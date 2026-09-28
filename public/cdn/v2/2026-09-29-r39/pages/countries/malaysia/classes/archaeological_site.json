@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.10.9",
+    "release_id": "2026-09-29-r39",
+    "page_type": "country_class",
+    "id": "country-class:my:archaeological_site"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "archaeological_site",
+    "label_ru": "Археологические объекты",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:archaeology_memory",
+    "page_path": "pages/countries/malaysia/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/archaeological_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:lenggong-kuala-kangsar-ipoh",
+      "name": "Lenggong / Kuala Kangsar / Ipoh",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/lenggong-kuala-kangsar-ipoh.json"
+    },
+    {
+      "id": "my:region:perak-taiping-kuala-kangsar-belum",
+      "name": "Perak / Taiping / Kuala Kangsar / Belum",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/perak-taiping-kuala-kangsar-belum.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:lenggong-valley-archaeological-landscape",
+      "name": "Lenggong Valley archaeological landscape",
+      "geography_ids": [
+        "country:my",
+        "my:hub:lenggong-kuala-kangsar-ipoh",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
+      "nearest_hub": "Lenggong / Kuala Kangsar / Ipoh",
+      "narrow": "Один из ключевых доисторических ландшафтов ЮВА: почти двухмиллионная последовательность человеческого присутствия, Perak Man, палеолитические мастерские, пещеры и геология долины.",
+      "detail_path": "countries/malaysia/objects/lenggong-valley-archaeological-landscape.json"
+    }
+  ]
+}

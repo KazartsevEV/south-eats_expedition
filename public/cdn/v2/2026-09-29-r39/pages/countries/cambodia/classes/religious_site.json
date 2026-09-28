@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "schema_version": "2.10.9",
+    "release_id": "2026-09-29-r39",
+    "page_type": "country_class",
+    "id": "country-class:kh:religious_site"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "religious_site",
+    "label_ru": "Храмы и религиозные объекты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:religion_ethnography",
+    "page_path": "pages/countries/cambodia/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/religious_site.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:province:kandal",
+      "name": "Кандаль",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/kandal.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:oudong",
+      "name": "Oudong",
+      "geography_ids": [
+        "country:kh",
+        "kh:province:kandal"
+      ],
+      "region_legacy": "Кандаль / Удонг",
+      "nearest_hub": "Пномпень",
+      "narrow": "Удонг был королевской столицей Камбоджи с XVII до XIX века. Политический центр располагался между священной горой и водным путём Тонлесапа; на хребте сохранились королевские ступы, а ниже — следы городской, ремесленной и религиозной жизни.",
+      "detail_path": "countries/cambodia/objects/oudong.json"
+    }
+  ]
+}

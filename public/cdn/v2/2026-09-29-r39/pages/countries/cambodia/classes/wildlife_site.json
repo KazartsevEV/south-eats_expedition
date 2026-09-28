@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "schema_version": "2.10.9",
+    "release_id": "2026-09-29-r39",
+    "page_type": "country_class",
+    "id": "country-class:kh:wildlife_site"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "wildlife_site",
+    "label_ru": "Наблюдение за дикой природой",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:protected_ecosystems",
+    "page_path": "pages/countries/cambodia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/wildlife_site.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:province:kratie",
+      "name": "Кратьэх",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/kratie.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:kratie-kampi-irrawaddy-dolphins",
+      "name": "Kratie / Kampi Irrawaddy dolphins",
+      "geography_ids": [
+        "country:kh",
+        "kh:province:kratie"
+      ],
+      "region_legacy": "Кратьэх / средний Меконг",
+      "nearest_hub": "Кратьэх / Кампи",
+      "narrow": "На Меконге к северу от Кратьэха сохраняется один из последних участков обитания пресноводной популяции ирравадийского дельфина. Кампи примерно в 15 км от города — основной пункт наблюдения; маршрут объединяет речную экологию, рыболовство и охрану природы.",
+      "detail_path": "countries/cambodia/objects/kratie-kampi-irrawaddy-dolphins.json"
+    }
+  ]
+}

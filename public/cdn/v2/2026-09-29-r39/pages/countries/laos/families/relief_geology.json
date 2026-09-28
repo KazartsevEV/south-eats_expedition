@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "schema_version": "2.10.9",
+    "release_id": "2026-09-29-r39",
+    "page_type": "class_family",
+    "id": "country-family:la:relief_geology"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "family_id": "relief_geology",
+    "label_ru": "Рельеф и геология"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:la",
+    "page_path": "pages/countries/laos.json"
+  },
+  "global_family_page": "pages/families/relief_geology.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "count": 7,
+  "classes": [
+    {
+      "object_type": "plateau",
+      "label_ru": "Плато и нагорья",
+      "count": 1,
+      "global_page_path": "pages/classes/plateau.json",
+      "country_page_path": "pages/countries/laos/classes/plateau.json"
+    },
+    {
+      "object_type": "karst",
+      "label_ru": "Карстовые районы",
+      "count": 2,
+      "global_page_path": "pages/classes/karst.json",
+      "country_page_path": "pages/countries/laos/classes/karst.json"
+    },
+    {
+      "object_type": "cave",
+      "label_ru": "Пещеры",
+      "count": 4,
+      "global_page_path": "pages/classes/cave.json",
+      "country_page_path": "pages/countries/laos/classes/cave.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:bolaven-plateau",
+      "name": "Bolaven Plateau",
+      "object_type": "plateau",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:bolaven-plateau"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
+      "narrow": "плато Болавен — приподнятое вулканическое плато к востоку от Паксе, известное более прохладным влажным климатом, водопадами и кофейными плантациями. Французское коммерческое кофейное наследие наложилось на земли Mon-кхмерский народов, включая Laven, Katu и Alak.",
+      "detail_path": "countries/laos/objects/bolaven-plateau.json"
+    },
+    {
+      "id": "la:vang-vieng-karst",
+      "name": "Vang Vieng karst",
+      "object_type": "karst",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:vang-vieng-karst",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "narrow": "Ванг-Вьенг лежит в долине Нам-Сонг под почти вертикальными башнями тропического известнякового карста. Туризм здесь вырос из речных и пещерных маршрутов, но главный сюжет — взаимодействие реки, рисовых полей и карстовых массивов, а не отдельная Голубая лагуна.",
+      "detail_path": "countries/laos/objects/vang-vieng-karst.json"
+    },
+    {
+      "id": "la:nong-khiaw-and-muang-ngoi",
+      "name": "Nong Khiaw and Muang Ngoi",
+      "object_type": "karst",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-prabang",
+        "la:town:nong-khiaw"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "narrow": "Нонг-Кхиав и Мыанг-Нгой — связка поселений в узкой долине Нам-У между высокими известняковыми стенами. Нонг-Кхиав — дорожный узел и база, Мыанг-Нгой исторически был доступен в первую очередь по реке и сохраняет более выраженный речной ритм.",
+      "detail_path": "countries/laos/objects/nong-khiaw-and-muang-ngoi.json"
+    },
+    {
+      "id": "la:vieng-xai-caves",
+      "name": "Vieng Xai caves",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:houaphanh",
+        "la:town:vieng-xai"
+      ],
+      "region_legacy": "Хуапхан / Вьенгсай / Нам-Эт",
+      "narrow": "Пещерный комплекс Вьенгсай — политико-военный ландшафт Pathet Lao периода интенсивных бомбардировок 1960–1970-х. В известняковых полостях размещались штабы, жилые помещения, госпиталь и инфраструктура, образуя фактически скрытый город.",
+      "detail_path": "countries/laos/objects/vieng-xai-caves.json"
+    },
+    {
+      "id": "la:kong-lor-cave",
+      "name": "Kong Lor Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:kong-lor-phou-hin-poun",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Кхаммуан / Конг-Лор",
+      "narrow": "Конг-Лор — сквозная карстовая пещера с подземной рекой Нам-Хин-Бун, по которой лодка проходит несколько километров под массивом. Главное впечатление создаёт не украшенная часть с подсветкой, а масштаб тёмного речного тоннеля и выход в долину Natan.",
+      "detail_path": "countries/laos/objects/kong-lor-cave.json"
+    },
+    {
+      "id": "la:tham-piu-cave",
+      "name": "Tham Piu Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:xiangkhouang"
+      ],
+      "region_legacy": "Xieng Khouang",
+      "narrow": "Тхам-Пиу — пещера и мемориал в Сиангкхуанг, связанный с гибелью мирных жителей во время войны в Индокитае. Для маршрута это не 'ещё одна пещера', а место памяти, которое объясняет, почему UXO и бомбардировки остаются частью современной географии провинции.",
+      "detail_path": "countries/laos/objects/tham-piu-cave.json"
+    },
+    {
+      "id": "la:pak-ou-caves",
+      "name": "Pak Ou Caves",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-prabang"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "narrow": "Пак-У — две пещеры в известняковой стене над Меконг у устья Нам-У, заполненные тысячами буддийских изображений разных размеров и периодов. Сюжет — одновременно паломничество, накопление вотивных образов и речная география.",
+      "detail_path": "countries/laos/objects/pak-ou-caves.json"
+    }
+  ]
+}

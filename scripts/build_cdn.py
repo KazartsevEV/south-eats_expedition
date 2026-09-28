@@ -848,6 +848,7 @@ def build():
             "object_search": "search/objects.json",
             "place_search": "search/places.json",
             "geodata_contract": "schema/geodata-contract.json",
+            "lodging": "infrastructure/lodging/index.json",
         },
         "countries": countries,
     })
@@ -940,6 +941,7 @@ def build():
             "objects": len(search_objects),
             "places": len(places_global),
             "object_types": len(object_types),
+            "lodging": len(lodging_registry),
             "files": len(manifest_files),
         },
         "files": manifest_files,

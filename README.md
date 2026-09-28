@@ -4,7 +4,7 @@ Public, versioned CDN read model for the **Expedition South East** expedition kn
 
 ## Current architecture
 
-Schema `2.3.0` is built top-down and traversed recursively:
+Schema `2.4.0` is built top-down and traversed recursively:
 
 `project → Southeast Asia → country → geography / class family → primary class → object`
 
@@ -51,3 +51,22 @@ Every relevant push to `main`:
 3. validates JSON, release integrity and manifest hashes;
 4. validates the project → region → country → geography/class → object graph;
 5. commits generated CDN files back to `main` only when validation passes.
+
+
+## Geodata contract
+
+Object geodata uses WGS84 / EPSG:4326. A physical object may expose a primary operational point and additional points such as entrance, trailhead, summit, viewpoint, pier, parking, cave entrance or waterfall base.
+
+- latitude/longitude are decimal degrees;
+- elevation is metres above mean sea level and remains `null` when not verified;
+- `accuracy` records whether a point is high-confidence, medium, approximate or unknown;
+- large parks and route-like places should use a meaningful access point instead of an unexplained geometric centre;
+- human-readable decimal and DMS strings are generated from canonical numeric coordinates;
+- search indexes carry the same primary coordinates as object detail pages;
+- missing geodata is exposed in QA gaps and is never replaced by invented zero values.
+
+The generated contract is published at `/cdn/v2/<release>/schema/geodata-contract.json`.
+
+## Visual reconnaissance
+
+The visual block is location intelligence, not a photography tutorial: where a useful view is obtained, when the light/season makes it work, what is visible there and which equipment category is useful because of the geometry or distance. Camera settings, shot lists, composition lessons and video scripts are outside the data model.

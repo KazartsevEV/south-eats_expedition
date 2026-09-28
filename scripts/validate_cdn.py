@@ -92,6 +92,13 @@ if any(not x for x in ids):
 if len(ids) != len(set(ids)):
     fail("duplicate object id in search index")
 
+place_ids = [row.get("id") for row in places]
+if any(not x for x in place_ids):
+    fail("place search index contains row without id")
+if len(place_ids) != len(set(place_ids)):
+    duplicates = sorted({x for x in place_ids if place_ids.count(x) > 1})
+    fail(f"duplicate place id in search index: {duplicates[:20]}")
+
 # Reference release is expected to have full coverage of the fields requested
 # for object cards. Single-image galleries are allowed and explicitly marked.
 failures = qa.get("failures") or {}

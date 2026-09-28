@@ -131,6 +131,7 @@ TYPE_BY_NAME = {
     "Hin Nam No National Park": "national_park",
     "Nakai Nam Theun National Park": "national_park",
     "Tad Fane": "waterfall",
+    "Tad Yuang": "waterfall",
 }
 
 

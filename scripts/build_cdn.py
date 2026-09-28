@@ -14,13 +14,14 @@ SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
 SCHEMA_VERSION = "2.1.0"
-RELEASE_ID = "2026-09-28-r5"
+RELEASE_ID = "2026-09-28-r6"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
     ("laos.json", "LA", "laos"),
     ("indonesia.json", "ID", "indonesia"),
     ("malaysia.json", "MY", "malaysia"),
+    ("myanmar.json", "MM", "myanmar"),
 ]
 
 TYPE_LABELS = {
@@ -155,6 +156,25 @@ TYPE_BY_NAME.update({
     "Kampung Bavanggazo / Rungus longhouse": "living_settlement",
     "Batu Caves": "cave",
     "Sepilok Orangutan Rehabilitation Centre": "wildlife_site",
+})
+
+
+TYPE_BY_NAME.update({
+    "Bagan": "archaeological_site",
+    "Shwedagon Pagoda": "religious_site",
+    "Inle Lake": "river_or_wetland",
+    "Mandalay heritage": "historic_city",
+    "Kyaiktiyo / Golden Rock": "religious_site",
+    "Mawlamyine colonial core": "historic_city",
+    "Pyin Oo Lwin": "historic_city",
+    "Dawei old town": "historic_city",
+    "Mrauk U": "archaeological_site",
+    "Pyu Ancient Cities": "archaeological_site",
+    "Hpa-An karst and caves": "natural_landscape",
+    "Kakku Pagodas": "archaeological_site",
+    "Monywa / Thanboddhay and Bodhi Tataung": "religious_site",
+    "Indawgyi Lake": "protected_area",
+    "Nat Ma Taung / Mount Victoria": "national_park",
 })
 
 def load(path: Path):

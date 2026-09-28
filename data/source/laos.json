@@ -48,19 +48,27 @@
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "2.8.x",
+      "schema_target": "2.10.8",
       "updated": "2026-09-28",
-      "completed_objects": 4,
+      "completed_objects": 14,
       "total_objects": 19,
-      "current_chunk": "archaeology_religion"
+      "current_chunk": "operational_geodata_round_1",
+      "remaining_objects": [
+        "Vieng Xai caves",
+        "Savannakhet old quarter",
+        "Nam Et-Phou Louey area",
+        "Nam Ha National Protected Area",
+        "Old Thakhek Town"
+      ],
+      "policy": "WGS84/EPSG:4326; broad objects use an explicit operational or component anchor and notes that prevent it being mistaken for a geometric centre. No settlement coordinate is substituted for a missing attraction coordinate."
     },
     "visual_recon_upgrade_progress": {
-      "schema_target": "2.8.x",
+      "schema_target": "2.10.8",
       "updated": "2026-09-28",
-      "completed_objects": 4,
+      "completed_objects": 9,
       "total_objects": 19,
-      "current_chunk": "archaeology_religion",
-      "policy": "откуда + когда + что видно + класс техники по геометрии; без операторского ТЗ"
+      "current_chunk": "georeferenced_viewpoints_round_1",
+      "policy": "откуда + когда, если подтверждено + что видно + класс техники по геометрии; без ISO/выдержки/диафрагмы/shot list"
     },
     "country_source_normalization": {
       "status": "draft_complete_for_country_core",
@@ -698,6 +706,42 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
+            },
+            "coordinates": {
+              "lat": 19.88889,
+              "lon": 102.13333,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "unesco",
+              "title": "Town of Luang Prabang — geographical data",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/479/maps/",
+              "authority": "high",
+              "accessed": "2026-09-28",
+              "notes": "UNESCO coordinate for the 820 ha World Heritage property; this is a property reference point, not a gate or transport access point."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "object_elevation": {
+              "representative_m": 296,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "approximate",
+              "source": {
+                "type": "map",
+                "title": "Luang Prabang elevation",
+                "publisher": "Mapcarta / OpenStreetMap",
+                "url": "https://mapcarta.com/Luang_Prabang",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "296 m is the mapped city/locality elevation and is used only as an approximate characteristic elevation for the historic urban object."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Характерная рабочая отметка города; не средняя и не максимальная высота всей территории Всемирного наследия."
             }
           },
           "logistics": {
@@ -1301,7 +1345,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 18.92678,
+              "lon": 102.42301,
+              "elevation_m": null
+            },
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Viewpoint 1, Vang Vieng",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N6222348685",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM tourism=viewpoint node in the western Vang Vieng karst. Stored as an operational scenic anchor, not as the geometric centre of the whole karst landscape."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Ближайшая практичная база — Ванг-Вьенг; обычно нужен дорожный трансфер, затем пеший/лодочный участок в зависимости от маршрута. Для удалённых зон заранее подтверждать разрешение/проводник.",
@@ -1355,7 +1417,50 @@
             "video_suitability_5": 5,
             "best_light": "рассвет и последние часы дня; в дождевой лес мягкий свет после дождя часто лучше жёсткого полудня",
             "drone": "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска.",
-            "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие."
+            "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие.",
+            "visual_scouting": {
+              "best_time": null,
+              "best_weather_light": null,
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "viewpoint_1",
+                  "name": "Viewpoint 1",
+                  "description": "Геопривязанная обзорная точка в западном карсте Ванг-Вьенга; пригодна как опорная точка для панорамы известняковых башен и сельского ландшафта.",
+                  "coordinates": {
+                    "lat": 18.92678,
+                    "lon": 102.42301,
+                    "elevation_m": null
+                  },
+                  "view": {
+                    "description": "карстовые башни и долина к западу от Ванг-Вьенга"
+                  },
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "нужен широкий угол для связки ближайшего рельефа и долины"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "удобен для отдельных карстовых башен без чрезмерного расширения перспективы"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Viewpoint 1, Vang Vieng",
+                    "publisher": "Mapcarta / OpenStreetMap",
+                    "url": "https://mapcarta.com/N6222348685",
+                    "authority": "medium",
+                    "accessed": "2026-09-28",
+                    "notes": "OSM tourism=viewpoint node in the western Vang Vieng karst. Stored as an operational scenic anchor, not as the geometric centre of the whole karst landscape."
+                  }
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [],
+              "useful_equipment": []
+            }
           },
           "annotation": {
             "narrative": "Ванг-Вьенг лежит в долине Нам-Сонг под почти вертикальными башнями тропического известнякового карста. Туризм здесь вырос из речных и пещерных маршрутов, но главный сюжет — взаимодействие реки, рисовых полей и карстовых массивов, а не отдельная Голубая лагуна.",
@@ -1915,7 +2020,34 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 13.9729,
+              "lon": 105.9206,
+              "elevation_m": 84
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Don Det",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/Don_Det",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM place=island / GeoNames reference for Don Det, one of the main inhabited islands. This point represents Don Det only, not the centre or entrance of the entire Si Phan Don archipelago."
+            },
+            "elevation_source": {
+              "type": "map",
+              "title": "Don Det",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/Don_Det",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM place=island / GeoNames reference for Don Det, one of the main inhabited islands. This point represents Don Det only, not the centre or entrance of the entire Si Phan Don archipelago."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Основной подход через Паксе; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки.",
@@ -2381,7 +2513,57 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 17.95609,
+              "lon": 104.76161,
+              "elevation_m": null
+            },
+            "coordinate_type": "cave_entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Tham Kong Lor — western tourist cave entrance",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N6150289914",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM natural=cave_entrance and tourism=attraction; western entrance used by the Ban Kong Lor visitor approach."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Kong Lor — восточный выход",
+                "type": "cave_entrance",
+                "coordinates": {
+                  "lat": 17.94079,
+                  "lon": 104.7982,
+                  "elevation_m": 176
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Kong Lor Cave — eastern cave entrance",
+                  "publisher": "Mapcarta / OpenStreetMap",
+                  "url": "https://mapcarta.com/36097736",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "OSM natural=cave_entrance / GeoNames; eastern end of the through-cave system."
+                },
+                "checked_at": "2026-09-28",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Kong Lor Cave — eastern cave entrance",
+                  "publisher": "Mapcarta / OpenStreetMap",
+                  "url": "https://mapcarta.com/36097736",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "OSM natural=cave_entrance / GeoNames; eastern end of the through-cave system."
+                }
+              }
+            ]
           },
           "logistics": {
             "access": "Конг-Лор деревня в Phou Hin Poun национальный парк — ключевая остановка Тхакхэк кольцевой маршрут. Из Тхакхэк обычно едут дорожный маршрут через Khoun Kham/Nahin; последние километры до деревня асфальтированный/дорожный подъезд, затем вход в пещера by лодка местного сообщества.",
@@ -3073,7 +3255,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 20.56553,
+              "lon": 102.6297,
+              "elevation_m": null
+            },
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "PhaMary viewpoint",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N10597723586",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM tourism=viewpoint above Nong Khiaw; used as a scenic operational anchor for the broader karst-and-river object."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Практичная база — Луангпхабанг / Нонг-Кхиав; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -3123,7 +3323,50 @@
             "video_suitability_5": 4,
             "best_light": "утро и поздний день",
             "drone": "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска.",
-            "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие."
+            "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие.",
+            "visual_scouting": {
+              "best_time": null,
+              "best_weather_light": null,
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "phamary",
+                  "name": "PhaMary",
+                  "description": "Геопривязанная обзорная точка над Нонг-Кхиав.",
+                  "coordinates": {
+                    "lat": 20.56553,
+                    "lon": 102.6297,
+                    "elevation_m": null
+                  },
+                  "view": {
+                    "description": "долина Нам-У, Нонг-Кхиав и окружающие известняковые массивы"
+                  },
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает речную долину вместе с карстовыми стенами"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "полезен для изоляции дальних гребней и фрагментов поселения в долине"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "PhaMary viewpoint",
+                    "publisher": "Mapcarta / OpenStreetMap",
+                    "url": "https://mapcarta.com/N10597723586",
+                    "authority": "medium",
+                    "accessed": "2026-09-28",
+                    "notes": "OSM tourism=viewpoint above Nong Khiaw; used as a scenic operational anchor for the broader karst-and-river object."
+                  }
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [],
+              "useful_equipment": []
+            }
           },
           "annotation": {
             "narrative": "Нонг-Кхиав и Мыанг-Нгой — связка поселений в узкой долине Нам-У между высокими известняковыми стенами. Нонг-Кхиав — дорожный узел и база, Мыанг-Нгой исторически был доступен в первую очередь по реке и сохраняет более выраженный речной ритм.",
@@ -3291,7 +3534,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 15.18245,
+              "lon": 106.12701,
+              "elevation_m": null
+            },
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Tad Fane Viewpoint (2 waterfalls)",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N653299798",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM tourism=viewpoint opposite Tad Fane waterfalls; used as an operational viewpoint anchor, not as the centre of the Bolaven Plateau."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Ближайшая практичная база — Паксе; обычно нужен дорожный трансфер, затем пеший/лодочный участок в зависимости от маршрута. Для удалённых зон заранее подтверждать разрешение/проводник.",
@@ -3345,7 +3606,50 @@
             "video_suitability_5": 5,
             "best_light": "рассвет и последние часы дня; в дождевой лес мягкий свет после дождя часто лучше жёсткого полудня",
             "drone": "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска.",
-            "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие."
+            "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие.",
+            "visual_scouting": {
+              "best_time": null,
+              "best_weather_light": null,
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "tad_fane_viewpoint",
+                  "name": "Tad Fane Viewpoint",
+                  "description": "Размеченная обзорная точка у Tad Fane, позволяющая видеть два основных потока водопада через лесистое ущелье.",
+                  "coordinates": {
+                    "lat": 15.18245,
+                    "lon": 106.12701,
+                    "elevation_m": null
+                  },
+                  "view": {
+                    "description": "два потока Tad Fane и лесистое ущелье плато"
+                  },
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает водопады вместе с глубиной ущелья"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "полезен для деталей потоков с противоположной стороны ущелья"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Tad Fane Viewpoint (2 waterfalls)",
+                    "publisher": "Mapcarta / OpenStreetMap",
+                    "url": "https://mapcarta.com/N653299798",
+                    "authority": "medium",
+                    "accessed": "2026-09-28",
+                    "notes": "OSM tourism=viewpoint opposite Tad Fane waterfalls; used as an operational viewpoint anchor, not as the centre of the Bolaven Plateau."
+                  }
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [],
+              "useful_equipment": []
+            }
           },
           "annotation": {
             "narrative": "плато Болавен — приподнятое вулканическое плато к востоку от Паксе, известное более прохладным влажным климатом, водопадами и кофейными плантациями. Французское коммерческое кофейное наследие наложилось на земли Mon-кхмерский народов, включая Laven, Katu и Alak.",
@@ -3771,7 +4075,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 19.67549,
+              "lon": 103.56885,
+              "elevation_m": null
+            },
+            "coordinate_type": "cave_entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Tham Piew Cave",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N1391094366",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM cave node for Tham Piew/Tham Piu in Xiangkhouang."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Включается в Northern наследие маршрут вокруг Muang Kham; дорога day-trip из Phonsavan с остановками у исторических/этнографических точек. Никакой лодки для Тхам-Пиу не требуется.",
@@ -4496,7 +4818,57 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 21.64543,
+              "lon": 102.13869,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Komaen village (tea plantation village)",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N4285869089",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM tourism=information point at Ban Komaen, the tea-plantation village. The broader object also includes Phongsaly old town; this is the tea-landscape anchor, not a centroid for both components."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Phongsaly town reference",
+                "type": "center",
+                "coordinates": {
+                  "lat": 21.6835,
+                  "lon": 102.1057,
+                  "elevation_m": 1356
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Phongsali",
+                  "publisher": "Mapcarta / OpenStreetMap",
+                  "url": "https://mapcarta.com/Phongsali",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "Mapped Phongsali city/locality; stored as a secondary reference point for the old-town component."
+                },
+                "checked_at": "2026-09-28",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Phongsali",
+                  "publisher": "Mapcarta / OpenStreetMap",
+                  "url": "https://mapcarta.com/Phongsali",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "Mapped Phongsali city/locality; stored as a secondary reference point for the old-town component."
+                }
+              }
+            ]
           },
           "logistics": {
             "access": "В Пхонгсали добираются по горным дорогам на автобусе или автомобиле; есть связи с Вьентьяном, Удомсаем, Луангпхабангом, Луангнамтхой и Дьенбьенфу, но расписание нужно перепроверять. Чайная деревня Бан-Комаен находится примерно в 18 км от города.",
@@ -4550,7 +4922,50 @@
             "video_suitability_5": 5,
             "best_light": "туманное раннее утро в старом городе и чайных холмах; поздний день — с Phou Fa",
             "drone": "Для дрона проверить авиационные правила и получить согласие общины; не летать низко над деревнями и людьми на чайных плантациях.",
-            "filming_restrictions": "Для портретов, интерьеров деревень, ритуалов и крупной съёмки работников чайных хозяйств получать согласие."
+            "filming_restrictions": "Для портретов, интерьеров деревень, ритуалов и крупной съёмки работников чайных хозяйств получать согласие.",
+            "visual_scouting": {
+              "best_time": null,
+              "best_weather_light": null,
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "ban_komaen_tea_landscape",
+                  "name": "Ban Komaen — чайный ландшафт",
+                  "description": "Опорная точка в деревне Ban Komaen, откуда официальный туристический маршрут уходит по размеченной тропе среди старых чайных деревьев.",
+                  "coordinates": {
+                    "lat": 21.64543,
+                    "lon": 102.13869,
+                    "elevation_m": null
+                  },
+                  "view": {
+                    "description": "деревня и высокогорный чайный культурный ландшафт"
+                  },
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для связи чайных деревьев, тропы и высокогорного ландшафта"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для деревенской архитектуры и отдельных чайных деревьев"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Komaen village (tea plantation village)",
+                    "publisher": "Mapcarta / OpenStreetMap",
+                    "url": "https://mapcarta.com/N4285869089",
+                    "authority": "medium",
+                    "accessed": "2026-09-28",
+                    "notes": "OSM tourism=information point at Ban Komaen, the tea-plantation village. The broader object also includes Phongsaly old town; this is the tea-landscape anchor, not a centroid for both components."
+                  }
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [],
+              "useful_equipment": []
+            }
           },
           "annotation": {
             "narrative": "Пхонгсали город стоит примерно на 1,400 м и заметно прохладнее лаосских низменностей. Старый квартал хранит китайско-тибетско-юньнаньские черты, а Ban Komaen примерно в 18 км известен древними чайными деревьями, которые туристические власти Лаоса описывает как 400-летние.",
@@ -4717,7 +5132,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 21.18797,
+              "lon": 101.15016,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Old Night Market, Muang Sing",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/W103393500",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM shop=market building. Used as the market-core anchor; surrounding Tai Lue cultural landscape extends well beyond this point."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Мыанг-Синг находится примерно в 58 км от Луангнамтхи. Публиковался местный автобус с ориентиром 100 000 кип и отправлениями в 08:00, 10:30 и 12:00; расписание и цену перепроверять перед выездом.",
@@ -4771,7 +5204,50 @@
             "video_suitability_5": 5,
             "best_light": "07:00–08:00 для рынка; поздний день — для храмов и сельского ландшафта",
             "drone": "Не запускать дрон над рынком и деревнями без авиационного разрешения и согласия общины.",
-            "filming_restrictions": "Для крупных портретов, ритуалов и интерьеров деревень получать согласие; не обращаться с этническими общинами как с постановочной декорацией."
+            "filming_restrictions": "Для крупных портретов, ритуалов и интерьеров деревень получать согласие; не обращаться с этническими общинами как с постановочной декорацией.",
+            "visual_scouting": {
+              "best_time": null,
+              "best_weather_light": null,
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "old_market",
+                  "name": "Старый рынок Мыанг-Синга",
+                  "description": "Геопривязанное здание старого рынка в городском ядре.",
+                  "coordinates": {
+                    "lat": 21.18797,
+                    "lon": 101.15016,
+                    "elevation_m": null
+                  },
+                  "view": {
+                    "description": "рыночное ядро и окружающая городская среда Мыанг-Синга"
+                  },
+                  "best_time": "early_morning",
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "для рыночной среды и рабочих дистанций между прилавками и улицей"
+                    },
+                    {
+                      "type": "wide",
+                      "why": "для общего масштаба рынка и соседней застройки"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Old Night Market, Muang Sing",
+                    "publisher": "Mapcarta / OpenStreetMap",
+                    "url": "https://mapcarta.com/W103393500",
+                    "authority": "medium",
+                    "accessed": "2026-09-28",
+                    "notes": "OSM shop=market building. Used as the market-core anchor; surrounding Tai Lue cultural landscape extends well beyond this point."
+                  }
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [],
+              "useful_equipment": []
+            }
           },
           "annotation": {
             "narrative": "Мыанг-Синг — высокогорная долина у китайской границы, исторически связанная с Tai Lue княжествами и торговыми маршрутами. Утренний рынок собирает Lao, Tai Lue, Akha, Hmong и другие группы региона; окружающий ландшафт — рисовые поля, деревни и небольшие буддийские ваты.",
@@ -4929,7 +5405,75 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 19.75131,
+              "lon": 101.99691,
+              "elevation_m": null
+            },
+            "coordinate_type": "parking",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kuang Si Waterfall parking",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/W349188176",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "OSM amenity=parking; operational access anchor near the visitor facilities."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "object_elevation": {
+              "representative_m": 496,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Kouangxi Water Fall",
+                "publisher": "Mapcarta / OpenStreetMap",
+                "url": "https://mapcarta.com/26229586",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "OSM waterway=waterfall / GeoNames mapped waterfall point; elevation 496 m belongs to this mapped waterfall point."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "496 м относится к геопривязанной основной точке водопада, а не к верхней кромке всего каскада."
+            },
+            "geo_points": [
+              {
+                "name": "Kuang Si — основная точка водопада",
+                "type": "waterfall_base",
+                "coordinates": {
+                  "lat": 19.7488,
+                  "lon": 101.99133,
+                  "elevation_m": 496
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Kouangxi Water Fall",
+                  "publisher": "Mapcarta / OpenStreetMap",
+                  "url": "https://mapcarta.com/26229586",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "OSM waterway=waterfall / GeoNames mapped waterfall point; elevation 496 m belongs to this mapped waterfall point."
+                },
+                "checked_at": "2026-09-28",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Kouangxi Water Fall",
+                  "publisher": "Mapcarta / OpenStreetMap",
+                  "url": "https://mapcarta.com/26229586",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "OSM waterway=waterfall / GeoNames mapped waterfall point; elevation 496 m belongs to this mapped waterfall point."
+                }
+              }
+            ]
           },
           "logistics": {
             "access": "Около 30 км от Луангпхабанг; tuk-tuk/микроавтобус/scooter/организованный трансфер.",
@@ -4981,7 +5525,50 @@
             "video_suitability_5": 5,
             "best_light": "сразу после открытия и поздний день",
             "drone": "В природной зоне только по действующим правилам; не запускать над людьми без разрешения.",
-            "filming_restrictions": "Обычная любительская съёмка с троп допустима по локальным правилам; следовать знакам у бассейнов."
+            "filming_restrictions": "Обычная любительская съёмка с троп допустима по локальным правилам; следовать знакам у бассейнов.",
+            "visual_scouting": {
+              "best_time": null,
+              "best_weather_light": null,
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "main_waterfall",
+                  "name": "Основной каскад Kuang Si",
+                  "description": "Геопривязанная основная точка водопада; отдельная от парковки и входной инфраструктуры.",
+                  "coordinates": {
+                    "lat": 19.7488,
+                    "lon": 101.99133,
+                    "elevation_m": 496
+                  },
+                  "view": {
+                    "description": "главный каскад и известняковые уступы в лесу"
+                  },
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "главный каскад расположен в тесной лесной чаше"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для отдельных ярусов и минеральных уступов без чрезмерного расширения перспективы"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Kouangxi Water Fall",
+                    "publisher": "Mapcarta / OpenStreetMap",
+                    "url": "https://mapcarta.com/26229586",
+                    "authority": "medium",
+                    "accessed": "2026-09-28",
+                    "notes": "OSM waterway=waterfall / GeoNames mapped waterfall point; elevation 496 m belongs to this mapped waterfall point."
+                  }
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [],
+              "useful_equipment": []
+            }
           },
           "annotation": {
             "narrative": "Куанг-Си — каскад по известняковым/травертиновым уступам южнее Луангпхабанг. Бирюзовый цвет создаётся рассеянием света в минеральной воде; визуальный интерес — последовательность малых чаш, леса и главного вертикального водопада, а не один бассейн.",

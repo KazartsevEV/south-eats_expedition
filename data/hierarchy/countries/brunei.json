@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "BN",
     "country_slug": "brunei",
-    "status": "district_level_formalized",
+    "status": "brunei_muara_second_level_formalized",
     "checked_at": "2026-09-28",
-    "next_level": "cities_mukims_villages_and_geographic_areas"
+    "next_level": "brunei_muara_remaining_localities_then_belait_tutong_temburong"
   },
   "rules": {
     "parentage": "Only documented administrative containment is encoded as hierarchy.",
@@ -21,20 +21,13 @@
       "slug": "brunei-muara",
       "parent_id": "country:bn",
       "object_ids": [
-        "bn:omar-ali-saifuddien-mosque",
-        "bn:jame-asr-hassanil-bolkiah-mosque",
-        "bn:kampong-ayer",
-        "bn:royal-regalia-museum",
-        "bn:tasek-lama-park",
-        "bn:malay-technology-museum",
         "bn:bukit-shahbandar-recreational-park",
-        "bn:brunei-river-mangrove-safari",
-        "bn:tamu-kianggeh",
         "bn:berakas-forest-recreational-park"
       ],
       "legacy_region_names": [
         "Бандар-Сери-Бегаван / Бруней-Муара"
-      ]
+      ],
+      "notes_ru": "Два лесных парка пока оставлены непосредственно на уровне района: текущие официальные источники подтверждают их связь с Бруней-Муара, но в этой итерации не задаётся более узкий административный parent без достаточной опоры."
     },
     {
       "id": "bn:district:belait",
@@ -82,6 +75,58 @@
       "legacy_region_names": [
         "Temburong"
       ]
+    },
+    {
+      "id": "bn:city:bandar-seri-begawan",
+      "kind": "city",
+      "name_ru": "Бандар-Сери-Бегаван",
+      "name_local": "Bandar Seri Begawan",
+      "slug": "bandar-seri-begawan",
+      "parent_id": "bn:district:brunei-muara",
+      "object_ids": [
+        "bn:omar-ali-saifuddien-mosque",
+        "bn:jame-asr-hassanil-bolkiah-mosque",
+        "bn:royal-regalia-museum",
+        "bn:tasek-lama-park",
+        "bn:tamu-kianggeh"
+      ],
+      "notes_ru": "Городской узел используется для объектов, чья принадлежность к Bandar Seri Begawan подтверждается официальными муниципальными, государственными или туристическими источниками. Mukim-границы не подменяются границами муниципалитета."
+    },
+    {
+      "id": "bn:geographic-area:kampong-ayer",
+      "kind": "geographic_area",
+      "name_ru": "Кампонг-Айер",
+      "name_local": "Kampong Ayer",
+      "slug": "kampong-ayer",
+      "parent_id": "bn:district:brunei-muara",
+      "object_ids": [
+        "bn:kampong-ayer"
+      ],
+      "notes_ru": "Водный поселенческий комплекс на реке Бруней. Выделен отдельной географической сущностью, а не подчинён городу административно: официальные источники описывают его как систему нескольких mukim внутри района Бруней-Муара."
+    },
+    {
+      "id": "bn:geographic-area:kota-batu",
+      "kind": "geographic_area",
+      "name_ru": "Кота-Бату",
+      "name_local": "Kota Batu",
+      "slug": "kota-batu",
+      "parent_id": "bn:district:brunei-muara",
+      "object_ids": [
+        "bn:malay-technology-museum"
+      ],
+      "notes_ru": "Для текущего объекта зафиксирован географический район Kota Batu; уровень mukim будет введён только после покарточной проверки точного административного положения."
+    },
+    {
+      "id": "bn:river:brunei",
+      "kind": "river",
+      "name_ru": "Река Бруней",
+      "name_local": "Sungai Brunei / Brunei River",
+      "slug": "brunei-river",
+      "parent_id": "bn:district:brunei-muara",
+      "object_ids": [
+        "bn:brunei-river-mangrove-safari"
+      ],
+      "notes_ru": "Природная географическая сущность для речных и мангровых объектов; не является административным уровнем."
     }
   ],
   "sources": [
@@ -99,6 +144,63 @@
       "publisher": "Department of Town and Country Planning, Brunei Darussalam",
       "used_for": [
         "district-level planning structure"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.bandaran-bsb.gov.bn/maklumat-bandaran/",
+      "publisher": "Bandar Seri Begawan Municipal Department",
+      "used_for": [
+        "Bandar Seri Begawan municipal identity and extent"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.jkng.gov.bn/nama-jalan/",
+      "publisher": "Jawatankuasa Kebangsaan Nama Geografi, Brunei Darussalam",
+      "used_for": [
+        "Bandar Seri Begawan municipal-area streets and mukim context",
+        "Jame' Asr / Kianggeh / Gadong / Berakas context"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.bruneitourism.com/places/kampong-ayer/",
+      "publisher": "Tourism Development Department, Brunei Darussalam",
+      "used_for": [
+        "Kampong Ayer location and public geographic identity"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.bruneitourism.com/places/royal-regalia-museum/",
+      "publisher": "Tourism Development Department, Brunei Darussalam",
+      "used_for": [
+        "Royal Regalia Museum location in Bandar Seri Begawan"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.bruneitourism.com/places/tasek-lama-park/",
+      "publisher": "Tourism Development Department, Brunei Darussalam",
+      "used_for": [
+        "Tasek Lama Park location in Bandar Seri Begawan"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.information.gov.bn/Brunei%20Today%20PDF%20Library/2009/brunei_today_june_2009.pdf",
+      "publisher": "Information Department, Brunei Darussalam",
+      "used_for": [
+        "Malay Technology Museum location at Kota Batu"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.bruneitourism.com/activities-tour/mangrove-safari-firefly-cruise/",
+      "publisher": "Tourism Development Department, Brunei Darussalam",
+      "used_for": [
+        "Brunei River and tributary mangrove-safari geography"
       ],
       "checked_at": "2026-09-28"
     }

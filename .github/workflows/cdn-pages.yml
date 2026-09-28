@@ -5,6 +5,14 @@ on:
     branches: [main]
     paths:
       - "data/source/**"
+      - "data/id-registry.json"
+      - "scripts/**"
+      - ".github/workflows/cdn-pages.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "data/source/**"
+      - "data/id-registry.json"
       - "scripts/**"
       - ".github/workflows/cdn-pages.yml"
   workflow_dispatch:
@@ -33,16 +41,23 @@ jobs:
       - name: Build normalized CDN from source
         run: python scripts/build_cdn.py
 
+      - name: Build canonical CDN layer
+        run: python scripts/build_canonical_layer.py
+
       - name: Build recursive project hierarchy
         run: python scripts/augment_hierarchy.py
 
       - name: Validate source and generated CDN
         run: python scripts/validate_cdn.py public/cdn/v2
 
+      - name: Validate canonical CDN contract
+        run: python scripts/validate_canonical.py public/cdn/v2
+
       - name: Validate recursive hierarchy
         run: python scripts/validate_hierarchy.py public/cdn/v2
 
       - name: Publish generated CDN from latest main
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         shell: bash
         run: |
           set -euo pipefail
@@ -55,8 +70,10 @@ jobs:
             git reset --hard origin/main
 
             python scripts/build_cdn.py
+            python scripts/build_canonical_layer.py
             python scripts/augment_hierarchy.py
             python scripts/validate_cdn.py public/cdn/v2
+            python scripts/validate_canonical.py public/cdn/v2
             python scripts/validate_hierarchy.py public/cdn/v2
 
             git add public/cdn/v2

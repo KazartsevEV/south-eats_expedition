@@ -57,6 +57,10 @@
       "total_objects": 18,
       "objects_with_verified_elevation": 3,
       "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas and variable river departures are explicitly approximate"
+    },
+    "elevation_provenance_upgrade": {
+      "updated": "2026-09-28",
+      "policy": "Каждое ненулевое elevation_m имеет отдельный elevation_source."
     }
   },
   "overview": {
@@ -593,7 +597,16 @@
               "elevation_url": "https://www.komoot.com/highlight/795038",
               "basis": "mapped mosque coordinate; terrain elevation from mapped highlight"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "Jame' Asr Hassanil Bolkiah Mosque elevation",
+              "publisher": "Komoot",
+              "url": "https://www.komoot.com/highlight/795038",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Используется только для высоты рельефа у мечети; координаты подтверждаются отдельным картографическим источником."
+            }
           },
           "logistics": {
             "access": "Dart/автомобиль; находится вне компактного пешего ядра BSB.",
@@ -1615,7 +1628,16 @@
               "url": "https://mapcarta.com/15986052",
               "basis": "Seria town reference point used only as centre of broad oil-heritage landscape"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "Seria elevation",
+              "publisher": "GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/15986052",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Высота относится к опорной точке города Seria, используемой для широкого нефтяного культурного ландшафта."
+            }
           },
           "logistics": {
             "access": "Автомобиль/Dart из Kuala Белайт или BSB; часть pumpjacks видна с общедоступных дорог около побережья и Billionth Barrel Monument.",
@@ -2337,7 +2359,15 @@
               "url": "https://mapcarta.com/15986412",
               "basis": "Tasek Merimbun lake feature"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "Tasek Merimbun elevation",
+              "publisher": "GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/15986412",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            }
           },
           "logistics": {
             "access": "Лучше частный автомобиль/Dart; общественный транспорт ограничен.",

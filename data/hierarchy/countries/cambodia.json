@@ -1,0 +1,424 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "status": "country_geography_draft_for_import_after_brunei",
+    "checked_at": "2026-09-28",
+    "next_level": "object_level_geo_qa_and_country_profile_source_normalization",
+    "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; legacy route-place IDs remain migration-only."
+  },
+  "rules": {
+    "parentage": "Only documented administrative containment is encoded as hierarchy.",
+    "route_hubs": "Legacy nearest_hub values remain logistics metadata and are not treated as administrative parents.",
+    "physical_geography": "Large cross-province systems such as Tonle Sap and the Cardamom Mountains remain physical-geography nodes rather than being forced under one province.",
+    "object_visibility": "An object may be attached to both an administrative node and a physical-geography node when both relationships are documented."
+  },
+  "nodes": [
+    {
+      "id": "kh:province:siem-reap",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Сиемреап",
+      "name_local": "សៀមរាប",
+      "slug": "siem-reap",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:angkor-archaeological-park"
+      ],
+      "legacy_region_names": [
+        "Siem Reap / Angkor"
+      ],
+      "notes_ru": "Провинциальный parent для Ангкора. Beng Mealea и Phnom Kulen вынесены ниже в подтверждённые локальные/физические узлы.",
+      "canonical_id": "geo_kh_0024"
+    },
+    {
+      "id": "kh:district:svay-leu",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Свай-Леу",
+      "name_local": "ស្វាយលើ",
+      "slug": "svay-leu",
+      "parent_id": "kh:province:siem-reap",
+      "object_ids": [
+        "kh:beng-mealea"
+      ],
+      "notes_ru": "UNESCO указывает Beng Mealea village, Beng Mealea commune, Svay Leu District, Siem Reap Province.",
+      "canonical_id": "geo_kh_0025"
+    },
+    {
+      "id": "kh:geographic-area:phnom-kulen",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Пном-Кулен",
+      "name_local": "ភ្នំគូលែន",
+      "slug": "phnom-kulen",
+      "parent_id": "kh:province:siem-reap",
+      "object_ids": [
+        "kh:phnom-kulen-national-park"
+      ],
+      "notes_ru": "Физико-географический узел хребта/плато Пном-Кулен в провинции Сиемреап; не подменяется одной административной коммуной.",
+      "canonical_id": "geo_kh_0026"
+    },
+    {
+      "id": "kh:city:phnom-penh",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Пномпень",
+      "name_local": "ភ្នំពេញ",
+      "slug": "phnom-penh",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:royal-palace-phnom-penh",
+        "kh:tuol-sleng-genocide-museum",
+        "kh:choeung-ek"
+      ],
+      "legacy_region_names": [
+        "Phnom Penh"
+      ],
+      "notes_ru": "Столица имеет отдельный административный статус; в этой итерации город используется как безопасный подтверждённый parent без выдумывания khan/sangkat для каждого объекта.",
+      "canonical_id": "geo_kh_0027"
+    },
+    {
+      "id": "kh:province:preah-vihear",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Преахвихеа",
+      "name_local": "ព្រះវិហារ",
+      "slug": "preah-vihear",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:preah-vihear",
+        "kh:koh-ker",
+        "kh:preah-khan-kompong-svay"
+      ],
+      "legacy_region_names": [
+        "Преахвихеа / северный храмовый пояс"
+      ],
+      "notes_ru": "UNESCO прямо помещает Temple of Preah Vihear и Koh Ker в Preah Vihear Province; Preah Khan Kompong Svay — в Sangkum Thmei commune, Preah Vihear Province.",
+      "canonical_id": "geo_kh_0028"
+    },
+    {
+      "id": "kh:province:kampong-thom",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Кампонгтхом",
+      "name_local": "កំពង់ធំ",
+      "slug": "kampong-thom",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:sambor-prei-kuk"
+      ],
+      "notes_ru": "UNESCO помещает Sambor Prei Kuk / древнюю Ишанапуру в Kampong Thom Province.",
+      "canonical_id": "geo_kh_0029"
+    },
+    {
+      "id": "kh:province:preah-sihanouk",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Преах-Сианук",
+      "name_local": "ព្រះសីហនុ",
+      "slug": "preah-sihanouk",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:koh-rong-islands"
+      ],
+      "legacy_region_names": [
+        "острова Сиамского залива / Ко-Ронг"
+      ],
+      "notes_ru": "Провинциальный parent для островов Ко-Ронг; морская/островная сущность будет детализироваться отдельно при покарточном QA.",
+      "canonical_id": "geo_kh_0030"
+    },
+    {
+      "id": "kh:province:banteay-meanchey",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Бантеаймеанчей",
+      "name_local": "បន្ទាយមានជ័យ",
+      "slug": "banteay-meanchey",
+      "parent_id": "country:kh",
+      "object_ids": [],
+      "notes_ru": "Banteay Chhmar находится в этой провинции; объект привязан ниже к подтверждённому району Thma Puok.",
+      "canonical_id": "geo_kh_0031"
+    },
+    {
+      "id": "kh:district:thma-puok",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Тхма-Пуок",
+      "name_local": "ថ្មពួក",
+      "slug": "thma-puok",
+      "parent_id": "kh:province:banteay-meanchey",
+      "object_ids": [
+        "kh:banteay-chhmar"
+      ],
+      "notes_ru": "UNESCO указывает Banteay Chhmar commune, Thma Puok District, Banteay Meanchey Province.",
+      "canonical_id": "geo_kh_0032"
+    },
+    {
+      "id": "kh:province:battambang",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Баттамбанг",
+      "name_local": "បាត់ដំបង",
+      "slug": "battambang",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:battambang-historic-shophouses"
+      ],
+      "legacy_region_names": [
+        "Баттамбанг"
+      ],
+      "canonical_id": "geo_kh_0033"
+    },
+    {
+      "id": "kh:province:koh-kong",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Кохконг",
+      "name_local": "កោះកុង",
+      "slug": "koh-kong",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:cardamom-mountains-community-routes"
+      ],
+      "legacy_region_names": [
+        "Кардамоновы горы / юго-запад"
+      ],
+      "notes_ru": "Объект использует Chi Phat как операционный вход; физическая система Кардамоновых гор вынесена отдельным параллельным узлом.",
+      "canonical_id": "geo_kh_0034"
+    },
+    {
+      "id": "kh:geographic-area:cardamom-mountains",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Кардамоновы горы",
+      "name_local": "ជួរភ្នំក្រវាញ",
+      "slug": "cardamom-mountains",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:cardamom-mountains-community-routes"
+      ],
+      "notes_ru": "Транс-провинциальная физико-географическая система; не кодируется как административный parent.",
+      "canonical_id": "geo_kh_0035"
+    },
+    {
+      "id": "kh:province:takeo",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Такео",
+      "name_local": "តាកែវ",
+      "slug": "takeo",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:angkor-borei-and-phnom-da"
+      ],
+      "legacy_region_names": [
+        "Такео / наследие нижнего Меконга"
+      ],
+      "notes_ru": "UNESCO помещает Angkor Borei and Phnom Da в Takeo Province.",
+      "canonical_id": "geo_kh_0036"
+    },
+    {
+      "id": "kh:province:kratie",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Кратьэх",
+      "name_local": "ក្រចេះ",
+      "slug": "kratie",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:kratie-kampi-irrawaddy-dolphins"
+      ],
+      "legacy_region_names": [
+        "Кратьэх / средний Меконг"
+      ],
+      "canonical_id": "geo_kh_0037"
+    },
+    {
+      "id": "kh:province:kampot",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Кампот",
+      "name_local": "កំពត",
+      "slug": "kampot",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:bokor-national-park-and-hill-station"
+      ],
+      "legacy_region_names": [
+        "Kampot / Бокор"
+      ],
+      "canonical_id": "geo_kh_0038"
+    },
+    {
+      "id": "kh:province:kandal",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Кандаль",
+      "name_local": "កណ្ដាល",
+      "slug": "kandal",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:oudong"
+      ],
+      "notes_ru": "Исправляет старую маршрутную привязку Oudong к Phnom Penh: административно исторический Удонг находится в Kandal Province.",
+      "canonical_id": "geo_kh_0039"
+    },
+    {
+      "id": "kh:geographic-area:tonle-sap",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Тонлесап",
+      "name_local": "ទន្លេសាប",
+      "slug": "tonle-sap",
+      "parent_id": "country:kh",
+      "object_ids": [
+        "kh:tonle-sap-biosphere-reserve"
+      ],
+      "legacy_region_names": [
+        "Тонлесап"
+      ],
+      "notes_ru": "Озеро и биосферный резерват охватывают несколько провинций; объект не следует искусственно подчинять одному провинциальному parent.",
+      "canonical_id": "geo_kh_0040"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://whc.unesco.org/en/list/668/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Angkor in Siem Reap Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/en/tentativelists/6457/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Beng Mealea village/commune in Svay Leu District, Siem Reap Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/en/tentativelists/6460/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Phnom Kulen in Siem Reap Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/en/news/2162",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Temple of Preah Vihear in Preah Vihear Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/document/205732",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Koh Ker in Preah Vihear Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/en/tentativelists/6462/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Preah Khan Kompong Svay in Sangkum Thmei commune, Preah Vihear Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1532/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Sambor Prei Kuk identity and World Heritage property"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/document/218031",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Sambor Prei Kuk in Kampong Thom Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/fr/listesindicatives/6456/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Banteay Chhmar commune, Thma Puok District, Banteay Meanchey Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/en/tentativelists/6455/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Angkor Borei and Phnom Da in Takeo Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://tourismcambodia.org/provinces/58/battambang",
+      "publisher": "Tourism Cambodia",
+      "used_for": [
+        "Battambang historic riverfront/shophouse geography"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://tourismcambodia.org/provinces/48/preah-sihanouk",
+      "publisher": "Tourism Cambodia",
+      "used_for": [
+        "Koh Rong in Preah Sihanouk provincial island geography"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.tourismcambodia.org/cbet_sites/index_view-destdetail-prv-9-att-319-lang-zh",
+      "publisher": "Tourism Cambodia",
+      "used_for": [
+        "Chi Phat in the Cardamom Mountains and route-access context"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://tourismcambodia.org/destinations/kratie/",
+      "publisher": "Tourism Cambodia",
+      "used_for": [
+        "Kampi dolphin site north of Kratie town"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://tourismcambodia.org/provinces/52/kampot",
+      "publisher": "Tourism Cambodia",
+      "used_for": [
+        "Bokor National Park in Kampot travel geography"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://tourismcambodia.org/provinces/",
+      "publisher": "Tourism Cambodia",
+      "used_for": [
+        "Oudong in Kandal Province"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://whc.unesco.org/en/activities/497/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Tonle Sap Biosphere Reserve as a distinct biosphere/physical-geography system"
+      ],
+      "checked_at": "2026-09-28"
+    }
+  ]
+}

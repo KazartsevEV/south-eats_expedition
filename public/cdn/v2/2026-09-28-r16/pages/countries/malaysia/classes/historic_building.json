@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.6.1",
+    "release_id": "2026-09-28-r16",
+    "page_type": "country_class",
+    "id": "country-class:my:historic_building"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "historic_building",
+    "label_ru": "Исторические здания и руины",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:built_heritage",
+    "page_path": "pages/countries/malaysia/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_building.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:ipoh-taiping-gerik",
+      "name": "Ipoh / Taiping / Gerik",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/ipoh-taiping-gerik.json"
+    },
+    {
+      "id": "my:region:perak-taiping-kuala-kangsar-belum",
+      "name": "Perak / Taiping / Kuala Kangsar / Belum",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/perak-taiping-kuala-kangsar-belum.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:kellie-s-castle",
+      "name": "Kellie's Castle",
+      "geography_ids": [
+        "country:my",
+        "my:hub:ipoh-taiping-gerik",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
+      "nearest_hub": "Ipoh / Taiping / Gerik",
+      "narrow": "Kellie's Castle — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/malaysia/objects/kellie-s-castle.json"
+    }
+  ]
+}

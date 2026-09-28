@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "schema_version": "2.10.2",
+    "release_id": "2026-09-28-r32",
+    "page_type": "country_class",
+    "id": "country-class:la:protected_area"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "protected_area",
+    "label_ru": "Заповедники и охраняемые территории",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:protected_ecosystems",
+    "page_path": "pages/countries/laos/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/protected_area.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:hub:luang-namtha",
+      "name": "Luang Namtha",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/luang-namtha.json"
+    },
+    {
+      "id": "la:hub:sam-neua-vieng-xai",
+      "name": "Sam Neua / Vieng Xai",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/sam-neua-vieng-xai.json"
+    },
+    {
+      "id": "la:region:khuapkhan-vengsai-nam-et",
+      "name": "Хуапхан / Вьенгсай / Нам-Эт",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/khuapkhan-vengsai-nam-et.json"
+    },
+    {
+      "id": "la:region:luangnamtkha-nam-kha",
+      "name": "Луангнамтха / Нам-Ха",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/luangnamtkha-nam-kha.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:nam-et-phou-louey-area",
+      "name": "Nam Et-Phou Louey area",
+      "geography_ids": [
+        "country:la",
+        "la:hub:sam-neua-vieng-xai",
+        "la:region:khuapkhan-vengsai-nam-et"
+      ],
+      "region_legacy": "Хуапхан / Вьенгсай / Нам-Эт",
+      "nearest_hub": "Sam Neua / Vieng Xai",
+      "narrow": "Нам-Эт — Пху-Луэй — один из крупнейших и наиболее биоразнообразных национальных парков Лаоса на стыке Хуапхан, Луангпхабанг и Сиангкхуанг. Туристический доступ сознательно организован как местное сообщество-основанный дикая природа туризм, чтобы часть дохода напрямую связывалась с охраной природы.",
+      "detail_path": "countries/laos/objects/nam-et-phou-louey-area.json"
+    },
+    {
+      "id": "la:nam-ha-national-protected-area",
+      "name": "Nam Ha National Protected Area",
+      "geography_ids": [
+        "country:la",
+        "la:hub:luang-namtha",
+        "la:region:luangnamtkha-nam-kha"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "nearest_hub": "Luang Namtha",
+      "narrow": "Нам-Ха — охраняемая горно-лесная зона вокруг Luang Namtha, где треккинг-схема строится вокруг леса и деревень Khmu, Akha, Lanten, Hmong, Tai Dam/Tai Lue и других групп. Важная часть модели — обязательный/организованный местный гид и местное сообщество ночёвки.",
+      "detail_path": "countries/laos/objects/nam-ha-national-protected-area.json"
+    }
+  ]
+}

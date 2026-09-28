@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schema_version": "2.10.2",
+    "release_id": "2026-09-28-r32",
+    "page_type": "geography",
+    "id": "my:hub:george-town-penang"
+  },
+  "identity": {
+    "name": "George Town / Penang",
+    "kind": "city_or_route_hub",
+    "slug": "george-town-penang",
+    "country_code": "MY"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:my",
+    "page_path": "pages/countries/malaysia.json"
+  },
+  "source_profile": {
+    "id": "my:hub:george-town-penang",
+    "kind": "city_or_route_hub",
+    "name": "George Town / Penang",
+    "slug": "george-town-penang"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/malaysia/classes/historic_city.json",
+          "filter": {
+            "geography_id": "my:hub:george-town-penang"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:george-town",
+      "name": "George Town",
+      "object_type": "historic_city",
+      "narrow": "Джорджтаун — живой портовый город Малаккского пролива, где в пешем радиусе соседствуют китайские клановые дома, мечети, индуистские храмы, перанаканская архитектура, торговые дома и жилые Clan Jetties.",
+      "detail_path": "countries/malaysia/objects/george-town.json"
+    }
+  ]
+}

@@ -235,6 +235,46 @@ def narrative_sections(story, source_refs):
 
 def access_options(logistics):
     logistics = logistics or {}
+
+    # Canonical-first path: preserve researched multimodal legs when the source
+    # already follows the expedition contract. Legacy mode notes remain a
+    # backward-compatible fallback for countries not migrated yet.
+    explicit = logistics.get("access_options")
+    if isinstance(explicit, list) and explicit:
+        out = []
+        for option in explicit:
+            if not isinstance(option, dict):
+                continue
+            legs = []
+            for leg in option.get("legs") or []:
+                if not isinstance(leg, dict) or not leg.get("mode"):
+                    continue
+                legs.append({
+                    "mode": leg.get("mode"),
+                    "distance_km": leg.get("distance_km"),
+                    "duration_min": leg.get("duration_min"),
+                    "surface": leg.get("surface"),
+                    "condition": leg.get("condition"),
+                    "seasonality": leg.get("seasonality"),
+                    "elevation_gain_m": leg.get("elevation_gain_m"),
+                    "elevation_loss_m": leg.get("elevation_loss_m"),
+                    "trailhead": leg.get("trailhead"),
+                    "navigation": leg.get("navigation"),
+                    "fords": leg.get("fords"),
+                    "notes": leg.get("notes"),
+                })
+            if legs:
+                out.append({
+                    "id": option.get("id"),
+                    "origin": option.get("origin") or option.get("origin_place_id"),
+                    "modes": option.get("modes") or list(dict.fromkeys(x["mode"] for x in legs)),
+                    "legs": legs,
+                    "source_refs": option.get("source_refs") or [],
+                    "checked_at": option.get("checked_at"),
+                })
+        if out:
+            return out
+
     raw_modes = logistics.get("modes") or {}
     mode_aliases = {
         "public_transport": "public_transport",
@@ -762,19 +802,21 @@ def build():
                     "checked_at": operations.get("last_verified"),
                 },
                 "access_options": access_options(logistics),
-                "water": {
-                    "summary": logistics.get("water"),
-                    "quality": "unknown",
-                    "last_reliable_source": None,
-                    "distance_m": None,
-                    "natural_sources": [],
-                    "source_refs": source_refs,
-                },
-                "supplies": None,
+                "water": (
+                    {
+                        "summary": (logistics.get("water_structured") or {}).get("summary") or logistics.get("water"),
+                        "quality": (logistics.get("water_structured") or {}).get("quality") or "unknown",
+                        "last_reliable_source": (logistics.get("water_structured") or {}).get("last_reliable_source"),
+                        "distance_m": (logistics.get("water_structured") or {}).get("distance_m"),
+                        "natural_sources": (logistics.get("water_structured") or {}).get("natural_sources") or [],
+                        "source_refs": list(dict.fromkeys(source_refs + list((logistics.get("water_structured") or {}).get("source_refs") or []))),
+                    }
+                ),
+                "supplies": logistics.get("supplies"),
                 "overnight": {
-                    "status": "unclear",
-                    "summary": logistics.get("overnight_and_camping"),
-                    "source_refs": source_refs,
+                    "status": (logistics.get("overnight_structured") or {}).get("status") or "unclear",
+                    "summary": (logistics.get("overnight_structured") or {}).get("summary") or logistics.get("overnight_and_camping"),
+                    "source_refs": list(dict.fromkeys(source_refs + list((logistics.get("overnight_structured") or {}).get("source_refs") or []))),
                 },
                 "lodging_ids": lodging_ids,
                 "rules": {

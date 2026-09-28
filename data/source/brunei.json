@@ -51,13 +51,13 @@
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "2.10.2",
+      "schema_target": "2.10.3",
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
       "policy": "WGS84/EPSG:4326; point elevation belongs to a specific GPS point (entrance/pier/trailhead/etc.); object_elevation separately describes the object itself above mean sea level and is required for elevation QA.",
       "objects_with_point_elevation": 16,
-      "objects_with_object_elevation": 11
+      "objects_with_object_elevation": 13
     },
     "elevation_provenance_upgrade": {
       "updated": "2026-09-28",
@@ -1746,6 +1746,24 @@
               "authority": "medium",
               "accessed": "2026-09-28",
               "notes": "Высота относится к опорной точке города Seria, используемой для широкого нефтяного культурного ландшафта."
+            },
+            "object_elevation": {
+              "representative_m": 6,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Seria elevation",
+                "publisher": "GeoNames via Mapcarta",
+                "url": "https://mapcarta.com/15986052",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "Высота относится к опорной точке города Seria, используемой для широкого нефтяного культурного ландшафта."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Репрезентативная высота нефтяного культурного ландшафта Seria по опорной точке города. Это характеристика низкой прибрежной равнины, а не полный min/max диапазон."
             }
           },
           "logistics": {
@@ -1992,6 +2010,24 @@
               "authority": "medium",
               "accessed": "2026-09-28",
               "notes": "Отметка относится к той же reference point Mukim Labi (4.38947, 114.4603), которая используется как primary_location для протяжённого объекта Labi interior."
+            },
+            "object_elevation": {
+              "representative_m": 103,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "approximate",
+              "source": {
+                "type": "map",
+                "title": "Mukim Labi elevation",
+                "publisher": "Mapcarta / GeoNames",
+                "url": "https://mapcarta.com/15986626",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "Отметка относится к той же reference point Mukim Labi (4.38947, 114.4603), которая используется как primary_location для протяжённого объекта Labi interior."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Репрезентативная высота внутреннего ландшафта Labi по опорной точке Mukim Labi. Это характерная отметка района, а не полный высотный диапазон."
             }
           },
           "logistics": {

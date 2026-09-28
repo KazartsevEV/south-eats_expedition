@@ -5,7 +5,7 @@
     "language": "ru",
     "last_updated": "2026-09-28",
     "purpose": "Expedition South East",
-    "data_model_version": "1.3",
+    "data_model_version": "1.5",
     "dynamic_fields": [
       "entry_forms",
       "visa",
@@ -20,7 +20,8 @@
       "travel.regions and object-level location profiles add practical spoken languages and currency; language lists are field-use profiles, not exhaustive census enumerations.",
       "Malaysia protected-area cards distinguish open urban destinations from permit-controlled Sabah/Sarawak/Perak wilderness; protected-area filming may require explicit permit.",
       "Object-level media.field_planning is editorial production guidance (gear/complexity/weather/audio/crowd), kept separate from sourced official operational rules.",
-      "v1.3: все 21 объектная карточка Malaysia расширена связной историко-культурной/географической аннотацией, этнографией/поверьями где подтверждены, транспортом по видам, пешим масштабом, водой, позицией по законной ночёвке/кемпингу, жильём, жалобами путешественников и объект-специфичным location-scouting по фотографиям; шаблонные универсальные формулировки заменены содержательными."
+      "v1.3: все 21 объектная карточка Malaysia расширена связной историко-культурной/географической аннотацией, этнографией/поверьями где подтверждены, транспортом по видам, пешим масштабом, водой, позицией по законной ночёвке/кемпингу, жильём, жалобами путешественников и объект-специфичным location-scouting по фотографиям; шаблонные универсальные формулировки заменены содержательными.",
+      "v1.5 migration: adds narrow, normalized tags, route_meta and locality linkage for canonical CDN build."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.3",
@@ -68,7 +69,7 @@
       "year": 2025,
       "poverty": {
         "metric": "World Bank $3.00/day (2021 PPP)",
-        "value_pct": 0.0,
+        "value_pct": 0,
         "year": 2021,
         "notes": "Последний отображаемый международно сопоставимый показатель; национальная относительная/абсолютная бедность рассчитывается иначе."
       }
@@ -144,11 +145,11 @@
       "Jan": 28.3,
       "Feb": 28.9,
       "Mar": 29.4,
-      "Apr": 30.0,
+      "Apr": 30,
       "May": 30.6,
       "Jun": 30.6,
-      "Jul": 30.0,
-      "Aug": 30.0,
+      "Jul": 30,
+      "Aug": 30,
       "Sep": 29.4,
       "Oct": 29.4,
       "Nov": 28.9,
@@ -245,7 +246,7 @@
       ],
       "typical_simple_meal_usd_range": [
         1.5,
-        5.0
+        5
       ]
     },
     "laws_and_prohibitions": [
@@ -855,6 +856,49 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Kuala Lumpur — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+        "tags": [
+          "urban",
+          "architecture",
+          "cityscape",
+          "culture",
+          "class_major",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail"
+        ],
+        "route_meta": {
+          "region_ref": "Kuala Lumpur / Klang Valley",
+          "locality_ref": "Kuala Lumpur",
+          "typical_visit_hours": [
+            1.5,
+            4
+          ],
+          "transport_modes": {
+            "public_transport": "MRT/LRT/Monorail и KTM закрывают основные туристические оси; для Merdeka Square–Pasar Seni–Chinatown удобнее пешком, для KLCC/Bukit Bintang — MRT/LRT/Monorail.",
+            "taxi_ridehail": "Grab удобен между несвязанными рельсом районами, но в 17:00–20:00 может проигрывать MRT по времени.",
+            "moped": "Технически возможен, но для центра хуже общественного транспорта: сложная развязочная сеть, парковка и ливни.",
+            "walking": "Историческое ядро Merdeka Square–Central Market–Petaling Street — примерно 2–4 км; KLCC добавляет ещё несколько километров."
+          },
+          "walking": "Историческое ядро Merdeka Square–Central Market–Petaling Street — примерно 2–4 км; KLCC добавляет ещё несколько километров.",
+          "water": "В центре магазины/кафе каждые несколько сотен метров; на уличную съёмку всё равно носить воду из-за жары.",
+          "overnight_and_camping": "Палатку в центральных парках/под эстакадами не планировать; дешёвые комнаты и капсулы многочисленны.",
+          "permit_or_guide": null,
+          "best_period": "Круглый год; для длинной уличной съёмки удобнее сухое утро после ночного дождя.",
+          "current_status": null,
+          "main_risks": [
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Ровный город, но жара, лестницы/переходы метро и разорванная автомагистралями пешеходная сеть утомляют сильнее расстояния.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется по умолчанию; местного специалиста подключать при регулируемом доступе, переговорах с общиной, сложной навигации или ради углублённого контекста"
+          }
         }
       },
       {
@@ -1074,6 +1118,51 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "George Town — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "tags": [
+          "culture",
+          "architecture",
+          "class_major",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Penang / George Town",
+          "locality_ref": "George Town / Penang",
+          "typical_visit_hours": [
+            4,
+            12
+          ],
+          "transport_modes": {
+            "public_transport": "Rapid Penang связывает ferry terminal/Komtar с островом; внутри UNESCO-core автобус обычно медленнее пешего маршрута.",
+            "taxi_ridehail": "Grab удобен на Penang Hill/аэропорт/дальние районы; в heritage core часто нет смысла.",
+            "moped": "Удобен вне ядра, но внутри старого города парковка и односторонние улицы мешают.",
+            "walking": "Armenian Street–Harmony Street–Little India–Clan Jetties — около 3–5 км полноценного круга."
+          },
+          "walking": "Armenian Street–Harmony Street–Little India–Clan Jetties — около 3–5 км полноценного круга.",
+          "water": "Кофейни, minimart и hawker centres постоянно доступны; до 07:00 выбор уже уже.",
+          "overnight_and_camping": "Ночёвка на clan jetties/в храмах без приглашения неприемлема; бюджетных guesthouse в core много.",
+          "permit_or_guide": "No guide required for public streets; a licensed/heritage guide substantially improves architecture and community context.",
+          "best_period": "Декабрь–февраль обычно суше; для street/documentary важнее ранний старт до туристических групп.",
+          "current_status": null,
+          "main_risks": [
+            "жара",
+            "дорожное движение",
+            "обычные мелкие кражи в людных местах",
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полный день",
+            "terrain_and_movement": "Историческое ядро плоское, но бордюры, узкие галереи и припаркованные мотоциклы мешают коляскам/тяжёлому штативу.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -1274,6 +1363,51 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Melaka — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "tags": [
+          "culture",
+          "architecture",
+          "class_major",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Melaka",
+          "locality_ref": "Melaka City",
+          "typical_visit_hours": [
+            5,
+            12
+          ],
+          "transport_modes": {
+            "public_transport": "Из Kuala Lumpur удобны междугородние автобусы до Melaka Sentral; в core — local bus/Grab, но сам центр пеший.",
+            "taxi_ridehail": "Grab полезен от Melaka Sentral и к Portuguese Settlement; в Jonker core часто медленнее пешком.",
+            "moped": "Возможен, но weekend crowds и односторонние улицы снижают смысл.",
+            "walking": "Dutch Square–St Paul–Jonker–river loop около 3–4 км."
+          },
+          "walking": "Dutch Square–St Paul–Jonker–river loop около 3–4 км.",
+          "water": "Магазины/кафе постоянно в пределах нескольких сотен метров.",
+          "overnight_and_camping": "Палатка на riverfront/в историческом центре неразумна; guesthouse много.",
+          "permit_or_guide": "No guide needed for public realm; use a heritage guide if filming Portuguese/Dutch/Peranakan layers in depth.",
+          "best_period": "Более сухое окно удобно, но для съёмки важнее будний рассвет: weekend crowd сильнее влияет на материал, чем сезон.",
+          "current_status": null,
+          "main_risks": [
+            "жара",
+            "дорожное движение",
+            "обычные мелкие кражи в людных местах",
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полный день",
+            "terrain_and_movement": "Ядро компактное и плоское; St Paul Hill добавляет подъём и лестницы.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -1507,6 +1641,56 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Mount Kinabalu — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+        "tags": [
+          "nature",
+          "mountain",
+          "hiking",
+          "biodiversity",
+          "unesco",
+          "wildlife",
+          "class_major",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Sabah highlands / Kinabalu",
+          "locality_ref": "Kota Kinabalu / Kundasang",
+          "typical_visit_hours": [
+            30,
+            42
+          ],
+          "transport_modes": {
+            "public_transport": "Минивэны/автобусы Kota Kinabalu–Ranau/Kundasang могут высадить у park road, но для точного времени регистрации удобнее заранее заказанный transfer.",
+            "taxi_ridehail": "Из Kota Kinabalu дорого; практичнее shared/private transfer с ночёвкой Kundasang/Kinabalu Park.",
+            "moped": "До парка возможен, но горная дорога, туман и дождь делают его плохим вариантом перед/после 2-дневного climb.",
+            "walking": "Timpohon–Panalaban примерно 6 км подъёма; summit section добавляет ещё около 2.5–3 км в одну сторону."
+          },
+          "walking": "Timpohon–Panalaban примерно 6 км подъёма; summit section добавляет ещё около 2.5–3 км в одну сторону.",
+          "water": "На маршруте есть контролируемые water points/инфраструктура, но личную воду не заменять полностью ожиданием источников; точную доступность подтверждать у guide.",
+          "overnight_and_camping": "Самовольный лагерь запрещён; summit climb включает обязательную/забронированную ночёвку Panalaban, внизу — lodge/hostel.",
+          "permit_or_guide": "Sabah Parks requires registered mountain guide; standard climb 2D1N, with 3 days more comfortable for acclimatisation.",
+          "best_period": "Sabah Parks 2026 planner shows February as best balance of lower rainfall tendency and lower historical demand; April/August also lower-rainfall options but busier.",
+          "current_status": null,
+          "main_risks": [
+            "погодные изменения",
+            "скользкие/неровные тропы",
+            "тепловая нагрузка или обезвоживание",
+            "ограниченная быстрая медицинская помощь в удалённых зонах",
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "многодневный/составной маршрут",
+            "terrain_and_movement": "Проверить ступени, грунт, лодочные посадки и доступность на официальной странице; природные и археологические объекты часто не безбарьерны.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -1751,6 +1935,57 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Gunung Mulu National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+        "tags": [
+          "nature",
+          "landscape",
+          "wildlife",
+          "class_major",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Mulu / interior Sarawak",
+          "locality_ref": "Mulu",
+          "typical_visit_hours": [
+            4,
+            8
+          ],
+          "transport_modes": {
+            "public_transport": "Практический доступ — перелёт Miri–Mulu; наземного регулярного шоссе до остальной сети нет.",
+            "taxi_ridehail": "Из Mulu airport до HQ короткий local transfer; обычный городской Grab не базовая стратегия.",
+            "moped": "Не нужен для park core; дальние маршруты идут пешком/лодкой с guide.",
+            "walking": "HQ–Deer Cave/ Lang Cave — несколько км по boardwalk; Pinnacles — многодневный маршрут с лодкой и camp."
+          },
+          "walking": "HQ–Deer Cave/ Lang Cave — несколько км по boardwalk; Pinnacles — многодневный маршрут с лодкой и camp.",
+          "water": "У HQ есть вода/кафе; на дальние треки воду несут и пополняют только по указаниям guide/camp.",
+          "overnight_and_camping": "Разрешённые варианты — park accommodation, nearby homestay, Camp 5 на соответствующем маршруте; произвольный лесной лагерь не планировать.",
+          "permit_or_guide": "Park guide required for caves/canopy and mandatory for major treks such as Pinnacles, Mount Mulu summit and Headhunters Trail.",
+          "best_period": "Любой месяц требует резерва; для Deer Cave bat exodus лучше сухой вечер, для rainforest дождь сам по себе не проблема.",
+          "current_status": null,
+          "main_risks": [
+            "погодные изменения",
+            "скользкие/неровные тропы",
+            "тепловая нагрузка или обезвоживание",
+            "ограниченная быстрая медицинская помощь в удалённых зонах",
+            "обычная осторожность с ценностями и транспортом",
+            "flash rise in cave/river water",
+            "slippery cave terrain",
+            "remote medical assistance",
+            "flight/weather disruption"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полный день",
+            "terrain_and_movement": "Boardwalk доступнее лесных треков; Pinnacles/adventure caves требуют хорошей физической формы, лестниц/верёвочных участков и guide.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -1962,6 +2197,51 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Langkawi — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+        "tags": [
+          "nature",
+          "island",
+          "beaches",
+          "geopark",
+          "culture",
+          "class_major",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Langkawi / northwest coast",
+          "locality_ref": "Langkawi",
+          "typical_visit_hours": [
+            24,
+            120
+          ],
+          "transport_modes": {
+            "public_transport": "Полноценной островной автобусной сети для достопримечательностей нет.",
+            "taxi_ridehail": "Grab/такси работают на населённой части острова; Kilim/островные маршруты требуют boat operator.",
+            "moped": "Один из самых практичных способов для сухопутных точек; после ливня сельские дороги скользкие.",
+            "walking": "Отдельные beaches/urban strips ходятся пешком, но остров целиком — нет."
+          },
+          "walking": "Отдельные beaches/urban strips ходятся пешком, но остров целиком — нет.",
+          "water": "На популярных пляжах и у jetty доступна; в boat tour брать свою воду, не рассчитывать на остановки.",
+          "overnight_and_camping": "Палатки на популярных beaches без разрешения не планировать; использовать hostel/chalet/campsite с явным допуском.",
+          "permit_or_guide": "Guide/operator optional for general island travel; strongly useful/required for mangrove boat and specific marine/geo routes.",
+          "best_period": "Декабрь–март обычно суше; для mangrove и boat work выбирать день с умеренным ветром, а не только без дождя.",
+          "current_status": null,
+          "main_risks": [
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "многодневный/составной маршрут",
+            "terrain_and_movement": "Большинство ключевых точек разнесено по острову; пеший формат годится только для отдельных beach/urban clusters.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -2182,6 +2462,57 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Perhentian islands — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+        "tags": [
+          "nature",
+          "landscape",
+          "marine",
+          "adventure",
+          "class_major",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Perhentian / east coast",
+          "locality_ref": "Kuala Besut",
+          "typical_visit_hours": [
+            48,
+            168
+          ],
+          "transport_modes": {
+            "public_transport": "Автобус/такси до Kuala Besut, затем speedboat.",
+            "taxi_ridehail": "На островах машин почти нет; трансферы по воде.",
+            "moped": "Практически не нужен/не применим на туристических островах.",
+            "walking": "На Kecil есть jungle paths между beach clusters; 1–4 км в зависимости от пары пляжей."
+          },
+          "walking": "На Kecil есть jungle paths между beach clusters; 1–4 км в зависимости от пары пляжей.",
+          "water": "Питьевая вода продаётся в поселении/resorts; для пеших переходов брать с собой.",
+          "overnight_and_camping": "Использовать chalet/resort/campsite только там, где объект размещения явно это разрешает; самовольный beach camp не планировать.",
+          "permit_or_guide": "No guide for ordinary beach stay; licensed dive/snorkel/boat operator for offshore sites.",
+          "best_period": "Март–октябрь — основной рабочий сезон; в северо-восточный муссон часть жилья и лодок закрывается полностью.",
+          "current_status": null,
+          "main_risks": [
+            "погодные изменения",
+            "скользкие/неровные тропы",
+            "тепловая нагрузка или обезвоживание",
+            "ограниченная быстрая медицинская помощь в удалённых зонах",
+            "волна/течения",
+            "лодочная безопасность",
+            "солнце и обезвоживание",
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "многодневный/составной маршрут",
+            "terrain_and_movement": "Пляжные тропы неровные, с корнями и крутыми участками; багаж между jetty и chalet иногда несут вручную/лодкой.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -2385,6 +2716,49 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Taiping — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+        "tags": [
+          "architecture",
+          "colonial_heritage",
+          "urban",
+          "nature",
+          "class_architecture_history",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail"
+        ],
+        "route_meta": {
+          "region_ref": "Perak / Taiping / Kuala Kangsar / Belum",
+          "locality_ref": "Ipoh / Taiping / Gerik",
+          "typical_visit_hours": [
+            1.5,
+            4
+          ],
+          "transport_modes": {
+            "public_transport": "ETS/Komuter до Taiping, затем local bus/Grab.",
+            "taxi_ridehail": "Grab дешёв и удобен между station, Lake Gardens и museum.",
+            "moped": "Удобен для outskirts, но в дождь преимущество исчезает.",
+            "walking": "Station–old town–Lake Gardens около 4–6 км кругом."
+          },
+          "walking": "Station–old town–Lake Gardens около 4–6 км кругом.",
+          "water": "Магазины/кафе рядом с old town и gardens.",
+          "overnight_and_camping": "В Lake Gardens палатку не планировать; гостиницы рядом дешёвые.",
+          "permit_or_guide": null,
+          "best_period": "Taiping дождлив круглый год; для визуала это преимущество, поэтому нужен не “самый сухой месяц”, а раннее окно до дневного ливня.",
+          "current_status": null,
+          "main_risks": [
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Город в основном плоский; садовые дорожки удобны, но мокрые покрытия скользкие.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется по умолчанию; местного специалиста подключать при регулируемом доступе, переговорах с общиной, сложной навигации или ради углублённого контекста"
+          }
         }
       },
       {
@@ -2591,6 +2965,50 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Kuala Kangsar — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "tags": [
+          "culture",
+          "architecture",
+          "class_architecture_culture",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail"
+        ],
+        "route_meta": {
+          "region_ref": "Perak / Taiping / Kuala Kangsar / Belum",
+          "locality_ref": "Ipoh / Taiping / Gerik",
+          "typical_visit_hours": [
+            1.5,
+            4
+          ],
+          "transport_modes": {
+            "public_transport": "ETS до Kuala Kangsar, далее Grab/такси.",
+            "taxi_ridehail": "Лучший способ связать station, Ubudiah Mosque и royal precinct.",
+            "moped": "Удобен для ремесленных деревень за городом.",
+            "walking": "Royal precinct около 2–4 км; от станции потребуется дополнительный переход/подброска."
+          },
+          "walking": "Royal precinct около 2–4 км; от станции потребуется дополнительный переход/подброска.",
+          "water": "В городе доступна легко; в royal precinct лучше иметь бутылку.",
+          "overnight_and_camping": "Ночёвка на mosque/palace grounds исключена; homestay/hotel в городе.",
+          "permit_or_guide": null,
+          "best_period": "Утро/поздний день круглый год; дождь полезен для драматичного неба над Ubudiah Mosque.",
+          "current_status": null,
+          "main_risks": [
+            "жара",
+            "дорожное движение",
+            "обычные мелкие кражи в людных местах",
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Royal precinct ходится пешком, но жара и расстояние от станции делают Grab практичнее.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется по умолчанию; местного специалиста подключать при регулируемом доступе, переговорах с общиной, сложной навигации или ради углублённого контекста"
+          }
         }
       },
       {
@@ -2810,6 +3228,50 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Belum-Temengor — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+        "tags": [
+          "nature",
+          "rainforest",
+          "wildlife",
+          "conservation",
+          "class_nature",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Perak / Taiping / Kuala Kangsar / Belum",
+          "locality_ref": "Ipoh / Taiping / Gerik",
+          "typical_visit_hours": [
+            1.5,
+            4
+          ],
+          "transport_modes": {
+            "public_transport": "Bus до Gerik; далее такси/transfer к Pulau Banding.",
+            "taxi_ridehail": "Grab ненадёжен для возврата из Pulau Banding; лучше заранее водитель/operator.",
+            "moped": "До Banding возможен, но внутри Royal Belum всё равно нужна лодка/permit.",
+            "walking": "Основные forest walks стартуют после boat drop; длина определяется конкретным permitted itinerary."
+          },
+          "walking": "Основные forest walks стартуют после boat drop; длина определяется конкретным permitted itinerary.",
+          "water": "На boat/houseboat запас питьевой воды должен быть организован оператором; сырую озёрную/речную воду не считать питьевой.",
+          "overnight_and_camping": "Разумные варианты — houseboat/approved camp/operator lodge; самовольный лесной лагерь внутри protected area не планировать.",
+          "permit_or_guide": "Permit through Perak State Parks Royal Belum Information & Permit Centre; use authorized operator/guide.",
+          "best_period": "Более сухое окно облегчает forest trails, но рассветный туман и краткий дождь дают лучший визуальный материал на озере.",
+          "current_status": null,
+          "main_risks": [
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Boat transfers обязательны для большинства маршрутов; forest trails влажные, с корнями и пиявками.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -3041,6 +3503,55 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Bario / Kelabit Highlands — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+        "tags": [
+          "nature",
+          "highlands",
+          "kelabit_culture",
+          "trekking",
+          "agriculture",
+          "class_culture_nature",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Bario / Kelabit Highlands",
+          "locality_ref": "Bario / Miri",
+          "typical_visit_hours": [
+            48,
+            120
+          ],
+          "transport_modes": {
+            "public_transport": "Основной доступ — MASwings/региональный малый самолёт из Miri; расписание и багаж ограничены.",
+            "taxi_ridehail": "Нет обычного ride-hailing; airport pickup организует homestay/4WD.",
+            "moped": "Не базовый вариант; грунтовые дороги и river crossings зависят от погоды.",
+            "walking": "Bario core и paddies реально ходить пешком; отдельные longhouse/salt springs — несколько км или 4WD."
+          },
+          "walking": "Bario core и paddies реально ходить пешком; отдельные longhouse/salt springs — несколько км или 4WD.",
+          "water": "В homestay есть бытовая вода; на treks питьевой запас/фильтрацию согласовывать с guide.",
+          "overnight_and_camping": "Лучший и культурно корректный вариант — зарегистрированный homestay/longhouse; camping только по договорённости с host/землевладельцем.",
+          "permit_or_guide": "No single entry permit for Bario public village area; arrange homestay/local guide for longhouses, farms and trails and obtain community consent.",
+          "best_period": "Более сухие месяцы упрощают 4WD/treks, но авиарейс остаётся погодозависимым круглый год.",
+          "current_status": null,
+          "main_risks": [
+            "погодные изменения",
+            "скользкие/неровные тропы",
+            "тепловая нагрузка или обезвоживание",
+            "ограниченная быстрая медицинская помощь в удалённых зонах",
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "многодневный/составной маршрут",
+            "terrain_and_movement": "В деревнях ходится легко; дальние треки и дороги могут быть грязными и без твёрдого покрытия.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -3240,6 +3751,53 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Danum Valley Conservation Area — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+        "tags": [
+          "nature",
+          "landscape",
+          "wildlife",
+          "class_nature_wildlife",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Sabah east coast / Danum / Kinabatangan",
+          "locality_ref": "Sandakan / Lahad Datu",
+          "typical_visit_hours": [
+            48,
+            120
+          ],
+          "transport_modes": {
+            "public_transport": "До Lahad Datu самолёт/автобус; дальше только заранее зарегистрированный transfer/vehicle.",
+            "taxi_ridehail": "Grab не является способом въезда в conservation area.",
+            "moped": "Не допускать как самостоятельный last-mile.",
+            "walking": "Треки только от research/lodge bases и по approved trails с guide."
+          },
+          "walking": "Треки только от research/lodge bases и по approved trails с guide.",
+          "water": "Питьевая вода в lodge/studies centre; на field walks выдача/перенос по плану guide.",
+          "overnight_and_camping": "Только разрешённое accommodation/field camp по программе; свободный camping запрещён.",
+          "permit_or_guide": "Prior permission required; guided treks/night drives/birding arranged through DVSC or lodge.",
+          "best_period": "Wildlife снимается круглый год; практичнее иметь 3+ ночи, чтобы пережить один неудачный дождевой день.",
+          "current_status": null,
+          "main_risks": [
+            "погодные изменения",
+            "скользкие/неровные тропы",
+            "тепловая нагрузка или обезвоживание",
+            "ограниченная быстрая медицинская помощь в удалённых зонах",
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "многодневный/составной маршрут",
+            "terrain_and_movement": "Тропы влажные, корни/пиявки постоянны; canopy structures и ночные маршруты требуют guide.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -3455,6 +4013,54 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Kinabatangan River — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+        "tags": [
+          "nature",
+          "landscape",
+          "wildlife",
+          "class_nature_wildlife",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Sabah east coast / Danum / Kinabatangan",
+          "locality_ref": "Sandakan / Lahad Datu",
+          "typical_visit_hours": [
+            48,
+            96
+          ],
+          "transport_modes": {
+            "public_transport": "Sandakan–Sukau/Bilit на minivan/bus/transfer; дальше wildlife routes — лодкой.",
+            "taxi_ridehail": "До Sukau лучше prebooked transfer; Grab обратно ненадёжен.",
+            "moped": "Дорога до Sukau возможна, но wildlife program всё равно лодочный.",
+            "walking": "В villages/lodge boardwalks немного; ключевой маршрут проходит по воде."
+          },
+          "walking": "В villages/lodge boardwalks немного; ключевой маршрут проходит по воде.",
+          "water": "В lodges/homestays есть питьевая вода; на cruise брать бутылку.",
+          "overnight_and_camping": "Ночёвка в Sukau/Bilit homestay/lodge; wild riverbank camping не планировать из-за crocodiles, private land и flood risk.",
+          "permit_or_guide": "Book lodge/local operator package for boat and guided wildlife viewing. Sabah Tourism recommends at least ~3 days for better wildlife chances.",
+          "best_period": "Круглый год, но уровень воды меняет доступ к tributaries/oxbow lakes; для съёмки планировать несколько dawn/dusk cruises.",
+          "current_status": null,
+          "main_risks": [
+            "saltwater crocodiles",
+            "boat safety",
+            "mosquitoes/heat/humidity",
+            "slippery trails",
+            "wild elephants/primates — observe from guide-approved distance",
+            "flood/high-water conditions"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "многодневный/составной маршрут",
+            "terrain_and_movement": "Основная активность проходит в лодке; посадка на низком jetty может быть неудобна при высоком/низком уровне воды.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -3712,6 +4318,57 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Niah National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+        "tags": [
+          "nature",
+          "landscape",
+          "wildlife",
+          "class_nature_archaeology",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Sarawak / Kuching / Niah",
+          "locality_ref": "Kuching / Miri depending object",
+          "typical_visit_hours": [
+            4,
+            8
+          ],
+          "transport_modes": {
+            "public_transport": "Из Miri/Niah road transfer до park HQ; от HQ маршрут пеший.",
+            "taxi_ridehail": "Из Miri слишком далеко для обычного спонтанного Grab-return; лучше prebooked driver/bus.",
+            "moped": "Возможен по дороге, но длинный дождливый road leg не лучший вариант с техникой.",
+            "walking": "HQ–Great Cave–Painted Cave обычно несколько часов и много километров boardwalk/trail."
+          },
+          "walking": "HQ–Great Cave–Painted Cave обычно несколько часов и много километров boardwalk/trail.",
+          "water": "В visitor area есть базовые сервисы; в пещерный маршрут воду брать с собой.",
+          "overnight_and_camping": "Официальный hostel/chalet/camping у visitor centre — нормальный вариант; внутри caves ночёвка запрещена.",
+          "permit_or_guide": "Проверить park entry/permit и необходимость guide; для удалённых маршрутов заранее бронировать.",
+          "best_period": "Март–сентябрь: более сухой период и удобнее тропы; ноябрь–февраль влажнее.",
+          "current_status": "open",
+          "main_risks": [
+            "погодные изменения",
+            "скользкие/неровные тропы",
+            "тепловая нагрузка или обезвоживание",
+            "ограниченная быстрая медицинская помощь в удалённых зонах",
+            "обычная осторожность с ценностями и транспортом",
+            "dark/slippery caves",
+            "crocodile risk in river",
+            "heat/humidity",
+            "remote trail sections"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полный день",
+            "terrain_and_movement": "Проверить ступени, грунт, лодочные посадки и доступность на официальной странице; природные и археологические объекты часто не безбарьерны.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -3919,6 +4576,50 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Kellie's Castle — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+        "tags": [
+          "architecture",
+          "colonial_heritage",
+          "ruins",
+          "history",
+          "class_architecture_history",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Perak / Taiping / Kuala Kangsar / Belum",
+          "locality_ref": "Ipoh / Taiping / Gerik",
+          "typical_visit_hours": [
+            1,
+            2
+          ],
+          "transport_modes": {
+            "public_transport": "Прямого удобного общественного транспорта мало; из Ipoh/Batu Gajah лучше taxi/Grab.",
+            "taxi_ridehail": "Grab туда возможен; возврат лучше не оставлять на поздний час.",
+            "moped": "Простой rural road approach.",
+            "walking": "Внутри объекта 1–2 км максимум с лестницами."
+          },
+          "walking": "Внутри объекта 1–2 км максимум с лестницами.",
+          "water": "Киоски/visitor services у входа; взять бутылку в жару.",
+          "overnight_and_camping": "Ночёвка/палатка на территории не допускается; база Ipoh/Batu Gajah.",
+          "permit_or_guide": "Ordinary self-guided visitor access; special/commercial filming should be cleared with site management.",
+          "best_period": "Утро или поздний день круглый год; грозовые облака визуально сильнее синего полудня.",
+          "current_status": null,
+          "main_risks": [
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Много лестниц, неровные старые поверхности и открытые верхние площадки.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -4119,6 +4820,50 @@
             "security"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Kuching old town and waterfront — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "tags": [
+          "culture",
+          "architecture",
+          "class_architecture_culture",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail"
+        ],
+        "route_meta": {
+          "region_ref": "Sarawak / Kuching / Niah",
+          "locality_ref": "Kuching / Miri depending object",
+          "typical_visit_hours": [
+            2,
+            5
+          ],
+          "transport_modes": {
+            "public_transport": "Городские автобусы есть, но heritage core компактнее пешком.",
+            "taxi_ridehail": "Grab удобен из аэропорта и к дальним музеям.",
+            "moped": "Не нужен для waterfront core.",
+            "walking": "Waterfront–Main Bazaar–Carpenter Street–Padungan около 4–6 км."
+          },
+          "walking": "Waterfront–Main Bazaar–Carpenter Street–Padungan около 4–6 км.",
+          "water": "Магазины/кафе постоянно рядом.",
+          "overnight_and_camping": "Никакого camping на waterfront; дешёвые lodge в центре.",
+          "permit_or_guide": null,
+          "best_period": "Более сухие месяцы удобнее, но лучший городской материал часто получается сразу после ливня.",
+          "current_status": null,
+          "main_risks": [
+            "жара",
+            "дорожное движение",
+            "обычные мелкие кражи в людных местах",
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Waterfront плоский и доступный; старые shophouse имеют ступени и узкие five-foot ways.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется по умолчанию; местного специалиста подключать при регулируемом доступе, переговорах с общиной, сложной навигации или ради углублённого контекста"
+          }
         }
       },
       {
@@ -4320,6 +5065,53 @@
             "filming/drone"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Один из ключевых доисторических ландшафтов ЮВА: почти двухмиллионная последовательность человеческого присутствия, Perak Man, палеолитические мастерские, пещеры и геология долины.",
+        "tags": [
+          "archaeology",
+          "prehistoric_heritage",
+          "caves",
+          "geology",
+          "unesco",
+          "geopark",
+          "nature",
+          "class_archaeology_unesco_geopark",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Perak / Taiping / Kuala Kangsar / Belum",
+          "locality_ref": "Lenggong / Kuala Kangsar / Ipoh",
+          "typical_visit_hours": [
+            4,
+            8
+          ],
+          "transport_modes": {
+            "public_transport": "ETS/bus до Kuala Kangsar/Ipoh, затем road transfer; внутри valley общественный транспорт слабый.",
+            "taxi_ridehail": "Prebooked driver лучше Grab для удалённых caves.",
+            "moped": "Удобен между villages и gallery при сухой погоде.",
+            "walking": "Отдельные sites требуют коротких/средних trail sections; весь serial property пешком не обходится."
+          },
+          "walking": "Отдельные sites требуют коротких/средних trail sections; весь serial property пешком не обходится.",
+          "water": "В Lenggong town доступна; на cave/site field trip брать 1–2 л.",
+          "overnight_and_camping": "Homestay в Lenggong; camping только на согласованной частной/разрешённой площадке, не на archaeology site.",
+          "permit_or_guide": "Tourism Malaysia прямо указывает, что Gua Kajang посещается с permit. Для археологических cave-sites разумно заранее организовывать local geoguide.",
+          "best_period": "Круглый год с резервом под ливень; cave/field sites лучше в устойчивое сухое окно.",
+          "current_status": "открытый серийный ландшафт; для части участков требуется разрешение",
+          "main_risks": [
+            "обычная осторожность с ценностями и транспортом"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полный день",
+            "terrain_and_movement": "Пещеры и археологические участки неровные/влажные; галерея существенно доступнее полевых sites.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -4543,6 +5335,55 @@
             "filming/drone"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Один из ключевых oceanic dive sites Борнео: steep reef walls, turtles, pelagic fish и высокая подводная медиапригодность при строгом permit regime.",
+        "tags": [
+          "nature",
+          "wildlife",
+          "marine",
+          "reef",
+          "diving",
+          "class_expanded",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Semporna / Sipadan / east Sabah",
+          "locality_ref": "Semporna",
+          "typical_visit_hours": [
+            8,
+            10
+          ],
+          "transport_modes": {
+            "public_transport": "До Semporna bus/van из Tawau; дальше только зарегистрированный dive operator.",
+            "taxi_ridehail": "Grab/driver до Semporna jetty; остров — speedboat.",
+            "moped": "Только городской участок; к острову не относится.",
+            "walking": "На самом острове только короткие park/jetty movements; основной маршрут под водой."
+          },
+          "walking": "На самом острове только короткие park/jetty movements; основной маршрут под водой.",
+          "water": "Питьевую воду предоставляет/везёт оператор; на острове не рассчитывать на retail infrastructure.",
+          "overnight_and_camping": "На Sipadan размещение закрыто; ночевать в Semporna/Mabul/Kapalai и др. по правилам оператора.",
+          "permit_or_guide": "Обязательны permit и registered operator; выдача разрешений остаётся на усмотрение Sabah Parks.",
+          "best_period": "Дайв-поездки планировать по permit availability, sea state и текущим условиям оператора.",
+          "current_status": "открыт; динамические условия перепроверять",
+          "main_risks": [
+            "дайвинг/декомпрессионные риски",
+            "течения",
+            "лодка/море",
+            "ограниченный permit",
+            "east-Sabah security context"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полный день",
+            "terrain_and_movement": "На самом острове только короткие park/jetty movements; основной маршрут под водой.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -4744,6 +5585,53 @@
             "filming/drone"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Живой Rungus longhouse с коллективной архитектурой, bead/gong traditions и возможностью ночёвки — сильный контрапункт городскому Sabah.",
+        "tags": [
+          "culture",
+          "architecture",
+          "living_heritage",
+          "crafts",
+          "class_expanded",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Kudat / Rungus north Sabah",
+          "locality_ref": "Kudat / Kota Kinabalu",
+          "typical_visit_hours": [
+            4,
+            30
+          ],
+          "transport_modes": {
+            "public_transport": "До Kudat bus/minivan; дальше local transfer по предварительной договорённости.",
+            "taxi_ridehail": "Из Kota Kinabalu обычный Grab нерационален; driver/host transfer.",
+            "moped": "Возможен для опытного водителя, но 2.5+ часа в одну сторону и ливни делают его не лучшим вариантом.",
+            "walking": "В самой деревне всё пешком; last-mile road drive."
+          },
+          "walking": "В самой деревне всё пешком; last-mile road drive.",
+          "water": "У homestay бытовая/питьевая вода; на сельскую прогулку иметь бутылку.",
+          "overnight_and_camping": "Ночёвка в longhouse только по prior arrangement; самовольная палатка на village land неприемлема.",
+          "permit_or_guide": "Prior arrangements required; Sabah Tourism рекомендует ночёвку 1–2 ночи для полного погружения.",
+          "best_period": "Круглый год, но сухие окна удобнее для деревень и дорог.",
+          "current_status": "открыт; динамические условия перепроверять",
+          "main_risks": [
+            "сельская дорога",
+            "жара/ливни",
+            "съёмка частной жизни",
+            "культурный этикет"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "многодневный/составной маршрут",
+            "terrain_and_movement": "Rural site; базовые facilities есть, но не ожидать городской accessibility.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
       },
       {
@@ -4956,6 +5844,54 @@
             "filming/drone"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Монументальная Hindu cave-temple композиция в известняковом массиве с 272 цветными ступенями и 43-метровым Murugan — один из самых сильных архитектурно-культурных кадров Klang V…",
+        "tags": [
+          "culture",
+          "religion",
+          "architecture",
+          "cave",
+          "festival",
+          "class_expanded",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail"
+        ],
+        "route_meta": {
+          "region_ref": "Kuala Lumpur / Klang Valley",
+          "locality_ref": "Kuala Lumpur / Gombak",
+          "typical_visit_hours": [
+            2,
+            4
+          ],
+          "transport_modes": {
+            "public_transport": "KTM Komuter прямо до Batu Caves station; от платформы около 5 минут пешком.",
+            "taxi_ridehail": "Grab из центра удобен вне часа пик, но KTM предсказуемее.",
+            "moped": "Возможен, parking у комплекса.",
+            "walking": "272 ступени плюс 1–2 км внутри/вокруг комплекса."
+          },
+          "walking": "272 ступени плюс 1–2 км внутри/вокруг комплекса.",
+          "water": "Киоски/магазины у подножия; наверх взять бутылку, но не кормить macaques.",
+          "overnight_and_camping": "Ночёвка/палатка в temple complex не планируется; KL lodging.",
+          "permit_or_guide": null,
+          "best_period": "Круглый год; для фото планировать утро/blue hour и резерв под ливень.",
+          "current_status": "открыт; динамические условия перепроверять",
+          "main_risks": [
+            "272 ступени",
+            "макаки",
+            "жара",
+            "толпы на Thaipusam",
+            "религиозный этикет"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Главная cave-temple зона требует подъёма по 272 ступеням.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется по умолчанию; местного специалиста подключать при регулируемом доступе, переговорах с общиной, сложной навигации или ради углублённого контекста"
+          }
         }
       },
       {
@@ -5154,7 +6090,206 @@
             "filming/drone"
           ],
           "verify_before_departure": true
+        },
+        "narrow": "Классический rehabilitation-site для orangutan внутри Kabili-Sepilok Forest Reserve: хороший wildlife-контент с сильным conservation narrative и предсказуемой visitor infrastruc…",
+        "tags": [
+          "nature",
+          "wildlife",
+          "rainforest",
+          "conservation",
+          "class_expanded",
+          "walking",
+          "public_transport",
+          "moped_access",
+          "taxi_ridehail",
+          "guide_or_permit"
+        ],
+        "route_meta": {
+          "region_ref": "Sandakan / Sepilok",
+          "locality_ref": "Sandakan",
+          "typical_visit_hours": [
+            3,
+            5
+          ],
+          "transport_modes": {
+            "public_transport": "Из Sandakan есть bus/van до Sepilok junction, дальше walk/transfer.",
+            "taxi_ridehail": "Grab/такси 30–40 минут из Sandakan; обратную машину лучше планировать заранее.",
+            "moped": "Простой road access, парковка у комплекса.",
+            "walking": "Boardwalk/centre route несколько км максимум."
+          },
+          "walking": "Boardwalk/centre route несколько км максимум.",
+          "water": "Кафе/visitor area рядом; внутри boardwalk держать руки свободными и не носить открытую еду.",
+          "overnight_and_camping": "Только lodge/resort/hostel вокруг Sepilok; forest camping не планировать.",
+          "permit_or_guide": "Обычный visitor ticket; профессиональную production/спецдоступ согласовывать с Sabah Wildlife Department.",
+          "best_period": "Круглый год; wildlife не гарантирован, а дождь и плодоношение леса влияют на видимость животных.",
+          "current_status": "открыт; динамические условия перепроверять",
+          "main_risks": [
+            "wildlife unpredictable",
+            "тропическая жара/ливень",
+            "boardwalk",
+            "не приближаться/не трогать orangutan"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Visitor infrastructure/boardwalks; accessibility по отдельным участкам уточнять.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "местный гид/оператор используется там, где он требуется режимом объекта или существенно упрощает доступ"
+          }
         }
+      }
+    ],
+    "region_model_note": "v1.5: regions are canonical geographic/filter entities; localities are practical route hubs derived from object-level nearest_hub linkage.",
+    "localities": [
+      {
+        "name": "Kuala Lumpur",
+        "regions": [
+          "Kuala Lumpur / Klang Valley"
+        ],
+        "object_names": [
+          "Kuala Lumpur"
+        ]
+      },
+      {
+        "name": "George Town / Penang",
+        "regions": [
+          "Penang / George Town"
+        ],
+        "object_names": [
+          "George Town"
+        ]
+      },
+      {
+        "name": "Melaka City",
+        "regions": [
+          "Melaka"
+        ],
+        "object_names": [
+          "Melaka"
+        ]
+      },
+      {
+        "name": "Kota Kinabalu / Kundasang",
+        "regions": [
+          "Sabah highlands / Kinabalu"
+        ],
+        "object_names": [
+          "Mount Kinabalu"
+        ]
+      },
+      {
+        "name": "Mulu",
+        "regions": [
+          "Mulu / interior Sarawak"
+        ],
+        "object_names": [
+          "Gunung Mulu National Park"
+        ]
+      },
+      {
+        "name": "Langkawi",
+        "regions": [
+          "Langkawi / northwest coast"
+        ],
+        "object_names": [
+          "Langkawi"
+        ]
+      },
+      {
+        "name": "Kuala Besut",
+        "regions": [
+          "Perhentian / east coast"
+        ],
+        "object_names": [
+          "Perhentian islands"
+        ]
+      },
+      {
+        "name": "Ipoh / Taiping / Gerik",
+        "regions": [
+          "Perak / Taiping / Kuala Kangsar / Belum"
+        ],
+        "object_names": [
+          "Taiping",
+          "Kuala Kangsar",
+          "Belum-Temengor",
+          "Kellie's Castle"
+        ]
+      },
+      {
+        "name": "Bario / Miri",
+        "regions": [
+          "Bario / Kelabit Highlands"
+        ],
+        "object_names": [
+          "Bario / Kelabit Highlands"
+        ]
+      },
+      {
+        "name": "Sandakan / Lahad Datu",
+        "regions": [
+          "Sabah east coast / Danum / Kinabatangan"
+        ],
+        "object_names": [
+          "Danum Valley Conservation Area",
+          "Kinabatangan River"
+        ]
+      },
+      {
+        "name": "Kuching / Miri depending object",
+        "regions": [
+          "Sarawak / Kuching / Niah"
+        ],
+        "object_names": [
+          "Niah National Park",
+          "Kuching old town and waterfront"
+        ]
+      },
+      {
+        "name": "Lenggong / Kuala Kangsar / Ipoh",
+        "regions": [
+          "Perak / Taiping / Kuala Kangsar / Belum"
+        ],
+        "object_names": [
+          "Lenggong Valley archaeological landscape"
+        ]
+      },
+      {
+        "name": "Semporna",
+        "regions": [
+          "Semporna / Sipadan / east Sabah"
+        ],
+        "object_names": [
+          "Sipadan Island"
+        ]
+      },
+      {
+        "name": "Kudat / Kota Kinabalu",
+        "regions": [
+          "Kudat / Rungus north Sabah"
+        ],
+        "object_names": [
+          "Kampung Bavanggazo / Rungus longhouse"
+        ]
+      },
+      {
+        "name": "Kuala Lumpur / Gombak",
+        "regions": [
+          "Kuala Lumpur / Klang Valley"
+        ],
+        "object_names": [
+          "Batu Caves"
+        ]
+      },
+      {
+        "name": "Sandakan",
+        "regions": [
+          "Sandakan / Sepilok"
+        ],
+        "object_names": [
+          "Sepilok Orangutan Rehabilitation Centre"
+        ]
       }
     ]
   },

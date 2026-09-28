@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.3.1"
-RELEASE_ID = "2026-09-28-r9"
+SCHEMA_VERSION = "2.3.2"
+RELEASE_ID = "2026-09-28-r10"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),

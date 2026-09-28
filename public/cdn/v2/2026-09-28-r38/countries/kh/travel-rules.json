@@ -163,16 +163,22 @@
   },
   "drones": {
     "value": {
-      "status": "needs_site_specific_verification",
-      "summary": "Единого актуального официального источника, достаточного для надёжного общенационального правила по любительским БПЛА, в этом проходе не зафиксировано. Для Ангкора, Пномпеня, аэропортовых зон, военных и иных чувствительных объектов использовать объектные ограничения и получать разрешение там, где оно требуется.",
-      "source_ids": [],
+      "status": "official_notice_exists_site_specific_verification_required",
+      "summary": "Государственный секретариат гражданской авиации Камбоджи публикует отдельное официальное уведомление по дронам в разделе Security Regulation. В доступной текстовой версии страницы недостаточно данных, чтобы безопасно занести единые числовые ограничения по высоте, радиусам или регистрации. Поэтому для каждого полёта нужно проверять актуальное уведомление SSCA и ограничения конкретной территории; для Ангкора и других охраняемых/чувствительных объектов действуют дополнительные правила площадки.",
+      "source_ids": [
+        "SSCA_DRONE",
+        "APSARA_FILMING"
+      ],
       "checked_at": "2026-09-28"
     },
-    "source_refs": [],
+    "source_refs": [
+      "src_900019",
+      "src_900020"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "No sufficiently authoritative country-wide drone rule was normalized in this pass; object/site-specific restrictions remain authoritative."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "laws_and_prohibitions": {
@@ -201,12 +207,22 @@
     }
   },
   "permits": {
-    "value": null,
-    "source_refs": [],
+    "value": {
+      "status": "object_specific",
+      "summary": "Единого «туристического разрешения на путешествие по Камбодже» в справочнике не применяется. Разрешения возникают для отдельных типов деятельности и территорий: в охраняемых природных зонах — по режиму конкретной территории, в Ангкоре — для ряда съёмочных и коммерческих форматов. Обычная личная фото- и видеосъёмка в Ангкоре, по официальному разъяснению APSARA, предварительного разрешения не требует; YouTube, коммерческая съёмка, кино, музыкальные клипы и некоторые публичные форматы требуют предварительного согласования.",
+      "source_ids": [
+        "MOE_CODE",
+        "APSARA_FILMING"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    "source_refs": [
+      "src_900020"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "currency": {

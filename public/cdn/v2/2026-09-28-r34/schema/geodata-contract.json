@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "schema_version": "2.10.4",
+    "release_id": "2026-09-28-r34"
+  },
+  "crs": "WGS84",
+  "epsg": 4326,
+  "primary_coordinate_fields": [
+    "lat",
+    "lon",
+    "elevation_m",
+    "elevation_range_m"
+  ],
+  "object_elevation_fields": [
+    "representative_m",
+    "min_m",
+    "max_m",
+    "reference_type",
+    "accuracy",
+    "source_refs",
+    "checked_at",
+    "notes"
+  ],
+  "fact_provenance": {
+    "coordinate_sources": "source_refs",
+    "point_elevation_sources": "elevation_source_refs",
+    "object_elevation_sources": "geo.object_elevation.source_refs"
+  },
+  "coordinate_types": [
+    "archaeological_core",
+    "cave_entrance",
+    "center",
+    "entrance",
+    "parking",
+    "pier",
+    "summit",
+    "temple_entrance",
+    "trailhead",
+    "viewpoint",
+    "waterfall_base"
+  ],
+  "accuracy_values": [
+    "high",
+    "medium",
+    "approximate",
+    "unknown"
+  ],
+  "rules": {
+    "lat_range": [
+      -90,
+      90
+    ],
+    "lon_range": [
+      -180,
+      180
+    ],
+    "elevation_unit": "metres_above_mean_sea_level",
+    "point_elevation_rule": "Elevation inside primary_location/geo.points belongs only to that GPS point (entrance, pier, trailhead, viewpoint, etc.) and never satisfies object-level elevation QA by itself.",
+    "object_elevation_rule": "geo.object_elevation describes the object itself above mean sea level: summit/highest point for peaks, min/max or characteristic elevation for extensive terrain, water_surface for lakes, and site elevation for point-like cultural objects.",
+    "elevation_range_rule": "Use min_m/max_m for mountains, plateaus, parks and other extensive objects when one scalar would create false precision.",
+    "unknown_values": "null",
+    "no_false_precision": true,
+    "large_objects": "Use an operational primary point such as entrance/trailhead/pier and additional geo.points rather than an unexplained geometric centre."
+  }
+}

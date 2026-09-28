@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "schema_version": "2.10.4",
+    "release_id": "2026-09-28-r34",
+    "page_type": "country_class",
+    "id": "country-class:kh:national_park"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "national_park",
+    "label_ru": "Национальные парки",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:protected_ecosystems",
+    "page_path": "pages/countries/cambodia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/national_park.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:hub:kampot",
+      "name": "Kampot",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/city_or_route_hub/kampot.json"
+    },
+    {
+      "id": "kh:hub:siem-reap",
+      "name": "Siem Reap",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/city_or_route_hub/siem-reap.json"
+    },
+    {
+      "id": "kh:region:kampot-bokor",
+      "name": "Kampot / Бокор",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/region/kampot-bokor.json"
+    },
+    {
+      "id": "kh:region:siem-reap-angkor",
+      "name": "Siem Reap / Angkor",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/region/siem-reap-angkor.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:phnom-kulen-national-park",
+      "name": "Phnom Kulen National Park",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:siem-reap",
+        "kh:region:siem-reap-angkor"
+      ],
+      "region_legacy": "Siem Reap / Angkor",
+      "nearest_hub": "Siem Reap",
+      "narrow": "Пном-Кулен — песчаниковое плато к северо-востоку от Angkor, где в начале IX века формировался Mahendraparvata и политико-религиозная программа ранней Кхмерской империи.",
+      "detail_path": "countries/cambodia/objects/phnom-kulen-national-park.json"
+    },
+    {
+      "id": "kh:bokor-national-park-and-hill-station",
+      "name": "Bokor National Park and hill station",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:kampot",
+        "kh:region:kampot-bokor"
+      ],
+      "region_legacy": "Kampot / Бокор",
+      "nearest_hub": "Kampot",
+      "narrow": "плато Бокор — редкая для Камбоджа смесь влажного горного леса, колониального горного курорта и современной курортной застройки.",
+      "detail_path": "countries/cambodia/objects/bokor-national-park-and-hill-station.json"
+    }
+  ]
+}

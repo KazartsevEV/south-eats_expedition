@@ -55,7 +55,7 @@
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
-      "objects_with_verified_elevation": 15,
+      "objects_with_verified_elevation": 16,
       "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas and variable river departures are explicitly approximate"
     },
     "elevation_provenance_upgrade": {
@@ -3406,17 +3406,26 @@
             "coordinates": {
               "lat": 4.61675,
               "lon": 114.31716,
-              "elevation_m": null
+              "elevation_m": 4
             },
             "coordinate_type": "entrance",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Mapcarta / OpenStreetMap",
               "url": "https://mapcarta.com/N2550896077",
               "basis": "monument feature coordinate"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "SRTM30m samples for final Brunei elevation QA points",
+              "publisher": "OpenTopoData / SRTM",
+              "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.61675%2C114.31716%7C4.88675%2C114.94301%7C4.99319%2C114.92401",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "SRTM30m sample at the exact canonical GPS point. Approximate surface elevation from a ~30 m raster; not a surveyed monument threshold elevation."
+            }
           },
           "logistics": {
             "access": "Автомобиль/Dart; объект у побережья, совмещается с oil наследие маршрут.",

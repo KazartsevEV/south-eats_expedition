@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.4.2"
-RELEASE_ID = "2026-09-28-r13"
+SCHEMA_VERSION = "2.5.0"
+RELEASE_ID = "2026-09-28-r14"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
@@ -458,6 +458,36 @@ def merged_logistics(card, route):
     return logistics
 
 
+def visual_recon_from(card):
+    media = card.get("media") or {}
+    scout = media.get("visual_scouting") or {}
+    viewpoints = []
+    for idx, value in enumerate(scout.get("viewpoints_for_photo_video") or [], start=1):
+        if isinstance(value, str) and value.strip():
+            viewpoints.append({
+                "id": f"vp_{idx:02d}",
+                "description": value.strip(),
+                "coordinates": None,
+                "gps": None,
+                "access": None,
+                "view": None,
+                "source_refs": [],
+            })
+        elif isinstance(value, dict):
+            viewpoints.append(value)
+    return {
+        "photo_suitability_5": media.get("photo_suitability_5"),
+        "video_suitability_5": media.get("video_suitability_5"),
+        "best_time": scout.get("best_time"),
+        "best_weather_light": scout.get("best_weather_light"),
+        "viewpoints": viewpoints,
+        "seasonal_visuals": scout.get("seasonal_visuals") or [],
+        "video_activity": scout.get("video_activity") or [],
+        "useful_equipment": scout.get("useful_equipment") or [],
+        "drone": media.get("drone"),
+        "filming_restrictions": media.get("filming_restrictions"),
+    }
+
 def country_payload(source, code, slug, object_count, places_count):
     travel = source.get("travel") or {}
     return {
@@ -504,6 +534,7 @@ def build():
     region_counts = Counter()
     prominence_counts = Counter()
     qa_objects = []
+    lodging_registry = {}
 
     for filename, code, country_slug in PUBLISH:
         src_path = SRC / filename
@@ -539,6 +570,37 @@ def build():
             interests = canonical_tags(obj.get("interest") or [])
             tags = canonical_tags((obj.get("tags") or []) + interests)
             logistics = merged_logistics(card, route)
+            visual_recon = visual_recon_from(card)
+            lodging_ids = []
+            for lodging in card.get("accommodation") or []:
+                if not isinstance(lodging, dict) or not lodging.get("name"):
+                    continue
+                lodging_id = f"lod:{code.lower()}:{slugify(lodging['name'])}"
+                lodging_ids.append(lodging_id)
+                current = lodging_registry.get(lodging_id)
+                entity = {
+                    "id": lodging_id,
+                    "kind": "lodging",
+                    "country_code": code,
+                    "country_slug": country_slug,
+                    "name": lodging.get("name"),
+                    "area": lodging.get("area"),
+                    "price_for_two": lodging.get("price_for_two"),
+                    "contact": lodging.get("contact"),
+                    "social_or_web": lodging.get("social_or_web"),
+                    "source": lodging.get("source"),
+                    "coordinates": lodging.get("coordinates"),
+                    "checked_at": lodging.get("checked_at") or lodging.get("last_checked"),
+                    "referenced_by": [object_id],
+                }
+                if current:
+                    refs = list(dict.fromkeys((current.get("referenced_by") or []) + [object_id]))
+                    current["referenced_by"] = refs
+                    for key, value in entity.items():
+                        if key != "referenced_by" and current.get(key) in (None, "", []):
+                            current[key] = value
+                else:
+                    lodging_registry[lodging_id] = entity
             detail = {
                 "meta": {
                     "schema_version": SCHEMA_VERSION,
@@ -565,13 +627,13 @@ def build():
                     "climate": card.get("climate"),
                     "operations": card.get("operations"),
                     "safety": card.get("safety"),
-                    "accommodation": card.get("accommodation"),
+                    "lodging_ids": lodging_ids,
                     "traveler_reports": card.get("traveler_reports"),
                 },
+                "visual_recon": visual_recon,
                 "media": {
                     "gallery": gallery,
                     "gallery_status": "carousel_ready" if len(gallery) >= 2 else "single_image_source",
-                    "photo_video": card.get("media"),
                 },
                 "provenance": {
                     "sources": obj.get("sources") or [],
@@ -652,13 +714,13 @@ def build():
                 "logistics": bool(logistics),
                 "water": bool(logistics.get("water")),
                 "overnight": bool(logistics.get("overnight_and_camping")),
-                "accommodation": bool(card.get("accommodation")),
+                "accommodation": bool(lodging_ids),
                 "traveler_reports": bool(card.get("traveler_reports")),
                 "sources": bool(obj.get("sources")),
                 "hero": bool(gallery),
                 "gallery_min_2": len(gallery) >= 2,
                 "photo_video": bool(card.get("media")),
-                "visual_recon": bool(((card.get("media") or {}).get("visual_scouting"))),
+                "visual_recon": bool(visual_recon.get("best_time") or visual_recon.get("viewpoints")),
                 "coordinates": bool(geo.get("primary_location")),
                 "elevation": ((geo.get("primary_location") or {}).get("coordinates") or {}).get("elevation_m") is not None,
                 "coordinate_type": bool((geo.get("primary_location") or {}).get("type")),
@@ -821,6 +883,23 @@ def build():
         ],
     }
     dump(release / "qa.json", qa)
+
+    lodging_index = []
+    for lodging_id, entity in sorted(lodging_registry.items()):
+        path = release / "infrastructure" / "lodging" / entity["country_slug"] / f"{slugify(entity['name'])}.json"
+        dump(path, entity)
+        lodging_index.append({
+            "id": lodging_id,
+            "country_code": entity["country_code"],
+            "name": entity["name"],
+            "area": entity.get("area"),
+            "detail_path": path.relative_to(release).as_posix(),
+            "referenced_by": entity.get("referenced_by") or [],
+        })
+    dump(release / "infrastructure" / "lodging" / "index.json", {
+        "meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID, "count": len(lodging_index)},
+        "lodging": lodging_index,
+    })
 
     dump(release / "schema" / "geodata-contract.json", {
         "meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID},

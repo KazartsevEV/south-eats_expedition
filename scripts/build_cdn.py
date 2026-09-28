@@ -128,6 +128,7 @@ TYPE_BY_NAME = {
     "Muang Sing market and Tai Lue cultural landscape": "cultural_landscape",
     "Kuang Si Falls": "waterfall",
     "Pak Ou Caves": "cave",
+    "Hin Nam No National Park": "national_park",
 }
 
 

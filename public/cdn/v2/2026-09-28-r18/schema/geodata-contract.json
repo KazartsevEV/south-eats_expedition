@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "schema_version": "2.7.1",
+    "release_id": "2026-09-28-r18"
+  },
+  "crs": "WGS84",
+  "epsg": 4326,
+  "primary_coordinate_fields": [
+    "lat",
+    "lon",
+    "elevation_m"
+  ],
+  "fact_provenance": {
+    "coordinate_sources": "source_refs",
+    "elevation_sources": "elevation_source_refs"
+  },
+  "coordinate_types": [
+    "archaeological_core",
+    "cave_entrance",
+    "center",
+    "entrance",
+    "parking",
+    "pier",
+    "summit",
+    "temple_entrance",
+    "trailhead",
+    "viewpoint",
+    "waterfall_base"
+  ],
+  "accuracy_values": [
+    "high",
+    "medium",
+    "approximate",
+    "unknown"
+  ],
+  "rules": {
+    "lat_range": [
+      -90,
+      90
+    ],
+    "lon_range": [
+      -180,
+      180
+    ],
+    "elevation_unit": "metres_above_mean_sea_level",
+    "unknown_values": "null",
+    "no_false_precision": true,
+    "large_objects": "Use an operational primary point such as entrance/trailhead/pier and additional geo.points rather than an unexplained geometric centre."
+  }
+}

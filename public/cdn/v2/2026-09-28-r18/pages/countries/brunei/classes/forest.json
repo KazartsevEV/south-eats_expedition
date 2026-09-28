@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "schema_version": "2.7.1",
+    "release_id": "2026-09-28-r18",
+    "page_type": "country_class",
+    "id": "country-class:bn:forest"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "object_type": "forest",
+    "label_ru": "Леса и джунгли",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:bn:protected_ecosystems",
+    "page_path": "pages/countries/brunei/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/forest.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "bn:city:bandar-seri-begawan",
+      "name": "Бандар-Сери-Бегаван",
+      "kind": "city",
+      "axis": "municipal",
+      "page_path": "pages/geography/brunei/city/bandar-seri-begawan.json"
+    },
+    {
+      "id": "bn:district:brunei-muara",
+      "name": "Бруней-Муара",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/brunei-muara.json"
+    },
+    {
+      "id": "bn:mukim:kianggeh",
+      "name": "Кианггех",
+      "kind": "mukim",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/mukim/kianggeh.json"
+    },
+    {
+      "id": "bn:mukim:sengkurong",
+      "name": "Сенгкуронг",
+      "kind": "mukim",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/mukim/sengkurong.json"
+    },
+    {
+      "id": "bn:village:jerudong",
+      "name": "Джерудонг",
+      "kind": "village",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/village/jerudong.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:tasek-lama-park",
+      "name": "Tasek Lama Park",
+      "geography_ids": [
+        "bn:city:bandar-seri-begawan",
+        "bn:district:brunei-muara",
+        "bn:mukim:kianggeh",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "nearest_hub": "Bandar Seri Begawan",
+      "narrow": "Лесной парк почти у центра столицы: за несколько минут городской пейзаж сменяется ручьями, корнями, крутыми тропами и обзорными точками.",
+      "detail_path": "countries/brunei/objects/tasek-lama-park.json"
+    },
+    {
+      "id": "bn:bukit-shahbandar-recreational-park",
+      "name": "Bukit Shahbandar Recreational Park",
+      "geography_ids": [
+        "bn:district:brunei-muara",
+        "bn:mukim:sengkurong",
+        "bn:village:jerudong",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "nearest_hub": "Бандар-Сери-Бегаван / Джерудонг",
+      "narrow": "Тренировочный лесной парк с серией крутых подъёмов и спусков, популярный у местных. Характер места создаёт ритм холмов, лестниц и леса, а не одна панорамная точка.",
+      "detail_path": "countries/brunei/objects/bukit-shahbandar-recreational-park.json"
+    }
+  ]
+}

@@ -174,6 +174,41 @@ for row in country_qa_rows:
     if not path or not (release / path).exists():
         fail(f"country QA detail missing: {row.get('country_code')} -> {path}")
 
+# A country that declares a migration pass complete in canonical source must
+# remain complete in every generated release. This lets countries migrate
+# incrementally without weakening already-finished data.
+country_qa_by_code = {
+    row.get("country_code"): load(release / row["path"])
+    for row in country_qa_rows
+}
+source_code_by_country = {
+    "Brunei Darussalam":"BN",
+    "Cambodia":"KH",
+    "Lao PDR":"LA",
+    "Laos":"LA",
+    "Indonesia":"ID",
+    "Malaysia":"MY",
+    "Myanmar":"MM",
+}
+for source_path in sources:
+    source_doc = load(source_path)
+    meta = source_doc.get("meta") or {}
+    code = source_code_by_country.get(meta.get("country"))
+    if not code or code not in country_qa_by_code:
+        continue
+    country_qa = country_qa_by_code[code]
+    total = int(country_qa.get("objects_total") or 0)
+    geodata_progress = meta.get("geodata_upgrade_progress") or {}
+    if geodata_progress.get("objects_with_primary_coordinates") == geodata_progress.get("total_objects") == total:
+        missing = (country_qa.get("missing") or {}).get("coordinates") or []
+        if missing:
+            fail(f"{code}: source declares full geodata coverage but generated QA misses coordinates: {missing}")
+    visual_progress = meta.get("visual_recon_upgrade_progress") or {}
+    if visual_progress.get("objects_with_visual_recon") == visual_progress.get("total_objects") == total:
+        missing = (country_qa.get("missing") or {}).get("visual_recon") or []
+        if missing:
+            fail(f"{code}: source declares full visual_recon coverage but generated QA has gaps: {missing}")
+
 # Contract: story is emitted once; legacy source prose keys must not leak.
 for row in objects:
     detail = load(release / row["detail_path"])

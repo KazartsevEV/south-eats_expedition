@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.6.1"
-RELEASE_ID = "2026-09-28-r16"
+SCHEMA_VERSION = "2.7.0"
+RELEASE_ID = "2026-09-28-r17"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
@@ -812,6 +812,8 @@ def build():
             })
             qa_objects.append({
                 "id": object_id,
+                "country_code": code,
+                "object_type": object_type,
                 "story": bool(story.get("narrative")),
                 "narrow": bool(card_row.get("narrow")),
                 "logistics": bool(logistics),
@@ -953,6 +955,7 @@ def build():
             "geodata_contract": "schema/geodata-contract.json",
             "lodging": "infrastructure/lodging/index.json",
             "sources": "sources/index.json",
+            "country_qa": "qa/countries/index.json",
         },
         "countries": countries,
     })
@@ -988,6 +991,73 @@ def build():
         ],
     }
     dump(release / "qa.json", qa)
+
+    country_qa_rows = []
+    country_qa_fields = blocking_required + expedition_required
+    for _, code, country_slug in PUBLISH:
+        rows = [row for row in qa_objects if row.get("country_code") == code]
+        missing = {
+            key: [row["id"] for row in rows if not row.get(key)]
+            for key in country_qa_fields
+            if any(not row.get(key) for row in rows)
+        }
+        complete = [
+            row["id"]
+            for row in rows
+            if all(row.get(key) for key in country_qa_fields)
+        ]
+        payload = {
+            "meta": {
+                "schema_version": SCHEMA_VERSION,
+                "release_id": RELEASE_ID,
+                "country_code": code,
+                "country_slug": country_slug,
+            },
+            "objects_total": len(rows),
+            "objects_complete": len(complete),
+            "objects_incomplete": len(rows) - len(complete),
+            "coverage": {
+                key: sum(1 for row in rows if row.get(key))
+                for key in country_qa_fields
+            },
+            "missing": missing,
+            "class_breakdown": [
+                {
+                    "object_type": object_type,
+                    "objects_total": len(class_rows),
+                    "objects_complete": sum(
+                        1 for row in class_rows
+                        if all(row.get(key) for key in country_qa_fields)
+                    ),
+                    "missing": {
+                        key: [row["id"] for row in class_rows if not row.get(key)]
+                        for key in country_qa_fields
+                        if any(not row.get(key) for row in class_rows)
+                    },
+                }
+                for object_type, class_rows in sorted(
+                    (
+                        (otype, [row for row in rows if row.get("object_type") == otype])
+                        for otype in sorted({row.get("object_type") for row in rows if row.get("object_type")})
+                    ),
+                    key=lambda item: item[0],
+                )
+            ],
+        }
+        path = release / "qa" / "countries" / f"{country_slug}.json"
+        dump(path, payload)
+        country_qa_rows.append({
+            "country_code": code,
+            "country_slug": country_slug,
+            "objects_total": len(rows),
+            "objects_complete": len(complete),
+            "objects_incomplete": len(rows) - len(complete),
+            "path": path.relative_to(release).as_posix(),
+        })
+    dump(release / "qa" / "countries" / "index.json", {
+        "meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID, "count": len(country_qa_rows)},
+        "countries": country_qa_rows,
+    })
 
     source_index = []
     for source_id, entity in sorted(source_registry.items()):

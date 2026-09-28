@@ -68,6 +68,10 @@
       "checked_at": "2026-09-28",
       "scope": "user-facing prose; source titles, URLs, provider names and technical identifiers excluded",
       "rule": "Русский текст без машинной англо-русской смеси; официальные имена, общепринятые аббревиатуры и собственные названия допускаются."
+    },
+    "elevation_provenance_upgrade": {
+      "updated": "2026-09-28",
+      "policy": "Каждое ненулевое elevation_m имеет отдельный elevation_source; соседние высоты не подставляются вместо высоты объекта."
     }
   },
   "overview": {
@@ -401,7 +405,16 @@
                   "accessed": "2026-09-28",
                   "notes": "Операционная опорная точка главного храмового ядра, а не центр всего парка."
                 },
-                "checked_at": "2026-09-28"
+                "checked_at": "2026-09-28",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Angkor Archaeological Park elevation",
+                  "publisher": "GeoNames via Mapcarta",
+                  "url": "https://mapcarta.com/Angkor_Archaeological_Park",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "Высота 40 м относится к опорной точке Ангкор-Вата/археологического парка, а не ко всему 400-км² ландшафту."
+                }
               }
             ]
           },
@@ -758,7 +771,15 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "map",
+              "title": "Royal Palace of Cambodia elevation",
+              "publisher": "GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/27640482",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            }
           },
           "logistics": {
             "access": "Риверсайд; пешком/тук-тук из Даун-Пеня.",
@@ -1045,7 +1066,15 @@
               "accessed": "2026-09-28",
               "notes": "UNESCO gives N11 32 58.22 E104 55 3.28; the mapped building centre differs only by metres. Elevation 13 m from OSM/GeoNames-linked S-21 record."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "S-21 elevation",
+              "publisher": "GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/27640484",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            }
           },
           "logistics": {
             "access": "тук-тук/сервис заказа такси; городской объект.",
@@ -1331,7 +1360,15 @@
               "accessed": "2026-09-28",
               "notes": "UNESCO gives N11 29 3.92 E104 54 7.6; elevation 13 m from GeoNames-linked Choeung Ek record."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "Choeung Ek elevation",
+              "publisher": "GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/26230234",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            }
           },
           "logistics": {
             "access": "тук-тук/автомобиль из центра, обычно 30–60 минут в зависимости от трафика.",
@@ -1601,11 +1638,11 @@
             "coordinates": {
               "lat": 14.390841,
               "lon": 104.680325,
-              "elevation_m": null
+              "elevation_m": 643
             },
             "coordinate_type": "archaeological_core",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "medium",
             "coordinate_source": {
               "type": "unesco",
               "title": "Temple of Преахвихеа — geographical data",
@@ -1637,7 +1674,15 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "map",
+              "title": "Preah Vihear elevation",
+              "publisher": "GeoNames / OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/Preah_Vihear",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            }
           },
           "logistics": {
             "access": "В нормальных условиях подъезд с камбоджийской стороны, но текущая приграничная обстановка имеет приоритет над туристической логистикой.",
@@ -1915,11 +1960,11 @@
             "coordinates": {
               "lat": 13.783056,
               "lon": 104.537222,
-              "elevation_m": null
+              "elevation_m": 86
             },
             "coordinate_type": "archaeological_core",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "medium",
             "coordinate_source": {
               "type": "unesco",
               "title": "Кох-Кер — geographical data",
@@ -1929,7 +1974,16 @@
               "accessed": "2026-09-28",
               "notes": "Центральная точка объекта; план управления указывает, что она приходится на Prasat Prang комплекса Прасат-Тхом."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "Prasat Kaoh Ker elevation",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/35352618",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Высота относится к Prasat Kaoh Ker рядом с первичной точкой Prasat Prang."
+            }
           },
           "logistics": {
             "access": "Удалённый археологический комплекс к северо-востоку от Сиемреапа; самостоятельно удобнее ехать на автомобиле или мотоцикле, заранее проверив состояние дороги.",
@@ -2586,7 +2640,16 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "map",
+              "title": "Koh Rong reference-point elevation",
+              "publisher": "GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Koh_Rong",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "15 м — высота опорной точки острова, не максимальная высота Ко-Ронга."
+            }
           },
           "logistics": {
             "access": "паром/speedboat из Sihanoukville; расписание зависит от погоды и оператора.",
@@ -2876,11 +2939,11 @@
             "coordinates": {
               "lat": 14.07088,
               "lon": 103.09988,
-              "elevation_m": null
+              "elevation_m": 88
             },
             "coordinate_type": "archaeological_core",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "medium",
             "coordinate_source": {
               "type": "map",
               "title": "Бантей-Чмар Temple",
@@ -2890,7 +2953,15 @@
               "accessed": "2026-09-28",
               "notes": "Точка центрального храмового комплекса; не координата одноимённой коммуны."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "Prasat Banteay Chhmar elevation",
+              "publisher": "GeoNames / OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/15991130",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            }
           },
           "logistics": {
             "access": "Дальний автомобильный маршрут; разумно планировать с местным водителем/гидом и проверять состояние дорог.",
@@ -3187,11 +3258,11 @@
             "coordinates": {
               "lat": 13.40822,
               "lon": 104.74858,
-              "elevation_m": null
+              "elevation_m": 67
             },
             "coordinate_type": "archaeological_core",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "medium",
             "coordinate_source": {
               "type": "map",
               "title": "Preah Khan Kampong Svay",
@@ -3201,7 +3272,15 @@
               "accessed": "2026-09-28",
               "notes": "Координата центральных руин комплекса; публикация UNESCO Tentative List содержит координаты в ином/неочевидном формате, поэтому для GPS использована однозначная картографическая точка."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "Prasat Preăh Khăn elevation",
+              "publisher": "GeoNames / Wikidata via Mapcarta",
+              "url": "https://mapcarta.com/15991118",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            }
           },
           "logistics": {
             "access": "National Authority указывает примерно 84 км от Preah Vihear city по NR62/районным дорогам или около 76 км от направления NR6A через Sankor–Ta Seng; нужен частный дорога транспорт.",
@@ -4466,7 +4545,15 @@
                   "authority": "medium",
                   "accessed": "2026-09-28"
                 },
-                "checked_at": "2026-09-28"
+                "checked_at": "2026-09-28",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Phnom Kulen summit elevation",
+                  "publisher": "OpenStreetMap / Wikidata via Mapcarta",
+                  "url": "https://mapcarta.com/N11525308037",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                }
               },
               {
                 "name": "Пном-Кулен National Park reference point",
@@ -4855,7 +4942,15 @@
                   "authority": "medium",
                   "accessed": "2026-09-28"
                 },
-                "checked_at": "2026-09-28"
+                "checked_at": "2026-09-28",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Kampong Phluk elevation",
+                  "publisher": "GeoNames / OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/16001206",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                }
               }
             ]
           },
@@ -5159,7 +5254,15 @@
               "accessed": "2026-09-28",
               "notes": "Высшая точка Phnom Удонг; исторический комплекс вытянут вдоль гребня."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "Phnom Oudong elevation",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/N2583387260",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            }
           },
           "logistics": {
             "access": "Car/тук-тук from Пномпень; далее подъём по лестницам/холму.",
@@ -5457,7 +5560,15 @@
                   "authority": "medium",
                   "accessed": "2026-09-28"
                 },
-                "checked_at": "2026-09-28"
+                "checked_at": "2026-09-28",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Phnom Da elevation",
+                  "publisher": "GeoNames / OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/15998644",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                }
               },
               {
                 "name": "Angkor Borey Museum",
@@ -6134,7 +6245,16 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "wikidata",
+              "title": "Bokor Hill Station elevation",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q559155",
+              "authority": "high",
+              "accessed": "2026-09-28",
+              "notes": "Высота 1048 м относится к hill station, которая используется как первичная точка этой составной карточки."
+            }
           },
           "logistics": {
             "access": "От Кампота до плато Бокор около 42 км по асфальтированной горной дороге. Самостоятельный вариант — мотоцикл или автомобиль.",

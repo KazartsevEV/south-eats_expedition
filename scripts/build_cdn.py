@@ -515,7 +515,28 @@ def gallery_from(obj):
 
 def story_from(obj):
     ann = ((obj.get("traveler_card") or {}).get("annotation") or {})
+    sections = ann.get("sections") if isinstance(ann, dict) else None
     narrative = ann.get("narrative") if isinstance(ann, dict) else None
+    if isinstance(sections, list) and sections:
+        first_prose = next(
+            (
+                row.get("content")
+                for row in sections
+                if isinstance(row, dict)
+                and row.get("section_id") in {"overview", "history"}
+                and isinstance(row.get("content"), str)
+                and row.get("content").strip()
+            ),
+            None,
+        )
+        return {
+            "narrative": compact_text(first_prose) or compact_text(narrative) or compact_text(obj.get("why_go")),
+            "sections": sections,
+            "migration": {
+                "legacy_annotation_fields_retained_in_source": True,
+                "canonical_sections_authoritative": True,
+            },
+        }
     return {
         "narrative": compact_text(narrative) or compact_text(obj.get("why_go")),
         "culture_ethnography": compact_text(ann.get("culture_ethnography")) if isinstance(ann, dict) else None,

@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schema_version": "2.9.3",
+    "release_id": "2026-09-28-r25",
+    "page_type": "geography",
+    "id": "my:hub:kuala-besut"
+  },
+  "identity": {
+    "name": "Kuala Besut",
+    "kind": "city_or_route_hub",
+    "slug": "kuala-besut",
+    "country_code": "MY"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:my",
+    "page_path": "pages/countries/malaysia.json"
+  },
+  "source_profile": {
+    "id": "my:hub:kuala-besut",
+    "kind": "city_or_route_hub",
+    "name": "Kuala Besut",
+    "slug": "kuala-besut"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "island",
+          "label_ru": "Острова и архипелаги",
+          "count": 1,
+          "country_class_page": "pages/countries/malaysia/classes/island.json",
+          "filter": {
+            "geography_id": "my:hub:kuala-besut"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:perhentian-islands",
+      "name": "Perhentian islands",
+      "object_type": "island",
+      "narrow": "Перхентианы — удобная морская база для самостоятельного островного режима: пешие связки между бухтами, лодочные переброски, рифы у берега и возможность собирать несколько дней вокруг воды и троп, а не вокруг пакетной экскурсии.",
+      "detail_path": "countries/malaysia/objects/perhentian-islands.json"
+    }
+  ]
+}

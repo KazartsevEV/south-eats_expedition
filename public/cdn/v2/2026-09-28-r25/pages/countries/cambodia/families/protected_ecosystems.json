@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "schema_version": "2.9.3",
+    "release_id": "2026-09-28-r25",
+    "page_type": "class_family",
+    "id": "country-family:kh:protected_ecosystems"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "family_id": "protected_ecosystems",
+    "label_ru": "Охраняемая природа и экосистемы"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:kh",
+    "page_path": "pages/countries/cambodia.json"
+  },
+  "global_family_page": "pages/families/protected_ecosystems.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "count": 4,
+  "classes": [
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 2,
+      "global_page_path": "pages/classes/national_park.json",
+      "country_page_path": "pages/countries/cambodia/classes/national_park.json"
+    },
+    {
+      "object_type": "protected_area",
+      "label_ru": "Заповедники и охраняемые территории",
+      "count": 1,
+      "global_page_path": "pages/classes/protected_area.json",
+      "country_page_path": "pages/countries/cambodia/classes/protected_area.json"
+    },
+    {
+      "object_type": "wildlife_site",
+      "label_ru": "Наблюдение за дикой природой",
+      "count": 1,
+      "global_page_path": "pages/classes/wildlife_site.json",
+      "country_page_path": "pages/countries/cambodia/classes/wildlife_site.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:phnom-kulen-national-park",
+      "name": "Phnom Kulen National Park",
+      "object_type": "national_park",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:siem-reap",
+        "kh:region:siem-reap-angkor"
+      ],
+      "region_legacy": "Siem Reap / Angkor",
+      "narrow": "Пном-Кулен — песчаниковое плато к северо-востоку от Angkor, где в начале IX века формировался Mahendraparvata и политико-религиозная программа ранней Кхмерской империи.",
+      "detail_path": "countries/cambodia/objects/phnom-kulen-national-park.json"
+    },
+    {
+      "id": "kh:bokor-national-park-and-hill-station",
+      "name": "Bokor National Park and hill station",
+      "object_type": "national_park",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:kampot",
+        "kh:region:kampot-bokor"
+      ],
+      "region_legacy": "Kampot / Бокор",
+      "narrow": "плато Бокор — редкая для Камбоджа смесь влажного горного леса, колониального горного курорта и современной курортной застройки.",
+      "detail_path": "countries/cambodia/objects/bokor-national-park-and-hill-station.json"
+    },
+    {
+      "id": "kh:cardamom-mountains-community-routes",
+      "name": "Cardamom Mountains community routes",
+      "object_type": "protected_area",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:koh-kong-pursat",
+        "kh:region:kardamonovy-gory-yugo-zapad"
+      ],
+      "region_legacy": "Кардамоновы горы / юго-запад",
+      "narrow": "Кардамоновы горы — один из крупнейших непрерывных лесных массивов материковой Юго-Восточной Азии, но для путешественника это не один “национальный парк с воротами”. Реальная входная модель — общинные маршруты, например Chi Phat: деревня, проводники, лодка/велосипед/трекинг и официальные лес camps.",
+      "detail_path": "countries/cambodia/objects/cardamom-mountains-community-routes.json"
+    },
+    {
+      "id": "kh:kratie-kampi-irrawaddy-dolphins",
+      "name": "Kratie / Kampi Irrawaddy dolphins",
+      "object_type": "wildlife_site",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:kratie-town-kampi",
+        "kh:region:kratekh-srednii-mekong"
+      ],
+      "region_legacy": "Кратьэх / средний Меконг",
+      "narrow": "К северу от Kratie Меконг сохраняет один из последних участков обитания пресноводной популяции Irrawaddy дельфин. Кампи примерно в 15 км от города — главный туристический точка наблюдения, но сюжет здесь шире “увидеть дельфина”: речная экология, рыболовство и охрана природы связаны напрямую.",
+      "detail_path": "countries/cambodia/objects/kratie-kampi-irrawaddy-dolphins.json"
+    }
+  ]
+}

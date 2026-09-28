@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.9.5",
+    "release_id": "2026-09-28-r27",
+    "page_type": "country_class",
+    "id": "country-class:my:wildlife_site"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "wildlife_site",
+    "label_ru": "Наблюдение за дикой природой",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:protected_ecosystems",
+    "page_path": "pages/countries/malaysia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/wildlife_site.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:sandakan",
+      "name": "Sandakan",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/sandakan.json"
+    },
+    {
+      "id": "my:region:sandakan-sepilok",
+      "name": "Sandakan / Sepilok",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/sandakan-sepilok.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:sepilok-orangutan-rehabilitation-centre",
+      "name": "Sepilok Orangutan Rehabilitation Centre",
+      "geography_ids": [
+        "country:my",
+        "my:hub:sandakan",
+        "my:region:sandakan-sepilok"
+      ],
+      "region_legacy": "Sandakan / Sepilok",
+      "nearest_hub": "Sandakan",
+      "narrow": "Sepilok — центр реабилитации орангутанов внутри лесного резервата Kabili-Sepilok; важнее наблюдения за животными здесь сама логика возвращения их к самостоятельной жизни в лесу.",
+      "detail_path": "countries/malaysia/objects/sepilok-orangutan-rehabilitation-centre.json"
+    }
+  ]
+}

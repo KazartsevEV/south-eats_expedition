@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "schema_version": "2.9.5",
+    "release_id": "2026-09-28-r27",
+    "page_type": "geography",
+    "id": "mm:region:kayin-hpa-an"
+  },
+  "identity": {
+    "name": "Kayin / Hpa-An",
+    "kind": "region",
+    "slug": "kayin-hpa-an",
+    "country_code": "MM"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:mm",
+    "page_path": "pages/countries/myanmar.json"
+  },
+  "source_profile": {
+    "id": "mm:region:kayin-hpa-an",
+    "kind": "region",
+    "name": "Kayin / Hpa-An",
+    "slug": "kayin-hpa-an",
+    "languages_spoken": [
+      "Burmese",
+      "S'gaw/Pwo Karen",
+      "English limited"
+    ],
+    "currency": {
+      "code": "MMK",
+      "name": "Myanmar kyat",
+      "local_currency_per_1_usd": 3247.96,
+      "as_of": "2026-09-27",
+      "rate_type": "reference-market snapshot only",
+      "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
+      "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
+    },
+    "climate_summary": "Влажный карстовый юго-восток.",
+    "best_period_general": "Ноябрь–февраль по погоде; региональные advisories могут запрещать поездку.",
+    "last_verified": "2026-09-28"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "karst",
+      "label_ru": "Карстовые районы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "relief_geology",
+      "label_ru": "Рельеф и геология",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "karst",
+          "label_ru": "Карстовые районы",
+          "count": 1,
+          "country_class_page": "pages/countries/myanmar/classes/karst.json",
+          "filter": {
+            "geography_id": "mm:region:kayin-hpa-an"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "mm:hpa-an-karst-and-caves",
+      "name": "Hpa-An karst and caves",
+      "object_type": "karst",
+      "narrow": "Hpa-An karst and caves — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/myanmar/objects/hpa-an-karst-and-caves.json"
+    }
+  ]
+}

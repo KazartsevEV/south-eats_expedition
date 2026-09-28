@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.6.0"
-RELEASE_ID = "2026-09-28-r15"
+SCHEMA_VERSION = "2.6.1"
+RELEASE_ID = "2026-09-28-r16"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
@@ -366,24 +366,42 @@ def _normalized_point(raw, fallback_type=None):
         "gps": gps_repr(lat, lon),
         "accuracy": raw.get("accuracy") or "unknown",
         "elevation_accuracy": raw.get("elevation_accuracy") or ("unknown" if elevation is None else raw.get("accuracy") or "unknown"),
-        "source": raw.get("coordinate_source") or raw.get("source"),
+        "source_refs": [raw.get("source_ref")] if raw.get("source_ref") else [],
         "checked_at": raw.get("coordinates_checked_at") or raw.get("checked_at"),
     }
 
-def normalize_geo(location):
+def normalize_geo(location, source_registry=None, object_id=None):
     location = location if isinstance(location, dict) else {}
+
+    def coordinate_source_ref(holder):
+        if not isinstance(holder, dict) or source_registry is None or object_id is None:
+            return None
+        source = holder.get("coordinate_source") or holder.get("source")
+        if not isinstance(source, dict):
+            return None
+        source = dict(source)
+        used_for = list(source.get("used_for") or [])
+        if "coordinates" not in used_for:
+            used_for.append("coordinates")
+        source["used_for"] = used_for
+        return merge_source_entity(source_registry, source, object_id)
+
     primary_raw = {
         "coordinates": location.get("coordinates"),
         "coordinate_type": location.get("coordinate_type"),
         "accuracy": location.get("accuracy"),
         "elevation_accuracy": location.get("elevation_accuracy"),
-        "coordinate_source": location.get("coordinate_source"),
+        "source_ref": coordinate_source_ref(location),
         "coordinates_checked_at": location.get("coordinates_checked_at"),
     }
     primary = _normalized_point(primary_raw, "center")
     points = []
     for row in location.get("geo_points") or []:
-        point = _normalized_point(row)
+        if not isinstance(row, dict):
+            continue
+        normalized_raw = dict(row)
+        normalized_raw["source_ref"] = coordinate_source_ref(row)
+        point = _normalized_point(normalized_raw)
         if point:
             points.append(point)
     return {
@@ -599,7 +617,7 @@ def build():
             object_id = f"{code.lower()}:{slug}"
             card = obj.get("traveler_card") or {}
             location = card.get("location") or {}
-            geo = normalize_geo(location)
+            geo = normalize_geo(location, source_registry, object_id)
             route = obj.get("route_meta") or {}
             gallery = gallery_from(obj)
             story = story_from(obj)

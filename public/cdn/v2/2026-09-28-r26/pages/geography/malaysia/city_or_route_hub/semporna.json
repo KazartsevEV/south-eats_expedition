@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schema_version": "2.9.4",
+    "release_id": "2026-09-28-r26",
+    "page_type": "geography",
+    "id": "my:hub:semporna"
+  },
+  "identity": {
+    "name": "Semporna",
+    "kind": "city_or_route_hub",
+    "slug": "semporna",
+    "country_code": "MY"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:my",
+    "page_path": "pages/countries/malaysia.json"
+  },
+  "source_profile": {
+    "id": "my:hub:semporna",
+    "kind": "city_or_route_hub",
+    "name": "Semporna",
+    "slug": "semporna"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "island",
+          "label_ru": "Острова и архипелаги",
+          "count": 1,
+          "country_class_page": "pages/countries/malaysia/classes/island.json",
+          "filter": {
+            "geography_id": "my:hub:semporna"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:sipadan-island",
+      "name": "Sipadan Island",
+      "object_type": "island",
+      "narrow": "Сипадан — океанический остров на вершине подводного вулканического конуса с почти вертикальными рифовыми стенами, черепахами и пелагическими стаями; доступ строго ограничен разрешениями.",
+      "detail_path": "countries/malaysia/objects/sipadan-island.json"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "schema_version": "2.9.4",
+    "release_id": "2026-09-28-r26",
+    "page_type": "country_class",
+    "id": "country-class:la:cave"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "cave",
+    "label_ru": "Пещеры",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:relief_geology",
+    "page_path": "pages/countries/laos/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/cave.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 4,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:hub:luang-prabang",
+      "name": "Luang Prabang",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/luang-prabang.json"
+    },
+    {
+      "id": "la:hub:phonsavan",
+      "name": "Phonsavan",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/phonsavan.json"
+    },
+    {
+      "id": "la:hub:sam-neua-vieng-xai",
+      "name": "Sam Neua / Vieng Xai",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/sam-neua-vieng-xai.json"
+    },
+    {
+      "id": "la:hub:tkhakkhek-ban-kong-lor",
+      "name": "Тхакхэк / Бан-Конг-Лор",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/tkhakkhek-ban-kong-lor.json"
+    },
+    {
+      "id": "la:region:khuapkhan-vengsai-nam-et",
+      "name": "Хуапхан / Вьенгсай / Нам-Эт",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/khuapkhan-vengsai-nam-et.json"
+    },
+    {
+      "id": "la:region:kkhammuan-kong-lor",
+      "name": "Кхаммуан / Конг-Лор",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/kkhammuan-kong-lor.json"
+    },
+    {
+      "id": "la:region:luangpkhabang-sever-doliny-nam-u",
+      "name": "Луангпхабанг / север долины Нам-У",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/luangpkhabang-sever-doliny-nam-u.json"
+    },
+    {
+      "id": "la:region:xieng-khouang",
+      "name": "Xieng Khouang",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/xieng-khouang.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:vieng-xai-caves",
+      "name": "Vieng Xai caves",
+      "geography_ids": [
+        "country:la",
+        "la:hub:sam-neua-vieng-xai",
+        "la:region:khuapkhan-vengsai-nam-et"
+      ],
+      "region_legacy": "Хуапхан / Вьенгсай / Нам-Эт",
+      "nearest_hub": "Sam Neua / Vieng Xai",
+      "narrow": "Пещерный комплекс Вьенгсай — политико-военный ландшафт Pathet Lao периода интенсивных бомбардировок 1960–1970-х. В известняковых полостях размещались штабы, жилые помещения, госпиталь и инфраструктура, образуя фактически скрытый город.",
+      "detail_path": "countries/laos/objects/vieng-xai-caves.json"
+    },
+    {
+      "id": "la:kong-lor-cave",
+      "name": "Kong Lor Cave",
+      "geography_ids": [
+        "country:la",
+        "la:hub:tkhakkhek-ban-kong-lor",
+        "la:region:kkhammuan-kong-lor"
+      ],
+      "region_legacy": "Кхаммуан / Конг-Лор",
+      "nearest_hub": "Тхакхэк / Бан-Конг-Лор",
+      "narrow": "Конг-Лор — сквозная карстовая пещера с подземной рекой Нам-Хин-Бун, по которой лодка проходит несколько километров под массивом. Главное впечатление создаёт не украшенная часть с подсветкой, а масштаб тёмного речного тоннеля и выход в долину Natan.",
+      "detail_path": "countries/laos/objects/kong-lor-cave.json"
+    },
+    {
+      "id": "la:tham-piu-cave",
+      "name": "Tham Piu Cave",
+      "geography_ids": [
+        "country:la",
+        "la:hub:phonsavan",
+        "la:region:xieng-khouang"
+      ],
+      "region_legacy": "Xieng Khouang",
+      "nearest_hub": "Phonsavan",
+      "narrow": "Тхам-Пиу — пещера и мемориал в Сиангкхуанг, связанный с гибелью мирных жителей во время войны в Индокитае. Для маршрута это не 'ещё одна пещера', а место памяти, которое объясняет, почему UXO и бомбардировки остаются частью современной географии провинции.",
+      "detail_path": "countries/laos/objects/tham-piu-cave.json"
+    },
+    {
+      "id": "la:pak-ou-caves",
+      "name": "Pak Ou Caves",
+      "geography_ids": [
+        "country:la",
+        "la:hub:luang-prabang",
+        "la:region:luangpkhabang-sever-doliny-nam-u"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "nearest_hub": "Luang Prabang",
+      "narrow": "Пак-У — две пещеры в известняковой стене над Меконг у устья Нам-У, заполненные тысячами буддийских изображений разных размеров и периодов. Сюжет — одновременно паломничество, накопление вотивных образов и речная география.",
+      "detail_path": "countries/laos/objects/pak-ou-caves.json"
+    }
+  ]
+}

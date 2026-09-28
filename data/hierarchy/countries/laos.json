@@ -1,0 +1,482 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "LA",
+    "country_slug": "laos",
+    "status": "country_geography_formalized",
+    "checked_at": "2026-09-29",
+    "next_level": "object_level_qa_complete_then_country_qa",
+    "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; route hubs remain logistics metadata unless independently verified as settlements."
+  },
+  "rules": {
+    "parentage": "Only documented administrative containment is encoded as hierarchy.",
+    "route_hubs": "A route hub is not promoted to an administrative parent solely because it is convenient for access.",
+    "physical_geography": "Cross-province systems such as the Bolaven Plateau and Nam Et–Phou Louey remain physical/protected-area nodes under the country rather than being forced under one province.",
+    "object_visibility": "An object may attach to both an administrative node and a physical-geography node when both relations are supported."
+  },
+  "nodes": [
+    {
+      "id": "la:province:luang-prabang",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Луангпхабанг",
+      "slug": "luang-prabang",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:luang-prabang",
+        "la:nong-khiaw-and-muang-ngoi",
+        "la:kuang-si-falls",
+        "la:pak-ou-caves"
+      ],
+      "legacy_region_names": [
+        "Луангпхабанг / север долины Нам-У"
+      ],
+      "notes_ru": "Провинциальный уровень для объектов Луангпхабанга и долины Нам-У.",
+      "canonical_id": "geo_la_0024"
+    },
+    {
+      "id": "la:city:luang-prabang",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Луангпхабанг",
+      "slug": "luang-prabang-city",
+      "parent_id": "la:province:luang-prabang",
+      "object_ids": [
+        "la:luang-prabang"
+      ],
+      "notes_ru": "Исторический город и объект Всемирного наследия.",
+      "canonical_id": "geo_la_0025"
+    },
+    {
+      "id": "la:town:nong-khiaw",
+      "kind": "town",
+      "axis": "administrative",
+      "name_ru": "Нонг-Кхиав",
+      "slug": "nong-khiaw",
+      "parent_id": "la:province:luang-prabang",
+      "object_ids": [
+        "la:nong-khiaw-and-muang-ngoi"
+      ],
+      "notes_ru": "Операционный населённый пункт составной карточки Нонг-Кхиав / Мыанг-Нгой.",
+      "canonical_id": "geo_la_0026"
+    },
+    {
+      "id": "la:province:xiangkhouang",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Сиангкхуанг",
+      "slug": "xiangkhouang",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:plain-of-jars",
+        "la:tham-piu-cave"
+      ],
+      "legacy_region_names": [
+        "Xieng Khouang"
+      ],
+      "canonical_id": "geo_la_0027"
+    },
+    {
+      "id": "la:geographic-area:plain-of-jars",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "name_ru": "Равнина кувшинов",
+      "slug": "plain-of-jars",
+      "parent_id": "la:province:xiangkhouang",
+      "object_ids": [
+        "la:plain-of-jars"
+      ],
+      "notes_ru": "Серийный археологический ландшафт не сводится к одной точке Site 1.",
+      "canonical_id": "geo_la_0028"
+    },
+    {
+      "id": "la:province:vientiane",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Провинция Вьентьян",
+      "slug": "vientiane-province",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:vang-vieng-karst"
+      ],
+      "legacy_region_names": [
+        "Ванг-Вьенг / провинция Вьентьян"
+      ],
+      "canonical_id": "geo_la_0029"
+    },
+    {
+      "id": "la:geographic-area:vang-vieng-karst",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Карст Ванг-Вьенга",
+      "slug": "vang-vieng-karst",
+      "parent_id": "la:province:vientiane",
+      "object_ids": [
+        "la:vang-vieng-karst"
+      ],
+      "notes_ru": "Физико-географический карстовый район вокруг долины Нам-Сонг.",
+      "canonical_id": "geo_la_0030"
+    },
+    {
+      "id": "la:province:champasak",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Чампасак",
+      "slug": "champasak",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:wat-phou",
+        "la:si-phan-don-4000-islands"
+      ],
+      "legacy_region_names": [
+        "Чампасак / Си-Фан-Дон / Болавен"
+      ],
+      "canonical_id": "geo_la_0031"
+    },
+    {
+      "id": "la:district:champasak",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Район Чампасак",
+      "slug": "champasak-district",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:wat-phou"
+      ],
+      "notes_ru": "Административная привязка культурного ландшафта Ват-Пху.",
+      "canonical_id": "geo_la_0032"
+    },
+    {
+      "id": "la:geographic-area:si-phan-don",
+      "kind": "archipelago",
+      "axis": "physical_geography",
+      "name_ru": "Си-Фан-Дон",
+      "slug": "si-phan-don",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:si-phan-don-4000-islands"
+      ],
+      "notes_ru": "Островная и протоковая система Меконга на юге Лаоса.",
+      "canonical_id": "geo_la_0033"
+    },
+    {
+      "id": "la:geographic-area:bolaven-plateau",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Плато Болавен",
+      "slug": "bolaven-plateau",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:bolaven-plateau"
+      ],
+      "notes_ru": "Транс-провинциальное плато; не кодируется как дочернее одной провинции.",
+      "canonical_id": "geo_la_0034"
+    },
+    {
+      "id": "la:province:houaphanh",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Хуапхан",
+      "slug": "houaphanh",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:vieng-xai-caves"
+      ],
+      "legacy_region_names": [
+        "Хуапхан / Вьенгсай / Нам-Эт"
+      ],
+      "canonical_id": "geo_la_0035"
+    },
+    {
+      "id": "la:town:vieng-xai",
+      "kind": "town",
+      "axis": "administrative",
+      "name_ru": "Вьенгсай",
+      "slug": "vieng-xai",
+      "parent_id": "la:province:houaphanh",
+      "object_ids": [
+        "la:vieng-xai-caves"
+      ],
+      "notes_ru": "Городской/поселенческий узел распределённого пещерного комплекса.",
+      "canonical_id": "geo_la_0036"
+    },
+    {
+      "id": "la:protected-area:nam-et-phou-louey",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Nam Et–Phou Louey",
+      "slug": "nam-et-phou-louey",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:nam-et-phou-louey-area"
+      ],
+      "notes_ru": "Национальный парк охватывает несколько провинций; поэтому не подчиняется одной из них в канонической иерархии.",
+      "canonical_id": "geo_la_0037"
+    },
+    {
+      "id": "la:province:khammouane",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Кхаммуан",
+      "slug": "khammouane",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:kong-lor-cave",
+        "la:old-thakhek-town"
+      ],
+      "legacy_region_names": [
+        "Кхаммуан / Конг-Лор"
+      ],
+      "canonical_id": "geo_la_0038"
+    },
+    {
+      "id": "la:geographic-area:kong-lor-phou-hin-poun",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Карст Конг-Лор / Пху-Хин-Пун",
+      "slug": "kong-lor-phou-hin-poun",
+      "parent_id": "la:province:khammouane",
+      "object_ids": [
+        "la:kong-lor-cave"
+      ],
+      "notes_ru": "Карстовый район и речная пещера в системе Phou Hin Poun.",
+      "canonical_id": "geo_la_0039"
+    },
+    {
+      "id": "la:city:thakhek",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Тхакхэк",
+      "slug": "thakhek",
+      "parent_id": "la:province:khammouane",
+      "object_ids": [
+        "la:old-thakhek-town"
+      ],
+      "canonical_id": "geo_la_0040"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Саваннакхет",
+      "slug": "savannakhet",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:savannakhet-old-quarter"
+      ],
+      "legacy_region_names": [
+        "Savannakhet"
+      ],
+      "canonical_id": "geo_la_0041"
+    },
+    {
+      "id": "la:city:savannakhet",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Саваннакхет",
+      "slug": "savannakhet-city",
+      "parent_id": "la:province:savannakhet",
+      "object_ids": [
+        "la:savannakhet-old-quarter"
+      ],
+      "canonical_id": "geo_la_0042"
+    },
+    {
+      "id": "la:province:luang-namtha",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Луангнамтха",
+      "slug": "luang-namtha",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:nam-ha-national-protected-area",
+        "la:muang-sing-market-and-tai-lue-cultural-landscape"
+      ],
+      "legacy_region_names": [
+        "Луангнамтха / Нам-Ха"
+      ],
+      "canonical_id": "geo_la_0043"
+    },
+    {
+      "id": "la:protected-area:nam-ha",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальная охраняемая территория Nam Ha",
+      "slug": "nam-ha",
+      "parent_id": "la:province:luang-namtha",
+      "object_ids": [
+        "la:nam-ha-national-protected-area"
+      ],
+      "canonical_id": "geo_la_0044"
+    },
+    {
+      "id": "la:town:muang-sing",
+      "kind": "town",
+      "axis": "administrative",
+      "name_ru": "Мыанг-Синг",
+      "slug": "muang-sing",
+      "parent_id": "la:province:luang-namtha",
+      "object_ids": [
+        "la:muang-sing-market-and-tai-lue-cultural-landscape"
+      ],
+      "canonical_id": "geo_la_0045"
+    },
+    {
+      "id": "la:city:vientiane",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Вьентьян",
+      "slug": "vientiane",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:vientiane-sacred-architecture"
+      ],
+      "legacy_region_names": [
+        "Vientiane Capital"
+      ],
+      "notes_ru": "Столица выделена отдельным городским узлом и не смешивается с одноимённой провинцией.",
+      "canonical_id": "geo_la_0046"
+    },
+    {
+      "id": "la:province:phongsaly",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Пхонгсали",
+      "slug": "phongsaly",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:phongsaly-old-town-and-ancient-tea-highlands"
+      ],
+      "legacy_region_names": [
+        "Phongsaly highlands"
+      ],
+      "canonical_id": "geo_la_0047"
+    },
+    {
+      "id": "la:town:phongsaly",
+      "kind": "town",
+      "axis": "administrative",
+      "name_ru": "Пхонгсали",
+      "slug": "phongsaly-town",
+      "parent_id": "la:province:phongsaly",
+      "object_ids": [
+        "la:phongsaly-old-town-and-ancient-tea-highlands"
+      ],
+      "canonical_id": "geo_la_0048"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://whc.unesco.org/en/list/479/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Luang Prabang World Heritage city"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/1587/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Plain of Jars serial archaeological landscape in Xiangkhouang"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://whc.unesco.org/en/list/481/",
+      "publisher": "UNESCO World Heritage Centre",
+      "used_for": [
+        "Vat Phou and Champasak cultural landscape"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/northern-provinces/louangphabang-province/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Luang Prabang Province travel geography"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/northern-provinces/xiangkhouang-province/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Xiangkhouang Province travel geography"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/central-provinces/vientiane-province/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Vientiane Province and Vang Vieng"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Champasak and southern Mekong travel geography"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.namet.org/about-the-park/",
+      "publisher": "Nam Et-Phou Louey National Park",
+      "used_for": [
+        "Nam Et-Phou Louey cross-province protected-area identity"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/central-provinces/khammouane-province/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Khammouane, Thakhek and Kong Lor travel geography"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://laoparks.la/parks/",
+      "publisher": "Protected Area Management Division, Department of Forestry",
+      "used_for": [
+        "Phou Hin Poun and Nam Ha protected-area identities"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16628",
+      "publisher": "Key Biodiversity Areas",
+      "used_for": [
+        "Nam Ha central coordinate and mountain system"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Luang Namtha Province and Muang Sing travel geography"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Vientiane Capital"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/northern-provinces/phongsali-province/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Phongsaly Province and town"
+      ],
+      "checked_at": "2026-09-29"
+    }
+  ]
+}

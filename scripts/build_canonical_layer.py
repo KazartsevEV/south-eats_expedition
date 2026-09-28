@@ -834,6 +834,15 @@ def build():
     dump(release / "schema" / "enums.json", {
         "geo_kinds": sorted(GEO_KINDS),
         "coordinate_types": sorted(COORDINATE_TYPES),
+        "object_elevation_reference_types": [
+            "site",
+            "summit",
+            "highest_point",
+            "characteristic",
+            "range",
+            "water_surface",
+            "unknown",
+        ],
         "transport_modes": TRANSPORT_MODES,
         "surface_types": SURFACE_TYPES,
         "overnight_status": [

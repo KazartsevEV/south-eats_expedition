@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.3.0"
-RELEASE_ID = "2026-09-28-r8"
+SCHEMA_VERSION = "2.3.1"
+RELEASE_ID = "2026-09-28-r9"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
@@ -295,12 +295,22 @@ def dump(path: Path, value):
     )
 
 
+CYRILLIC_TRANSLIT = str.maketrans({
+    "а":"a","б":"b","в":"v","г":"g","д":"d","е":"e","ё":"e","ж":"zh","з":"z","и":"i","й":"i",
+    "к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f",
+    "х":"kh","ц":"ts","ч":"ch","ш":"sh","щ":"shch","ъ":"","ы":"y","ь":"","э":"e","ю":"yu","я":"ya",
+})
+
 def slugify(value: str) -> str:
-    text = unicodedata.normalize("NFKD", value or "")
+    raw = (value or "").strip()
+    text = raw.lower().translate(CYRILLIC_TRANSLIT).replace("&", " and ")
+    text = unicodedata.normalize("NFKD", text)
     text = "".join(ch for ch in text if not unicodedata.combining(ch))
-    text = text.lower().replace("&", " and ")
-    text = re.sub(r"[^a-z0-9]+", "-", text)
-    return text.strip("-") or "item"
+    text = re.sub(r"[^a-z0-9]+", "-", text).strip("-")
+    if text:
+        return text
+    # Stable fallback for scripts not covered by transliteration. Never emit a shared "item" slug.
+    return "item-" + hashlib.sha1(raw.encode("utf-8")).hexdigest()[:10]
 
 
 def compact_text(value):

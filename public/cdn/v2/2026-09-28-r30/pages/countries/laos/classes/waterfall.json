@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.10.0",
+    "release_id": "2026-09-28-r30",
+    "page_type": "country_class",
+    "id": "country-class:la:waterfall"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "waterfall",
+    "label_ru": "Водопады",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:water_coast_marine",
+    "page_path": "pages/countries/laos/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/waterfall.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:hub:luang-prabang",
+      "name": "Luang Prabang",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/luang-prabang.json"
+    },
+    {
+      "id": "la:region:luangpkhabang-sever-doliny-nam-u",
+      "name": "Луангпхабанг / север долины Нам-У",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/luangpkhabang-sever-doliny-nam-u.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:kuang-si-falls",
+      "name": "Kuang Si Falls",
+      "geography_ids": [
+        "country:la",
+        "la:hub:luang-prabang",
+        "la:region:luangpkhabang-sever-doliny-nam-u"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "nearest_hub": "Luang Prabang",
+      "narrow": "Куанг-Си — каскад по известняковым/травертиновым уступам южнее Луангпхабанг. Бирюзовый цвет создаётся рассеянием света в минеральной воде; визуальный интерес — последовательность малых чаш, леса и главного вертикального водопада, а не один бассейн.",
+      "detail_path": "countries/laos/objects/kuang-si-falls.json"
+    }
+  ]
+}

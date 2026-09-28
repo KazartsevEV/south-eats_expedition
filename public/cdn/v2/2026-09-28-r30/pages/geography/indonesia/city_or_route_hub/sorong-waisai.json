@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schema_version": "2.10.0",
+    "release_id": "2026-09-28-r30",
+    "page_type": "geography",
+    "id": "id:hub:sorong-waisai"
+  },
+  "identity": {
+    "name": "Sorong / Waisai",
+    "kind": "city_or_route_hub",
+    "slug": "sorong-waisai",
+    "country_code": "ID"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:id",
+    "page_path": "pages/countries/indonesia.json"
+  },
+  "source_profile": {
+    "id": "id:hub:sorong-waisai",
+    "kind": "city_or_route_hub",
+    "name": "Sorong / Waisai",
+    "slug": "sorong-waisai"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "island",
+          "label_ru": "Острова и архипелаги",
+          "count": 1,
+          "country_class_page": "pages/countries/indonesia/classes/island.json",
+          "filter": {
+            "geography_id": "id:hub:sorong-waisai"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "id:raja-ampat",
+      "name": "Raja Ampat",
+      "object_type": "island",
+      "narrow": "Raja Ampat — не одна точка, а многодневная морская сеть карстовых островов, папуасских деревень и рифов Coral Triangle, где лодка является обычным транспортом между участками маршрута.",
+      "detail_path": "countries/indonesia/objects/raja-ampat.json"
+    }
+  ]
+}

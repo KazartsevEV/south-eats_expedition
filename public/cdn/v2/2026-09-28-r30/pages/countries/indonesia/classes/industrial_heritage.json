@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "schema_version": "2.10.0",
+    "release_id": "2026-09-28-r30",
+    "page_type": "country_class",
+    "id": "country-class:id:industrial_heritage"
+  },
+  "identity": {
+    "country_code": "ID",
+    "country_slug": "indonesia",
+    "object_type": "industrial_heritage",
+    "label_ru": "Индустриальное наследие",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:id:built_heritage",
+    "page_path": "pages/countries/indonesia/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/industrial_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:padang-sawahlunto",
+      "name": "Padang / Sawahlunto",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/padang-sawahlunto.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "id:sawahlunto",
+      "name": "Sawahlunto",
+      "geography_ids": [
+        "country:id",
+        "id:hub:padang-sawahlunto"
+      ],
+      "region_legacy": "Западной Суматре / Sawahlunto",
+      "nearest_hub": "Padang / Sawahlunto",
+      "narrow": "Sawahlunto — бывший колониальный угольный город Ombilin: шахты, рабочие кварталы, железная дорога и административная архитектура позволяют читать всю промышленную систему, включая историю принудительного труда.",
+      "detail_path": "countries/indonesia/objects/sawahlunto.json"
+    }
+  ]
+}

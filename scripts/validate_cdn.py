@@ -1,80 +1,123 @@
 #!/usr/bin/env python3
-import hashlib, json, sys
+import hashlib
+import json
+import sys
 from pathlib import Path
 
-ROOT = Path(sys.argv[1] if len(sys.argv) > 1 else "public/cdn/v2")
-LATEST = ROOT / "latest.json"
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "data" / "source"
+CDN = Path(sys.argv[1] if len(sys.argv) > 1 else ROOT / "public" / "cdn" / "v2")
 
-def load(p):
-    with p.open("r", encoding="utf-8") as f:
+def load(path):
+    with path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
-def fail(msg):
-    print(f"ERROR: {msg}", file=sys.stderr)
+def fail(message):
+    print(f"ERROR: {message}", file=sys.stderr)
     raise SystemExit(1)
 
-if not LATEST.exists(): fail(f"missing {LATEST}")
-latest = load(LATEST)
+# Source guard: never accept empty/truncated JSON again.
+sources = sorted(SRC.glob("*.json"))
+if not sources:
+    fail("no source country files")
+for path in sources:
+    if path.stat().st_size < 10_000:
+        fail(f"source suspiciously small: {path} ({path.stat().st_size} bytes)")
+    try:
+        doc = load(path)
+    except Exception as exc:
+        fail(f"invalid source JSON {path}: {exc}")
+    if not (doc.get("meta") or {}).get("country"):
+        fail(f"source missing meta.country: {path}")
+    if not isinstance((doc.get("travel") or {}).get("objects"), list):
+        fail(f"source missing travel.objects: {path}")
+
+latest_path = CDN / "latest.json"
+if not latest_path.exists():
+    fail(f"missing {latest_path}")
+latest = load(latest_path)
 release_id = latest.get("release_id")
-if not release_id: fail("latest.json missing release_id")
-release = ROOT / release_id
+if not release_id:
+    fail("latest.json missing release_id")
+release = CDN / release_id
 manifest_path = release / "manifest.json"
-if not manifest_path.exists(): fail(f"missing manifest {manifest_path}")
+if not manifest_path.exists():
+    fail(f"missing {manifest_path}")
 manifest = load(manifest_path)
-if manifest.get("release_id") != release_id: fail("latest/manifest release_id mismatch")
-if manifest.get("schema_version") != latest.get("schema_version"): fail("latest/manifest schema_version mismatch")
 
-for p in sorted(release.rglob("*.json")):
-    try: load(p)
-    except Exception as e: fail(f"invalid JSON {p}: {e}")
+if manifest.get("release_id") != release_id:
+    fail("latest/manifest release_id mismatch")
+if manifest.get("schema_version") != latest.get("schema_version"):
+    fail("latest/manifest schema_version mismatch")
 
+# Every generated JSON must parse.
+for path in sorted(release.rglob("*.json")):
+    try:
+        load(path)
+    except Exception as exc:
+        fail(f"invalid generated JSON {path}: {exc}")
+
+# Manifest integrity.
 for item in manifest.get("files", []):
     rel = item.get("path")
-    if not rel: fail("manifest file item missing path")
-    p = release / rel
-    if not p.exists(): fail(f"manifest references missing file: {rel}")
-    b = p.read_bytes()
-    if len(b) != item.get("bytes"): fail(f"size mismatch: {rel}")
-    sha = hashlib.sha256(b).hexdigest()
-    if sha != item.get("sha256"): fail(f"sha256 mismatch: {rel}")
+    if not rel:
+        fail("manifest file entry missing path")
+    path = release / rel
+    if not path.exists():
+        fail(f"manifest references missing file: {rel}")
+    payload = path.read_bytes()
+    if len(payload) != item.get("bytes"):
+        fail(f"size mismatch: {rel}")
+    if hashlib.sha256(payload).hexdigest() != item.get("sha256"):
+        fail(f"sha256 mismatch: {rel}")
 
-countries = load(release / "countries.json")
-objects = load(release / "search/objects.json")
-places = load(release / "search/places.json")
+countries = load(release / "countries.json").get("countries", [])
+objects = load(release / "search" / "objects.json").get("objects", [])
+places = load(release / "search" / "places.json").get("places", [])
 qa = load(release / "qa.json")
 
-def seq(obj):
-    if isinstance(obj, list): return obj
-    if isinstance(obj, dict):
-        for k in ("countries","items","objects","places","results"):
-            if isinstance(obj.get(k), list): return obj[k]
-    fail("cannot identify list payload")
+totals = manifest.get("totals") or {}
+checks = {
+    "countries": len(countries),
+    "objects": len(objects),
+    "places": len(places),
+}
+for key, actual in checks.items():
+    if actual != totals.get(key):
+        fail(f"{key} count {actual} != manifest {totals.get(key)}")
 
-country_rows = seq(countries)
-object_rows = seq(objects)
-place_rows = seq(places)
+ids = [row.get("id") for row in objects]
+if any(not x for x in ids):
+    fail("object search index contains row without id")
+if len(ids) != len(set(ids)):
+    fail("duplicate object id in search index")
 
-expected = manifest.get("totals", {})
-if len(country_rows) != expected.get("countries"): fail(f"country count {len(country_rows)} != {expected.get('countries')}")
-if len(object_rows) != expected.get("objects"): fail(f"object count {len(object_rows)} != {expected.get('objects')}")
-if len(place_rows) != expected.get("places"): fail(f"place count {len(place_rows)} != {expected.get('places')}")
-if qa.get("failures") not in ({}, None): fail(f"qa failures present: {qa.get('failures')}")
+# Reference release is expected to have full coverage of the fields requested
+# for object cards. Single-image galleries are allowed and explicitly marked.
+failures = qa.get("failures") or {}
+if failures:
+    fail(f"QA coverage failures: {json.dumps(failures, ensure_ascii=False)}")
 
-def first_key(row, keys):
-    if not isinstance(row, dict): return None
-    for k in keys:
-        if row.get(k): return str(row[k])
-    return None
-
-ids = [first_key(r,("id","object_id","slug")) for r in object_rows]
-ids = [x for x in ids if x]
-if len(ids) != len(set(ids)): fail("duplicate object id/slug in search index")
+# Contract: story is emitted once; legacy source prose keys must not leak.
+for row in objects:
+    detail = load(release / row["detail_path"])
+    if "why_go" in detail or "annotation" in detail:
+        fail(f"duplicate prose field leaked into {row['detail_path']}")
+    story = (detail.get("story") or {}).get("narrative")
+    if not story:
+        fail(f"missing canonical story in {row['detail_path']}")
+    identity = detail.get("identity") or {}
+    if not identity.get("narrow"):
+        fail(f"missing narrow in {row['detail_path']}")
+    if not identity.get("object_type"):
+        fail(f"missing object_type in {row['detail_path']}")
 
 print(json.dumps({
-    "status":"ok",
-    "release_id":release_id,
-    "countries":len(country_rows),
-    "objects":len(object_rows),
-    "places":len(place_rows),
-    "manifest_files":len(manifest.get("files", []))
+    "status": "ok",
+    "release_id": release_id,
+    "schema_version": manifest.get("schema_version"),
+    "source_files": len(sources),
+    "published_countries": manifest.get("published_countries"),
+    **checks,
+    "manifest_files": len(manifest.get("files", [])),
 }, ensure_ascii=False, indent=2))

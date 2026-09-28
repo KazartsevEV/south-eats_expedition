@@ -51,13 +51,13 @@
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "2.10.5",
+      "schema_target": "2.10.6",
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
       "policy": "WGS84/EPSG:4326; point elevation belongs to a specific GPS point (entrance/pier/trailhead/etc.); object_elevation separately describes the object itself above mean sea level and is required for elevation QA.",
       "objects_with_point_elevation": 16,
-      "objects_with_object_elevation": 15
+      "objects_with_object_elevation": 16
     },
     "elevation_provenance_upgrade": {
       "updated": "2026-09-28",
@@ -892,6 +892,24 @@
               "authority": "medium",
               "accessed": "2026-09-28",
               "notes": "SRTM30m sample at the exact canonical GPS point. Approximate surface elevation from a ~30 m raster; in stilt settlement and rainforest/longhouse settings it can include building or canopy bias and is not a surveyed threshold/ground elevation."
+            },
+            "object_elevation": {
+              "representative_m": 0,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "water_surface",
+              "accuracy": "approximate",
+              "source": {
+                "type": "research",
+                "title": "Impact of Seasonal Variation and Population Growth on Coliform Bacteria Concentrations in the Brunei River: A Temporal Analysis with Future Projection",
+                "publisher": "Water (MDPI)",
+                "url": "https://www.mdpi.com/2073-4441/17/7/1069",
+                "authority": "high",
+                "accessed": "2026-09-28",
+                "notes": "Исследование помещает традиционный свайный Kampong Ayer непосредственно в Sungai Brunei и описывает нижнее течение как эстуарную систему под сильным влиянием приливов."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Около 0 м MSL — характеристика водной поверхности среды объекта, а не отметка пола домов/настилов. Поселение стоит на сваях над приливной рекой; фактический уровень воды меняется с приливом."
             }
           },
           "logistics": {

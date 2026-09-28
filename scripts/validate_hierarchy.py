@@ -40,6 +40,14 @@ navigation = load(release / "navigation" / "tree.json")
 status = load(release / "hierarchy-status.json")
 types = load(release / "object-types.json")["object_types"]
 objects = load(release / "search" / "objects.json")["objects"]
+places = load(release / "search" / "places.json")["places"]
+
+place_ids = [p.get("id") for p in places]
+if any(not x for x in place_ids):
+    fail("place index contains empty id")
+if len(place_ids) != len(set(place_ids)):
+    duplicates = sorted({x for x in place_ids if place_ids.count(x) > 1})
+    fail(f"duplicate place ids: {duplicates[:20]}")
 
 # Top levels are fixed before descending.
 countries = project.get("countries") or []
@@ -103,6 +111,14 @@ if {n.get("id","").split(":")[-1].upper() for n in nav_countries} != set(codes):
     fail("navigation country set mismatch")
 
 # Every released object must be reachable through its country's class branch.
+def collect_object_ids(node):
+    out = set()
+    if node.get("kind") in {"object", "object_ref"} and node.get("id"):
+        out.add(node["id"])
+    for child in node.get("children") or []:
+        out.update(collect_object_ids(child))
+    return out
+
 reachable = set()
 for country in nav_countries:
     branches = {b.get("id","").split(":")[-1]: b for b in country.get("children") or []}
@@ -110,10 +126,7 @@ for country in nav_countries:
     geo_branch = branches.get("geography")
     if class_branch is None or geo_branch is None:
         fail(f"country lacks geography/classes branches: {country.get('id')}")
-    for class_node in class_branch.get("children") or []:
-        for child in class_node.get("children") or []:
-            if child.get("id"):
-                reachable.add(child["id"])
+    reachable.update(collect_object_ids(class_branch))
 
 object_ids = {o["id"] for o in objects}
 missing_objects = sorted(object_ids - reachable)

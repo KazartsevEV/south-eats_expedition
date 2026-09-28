@@ -49,6 +49,13 @@
       "physical_difficulty_policy": "ступени, большой пеший километраж, уклоны и многодневный формат не считаются ограничением сами по себе; они фиксируются как параметры маршрута",
       "guide_policy": "гид/проводник указывается только когда он обязателен режимом доступа или действительно рационален из-за навигации, лодочного доступа, охраняемой территории, языка/согласия общины либо специального исторического контекста",
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
+    },
+    "geodata_upgrade_progress": {
+      "schema_target": "2.4.0",
+      "updated": "2026-09-28",
+      "objects_with_primary_coordinates": 15,
+      "total_objects": 18,
+      "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas use approximate reference points with explicit basis"
     }
   },
   "overview": {
@@ -147,8 +154,8 @@
       "Apr": 27.1,
       "May": 27.3,
       "Jun": 27.1,
-      "Jul": 27.0,
-      "Aug": 27.0,
+      "Jul": 27,
+      "Aug": 27,
       "Sep": 26.8,
       "Oct": 26.3,
       "Nov": 26.2,
@@ -237,7 +244,7 @@
       ],
       "typical_simple_meal_usd_range": [
         1.5,
-        5.0
+        5
       ],
       "price_note": "ориентир, не официальный тариф"
     },
@@ -322,7 +329,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.88942,
+              "lon": 114.9392,
+              "elevation_m": null
+            },
+            "coordinate_type": "temple_entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/W45840473",
+              "basis": "mapped mosque feature"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Jalan McArthur в центре столицы; пешком из центральной части BSB, Dart или городской автобус.",
@@ -556,7 +577,22 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.898056,
+              "lon": 114.921944,
+              "elevation_m": 10
+            },
+            "coordinate_type": "temple_entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "provider": "Wikidata + Komoot",
+              "url": "https://www.wikidata.org/wiki/Q20410627",
+              "elevation_url": "https://www.komoot.com/highlight/795038",
+              "basis": "mapped mosque coordinate; terrain elevation from mapped highlight"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Dart/автомобиль; находится вне компактного пешего ядра BSB.",
@@ -773,7 +809,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.8825,
+              "lon": 114.9425,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1990199",
+              "basis": "settlement-area reference coordinate"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "С набережной BSB на вода такси, затем пешком по деревянным мосткам.",
@@ -1003,7 +1053,71 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.55497,
+              "lon": 115.15486,
+              "elevation_m": null
+            },
+            "coordinate_type": "pier",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N4817868121",
+              "basis": "National Park Registration Jetty; operational river entry point"
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Hiking Trail",
+                "type": "trailhead",
+                "coordinates": {
+                  "lat": 4.55229,
+                  "lon": 115.15673,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "source": {
+                  "provider": "Mapcarta / OpenStreetMap",
+                  "url": "https://mapcarta.com/N4817868221"
+                },
+                "checked_at": "2026-09-28"
+              },
+              {
+                "name": "Canopy Viewing Tower",
+                "type": "viewpoint",
+                "coordinates": {
+                  "lat": 4.55209,
+                  "lon": 115.15976,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "source": {
+                  "provider": "Mapcarta / OpenStreetMap",
+                  "url": "https://mapcarta.com/N4817868122"
+                },
+                "checked_at": "2026-09-28"
+              },
+              {
+                "name": "Waterfalls (natural fish spa)",
+                "type": "waterfall_base",
+                "coordinates": {
+                  "lat": 4.56169,
+                  "lon": 115.15312,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "source": {
+                  "provider": "Mapcarta / OpenStreetMap",
+                  "url": "https://mapcarta.com/N5320149923"
+                },
+                "checked_at": "2026-09-28"
+              }
+            ]
           },
           "logistics": {
             "access": "Из BSB по Тембуронг Bridge в Bangar, далее организованный трансфер/лодка к зоне парка и тропам.",
@@ -1248,7 +1362,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.892881,
+              "lon": 114.941562,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q21787576",
+              "basis": "museum feature coordinate"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "В центре BSB; пешком или Dart.",
@@ -1472,7 +1600,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.61416,
+              "lon": 114.33018,
+              "elevation_m": 6
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "provider": "Mapcarta / GeoNames",
+              "url": "https://mapcarta.com/15986052",
+              "basis": "Seria town reference point used only as centre of broad oil-heritage landscape"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Автомобиль/Dart из Kuala Белайт или BSB; часть pumpjacks видна с общедоступных дорог около побережья и Billionth Barrel Monument.",
@@ -1695,7 +1837,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.38947,
+              "lon": 114.4603,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / GeoNames",
+              "url": "https://mapcarta.com/15986266",
+              "basis": "Mukim Labi reference point; object is a broad interior landscape"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Из Kuala Белайт/Сериа по Лаби дорога; для удалённых лесных маршрутов нужен локальный контакт или гид.",
@@ -1934,7 +2090,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.80379,
+              "lon": 114.65642,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/W518214658",
+              "basis": "Pasar Malam Pekan Tutong marketplace"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "По шоссе из BSB/Сериа; в городе пешком или Dart.",
@@ -2152,7 +2322,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.5942,
+              "lon": 114.67961,
+              "elevation_m": 94
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "provider": "Mapcarta / GeoNames",
+              "url": "https://mapcarta.com/15986412",
+              "basis": "Tasek Merimbun lake feature"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Лучше частный автомобиль/Dart; общественный транспорт ограничен.",
@@ -2372,7 +2556,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.902917,
+              "lon": 114.945122,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/W221450930",
+              "basis": "park feature coordinate"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Dart/автомобиль; затем пешком по тропам.",
@@ -3064,7 +3262,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.61675,
+              "lon": 114.31716,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N2550896077",
+              "basis": "monument feature coordinate"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Автомобиль/Dart; объект у побережья, совмещается с oil наследие маршрут.",
@@ -3289,7 +3501,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.88325,
+              "lon": 114.9698,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N2077189639",
+              "basis": "museum feature coordinate"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Dart/автомобиль из центра BSB; удобно совместить с Kota Batu museums.",
@@ -3513,7 +3739,21 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается."
-            }
+            },
+            "coordinates": {
+              "lat": 4.9517,
+              "lon": 114.8535,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/W137295789",
+              "basis": "recreational park feature coordinate"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Короткий автомобильный трансфер из Бандар-Сери-Бегаван в сторону Jerudong; проще всего Dart/такси, автобус — бюджетная альтернатива.",
@@ -3935,7 +4175,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.89041,
+              "lon": 114.94503,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/W431333374",
+              "basis": "marketplace feature coordinate"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "В центре BSB у Kianggeh река; пешком из центральной части, Dart или городской автобус.",
@@ -4152,7 +4406,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.99319,
+              "lon": 114.92401,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/W479573588",
+              "basis": "Berakas Forest Reserve park feature; used as park reference point"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Короткая поездка из BSB; Бруней туризм рекомендует Dart, возможен автобус.",

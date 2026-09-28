@@ -12,6 +12,7 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
 FORMAL_CANONICAL_GEO_CODES = {"KH"}
+COUNTRY_SOURCE_CANONICAL_CODES = {"KH"}
 
 GENERATED_AT = "2026-09-28T21:14:00+04:00"
 DEFAULT_LANGUAGE = "ru"
@@ -574,7 +575,8 @@ def build():
         "academic": "academic",
         "university": "university",
     }
-    for code, (_, country_source) in sources_by_code.items():
+    for code in sorted(published_codes & COUNTRY_SOURCE_CANONICAL_CODES):
+        country_source = sources_by_code[code][1]
         for row in country_source.get("sources") or []:
             short_id = row.get("id")
             if not short_id:

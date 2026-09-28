@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.7.0"
-RELEASE_ID = "2026-09-28-r17"
+SCHEMA_VERSION = "2.7.1"
+RELEASE_ID = "2026-09-28-r18"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
@@ -367,22 +367,25 @@ def _normalized_point(raw, fallback_type=None):
         "accuracy": raw.get("accuracy") or "unknown",
         "elevation_accuracy": raw.get("elevation_accuracy") or ("unknown" if elevation is None else raw.get("accuracy") or "unknown"),
         "source_refs": [raw.get("source_ref")] if raw.get("source_ref") else [],
+        "elevation_source_refs": [raw.get("elevation_source_ref")] if raw.get("elevation_source_ref") else [],
         "checked_at": raw.get("coordinates_checked_at") or raw.get("checked_at"),
     }
 
 def normalize_geo(location, source_registry=None, object_id=None):
     location = location if isinstance(location, dict) else {}
 
-    def coordinate_source_ref(holder):
+    def fact_source_ref(holder, source_key, used_for_label):
         if not isinstance(holder, dict) or source_registry is None or object_id is None:
             return None
-        source = holder.get("coordinate_source") or holder.get("source")
+        source = holder.get(source_key)
+        if source_key == "coordinate_source" and not isinstance(source, dict):
+            source = holder.get("source")
         if not isinstance(source, dict):
             return None
         source = dict(source)
         used_for = list(source.get("used_for") or [])
-        if "coordinates" not in used_for:
-            used_for.append("coordinates")
+        if used_for_label not in used_for:
+            used_for.append(used_for_label)
         source["used_for"] = used_for
         return merge_source_entity(source_registry, source, object_id)
 
@@ -391,7 +394,8 @@ def normalize_geo(location, source_registry=None, object_id=None):
         "coordinate_type": location.get("coordinate_type"),
         "accuracy": location.get("accuracy"),
         "elevation_accuracy": location.get("elevation_accuracy"),
-        "source_ref": coordinate_source_ref(location),
+        "source_ref": fact_source_ref(location, "coordinate_source", "coordinates"),
+        "elevation_source_ref": fact_source_ref(location, "elevation_source", "elevation"),
         "coordinates_checked_at": location.get("coordinates_checked_at"),
     }
     primary = _normalized_point(primary_raw, "center")
@@ -400,7 +404,8 @@ def normalize_geo(location, source_registry=None, object_id=None):
         if not isinstance(row, dict):
             continue
         normalized_raw = dict(row)
-        normalized_raw["source_ref"] = coordinate_source_ref(row)
+        normalized_raw["source_ref"] = fact_source_ref(row, "coordinate_source", "coordinates")
+        normalized_raw["elevation_source_ref"] = fact_source_ref(row, "elevation_source", "elevation")
         point = _normalized_point(normalized_raw)
         if point:
             points.append(point)
@@ -1098,6 +1103,10 @@ def build():
         "crs": "WGS84",
         "epsg": 4326,
         "primary_coordinate_fields": ["lat", "lon", "elevation_m"],
+        "fact_provenance": {
+            "coordinate_sources": "source_refs",
+            "elevation_sources": "elevation_source_refs"
+        },
         "coordinate_types": sorted(COORDINATE_TYPES),
         "accuracy_values": ["high", "medium", "approximate", "unknown"],
         "rules": {

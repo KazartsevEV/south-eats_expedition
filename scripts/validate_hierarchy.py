@@ -133,14 +133,31 @@ missing_objects = sorted(object_ids - reachable)
 if missing_objects:
     fail(f"objects unreachable through country class branches: {missing_objects[:20]}")
 
+def validate_nav_pages(node):
+    kind=node.get("kind")
+    if kind in {"class_family","country_class"}:
+        path=node.get("path")
+        if not path or not (release / path).exists():
+            fail(f"navigation node page missing: {node.get('id')} -> {path}")
+    for child in node.get("children") or []:
+        validate_nav_pages(child)
+
+for country in nav_countries:
+    validate_nav_pages(country)
+
+for family in ((taxonomy.get("root") or {}).get("children") or []):
+    family_page=release / "pages" / "families" / f"{family.get('value')}.json"
+    if not family_page.exists():
+        fail(f"global family page missing: {family.get('value')}")
+
 # Page contracts must cover all renderer levels.
 layouts = load(release / "page-layouts.json").get("layouts") or {}
-expected_layouts = {"project","region","country","geography","class","object"}
+expected_layouts = {"project","region","country","geography","class_family","class","country_class","object"}
 if set(layouts) != expected_layouts:
     fail(f"page layout set mismatch: {sorted(layouts)}")
 
 levels = status.get("levels") or {}
-for key in ["project","region","country_catalog","taxonomy_families","geography_contract","country_pages","geography_pages","object_classes","object_cards"]:
+for key in ["project","region","country_catalog","taxonomy_families","geography_contract","country_pages","geography_pages","class_family_pages","country_class_pages","object_classes","object_cards"]:
     if key not in levels:
         fail(f"hierarchy status missing level: {key}")
 

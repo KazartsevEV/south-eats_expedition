@@ -1,0 +1,522 @@
+{
+  "meta": {
+    "schema_version": "2.4.0",
+    "release_id": "2026-09-28-r11",
+    "tree_kind": "object_taxonomy"
+  },
+  "root": {
+    "id": "taxonomy:objects",
+    "kind": "taxonomy_root",
+    "label_ru": "Классы объектов",
+    "rule": "Каждый объект имеет один основной класс; семейства служат только для навигации и не заменяют primary class.",
+    "children": [
+      {
+        "id": "family:built_heritage",
+        "kind": "class_family",
+        "value": "built_heritage",
+        "label_ru": "Поселения и архитектурное наследие",
+        "description": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+        "count": 22,
+        "children": [
+          {
+            "id": "class:city",
+            "kind": "object_class",
+            "value": "city",
+            "label_ru": "Города",
+            "count": 2,
+            "page_path": "pages/classes/city.json",
+            "collection_path": "collections/city.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:historic_city",
+            "kind": "object_class",
+            "value": "historic_city",
+            "label_ru": "Исторические города и кварталы",
+            "count": 15,
+            "page_path": "pages/classes/historic_city.json",
+            "collection_path": "collections/historic_city.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:historic_building",
+            "kind": "object_class",
+            "value": "historic_building",
+            "label_ru": "Исторические здания и руины",
+            "count": 1,
+            "page_path": "pages/classes/historic_building.json",
+            "collection_path": "collections/historic_building.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:palace",
+            "kind": "object_class",
+            "value": "palace",
+            "label_ru": "Дворцы",
+            "count": 1,
+            "page_path": "pages/classes/palace.json",
+            "collection_path": "collections/palace.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:fortification",
+            "kind": "object_class",
+            "value": "fortification",
+            "label_ru": "Фортификации",
+            "count": 0,
+            "page_path": "pages/classes/fortification.json",
+            "collection_path": null,
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:colonial_architecture",
+            "kind": "object_class",
+            "value": "colonial_architecture",
+            "label_ru": "Колониальная архитектура",
+            "count": 0,
+            "page_path": "pages/classes/colonial_architecture.json",
+            "collection_path": null,
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:industrial_heritage",
+            "kind": "object_class",
+            "value": "industrial_heritage",
+            "label_ru": "Индустриальное наследие",
+            "count": 2,
+            "page_path": "pages/classes/industrial_heritage.json",
+            "collection_path": "collections/industrial_heritage.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:monument",
+            "kind": "object_class",
+            "value": "monument",
+            "label_ru": "Памятники и монументы",
+            "count": 1,
+            "page_path": "pages/classes/monument.json",
+            "collection_path": "collections/monument.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:abandoned_site",
+            "kind": "object_class",
+            "value": "abandoned_site",
+            "label_ru": "Заброшенные объекты",
+            "count": 0,
+            "page_path": "pages/classes/abandoned_site.json",
+            "collection_path": null,
+            "status": "canonical_leaf"
+          }
+        ]
+      },
+      {
+        "id": "family:archaeology_memory",
+        "kind": "class_family",
+        "value": "archaeology_memory",
+        "label_ru": "Археология, древность и историческая память",
+        "description": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+        "count": 22,
+        "children": [
+          {
+            "id": "class:archaeological_site",
+            "kind": "object_class",
+            "value": "archaeological_site",
+            "label_ru": "Археологические объекты",
+            "count": 16,
+            "page_path": "pages/classes/archaeological_site.json",
+            "collection_path": "collections/archaeological_site.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:megalithic_site",
+            "kind": "object_class",
+            "value": "megalithic_site",
+            "label_ru": "Мегалиты",
+            "count": 2,
+            "page_path": "pages/classes/megalithic_site.json",
+            "collection_path": "collections/megalithic_site.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:museum",
+            "kind": "object_class",
+            "value": "museum",
+            "label_ru": "Музеи",
+            "count": 3,
+            "page_path": "pages/classes/museum.json",
+            "collection_path": "collections/museum.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:memorial_site",
+            "kind": "object_class",
+            "value": "memorial_site",
+            "label_ru": "Мемориальные места",
+            "count": 1,
+            "page_path": "pages/classes/memorial_site.json",
+            "collection_path": "collections/memorial_site.json",
+            "status": "canonical_leaf"
+          }
+        ]
+      },
+      {
+        "id": "family:religion_ethnography",
+        "kind": "class_family",
+        "value": "religion_ethnography",
+        "label_ru": "Религия, этнография и живая культура",
+        "description": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+        "count": 20,
+        "children": [
+          {
+            "id": "class:religious_site",
+            "kind": "object_class",
+            "value": "religious_site",
+            "label_ru": "Храмы и религиозные объекты",
+            "count": 7,
+            "page_path": "pages/classes/religious_site.json",
+            "collection_path": "collections/religious_site.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:living_settlement",
+            "kind": "object_class",
+            "value": "living_settlement",
+            "label_ru": "Живые традиционные поселения",
+            "count": 5,
+            "page_path": "pages/classes/living_settlement.json",
+            "collection_path": "collections/living_settlement.json",
+            "status": "transitional_overlap",
+            "migration": {
+              "status": "transitional_overlap",
+              "target_split": [
+                "traditional_settlement"
+              ],
+              "note_ru": "Старый класс сохраняется до проверки: в новой схеме поселение должно описываться как traditional_settlement, а живая культура — тегами и этнографическим блоком."
+            }
+          },
+          {
+            "id": "class:traditional_settlement",
+            "kind": "object_class",
+            "value": "traditional_settlement",
+            "label_ru": "Традиционные поселения",
+            "count": 0,
+            "page_path": "pages/classes/traditional_settlement.json",
+            "collection_path": null,
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:cultural_landscape",
+            "kind": "object_class",
+            "value": "cultural_landscape",
+            "label_ru": "Культурные ландшафты",
+            "count": 6,
+            "page_path": "pages/classes/cultural_landscape.json",
+            "collection_path": "collections/cultural_landscape.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:market",
+            "kind": "object_class",
+            "value": "market",
+            "label_ru": "Рынки",
+            "count": 2,
+            "page_path": "pages/classes/market.json",
+            "collection_path": "collections/market.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:craft_center",
+            "kind": "object_class",
+            "value": "craft_center",
+            "label_ru": "Ремесленные центры",
+            "count": 0,
+            "page_path": "pages/classes/craft_center.json",
+            "collection_path": null,
+            "status": "canonical_leaf"
+          }
+        ]
+      },
+      {
+        "id": "family:protected_ecosystems",
+        "kind": "class_family",
+        "value": "protected_ecosystems",
+        "label_ru": "Охраняемая природа и экосистемы",
+        "description": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+        "count": 21,
+        "children": [
+          {
+            "id": "class:national_park",
+            "kind": "object_class",
+            "value": "national_park",
+            "label_ru": "Национальные парки",
+            "count": 10,
+            "page_path": "pages/classes/national_park.json",
+            "collection_path": "collections/national_park.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:protected_area",
+            "kind": "object_class",
+            "value": "protected_area",
+            "label_ru": "Заповедники и охраняемые территории",
+            "count": 5,
+            "page_path": "pages/classes/protected_area.json",
+            "collection_path": "collections/protected_area.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:wildlife_site",
+            "kind": "object_class",
+            "value": "wildlife_site",
+            "label_ru": "Наблюдение за дикой природой",
+            "count": 2,
+            "page_path": "pages/classes/wildlife_site.json",
+            "collection_path": "collections/wildlife_site.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:forest",
+            "kind": "object_class",
+            "value": "forest",
+            "label_ru": "Леса и джунгли",
+            "count": 2,
+            "page_path": "pages/classes/forest.json",
+            "collection_path": "collections/forest.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:mangrove",
+            "kind": "object_class",
+            "value": "mangrove",
+            "label_ru": "Мангровые леса",
+            "count": 1,
+            "page_path": "pages/classes/mangrove.json",
+            "collection_path": "collections/mangrove.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:natural_landscape",
+            "kind": "object_class",
+            "value": "natural_landscape",
+            "label_ru": "Природные ландшафты и треккинг",
+            "count": 1,
+            "page_path": "pages/classes/natural_landscape.json",
+            "collection_path": "collections/natural_landscape.json",
+            "status": "transitional_broad_class",
+            "migration": {
+              "status": "transitional_broad_class",
+              "target_split": [
+                "mountain",
+                "plateau",
+                "karst",
+                "forest",
+                "geological_site"
+              ],
+              "note_ru": "Слишком широкий исторический класс; объекты мигрируются в более точные классы по фактическому типу."
+            }
+          }
+        ]
+      },
+      {
+        "id": "family:relief_geology",
+        "kind": "class_family",
+        "value": "relief_geology",
+        "label_ru": "Рельеф и геология",
+        "description": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+        "count": 14,
+        "children": [
+          {
+            "id": "class:mountain",
+            "kind": "object_class",
+            "value": "mountain",
+            "label_ru": "Горы",
+            "count": 2,
+            "page_path": "pages/classes/mountain.json",
+            "collection_path": "collections/mountain.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:volcano",
+            "kind": "object_class",
+            "value": "volcano",
+            "label_ru": "Вулканы и вулканические комплексы",
+            "count": 2,
+            "page_path": "pages/classes/volcano.json",
+            "collection_path": "collections/volcano.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:plateau",
+            "kind": "object_class",
+            "value": "plateau",
+            "label_ru": "Плато и нагорья",
+            "count": 2,
+            "page_path": "pages/classes/plateau.json",
+            "collection_path": "collections/plateau.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:karst",
+            "kind": "object_class",
+            "value": "karst",
+            "label_ru": "Карстовые районы",
+            "count": 3,
+            "page_path": "pages/classes/karst.json",
+            "collection_path": "collections/karst.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:cave",
+            "kind": "object_class",
+            "value": "cave",
+            "label_ru": "Пещеры",
+            "count": 5,
+            "page_path": "pages/classes/cave.json",
+            "collection_path": "collections/cave.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:geological_site",
+            "kind": "object_class",
+            "value": "geological_site",
+            "label_ru": "Геологические объекты",
+            "count": 0,
+            "page_path": "pages/classes/geological_site.json",
+            "collection_path": null,
+            "status": "canonical_leaf"
+          }
+        ]
+      },
+      {
+        "id": "family:water_coast_marine",
+        "kind": "class_family",
+        "value": "water_coast_marine",
+        "label_ru": "Вода, побережья и морская среда",
+        "description": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+        "count": 14,
+        "children": [
+          {
+            "id": "class:river",
+            "kind": "object_class",
+            "value": "river",
+            "label_ru": "Реки",
+            "count": 1,
+            "page_path": "pages/classes/river.json",
+            "collection_path": "collections/river.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:lake",
+            "kind": "object_class",
+            "value": "lake",
+            "label_ru": "Озёра",
+            "count": 4,
+            "page_path": "pages/classes/lake.json",
+            "collection_path": "collections/lake.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:wetland",
+            "kind": "object_class",
+            "value": "wetland",
+            "label_ru": "Болота и водно-болотные угодья",
+            "count": 1,
+            "page_path": "pages/classes/wetland.json",
+            "collection_path": "collections/wetland.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:waterfall",
+            "kind": "object_class",
+            "value": "waterfall",
+            "label_ru": "Водопады",
+            "count": 1,
+            "page_path": "pages/classes/waterfall.json",
+            "collection_path": "collections/waterfall.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:island",
+            "kind": "object_class",
+            "value": "island",
+            "label_ru": "Острова и архипелаги",
+            "count": 7,
+            "page_path": "pages/classes/island.json",
+            "collection_path": "collections/island.json",
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:beach",
+            "kind": "object_class",
+            "value": "beach",
+            "label_ru": "Пляжи",
+            "count": 0,
+            "page_path": "pages/classes/beach.json",
+            "collection_path": null,
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:reef",
+            "kind": "object_class",
+            "value": "reef",
+            "label_ru": "Рифы",
+            "count": 0,
+            "page_path": "pages/classes/reef.json",
+            "collection_path": null,
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:diving_site",
+            "kind": "object_class",
+            "value": "diving_site",
+            "label_ru": "Места для дайвинга",
+            "count": 0,
+            "page_path": "pages/classes/diving_site.json",
+            "collection_path": null,
+            "status": "canonical_leaf"
+          },
+          {
+            "id": "class:river_or_wetland",
+            "kind": "object_class",
+            "value": "river_or_wetland",
+            "label_ru": "Реки, озёра, водно-болотные угодья",
+            "count": 0,
+            "page_path": "pages/classes/river_or_wetland.json",
+            "collection_path": null,
+            "status": "transitional_broad_class",
+            "migration": {
+              "status": "transitional_broad_class",
+              "target_split": [
+                "river",
+                "lake",
+                "wetland"
+              ],
+              "note_ru": "Промежуточный класс старой схемы; должен исчезнуть после покарточной классификации."
+            }
+          },
+          {
+            "id": "class:island_or_coast",
+            "kind": "object_class",
+            "value": "island_or_coast",
+            "label_ru": "Острова и побережья",
+            "count": 0,
+            "page_path": "pages/classes/island_or_coast.json",
+            "collection_path": null,
+            "status": "transitional_broad_class",
+            "migration": {
+              "status": "transitional_broad_class",
+              "target_split": [
+                "island",
+                "beach",
+                "reef",
+                "diving_site"
+              ],
+              "note_ru": "Промежуточный класс старой схемы; должен быть разделён по реальному типу объекта."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

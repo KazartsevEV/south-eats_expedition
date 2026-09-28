@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "BN",
     "country_slug": "brunei",
-    "status": "brunei_muara_second_level_formalized",
+    "status": "brunei_muara_recursive_geography_in_progress",
     "checked_at": "2026-09-28",
-    "next_level": "brunei_muara_remaining_localities_then_belait_tutong_temburong"
+    "next_level": "complete_brunei_muara_then_descend_sibling_districts"
   },
   "rules": {
     "parentage": "Only documented administrative containment is encoded as hierarchy.",
@@ -21,13 +21,13 @@
       "slug": "brunei-muara",
       "parent_id": "country:bn",
       "object_ids": [
-        "bn:bukit-shahbandar-recreational-park",
         "bn:berakas-forest-recreational-park"
       ],
       "legacy_region_names": [
         "Бандар-Сери-Бегаван / Бруней-Муара"
       ],
-      "notes_ru": "Два лесных парка пока оставлены непосредственно на уровне района: текущие официальные источники подтверждают их связь с Бруней-Муара, но в этой итерации не задаётся более узкий административный parent без достаточной опоры."
+      "notes_ru": "Только Berakas Forest пока остаётся непосредственно на уровне района: принадлежность к Brunei-Muara подтверждена Forestry Department, но более узкий административный parent в этой итерации не утверждается.",
+      "axis": "administrative"
     },
     {
       "id": "bn:district:belait",
@@ -45,7 +45,8 @@
       ],
       "legacy_region_names": [
         "Белайт / Сериа / Лаби"
-      ]
+      ],
+      "axis": "administrative"
     },
     {
       "id": "bn:district:tutong",
@@ -60,7 +61,8 @@
       ],
       "legacy_region_names": [
         "Tutong"
-      ]
+      ],
+      "axis": "administrative"
     },
     {
       "id": "bn:district:temburong",
@@ -74,7 +76,8 @@
       ],
       "legacy_region_names": [
         "Temburong"
-      ]
+      ],
+      "axis": "administrative"
     },
     {
       "id": "bn:city:bandar-seri-begawan",
@@ -90,7 +93,8 @@
         "bn:tasek-lama-park",
         "bn:tamu-kianggeh"
       ],
-      "notes_ru": "Городской узел используется для объектов, чья принадлежность к Bandar Seri Begawan подтверждается официальными муниципальными, государственными или туристическими источниками. Mukim-границы не подменяются границами муниципалитета."
+      "notes_ru": "Городской узел используется для объектов, чья принадлежность к Bandar Seri Begawan подтверждается официальными муниципальными, государственными или туристическими источниками. Mukim-границы не подменяются границами муниципалитета.",
+      "axis": "municipal"
     },
     {
       "id": "bn:geographic-area:kampong-ayer",
@@ -102,19 +106,21 @@
       "object_ids": [
         "bn:kampong-ayer"
       ],
-      "notes_ru": "Водный поселенческий комплекс на реке Бруней. Выделен отдельной географической сущностью, а не подчинён городу административно: официальные источники описывают его как систему нескольких mukim внутри района Бруней-Муара."
+      "notes_ru": "Водный поселенческий комплекс на реке Бруней. Выделен отдельной географической сущностью, а не подчинён городу административно: официальные источники описывают его как систему нескольких mukim внутри района Бруней-Муара.",
+      "axis": "cultural_geography"
     },
     {
-      "id": "bn:geographic-area:kota-batu",
-      "kind": "geographic_area",
+      "id": "bn:mukim:kota-batu",
+      "kind": "mukim",
       "name_ru": "Кота-Бату",
-      "name_local": "Kota Batu",
+      "name_local": "Mukim Kota Batu",
       "slug": "kota-batu",
       "parent_id": "bn:district:brunei-muara",
       "object_ids": [
         "bn:malay-technology-museum"
       ],
-      "notes_ru": "Для текущего объекта зафиксирован географический район Kota Batu; уровень mukim будет введён только после покарточной проверки точного административного положения."
+      "notes_ru": "Malay Technology Museum расположен в Kota Batu; Mukim Kota Batu подтверждён официальной судебной зональной схемой. Точная kampung-привязка музея пока не зафиксирована.",
+      "axis": "administrative"
     },
     {
       "id": "bn:river:brunei",
@@ -126,7 +132,46 @@
       "object_ids": [
         "bn:brunei-river-mangrove-safari"
       ],
-      "notes_ru": "Природная географическая сущность для речных и мангровых объектов; не является административным уровнем."
+      "notes_ru": "Природная географическая сущность для речных и мангровых объектов; не является административным уровнем.",
+      "axis": "physical_geography"
+    },
+    {
+      "id": "bn:mukim:kianggeh",
+      "kind": "mukim",
+      "axis": "administrative",
+      "name_ru": "Кианггех",
+      "name_local": "Mukim Kianggeh",
+      "slug": "kianggeh",
+      "parent_id": "bn:district:brunei-muara",
+      "object_ids": [
+        "bn:tasek-lama-park",
+        "bn:tamu-kianggeh"
+      ],
+      "notes_ru": "Tasek Lama и Kampung Kianggeh перечислены внутри Mukim Kianggeh в актуальной государственной зональной схеме; Tamu Kianggeh официально описывается как объект Mukim Kianggeh."
+    },
+    {
+      "id": "bn:mukim:sengkurong",
+      "kind": "mukim",
+      "axis": "administrative",
+      "name_ru": "Сенгкуронг",
+      "name_local": "Mukim Sengkurong",
+      "slug": "sengkurong",
+      "parent_id": "bn:district:brunei-muara",
+      "object_ids": [],
+      "notes_ru": "Административный узел введён для подтверждённой дочерней деревни Jerudong и связанных объектов."
+    },
+    {
+      "id": "bn:village:jerudong",
+      "kind": "village",
+      "axis": "administrative",
+      "name_ru": "Джерудонг",
+      "name_local": "Kampong Jerudong",
+      "slug": "jerudong",
+      "parent_id": "bn:mukim:sengkurong",
+      "object_ids": [
+        "bn:bukit-shahbandar-recreational-park"
+      ],
+      "notes_ru": "Государственные материалы помещают Kampong Jerudong в Mukim Sengkurong; отдельные официальные документы указывают Bukit Shahbandar в Kampong Jerudong."
     }
   ],
   "sources": [
@@ -203,6 +248,48 @@
         "Brunei River and tributary mangrove-safari geography"
       ],
       "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.judiciary.gov.bn/subordinate-court/magistrates-court/coroner-zoning/",
+      "publisher": "Judiciary of Brunei Darussalam",
+      "used_for": [
+        "Mukim Kianggeh locality membership",
+        "Mukim Kota Batu official administrative context"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.pelitabrunei.gov.bn/Lists/Berita%202008/NewDisplayForm.aspx?ContentTypeId=0x01000AD708F3C215FA4CB59342165B677943&ID=27506",
+      "publisher": "Pelita Brunei / Information Department",
+      "used_for": [
+        "Tamu Kianggeh within Mukim Kianggeh"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.moha.gov.bn/Downloads/2023/DirektoriPMKK_V04%20APRIL2024.pdf",
+      "publisher": "Ministry of Home Affairs, Brunei Darussalam",
+      "used_for": [
+        "Kampong Jerudong A/B under Mukim Sengkurong"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.forestry.gov.bn/parks-of-interest/",
+      "publisher": "Forestry Department, Brunei Darussalam",
+      "used_for": [
+        "Bukit Shahbandar and Berakas Forest Recreation Parks in Brunei-Muara"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.mora.gov.bn/SiteCollectionDocuments/Pautan%20Pilihan/BKMH/Senarai%20Restoran%20Halal%20Updated%207.2.2017.pdf",
+      "publisher": "Ministry of Religious Affairs, Brunei Darussalam",
+      "used_for": [
+        "Bukit Shahbandar location at Kampong Jerudong, Mukim Sengkurong"
+      ],
+      "checked_at": "2026-09-28",
+      "note": "Used only for stable place/address relationship, not current business status."
     }
   ]
 }

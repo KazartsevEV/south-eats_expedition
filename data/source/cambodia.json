@@ -78,6 +78,13 @@
       "objects_with_gallery_min_2": 19,
       "total_objects": 19,
       "status": "complete"
+    },
+    "elevation_upgrade_progress": {
+      "updated": "2026-09-28",
+      "objects_with_verified_or_sourced_elevation_context": 19,
+      "total_objects": 19,
+      "status": "complete",
+      "policy": "Scalar elevation is used only for a matched point; large properties may use an authoritative elevation range; nearby DEM points are stored as separate geo_points rather than substituted for the primary point."
     }
   },
   "overview": {
@@ -2354,7 +2361,7 @@
             },
             "coordinate_type": "center",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "high",
             "coordinate_source": {
               "type": "unesco",
               "title": "Самбор-Прей-Кук — geographical data",
@@ -2364,7 +2371,20 @@
               "accessed": "2026-09-28",
               "notes": "Центральная координата объекта Всемирного наследия."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_range_m": {
+              "min": 2,
+              "max": 10
+            },
+            "elevation_source": {
+              "type": "unesco",
+              "title": "Sambor Prei Kuk Management Plan",
+              "publisher": "UNESCO World Heritage Centre / Kingdom of Cambodia",
+              "url": "https://whc.unesco.org/document/156564",
+              "authority": "high",
+              "accessed": "2026-09-28",
+              "notes": "План управления описывает территорию объекта как относительно плоскую, с высотами примерно 2–10 м; диапазон хранится вместо искусственного среднего значения."
+            }
           },
           "logistics": {
             "access": "Основной hub — Kampong Thom; комплекс расположен вне города и требует дорога трансфер, затем пеших переходов между temple группы.",
@@ -3655,11 +3675,11 @@
             "coordinates": {
               "lat": 13.10212,
               "lon": 103.19848,
-              "elevation_m": null
+              "elevation_m": 18
             },
             "coordinate_type": "center",
             "accuracy": "approximate",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map",
               "title": "Phsar Nat — central Баттамбанг reference point",
@@ -3669,7 +3689,16 @@
               "accessed": "2026-09-28",
               "notes": "Используется как опорная точка исторического центра; объект представляет несколько кварталов shophouses, а не одно здание."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "Battambang elevation",
+              "publisher": "GeoNames / OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/Battambang",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Высота 18 м относится к центральной точке Battambang (13.1020, 103.1998), почти совпадающей с опорной точкой исторического центра у Phsar Nat; поэтому значение помечено как approximate."
+            }
           },
           "logistics": {
             "access": "Старый центр компактен и проходится пешком/велосипедом; Street 1–3 и набережная.",
@@ -3963,11 +3992,11 @@
             "coordinates": {
               "lat": 11.32868,
               "lon": 103.52424,
-              "elevation_m": null
+              "elevation_m": 6
             },
             "coordinate_type": "entrance",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map",
               "title": "Chi Phat Visitor Center",
@@ -3999,7 +4028,16 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "map",
+              "title": "Terrain altitude near Chi Phat Visitor Center",
+              "publisher": "Ventusky / ICON terrain model",
+              "url": "https://www.ventusky.com/11.328%3B103.524",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Модельная высота 6 м для координат 11.328, 103.524 рядом с visitor center. Это оценка рельефа, а не геодезическая отметка."
+            }
           },
           "logistics": {
             "access": "Точки входа различаются; для удалённых маршрутов нужен оператор/местное сообщество project, 4x4/лодка и запас времени.",
@@ -4334,7 +4372,39 @@
               "accessed": "2026-09-28",
               "notes": "Координата археологического объекта; геопривязанные фотографии внутри комплекса показывают разброс точек примерно на 1 км западнее."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Западная зона разрушенных галерей — EXIF-точка",
+                "type": "viewpoint",
+                "coordinates": {
+                  "lat": 13.475531,
+                  "lon": 104.229641,
+                  "elevation_m": 80
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "other",
+                  "title": "07-Beng Mealea-nX-36.jpg — camera GPS",
+                  "publisher": "Wikimedia Commons / PsamatheM",
+                  "url": "https://commons.wikimedia.org/wiki/File:07-Beng_Mealea-nX-36.jpg",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "EXIF файла содержит GPS WGS84 13.475531, 104.229641."
+                },
+                "elevation_source": {
+                  "type": "other",
+                  "title": "07-Beng Mealea-nX-36.jpg — EXIF altitude",
+                  "publisher": "Wikimedia Commons / PsamatheM",
+                  "url": "https://commons.wikimedia.org/wiki/File:07-Beng_Mealea-nX-36.jpg",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "EXIF файла указывает Altitude 80 meters above sea level. Значение относится к этой точке внутри комплекса, не к геометрическому центру всего храма."
+                },
+                "checked_at": "2026-09-28"
+              }
+            ]
           },
           "logistics": {
             "access": "Car/тук-тук from Сиемреап; часто совмещают с Кох-Кер.",
@@ -6095,7 +6165,38 @@
               "accessed": "2026-09-28",
               "notes": "Практическая лодочная точка наблюдения у Кампи; сами дельфины перемещаются по речному участку."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Phum Kampi — высотная опорная точка",
+                "type": "center",
+                "coordinates": {
+                  "lat": 12.61192,
+                  "lon": 106.02224,
+                  "elevation_m": 25
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "approximate",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Phum Kampi coordinates",
+                  "publisher": "GeoNames via Geoview",
+                  "url": "https://kh.geoview.info/phum_kampi%2C1828338",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                },
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Phum Kampi DEM elevation",
+                  "publisher": "GeoNames / DEM via Geoview",
+                  "url": "https://kh.geoview.info/phum_kampi%2C1828338",
+                  "authority": "medium",
+                  "accessed": "2026-09-28",
+                  "notes": "DEM 25 м относится к деревне Kampi примерно в 0,65 км от лодочной точки. Высота самого причала остаётся unknown."
+                },
+                "checked_at": "2026-09-28"
+              }
+            ]
           },
           "logistics": {
             "access": "Деревня Кампи находится примерно в 15 км к северу от Кратьэха. Министерство туризма указывает Кампи как главную точку наблюдения за дельфинами; к маршрутам на Ко-Пдао добавляется дорожный переезд и медленная лодка.",

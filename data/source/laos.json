@@ -5,7 +5,7 @@
     "language": "ru",
     "last_updated": "2026-09-28",
     "purpose": "Expedition South East",
-    "data_model_version": "1.5",
+    "data_model_version": "1.6",
     "dynamic_fields": [
       "visa",
       "border_operation",
@@ -20,7 +20,8 @@
       "travel.regions and object-level location profiles add practical spoken languages and currency; language lists are field-use profiles, not exhaustive census enumerations.",
       "v1.3: все 19 объектных карточек Laos расширены связной аннотацией, этнографией/поверьями где подтверждены, транспортом по видам, пешим масштабом, водой, позицией по ночёвке/кемпингу, жильём, жалобами путешественников и объект-специфичным location-scouting на основе фотографий и рельефа; шаблонные англо-русские формулировки в ключевых полях заменены.",
       "v1.4: добавлен человекочитаемый слой narrow: страна >=1000 знаков, маршрутные регионы >=500, локальные хабы >=250, каждая достопримечательность получила narrow и нормализованные tags; технические поля сохранены как маршрутные метаданные.",
-      "v1.5: пользовательский слой очищен от русско-английской смеси; модель доступа переведена с пакетно-туристической на самостоятельную экспедиционную; физическая протяжённость, ступени и многодневность считаются параметрами маршрута, а не ограничениями; операторские ТЗ удалены."
+      "v1.5: пользовательский слой очищен от русско-английской смеси; модель доступа переведена с пакетно-туристической на самостоятельную экспедиционную; физическая протяжённость, ступени и многодневность считаются параметрами маршрута, а не ограничениями; операторские ТЗ удалены.",
+      "v1.6 draft: страновой слой Лаоса нормализован под canonical CDN по образцу Камбоджи: добавлены язык, этнография и культура, fact-level source_ids для ключевых стабильных и динамических полей, официальные источники иммиграции/погранпунктов и Bank of the Lao P.D.R.; неподтверждённые общенациональные правила кемпинга и дронов не выводятся по косвенным источникам."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -60,7 +61,13 @@
       "total_objects": 19,
       "current_chunk": "archaeology_religion",
       "policy": "откуда + когда + что видно + класс техники по геометрии; без операторского ТЗ"
-    }
+    },
+    "country_source_normalization": {
+      "status": "draft_complete_for_country_core",
+      "checked_at": "2026-09-28",
+      "policy": "Country-level facts carry source_ids remapped to canonical source_refs during CDN build; unsupported country-wide camping/drone rules remain null instead of being inferred."
+    },
+    "country_source_id_policy": "Laos country-level canonical source IDs use the reserved src_900101+ range and are intentionally outside the legacy object/source migration registry."
   },
   "overview": {
     "summary": "Гористая внутриконтинентальная страна бассейна Меконга между Китаем, Вьетнамом, Камбоджей, Таиландом и Мьянмой.",
@@ -81,10 +88,16 @@
         "name": "Phou Bia",
         "elevation_m": 2819
       },
-      "terrain": "Преимущественно горы и плато, долина Меконга вдоль западной границы, известняковый карст в центре и на севере."
+      "terrain": "Преимущественно горы и плато, долина Меконга вдоль западной границы, известняковый карст в центре и на севере.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "religion": {
-      "profile": "Буддизм тхеравады доминирует среди Lao Loum; широко распространены анимистические и этнические верования, есть христианские меньшинства."
+      "profile": "Буддизм тхеравады доминирует среди Lao Loum; широко распространены анимистические и этнические верования, есть христианские меньшинства.",
+      "source_ids": [
+        "TOURISM_ETHNIC"
+      ]
     },
     "political_system": "Однопартийная социалистическая республика; ведущая политическая роль принадлежит Lao People's Revolutionary Party.",
     "economy": {
@@ -97,9 +110,34 @@
         "metric": "World Bank $3.00/day (2021 PPP)",
         "value_pct": 7.1,
         "year": 2024
-      }
+      },
+      "source_ids": [
+        "WB"
+      ]
     },
-    "narrow": "Лаос — горная внутриконтинентальная страна бассейна Меконга, в которой расстояние на карте почти всегда менее важно, чем рельеф, качество дороги и доступность конкретной долины или перевала. Основу исторического ядра составляет наследие королевства Лансанг и буддийская культура долины Меконга; поверх неё лежат французский колониальный слой, память войн XX века и современная инфраструктура, включая железную дорогу Китай–Лаос. Страна географически неоднородна: север формируют известняковые горы, речные долины и высокогорные этнические районы; центр — карст Кхаммуан и равнины вдоль Меконга; юг — плато Bolaven, водопады и островная система Си-Фан-Дон. Этнография здесь принципиальна для маршрута: рядом с Lao Loum живут Khmu, Hmong, Tai Lue, Akha, Phounoy и другие группы, причём обычаи, языки и системы верований нельзя сводить к единому «горному» фольклору. Климат муссонный, но высота резко меняет ощущения: зимой высокогорья могут быть прохладными, а в сезон дождей грунтовые дороги, реки и пещерные маршруты становятся сложнее. Главные маршрутные оси дают Луангпхабанг и Нам-У, Долина кувшинов, Ванг-Вьенг, Вьентьян, Кхаммуан кольцевой маршрут, Bolaven и южный Меконг. Между ними полезно рассматривать не только известные памятники, но и старые кварталы Саваннакхет и Тхакхэк, пещерные комплексы Вьенгсай, рынки и высокогорные поселения, потому что именно они связывают историю, географию и повседневную жизнь в один экспедиционный рассказ."
+    "narrow": "Лаос — горная внутриконтинентальная страна бассейна Меконга, в которой расстояние на карте почти всегда менее важно, чем рельеф, качество дороги и доступность конкретной долины или перевала. Основу исторического ядра составляет наследие королевства Лансанг и буддийская культура долины Меконга; поверх неё лежат французский колониальный слой, память войн XX века и современная инфраструктура, включая железную дорогу Китай–Лаос. Страна географически неоднородна: север формируют известняковые горы, речные долины и высокогорные этнические районы; центр — карст Кхаммуан и равнины вдоль Меконга; юг — плато Bolaven, водопады и островная система Си-Фан-Дон. Этнография здесь принципиальна для маршрута: рядом с Lao Loum живут Khmu, Hmong, Tai Lue, Akha, Phounoy и другие группы, причём обычаи, языки и системы верований нельзя сводить к единому «горному» фольклору. Климат муссонный, но высота резко меняет ощущения: зимой высокогорья могут быть прохладными, а в сезон дождей грунтовые дороги, реки и пещерные маршруты становятся сложнее. Главные маршрутные оси дают Луангпхабанг и Нам-У, Долина кувшинов, Ванг-Вьенг, Вьентьян, Кхаммуан кольцевой маршрут, Bolaven и южный Меконг. Между ними полезно рассматривать не только известные памятники, но и старые кварталы Саваннакхет и Тхакхэк, пещерные комплексы Вьенгсай, рынки и высокогорные поселения, потому что именно они связывают историю, географию и повседневную жизнь в один экспедиционный рассказ.",
+    "languages": {
+      "official": "лаосский",
+      "practical": "Лаосский — официальный язык. В многоэтничных районах используются языки тай-кадайской, австроазиатской, хмонг-мьенской и сино-тибетской семей; английский заметен прежде всего в туристических узлах.",
+      "source_ids": [
+        "RUS_MFA",
+        "TOURISM_ETHNIC"
+      ]
+    },
+    "ethnography": {
+      "summary": "Официальный туристический ресурс ЛНДР описывает 49 признанных этнических групп в четырёх основных языковых семьях. Для экспедиционного справочника этнографические сведения должны привязываться к конкретным общинам: Tai Lao, Khmu, Hmong, Tai Lue, Akha, Lanten и другие группы различаются языком, хозяйством, религиозными практиками, архитектурой и локальными табу.",
+      "source_ids": [
+        "TOURISM_ETHNIC"
+      ]
+    },
+    "culture": {
+      "summary": "Культурный слой страны сочетает буддизм тхеравады, культы духов и предков, церемонии baci/soukhwan, храмовую жизнь и ремесленные традиции — ткачество, вышивку, плетение, резьбу и локальные музыкальные практики. Эти обобщения используются только как страновой фон; конкретные обряды и табу в карточках объектов должны иметь локальную атрибуцию.",
+      "source_ids": [
+        "TOURISM_ETHNIC"
+      ]
+    },
+    "history_source_ids": [],
+    "political_system_source_ids": []
   },
   "nature": {
     "flora": [
@@ -121,11 +159,17 @@
     "dangerous_animals": [
       {
         "name": "cobras / kraits / pit vipers",
-        "risk": "ядовитые змеи в сельской/лесной местности"
+        "risk": "ядовитые змеи в сельской/лесной местности",
+        "source_ids": [
+          "WHO_SNAKEBITE"
+        ]
       },
       {
         "name": "mosquitoes",
-        "risk": "денге и другие инфекции"
+        "risk": "денге и другие инфекции",
+        "source_ids": [
+          "RUS_MFA"
+        ]
       },
       {
         "name": "centipedes/scorpions",
@@ -182,6 +226,10 @@
     "sensitive_areas": [
       "в районах бывших боевых действий не сходить с проверенных троп из-за UXO",
       "some border zones"
+    ],
+    "source_ids": [
+      "RUS_MFA",
+      "UXO"
     ]
   },
   "travel": {
@@ -264,30 +312,61 @@
     "visa_for_russian_passport": {
       "status": "visa-free",
       "stay_days": 30,
-      "extension": "Продление возможно через иммиграционные органы при соблюдении текущих правил.",
+      "extension": "Для более длительного пребывания МИД России указывает обращение в Иммиграционный департамент МВД ЛНДР; опубликованная стоимость продления — 20 000 LAK за один день.",
       "visa_run": {
-        "possible": "Новый въезд после выезда возможен при допуске на границе.",
-        "limits": "Опубликованного специального годового лимита visa-run для россиян в найденном официальном источнике нет.",
-        "notes": "Не все переходы являются международными для иностранцев."
+        "possible": "Отдельного гарантированного режима «visa-run» официальный источник не устанавливает.",
+        "limits": "Безвизовый срок для российского загранпаспорта — до 30 дней на въезд; повторный допуск после выезда является отдельным иммиграционным решением.",
+        "notes": "Перед наземным повторным въездом проверять статус конкретного международного пункта пропуска."
       },
-      "passport_validity": "проверять минимум 6 месяцев",
-      "official_source": "Russian MFA / Lao authorities"
+      "passport_validity": "минимум 6 месяцев с даты прибытия",
+      "official_source": "Consular Department, MFA Russia / Department of Immigration, Lao PDR",
+      "entry_form": "LDIF: с 1 сентября 2025 года цифровая иммиграционная форма обязательна для иностранцев при въезде и выезде через Wattay, Luang Prabang, Pakse и Lao–Thai Friendship Bridge I; форму регистрируют на официальном сайте иммиграционной службы.",
+      "overstay": "МИД России указывает штраф 10 USD за каждый день превышения разрешённого срока пребывания.",
+      "source_ids": [
+        "RUS_MFA",
+        "IMMIGRATION_LDIF",
+        "LAO_EVISA"
+      ]
     },
     "airports": [
       {
         "iata": "VTE",
-        "name": "Wattay International Airport"
+        "name": "Wattay International Airport",
+        "role": "международный аэропорт Вьентьяна",
+        "source_ids": [
+          "IMMIGRATION_CHECKPOINTS",
+          "IMMIGRATION_LDIF"
+        ]
       },
       {
         "iata": "LPQ",
-        "name": "Luang Prabang International Airport"
+        "name": "Luang Prabang International Airport",
+        "role": "международный аэропорт Луангпхабанга",
+        "source_ids": [
+          "IMMIGRATION_CHECKPOINTS",
+          "IMMIGRATION_LDIF"
+        ]
+      },
+      {
+        "iata": "ZVK",
+        "name": "Savannakhet International Airport",
+        "role": "международный аэропорт Саваннакхета",
+        "source_ids": [
+          "IMMIGRATION_CHECKPOINTS",
+          "RUS_MFA"
+        ]
       },
       {
         "iata": "PKZ",
-        "name": "Pakse International Airport"
+        "name": "Pakse International Airport",
+        "role": "международный аэропорт Паксе",
+        "source_ids": [
+          "IMMIGRATION_CHECKPOINTS",
+          "IMMIGRATION_LDIF"
+        ]
       }
     ],
-    "international_air_links": "Региональные связи с Bangkok, Hanoi/Ho Chi Minh City, China и соседними хабами меняются по сезону.",
+    "international_air_links": "Официальная страновая справка МИД России указывает международное авиасообщение с соседними странами через аэропорты Лаоса; конкретные направления и частоты являются динамическими и должны проверяться по текущему расписанию аэропорта/авиакомпании.",
     "land_borders": {
       "countries": [
         "China",
@@ -296,15 +375,24 @@
         "Thailand",
         "Myanmar"
       ],
-      "transport": "China–Laos Railway связывает Vientiane/Luang Prabang с Китаем; железнодорожная связь с Таиландом дошла до Vientiane, также много международных автобусов. Конкретный checkpoint надо проверять на допуск иностранцев."
+      "transport": "Официальный Department of Immigration сообщает о 31 международном пункте пропуска. МИД России перечисляет международные сухопутные переходы с Китаем, Вьетнамом, Таиландом и Камбоджей; перед маршрутом проверять текущий статус конкретного перехода и допустимый визовый режим.",
+      "notes": "Цифровая форма LDIF пока отдельно подтверждена для Lao–Thai Friendship Bridge I и трёх аэропортов; её применение на остальных переходах не следует предполагать без проверки.",
+      "source_ids": [
+        "RUS_MFA",
+        "IMMIGRATION_CHECKPOINTS",
+        "IMMIGRATION_LDIF"
+      ]
     },
     "currency": {
       "code": "LAK",
       "name": "Lao kip",
-      "local_currency_per_1_usd": 22417,
-      "as_of": "2026-09-27",
-      "rate_type": "market/reference snapshot",
-      "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip."
+      "local_currency_per_1_usd": 22332,
+      "as_of": "2026-09-25",
+      "rate_type": "Bank of the Lao P.D.R. reference rate",
+      "notes": "Официальный справочный курс BOL; наличный и банковский курс покупки/продажи отличается.",
+      "source_ids": [
+        "BOL_RATE"
+      ]
     },
     "regions": [
       {
@@ -5525,6 +5613,20 @@
           "Pak Ou Caves"
         ]
       }
+    ],
+    "airports_source_ids": [
+      "IMMIGRATION_CHECKPOINTS",
+      "RUS_MFA",
+      "IMMIGRATION_LDIF"
+    ],
+    "international_air_links_source_ids": [
+      "RUS_MFA"
+    ],
+    "camping_rules": null,
+    "drone_rules": null,
+    "tourist_permits": null,
+    "laws_source_ids": [
+      "RUS_MFA"
     ]
   },
   "sources": [
@@ -5537,7 +5639,8 @@
         "economy",
         "poverty"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_900101"
     },
     {
       "id": "RUS_MFA",
@@ -5545,11 +5648,21 @@
       "url": "https://www.kdmid.ru/docs/laos/information-about-the-country/",
       "kind": "government",
       "used_for": [
+        "country_profile",
+        "official_language",
+        "geography",
+        "climate",
         "visa",
-        "safety",
-        "country_profile"
+        "entry",
+        "border_operation",
+        "airports",
+        "air_connectivity",
+        "customs",
+        "laws",
+        "safety"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_900102"
     },
     {
       "id": "UNESCO",
@@ -5559,7 +5672,8 @@
       "used_for": [
         "heritage"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_900103"
     },
     {
       "id": "UXO",
@@ -5567,9 +5681,11 @@
       "url": "https://uxolao.gov.la/",
       "kind": "government_program",
       "used_for": [
-        "uxo_risk"
+        "uxo_risk",
+        "safety"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_900104"
     },
     {
       "id": "CLIMATE",
@@ -5577,9 +5693,11 @@
       "url": "https://climateknowledgeportal.worldbank.org/country/lao-pdr/climate-data-historical",
       "kind": "international_organization",
       "used_for": [
-        "climate"
+        "climate",
+        "air_temperature"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_900105"
     },
     {
       "id": "WHO_SNAKEBITE",
@@ -5590,7 +5708,8 @@
         "venomous_snake_risk"
       ],
       "accessed": "2026-09-27",
-      "notes": "Региональный фон; не заменяет локальные данные."
+      "notes": "Региональный фон; не заменяет локальные данные.",
+      "canonical_id": "src_900106"
     },
     {
       "id": "IUCN_RED_LIST",
@@ -5600,7 +5719,96 @@
       "used_for": [
         "fauna_conservation_status"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_900107"
+    },
+    {
+      "id": "TOURISM_ETHNIC",
+      "canonical_id": "src_900108",
+      "publisher": "Tourism Marketing & Promotion Department, Ministry of Culture and Tourism, Lao PDR",
+      "title": "Ethnic Diversity",
+      "url": "https://www.tourismlaos.org/welcome/authentic-culture/ethnic-diversity/",
+      "kind": "government",
+      "used_for": [
+        "languages",
+        "ethnography",
+        "religion",
+        "culture"
+      ],
+      "accessed": "2026-09-28",
+      "notes": "Official tourism source describes 49 officially recognised ethnic groups, four main language families, Lao as the official language, and examples of Buddhist/spirit-belief practices. It is used for a high-level country profile, not as a substitute for community-specific ethnography."
+    },
+    {
+      "id": "IMMIGRATION_LDIF",
+      "canonical_id": "src_900109",
+      "publisher": "Department of Immigration, Ministry of Public Security, Lao PDR",
+      "title": "Submit Arrival or Departure Digital Card",
+      "url": "https://immigration.gov.la/en/news-detail/%E0%BA%A5%E0%BA%BB%E0%BA%87%E0%BA%97%E0%BA%B0%E0%BA%9A%E0%BA%BD%E0%BA%99%E0%BB%80%E0%BA%82%E0%BA%BB%E0%BB%89%E0%BA%B2-%E0%BA%AD%E0%BA%AD%E0%BA%81-%E0%BA%AA%E0%BA%9B%E0%BA%9B-%E0%BA%A5%E0%BA%B2%E0%BA%A7",
+      "kind": "government",
+      "used_for": [
+        "entry",
+        "ldif",
+        "border_operation"
+      ],
+      "accessed": "2026-09-28"
+    },
+    {
+      "id": "IMMIGRATION_CHECKPOINTS",
+      "canonical_id": "src_900110",
+      "publisher": "Department of Immigration, Ministry of Public Security, Lao PDR",
+      "title": "Laos Entry and Exit Control Point",
+      "url": "https://immigration.gov.la/en/checkpoint/",
+      "kind": "government",
+      "used_for": [
+        "entry",
+        "border_operation",
+        "airports"
+      ],
+      "accessed": "2026-09-28",
+      "notes": "Official checkpoint directory states 31 international checkpoints and lists four international airports."
+    },
+    {
+      "id": "LAO_EVISA",
+      "canonical_id": "src_900111",
+      "publisher": "Lao eVisa / Government of Lao PDR",
+      "title": "Lao Official Online Visa — application requirements",
+      "url": "https://www.laoevisa.gov.la/application",
+      "kind": "government",
+      "used_for": [
+        "entry",
+        "passport_validity"
+      ],
+      "accessed": "2026-09-28",
+      "notes": "Used only for the official six-month passport-validity requirement; Russian ordinary-passport visa exemption is sourced separately."
+    },
+    {
+      "id": "BOL_RATE",
+      "canonical_id": "src_900112",
+      "publisher": "Bank of the Lao P.D.R.",
+      "title": "Exchange Rate and Reference Rate",
+      "url": "https://www.bol.gov.la/en/index",
+      "kind": "government",
+      "used_for": [
+        "currency",
+        "exchange_rate"
+      ],
+      "accessed": "2026-09-28",
+      "notes": "Official reference rate shown for 2026-09-25: 22,332 LAK/USD."
+    },
+    {
+      "id": "LAO_PARKS",
+      "canonical_id": "src_900113",
+      "publisher": "Department of Forestry / Lao Parks",
+      "title": "Official Site for Lao PDR National Protected Areas",
+      "url": "https://laoparks.la/",
+      "kind": "government",
+      "used_for": [
+        "protected_areas",
+        "forest_tourism",
+        "permits"
+      ],
+      "accessed": "2026-09-28",
+      "notes": "Country-wide protected-area source. It does not by itself establish a blanket rule that wild camping is legal or illegal everywhere."
     }
   ],
   "uncertainties": [

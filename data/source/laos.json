@@ -29,7 +29,8 @@
       "v1.6.4 draft: добавлен obj_la_0022 Tad Fane с отдельными GPS входа, основного viewpoint и верхней фототочки; высота падения 120 м не смешивается с абсолютной высотой.",
       "v1.6.3 QA-fix: у Nakai Nam Theun удалён центр Удомсука из object.geo_points, primary_location уточнён как приблизительный операционный лодочный доступ Тхаланга, 2–3 часа езды оставлены диапазоном в notes без ложного duration_min=120; медиа заменены на Commons с открытой лицензией.",
       "v1.6.5 draft: добавлен obj_la_0023 Tad Yuang; сохранены 800 м грунтового last-mile, 12 км/15 мин от Паксонга, динамические тарифы 2025 и честный elevation=null до надёжного абсолютного источника.",
-      "v1.6.4 draft: добавлен obj_la_0023 Phou Khao Khouay National Park. Primary GPS — научно опубликованный Tad Leuk visitor sector, Tad Xai вынесен отдельной geo_point; официальные campsite и текущий road access отделены от исторических расписаний и старых тарифов."
+      "v1.6.4 draft: добавлен obj_la_0023 Phou Khao Khouay National Park. Primary GPS — научно опубликованный Tad Leuk visitor sector, Tad Xai вынесен отдельной geo_point; официальные campsite и текущий road access отделены от исторических расписаний и старых тарифов.",
+      "v1.6.6 draft: добавлен obj_la_0024 Khone Phapheng Falls; OSM GPS и отдельный site elevation 79 м по EXIF без смешения с перепадом 21 м."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -83,10 +84,9 @@
     },
     "country_expansion_qa": {
       "status": "open",
-      "current_canonical_objects": 24,
+      "current_canonical_objects": 25,
       "note_ru": "В драфте сейчас 24 канонических карточек Лаоса. Прохождение структурного QA каждой существующей карточки не означает полноту страны: country QA остаётся открытым до завершения исследования приоритетных классов и кандидатов.",
       "priority_candidates": [
-        "Khone Phapheng Falls",
         "Li Phi / Somphamit Falls",
         "Tham Pa Fa",
         "Tham Nang Aen",
@@ -11040,6 +11040,493 @@
             "status": "reviewed",
             "checked_at": "2026-09-29",
             "notes": "Координаты привязаны к конкретным visitor points; старые цены/расписания не перенесены; километраж и время оставлены null там, где нет надёжного актуального источника."
+          }
+        }
+      },
+      {
+        "name": "Khone Phapheng Falls",
+        "class": "nature",
+        "interest": [
+          "nature",
+          "waterfall",
+          "Mekong",
+          "Si Phan Don",
+          "river",
+          "viewpoint",
+          "photography"
+        ],
+        "why_go": "Кхон-Папенг — не высокий одиночный обрыв, а гигантская система порогов и каскадов Меконга в Си-Фан-Доне. Tourism Laos указывает максимальный перепад около 21 м и участок порогов длиной около 9,7 км; именно эта система исторически разрывает сквозную навигацию по Меконгу.",
+        "traveler_card": {
+          "location": {
+            "region": "Чампасак / Си-Фан-Дон",
+            "nearest_hub": "Накасанг / Дон-Дет",
+            "languages_spoken": [
+              "лаосский",
+              "английский в туристической зоне"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 13.9597676,
+              "lon": 105.986526,
+              "elevation_m": null
+            },
+            "coordinate_type": "waterfall_base",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Node: Khone Phapheng Falls (427599195)",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/node/427599195",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "object_elevation": {
+              "representative_m": 79,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "media_metadata",
+                "title": "File:Khone Phapheng Falls - 5.jpg — EXIF altitude",
+                "publisher": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls_-_5.jpg",
+                "authority": "medium",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Представительная абсолютная отметка у каскада; не высота падения 21 м."
+            },
+            "geo_points": [
+              {
+                "type": "viewpoint",
+                "name": "Фототочка Hiroo Yamagata",
+                "coordinates": {
+                  "lat": 13.958543,
+                  "lon": 105.990662,
+                  "elevation_m": 79
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "media_metadata",
+                  "title": "File:Khone Phapheng Falls - 5.jpg",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls_-_5.jpg",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "elevation_source": {
+                  "type": "media_metadata",
+                  "title": "EXIF altitude",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls_-_5.jpg",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              },
+              {
+                "type": "viewpoint",
+                "name": "Панорамная точка Basile Morin",
+                "coordinates": {
+                  "lat": 13.958335,
+                  "lon": 105.987285,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "media_metadata",
+                  "title": "Khone Phapheng Falls panorama",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls,_Si_Phan_Don,_Laos,_widest_waterfall_in_the_world.jpg",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              }
+            ],
+            "coordinates_checked_at": "2026-09-29"
+          },
+          "logistics": {
+            "access": "Материковая туристическая зона южнее Накасанга; лодка для самого посещения не нужна.",
+            "public_transport": "Официального актуального прямого расписания к входу не найдено. Практическая схема — транспорт до Накасанга/южного коридора Route 13, затем местный наземный трансфер.",
+            "last_mile": "Благоустроенные дорожки и несколько viewpoints; Discover Laos рекомендует 1–2 часа. Точный километраж контура не подтверждён.",
+            "permit_or_guide": "Гид для стандартного посещения не требуется.",
+            "access_requirements": "самостоятельный наземный доступ",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно",
+            "access_options": [
+              {
+                "id": "nakasang_ground_access",
+                "origin": "Накасанг / Route 13",
+                "modes": [
+                  "car",
+                  "moped",
+                  "walking"
+                ],
+                "checked_at": "2026-09-29",
+                "source_refs": [],
+                "legs": [
+                  {
+                    "mode": "car",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "paved",
+                    "condition": "дорожный подъезд к visitor zone",
+                    "seasonality": "круглогодично",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Khone Phapheng visitor area",
+                    "fords": 0,
+                    "notes": "Точный километраж не фиксируется без проверенного маршрута."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "paved",
+                    "condition": "благоустроенные дорожки между viewpoints",
+                    "seasonality": "мокрые поверхности в сезон дождей",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "официальная visitor zone",
+                    "fords": 0,
+                    "notes": "Обычно 1–2 часа на осмотр."
+                  }
+                ]
+              }
+            ],
+            "water": "Питьевую воду брать с собой или покупать в туристической зоне; воду Меконга не считать питьевой.",
+            "water_structured": {
+              "summary": "Покупная вода — visitor zone; речная вода требует обработки.",
+              "quality": "potable",
+              "last_reliable_source": "visitor zone",
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "river",
+                  "potability": "treatment_required",
+                  "notes": "Меконг"
+                }
+              ],
+              "source_refs": []
+            },
+            "supplies": "Основное снабжение — Накасанг/Дон-Дет.",
+            "overnight_and_camping": "Свободный кемпинг у каскада не подтверждён; базироваться в Си-Фан-Доне.",
+            "overnight_structured": {
+              "status": "unclear",
+              "summary": "Разрешение на свободный лагерь у водопада не подтверждено.",
+              "source_refs": []
+            }
+          },
+          "climate": {
+            "best_period": "Ноябрь–февраль комфортнее; май–октябрь даёт наиболее мощный поток.",
+            "heat_rain_notes": "В сезон дождей активных русел больше, spray сильнее.",
+            "site_specific_notes": "В сухой сезон лучше читается скальная структура отдельных каналов."
+          },
+          "operations": {
+            "hours": "Discover Laos указывает ежедневно 08:00–17:00; перепроверять перед посещением.",
+            "ticket": "Надёжный официальный тариф 2026 не найден.",
+            "closure_notes": "Visitor zone действует как стандартный наземный объект.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.tourismlaos.org/waterfalls/"
+          },
+          "safety": {
+            "main_risks": [
+              "мощное течение Меконга",
+              "скользкие камни вне дорожек",
+              "жара и открытое солнце"
+            ],
+            "sensitive_areas": [
+              "не выходить за ограждения к активным руслам"
+            ]
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Сухой сезон лучше показывает структуру русел; влажный — массу воды.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": "Общие правила Lao DCA; близость границы с Камбоджей требует проверки ограниченного воздушного пространства.",
+              "restrictions": [
+                "не выше 120 м",
+                "прямая видимость",
+                "не над посетителями",
+                "не входить в ограниченное/приграничное воздушное пространство без согласования"
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+                "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+                "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Коммерческую съёмку и полёт дрона в приграничной зоне согласовывать отдельно.",
+            "visual_scouting": {
+              "best_time": "early_morning / afternoon",
+              "best_weather_light": "Во влажный сезон максимальный поток; в сухой лучше видны скальные ступени.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "hiroo_viewpoint",
+                  "name": "Восточная фототочка",
+                  "description": "Близкий ракурс на активные рукава.",
+                  "coordinates": {
+                    "lat": 13.958543,
+                    "lon": 105.990662,
+                    "elevation_m": 79
+                  },
+                  "best_time": "afternoon",
+                  "view": {
+                    "description": "пороги и скальные ступени"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "широкий речной каскад"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "удалённые рукава"
+                    }
+                  ],
+                  "source": {
+                    "type": "media_metadata",
+                    "title": "File:Khone Phapheng Falls - 5.jpg",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls_-_5.jpg",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                },
+                {
+                  "id": "morin_panorama",
+                  "name": "Панорамная точка",
+                  "description": "Геотегированная точка Basile Morin.",
+                  "coordinates": {
+                    "lat": 13.958335,
+                    "lon": 105.987285,
+                    "elevation_m": null
+                  },
+                  "best_time": "afternoon",
+                  "view": {
+                    "description": "широкая полоса порогов Меконга"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "горизонтальный масштаб"
+                    }
+                  ],
+                  "source": {
+                    "type": "media_metadata",
+                    "title": "Khone Phapheng Falls panorama",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls,_Si_Phan_Don,_Laos,_widest_waterfall_in_the_world.jpg",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Май–октябрь: максимальная масса воды.",
+                "Ноябрь–апрель: сильнее читаются отдельные каналы."
+              ],
+              "video_activity": [
+                "движение воды через несколько рукавов",
+                "сезонное перераспределение потока"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "масштаб каскадов"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "детали удалённых рукавов"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Кхон-Папенг — центральная часть огромной системы порогов южного Меконга. Tourism Laos описывает максимальный перепад до 21 м, участок порогов около 9,7 км и средний расход почти 11 000 м³/с.",
+            "culture_ethnography": "Каскады встроены в речную экономику Си-Фан-Дона; конкретные рыболовные практики следует привязывать к общине и источнику.",
+            "geography_geology": "Меконг распадается на множество рукавов между островами и скальными грядами, создавая длинный несудоходный барьер.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Крупнейшая по объёму система водопадов Юго-Восточной Азии на Меконге: до 21 м перепада и около 9,7 км порогов."
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Непроходимость каскадов для сквозного судоходства стала одной из причин строительства французской железной дороги через Дон-Дет и Дон-Кхон."
+                  }
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Меконг делится на множество рукавов Си-Фан-Дона; пороги растянуты между островами и скальными каналами."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Visitor zone легко доступна; в дождливый сезон spray и высокий поток сокращают безопасный подход к воде."
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "BABA Guesthouse",
+              "area": "Дон-Дет",
+              "price_for_two": "бюджетный/среднебюджетный гостевой дом; цену на конкретные даты уточнять напрямую",
+              "contact": "+856 20 98 89 39 43; b@ici.la",
+              "social_or_web": "https://dondet.net/",
+              "source": "official guesthouse website"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Khone_Phapheng_Falls%2C_Si_Phan_Don%2C_Laos%2C_widest_waterfall_in_the_world.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls,_Si_Phan_Don,_Laos,_widest_waterfall_in_the_world.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Basile Morin",
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Khone_Phapheng_Falls%2C_Si_Phan_Don%2C_Laos%2C_widest_waterfall_in_the_world.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls,_Si_Phan_Don,_Laos,_widest_waterfall_in_the_world.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Basile Morin",
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Khone_Phapheng_Falls_-_5.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls_-_5.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0",
+              "artist": "Hiroo Yamagata",
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "type": "official",
+            "title": "Waterfalls — Khone Phapheng",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/waterfalls/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "hydrology",
+              "21 m drop",
+              "9.7 km rapids"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Node: Khone Phapheng Falls (427599195)",
+            "publisher": "OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/427599195",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "waterfall GPS"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Khone Phapheng Waterfall",
+            "publisher": "Discover Laos",
+            "url": "https://discoverlaos.today/pakse/thing-to-do/khone-phapheng-waterfall",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "viewpoints",
+              "visitor centre",
+              "hours",
+              "seasonality"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:Khone Phapheng Falls - 5.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls_-_5.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media",
+              "viewpoint GPS",
+              "EXIF elevation"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "Khone Phapheng Falls panorama",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Khone_Phapheng_Falls,_Si_Phan_Don,_Laos,_widest_waterfall_in_the_world.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media",
+              "panoramic viewpoint GPS"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "ticket",
+            "transport",
+            "visitor facilities",
+            "drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Кхон-Папенг — гигантская система порогов Меконга в Си-Фан-Доне: до 21 м перепада и около 9,7 км каскадов. Подход простой и наземный; главный интерес — гидрология, история несудоходного барьера и сезонная смена масштаба потока.",
+        "tags": [
+          "nature",
+          "waterfall",
+          "mekong",
+          "si_phan_don",
+          "river",
+          "viewpoint",
+          "visual_drone",
+          "class_nature"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "Перепад и абсолютная elevation разделены; изменяемая цена входа не выдумана."
           }
         }
       }

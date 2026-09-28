@@ -1,0 +1,1000 @@
+{
+  "meta": {
+    "country": "Brunei Darussalam",
+    "country_code": "BN",
+    "language": "ru",
+    "last_updated": "2026-09-28",
+    "purpose": "Expedition South East",
+    "data_model_version": "1.5",
+    "dynamic_fields": [
+      "visa",
+      "visa_run",
+      "air_links",
+      "border_operation",
+      "currency",
+      "political_context"
+    ],
+    "research_notes": [
+      "Fast-changing fields are a dated snapshot, not a guarantee of future entry or transport.",
+      "Crime is described from official traveler/security sources rather than crowdsourced Numbeo rankings.",
+      "Food prices are indicative field-planning ranges, not official statistics.",
+      "Dangerous plants/animals list prioritizes plausible expedition exposure; it is not exhaustive medical guidance.",
+      "travel.objects adds object-level traveler cards, media suitability and non-generated illustration provenance; dynamic operational fields require re-check before travel.",
+      "travel.regions and object-level location profiles add practical spoken languages and currency; language lists are field-use profiles, not exhaustive census enumerations.",
+      "v1.3: все 18 объектных карточек Brunei расширены связной аннотацией, транспортом по видам, пешими расстояниями/масштабом, водой, позицией по легальной ночёвке/кемпингу, жильём, жалобами путешественников и объект-специфичными рекомендациями по съёмке; удалён основной англо-русский шаблонный слой.",
+      "QA 2026-09-28: медиаблоки исправлены в формат visual scouting: для каждого объекта оставлены только лучшие время/свет/погодные условия и конкретные точки/направления, откуда получаются сильные фото и видео; удалены ТЗ фотографу/оператору, техника, объективы, shot lists, production complexity, сценарные и монтажные указания.",
+      "v1.4: добавлен человекочитаемый слой narrow: страна >=1000 знаков, маршрутные регионы >=500, локальные хабы >=250, каждая достопримечательность получила narrow и нормализованные tags; технические поля сохранены как маршрутные метаданные.",
+      "v1.5: пользовательский слой очищен от русско-английской смеси; модель доступа переведена с пакетно-туристической на самостоятельную экспедиционную; физическая протяжённость, ступени и многодневность считаются параметрами маршрута, а не ограничениями; операторские ТЗ удалены."
+    ],
+    "object_card_upgrade_progress": {
+      "schema_target": "1.5",
+      "completed_objects": 18,
+      "total_objects": 18,
+      "status": "complete_qa_pass_v1_5",
+      "updated": "2026-09-28",
+      "qa_scope": "русский человекочитаемый слой; самостоятельная экспедиционная модель; гид только по необходимости; физические характеристики как параметры маршрута"
+    },
+    "human_readable_layer": {
+      "country_narrow_min_chars": 1000,
+      "region_narrow_min_chars": 500,
+      "locality_narrow_min_chars": 250,
+      "object_narrow": true,
+      "object_tags": true,
+      "primary_unit": "attraction",
+      "status": "complete"
+    },
+    "expedition_model": {
+      "default_travel_style": "самостоятельная экспедиция",
+      "equipment_assumption": "палатка и обычное походное снаряжение есть",
+      "physical_difficulty_policy": "ступени, большой пеший километраж, уклоны и многодневный формат не считаются ограничением сами по себе; они фиксируются как параметры маршрута",
+      "guide_policy": "гид/проводник указывается только когда он обязателен режимом доступа или действительно рационален из-за навигации, лодочного доступа, охраняемой территории, языка/согласия общины либо специального исторического контекста",
+      "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
+    }
+  },
+  "overview": {
+    "summary": "Небольшой богатый нефтью и газом султанат на северном побережье Борнео, разделённый малайзийским штатом Саравак на две части.",
+    "history": "Брунейский султанат был крупной региональной державой в XV–XVI веках, затем утратил значительную часть территорий. С 1888 года находился под британским протекторатом; внутренняя конституционная система оформлена в 1959 году. Полную независимость получил 1 января 1984 года.",
+    "geography": {
+      "region": "север Борнео, Юго-Восточная Азия",
+      "neighbors": [
+        "Malaysia (Sarawak)"
+      ],
+      "coastline_km_approx": 161,
+      "seas_and_oceans": [
+        "South China Sea",
+        "Pacific Ocean basin"
+      ],
+      "highest_point": {
+        "name": "Bukit Pagon",
+        "elevation_m": 1850
+      },
+      "terrain": "Низменное побережье, холмистые и горные внутренние районы, влажные тропические леса; восточная часть Temburong более гористая и лесистая."
+    },
+    "religion": {
+      "official": "Islam",
+      "profile": "Ислам — официальная религия и доминирующая традиция; присутствуют буддисты, христиане и традиционные верования."
+    },
+    "political_system": "Абсолютная наследственная монархия (султанат); султан является главой государства и правительства. Государственная идеология — Melayu Islam Beraja.",
+    "economy": {
+      "summary": "Высокодоходная экономика, исторически опирающаяся на нефть и природный газ; государство развивает нефтехимию, логистику, исламские финансы, туризм и цифровые услуги.",
+      "gdp_current_usd_billion": 15.03,
+      "gdp_per_capita_usd": 32234.6,
+      "gdp_growth_pct": 0.7,
+      "year": 2025,
+      "poverty": {
+        "metric": "World Bank $3.00/day (2021 PPP)",
+        "value_pct": null,
+        "year": null,
+        "notes": "На текущей странице Всемирного банка сопоставимый показатель отсутствует; не подменён национальной статистикой другого определения."
+      }
+    },
+    "narrow": "Бруней-Даруссалам — небольшой султанат на северо-западе Борнео, где почти вся логика путешествия строится на резком соседстве трёх ландшафтов: компактной монархической столицы, нефтяного побережья и влажного тропического леса. Государство состоит из двух частей, разделённых территорией малайзийского Саравака, но мост через Тембуронг связал восточный анклав с основной частью страны без транзита через Малайзию. Исторически Бруней был крупным малайским султанатом, контролировавшим значительную часть прибрежного Борнео; в XIX–XX веках его территория сократилась, затем последовал британский протекторат, а полная независимость была получена в 1984 году. Современная идентичность государства опирается на монархию, ислам и малайскую культурную традицию, что особенно хорошо читается в архитектуре Бандар-Сери-Бегавана, придворной символике и правилах поведения в мечетях. Экономика сформирована нефтегазовой отраслью: Сериа и Белайт дают наглядный индустриальный слой, который полезно сопоставлять с официальной архитектурой столицы и с малонаселённым внутренним Борнео. Климат экваториальный, жаркий и влажный круглый год; сезонность проявляется прежде всего в количестве осадков, уровне рек и состоянии лесных троп. Для экспедиции Бруней удобен короткими расстояниями, английским языком в городской и туристической среде и низким уровнем уличной преступности, но общественный транспорт ограничен, поэтому маршруты часто завязаны на Dart, автомобиль, лодку и заранее организованные трансферы. Наиболее сильные сюжетные линии страны — водный город Кампонг-Айер, государственные мечети, нефтяное наследие Сериа, рынки и повседневная жизнь, мангры Бруней река и леса Тембуронг."
+  },
+  "nature": {
+    "flora": [
+      "dipterocarp rainforest",
+      "mangroves",
+      "nipah palm",
+      "orchids",
+      "pitcher plants (Nepenthes)"
+    ],
+    "fauna": [
+      "proboscis monkey",
+      "Bornean gibbon",
+      "hornbills",
+      "sun bear",
+      "clouded leopard",
+      "saltwater crocodile"
+    ],
+    "dangerous_animals": [
+      {
+        "name": "saltwater crocodile",
+        "risk": "серьёзный риск в эстуариях, реках и манграх",
+        "where": "речные и прибрежные водно-болотные угодья"
+      },
+      {
+        "name": "king cobra / kraits / pit vipers",
+        "risk": "ядовитые змеи; встречи редки, но возможны",
+        "where": "лесные и сельские районы"
+      },
+      {
+        "name": "macaques",
+        "risk": "укусы/кража еды при прикармливании",
+        "where": "парки и населённые зоны"
+      }
+    ],
+    "poisonous_plants": [
+      {
+        "name": "Cerbera manghas (sea mango)",
+        "risk": "семена и сок токсичны при проглатывании"
+      },
+      {
+        "name": "Datura spp.",
+        "risk": "все части растения токсичны"
+      },
+      {
+        "name": "Gloriosa superba",
+        "risk": "содержит колхициноподобные токсичные алкалоиды"
+      }
+    ]
+  },
+  "climate": {
+    "reference_location": "Bandar Seri Begawan",
+    "air_temp_mean_c_by_month": {
+      "Jan": 25.9,
+      "Feb": 26.1,
+      "Mar": 26.6,
+      "Apr": 27.1,
+      "May": 27.3,
+      "Jun": 27.1,
+      "Jul": 27.0,
+      "Aug": 27.0,
+      "Sep": 26.8,
+      "Oct": 26.3,
+      "Nov": 26.2,
+      "Dec": 26.1
+    },
+    "sea_temp_mean_c_by_month": {
+      "Jan": 27.5,
+      "Feb": 26.9,
+      "Mar": 27.3,
+      "Apr": 28.8,
+      "May": 29.9,
+      "Jun": 30.3,
+      "Jul": 30.3,
+      "Aug": 29.8,
+      "Sep": 29.5,
+      "Oct": 29.3,
+      "Nov": 29.4,
+      "Dec": 29.1
+    },
+    "notes": "Экваториальный жаркий влажный климат; температуры меняются мало, сезонность сильнее выражена осадками.",
+    "source_quality": "climatology secondary sources; use as planning normals, not forecast"
+  },
+  "safety": {
+    "crime_level": {
+      "qualitative": "низкий",
+      "notes": "Российские и западные консульские рекомендации обычно описывают Бруней как страну с низким уровнем уличной преступности; возможны обычные кражи. Единого сопоставимого официального crime index для всех 11 стран не используется."
+    },
+    "common_traveler_risks": [
+      "petty theft",
+      "traffic accidents",
+      "heat/dehydration",
+      "crocodile habitat"
+    ],
+    "sensitive_areas": [
+      "government/military facilities — photography restrictions can apply"
+    ]
+  },
+  "travel": {
+    "major_attractions": [
+      "Omar Ali Saifuddien Mosque",
+      "Jame' Asr Hassanil Bolkiah Mosque",
+      "Kampong Ayer",
+      "Ulu Temburong National Park",
+      "Royal Regalia Museum"
+    ],
+    "non_touristy_interests": [
+      {
+        "name": "Seria oil heritage landscape",
+        "type": "industrial/history",
+        "why": "нефтяная история государства и жилые кварталы нефтяной эпохи"
+      },
+      {
+        "name": "Labi interior",
+        "type": "nature/culture",
+        "why": "длинные дома, сельский Борнео и низкая туристическая плотность",
+        "access_notes": "часть маршрутов разумнее организовывать с местным проводником"
+      },
+      {
+        "name": "Tutong and Tamu markets",
+        "type": "culture/food",
+        "why": "локальная повседневность и продукты вне столичного туристического ядра"
+      }
+    ],
+    "festivals": [
+      {
+        "name": "Hari Raya Aidilfitri",
+        "typical_month": "varies (Islamic calendar)"
+      },
+      {
+        "name": "National Day",
+        "typical_month": "February 23"
+      },
+      {
+        "name": "Sultan's Birthday",
+        "typical_month": "July 15"
+      }
+    ],
+    "food": {
+      "budget_food_summary": "Недорогая еда доступна в kopitiam, фуд-кортах и ночных рынках; Gadong Night Market — удобная точка для дегустации.",
+      "street_food": [
+        "nasi katok",
+        "satay",
+        "grilled fish",
+        "kuih",
+        "ambuyat (обычно не street-food в узком смысле)"
+      ],
+      "typical_simple_meal_usd_range": [
+        1.5,
+        5.0
+      ],
+      "price_note": "ориентир, не официальный тариф"
+    },
+    "laws_and_prohibitions": [
+      {
+        "topic": "alcohol",
+        "rule": "Продажа алкоголя внутри страны запрещена; немусульмане 17+ могут ввозить ограниченное количество для личного употребления с декларацией, хранить/употреблять в частном месте."
+      },
+      {
+        "topic": "drugs",
+        "rule": "Очень строгие уголовные санкции за наркотики; отдельные составы предусматривают смертную казнь."
+      },
+      {
+        "topic": "religious/public conduct",
+        "rule": "Действуют гражданское право и нормы шариата; в религиозных местах и во время Рамадана ожидается консервативное поведение."
+      }
+    ],
+    "visa_for_russian_passport": {
+      "status": "visa-free",
+      "stay_days": 14,
+      "extension": "Для более долгого пребывания требуется соответствующая виза/разрешение.",
+      "visa_run": {
+        "possible": "Технически новый въезд после выезда возможен только при новом допуске пограничной службы.",
+        "limits": "Опубликованного права на неограниченные visa-runs не найдено.",
+        "notes": "Не считать гарантированным способом долгосрочного проживания."
+      },
+      "passport_validity": "проверять минимум 6 месяцев перед поездкой",
+      "official_source": "Brunei MFA / Russian MFA"
+    },
+    "airports": [
+      {
+        "iata": "BWN",
+        "name": "Brunei International Airport",
+        "role": "main international gateway"
+      }
+    ],
+    "international_air_links": "Региональные и дальнемагистральные рейсы через BWN; сеть меняется, перед маршрутом проверять расписание авиакомпаний.",
+    "land_borders": {
+      "countries": [
+        "Malaysia"
+      ],
+      "main_crossings": [
+        "Sungai Tujoh",
+        "Kuala Lurah",
+        "Labu",
+        "Ujong Jalan"
+      ],
+      "transport": "Автомобиль/такси/автобусные и частные трансферы; Temburong Bridge связывает восточный анклав с основной частью страны без транзита через Малайзию."
+    },
+    "currency": {
+      "code": "BND",
+      "name": "Brunei dollar",
+      "local_currency_per_1_usd": 1.2769,
+      "as_of": "2026-09-27",
+      "rate_type": "market/reference snapshot",
+      "notes": "BND взаимозаменяем с SGD по номиналу в рамках Currency Interchangeability Arrangement; фактический наличный курс обменника отличается."
+    },
+    "objects": [
+      {
+        "name": "Omar Ali Saifuddien Mosque",
+        "class": "major",
+        "interest": [
+          "architecture",
+          "culture",
+          "religion"
+        ],
+        "why_go": "Открытая в 1958 году мечеть султана Омара Али Сайфуддина III — главный архитектурный символ послевоенного Брунея. Белый мрамор, золочёный купол, искусственная лагуна и церемониальная баржа превращают её в визуальный манифест исламской монархии, а не просто отдельный культовый объект.",
+        "traveler_card": {
+          "location": {
+            "region": "Бандар-Сери-Бегаван / Бруней-Муара",
+            "nearest_hub": "Bandar Seri Begawan",
+            "languages_spoken": [
+              "Malay / Brunei Malay",
+              "English",
+              "мандаринский и хоккиен в части китайской общины"
+            ],
+            "currency": {
+              "code": "BND",
+              "name": "Brunei dollar",
+              "local_currency_per_1_usd": 1.2769,
+              "as_of": "2026-09-27",
+              "rate_type": "market/reference snapshot",
+              "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
+              "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
+            }
+          },
+          "logistics": {
+            "access": "Jalan McArthur в центре столицы; пешком из центральной части BSB, Dart или городской автобус.",
+            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
+            "last_mile": null,
+            "typical_visit_hours": [
+              1,
+              2
+            ],
+            "permit_or_guide": null,
+            "modes": {
+              "public_transport": "центр BSB: автобус/пешком; Dart из Gadong/аэропорта",
+              "taxi_ridehail": "Dart до Jalan McArthur",
+              "moped": "городской подъезд; парковка только в разрешённых местах",
+              "walking": "от набережная/Tamu Kianggeh ~0.5–1 км"
+            },
+            "water": "вода/магазины в пределах нескольких сотен метров",
+            "overnight_and_camping": "кемпинг на территории мечети и городских газонах не планировать; гостиница",
+            "terrain_and_movement": "Городской ровный подход; перед входом снимают обувь.",
+            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно"
+          },
+          "climate": {
+            "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
+            "heat_rain_notes": "Экваториальный климат: высокая влажность и жара круглый год; сильный ливень возможен в любой месяц.",
+            "site_specific_notes": null
+          },
+          "operations": {
+            "hours": "Действующая мечеть: немусульманским посетителям входить только вне молитв. Бруней туризм рекомендует позднее утро–ранний день; в Ramadan избегать молитв, включая Tarawih. Точный дневной время доступа посетителей проверять на месте.",
+            "ticket": "Свободный вход при соблюдении правил мечети.",
+            "closure_notes": "Доступ посетителей ограничивается во время молитв, религиозных мероприятий и может меняться в Ramadan/праздники.",
+            "last_verified": "2026-09-28",
+            "official_url": "https://www.bruneitourism.com/places/omar-ali-saifuddien-mosque/",
+            "status": "open_active_mosque"
+          },
+          "safety": {
+            "crime_context": "Сопоставимой официальной статистики преступности именно по объекту нет; вместо фиктивного объект преступность оценка приведены реальные операционные и природные риски.",
+            "main_risks": [
+              "жара и влажность",
+              "скользкие поверхности после дождя",
+              "религиозный этикет",
+              "ограничение доступа во время молитв"
+            ],
+            "sensitive_areas": [],
+            "confidence": "отдельная официальная статистика преступности по объекту отсутствует"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "visual_scouting": {
+              "best_time": "рассвет + последние 40 минут до заката и синий час",
+              "best_weather_light": "сухой вечер после дневного ливня: чище воздух и сильнее отражения",
+              "viewpoints_for_photo_video": [
+                "низкая точка у лагуны с баржей и куполом",
+                "набережная напротив мечети для связи здания с городом",
+                "садовая ось и мост через лагуну"
+              ]
+            },
+            "drone": "Не запускать без отдельного разрешения; религиозный объект в центре столицы.",
+            "filming_restrictions": "Снаружи съёмка обычно возможна; внутри следовать указаниям персонала и не снимать молящихся без согласия."
+          },
+          "annotation": {
+            "narrative": "Открытая в 1958 году мечеть султана Омара Али Сайфуддина III — главный архитектурный символ послевоенного Брунея. Белый мрамор, золочёный купол, искусственная лагуна и церемониальная баржа превращают её в визуальный манифест исламской монархии, а не просто отдельный культовый объект.",
+            "culture_ethnography": "Лучше объяснять вместе с Кампонг-Айер: государственная монументальная столица на суше стоит напротив многовекового водного города.",
+            "geography_geology": "Стоит на низменной речной равнине у Бруней река; искусственная лагуна создаёт чистые отражения и отделяет фасад от дорожного фона."
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "молитвенные окна могут закрыть интерьер",
+              "полдень даёт пересвет мрамора"
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Jubilee Hotel",
+              "area": "Бандар-Сери-Бегаван / Kianggeh",
+              "price_for_two": "ориентир на сентябрь 2026: от ~US$34 за номер/ночь без части налогов; цена динамическая",
+              "contact": "+673 222 8070",
+              "social_or_web": "Booking.com / официальный контакт отеля",
+              "source": "https://www.booking.com/hotel/bn/jubilee.html"
+            },
+            {
+              "name": "Qing Yun Resthouse — Bandar branch",
+              "area": "центр Бандар-Сери-Бегаван",
+              "price_for_two": "бюджетный сегмент; точный тариф на нужные даты проверять перед бронированием",
+              "contact": "+673 222 0503; общий +673 873 5503",
+              "social_or_web": "https://www.qingyunresthouse.com/ ; Facebook/Instagram сети",
+              "source": "https://brunei.worldplaces.me/view-place/81079504-qing-yun-resthouse-bandar-branch.html"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sultan_Omar_Ali_Saifuddin_Mosque_02.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sultan_Omar_Ali_Saifuddin_Mosque_02.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY 2.0",
+          "artist": "sam garza",
+          "last_checked": "2026-09-28"
+        },
+        "sources": [
+          {
+            "url": "https://www.bruneitourism.com/places/omar-ali-saifuddien-mosque/",
+            "publisher": "Brunei Tourism / Tourism Development Department",
+            "used_for": [
+              "description",
+              "access",
+              "hours",
+              "visitor logistics"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Sultan_Omar_Ali_Saifuddin_Mosque_02.jpg",
+            "publisher": "Wikimedia Commons",
+            "used_for": [
+              "illustration",
+              "license provenance"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://deps.mofe.gov.bn/",
+            "publisher": "national statistics / official source",
+            "used_for": [
+              "regional language context"
+            ],
+            "accessed": "2026-09-28",
+            "notes": "Regional practical language profile is synthesized, not an exhaustive census table."
+          },
+          {
+            "url": "https://www.bruneitourism.com/immerse-in-the-spirit-of-ramadan-in-brunei/",
+            "publisher": "Brunei Tourism / Tourism Development Department",
+            "used_for": [
+              "visitor timing",
+              "Ramadan etiquette",
+              "dress"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.booking.com/hotel/bn/jubilee.html",
+            "publisher": "Booking.com",
+            "used_for": [
+              "2026 lodging price snapshot",
+              "guest review context"
+            ],
+            "accessed": "2026-09-28"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Открытая в 1958 году мечеть султана Омара Али Сайфуддина III — главный архитектурный символ послевоенного Брунея. Белый мрамор, золочёный купол, искусственная лагуна и церемониальная баржа превращают её в визуальный манифест исламской монархии, а не просто отдельный культовый объект. Лучше объяснять вместе с Кампонг-Айер: государственная монументальная столица на суше стоит напротив многовекового водного города. Стоит на низменной речной равнине у Бруней река; искусственная лагуна создаёт чистые отражения и отделяет фасад от дорожного фона. Сезон: Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год. Лучшее время: рассвет + последние 40 минут до заката и синий час Свет и погода: сухой вечер после дневного ливня: чище воздух и сильнее отражения Сильные точки обзора: низкая точка у лагуны с баржей и куполом; набережная напротив мечети для связи здания с городом; садовая ось и мост через лагуну.",
+        "tags": [
+          "architecture",
+          "culture",
+          "religion",
+          "nature",
+          "urban",
+          "water",
+          "sunrise_good",
+          "sunset_good",
+          "class_major"
+        ],
+        "route_meta": {
+          "region_ref": "Бандар-Сери-Бегаван / Бруней-Muara",
+          "locality_ref": "Бандар-Сери-Бегаван",
+          "typical_visit_hours": [
+            1,
+            2
+          ],
+          "transport_modes": {
+            "public_transport": "центр BSB: автобус/пешком; Dart из Gadong/аэропорта",
+            "taxi_ridehail": "Dart до Jalan McArthur",
+            "moped": "городской подъезд; парковка только в разрешённых местах",
+            "walking": "от набережная/Tamu Kianggeh ~0.5–1 км"
+          },
+          "walking": "от набережная/Tamu Kianggeh ~0.5–1 км",
+          "water": "вода/магазины в пределах нескольких сотен метров",
+          "overnight_and_camping": "кемпинг на территории мечети и городских газонах не планировать; гостиница",
+          "permit_or_guide": null,
+          "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
+          "current_status": "open_active_mosque",
+          "main_risks": [
+            "жара и влажность",
+            "скользкие поверхности после дождя",
+            "религиозный этикет",
+            "ограничение доступа во время молитв"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Городской ровный подход; перед входом снимают обувь.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+          }
+        }
+      },
+      {
+        "name": "Jame' Asr Hassanil Bolkiah Mosque",
+        "class": "major",
+        "interest": [
+          "architecture",
+          "culture",
+          "religion"
+        ],
+        "why_go": "Открытая в 1994 году государственная мечеть эпохи султана Хассанала Болкиаха. 29 золотых куполов отсылают к нынешнему султану как 29-му правителю династии; архитектура работает масштабом, симметрией и повтором.",
+        "traveler_card": {
+          "location": {
+            "region": "Бандар-Сери-Бегаван / Бруней-Муара",
+            "nearest_hub": "Bandar Seri Begawan",
+            "languages_spoken": [
+              "Malay / Brunei Malay",
+              "English",
+              "мандаринский и хоккиен в части китайской общины"
+            ],
+            "currency": {
+              "code": "BND",
+              "name": "Brunei dollar",
+              "local_currency_per_1_usd": 1.2769,
+              "as_of": "2026-09-27",
+              "rate_type": "market/reference snapshot",
+              "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
+              "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
+            }
+          },
+          "logistics": {
+            "access": "Dart/автомобиль; находится вне компактного пешего ядра BSB.",
+            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
+            "last_mile": null,
+            "typical_visit_hours": [
+              1,
+              2
+            ],
+            "permit_or_guide": null,
+            "modes": {
+              "public_transport": "автобусы есть, но для съёмочного графика неудобны",
+              "taxi_ridehail": "Dart из центра",
+              "moped": "прямой городской подъезд",
+              "walking": "из центра BSB ~4–5 км"
+            },
+            "water": "воду купить в Kiarong/Gadong до входа",
+            "overnight_and_camping": "ночёвка на территории комплекса не рассматривается",
+            "terrain_and_movement": "Большие открытые площадки и лестницы; соблюдать дресс-код.",
+            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно"
+          },
+          "climate": {
+            "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
+            "heat_rain_notes": "Экваториальный климат: высокая влажность и жара круглый год; сильный ливень возможен в любой месяц.",
+            "site_specific_notes": null
+          },
+          "operations": {
+            "hours": "Официальная страница: Mon–Wed 08:00–11:30 и 14:00–15:00; Thu 08:00–11:30. Доступ для посетителей вне молитв; праздничный режим сверять.",
+            "ticket": "Бесплатно, если на месте не объявлено иное.",
+            "closure_notes": null,
+            "last_verified": "2026-09-28",
+            "official_url": "https://www.bruneitourism.com/places/jame-asr-hassanil-bolkiah-mosque/"
+          },
+          "safety": {
+            "crime_context": "Сопоставимой официальной статистики преступности именно по объекту нет; вместо фиктивного объект преступность оценка приведены реальные операционные и природные риски.",
+            "main_risks": [
+              "жара",
+              "религиозный этикет",
+              "закрытие во время молитв"
+            ],
+            "sensitive_areas": [],
+            "confidence": "отдельная официальная статистика преступности по объекту отсутствует"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "visual_scouting": {
+              "best_time": "первое утреннее время доступа посетителей или поздний день",
+              "best_weather_light": "после дождя камень и зелень насыщеннее",
+              "viewpoints_for_photo_video": [
+                "центральная садовая ось",
+                "боковой ракурс, собирающий несколько минаретов и куполов",
+                "край сада/водоёма для повторяющейся геометрии"
+              ]
+            },
+            "drone": "Только с отдельным разрешением.",
+            "filming_restrictions": "Внутри возможны ограничения фото/видео; соблюдать дресс-код и указания персонала."
+          },
+          "annotation": {
+            "narrative": "Открытая в 1994 году государственная мечеть эпохи султана Хассанала Болкиаха. 29 золотых куполов отсылают к нынешнему султану как 29-му правителю династии; архитектура работает масштабом, симметрией и повтором.",
+            "culture_ethnography": "Это действующая соборная мечеть и пространство пятничной молитвы.",
+            "geography_geology": "Находится в Kiarong вне старого пешего ядра BSB; вокруг больше дорог и открытых площадей, поэтому выбор ракурса особенно важен."
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "короткие время доступа посетителей",
+              "большая территория и жёсткий полуденный свет"
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Jubilee Hotel",
+              "area": "Бандар-Сери-Бегаван / Kianggeh",
+              "price_for_two": "ориентир на сентябрь 2026: от ~US$34 за номер/ночь без части налогов; цена динамическая",
+              "contact": "+673 222 8070",
+              "social_or_web": "Booking.com / официальный контакт отеля",
+              "source": "https://www.booking.com/hotel/bn/jubilee.html"
+            },
+            {
+              "name": "Qing Yun Resthouse — Bandar branch",
+              "area": "центр Бандар-Сери-Бегаван",
+              "price_for_two": "бюджетный сегмент; точный тариф на нужные даты проверять перед бронированием",
+              "contact": "+673 222 0503; общий +673 873 5503",
+              "social_or_web": "https://www.qingyunresthouse.com/ ; Facebook/Instagram сети",
+              "source": "https://brunei.worldplaces.me/view-place/81079504-qing-yun-resthouse-bandar-branch.html"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Jame%27_Asr_Hassanil_Bolkiah_Mosque%2C_Brunei%2C_April_2025_06.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Jame%27_Asr_Hassanil_Bolkiah_Mosque,_Brunei,_April_2025_06.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Calistemon",
+          "last_checked": "2026-09-28"
+        },
+        "sources": [
+          {
+            "url": "https://www.bruneitourism.com/places/jame-asr-hassanil-bolkiah-mosque/",
+            "publisher": "Brunei Tourism / Tourism Development Department",
+            "used_for": [
+              "description",
+              "access",
+              "hours",
+              "visitor logistics"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Jame%27_Asr_Hassanil_Bolkiah_Mosque,_Brunei,_April_2025_06.jpg",
+            "publisher": "Wikimedia Commons",
+            "used_for": [
+              "illustration",
+              "license provenance"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://deps.mofe.gov.bn/",
+            "publisher": "national statistics / official source",
+            "used_for": [
+              "regional language context"
+            ],
+            "accessed": "2026-09-28",
+            "notes": "Regional practical language profile is synthesized, not an exhaustive census table."
+          },
+          {
+            "url": "https://www.booking.com/hotel/bn/jubilee.html",
+            "publisher": "Booking.com",
+            "used_for": [
+              "2026 lodging price snapshot",
+              "guest review context"
+            ],
+            "accessed": "2026-09-28"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Открытая в 1994 году государственная мечеть эпохи султана Хассанала Болкиаха. 29 золотых куполов отсылают к нынешнему султану как 29-му правителю династии; архитектура работает масштабом, симметрией и повтором. Это действующая соборная мечеть и пространство пятничной молитвы. Находится в Kiarong вне старого пешего ядра BSB; вокруг больше дорог и открытых площадей, поэтому выбор ракурса особенно важен. Сезон: Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год. Лучшее время: первое утреннее время доступа посетителей или поздний день Свет и погода: после дождя камень и зелень насыщеннее Сильные точки обзора: центральная садовая ось; боковой ракурс, собирающий несколько минаретов и куполов; край сада/водоёма для повторяющейся геометрии.",
+        "tags": [
+          "architecture",
+          "culture",
+          "religion",
+          "weather_sensitive",
+          "class_major"
+        ],
+        "route_meta": {
+          "region_ref": "Бандар-Сери-Бегаван / Бруней-Muara",
+          "locality_ref": "Бандар-Сери-Бегаван",
+          "typical_visit_hours": [
+            1,
+            2
+          ],
+          "transport_modes": {
+            "public_transport": "автобусы есть, но для съёмочного графика неудобны",
+            "taxi_ridehail": "Dart из центра",
+            "moped": "прямой городской подъезд",
+            "walking": "из центра BSB ~4–5 км"
+          },
+          "walking": "из центра BSB ~4–5 км",
+          "water": "воду купить в Kiarong/Gadong до входа",
+          "overnight_and_camping": "ночёвка на территории комплекса не рассматривается",
+          "permit_or_guide": null,
+          "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
+          "current_status": null,
+          "main_risks": [
+            "жара",
+            "религиозный этикет",
+            "закрытие во время молитв"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Большие открытые площадки и лестницы; соблюдать дресс-код.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+          }
+        }
+      },
+      {
+        "name": "Kampong Ayer",
+        "class": "major",
+        "interest": [
+          "culture",
+          "architecture",
+          "living heritage"
+        ],
+        "why_go": "Кампонг-Айер — сеть водных деревень на сваях вдоль Бруней река. Европейские путешественники описывали огромный водный город здесь уже в XVI веке; сегодня это жилые кварталы со школами, мечетями, пожарной и полицейской инфраструктурой.",
+        "traveler_card": {
+          "location": {
+            "region": "Бандар-Сери-Бегаван / Бруней-Муара",
+            "nearest_hub": "набережная Бандар-Сери-Бегавана",
+            "languages_spoken": [
+              "Malay / Brunei Malay",
+              "English",
+              "мандаринский и хоккиен в части китайской общины"
+            ],
+            "currency": {
+              "code": "BND",
+              "name": "Brunei dollar",
+              "local_currency_per_1_usd": 1.2769,
+              "as_of": "2026-09-27",
+              "rate_type": "market/reference snapshot",
+              "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
+              "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
+            }
+          },
+          "logistics": {
+            "access": "С набережной BSB на вода такси, затем пешком по деревянным мосткам.",
+            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
+            "last_mile": null,
+            "typical_visit_hours": [
+              2,
+              4
+            ],
+            "permit_or_guide": null,
+            "modes": {
+              "public_transport": "до набережная автобус/пешком, далее вода такси",
+              "taxi_ridehail": "Dart до набережная",
+              "moped": "оставить на суше",
+              "walking": "после лодки обычно 0.5–3 км по мосткам"
+            },
+            "water": "магазины есть не везде и не всегда; воду брать с берега",
+            "overnight_and_camping": "палатка на мостках/под домами недопустима; ночёвка только по приглашению/в размещении",
+            "terrain_and_movement": "Узкие мостки и ступени к лодкам; часть района неудобна при ограниченной мобильности.",
+            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно"
+          },
+          "climate": {
+            "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
+            "heat_rain_notes": "Экваториальный климат: высокая влажность и жара круглый год; сильный ливень возможен в любой месяц.",
+            "site_specific_notes": null
+          },
+          "operations": {
+            "hours": "Жилой район не имеет единого графика; отдельные галереи/дома имеют собственные часы.",
+            "ticket": "Лодка и частные посещения оплачиваются отдельно; цену вода такси согласовывать до посадки.",
+            "closure_notes": null,
+            "last_verified": "2026-09-28",
+            "official_url": "https://www.bruneitourism.com/places/kampong-ayer/"
+          },
+          "safety": {
+            "crime_context": "Сопоставимой официальной статистики преступности именно по объекту нет; вместо фиктивного объект преступность оценка приведены реальные операционные и природные риски.",
+            "main_risks": [
+              "падение с мостков",
+              "скользкое дерево после дождя",
+              "лодочная безопасность",
+              "уважение частной жизни жителей"
+            ],
+            "sensitive_areas": [],
+            "confidence": "отдельная официальная статистика преступности по объекту отсутствует"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "visual_scouting": {
+              "best_time": "06:30–09:00 и 16:30–18:15",
+              "best_weather_light": "пасмурно после дождя даёт мягкий свет; сильный ливень опасен на мостках",
+              "viewpoints_for_photo_video": [
+                "лодка на средней дистанции вдоль свайных фасадов",
+                "длинная перспектива по мостку",
+                "пристань у Cultural and туризм Gallery"
+              ]
+            },
+            "drone": "Не запускать над жилыми домами без разрешения и проверки авиационных правил.",
+            "filming_restrictions": "Для портретов и интерьеров получать согласие; не снимать детей и частную жизнь навязчиво."
+          },
+          "annotation": {
+            "narrative": "Кампонг-Айер — сеть водных деревень на сваях вдоль Бруней река. Европейские путешественники описывали огромный водный город здесь уже в XVI веке; сегодня это жилые кварталы со школами, мечетями, пожарной и полицейской инфраструктурой.",
+            "culture_ethnography": "Ключ — повседневность, а не экзотика свай: лодка заменяет улицу, пристань — подъезд, мостки — тротуар. Частный дом не является музеем; интерьеры и портреты снимаются только по приглашению.",
+            "geography_geology": "Приливная среда Бруней река меняет уровень воды, свет и доступ в течение дня; утром и вечером вода становится сильным естественным отражателем."
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "цену вода такси согласовать до посадки",
+              "мокрые мостки скользкие"
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Jubilee Hotel",
+              "area": "Бандар-Сери-Бегаван / Kianggeh",
+              "price_for_two": "ориентир на сентябрь 2026: от ~US$34 за номер/ночь без части налогов; цена динамическая",
+              "contact": "+673 222 8070",
+              "social_or_web": "Booking.com / официальный контакт отеля",
+              "source": "https://www.booking.com/hotel/bn/jubilee.html"
+            },
+            {
+              "name": "Qing Yun Resthouse — Bandar branch",
+              "area": "центр Бандар-Сери-Бегаван",
+              "price_for_two": "бюджетный сегмент; точный тариф на нужные даты проверять перед бронированием",
+              "contact": "+673 222 0503; общий +673 873 5503",
+              "social_or_web": "https://www.qingyunresthouse.com/ ; Facebook/Instagram сети",
+              "source": "https://brunei.worldplaces.me/view-place/81079504-qing-yun-resthouse-bandar-branch.html"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Kampong_Ayer%2C_Brunei_in_January_2026_%28DSCF1416%29.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer,_Brunei_in_January_2026_(DSCF1416).jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Yu Chu Chin",
+          "last_checked": "2026-09-28"
+        },
+        "sources": [
+          {
+            "url": "https://www.bruneitourism.com/places/kampong-ayer/",
+            "publisher": "Brunei Tourism / Tourism Development Department",
+            "used_for": [
+              "description",
+              "access",
+              "hours",
+              "visitor logistics"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer,_Brunei_in_January_2026_(DSCF1416).jpg",
+            "publisher": "Wikimedia Commons",
+            "used_for": [
+              "illustration",
+              "license provenance"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://deps.mofe.gov.bn/",
+            "publisher": "national statistics / official source",
+            "used_for": [
+              "regional language context"
+            ],
+            "accessed": "2026-09-28",
+            "notes": "Regional practical language profile is synthesized, not an exhaustive census table."
+          },
+          {
+            "url": "https://www.booking.com/hotel/bn/jubilee.html",
+            "publisher": "Booking.com",
+            "used_for": [
+              "2026 lodging price snapshot",
+              "guest review context"
+            ],
+            "accessed": "2026-09-28"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Кампонг-Айер — сеть водных деревень на сваях вдоль Бруней река. Европейские путешественники описывали огромный водный город здесь уже в XVI веке; сегодня это жилые кварталы со школами, мечетями, пожарной и полицейской инфраструктурой. Ключ — повседневность, а не экзотика свай: лодка заменяет улицу, пристань — подъезд, мостки — тротуар. Частный дом не является музеем; интерьеры и портреты снимаются только по приглашению. Приливная среда Бруней река меняет уровень воды, свет и доступ в течение дня; утром и вечером вода становится сильным естественным отражателем. Сезон: Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год. Лучшее время: 06:30–09:00 и 16:30–18:15 Свет и погода: пасмурно после дождя даёт мягкий свет; сильный ливень опасен на мостках Сильные точки обзора: лодка на средней дистанции вдоль свайных фасадов; длинная перспектива по мостку; пристань у Cultural and туризм Gallery.",
+        "tags": [
+          "culture",
+          "architecture",
+          "living_heritage",
+          "history",
+          "religion",
+          "nature",
+          "ethnography",
+          "urban",
+          "water",
+          "market_food",
+          "boat_access",
+          "sunrise_good",
+          "sunset_good",
+          "weather_sensitive",
+          "class_major"
+        ],
+        "route_meta": {
+          "region_ref": "Бандар-Сери-Бегаван / Бруней-Muara",
+          "locality_ref": "набережная Бандар-Сери-Бегавана",
+          "typical_visit_hours": [
+            2,
+            4
+          ],
+          "transport_modes": {
+            "public_transport": "до набережная автобус/пешком, далее вода такси",
+            "taxi_ridehail": "Dart до набережная",
+            "moped": "оставить на суше",
+            "walking": "после лодки обычно 0.5–3 км по мосткам"
+          },
+          "walking": "после лодки обычно 0.5–3 км по мосткам",
+          "water": "магазины есть не везде и не всегда; воду брать с берега",
+          "overnight_and_camping": "палатка на мостках/под домами недопустима; ночёвка только по приглашению/в размещении",
+          "permit_or_guide": null,
+          "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
+          "current_status": null,
+          "main_risks": [
+            "падение с мостков",
+            "скользкое дерево после дождя",
+            "лодочная безопасность",
+            "уважение частной жизни жителей"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "Узкие мостки и ступени к лодкам; часть района неудобна при ограниченной мобильности.",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+          }
+        }
+      },
+      {
+        "name": "Ulu Temburong National Park",
+        "class": "major",
+        "interest": [
+          "nature",
+          "rainforest",
+          "wildlife",
+          "adventure"
+        ],
+        "why_go": "Главный охраняемый дождевой лес Брунея и наиболее сильный контраст нефтегазовой экономике страны. Туристический доступ построен вокруг реки, лесной тропы и башня над пологом леса над верхним ярусом тропического леса.",
+        "traveler_card": {
+          "location": {
+            "region": "Temburong",
+            "nearest_hub": "Bangar",
+            "languages_spoken": [
+              "Malay",
+              "English in tourism",
+              "ибан / лун-бауанг / мурут в отдельных общинах"
+            ],
+            "currency": {
+              "code": "BND",
+              "name": "Brunei dollar",

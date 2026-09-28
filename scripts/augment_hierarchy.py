@@ -10,6 +10,7 @@ from build_cdn import TYPE_LABELS as CLASS_LABELS
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public" / "cdn" / "v2"
+HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
 
 TARGET_COUNTRIES = [
     {"code":"BN","slug":"brunei","name_ru":"Бруней","name_en":"Brunei Darussalam","name_local":"Negara Brunei Darussalam","flag":"🇧🇳","subregions":["maritime"],"tags":["borneo","sultanate","rainforest","islamic_culture"]},
@@ -106,6 +107,16 @@ def main():
     for row in places:
         places_by_country[row["country_code"]].append(row)
 
+    formal_geography = {}
+    for meta in TARGET_COUNTRIES:
+        path = HIERARCHY / f"{meta['slug']}.json"
+        if not path.exists():
+            continue
+        doc = load(path)
+        if (doc.get("meta") or {}).get("country_code") != meta["code"]:
+            raise RuntimeError(f"formal geography country mismatch: {path}")
+        formal_geography[meta["code"]] = doc
+
     type_by_value = {row["value"]: row for row in type_rows}
     family_by_type = {}
     for family in FAMILIES:
@@ -176,29 +187,128 @@ def main():
             })
 
     geography_children=[]; geography_nodes=1; place_page_count=0
-    for meta in TARGET_COUNTRIES:
-        code=meta["code"]; cplaces=sorted(places_by_country.get(code,[]),key=lambda x:(x.get("kind") or "",x.get("name") or "")); child_refs=[]
-        for place in cplaces:
-            page_path=f"pages/geography/{meta['slug']}/{place['kind']}/{place['slug']}.json"
-            child_refs.append({"id":place["id"],"kind":place["kind"],"name":place["name"],"slug":place["slug"],"page_path":page_path,"object_count":len(place.get("object_ids") or [])})
-            geography_nodes += 1; place_page_count += 1
-            pobj=[objects_by_id[oid] for oid in place.get("object_ids") or [] if oid in objects_by_id]; class_counts=Counter(o["object_type"] for o in pobj)
-            dump(release / page_path, {
-                "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"page_type":"geography","id":place["id"]},
-                "identity":{"name":place["name"],"kind":place["kind"],"slug":place["slug"],"country_code":code},"layout":"geography",
-                "parent":{"id":f"country:{code.lower()}","page_path":f"pages/countries/{meta['slug']}.json"},
-                "source_profile":{k:v for k,v in place.items() if k not in {"object_ids","country_code","country_slug"}},
-                "parentage_status":"country_parent_confirmed; lower administrative nesting not inferred without source evidence",
-                "class_counts":[{"object_type":k,"label_ru":type_by_value.get(k,{}).get("label_ru",k),"count":v} for k,v in sorted(class_counts.items())],
-                "objects":[{"id":o["id"],"name":o["name"],"object_type":o["object_type"],"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in pobj],
-            })
-        geography_children.append({"id":f"country:{code.lower()}","kind":"country","name":meta["name_ru"],"slug":meta["slug"],"page_path":f"pages/countries/{meta['slug']}.json","status":"published" if code in published else "pending_source_migration","children":child_refs}); geography_nodes += 1
+    country_geo_roots = {}
+    country_geo_mode = {}
 
-    dump(release / "geography" / "tree.json", {"meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"tree_kind":"geography","allowed_kinds":["macroregion","country","region","province","state","district","island","city","village","traditional_settlement","geographic_area","city_or_route_hub"]},"root":{"id":"geo:southeast-asia","kind":"macroregion","name":"Юго-Восточная Азия","page_path":"region/southeast-asia.json","children":geography_children}})
+    def nav_geo_node(node):
+        return {
+            "id": node["id"],
+            "kind": node["kind"],
+            "name": node["name"],
+            "path": node["page_path"],
+            "object_count": node["object_count"],
+            "children": [nav_geo_node(child) for child in node.get("children") or []],
+        }
+
+    for meta in TARGET_COUNTRIES:
+        code=meta["code"]
+        country_id=f"country:{code.lower()}"
+        if code in formal_geography:
+            doc=formal_geography[code]
+            nodes=doc.get("nodes") or []
+            ids=[n.get("id") for n in nodes]
+            if any(not x for x in ids) or len(ids) != len(set(ids)):
+                raise RuntimeError(f"{code}: invalid or duplicate formal geography node ids")
+            node_by_id={n["id"]:n for n in nodes}
+            children_by_parent=defaultdict(list)
+            for node in nodes:
+                parent_id=node.get("parent_id")
+                if parent_id != country_id and parent_id not in node_by_id:
+                    raise RuntimeError(f"{code}: unknown formal geography parent {parent_id} for {node['id']}")
+                children_by_parent[parent_id].append(node["id"])
+
+            object_cache={}
+            def aggregate_object_ids(node_id, stack=None):
+                if node_id in object_cache:
+                    return object_cache[node_id]
+                stack=set(stack or [])
+                if node_id in stack:
+                    raise RuntimeError(f"{code}: geography cycle at {node_id}")
+                stack.add(node_id)
+                out=[]
+                node=node_by_id[node_id]
+                for oid in node.get("object_ids") or []:
+                    if oid not in objects_by_id:
+                        raise RuntimeError(f"{code}: geography references unknown object {oid}")
+                    if oid not in out:
+                        out.append(oid)
+                for child_id in children_by_parent.get(node_id,[]):
+                    for oid in aggregate_object_ids(child_id, stack):
+                        if oid not in out:
+                            out.append(oid)
+                object_cache[node_id]=out
+                return out
+
+            def node_page_path(node):
+                return f"pages/geography/{meta['slug']}/{node['kind']}/{node['slug']}.json"
+
+            def build_formal_node(node_id):
+                nonlocal geography_nodes, place_page_count
+                node=node_by_id[node_id]
+                children=[build_formal_node(cid) for cid in sorted(children_by_parent.get(node_id,[]))]
+                object_ids=aggregate_object_ids(node_id)
+                pobj=[objects_by_id[oid] for oid in object_ids]
+                class_counts=Counter(o["object_type"] for o in pobj)
+                page_path=node_page_path(node)
+                parent_id=node.get("parent_id")
+                if parent_id == country_id:
+                    parent_page=f"pages/countries/{meta['slug']}.json"
+                else:
+                    parent_page=node_page_path(node_by_id[parent_id])
+                dump(release / page_path, {
+                    "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"page_type":"geography","id":node["id"]},
+                    "identity":{"name":node.get("name_ru") or node.get("name_local") or node["id"],"name_local":node.get("name_local"),"kind":node["kind"],"slug":node["slug"],"country_code":code},
+                    "layout":"geography",
+                    "parent":{"id":parent_id,"page_path":parent_page},
+                    "hierarchy_status":"formalized",
+                    "children":[{"id":child["id"],"kind":child["kind"],"name":child["name"],"page_path":child["page_path"],"object_count":child["object_count"]} for child in children],
+                    "legacy_region_names":node.get("legacy_region_names") or [],
+                    "class_counts":[{"object_type":k,"label_ru":type_by_value.get(k,{}).get("label_ru",CLASS_LABELS.get(k,k)),"count":v} for k,v in sorted(class_counts.items())],
+                    "objects":[{"id":o["id"],"name":o["name"],"object_type":o["object_type"],"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in pobj],
+                    "provenance":{"sources":doc.get("sources") or [],"checked_at":(doc.get("meta") or {}).get("checked_at")},
+                })
+                geography_nodes += 1; place_page_count += 1
+                return {"id":node["id"],"kind":node["kind"],"name":node.get("name_ru") or node.get("name_local") or node["id"],"slug":node["slug"],"page_path":page_path,"object_count":len(object_ids),"children":children}
+
+            roots=[build_formal_node(nid) for nid in sorted(children_by_parent.get(country_id,[]))]
+            covered=set()
+            for root in roots:
+                covered.update(aggregate_object_ids(root["id"]))
+            expected={o["id"] for o in objects_by_country.get(code,[])}
+            if covered != expected:
+                raise RuntimeError(f"{code}: formal geography coverage mismatch missing={sorted(expected-covered)} extra={sorted(covered-expected)}")
+            country_geo_roots[code]=roots
+            country_geo_mode[code]="formalized"
+            child_refs=roots
+        else:
+            cplaces=sorted(places_by_country.get(code,[]),key=lambda x:(x.get("kind") or "",x.get("name") or ""))
+            child_refs=[]
+            for place in cplaces:
+                page_path=f"pages/geography/{meta['slug']}/{place['kind']}/{place['slug']}.json"
+                child_refs.append({"id":place["id"],"kind":place["kind"],"name":place["name"],"slug":place["slug"],"page_path":page_path,"object_count":len(place.get("object_ids") or []),"children":[]})
+                geography_nodes += 1; place_page_count += 1
+                pobj=[objects_by_id[oid] for oid in place.get("object_ids") or [] if oid in objects_by_id]; class_counts=Counter(o["object_type"] for o in pobj)
+                dump(release / page_path, {
+                    "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"page_type":"geography","id":place["id"]},
+                    "identity":{"name":place["name"],"kind":place["kind"],"slug":place["slug"],"country_code":code},"layout":"geography",
+                    "parent":{"id":country_id,"page_path":f"pages/countries/{meta['slug']}.json"},
+                    "source_profile":{k:v for k,v in place.items() if k not in {"object_ids","country_code","country_slug"}},
+                    "hierarchy_status":"legacy_route_place",
+                    "parentage_status":"country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+                    "class_counts":[{"object_type":k,"label_ru":type_by_value.get(k,{}).get("label_ru",CLASS_LABELS.get(k,k)),"count":v} for k,v in sorted(class_counts.items())],
+                    "objects":[{"id":o["id"],"name":o["name"],"object_type":o["object_type"],"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in pobj],
+                })
+            country_geo_roots[code]=child_refs
+            country_geo_mode[code]="legacy_route_places"
+
+        geography_children.append({"id":country_id,"kind":"country","name":meta["name_ru"],"slug":meta["slug"],"page_path":f"pages/countries/{meta['slug']}.json","status":"published" if code in published else "pending_source_migration","geography_status":country_geo_mode[code],"children":child_refs})
+        geography_nodes += 1
+
+    dump(release / "geography" / "tree.json", {"meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"tree_kind":"geography","allowed_kinds":["macroregion","country","region","province","state","district","mukim","island","city","town","village","traditional_settlement","geographic_area","city_or_route_hub"]},"root":{"id":"geo:southeast-asia","kind":"macroregion","name":"Юго-Восточная Азия","page_path":"region/southeast-asia.json","children":geography_children}})
 
     nav_country_children=[]
     for meta in TARGET_COUNTRIES:
-        code=meta["code"]; src=published.get(code); cobjects=objects_by_country.get(code,[]); cplaces=sorted(places_by_country.get(code,[]),key=lambda x:(x.get("kind") or "",x.get("name") or "")); present_types=sorted(set(o["object_type"] for o in cobjects))
+        code=meta["code"]; src=published.get(code); cobjects=objects_by_country.get(code,[]); present_types=sorted(set(o["object_type"] for o in cobjects))
         class_families=[]; class_nav_families=[]
         for family in FAMILIES:
             family_types=[t for t in family["types"] if t in present_types]
@@ -212,18 +322,18 @@ def main():
                 family_nav_classes.append({"id":f"country-class:{code.lower()}:{t}","kind":"country_class","label_ru":type_by_value[t]["label_ru"],"object_type":t,"children":[{"id":o["id"],"kind":"object","name":o["name"],"path":o["detail_path"]} for o in rows]})
             class_families.append({"family_id":family["id"],"label_ru":family["label_ru"],"count":family_count,"classes":family_classes})
             class_nav_families.append({"id":f"country-family:{code.lower()}:{family['id']}","kind":"class_family","label_ru":family["label_ru"],"count":family_count,"children":family_nav_classes})
-        geography_rows=[{"id":p["id"],"kind":p["kind"],"name":p["name"],"page_path":f"pages/geography/{meta['slug']}/{p['kind']}/{p['slug']}.json","object_count":len(p.get("object_ids") or [])} for p in cplaces]
+        geography_rows=[{"id":p["id"],"kind":p["kind"],"name":p["name"],"page_path":p["page_path"],"object_count":p["object_count"],"children_count":len(p.get("children") or [])} for p in country_geo_roots.get(code,[])]
         dump(release / "pages" / "countries" / f"{meta['slug']}.json", {
             "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"page_type":"country","id":f"country:{code.lower()}"},
             "identity":{"country_code":code,"slug":meta["slug"],"name_ru":meta["name_ru"],"name_en":meta["name_en"],"name_local":meta["name_local"],"flag":meta["flag"],"subregions":meta["subregions"],"tags":meta["tags"]},
             "layout":"country","status":"published" if src else "pending_source_migration","hero":src.get("cover") if src else None,"summary":src.get("summary") if src else None,"content_ref":src.get("country_path") if src else None,
-            "geography":geography_rows,"class_families":class_families,"objects_count":len(cobjects),
+            "geography":geography_rows,"geography_status":country_geo_mode.get(code),"legacy_route_places_ref":f"countries/{meta['slug']}/places.json" if code in formal_geography else None,"class_families":class_families,"objects_count":len(cobjects),
             "migration_note":None if src else "Исходный страновой файл ещё не перенесён в Git/CDN; страница существует как узел общей архитектуры без выдуманного содержимого.",
         })
         nav_country_children.append({
             "id":f"country:{code.lower()}","kind":"country","name":meta["name_ru"],"path":f"pages/countries/{meta['slug']}.json","status":"published" if src else "pending_source_migration",
             "children":[
-                {"id":f"branch:{code.lower()}:geography","kind":"navigation_branch","label_ru":"География","children":[{"id":p["id"],"kind":p["kind"],"name":p["name"],"path":f"pages/geography/{meta['slug']}/{p['kind']}/{p['slug']}.json","children":[{"id":oid,"kind":"object_ref","path":objects_by_id[oid]["detail_path"]} for oid in p.get("object_ids") or [] if oid in objects_by_id]} for p in cplaces]},
+                {"id":f"branch:{code.lower()}:geography","kind":"navigation_branch","label_ru":"География","status":country_geo_mode.get(code),"children":[nav_geo_node(p) for p in country_geo_roots.get(code,[])]},
                 {"id":f"branch:{code.lower()}:classes","kind":"navigation_branch","label_ru":"Классы объектов","children":class_nav_families},
             ],
         })
@@ -237,7 +347,7 @@ def main():
             "project":{"status":"complete"},"region":{"status":"complete"},
             "country_catalog":{"status":"complete","total":len(TARGET_COUNTRIES),"published":len(published)},
             "taxonomy_families":{"status":"complete","families":len(FAMILIES),"classes":sum(len(f["types"]) for f in FAMILIES)},
-            "geography_contract":{"status":"complete","nodes":geography_nodes,"note":"Иерархия ниже уровня страны пока не угадывается: старые route-region/hub узлы сохраняются до доказанной административной нормализации."},
+            "geography_contract":{"status":"complete","nodes":geography_nodes,"formalized_countries":sorted(formal_geography),"note":"Формализованные страны используют доказанную иерархию; остальные сохраняют route-region/hub как переходный слой без выдуманного административного parentage."},
             "country_pages":{"status":"in_progress","published":len(published),"placeholders":len(TARGET_COUNTRIES)-len(published)},
             "geography_pages":{"status":"generated_from_existing_source","count":place_page_count},
             "object_classes":{"status":"formalized_with_transitional_legacy_types"},

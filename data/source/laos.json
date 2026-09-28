@@ -26,7 +26,8 @@
       "v1.6.1 draft: правило движения исправлено на правостороннее; официальные лаосские документы требуют левое расположение рулевого управления для постоянно импортируемых автомобилей. Ошибочное указание о левостороннем движении из внешнего консульского источника не переносится.",
       "v1.6.2 draft: добавлен obj_la_0020 Hin Nam No National Park с операционной primary_location у западного портала Xe Bang Fai, отдельным UNESCO reference point, hierarchy Boualapha/Hin Nam No, официальной ночёвкой в visitor zone и разведением основного асфальтированного подъезда от более грубых поперечных дорог.",
       "v1.6.3 draft: добавлен obj_la_0021 Nakai Nam Theun National Park; multimodal access сохранён структурированными legs, а неизвестные километры/набор высоты не заменялись оценками.",
-      "v1.6.4 draft: добавлен obj_la_0022 Tad Fane с отдельными GPS входа, основного viewpoint и верхней фототочки; высота падения 120 м не смешивается с абсолютной высотой."
+      "v1.6.4 draft: добавлен obj_la_0022 Tad Fane с отдельными GPS входа, основного viewpoint и верхней фототочки; высота падения 120 м не смешивается с абсолютной высотой.",
+      "v1.6.3 QA-fix: у Nakai Nam Theun удалён центр Удомсука из object.geo_points, primary_location уточнён как приблизительный операционный лодочный доступ Тхаланга, 2–3 часа езды оставлены диапазоном в notes без ложного duration_min=120; медиа заменены на Commons с открытой лицензией."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -8558,8 +8559,8 @@
               ]
             },
             "coordinates": {
-              "lat": 17.84424,
-              "lon": 105.05296,
+              "lat": 17.84427,
+              "lon": 105.05261,
               "elevation_m": null
             },
             "coordinate_type": "pier",
@@ -8567,12 +8568,12 @@
             "elevation_accuracy": "unknown",
             "coordinate_source": {
               "type": "map",
-              "title": "Thalang village / port cluster",
+              "title": "Thalang port / reservoir access",
               "publisher": "WorldPlaces / OSM-derived locality data",
-              "url": "https://laos.worldplaces.me/view-place/84760008-thalang.html",
+              "url": "https://laos.worldplaces.me/view-place/64082355.html",
               "authority": "medium",
               "accessed": "2026-09-29",
-              "notes": "Операционная точка района лодочного отправления в Тхаланге; не геодезическая точка конкретного пирса."
+              "notes": "Операционная точка лодочного доступа в Тхаланге; не геодезическая отметка конкретного причального сооружения."
             },
             "object_elevation": {
               "representative_m": null,
@@ -8591,35 +8592,7 @@
               "checked_at": "2026-09-29",
               "notes": "Диапазон относится к национальному парку в целом, а не к точке доступа."
             },
-            "geo_points": [
-              {
-                "type": "center",
-                "name": "Удомсук / Накай, район штаб-квартиры парка",
-                "coordinates": {
-                  "lat": 17.71058,
-                  "lon": 105.14921,
-                  "elevation_m": 547
-                },
-                "accuracy": "medium",
-                "coordinate_source": {
-                  "type": "map",
-                  "title": "Oudomsouk",
-                  "publisher": "OpenStreetMap / GeoNames via Mapcarta",
-                  "url": "https://mapcarta.com/39608992",
-                  "authority": "medium",
-                  "accessed": "2026-09-29"
-                },
-                "elevation_source": {
-                  "type": "map",
-                  "title": "Oudomsouk elevation",
-                  "publisher": "OpenStreetMap / GeoNames via Mapcarta",
-                  "url": "https://mapcarta.com/39608992",
-                  "authority": "medium",
-                  "accessed": "2026-09-29"
-                },
-                "checked_at": "2026-09-29"
-              }
-            ],
+            "geo_points": [],
             "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
@@ -8668,16 +8641,16 @@
                   {
                     "mode": "moped",
                     "distance_km": null,
-                    "duration_min": 120,
-                    "surface": "paved",
-                    "condition": "магистральный маршрут петли Тхакхэка до Тхаланга",
+                    "duration_min": null,
+                    "surface": null,
+                    "condition": "основная дорожная ось петли Тхакхэка до Тхаланга; тип и состояние отдельных сегментов проверять актуально",
                     "seasonality": "в дождливый сезон видимость и сцепление ухудшаются; состояние конкретных ответвлений проверять отдельно",
                     "elevation_gain_m": null,
                     "elevation_loss_m": null,
                     "trailhead": null,
                     "navigation": "Route 1E / Thakhek Loop",
                     "fords": null,
-                    "notes": "Phosy Thalang указывает ориентир 2–3 часа езды от Тхакхэка; точный километраж не переносится без отдельного картографического источника."
+                    "notes": "Phosy Thalang публикует ориентир 2–3 часа из Тхакхэка. В схеме CDN диапазон не превращается в выдуманный скаляр; километраж и точный тип покрытия оставлены null до отдельной картографической проверки."
                   }
                 ]
               },
@@ -8701,8 +8674,8 @@
                     "elevation_gain_m": null,
                     "elevation_loss_m": null,
                     "trailhead": {
-                      "lat": 17.84424,
-                      "lon": 105.05296,
+                      "lat": 17.84427,
+                      "lon": 105.05261,
                       "coordinate_type": "pier",
                       "accuracy": "approximate"
                     },
@@ -8808,8 +8781,8 @@
                   "name": "Берег водохранилища у Тхаланга",
                   "description": "Широкая водная поверхность, затопленные стволы и дальние аннамитские хребты.",
                   "coordinates": {
-                    "lat": 17.84424,
-                    "lon": 105.05296,
+                    "lat": 17.84427,
+                    "lon": 105.05261,
                     "elevation_m": null
                   },
                   "best_time": "sunrise",
@@ -8828,9 +8801,9 @@
                   ],
                   "source": {
                     "type": "map",
-                    "title": "Thalang locality",
-                    "publisher": "WorldPlaces / OSM-derived data",
-                    "url": "https://laos.worldplaces.me/view-place/84760008-thalang.html",
+                    "title": "Thalang port / reservoir access",
+                    "publisher": "WorldPlaces / OSM-derived locality data",
+                    "url": "https://laos.worldplaces.me/view-place/64082355.html",
                     "authority": "medium",
                     "accessed": "2026-09-29"
                   }
@@ -8894,12 +8867,22 @@
               }
             ]
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "Практические отчёты по петле Тхакхэка описывают Тхаланг как удобную ночёвку перед дальнейшим движением; качество удалённых лесных дорог и троп заметно меняется по сезону.",
-              "Для внутренних маршрутов путешественники чаще используют местную лодку и проводника, чем пытаются строить самостоятельный переход без локальной навигации."
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "road",
+              "summary": "Свежие отчёты по петле Тхакхэка показывают неоднородность покрытия: на основной оси есть хорошие асфальтовые участки, но отдельные ответвления и строительные зоны могут быть пыльными и грубыми. Это нельзя переносить как характеристику каждой дороги парка.",
+              "observed_period": "2026-01",
+              "source_refs": [],
+              "confidence": "medium"
+            },
+            {
+              "topic": "navigation",
+              "summary": "Официальный парк публикует маршруты с местными проводниками и отдельный режим для более глубоких зон; самостоятельное движение вне оформленных туристических маршрутов не рассматривается как стандартный доступ.",
+              "observed_period": "2026-09",
+              "source_refs": [],
+              "confidence": "high"
+            }
+          ],
           "accommodation": [
             {
               "name": "Phosy Thalang Guesthouse",
@@ -8913,28 +8896,32 @@
           ]
         },
         "illustration": {
-          "static_url": "https://phosythalanglaos.com/wp-content/uploads/2024/12/waterall_namthern_Laos-1.jpg",
-          "source_page": "https://phosythalanglaos.com/booking/",
-          "provider": "Phosy Thalang",
-          "license": null,
-          "artist": null,
-          "illustration_scope": "Nakai–Nam Theun / reservoir-tour imagery",
+          "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NUMTHEUN2_-_panoramio_(4).jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:NUMTHEUN2_-_panoramio_(4).jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY 3.0",
+          "artist": "chalongrat hantragul",
+          "illustration_scope": "Nam Theun 2 reservoir landscape adjacent to Nakai–Nam Theun access zone",
           "last_checked": "2026-09-29",
           "gallery": [
             {
-              "static_url": "https://phosythalanglaos.com/wp-content/uploads/2024/12/waterall_namthern_Laos-1.jpg",
-              "source_page": "https://phosythalanglaos.com/booking/",
-              "provider": "Phosy Thalang",
-              "license": null,
-              "artist": null,
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NUMTHEUN2_-_panoramio_(4).jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:NUMTHEUN2_-_panoramio_(4).jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 3.0",
+              "artist": "chalongrat hantragul",
+              "coordinates": {
+                "lat": 18.003305,
+                "lon": 104.949818
+              },
               "last_checked": "2026-09-29"
             },
             {
-              "static_url": "https://phosythalanglaos.com/wp-content/uploads/2024/12/phosy_thalang_kayaking.jpg",
-              "source_page": "https://phosythalanglaos.com/booking/",
-              "provider": "Phosy Thalang",
-              "license": null,
-              "artist": null,
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/NAKAI_AT_HUAPOO_-_panoramio.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:NAKAI_AT_HUAPOO_-_panoramio.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 3.0",
+              "artist": "chalongrat hantragul",
               "last_checked": "2026-09-29"
             }
           ]
@@ -9017,6 +9004,113 @@
               "approximate Thalang access coordinate"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "type": "park_authority",
+            "title": "Nakai Nam Theun National Park — Home",
+            "publisher": "Nakai Nam Theun National Park / Ministry of Agriculture and Forestry",
+            "url": "https://nntnp.maf.gov.la/en/home/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "tourism zones",
+              "guided routes",
+              "special permits",
+              "route durations"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "park_authority",
+            "title": "About Nakai Nam Theun National Park",
+            "publisher": "Nakai Nam Theun National Park / Ministry of Agriculture and Forestry",
+            "url": "https://nntnp.maf.gov.la/en/about/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "park headquarters",
+              "contact",
+              "management context"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "park_authority",
+            "title": "Administration, planning and financial unit",
+            "publisher": "Nakai Nam Theun National Park / Ministry of Agriculture and Forestry",
+            "url": "https://nntnp.maf.gov.la/en/about/administration-planning-and-financial-unit/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "management authority"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "park_authority",
+            "title": "Investment opportunities in Lao national parks",
+            "publisher": "Lao Parks / Protected Area Management Division",
+            "url": "https://laoparks.la/invest/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "current tourism products",
+              "Nakai Nam Theun visitor development"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "government_official",
+            "title": "Decree on the Establishment of Nakai–Nam Theun National Park",
+            "publisher": "Government of Lao PDR",
+            "url": "https://www.namtheun2.com/wp-content/uploads/2023/02/GO36_Decree_on_the_Establishment_of_NK_NT_NationalPark_15Feb19_C06-06.pdf",
+            "language": "en",
+            "published_at": "2019-02-15",
+            "authority": "high",
+            "used_for": [
+              "2019 national park status",
+              "legal boundary context"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:NUMTHEUN2 - panoramio (4).jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:NUMTHEUN2_-_panoramio_(4).jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media",
+              "license",
+              "camera coordinates"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:NAKAI AT HUAPOO - panoramio.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:NAKAI_AT_HUAPOO_-_panoramio.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media",
+              "license"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Thalang port / reservoir access",
+            "publisher": "WorldPlaces / OSM-derived locality data",
+            "url": "https://laos.worldplaces.me/view-place/64082355.html",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "operational access coordinates"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -9051,7 +9145,7 @@
           "language_review": {
             "status": "reviewed",
             "checked_at": "2026-09-29",
-            "notes": "Русский пользовательский слой; неподтверждённые километры, набор высоты и расписание оставлены null."
+            "notes": "Русский пользовательский слой; населённый пункт не используется как GPS объекта, а диапазон 2–3 часа не превращён в ложный scalar duration."
           }
         }
       },

@@ -14,11 +14,13 @@ SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
 SCHEMA_VERSION = "2.1.0"
-RELEASE_ID = "2026-09-28-r4"
+RELEASE_ID = "2026-09-28-r5"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
     ("laos.json", "LA", "laos"),
+    ("indonesia.json", "ID", "indonesia"),
+    ("malaysia.json", "MY", "malaysia"),
 ]
 
 TYPE_LABELS = {
@@ -107,6 +109,53 @@ TYPE_BY_NAME = {
     "Pak Ou Caves": "cave",
 }
 
+
+
+TYPE_BY_NAME.update({
+    "Borobudur": "archaeological_site",
+    "Prambanan": "archaeological_site",
+    "Yogyakarta": "city",
+    "Bali temple landscapes": "cultural_landscape",
+    "Komodo National Park": "national_park",
+    "Bromo-Tengger-Semeru": "natural_landscape",
+    "Ijen": "natural_landscape",
+    "Raja Ampat": "island_or_coast",
+    "Banda Neira": "historic_city",
+    "Lasem": "historic_city",
+    "Sawahlunto": "industrial_heritage",
+    "Tana Toraja hinterland": "cultural_landscape",
+    "Gunung Leuser National Park / Bukit Lawang": "national_park",
+    "Tanjung Puting National Park": "national_park",
+    "Kelimutu National Park": "national_park",
+    "Dieng Plateau": "cultural_landscape",
+    "Wakatobi National Park": "national_park",
+    "Togean Islands": "island_or_coast",
+    "Lake Toba / Samosir Batak cultural landscape": "cultural_landscape",
+    "Wae Rebo": "living_settlement",
+    "Sumba megalithic villages": "megalithic_site",
+
+    "Kuala Lumpur": "city",
+    "George Town": "historic_city",
+    "Melaka": "historic_city",
+    "Mount Kinabalu": "natural_landscape",
+    "Gunung Mulu National Park": "national_park",
+    "Langkawi": "island_or_coast",
+    "Perhentian islands": "island_or_coast",
+    "Taiping": "historic_city",
+    "Kuala Kangsar": "historic_city",
+    "Belum-Temengor": "protected_area",
+    "Bario / Kelabit Highlands": "cultural_landscape",
+    "Danum Valley Conservation Area": "protected_area",
+    "Kinabatangan River": "river_or_wetland",
+    "Niah National Park": "national_park",
+    "Kellie's Castle": "historic_building",
+    "Kuching old town and waterfront": "historic_city",
+    "Lenggong Valley archaeological landscape": "archaeological_site",
+    "Sipadan Island": "island_or_coast",
+    "Kampung Bavanggazo / Rungus longhouse": "living_settlement",
+    "Batu Caves": "cave",
+    "Sepilok Orangutan Rehabilitation Centre": "wildlife_site",
+})
 
 def load(path: Path):
     with path.open("r", encoding="utf-8") as f:

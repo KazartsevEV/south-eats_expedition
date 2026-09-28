@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.10.5",
+    "release_id": "2026-09-28-r35",
+    "page_type": "country_class",
+    "id": "country-class:my:cave"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "cave",
+    "label_ru": "Пещеры",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:relief_geology",
+    "page_path": "pages/countries/malaysia/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/cave.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:kuala-lumpur-gombak",
+      "name": "Kuala Lumpur / Gombak",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/kuala-lumpur-gombak.json"
+    },
+    {
+      "id": "my:region:kuala-lumpur-klang-valley",
+      "name": "Kuala Lumpur / Klang Valley",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/kuala-lumpur-klang-valley.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:batu-caves",
+      "name": "Batu Caves",
+      "geography_ids": [
+        "country:my",
+        "my:hub:kuala-lumpur-gombak",
+        "my:region:kuala-lumpur-klang-valley"
+      ],
+      "region_legacy": "Kuala Lumpur / Klang Valley",
+      "nearest_hub": "Kuala Lumpur / Gombak",
+      "narrow": "Batu Caves — индуистский храмовый комплекс в известняковом массиве у Куала-Лумпура: 272 ступени, 43-метровая статуя Муругана и огромная Cathedral Cave связывают геологию карста с действующей религиозной практикой.",
+      "detail_path": "countries/malaysia/objects/batu-caves.json"
+    }
+  ]
+}

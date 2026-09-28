@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.10.5",
+    "release_id": "2026-09-28-r35",
+    "page_type": "country_class",
+    "id": "country-class:kh:wildlife_site"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "wildlife_site",
+    "label_ru": "Наблюдение за дикой природой",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:protected_ecosystems",
+    "page_path": "pages/countries/cambodia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/wildlife_site.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:hub:kratie-town-kampi",
+      "name": "Kratie town / Кампи",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/city_or_route_hub/kratie-town-kampi.json"
+    },
+    {
+      "id": "kh:region:kratekh-srednii-mekong",
+      "name": "Кратьэх / средний Меконг",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/region/kratekh-srednii-mekong.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:kratie-kampi-irrawaddy-dolphins",
+      "name": "Kratie / Kampi Irrawaddy dolphins",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:kratie-town-kampi",
+        "kh:region:kratekh-srednii-mekong"
+      ],
+      "region_legacy": "Кратьэх / средний Меконг",
+      "nearest_hub": "Kratie town / Кампи",
+      "narrow": "К северу от Kratie Меконг сохраняет один из последних участков обитания пресноводной популяции Irrawaddy дельфин. Кампи примерно в 15 км от города — главный туристический точка наблюдения, но сюжет здесь шире “увидеть дельфина”: речная экология, рыболовство и охрана природы связаны напрямую.",
+      "detail_path": "countries/cambodia/objects/kratie-kampi-irrawaddy-dolphins.json"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "schema_version": "2.10.5",
+    "release_id": "2026-09-28-r35",
+    "page_type": "geography",
+    "id": "mm:hub:mandalay"
+  },
+  "identity": {
+    "name": "Mandalay",
+    "kind": "city_or_route_hub",
+    "slug": "mandalay",
+    "country_code": "MM"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:mm",
+    "page_path": "pages/countries/myanmar.json"
+  },
+  "source_profile": {
+    "id": "mm:hub:mandalay",
+    "kind": "city_or_route_hub",
+    "name": "Mandalay",
+    "slug": "mandalay"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 2
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 2,
+          "country_class_page": "pages/countries/myanmar/classes/historic_city.json",
+          "filter": {
+            "geography_id": "mm:hub:mandalay"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "mm:mandalay-heritage",
+      "name": "Mandalay heritage",
+      "object_type": "historic_city",
+      "narrow": "Mandalay лучше рассматривать как узел последней королевской географии Бирмы: Palace, Mandalay Hill, Kuthodaw, Mahamuni, ремесленные кварталы и соседняя Amarapura с U Bein Bridge складываются в самостоятельный маршрут на 2–3 дня.",
+      "detail_path": "countries/myanmar/objects/mandalay-heritage.json"
+    },
+    {
+      "id": "mm:pyin-oo-lwin",
+      "name": "Pyin Oo Lwin",
+      "object_type": "historic_city",
+      "narrow": "Pyin Oo Lwin — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/myanmar/objects/pyin-oo-lwin.json"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.10.5",
+    "release_id": "2026-09-28-r35",
+    "page_type": "country_class",
+    "id": "country-class:my:mountain"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "mountain",
+    "label_ru": "Горы",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:relief_geology",
+    "page_path": "pages/countries/malaysia/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/mountain.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:kota-kinabalu-kundasang",
+      "name": "Kota Kinabalu / Kundasang",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/kota-kinabalu-kundasang.json"
+    },
+    {
+      "id": "my:region:sabah-highlands-kinabalu",
+      "name": "Sabah highlands / Kinabalu",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/sabah-highlands-kinabalu.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:mount-kinabalu",
+      "name": "Mount Kinabalu",
+      "geography_ids": [
+        "country:my",
+        "my:hub:kota-kinabalu-kundasang",
+        "my:region:sabah-highlands-kinabalu"
+      ],
+      "region_legacy": "Sabah highlands / Kinabalu",
+      "nearest_hub": "Kota Kinabalu / Kundasang",
+      "narrow": "Кинабалу — 4095-метровый гранитный массив и один из ключевых высотных маршрутов Борнео: переход от горного дождевого леса к открытым гранитным плитам сам по себе является содержанием экспедиции.",
+      "detail_path": "countries/malaysia/objects/mount-kinabalu.json"
+    }
+  ]
+}

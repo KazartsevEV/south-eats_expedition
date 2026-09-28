@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.7.1"
-RELEASE_ID = "2026-09-28-r18"
+SCHEMA_VERSION = "2.7.2"
+RELEASE_ID = "2026-09-28-r19"
 SUPPORTED_SOURCE_MODELS = {"1.5", "1.6"}
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
@@ -834,7 +834,10 @@ def build():
                 "photo_video": bool(card.get("media")),
                 "visual_recon": bool(visual_recon.get("best_time") or visual_recon.get("viewpoints")),
                 "coordinates": bool(geo.get("primary_location")),
-                "elevation": ((geo.get("primary_location") or {}).get("coordinates") or {}).get("elevation_m") is not None,
+                "elevation": (
+                    ((geo.get("primary_location") or {}).get("coordinates") or {}).get("elevation_m") is not None
+                    or any(((point.get("coordinates") or {}).get("elevation_m") is not None) for point in (geo.get("points") or []))
+                ),
                 "coordinate_type": bool((geo.get("primary_location") or {}).get("type")),
                 "dynamic_checked_at": bool((card.get("operations") or {}).get("last_verified")),
             })

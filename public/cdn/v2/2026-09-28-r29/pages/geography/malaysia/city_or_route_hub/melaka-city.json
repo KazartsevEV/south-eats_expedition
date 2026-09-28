@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schema_version": "2.9.7",
+    "release_id": "2026-09-28-r29",
+    "page_type": "geography",
+    "id": "my:hub:melaka-city"
+  },
+  "identity": {
+    "name": "Melaka City",
+    "kind": "city_or_route_hub",
+    "slug": "melaka-city",
+    "country_code": "MY"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:my",
+    "page_path": "pages/countries/malaysia.json"
+  },
+  "source_profile": {
+    "id": "my:hub:melaka-city",
+    "kind": "city_or_route_hub",
+    "name": "Melaka City",
+    "slug": "melaka-city"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/malaysia/classes/historic_city.json",
+          "filter": {
+            "geography_id": "my:hub:melaka-city"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:melaka",
+      "name": "Melaka",
+      "object_type": "historic_city",
+      "narrow": "Малакка — компактный слой истории Малаккского пролива: малайский султанат, португальская крепость, голландский административный центр, британский период, перанаканские дома и сохранившаяся евразийская община кристанг.",
+      "detail_path": "countries/malaysia/objects/melaka.json"
+    }
+  ]
+}

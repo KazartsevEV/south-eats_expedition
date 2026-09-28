@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "schema_version": "2.9.7",
+    "release_id": "2026-09-28-r29",
+    "page_type": "geography",
+    "id": "mm:region:kachin-state-indawgyi"
+  },
+  "identity": {
+    "name": "Kachin State / Indawgyi",
+    "kind": "region",
+    "slug": "kachin-state-indawgyi",
+    "country_code": "MM"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:mm",
+    "page_path": "pages/countries/myanmar.json"
+  },
+  "source_profile": {
+    "id": "mm:region:kachin-state-indawgyi",
+    "kind": "region",
+    "name": "Kachin State / Indawgyi",
+    "slug": "kachin-state-indawgyi",
+    "languages_spoken": [
+      "Burmese",
+      "Jinghpaw/Kachin languages locally",
+      "Shan languages locally",
+      "English very limited"
+    ],
+    "currency": {
+      "code": "MMK",
+      "name": "Myanmar kyat",
+      "local_currency_per_1_usd": 3247.96,
+      "as_of": "2026-09-27",
+      "rate_type": "reference-market snapshot only",
+      "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
+      "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
+    },
+    "climate_summary": "Субтропический/муссонный бассейн озера; влажный сезон осложняет дороги.",
+    "best_period_general": "Сезонность вторична: текущая безопасность делает объект исследовательской справкой, а не рекомендацией маршрута.",
+    "last_verified": "2026-09-28"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "lake",
+      "label_ru": "Озёра",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "lake",
+          "label_ru": "Озёра",
+          "count": 1,
+          "country_class_page": "pages/countries/myanmar/classes/lake.json",
+          "filter": {
+            "geography_id": "mm:region:kachin-state-indawgyi"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "mm:indawgyi-lake",
+      "name": "Indawgyi Lake",
+      "object_type": "lake",
+      "narrow": "Крупнейшее пресноводное озеро Myanmar и UNESCO Biosphere Reserve с важными водно-болотными экосистемами и Shwe Myitzu пагодой — высокий исследовательский потенциал, но не обычный маршрут при текущей безопасности.",
+      "detail_path": "countries/myanmar/objects/indawgyi-lake.json"
+    }
+  ]
+}

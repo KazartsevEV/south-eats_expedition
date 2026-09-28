@@ -55,7 +55,7 @@
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
-      "objects_with_verified_elevation": 8,
+      "objects_with_verified_elevation": 10,
       "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas and variable river departures are explicitly approximate"
     },
     "elevation_provenance_upgrade": {
@@ -1398,17 +1398,26 @@
             "coordinates": {
               "lat": 4.892881,
               "lon": 114.941562,
-              "elevation_m": null
+              "elevation_m": 11
             },
             "coordinate_type": "entrance",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Wikidata",
               "url": "https://www.wikidata.org/wiki/Q21787576",
               "basis": "museum feature coordinate"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "SRTM30m elevation samples for Brunei museum entrances",
+              "publisher": "OpenTopoData / SRTM",
+              "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.892881%2C114.941562%7C4.88325%2C114.9698",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "SRTM30m sample at the exact canonical entrance GPS point. Approximate surface elevation from a ~30 m raster; may include building/surface bias and is not a surveyed threshold elevation."
+            }
           },
           "logistics": {
             "access": "В центре BSB; пешком или Dart.",
@@ -3609,17 +3618,26 @@
             "coordinates": {
               "lat": 4.88325,
               "lon": 114.9698,
-              "elevation_m": null
+              "elevation_m": 8
             },
             "coordinate_type": "entrance",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Mapcarta / OpenStreetMap",
               "url": "https://mapcarta.com/N2077189639",
               "basis": "museum feature coordinate"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "SRTM30m elevation samples for Brunei museum entrances",
+              "publisher": "OpenTopoData / SRTM",
+              "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.892881%2C114.941562%7C4.88325%2C114.9698",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "SRTM30m sample at the exact canonical entrance GPS point. Approximate surface elevation from a ~30 m raster; may include building/surface bias and is not a surveyed threshold elevation."
+            }
           },
           "logistics": {
             "access": "Dart/автомобиль из центра BSB; удобно совместить с Kota Batu museums.",

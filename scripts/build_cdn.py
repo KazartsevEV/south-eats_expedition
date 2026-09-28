@@ -512,7 +512,7 @@ def merge_source_entity(registry, source, object_id):
                     entity[key] = value
     return sid
 
-def visual_recon_from(card):
+def visual_recon_from(card, source_registry=None, object_id=None):
     media = card.get("media") or {}
     scout = media.get("visual_scouting") or {}
     viewpoints = []
@@ -520,15 +520,58 @@ def visual_recon_from(card):
         if isinstance(value, str) and value.strip():
             viewpoints.append({
                 "id": f"vp_{idx:02d}",
+                "name": None,
                 "description": value.strip(),
                 "coordinates": None,
                 "gps": None,
                 "access": None,
                 "view": None,
+                "best_time": None,
+                "best_weather_light": None,
+                "useful_equipment": [],
                 "source_refs": [],
             })
-        elif isinstance(value, dict):
-            viewpoints.append(value)
+            continue
+        if not isinstance(value, dict):
+            continue
+        row = dict(value)
+        coords = row.get("coordinates") or {}
+        lat = coords.get("lat") if isinstance(coords, dict) else None
+        lon = coords.get("lon") if isinstance(coords, dict) else None
+        normalized_coords = None
+        gps = None
+        if isinstance(lat, (int, float)) and not isinstance(lat, bool) and isinstance(lon, (int, float)) and not isinstance(lon, bool):
+            elevation = coords.get("elevation_m")
+            normalized_coords = {
+                "lat": float(lat),
+                "lon": float(lon),
+                "elevation_m": float(elevation) if isinstance(elevation, (int, float)) and not isinstance(elevation, bool) else None,
+            }
+            gps = gps_repr(lat, lon)
+        refs = list(row.get("source_refs") or [])
+        source = row.get("source")
+        if isinstance(source, dict) and source_registry is not None and object_id is not None:
+            source = dict(source)
+            used_for = list(source.get("used_for") or [])
+            if "visual viewpoint" not in used_for:
+                used_for.append("visual viewpoint")
+            source["used_for"] = used_for
+            sid = merge_source_entity(source_registry, source, object_id)
+            if sid and sid not in refs:
+                refs.append(sid)
+        viewpoints.append({
+            "id": row.get("id") or f"vp_{idx:02d}",
+            "name": row.get("name"),
+            "description": row.get("description"),
+            "coordinates": normalized_coords,
+            "gps": gps,
+            "access": row.get("access"),
+            "view": row.get("view"),
+            "best_time": row.get("best_time"),
+            "best_weather_light": row.get("best_weather_light"),
+            "useful_equipment": row.get("useful_equipment") or [],
+            "source_refs": refs,
+        })
     return {
         "photo_suitability_5": media.get("photo_suitability_5"),
         "video_suitability_5": media.get("video_suitability_5"),
@@ -625,7 +668,7 @@ def build():
             interests = canonical_tags(obj.get("interest") or [])
             tags = canonical_tags((obj.get("tags") or []) + interests)
             logistics = merged_logistics(card, route)
-            visual_recon = visual_recon_from(card)
+            visual_recon = visual_recon_from(card, source_registry, object_id)
             source_refs = []
             for source_row in obj.get("sources") or []:
                 sid = merge_source_entity(source_registry, source_row, object_id)

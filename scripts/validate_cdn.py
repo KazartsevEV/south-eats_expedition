@@ -163,6 +163,17 @@ geodata_contract = load(geodata_contract_path)
 if geodata_contract.get("crs") != "WGS84" or geodata_contract.get("epsg") != 4326:
     fail("geodata contract must be WGS84 / EPSG:4326")
 
+country_qa_index = release / "qa" / "countries" / "index.json"
+if not country_qa_index.exists():
+    fail("missing qa/countries/index.json")
+country_qa_rows = load(country_qa_index).get("countries") or []
+if {row.get("country_code") for row in country_qa_rows} != {row.get("country_code") for row in countries}:
+    fail("country QA index does not match published countries")
+for row in country_qa_rows:
+    path = row.get("path")
+    if not path or not (release / path).exists():
+        fail(f"country QA detail missing: {row.get('country_code')} -> {path}")
+
 # Contract: story is emitted once; legacy source prose keys must not leak.
 for row in objects:
     detail = load(release / row["detail_path"])
@@ -185,6 +196,25 @@ for row in objects:
     visual_recon = detail.get("visual_recon") or {}
     if not isinstance(visual_recon, dict):
         fail(f"invalid visual_recon in {row['detail_path']}")
+    forbidden_visual_keys = {"iso", "aperture", "shutter", "shutter_speed", "shot_list", "camera_movement", "script"}
+    if forbidden_visual_keys & set(visual_recon):
+        fail(f"photographer-instruction fields leaked into visual_recon in {row['detail_path']}")
+    for index, viewpoint in enumerate(visual_recon.get("viewpoints") or []):
+        if not isinstance(viewpoint, dict):
+            fail(f"invalid visual viewpoint in {row['detail_path']}[{index}]")
+        coords = viewpoint.get("coordinates")
+        if coords is not None:
+            lat = coords.get("lat") if isinstance(coords, dict) else None
+            lon = coords.get("lon") if isinstance(coords, dict) else None
+            if not isinstance(lat, (int, float)) or isinstance(lat, bool) or not (-90 <= lat <= 90):
+                fail(f"invalid visual viewpoint latitude in {row['detail_path']}[{index}]")
+            if not isinstance(lon, (int, float)) or isinstance(lon, bool) or not (-180 <= lon <= 180):
+                fail(f"invalid visual viewpoint longitude in {row['detail_path']}[{index}]")
+            if not (viewpoint.get("gps") or {}).get("decimal"):
+                fail(f"missing visual viewpoint GPS in {row['detail_path']}[{index}]")
+        for source_id in viewpoint.get("source_refs") or []:
+            if source_id not in source_ids:
+                fail(f"unknown visual viewpoint source {source_id} in {row['detail_path']}[{index}]")
     for lodging_id in (detail.get("visit") or {}).get("lodging_ids") or []:
         if lodging_id not in lodging_ids:
             fail(f"unknown lodging reference {lodging_id} in {row['detail_path']}")
@@ -197,8 +227,14 @@ for row in objects:
         fail(f"invalid/missing WGS84 contract in {row['detail_path']}")
     primary = geo.get("primary_location")
     validate_point(primary, row["detail_path"] + ":primary_location")
+    for source_id in (primary or {}).get("source_refs") or []:
+        if source_id not in source_ids:
+            fail(f"unknown primary geodata source {source_id} in {row['detail_path']}")
     for index, point in enumerate(geo.get("points") or []):
         validate_point(point, row["detail_path"] + f":points[{index}]")
+        for source_id in point.get("source_refs") or []:
+            if source_id not in source_ids:
+                fail(f"unknown geodata source {source_id} in {row['detail_path']}[{index}]")
     search_coords = row.get("coordinates")
     detail_coords = (primary or {}).get("coordinates")
     if search_coords != detail_coords:

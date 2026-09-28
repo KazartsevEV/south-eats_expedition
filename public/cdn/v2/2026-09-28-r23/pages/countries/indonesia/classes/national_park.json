@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "schema_version": "2.9.1",
+    "release_id": "2026-09-28-r23",
+    "page_type": "country_class",
+    "id": "country-class:id:national_park"
+  },
+  "identity": {
+    "country_code": "ID",
+    "country_slug": "indonesia",
+    "object_type": "national_park",
+    "label_ru": "Национальные парки",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:id:protected_ecosystems",
+    "page_path": "pages/countries/indonesia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/national_park.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 5,
+  "geography_filters": [
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:labuan-bajo",
+      "name": "Labuan Bajo",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/labuan-bajo.json"
+    },
+    {
+      "id": "id:hub:medan-bukit-lawang",
+      "name": "Medan / Bukit Lawang",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/medan-bukit-lawang.json"
+    },
+    {
+      "id": "id:hub:moni-ende",
+      "name": "Moni / Ende",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/moni-ende.json"
+    },
+    {
+      "id": "id:hub:pangkalan-bun-kumai",
+      "name": "Pangkalan Bun / Kumai",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/pangkalan-bun-kumai.json"
+    },
+    {
+      "id": "id:hub:wangi-wangi-bau-bau",
+      "name": "Wangi-Wangi / Bau-Bau",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/wangi-wangi-bau-bau.json"
+    },
+    {
+      "id": "id:region:central-kalimantan-tanjung-puting",
+      "name": "Central Kalimantan / Tanjung Puting",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/central-kalimantan-tanjung-puting.json"
+    },
+    {
+      "id": "id:region:flores-komodo",
+      "name": "Flores / Komodo",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/flores-komodo.json"
+    },
+    {
+      "id": "id:region:north-sumatra-gunung-leuser",
+      "name": "North Sumatra / Gunung Leuser",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/north-sumatra-gunung-leuser.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "id:komodo-national-park",
+      "name": "Komodo National Park",
+      "geography_ids": [
+        "country:id",
+        "id:hub:labuan-bajo",
+        "id:region:flores-komodo"
+      ],
+      "region_legacy": "Flores / Komodo",
+      "nearest_hub": "Labuan Bajo",
+      "narrow": "Комодские вараны, сухие саванновые острова и один из самых сильных морских ландшафтов региона.",
+      "detail_path": "countries/indonesia/objects/komodo-national-park.json"
+    },
+    {
+      "id": "id:gunung-leuser-national-park-bukit-lawang",
+      "name": "Gunung Leuser National Park / Bukit Lawang",
+      "geography_ids": [
+        "country:id",
+        "id:hub:medan-bukit-lawang",
+        "id:region:north-sumatra-gunung-leuser"
+      ],
+      "region_legacy": "North Sumatra / Gunung Leuser",
+      "nearest_hub": "Medan / Bukit Lawang",
+      "narrow": "Bukit Lawang — удобные ворота в Gunung Leuser для настоящего тропического лесного маршрута: крутые грязные тропы, ночёвки в разрешённых лагерях и наблюдение суматранских орангутанов в среде обитания.",
+      "detail_path": "countries/indonesia/objects/gunung-leuser-national-park-bukit-lawang.json"
+    },
+    {
+      "id": "id:tanjung-puting-national-park",
+      "name": "Tanjung Puting National Park",
+      "geography_ids": [
+        "country:id",
+        "id:hub:pangkalan-bun-kumai",
+        "id:region:central-kalimantan-tanjung-puting"
+      ],
+      "region_legacy": "Central Kalimantan / Tanjung Puting",
+      "nearest_hub": "Pangkalan Bun / Kumai",
+      "narrow": "Tanjung Puting — многодневный речной маршрут по болотному и торфяному лесу Центрального Калимантана, где klotok одновременно служит транспортом, жильём и наблюдательной площадкой.",
+      "detail_path": "countries/indonesia/objects/tanjung-puting-national-park.json"
+    },
+    {
+      "id": "id:kelimutu-national-park",
+      "name": "Kelimutu National Park",
+      "geography_ids": [
+        "country:id",
+        "id:hub:moni-ende",
+        "id:region:flores-komodo"
+      ],
+      "region_legacy": "Flores / Komodo",
+      "nearest_hub": "Moni / Ende",
+      "narrow": "Три кратерных озера с меняющимися цветами на вершине Flores; компактный, но сильный sunrise landscape.",
+      "detail_path": "countries/indonesia/objects/kelimutu-national-park.json"
+    },
+    {
+      "id": "id:wakatobi-national-park",
+      "name": "Wakatobi National Park",
+      "geography_ids": [
+        "country:id",
+        "id:hub:wangi-wangi-bau-bau"
+      ],
+      "region_legacy": "Wakatobi / SE Сулавеси",
+      "nearest_hub": "Wangi-Wangi / Bau-Bau",
+      "narrow": "Wakatobi — морской национальный парк из четырёх основных островов, рифовых стен, деревень Bajo и длинной межостровной лодочной логистики; сильный объект для многодневной морской экспедиции.",
+      "detail_path": "countries/indonesia/objects/wakatobi-national-park.json"
+    }
+  ]
+}

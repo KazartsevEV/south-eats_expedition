@@ -335,7 +335,7 @@ def _dms_component(value, positive, negative, is_lat):
     minutes = int(minutes_full)
     seconds = round((minutes_full - minutes) * 60, 1)
     width = 2 if is_lat else 3
-    return f'{degrees:0{width}d}°{minutes:02d}\\'{seconds:04.1f}"{direction}'
+    return f"{degrees:0{width}d}°{minutes:02d}′{seconds:04.1f}″{direction}"
 
 def gps_repr(lat, lon):
     return {

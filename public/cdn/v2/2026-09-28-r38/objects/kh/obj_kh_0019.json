@@ -65,7 +65,18 @@
         "checked_at": "2026-09-28"
       }
     ],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 1048.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "site",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_000297"
+      ],
+      "checked_at": "2026-09-28",
+      "notes": "1048 м относится к hill station, выбранной как первичная точка составной карточки; это не диапазон высот всего национального парка."
+    }
   },
   "narrative": {
     "sections": [
@@ -393,13 +404,13 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,

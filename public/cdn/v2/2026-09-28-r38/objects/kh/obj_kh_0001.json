@@ -64,7 +64,18 @@
         "checked_at": "2026-09-28"
       }
     ],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 40.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "characteristic",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src_000414"
+      ],
+      "checked_at": "2026-09-28",
+      "notes": "40 м относится к опорной точке Ангкор-Вата внутри большого культурного ландшафта; это характерная рабочая отметка, а не средняя или максимальная высота всего парка."
+    }
   },
   "narrative": {
     "sections": [
@@ -441,13 +452,13 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,

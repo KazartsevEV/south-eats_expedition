@@ -78,7 +78,18 @@
         "checked_at": "2026-09-28"
       }
     ],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 8.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "characteristic",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src_000110"
+      ],
+      "checked_at": "2026-09-28",
+      "notes": "8 м относится к Кампонг-Плуку — опорной точке внутри озёрно-пойменной системы. Уровень воды Тонлесапа сезонно меняется, поэтому это не фиксированная высота всей биосферной территории."
+    }
   },
   "narrative": {
     "sections": [
@@ -394,13 +405,13 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,

@@ -78,7 +78,18 @@
         "checked_at": "2026-09-28"
       }
     ],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 487.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "summit",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_000151"
+      ],
+      "checked_at": "2026-09-28",
+      "notes": "487 м относится к отмеченной вершине/высокой точке Пном-Кулена; значение не описывает весь диапазон высот национального парка."
+    }
   },
   "narrative": {
     "sections": [
@@ -437,13 +448,13 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,

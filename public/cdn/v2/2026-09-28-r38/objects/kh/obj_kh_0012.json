@@ -66,7 +66,18 @@
         "checked_at": "2026-09-28"
       }
     ],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 6.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "characteristic",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src_000373"
+      ],
+      "checked_at": "2026-09-28",
+      "notes": "6 м относится к опорной точке у Chi Phat Visitor Center — одному из входов в маршруты; высоты самих горных маршрутов значительно меняются."
+    }
   },
   "narrative": {
     "sections": [
@@ -413,13 +424,13 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,

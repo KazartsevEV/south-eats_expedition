@@ -62,7 +62,18 @@
         "checked_at": "2026-09-28"
       }
     ],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 25.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "characteristic",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src_000450"
+      ],
+      "checked_at": "2026-09-28",
+      "notes": "25 м — DEM-отметка деревни Кампи примерно в 0,65 км от лодочной точки; используется только как приблизительная высотная характеристика района, не как отметка уровня воды Меконга."
+    }
   },
   "narrative": {
     "sections": [
@@ -382,13 +393,13 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,

@@ -11,10 +11,10 @@ SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
-FORMAL_CANONICAL_GEO_CODES = {"KH"}
-COUNTRY_SOURCE_CANONICAL_CODES = {"KH"}
+FORMAL_CANONICAL_GEO_CODES = {"KH", "LA"}
+COUNTRY_SOURCE_CANONICAL_CODES = {"KH", "LA"}
 
-GENERATED_AT = "2026-09-28T21:14:00+04:00"
+GENERATED_AT = "2026-09-29T00:35:00+04:00"
 DEFAULT_LANGUAGE = "ru"
 
 CLASS_ID_MAP = {
@@ -167,6 +167,9 @@ def remap_visual_sources(visual, registry):
     for row in visual.get("viewpoints") or []:
         if isinstance(row, dict):
             row["source_refs"] = remap_source_refs(row.get("source_refs"), registry)
+    drone = visual.get("drone")
+    if isinstance(drone, dict):
+        drone["source_refs"] = remap_source_refs(drone.get("source_refs"), registry)
     return visual
 
 
@@ -543,24 +546,41 @@ def build():
             source_id = row.get("canonical_id")
             if not short_id or not source_id:
                 raise RuntimeError(f"{code}: country source missing id/canonical_id: {short_id}")
+            source_path = release / "sources" / f"{source_id}.json"
             if source_id in canonical_source_ids:
-                raise RuntimeError(f"{code}: duplicate canonical source ID: {source_id}")
-            dump(release / "sources" / f"{source_id}.json", {
-                "id": source_id,
-                "type": source_type_map.get(row.get("kind"), "other"),
-                "title": row.get("title"),
-                "publisher": row.get("publisher"),
-                "url": row.get("url"),
-                "language": row.get("language"),
-                "published_at": row.get("published_at"),
-                "accessed_at": row.get("accessed"),
-                "authority": "high" if row.get("kind") in {"government", "international_organization", "airport_official"} else "medium",
-                "used_for": row.get("used_for") or [],
-                "notes": row.get("notes"),
-                "referenced_by": [],
-                "legacy_ids": [f"country:{code.lower()}:{short_id}"],
-            })
-            canonical_source_ids.add(source_id)
+                existing = load(source_path)
+                if existing.get("url") != row.get("url"):
+                    raise RuntimeError(f"{code}: duplicate canonical source ID with different URL: {source_id}")
+                existing["used_for"] = list(dict.fromkeys((existing.get("used_for") or []) + (row.get("used_for") or [])))
+                existing["legacy_ids"] = list(dict.fromkeys((existing.get("legacy_ids") or []) + [f"country:{code.lower()}:{short_id}"]))
+                for key, value in {
+                    "title": row.get("title"),
+                    "publisher": row.get("publisher"),
+                    "language": row.get("language"),
+                    "published_at": row.get("published_at"),
+                    "accessed_at": row.get("accessed"),
+                    "notes": row.get("notes"),
+                }.items():
+                    if existing.get(key) in (None, "", []) and value not in (None, "", []):
+                        existing[key] = value
+                dump(source_path, existing)
+            else:
+                dump(source_path, {
+                    "id": source_id,
+                    "type": source_type_map.get(row.get("kind"), "other"),
+                    "title": row.get("title"),
+                    "publisher": row.get("publisher"),
+                    "url": row.get("url"),
+                    "language": row.get("language"),
+                    "published_at": row.get("published_at"),
+                    "accessed_at": row.get("accessed"),
+                    "authority": "high" if row.get("kind") in {"government", "international_organization", "airport_official"} else "medium",
+                    "used_for": row.get("used_for") or [],
+                    "notes": row.get("notes"),
+                    "referenced_by": [],
+                    "legacy_ids": [f"country:{code.lower()}:{short_id}"],
+                })
+                canonical_source_ids.add(source_id)
             country_source_ids_by_code[code][short_id] = source_id
 
     # Canonical lodging copies use persistent IDs and country-code paths.

@@ -6,6 +6,8 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from build_cdn import TYPE_LABELS as CLASS_LABELS
+
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
@@ -42,7 +44,7 @@ TRANSITIONAL_TYPES = {
 PAGE_LAYOUTS = {
     "project":["hero","project_description","southeast_asia_intro","country_grid","taxonomy_families","geography_entry","search_entry"],
     "region":["hero","definition","mainland_and_maritime","natural_zones","climate","historical_layers","languages_religions_ethnicity","cross_border_movement","independent_expedition_context","country_grid"],
-    "country":["hero","introduction","history","geography_relief","climate_seasonality","religions_ethnicity_languages","traveler_economy_currency_payments","entry_borders_air","internal_transport","risks_laws_animals_plants","food_festivals","camping_and_mobility","geography_grid","class_grid","object_grid"],
+    "country":["hero","introduction","history","geography_relief","climate_seasonality","religions_ethnicity_languages","traveler_economy_currency_payments","entry_borders_air","internal_transport","risks_laws_animals_plants","food_festivals","camping_and_mobility","geography_grid","class_family_grid","object_grid"],
     "geography":["breadcrumb","identity","summary","child_geography","class_counts","object_grid"],
     "class":["breadcrumb","identity","definition","country_distribution","filters","object_grid"],
     "object":["breadcrumb","identity","gallery","story","access","walking","supply","overnight","accommodation","restrictions_cost_season","traveler_reports","visual_scouting","sources_and_verification"],
@@ -151,7 +153,7 @@ def main():
         for t in family["types"]:
             row = type_by_value.get(t)
             count = row["count"] if row else 0
-            label = row["label_ru"] if row else t
+            label = row["label_ru"] if row else CLASS_LABELS[t]
             transitional = TRANSITIONAL_TYPES.get(t)
             node = {"id":f"class:{t}","kind":"object_class","value":t,"label_ru":label,"count":count,"page_path":f"pages/classes/{t}.json","collection_path":f"collections/{t}.json" if row else None,"status":transitional["status"] if transitional else "canonical_leaf"}
             if transitional:
@@ -197,24 +199,32 @@ def main():
     nav_country_children=[]
     for meta in TARGET_COUNTRIES:
         code=meta["code"]; src=published.get(code); cobjects=objects_by_country.get(code,[]); cplaces=sorted(places_by_country.get(code,[]),key=lambda x:(x.get("kind") or "",x.get("name") or "")); present_types=sorted(set(o["object_type"] for o in cobjects))
-        class_rows=[]; class_nav=[]
-        for t in present_types:
-            rows=objects_by_country_type[(code,t)]
-            class_rows.append({"object_type":t,"label_ru":type_by_value[t]["label_ru"],"count":len(rows),"global_page_path":f"pages/classes/{t}.json"})
-            class_nav.append({"id":f"country-class:{code.lower()}:{t}","kind":"country_class","label_ru":type_by_value[t]["label_ru"],"object_type":t,"children":[{"id":o["id"],"kind":"object","name":o["name"],"path":o["detail_path"]} for o in rows]})
+        class_families=[]; class_nav_families=[]
+        for family in FAMILIES:
+            family_types=[t for t in family["types"] if t in present_types]
+            if not family_types:
+                continue
+            family_classes=[]; family_nav_classes=[]; family_count=0
+            for t in family_types:
+                rows=objects_by_country_type[(code,t)]
+                family_count += len(rows)
+                family_classes.append({"object_type":t,"label_ru":type_by_value[t]["label_ru"],"count":len(rows),"global_page_path":f"pages/classes/{t}.json"})
+                family_nav_classes.append({"id":f"country-class:{code.lower()}:{t}","kind":"country_class","label_ru":type_by_value[t]["label_ru"],"object_type":t,"children":[{"id":o["id"],"kind":"object","name":o["name"],"path":o["detail_path"]} for o in rows]})
+            class_families.append({"family_id":family["id"],"label_ru":family["label_ru"],"count":family_count,"classes":family_classes})
+            class_nav_families.append({"id":f"country-family:{code.lower()}:{family['id']}","kind":"class_family","label_ru":family["label_ru"],"count":family_count,"children":family_nav_classes})
         geography_rows=[{"id":p["id"],"kind":p["kind"],"name":p["name"],"page_path":f"pages/geography/{meta['slug']}/{p['kind']}/{p['slug']}.json","object_count":len(p.get("object_ids") or [])} for p in cplaces]
         dump(release / "pages" / "countries" / f"{meta['slug']}.json", {
             "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"page_type":"country","id":f"country:{code.lower()}"},
             "identity":{"country_code":code,"slug":meta["slug"],"name_ru":meta["name_ru"],"name_en":meta["name_en"],"name_local":meta["name_local"],"flag":meta["flag"],"subregions":meta["subregions"],"tags":meta["tags"]},
             "layout":"country","status":"published" if src else "pending_source_migration","hero":src.get("cover") if src else None,"summary":src.get("summary") if src else None,"content_ref":src.get("country_path") if src else None,
-            "geography":geography_rows,"classes":class_rows,"objects_count":len(cobjects),
+            "geography":geography_rows,"class_families":class_families,"objects_count":len(cobjects),
             "migration_note":None if src else "Исходный страновой файл ещё не перенесён в Git/CDN; страница существует как узел общей архитектуры без выдуманного содержимого.",
         })
         nav_country_children.append({
             "id":f"country:{code.lower()}","kind":"country","name":meta["name_ru"],"path":f"pages/countries/{meta['slug']}.json","status":"published" if src else "pending_source_migration",
             "children":[
                 {"id":f"branch:{code.lower()}:geography","kind":"navigation_branch","label_ru":"География","children":[{"id":p["id"],"kind":p["kind"],"name":p["name"],"path":f"pages/geography/{meta['slug']}/{p['kind']}/{p['slug']}.json","children":[{"id":oid,"kind":"object_ref","path":objects_by_id[oid]["detail_path"]} for oid in p.get("object_ids") or [] if oid in objects_by_id]} for p in cplaces]},
-                {"id":f"branch:{code.lower()}:classes","kind":"navigation_branch","label_ru":"Классы объектов","children":class_nav},
+                {"id":f"branch:{code.lower()}:classes","kind":"navigation_branch","label_ru":"Классы объектов","children":class_nav_families},
             ],
         })
 

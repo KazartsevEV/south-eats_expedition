@@ -273,23 +273,40 @@ def access_options(logistics):
     return options
 
 
-def traveler_reports_list(value):
+def traveler_reports_list(value, registry=None):
     if value in (None, "", [], {}):
         return []
+
+    def refs_for_item(item):
+        if not isinstance(item, dict) or not item.get("source_url") or not registry:
+            return []
+        old_id = "src:" + hashlib.sha1(str(item["source_url"]).encode("utf-8")).hexdigest()[:14]
+        canonical = (registry.get("sources") or {}).get(old_id)
+        return [canonical] if canonical else []
     if isinstance(value, list):
         return value
     if isinstance(value, dict):
         recurring = value.get("recurring_issues")
         if isinstance(recurring, list):
-            rows = [
-                {
-                    "kind": "aggregated_recurring_issue",
-                    "summary": item,
-                    "source_refs": [],
-                }
-                for item in recurring
-                if item not in (None, "")
-            ]
+            rows = []
+            for item in recurring:
+                if item in (None, ""):
+                    continue
+                if isinstance(item, dict):
+                    summary = item.get("summary")
+                    if summary in (None, ""):
+                        continue
+                    rows.append({
+                        "kind": item.get("kind") or "aggregated_recurring_issue",
+                        "summary": summary,
+                        "source_refs": refs_for_item(item),
+                    })
+                else:
+                    rows.append({
+                        "kind": "aggregated_recurring_issue",
+                        "summary": item,
+                        "source_refs": [],
+                    })
             other = {k: v for k, v in value.items() if k != "recurring_issues" and v not in (None, "", [], {})}
             if other:
                 rows.append({
@@ -694,7 +711,7 @@ def build():
         if isinstance(source_sections, list) and source_sections:
             story_payload["sections"] = source_sections
         sections = narrative_sections(story_payload, source_refs)
-        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
+        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"), registry)
         language_review = ((source_object or {}).get("qa") or {}).get("language_review") or {}
 
         checks = {

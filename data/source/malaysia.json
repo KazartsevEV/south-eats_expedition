@@ -3,7 +3,7 @@
     "country": "Malaysia",
     "country_code": "MY",
     "language": "ru",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-29",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -24,7 +24,8 @@
       "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны.",
       "v1.7 draft: начата каноническая геопривязка Malaysia: primary_location с WGS84, coordinate_type, точностью и источником; старые 21 object ID сохраняются.",
       "v1.7 draft: visual_scouting отделён от старых редакционных подсказок фотографу; в канонический visual_recon выводятся только точка/время/вид/полезный тип техники.",
-      "v1.7 draft: академический поиск по археологии, карсту и этнографии ведётся через Sider Scholar/OpenAlex, чтобы не зависеть от одного web-search backend."
+      "v1.7 draft: академический поиск по археологии, карсту и этнографии ведётся через Sider Scholar/OpenAlex, чтобы не зависеть от одного web-search backend.",
+      "v1.7 draft: для 10 новых объектов traveler_reports переведены в структурированные записи с source_url; канонизатор теперь сохраняет точный source_ref каждого отчёта."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.7-draft",
@@ -8540,8 +8541,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "Путешественники в 2026 году отмечают очень редкое расписание общественного транспорта Jerantut—Kuala Tahan: на него нельзя без проверки завязывать позднее возвращение с маршрута.",
+                "source_url": "https://www.reddit.com/r/malaysia/comments/1u62yj7/kuala_lumpur_taman_negara_national_park/"
+              },
+              {
+                "summary": "В свежем обсуждении упоминается, что отдельный участок у Bukit Teresek ранее оказывался недоступен после оползня без заметного предварительного объявления; состояние тропы разумно подтверждать в park HQ перед выходом.",
+                "source_url": "https://www.reddit.com/r/malaysia/comments/1u62yj7/kuala_lumpur_taman_negara_national_park/"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -8580,6 +8590,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.reddit.com/r/malaysia/comments/1u62yj7/kuala_lumpur_taman_negara_national_park/",
+            "publisher": "Reddit / r/malaysia",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -8808,8 +8828,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "Повторяющаяся практическая жалоба — тяжёлая дорога к Peta: глубокие колеи, камни и участки, где обычный легковой автомобиль непрактичен; после дождя ситуация хуже.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g298277-d19395414-Reviews-or10-Endau_Rompin_National_Park-Johor.html"
+              },
+              {
+                "summary": "В старых подробных отчётах выходные кемпинги описываются как очень плотные; также регулярно упоминаются пиявки на лесных тропах.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g298277-d19395414-Reviews-or10-Endau_Rompin_National_Park-Johor.html"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -8848,6 +8877,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Attraction_Review-g298277-d19395414-Reviews-or10-Endau_Rompin_National_Park-Johor.html",
+            "publisher": "Tripadvisor",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -9080,8 +9119,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "Путешественники отдельно подчёркивают грубую каменистую дорогу между воротами и Studies Centre и практическую необходимость 4WD.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g3533821-d5893389-Reviews-or30-Maliau_Basin_Conservation_Area-Tawau_Tawau_Division_Sabah.html"
+              },
+              {
+                "summary": "Размещение в Studies Centre описывается как простое полевое; ожидать уровень исследовательской базы, а не обычного гостиничного сервиса.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g3533821-d5893389-Reviews-or30-Maliau_Basin_Conservation_Area-Tawau_Tawau_Division_Sabah.html"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -9109,6 +9157,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Attraction_Review-g3533821-d5893389-Reviews-or30-Maliau_Basin_Conservation_Area-Tawau_Tawau_Division_Sabah.html",
+            "publisher": "Tripadvisor",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -9332,8 +9390,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "Прилив напрямую влияет на лодочную логистику: в отзывах 2025–2026 годов встречаются ожидание воды, высадка/посадка по грязи и задержки на отмелях.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g298309-d10810369-Reviews-Bako_National_Park-Kuching_Sarawak.html"
+              },
+              {
+                "summary": "После дождей тропы описывают как мокрые и скользкие; встречаются жалобы на шум больших групп и мусор на пляжах/у инфраструктуры.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g298309-d10810369-Reviews-Bako_National_Park-Kuching_Sarawak.html"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -9369,6 +9436,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Attraction_Review-g298309-d10810369-Reviews-Bako_National_Park-Kuching_Sarawak.html",
+            "publisher": "Tripadvisor",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -9577,8 +9654,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "В отчёте 2025 года посетителя не допустили на природную тропу без требуемого сопровождения/оформления; конкретный режим выбранного trail нужно проверять до приезда.",
+                "source_url": "https://www.tripadvisor.com.my/Attraction_Review-g298313-d1018373-Reviews-FRIM_Forest_Research_Institute_of_Malaysia-Petaling_Jaya_Petaling_District_Selang.html"
+              },
+              {
+                "summary": "Лесные маршруты могут быть существенно более влажными и комариными, чем городское положение FRIM заставляет ожидать.",
+                "source_url": "https://www.tripadvisor.com.my/Attraction_Review-g298313-d1018373-Reviews-FRIM_Forest_Research_Institute_of_Malaysia-Petaling_Jaya_Petaling_District_Selang.html"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -9614,6 +9700,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.tripadvisor.com.my/Attraction_Review-g298313-d1018373-Reviews-FRIM_Forest_Research_Institute_of_Malaysia-Petaling_Jaya_Petaling_District_Selang.html",
+            "publisher": "Tripadvisor",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -9826,8 +9922,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "Самая стабильная жалоба — очень сильный аммиачный запах от гуано и большое количество тараканов на настиле и поручнях.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g303997-d2414472-Reviews-Gomantong_Cave_Sandakan-Sandakan_Sandakan_Division_Sabah.html"
+              },
+              {
+                "summary": "В отзывах 2026 года встречаются претензии к состоянию visitor centre и туалетов; также отмечают шум генераторов во время вечернего вылета летучих мышей.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g303997-d2414472-Reviews-Gomantong_Cave_Sandakan-Sandakan_Sandakan_Division_Sabah.html"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -9855,6 +9960,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Attraction_Review-g303997-d2414472-Reviews-Gomantong_Cave_Sandakan-Sandakan_Sandakan_Division_Sabah.html",
+            "publisher": "Tripadvisor",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -10094,8 +10209,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "Главное разочарование посетителей — приехать специально за Rafflesia в день, когда цветения нет; звонок в park office перед выездом критичнее календарного прогноза.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g1642830-d456301-Reviews-Gunung_Gading_National_Park-Lundu_Sarawak.html"
+              },
+              {
+                "summary": "В отзывах повторяются скользкие после дождя настилы/тропы и замечание, что summit trail заканчивается лесной площадкой без выраженной панорамы.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g1642830-d456301-Reviews-Gunung_Gading_National_Park-Lundu_Sarawak.html"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -10132,6 +10256,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Attraction_Review-g1642830-d456301-Reviews-Gunung_Gading_National_Park-Lundu_Sarawak.html",
+            "publisher": "Tripadvisor",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -10336,8 +10470,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "Дорогу из Lahad Datu путешественники описывают как долгую и каменистую; это часть экспедиционной логистики, а не короткий hotel transfer.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g1214323-d656778-Reviews-Tabin_Wildlife_Reserve-Lahad_Datu_Sabah.html"
+              },
+              {
+                "summary": "Часто упоминаются пиявки. Часть посетителей также отмечает, что дневные/ночные wildlife drives многократно проходят по одной дороге вдоль границы леса и пальмовой плантации.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g1214323-d656778-Reviews-Tabin_Wildlife_Reserve-Lahad_Datu_Sabah.html"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -10373,6 +10516,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Attraction_Review-g1214323-d656778-Reviews-Tabin_Wildlife_Reserve-Lahad_Datu_Sabah.html",
+            "publisher": "Tripadvisor",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -10596,8 +10749,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "Свежие отзывы 2025–2026 годов содержат жалобы на поваленные деревья, слабую маркировку и плохое состояние отдельных участков троп.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g660694-d1994555-Reviews-Penang_National_Park_Taman_Negara_Pulau_Pinang-Penang_Island_Penang.html"
+              },
+              {
+                "summary": "Встречаются сообщения об агрессивных макаках на прибрежных маршрутах; это полевые отчёты, а не гарантия поведения животных.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g660694-d1994555-Reviews-Penang_National_Park_Taman_Negara_Pulau_Pinang-Penang_Island_Penang.html"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -10636,6 +10798,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Attraction_Review-g660694-d1994555-Reviews-Penang_National_Park_Taman_Negara_Pulau_Pinang-Penang_Island_Penang.html",
+            "publisher": "Tripadvisor",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -10887,8 +11059,17 @@
             ]
           },
           "traveler_reports": {
-            "recurring_issues": [],
-            "note": "Проверяемые операционные ограничения и повторяющиеся практические проблемы; не рейтинг."
+            "recurring_issues": [
+              {
+                "summary": "Наиболее практичная повторяющаяся претензия — задержки/неудобство паромной логистики и слабая инфраструктура ожидания в Mersing.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g303993-d12458179-Reviews-Cataferry-Pulau_Tioman_Rompin_District_Pahang.html"
+              },
+              {
+                "summary": "Паромное расписание нельзя считать жёстким железнодорожным графиком: погода, прилив и операционные изменения требуют запаса времени.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g303993-d12458179-Reviews-Cataferry-Pulau_Tioman_Rompin_District_Pahang.html"
+              }
+            ],
+            "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
           "accommodation": []
         },
@@ -10924,6 +11105,16 @@
             ],
             "accessed": "2026-09-28",
             "kind": "media_repository"
+          },
+          {
+            "url": "https://www.tripadvisor.com/Attraction_Review-g303993-d12458179-Reviews-Cataferry-Pulau_Tioman_Rompin_District_Pahang.html",
+            "publisher": "Tripadvisor / Cataferry reviews",
+            "kind": "traveler_report",
+            "used_for": [
+              "traveler reports",
+              "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {

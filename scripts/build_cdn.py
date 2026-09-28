@@ -321,6 +321,87 @@ def compact_text(value):
     return value
 
 
+
+COORDINATE_TYPES = {
+    "center", "entrance", "trailhead", "summit", "viewpoint", "pier", "parking",
+    "cave_entrance", "waterfall_base", "archaeological_core", "temple_entrance",
+}
+
+def _dms_component(value, positive, negative, is_lat):
+    direction = positive if value >= 0 else negative
+    absolute = abs(float(value))
+    degrees = int(absolute)
+    minutes_full = (absolute - degrees) * 60
+    minutes = int(minutes_full)
+    seconds = round((minutes_full - minutes) * 60, 1)
+    width = 2 if is_lat else 3
+    return f"{degrees:0{width}d}°{minutes:02d}'{seconds:04.1f}\\"{direction}"
+
+def gps_repr(lat, lon):
+    return {
+        "decimal": f"{float(lat):.6f}, {float(lon):.6f}",
+        "dms": f"{_dms_component(lat, 'N', 'S', True)} {_dms_component(lon, 'E', 'W', False)}",
+    }
+
+def _normalized_point(raw, fallback_type=None):
+    if not isinstance(raw, dict):
+        return None
+    coords = raw.get("coordinates") if isinstance(raw.get("coordinates"), dict) else raw
+    lat = coords.get("lat")
+    lon = coords.get("lon")
+    if not isinstance(lat, (int, float)) or isinstance(lat, bool):
+        return None
+    if not isinstance(lon, (int, float)) or isinstance(lon, bool):
+        return None
+    point_type = raw.get("type") or raw.get("coordinate_type") or fallback_type or "center"
+    elevation = coords.get("elevation_m")
+    return {
+        "name": raw.get("name"),
+        "type": point_type,
+        "coordinates": {
+            "lat": float(lat),
+            "lon": float(lon),
+            "elevation_m": float(elevation) if isinstance(elevation, (int, float)) and not isinstance(elevation, bool) else None,
+        },
+        "gps": gps_repr(lat, lon),
+        "accuracy": raw.get("accuracy") or "unknown",
+        "elevation_accuracy": raw.get("elevation_accuracy") or ("unknown" if elevation is None else raw.get("accuracy") or "unknown"),
+        "source": raw.get("coordinate_source") or raw.get("source"),
+        "checked_at": raw.get("coordinates_checked_at") or raw.get("checked_at"),
+    }
+
+def normalize_geo(location):
+    location = location if isinstance(location, dict) else {}
+    primary_raw = {
+        "coordinates": location.get("coordinates"),
+        "coordinate_type": location.get("coordinate_type"),
+        "accuracy": location.get("accuracy"),
+        "elevation_accuracy": location.get("elevation_accuracy"),
+        "coordinate_source": location.get("coordinate_source"),
+        "coordinates_checked_at": location.get("coordinates_checked_at"),
+    }
+    primary = _normalized_point(primary_raw, "center")
+    points = []
+    for row in location.get("geo_points") or []:
+        point = _normalized_point(row)
+        if point:
+            points.append(point)
+    return {
+        "crs": "WGS84",
+        "epsg": 4326,
+        "primary_location": primary,
+        "points": points,
+    }
+
+def location_context(location):
+    location = dict(location or {})
+    for key in [
+        "coordinates", "coordinate_type", "accuracy", "elevation_accuracy",
+        "coordinate_source", "coordinates_checked_at", "geo_points",
+    ]:
+        location.pop(key, None)
+    return location
+
 def gallery_from(obj):
     ill = obj.get("illustration") or {}
     gallery = []
@@ -450,6 +531,7 @@ def build():
             object_id = f"{code.lower()}:{slug}"
             card = obj.get("traveler_card") or {}
             location = card.get("location") or {}
+            geo = normalize_geo(location)
             route = obj.get("route_meta") or {}
             gallery = gallery_from(obj)
             story = story_from(obj)
@@ -475,7 +557,8 @@ def build():
                     "interests": interests,
                     "tags": tags,
                 },
-                "location": location,
+                "location": location_context(location),
+                "geo": geo,
                 "story": story,
                 "visit": {
                     "logistics": logistics,
@@ -508,6 +591,8 @@ def build():
                 "prominence": obj.get("class"),
                 "region": location.get("region"),
                 "nearest_hub": location.get("nearest_hub"),
+                "coordinates": ((geo.get("primary_location") or {}).get("coordinates")),
+                "coordinate_type": ((geo.get("primary_location") or {}).get("type")),
                 "tags": tags,
                 "hero": gallery[0] if gallery else None,
                 "gallery_count": len(gallery),
@@ -554,6 +639,8 @@ def build():
                 "prominence": obj.get("class"),
                 "region": location.get("region"),
                 "nearest_hub": location.get("nearest_hub"),
+                "coordinates": ((geo.get("primary_location") or {}).get("coordinates")),
+                "coordinate_type": ((geo.get("primary_location") or {}).get("type")),
                 "tags": tags,
                 "keywords": keywords,
                 "detail_path": card_row["detail_path"],
@@ -571,7 +658,10 @@ def build():
                 "hero": bool(gallery),
                 "gallery_min_2": len(gallery) >= 2,
                 "photo_video": bool(card.get("media")),
-                "coordinates": bool((card.get("location") or {}).get("coordinates")),
+                "visual_recon": bool(((card.get("media") or {}).get("visual_scouting"))),
+                "coordinates": bool(geo.get("primary_location")),
+                "elevation": ((geo.get("primary_location") or {}).get("coordinates") or {}).get("elevation_m") is not None,
+                "coordinate_type": bool((geo.get("primary_location") or {}).get("type")),
                 "dynamic_checked_at": bool((card.get("operations") or {}).get("last_verified")),
             })
 
@@ -695,12 +785,13 @@ def build():
             "taxonomy": "taxonomy.json",
             "object_search": "search/objects.json",
             "place_search": "search/places.json",
+            "geodata_contract": "schema/geodata-contract.json",
         },
         "countries": countries,
     })
 
     blocking_required = ["story", "narrow", "logistics", "sources", "hero"]
-    expedition_required = ["water", "overnight", "accommodation", "traveler_reports", "gallery_min_2", "photo_video", "coordinates", "dynamic_checked_at"]
+    expedition_required = ["water", "overnight", "accommodation", "traveler_reports", "gallery_min_2", "photo_video", "visual_recon", "coordinates", "elevation", "coordinate_type", "dynamic_checked_at"]
     coverage = {k: sum(1 for x in qa_objects if x[k]) for k in blocking_required + expedition_required}
     qa = {
         "schema_version": SCHEMA_VERSION,
@@ -730,6 +821,23 @@ def build():
         ],
     }
     dump(release / "qa.json", qa)
+
+    dump(release / "schema" / "geodata-contract.json", {
+        "meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID},
+        "crs": "WGS84",
+        "epsg": 4326,
+        "primary_coordinate_fields": ["lat", "lon", "elevation_m"],
+        "coordinate_types": sorted(COORDINATE_TYPES),
+        "accuracy_values": ["high", "medium", "approximate", "unknown"],
+        "rules": {
+            "lat_range": [-90, 90],
+            "lon_range": [-180, 180],
+            "elevation_unit": "metres_above_mean_sea_level",
+            "unknown_values": "null",
+            "no_false_precision": True,
+            "large_objects": "Use an operational primary point such as entrance/trailhead/pier and additional geo.points rather than an unexplained geometric centre.",
+        },
+    })
 
     manifest_files = []
     for path in sorted(release.rglob("*.json")):

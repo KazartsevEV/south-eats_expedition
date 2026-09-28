@@ -51,13 +51,13 @@
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "2.10.7",
+      "schema_target": "2.10.8",
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
       "policy": "WGS84/EPSG:4326; point elevation belongs to a specific GPS point (entrance/pier/trailhead/etc.); object_elevation separately describes the object itself above mean sea level and is required for elevation QA.",
       "objects_with_point_elevation": 16,
-      "objects_with_object_elevation": 17
+      "objects_with_object_elevation": 18
     },
     "elevation_provenance_upgrade": {
       "updated": "2026-09-28",
@@ -4916,7 +4916,25 @@
               "url": "https://mapcarta.com/W479573588",
               "basis": "Berakas Forest Reserve park feature; used as park reference point"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "object_elevation": {
+              "representative_m": 55,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Berakas Forest Reserve",
+                "publisher": "Wikidata / GeoNames",
+                "url": "https://www.wikidata.org/wiki/Q21792586",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "Wikidata records elevation above sea level 55 m for Berakas Forest Reserve and cites GeoNames as the source. Used as a characteristic reserve elevation, not a full terrain range."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Характерная высота лесного массива. Это не min/max диапазон и не cumulative trail gain; прежняя точечная высота у primary_location хранится отдельно."
+            }
           },
           "logistics": {
             "access": "Короткая поездка из BSB; Бруней туризм рекомендует Dart, возможен автобус.",

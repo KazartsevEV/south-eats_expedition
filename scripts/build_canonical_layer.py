@@ -188,18 +188,46 @@ def canonical_point(point):
 
 def narrative_sections(story, source_refs):
     story = story or {}
+    allowed = {
+        "overview", "history", "culture", "geography",
+        "geology", "ethnography", "myths_beliefs",
+    }
+    structured = story.get("sections")
+    if isinstance(structured, list) and structured:
+        rows = []
+        for raw in structured:
+            if not isinstance(raw, dict):
+                continue
+            section_id = raw.get("section_id")
+            content = raw.get("content")
+            if section_id not in allowed:
+                raise RuntimeError(f"unknown canonical narrative section: {section_id}")
+            if content in (None, "", [], {}):
+                continue
+            row = {
+                "section_id": section_id,
+                "content": content,
+                "source_refs": list(dict.fromkeys((raw.get("source_refs") or []) + list(source_refs))),
+            }
+            if raw.get("notes"):
+                row["notes"] = raw.get("notes")
+            rows.append(row)
+        if rows:
+            return rows
+
+    # Compatibility fallback for countries not yet migrated to explicit sections.
     rows = []
     mapping = [
         ("narrative", "overview", None),
         (
             "culture_ethnography",
-            "culture_ethnography",
-            "Legacy source combines culture and ethnography; split during object research pass instead of guessing.",
+            "culture",
+            "Legacy source combines culture and ethnography; emitted under culture until that country receives an object research pass.",
         ),
         (
             "geography_geology",
-            "geography_geology",
-            "Legacy source combines geography and geology; split during object research pass instead of guessing.",
+            "geography",
+            "Legacy source combines geography and geology; emitted under geography until that country receives an object research pass.",
         ),
         ("myths_legends_beliefs", "myths_beliefs", None),
     ]

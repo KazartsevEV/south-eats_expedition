@@ -26,7 +26,8 @@
       "v1.7 draft: visual_scouting отделён от старых редакционных подсказок фотографу; в канонический visual_recon выводятся только точка/время/вид/полезный тип техники.",
       "v1.7 draft: академический поиск по археологии, карсту и этнографии ведётся через Sider Scholar/OpenAlex, чтобы не зависеть от одного web-search backend.",
       "v1.7 draft: для 10 новых объектов traveler_reports переведены в структурированные записи с source_url; канонизатор теперь сохраняет точный source_ref каждого отчёта.",
-      "v1.7 draft: для 10 новых объектов добавлен lodging layer; динамические цены датированы, отсутствующие официальные тарифы не выдумываются."
+      "v1.7 draft: для 10 новых объектов добавлен lodging layer; динамические цены датированы, отсутствующие официальные тарифы не выдумываются.",
+      "v1.7 draft: object_elevation доведён до 30/31; протяжённые объекты используют range/highest_point, города и отдельные sites — representative/characteristic; DEM/GeoNames-производные значения помечены approximate. Bavanggazo оставлен null до надёжного site-level значения."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.7-draft",
@@ -55,6 +56,16 @@
       "total_objects": 31,
       "status": "complete",
       "updated": "2026-09-28"
+    },
+    "elevation_upgrade_progress": {
+      "schema_target": "canonical-v2.10.8",
+      "objects_with_object_elevation": 30,
+      "total_objects": 31,
+      "unresolved_objects": [
+        "Kampung Bavanggazo / Rungus longhouse"
+      ],
+      "status": "partial",
+      "updated": "2026-09-29"
     }
   },
   "overview": {
@@ -905,6 +916,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 42,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://www.geonames.org/advanced-search.html?continentCode=EU&country=MY&featureClass=&q=Island",
+                "publisher": "GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "GeoNames Kuala Lumpur entry reports 42 m; city-level representative value, not a surveyed object point."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -1119,6 +1148,17 @@
               "image provenance"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.geonames.org/advanced-search.html?continentCode=EU&country=MY&featureClass=&q=Island",
+            "publisher": "GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "GeoNames Kuala Lumpur entry reports 42 m; city-level representative value, not a surveyed object point.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -1232,6 +1272,24 @@
               ],
               "accessed": "2026-09-28",
               "kind": "unesco"
+            },
+            "object_elevation": {
+              "representative_m": 14,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/George_Town_%28Malaysia%29",
+                "publisher": "Mapcarta / OSM / GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "City-level representative elevation."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -1472,6 +1530,17 @@
               "building access model"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://mapcarta.com/George_Town_%28Malaysia%29",
+            "publisher": "Mapcarta / OSM / GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "City-level representative elevation.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -1586,6 +1655,24 @@
               ],
               "accessed": "2026-09-28",
               "kind": "unesco"
+            },
+            "object_elevation": {
+              "representative_m": 6,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/Malacca",
+                "publisher": "Mapcarta / OSM / GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "City-level representative elevation."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -1808,6 +1895,17 @@
             ],
             "accessed": "2026-09-28",
             "notes": "Полевой языковой профиль — практическая выборка, а не полный переписной перечень."
+          },
+          {
+            "url": "https://mapcarta.com/Malacca",
+            "publisher": "Mapcarta / OSM / GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "City-level representative elevation.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -2730,6 +2828,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 0,
+              "max_m": 881,
+              "reference_type": "range",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/N1275800978",
+                "publisher": "Mapcarta / OpenStreetMap",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Archipelago range uses sea level as lower bound and Gunung Raya 881 m as the island high point."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -2965,6 +3081,17 @@
               "conservation rules"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://mapcarta.com/N1275800978",
+            "publisher": "Mapcarta / OpenStreetMap",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Archipelago range uses sea level as lower bound and Gunung Raya 881 m as the island high point.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -3080,6 +3207,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 0,
+              "max_m": 332,
+              "reference_type": "range",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/15818474",
+                "publisher": "Mapcarta / GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Island-group range uses sea level and Pulau Perhentian Kecil high point reported at 332 m."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -3326,6 +3471,17 @@
               "marine-park legal/conservation context"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://mapcarta.com/15818474",
+            "publisher": "Mapcarta / GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Island-group range uses sea level and Pulau Perhentian Kecil high point reported at 332 m.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -3449,6 +3605,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 19,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/Taiping",
+                "publisher": "Mapcarta / OSM / GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Town-level representative elevation."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -3672,6 +3846,17 @@
               "Taiping attraction context"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://mapcarta.com/Taiping",
+            "publisher": "Mapcarta / OSM / GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Town-level representative elevation.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -3785,6 +3970,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 42,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/Kuala_Kangsar",
+                "publisher": "Mapcarta / OSM / GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Town-level representative elevation."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -4013,6 +4216,17 @@
               "key cultural assets"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://mapcarta.com/Kuala_Kangsar",
+            "publisher": "Mapcarta / OSM / GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Town-level representative elevation.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -4128,6 +4342,24 @@
               ],
               "accessed": "2026-09-28",
               "kind": "park_authority"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 130,
+              "max_m": 1533,
+              "reference_type": "range",
+              "accuracy": "medium",
+              "source": {
+                "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16003",
+                "publisher": "Key Biodiversity Areas",
+                "type": "other",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "KBA elevation range for the Belum-Temengor landscape."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -4371,6 +4603,17 @@
               "boat/houseboat logistics"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16003",
+            "publisher": "Key Biodiversity Areas",
+            "type": "other",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "KBA elevation range for the Belum-Temengor landscape.",
+            "kind": "other"
           }
         ],
         "verification": {
@@ -4488,6 +4731,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 1060,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "high",
+              "source": {
+                "url": "https://aip.caam.gov.my/aip/eAIP/2025-06-17/html/eAIP/WM-AD-2.WBGZ-en-MS.html",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "type": "government_official",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Bario aerodrome elevation 1060 m; used as a precise representative value for the Bario settlement within the wider Kelabit Highlands."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -4738,6 +4999,17 @@
               "размещение"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://aip.caam.gov.my/aip/eAIP/2025-06-17/html/eAIP/WM-AD-2.WBGZ-en-MS.html",
+            "publisher": "Civil Aviation Authority of Malaysia",
+            "type": "government_official",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Bario aerodrome elevation 1060 m; used as a precise representative value for the Bario settlement within the wider Kelabit Highlands.",
+            "kind": "government_official"
           }
         ],
         "verification": {
@@ -5215,6 +5487,24 @@
               ],
               "accessed": "2026-09-28",
               "kind": "traveler_report"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 0,
+              "max_m": 71,
+              "reference_type": "range",
+              "accuracy": "medium",
+              "source": {
+                "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16025",
+                "publisher": "Key Biodiversity Areas",
+                "type": "other",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Kinabatangan floodplain KBA elevation range; object is an extended river/floodplain landscape."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -5456,6 +5746,17 @@
               "wildlife risks"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16025",
+            "publisher": "Key Biodiversity Areas",
+            "type": "other",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Kinabatangan floodplain KBA elevation range; object is an extended river/floodplain landscape.",
+            "kind": "other"
           }
         ],
         "verification": {
@@ -5574,6 +5875,24 @@
               ],
               "accessed": "2026-09-28",
               "kind": "unesco"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 16,
+              "max_m": 394,
+              "reference_type": "range",
+              "accuracy": "medium",
+              "source": {
+                "url": "https://www.keybiodiversityareas.org/site/factsheet/16064",
+                "publisher": "Key Biodiversity Areas",
+                "type": "other",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Niah National Park KBA elevation range."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -5855,6 +6174,17 @@
               "статус Niah Caves Complex как World Heritage property"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.keybiodiversityareas.org/site/factsheet/16064",
+            "publisher": "Key Biodiversity Areas",
+            "type": "other",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Niah National Park KBA elevation range.",
+            "kind": "other"
           }
         ],
         "verification": {
@@ -5978,6 +6308,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 50,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://commons.wikimedia.org/wiki/File:Kellie%27s_castle_(main_entrance).jpg",
+                "publisher": "Wikimedia Commons GPS EXIF",
+                "type": "other",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Representative site elevation rounded from multiple GPS-tagged photographs at the castle (about 42–58 m); not a survey benchmark."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -6205,6 +6553,17 @@
               "architecture"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Kellie%27s_castle_(main_entrance).jpg",
+            "publisher": "Wikimedia Commons GPS EXIF",
+            "type": "other",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Representative site elevation rounded from multiple GPS-tagged photographs at the castle (about 42–58 m); not a survey benchmark.",
+            "kind": "other"
           }
         ],
         "verification": {
@@ -6320,6 +6679,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 8,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/Kuching",
+                "publisher": "Mapcarta / OSM / GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "City-level representative elevation; waterfront itself is lower locally."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -6541,6 +6918,17 @@
             ],
             "accessed": "2026-09-28",
             "notes": "Полевой языковой профиль — практическая выборка, а не полный переписной перечень."
+          },
+          {
+            "url": "https://mapcarta.com/Kuching",
+            "publisher": "Mapcarta / OSM / GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "City-level representative elevation; waterfront itself is lower locally.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -6658,6 +7046,24 @@
               ],
               "accessed": "2026-09-28",
               "kind": "unesco"
+            },
+            "object_elevation": {
+              "representative_m": 100,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "medium",
+              "source": {
+                "url": "https://flex.flinders.edu.au/file/906cf24c-731d-47bf-9aa7-f21c198116f4/1/Thesis-Goh-2014.pdf",
+                "publisher": "Flinders University PhD thesis — Hsiao Mei Goh",
+                "type": "academic",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "The thesis states the Lenggong Valley has an average elevation around 100 m above sea level."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -6877,6 +7283,17 @@
               "география serial property"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://flex.flinders.edu.au/file/906cf24c-731d-47bf-9aa7-f21c198116f4/1/Thesis-Goh-2014.pdf",
+            "publisher": "Flinders University PhD thesis — Hsiao Mei Goh",
+            "type": "academic",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "The thesis states the Lenggong Valley has an average elevation around 100 m above sea level.",
+            "kind": "academic"
           }
         ],
         "verification": {
@@ -6996,6 +7413,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 22,
+              "min_m": 0,
+              "max_m": 22,
+              "reference_type": "range",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/Sipadan",
+                "publisher": "Mapcarta / OSM / GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Island land elevation; explicitly not the often-quoted ~600 m rise from the seabed."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -7249,6 +7684,17 @@
               "актуальные conservation/diving fees"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://mapcarta.com/Sipadan",
+            "publisher": "Mapcarta / OSM / GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Island land elevation; explicitly not the often-quoted ~600 m rise from the seabed.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -7369,7 +7815,9 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
-            }
+            },
+            "object_elevation": null,
+            "elevation_note": "Надёжная абсолютная высота именно longhouse/деревни не найдена в текущем проходе; не подменять высотой Kudat или произвольной DEM-точкой."
           },
           "logistics": {
             "access": "Sabah Tourism: около 41 км южнее Kudat и около 98 км / 2.5 ч от Кота-Кинабалу.",
@@ -7714,6 +8162,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 74,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/15816008",
+                "publisher": "Mapcarta / GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Elevation for the Batu Caves feature at the same coordinates used for the cave object."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -7951,6 +8417,17 @@
               "актуальный 2026 KTM Komuter corridor Batu Caves"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://mapcarta.com/15816008",
+            "publisher": "Mapcarta / GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Elevation for the Batu Caves feature at the same coordinates used for the cave object.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -8068,6 +8545,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 13,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://mapcarta.com/15813684",
+                "publisher": "Mapcarta / GeoNames",
+                "type": "map_osm",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Locality-level elevation for Sepilok; representative for the rehabilitation-centre area, not a survey benchmark."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -8296,6 +8791,17 @@
               "контакт и локальный transfer жилья"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://mapcarta.com/15813684",
+            "publisher": "Mapcarta / GeoNames",
+            "type": "map_osm",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Locality-level elevation for Sepilok; representative for the rehabilitation-centre area, not a survey benchmark.",
+            "kind": "map_osm"
           }
         ],
         "verification": {
@@ -8730,6 +9236,24 @@
               ],
               "accessed": "2026-09-28",
               "kind": "park_authority"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 40,
+              "max_m": 1036,
+              "reference_type": "range",
+              "accuracy": "medium",
+              "source": {
+                "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16013",
+                "publisher": "Key Biodiversity Areas",
+                "type": "other",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "KBA elevation range; high point reported at Gunung Besar 1036 m."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -8947,6 +9471,17 @@
               "contact"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16013",
+            "publisher": "Key Biodiversity Areas",
+            "type": "other",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "KBA elevation range; high point reported at Gunung Besar 1036 m.",
+            "kind": "other"
           }
         ],
         "verification": {
@@ -9047,6 +9582,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": null,
+              "max_m": 1675,
+              "reference_type": "highest_point",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://maliaubasin.my/2023/03/14/introduction-2/",
+                "publisher": "Maliau Basin Conservation Area / Yayasan Sabah",
+                "type": "park_authority",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Official site states the north-rim high point is over 1675 m and has not been accurately surveyed."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -9256,6 +9809,17 @@
               "contact"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://maliaubasin.my/2023/03/14/introduction-2/",
+            "publisher": "Maliau Basin Conservation Area / Yayasan Sabah",
+            "type": "park_authority",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Official site states the north-rim high point is over 1675 m and has not been accurately surveyed.",
+            "kind": "park_authority"
           }
         ],
         "verification": {
@@ -9355,6 +9919,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": 40,
+              "min_m": 0,
+              "max_m": 280,
+              "reference_type": "range",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://en-gb.topographic-map.com/map-8fd2z4/Bako-National-Park/",
+                "publisher": "Topographic-map.com DEM",
+                "type": "official_map",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "DEM reports average 40 m, min -3 m and max 280 m; min normalized to sea level 0 because negative coastal DEM value is not meaningful land elevation."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -9564,6 +10146,17 @@
               "contact"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://en-gb.topographic-map.com/map-8fd2z4/Bako-National-Park/",
+            "publisher": "Topographic-map.com DEM",
+            "type": "official_map",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "DEM reports average 40 m, min -3 m and max 280 m; min normalized to sea level 0 because negative coastal DEM value is not meaningful land elevation.",
+            "kind": "official_map"
           }
         ],
         "verification": {
@@ -9660,6 +10253,24 @@
               ],
               "accessed": "2026-09-28",
               "kind": "unesco"
+            },
+            "object_elevation": {
+              "representative_m": 139,
+              "min_m": 54,
+              "max_m": 478,
+              "reference_type": "range",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://en-gb.topographic-map.com/map-rzfbcz/FRIM-Selangor-Forest-Park/",
+                "publisher": "Topographic-map.com DEM",
+                "type": "official_map",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "DEM-derived range for the mapped FRIM Forest Park Selangor property."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -9857,6 +10468,17 @@
               "contact"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://en-gb.topographic-map.com/map-rzfbcz/FRIM-Selangor-Forest-Park/",
+            "publisher": "Topographic-map.com DEM",
+            "type": "official_map",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "DEM-derived range for the mapped FRIM Forest Park Selangor property.",
+            "kind": "official_map"
           }
         ],
         "verification": {
@@ -9955,6 +10577,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": null,
+              "max_m": 221,
+              "reference_type": "highest_point",
+              "accuracy": "medium",
+              "source": {
+                "url": "https://www.sciencedirect.com/science/article/pii/S0169555X11003047",
+                "publisher": "Geomorphology / ScienceDirect",
+                "type": "academic",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "Published geomorphology study reports the top of Gomantong Hill at 221 m asl; upper cave entrances are around 200 m."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -10145,6 +10785,17 @@
               "contact"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.sciencedirect.com/science/article/pii/S0169555X11003047",
+            "publisher": "Geomorphology / ScienceDirect",
+            "type": "academic",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Published geomorphology study reports the top of Gomantong Hill at 221 m asl; upper cave entrances are around 200 m.",
+            "kind": "academic"
           }
         ],
         "verification": {
@@ -10566,6 +11217,24 @@
               "accessed": "2026-09-28",
               "kind": "map",
               "authority": "medium"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 100,
+              "max_m": 571,
+              "reference_type": "range",
+              "accuracy": "medium",
+              "source": {
+                "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16042",
+                "publisher": "Key Biodiversity Areas",
+                "type": "other",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "KBA elevation range for Tabin Wildlife Reserve."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -10759,6 +11428,30 @@
               "contact"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16042",
+            "publisher": "Key Biodiversity Areas",
+            "type": "other",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "KBA elevation range for Tabin Wildlife Reserve.",
+            "kind": "other"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Northern_Gray_Gibbon_(Tabin_Wildlife_Reserve,_April_2025).jpg",
+            "publisher": "Wikimedia Commons",
+            "type": "other",
+            "kind": "media_repository",
+            "used_for": [
+              "illustration",
+              "image provenance",
+              "license"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "CC BY-SA 4.0; author Apocru"
           }
         ],
         "verification": {
@@ -10802,13 +11495,13 @@
           "mobility_notes": null
         },
         "illustration": {
-          "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tabin%20Wildlife%20Reserve%20(14839986368).jpg",
-          "source_page": "https://commons.wikimedia.org/wiki/File:Tabin%20Wildlife%20Reserve%20(14839986368).jpg",
+          "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Northern%20Gray%20Gibbon%20(Tabin%20Wildlife%20Reserve%2C%20April%202025).jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Northern_Gray_Gibbon_(Tabin_Wildlife_Reserve,_April_2025).jpg",
           "provider": "Wikimedia Commons",
-          "license": "CC BY 2.0",
-          "artist": "Mike Prince",
-          "illustration_scope": "object-specific reserve boundary landscape",
-          "last_checked": "2026-09-28"
+          "license": "CC BY-SA 4.0",
+          "artist": "Apocru",
+          "illustration_scope": "object-specific wildlife in Tabin Wildlife Reserve",
+          "last_checked": "2026-09-29"
         }
       },
       {
@@ -10856,6 +11549,24 @@
               ],
               "accessed": "2026-09-28",
               "kind": "government"
+            },
+            "object_elevation": {
+              "representative_m": 86,
+              "min_m": 0,
+              "max_m": 456,
+              "reference_type": "range",
+              "accuracy": "approximate",
+              "source": {
+                "url": "https://en-gb.topographic-map.com/map-hv4stp/Penang-National-Park/",
+                "publisher": "Topographic-map.com DEM",
+                "type": "official_map",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29",
+                "notes": "DEM reports average 86 m, min -1 m and max 456 m; min normalized to coastline sea level 0."
+              },
+              "checked_at": "2026-09-29"
             }
           },
           "logistics": {
@@ -11073,6 +11784,17 @@
               "contact"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://en-gb.topographic-map.com/map-hv4stp/Penang-National-Park/",
+            "publisher": "Topographic-map.com DEM",
+            "type": "official_map",
+            "used_for": [
+              "object elevation"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "DEM reports average 86 m, min -1 m and max 456 m; min normalized to coastline sea level 0.",
+            "kind": "official_map"
           }
         ],
         "verification": {

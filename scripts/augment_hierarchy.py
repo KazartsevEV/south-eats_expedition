@@ -50,7 +50,7 @@ PAGE_LAYOUTS = {
     "class_family":["breadcrumb","identity","definition","class_grid","country_distribution","object_grid"],
     "class":["breadcrumb","identity","definition","country_distribution","filters","object_grid"],
     "country_class":["breadcrumb","country_context","identity","definition","geography_filters","object_grid"],
-    "object":["breadcrumb","identity","gallery","story","access","walking","supply","overnight","accommodation","restrictions_cost_season","traveler_reports","visual_scouting","sources_and_verification"],
+    "object":["breadcrumb","identity","coordinates","gallery","story","access","walking","supply","overnight","accommodation","restrictions_cost_season","traveler_reports","visual_recon","sources_and_verification"],
 }
 
 SEA_INTRO = {

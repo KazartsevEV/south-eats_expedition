@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schema_version": "2.9.2",
+    "release_id": "2026-09-28-r24",
+    "page_type": "geography",
+    "id": "kh:hub:kampot"
+  },
+  "identity": {
+    "name": "Kampot",
+    "kind": "city_or_route_hub",
+    "slug": "kampot",
+    "country_code": "KH"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:kh",
+    "page_path": "pages/countries/cambodia.json"
+  },
+  "source_profile": {
+    "id": "kh:hub:kampot",
+    "kind": "city_or_route_hub",
+    "name": "Kampot",
+    "slug": "kampot"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "national_park",
+          "label_ru": "Национальные парки",
+          "count": 1,
+          "country_class_page": "pages/countries/cambodia/classes/national_park.json",
+          "filter": {
+            "geography_id": "kh:hub:kampot"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:bokor-national-park-and-hill-station",
+      "name": "Bokor National Park and hill station",
+      "object_type": "national_park",
+      "narrow": "плато Бокор — редкая для Камбоджа смесь влажного горного леса, колониального горного курорта и современной курортной застройки.",
+      "detail_path": "countries/cambodia/objects/bokor-national-park-and-hill-station.json"
+    }
+  ]
+}

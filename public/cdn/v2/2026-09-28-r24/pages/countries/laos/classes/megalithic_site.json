@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.9.2",
+    "release_id": "2026-09-28-r24",
+    "page_type": "country_class",
+    "id": "country-class:la:megalithic_site"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "megalithic_site",
+    "label_ru": "Мегалиты",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:archaeology_memory",
+    "page_path": "pages/countries/laos/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/megalithic_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:hub:phonsavan",
+      "name": "Phonsavan",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/phonsavan.json"
+    },
+    {
+      "id": "la:region:xieng-khouang",
+      "name": "Xieng Khouang",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/xieng-khouang.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:plain-of-jars",
+      "name": "Plain of Jars",
+      "geography_ids": [
+        "country:la",
+        "la:hub:phonsavan",
+        "la:region:xieng-khouang"
+      ],
+      "region_legacy": "Xieng Khouang",
+      "nearest_hub": "Phonsavan",
+      "narrow": "Равнина Кувшинов — серия мегалитических полей железного века в Сиангкхуанг: тысячи каменных сосудов, дисков и связанных погребальных следов разбросаны по плато. Археологическая интерпретация связывает комплексы с погребальной практикой и дальними путями обмена, а не с буквальным хранением напитков.",
+      "detail_path": "countries/laos/objects/plain-of-jars.json"
+    }
+  ]
+}

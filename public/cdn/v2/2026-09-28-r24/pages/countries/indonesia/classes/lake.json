@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.9.2",
+    "release_id": "2026-09-28-r24",
+    "page_type": "country_class",
+    "id": "country-class:id:lake"
+  },
+  "identity": {
+    "country_code": "ID",
+    "country_slug": "indonesia",
+    "object_type": "lake",
+    "label_ru": "Озёра",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:id:water_coast_marine",
+    "page_path": "pages/countries/indonesia/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/lake.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:medan-parapat-samosir",
+      "name": "Medan / Parapat / Samosir",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/medan-parapat-samosir.json"
+    },
+    {
+      "id": "id:region:north-sumatra-lake-toba-samosir",
+      "name": "North Sumatra / Lake Toba / Samosir",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/north-sumatra-lake-toba-samosir.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "id:lake-toba-samosir-batak-cultural-landscape",
+      "name": "Lake Toba / Samosir Batak cultural landscape",
+      "geography_ids": [
+        "country:id",
+        "id:hub:medan-parapat-samosir",
+        "id:region:north-sumatra-lake-toba-samosir"
+      ],
+      "region_legacy": "North Sumatra / Lake Toba / Samosir",
+      "nearest_hub": "Medan / Parapat / Samosir",
+      "narrow": "Lake Toba и Samosir соединяют гигантскую вулканическую кальдеру с живой культурой Batak Toba: rumah bolon, родовые деревни, ulos, каменные комплексы и горные дороги складываются в многодневный самостоятельный маршрут.",
+      "detail_path": "countries/indonesia/objects/lake-toba-samosir-batak-cultural-landscape.json"
+    }
+  ]
+}

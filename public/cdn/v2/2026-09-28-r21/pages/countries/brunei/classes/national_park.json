@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "schema_version": "2.8.1",
+    "release_id": "2026-09-28-r21",
+    "page_type": "country_class",
+    "id": "country-class:bn:national_park"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "object_type": "national_park",
+    "label_ru": "Национальные парки",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:bn:protected_ecosystems",
+    "page_path": "pages/countries/brunei/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/national_park.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "bn:district:temburong",
+      "name": "Тембуронг",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/temburong.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:ulu-temburong-national-park",
+      "name": "Ulu Temburong National Park",
+      "geography_ids": [
+        "bn:district:temburong",
+        "country:bn"
+      ],
+      "region_legacy": "Temburong",
+      "nearest_hub": "Bangar",
+      "narrow": "Главный охраняемый дождевой лес Брунея и наиболее сильный контраст нефтегазовой экономике страны. Туристический доступ построен вокруг реки, лесной тропы и башня над пологом леса над верхним ярусом тропического леса.",
+      "detail_path": "countries/brunei/objects/ulu-temburong-national-park.json"
+    }
+  ]
+}

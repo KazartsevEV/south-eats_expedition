@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schema_version": "2.6.0",
+    "release_id": "2026-09-28-r15",
+    "page_type": "geography",
+    "id": "kh:hub:takeo"
+  },
+  "identity": {
+    "name": "Takeo",
+    "kind": "city_or_route_hub",
+    "slug": "takeo",
+    "country_code": "KH"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:kh",
+    "page_path": "pages/countries/cambodia.json"
+  },
+  "source_profile": {
+    "id": "kh:hub:takeo",
+    "kind": "city_or_route_hub",
+    "name": "Takeo",
+    "slug": "takeo"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "archaeological_site",
+      "label_ru": "Археологические объекты",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "archaeology_memory",
+      "label_ru": "Археология, древность и историческая память",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "archaeological_site",
+          "label_ru": "Археологические объекты",
+          "count": 1,
+          "country_class_page": "pages/countries/cambodia/classes/archaeological_site.json",
+          "filter": {
+            "geography_id": "kh:hub:takeo"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:angkor-borei-and-phnom-da",
+      "name": "Angkor Borei and Phnom Da",
+      "object_type": "archaeological_site",
+      "narrow": "Angkor Borei — один из важнейших ранних городских центров Southeast Asia, связанный с политиями Funan и развитием кхмерский civilization задолго до Angkor.",
+      "detail_path": "countries/cambodia/objects/angkor-borei-and-phnom-da.json"
+    }
+  ]
+}

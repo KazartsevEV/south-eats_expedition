@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "schema_version": "2.6.0",
+    "release_id": "2026-09-28-r15",
+    "page_type": "country_class",
+    "id": "country-class:id:island"
+  },
+  "identity": {
+    "country_code": "ID",
+    "country_slug": "indonesia",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:id:water_coast_marine",
+    "page_path": "pages/countries/indonesia/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:ampana-gorontalo",
+      "name": "Ampana / Gorontalo",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/ampana-gorontalo.json"
+    },
+    {
+      "id": "id:hub:sorong-waisai",
+      "name": "Sorong / Waisai",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/sorong-waisai.json"
+    },
+    {
+      "id": "id:region:raja-ampat-west-papua",
+      "name": "Raja Ampat / West Papua",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/raja-ampat-west-papua.json"
+    },
+    {
+      "id": "id:region:togean-central-sulawesi",
+      "name": "Togean / Central Sulawesi",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/togean-central-sulawesi.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "id:raja-ampat",
+      "name": "Raja Ampat",
+      "geography_ids": [
+        "country:id",
+        "id:hub:sorong-waisai",
+        "id:region:raja-ampat-west-papua"
+      ],
+      "region_legacy": "Raja Ampat / West Papua",
+      "nearest_hub": "Sorong / Waisai",
+      "narrow": "Карстовые острова, reefs, manta sites и папуасские деревни — top-tier морская/экспедиционная визуальная среда.",
+      "detail_path": "countries/indonesia/objects/raja-ampat.json"
+    },
+    {
+      "id": "id:togean-islands",
+      "name": "Togean Islands",
+      "geography_ids": [
+        "country:id",
+        "id:hub:ampana-gorontalo",
+        "id:region:togean-central-sulawesi"
+      ],
+      "region_legacy": "Togean / Central Sulawesi",
+      "nearest_hub": "Ampana / Gorontalo",
+      "narrow": "Удалённый архипелаг Центрального Sulawesi: calm lagoons, Bajau communities, reefs and slow boat travel with strong off-grid feel.",
+      "detail_path": "countries/indonesia/objects/togean-islands.json"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "schema_version": "2.6.0",
+    "release_id": "2026-09-28-r15"
+  },
+  "order": [
+    "project",
+    "region",
+    "country_catalog",
+    "taxonomy_families",
+    "geography_contract",
+    "country_pages",
+    "geography_pages",
+    "object_geography_index",
+    "class_family_pages",
+    "country_class_pages",
+    "object_classes",
+    "object_cards"
+  ],
+  "levels": {
+    "project": {
+      "status": "complete"
+    },
+    "region": {
+      "status": "complete"
+    },
+    "country_catalog": {
+      "status": "complete",
+      "total": 11,
+      "published": 6
+    },
+    "taxonomy_families": {
+      "status": "complete",
+      "families": 6,
+      "classes": 41
+    },
+    "geography_contract": {
+      "status": "complete",
+      "nodes": 158,
+      "formalized_countries": [
+        "BN"
+      ],
+      "note": "Формализованные страны используют доказанную иерархию; остальные сохраняют route-region/hub как переходный слой без выдуманного административного parentage."
+    },
+    "country_pages": {
+      "status": "in_progress",
+      "published": 6,
+      "placeholders": 5
+    },
+    "geography_pages": {
+      "status": "generated_from_existing_source",
+      "count": 146
+    },
+    "object_geography_index": {
+      "status": "complete",
+      "objects": 113,
+      "formalized_countries": [
+        "BN"
+      ]
+    },
+    "class_family_pages": {
+      "status": "complete",
+      "global": 6,
+      "country_scoped": 33
+    },
+    "country_class_pages": {
+      "status": "complete_for_published_objects",
+      "count": 65
+    },
+    "object_classes": {
+      "status": "formalized_with_transitional_legacy_types"
+    },
+    "object_cards": {
+      "status": "lower_branch_migration_in_progress"
+    }
+  },
+  "next_descent_rule": "После QA уровня переходить только к его детям: страна → география/класс → объект."
+}

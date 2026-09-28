@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "schema_version": "2.6.0",
+    "release_id": "2026-09-28-r15",
+    "page_type": "geography",
+    "id": "la:hub:luangpkhabang-nong-kkhiav"
+  },
+  "identity": {
+    "name": "Луангпхабанг / Нонг-Кхиав",
+    "kind": "city_or_route_hub",
+    "slug": "luangpkhabang-nong-kkhiav",
+    "country_code": "LA"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:la",
+    "page_path": "pages/countries/laos.json"
+  },
+  "source_profile": {
+    "id": "la:hub:luangpkhabang-nong-kkhiav",
+    "kind": "city_or_route_hub",
+    "name": "Луангпхабанг / Нонг-Кхиав",
+    "slug": "luangpkhabang-nong-kkhiav"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    },
+    {
+      "object_type": "karst",
+      "label_ru": "Карстовые районы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/historic_city.json",
+          "filter": {
+            "geography_id": "la:hub:luangpkhabang-nong-kkhiav"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "relief_geology",
+      "label_ru": "Рельеф и геология",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "karst",
+          "label_ru": "Карстовые районы",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/karst.json",
+          "filter": {
+            "geography_id": "la:hub:luangpkhabang-nong-kkhiav"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:luang-prabang",
+      "name": "Luang Prabang",
+      "object_type": "historic_city",
+      "narrow": "Луангпхабанг — бывшая королевская столица Лансанга и затем королевства Луангпхабанг, исторический город на полуострове между Меконгом и Нам-Кханом.",
+      "detail_path": "countries/laos/objects/luang-prabang.json"
+    },
+    {
+      "id": "la:nong-khiaw-and-muang-ngoi",
+      "name": "Nong Khiaw and Muang Ngoi",
+      "object_type": "karst",
+      "narrow": "Нонг-Кхиав и Мыанг-Нгой — связка поселений в узкой долине Нам-У между высокими известняковыми стенами. Нонг-Кхиав — дорожный узел и база, Мыанг-Нгой исторически был доступен в первую очередь по реке и сохраняет более выраженный речной ритм.",
+      "detail_path": "countries/laos/objects/nong-khiaw-and-muang-ngoi.json"
+    }
+  ]
+}

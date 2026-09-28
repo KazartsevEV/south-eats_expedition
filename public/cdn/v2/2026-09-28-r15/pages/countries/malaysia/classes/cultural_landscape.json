@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.6.0",
+    "release_id": "2026-09-28-r15",
+    "page_type": "country_class",
+    "id": "country-class:my:cultural_landscape"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "cultural_landscape",
+    "label_ru": "Культурные ландшафты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:religion_ethnography",
+    "page_path": "pages/countries/malaysia/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/cultural_landscape.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:bario-miri",
+      "name": "Bario / Miri",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/bario-miri.json"
+    },
+    {
+      "id": "my:region:bario-kelabit-highlands",
+      "name": "Bario / Kelabit Highlands",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/bario-kelabit-highlands.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:bario-kelabit-highlands",
+      "name": "Bario / Kelabit Highlands",
+      "geography_ids": [
+        "country:my",
+        "my:hub:bario-miri",
+        "my:region:bario-kelabit-highlands"
+      ],
+      "region_legacy": "Bario / Kelabit Highlands",
+      "nearest_hub": "Bario / Miri",
+      "narrow": "Bario / Kelabit Highlands — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/malaysia/objects/bario-kelabit-highlands.json"
+    }
+  ]
+}

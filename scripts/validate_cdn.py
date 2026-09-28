@@ -109,6 +109,17 @@ if not lodging_index_path.exists():
     fail("missing normalized lodging index")
 lodging_rows = load(lodging_index_path).get("lodging") or []
 lodging_ids = {row.get("id") for row in lodging_rows if row.get("id")}
+source_index_path = release / "sources" / "index.json"
+if not source_index_path.exists():
+    fail("missing normalized source index")
+source_rows = load(source_index_path).get("sources") or []
+source_ids = {row.get("id") for row in source_rows if row.get("id")}
+if len(source_ids) != len(source_rows):
+    fail("source index contains empty or duplicate ids")
+for row in source_rows:
+    path = row.get("detail_path")
+    if not path or not (release / path).exists():
+        fail(f"source detail missing: {row.get('id')} -> {path}")
 if len(lodging_ids) != len(lodging_rows):
     fail("lodging index contains empty or duplicate ids")
 for row in lodging_rows:
@@ -165,6 +176,12 @@ for row in objects:
         fail(f"embedded accommodation leaked into {row['detail_path']}")
     if "photo_video" in (detail.get("media") or {}):
         fail(f"embedded photo_video leaked into {row['detail_path']}")
+    provenance = detail.get("provenance") or {}
+    if "sources" in provenance:
+        fail(f"embedded sources leaked into {row['detail_path']}")
+    for source_id in provenance.get("source_refs") or []:
+        if source_id not in source_ids:
+            fail(f"unknown source reference {source_id} in {row['detail_path']}")
     visual_recon = detail.get("visual_recon") or {}
     if not isinstance(visual_recon, dict):
         fail(f"invalid visual_recon in {row['detail_path']}")

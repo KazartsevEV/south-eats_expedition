@@ -46,7 +46,7 @@ PAGE_LAYOUTS = {
     "project":["hero","project_description","southeast_asia_intro","country_grid","taxonomy_families","geography_entry","search_entry"],
     "region":["hero","definition","mainland_and_maritime","natural_zones","climate","historical_layers","languages_religions_ethnicity","cross_border_movement","independent_expedition_context","country_grid"],
     "country":["hero","introduction","history","geography_relief","climate_seasonality","religions_ethnicity_languages","traveler_economy_currency_payments","entry_borders_air","internal_transport","risks_laws_animals_plants","food_festivals","camping_and_mobility","geography_grid","class_family_grid","object_grid"],
-    "geography":["breadcrumb","identity","summary","child_geography","class_counts","object_grid"],
+    "geography":["breadcrumb","identity","summary","child_geography","class_family_grid","object_grid"],
     "class_family":["breadcrumb","identity","definition","class_grid","country_distribution","object_grid"],
     "class":["breadcrumb","identity","definition","country_distribution","filters","object_grid"],
     "country_class":["breadcrumb","country_context","identity","definition","geography_filters","object_grid"],
@@ -94,7 +94,8 @@ def main():
     release = PUBLIC / latest["release_id"]
     countries_data = load(release / "countries.json")["countries"]
     type_rows = load(release / "object-types.json")["object_types"]
-    objects = load(release / "search" / "objects.json")["objects"]
+    objects_doc = load(release / "search" / "objects.json")
+    objects = objects_doc["objects"]
     places = load(release / "places.json")["places"]
 
     published = {row["country_code"]: row for row in countries_data}
@@ -129,6 +130,33 @@ def main():
     unknown_types = sorted(set(type_by_value) - set(family_by_type))
     if unknown_types:
         raise RuntimeError(f"unclassified object types in hierarchy: {unknown_types}")
+
+    object_geography = defaultdict(set)
+    geography_lookup = {}
+    for row in objects:
+        object_geography[row["id"]].add(f"country:{row['country_code'].lower()}")
+
+    def class_families_for_objects(rows, country_slug, geography_id):
+        present=Counter(row["object_type"] for row in rows)
+        out=[]
+        for family in FAMILIES:
+            classes=[]
+            total=0
+            for t in family["types"]:
+                count=present.get(t,0)
+                if not count:
+                    continue
+                total += count
+                classes.append({
+                    "object_type":t,
+                    "label_ru":type_by_value.get(t,{}).get("label_ru",CLASS_LABELS.get(t,t)),
+                    "count":count,
+                    "country_class_page":f"pages/countries/{country_slug}/classes/{t}.json",
+                    "filter":{"geography_id":geography_id},
+                })
+            if classes:
+                out.append({"family_id":family["id"],"label_ru":family["label_ru"],"count":total,"classes":classes})
+        return out
 
     country_cards = []
     for meta in TARGET_COUNTRIES:
@@ -269,6 +297,9 @@ def main():
                 pobj=[objects_by_id[oid] for oid in object_ids]
                 class_counts=Counter(o["object_type"] for o in pobj)
                 page_path=node_page_path(node)
+                geography_lookup[node["id"]]={"id":node["id"],"name":node.get("name_ru") or node.get("name_local") or node["id"],"kind":node["kind"],"axis":node.get("axis"),"page_path":page_path}
+                for oid in object_ids:
+                    object_geography[oid].add(node["id"])
                 parent_id=node.get("parent_id")
                 if parent_id == country_id:
                     parent_page=f"pages/countries/{meta['slug']}.json"
@@ -284,6 +315,7 @@ def main():
                     "legacy_region_names":node.get("legacy_region_names") or [],
                     "notes_ru":node.get("notes_ru"),
                     "class_counts":[{"object_type":k,"label_ru":type_by_value.get(k,{}).get("label_ru",CLASS_LABELS.get(k,k)),"count":v} for k,v in sorted(class_counts.items())],
+                    "class_families":class_families_for_objects(pobj, meta["slug"], node["id"]),
                     "objects":[{"id":o["id"],"name":o["name"],"object_type":o["object_type"],"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in pobj],
                     "provenance":{"sources":doc.get("sources") or [],"checked_at":(doc.get("meta") or {}).get("checked_at")},
                 })
@@ -308,6 +340,10 @@ def main():
                 child_refs.append({"id":place["id"],"kind":place["kind"],"name":place["name"],"slug":place["slug"],"page_path":page_path,"object_count":len(place.get("object_ids") or []),"children":[]})
                 geography_nodes += 1; place_page_count += 1
                 pobj=[objects_by_id[oid] for oid in place.get("object_ids") or [] if oid in objects_by_id]; class_counts=Counter(o["object_type"] for o in pobj)
+                geography_lookup[place["id"]]={"id":place["id"],"name":place["name"],"kind":place["kind"],"axis":"legacy_route_place","page_path":page_path}
+                for oid in place.get("object_ids") or []:
+                    if oid in objects_by_id:
+                        object_geography[oid].add(place["id"])
                 dump(release / page_path, {
                     "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"page_type":"geography","id":place["id"]},
                     "identity":{"name":place["name"],"kind":place["kind"],"slug":place["slug"],"country_code":code},"layout":"geography",
@@ -316,6 +352,7 @@ def main():
                     "hierarchy_status":"legacy_route_place",
                     "parentage_status":"country_parent_confirmed; lower administrative nesting not inferred without source evidence",
                     "class_counts":[{"object_type":k,"label_ru":type_by_value.get(k,{}).get("label_ru",CLASS_LABELS.get(k,k)),"count":v} for k,v in sorted(class_counts.items())],
+                    "class_families":class_families_for_objects(pobj, meta["slug"], place["id"]),
                     "objects":[{"id":o["id"],"name":o["name"],"object_type":o["object_type"],"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in pobj],
                 })
             country_geo_roots[code]=child_refs
@@ -325,6 +362,21 @@ def main():
         geography_nodes += 1
 
     dump(release / "geography" / "tree.json", {"meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"tree_kind":"geography","allowed_kinds":["macroregion","country","region","province","state","district","mukim","island","city","town","village","traditional_settlement","geographic_area","city_or_route_hub"]},"root":{"id":"geo:southeast-asia","kind":"macroregion","name":"Юго-Восточная Азия","page_path":"region/southeast-asia.json","children":geography_children}})
+
+    country_meta_by_code={m["code"]:m for m in TARGET_COUNTRIES}
+    for code, meta in country_meta_by_code.items():
+        geography_lookup[f"country:{code.lower()}"]={"id":f"country:{code.lower()}","name":meta["name_ru"],"kind":"country","axis":"administrative","page_path":f"pages/countries/{meta['slug']}.json"}
+
+    for row in objects:
+        row["geography_ids"]=sorted(object_geography[row["id"]])
+        row["geography_status"]="formalized" if row["country_code"] in formal_geography else "legacy_route_places"
+    objects_doc.setdefault("meta", {})["geography_index"]="search/object-geography.json"
+    dump(release / "search" / "objects.json", objects_doc)
+    dump(release / "search" / "object-geography.json", {
+        "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"count":len(objects)},
+        "objects":[{"id":row["id"],"country_code":row["country_code"],"geography_ids":row["geography_ids"],"status":row["geography_status"]} for row in objects],
+        "geography":{key:geography_lookup[key] for key in sorted(geography_lookup)},
+    })
 
     nav_country_children=[]
     for meta in TARGET_COUNTRIES:
@@ -352,8 +404,8 @@ def main():
                     "definition":family["description"],
                     "migration":TRANSITIONAL_TYPES.get(t),
                     "count":len(rows),
-                    "geography_filters":sorted({o.get("region") for o in rows if o.get("region")}),
-                    "objects":[{"id":o["id"],"name":o["name"],"region":o.get("region"),"nearest_hub":o.get("nearest_hub"),"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in rows],
+                    "geography_filters":[geography_lookup[gid] for gid in sorted(set().union(*(set(o.get("geography_ids") or []) for o in rows))) if gid in geography_lookup],
+                    "objects":[{"id":o["id"],"name":o["name"],"geography_ids":o.get("geography_ids") or [],"region_legacy":o.get("region"),"nearest_hub":o.get("nearest_hub"),"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in rows],
                 })
                 family_nav_classes.append({"id":f"country-class:{code.lower()}:{t}","kind":"country_class","label_ru":type_by_value[t]["label_ru"],"object_type":t,"path":country_class_path,"children":[{"id":o["id"],"kind":"object","name":o["name"],"path":o["detail_path"]} for o in rows]})
             dump(release / country_family_path, {
@@ -365,7 +417,7 @@ def main():
                 "definition":family["description"],
                 "count":family_count,
                 "classes":family_classes,
-                "objects":[{"id":o["id"],"name":o["name"],"object_type":o["object_type"],"region":o.get("region"),"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in family_objects],
+                "objects":[{"id":o["id"],"name":o["name"],"object_type":o["object_type"],"geography_ids":o.get("geography_ids") or [],"region_legacy":o.get("region"),"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in family_objects],
             })
             class_families.append({"family_id":family["id"],"label_ru":family["label_ru"],"count":family_count,"page_path":country_family_path,"global_page_path":f"pages/families/{family['id']}.json","classes":family_classes})
             class_nav_families.append({"id":f"country-family:{code.lower()}:{family['id']}","kind":"class_family","label_ru":family["label_ru"],"count":family_count,"path":country_family_path,"children":family_nav_classes})
@@ -389,7 +441,7 @@ def main():
 
     dump(release / "hierarchy-status.json", {
         "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"]},
-        "order":["project","region","country_catalog","taxonomy_families","geography_contract","country_pages","geography_pages","class_family_pages","country_class_pages","object_classes","object_cards"],
+        "order":["project","region","country_catalog","taxonomy_families","geography_contract","country_pages","geography_pages","object_geography_index","class_family_pages","country_class_pages","object_classes","object_cards"],
         "levels":{
             "project":{"status":"complete"},"region":{"status":"complete"},
             "country_catalog":{"status":"complete","total":len(TARGET_COUNTRIES),"published":len(published)},
@@ -397,6 +449,7 @@ def main():
             "geography_contract":{"status":"complete","nodes":geography_nodes,"formalized_countries":sorted(formal_geography),"note":"Формализованные страны используют доказанную иерархию; остальные сохраняют route-region/hub как переходный слой без выдуманного административного parentage."},
             "country_pages":{"status":"in_progress","published":len(published),"placeholders":len(TARGET_COUNTRIES)-len(published)},
             "geography_pages":{"status":"generated_from_existing_source","count":place_page_count},
+            "object_geography_index":{"status":"complete","objects":len(objects),"formalized_countries":sorted(formal_geography)},
             "class_family_pages":{"status":"complete","global":len(FAMILIES),"country_scoped":sum(1 for meta in TARGET_COUNTRIES for family in FAMILIES if any(o["country_code"]==meta["code"] and o["object_type"] in family["types"] for o in objects))},
             "country_class_pages":{"status":"complete_for_published_objects","count":sum(len(set(o["object_type"] for o in objects_by_country.get(meta["code"],[]))) for meta in TARGET_COUNTRIES)},
             "object_classes":{"status":"formalized_with_transitional_legacy_types"},
@@ -404,7 +457,7 @@ def main():
         },
         "next_descent_rule":"После QA уровня переходить только к его детям: страна → география/класс → объект.",
     })
-    refresh_manifest(release,{"target_countries":len(TARGET_COUNTRIES),"taxonomy_families":len(FAMILIES),"taxonomy_nodes":taxonomy_nodes,"geography_nodes":geography_nodes,"geography_pages":place_page_count,"global_family_pages":len(FAMILIES),"country_family_pages":sum(1 for meta in TARGET_COUNTRIES for family in FAMILIES if any(o["country_code"]==meta["code"] and o["object_type"] in family["types"] for o in objects)),"country_class_pages":sum(len(set(o["object_type"] for o in objects_by_country.get(meta["code"],[]))) for meta in TARGET_COUNTRIES)})
+    refresh_manifest(release,{"target_countries":len(TARGET_COUNTRIES),"taxonomy_families":len(FAMILIES),"taxonomy_nodes":taxonomy_nodes,"geography_nodes":geography_nodes,"geography_pages":place_page_count,"global_family_pages":len(FAMILIES),"country_family_pages":sum(1 for meta in TARGET_COUNTRIES for family in FAMILIES if any(o["country_code"]==meta["code"] and o["object_type"] in family["types"] for o in objects)),"country_class_pages":sum(len(set(o["object_type"] for o in objects_by_country.get(meta["code"],[]))) for meta in TARGET_COUNTRIES),"object_geography_index":len(objects)})
 
 if __name__ == "__main__":
     main()

@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.7.2"
-RELEASE_ID = "2026-09-28-r19"
+SCHEMA_VERSION = "2.8.0"
+RELEASE_ID = "2026-09-28-r20"
 SUPPORTED_SOURCE_MODELS = {"1.5", "1.6"}
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
@@ -356,6 +356,16 @@ def _normalized_point(raw, fallback_type=None):
         return None
     point_type = raw.get("type") or raw.get("coordinate_type") or fallback_type or "center"
     elevation = coords.get("elevation_m")
+    elevation_range = raw.get("elevation_range_m") or coords.get("elevation_range_m")
+    normalized_range = None
+    if isinstance(elevation_range, dict):
+        min_m = elevation_range.get("min")
+        max_m = elevation_range.get("max")
+        if (
+            isinstance(min_m, (int, float)) and not isinstance(min_m, bool)
+            and isinstance(max_m, (int, float)) and not isinstance(max_m, bool)
+        ):
+            normalized_range = {"min": float(min_m), "max": float(max_m)}
     return {
         "name": raw.get("name"),
         "type": point_type,
@@ -363,10 +373,11 @@ def _normalized_point(raw, fallback_type=None):
             "lat": float(lat),
             "lon": float(lon),
             "elevation_m": float(elevation) if isinstance(elevation, (int, float)) and not isinstance(elevation, bool) else None,
+            "elevation_range_m": normalized_range,
         },
         "gps": gps_repr(lat, lon),
         "accuracy": raw.get("accuracy") or "unknown",
-        "elevation_accuracy": raw.get("elevation_accuracy") or ("unknown" if elevation is None else raw.get("accuracy") or "unknown"),
+        "elevation_accuracy": raw.get("elevation_accuracy") or ("unknown" if elevation is None and normalized_range is None else raw.get("accuracy") or "unknown"),
         "source_refs": [raw.get("source_ref")] if raw.get("source_ref") else [],
         "elevation_source_refs": [raw.get("elevation_source_ref")] if raw.get("elevation_source_ref") else [],
         "checked_at": raw.get("coordinates_checked_at") or raw.get("checked_at"),
@@ -395,6 +406,7 @@ def normalize_geo(location, source_registry=None, object_id=None):
         "coordinate_type": location.get("coordinate_type"),
         "accuracy": location.get("accuracy"),
         "elevation_accuracy": location.get("elevation_accuracy"),
+        "elevation_range_m": location.get("elevation_range_m"),
         "source_ref": fact_source_ref(location, "coordinate_source", "coordinates"),
         "elevation_source_ref": fact_source_ref(location, "elevation_source", "elevation"),
         "coordinates_checked_at": location.get("coordinates_checked_at"),
@@ -420,8 +432,8 @@ def normalize_geo(location, source_registry=None, object_id=None):
 def location_context(location):
     location = dict(location or {})
     for key in [
-        "coordinates", "coordinate_type", "accuracy", "elevation_accuracy",
-        "coordinate_source", "coordinates_checked_at", "geo_points",
+        "coordinates", "coordinate_type", "accuracy", "elevation_accuracy", "elevation_range_m",
+        "coordinate_source", "elevation_source", "coordinates_checked_at", "geo_points",
     ]:
         location.pop(key, None)
     return location
@@ -836,7 +848,14 @@ def build():
                 "coordinates": bool(geo.get("primary_location")),
                 "elevation": (
                     ((geo.get("primary_location") or {}).get("coordinates") or {}).get("elevation_m") is not None
-                    or any(((point.get("coordinates") or {}).get("elevation_m") is not None) for point in (geo.get("points") or []))
+                    or ((geo.get("primary_location") or {}).get("coordinates") or {}).get("elevation_range_m") is not None
+                    or any(
+                        (
+                            (point.get("coordinates") or {}).get("elevation_m") is not None
+                            or (point.get("coordinates") or {}).get("elevation_range_m") is not None
+                        )
+                        for point in (geo.get("points") or [])
+                    )
                 ),
                 "coordinate_type": bool((geo.get("primary_location") or {}).get("type")),
                 "dynamic_checked_at": bool((card.get("operations") or {}).get("last_verified")),
@@ -1107,7 +1126,7 @@ def build():
         "meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID},
         "crs": "WGS84",
         "epsg": 4326,
-        "primary_coordinate_fields": ["lat", "lon", "elevation_m"],
+        "primary_coordinate_fields": ["lat", "lon", "elevation_m", "elevation_range_m"],
         "fact_provenance": {
             "coordinate_sources": "source_refs",
             "elevation_sources": "elevation_source_refs"
@@ -1118,6 +1137,7 @@ def build():
             "lat_range": [-90, 90],
             "lon_range": [-180, 180],
             "elevation_unit": "metres_above_mean_sea_level",
+            "elevation_range_rule": "Use an authoritative min/max range when a property or landscape has a documented range and one scalar value would create false precision.",
             "unknown_values": "null",
             "no_false_precision": True,
             "large_objects": "Use an operational primary point such as entrance/trailhead/pier and additional geo.points rather than an unexplained geometric centre.",

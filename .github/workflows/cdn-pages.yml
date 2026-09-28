@@ -1,11 +1,12 @@
-name: Validate and deploy CDN
+name: Build, validate and deploy CDN
 
 on:
   push:
     branches: [main]
     paths:
-      - "public/**"
+      - "data/source/**"
       - "scripts/**"
+      - "public/**"
       - ".github/workflows/cdn-pages.yml"
   workflow_dispatch:
 
@@ -15,23 +16,30 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: expedition-cdn-pages
   cancel-in-progress: true
 
 jobs:
-  validate:
+  build-and-validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Validate CDN release
+
+      - name: Build normalized CDN from source
+        run: python scripts/build_cdn.py
+
+      - name: Validate source and generated CDN
         run: python scripts/validate_cdn.py public/cdn/v2
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
@@ -42,7 +50,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: validate
+    needs: build-and-validate
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Chin State / Nat Ma Taung"
+    {
+      "id": "country:mm",
+      "name": "Мьянма",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/myanmar.json"
+    },
+    {
+      "id": "mm:hub:kanpetlet-mindat",
+      "name": "Kanpetlet / Mindat",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/city_or_route_hub/kanpetlet-mindat.json"
+    },
+    {
+      "id": "mm:region:chin-state-nat-ma-taung",
+      "name": "Chin State / Nat Ma Taung",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/region/chin-state-nat-ma-taung.json"
+    }
   ],
   "objects": [
     {
       "id": "mm:nat-ma-taung-mount-victoria",
       "name": "Nat Ma Taung / Mount Victoria",
-      "region": "Chin State / Nat Ma Taung",
+      "geography_ids": [
+        "country:mm",
+        "mm:hub:kanpetlet-mindat",
+        "mm:region:chin-state-nat-ma-taung"
+      ],
+      "region_legacy": "Chin State / Nat Ma Taung",
       "nearest_hub": "Kanpetlet / Mindat",
       "narrow": "Высокогорный Nat Ma Taung в Chin State — ASEAN heritage/biodiversity landscape с эндемичной флорой, горными лесами и Chin cultural context; сейчас объект только для исследования базы.",
       "detail_path": "countries/myanmar/objects/nat-ma-taung-mount-victoria.json"

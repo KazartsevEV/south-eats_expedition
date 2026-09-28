@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Чампасак / Си-Фан-Дон / Болавен"
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:hub:pakse",
+      "name": "Pakse",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/pakse.json"
+    },
+    {
+      "id": "la:region:champasak-si-fan-don-bolaven",
+      "name": "Чампасак / Си-Фан-Дон / Болавен",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/champasak-si-fan-don-bolaven.json"
+    }
   ],
   "objects": [
     {
       "id": "la:si-phan-don-4000-islands",
       "name": "Si Phan Don / 4000 Islands",
-      "region": "Чампасак / Си-Фан-Дон / Болавен",
+      "geography_ids": [
+        "country:la",
+        "la:hub:pakse",
+        "la:region:champasak-si-fan-don-bolaven"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
       "nearest_hub": "Pakse",
       "narrow": "Си-Фан-Дон — расширенная пойма Меконга перед камбоджийской границей, где в сухой сезон проявляются сотни островов, рукавов и песчаных кос. Французская колониальная железная дорога Don Det–Don Khon была инженерным обходом непроходимых порогов и водопадов Меконг.",
       "detail_path": "countries/laos/objects/si-phan-don-4000-islands.json"

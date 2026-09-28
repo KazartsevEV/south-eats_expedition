@@ -22,13 +22,45 @@
   "migration": null,
   "count": 2,
   "geography_filters": [
-    "Yogyakarta / Central Java"
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:yogyakarta",
+      "name": "Yogyakarta",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/yogyakarta.json"
+    },
+    {
+      "id": "id:hub:yogyakarta-magelang",
+      "name": "Yogyakarta / Magelang",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/yogyakarta-magelang.json"
+    },
+    {
+      "id": "id:region:yogyakarta-central-java",
+      "name": "Yogyakarta / Central Java",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/yogyakarta-central-java.json"
+    }
   ],
   "objects": [
     {
       "id": "id:borobudur",
       "name": "Borobudur",
-      "region": "Yogyakarta / Central Java",
+      "geography_ids": [
+        "country:id",
+        "id:hub:yogyakarta-magelang",
+        "id:region:yogyakarta-central-java"
+      ],
+      "region_legacy": "Yogyakarta / Central Java",
       "nearest_hub": "Yogyakarta / Magelang",
       "narrow": "Крупнейший буддийский монумент Индонезии с рельефами, террасами и сильным вулканическим ландшафтом вокруг.",
       "detail_path": "countries/indonesia/objects/borobudur.json"
@@ -36,7 +68,12 @@
     {
       "id": "id:prambanan",
       "name": "Prambanan",
-      "region": "Yogyakarta / Central Java",
+      "geography_ids": [
+        "country:id",
+        "id:hub:yogyakarta",
+        "id:region:yogyakarta-central-java"
+      ],
+      "region_legacy": "Yogyakarta / Central Java",
       "nearest_hub": "Yogyakarta",
       "narrow": "Монументальный индуистский комплекс IX века с острой вертикалью башен; особенно силён в боковом свете и на фоне вулканического неба.",
       "detail_path": "countries/indonesia/objects/prambanan.json"

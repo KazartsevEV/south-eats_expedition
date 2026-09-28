@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Perak / Taiping / Kuala Kangsar / Belum"
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:lenggong-kuala-kangsar-ipoh",
+      "name": "Lenggong / Kuala Kangsar / Ipoh",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/lenggong-kuala-kangsar-ipoh.json"
+    },
+    {
+      "id": "my:region:perak-taiping-kuala-kangsar-belum",
+      "name": "Perak / Taiping / Kuala Kangsar / Belum",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/perak-taiping-kuala-kangsar-belum.json"
+    }
   ],
   "objects": [
     {
       "id": "my:lenggong-valley-archaeological-landscape",
       "name": "Lenggong Valley archaeological landscape",
-      "region": "Perak / Taiping / Kuala Kangsar / Belum",
+      "geography_ids": [
+        "country:my",
+        "my:hub:lenggong-kuala-kangsar-ipoh",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
       "nearest_hub": "Lenggong / Kuala Kangsar / Ipoh",
       "narrow": "Один из ключевых доисторических ландшафтов ЮВА: почти двухмиллионная последовательность человеческого присутствия, Perak Man, палеолитические мастерские, пещеры и геология долины.",
       "detail_path": "countries/malaysia/objects/lenggong-valley-archaeological-landscape.json"

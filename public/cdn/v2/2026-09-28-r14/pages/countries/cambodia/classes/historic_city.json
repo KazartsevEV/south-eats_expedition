@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Battambang"
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:hub:battambang",
+      "name": "Battambang",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/city_or_route_hub/battambang.json"
+    },
+    {
+      "id": "kh:region:battambang",
+      "name": "Battambang",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/region/battambang.json"
+    }
   ],
   "objects": [
     {
       "id": "kh:battambang-historic-shophouses",
       "name": "Battambang historic shophouses",
-      "region": "Battambang",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:battambang",
+        "kh:region:battambang"
+      ],
+      "region_legacy": "Battambang",
       "nearest_hub": "Battambang",
       "narrow": "Исторический центр Battambang — не единый “французский квартал”, а несколько слоёв: период тайских наследственные губернаторы, французская модернизация после 1907 года и архитектура независимой Камбоджа 1950–1970-х.",
       "detail_path": "countries/cambodia/objects/battambang-historic-shophouses.json"

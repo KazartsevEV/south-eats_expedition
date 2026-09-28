@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Phnom Penh"
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:hub:phnom-penh",
+      "name": "Phnom Penh",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/city_or_route_hub/phnom-penh.json"
+    },
+    {
+      "id": "kh:region:phnom-penh",
+      "name": "Phnom Penh",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/region/phnom-penh.json"
+    }
   ],
   "objects": [
     {
       "id": "kh:oudong",
       "name": "Oudong",
-      "region": "Phnom Penh",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:phnom-penh",
+        "kh:region:phnom-penh"
+      ],
+      "region_legacy": "Phnom Penh",
       "nearest_hub": "Phnom Penh",
       "narrow": "Oudong был королевской столицей Камбоджа с начала XVII до XIX века и располагался между священной горой и водным путём Тонлесап — типовая для кхмерских столиц связка горы, воды и политического центра.",
       "detail_path": "countries/cambodia/objects/oudong.json"

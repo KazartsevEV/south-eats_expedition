@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Sumba / East Nusa Tenggara"
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:tambolaka-waingapu",
+      "name": "Tambolaka / Waingapu",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/tambolaka-waingapu.json"
+    },
+    {
+      "id": "id:region:sumba-east-nusa-tenggara",
+      "name": "Sumba / East Nusa Tenggara",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/sumba-east-nusa-tenggara.json"
+    }
   ],
   "objects": [
     {
       "id": "id:sumba-megalithic-villages",
       "name": "Sumba megalithic villages",
-      "region": "Sumba / East Nusa Tenggara",
+      "geography_ids": [
+        "country:id",
+        "id:hub:tambolaka-waingapu",
+        "id:region:sumba-east-nusa-tenggara"
+      ],
+      "region_legacy": "Sumba / East Nusa Tenggara",
       "nearest_hub": "Tambolaka / Waingapu",
       "narrow": "Сеть традиционных деревень Sumba с высокими соломенными домами, мегалитическими гробницами, Marapu и ikat; один из самых визуально цельных культурных ландшафтов региона.",
       "detail_path": "countries/indonesia/objects/sumba-megalithic-villages.json"

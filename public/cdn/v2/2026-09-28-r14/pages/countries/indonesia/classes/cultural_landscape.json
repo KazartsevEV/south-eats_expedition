@@ -22,14 +22,52 @@
   "migration": null,
   "count": 2,
   "geography_filters": [
-    "Bali",
-    "Toraja / South Sulawesi"
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:denpasar-ubud",
+      "name": "Denpasar / Ubud",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/denpasar-ubud.json"
+    },
+    {
+      "id": "id:hub:rantepao-makale",
+      "name": "Rantepao / Makale",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/rantepao-makale.json"
+    },
+    {
+      "id": "id:region:bali",
+      "name": "Bali",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/bali.json"
+    },
+    {
+      "id": "id:region:toraja-south-sulawesi",
+      "name": "Toraja / South Sulawesi",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/toraja-south-sulawesi.json"
+    }
   ],
   "objects": [
     {
       "id": "id:bali-temple-landscapes",
       "name": "Bali temple landscapes",
-      "region": "Bali",
+      "geography_ids": [
+        "country:id",
+        "id:hub:denpasar-ubud",
+        "id:region:bali"
+      ],
+      "region_legacy": "Bali",
       "nearest_hub": "Denpasar / Ubud",
       "narrow": "Храмы в вулканическом, рисовом и прибрежном ландшафте; важен именно как живая ритуальная система, а не набор фототочек.",
       "detail_path": "countries/indonesia/objects/bali-temple-landscapes.json"
@@ -37,7 +75,12 @@
     {
       "id": "id:tana-toraja-hinterland",
       "name": "Tana Toraja hinterland",
-      "region": "Toraja / South Sulawesi",
+      "geography_ids": [
+        "country:id",
+        "id:hub:rantepao-makale",
+        "id:region:toraja-south-sulawesi"
+      ],
+      "region_legacy": "Toraja / South Sulawesi",
       "nearest_hub": "Rantepao / Makale",
       "narrow": "Tongkonan, rice terraces, cliff/burial landscapes and ritual life form one of Indonesia’s most distinctive cultural landscapes.",
       "detail_path": "countries/indonesia/objects/tana-toraja-hinterland.json"

@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Tonle Sap"
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:hub:siemreap-pursat-kampongchnang",
+      "name": "Сиемреап / Пурсат / Кампонгчнанг",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/city_or_route_hub/siemreap-pursat-kampongchnang.json"
+    },
+    {
+      "id": "kh:region:tonle-sap",
+      "name": "Tonle Sap",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/region/tonle-sap.json"
+    }
   ],
   "objects": [
     {
       "id": "kh:tonle-sap-biosphere-reserve",
       "name": "Tonle Sap Biosphere Reserve",
-      "region": "Tonle Sap",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:siemreap-pursat-kampongchnang",
+        "kh:region:tonle-sap"
+      ],
+      "region_legacy": "Tonle Sap",
       "nearest_hub": "Сиемреап / Пурсат / Кампонгчнанг",
       "narrow": "Тонлесап — сезонно пульсирующая система озера, реки и затопляемого леса: площадь и глубина резко меняются между сухим и дождливым сезонами из-за разворота течения Тонлесап река.",
       "detail_path": "countries/cambodia/objects/tonle-sap-biosphere-reserve.json"

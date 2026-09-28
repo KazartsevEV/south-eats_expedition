@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Vientiane Capital"
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:hub:vientiane",
+      "name": "Vientiane",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/vientiane.json"
+    },
+    {
+      "id": "la:region:vientiane-capital",
+      "name": "Vientiane Capital",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/vientiane-capital.json"
+    }
   ],
   "objects": [
     {
       "id": "la:vientiane-sacred-architecture",
       "name": "Vientiane sacred architecture",
-      "region": "Vientiane Capital",
+      "geography_ids": [
+        "country:la",
+        "la:hub:vientiane",
+        "la:region:vientiane-capital"
+      ],
+      "region_legacy": "Vientiane Capital",
       "nearest_hub": "Vientiane",
       "narrow": "Сакральная архитектура Вьентьян читается как система: Pha That Luang — государственно-буддийский символ, Wat Si Saket — редкий уцелевший ранне-XIX-вековый храм, Wat Ho Phra Keo — бывшая королевская святыня, Wat Si Muang — активный городской центр обетов и защитных культов.",
       "detail_path": "countries/laos/objects/vientiane-sacred-architecture.json"

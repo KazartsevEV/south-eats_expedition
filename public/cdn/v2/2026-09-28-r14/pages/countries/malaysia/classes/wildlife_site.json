@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Sandakan / Sepilok"
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:sandakan",
+      "name": "Sandakan",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/sandakan.json"
+    },
+    {
+      "id": "my:region:sandakan-sepilok",
+      "name": "Sandakan / Sepilok",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/sandakan-sepilok.json"
+    }
   ],
   "objects": [
     {
       "id": "my:sepilok-orangutan-rehabilitation-centre",
       "name": "Sepilok Orangutan Rehabilitation Centre",
-      "region": "Sandakan / Sepilok",
+      "geography_ids": [
+        "country:my",
+        "my:hub:sandakan",
+        "my:region:sandakan-sepilok"
+      ],
+      "region_legacy": "Sandakan / Sepilok",
       "nearest_hub": "Sandakan",
       "narrow": "Классический rehabilitation-site для orangutan внутри Kabili-Sepilok Forest Reserve: хороший wildlife-контент с сильным conservation narrative и предсказуемой visitor infrastructure.",
       "detail_path": "countries/malaysia/objects/sepilok-orangutan-rehabilitation-centre.json"

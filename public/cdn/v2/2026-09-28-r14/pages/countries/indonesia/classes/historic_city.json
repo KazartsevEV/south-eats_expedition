@@ -22,14 +22,52 @@
   "migration": null,
   "count": 2,
   "geography_filters": [
-    "Maluku / Banda",
-    "Yogyakarta / Central Java"
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:banda-neira",
+      "name": "Banda Neira",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/banda-neira.json"
+    },
+    {
+      "id": "id:hub:semarang-rembang",
+      "name": "Semarang / Rembang",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/semarang-rembang.json"
+    },
+    {
+      "id": "id:region:maluku-banda",
+      "name": "Maluku / Banda",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/maluku-banda.json"
+    },
+    {
+      "id": "id:region:yogyakarta-central-java",
+      "name": "Yogyakarta / Central Java",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/yogyakarta-central-java.json"
+    }
   ],
   "objects": [
     {
       "id": "id:banda-neira",
       "name": "Banda Neira",
-      "region": "Maluku / Banda",
+      "geography_ids": [
+        "country:id",
+        "id:hub:banda-neira",
+        "id:region:maluku-banda"
+      ],
+      "region_legacy": "Maluku / Banda",
       "nearest_hub": "Banda Neira",
       "narrow": "Мировой центр исторической торговли мускатным орехом: Fort Belgica, colonial houses, spice plantations и Gunung Api в маленьком архипелаге.",
       "detail_path": "countries/indonesia/objects/banda-neira.json"
@@ -37,7 +75,12 @@
     {
       "id": "id:lasem",
       "name": "Lasem",
-      "region": "Yogyakarta / Central Java",
+      "geography_ids": [
+        "country:id",
+        "id:hub:semarang-rembang",
+        "id:region:yogyakarta-central-java"
+      ],
+      "region_legacy": "Yogyakarta / Central Java",
       "nearest_hub": "Semarang / Rembang",
       "narrow": "Редкий китайско-яванский старый город: klenteng, shophouses, courtyards и distinctive red batik вне массового маршрута.",
       "detail_path": "countries/indonesia/objects/lasem.json"

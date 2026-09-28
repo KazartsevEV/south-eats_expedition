@@ -22,16 +22,80 @@
   "migration": null,
   "count": 4,
   "geography_filters": [
-    "Bagan / central dry zone",
-    "Pyu ancient cities / Bago-Magway belt",
-    "Rakhine / Mrauk U",
-    "Shan State / Inle / Kakku"
+    {
+      "id": "country:mm",
+      "name": "Мьянма",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/myanmar.json"
+    },
+    {
+      "id": "mm:hub:bago-pyay",
+      "name": "Bago / Pyay",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/city_or_route_hub/bago-pyay.json"
+    },
+    {
+      "id": "mm:hub:nyaung-u-bagan",
+      "name": "Nyaung-U / Bagan",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/city_or_route_hub/nyaung-u-bagan.json"
+    },
+    {
+      "id": "mm:hub:nyaungshwe-taunggyi",
+      "name": "Nyaungshwe / Taunggyi",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/city_or_route_hub/nyaungshwe-taunggyi.json"
+    },
+    {
+      "id": "mm:hub:sittwe-mrauk-u",
+      "name": "Sittwe / Mrauk U",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/city_or_route_hub/sittwe-mrauk-u.json"
+    },
+    {
+      "id": "mm:region:bagan-central-dry-zone",
+      "name": "Bagan / central dry zone",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/region/bagan-central-dry-zone.json"
+    },
+    {
+      "id": "mm:region:pyu-ancient-cities-bago-magway-belt",
+      "name": "Pyu ancient cities / Bago-Magway belt",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/region/pyu-ancient-cities-bago-magway-belt.json"
+    },
+    {
+      "id": "mm:region:rakhine-mrauk-u",
+      "name": "Rakhine / Mrauk U",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/region/rakhine-mrauk-u.json"
+    },
+    {
+      "id": "mm:region:shan-state-inle-kakku",
+      "name": "Shan State / Inle / Kakku",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/myanmar/region/shan-state-inle-kakku.json"
+    }
   ],
   "objects": [
     {
       "id": "mm:bagan",
       "name": "Bagan",
-      "region": "Bagan / central dry zone",
+      "geography_ids": [
+        "country:mm",
+        "mm:hub:nyaung-u-bagan",
+        "mm:region:bagan-central-dry-zone"
+      ],
+      "region_legacy": "Bagan / central dry zone",
       "nearest_hub": "Nyaung-U / Bagan",
       "narrow": "Bagan — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
       "detail_path": "countries/myanmar/objects/bagan.json"
@@ -39,7 +103,12 @@
     {
       "id": "mm:mrauk-u",
       "name": "Mrauk U",
-      "region": "Rakhine / Mrauk U",
+      "geography_ids": [
+        "country:mm",
+        "mm:hub:sittwe-mrauk-u",
+        "mm:region:rakhine-mrauk-u"
+      ],
+      "region_legacy": "Rakhine / Mrauk U",
       "nearest_hub": "Sittwe / Mrauk U",
       "narrow": "Mrauk U — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
       "detail_path": "countries/myanmar/objects/mrauk-u.json"
@@ -47,7 +116,12 @@
     {
       "id": "mm:pyu-ancient-cities",
       "name": "Pyu Ancient Cities",
-      "region": "Pyu ancient cities / Bago-Magway belt",
+      "geography_ids": [
+        "country:mm",
+        "mm:hub:bago-pyay",
+        "mm:region:pyu-ancient-cities-bago-magway-belt"
+      ],
+      "region_legacy": "Pyu ancient cities / Bago-Magway belt",
       "nearest_hub": "Bago / Pyay",
       "narrow": "Pyu Ancient Cities — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
       "detail_path": "countries/myanmar/objects/pyu-ancient-cities.json"
@@ -55,7 +129,12 @@
     {
       "id": "mm:kakku-pagodas",
       "name": "Kakku Pagodas",
-      "region": "Shan State / Inle / Kakku",
+      "geography_ids": [
+        "country:mm",
+        "mm:hub:nyaungshwe-taunggyi",
+        "mm:region:shan-state-inle-kakku"
+      ],
+      "region_legacy": "Shan State / Inle / Kakku",
       "nearest_hub": "Nyaungshwe / Taunggyi",
       "narrow": "Kakku Pagodas — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
       "detail_path": "countries/myanmar/objects/kakku-pagodas.json"

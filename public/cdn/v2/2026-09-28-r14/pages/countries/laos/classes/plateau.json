@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Чампасак / Си-Фан-Дон / Болавен"
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:hub:pakse",
+      "name": "Pakse",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/pakse.json"
+    },
+    {
+      "id": "la:region:champasak-si-fan-don-bolaven",
+      "name": "Чампасак / Си-Фан-Дон / Болавен",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/champasak-si-fan-don-bolaven.json"
+    }
   ],
   "objects": [
     {
       "id": "la:bolaven-plateau",
       "name": "Bolaven Plateau",
-      "region": "Чампасак / Си-Фан-Дон / Болавен",
+      "geography_ids": [
+        "country:la",
+        "la:hub:pakse",
+        "la:region:champasak-si-fan-don-bolaven"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
       "nearest_hub": "Pakse",
       "narrow": "плато Болавен — приподнятое вулканическое плато к востоку от Паксе, известное более прохладным влажным климатом, водопадами и кофейными плантациями. Французское коммерческое кофейное наследие наложилось на земли Mon-кхмерский народов, включая Laven, Katu и Alak.",
       "detail_path": "countries/laos/objects/bolaven-plateau.json"

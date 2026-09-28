@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Kuala Lumpur / Klang Valley"
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:kuala-lumpur-gombak",
+      "name": "Kuala Lumpur / Gombak",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/kuala-lumpur-gombak.json"
+    },
+    {
+      "id": "my:region:kuala-lumpur-klang-valley",
+      "name": "Kuala Lumpur / Klang Valley",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/kuala-lumpur-klang-valley.json"
+    }
   ],
   "objects": [
     {
       "id": "my:batu-caves",
       "name": "Batu Caves",
-      "region": "Kuala Lumpur / Klang Valley",
+      "geography_ids": [
+        "country:my",
+        "my:hub:kuala-lumpur-gombak",
+        "my:region:kuala-lumpur-klang-valley"
+      ],
+      "region_legacy": "Kuala Lumpur / Klang Valley",
       "nearest_hub": "Kuala Lumpur / Gombak",
       "narrow": "Монументальная Hindu cave-temple композиция в известняковом массиве с 272 цветными ступенями и 43-метровым Murugan — один из самых сильных архитектурно-культурных кадров Klang Valley.",
       "detail_path": "countries/malaysia/objects/batu-caves.json"

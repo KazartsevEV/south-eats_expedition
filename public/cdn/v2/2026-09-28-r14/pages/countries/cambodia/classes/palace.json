@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Phnom Penh"
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:hub:phnom-penh",
+      "name": "Phnom Penh",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/city_or_route_hub/phnom-penh.json"
+    },
+    {
+      "id": "kh:region:phnom-penh",
+      "name": "Phnom Penh",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/region/phnom-penh.json"
+    }
   ],
   "objects": [
     {
       "id": "kh:royal-palace-phnom-penh",
       "name": "Royal Palace Phnom Penh",
-      "region": "Phnom Penh",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:phnom-penh",
+        "kh:region:phnom-penh"
+      ],
+      "region_legacy": "Phnom Penh",
       "nearest_hub": "Phnom Penh",
       "narrow": "Королевский дворец формирует политический и церемониальный центр Пномпень после переноса столицы из Oudong в XIX веке. Комплекс — действующая королевская резиденция, поэтому туристический доступ подчинён государственным церемониям, а не музейному расписанию.",
       "detail_path": "countries/cambodia/objects/royal-palace-phnom-penh.json"

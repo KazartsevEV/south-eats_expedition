@@ -28,13 +28,38 @@
   },
   "count": 1,
   "geography_filters": [
-    "Kudat / Rungus north Sabah"
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:kudat-kota-kinabalu",
+      "name": "Kudat / Kota Kinabalu",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/kudat-kota-kinabalu.json"
+    },
+    {
+      "id": "my:region:kudat-rungus-north-sabah",
+      "name": "Kudat / Rungus north Sabah",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/kudat-rungus-north-sabah.json"
+    }
   ],
   "objects": [
     {
       "id": "my:kampung-bavanggazo-rungus-longhouse",
       "name": "Kampung Bavanggazo / Rungus longhouse",
-      "region": "Kudat / Rungus north Sabah",
+      "geography_ids": [
+        "country:my",
+        "my:hub:kudat-kota-kinabalu",
+        "my:region:kudat-rungus-north-sabah"
+      ],
+      "region_legacy": "Kudat / Rungus north Sabah",
       "nearest_hub": "Kudat / Kota Kinabalu",
       "narrow": "Живой Rungus longhouse с коллективной архитектурой, bead/gong traditions и возможностью ночёвки — сильный контрапункт городскому Sabah.",
       "detail_path": "countries/malaysia/objects/kampung-bavanggazo-rungus-longhouse.json"

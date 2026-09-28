@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Perak / Taiping / Kuala Kangsar / Belum"
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:ipoh-taiping-gerik",
+      "name": "Ipoh / Taiping / Gerik",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/ipoh-taiping-gerik.json"
+    },
+    {
+      "id": "my:region:perak-taiping-kuala-kangsar-belum",
+      "name": "Perak / Taiping / Kuala Kangsar / Belum",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/perak-taiping-kuala-kangsar-belum.json"
+    }
   ],
   "objects": [
     {
       "id": "my:kellie-s-castle",
       "name": "Kellie's Castle",
-      "region": "Perak / Taiping / Kuala Kangsar / Belum",
+      "geography_ids": [
+        "country:my",
+        "my:hub:ipoh-taiping-gerik",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
       "nearest_hub": "Ipoh / Taiping / Gerik",
       "narrow": "Kellie's Castle — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
       "detail_path": "countries/malaysia/objects/kellie-s-castle.json"

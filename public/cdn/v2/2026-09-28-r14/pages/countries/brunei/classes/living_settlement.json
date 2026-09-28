@@ -28,14 +28,45 @@
   },
   "count": 3,
   "geography_filters": [
-    "Бандар-Сери-Бегаван / Бруней-Муара",
-    "Белайт / Сериа / Лаби"
+    {
+      "id": "bn:district:belait",
+      "name": "Белайт",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/belait.json"
+    },
+    {
+      "id": "bn:district:brunei-muara",
+      "name": "Бруней-Муара",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/brunei-muara.json"
+    },
+    {
+      "id": "bn:geographic-area:kampong-ayer",
+      "name": "Кампонг-Айер",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "page_path": "pages/geography/brunei/geographic_area/kampong-ayer.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
   ],
   "objects": [
     {
       "id": "bn:kampong-ayer",
       "name": "Kampong Ayer",
-      "region": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "geography_ids": [
+        "bn:district:brunei-muara",
+        "bn:geographic-area:kampong-ayer",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
       "nearest_hub": "набережная Бандар-Сери-Бегавана",
       "narrow": "Кампонг-Айер — сеть водных деревень на сваях вдоль Бруней река. Европейские путешественники описывали огромный водный город здесь уже в XVI веке; сегодня это жилые кварталы со школами, мечетями, пожарной и полицейской инфраструктурой.",
       "detail_path": "countries/brunei/objects/kampong-ayer.json"
@@ -43,7 +74,11 @@
     {
       "id": "bn:teraja-longhouse",
       "name": "Teraja Longhouse",
-      "region": "Белайт / Сериа / Лаби",
+      "geography_ids": [
+        "bn:district:belait",
+        "country:bn"
+      ],
+      "region_legacy": "Белайт / Сериа / Лаби",
       "nearest_hub": "Kuala Belait / Seria",
       "narrow": "Ибанская длинный дом-община в районе Лаби, где общая галерея ruai соединяет семейные секции и служит общественным пространством.",
       "detail_path": "countries/brunei/objects/teraja-longhouse.json"
@@ -51,7 +86,11 @@
     {
       "id": "bn:mendaram-besar-longhouse",
       "name": "Mendaram Besar Longhouse",
-      "region": "Белайт / Сериа / Лаби",
+      "geography_ids": [
+        "bn:district:belait",
+        "country:bn"
+      ],
+      "region_legacy": "Белайт / Сериа / Лаби",
       "nearest_hub": "Kuala Belait / Seria",
       "narrow": "длинный дом-община внутреннего Белайт, где съёмочный акцент лучше делать на материальной культуре: плетении, тканях, приготовлении пищи, семейной секции и общей галерее.",
       "detail_path": "countries/brunei/objects/mendaram-besar-longhouse.json"

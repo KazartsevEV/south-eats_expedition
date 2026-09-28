@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Kuala Lumpur / Klang Valley"
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:kuala-lumpur",
+      "name": "Kuala Lumpur",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/kuala-lumpur.json"
+    },
+    {
+      "id": "my:region:kuala-lumpur-klang-valley",
+      "name": "Kuala Lumpur / Klang Valley",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/kuala-lumpur-klang-valley.json"
+    }
   ],
   "objects": [
     {
       "id": "my:kuala-lumpur",
       "name": "Kuala Lumpur",
-      "region": "Kuala Lumpur / Klang Valley",
+      "geography_ids": [
+        "country:my",
+        "my:hub:kuala-lumpur",
+        "my:region:kuala-lumpur-klang-valley"
+      ],
+      "region_legacy": "Kuala Lumpur / Klang Valley",
       "nearest_hub": "Kuala Lumpur",
       "narrow": "Kuala Lumpur — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
       "detail_path": "countries/malaysia/objects/kuala-lumpur.json"

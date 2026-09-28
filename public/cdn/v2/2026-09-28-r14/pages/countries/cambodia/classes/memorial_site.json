@@ -22,13 +22,38 @@
   "migration": null,
   "count": 1,
   "geography_filters": [
-    "Phnom Penh"
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:hub:phnom-penh",
+      "name": "Phnom Penh",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/city_or_route_hub/phnom-penh.json"
+    },
+    {
+      "id": "kh:region:phnom-penh",
+      "name": "Phnom Penh",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/region/phnom-penh.json"
+    }
   ],
   "objects": [
     {
       "id": "kh:choeung-ek",
       "name": "Choeung Ek",
-      "region": "Phnom Penh",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:phnom-penh",
+        "kh:region:phnom-penh"
+      ],
+      "region_legacy": "Phnom Penh",
       "nearest_hub": "Phnom Penh",
       "narrow": "Choeung Ek — мемориальный комплекс на месте одного из массовых захоронений, куда заключённых S-21 вывозили из Пномпень. Сегодня пространство организовано вокруг памятной ступы, дорожки по территории бывших захоронений и интерпретации преступлений красные кхмеры.",
       "detail_path": "countries/cambodia/objects/choeung-ek.json"

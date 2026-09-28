@@ -32,13 +32,30 @@
   },
   "count": 1,
   "geography_filters": [
-    "Бандар-Сери-Бегаван / Бруней-Муара"
+    {
+      "id": "bn:district:brunei-muara",
+      "name": "Бруней-Муара",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/brunei-muara.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
   ],
   "objects": [
     {
       "id": "bn:berakas-forest-recreational-park",
       "name": "Berakas Forest Recreational Park",
-      "region": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "geography_ids": [
+        "bn:district:brunei-muara",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
       "nearest_hub": "Бандар-Сери-Бегаван / Беракас",
       "narrow": "Прибрежный рекреационный парк, где тёмный лес резко открывается к светлому берегу Южно-Китайского моря. Интереснее переход между средами, чем отдельная 'достопримечательность'.",
       "detail_path": "countries/brunei/objects/berakas-forest-recreational-park.json"

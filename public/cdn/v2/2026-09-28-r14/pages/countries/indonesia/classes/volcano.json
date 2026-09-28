@@ -22,13 +22,45 @@
   "migration": null,
   "count": 2,
   "geography_filters": [
-    "East Java"
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:banyuwangi-bondowoso",
+      "name": "Banyuwangi / Bondowoso",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/banyuwangi-bondowoso.json"
+    },
+    {
+      "id": "id:hub:malang-probolinggo",
+      "name": "Malang / Probolinggo",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/malang-probolinggo.json"
+    },
+    {
+      "id": "id:region:east-java",
+      "name": "East Java",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/east-java.json"
+    }
   ],
   "objects": [
     {
       "id": "id:bromo-tengger-semeru",
       "name": "Bromo-Tengger-Semeru",
-      "region": "East Java",
+      "geography_ids": [
+        "country:id",
+        "id:hub:malang-probolinggo",
+        "id:region:east-java"
+      ],
+      "region_legacy": "East Java",
       "nearest_hub": "Malang / Probolinggo",
       "narrow": "Кальдера Tengger, Mount Bromo, sea of sand и действующий Semeru создают один из сильнейших вулканических кадров Индонезии.",
       "detail_path": "countries/indonesia/objects/bromo-tengger-semeru.json"
@@ -36,7 +68,12 @@
     {
       "id": "id:ijen",
       "name": "Ijen",
-      "region": "East Java",
+      "geography_ids": [
+        "country:id",
+        "id:hub:banyuwangi-bondowoso",
+        "id:region:east-java"
+      ],
+      "region_legacy": "East Java",
       "nearest_hub": "Banyuwangi / Bondowoso",
       "narrow": "Кислотное кратерное озеро, серные шахтёры и вулканическая индустриальная среда; визуально сильный, но физически и газово рискованный объект.",
       "detail_path": "countries/indonesia/objects/ijen.json"

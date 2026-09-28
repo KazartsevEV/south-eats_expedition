@@ -28,13 +28,38 @@
   },
   "count": 1,
   "geography_filters": [
-    "Flores / Komodo"
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:hub:labuan-bajo-ruteng-denge",
+      "name": "Labuan Bajo / Ruteng / Denge",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/city_or_route_hub/labuan-bajo-ruteng-denge.json"
+    },
+    {
+      "id": "id:region:flores-komodo",
+      "name": "Flores / Komodo",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/indonesia/region/flores-komodo.json"
+    }
   ],
   "objects": [
     {
       "id": "id:wae-rebo",
       "name": "Wae Rebo",
-      "region": "Flores / Komodo",
+      "geography_ids": [
+        "country:id",
+        "id:hub:labuan-bajo-ruteng-denge",
+        "id:region:flores-komodo"
+      ],
+      "region_legacy": "Flores / Komodo",
       "nearest_hub": "Labuan Bajo / Ruteng / Denge",
       "narrow": "Изолированная горная деревня Manggarai с семью конусными Mbaru Niang; сильный объект живой архитектуры, community heritage и пешего сюжета.",
       "detail_path": "countries/indonesia/objects/wae-rebo.json"

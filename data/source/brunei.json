@@ -55,7 +55,7 @@
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
-      "objects_with_verified_elevation": 10,
+      "objects_with_verified_elevation": 12,
       "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas and variable river departures are explicitly approximate"
     },
     "elevation_provenance_upgrade": {
@@ -2153,17 +2153,26 @@
             "coordinates": {
               "lat": 4.80379,
               "lon": 114.65642,
-              "elevation_m": null
+              "elevation_m": 7
             },
             "coordinate_type": "entrance",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Mapcarta / OpenStreetMap",
               "url": "https://mapcarta.com/W518214658",
               "basis": "Pasar Malam Pekan Tutong marketplace"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "SRTM30m elevation samples for Brunei market entrances",
+              "publisher": "OpenTopoData / SRTM",
+              "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.80379%2C114.65642%7C4.89041%2C114.94503",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "SRTM30m sample at the exact canonical entrance GPS point. Approximate surface elevation from a ~30 m raster; not a surveyed threshold elevation."
+            }
           },
           "logistics": {
             "access": "По шоссе из BSB/Сериа; в городе пешком или Dart.",
@@ -4315,17 +4324,26 @@
             "coordinates": {
               "lat": 4.89041,
               "lon": 114.94503,
-              "elevation_m": null
+              "elevation_m": 9
             },
             "coordinate_type": "entrance",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Mapcarta / OpenStreetMap",
               "url": "https://mapcarta.com/W431333374",
               "basis": "marketplace feature coordinate"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "SRTM30m elevation samples for Brunei market entrances",
+              "publisher": "OpenTopoData / SRTM",
+              "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.80379%2C114.65642%7C4.89041%2C114.94503",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "SRTM30m sample at the exact canonical entrance GPS point. Approximate surface elevation from a ~30 m raster; not a surveyed threshold elevation."
+            }
           },
           "logistics": {
             "access": "В центре BSB у Kianggeh река; пешком из центральной части, Dart или городской автобус.",

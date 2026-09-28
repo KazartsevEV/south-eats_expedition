@@ -3,12 +3,13 @@
     "schema_version": "2.3.2",
     "release_id": "2026-09-28-r10",
     "page_type": "geography",
-    "id": "bn:hub:bangar"
+    "id": "bn:district:temburong"
   },
   "identity": {
-    "name": "Bangar",
-    "kind": "city_or_route_hub",
-    "slug": "bangar",
+    "name": "Тембуронг",
+    "name_local": "Daerah Temburong",
+    "kind": "district",
+    "slug": "temburong",
     "country_code": "BN"
   },
   "layout": "geography",
@@ -16,13 +17,11 @@
     "id": "country:bn",
     "page_path": "pages/countries/brunei.json"
   },
-  "source_profile": {
-    "id": "bn:hub:bangar",
-    "kind": "city_or_route_hub",
-    "name": "Bangar",
-    "slug": "bangar"
-  },
-  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "hierarchy_status": "formalized",
+  "children": [],
+  "legacy_region_names": [
+    "Temburong"
+  ],
   "class_counts": [
     {
       "object_type": "national_park",
@@ -38,5 +37,27 @@
       "narrow": "Главный охраняемый дождевой лес Брунея и наиболее сильный контраст нефтегазовой экономике страны. Туристический доступ построен вокруг реки, лесной тропы и башня над пологом леса над верхним ярусом тропического леса.",
       "detail_path": "countries/brunei/objects/ulu-temburong-national-park.json"
     }
-  ]
+  ],
+  "provenance": {
+    "sources": [
+      {
+        "url": "https://www.moha.gov.bn/perkhidmatan-hal-ehwal-daerah/",
+        "publisher": "Ministry of Home Affairs, Brunei Darussalam",
+        "used_for": [
+          "four district offices",
+          "official district names"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      {
+        "url": "https://www.jpbd.gov.bn/buku-garispanduan-dan-master-plan/",
+        "publisher": "Department of Town and Country Planning, Brunei Darussalam",
+        "used_for": [
+          "district-level planning structure"
+        ],
+        "checked_at": "2026-09-28"
+      }
+    ],
+    "checked_at": "2026-09-28"
+  }
 }

@@ -50,24 +50,20 @@
     "geodata_upgrade_progress": {
       "schema_target": "2.10.8",
       "updated": "2026-09-28",
-      "completed_objects": 14,
+      "completed_objects": 18,
       "total_objects": 19,
-      "current_chunk": "operational_geodata_round_1",
+      "current_chunk": "operational_geodata_round_2",
       "remaining_objects": [
-        "Vieng Xai caves",
-        "Savannakhet old quarter",
-        "Nam Et-Phou Louey area",
-        "Nam Ha National Protected Area",
         "Old Thakhek Town"
       ],
-      "policy": "WGS84/EPSG:4326; broad objects use an explicit operational or component anchor and notes that prevent it being mistaken for a geometric centre. No settlement coordinate is substituted for a missing attraction coordinate."
+      "policy": "WGS84/EPSG:4326; broad objects use explicit operational/component anchors. Town centers are not substituted for missing attraction access points; unresolved geometry stays null."
     },
     "visual_recon_upgrade_progress": {
       "schema_target": "2.10.8",
       "updated": "2026-09-28",
-      "completed_objects": 9,
+      "completed_objects": 11,
       "total_objects": 19,
-      "current_chunk": "georeferenced_viewpoints_round_1",
+      "current_chunk": "georeferenced_viewpoints_round_2",
       "policy": "откуда + когда, если подтверждено + что видно + класс техники по геометрии; без ISO/выдержки/диафрагмы/shot list"
     },
     "country_source_normalization": {
@@ -2283,7 +2279,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 20.40181,
+              "lon": 104.22729,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Viengxay Caves Visitor Centre & Tickets",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/W1125189070",
+              "notes": "OSM way 1125189070. Indexed source exposes longitude 104.22729 and full Open Location Code 7PG6C62G+PW; the latitude 20.40181 is the decoded centre of that full code. Treated as medium accuracy, not a survey coordinate.",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Viengxay находится примерно в 30 км от Sam Neua; до Sam Neua — дорога or flight to Nong Khang airport, затем наземный трансфер. По пещерам — visitor-centre основанный тур/аудиогид тур.",
@@ -2335,7 +2349,50 @@
             "video_suitability_5": 5,
             "best_light": "долины — утро/вечер; внутри пещер нужна светосильная оптика и работа в слабом свете по правилам объекта",
             "drone": "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска.",
-            "filming_restrictions": "Уточнять фото/видео-политику у визит-центр; не снимать restricted/официальный areas и не заходить в закрытые cavities ради кадра."
+            "filming_restrictions": "Уточнять фото/видео-политику у визит-центр; не снимать restricted/официальный areas и не заходить в закрытые cavities ради кадра.",
+            "visual_scouting": {
+              "best_time": null,
+              "best_weather_light": null,
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "phou_nang_viewpoint",
+                  "name": "Phou Nang Viewpoint",
+                  "description": "Размеченная обзорная точка над Вьенгсай, рядом с туристическим ядром пещерного комплекса.",
+                  "coordinates": {
+                    "lat": 20.41067,
+                    "lon": 104.22845,
+                    "elevation_m": null
+                  },
+                  "view": {
+                    "description": "карстовая долина Вьенгсай и район бывшего пещерного штаба"
+                  },
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает долину и известняковые стены одним планом"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "позволяет выделять отдельные скальные массивы и детали поселения"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Phou Nang Viewpoint",
+                    "publisher": "Mapcarta / OpenStreetMap",
+                    "url": "https://mapcarta.com/N6822221988",
+                    "notes": "OSM tourism=viewpoint above Vieng Xai; mapped near the Caves Visitor Centre.",
+                    "authority": "high",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [],
+              "useful_equipment": []
+            }
           },
           "annotation": {
             "narrative": "Пещерный комплекс Вьенгсай — политико-военный ландшафт Pathet Lao периода интенсивных бомбардировок 1960–1970-х. В известняковых полостях размещались штабы, жилые помещения, госпиталь и инфраструктура, образуя фактически скрытый город.",
@@ -2794,7 +2851,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 16.557,
+              "lon": 104.7486,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "St. Teresa's Catholic Church, Savannakhet",
+              "publisher": "Wikimedia Commons / Wikidata",
+              "url": "https://commons.wikimedia.org/wiki/Category:St._Teresa%27s_Catholic_Church,_Savannakhet",
+              "notes": "Commons gives 16°33′25.2″N 104°44′54.96″E. Tourism Laos identifies St Theresa's Church and nearby colonial shophouses as principal French-colonial architecture in Savannakhet. Used as a historic-core anchor, not as a geometric centroid.",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Удобнее всего из Саваннакхет; объект/район исследуется пешком с локальным общественным транспортом или сервис заказа такси для подброски.",
@@ -2843,7 +2918,50 @@
             "video_suitability_5": 4,
             "best_light": "утро и поздний день",
             "drone": "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска.",
-            "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие."
+            "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие.",
+            "visual_scouting": {
+              "best_time": null,
+              "best_weather_light": null,
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "st_theresa_square",
+                  "name": "St. Theresa / Talat Yen",
+                  "description": "Опорная точка в колониальном ядре: католическая церковь и вытянутая площадь с окружающей колониальной застройкой.",
+                  "coordinates": {
+                    "lat": 16.557,
+                    "lon": 104.7486,
+                    "elevation_m": null
+                  },
+                  "view": {
+                    "description": "церковь, площадь и фрагменты французско-лаосской городской застройки"
+                  },
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для связи площади, фасадов и церкви"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для отдельных шопхаусов и архитектурных деталей"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "St. Teresa's Catholic Church, Savannakhet",
+                    "publisher": "Wikimedia Commons / Wikidata",
+                    "url": "https://commons.wikimedia.org/wiki/Category:St._Teresa%27s_Catholic_Church,_Savannakhet",
+                    "notes": "Commons gives 16°33′25.2″N 104°44′54.96″E. Tourism Laos identifies St Theresa's Church and nearby colonial shophouses as principal French-colonial architecture in Savannakhet. Used as a historic-core anchor, not as a geometric centroid.",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [],
+              "useful_equipment": []
+            }
           },
           "annotation": {
             "narrative": "Старый Саваннакхет — речной торговый город с франко-лаосской застройкой, китайско-вьетнамскими торговыми домами и кварталами вокруг Меконг. Ценность — не отдельный 'колониальный дом', а непрерывная городская ткань с рынком, храмами и фасадами разной сохранности.",
@@ -2998,6 +3116,42 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
+            },
+            "coordinates": {
+              "lat": 20.0897346,
+              "lon": 103.3689259,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Nam Et - Phou Louey National Park Headquarters & Visitor Center",
+              "publisher": "WorldTrip map index; identity corroborated by official Nam Et-Phou Louey National Park",
+              "url": "https://www.worldtrip.guide/twisties/l/Nam_Et___Phou_Louey_National_Park_Headquarters___Visitor_Center_20.0897346_103.3689259",
+              "notes": "Mapped venue URL encodes 20.0897346, 103.3689259. Official namet.org confirms that the Headquarters and Visitor Center in Muang Hiam is the meeting point for all park tours. Coordinate retained at medium accuracy because the exact pin comes from a secondary map index.",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 336,
+              "max_m": 2257,
+              "reference_type": "range",
+              "accuracy": "high",
+              "source": {
+                "type": "park_authority",
+                "title": "About the Park — Topography",
+                "publisher": "Nam Et-Phou Louey National Park",
+                "url": "https://www.namet.org/about-the-park/",
+                "notes": "Official park page states the national park ranges from 336 m at the Nam Et River to 2,257 m at Phou Louey Mountain.",
+                "authority": "high",
+                "accessed": "2026-09-28"
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Диапазон относится ко всему национальному парку; 2257 м — Phou Louey, 336 м — Nam Et River."
             }
           },
           "logistics": {
@@ -3827,7 +3981,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
-            }
+            },
+            "coordinates": {
+              "lat": 20.87555,
+              "lon": 101.33069,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Nam Ha Visitor Center",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "url": "https://mapcarta.com/N3347232997",
+              "notes": "OSM tourism office. Indexed map result gives latitude 20.87555 and full Open Location Code 7PG3V8GJ+67; longitude 101.33069 is decoded from that full code. The historical Nam Ha ecotourism publication identifies the visitor center at Ban Chaleunsouk as a gateway to NPA activities.",
+              "authority": "medium",
+              "accessed": "2026-09-28"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Луангнамтха — основная база и точка старта. По дорогам и населённым пунктам можно двигаться самостоятельно; регулируемые дневные и многодневные треки внутри Нам-Ха оформляются через уполномоченных местных проводников.",
@@ -4619,7 +4791,8 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip."
-            }
+            },
+            "coordinate_research_note": "Официальный Tourism Laos определяет центр старого города как Fountain Square у Меконга. OSM-объект Fountain Square найден (way 239207377), но точный центр полигона ещё не нормализован в source layer; городские координаты Thakhek или координаты собора намеренно не подставлены."
           },
           "logistics": {
             "access": "Тхакхэк — столица провинции на Меконге напротив Накхонпханома в Таиланде. Старый центр сосредоточен вокруг площади с фонтаном и набережной; большинство заметных старых зданий находится в пределах пяти–шести кварталов.",

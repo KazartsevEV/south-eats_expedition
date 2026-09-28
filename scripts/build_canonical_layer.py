@@ -426,6 +426,10 @@ def build():
         entity = dict(detail)
         entity["id"] = source_id
         entity["legacy_ids"] = [old_id]
+        entity["referenced_by"] = [
+            require_id(registry, "objects", legacy_object_id)
+            for legacy_object_id in (detail.get("referenced_by") or [])
+        ]
         dump(release / "sources" / f"{source_id}.json", entity)
         canonical_source_ids.add(source_id)
 
@@ -458,7 +462,10 @@ def build():
             "legacy_source": detail.get("source"),
             "relations": {
                 "legacy_ids": [old_id],
-                "referenced_by": detail.get("referenced_by") or [],
+                "referenced_by": [
+                    require_id(registry, "objects", legacy_object_id)
+                    for legacy_object_id in (detail.get("referenced_by") or [])
+                ],
             },
             "qa": {
                 "source_refs_complete": False,

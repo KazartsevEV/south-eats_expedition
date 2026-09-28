@@ -133,6 +133,7 @@ TYPE_BY_NAME = {
     "Phou Khao Khouay National Park": "national_park",
     "Tad Fane": "waterfall",
     "Tad Yuang": "waterfall",
+    "Khone Phapheng Falls": "waterfall",
 }
 
 

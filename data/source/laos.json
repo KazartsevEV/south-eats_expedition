@@ -25,7 +25,8 @@
       "v1.6.1 draft: страновой профиль дополнен языками, этнографией и живым культурным наследием; зафиксировано, что результаты переписи 2025 по состоянию на 2026-09-29 ещё не опубликованы как полный итоговый набор и подробная этнодемография опирается на перепись 2015/LSIS.",
       "v1.6.1 draft: правило движения исправлено на правостороннее; официальные лаосские документы требуют левое расположение рулевого управления для постоянно импортируемых автомобилей. Ошибочное указание о левостороннем движении из внешнего консульского источника не переносится.",
       "v1.6.2 draft: добавлен obj_la_0020 Hin Nam No National Park с операционной primary_location у западного портала Xe Bang Fai, отдельным UNESCO reference point, hierarchy Boualapha/Hin Nam No, официальной ночёвкой в visitor zone и разведением основного асфальтированного подъезда от более грубых поперечных дорог.",
-      "v1.6.3 draft: добавлен obj_la_0021 Nakai Nam Theun National Park; multimodal access сохранён структурированными legs, а неизвестные километры/набор высоты не заменялись оценками."
+      "v1.6.3 draft: добавлен obj_la_0021 Nakai Nam Theun National Park; multimodal access сохранён структурированными legs, а неизвестные километры/набор высоты не заменялись оценками.",
+      "v1.6.4 draft: добавлен obj_la_0022 Tad Fane с отдельными GPS входа, основного viewpoint и верхней фототочки; высота падения 120 м не смешивается с абсолютной высотой."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -79,10 +80,9 @@
     },
     "country_expansion_qa": {
       "status": "open",
-      "current_canonical_objects": 21,
+      "current_canonical_objects": 22,
       "note_ru": "19 карточек проходят текущий структурный QA, но это не означает полноту Лаоса как страны. Перед импортом после Камбоджи расширить объектный каталог и только затем закрывать QA страны.",
       "priority_candidates": [
-        "Tad Fane",
         "Tad Yuang",
         "Khone Phapheng Falls",
         "Li Phi / Somphamit Falls",
@@ -9052,6 +9052,601 @@
             "status": "reviewed",
             "checked_at": "2026-09-29",
             "notes": "Русский пользовательский слой; неподтверждённые километры, набор высоты и расписание оставлены null."
+          }
+        }
+      },
+      {
+        "name": "Tad Fane",
+        "class": "nature",
+        "interest": [
+          "nature",
+          "waterfall",
+          "Bolaven Plateau",
+          "Dong Houa Sao",
+          "viewpoint",
+          "trekking",
+          "photography"
+        ],
+        "why_go": "Тад-Фане — двойной водопад на западной кромке плато Болавен, где реки Чампи и Пак-Кут падают примерно на 120 м в глубокий лесной амфитеатр. Это не просто roadside viewpoint: объект лежит внутри национального парка Донг-Хуа-Сао и связан с более длинными лесными маршрутами по краю плато.",
+        "traveler_card": {
+          "location": {
+            "region": "Чампасак / Паксонг / Болавен",
+            "nearest_hub": "Паксонг / Паксе",
+            "languages_spoken": [
+              "лаосский",
+              "английский в туристической инфраструктуре"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 15.18245,
+              "lon": 106.12701,
+              "elevation_m": null
+            },
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Tad Fane Viewpoint (2 waterfalls)",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/N653299798",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "object_elevation": {
+              "representative_m": 852,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "media_metadata",
+                "title": "File:Tad Fane 3.jpg — GPS/EXIF altitude at top of waterfall",
+                "publisher": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Tad_Fane_3.jpg",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "EXIF records camera altitude 852.381 m at 15.181640, 106.130120 near the top of the falls."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Представительная высота верхней части водопада по GPS/EXIF снимка; это не высота падения."
+            },
+            "geo_points": [
+              {
+                "type": "entrance",
+                "name": "Касса / вход Tad Fane",
+                "coordinates": {
+                  "lat": 15.18417,
+                  "lon": 106.12688,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Tad Fane Waterfall ticket shop",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/N4259774392",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              },
+              {
+                "type": "center",
+                "name": "Южная ветвь Tad Fane",
+                "coordinates": {
+                  "lat": 15.18082,
+                  "lon": 106.12962,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Tad Fane Waterfall (South)",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/N1219484163",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              },
+              {
+                "type": "viewpoint",
+                "name": "Фототочка Christophe95 / верхняя часть водопада",
+                "coordinates": {
+                  "lat": 15.18265,
+                  "lon": 106.12988,
+                  "elevation_m": 911.37
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "media_metadata",
+                  "title": "File:Tad Fane 2.jpg",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:Tad_Fane_2.jpg",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "elevation_source": {
+                  "type": "media_metadata",
+                  "title": "File:Tad Fane 2.jpg — EXIF altitude",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:Tad_Fane_2.jpg",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              }
+            ],
+            "coordinates_checked_at": "2026-09-29"
+          },
+          "logistics": {
+            "access": "Основной самостоятельный доступ идёт из Паксе по дороге на Паксонг. Tourism Laos указывает Tad Fane на отметке около 38 км по направлению к Паксонгу; вход, касса и основной viewpoint находятся у Tad Fane Resort.",
+            "public_transport": "Надёжное актуальное расписание общественного транспорта непосредственно до входа не найдено. Автобусы/сонгтхэу по направлению Паксонга существуют, но конкретную высадку у Km 38 и обратный транспорт нужно подтверждать на месте; не выдавать это за гарантированный прямой рейс.",
+            "last_mile": "От кассы до основного viewpoint около 190 м по картографическим данным. Более длинные треки к верхней части водопада и соседним деревням существуют, но километраж и GPX требуют отдельной route-проверки.",
+            "permit_or_guide": "Для основного viewpoint гид не нужен. Для длинных треков внутри Донг-Хуа-Сао режим доступа и необходимость местного проводника подтверждать отдельно.",
+            "access_requirements": "основной viewpoint — самостоятельный доступ через кассу; удалённые лесные маршруты не считать автоматически свободными",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно до viewpoint",
+            "access_options": [
+              {
+                "id": "pakse_moped",
+                "origin": "Паксе",
+                "modes": [
+                  "moped"
+                ],
+                "checked_at": "2026-09-29",
+                "source_refs": [],
+                "legs": [
+                  {
+                    "mode": "moped",
+                    "distance_km": 38,
+                    "duration_min": 40,
+                    "surface": "paved",
+                    "condition": "основная дорога Паксе–Паксонг",
+                    "seasonality": "круглогодичный дорожный доступ; в сильный дождь хуже видимость и сцепление",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "следовать по направлению Паксонга до района Km 38",
+                    "fords": 0,
+                    "notes": "Tourism Laos указывает 38 км; отдельный материал о reopening даёт около 40 минут от Паксе."
+                  }
+                ]
+              },
+              {
+                "id": "entrance_to_viewpoint",
+                "origin": "Касса Tad Fane",
+                "modes": [
+                  "walking"
+                ],
+                "checked_at": "2026-09-29",
+                "source_refs": [],
+                "legs": [
+                  {
+                    "mode": "walking",
+                    "distance_km": 0.19,
+                    "duration_min": null,
+                    "surface": "trail",
+                    "condition": "короткий благоустроенный подход",
+                    "seasonality": "после дождя поверхности могут быть мокрыми",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": {
+                      "lat": 15.18417,
+                      "lon": 106.12688,
+                      "coordinate_type": "entrance",
+                      "accuracy": "high"
+                    },
+                    "navigation": "очевидный путь к официальному viewpoint",
+                    "fords": 0,
+                    "notes": "Расстояние между кассой и viewpoint по OSM/Mapcarta."
+                  }
+                ]
+              }
+            ],
+            "water": "У входа и Tad Fane Resort есть ресторанная инфраструктура; питьевую воду логично пополнять здесь. Воду из рек над водопадом не считать питьевой без обработки.",
+            "water_structured": {
+              "summary": "Последняя надёжная точка покупной воды — инфраструктура у входа/Tad Fane Resort.",
+              "quality": "potable",
+              "last_reliable_source": "Tad Fane Resort / входная зона",
+              "distance_m": 0,
+              "natural_sources": [
+                {
+                  "type": "river",
+                  "potability": "treatment_required",
+                  "notes": "Чампи и Пак-Кут не считать питьевыми по умолчанию"
+                }
+              ],
+              "source_refs": []
+            },
+            "supplies": "У входа есть ресторан/туристическая инфраструктура; для полноценного снабжения лучше Паксонг или Паксе.",
+            "overnight_and_camping": "Tad Fane Resort расположен непосредственно у viewpoint. Законность свободного лагеря в национальном парке без согласования не подтверждена; палаточную ночёвку вне согласованной площадки не считать разрешённой.",
+            "overnight_structured": {
+              "status": "unclear",
+              "summary": "Жильё у объекта подтверждено; свободный кемпинг в национальном парке не подтверждён.",
+              "source_refs": []
+            }
+          },
+          "climate": {
+            "best_period": "Сухой сезон даёт более предсказуемый подъезд и обзор, но после дождей поток и облако брызг заметно мощнее.",
+            "heat_rain_notes": "Плато Болавен значительно влажнее низин Паксе; туман и низкая облачность могут полностью закрывать противоположную стену ущелья.",
+            "site_specific_notes": "Ветром водяную пыль выносит к viewpoint; Tourism Laos отдельно отмечает появление радуг в распылённой воде."
+          },
+          "operations": {
+            "hours": "Надёжные официальные часы на 2026 год в проверенных источниках не найдены.",
+            "ticket": "Актуальный официальный тариф 2026 не найден в источнике достаточной надёжности; старые цены из агрегаторов не переносить.",
+            "closure_notes": "Основной viewpoint открыт как туристический объект; отдельные активности и треки могут иметь собственный режим.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.tourismlaos.org/waterfalls/"
+          },
+          "safety": {
+            "main_risks": [
+              "глубокое ущелье и обрывы",
+              "скользкие поверхности после дождя",
+              "сильная водяная пыль",
+              "лесные тропы вне благоустроенного viewpoint"
+            ],
+            "sensitive_areas": [
+              "граница туристической зоны и национального парка Донг-Хуа-Сао"
+            ]
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Основной viewpoint смотрит на двойной каскад через ущелье; для визуального результата важнее отсутствие плотного тумана и направление брызг, чем фиксированный час.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": "Применяются общие правила Lao DCA и режим национального парка; запуск не считать автоматически разрешённым.",
+              "restrictions": [
+                "не выше 120 м",
+                "только в прямой видимости",
+                "не над людьми/населёнными пунктами без требуемого согласования",
+                "учитывать режим Донг-Хуа-Сао"
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+                "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+                "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Коммерческую съёмку и использование дрона в пределах национального парка согласовывать отдельно.",
+            "visual_scouting": {
+              "best_time": "morning / afternoon",
+              "best_weather_light": "После дождя поток сильнее и больше тумана; при ветре в водяной пыли могут возникать радуги.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "main_viewpoint",
+                  "name": "Основной viewpoint Tad Fane",
+                  "description": "Противоположная сторона ущелья с фронтальным видом на две ветви водопада.",
+                  "coordinates": {
+                    "lat": 15.18245,
+                    "lon": 106.12701,
+                    "elevation_m": null
+                  },
+                  "best_time": "morning",
+                  "view": {
+                    "description": "двойной 120-метровый каскад, амфитеатр ущелья, лес"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "две ветви помещаются в кадр с основной площадки"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "детали потока и противоположной стены через ущелье"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Tad Fane Viewpoint (2 waterfalls)",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N653299798",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                },
+                {
+                  "id": "upper_falls_camera_point",
+                  "name": "Верхняя точка у водопада",
+                  "description": "GPS-точка снимка Wikimedia у верхней части водопада; даёт боковой/верхний ракурс и не заменяет основной viewpoint.",
+                  "coordinates": {
+                    "lat": 15.18164,
+                    "lon": 106.13012,
+                    "elevation_m": 852.381
+                  },
+                  "best_time": "midday",
+                  "view": {
+                    "description": "верхняя кромка каскада и лес по краям ущелья"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "близкая дистанция к кромке и большой перепад рельефа"
+                    }
+                  ],
+                  "source": {
+                    "type": "media_metadata",
+                    "title": "File:Tad Fane 3.jpg",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Tad_Fane_3.jpg",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "В дождливый период каскады мощнее, но туман может скрывать стены ущелья.",
+                "В более сухие месяцы контуры ущелья читаются лучше, а поток тоньше."
+              ],
+              "video_activity": [
+                "движение двух потоков",
+                "водяная пыль и радуга при ветре",
+                "работа zipline над ущельем"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "масштаб ущелья"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "дальний каскад с основной площадки"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "влажная зона и активности у ущелья"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Тад-Фане образован двумя потоками — Чампи и Пак-Кут — которые сходят с плато Болавен и падают в один глубокий лесной амфитеатр. Tourism Laos указывает высоту падения около 120 м. Важная географическая деталь: водопад находится не отдельно от лесного массива, а внутри национального парка Донг-Хуа-Сао.",
+            "culture_ethnography": "Плато Болавен — территория с живыми мон-кхмерскими общинами и кофейными хозяйствами. Для самого Tad Fane этнографическую историю нельзя придумывать по общей характеристике плато; отдельные деревни и треки к ним нужно описывать отдельными объектами/маршрутами.",
+            "geography_geology": "Тад-Фане лежит на западной кромке плато Болавен, где речные потоки врезаются в крутой уступ. Водопад визуально читается как две почти параллельные струи на стене глубокого лесного ущелья.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Двойной водопад плато Болавен высотой около 120 м, доступный с официального viewpoint у Km 38 дороги Паксе–Паксонг."
+              },
+              {
+                "section_id": "geography",
+                "content": "Реки Чампи и Пак-Кут сходят с плато и падают в глубокий лесной амфитеатр внутри национального парка Донг-Хуа-Сао."
+              },
+              {
+                "section_id": "culture",
+                "content": "Основной современный культурный контекст объекта связан с Болавеном, кофейным хозяйством и соседними общинами; конкретные этнографические практики требуют привязки к отдельной деревне."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Туман и водяная пыль иногда полностью закрывают каскады на короткое время.",
+              "После сильного дождя короткие подходы и ступени становятся скользкими."
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Tad Fane Resort",
+              "area": "Ban Lak 38 / основной viewpoint",
+              "price_for_two": null,
+              "contact": "+856 20 97775881; tadfane@hotmail.com",
+              "social_or_web": "https://tadfaneresort.mystrikingly.com/",
+              "source": "official resort site + OSM location",
+              "coordinates": {
+                "lat": 15.18275,
+                "lon": 106.12707,
+                "elevation_m": null
+              },
+              "checked_at": "2026-09-29"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Tad_Fane_2.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Tad_Fane_2.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Christophe95",
+          "illustration_scope": "Tad Fane and surroundings",
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Tad_Fane_2.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tad_Fane_2.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Christophe95",
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Tad_Fane_3.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tad_Fane_3.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Christophe95",
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "type": "official",
+            "title": "Waterfalls — Tad Fane",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/waterfalls/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "height",
+              "rivers",
+              "location",
+              "visual conditions"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Champasak Province — Tad Fane",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "38 km access",
+              "national park context",
+              "trekking context"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "park_authority",
+            "title": "Parks",
+            "publisher": "Lao Parks / Protected Area Management Division",
+            "url": "https://laoparks.la/parks/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "Dong Houa Sao national park status",
+              "area"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Tad Fane Viewpoint (2 waterfalls)",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N653299798",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "viewpoint GPS",
+              "distance to ticket shop"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Tad Fane Waterfall ticket shop",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N4259774392",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "entrance GPS"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Tad Fane Waterfall (South)",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N1219484163",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "waterfall branch GPS"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Tad Fane Resort",
+            "publisher": "Tad Fane Resort",
+            "url": "https://tadfaneresort.mystrikingly.com/",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "lodging contact",
+              "restaurant/lodging context"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Tad Fane Resort",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N1215257726",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "lodging GPS"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:Tad Fane 2.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Tad_Fane_2.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media license",
+              "viewpoint GPS",
+              "EXIF elevation"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:Tad Fane 3.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Tad_Fane_3.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media license",
+              "upper-falls GPS",
+              "EXIF elevation"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "ticket",
+            "long trek access",
+            "lodging price",
+            "drone",
+            "trail condition"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Тад-Фане — двойной 120-метровый водопад внутри национального парка Донг-Хуа-Сао на плато Болавен. Основной viewpoint доступен самостоятельно с дороги Паксе–Паксонг; более длинные лесные маршруты требуют отдельной проверки режима доступа.",
+        "tags": [
+          "nature",
+          "waterfall",
+          "bolaven",
+          "dong_houa_sao",
+          "viewpoint",
+          "trekking",
+          "visual_drone",
+          "class_nature"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "Высота падения не смешана с абсолютной высотой над уровнем моря; неизвестные часы/цена оставлены null."
           }
         }
       }

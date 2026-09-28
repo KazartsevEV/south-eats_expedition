@@ -15,6 +15,7 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 
 SCHEMA_VERSION = "2.7.1"
 RELEASE_ID = "2026-09-28-r18"
+SUPPORTED_SOURCE_MODELS = {"1.5", "1.6"}
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
@@ -644,8 +645,9 @@ def build():
         if not src_path.exists() or src_path.stat().st_size < 10000:
             raise RuntimeError(f"source missing or too small: {src_path}")
         source = load(src_path)
-        if (source.get("meta") or {}).get("data_model_version") != "1.5":
-            raise RuntimeError(f"{filename}: publish requires source model 1.5")
+        source_model = (source.get("meta") or {}).get("data_model_version")
+        if source_model not in SUPPORTED_SOURCE_MODELS:
+            raise RuntimeError(f"{filename}: unsupported source model {source_model!r}; supported={sorted(SUPPORTED_SOURCE_MODELS)}")
 
         travel = source.get("travel") or {}
         source_objects = travel.get("objects") or []

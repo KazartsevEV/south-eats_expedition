@@ -27,7 +27,8 @@
       "v1.6.2 draft: добавлен obj_la_0020 Hin Nam No National Park с операционной primary_location у западного портала Xe Bang Fai, отдельным UNESCO reference point, hierarchy Boualapha/Hin Nam No, официальной ночёвкой в visitor zone и разведением основного асфальтированного подъезда от более грубых поперечных дорог.",
       "v1.6.3 draft: добавлен obj_la_0021 Nakai Nam Theun National Park; multimodal access сохранён структурированными legs, а неизвестные километры/набор высоты не заменялись оценками.",
       "v1.6.4 draft: добавлен obj_la_0022 Tad Fane с отдельными GPS входа, основного viewpoint и верхней фототочки; высота падения 120 м не смешивается с абсолютной высотой.",
-      "v1.6.3 QA-fix: у Nakai Nam Theun удалён центр Удомсука из object.geo_points, primary_location уточнён как приблизительный операционный лодочный доступ Тхаланга, 2–3 часа езды оставлены диапазоном в notes без ложного duration_min=120; медиа заменены на Commons с открытой лицензией."
+      "v1.6.3 QA-fix: у Nakai Nam Theun удалён центр Удомсука из object.geo_points, primary_location уточнён как приблизительный операционный лодочный доступ Тхаланга, 2–3 часа езды оставлены диапазоном в notes без ложного duration_min=120; медиа заменены на Commons с открытой лицензией.",
+      "v1.6.5 draft: добавлен obj_la_0023 Tad Yuang; сохранены 800 м грунтового last-mile, 12 км/15 мин от Паксонга, динамические тарифы 2025 и честный elevation=null до надёжного абсолютного источника."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -81,10 +82,9 @@
     },
     "country_expansion_qa": {
       "status": "open",
-      "current_canonical_objects": 22,
+      "current_canonical_objects": 23,
       "note_ru": "19 карточек проходят текущий структурный QA, но это не означает полноту Лаоса как страны. Перед импортом после Камбоджи расширить объектный каталог и только затем закрывать QA страны.",
       "priority_candidates": [
-        "Tad Yuang",
         "Khone Phapheng Falls",
         "Li Phi / Somphamit Falls",
         "Tham Pa Fa",
@@ -9741,6 +9741,500 @@
             "status": "reviewed",
             "checked_at": "2026-09-29",
             "notes": "Высота падения не смешана с абсолютной высотой над уровнем моря; неизвестные часы/цена оставлены null."
+          }
+        }
+      },
+      {
+        "name": "Tad Yuang",
+        "class": "nature",
+        "interest": [
+          "nature",
+          "waterfall",
+          "Bolaven Plateau",
+          "viewpoint",
+          "swimming",
+          "market",
+          "photography"
+        ],
+        "why_go": "Тад-Юанг — компактный двойной водопад плато Болавен с падением около 40–42 м, к которому можно подойти значительно ближе, чем к соседнему Тад-Фане. Сверху устроены рынок и picnic area, а лестничная тропа спускается к среднему и нижнему viewpoints у чаши водопада.",
+        "traveler_card": {
+          "location": {
+            "region": "Чампасак / Паксонг / Болавен",
+            "nearest_hub": "Паксонг / Паксе",
+            "languages_spoken": [
+              "лаосский",
+              "английский в туристической инфраструктуре"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 15.18035,
+              "lon": 106.13854,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Tad Yuang waterfall",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/N653299804",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "object_elevation": null,
+            "geo_points": [
+              {
+                "type": "viewpoint",
+                "name": "Верхняя зона / рынок и начало спуска",
+                "coordinates": {
+                  "lat": 15.18244,
+                  "lon": 106.14167,
+                  "elevation_m": null
+                },
+                "accuracy": "approximate",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Tad Yuang locality",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/N1450762958",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29",
+                "notes": "Координата населённого узла Tad Yuang, а не точная геодезическая точка кассы; используется только как приблизительная верхняя зона."
+              }
+            ],
+            "coordinates_checked_at": "2026-09-29"
+          },
+          "logistics": {
+            "access": "Из Паксе ехать по Route 13 к повороту на Route 16 East, затем по хорошей асфальтированной дороге в сторону Паксонга. Tourism Laos указывает около 40 минут от Паксе; после поворота к Tad Yuang идёт короткая грунтовая дорога к парковке и рынку.",
+            "public_transport": "Прямой подтверждённый рейс к самой кассе не найден. Для общественного транспорта практичнее ехать по направлению Паксонга и заранее уточнять высадку у поворота Km 40 и обратный транспорт.",
+            "last_mile": "Travelfish указывает около 800 м грунтового подъезда от Route 16E до входной зоны. От рынка вниз идёт крутая лестничная тропа с несколькими viewpoints; точный пеший километраж и набор высоты в надёжном источнике не опубликованы.",
+            "permit_or_guide": "Гид для стандартного посещения не нужен.",
+            "access_requirements": "самостоятельный доступ; входной билет и парковка оплачиваются на месте",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно",
+            "access_options": [
+              {
+                "id": "pakse_to_tad_yuang",
+                "origin": "Паксе",
+                "modes": [
+                  "moped",
+                  "walking"
+                ],
+                "checked_at": "2026-09-29",
+                "source_refs": [],
+                "legs": [
+                  {
+                    "mode": "moped",
+                    "distance_km": null,
+                    "duration_min": 40,
+                    "surface": "paved",
+                    "condition": "Route 13 + Route 16 East; основная дорога хорошая",
+                    "seasonality": "круглогодично; в дождь хуже видимость",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "ориентир — поворот Tad Yuang после района Tad Fane и кофейного кооператива",
+                    "fords": 0,
+                    "notes": "Tourism Laos даёт около 40 минут от Паксе."
+                  },
+                  {
+                    "mode": "moped",
+                    "distance_km": 0.8,
+                    "duration_min": null,
+                    "surface": "dirt",
+                    "condition": "короткий грунтовый подъезд к парковке",
+                    "seasonality": "может размокать в сезон дождей",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "следовать к Tad Yuang Market/parking",
+                    "fords": 0,
+                    "notes": "Около 800 м по свежему полевому путеводителю Travelfish."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "stairs",
+                    "condition": "крутой спуск по ступеням и влажной тропе",
+                    "seasonality": "в Green Season May–October тропа становится грязной и скользкой",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "маршрут размечен viewpoints",
+                    "fords": 0,
+                    "notes": "Внизу есть viewing stand; подъём обратно тем же путём."
+                  }
+                ]
+              },
+              {
+                "id": "paksong_to_tad_yuang",
+                "origin": "Паксонг",
+                "modes": [
+                  "moped"
+                ],
+                "checked_at": "2026-09-29",
+                "source_refs": [],
+                "legs": [
+                  {
+                    "mode": "moped",
+                    "distance_km": 12,
+                    "duration_min": 15,
+                    "surface": "paved",
+                    "condition": "Route 16 west",
+                    "seasonality": "круглогодично",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "примерно 12 км от Паксонга, затем левый поворот к Tad Yuang",
+                    "fords": 0,
+                    "notes": "Данные Tourism Laos."
+                  }
+                ]
+              }
+            ],
+            "water": "В верхней зоне есть рынок, киоски и ресторан у реки Чампи; покупная вода доступна перед спуском. Речную воду не считать питьевой без обработки.",
+            "water_structured": {
+              "summary": "Надёжная покупная вода — рынок и ресторан у входа.",
+              "quality": "potable",
+              "last_reliable_source": "Tad Yuang Market / restaurant",
+              "distance_m": 0,
+              "natural_sources": [
+                {
+                  "type": "river",
+                  "potability": "treatment_required",
+                  "notes": "вода реки Чампи"
+                }
+              ],
+              "source_refs": []
+            },
+            "supplies": "На входном рынке продаются напитки, продукты, местные изделия и кофе Болавена; для полноценного снабжения — Паксонг.",
+            "overnight_and_camping": "У самого водопада подтверждённой официальной кемпинговой зоны в проверенных источниках нет. Ближайшее отдельное жильё в базе — Tad Fane Resort примерно в 1.25 км к западу; свободный лагерь не считать разрешённым.",
+            "overnight_structured": {
+              "status": "unclear",
+              "summary": "Жильё рядом есть, но правовой статус дикого кемпинга у водопада не подтверждён.",
+              "source_refs": []
+            }
+          },
+          "climate": {
+            "best_period": "Сухой сезон проще для спуска к нижнему viewpoint; Green Season May–October даёт более мощный поток, но грязную и скользкую тропу.",
+            "heat_rain_notes": "Влажный микроклимат ущелья сохраняет ступени мокрыми даже без активного дождя.",
+            "site_specific_notes": "Сильный поток и брызги меняют пригодность нижней зоны для купания; возможность купания оценивать на месте."
+          },
+          "operations": {
+            "hours": "Актуальные официальные часы 2026 в проверенных источниках не найдены.",
+            "ticket": "Travelfish, обновлено 21 октября 2025: вход 10 000 LAK, парковка мотоцикла 5 000 LAK. Считать динамическим тарифом и перепроверять на месте.",
+            "closure_notes": "Объект действует как благоустроенная локальная туристическая зона с рынком, viewpoints и тропой.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.tourismlaos.org/champasak-laos-safe-sustainable-star-tad-yeuang-waterfall/"
+          },
+          "safety": {
+            "main_risks": [
+              "скользкие лестницы",
+              "крутой подъём обратно",
+              "сильное течение у чаши",
+              "мокрые камни и грязь в сезон дождей"
+            ],
+            "sensitive_areas": [
+              "нижняя зона у потока во время высокой воды"
+            ]
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "В отличие от Tad Fane, здесь каскад снимается с близких верхних, средних и нижних площадок; реальный результат сильно зависит от брызг и облачности.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": "Действуют общие правила Lao DCA; локальное разрешение площадки отдельно не подтверждено.",
+              "restrictions": [
+                "не выше 120 м",
+                "только в прямой видимости",
+                "не над скоплением людей",
+                "учитывать близость туристической зоны"
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+                "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+                "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "На рынке и при съёмке продавцов получать согласие; дрон не считать автоматически разрешённым.",
+            "visual_scouting": {
+              "best_time": "morning",
+              "best_weather_light": "В Green Season поток сильнее, но spray и облачность могут закрывать детали; в сухой сезон легче работать с нижних площадок.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "waterfall_core",
+                  "name": "Нижний/средний ракурс Tad Yuang",
+                  "description": "Основной близкий ракурс на двойной каскад и чашу водопада.",
+                  "coordinates": {
+                    "lat": 15.18035,
+                    "lon": 106.13854,
+                    "elevation_m": null
+                  },
+                  "best_time": "morning",
+                  "view": {
+                    "description": "40–42-метровый каскад, чаша, лесные стены"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "близкая дистанция и высокий вертикальный каскад"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "естественный масштаб водопада и нижней площадки"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Tad Yuang waterfall",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N653299804",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "May–October: максимальная зелень и мощный поток, но грязная тропа.",
+                "Сухой сезон: проще нижний доступ и спокойнее spray."
+              ],
+              "video_activity": [
+                "падение воды в чашу",
+                "рынок и поток посетителей у входа",
+                "брызги и движение воды у нижней площадки"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "вертикальный каскад с близкой дистанции"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "влажная зона у нижнего viewpoint"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Тад-Юанг — двойной водопад на плато Болавен, где река Чампи падает примерно на 40–42 м в лесную чашу. В 2020–2021 годах местная община обновила viewpoints, рынок, picnic area и тропу; в 2022 году объект получил ASEAN Sustainable Tourism Award.",
+            "culture_ethnography": "Входная зона работает как локальный рынок: здесь продают овощи, фрукты, ремесленные изделия и кофе Болавена. Это реальная общественная инфраструктура объекта, а не отдельное «этно-шоу». Конкретные этнические традиции без привязки к деревне не приписываются.",
+            "geography_geology": "Водопад находится на плато Болавен и связан с системой реки Чампи; ниже поток продолжает путь к району Tad Fane. Ступенчатый лесной склон позволяет видеть каскад сверху, из средней части ущелья и снизу.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Двойной каскад высотой около 40–42 м на плато Болавен с развитой системой верхних, средних и нижних viewpoints."
+              },
+              {
+                "section_id": "culture",
+                "content": "Объект обслуживается локальной туристической инфраструктурой: рынок, ресторан и picnic area были обновлены общиной в 2020–2021 годах; в 2022 году Tad Yuang получил ASEAN Sustainable Tourism Award."
+              },
+              {
+                "section_id": "geography",
+                "content": "Река Чампи падает с кромки плато в лесную чашу; ниже вода продолжает движение в сторону системы Tad Fane."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Ступени и тропа к нижней площадке постоянно влажные и могут быть очень скользкими.",
+              "В Green Season мощный поток улучшает вид водопада, но усложняет нижний подход и купание.",
+              "Входная зона коммерциализирована заметнее, чем Tad Fane; это влияет на атмосферу, но не на доступ к каскаду."
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Tad Fane Resort",
+              "area": "Ban Lak 38 / около 1.25 км к западу",
+              "price_for_two": null,
+              "contact": "+856 20 97775881; tadfane@hotmail.com",
+              "social_or_web": "https://tadfaneresort.mystrikingly.com/",
+              "source": "official resort site + OSM location",
+              "coordinates": {
+                "lat": 15.18275,
+                "lon": 106.12707,
+                "elevation_m": null
+              },
+              "checked_at": "2026-09-29"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Hut_above_Tad_Yuang_waterfall.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Hut_above_Tad_Yuang_waterfall.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Kris Martyn",
+          "illustration_scope": "Tad Yuang Waterfall",
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Hut_above_Tad_Yuang_waterfall.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Hut_above_Tad_Yuang_waterfall.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Kris Martyn",
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Tad_Yuang_%285416105690%29.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tad_Yuang_(5416105690).jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 2.0",
+              "artist": "Aleksey Gnilenkov",
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "type": "official",
+            "title": "Champasak — Safe & Sustainable Star: Tad Yeuang Waterfall",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/champasak-laos-safe-sustainable-star-tad-yeuang-waterfall/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "access",
+              "40-minute drive",
+              "12 km from Paksong",
+              "green season",
+              "viewpoints",
+              "market",
+              "community upgrades",
+              "award"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Waterfalls — Tad Yuang Falls",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/waterfalls/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "40 m waterfall height"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Champasak Province — Tad Yeung",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "viewpoint structure",
+              "swimming context",
+              "Route 16 access"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Tad Yuang waterfall",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N653299804",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "waterfall GPS"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Tad Yuang, Pakse — visitor guide",
+            "publisher": "Travelfish",
+            "url": "https://www.travelfish.org/sight_profile/laos/southern_laos/champasak/pakse/593",
+            "language": "en",
+            "published_at": "2025-10-21",
+            "authority": "medium",
+            "used_for": [
+              "800 m dirt access",
+              "admission",
+              "motorbike parking",
+              "slippery trail",
+              "visit duration"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:Hut above Tad Yuang waterfall.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Hut_above_Tad_Yuang_waterfall.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media provenance",
+              "license"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:Tad Yuang (5416105690).jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Tad_Yuang_(5416105690).jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media provenance",
+              "license"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "ticket",
+            "parking fee",
+            "road condition",
+            "swimming",
+            "drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Тад-Юанг — двойной 40–42-метровый водопад Болавена с близкими верхними и нижними viewpoints, рынком и лестничным спуском к чаше. Самостоятельный доступ прост: около 40 минут от Паксе или 12 км от Паксонга, затем короткий грунтовый подъезд.",
+        "tags": [
+          "nature",
+          "waterfall",
+          "bolaven",
+          "viewpoint",
+          "swimming",
+          "market",
+          "access_moped",
+          "visual_drone",
+          "class_nature"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "Абсолютная высота над уровнем моря не заполнена без надёжного источника; высота падения хранится только в narrative."
           }
         }
       }

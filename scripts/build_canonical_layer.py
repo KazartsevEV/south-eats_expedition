@@ -12,7 +12,7 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
 FORMAL_CANONICAL_GEO_CODES = {"KH"}
-COUNTRY_SOURCE_CANONICAL_CODES = {"KH"}
+COUNTRY_SOURCE_CANONICAL_CODES = {"KH", "MY"}
 
 GENERATED_AT = "2026-09-28T21:14:00+04:00"
 DEFAULT_LANGUAGE = "ru"
@@ -508,6 +508,7 @@ def build():
 
     # Canonical sources coexist with legacy source files during the compatibility phase.
     canonical_source_ids = set()
+    canonical_source_id_by_url = {}
     for row in legacy_sources:
         old_id = row.get("id")
         if not old_id:
@@ -526,6 +527,8 @@ def build():
         ]
         dump(release / "sources" / f"{source_id}.json", entity)
         canonical_source_ids.add(source_id)
+        if entity.get("url"):
+            canonical_source_id_by_url[entity["url"]] = source_id
 
     source_type_map = {
         "government": "government_official",
@@ -541,8 +544,14 @@ def build():
         for row in country_source.get("sources") or []:
             short_id = row.get("id")
             source_id = row.get("canonical_id")
-            if not short_id or not source_id:
-                raise RuntimeError(f"{code}: country source missing id/canonical_id: {short_id}")
+            if not short_id:
+                raise RuntimeError(f"{code}: country source missing id")
+            existing_source_id = canonical_source_id_by_url.get(row.get("url")) if row.get("url") else None
+            if existing_source_id:
+                country_source_ids_by_code[code][short_id] = existing_source_id
+                continue
+            if not source_id:
+                raise RuntimeError(f"{code}: country source missing canonical_id: {short_id}")
             if source_id in canonical_source_ids:
                 raise RuntimeError(f"{code}: duplicate canonical source ID: {source_id}")
             dump(release / "sources" / f"{source_id}.json", {
@@ -561,6 +570,8 @@ def build():
                 "legacy_ids": [f"country:{code.lower()}:{short_id}"],
             })
             canonical_source_ids.add(source_id)
+            if row.get("url"):
+                canonical_source_id_by_url[row["url"]] = source_id
             country_source_ids_by_code[code][short_id] = source_id
 
     # Canonical lodging copies use persistent IDs and country-code paths.

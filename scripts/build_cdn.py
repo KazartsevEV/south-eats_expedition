@@ -226,6 +226,19 @@ TYPE_BY_NAME.update({
     "Nat Ma Taung / Mount Victoria": "mountain",
 })
 
+TYPE_BY_NAME.update({
+    "Taman Negara / Gunung Tahan": "national_park",
+    "Endau-Rompin Johor National Park": "national_park",
+    "Maliau Basin Conservation Area": "protected_area",
+    "Bako National Park": "national_park",
+    "Forest Research Institute Malaysia Forest Park Selangor": "cultural_landscape",
+    "Gomantong Caves": "cave",
+    "Gunung Gading National Park": "national_park",
+    "Tabin Wildlife Reserve": "protected_area",
+    "Penang National Park": "national_park",
+    "Tioman Island / Tioman Marine Park": "island",
+})
+
 TAG_ALIASES = {
     "unesco": "unesco",
     "living heritage": "living_heritage",

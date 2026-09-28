@@ -10,6 +10,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
+HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
+FORMAL_CANONICAL_GEO_CODES = {"KH"}
+COUNTRY_SOURCE_CANONICAL_CODES = {"KH"}
 
 GENERATED_AT = "2026-09-28T21:14:00+04:00"
 DEFAULT_LANGUAGE = "ru"
@@ -189,30 +192,39 @@ def canonical_point(point):
 
 def narrative_sections(story, source_refs):
     story = story or {}
+    allowed = {"overview", "history", "culture", "geography", "geology", "ethnography", "myths_beliefs"}
+    structured = story.get("sections")
+    if isinstance(structured, list) and structured:
+        rows = []
+        for raw in structured:
+            if not isinstance(raw, dict):
+                continue
+            section_id = raw.get("section_id")
+            content = raw.get("content")
+            if section_id not in allowed:
+                raise RuntimeError(f"unknown canonical narrative section: {section_id}")
+            if content in (None, "", [], {}):
+                continue
+            rows.append({
+                "section_id": section_id,
+                "content": content,
+                "source_refs": list(dict.fromkeys((raw.get("source_refs") or []) + list(source_refs))),
+            })
+        if rows:
+            return rows
+
     rows = []
     mapping = [
         ("narrative", "overview", None),
-        (
-            "culture_ethnography",
-            "culture_ethnography",
-            "Legacy source combines culture and ethnography; split during object research pass instead of guessing.",
-        ),
-        (
-            "geography_geology",
-            "geography_geology",
-            "Legacy source combines geography and geology; split during object research pass instead of guessing.",
-        ),
+        ("culture_ethnography", "culture", "Legacy combined section retained under culture until country research splits it."),
+        ("geography_geology", "geography", "Legacy combined section retained under geography until country research splits it."),
         ("myths_legends_beliefs", "myths_beliefs", None),
     ]
     for key, section_id, migration_note in mapping:
         value = story.get(key)
         if value in (None, "", [], {}):
             continue
-        row = {
-            "section_id": section_id,
-            "content": value,
-            "source_refs": list(source_refs),
-        }
+        row = {"section_id": section_id, "content": value, "source_refs": list(source_refs)}
         if migration_note:
             row["migration_note"] = migration_note
         rows.append(row)
@@ -315,14 +327,15 @@ def source_files_by_code(published_codes):
     return result
 
 
-def wrap_dynamic(value, checked_at):
+def wrap_dynamic(value, checked_at, source_refs=None, note=None):
+    source_refs = list(dict.fromkeys(source_refs or []))
     return {
         "value": value,
-        "source_refs": [],
+        "source_refs": source_refs,
         "checked_at": checked_at,
         "qa": {
-            "source_refs_complete": False,
-            "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization.",
+            "source_refs_complete": bool(source_refs),
+            "note": note or ("Country-level fact has normalized canonical source refs." if source_refs else "Country-level fact still requires fact-level source normalization."),
         },
     }
 
@@ -338,6 +351,22 @@ def build():
     legacy_countries = countries_doc.get("countries") or []
     published_codes = {row["country_code"] for row in legacy_countries}
     sources_by_code = source_files_by_code(published_codes)
+    country_slug_by_code = {row["country_code"]: row["slug"] for row in legacy_countries if row.get("country_code") and row.get("slug")}
+    source_object_by_country_name = {}
+    for code, (_, source_doc) in sources_by_code.items():
+        for row in ((source_doc.get("travel") or {}).get("objects") or []):
+            if row.get("name"):
+                source_object_by_country_name[(code, row.get("name"))] = row
+
+    formal_hierarchy = {}
+    for code in sorted(published_codes & FORMAL_CANONICAL_GEO_CODES):
+        slug = country_slug_by_code.get(code)
+        path = HIERARCHY / f"{slug}.json" if slug else None
+        if path and path.exists():
+            doc = load(path)
+            if (doc.get("meta") or {}).get("country_code") != code:
+                raise RuntimeError(f"formal hierarchy country mismatch: {path}")
+            formal_hierarchy[code] = doc
 
     legacy_search = load(release / "search" / "objects.json").get("objects") or []
     legacy_places = load(release / "places.json").get("places") or []
@@ -356,6 +385,8 @@ def build():
     canonical_media_ids_by_country = defaultdict(list)
     canonical_geo_ids_by_country = defaultdict(list)
     canonical_object_ids_by_country = defaultdict(list)
+    formal_geo_refs_by_object = defaultdict(list)
+    country_source_ids_by_code = defaultdict(dict)
 
     # Canonical country and legacy-place geography.
     place_id_by_country_name_kind = {}
@@ -383,6 +414,8 @@ def build():
         code = place.get("country_code")
         legacy_id = place.get("id")
         if not code or not legacy_id:
+            continue
+        if code in formal_hierarchy:
             continue
         geo_id = require_id(registry, "geo", legacy_id)
         country_id = f"geo_{code.lower()}"
@@ -415,6 +448,57 @@ def build():
         canonical_geo_ids_by_country[code].append(geo_id)
         place_id_by_country_name_kind[(code, place.get("name"), place.get("kind"))] = geo_id
 
+    for code, doc in formal_hierarchy.items():
+        country_id = f"geo_{code.lower()}"
+        nodes = doc.get("nodes") or []
+        node_by_id = {node["id"]: node for node in nodes}
+        canonical_id_by_node = {node_id: require_id(registry, "geo", node_id) for node_id in node_by_id}
+        path_cache = {}
+        def formal_geo_path(node_id, stack=None):
+            if node_id in path_cache:
+                return path_cache[node_id]
+            stack = set(stack or [])
+            if node_id in stack:
+                raise RuntimeError(f"{code}: formal geography cycle at {node_id}")
+            stack.add(node_id)
+            node = node_by_id[node_id]
+            parent = node.get("parent_id")
+            if parent == f"country:{code.lower()}":
+                out = [country_id, canonical_id_by_node[node_id]]
+            elif parent in node_by_id:
+                out = formal_geo_path(parent, stack) + [canonical_id_by_node[node_id]]
+            else:
+                raise RuntimeError(f"{code}: unknown formal geography parent {parent}")
+            path_cache[node_id] = out
+            return out
+
+        for node in nodes:
+            node_id = node["id"]
+            geo_id = canonical_id_by_node[node_id]
+            parent = node.get("parent_id")
+            parent_id = country_id if parent == f"country:{code.lower()}" else canonical_id_by_node[parent]
+            kind = node.get("kind") or "geographic_area"
+            if kind not in GEO_KINDS:
+                kind = "geographic_area"
+            geo_entities[geo_id] = {
+                "id": geo_id,
+                "kind": kind,
+                "names": {"primary": node.get("name_ru") or node.get("name_local") or node_id, "local": node.get("name_local")},
+                "slug": node.get("slug"),
+                "parent_id": parent_id,
+                "geo_path": formal_geo_path(node_id),
+                "description": {"narrow": node.get("notes_ru"), "body": None},
+                "cover_media_id": None,
+                "legacy_ids": [node_id],
+                "migration": {"source_kind": "formal_hierarchy", "axis": node.get("axis"), "status": "formalized"},
+                "provenance": {"checked_at": (doc.get("meta") or {}).get("checked_at"), "sources": doc.get("sources") or []},
+            }
+            canonical_geo_ids_by_country[code].append(geo_id)
+            for old_object_id in node.get("object_ids") or []:
+                for ref in formal_geo_path(node_id)[1:]:
+                    if ref not in formal_geo_refs_by_object[(code, old_object_id)]:
+                        formal_geo_refs_by_object[(code, old_object_id)].append(ref)
+
     # Canonical sources coexist with legacy source files during the compatibility phase.
     canonical_source_ids = set()
     for row in legacy_sources:
@@ -435,6 +519,41 @@ def build():
         ]
         dump(release / "sources" / f"{source_id}.json", entity)
         canonical_source_ids.add(source_id)
+
+    source_type_map = {
+        "government": "government_official",
+        "airport_official": "other",
+        "international_organization": "other",
+        "secondary_climatology": "other",
+        "scientific_database": "other",
+        "academic": "academic",
+        "university": "university",
+    }
+    for code in sorted(published_codes & COUNTRY_SOURCE_CANONICAL_CODES):
+        country_source = sources_by_code[code][1]
+        for row in country_source.get("sources") or []:
+            short_id = row.get("id")
+            if not short_id:
+                continue
+            legacy_id = f"country:{code.lower()}:{short_id}"
+            source_id = require_id(registry, "sources", legacy_id)
+            dump(release / "sources" / f"{source_id}.json", {
+                "id": source_id,
+                "type": source_type_map.get(row.get("kind"), "other"),
+                "title": row.get("title"),
+                "publisher": row.get("publisher"),
+                "url": row.get("url"),
+                "language": row.get("language"),
+                "published_at": row.get("published_at"),
+                "accessed_at": row.get("accessed"),
+                "authority": "high" if row.get("kind") in {"government", "international_organization", "airport_official"} else "medium",
+                "used_for": row.get("used_for") or [],
+                "notes": row.get("notes"),
+                "referenced_by": [],
+                "legacy_ids": [legacy_id],
+            })
+            canonical_source_ids.add(source_id)
+            country_source_ids_by_code[code][short_id] = source_id
 
     # Canonical lodging copies use persistent IDs and country-code paths.
     canonical_lodging_ids = set()
@@ -504,13 +623,19 @@ def build():
         ]
 
         location = detail.get("location") or {}
-        region_id = place_id_by_country_name_kind.get((code, location.get("region"), "region"))
-        nearest_place_id = place_id_by_country_name_kind.get((code, location.get("nearest_hub"), "city_or_route_hub"))
-        geo_ids = [f"geo_{code.lower()}"]
-        if region_id:
-            geo_ids.append(region_id)
-        if nearest_place_id and nearest_place_id not in geo_ids:
-            geo_ids.append(nearest_place_id)
+        if code in formal_hierarchy:
+            region_ids = list(formal_geo_refs_by_object.get((code, old_object_id), []))
+            nearest_place_id = next((geo_id for geo_id in reversed(region_ids) if (geo_entities.get(geo_id) or {}).get("kind") in {"city", "town", "village", "settlement"}), None)
+            geo_ids = [f"geo_{code.lower()}"] + region_ids
+        else:
+            region_id = place_id_by_country_name_kind.get((code, location.get("region"), "region"))
+            nearest_place_id = place_id_by_country_name_kind.get((code, location.get("nearest_hub"), "city_or_route_hub"))
+            region_ids = [region_id] if region_id else []
+            geo_ids = [f"geo_{code.lower()}"]
+            if region_id:
+                geo_ids.append(region_id)
+            if nearest_place_id and nearest_place_id not in geo_ids:
+                geo_ids.append(nearest_place_id)
 
         gallery = (detail.get("media") or {}).get("gallery") or []
         media_ids = []
@@ -544,11 +669,17 @@ def build():
         logistics = (detail.get("visit") or {}).get("logistics") or {}
         operations = (detail.get("visit") or {}).get("operations") or {}
         visual_recon = remap_visual_sources(detail.get("visual_recon"), registry)
-        sections = narrative_sections(detail.get("story"), source_refs)
+        source_object = source_object_by_country_name.get((code, (detail.get("identity") or {}).get("name")))
+        story_payload = dict(detail.get("story") or {})
+        source_sections = ((((source_object or {}).get("traveler_card") or {}).get("annotation") or {}).get("sections"))
+        if isinstance(source_sections, list) and source_sections:
+            story_payload["sections"] = source_sections
+        sections = narrative_sections(story_payload, source_refs)
         reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
+        language_review = ((source_object or {}).get("qa") or {}).get("language_review") or {}
 
         checks = {
-            "language": bool((detail.get("identity") or {}).get("narrow") or sections),
+            "language": bool((detail.get("identity") or {}).get("narrow") or sections) and (code != "KH" or language_review.get("status") == "reviewed"),
             "classification": bool(class_id),
             "geo": bool(geo_ids),
             "coordinates": bool(primary_location and primary_location.get("lat") is not None and primary_location.get("lon") is not None),
@@ -583,7 +714,7 @@ def build():
             },
             "geo": {
                 "country_id": f"geo_{code.lower()}",
-                "region_ids": [region_id] if region_id else [],
+                "region_ids": region_ids,
                 "nearest_place_id": nearest_place_id,
                 "nearest_place_name_raw": location.get("nearest_hub"),
                 "primary_location": primary_location,
@@ -727,6 +858,19 @@ def build():
         overview = source.get("overview") or {}
         travel = source.get("travel") or {}
         checked_at = meta.get("last_updated")
+        source_map = country_source_ids_by_code.get(code) or {}
+        source_rows = {row.get("id"): row for row in (source.get("sources") or []) if row.get("id")}
+        def refs_for(*topics):
+            wanted = set(topics)
+            out = []
+            for short_id, row in source_rows.items():
+                if wanted.intersection(set(row.get("used_for") or [])):
+                    canonical = source_map.get(short_id)
+                    if canonical and canonical not in out:
+                        out.append(canonical)
+            return out
+        def refs_from_ids(ids):
+            return [source_map[source_id] for source_id in (ids or []) if source_id in source_map]
 
         profile = {
             "id": f"geo_{code.lower()}",
@@ -738,6 +882,7 @@ def build():
             "languages": overview.get("languages"),
             "ethnography": overview.get("ethnography"),
             "economy": overview.get("economy"),
+            "political_system": overview.get("political_system"),
             "culture": overview.get("culture"),
             "cuisine": (travel.get("food") or {}).get("budget_food_summary"),
             "street_food": (travel.get("food") or {}).get("street_food"),
@@ -747,35 +892,51 @@ def build():
             "summary": overview.get("summary"),
             "narrow": overview.get("narrow"),
             "source_file": source_path.name,
+            "source_refs": list(dict.fromkeys(refs_for("country_profile", "economy", "poverty", "demography", "administrative_structure", "ethnography", "languages", "religion", "culture", "heritage", "official_language", "state_religion", "political_system"))),
+            "field_source_refs": {
+                "history": refs_from_ids(overview.get("history_source_ids")),
+                "geography": refs_from_ids((overview.get("geography") or {}).get("source_ids")),
+                "religions": refs_from_ids((overview.get("religion") or {}).get("source_ids")),
+                "languages": refs_from_ids((overview.get("languages") or {}).get("source_ids")),
+                "ethnography": refs_from_ids((overview.get("ethnography") or {}).get("source_ids")),
+                "economy": refs_from_ids((overview.get("economy") or {}).get("source_ids")),
+                "political_system": refs_from_ids(overview.get("political_system_source_ids")),
+                "culture": refs_from_ids((overview.get("culture") or {}).get("source_ids")),
+            },
         }
         dump(release / "countries" / code.lower() / "profile.json", profile)
+        climate_refs = refs_for("air_temperature", "sea_temperature", "climate")
         dump(release / "countries" / code.lower() / "climate.json", {
             "country_id": f"geo_{code.lower()}",
             "data": source.get("climate"),
-            "source_refs": [],
+            "source_refs": climate_refs,
             "checked_at": checked_at,
-            "qa": {
-                "source_refs_complete": False,
-                "note": "Climate values are preserved from the project source; fact-level source normalization remains queued.",
-            },
+            "qa": {"source_refs_complete": bool(climate_refs), "note": "Climate source refs normalized from the research source." if climate_refs else "Climate fact-level source normalization remains queued."},
         })
+        visa_refs = refs_from_ids((travel.get("visa_for_russian_passport") or {}).get("source_ids")) or refs_for("visa", "entry")
+        border_refs = refs_from_ids((travel.get("land_borders") or {}).get("source_ids")) or refs_for("entry")
+        airport_refs = refs_from_ids(travel.get("airports_source_ids")) or refs_for("airport")
+        air_link_refs = refs_from_ids(travel.get("international_air_links_source_ids")) or refs_for("air_connectivity")
+        transport_refs = refs_from_ids((travel.get("transport_rules") or {}).get("source_ids")) or refs_for("transport_rules", "road_traffic_law")
+        camping_refs = refs_from_ids((travel.get("camping_rules") or {}).get("source_ids")) or refs_for("camping_rules", "protected_areas")
+        drone_refs = refs_from_ids((travel.get("drone_rules") or {}).get("source_ids"))
+        law_refs = refs_from_ids(travel.get("laws_source_ids")) or refs_for("heritage_law", "environmental_rules")
+        currency_refs = refs_from_ids((travel.get("currency") or {}).get("source_ids")) or refs_for("currency", "exchange_rate")
+        safety_refs = refs_from_ids((source.get("safety") or {}).get("source_ids")) or refs_for("safety")
         dump(release / "countries" / code.lower() / "travel-rules.json", {
             "country_id": f"geo_{code.lower()}",
-            "visa": wrap_dynamic(travel.get("visa_for_russian_passport"), checked_at),
-            "visa_run": wrap_dynamic(
-                ((travel.get("visa_for_russian_passport") or {}).get("visa_run")),
-                checked_at,
-            ),
-            "borders": wrap_dynamic(travel.get("land_borders"), checked_at),
-            "airports": wrap_dynamic(travel.get("airports"), checked_at),
-            "international_air_links": wrap_dynamic(travel.get("international_air_links"), checked_at),
-            "transport_rules": wrap_dynamic(travel.get("transport_rules"), checked_at),
-            "camping": wrap_dynamic(travel.get("camping_rules"), checked_at),
-            "drones": wrap_dynamic(travel.get("drone_rules"), checked_at),
-            "laws_and_prohibitions": wrap_dynamic(travel.get("laws_and_prohibitions"), checked_at),
-            "permits": wrap_dynamic(travel.get("tourist_permits"), checked_at),
-            "currency": wrap_dynamic(travel.get("currency"), checked_at),
-            "safety_snapshot": wrap_dynamic(source.get("safety"), checked_at),
+            "visa": wrap_dynamic(travel.get("visa_for_russian_passport"), checked_at, visa_refs),
+            "visa_run": wrap_dynamic(((travel.get("visa_for_russian_passport") or {}).get("visa_run")), checked_at, visa_refs),
+            "borders": wrap_dynamic(travel.get("land_borders"), checked_at, border_refs),
+            "airports": wrap_dynamic(travel.get("airports"), checked_at, airport_refs),
+            "international_air_links": wrap_dynamic(travel.get("international_air_links"), checked_at, air_link_refs),
+            "transport_rules": wrap_dynamic(travel.get("transport_rules"), checked_at, transport_refs),
+            "camping": wrap_dynamic(travel.get("camping_rules"), checked_at, camping_refs),
+            "drones": wrap_dynamic(travel.get("drone_rules"), checked_at, drone_refs, "No sufficiently authoritative country-wide drone rule was normalized in this pass; object/site-specific restrictions remain authoritative." if not drone_refs else None),
+            "laws_and_prohibitions": wrap_dynamic(travel.get("laws_and_prohibitions"), checked_at, law_refs),
+            "permits": wrap_dynamic(travel.get("tourist_permits"), checked_at, refs_for("permit", "permits")),
+            "currency": wrap_dynamic(travel.get("currency"), checked_at, currency_refs),
+            "safety_snapshot": wrap_dynamic(source.get("safety"), checked_at, safety_refs),
         })
         indexes = {
             "country_id": f"geo_{code.lower()}",

@@ -134,6 +134,7 @@ TYPE_BY_NAME = {
     "Tad Fane": "waterfall",
     "Tad Yuang": "waterfall",
     "Khone Phapheng Falls": "waterfall",
+    "Li Phi / Somphamit Falls": "waterfall",
 }
 
 

@@ -2,8 +2,8 @@
   "country_id": "geo_kh",
   "visa": {
     "value": {
-      "status": "visa required",
-      "tourist_visa": "туристическая виза категории T / электронная виза / виза по прибытии там, где она доступна",
+      "status": "виза требуется для обычного российского паспорта",
+      "tourist_visa": "Туристическая виза T: электронная виза либо иной доступный на конкретном пункте въезда визовый режим. Официальная eVisa T — однократная, сбор USD 30, срок действия 3 месяца с даты выдачи, разрешённое пребывание 1 месяц.",
       "stay_days": 30,
       "extension": "Туристическую визу обычно можно продлить один раз ещё примерно на 30 дней.",
       "visa_run": {
@@ -13,14 +13,26 @@
       },
       "fee_usd_typical": 30,
       "passport_validity": "обычно минимум 6 месяцев",
-      "entry_form": "Cambodia e-Arrival requirements should be checked before arrival",
-      "official_source": "официальная система электронной визы Камбоджи / МИД России"
+      "entry_form": "Cambodia e-Arrival объединяет электронную форму прибытия, иммиграционную форму, медицинскую декларацию и таможенную декларацию; требования проверять непосредственно перед въездом.",
+      "official_source": "официальная система электронной визы Камбоджи / МИД России",
+      "visa_exemption_note": "По официальной таблице визовых соглашений на 25 сентября 2026 года для России указано освобождение для дипломатической категории на срок миссии; обычный паспорт отмечен как не освобождённый.",
+      "source_ids": [
+        "EVISA",
+        "MFA_VISA_EXEMPT",
+        "EARRIVAL",
+        "RUS_MFA"
+      ]
     },
-    "source_refs": [],
+    "source_refs": [
+      "src_900002",
+      "src_900017",
+      "src_900011",
+      "src_900003"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "visa_run": {
@@ -29,27 +41,39 @@
       "limits": "Это не гарантированное право; электронная виза принимается только в перечисленных пунктах, а работа конкретных сухопутных границ меняется.",
       "notes": "Перед наземным визаран проверять, открыт ли нужный пограничный пункт для иностранцев и электронная виза."
     },
-    "source_refs": [],
+    "source_refs": [
+      "src_900002",
+      "src_900017",
+      "src_900011",
+      "src_900003"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "borders": {
     "value": {
       "countries": [
-        "Thailand",
-        "Laos",
-        "Vietnam"
+        "Таиланд",
+        "Лаос",
+        "Вьетнам"
       ],
-      "transport": "Международные автобусы, микроавтобусы и частные трансферы работают на основных направлениях; режим пограничных переходов и обстановка на камбоджийско-тайской границе меняются, их нужно проверять непосредственно перед поездкой."
+      "transport": "На основных направлениях работают автобусы, микроавтобусы и частные трансферы. Конкретный пограничный пункт, допуск иностранцев, принятие eVisa и текущую обстановку необходимо перепроверять перед наземным переходом.",
+      "source_ids": [
+        "RUS_MFA",
+        "EVISA"
+      ]
     },
-    "source_refs": [],
+    "source_refs": [
+      "src_900003",
+      "src_900002"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "airports": {
@@ -57,60 +81,98 @@
       {
         "iata": "KTI",
         "name": "Techo International Airport",
-        "role": "main Phnom Penh international gateway; operating since 9 Sep 2025"
+        "role": "главный международный аэропорт Пномпеня; работает с 9 сентября 2025 года",
+        "source_ids": [
+          "KTI",
+          "SSCA"
+        ]
       },
       {
         "iata": "SAI",
         "name": "Siem Reap–Angkor International Airport",
-        "role": "Angkor gateway"
+        "role": "главный аэропорт доступа к Сиемреапу и Ангкору",
+        "source_ids": [
+          "SSCA"
+        ]
       },
       {
         "iata": "KOS",
         "name": "Sihanouk International Airport",
-        "role": "coast"
+        "role": "аэропорт побережья и Сиануквиля",
+        "source_ids": [
+          "SSCA"
+        ]
       }
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_900004",
+      "src_900018"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "international_air_links": {
-    "value": "KTI replaced the old Phnom Penh airport as the principal capital gateway in September 2025; strong links to ASEAN and East Asian hubs.",
-    "source_refs": [],
+    "value": "KTI заменил старый аэропорт Пномпеня как основной столичный международный шлюз в сентябре 2025 года. Для конкретных международных направлений и частот использовать текущее расписание аэропортов/авиакомпаний, а не статический список.",
+    "source_refs": [
+      "src_900004",
+      "src_900018"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "transport_rules": {
-    "value": null,
-    "source_refs": [],
+    "value": {
+      "summary": "Самостоятельное управление автомобилем или мотоциклом регулируется Законом о дорожном движении Камбоджи. В справочнике не предполагается автоматически, что иностранные права или конкретная категория мотоцикла принимаются: категорию прав, международное удостоверение и условия проката нужно проверять для выбранного транспорта.",
+      "source_ids": [
+        "MPWT_ROAD"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    "source_refs": [
+      "src_900013"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "camping": {
-    "value": null,
-    "source_refs": [],
+    "value": {
+      "status": "site_specific",
+      "summary": "Подтверждённого общего права на свободный кемпинг по всей Камбодже не найдено. В охраняемых территориях доступ и допустимые действия зависят от зонирования, режима конкретной территории и решений её администрации; ночёвку в палатке следует считать разрешённой только там, где это подтверждено для конкретного объекта или согласовано на месте.",
+      "source_ids": [
+        "MOE_CODE"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    "source_refs": [
+      "src_900014"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "drones": {
-    "value": null,
+    "value": {
+      "status": "needs_site_specific_verification",
+      "summary": "Единого актуального официального источника, достаточного для надёжного общенационального правила по любительским БПЛА, в этом проходе не зафиксировано. Для Ангкора, Пномпеня, аэропортовых зон, военных и иных чувствительных объектов использовать объектные ограничения и получать разрешение там, где оно требуется.",
+      "source_ids": [],
+      "checked_at": "2026-09-28"
+    },
     "source_refs": [],
     "checked_at": "2026-09-28",
     "qa": {
       "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "note": "No sufficiently authoritative country-wide drone rule was normalized in this pass; object/site-specific restrictions remain authoritative."
     }
   },
   "laws_and_prohibitions": {
@@ -128,11 +190,14 @@
         "rule": "Не вывозить древности/археологические предметы без законного происхождения и разрешений; для дронов и профессиональной съёмки на объектах Ангкора действуют отдельные правила."
       }
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_900009",
+      "src_900014"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "permits": {
@@ -141,50 +206,63 @@
     "checked_at": "2026-09-28",
     "qa": {
       "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "note": "Country-level fact still requires fact-level source normalization."
     }
   },
   "currency": {
     "value": {
       "code": "KHR",
-      "name": "Cambodian riel",
+      "name": "камбоджийский риель",
       "local_currency_per_1_usd": 4068.11,
       "as_of": "2026-09-27",
       "rate_type": "market/reference snapshot",
-      "notes": "US dollars remain widely used, especially for larger/tourist transactions; change may be given in riel."
+      "notes": "Доллары США широко используются параллельно риелю, особенно в туристических и более крупных расчётах; сдачу нередко дают в риелях.",
+      "source_ids": [
+        "NBC_RATE"
+      ]
     },
-    "source_refs": [],
+    "source_refs": [
+      "src_900012"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "safety_snapshot": {
     "value": {
       "crime_level": {
-        "qualitative": "низкий–умеренный для обычного туристического маршрута",
-        "notes": "Наиболее типичны карманные кражи, срывание сумок проезжающими мотоциклистами с мотоциклов, мошенничество; уровень рисков заметно меняется по району."
+        "qualitative": "Основной бытовой риск для путешественника связан не с тяжёлой преступностью, а с кражами, рывками телефонов и сумок с мотоциклов, мошенничеством и дорожными происшествиями; ситуация зависит от района.",
+        "notes": "Для удалённых районов отдельно учитывать мины/UXO и актуальную обстановку у сухопутных границ.",
+        "source_ids": [
+          "RUS_MFA"
+        ]
       },
       "common_traveler_risks": [
-        "срывание сумок проезжающими мотоциклистами",
-        "pickpocketing",
-        "road crashes",
-        "scams",
-        "heat",
-        "unexploded ordnance in remote border/rural areas"
+        "кражи и рывки телефонов/сумок с проезжающих мотоциклов",
+        "карманные кражи",
+        "дорожные происшествия",
+        "мошенничество",
+        "жара и обезвоживание",
+        "мины и неразорвавшиеся боеприпасы в отдельных удалённых и приграничных районах"
       ],
       "sensitive_areas": [
-        "remote border zones",
-        "military sites",
-        "landmine/UXO marked zones"
+        "удалённые приграничные районы",
+        "военные объекты",
+        "обозначенные зоны минной и UXO-опасности"
+      ],
+      "source_ids": [
+        "RUS_MFA"
       ]
     },
-    "source_refs": [],
+    "source_refs": [
+      "src_900003"
+    ],
     "checked_at": "2026-09-28",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level legacy source does not yet expose fact-level source IDs; retain value and queue source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   }
 }

@@ -30,67 +30,53 @@
       "page_path": "pages/countries/cambodia.json"
     },
     {
-      "id": "kh:hub:kampong-thom",
-      "name": "Kampong Thom",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/cambodia/city_or_route_hub/kampong-thom.json"
+      "id": "kh:district:svay-leu",
+      "name": "Свай-Леу",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/district/svay-leu.json"
     },
     {
-      "id": "kh:hub:kampongtkhom-gorod-preakhvikhea",
-      "name": "Кампонгтхом / город Преахвихеа",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/cambodia/city_or_route_hub/kampongtkhom-gorod-preakhvikhea.json"
+      "id": "kh:district:thma-puok",
+      "name": "Тхма-Пуок",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/district/thma-puok.json"
     },
     {
-      "id": "kh:hub:preah-vihear-city",
-      "name": "Preah Vihear City",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/cambodia/city_or_route_hub/preah-vihear-city.json"
+      "id": "kh:province:banteay-meanchey",
+      "name": "Бантеаймеанчей",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/banteay-meanchey.json"
     },
     {
-      "id": "kh:hub:siem-reap",
-      "name": "Siem Reap",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/cambodia/city_or_route_hub/siem-reap.json"
+      "id": "kh:province:kampong-thom",
+      "name": "Кампонгтхом",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/kampong-thom.json"
     },
     {
-      "id": "kh:hub:sisopkhon-banteaimeanchei",
-      "name": "Сисопхон / Бантеаймеанчей",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/cambodia/city_or_route_hub/sisopkhon-banteaimeanchei.json"
+      "id": "kh:province:preah-vihear",
+      "name": "Преахвихеа",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/preah-vihear.json"
     },
     {
-      "id": "kh:hub:takeo",
-      "name": "Takeo",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/cambodia/city_or_route_hub/takeo.json"
+      "id": "kh:province:siem-reap",
+      "name": "Сиемреап",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/siem-reap.json"
     },
     {
-      "id": "kh:region:preakhvikhea-severnyi-khramovyi-poyas",
-      "name": "Преахвихеа / северный храмовый пояс",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/cambodia/region/preakhvikhea-severnyi-khramovyi-poyas.json"
-    },
-    {
-      "id": "kh:region:siem-reap-angkor",
-      "name": "Siem Reap / Angkor",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/cambodia/region/siem-reap-angkor.json"
-    },
-    {
-      "id": "kh:region:takeo-nasledie-nizhnego-mekonga",
-      "name": "Такео / наследие нижнего Меконга",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/cambodia/region/takeo-nasledie-nizhnego-mekonga.json"
+      "id": "kh:province:takeo",
+      "name": "Такео",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/takeo.json"
     }
   ],
   "objects": [
@@ -99,12 +85,11 @@
       "name": "Angkor Archaeological Park",
       "geography_ids": [
         "country:kh",
-        "kh:hub:siem-reap",
-        "kh:region:siem-reap-angkor"
+        "kh:province:siem-reap"
       ],
-      "region_legacy": "Siem Reap / Angkor",
-      "nearest_hub": "Siem Reap",
-      "narrow": "Ангкор — не один храм, а примерно 400 км² последовательных столиц Кхмерской империи IX–XV веков: храмы, дороги, дамбы, каналы, бараи и жилой ландшафт.",
+      "region_legacy": "Сиемреап / Ангкор",
+      "nearest_hub": "Сиемреап",
+      "narrow": "Ангкор — не один храм, а огромный культурный ландшафт бывших столиц Кхмерской империи: храмы, дороги, дамбы, каналы, бараи, монастыри, деревни и сельскохозяйственные земли образуют единую систему.",
       "detail_path": "countries/cambodia/objects/angkor-archaeological-park.json"
     },
     {
@@ -112,12 +97,11 @@
       "name": "Preah Vihear",
       "geography_ids": [
         "country:kh",
-        "kh:hub:preah-vihear-city",
-        "kh:region:preakhvikhea-severnyi-khramovyi-poyas"
+        "kh:province:preah-vihear"
       ],
       "region_legacy": "Преахвихеа / северный храмовый пояс",
-      "nearest_hub": "Preah Vihear City",
-      "narrow": "Преахвихеа — храм Шивы, развивавшийся с IX по XII век на краю уступа Дангрэк. В отличие от концентрического Ангкор-Ват, ансамбль вытянут по оси вдоль горного хребта и террас: топография буквально диктует ритуальный путь вверх.",
+      "nearest_hub": "город Преахвихеа",
+      "narrow": "Преахвихеа — храм Шивы, развивавшийся с IX по XII век на краю уступа Дангрэк. В отличие от концентрического Ангкор-Вата ансамбль вытянут по оси вдоль хребта и террас: рельеф формирует последовательный ритуальный путь вверх.",
       "detail_path": "countries/cambodia/objects/preah-vihear.json"
     },
     {
@@ -125,12 +109,11 @@
       "name": "Koh Ker",
       "geography_ids": [
         "country:kh",
-        "kh:hub:siem-reap",
-        "kh:region:preakhvikhea-severnyi-khramovyi-poyas"
+        "kh:province:preah-vihear"
       ],
       "region_legacy": "Преахвихеа / северный храмовый пояс",
-      "nearest_hub": "Siem Reap",
-      "narrow": "Кох-Кер был столицей Кхмерской империи в 921–944 годах, а в 928–944 — единственной столицей, когда центр власти при Джаявармане IV был перенесён из Ангкора.",
+      "nearest_hub": "Сиемреап",
+      "narrow": "Кох-Кер был столичным центром Кхмерской империи в X веке при Джаявармане IV. Город, известный как Лингапура или Чок-Гаргьяр, формировался быстро и выделяется крупной каменной скульптурой, монументальными лингамами и ступенчатой пирамидой Прасат-Пранг.",
       "detail_path": "countries/cambodia/objects/koh-ker.json"
     },
     {
@@ -138,12 +121,11 @@
       "name": "Sambor Prei Kuk",
       "geography_ids": [
         "country:kh",
-        "kh:hub:kampong-thom",
-        "kh:region:preakhvikhea-severnyi-khramovyi-poyas"
+        "kh:province:kampong-thom"
       ],
-      "region_legacy": "Преахвихеа / северный храмовый пояс",
-      "nearest_hub": "Kampong Thom",
-      "narrow": "Самбор-Прей-Кук — храмовая зона древней Ishanapura, столицы Chenla конца VI–VII веков, то есть важнейшая ступень до Ангкора. Здесь более сотни храмов, а уникальные восьмиугольные башни и кирпичная пластика показывают, как формировался собственный кхмерский архитектурный язык.",
+      "region_legacy": "Кампонгтхом / Самбор-Прей-Кук",
+      "nearest_hub": "Кампонгтхом",
+      "narrow": "Самбор-Прей-Кук — храмовая зона древней Ишанапуры, столицы Ченлы конца VI–VII веков и важный этап формирования кхмерской архитектуры до Ангкора. Здесь сохранились многочисленные кирпичные святилища, включая характерные восьмиугольные башни.",
       "detail_path": "countries/cambodia/objects/sambor-prei-kuk.json"
     },
     {
@@ -151,12 +133,12 @@
       "name": "Banteay Chhmar",
       "geography_ids": [
         "country:kh",
-        "kh:hub:sisopkhon-banteaimeanchei",
-        "kh:region:preakhvikhea-severnyi-khramovyi-poyas"
+        "kh:district:thma-puok",
+        "kh:province:banteay-meanchey"
       ],
-      "region_legacy": "Преахвихеа / северный храмовый пояс",
+      "region_legacy": "Бантеаймеанчей / Бантей-Чмар",
       "nearest_hub": "Сисопхон / Бантеаймеанчей",
-      "narrow": "Бантей-Чмар — большой храмовый и городской комплекс конца XII–начала XIII века, связанный с Jayavarman VII. Он известен длинными барельефами с военными и придворными сценами, башнями с лицами и изображениями многорукого Avalokiteshvara; значительная часть комплекса остаётся в состоянии руин.",
+      "narrow": "Бантей-Чмар — большой храмовый и городской комплекс конца XII–начала XIII века, связанный с Джаяварманом VII. Он известен длинными барельефами, башнями с лицами и изображениями многорукого Авалокитешвары; значительная часть сооружений сохраняется в виде руин.",
       "detail_path": "countries/cambodia/objects/banteay-chhmar.json"
     },
     {
@@ -164,12 +146,11 @@
       "name": "Preah Khan Kompong Svay",
       "geography_ids": [
         "country:kh",
-        "kh:hub:kampongtkhom-gorod-preakhvikhea",
-        "kh:region:preakhvikhea-severnyi-khramovyi-poyas"
+        "kh:province:preah-vihear"
       ],
       "region_legacy": "Преахвихеа / северный храмовый пояс",
       "nearest_hub": "Кампонгтхом / город Преахвихеа",
-      "narrow": "Преах-Кхан-Компонг-Свай, исторически Bakan, — огромный удалённый комплекс примерно в 105 км к востоку от Angkor. Это не просто храм: ЮНЕСКО описывает его как махаянский “город чистой земли”, станцию на восточной королевской дороге и одновременно центр добычи/производства железа.",
+      "narrow": "Преах-Кхан-Компонг-Свай, исторически Бакан, — крупный удалённый комплекс к востоку от Ангкора. ЮНЕСКО описывает его как махаянский город, узел восточной королевской дороги и район, связанный с производством железа.",
       "detail_path": "countries/cambodia/objects/preah-khan-kompong-svay.json"
     },
     {
@@ -177,12 +158,12 @@
       "name": "Beng Mealea",
       "geography_ids": [
         "country:kh",
-        "kh:hub:siem-reap",
-        "kh:region:siem-reap-angkor"
+        "kh:district:svay-leu",
+        "kh:province:siem-reap"
       ],
-      "region_legacy": "Siem Reap / Angkor",
-      "nearest_hub": "Siem Reap",
-      "narrow": "Бенг-Мелеа — крупный храмовый комплекс XII века на древней восточной дорожной системе Angkor, архитектурно близкий к Ангкор-Ват, но переживший сильное разрушение.",
+      "region_legacy": "Сиемреап / Ангкор",
+      "nearest_hub": "Сиемреап",
+      "narrow": "Бенг-Мелеа — крупный храмовый комплекс XII века на древней восточной дорожной системе Ангкора, архитектурно близкий к Ангкор-Вату и сильно разрушенный.",
       "detail_path": "countries/cambodia/objects/beng-mealea.json"
     },
     {
@@ -190,12 +171,11 @@
       "name": "Angkor Borei and Phnom Da",
       "geography_ids": [
         "country:kh",
-        "kh:hub:takeo",
-        "kh:region:takeo-nasledie-nizhnego-mekonga"
+        "kh:province:takeo"
       ],
       "region_legacy": "Такео / наследие нижнего Меконга",
-      "nearest_hub": "Takeo",
-      "narrow": "Ангкор-Борей — один из важнейших ранних городских центров Юго-Восточной Азии, связанный с политиями Funan и развитием кхмерской цивилизации задолго до Ангкора.",
+      "nearest_hub": "Такео",
+      "narrow": "Ангкор-Борей — один из важнейших ранних городских центров Юго-Восточной Азии, связанный с политиями Фунань и развитием кхмерской цивилизации задолго до Ангкора. Здесь найдены ранние кхмерские надписи; город был окружён стенами и рвами и связан каналами с другими центрами дельты Меконга.",
       "detail_path": "countries/cambodia/objects/angkor-borei-and-phnom-da.json"
     }
   ]

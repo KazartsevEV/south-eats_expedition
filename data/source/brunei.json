@@ -51,13 +51,13 @@
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "2.10.1",
+      "schema_target": "2.10.2",
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
       "policy": "WGS84/EPSG:4326; point elevation belongs to a specific GPS point (entrance/pier/trailhead/etc.); object_elevation separately describes the object itself above mean sea level and is required for elevation QA.",
       "objects_with_point_elevation": 16,
-      "objects_with_object_elevation": 10
+      "objects_with_object_elevation": 11
     },
     "elevation_provenance_upgrade": {
       "updated": "2026-09-28",
@@ -1195,6 +1195,24 @@
               "authority": "medium",
               "accessed": "2026-09-28",
               "notes": "SRTM30m sample at the exact canonical pier GPS point. Approximate surface elevation from a ~30 m raster; not a surveyed jetty deck or river-stage elevation."
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": null,
+              "max_m": 1850,
+              "reference_type": "highest_point",
+              "accuracy": "medium",
+              "source": {
+                "type": "university_research_profile",
+                "title": "The Kuala Belalong Field Studies Centre",
+                "publisher": "Universiti Brunei Darussalam / Asia Research News",
+                "url": "https://www.asiaresearchnews.com/html/article.php/aid/3356/cid/2/research/people/universiti_brunei_darussalam/the_kuala_belalong_field_studies_centre.html",
+                "authority": "high",
+                "accessed": "2026-09-28",
+                "notes": "Источник прямо указывает, что высшая точка в Ulu Temburong National Park — Gunong Pagon, 1850 м. Это object-level maximum, а не высота туристического пирса."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Высота объекта задана по высшей точке парка. Локальная высота primary_location (пирс) хранится отдельно и не используется как характеристика рельефа парка."
             }
           },
           "logistics": {

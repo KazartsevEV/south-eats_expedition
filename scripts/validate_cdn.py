@@ -104,6 +104,17 @@ countries = load(release / "countries.json").get("countries", [])
 objects = load(release / "search" / "objects.json").get("objects", [])
 places = load(release / "search" / "places.json").get("places", [])
 qa = load(release / "qa.json")
+lodging_index_path = release / "infrastructure" / "lodging" / "index.json"
+if not lodging_index_path.exists():
+    fail("missing normalized lodging index")
+lodging_rows = load(lodging_index_path).get("lodging") or []
+lodging_ids = {row.get("id") for row in lodging_rows if row.get("id")}
+if len(lodging_ids) != len(lodging_rows):
+    fail("lodging index contains empty or duplicate ids")
+for row in lodging_rows:
+    path = row.get("detail_path")
+    if not path or not (release / path).exists():
+        fail(f"lodging detail missing: {row.get('id')} -> {path}")
 
 totals = manifest.get("totals") or {}
 checks = {
@@ -150,6 +161,16 @@ for row in objects:
     if not story:
         fail(f"missing canonical story in {row['detail_path']}")
     identity = detail.get("identity") or {}
+    if "accommodation" in (detail.get("visit") or {}):
+        fail(f"embedded accommodation leaked into {row['detail_path']}")
+    if "photo_video" in (detail.get("media") or {}):
+        fail(f"embedded photo_video leaked into {row['detail_path']}")
+    visual_recon = detail.get("visual_recon") or {}
+    if not isinstance(visual_recon, dict):
+        fail(f"invalid visual_recon in {row['detail_path']}")
+    for lodging_id in (detail.get("visit") or {}).get("lodging_ids") or []:
+        if lodging_id not in lodging_ids:
+            fail(f"unknown lodging reference {lodging_id} in {row['detail_path']}")
     if not identity.get("narrow"):
         fail(f"missing narrow in {row['detail_path']}")
     if not identity.get("object_type"):

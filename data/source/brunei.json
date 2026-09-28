@@ -55,7 +55,7 @@
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
-      "objects_with_verified_elevation": 12,
+      "objects_with_verified_elevation": 14,
       "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas and variable river departures are explicitly approximate"
     },
     "elevation_provenance_upgrade": {
@@ -2636,17 +2636,26 @@
             "coordinates": {
               "lat": 4.902917,
               "lon": 114.945122,
-              "elevation_m": null
+              "elevation_m": 29
             },
             "coordinate_type": "center",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Mapcarta / OpenStreetMap",
               "url": "https://mapcarta.com/W221450930",
               "basis": "park feature coordinate"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "SRTM30m elevation samples for Brunei forest park reference points",
+              "publisher": "OpenTopoData / SRTM",
+              "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.902917%2C114.945122%7C4.9517%2C114.8535",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "SRTM30m sample at the exact canonical park reference GPS point. Approximate surface elevation from a ~30 m raster; forest canopy can bias the surface value and it is not a surveyed trailhead/ground elevation."
+            }
           },
           "logistics": {
             "access": "Dart/автомобиль; затем пешком по тропам.",
@@ -3874,17 +3883,26 @@
             "coordinates": {
               "lat": 4.9517,
               "lon": 114.8535,
-              "elevation_m": null
+              "elevation_m": 64
             },
             "coordinate_type": "center",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Mapcarta / OpenStreetMap",
               "url": "https://mapcarta.com/W137295789",
               "basis": "recreational park feature coordinate"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "map",
+              "title": "SRTM30m elevation samples for Brunei forest park reference points",
+              "publisher": "OpenTopoData / SRTM",
+              "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.902917%2C114.945122%7C4.9517%2C114.8535",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "SRTM30m sample at the exact canonical park reference GPS point. Approximate surface elevation from a ~30 m raster; forest canopy can bias the surface value and it is not a surveyed trailhead/ground elevation."
+            }
           },
           "logistics": {
             "access": "Короткий автомобильный трансфер из Бандар-Сери-Бегаван в сторону Jerudong; проще всего Dart/такси, автобус — бюджетная альтернатива.",

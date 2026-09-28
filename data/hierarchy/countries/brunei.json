@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "status": "district_level_formalized",
+    "checked_at": "2026-09-28",
+    "next_level": "cities_mukims_villages_and_geographic_areas"
+  },
+  "rules": {
+    "parentage": "Only documented administrative containment is encoded as hierarchy.",
+    "route_hubs": "Legacy nearest_hub values remain useful for access logistics but are not treated as administrative parents.",
+    "object_visibility": "Selecting a district must return every object assigned to that district."
+  },
+  "nodes": [
+    {
+      "id": "bn:district:brunei-muara",
+      "kind": "district",
+      "name_ru": "Бруней-Муара",
+      "name_local": "Daerah Brunei dan Muara",
+      "slug": "brunei-muara",
+      "parent_id": "country:bn",
+      "object_ids": [
+        "bn:omar-ali-saifuddien-mosque",
+        "bn:jame-asr-hassanil-bolkiah-mosque",
+        "bn:kampong-ayer",
+        "bn:royal-regalia-museum",
+        "bn:tasek-lama-park",
+        "bn:malay-technology-museum",
+        "bn:bukit-shahbandar-recreational-park",
+        "bn:brunei-river-mangrove-safari",
+        "bn:tamu-kianggeh",
+        "bn:berakas-forest-recreational-park"
+      ],
+      "legacy_region_names": [
+        "Бандар-Сери-Бегаван / Бруней-Муара"
+      ]
+    },
+    {
+      "id": "bn:district:belait",
+      "kind": "district",
+      "name_ru": "Белайт",
+      "name_local": "Daerah Belait",
+      "slug": "belait",
+      "parent_id": "country:bn",
+      "object_ids": [
+        "bn:seria-oil-heritage-landscape",
+        "bn:labi-interior",
+        "bn:teraja-longhouse",
+        "bn:mendaram-besar-longhouse",
+        "bn:billionth-barrel-monument"
+      ],
+      "legacy_region_names": [
+        "Белайт / Сериа / Лаби"
+      ]
+    },
+    {
+      "id": "bn:district:tutong",
+      "kind": "district",
+      "name_ru": "Тутонг",
+      "name_local": "Daerah Tutong",
+      "slug": "tutong",
+      "parent_id": "country:bn",
+      "object_ids": [
+        "bn:tutong-and-tamu-markets",
+        "bn:tasek-merimbun-heritage-park"
+      ],
+      "legacy_region_names": [
+        "Tutong"
+      ]
+    },
+    {
+      "id": "bn:district:temburong",
+      "kind": "district",
+      "name_ru": "Тембуронг",
+      "name_local": "Daerah Temburong",
+      "slug": "temburong",
+      "parent_id": "country:bn",
+      "object_ids": [
+        "bn:ulu-temburong-national-park"
+      ],
+      "legacy_region_names": [
+        "Temburong"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.moha.gov.bn/perkhidmatan-hal-ehwal-daerah/",
+      "publisher": "Ministry of Home Affairs, Brunei Darussalam",
+      "used_for": [
+        "four district offices",
+        "official district names"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://www.jpbd.gov.bn/buku-garispanduan-dan-master-plan/",
+      "publisher": "Department of Town and Country Planning, Brunei Darussalam",
+      "used_for": [
+        "district-level planning structure"
+      ],
+      "checked_at": "2026-09-28"
+    }
+  ]
+}

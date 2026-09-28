@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.9.7"
-RELEASE_ID = "2026-09-28-r29"
+SCHEMA_VERSION = "2.10.0"
+RELEASE_ID = "2026-09-28-r30"
 SUPPORTED_SOURCE_MODELS = {"1.5", "1.6"}
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
@@ -383,6 +383,47 @@ def _normalized_point(raw, fallback_type=None):
         "checked_at": raw.get("coordinates_checked_at") or raw.get("checked_at"),
     }
 
+OBJECT_ELEVATION_REFERENCE_TYPES = {
+    "site",
+    "summit",
+    "highest_point",
+    "characteristic",
+    "range",
+    "water_surface",
+    "unknown",
+}
+
+def _normalized_object_elevation(raw, source_ref=None):
+    if not isinstance(raw, dict):
+        return None
+    representative = raw.get("representative_m")
+    min_m = raw.get("min_m")
+    max_m = raw.get("max_m")
+    def number_or_none(value):
+        if isinstance(value, (int, float)) and not isinstance(value, bool):
+            return float(value)
+        return None
+    representative = number_or_none(representative)
+    min_m = number_or_none(min_m)
+    max_m = number_or_none(max_m)
+    if representative is None and min_m is None and max_m is None:
+        return None
+    if min_m is not None and max_m is not None and min_m > max_m:
+        raise RuntimeError(f"invalid object elevation range: min {min_m} > max {max_m}")
+    reference_type = raw.get("reference_type") or "unknown"
+    if reference_type not in OBJECT_ELEVATION_REFERENCE_TYPES:
+        raise RuntimeError(f"unsupported object elevation reference_type: {reference_type!r}")
+    return {
+        "representative_m": representative,
+        "min_m": min_m,
+        "max_m": max_m,
+        "reference_type": reference_type,
+        "accuracy": raw.get("accuracy") or "unknown",
+        "source_refs": [source_ref] if source_ref else [],
+        "checked_at": raw.get("checked_at"),
+        "notes": raw.get("notes"),
+    }
+
 def normalize_geo(location, source_registry=None, object_id=None):
     location = location if isinstance(location, dict) else {}
 
@@ -400,6 +441,17 @@ def normalize_geo(location, source_registry=None, object_id=None):
             used_for.append(used_for_label)
         source["used_for"] = used_for
         return merge_source_entity(source_registry, source, object_id)
+
+    object_elevation_raw = location.get("object_elevation")
+    object_elevation_source_ref = fact_source_ref(
+        object_elevation_raw,
+        "source",
+        "object elevation",
+    ) if isinstance(object_elevation_raw, dict) else None
+    object_elevation = _normalized_object_elevation(
+        object_elevation_raw,
+        object_elevation_source_ref,
+    )
 
     primary_raw = {
         "coordinates": location.get("coordinates"),
@@ -427,6 +479,7 @@ def normalize_geo(location, source_registry=None, object_id=None):
         "epsg": 4326,
         "primary_location": primary,
         "points": points,
+        "object_elevation": object_elevation,
     }
 
 def location_context(location):
@@ -434,6 +487,7 @@ def location_context(location):
     for key in [
         "coordinates", "coordinate_type", "accuracy", "elevation_accuracy", "elevation_range_m",
         "coordinate_source", "elevation_source", "coordinates_checked_at", "geo_points",
+        "object_elevation",
     ]:
         location.pop(key, None)
     return location
@@ -846,17 +900,7 @@ def build():
                 "photo_video": bool(card.get("media")),
                 "visual_recon": bool(visual_recon.get("best_time") or visual_recon.get("viewpoints")),
                 "coordinates": bool(geo.get("primary_location")),
-                "elevation": (
-                    ((geo.get("primary_location") or {}).get("coordinates") or {}).get("elevation_m") is not None
-                    or ((geo.get("primary_location") or {}).get("coordinates") or {}).get("elevation_range_m") is not None
-                    or any(
-                        (
-                            (point.get("coordinates") or {}).get("elevation_m") is not None
-                            or (point.get("coordinates") or {}).get("elevation_range_m") is not None
-                        )
-                        for point in (geo.get("points") or [])
-                    )
-                ),
+                "elevation": bool(geo.get("object_elevation")),
                 "coordinate_type": bool((geo.get("primary_location") or {}).get("type")),
                 "dynamic_checked_at": bool((card.get("operations") or {}).get("last_verified")),
             })
@@ -1127,9 +1171,11 @@ def build():
         "crs": "WGS84",
         "epsg": 4326,
         "primary_coordinate_fields": ["lat", "lon", "elevation_m", "elevation_range_m"],
+        "object_elevation_fields": ["representative_m", "min_m", "max_m", "reference_type", "accuracy", "source_refs", "checked_at", "notes"],
         "fact_provenance": {
             "coordinate_sources": "source_refs",
-            "elevation_sources": "elevation_source_refs"
+            "point_elevation_sources": "elevation_source_refs",
+            "object_elevation_sources": "geo.object_elevation.source_refs"
         },
         "coordinate_types": sorted(COORDINATE_TYPES),
         "accuracy_values": ["high", "medium", "approximate", "unknown"],
@@ -1137,7 +1183,9 @@ def build():
             "lat_range": [-90, 90],
             "lon_range": [-180, 180],
             "elevation_unit": "metres_above_mean_sea_level",
-            "elevation_range_rule": "Use an authoritative min/max range when a property or landscape has a documented range and one scalar value would create false precision.",
+            "point_elevation_rule": "Elevation inside primary_location/geo.points belongs only to that GPS point (entrance, pier, trailhead, viewpoint, etc.) and never satisfies object-level elevation QA by itself.",
+            "object_elevation_rule": "geo.object_elevation describes the object itself above mean sea level: summit/highest point for peaks, min/max or characteristic elevation for extensive terrain, water_surface for lakes, and site elevation for point-like cultural objects.",
+            "elevation_range_rule": "Use min_m/max_m for mountains, plateaus, parks and other extensive objects when one scalar would create false precision.",
             "unknown_values": "null",
             "no_false_precision": True,
             "large_objects": "Use an operational primary point such as entrance/trailhead/pier and additional geo.points rather than an unexplained geometric centre.",

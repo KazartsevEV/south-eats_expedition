@@ -186,6 +186,7 @@ source_code_by_country = {
     "Cambodia":"KH",
     "Lao PDR":"LA",
     "Laos":"LA",
+    "Lao People's Democratic Republic":"LA",
     "Indonesia":"ID",
     "Malaysia":"MY",
     "Myanmar":"MM",

@@ -7947,15 +7947,27 @@
       "checked_at": "2026-09-28"
     },
     "drone_rules": {
-      "status": "needs_site_specific_verification",
-      "summary": "Единого актуального официального источника, достаточного для надёжного общенационального правила по любительским БПЛА, в этом проходе не зафиксировано. Для Ангкора, Пномпеня, аэропортовых зон, военных и иных чувствительных объектов использовать объектные ограничения и получать разрешение там, где оно требуется.",
-      "source_ids": [],
+      "status": "official_notice_exists_site_specific_verification_required",
+      "summary": "Государственный секретариат гражданской авиации Камбоджи публикует отдельное официальное уведомление по дронам в разделе Security Regulation. В доступной текстовой версии страницы недостаточно данных, чтобы безопасно занести единые числовые ограничения по высоте, радиусам или регистрации. Поэтому для каждого полёта нужно проверять актуальное уведомление SSCA и ограничения конкретной территории; для Ангкора и других охраняемых/чувствительных объектов действуют дополнительные правила площадки.",
+      "source_ids": [
+        "SSCA_DRONE",
+        "APSARA_FILMING"
+      ],
       "checked_at": "2026-09-28"
     },
     "laws_source_ids": [
       "CONSTITUTION",
       "MOE_CODE"
-    ]
+    ],
+    "tourist_permits": {
+      "status": "object_specific",
+      "summary": "Единого «туристического разрешения на путешествие по Камбодже» в справочнике не применяется. Разрешения возникают для отдельных типов деятельности и территорий: в охраняемых природных зонах — по режиму конкретной территории, в Ангкоре — для ряда съёмочных и коммерческих форматов. Обычная личная фото- и видеосъёмка в Ангкоре, по официальному разъяснению APSARA, предварительного разрешения не требует; YouTube, коммерческая съёмка, кино, музыкальные клипы и некоторые публичные форматы требуют предварительного согласования.",
+      "source_ids": [
+        "MOE_CODE",
+        "APSARA_FILMING"
+      ],
+      "checked_at": "2026-09-28"
+    }
   },
   "sources": [
     {
@@ -8182,6 +8194,36 @@
       ],
       "accessed": "2026-09-28",
       "canonical_id": "src_900018"
+    },
+    {
+      "id": "SSCA_DRONE",
+      "canonical_id": "src_900019",
+      "publisher": "State Secretariat of Civil Aviation, Cambodia",
+      "title": "Annoucement Drone",
+      "url": "https://civilaviation.gov.kh/legislation-regulations-and-publication/regulation/security-regulation/annoucement-drone",
+      "kind": "government",
+      "used_for": [
+        "drone_rules",
+        "aviation_security"
+      ],
+      "accessed": "2026-09-28",
+      "notes": "Official SSCA drone notice page under Security Regulation. The current public page does not expose enough operative text to encode numeric flight limits safely; use the notice itself for current requirements."
+    },
+    {
+      "id": "APSARA_FILMING",
+      "canonical_id": "src_900020",
+      "publisher": "APSARA National Authority",
+      "title": "Taking photos and videos of personal memories does not require prior permission",
+      "url": "https://apsaraauthority.gov.kh/2023/10/06/taking-photos-and-videos-of-personal-memories/",
+      "kind": "government",
+      "used_for": [
+        "permits",
+        "filming",
+        "photography",
+        "angkor_rules"
+      ],
+      "accessed": "2026-09-28",
+      "notes": "APSARA states personal souvenir photography/video does not require prior permission, while pre-wedding, YouTube, live guide recordings, filmmaking, music videos and other commercial photography require prior permission."
     }
   ],
   "uncertainties": [

@@ -1,0 +1,1000 @@
+{
+  "meta": {
+    "country": "Cambodia",
+    "country_code": "KH",
+    "language": "ru",
+    "last_updated": "2026-09-28",
+    "purpose": "Expedition South East",
+    "data_model_version": "1.5",
+    "dynamic_fields": [
+      "visa",
+      "visa_run",
+      "border_operation",
+      "air_links",
+      "currency",
+      "security"
+    ],
+    "research_notes": [
+      "Fast-changing fields are a dated snapshot, not a guarantee of future entry or transport.",
+      "Crime is described from official traveler/security sources rather than crowdsourced Numbeo rankings.",
+      "Food prices are indicative field-planning ranges, not official statistics.",
+      "Dangerous plants/animals list prioritizes plausible expedition exposure; it is not exhaustive medical guidance.",
+      "travel.objects adds object-level traveler cards, current security/access flags, media suitability and non-generated illustration provenance; dynamic fields require re-check before travel.",
+      "travel.regions and object-level location profiles add practical spoken languages and currency; language lists are field-use profiles, not exhaustive census enumerations.",
+      "Cambodia temple operations use current Angkor Enterprise official passes where available; Preah Vihear is kept as a closed research-reference object under the current border warning.",
+      "v1.3: все 19 объектных карточек Cambodia расширены связной историко-культурной/географической аннотацией, транспортом по видам, пешим масштабом, водой, позицией по законной ночёвке/кемпингу, жильём, жалобами путешественников и объект-специфичным location-scouting для видео; шаблонные англо-русские формулировки в ключевых полях заменены содержательными русскими.",
+      "v1.4: добавлен человекочитаемый слой narrow: страна >=1000 знаков, маршрутные регионы >=500, локальные хабы >=250, каждая достопримечательность получила narrow и нормализованные tags; технические поля сохранены как маршрутные метаданные.",
+      "v1.5: пользовательский слой очищен от русско-английской смеси; модель доступа переведена с пакетно-туристической на самостоятельную экспедиционную; физическая протяжённость, ступени и многодневность считаются параметрами маршрута, а не ограничениями; операторские ТЗ удалены."
+    ],
+    "object_card_upgrade_progress": {
+      "schema_target": "1.5",
+      "completed_objects": 19,
+      "total_objects": 19,
+      "status": "complete_qa_pass_v1_5",
+      "updated": "2026-09-28",
+      "qa_scope": "русский человекочитаемый слой; самостоятельная экспедиционная модель; гид только по необходимости; физические характеристики как параметры маршрута"
+    },
+    "human_readable_layer": {
+      "country_narrow_min_chars": 1000,
+      "region_narrow_min_chars": 500,
+      "locality_narrow_min_chars": 250,
+      "object_narrow": true,
+      "object_tags": true,
+      "primary_unit": "attraction",
+      "status": "complete"
+    },
+    "expedition_model": {
+      "default_travel_style": "самостоятельная экспедиция",
+      "equipment_assumption": "палатка и обычное походное снаряжение есть",
+      "physical_difficulty_policy": "ступени, большой пеший километраж, уклоны и многодневный формат не считаются ограничением сами по себе; они фиксируются как параметры маршрута",
+      "guide_policy": "гид/проводник указывается только когда он обязателен режимом доступа или действительно рационален из-за навигации, лодочного доступа, охраняемой территории, языка/согласия общины либо специального исторического контекста",
+      "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
+    }
+  },
+  "overview": {
+    "summary": "Континентальное государство Нижнего Меконга с побережьем Сиамского залива и наследием Ангкорской империи.",
+    "history": "Кхмерская империя с центром в Ангкоре доминировала в регионе с IX по XV век. В XIX веке Камбоджа стала французским протекторатом, независимость получила в 1953 году. В 1975–1979 годах режим красных кхмеров привёл к массовой гибели населения; затем последовали длительный конфликт и Парижские мирные соглашения 1991 года. Современная конституционная монархия оформлена в 1993 году.",
+    "geography": {
+      "region": "Indochina / Lower Mekong",
+      "neighbors": [
+        "Thailand",
+        "Laos",
+        "Vietnam"
+      ],
+      "coastline_km_approx": 443,
+      "seas_and_oceans": [
+        "Gulf of Thailand",
+        "South China Sea marginal system / Pacific basin"
+      ],
+      "highest_point": {
+        "name": "Phnom Aural",
+        "elevation_m": 1813
+      },
+      "terrain": "Центральная низменность Меконга и Тонлесапа окружена возвышенностями; на юго-западе — Кардамоновы горы."
+    },
+    "religion": {
+      "official": "Theravada Buddhism",
+      "profile": "Буддизм тхеравады — государственная и доминирующая религия; есть мусульмане-чамы, христиане и народные верования."
+    },
+    "political_system": "Конституционная монархия с парламентским правительством.",
+    "economy": {
+      "summary": "Экономика опирается на швейно-обувной экспорт, строительство, туризм, сельское хозяйство и быстро растущую переработку/электронику.",
+      "gdp_current_usd_billion": 51.27,
+      "gdp_per_capita_usd": 2872.4,
+      "gdp_growth_pct": 5.3,
+      "year": 2025,
+      "poverty": {
+        "metric": "World Bank $3.00/day (2021 PPP)",
+        "value_pct": null,
+        "year": null,
+        "notes": "Country page не показывает актуального сопоставимого значения; национальная черта бедности — отдельная методология."
+      }
+    },
+    "narrow": "Камбоджа — страна Нижнего Меконга, где маршрут почти неизбежно связывает три разные географические и исторические системы: центральную низменность с Тонлесапом и Меконгом, храмовый пояс бывшей Ангкорской империи и более влажные лесистые районы Кардамоновых гор и побережья Сиамского залива. Ангкорская цивилизация IX–XV веков оставила здесь одну из крупнейших архитектурно-гидротехнических систем мира: храмы, дороги, водоёмы и города образуют не отдельные «руины», а связанный культурный ландшафт. Позднее территория вошла во французский Индокитай, получила независимость в 1953 году, а во второй половине XX века пережила войну, режим красных кхмеров и длительный период восстановления. Поэтому современная экспедиция по Камбодже должна одинаково внимательно читать и древнюю архитектуру, и места памяти XX века, и живую буддийскую культуру. Климат муссонный: сухой сезон обычно удобнее для дорог и пеших маршрутов, тогда как сезон дождей даёт зелёный ландшафт, наполненные водоёмы и более выразительный Тонлесап, но усложняет грунтовые подъезды. Логистика в главных узлах проста — Пномпень, Сиемреап, Battambang, Кампот и Sihanoukville связаны дорогами и автобусами, однако удалённые храмы, Кардамоны, острова и часть северных районов требуют отдельного транспорта, лодок или местного проводника. Важный слой маршрута — локальные рынки, рыбацкие и сельские поселения, монастыри, речные города и этнографические различия между центральными кхмерскими районами, чамскими общинами и пограничными территориями. Для полевой работы особенно важны актуальные ограничения в приграничье, UXO и минные зоны, режим охраняемых территорий и сезонная проходимость дорог."
+  },
+  "nature": {
+    "flora": [
+      "evergreen and semi-evergreen forest",
+      "Cardamom montane forest",
+      "dipterocarps",
+      "mangroves",
+      "lotus and floodplain vegetation"
+    ],
+    "fauna": [
+      "Asian elephant",
+      "banteng",
+      "pileated gibbon",
+      "Irrawaddy dolphin",
+      "giant ibis",
+      "Siamese crocodile"
+    ],
+    "dangerous_animals": [
+      {
+        "name": "king cobra / monocled cobra / kraits / pit vipers",
+        "risk": "ядовитые змеи в сельской и лесной местности"
+      },
+      {
+        "name": "mosquitoes",
+        "risk": "денге и другие трансмиссивные инфекции — более практичный риск, чем крупные хищники"
+      },
+      {
+        "name": "crocodiles",
+        "risk": "дикие встречи редки; не заходить в неизвестные речные/болотные участки"
+      }
+    ],
+    "poisonous_plants": [
+      {
+        "name": "Cerbera manghas",
+        "risk": "токсичные семена и сок"
+      },
+      {
+        "name": "Datura metel",
+        "risk": "токсичные тропановые алкалоиды"
+      },
+      {
+        "name": "Gloriosa superba",
+        "risk": "токсична при проглатывании"
+      }
+    ]
+  },
+  "climate": {
+    "reference_location": "Sihanoukville",
+    "air_temp_mean_c_by_month": {
+      "Jan": 26.8,
+      "Feb": 27.0,
+      "Mar": 27.7,
+      "Apr": 28.4,
+      "May": 28.0,
+      "Jun": 27.6,
+      "Jul": 27.2,
+      "Aug": 27.1,
+      "Sep": 26.9,
+      "Oct": 27.0,
+      "Nov": 27.4,
+      "Dec": 27.2
+    },
+    "sea_temp_mean_c_by_month": {
+      "Jan": 28.2,
+      "Feb": 28.4,
+      "Mar": 29.4,
+      "Apr": 30.4,
+      "May": 30.7,
+      "Jun": 29.8,
+      "Jul": 29.2,
+      "Aug": 28.9,
+      "Sep": 28.8,
+      "Oct": 29.2,
+      "Nov": 29.2,
+      "Dec": 28.7
+    },
+    "notes": "Побережье выбрано как экспедиционная климатическая точка; внутренний Сиемреап/Пномпень имеют большую жару и суточные амплитуды.",
+    "source_quality": "secondary climatology"
+  },
+  "safety": {
+    "crime_level": {
+      "qualitative": "низкий–умеренный для обычного туристического маршрута",
+      "notes": "Наиболее типичны карманные кражи, bag-snatching с мотоциклов, мошенничество; уровень рисков заметно меняется по району."
+    },
+    "common_traveler_risks": [
+      "bag-snatching",
+      "pickpocketing",
+      "road crashes",
+      "scams",
+      "heat",
+      "unexploded ordnance in remote border/rural areas"
+    ],
+    "sensitive_areas": [
+      "remote border zones",
+      "military sites",
+      "landmine/UXO marked zones"
+    ]
+  },
+  "travel": {
+    "major_attractions": [
+      "Angkor Archaeological Park",
+      "Royal Palace Phnom Penh",
+      "Tuol Sleng Genocide Museum",
+      "Choeung Ek",
+      "Preah Vihear",
+      "Koh Ker",
+      "Sambor Prei Kuk",
+      "Koh Rong islands"
+    ],
+    "non_touristy_interests": [
+      {
+        "name": "Banteay Chhmar",
+        "type": "archaeology",
+        "why": "крупный ангкорский храмовый комплекс с существенно меньшим потоком"
+      },
+      {
+        "name": "Preah Khan Kompong Svay",
+        "type": "archaeology",
+        "why": "удалённый монументальный комплекс"
+      },
+      {
+        "name": "Battambang historic shophouses",
+        "type": "architecture",
+        "why": "франко-кхмерская городская ткань и повседневная жизнь"
+      },
+      {
+        "name": "Cardamom Mountains community routes",
+        "type": "nature",
+        "why": "лес, реки и деревни вне массового пляжного/ангкорского туризма",
+        "access_notes": "часть зон требует местного оператора/разрешений"
+      }
+    ],
+    "festivals": [
+      {
+        "name": "Khmer New Year",
+        "typical_month": "April"
+      },
+      {
+        "name": "Pchum Ben",
+        "typical_month": "September–October"
+      },
+      {
+        "name": "Water Festival (Bon Om Touk)",
+        "typical_month": "November, lunar date"
+      }
+    ],
+    "food": {
+      "budget_food_summary": "Очень доступные рынки, локальные столовые и уличные тележки.",
+      "street_food": [
+        "bai sach chrouk",
+        "kuy teav",
+        "nom banh chok",
+        "num pang",
+        "grilled skewers",
+        "fried insects in some markets"
+      ],
+      "typical_simple_meal_usd_range": [
+        1.0,
+        4.0
+      ],
+      "price_note": "ориентир; туристические центры дороже"
+    },
+    "laws_and_prohibitions": [
+      {
+        "topic": "monarchy",
+        "rule": "Оскорбление короля криминализовано (lèse-majesté)."
+      },
+      {
+        "topic": "drugs",
+        "rule": "Наркопреступления наказываются строго."
+      },
+      {
+        "topic": "heritage",
+        "rule": "Не вывозить древности/археологические предметы без законного происхождения и разрешений; для дронов и профессиональной съёмки на объектах Angkor действуют отдельные правила."
+      }
+    ],
+    "visa_for_russian_passport": {
+      "status": "visa required",
+      "tourist_visa": "T visa / eVisa / visa on arrival where available",
+      "stay_days": 30,
+      "extension": "Туристическую визу обычно можно продлить один раз ещё примерно на 30 дней.",
+      "visa_run": {
+        "possible": "После выезда можно обращаться за новой визой и въезжать заново.",
+        "limits": "Это не гарантированное право; eVisa принимается только в перечисленных пунктах, а работа конкретных сухопутных границ меняется.",
+        "notes": "Перед наземным visa-run проверять, открыт ли нужный checkpoint для иностранцев и eVisa."
+      },
+      "fee_usd_typical": 30,
+      "passport_validity": "обычно минимум 6 месяцев",
+      "entry_form": "Cambodia e-Arrival requirements should be checked before arrival",
+      "official_source": "Cambodia eVisa / Russian MFA"
+    },
+    "airports": [
+      {
+        "iata": "KTI",
+        "name": "Techo International Airport",
+        "role": "main Phnom Penh international gateway; operating since 9 Sep 2025"
+      },
+      {
+        "iata": "SAI",
+        "name": "Siem Reap–Angkor International Airport",
+        "role": "Angkor gateway"
+      },
+      {
+        "iata": "KOS",
+        "name": "Sihanouk International Airport",
+        "role": "coast"
+      }
+    ],
+    "international_air_links": "KTI replaced the old Phnom Penh airport as the principal capital gateway in September 2025; strong links to ASEAN and East Asian hubs.",
+    "land_borders": {
+      "countries": [
+        "Thailand",
+        "Laos",
+        "Vietnam"
+      ],
+      "transport": "International buses/minivans and private transfers operate on major corridors; border openings and Thai-Cambodian conditions are dynamic and must be checked immediately before travel."
+    },
+    "currency": {
+      "code": "KHR",
+      "name": "Cambodian riel",
+      "local_currency_per_1_usd": 4068.11,
+      "as_of": "2026-09-27",
+      "rate_type": "market/reference snapshot",
+      "notes": "US dollars remain widely used, especially for larger/tourist transactions; change may be given in riel."
+    },
+    "objects": [
+      {
+        "name": "Angkor Archaeological Park",
+        "class": "major",
+        "interest": [
+          "architecture",
+          "archaeology",
+          "culture",
+          "UNESCO"
+        ],
+        "why_go": "Ангкор — не один храм, а примерно 400 км² последовательных столиц Кхмерской империи IX–XV веков: храмы, дороги, дамбы, каналы, бараи и жилой ландшафт.",
+        "traveler_card": {
+          "location": {
+            "region": "Siem Reap / Angkor",
+            "nearest_hub": "Siem Reap",
+            "languages_spoken": [
+              "Khmer",
+              "английский широко используется в туристической сфере"
+            ],
+            "currency": {
+              "code": "KHR",
+              "name": "Cambodian riel",
+              "local_currency_per_1_usd": 4068.11,
+              "as_of": "2026-09-27",
+              "rate_type": "market/reference snapshot",
+              "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
+              "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
+            }
+          },
+          "logistics": {
+            "access": "Из Сиемреап tuk-tuk/car/bicycle по храмовым кругам; билет покупать через официальный Angkor Enterprise.",
+            "last_mile": "от центра Сиемреап до Ангкор-Ват около 6 км; внутри одного храмового узла 1–3 км пешком нормально, но малый/большой круг — десятки километров",
+            "typical_visit_hours": [
+              6,
+              12
+            ],
+            "permit_or_guide": "гид не обязателен; имеет смысл только для углублённой археологии/эпиграфики или локальной навигации",
+            "mobility_notes": null,
+            "modes": {
+              "public_transport": "регулярного городского автобуса, который удобно обслуживал бы весь храмовый круг, нет; из Сиемреап обычно едут tuk-tuk/водитель, экскурсионным транспортом или велосипедом",
+              "taxi_ridehail": "частный tuk-tuk/автомобиль удобнее всего для 2–3 храмовых кругов и съёмочной техники; цену и набор храмов фиксировать до старта",
+              "moped": "технически удобен между храмами, но проверять действительность водительских прав/страховки; движение ранним утром в темноте требует отдельной осторожности",
+              "walking": "от центра Сиемреап до Ангкор-Ват около 6 км; внутри одного храмового узла 1–3 км пешком нормально, но малый/большой круг — десятки километров"
+            },
+            "water": "магазины и киоски есть у главных входов, но между второстепенными храмами их может не быть; на утренний круг брать минимум 1.5–2 л на человека",
+            "overnight_and_camping": "самовольную палатку внутри археологического парка не планировать: это охраняемый культурный ландшафт с деревнями и святыми местами; ночевать в Сиемреап",
+            "access_requirements": "гид не обязателен; имеет смысл только для углублённой археологии/эпиграфики или локальной навигации",
+            "self_guided_default": false,
+            "travel_model": "самостоятельно; требуется действующий Angkor Pass"
+          },
+          "climate": {
+            "best_period": "Ноябрь–февраль: суше и прохладнее; март–май очень жарко; май–октябрь сезон дождей."
+          },
+          "operations": {
+            "status": "open / ticketed",
+            "hours": "Общий режим доступа по Angkor Pass — 05:00–18:30; у отдельных храмов часы уже. Перед конкретным рассветом/закатом сверять карточку храма у Angkor Enterprise/APSARA.",
+            "ticket": "Angkor Enterprise: 1 день — US$37; 3 дня — US$62 (использование в течение 7 дней); 7 дней — US$72 (в течение 30 дней). Нужен официальный билет.",
+            "last_verified": "2026-09-28",
+            "official_url": "https://www.angkorenterprise.gov.kh/en/available-tickets",
+            "closure_notes": "Церемонии, реставрация и правила конкретного храма могут временно сужать доступ; рассветный вход разрешён не во все храмы."
+          },
+          "safety": {
+            "main_risks": [
+              "жара и тепловой удар",
+              "дорожное движение между храмами",
+              "скользкий камень в дождь",
+              "не сходить с маршрутов из-за археологии/UXO"
+            ],
+            "country_advisory_note": "На сентябрь 2026 иностранные travel advisories указывают повышенную осторожность из-за преступности, UXO и последствий конфликта на границе с Таиланд; приграничные районы имеют отдельные ограничения."
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Ангкор-Ват — рассвет для силуэта, но для менее банального материала 15:00–17:30; Bayon и Та-Пром лучше ранним утром либо поздним днём",
+            "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
+            "filming_restrictions": "Штатив, дрон и коммерческая/постановочная съёмка могут требовать разрешения APSARA; религиозные церемонии и реставрационные зоны имеют отдельные ограничения."
+          },
+          "annotation": {
+            "narrative": "Ангкор — не один храм, а примерно 400 км² последовательных столиц Кхмерской империи IX–XV веков: храмы, дороги, дамбы, каналы, бараи и жилой ландшафт. Ангкор-Ват, Ангкор-Тхом, Bayon, Та-Пром и десятки меньших комплексов показывают не только архитектуру, но и устройство государства, которое управляло водой, земледелием и огромным населённым регионом.",
+            "culture_ethnography": "Парк остаётся населённым: внутри и вокруг него находятся деревни, рисовые поля, монастыри и действующие святыни. Религиозный слой неоднороден: Ангкор-Ват создавался как индуистский храм Вишну и позднее стал буддийским; ансамбли Jayavarman VII связаны с махаянским буддизмом, а сегодня многие места используются в тхеравадинской практике.",
+            "geography_geology": "Плоская равнина к северу от Тонлесап позволила построить гигантскую гидравлическую систему. Для путешественника это означает большие расстояния: маленький и большой храмовые круги нельзя разумно считать пешим маршрутом.",
+            "myths_legends_beliefs": [
+              "Храм-гора и концентрическая композиция Ангкор-Ват читаются через индуистскую космологию и образ горы Меру.",
+              "Наги, девы/асуры и сцена пахтания Молочного океана — не декор “для фото”, а часть космологического языка комплекса."
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "главная жалоба фотографов — толпа на рассвет у западных отражающих прудов; “приехать раньше” не решает проблему, потому что большинство рассвет-групп делает то же самое",
+              "стоимость tuk-tuk и маршрут лучше согласовывать заранее; в 2025 путешественники отдельно жаловались на завышенные цены в туристических ресторанах у храмов",
+              "при попытке “ходить весь день” недооценивают расстояния и полуденную жару"
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Onederz Siem Reap",
+              "area": "Сиемреап / Старый рынок",
+              "price_for_two": "снимок бронирование на сентябрь 2026: стандартный двухместный номер около US$17–22/ночь до части налогов/сборов; две койки в dorm обычно дешевле",
+              "contact": "+855 97 211 7100; +855 63 963 525; onederzreservation@gmail.com",
+              "social_or_web": "https://onederz.com/ ; Booking.com",
+              "source": "https://www.booking.com/hotel/kh/one-stop-hostel-siem-reap-angkor-night-market.html"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Terraza_del_rey_leproso%2C_Angkor_Thom%2C_Camboya%2C_2013-08-16%2C_DD_10.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Terraza_del_rey_leproso,_Angkor_Thom,_Camboya,_2013-08-16,_DD_10.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "artist": "Diego Delso",
+          "last_checked": "2026-09-28"
+        },
+        "sources": [
+          {
+            "url": "https://whc.unesco.org/en/list/668/",
+            "publisher": "UNESCO / Cambodian authority / Ministry of Tourism",
+            "used_for": [
+              "site significance",
+              "access/status/visitor planning"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Terraza_del_rey_leproso,_Angkor_Thom,_Camboya,_2013-08-16,_DD_10.jpg",
+            "publisher": "Wikimedia Commons",
+            "used_for": [
+              "illustration",
+              "license provenance"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://nis.gov.kh/nis/Census2019/Final%20General%20Population%20Census%202019-English.pdf",
+            "publisher": "national statistics / official source",
+            "used_for": [
+              "regional language context"
+            ],
+            "accessed": "2026-09-28",
+            "notes": "Regional practical language profile is synthesized, not an exhaustive census table."
+          },
+          {
+            "url": "https://www.angkorenterprise.gov.kh/en/available-tickets",
+            "publisher": "Angkor Enterprise (official)",
+            "used_for": [
+              "current 2026 ticket prices",
+              "park access hours"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.angkorenterprise.gov.kh/",
+            "publisher": "Angkor Enterprise (official)",
+            "used_for": [
+              "official ticket channels"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.booking.com/hotel/kh/one-stop-hostel-siem-reap-angkor-night-market.html",
+            "publisher": "Booking.com",
+            "used_for": [
+              "снимок цены жилья 2026"
+            ],
+            "accessed": "2026-09-28"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "access",
+            "hours",
+            "tickets",
+            "permits",
+            "security",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Ангкор — не один храм, а примерно 400 км² последовательных столиц Кхмерской империи IX–XV веков: храмы, дороги, дамбы, каналы, бараи и жилой ландшафт. Ангкор-Ват, Ангкор-Тхом, Bayon, Та-Пром и десятки меньших комплексов показывают не только архитектуру, но и устройство государства, которое управляло водой, земледелием и огромным населённым регионом. Парк остаётся населённым: внутри и вокруг него находятся деревни, рисовые поля, монастыри и действующие святыни. Религиозный слой неоднороден: Ангкор-Ват создавался как индуистский храм Вишну и позднее стал буддийским; ансамбли Jayavarman VII связаны с махаянским буддизмом, а сегодня многие места используются в тхеравадинской практике. Плоская равнина к северу от Тонлесап позволила построить гигантскую гидравлическую систему. Для путешественника это означает большие расстояния: маленький и большой храмовые круги нельзя разумно считать пешим маршрутом. Мифы и поверья: Храм-гора и концентрическая композиция Ангкор-Ват читаются через индуистскую космологию и образ горы Меру. Наги, девы/асуры и сцена пахтания Молочного океана — не декор “для фото”, а часть космологического языка комплекса. Сезон: Ноябрь–февраль: суше и прохладнее; март–май очень жарко; май–октябрь сезон дождей.",
+        "tags": [
+          "architecture",
+          "archaeology",
+          "culture",
+          "unesco",
+          "religion",
+          "ethnography",
+          "urban",
+          "rural",
+          "guide_or_permit",
+          "weather_sensitive",
+          "class_major"
+        ],
+        "route_meta": {
+          "region_ref": "Сиемреап / Angkor",
+          "locality_ref": "Сиемреап",
+          "typical_visit_hours": [
+            6,
+            12
+          ],
+          "transport_modes": {
+            "public_transport": "регулярного городского автобуса, который удобно обслуживал бы весь храмовый круг, нет; из Сиемреап обычно едут tuk-tuk/водитель, экскурсионным транспортом или велосипедом",
+            "taxi_ridehail": "частный tuk-tuk/автомобиль удобнее всего для 2–3 храмовых кругов и съёмочной техники; цену и набор храмов фиксировать до старта",
+            "moped": "технически удобен между храмами, но проверять действительность водительских прав/страховки; движение ранним утром в темноте требует отдельной осторожности",
+            "walking": "от центра Сиемреап до Ангкор-Ват около 6 км; внутри одного храмового узла 1–3 км пешком нормально, но малый/большой круг — десятки километров"
+          },
+          "walking": "от центра Сиемреап до Ангкор-Ват около 6 км; внутри одного храмового узла 1–3 км пешком нормально, но малый/большой круг — десятки километров",
+          "water": "магазины и киоски есть у главных входов, но между второстепенными храмами их может не быть; на утренний круг брать минимум 1.5–2 л на человека",
+          "overnight_and_camping": "самовольную палатку внутри археологического парка не планировать: это охраняемый культурный ландшафт с деревнями и святыми местами; ночевать в Сиемреап",
+          "permit_or_guide": "гид не обязателен; имеет смысл только для углублённой археологии/эпиграфики или локальной навигации",
+          "best_period": "Ноябрь–февраль: суше и прохладнее; март–май очень жарко; май–октябрь сезон дождей.",
+          "current_status": "open / ticketed",
+          "main_risks": [
+            "жара и тепловой удар",
+            "дорожное движение между храмами",
+            "скользкий камень в дождь",
+            "не сходить с маршрутов из-за археологии/UXO"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно; требуется действующий Angkor Pass",
+            "route_scale": "полный день или больше",
+            "terrain_and_movement": "от центра Сиемреап до Ангкор-Ват около 6 км; внутри одного храмового узла 1–3 км пешком нормально, но малый/большой круг — десятки километров",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не обязателен; имеет смысл только для углублённой археологии/эпиграфики или локальной навигации"
+          }
+        }
+      },
+      {
+        "name": "Royal Palace Phnom Penh",
+        "class": "major",
+        "interest": [
+          "architecture",
+          "monarchy",
+          "culture"
+        ],
+        "why_go": "Королевский дворец формирует политический и церемониальный центр Пномпень после переноса столицы из Oudong в XIX веке. Комплекс — действующая королевская резиденция, поэтому туристический доступ подчинён государственным церемониям, а не музейному расписанию.",
+        "traveler_card": {
+          "location": {
+            "region": "Phnom Penh",
+            "nearest_hub": "Phnom Penh",
+            "languages_spoken": [
+              "Khmer",
+              "английский распространён в туризме и бизнесе",
+              "китайский встречается всё чаще",
+              "French limited"
+            ],
+            "currency": {
+              "code": "KHR",
+              "name": "Cambodian riel",
+              "local_currency_per_1_usd": 4068.11,
+              "as_of": "2026-09-27",
+              "rate_type": "market/reference snapshot",
+              "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
+              "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
+            }
+          },
+          "logistics": {
+            "access": "Риверсайд; пешком/tuk-tuk из Daun Penh.",
+            "last_mile": "от берег реки/Wat Ounalom порядка 0.5–1.5 км; от Onederz Пномпень около 2 км",
+            "typical_visit_hours": [
+              1.5,
+              2.5
+            ],
+            "permit_or_guide": null,
+            "mobility_notes": null,
+            "modes": {
+              "public_transport": "городские автобусы не дают такого точного доступа, как пеший маршрут из Daun Penh; для туриста общественный транспорт здесь вторичен",
+              "taxi_ridehail": "PassApp/Grab/tuk-tuk из центральных районов; из берег реки поездка короткая",
+              "moped": "городское движение плотное; парковаться только вне дворцовой зоны там, где это разрешено",
+              "walking": "от берег реки/Wat Ounalom порядка 0.5–1.5 км; от Onederz Пномпень около 2 км"
+            },
+            "water": "вода и магазины есть на улицах вокруг берег реки; внутри полагаться на продажу воды не стоит",
+            "overnight_and_camping": "палатка/ночёвка на набережной, территории дворца или при пагодах без приглашения не является разумным легальным вариантом; ночёвка в городе",
+            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно"
+          },
+          "climate": {
+            "best_period": "Ноябрь–февраль: суше и прохладнее; март–май очень жарко; май–октябрь сезон дождей."
+          },
+          "operations": {
+            "status": "open/verify",
+            "hours": "Закрывается на официальные церемонии, иногда без долгого предупреждения; утром прохладнее.",
+            "ticket": "Платный вход для туристов; актуальный тариф проверять перед визитом.",
+            "last_verified": "2026-09-28",
+            "official_url": "https://www.tourismcambodia.org/public/provinces/search/detail/127/royal-palace-1548301051"
+          },
+          "safety": {
+            "main_risks": [
+              "карманные кражи/рывки сумок в Пномпень",
+              "жара",
+              "строгий dress code",
+              "внезапное закрытие на церемонии"
+            ],
+            "country_advisory_note": "На сентябрь 2026 иностранные travel advisories указывают повышенную осторожность из-за преступности, UXO и последствий конфликта на границе с Таиланд; приграничные районы имеют отдельные ограничения."
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "раннее утро и поздний день",
+            "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
+            "filming_restrictions": "Фотография запрещена внутри Throne Hall и Silver Pagoda; снаружи соблюдать правила дворца."
+          },
+          "annotation": {
+            "narrative": "Королевский дворец формирует политический и церемониальный центр Пномпень после переноса столицы из Oudong в XIX веке. Комплекс — действующая королевская резиденция, поэтому туристический доступ подчинён государственным церемониям, а не музейному расписанию.",
+            "culture_ethnography": "Silver Pagoda и дворцовые павильоны объединяют монархическую и буддийскую символику. Это место лучше читать вместе с набережной: дворец обращён к зоне слияния Меконг, Тонлесап и Bassac, откуда исторически город жил торговлей и водным транспортом.",
+            "geography_geology": "",
+            "myths_legends_beliefs": []
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "дворец может закрываться на церемонии без длинного туристического уведомления",
+              "dress code реально проверяется",
+              "на берег реки актуален риск рывка телефона/сумки с мотоцикла — камеру не держать на ремне со стороны проезжей части"
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Onederz Phnom Penh",
+              "area": "набережная / Даун-Пень",
+              "price_for_two": "снимок бронирование на сентябрь 2026: budget двухместный номер около US$22/ночь, standard двухместный номер около US$24/ночь до части налогов/сборов",
+              "contact": "+855 86 911 284; +855 23 982 822; onederzpp@gmail.com",
+              "social_or_web": "https://onederz.com/phnom-penh/ ; Booking.com",
+              "source": "https://www.booking.com/hotel/kh/waterview-guesthouse.html"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/2016_Phnom_Penh%2C_Pa%C5%82ac_Kr%C3%B3lewski%2C_Preah_Tineang_Phhochani_%2814%29.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Pa%C5%82ac_Kr%C3%B3lewski,_Preah_Tineang_Phhochani_(14).jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Marcin Konsek",
+          "last_checked": "2026-09-28"
+        },
+        "sources": [
+          {
+            "url": "https://www.tourismcambodia.org/public/provinces/search/detail/127/royal-palace-1548301051",
+            "publisher": "UNESCO / Cambodian authority / Ministry of Tourism",
+            "used_for": [
+              "site significance",
+              "access/status/visitor planning"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Pa%C5%82ac_Kr%C3%B3lewski,_Preah_Tineang_Phhochani_(14).jpg",
+            "publisher": "Wikimedia Commons",
+            "used_for": [
+              "illustration",
+              "license provenance"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://nis.gov.kh/nis/Census2019/Final%20General%20Population%20Census%202019-English.pdf",
+            "publisher": "national statistics / official source",
+            "used_for": [
+              "regional language context"
+            ],
+            "accessed": "2026-09-28",
+            "notes": "Regional practical language profile is synthesized, not an exhaustive census table."
+          },
+          {
+            "url": "https://onederz.com/phnom-penh/",
+            "publisher": "Onederz",
+            "used_for": [
+              "контакты и расположение бюджетного жилья"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.booking.com/hotel/kh/waterview-guesthouse.html",
+            "publisher": "Booking.com",
+            "used_for": [
+              "снимок цены жилья 2026"
+            ],
+            "accessed": "2026-09-28"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "access",
+            "hours",
+            "tickets",
+            "permits",
+            "security",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Королевский дворец формирует политический и церемониальный центр Пномпень после переноса столицы из Oudong в XIX веке. Комплекс — действующая королевская резиденция, поэтому туристический доступ подчинён государственным церемониям, а не музейному расписанию. Silver Pagoda и дворцовые павильоны объединяют монархическую и буддийскую символику. Это место лучше читать вместе с набережной: дворец обращён к зоне слияния Меконг, Тонлесап и Bassac, откуда исторически город жил торговлей и водным транспортом. Сезон: Ноябрь–февраль: суше и прохладнее; март–май очень жарко; май–октябрь сезон дождей.",
+        "tags": [
+          "architecture",
+          "monarchy",
+          "culture",
+          "history",
+          "religion",
+          "urban",
+          "water",
+          "museum",
+          "weather_sensitive",
+          "class_major"
+        ],
+        "route_meta": {
+          "region_ref": "Пномпень",
+          "locality_ref": "Пномпень",
+          "typical_visit_hours": [
+            1.5,
+            2.5
+          ],
+          "transport_modes": {
+            "public_transport": "городские автобусы не дают такого точного доступа, как пеший маршрут из Daun Penh; для туриста общественный транспорт здесь вторичен",
+            "taxi_ridehail": "PassApp/Grab/tuk-tuk из центральных районов; из берег реки поездка короткая",
+            "moped": "городское движение плотное; парковаться только вне дворцовой зоны там, где это разрешено",
+            "walking": "от берег реки/Wat Ounalom порядка 0.5–1.5 км; от Onederz Пномпень около 2 км"
+          },
+          "walking": "от берег реки/Wat Ounalom порядка 0.5–1.5 км; от Onederz Пномпень около 2 км",
+          "water": "вода и магазины есть на улицах вокруг берег реки; внутри полагаться на продажу воды не стоит",
+          "overnight_and_camping": "палатка/ночёвка на набережной, территории дворца или при пагодах без приглашения не является разумным легальным вариантом; ночёвка в городе",
+          "permit_or_guide": null,
+          "best_period": "Ноябрь–февраль: суше и прохладнее; март–май очень жарко; май–октябрь сезон дождей.",
+          "current_status": "open/verify",
+          "main_risks": [
+            "карманные кражи/рывки сумок в Пномпень",
+            "жара",
+            "строгий dress code",
+            "внезапное закрытие на церемонии"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "от берег реки/Wat Ounalom порядка 0.5–1.5 км; от Onederz Пномпень около 2 км",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+          }
+        }
+      },
+      {
+        "name": "Tuol Sleng Genocide Museum",
+        "class": "major",
+        "interest": [
+          "history",
+          "memorial",
+          "museum",
+          "culture"
+        ],
+        "why_go": "Tuol Sleng — бывшая школа, превращённая режимом красные кхмеры в тюрьму и центр допросов S-21 в 1975–1979 годах. Его сила именно в сохранённой повседневной архитектуре школы, переоборудованной под заключение, документах и свидетельствах, а не в эффектной “страшной” визуальности.",
+        "traveler_card": {
+          "location": {
+            "region": "Phnom Penh",
+            "nearest_hub": "Phnom Penh",
+            "languages_spoken": [
+              "Khmer",
+              "английский распространён в туризме и бизнесе",
+              "китайский встречается всё чаще",
+              "French limited"
+            ],
+            "currency": {
+              "code": "KHR",
+              "name": "Cambodian riel",
+              "local_currency_per_1_usd": 4068.11,
+              "as_of": "2026-09-27",
+              "rate_type": "market/reference snapshot",
+              "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
+              "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
+            }
+          },
+          "logistics": {
+            "access": "Tuk-tuk/сервис заказа такси; городской объект.",
+            "last_mile": "от королевский Palace/берег реки примерно 3–4 км; пешком возможно, но в полуденную жару нерационально",
+            "typical_visit_hours": [
+              2,
+              3
+            ],
+            "permit_or_guide": null,
+            "mobility_notes": null,
+            "modes": {
+              "public_transport": "городской автобус возможен лишь как часть маршрута; практически удобнее tuk-tuk/PassApp",
+              "taxi_ridehail": "из берег реки обычно короткая городская поездка",
+              "moped": "можно подъехать по городской сети, но парковку искать у входа/на соседних улицах по указаниям",
+              "walking": "от королевский Palace/берег реки примерно 3–4 км; пешком возможно, но в полуденную жару нерационально"
+            },
+            "water": "магазины и кафе есть в кварталах вокруг музея; воду купить до входа",
+            "overnight_and_camping": "ночёвка на территории мемориала исключена; использовать городское жильё",
+            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно"
+          },
+          "climate": {
+            "best_period": "Ноябрь–февраль: суше и прохладнее; март–май очень жарко; май–октябрь сезон дождей."
+          },
+          "operations": {
+            "status": "open",
+            "hours": "Ежедневно, включая государственные праздники: 08:00–17:00.",
+            "ticket": "Иностранные взрослые — 5 USD; 10–17 лет — 3 USD; до 10 лет бесплатно. Для граждан Камбоджи вход бесплатный. Наличные принимают в KHR и USD. Аудиогид для иностранцев — 5 USD.",
+            "last_verified": "2026-09-28",
+            "official_url": "https://tuolsleng.gov.kh/en/contact/",
+            "closure_notes": "Museum director may restrict buildings/areas for safety or охрана природы."
+          },
+          "safety": {
+            "main_risks": [
+              "эмоционально тяжёлый контент",
+              "городские кражи/traffic",
+              "уважение к мемориалу"
+            ],
+            "country_advisory_note": "На сентябрь 2026 иностранные travel advisories указывают повышенную осторожность из-за преступности, UXO и последствий конфликта на границе с Таиланд; приграничные районы имеют отдельные ограничения."
+          },
+          "media": {
+            "photo_suitability_5": 4,
+            "video_suitability_5": 4,
+            "best_light": "дневной рассеянный свет",
+            "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
+            "filming_restrictions": "Мемориальный объект: требуется уважительное поведение. Дроны запрещены без разрешения директора музея; внутри следовать обозначенным ограничениям фото и видео."
+          },
+          "annotation": {
+            "narrative": "Tuol Sleng — бывшая школа, превращённая режимом красные кхмеры в тюрьму и центр допросов S-21 в 1975–1979 годах. Его сила именно в сохранённой повседневной архитектуре школы, переоборудованной под заключение, документах и свидетельствах, а не в эффектной “страшной” визуальности.",
+            "culture_ethnography": "",
+            "geography_geology": "Городской объект в плотной жилой ткани Пномпень; жара на открытых галереях и в старых корпусах ощущается сильнее, чем расстояние по карте.",
+            "myths_legends_beliefs": []
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "на полный осмотр с аудиогидом нужно заметно больше часа; быстрый “чек-лист” обедняет контекст",
+              "часть посетителей тяжело переносит фото жертв и камеры; планировать паузу после посещения",
+              "в старых корпусах жарко, лестницы узкие; не рассчитывать на комфорт музейного здания"
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Onederz Phnom Penh",
+              "area": "набережная / Даун-Пень",
+              "price_for_two": "снимок бронирование на сентябрь 2026: budget двухместный номер около US$22/ночь, standard двухместный номер около US$24/ночь до части налогов/сборов",
+              "contact": "+855 86 911 284; +855 23 982 822; onederzpp@gmail.com",
+              "social_or_web": "https://onederz.com/phnom-penh/ ; Booking.com",
+              "source": "https://www.booking.com/hotel/kh/waterview-guesthouse.html"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/2016_Phnom_Penh%2C_Muzeum_Ludob%C3%B3jstwa_Tuol_Sleng_%2817%29.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Muzeum_Ludob%C3%B3jstwa_Tuol_Sleng_(17).jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Marcin Konsek",
+          "last_checked": "2026-09-28"
+        },
+        "sources": [
+          {
+            "url": "https://www.unesco.org/en/articles/promoting-archives-preservation-and-digitization-tuol-sleng-genocide-museum",
+            "publisher": "UNESCO / Cambodian authority / Ministry of Tourism",
+            "used_for": [
+              "site significance",
+              "access/status/visitor planning"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Muzeum_Ludob%C3%B3jstwa_Tuol_Sleng_(17).jpg",
+            "publisher": "Wikimedia Commons",
+            "used_for": [
+              "illustration",
+              "license provenance"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://nis.gov.kh/nis/Census2019/Final%20General%20Population%20Census%202019-English.pdf",
+            "publisher": "national statistics / official source",
+            "used_for": [
+              "regional language context"
+            ],
+            "accessed": "2026-09-28",
+            "notes": "Regional practical language profile is synthesized, not an exhaustive census table."
+          },
+          {
+            "url": "https://tuolsleng.gov.kh/en/contact/",
+            "publisher": "Tuol Sleng Genocide Museum (official)",
+            "used_for": [
+              "hours",
+              "admission",
+              "visitor regulations",
+              "drone rules"
+            ],
+            "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.booking.com/hotel/kh/waterview-guesthouse.html",
+            "publisher": "Booking.com",
+            "used_for": [
+              "снимок цены жилья 2026"
+            ],
+            "accessed": "2026-09-28"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "access",
+            "hours",
+            "tickets",
+            "permits",
+            "security",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Tuol Sleng — бывшая школа, превращённая режимом красные кхмеры в тюрьму и центр допросов S-21 в 1975–1979 годах. Его сила именно в сохранённой повседневной архитектуре школы, переоборудованной под заключение, документах и свидетельствах, а не в эффектной “страшной” визуальности. Городской объект в плотной жилой ткани Пномпень; жара на открытых галереях и в старых корпусах ощущается сильнее, чем расстояние по карте. Сезон: Ноябрь–февраль: суше и прохладнее; март–май очень жарко; май–октябрь сезон дождей.",
+        "tags": [
+          "history",
+          "memorial",
+          "museum",
+          "culture",
+          "architecture",
+          "urban",
+          "weather_sensitive",
+          "class_major"
+        ],
+        "route_meta": {
+          "region_ref": "Пномпень",
+          "locality_ref": "Пномпень",
+          "typical_visit_hours": [
+            2,
+            3
+          ],
+          "transport_modes": {
+            "public_transport": "городской автобус возможен лишь как часть маршрута; практически удобнее tuk-tuk/PassApp",
+            "taxi_ridehail": "из берег реки обычно короткая городская поездка",
+            "moped": "можно подъехать по городской сети, но парковку искать у входа/на соседних улицах по указаниям",
+            "walking": "от королевский Palace/берег реки примерно 3–4 км; пешком возможно, но в полуденную жару нерационально"
+          },
+          "walking": "от королевский Palace/берег реки примерно 3–4 км; пешком возможно, но в полуденную жару нерационально",
+          "water": "магазины и кафе есть в кварталах вокруг музея; воду купить до входа",
+          "overnight_and_camping": "ночёвка на территории мемориала исключена; использовать городское жильё",
+          "permit_or_guide": null,
+          "best_period": "Ноябрь–февраль: суше и прохладнее; март–май очень жарко; май–октябрь сезон дождей.",
+          "current_status": "open",
+          "main_risks": [
+            "эмоционально тяжёлый контент",
+            "городские кражи/traffic",
+            "уважение к мемориалу"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов",
+            "terrain_and_movement": "от королевский Palace/берег реки примерно 3–4 км; пешком возможно, но в полуденную жару нерационально",
+            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
+            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
+            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+          }
+        }
+      },
+      {
+        "name": "Choeung Ek",
+        "class": "major",
+        "interest": [
+          "history",
+          "memorial",
+          "culture"
+        ],
+        "why_go": "Choeung Ek — мемориальный комплекс на месте одного из массовых захоронений, куда заключённых S-21 вывозили из Пномпень. Сегодня пространство организовано вокруг памятной ступы, дорожки по территории бывших захоронений и интерпретации преступлений красные кхмеры.",
+        "traveler_card": {
+          "location": {
+            "region": "Phnom Penh",
+            "nearest_hub": "Phnom Penh",
+            "languages_spoken": [
+              "Khmer",
+              "английский распространён в туризме и бизнесе",
+              "китайский встречается всё чаще",
+              "French limited"
+            ],
+            "currency": {
+              "code": "KHR",
+              "name": "Cambodian riel",
+              "local_currency_per_1_usd": 4068.11,
+              "as_of": "2026-09-27",
+              "rate_type": "market/reference snapshot",
+              "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
+              "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
+            }
+          },
+          "logistics": {
+            "access": "Tuk-tuk/car из центра, обычно 30–60 минут в зависимости от трафика.",

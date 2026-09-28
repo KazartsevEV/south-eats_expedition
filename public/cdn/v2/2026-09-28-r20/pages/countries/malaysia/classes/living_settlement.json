@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "schema_version": "2.8.0",
+    "release_id": "2026-09-28-r20",
+    "page_type": "country_class",
+    "id": "country-class:my:living_settlement"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "living_settlement",
+    "label_ru": "Живые традиционные поселения",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:religion_ethnography",
+    "page_path": "pages/countries/malaysia/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/living_settlement.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": {
+    "status": "transitional_overlap",
+    "target_split": [
+      "traditional_settlement"
+    ],
+    "note_ru": "Старый класс сохраняется до проверки: в новой схеме поселение должно описываться как traditional_settlement, а живая культура — тегами и этнографическим блоком."
+  },
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:kudat-kota-kinabalu",
+      "name": "Kudat / Kota Kinabalu",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/kudat-kota-kinabalu.json"
+    },
+    {
+      "id": "my:region:kudat-rungus-north-sabah",
+      "name": "Kudat / Rungus north Sabah",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/kudat-rungus-north-sabah.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:kampung-bavanggazo-rungus-longhouse",
+      "name": "Kampung Bavanggazo / Rungus longhouse",
+      "geography_ids": [
+        "country:my",
+        "my:hub:kudat-kota-kinabalu",
+        "my:region:kudat-rungus-north-sabah"
+      ],
+      "region_legacy": "Kudat / Rungus north Sabah",
+      "nearest_hub": "Kudat / Kota Kinabalu",
+      "narrow": "Kampung Bavanggazo — действующее поселение Rungus с длинным общинным домом, ремёслами, гонгами и сельским хозяйством; ценность появляется при ночёвке и времени с хозяевами, а не при короткой постановочной остановке.",
+      "detail_path": "countries/malaysia/objects/kampung-bavanggazo-rungus-longhouse.json"
+    }
+  ]
+}

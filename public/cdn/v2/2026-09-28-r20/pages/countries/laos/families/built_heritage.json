@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "schema_version": "2.8.0",
+    "release_id": "2026-09-28-r20",
+    "page_type": "class_family",
+    "id": "country-family:la:built_heritage"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "family_id": "built_heritage",
+    "label_ru": "Поселения и архитектурное наследие"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:la",
+    "page_path": "pages/countries/laos.json"
+  },
+  "global_family_page": "pages/families/built_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "count": 3,
+  "classes": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 3,
+      "global_page_path": "pages/classes/historic_city.json",
+      "country_page_path": "pages/countries/laos/classes/historic_city.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:luang-prabang",
+      "name": "Luang Prabang",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:la",
+        "la:hub:luangpkhabang-nong-kkhiav",
+        "la:region:luangpkhabang-sever-doliny-nam-u"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "narrow": "Луангпхабанг — бывшая королевская столица Лансанга и затем королевства Луангпхабанг, исторический город на полуострове между Меконгом и Нам-Кханом.",
+      "detail_path": "countries/laos/objects/luang-prabang.json"
+    },
+    {
+      "id": "la:savannakhet-old-quarter",
+      "name": "Savannakhet old quarter",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:la",
+        "la:hub:savannakhet",
+        "la:region:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "narrow": "Старый Саваннакхет — речной торговый город с франко-лаосской застройкой, китайско-вьетнамскими торговыми домами и кварталами вокруг Меконг. Ценность — не отдельный 'колониальный дом', а непрерывная городская ткань с рынком, храмами и фасадами разной сохранности.",
+      "detail_path": "countries/laos/objects/savannakhet-old-quarter.json"
+    },
+    {
+      "id": "la:old-thakhek-town",
+      "name": "Old Thakhek Town",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:la",
+        "la:hub:thakhek",
+        "la:region:kkhammuan-kong-lor"
+      ],
+      "region_legacy": "Кхаммуан / Конг-Лор",
+      "narrow": "Старый Тхакхэк — компактный квартал на Меконг с франко-лаосскими шопхаусами, католическим и буддийским слоями и ролью транзитного центра к карсту Кхаммуан. Для экспедиции он работает как человеческая прелюдия к Тхакхэк кольцевой маршрут и Конг-Лор.",
+      "detail_path": "countries/laos/objects/old-thakhek-town.json"
+    }
+  ]
+}

@@ -107,6 +107,45 @@ def validate_coordinate_payload(point, context):
         fail(f"{context}: elevation present without elevation_source_refs")
 
 
+OBJECT_ELEVATION_REFERENCE_TYPES = {
+    "site",
+    "summit",
+    "highest_point",
+    "characteristic",
+    "range",
+    "water_surface",
+    "unknown",
+}
+
+def validate_object_elevation(value, context):
+    if value is None:
+        return False
+    if not isinstance(value, dict):
+        fail(f"{context}: object_elevation must be object or null")
+    representative = value.get("representative_m")
+    min_m = value.get("min_m")
+    max_m = value.get("max_m")
+    numeric = []
+    for label, item in [("representative_m", representative), ("min_m", min_m), ("max_m", max_m)]:
+        if item is not None:
+            if not isinstance(item, (int, float)) or isinstance(item, bool):
+                fail(f"{context}: invalid {label} {item!r}")
+            numeric.append(item)
+    if not numeric:
+        fail(f"{context}: object_elevation has no elevation value")
+    if min_m is not None and max_m is not None and min_m > max_m:
+        fail(f"{context}: min_m must not exceed max_m")
+    reference_type = value.get("reference_type")
+    if reference_type not in OBJECT_ELEVATION_REFERENCE_TYPES:
+        fail(f"{context}: unsupported reference_type {reference_type!r}")
+    source_refs = value.get("source_refs")
+    if not isinstance(source_refs, list) or not source_refs:
+        fail(f"{context}: object_elevation requires source_refs")
+    if not value.get("accuracy"):
+        fail(f"{context}: object_elevation requires accuracy")
+    return True
+
+
 def main():
     latest = load(PUBLIC / "latest.json")
     release_id = latest.get("release_id")
@@ -298,6 +337,10 @@ def main():
         validate_coordinate_payload(geo.get("primary_location"), f"{object_id}:primary_location")
         for index, point in enumerate(geo.get("geo_points") or []):
             validate_coordinate_payload(point, f"{object_id}:geo_points[{index}]")
+        has_object_elevation = validate_object_elevation(
+            geo.get("object_elevation"),
+            f"{object_id}:object_elevation",
+        )
 
         narrative = obj.get("narrative") or {}
         if not isinstance(narrative.get("sections"), list) or not narrative.get("sections"):
@@ -330,6 +373,8 @@ def main():
         checks = qa.get("checks") or {}
         if set(checks) != REQUIRED_QA_CHECKS:
             fail(f"{object_id}: QA check set mismatch: {sorted(checks)}")
+        if bool(checks.get("elevation")) != bool(has_object_elevation):
+            fail(f"{object_id}: elevation QA must reflect geo.object_elevation, not GPS-point elevation")
         qa_path = require_file(release, f"qa/objects/{code}/{object_id}.json")
         qa_doc = load(qa_path)
         if qa_doc.get("object_id") != object_id:

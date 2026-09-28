@@ -51,12 +51,13 @@
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "2.5.0",
+      "schema_target": "2.10.0",
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
-      "objects_with_verified_elevation": 15,
-      "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas and variable river departures are explicitly approximate"
+      "policy": "WGS84/EPSG:4326; point elevation belongs to a specific GPS point (entrance/pier/trailhead/etc.); object_elevation separately describes the object itself above mean sea level and is required for elevation QA.",
+      "objects_with_point_elevation": 15,
+      "objects_with_object_elevation": 0
     },
     "elevation_provenance_upgrade": {
       "updated": "2026-09-28",

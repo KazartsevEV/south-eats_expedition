@@ -153,6 +153,9 @@ def remap_geo_sources(geo, registry):
             continue
         point["source_refs"] = remap_source_refs(point.get("source_refs"), registry)
         point["elevation_source_refs"] = remap_source_refs(point.get("elevation_source_refs"), registry)
+    object_elevation = geo.get("object_elevation")
+    if isinstance(object_elevation, dict):
+        object_elevation["source_refs"] = remap_source_refs(object_elevation.get("source_refs"), registry)
     return geo
 
 
@@ -493,6 +496,7 @@ def build():
         source_refs = remap_source_refs((detail.get("provenance") or {}).get("source_refs"), registry)
         legacy_geo = remap_geo_sources(detail.get("geo"), registry)
         primary_location = canonical_point(legacy_geo.get("primary_location"))
+        object_elevation = legacy_geo.get("object_elevation")
         geo_points = [
             canonical_point(point)
             for point in (legacy_geo.get("points") or [])
@@ -549,15 +553,12 @@ def build():
             "geo": bool(geo_ids),
             "coordinates": bool(primary_location and primary_location.get("lat") is not None and primary_location.get("lon") is not None),
             "elevation": bool(
-                primary_location
+                isinstance(object_elevation, dict)
                 and (
-                    primary_location.get("elevation_m") is not None
-                    or primary_location.get("elevation_range_m") is not None
+                    object_elevation.get("representative_m") is not None
+                    or object_elevation.get("min_m") is not None
+                    or object_elevation.get("max_m") is not None
                 )
-            )
-            or any(
-                point.get("elevation_m") is not None or point.get("elevation_range_m") is not None
-                for point in geo_points
             ),
             "narrative": bool(sections),
             "sources": bool(source_refs),
@@ -587,6 +588,7 @@ def build():
                 "nearest_place_name_raw": location.get("nearest_hub"),
                 "primary_location": primary_location,
                 "geo_points": geo_points,
+                "object_elevation": object_elevation,
             },
             "narrative": {"sections": sections},
             "visit": {
@@ -832,6 +834,15 @@ def build():
     dump(release / "schema" / "enums.json", {
         "geo_kinds": sorted(GEO_KINDS),
         "coordinate_types": sorted(COORDINATE_TYPES),
+        "object_elevation_reference_types": [
+            "site",
+            "summit",
+            "highest_point",
+            "characteristic",
+            "range",
+            "water_surface",
+            "unknown",
+        ],
         "transport_modes": TRANSPORT_MODES,
         "surface_types": SURFACE_TYPES,
         "overnight_status": [

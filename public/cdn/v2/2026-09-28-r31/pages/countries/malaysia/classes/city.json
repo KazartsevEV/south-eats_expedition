@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.10.1",
+    "release_id": "2026-09-28-r31",
+    "page_type": "country_class",
+    "id": "country-class:my:city"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "city",
+    "label_ru": "Города",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:built_heritage",
+    "page_path": "pages/countries/malaysia/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:kuala-lumpur",
+      "name": "Kuala Lumpur",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/kuala-lumpur.json"
+    },
+    {
+      "id": "my:region:kuala-lumpur-klang-valley",
+      "name": "Kuala Lumpur / Klang Valley",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/kuala-lumpur-klang-valley.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:kuala-lumpur",
+      "name": "Kuala Lumpur",
+      "geography_ids": [
+        "country:my",
+        "my:hub:kuala-lumpur",
+        "my:region:kuala-lumpur-klang-valley"
+      ],
+      "region_legacy": "Kuala Lumpur / Klang Valley",
+      "nearest_hub": "Kuala Lumpur",
+      "narrow": "Куала-Лумпур полезен как полевой срез современной Малайзии: колониальное ядро у слияния Кланга и Гомбак, малайский Kampung Baru, китайские и индийские кварталы, рынки и сверхвысотный центр читаются в одном городском маршруте.",
+      "detail_path": "countries/malaysia/objects/kuala-lumpur.json"
+    }
+  ]
+}

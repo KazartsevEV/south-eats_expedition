@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "schema_version": "2.10.1",
+    "release_id": "2026-09-28-r31",
+    "page_type": "country_class",
+    "id": "country-class:kh:protected_area"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "protected_area",
+    "label_ru": "Заповедники и охраняемые территории",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:protected_ecosystems",
+    "page_path": "pages/countries/cambodia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/protected_area.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:hub:koh-kong-pursat",
+      "name": "Koh Kong / Pursat",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/city_or_route_hub/koh-kong-pursat.json"
+    },
+    {
+      "id": "kh:region:kardamonovy-gory-yugo-zapad",
+      "name": "Кардамоновы горы / юго-запад",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/cambodia/region/kardamonovy-gory-yugo-zapad.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:cardamom-mountains-community-routes",
+      "name": "Cardamom Mountains community routes",
+      "geography_ids": [
+        "country:kh",
+        "kh:hub:koh-kong-pursat",
+        "kh:region:kardamonovy-gory-yugo-zapad"
+      ],
+      "region_legacy": "Кардамоновы горы / юго-запад",
+      "nearest_hub": "Koh Kong / Pursat",
+      "narrow": "Кардамоновы горы — один из крупнейших непрерывных лесных массивов материковой Юго-Восточной Азии, но для путешественника это не один “национальный парк с воротами”. Реальная входная модель — общинные маршруты, например Chi Phat: деревня, проводники, лодка/велосипед/трекинг и официальные лес camps.",
+      "detail_path": "countries/cambodia/objects/cardamom-mountains-community-routes.json"
+    }
+  ]
+}

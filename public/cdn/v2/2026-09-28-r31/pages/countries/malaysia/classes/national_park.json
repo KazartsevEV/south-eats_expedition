@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "schema_version": "2.10.1",
+    "release_id": "2026-09-28-r31",
+    "page_type": "country_class",
+    "id": "country-class:my:national_park"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "national_park",
+    "label_ru": "Национальные парки",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:protected_ecosystems",
+    "page_path": "pages/countries/malaysia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/national_park.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:kuching-miri-depending-object",
+      "name": "Kuching / Miri depending object",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/kuching-miri-depending-object.json"
+    },
+    {
+      "id": "my:hub:mulu",
+      "name": "Mulu",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/mulu.json"
+    },
+    {
+      "id": "my:region:mulu-interior-sarawak",
+      "name": "Mulu / interior Sarawak",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/mulu-interior-sarawak.json"
+    },
+    {
+      "id": "my:region:sarawak-kuching-niah",
+      "name": "Sarawak / Kuching / Niah",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/sarawak-kuching-niah.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:gunung-mulu-national-park",
+      "name": "Gunung Mulu National Park",
+      "geography_ids": [
+        "country:my",
+        "my:hub:mulu",
+        "my:region:mulu-interior-sarawak"
+      ],
+      "region_legacy": "Mulu / interior Sarawak",
+      "nearest_hub": "Mulu",
+      "narrow": "Гунунг-Мулу — огромная карстовая система Саравака с пещерами, подземными реками, известняковыми «Иглами» и многодневными лесными маршрутами; это полноценная экспедиционная территория, а не одна экскурсия в пещеру.",
+      "detail_path": "countries/malaysia/objects/gunung-mulu-national-park.json"
+    },
+    {
+      "id": "my:niah-national-park",
+      "name": "Niah National Park",
+      "geography_ids": [
+        "country:my",
+        "my:hub:kuching-miri-depending-object",
+        "my:region:sarawak-kuching-niah"
+      ],
+      "region_legacy": "Sarawak / Kuching / Niah",
+      "nearest_hub": "Kuching / Miri depending object",
+      "narrow": "Niah — археологический и карстовый комплекс Саравака, где длинный настил через лес ведёт к огромной Great Cave, древним погребениям и Painted Cave; маршрут важен как связь человека, пещеры и тропического ландшафта.",
+      "detail_path": "countries/malaysia/objects/niah-national-park.json"
+    }
+  ]
+}

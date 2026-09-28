@@ -97,7 +97,8 @@
       "slug": "vientiane-province",
       "parent_id": "country:la",
       "object_ids": [
-        "la:vang-vieng-karst"
+        "la:vang-vieng-karst",
+        "la:phou-khao-khouay-national-park"
       ],
       "legacy_region_names": [
         "Ванг-Вьенг / провинция Вьентьян"
@@ -462,6 +463,71 @@
       ],
       "notes_ru": "Национальный парк площадью около 110 000 га; Tad Fane относится к его водопадному комплексу на Болавене.",
       "canonical_id": "geo_la_0055"
+    },
+    {
+      "id": "la:province:bolikhamxay",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Боликхамсай",
+      "slug": "bolikhamxay",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Провинция содержит один из основных доступных туристических секторов Пху-Кхао-Кхуая, включая Тад-Леук и подходы из района Тхапхабат.",
+      "canonical_id": "geo_la_0056"
+    },
+    {
+      "id": "la:province:xaisomboun",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Сайсомбун",
+      "slug": "xaisomboun",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Часть большого массива Пху-Кхао-Кхуай относится к Сайсомбуну; оперативная visitor-инфраструктура этой карточки привязана не сюда, а к сектору Тад-Леук/Тхапхабат.",
+      "canonical_id": "geo_la_0057"
+    },
+    {
+      "id": "la:district:thaphabat",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Тхапхабат",
+      "slug": "thaphabat",
+      "parent_id": "la:province:bolikhamxay",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Район основного самостоятельного доступа к Тад-Леук и Тад-Сай.",
+      "canonical_id": "geo_la_0058"
+    },
+    {
+      "id": "la:village:ban-hatkhai",
+      "kind": "village",
+      "axis": "administrative",
+      "name_ru": "Бан-Хаткхай",
+      "slug": "ban-hatkhai",
+      "parent_id": "la:district:thaphabat",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Деревня-опорная точка для локальных маршрутов к Тад-Сай/Пха-Сай; подтверждены местные проводники и проживание в семьях.",
+      "canonical_id": "geo_la_0059"
+    },
+    {
+      "id": "la:protected-area:phou-khao-khouay",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Пху-Кхао-Кхуай",
+      "slug": "phou-khao-khouay",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Транс-провинциальный национальный парк; parent=country выбран намеренно, чтобы не приписывать весь парк одной провинции. Карточка хранит рабочие точки доступа отдельно.",
+      "canonical_id": "geo_la_0060"
     }
   ],
   "sources": [

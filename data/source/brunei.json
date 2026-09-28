@@ -51,13 +51,13 @@
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "2.10.4",
+      "schema_target": "2.10.5",
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
       "policy": "WGS84/EPSG:4326; point elevation belongs to a specific GPS point (entrance/pier/trailhead/etc.); object_elevation separately describes the object itself above mean sea level and is required for elevation QA.",
       "objects_with_point_elevation": 16,
-      "objects_with_object_elevation": 14
+      "objects_with_object_elevation": 15
     },
     "elevation_provenance_upgrade": {
       "updated": "2026-09-28",
@@ -2808,6 +2808,24 @@
               "authority": "medium",
               "accessed": "2026-09-28",
               "notes": "SRTM30m sample at the exact canonical park reference GPS point. Approximate surface elevation from a ~30 m raster; forest canopy can bias the surface value and it is not a surveyed trailhead/ground elevation."
+            },
+            "object_elevation": {
+              "representative_m": 47,
+              "min_m": 0,
+              "max_m": 126,
+              "reference_type": "range",
+              "accuracy": "approximate",
+              "source": {
+                "type": "map",
+                "title": "Tasek Lama topographic map, elevation, terrain",
+                "publisher": "topographic-map.com",
+                "url": "https://en-gb.topographic-map.com/map-lcnvf3/Tasek-Lama/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "Карта указывает average elevation 47 м, minimum 0 м и maximum 126 м для Tasek Lama. Значения используются как ориентировочная характеристика рельефа объекта, а не как геодезическая съёмка."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Object-level диапазон рельефа парка. Point elevation 29 м у primary_location хранится отдельно."
             }
           },
           "logistics": {

@@ -39,6 +39,20 @@ def validate_point(point, context):
     elevation = coords.get("elevation_m")
     if elevation is not None and (not isinstance(elevation, (int, float)) or isinstance(elevation, bool)):
         fail(f"{context}: invalid elevation {elevation!r}")
+    elevation_range = coords.get("elevation_range_m")
+    if elevation_range is not None:
+        if not isinstance(elevation_range, dict):
+            fail(f"{context}: invalid elevation range {elevation_range!r}")
+        min_m = elevation_range.get("min")
+        max_m = elevation_range.get("max")
+        if (
+            not isinstance(min_m, (int, float)) or isinstance(min_m, bool)
+            or not isinstance(max_m, (int, float)) or isinstance(max_m, bool)
+            or min_m > max_m
+        ):
+            fail(f"{context}: invalid elevation range bounds {elevation_range!r}")
+    if elevation is not None and elevation_range is not None:
+        fail(f"{context}: use either scalar elevation or elevation range, not both")
     accuracy = point.get("accuracy")
     if accuracy not in {"high", "medium", "approximate", "unknown"}:
         fail(f"{context}: invalid accuracy {accuracy!r}")
@@ -269,7 +283,11 @@ for row in objects:
     for source_id in (primary or {}).get("elevation_source_refs") or []:
         if source_id not in source_ids:
             fail(f"unknown primary elevation source {source_id} in {row['detail_path']}")
-    if ((primary or {}).get("coordinates") or {}).get("elevation_m") is not None and not (primary or {}).get("elevation_source_refs"):
+    primary_coords = (primary or {}).get("coordinates") or {}
+    if (
+        primary_coords.get("elevation_m") is not None
+        or primary_coords.get("elevation_range_m") is not None
+    ) and not (primary or {}).get("elevation_source_refs"):
         fail(f"elevation without dedicated source in {row['detail_path']}")
     for index, point in enumerate(geo.get("points") or []):
         validate_point(point, row["detail_path"] + f":points[{index}]")
@@ -279,7 +297,11 @@ for row in objects:
         for source_id in point.get("elevation_source_refs") or []:
             if source_id not in source_ids:
                 fail(f"unknown elevation source {source_id} in {row['detail_path']}[{index}]")
-        if (point.get("coordinates") or {}).get("elevation_m") is not None and not point.get("elevation_source_refs"):
+        point_coords = point.get("coordinates") or {}
+        if (
+            point_coords.get("elevation_m") is not None
+            or point_coords.get("elevation_range_m") is not None
+        ) and not point.get("elevation_source_refs"):
             fail(f"elevation without dedicated source in {row['detail_path']}[{index}]")
     search_coords = row.get("coordinates")
     detail_coords = (primary or {}).get("coordinates")

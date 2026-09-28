@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schema_version": "2.9.0",
+    "release_id": "2026-09-28-r22",
+    "page_type": "geography",
+    "id": "la:hub:thakhek"
+  },
+  "identity": {
+    "name": "Thakhek",
+    "kind": "city_or_route_hub",
+    "slug": "thakhek",
+    "country_code": "LA"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:la",
+    "page_path": "pages/countries/laos.json"
+  },
+  "source_profile": {
+    "id": "la:hub:thakhek",
+    "kind": "city_or_route_hub",
+    "name": "Thakhek",
+    "slug": "thakhek"
+  },
+  "hierarchy_status": "legacy_route_place",
+  "parentage_status": "country_parent_confirmed; lower administrative nesting not inferred without source evidence",
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/historic_city.json",
+          "filter": {
+            "geography_id": "la:hub:thakhek"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:old-thakhek-town",
+      "name": "Old Thakhek Town",
+      "object_type": "historic_city",
+      "narrow": "Старый Тхакхэк — компактный квартал на Меконг с франко-лаосскими шопхаусами, католическим и буддийским слоями и ролью транзитного центра к карсту Кхаммуан. Для экспедиции он работает как человеческая прелюдия к Тхакхэк кольцевой маршрут и Конг-Лор.",
+      "detail_path": "countries/laos/objects/old-thakhek-town.json"
+    }
+  ]
+}

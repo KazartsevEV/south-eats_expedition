@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "schema_version": "2.9.0",
+    "release_id": "2026-09-28-r22",
+    "page_type": "class_family",
+    "id": "country-family:la:archaeology_memory"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "family_id": "archaeology_memory",
+    "label_ru": "Археология, древность и историческая память"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:la",
+    "page_path": "pages/countries/laos.json"
+  },
+  "global_family_page": "pages/families/archaeology_memory.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "count": 2,
+  "classes": [
+    {
+      "object_type": "archaeological_site",
+      "label_ru": "Археологические объекты",
+      "count": 1,
+      "global_page_path": "pages/classes/archaeological_site.json",
+      "country_page_path": "pages/countries/laos/classes/archaeological_site.json"
+    },
+    {
+      "object_type": "megalithic_site",
+      "label_ru": "Мегалиты",
+      "count": 1,
+      "global_page_path": "pages/classes/megalithic_site.json",
+      "country_page_path": "pages/countries/laos/classes/megalithic_site.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:wat-phou",
+      "name": "Wat Phou",
+      "object_type": "archaeological_site",
+      "geography_ids": [
+        "country:la",
+        "la:hub:pakse",
+        "la:region:champasak-si-fan-don-bolaven"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
+      "narrow": "Ват-Пху — ядро 1000-летнего культурного ландшафта Champasak, где храмовая ось тянется от равнины Меконга к горе Phou Kao. Комплекс развивался с V по XV век и особенно связан с кхмерской традицией; планировка сознательно соединяет воду, дорогу, террасы и гору.",
+      "detail_path": "countries/laos/objects/wat-phou.json"
+    },
+    {
+      "id": "la:plain-of-jars",
+      "name": "Plain of Jars",
+      "object_type": "megalithic_site",
+      "geography_ids": [
+        "country:la",
+        "la:hub:phonsavan",
+        "la:region:xieng-khouang"
+      ],
+      "region_legacy": "Xieng Khouang",
+      "narrow": "Равнина Кувшинов — серия мегалитических полей железного века в Сиангкхуанг: тысячи каменных сосудов, дисков и связанных погребальных следов разбросаны по плато. Археологическая интерпретация связывает комплексы с погребальной практикой и дальними путями обмена, а не с буквальным хранением напитков.",
+      "detail_path": "countries/laos/objects/plain-of-jars.json"
+    }
+  ]
+}

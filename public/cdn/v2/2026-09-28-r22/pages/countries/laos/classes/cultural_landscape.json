@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "schema_version": "2.9.0",
+    "release_id": "2026-09-28-r22",
+    "page_type": "country_class",
+    "id": "country-class:la:cultural_landscape"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "cultural_landscape",
+    "label_ru": "Культурные ландшафты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:religion_ethnography",
+    "page_path": "pages/countries/laos/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/cultural_landscape.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:hub:luangnamtkha-myang-sing",
+      "name": "Луангнамтха / Мыанг-Синг",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/luangnamtkha-myang-sing.json"
+    },
+    {
+      "id": "la:hub:phongsaly-town",
+      "name": "Phongsaly Town",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/city_or_route_hub/phongsaly-town.json"
+    },
+    {
+      "id": "la:region:luangnamtkha-nam-kha",
+      "name": "Луангнамтха / Нам-Ха",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/luangnamtkha-nam-kha.json"
+    },
+    {
+      "id": "la:region:phongsaly-highlands",
+      "name": "Phongsaly highlands",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/laos/region/phongsaly-highlands.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:phongsaly-old-town-and-ancient-tea-highlands",
+      "name": "Phongsaly old town and ancient tea highlands",
+      "geography_ids": [
+        "country:la",
+        "la:hub:phongsaly-town",
+        "la:region:phongsaly-highlands"
+      ],
+      "region_legacy": "Phongsaly highlands",
+      "nearest_hub": "Phongsaly Town",
+      "narrow": "Пхонгсали город стоит примерно на 1,400 м и заметно прохладнее лаосских низменностей. Старый квартал хранит китайско-тибетско-юньнаньские черты, а Ban Komaen примерно в 18 км известен древними чайными деревьями, которые туристические власти Лаоса описывает как 400-летние.",
+      "detail_path": "countries/laos/objects/phongsaly-old-town-and-ancient-tea-highlands.json"
+    },
+    {
+      "id": "la:muang-sing-market-and-tai-lue-cultural-landscape",
+      "name": "Muang Sing market and Tai Lue cultural landscape",
+      "geography_ids": [
+        "country:la",
+        "la:hub:luangnamtkha-myang-sing",
+        "la:region:luangnamtkha-nam-kha"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "nearest_hub": "Луангнамтха / Мыанг-Синг",
+      "narrow": "Мыанг-Синг — высокогорная долина у китайской границы, исторически связанная с Tai Lue княжествами и торговыми маршрутами. Утренний рынок собирает Lao, Tai Lue, Akha, Hmong и другие группы региона; окружающий ландшафт — рисовые поля, деревни и небольшие буддийские ваты.",
+      "detail_path": "countries/laos/objects/muang-sing-market-and-tai-lue-cultural-landscape.json"
+    }
+  ]
+}

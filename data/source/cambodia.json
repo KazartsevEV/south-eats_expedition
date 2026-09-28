@@ -51,19 +51,18 @@
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "2.6.1",
+      "schema_target": "2.7.0",
       "updated": "2026-09-28",
-      "class_chunk": "archaeological_site",
-      "updated_objects": 8,
+      "objects_with_primary_coordinates": 19,
       "total_objects": 19,
-      "policy": "WGS84/EPSG:4326; viewpoint coordinates use geotagged source images where available; uncertain elevation remains null"
+      "policy": "WGS84/EPSG:4326; broad areas use explicit operational access points plus geographic reference points; unverified elevation remains null"
     },
     "visual_recon_upgrade_progress": {
-      "schema_target": "2.6.1",
+      "schema_target": "2.7.0",
       "updated": "2026-09-28",
-      "class_chunk": "archaeological_site",
-      "updated_objects": 8,
-      "policy": "откуда + когда + что видно + полезный класс техники; без настроек камеры, shot list и операторского ТЗ"
+      "objects_with_visual_recon": 19,
+      "total_objects": 19,
+      "policy": "location intelligence only: where, when, what is visible, and equipment class justified by geometry/distance; no camera settings or shot-list instructions"
     }
   },
   "overview": {
@@ -714,7 +713,47 @@
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
               "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 11.56348,
+              "lon": 104.9305,
+              "elevation_m": 25
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Royal Palace",
+              "publisher": "OpenStreetMap / GeoNames / Wikidata via Mapcarta",
+              "url": "https://mapcarta.com/W1315431760",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Точка дворцового комплекса; высота 25 м взята из GeoNames-linked palace record."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Royal Palace Park — восточная сторона дворца",
+                "type": "viewpoint",
+                "coordinates": {
+                  "lat": 11.56497,
+                  "lon": 104.93233,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "source": {
+                  "type": "map",
+                  "title": "Royal Palace Park",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/W615419839",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                },
+                "checked_at": "2026-09-28"
+              }
+            ]
           },
           "logistics": {
             "access": "Риверсайд; пешком/tuk-tuk из Daun Penh.",
@@ -761,7 +800,63 @@
             "video_suitability_5": 5,
             "best_light": "раннее утро и поздний день",
             "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
-            "filming_restrictions": "Фотография запрещена внутри Throne Hall и Silver Pagoda; снаружи соблюдать правила дворца."
+            "filming_restrictions": "Фотография запрещена внутри Throne Hall и Silver Pagoda; снаружи соблюдать правила дворца.",
+            "visual_scouting": {
+              "best_time": "Раннее утро для пустой площади и мягкого света на крышах; поздний день — для восточной стороны дворца со стороны парка и набережной.",
+              "best_weather_light": "Чистый сухой день лучше показывает позолоченные крыши и шпили; после дождя мощёные площади дают отражения, но закрытые внутренние помещения всё равно не становятся съёмочной зоной.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "royal_palace_park",
+                  "name": "Royal Palace Park / восточная сторона",
+                  "description": "С открытого пространства перед дворцом виден длинный фасадный фронт, крыши и шпили без необходимости заходить во внутренние помещения.",
+                  "coordinates": {
+                    "lat": 11.56497,
+                    "lon": 104.93233,
+                    "elevation_m": null
+                  },
+                  "best_time": "late_afternoon",
+                  "best_weather_light": "Низкий свет с запада подсвечивает восточный фасадный фронт и крыши.",
+                  "view": {
+                    "description": "внешний фасад дворцового комплекса, крыши и открытая площадь"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "дворец читается целиком с противоположной стороны парка"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "шпили и декоративные детали крыш с общественной площади"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Royal Palace Park",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/W615419839",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "В сухой сезон воздух обычно прозрачнее; в сезон дождей грозовые облака и мокрая мостовая дают более драматичный городской фон."
+              ],
+              "video_activity": [
+                "утреннее открытие площади и движение посетителей у внешних ворот",
+                "вечерняя жизнь на набережной перед дворцовым кварталом"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "standard",
+                  "why": "городская дистанция до фасада"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "архитектурные детали без входа в зоны с ограничениями съёмки"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "Королевский дворец формирует политический и церемониальный центр Пномпень после переноса столицы из Oudong в XIX веке. Комплекс — действующая королевская резиденция, поэтому туристический доступ подчинён государственным церемониям, а не музейному расписанию.",
@@ -927,7 +1022,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
               "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 11.54945,
+              "lon": 104.91763,
+              "elevation_m": 13
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "unesco",
+              "title": "Cambodian Memorial Sites — Tuol Sleng property coordinates",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/1748/maps",
+              "authority": "high",
+              "accessed": "2026-09-28",
+              "notes": "UNESCO gives N11 32 58.22 E104 55 3.28; the mapped building centre differs only by metres. Elevation 13 m from OSM/GeoNames-linked S-21 record."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Tuk-tuk/сервис заказа такси; городской объект.",
@@ -974,7 +1087,63 @@
             "video_suitability_5": 4,
             "best_light": "дневной рассеянный свет",
             "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
-            "filming_restrictions": "Мемориальный объект: требуется уважительное поведение. Дроны запрещены без разрешения директора музея; внутри следовать обозначенным ограничениям фото и видео."
+            "filming_restrictions": "Мемориальный объект: требуется уважительное поведение. Дроны запрещены без разрешения директора музея; внутри следовать обозначенным ограничениям фото и видео.",
+            "visual_scouting": {
+              "best_time": "Утро после открытия: двор и фасады ещё не перегреты и обычно меньше посетителей; пасмурный день даёт ровный свет по белым школьным корпусам.",
+              "best_weather_light": "Рассеянная облачность лучше сохраняет детали фасадов и двора; жёсткий полдень создаёт глубокие тени в коридорах.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "museum_courtyard",
+                  "name": "Центральный двор S-21",
+                  "description": "Из двора одновременно читаются бывшие школьные корпуса, колючая проволока и мемориальные элементы; это главный пространственный контекст музея.",
+                  "coordinates": {
+                    "lat": 11.54945,
+                    "lon": 104.91763,
+                    "elevation_m": 13
+                  },
+                  "best_time": "morning или overcast_day",
+                  "best_weather_light": "Рассеянный свет уменьшает контраст между галереями и открытым двором.",
+                  "view": {
+                    "description": "школьные корпуса вокруг двора и мемориальная структура объекта"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "двор тесный и корпуса окружают точку со всех сторон"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "фасады, коридоры и архитектурные детали"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "S-21",
+                    "publisher": "OpenStreetMap / GeoNames / Wikidata via Mapcarta",
+                    "url": "https://mapcarta.com/27640484",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Сезон влияет меньше, чем время суток; после дождя двор темнее и зелень заметнее."
+              ],
+              "video_activity": [
+                "пространственная связь между школьными корпусами и двором",
+                "мемориальная тишина и движение посетителей без навязчивой съёмки людей"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "ограниченное пространство двора"
+                },
+                {
+                  "type": "standard",
+                  "why": "архитектура корпусов и экспозиционные детали там, где съёмка разрешена"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "Tuol Sleng — бывшая школа, превращённая режимом красные кхмеры в тюрьму и центр допросов S-21 в 1975–1979 годах. Его сила именно в сохранённой повседневной архитектуре школы, переоборудованной под заключение, документах и свидетельствах, а не в эффектной “страшной” визуальности.",
@@ -1139,7 +1308,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
               "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 11.48442,
+              "lon": 104.90211,
+              "elevation_m": 13
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "unesco",
+              "title": "Cambodian Memorial Sites — Choeung Ek property coordinates",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/1748/maps",
+              "authority": "high",
+              "accessed": "2026-09-28",
+              "notes": "UNESCO gives N11 29 3.92 E104 54 7.6; elevation 13 m from GeoNames-linked Choeung Ek record."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Tuk-tuk/car из центра, обычно 30–60 минут в зависимости от трафика.",
@@ -1186,7 +1373,63 @@
             "video_suitability_5": 4,
             "best_light": "утро/пасмурный день",
             "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
-            "filming_restrictions": "Мемориал геноцида: не снимать останки, церемонии и скорбящих посетителей навязчиво; соблюдать указания персонала."
+            "filming_restrictions": "Мемориал геноцида: не снимать останки, церемонии и скорбящих посетителей навязчиво; соблюдать указания персонала.",
+            "visual_scouting": {
+              "best_time": "Раннее утро или пасмурный день: мягкий свет по мемориальной ступе и деревьям, меньше людей на узких дорожках.",
+              "best_weather_light": "Облачность уменьшает резкий контраст между белой ступой, стеклом и тёмной растительностью; после дождя дорожки могут быть мокрыми.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "memorial_stupa_axis",
+                  "name": "Центральная зона мемориальной ступы",
+                  "description": "Главный визуальный контекст — ступа, деревья и дорожки бывшего места казней; съёмка должна оставаться документальной, без акцентирования человеческих останков.",
+                  "coordinates": {
+                    "lat": 11.48442,
+                    "lon": 104.90211,
+                    "elevation_m": 13
+                  },
+                  "best_time": "early_morning или overcast_day",
+                  "best_weather_light": "Мягкий свет удерживает детали ступы и зелени без жёстких бликов.",
+                  "view": {
+                    "description": "мемориальная ступа и окружающий ландшафт места памяти"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "пространство мемориала компактно"
+                    },
+                    {
+                      "type": "wide",
+                      "why": "показывает ступу вместе с деревьями и дорожками"
+                    }
+                  ],
+                  "source": {
+                    "type": "unesco",
+                    "title": "Cambodian Memorial Sites — Choeung Ek",
+                    "publisher": "UNESCO World Heritage Centre",
+                    "url": "https://whc.unesco.org/en/list/1748/maps",
+                    "authority": "high",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "В дождливый сезон растительность плотнее; в сухой сезон территория светлее и дорожки обычно суше."
+              ],
+              "video_activity": [
+                "общий пространственный контекст мемориала и движения по маршруту посетителей",
+                "церемонии памяти только при явном разрешении и без вмешательства"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "standard",
+                  "why": "компактный мемориальный ландшафт"
+                },
+                {
+                  "type": "wide",
+                  "why": "ступа в контексте деревьев и дорожек"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "Choeung Ek — мемориальный комплекс на месте одного из массовых захоронений, куда заключённых S-21 вывозили из Пномпень. Сегодня пространство организовано вокруг памятной ступы, дорожки по территории бывших захоронений и интерпретации преступлений красные кхмеры.",
@@ -2298,7 +2541,47 @@
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
               "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 10.7159,
+              "lon": 103.2488,
+              "elevation_m": 15
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Koh Rong",
+              "publisher": "OpenStreetMap / GeoNames / Wikidata via Mapcarta",
+              "url": "https://mapcarta.com/Koh_Rong",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Координата острова, не паромного причала. Для съёмочной и пляжной логистики дополнительно дана точка Long Beach."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Long Beach / Sok San Beach",
+                "type": "viewpoint",
+                "coordinates": {
+                  "lat": 10.69072,
+                  "lon": 103.24451,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "source": {
+                  "type": "map",
+                  "title": "Long Beach",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/W184298543",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                },
+                "checked_at": "2026-09-28"
+              }
+            ]
           },
           "logistics": {
             "access": "паром/speedboat из Sihanoukville; расписание зависит от погоды и оператора.",
@@ -2345,7 +2628,69 @@
             "video_suitability_5": 5,
             "best_light": "раннее утро и поздний день",
             "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
-            "filming_restrictions": "Обычная съёмка с рук зависит от правил объекта; профессиональную/коммерческую съёмку и постановку согласовывать."
+            "filming_restrictions": "Обычная съёмка с рук зависит от правил объекта; профессиональную/коммерческую съёмку и постановку согласовывать.",
+            "visual_scouting": {
+              "best_time": "Западное побережье и Long Beach — последние 90 минут перед закатом; восточные пляжи и причальные деревни — раннее утро.",
+              "best_weather_light": "После нескольких сухих дней вода обычно прозрачнее и светлее; после шторма или сильного дождя прибрежная вода мутнее.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "long_beach",
+                  "name": "Long Beach / Sok San Beach",
+                  "description": "Длинная западная дуга белого песка даёт открытый горизонт, лодки и непрерывную линию джунглей; особенно хорошо читается во второй половине дня.",
+                  "coordinates": {
+                    "lat": 10.69072,
+                    "lon": 103.24451,
+                    "elevation_m": null
+                  },
+                  "best_time": "late_afternoon и sunset",
+                  "best_weather_light": "Западный свет идёт вдоль береговой линии; спокойное море лучше показывает бирюзовый градиент.",
+                  "view": {
+                    "description": "длинная береговая дуга, море, лодки и лесной край"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "протяжённая дуга пляжа и море"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "лодки и удалённые участки берега"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Long Beach",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/W184298543",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "В спокойный сухой период вода визуально чище и светлее; муссонный прибой меняет цвет воды и сужает полезную пляжную полосу.",
+                "После штормов на некоторых пляжах накапливаются водоросли и плавник."
+              ],
+              "video_activity": [
+                "лодочное движение между причалами и пляжами",
+                "закатная активность на западных пляжах",
+                "рыбацкие и местные лодки вне главных курортных участков"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "длинные пляжи и открытый горизонт"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "лодки и слои береговой линии"
+                },
+                {
+                  "type": "underwater_camera",
+                  "why": "полезна только на участках с достаточной прозрачностью воды"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "Koh Rong — большой островной массив у Sihanoukville с длинными песчаными пляжами, лесным внутренним рельефом, рыбацкими поселениями и современной туристической застройкой разной плотности. Для экспедиции важнее выбрать конкретный берег и причал: Koh Touch и Long Set дают совершенно разный ритм, хотя находятся на одном острове.",
@@ -3116,7 +3461,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
               "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 13.10212,
+              "lon": 103.19848,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Phsar Nat — central Battambang reference point",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/W48681402",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Используется как опорная точка исторического центра; объект представляет несколько кварталов shophouses, а не одно здание."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Старый центр компактен и проходится пешком/велосипедом; Street 1–3 и набережная.",
@@ -3163,7 +3526,64 @@
             "video_suitability_5": 5,
             "best_light": "06:00–09:00 и 16:30–18:00",
             "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
-            "filming_restrictions": "Фасады с улицы снимать можно; интерьеры частных домов/магазинов — только с разрешения."
+            "filming_restrictions": "Фасады с улицы снимать можно; интерьеры частных домов/магазинов — только с разрешения.",
+            "visual_scouting": {
+              "best_time": "06:00–09:00 для фасадов, рынка и утренней уличной жизни; 16:30–18:00 для западного света и оживления набережной.",
+              "best_weather_light": "Лёгкая облачность удобна для длинных фасадных рядов; после дождя вывески, штукатурка и мокрый асфальт визуально насыщеннее.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "phsar_nat_historic_core",
+                  "name": "Phsar Nat и прилегающие кварталы",
+                  "description": "Центральная точка позволяет связать рынок, старую сетку улиц и ряды двухэтажных shophouses вокруг исторического ядра.",
+                  "coordinates": {
+                    "lat": 13.10212,
+                    "lon": 103.19848,
+                    "elevation_m": null
+                  },
+                  "best_time": "early_morning",
+                  "best_weather_light": "Утренний свет и работа рынка дают одновременно архитектуру и живой городской контекст.",
+                  "view": {
+                    "description": "центральный рынок, кварталы shophouses и городское движение"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "уличные дистанции и фасады"
+                    },
+                    {
+                      "type": "wide",
+                      "why": "угловые дома и длинные фасадные ряды на тесных улицах"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Phsar Nat",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/W48681402",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Сезон меняет главным образом уличную жизнь и состояние фасадов после дождя; архитектурная ценность стабильна круглый год."
+              ],
+              "video_activity": [
+                "утренняя торговля вокруг Phsar Nat",
+                "движение по старым кварталам вдоль Sangker",
+                "открывающиеся магазины и мастерские в shophouses"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "standard",
+                  "why": "естественная перспектива узких улиц"
+                },
+                {
+                  "type": "wide",
+                  "why": "фасадные ряды и угловая архитектура"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "Исторический центр Battambang — не единый “французский квартал”, а несколько слоёв: период тайских наследственные губернаторы, французская модернизация после 1907 года и архитектура независимой Камбоджа 1950–1970-х. На улицы 1–3 сохранились сотни торговые дома, вилл, банковских/общественных зданий и ар-деко рынок.",
@@ -3339,7 +3759,47 @@
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
               "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 11.32868,
+              "lon": 103.52424,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Chi Phat Visitor Center",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/N2240814940",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Практическая стартовая точка community routes в южных Кардамонах; объект не означает весь горный массив."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Chi Phat commune reference",
+                "type": "center",
+                "coordinates": {
+                  "lat": 11.329,
+                  "lon": 103.5225,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "source": {
+                  "type": "map",
+                  "title": "Chi Phat",
+                  "publisher": "Wikidata / OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/Chi_Phat",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                },
+                "checked_at": "2026-09-28"
+              }
+            ]
           },
           "logistics": {
             "access": "Точки входа различаются; для удалённых маршрутов нужен оператор/местное сообщество project, 4x4/лодка и запас времени.",
@@ -3388,7 +3848,69 @@
             "video_suitability_5": 5,
             "best_light": "раннее утро и поздний день",
             "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
-            "filming_restrictions": "Обычная съёмка с рук зависит от правил объекта; профессиональную/коммерческую съёмку и постановку согласовывать."
+            "filming_restrictions": "Обычная съёмка с рук зависит от правил объекта; профессиональную/коммерческую съёмку и постановку согласовывать.",
+            "visual_scouting": {
+              "best_time": "Раннее утро на реке и открытых участках; в лесу рассеянный свет работает почти весь день. Для многодневных маршрутов ключевее сезон и облачность, чем конкретный час.",
+              "best_weather_light": "После дождя лес насыщеннее, но тропы и переправы значительно тяжелее; в сухой сезон дымка может уменьшать дальние виды.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "chi_phat_river_hub",
+                  "name": "Chi Phat Visitor Center / речной узел",
+                  "description": "Стартовая точка показывает деревню, реку и лодочную логистику перед выходом на лесные маршруты.",
+                  "coordinates": {
+                    "lat": 11.32868,
+                    "lon": 103.52424,
+                    "elevation_m": null
+                  },
+                  "best_time": "early_morning",
+                  "best_weather_light": "Утренний туман над рекой и мягкий свет дают понятный переход от поселения к лесу.",
+                  "view": {
+                    "description": "деревня, река, лодки и вход в систему community routes"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "одновременно показывает реку, берег и поселение"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "лодки и дальние слои леса"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Chi Phat Visitor Center",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N2240814940",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Влажный сезон даёт максимально плотную зелень и полноводные реки, но усложняет грунтовые дороги, тропы и переправы.",
+                "В сухой сезон движение проще, однако открытые участки могут быть пыльными, а дальняя видимость страдать от дымки."
+              ],
+              "video_activity": [
+                "отправление лодок из Chi Phat",
+                "работа проводников и подготовка маршрутов в visitor center",
+                "переходы через лес, реки и общинные лагеря"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "лес, река и узкие тропы"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "наблюдение за животными и удалённые слои леса"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "лодочные и мокрые участки маршрута"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "Cardamom Mountains — один из крупнейших непрерывных лесных массивов материковой Southeast Asia, но для путешественника это не один “национальный парк с воротами”. Реальная входная модель — общинные маршруты, например Chi Phat: деревня, проводники, лодка/велосипед/трекинг и официальные лес camps.",
@@ -3901,7 +4423,67 @@
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
               "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 13.56742,
+              "lon": 104.10568,
+              "elevation_m": null
+            },
+            "coordinate_type": "waterfall_base",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Phnom Kulen Waterfall — first stage",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/N8635058459",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Операционная точка главного посетительского узла парка, а не геометрический центр национального парка."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Phnom Kulen summit",
+                "type": "summit",
+                "coordinates": {
+                  "lat": 13.6203,
+                  "lon": 104.1166,
+                  "elevation_m": 487
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "source": {
+                  "type": "map",
+                  "title": "Phnom Kulen peak",
+                  "publisher": "OpenStreetMap / Wikidata via Mapcarta",
+                  "url": "https://mapcarta.com/N11525308037",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                },
+                "checked_at": "2026-09-28"
+              },
+              {
+                "name": "Phnom Kulen National Park reference point",
+                "type": "center",
+                "coordinates": {
+                  "lat": 13.6062,
+                  "lon": 104.0957,
+                  "elevation_m": null
+                },
+                "accuracy": "medium",
+                "elevation_accuracy": "unknown",
+                "source": {
+                  "type": "map",
+                  "title": "Phnom Kulen National Park",
+                  "publisher": "Wikidata",
+                  "url": "https://www.wikidata.org/wiki/Q510882",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                },
+                "checked_at": "2026-09-28"
+              }
+            ]
           },
           "logistics": {
             "access": "Car/van через Kulen доступ дорога; режим подъёма транспорта может быть односторонним/временным — проверять перед поездкой.",
@@ -3949,7 +4531,98 @@
             "video_suitability_5": 5,
             "best_light": "раннее утро и поздний день",
             "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
-            "filming_restrictions": "Обычная съёмка с рук зависит от правил объекта; профессиональную/коммерческую съёмку и постановку согласовывать."
+            "filming_restrictions": "Обычная съёмка с рук зависит от правил объекта; профессиональную/коммерческую съёмку и постановку согласовывать.",
+            "visual_scouting": {
+              "best_time": "Водопады — утром до основной толпы; открытые края плато — поздний день при ясной видимости; лесные и сакральные точки работают и при облачности.",
+              "best_weather_light": "После дождей водопад значительно мощнее, но вода темнее и камни скользкие; в конце сухого сезона поток слабее.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "kulen_waterfall",
+                  "name": "Главный водопад Phnom Kulen",
+                  "description": "Каскад и бассейн дают масштаб только с нижней площадки и боковых открытых участков; сверху видна в основном кромка падения.",
+                  "coordinates": {
+                    "lat": 13.56742,
+                    "lon": 104.10568,
+                    "elevation_m": null
+                  },
+                  "best_time": "morning",
+                  "best_weather_light": "После периода дождей каскад шире и полноводнее; пасмурный свет уменьшает блики на воде.",
+                  "view": {
+                    "description": "полный каскад, бассейн и окружающий лес"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "у основания мало места и водопад высокий"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "отдельные струи, люди и масштаб"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Phnom Kulen Waterfall",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N8635058459",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                },
+                {
+                  "id": "kulen_peak",
+                  "name": "Phnom Kulen summit / plateau high point",
+                  "description": "Высокая точка полезна для понимания плато, но не заменяет отдельные точки водопада, Kbal Spean и священных объектов.",
+                  "coordinates": {
+                    "lat": 13.6203,
+                    "lon": 104.1166,
+                    "elevation_m": 487
+                  },
+                  "best_time": "late_afternoon при чистом горизонте",
+                  "best_weather_light": "Дальняя видимость важнее прямого солнца; низкая облачность закрывает рельеф.",
+                  "view": {
+                    "description": "плато и окружающий рельеф"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "ландшафт плато"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "удалённые гряды и детали рельефа"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Phnom Kulen peak",
+                    "publisher": "OpenStreetMap / Wikidata via Mapcarta",
+                    "url": "https://mapcarta.com/N11525308037",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Сезон дождей: водопады мощнее и лес максимально зелёный.",
+                "Конец сухого сезона: поток меньше, зато дороги и тропы обычно проще."
+              ],
+              "video_activity": [
+                "движение воды на главных каскадах",
+                "паломники и местная религиозная жизнь у действующих святынь там, где съёмка разрешена",
+                "переход между плато, лесом и водопадами"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "водопады и тесные лесные площадки"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "удалённые детали плато и храмовых объектов"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "Phnom Kulen — песчаниковое плато к северо-востоку от Angkor, где в начале IX века формировался Mahendraparvata и политико-религиозная программа ранней кхмерский империя. Гора одновременно археологический ландшафт, источник строительного камня, лесной национальный парк и действующее место паломничества.",
@@ -4119,7 +4792,67 @@
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
               "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 13.28764,
+              "lon": 103.99647,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kampong Phluk tourism office",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/N569030600",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Практическая точка доступа к одному из наиболее используемых маршрутов на Тонлесап; не является центром всего биосферного резервата."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Tonle Sap Biosphere Reserve — UNESCO reference point",
+                "type": "center",
+                "coordinates": {
+                  "lat": 12.8135,
+                  "lon": 104.052,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "source": {
+                  "type": "unesco",
+                  "title": "Tonle Sap Biosphere Reserve",
+                  "publisher": "UNESCO Man and the Biosphere Programme",
+                  "url": "https://www.unesco.org/en/mab/tonle-sap?hub=66369",
+                  "authority": "high",
+                  "accessed": "2026-09-28"
+                },
+                "checked_at": "2026-09-28"
+              },
+              {
+                "name": "Kampong Phluk",
+                "type": "center",
+                "coordinates": {
+                  "lat": 13.21218,
+                  "lon": 103.97429,
+                  "elevation_m": 8
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "source": {
+                  "type": "map",
+                  "title": "Kampong Phluk",
+                  "publisher": "GeoNames / OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/16001206",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                },
+                "checked_at": "2026-09-28"
+              }
+            ]
           },
           "logistics": {
             "access": "лодка доступ varies by деревня/сезон; уровень воды радикально меняет маршруты.",
@@ -4169,7 +4902,69 @@
             "video_suitability_5": 5,
             "best_light": "раннее утро и поздний день",
             "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
-            "filming_restrictions": "Съёмку жителей, особенно детей и внутри домов, делать только с согласием; избегать эксплуатации бедности как визуального аттракциона."
+            "filming_restrictions": "Съёмку жителей, особенно детей и внутри домов, делать только с согласием; избегать эксплуатации бедности как визуального аттракциона.",
+            "visual_scouting": {
+              "best_time": "Раннее утро для рыбацкого движения и мягкой дымки; поздний день для открытой воды и свайных деревень. Конкретная визуальная логика сильно зависит от уровня воды.",
+              "best_weather_light": "Высокая вода расширяет водную поверхность и превращает леса/поселения в явно водный ландшафт; в низкую воду сильнее видны сваи, грунт и каналы.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "kampong_phluk_access",
+                  "name": "Kampong Phluk — вход в лодочный маршрут",
+                  "description": "Здесь понятен переход от дороги к каналу и далее к свайной деревне и открытому озеру.",
+                  "coordinates": {
+                    "lat": 13.28764,
+                    "lon": 103.99647,
+                    "elevation_m": null
+                  },
+                  "best_time": "early_morning",
+                  "best_weather_light": "Утреннее движение лодок и низкий свет лучше показывают канал и жизнь поселения.",
+                  "view": {
+                    "description": "канал, лодочная логистика и вход в систему свайных поселений"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "лодки и поселение на средней дистанции"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "дальние лодки и слои свайной застройки"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Kampong Phluk tourism office",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N569030600",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Высокая вода меняет масштаб поселений: вода подходит к домам и затопленному лесу, лодка становится основным способом перемещения.",
+                "Низкая вода обнажает длинные сваи, грязевые берега и сухопутные участки; визуально это совсем другой ландшафт."
+              ],
+              "video_activity": [
+                "утреннее движение рыбацких лодок",
+                "переход из канала в открытую акваторию",
+                "жизнь свайных поселений без навязчивой съёмки частных домов и детей"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "standard",
+                  "why": "лодочная дистанция и поселения"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "птицы, лодки и удалённые ряды домов"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "мокрая лодочная среда"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "Тонлесап — сезонно пульсирующая система озера, реки и затопляемого леса: площадь и глубина резко меняются между сухим и дождливым сезонами из-за разворота течения Тонлесап река. Поэтому “floating деревня” нельзя описывать как статичную достопримечательность — поселение, рыбалка, причалы и маршруты физически перестраиваются вместе с водой.",
@@ -4341,7 +5136,25 @@
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях.",
               "practical_notes": "KHR официальная валюта; USD широко используется, особенно в туризме и для более крупных сумм; сдача часто в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 11.7947,
+              "lon": 104.7685,
+              "elevation_m": 93
+            },
+            "coordinate_type": "summit",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Phnom Oudong",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/N2583387260",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Высшая точка Phnom Oudong; исторический комплекс вытянут вдоль гребня."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Car/tuk-tuk from Пномпень; далее подъём по лестницам/холму.",
@@ -4388,7 +5201,64 @@
             "video_suitability_5": 5,
             "best_light": "раннее утро/закат",
             "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
-            "filming_restrictions": "Обычная съёмка с рук зависит от правил объекта; профессиональную/коммерческую съёмку и постановку согласовывать."
+            "filming_restrictions": "Обычная съёмка с рук зависит от правил объекта; профессиональную/коммерческую съёмку и постановку согласовывать.",
+            "visual_scouting": {
+              "best_time": "Раннее утро для лестниц и ступ без жары; поздний день для панорамы равнины с гребня.",
+              "best_weather_light": "После дождей равнина зеленее и воздух часто чище; сильная дымка снижает ценность дальних видов.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "phnom_oudong_ridge",
+                  "name": "Гребень Phnom Oudong",
+                  "description": "С гребня королевские ступы читаются на фоне плоской равнины; именно высотный контраст объясняет выбор бывшей столицы.",
+                  "coordinates": {
+                    "lat": 11.7947,
+                    "lon": 104.7685,
+                    "elevation_m": 93
+                  },
+                  "best_time": "late_afternoon",
+                  "best_weather_light": "Чистый горизонт и низкий свет отделяют ступы от равнины.",
+                  "view": {
+                    "description": "королевские ступы, гребень и центральнокамбоджийская равнина"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "ступы и ландшафт в одном кадре"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "слои равнины и отдельные ступы вдоль гребня"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Phnom Oudong",
+                    "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+                    "url": "https://mapcarta.com/N2583387260",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "После сезона дождей окружающая равнина ярко-зелёная; в конце сухого сезона пейзаж заметно суше и пыльнее."
+              ],
+              "video_activity": [
+                "подъём по лестницам между ступами",
+                "религиозная жизнь у действующих святынь при уважительной дистанции",
+                "панорамное раскрытие равнины с гребня"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "гребень и ступы находятся близко"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "равнина и дальние сельские детали"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "Oudong был королевской столицей Камбоджа с начала XVII до XIX века и располагался между священной горой и водным путём Тонлесап — типовая для кхмерских столиц связка горы, воды и политического центра. На хребте сохранились королевские ступы, внизу — следы городской, ремесленной и религиозной жизни.",
@@ -4915,7 +5785,25 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 12.6061,
+              "lon": 106.02233,
+              "elevation_m": null
+            },
+            "coordinate_type": "pier",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "River Dolphins Viewing Boats",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/N2625735283",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Практическая лодочная точка наблюдения у Kampi; сами дельфины перемещаются по речному участку."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Деревня Кампи находится примерно в 15 км к северу от Кратьэха. Министерство туризма указывает Кампи как главную точку наблюдения за дельфинами; к маршрутам на Ко-Пдао добавляется дорожный переезд и медленная лодка.",
@@ -4968,7 +5856,72 @@
             "video_suitability_5": 5,
             "best_light": "06:30–08:30 или 16:00–17:30",
             "drone": "Не запускать дрон над животными и лодками без экологического и авиационного разрешения.",
-            "filming_restrictions": "Keep distance and follow boatman instructions; no chasing/harassing дельфины for footage."
+            "filming_restrictions": "Keep distance and follow boatman instructions; no chasing/harassing дельфины for footage.",
+            "visual_scouting": {
+              "best_time": "06:30–08:30 и 16:00–17:30: ниже жара и свет идёт под меньшим углом к воде; активность дельфинов не гарантируется временем суток.",
+              "best_weather_light": "Спокойная вода и низкий ветер облегчают визуальное наблюдение; после сильных дождей вода мутнее и контраст дельфинов с поверхностью ниже.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "kampi_boat_launch",
+                  "name": "Kampi dolphin-viewing boats",
+                  "description": "Основная точка выхода лодок на участок Меконга, где наблюдают ирравади-дельфинов; хороший визуальный контекст включает лодки, островки и пороги.",
+                  "coordinates": {
+                    "lat": 12.6061,
+                    "lon": 106.02233,
+                    "elevation_m": null
+                  },
+                  "best_time": "early_morning или late_afternoon",
+                  "best_weather_light": "Низкий боковой свет лучше отделяет спины дельфинов от бликов на воде.",
+                  "view": {
+                    "description": "Меконг, лодки и участок наблюдения за дельфинами"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "telephoto",
+                      "why": "дельфины появляются на непредсказуемой дистанции"
+                    },
+                    {
+                      "type": "long_telephoto",
+                      "why": "позволяет не вынуждать лодку сближаться с животными"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "лодки и широкий речной контекст"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "River Dolphins Viewing Boats",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N2625735283",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Уровень Меконга меняет вид порогов, островков и ширину открытой воды; сухой сезон сильнее проявляет камни и отдельные русловые структуры."
+              ],
+              "video_activity": [
+                "выход местных лодок на наблюдение",
+                "спокойное всплытие дельфинов без погони за животными",
+                "речное движение и пороги вокруг Kampi"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "telephoto",
+                  "why": "наблюдение за животными на дистанции"
+                },
+                {
+                  "type": "long_telephoto",
+                  "why": "уменьшает необходимость приближаться"
+                },
+                {
+                  "type": "standard",
+                  "why": "лодка и речной ландшафт"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "К северу от Kratie Меконг сохраняет один из последних участков обитания пресноводной популяции Irrawaddy дельфин. Kampi примерно в 15 км от города — главный туристический точка наблюдения, но сюжет здесь шире “увидеть дельфина”: речная экология, рыболовство и охрана природы связаны напрямую.",
@@ -5136,7 +6089,47 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "notes": "Доллары США по-прежнему широко используются, особенно в туризме и для крупных платежей; сдачу часто дают в риелях."
-            }
+            },
+            "coordinates": {
+              "lat": 10.63041,
+              "lon": 104.01727,
+              "elevation_m": 1048
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Bokor Hill Station",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q559155",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Координата и высота hill station; объект карточки шире и включает национальный парк."
+            },
+            "coordinates_checked_at": "2026-09-28",
+            "geo_points": [
+              {
+                "name": "Le Bokor Palace",
+                "type": "viewpoint",
+                "coordinates": {
+                  "lat": 10.62211,
+                  "lon": 104.02667,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "source": {
+                  "type": "map",
+                  "title": "Le Bokor Palace",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/W362052245",
+                  "authority": "medium",
+                  "accessed": "2026-09-28"
+                },
+                "checked_at": "2026-09-28"
+              }
+            ]
           },
           "logistics": {
             "access": "От Кампота до плато Бокор около 42 км по асфальтированной горной дороге. Самостоятельный вариант — мотоцикл или автомобиль.",
@@ -5188,7 +6181,65 @@
             "video_suitability_5": 5,
             "best_light": "06:00–09:00 для облаков/пустой дороги; поздний день при ясном западном горизонте",
             "drone": "Для дрона нужны авиационные разрешения и соблюдение режима охраняемой территории; старт с частной земли требует согласия владельца.",
-            "filming_restrictions": "Часть исторических зданий и курортных территорий контролируется владельцами; доступ внутрь уточнять отдельно."
+            "filming_restrictions": "Часть исторических зданий и курортных территорий контролируется владельцами; доступ внутрь уточнять отдельно.",
+            "visual_scouting": {
+              "best_time": "06:00–09:00 для тумана, пустой дороги и низких облаков; поздний день хорош только при открытом западном горизонте.",
+              "best_weather_light": "Бокор интересен именно при смене погоды: туман быстро скрывает и открывает здания. Для панорамы побережья нужен редкий чистый горизонт без облачной шапки.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "le_bokor_palace",
+                  "name": "Le Bokor Palace и край плато",
+                  "description": "У бывшего Palace Hotel одновременно читаются колониальная архитектура, открытое плато и край горы.",
+                  "coordinates": {
+                    "lat": 10.62211,
+                    "lon": 104.02667,
+                    "elevation_m": null
+                  },
+                  "best_time": "early_morning или clearing_after_mist",
+                  "best_weather_light": "Тонкий туман даёт характерную атмосферу, но для дальнего побережья нужно его рассеивание.",
+                  "view": {
+                    "description": "историческое здание, плато и дальний склон к побережью"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "крупное здание и открытый ландшафт"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "дальнее побережье и отдельные здания hill station"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Le Bokor Palace",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/W362052245",
+                    "authority": "medium",
+                    "accessed": "2026-09-28"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Влажный сезон даёт плотный туман, насыщенную растительность и мощные водопады, но дальняя панорама часто закрыта.",
+                "Сухой сезон повышает шанс увидеть побережье, хотя плато становится визуально суше."
+              ],
+              "video_activity": [
+                "движение тумана через здания hill station",
+                "дорога по плато и смена леса на открытую высокогорную зону",
+                "работа облаков над обрывом и побережьем"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "архитектура на фоне открытого плато"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "побережье и удалённые объекты через атмосферную дымку"
+                }
+              ]
+            }
           },
           "annotation": {
             "narrative": "плато Бокор — редкая для Камбоджа смесь влажного горного леса, колониального горного курорта и современной курортной застройки. Французский комплекс 1920-х создавался как прохладное высокогорное убежище; сегодня старые здания церкви и гостиницы стоят рядом с новыми дорогами и зданиями, поэтому “заброшенный город-призрак” — уже неточное описание.",

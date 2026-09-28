@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.1.0"
-RELEASE_ID = "2026-09-28-r6"
+SCHEMA_VERSION = "2.2.0"
+RELEASE_ID = "2026-09-28-r7"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
@@ -47,6 +47,25 @@ TYPE_LABELS = {
     "natural_landscape": "Природные ландшафты и треккинг",
     "cultural_landscape": "Культурные ландшафты",
     "monument": "Памятники и монументы",
+    "mountain": "Горы",
+    "volcano": "Вулканы и вулканические комплексы",
+    "plateau": "Плато и нагорья",
+    "karst": "Карстовые районы",
+    "lake": "Озёра",
+    "river": "Реки",
+    "wetland": "Болота и водно-болотные угодья",
+    "mangrove": "Мангровые леса",
+    "forest": "Леса и джунгли",
+    "island": "Острова и архипелаги",
+    "beach": "Пляжи",
+    "reef": "Рифы",
+    "diving_site": "Места для дайвинга",
+    "geological_site": "Геологические объекты",
+    "fortification": "Фортификации",
+    "colonial_architecture": "Колониальная архитектура",
+    "traditional_settlement": "Традиционные поселения",
+    "craft_center": "Ремесленные центры",
+    "abandoned_site": "Заброшенные объекты",
 }
 
 TYPE_BY_NAME = {
@@ -177,6 +196,92 @@ TYPE_BY_NAME.update({
     "Nat Ma Taung / Mount Victoria": "national_park",
 })
 
+# Refine broad legacy buckets into the primary real-world classes used by CDN v2.2.
+TYPE_BY_NAME.update({
+    "Tasek Merimbun Heritage Park": "lake",
+    "Tasek Lama Park": "forest",
+    "Bukit Shahbandar Recreational Park": "forest",
+    "Brunei River Mangrove Safari": "mangrove",
+    "Koh Rong islands": "island",
+    "Tonle Sap Biosphere Reserve": "wetland",
+    "Vang Vieng karst": "karst",
+    "Si Phan Don / 4000 Islands": "island",
+    "Nong Khiaw and Muang Ngoi": "karst",
+    "Bolaven Plateau": "plateau",
+    "Bromo-Tengger-Semeru": "volcano",
+    "Ijen": "volcano",
+    "Raja Ampat": "island",
+    "Dieng Plateau": "plateau",
+    "Togean Islands": "island",
+    "Lake Toba / Samosir Batak cultural landscape": "lake",
+    "Mount Kinabalu": "mountain",
+    "Langkawi": "island",
+    "Perhentian islands": "island",
+    "Kinabatangan River": "river",
+    "Sipadan Island": "island",
+    "Inle Lake": "lake",
+    "Hpa-An karst and caves": "karst",
+    "Indawgyi Lake": "lake",
+    "Nat Ma Taung / Mount Victoria": "mountain",
+})
+
+TAG_ALIASES = {
+    "unesco": "unesco",
+    "living heritage": "living_heritage",
+    "living_heritage": "living_heritage",
+    "colonial heritage": "colonial_heritage",
+    "colonial_heritage": "colonial_heritage",
+    "industrial heritage": "industrial_heritage",
+    "industrial_heritage": "industrial_heritage",
+    "community tourism": "community_tourism",
+    "community_tourism": "community_tourism",
+    "rural landscape": "rural_landscape",
+    "rural_landscape": "rural_landscape",
+    "daily life": "daily_life",
+    "daily_life": "daily_life",
+    "vernacular architecture": "vernacular_architecture",
+    "vernacular_architecture": "vernacular_architecture",
+    "megalithic heritage": "megalithic",
+    "megalithic_heritage": "megalithic",
+    "waterfalls": "waterfall",
+    "waterfall": "waterfall",
+    "caves": "cave",
+    "cave": "cave",
+    "islands": "island",
+    "island": "island",
+    "beaches": "beach",
+    "beach": "beach",
+    "temples": "temple",
+    "temple": "temple",
+    "lakes": "lake",
+    "lake": "lake",
+    "highlands": "highland",
+    "highland": "highland",
+    "mekong": "mekong",
+}
+
+def canonical_tag(value: str) -> str:
+    raw = str(value or "").strip()
+    if not raw:
+        return ""
+    key = re.sub(r"\s+", " ", raw).strip().lower()
+    if key in TAG_ALIASES:
+        return TAG_ALIASES[key]
+    key = key.replace("/", "_").replace("-", "_").replace(" ", "_")
+    key = re.sub(r"_+", "_", key).strip("_")
+    return TAG_ALIASES.get(key, key)
+
+def canonical_tags(values):
+    out = []
+    seen = set()
+    for value in values or []:
+        tag = canonical_tag(value)
+        if tag and tag not in seen:
+            seen.add(tag)
+            out.append(tag)
+    return out
+
+
 def load(path: Path):
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
@@ -234,7 +339,32 @@ def story_from(obj):
         "narrative": compact_text(narrative) or compact_text(obj.get("why_go")),
         "culture_ethnography": compact_text(ann.get("culture_ethnography")) if isinstance(ann, dict) else None,
         "geography_geology": compact_text(ann.get("geography_geology")) if isinstance(ann, dict) else None,
+        "myths_legends_beliefs": ann.get("myths_legends_beliefs") if isinstance(ann, dict) else None,
     }
+
+
+def narrow_from(obj):
+    # The source "narrow" field in v1.5 often accumulated story + season + media notes.
+    # For CDN, a lead must stay compact and must not duplicate the full narrative.
+    return compact_text(obj.get("lead")) or compact_text(obj.get("why_go"))
+
+
+def merged_logistics(card, route):
+    logistics = dict(card.get("logistics") or {})
+    if route:
+        if not logistics.get("modes") and route.get("transport_modes"):
+            logistics["modes"] = route.get("transport_modes")
+        for src_key, dst_key in [
+            ("walking", "walking"),
+            ("water", "water"),
+            ("overnight_and_camping", "overnight_and_camping"),
+            ("permit_or_guide", "permit_or_guide"),
+        ]:
+            if not logistics.get(dst_key) and route.get(src_key):
+                logistics[dst_key] = route.get(src_key)
+        if not logistics.get("terrain_and_movement"):
+            logistics["terrain_and_movement"] = ((route.get("expedition_profile") or {}).get("terrain_and_movement"))
+    return logistics
 
 
 def country_payload(source, code, slug, object_count, places_count):
@@ -313,8 +443,10 @@ def build():
             route = obj.get("route_meta") or {}
             gallery = gallery_from(obj)
             story = story_from(obj)
-
-            tags = list(dict.fromkeys((obj.get("tags") or []) + (obj.get("interest") or [])))
+            narrow = narrow_from(obj)
+            interests = canonical_tags(obj.get("interest") or [])
+            tags = canonical_tags((obj.get("tags") or []) + interests)
+            logistics = merged_logistics(card, route)
             detail = {
                 "meta": {
                     "schema_version": SCHEMA_VERSION,
@@ -326,24 +458,23 @@ def build():
                 },
                 "identity": {
                     "name": name,
-                    "narrow": compact_text(obj.get("narrow")),
+                    "narrow": narrow,
                     "object_type": object_type,
                     "object_type_label_ru": TYPE_LABELS[object_type],
                     "prominence": obj.get("class"),
-                    "interests": obj.get("interest") or [],
+                    "interests": interests,
                     "tags": tags,
                 },
                 "location": location,
                 "story": story,
                 "visit": {
-                    "logistics": card.get("logistics"),
+                    "logistics": logistics,
                     "climate": card.get("climate"),
                     "operations": card.get("operations"),
                     "safety": card.get("safety"),
                     "accommodation": card.get("accommodation"),
                     "traveler_reports": card.get("traveler_reports"),
                 },
-                "route": route,
                 "media": {
                     "gallery": gallery,
                     "gallery_status": "carousel_ready" if len(gallery) >= 2 else "single_image_source",
@@ -361,7 +492,7 @@ def build():
                 "id": object_id,
                 "slug": slug,
                 "name": name,
-                "narrow": compact_text(obj.get("narrow")),
+                "narrow": narrow,
                 "object_type": object_type,
                 "object_type_label_ru": TYPE_LABELS[object_type],
                 "prominence": obj.get("class"),
@@ -381,8 +512,8 @@ def build():
                 hub_to_ids[location["nearest_hub"]].append(object_id)
             for t in tags:
                 tag_counts[str(t)] += 1
-            for i in obj.get("interest") or []:
-                interest_counts[str(i)] += 1
+            for i in interests:
+                interest_counts[i] += 1
             prominence_counts[str(obj.get("class") or "unknown")] += 1
 
             keywords = list(dict.fromkeys(
@@ -392,7 +523,7 @@ def build():
                         str(x)
                         for x in [
                             name,
-                            obj.get("narrow") or "",
+                            narrow or "",
                             object_type,
                             location.get("region") or "",
                             location.get("nearest_hub") or "",
@@ -408,7 +539,7 @@ def build():
                 "country_slug": country_slug,
                 "name": name,
                 "slug": slug,
-                "narrow": compact_text(obj.get("narrow")),
+                "narrow": narrow,
                 "object_type": object_type,
                 "prominence": obj.get("class"),
                 "region": location.get("region"),
@@ -421,14 +552,17 @@ def build():
                 "id": object_id,
                 "story": bool(story.get("narrative")),
                 "narrow": bool(card_row.get("narrow")),
-                "logistics": bool(card.get("logistics")),
-                "water": bool((card.get("logistics") or {}).get("water") or route.get("water")),
-                "overnight": bool((card.get("logistics") or {}).get("overnight_and_camping") or route.get("overnight_and_camping")),
+                "logistics": bool(logistics),
+                "water": bool(logistics.get("water")),
+                "overnight": bool(logistics.get("overnight_and_camping")),
                 "accommodation": bool(card.get("accommodation")),
                 "traveler_reports": bool(card.get("traveler_reports")),
                 "sources": bool(obj.get("sources")),
-                "route_meta": bool(route),
                 "hero": bool(gallery),
+                "gallery_min_2": len(gallery) >= 2,
+                "photo_video": bool(card.get("media")),
+                "coordinates": bool((card.get("location") or {}).get("coordinates")),
+                "dynamic_checked_at": bool((card.get("operations") or {}).get("last_verified")),
             })
 
         places = []
@@ -555,8 +689,9 @@ def build():
         "countries": countries,
     })
 
-    required = ["story", "narrow", "logistics", "water", "overnight", "accommodation", "traveler_reports", "sources", "route_meta", "hero"]
-    coverage = {k: sum(1 for x in qa_objects if x[k]) for k in required}
+    blocking_required = ["story", "narrow", "logistics", "sources", "hero"]
+    expedition_required = ["water", "overnight", "accommodation", "traveler_reports", "gallery_min_2", "photo_video", "coordinates", "dynamic_checked_at"]
+    coverage = {k: sum(1 for x in qa_objects if x[k]) for k in blocking_required + expedition_required}
     qa = {
         "schema_version": SCHEMA_VERSION,
         "release_id": RELEASE_ID,
@@ -567,14 +702,21 @@ def build():
         "coverage": coverage,
         "failures": {
             k: [x["id"] for x in qa_objects if not x[k]]
-            for k in required
+            for k in blocking_required
+            if any(not x[k] for x in qa_objects)
+        },
+        "gaps": {
+            k: [x["id"] for x in qa_objects if not x[k]]
+            for k in expedition_required
             if any(not x[k] for x in qa_objects)
         },
         "notes": [
-            "Source model remains editorial/research; CDN is a normalized read model.",
-            "why_go is not emitted separately: one canonical story lives at story.narrative.",
+            "Source model remains editorial/research; CDN is the normalized read model.",
+            "The CDN emits one compact lead at identity.narrow and one canonical story at story.narrative.",
+            "Route metadata is merged into visit.logistics and is not emitted as a duplicate route block.",
+            "Tags and interests are canonicalized to lowercase underscore identifiers.",
             "Object type is curated independently of broad search tags.",
-            "Single-image objects remain valid but are marked single_image_source for later gallery enrichment.",
+            "Incomplete expedition fields remain visible in qa.gaps; sparse objects are not deleted.",
         ],
     }
     dump(release / "qa.json", qa)

@@ -33,8 +33,14 @@ jobs:
       - name: Build normalized CDN from source
         run: python scripts/build_cdn.py
 
+      - name: Build recursive project hierarchy
+        run: python scripts/augment_hierarchy.py
+
       - name: Validate source and generated CDN
         run: python scripts/validate_cdn.py public/cdn/v2
+
+      - name: Validate recursive hierarchy
+        run: python scripts/validate_hierarchy.py public/cdn/v2
 
       - name: Commit generated CDN
         shell: bash

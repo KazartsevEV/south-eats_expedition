@@ -778,6 +778,7 @@ def build():
                     "contact": lodging.get("contact"),
                     "social_or_web": lodging.get("social_or_web"),
                     "source": lodging.get("source"),
+                    "source_url": lodging.get("source_url"),
                     "coordinates": lodging.get("coordinates"),
                     "checked_at": lodging.get("checked_at") or lodging.get("last_checked"),
                     "referenced_by": [object_id],

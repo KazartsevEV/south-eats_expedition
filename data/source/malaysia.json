@@ -25,7 +25,8 @@
       "v1.7 draft: начата каноническая геопривязка Malaysia: primary_location с WGS84, coordinate_type, точностью и источником; старые 21 object ID сохраняются.",
       "v1.7 draft: visual_scouting отделён от старых редакционных подсказок фотографу; в канонический visual_recon выводятся только точка/время/вид/полезный тип техники.",
       "v1.7 draft: академический поиск по археологии, карсту и этнографии ведётся через Sider Scholar/OpenAlex, чтобы не зависеть от одного web-search backend.",
-      "v1.7 draft: для 10 новых объектов traveler_reports переведены в структурированные записи с source_url; канонизатор теперь сохраняет точный source_ref каждого отчёта."
+      "v1.7 draft: для 10 новых объектов traveler_reports переведены в структурированные записи с source_url; канонизатор теперь сохраняет точный source_ref каждого отчёта.",
+      "v1.7 draft: для 10 новых объектов добавлен lodging layer; динамические цены датированы, отсутствующие официальные тарифы не выдумываются."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.7-draft",
@@ -8553,7 +8554,27 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Taman Negara River View Lodge",
+              "area": "Kuala Tahan",
+              "price_for_two": "US$22 base / about US$29 with taxes and fees for 2 adults, 1 night; Google Hotels snapshot for 28–29 Sep 2026",
+              "contact": "+60 17-967 8174",
+              "social_or_web": "Google Hotels / property listing",
+              "source": "live hotel result",
+              "source_url": "https://www.google.com.my/travel/hotels/entity/CgoIlaa5veGvlZAhEAE",
+              "coordinates": {
+                "lat": 4.383161,
+                "lon": 102.403301
+              },
+              "checked_at": "2026-09-29",
+              "features": [
+                "air_conditioning",
+                "wifi",
+                "restaurant"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -8598,6 +8619,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.google.com.my/travel/hotels/entity/CgoIlaa5veGvlZAhEAE",
+            "publisher": "Taman Negara River View Lodge",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }
@@ -8840,7 +8872,24 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Endau-Rompin Peta Visitor Complex / Standard Chalet",
+              "area": "Kampung Peta / park interior",
+              "price_for_two": "Актуальная цена на официальной странице не опубликована; запрашивать у Johor National Parks при бронировании",
+              "contact": "+60 13 744 0951; +60 7 788 2812",
+              "social_or_web": "Johor National Parks / Endau Rompin Peta",
+              "source": "official park accommodation page",
+              "source_url": "https://johornationalparks.gov.my/endau-rompin-peta-accommodation/",
+              "coordinates": null,
+              "checked_at": "2026-09-29",
+              "features": [
+                "park_chalet",
+                "attached_bathroom",
+                "cafeteria_at_visitor_complex"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -8885,6 +8934,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://johornationalparks.gov.my/endau-rompin-peta-accommodation/",
+            "publisher": "Endau-Rompin Peta Visitor Complex / Standard Chalet",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }
@@ -9131,7 +9191,25 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Maliau Basin Studies Centre — Standard Resthouse",
+              "area": "Maliau Basin Studies Centre",
+              "price_for_two": "RM3,740 for 2 adults for the published 3D2N Standard Resthouse package (RM1,870/person, twin sharing); 8% SST and tourism tax may apply",
+              "contact": "booking via Maliau Basin package page",
+              "social_or_web": "maliaubasin.org/discovery-package/",
+              "source": "current Maliau Basin package page",
+              "source_url": "https://maliaubasin.org/discovery-package/",
+              "coordinates": null,
+              "checked_at": "2026-09-29",
+              "features": [
+                "twin_sharing",
+                "meals_in_package",
+                "guided_program",
+                "study_centre"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -9165,6 +9243,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://maliaubasin.org/discovery-package/",
+            "publisher": "Maliau Basin Studies Centre — Standard Resthouse",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }
@@ -9402,7 +9491,25 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Bako National Park Forest Hostel",
+              "area": "Bako National Park HQ",
+              "price_for_two": "≈RM31.50 for 2 dorm beds/night (RM15.75 per bed); current 2026 visitor listing, verify in Sarawak Forestry e-booking",
+              "contact": "Sarawak Forestry e-booking",
+              "social_or_web": "Sarawak Forestry e-booking / Bako",
+              "source": "current visitor listing referencing Sarawak Forestry accommodation",
+              "source_url": "https://bakonationalpark.my/guides/bako-national-park-where-to-stay",
+              "coordinates": null,
+              "checked_at": "2026-09-29",
+              "features": [
+                "dormitory",
+                "shared_bathroom",
+                "fan",
+                "inside_park"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -9444,6 +9551,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://bakonationalpark.my/guides/bako-national-park-where-to-stay",
+            "publisher": "Bako National Park Forest Hostel",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }
@@ -9666,7 +9784,25 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Kepong Hotel",
+              "area": "Kepong, Kuala Lumpur",
+              "price_for_two": "US$22–24/night for 2 adults before some taxes/fees; Booking.com Sep 2026 snapshot",
+              "contact": "+60 19-676 7989",
+              "social_or_web": "Booking.com / Google Maps",
+              "source": "live hotel result",
+              "source_url": "https://www.booking.com/hotel/my/kepong.html",
+              "coordinates": null,
+              "checked_at": "2026-09-29",
+              "features": [
+                "air_conditioning",
+                "private_bathroom",
+                "wifi",
+                "24h_reception"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -9708,6 +9844,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.booking.com/hotel/my/kepong.html",
+            "publisher": "Kepong Hotel",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }
@@ -9934,7 +10081,24 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Sukau Backpackers B&B",
+              "area": "Sukau / Kinabatangan",
+              "price_for_two": "RM100/night for Standard Private Double for 2 incl. breakfast; RM110 for twin, published current room rate",
+              "contact": "+60 89 223 582; +60 11 2527 6878; +60 11 5122 2091",
+              "social_or_web": "https://www.sukaubackpackers.com/",
+              "source": "property official website",
+              "source_url": "https://www.sukaubackpackers.com/accomodation",
+              "coordinates": null,
+              "checked_at": "2026-09-29",
+              "features": [
+                "breakfast",
+                "private_bathroom",
+                "fan_or_air_conditioning"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -9968,6 +10132,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.sukaubackpackers.com/accomodation",
+            "publisher": "Sukau Backpackers B&B",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }
@@ -10221,7 +10396,24 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Gunung Gading National Park Forest Hostel",
+              "area": "Gunung Gading park HQ",
+              "price_for_two": "Исторически опубликованный тариф RM40/room или RM15/bed; текущую ставку обязательно подтвердить в Sarawak Forestry e-booking",
+              "contact": "+60 82-735144 (park office)",
+              "social_or_web": "Sarawak Forestry / Sarawak national parks e-booking",
+              "source": "official current park page + Sarawak visitor guide legacy rate",
+              "source_url": "https://mtcp.sarawak.gov.my/web/subpage/webpage_view/184",
+              "coordinates": null,
+              "checked_at": "2026-09-29",
+              "features": [
+                "park_hostel",
+                "shared_bathroom",
+                "fan"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -10264,6 +10456,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://mtcp.sarawak.gov.my/web/subpage/webpage_view/184",
+            "publisher": "Gunung Gading National Park Forest Hostel",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }
@@ -10482,7 +10685,26 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Tabin Wildlife Resort — Hill Lodge",
+              "area": "Tabin Wildlife Reserve",
+              "price_for_two": "RM5,140 for 2 adults on 2D1N join-in twin sharing (RM2,570/person) for Apr–Dec 2026; package includes reserve program, not room-only lodging",
+              "contact": "Tabin Rainforest Lodge / Amazing Borneo booking",
+              "social_or_web": "tabin.rainforestlodge.com",
+              "source": "current 2026 official/operator package page",
+              "source_url": "https://tabin.rainforestlodge.com/products/2d1n-tabin-wildlife-encounter",
+              "coordinates": null,
+              "checked_at": "2026-09-29",
+              "features": [
+                "twin_or_double",
+                "ensuite",
+                "heated_shower",
+                "balcony",
+                "package_only_context"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -10524,6 +10746,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://tabin.rainforestlodge.com/products/2d1n-tabin-wildlife-encounter",
+            "publisher": "Tabin Wildlife Resort — Hill Lodge",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }
@@ -10761,7 +10994,28 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Tony’s Guesthouse at Teluk Bahang",
+              "area": "Teluk Bahang",
+              "price_for_two": "US$12/night for Budget Double for 2 adults + 8% VAT + RM10 tourism fee/night; Booking.com Sep 2026 snapshot",
+              "contact": "booking platform / property contact after booking",
+              "social_or_web": "Booking.com",
+              "source": "live hotel result",
+              "source_url": "https://www.booking.com/hotel/my/tony-39-s-guesthouse-teluk-bahang.html",
+              "coordinates": {
+                "lat": 5.451458,
+                "lon": 100.212194
+              },
+              "checked_at": "2026-09-29",
+              "features": [
+                "budget",
+                "wifi",
+                "shared_bathroom",
+                "fan"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -10806,6 +11060,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.booking.com/hotel/my/tony-39-s-guesthouse-teluk-bahang.html",
+            "publisher": "Tony’s Guesthouse at Teluk Bahang",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }
@@ -11071,7 +11336,29 @@
             ],
             "note": "Полевые отзывы используются только как практические наблюдения; правовой режим, тарифы и обязательность проводника берутся из официальных источников."
           },
-          "accommodation": []
+          "accommodation": [
+            {
+              "name": "Juara Mutiara Resort",
+              "area": "Kampung Juara, Tioman",
+              "price_for_two": "≈RM146/night for 2 adults in current Google Hotels snapshot; Booking snapshots show roughly US$44–50/night depending room/date, plus taxes",
+              "contact": "+60 9-419 3161",
+              "social_or_web": "https://www.juaramutiararesort.com/",
+              "source": "property website + live hotel price snapshot",
+              "source_url": "https://www.juaramutiararesort.com/",
+              "coordinates": {
+                "lat": 2.794997,
+                "lon": 104.203273
+              },
+              "checked_at": "2026-09-29",
+              "features": [
+                "chalet",
+                "air_conditioning",
+                "restaurant",
+                "pool",
+                "wifi"
+              ]
+            }
+          ]
         },
         "sources": [
           {
@@ -11113,6 +11400,17 @@
             "used_for": [
               "traveler reports",
               "recurring practical issues"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.juaramutiararesort.com/",
+            "publisher": "Juara Mutiara Resort",
+            "kind": "lodging_source",
+            "used_for": [
+              "lodging",
+              "price_for_two",
+              "contact"
             ],
             "accessed": "2026-09-29"
           }

@@ -55,7 +55,7 @@
       "updated": "2026-09-28",
       "objects_with_primary_coordinates": 18,
       "total_objects": 18,
-      "objects_with_verified_elevation": 14,
+      "objects_with_verified_elevation": 15,
       "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas and variable river departures are explicitly approximate"
     },
     "elevation_provenance_upgrade": {
@@ -1089,11 +1089,11 @@
             "coordinates": {
               "lat": 4.55497,
               "lon": 115.15486,
-              "elevation_m": null
+              "elevation_m": 72
             },
             "coordinate_type": "pier",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Mapcarta / OpenStreetMap",
               "url": "https://mapcarta.com/N4817868121",
@@ -1149,7 +1149,16 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "map",
+              "title": "SRTM30m elevation sample at Ulu Temburong registration jetty",
+              "publisher": "OpenTopoData / SRTM",
+              "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.55497%2C115.15486",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "SRTM30m sample at the exact canonical pier GPS point. Approximate surface elevation from a ~30 m raster; not a surveyed jetty deck or river-stage elevation."
+            }
           },
           "logistics": {
             "access": "Из BSB по Тембуронг Bridge в Bangar, далее организованный трансфер/лодка к зоне парка и тропам.",

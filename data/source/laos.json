@@ -105,6 +105,14 @@
       "status": "round_1",
       "scope": "country regions/localities plus high-visibility object logistics/operations",
       "note": "Служебные идентификаторы, официальные названия и валютные коды не переводятся; пользовательский текст приводится к естественному русскому."
+    },
+    "elevation_upgrade_progress": {
+      "schema_target": "2.10.8",
+      "updated": "2026-09-28",
+      "objects_with_object_elevation": 19,
+      "total_objects": 19,
+      "status": "complete_with_semantic_qualifiers",
+      "policy": "Published/map elevations are preferred. SRTM90m is used only as an approximate terrain fallback at an exact object point; broad-object values are explicitly labelled as component/viewpoint/visitor-centre heights rather than whole-object averages."
     }
   },
   "overview": {
@@ -740,11 +748,11 @@
             "coordinates": {
               "lat": 19.88889,
               "lon": 102.13333,
-              "elevation_m": null
+              "elevation_m": 301
             },
             "coordinate_type": "center",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "unesco",
               "title": "Town of Luang Prabang — geographical data",
@@ -772,6 +780,15 @@
               },
               "checked_at": "2026-09-28",
               "notes": "Характерная рабочая отметка города; не средняя и не максимальная высота всей территории Всемирного наследия."
+            },
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
             }
           },
           "logistics": {
@@ -1008,11 +1025,11 @@
             "coordinates": {
               "lat": 19.431056,
               "lon": 103.152217,
-              "elevation_m": null
+              "elevation_m": 1098
             },
             "coordinate_type": "archaeological_core",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "unesco",
               "title": "Plain of Jars — Site 1 geographical data",
@@ -1052,7 +1069,34 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 1105,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site_reference_point",
+              "accuracy": "medium",
+              "source": {
+                "type": "map_osm",
+                "title": "Plain of Jars elevation",
+                "publisher": "GeoNames via Mapcarta",
+                "url": "https://mapcarta.com/Plain_of_Jars",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "Mapped reference point on the Site 1 plateau; the broader serial property spans multiple ridges and elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "1105 м — высота геопривязанной опорной точки участка 1, не единая высота всех площадок Долины кувшинов."
+            }
           },
           "logistics": {
             "access": "Три наиболее посещаемых и очищенных от UXO группы — объекты 1, 2 и 3 вокруг Phonsavan. объект 1 примерно 8–15 км от города; объекты 2/3 дальше к югу. Практично нанять tuk-tuk/4WD с водителем или взять организованный тур.",
@@ -1440,11 +1484,11 @@
             "coordinates": {
               "lat": 18.92678,
               "lon": 102.42301,
-              "elevation_m": null
+              "elevation_m": 483
             },
             "coordinate_type": "viewpoint",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Viewpoint 1, Vang Vieng",
@@ -1454,7 +1498,34 @@
               "accessed": "2026-09-28",
               "notes": "OSM tourism=viewpoint node in the western Vang Vieng karst. Stored as an operational scenic anchor, not as the geometric centre of the whole karst landscape."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 483,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "primary_viewpoint",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Высота относится к выбранной обзорной точке в западном карсте, а не ко всему карстовому массиву."
+            }
           },
           "logistics": {
             "access": "Ближайшая практичная база — Ванг-Вьенг; обычно нужен дорожный трансфер, затем пеший/лодочный участок в зависимости от маршрута. Для удалённых зон заранее подтверждать разрешение/проводник.",
@@ -1777,7 +1848,24 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "object_elevation": {
+              "representative_m": 125,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "archaeological_core",
+              "accuracy": "medium",
+              "source": {
+                "type": "map_osm",
+                "title": "Vat Phou elevation",
+                "publisher": "GeoNames via Mapcarta",
+                "url": "https://mapcarta.com/15650222",
+                "authority": "medium",
+                "accessed": "2026-09-28"
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Высота относится к основной геопривязанной точке комплекса; верхнее святилище находится выше по склону."
+            }
           },
           "logistics": {
             "access": "Около 10 км от Champasak город и примерно 40 км по дороге R14 от Паксе. Из Паксе доступны songthaew/местный автобус, частный трансфер, scooter; возможен медленный лодка трансфер по Меконг.",
@@ -2149,7 +2237,25 @@
               "accessed": "2026-09-28",
               "notes": "OSM place=island / GeoNames reference for Don Det, one of the main inhabited islands. This point represents Don Det only, not the centre or entrance of the entire Si Phan Don archipelago."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "object_elevation": {
+              "representative_m": 84,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "component_island",
+              "accuracy": "medium",
+              "source": {
+                "type": "map_osm",
+                "title": "Don Det",
+                "publisher": "Mapcarta / OpenStreetMap",
+                "url": "https://mapcarta.com/Don_Det",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "OSM place=island / GeoNames reference for Don Det, one of the main inhabited islands. This point represents Don Det only, not the centre or entrance of the entire Si Phan Don archipelago."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "84 м — высота опорной точки на Дон-Дете; это не средняя высота всего архипелага Си-Фан-Дон."
+            }
           },
           "logistics": {
             "access": "Основной подход через Паксе; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки.",
@@ -2394,11 +2500,11 @@
             "coordinates": {
               "lat": 20.40181,
               "lon": 104.22729,
-              "elevation_m": null
+              "elevation_m": 882
             },
             "coordinate_type": "entrance",
             "accuracy": "medium",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Viengxay Caves Visitor Centre & Tickets",
@@ -2408,7 +2514,34 @@
               "authority": "medium",
               "accessed": "2026-09-28"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 882,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "visitor_center",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "DEM-высота визит-центра; отдельные входы в пещеры лежат на разных отметках карстовой долины."
+            }
           },
           "logistics": {
             "access": "Viengxay находится примерно в 30 км от Sam Neua; до Sam Neua — дорога or flight to Nong Khang airport, затем наземный трансфер. По пещерам — visitor-centre основанный тур/аудиогид тур.",
@@ -2737,7 +2870,25 @@
                   "notes": "OSM natural=cave_entrance / GeoNames; eastern end of the through-cave system."
                 }
               }
-            ]
+            ],
+            "object_elevation": {
+              "representative_m": 176,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "eastern_cave_entrance",
+              "accuracy": "medium",
+              "source": {
+                "type": "map_osm",
+                "title": "Kong Lor Cave — eastern cave entrance",
+                "publisher": "Mapcarta / OpenStreetMap",
+                "url": "https://mapcarta.com/36097736",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "OSM natural=cave_entrance / GeoNames; eastern end of the through-cave system."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "176 м — отметка восточного выхода. Значение SRTM90m для западного входа не используется как высота пещеры: ячейка DEM пересекает крутой карстовый склон."
+            }
           },
           "logistics": {
             "access": "Конг-Лор деревня в Phou Hin Poun национальный парк — ключевая остановка Тхакхэк кольцевой маршрут. Из Тхакхэк обычно едут дорожный маршрут через Khoun Kham/Nahin; последние километры до деревня асфальтированный/дорожный подъезд, затем вход в пещера by лодка местного сообщества.",
@@ -2978,11 +3129,11 @@
             "coordinates": {
               "lat": 16.557,
               "lon": 104.7486,
-              "elevation_m": null
+              "elevation_m": 145
             },
             "coordinate_type": "center",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map",
               "title": "St. Teresa's Catholic Church, Savannakhet",
@@ -2992,7 +3143,34 @@
               "authority": "medium",
               "accessed": "2026-09-28"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 145,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "historic_core",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "DEM-высота опорной точки у St. Theresa/Talat Yen в старом квартале."
+            }
           },
           "logistics": {
             "access": "Удобнее всего из Саваннакхет; объект/район исследуется пешком с локальным общественным транспортом или сервис заказа такси для подброски.",
@@ -3247,11 +3425,11 @@
             "coordinates": {
               "lat": 20.0897346,
               "lon": 103.3689259,
-              "elevation_m": null
+              "elevation_m": 693
             },
             "coordinate_type": "entrance",
             "accuracy": "medium",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map",
               "title": "Nam Et - Phou Louey National Park Headquarters & Visitor Center",
@@ -3279,6 +3457,15 @@
               },
               "checked_at": "2026-09-28",
               "notes": "Диапазон относится ко всему национальному парку; 2257 м — Phou Louey, 336 м — Nam Et River."
+            },
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
             }
           },
           "logistics": {
@@ -3548,11 +3735,11 @@
             "coordinates": {
               "lat": 20.56553,
               "lon": 102.6297,
-              "elevation_m": null
+              "elevation_m": 829
             },
             "coordinate_type": "viewpoint",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "PhaMary viewpoint",
@@ -3562,7 +3749,34 @@
               "accessed": "2026-09-28",
               "notes": "OSM tourism=viewpoint above Nong Khiaw; used as a scenic operational anchor for the broader karst-and-river object."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 829,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "primary_viewpoint",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "829 м — DEM-высота PhaMary; речная долина и поселения расположены значительно ниже."
+            }
           },
           "logistics": {
             "access": "Практичная база — Луангпхабанг / Нонг-Кхиав; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -3832,11 +4046,11 @@
             "coordinates": {
               "lat": 15.18245,
               "lon": 106.12701,
-              "elevation_m": null
+              "elevation_m": 935
             },
             "coordinate_type": "viewpoint",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Tad Fane Viewpoint (2 waterfalls)",
@@ -3846,7 +4060,34 @@
               "accessed": "2026-09-28",
               "notes": "OSM tourism=viewpoint opposite Tad Fane waterfalls; used as an operational viewpoint anchor, not as the centre of the Bolaven Plateau."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 935,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "primary_viewpoint",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "935 м — DEM-высота обзорной точки Tad Fane, используемой как операционный якорь; плато имеет значительный диапазон высот."
+            }
           },
           "logistics": {
             "access": "Ближайшая практичная база — Паксе; обычно нужен дорожный трансфер, затем пеший/лодочный участок в зависимости от маршрута. Для удалённых зон заранее подтверждать разрешение/проводник.",
@@ -4180,11 +4421,11 @@
             "coordinates": {
               "lat": 20.87555,
               "lon": 101.33069,
-              "elevation_m": null
+              "elevation_m": 704
             },
             "coordinate_type": "entrance",
             "accuracy": "medium",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Nam Ha Visitor Center",
@@ -4194,7 +4435,34 @@
               "authority": "medium",
               "accessed": "2026-09-28"
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 704,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "visitor_center",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "704 м — DEM-высота визит-центра у Ban Chaleunsouk; не диапазон высот всей охраняемой территории."
+            }
           },
           "logistics": {
             "access": "Луангнамтха — основная база и точка старта. По дорогам и населённым пунктам можно двигаться самостоятельно; регулируемые дневные и многодневные треки внутри Нам-Ха оформляются через уполномоченных местных проводников.",
@@ -4467,11 +4735,11 @@
             "coordinates": {
               "lat": 19.67549,
               "lon": 103.56885,
-              "elevation_m": null
+              "elevation_m": 689
             },
             "coordinate_type": "cave_entrance",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Tham Piew Cave",
@@ -4481,7 +4749,34 @@
               "accessed": "2026-09-28",
               "notes": "OSM cave node for Tham Piew/Tham Piu in Xiangkhouang."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 689,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "cave_entrance",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "DEM-высота геопривязанного входа в Тхам-Пиу."
+            }
           },
           "logistics": {
             "access": "Тхам-Пиу включают в исторические маршруты по району Мыанг-Кхам; из Пхонсавана нужен наземный транспорт. Лодочный участок для доступа к пещере не требуется.",
@@ -4707,11 +5002,11 @@
             "coordinates": {
               "lat": 17.976169,
               "lon": 102.63425,
-              "elevation_m": null
+              "elevation_m": 176
             },
             "coordinate_type": "temple_entrance",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "wikidata",
               "title": "Pha That Luang coordinates",
@@ -4751,7 +5046,33 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 165,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "pha_that_luang_component",
+              "accuracy": "medium",
+              "source": {
+                "type": "other",
+                "title": "Pha That Luang 6.jpg — EXIF altitude",
+                "publisher": "Wikimedia Commons / Christophe95",
+                "url": "https://commons.wikimedia.org/wiki/File:Pha_That_Luang_6.jpg",
+                "authority": "medium",
+                "accessed": "2026-09-28"
+              },
+              "checked_at": "2026-09-28",
+              "notes": "Округлено от EXIF-высоты геопривязанной точки Пха-Тхат-Луанг; составная карточка включает и другие здания."
+            }
           },
           "logistics": {
             "access": "Центральный Вьентьян; Тхат-Луанг и Ват-Сисакет удобно связать пешком или велосипедом. Основные исторические объекты складываются в самостоятельный городской маршрут на несколько часов.",
@@ -5017,11 +5338,11 @@
             "coordinates": {
               "lat": 17.394922,
               "lon": 104.803814,
-              "elevation_m": null
+              "elevation_m": 150
             },
             "coordinate_type": "center",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Fountain Square, Thakhek — OSM way 239207377",
@@ -5031,7 +5352,34 @@
               "accessed": "2026-09-28",
               "notes": "Центр полигона Fountain Square рассчитан по восьми уникальным узлам OSM way 239207377. Tourism Laos определяет Fountain Square как центр старого Thakhek; координата относится к площади, а не к геометрическому центру города."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 150,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "fountain_square",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "DEM-высота центра полигона Fountain Square, используемого как историческое ядро старого Тхакхэка."
+            }
           },
           "logistics": {
             "access": "Тхакхэк — столица провинции на Меконге напротив Накхонпханома в Таиланде. Старый центр сосредоточен вокруг площади с фонтаном и набережной; большинство заметных старых зданий находится в пределах пяти–шести кварталов.",
@@ -5279,11 +5627,11 @@
             "coordinates": {
               "lat": 21.64543,
               "lon": 102.13869,
-              "elevation_m": null
+              "elevation_m": 1283
             },
             "coordinate_type": "center",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Komaen village (tea plantation village)",
@@ -5325,7 +5673,34 @@
                   "notes": "Mapped Phongsali city/locality; stored as a secondary reference point for the old-town component."
                 }
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 1356,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "old_town_component",
+              "accuracy": "medium",
+              "source": {
+                "type": "map_osm",
+                "title": "Phongsali",
+                "publisher": "Mapcarta / OpenStreetMap",
+                "url": "https://mapcarta.com/Phongsali",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "Mapped Phongsali city/locality; stored as a secondary reference point for the old-town component."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "1356 м — картографическая высота Пхонгсали для компонента старого города; чайная деревня Бан-Комаен лежит на другой отметке."
+            }
           },
           "logistics": {
             "access": "В Пхонгсали добираются по горным дорогам на автобусе или автомобиле; есть связи с Вьентьяном, Удомсаем, Луангпхабангом, Луангнамтхой и Дьенбьенфу, но расписание нужно перепроверять. Чайная деревня Бан-Комаен находится примерно в 18 км от города.",
@@ -5596,11 +5971,11 @@
             "coordinates": {
               "lat": 21.18797,
               "lon": 101.15016,
-              "elevation_m": null
+              "elevation_m": 644
             },
             "coordinate_type": "center",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Old Night Market, Muang Sing",
@@ -5610,7 +5985,34 @@
               "accessed": "2026-09-28",
               "notes": "OSM shop=market building. Used as the market-core anchor; surrounding Tai Lue cultural landscape extends well beyond this point."
             },
-            "coordinates_checked_at": "2026-09-28"
+            "coordinates_checked_at": "2026-09-28",
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 644,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "market_core",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "DEM-высота геопривязанного старого рынка; окружающий культурный ландшафт охватывает более широкий диапазон."
+            }
           },
           "logistics": {
             "access": "Мыанг-Синг находится примерно в 58 км от Луангнамтхи. Публиковался местный автобус с ориентиром 100 000 кип и отправлениями в 08:00, 10:30 и 12:00; расписание и цену перепроверять перед выездом.",
@@ -5904,11 +6306,11 @@
             "coordinates": {
               "lat": 19.75131,
               "lon": 101.99691,
-              "elevation_m": null
+              "elevation_m": 439
             },
             "coordinate_type": "parking",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Kuang Si Waterfall parking",
@@ -5968,7 +6370,16 @@
                   "notes": "OSM waterway=waterfall / GeoNames mapped waterfall point; elevation 496 m belongs to this mapped waterfall point."
                 }
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            }
           },
           "logistics": {
             "access": "Около 30 км от Луангпхабанга; практичны тук-тук, микроавтобус, мопед или заранее согласованный трансфер.",
@@ -6224,11 +6635,11 @@
             "coordinates": {
               "lat": 20.04931,
               "lon": 102.21077,
-              "elevation_m": null
+              "elevation_m": 321
             },
             "coordinate_type": "cave_entrance",
             "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "type": "map_osm",
               "title": "Pak Ou Cave (Lower Cave)",
@@ -6259,7 +6670,34 @@
                 },
                 "checked_at": "2026-09-28"
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "other",
+              "title": "SRTM 90m terrain elevation via OpenTopoData",
+              "publisher": "OpenTopoData / NASA SRTM",
+              "url": "https://www.opentopodata.org/datasets/srtm/",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+            },
+            "object_elevation": {
+              "representative_m": 321,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "lower_cave_entrance",
+              "accuracy": "approximate",
+              "source": {
+                "type": "other",
+                "title": "SRTM 90m terrain elevation via OpenTopoData",
+                "publisher": "OpenTopoData / NASA SRTM",
+                "url": "https://www.opentopodata.org/datasets/srtm/",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "DEM-derived terrain height at the exact stored WGS84 point. Horizontal resolution is approximately 90 m; values are marked approximate and are not survey elevations."
+              },
+              "checked_at": "2026-09-28",
+              "notes": "DEM-высота нижнего входа Тхам-Тинг; верхняя пещера расположена выше по склону."
+            }
           },
           "logistics": {
             "access": "Официальный маршрут из Луангпхабанга идёт лодкой вверх по Меконгу; альтернатива — наземный подъезд к деревне Пак-У и короткая переправа через реку.",

@@ -129,6 +129,7 @@ TYPE_BY_NAME = {
     "Kuang Si Falls": "waterfall",
     "Pak Ou Caves": "cave",
     "Hin Nam No National Park": "national_park",
+    "Nakai Nam Theun National Park": "national_park",
 }
 
 

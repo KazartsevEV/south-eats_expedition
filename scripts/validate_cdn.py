@@ -16,6 +16,35 @@ def fail(message):
     print(f"ERROR: {message}", file=sys.stderr)
     raise SystemExit(1)
 
+COORDINATE_TYPES = {
+    "center", "entrance", "trailhead", "summit", "viewpoint", "pier", "parking",
+    "cave_entrance", "waterfall_base", "archaeological_core", "temple_entrance",
+}
+
+def validate_point(point, context):
+    if point is None:
+        return
+    if not isinstance(point, dict):
+        fail(f"{context}: geodata point is not an object")
+    point_type = point.get("type")
+    if point_type not in COORDINATE_TYPES:
+        fail(f"{context}: invalid coordinate type {point_type!r}")
+    coords = point.get("coordinates") or {}
+    lat = coords.get("lat")
+    lon = coords.get("lon")
+    if not isinstance(lat, (int, float)) or isinstance(lat, bool) or not (-90 <= lat <= 90):
+        fail(f"{context}: invalid latitude {lat!r}")
+    if not isinstance(lon, (int, float)) or isinstance(lon, bool) or not (-180 <= lon <= 180):
+        fail(f"{context}: invalid longitude {lon!r}")
+    elevation = coords.get("elevation_m")
+    if elevation is not None and (not isinstance(elevation, (int, float)) or isinstance(elevation, bool)):
+        fail(f"{context}: invalid elevation {elevation!r}")
+    accuracy = point.get("accuracy")
+    if accuracy not in {"high", "medium", "approximate", "unknown"}:
+        fail(f"{context}: invalid accuracy {accuracy!r}")
+    if not (point.get("gps") or {}).get("decimal"):
+        fail(f"{context}: missing human-readable decimal GPS")
+
 # Source guard: never accept empty/truncated JSON again.
 sources = sorted(SRC.glob("*.json"))
 if not sources:
@@ -105,6 +134,13 @@ failures = qa.get("failures") or {}
 if failures:
     fail(f"QA coverage failures: {json.dumps(failures, ensure_ascii=False)}")
 
+geodata_contract_path = release / "schema" / "geodata-contract.json"
+if not geodata_contract_path.exists():
+    fail("missing schema/geodata-contract.json")
+geodata_contract = load(geodata_contract_path)
+if geodata_contract.get("crs") != "WGS84" or geodata_contract.get("epsg") != 4326:
+    fail("geodata contract must be WGS84 / EPSG:4326")
+
 # Contract: story is emitted once; legacy source prose keys must not leak.
 for row in objects:
     detail = load(release / row["detail_path"])
@@ -118,6 +154,17 @@ for row in objects:
         fail(f"missing narrow in {row['detail_path']}")
     if not identity.get("object_type"):
         fail(f"missing object_type in {row['detail_path']}")
+    geo = detail.get("geo") or {}
+    if geo.get("crs") != "WGS84" or geo.get("epsg") != 4326:
+        fail(f"invalid/missing WGS84 contract in {row['detail_path']}")
+    primary = geo.get("primary_location")
+    validate_point(primary, row["detail_path"] + ":primary_location")
+    for index, point in enumerate(geo.get("points") or []):
+        validate_point(point, row["detail_path"] + f":points[{index}]")
+    search_coords = row.get("coordinates")
+    detail_coords = (primary or {}).get("coordinates")
+    if search_coords != detail_coords:
+        fail(f"search/detail coordinate mismatch in {row['detail_path']}")
 
 print(json.dumps({
     "status": "ok",

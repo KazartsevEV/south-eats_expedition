@@ -28,7 +28,8 @@
       "v1.6.3 draft: добавлен obj_la_0021 Nakai Nam Theun National Park; multimodal access сохранён структурированными legs, а неизвестные километры/набор высоты не заменялись оценками.",
       "v1.6.4 draft: добавлен obj_la_0022 Tad Fane с отдельными GPS входа, основного viewpoint и верхней фототочки; высота падения 120 м не смешивается с абсолютной высотой.",
       "v1.6.3 QA-fix: у Nakai Nam Theun удалён центр Удомсука из object.geo_points, primary_location уточнён как приблизительный операционный лодочный доступ Тхаланга, 2–3 часа езды оставлены диапазоном в notes без ложного duration_min=120; медиа заменены на Commons с открытой лицензией.",
-      "v1.6.5 draft: добавлен obj_la_0023 Tad Yuang; сохранены 800 м грунтового last-mile, 12 км/15 мин от Паксонга, динамические тарифы 2025 и честный elevation=null до надёжного абсолютного источника."
+      "v1.6.5 draft: добавлен obj_la_0023 Tad Yuang; сохранены 800 м грунтового last-mile, 12 км/15 мин от Паксонга, динамические тарифы 2025 и честный elevation=null до надёжного абсолютного источника.",
+      "v1.6.4 draft: добавлен obj_la_0023 Phou Khao Khouay National Park. Primary GPS — научно опубликованный Tad Leuk visitor sector, Tad Xai вынесен отдельной geo_point; официальные campsite и текущий road access отделены от исторических расписаний и старых тарифов."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -82,7 +83,7 @@
     },
     "country_expansion_qa": {
       "status": "open",
-      "current_canonical_objects": 23,
+      "current_canonical_objects": 24,
       "note_ru": "19 карточек проходят текущий структурный QA, но это не означает полноту Лаоса как страны. Перед импортом после Камбоджи расширить объектный каталог и только затем закрывать QA страны.",
       "priority_candidates": [
         "Khone Phapheng Falls",
@@ -91,7 +92,6 @@
         "Tham Nang Aen",
         "Xe Pian National Protected Area",
         "Dong Hua Sao National Protected Area",
-        "Phou Khao Khouay National Protected Area",
         "Nong Fa / Dong Ampham landscape",
         "Ho Chi Minh Trail heritage sites in southern Laos"
       ],
@@ -10235,6 +10235,811 @@
             "status": "reviewed",
             "checked_at": "2026-09-29",
             "notes": "Абсолютная высота над уровнем моря не заполнена без надёжного источника; высота падения хранится только в narrative."
+          }
+        }
+      },
+      {
+        "name": "Phou Khao Khouay National Park",
+        "class": "nature",
+        "interest": [
+          "nature",
+          "national park",
+          "sandstone plateau",
+          "waterfall",
+          "forest",
+          "biodiversity",
+          "trekking",
+          "camping",
+          "community tourism",
+          "ethnography",
+          "botany"
+        ],
+        "why_go": "Пху-Кхао-Кхуай — большой национальный парк рядом с Вьентьяном, но на земле он распадается на несколько удалённых секторов. Для самостоятельной экспедиционной логики особенно полезен Тад-Леук: сюда ведёт отдельная дорога, есть visitor center, официальный кемпинг и короткая самостоятельная природная тропа. Из Бан-Хаткхая начинаются уже другие, регулируемые местными проводниками маршруты к Тад-Сай/Пха-Сай и на песчаниковые плато.",
+        "traveler_card": {
+          "location": {
+            "region": "Боликхамсай / Вьентьян / Пху-Кхао-Кхуай",
+            "nearest_hub": "Бан-Хаткхай / Тхабок",
+            "languages_spoken": [
+              "лаосский",
+              "в деревнях на периферии парка встречаются и другие языки; конкретный язык привязывать к конкретной общине"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 18.39525,
+              "lon": 103.071389,
+              "elevation_m": 200
+            },
+            "coordinate_type": "waterfall_base",
+            "accuracy": "high",
+            "elevation_accuracy": "high",
+            "coordinate_source": {
+              "type": "academic",
+              "title": "Endemism and evolution of Podostemaceae in Phou Khao Khouay National Park and adjoining areas",
+              "publisher": "Thai Forest Bulletin (Botany)",
+              "url": "https://li01.tci-thaijo.org/index.php/ThaiForestBulletin/article/download/254338/175243/942621",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "Координата опубликована для Tad Leuk waterfall; используется как operational primary_location самого доступного visitor-сектора парка, а не как геометрический центр."
+            },
+            "elevation_source": {
+              "type": "academic",
+              "title": "Endemism and evolution of Podostemaceae in Phou Khao Khouay National Park and adjoining areas",
+              "publisher": "Thai Forest Bulletin (Botany)",
+              "url": "https://li01.tci-thaijo.org/index.php/ThaiForestBulletin/article/download/254338/175243/942621",
+              "authority": "high",
+              "accessed": "2026-09-29"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": null,
+              "max_m": 1671,
+              "reference_type": "highest_point",
+              "accuracy": "medium",
+              "source": {
+                "type": "traveler_report",
+                "title": "Phou Khao Khouay National Park, Vientiane — Visitor guide & review",
+                "publisher": "Travelfish",
+                "url": "https://www.travelfish.org/sight_profile/laos/vientiane_and_surrounds/vientiane/vientiane/3358",
+                "authority": "medium",
+                "published_at": "2025-08-26",
+                "accessed": "2026-09-29",
+                "notes": "Указан Phou Ho 1,671 м как высшая вершина; значение согласуется с более ранними материалами управления парком."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высшая подтверждённая вершина в проверенных источниках; минимальная высота всего парка не фиксируется без столь же надёжного park-wide источника."
+            },
+            "geo_points": [
+              {
+                "type": "waterfall_base",
+                "name": "Тад-Сай",
+                "coordinates": {
+                  "lat": 18.455222,
+                  "lon": 103.142167,
+                  "elevation_m": 290
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "high",
+                "coordinate_source": {
+                  "type": "academic",
+                  "title": "Endemism and evolution of Podostemaceae in Phou Khao Khouay National Park and adjoining areas",
+                  "publisher": "Thai Forest Bulletin (Botany)",
+                  "url": "https://li01.tci-thaijo.org/index.php/ThaiForestBulletin/article/download/254338/175243/942621",
+                  "authority": "high",
+                  "accessed": "2026-09-29"
+                },
+                "elevation_source": {
+                  "type": "academic",
+                  "title": "Endemism and evolution of Podostemaceae in Phou Khao Khouay National Park and adjoining areas",
+                  "publisher": "Thai Forest Bulletin (Botany)",
+                  "url": "https://li01.tci-thaijo.org/index.php/ThaiForestBulletin/article/download/254338/175243/942621",
+                  "authority": "high",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              }
+            ],
+            "coordinates_checked_at": "2026-09-29"
+          },
+          "logistics": {
+            "access": "У парка нет единственных ворот. Для самостоятельного визита самым понятным сектором остаётся Тад-Леук в районе Тхапхабат: официальный проспект Lao Parks 2025 указывает 120 км по Route 13 из Вьентьяна и затем около 17 км по грунтовой дороге. Бан-Хаткхай — отдельная база для лодочно-пеших маршрутов к Тад-Сай/Пха-Сай.",
+            "public_transport": "Современного официального расписания непосредственно до Тад-Леук не опубликовано. Старый государственный ecotourism-материал описывает высадку в Тхабоке и нерегулярные сонгтхэу в направлении Long Xan, но эти сведения нельзя считать расписанием 2026 года.",
+            "last_mile": "В Тад-Леук от visitor center есть самостоятельная природная тропа около 1.5 км. Маршруты из Бан-Хаткхая к Тад-Сай в локальной схеме идут с деревенским проводником и включают лодочный участок.",
+            "permit_or_guide": "Для Тад-Леук возможны самостоятельные прогулки от visitor center. Для деревенских треков из Бан-Хаткхая историческая и современная модель доступа использует местного проводника; режим конкретного трека подтверждать в деревне.",
+            "access_requirements": "самостоятельно до Тад-Леук; регулируемые маршруты из Бан-Хаткхая — с местной сервисной группой/проводником",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно по открытому visitor-сектору Тад-Леук; проводник только для маршрутов, где его требует местная схема доступа",
+            "access_options": [
+              {
+                "id": "tad_leuk_self_drive",
+                "origin": "Вьентьян",
+                "modes": [
+                  "car",
+                  "walking"
+                ],
+                "checked_at": "2026-09-29",
+                "source_refs": [],
+                "legs": [
+                  {
+                    "mode": "car",
+                    "distance_km": 120,
+                    "duration_min": null,
+                    "surface": "paved",
+                    "condition": "Route 13 до ответвления на сектор Тад-Леук",
+                    "seasonality": "круглогодичная магистральная часть; фактическое состояние проверять перед выездом",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Route 13",
+                    "fords": null,
+                    "notes": "120 км по paved Route 13 указаны в официальном инвестиционном проспекте Lao Parks 2025."
+                  },
+                  {
+                    "mode": "car",
+                    "distance_km": 17,
+                    "duration_min": null,
+                    "surface": "dirt",
+                    "condition": "грунтовый подъезд к Тад-Леук",
+                    "seasonality": "после сильных дождей состояние грунта может существенно меняться; текущую проходимость подтверждать локально",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": {
+                      "lat": 18.39525,
+                      "lon": 103.071389,
+                      "coordinate_type": "waterfall_base",
+                      "accuracy": "high"
+                    },
+                    "navigation": "по указателям к Tad Leuk",
+                    "fords": null,
+                    "notes": "17 км dirt road указаны Lao Parks в проспекте 2025; это текущий официальный ориентир, а не старое описание дороги."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": 1.5,
+                    "duration_min": null,
+                    "surface": "trail",
+                    "condition": "природная тропа от visitor center",
+                    "seasonality": "влажный сезон делает камни и грунт скользкими",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": {
+                      "lat": 18.39525,
+                      "lon": 103.071389,
+                      "coordinate_type": "waterfall_base",
+                      "accuracy": "high"
+                    },
+                    "navigation": "маркированная/интерпретационная тропа visitor sector",
+                    "fords": null,
+                    "notes": "Около 1.5 км по историческому официальному описанию Tad Leuk Nature Trail; актуальность самого маршрута подтверждать на месте, поскольку часть visitor-инфраструктуры требует обновления."
+                  }
+                ]
+              },
+              {
+                "id": "tad_leuk_public_transport_fallback",
+                "origin": "Вьентьян",
+                "modes": [
+                  "public_transport",
+                  "walking"
+                ],
+                "checked_at": "2026-09-29",
+                "source_refs": [],
+                "legs": [
+                  {
+                    "mode": "public_transport",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": null,
+                    "condition": null,
+                    "seasonality": null,
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "до Тхабока; дальнейший локальный транспорт не гарантирован",
+                    "fords": null,
+                    "notes": "Старые официальные ecotourism-материалы описывают автобусы/сонгтхэу до Тхабока и Long Xan, но актуального расписания 2026 нет. Использовать только после проверки на месте."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": null,
+                    "condition": null,
+                    "seasonality": null,
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": null,
+                    "fords": null,
+                    "notes": "Пеший остаток зависит от фактического места высадки/наличия локального транспорта; не фиксируется без свежего источника."
+                  }
+                ]
+              },
+              {
+                "id": "ban_hatkhai_tad_xai",
+                "origin": "Бан-Хаткхай",
+                "modes": [
+                  "boat",
+                  "walking"
+                ],
+                "checked_at": "2026-09-29",
+                "source_refs": [],
+                "legs": [
+                  {
+                    "mode": "boat",
+                    "distance_km": null,
+                    "duration_min": 45,
+                    "surface": null,
+                    "condition": "лодочный участок по Нам-Манг в локальной схеме доступа",
+                    "seasonality": "уровень воды влияет на маршрут",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": {
+                      "lat": 18.40799,
+                      "lon": 103.16104,
+                      "coordinate_type": "trailhead",
+                      "accuracy": "medium"
+                    },
+                    "navigation": "местный проводник",
+                    "fords": null,
+                    "notes": "45 минут — исторически опубликованный ориентир community route; перед стартом подтверждать в деревне."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "trail",
+                    "condition": "лесная тропа к Тад-Сай/Пха-Сай",
+                    "seasonality": "в дождливый сезон поток Houay Xay может стать непроходимым для перехода",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": {
+                      "lat": 18.40799,
+                      "lon": 103.16104,
+                      "coordinate_type": "trailhead",
+                      "accuracy": "medium"
+                    },
+                    "navigation": "местный проводник",
+                    "fords": null,
+                    "notes": "Точный километраж и набор высоты не публикуются в источнике достаточной точности, поэтому оставлены null."
+                  }
+                ]
+              }
+            ],
+            "water": "У Тад-Леук есть visitor-инфраструктура и ресторанная площадка, но текущий официальный источник не подтверждает качество питьевой воды. Для самостоятельного выезда запас питьевой воды нужно формировать до грунтового участка; вода из Нам-Леук и ручьёв без обработки питьевой не считается.",
+            "water_structured": {
+              "summary": "Надёжный potable source непосредственно в visitor zone не подтверждён; природная вода требует обработки.",
+              "quality": "treatment_required",
+              "last_reliable_source": null,
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "river_stream",
+                  "potability": "treatment_required",
+                  "notes": "Nam Leuk и притоки; не считать potable без обработки"
+                }
+              ],
+              "source_refs": []
+            },
+            "supplies": "В официальном проспекте 2025 у Тад-Леук упомянут существующий ресторан, нуждающийся в обновлении. На его ассортимент и часы как на гарантированное снабжение не рассчитывать.",
+            "overnight_and_camping": "Тад-Леук имеет официальный campsite; Lao Parks в 2025 году прямо называет существующий кемпинг и планы его обновления. В Бан-Хаткхае действует community homestay; свободный лагерь в других зонах парка без согласования не считать разрешённым.",
+            "overnight_structured": {
+              "status": "official",
+              "summary": "Официальный кемпинг — visitor sector Тад-Леук. Community homestay — Бан-Хаткхай. Другие ночёвки требуют отдельного подтверждения режима конкретной зоны.",
+              "source_refs": []
+            }
+          },
+          "climate": {
+            "best_period": "Сухой сезон удобнее для дорог и троп; для самих водопадов визуально сильнее период высокой воды.",
+            "heat_rain_notes": "Тад-Сай особенно полноводен в дождливый сезон; у Тад-Леук старое полевое описание отмечает, что примерно с июня по октябрь поток может становиться настолько сильным, что пересечение русла невозможно.",
+            "site_specific_notes": "Не сводить сезон к одному «лучшему месяцу»: сухой сезон упрощает доступ, влажный усиливает водопады и растительность."
+          },
+          "operations": {
+            "hours": "Единого расписания всего национального парка нет. Тад-Леук — visitor sector с центром, кемпингом и тропами; актуальные часы visitor center на 2026 год в найденных официальных материалах не опубликованы.",
+            "ticket": "Актуальный единый тариф входа 2026 для Тад-Леук в проверенном официальном источнике не найден; старые цены Ecotourism Laos не переносить.",
+            "closure_notes": "Lao Parks 2025 описывает существующую инфраструктуру Тад-Леук как нуждающуюся в обновлении. Отдельные старые community routes могли измениться; конкретный трек подтверждать до выхода.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://laoparks.la/invest/"
+          },
+          "safety": {
+            "main_risks": [
+              "скользкие камни у водопадов",
+              "резкое увеличение потока в сезон дождей",
+              "расстояния между секторами парка значительно больше, чем кажется по обзорной карте",
+              "частично устаревшая туристическая инфраструктура",
+              "ограниченное снабжение внутри visitor-секторов"
+            ],
+            "sensitive_areas": [
+              "регулируемые треки community tourism",
+              "зоны национального парка вне открытых visitor sectors"
+            ]
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "У Тад-Леук и Тад-Сай основное визуальное различие задают уровень воды и облачность; открытые песчаниковые площадки и каскады читаются лучше при мягком или рассеянном свете.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": "Общие правила Lao DCA действуют; национальный парк не следует считать автоматически разрешённой зоной запуска.",
+              "restrictions": [
+                "не выше 120 м над землёй",
+                "только в прямой видимости",
+                "не в ограниченном/военном воздушном пространстве без согласования",
+                "в visitor/community zones учитывать согласие администрации и местных пользователей территории"
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+                "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+                "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Съёмку людей, деревенских ритуалов и частных домов вести только с согласием; коммерческие проекты в парке согласовывать отдельно.",
+            "visual_scouting": {
+              "best_time": "morning / afternoon",
+              "best_weather_light": "Влажный сезон даёт сильный поток и насыщенную растительность, но сложнее доступ; после длительной засухи Тад-Леук заметно слабее.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "tad_leuk_waterfall",
+                  "name": "Тад-Леук",
+                  "description": "Невысокий широкий каскад на песчаниковом русле с открытой площадкой и лесом по краям; подходит для показа геометрии русла и сезонной разницы воды.",
+                  "coordinates": {
+                    "lat": 18.395,
+                    "lon": 103.0719,
+                    "elevation_m": 200
+                  },
+                  "best_time": "morning",
+                  "view": {
+                    "description": "широкий каскад, песчаниковое русло, лесная кромка"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "каскад растянут по ширине"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "детали русла и люди дают масштаб"
+                    }
+                  ],
+                  "source": {
+                    "type": "other",
+                    "title": "File:Bolikhamsai TadLeuk1 tango7174.jpg",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Bolikhamsai_TadLeuk1_tango7174.jpg",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                },
+                {
+                  "id": "tad_xai_waterfall",
+                  "name": "Тад-Сай",
+                  "description": "Многоступенчатый водопад в более лесном секторе; в дождливый сезон поток значительно сильнее.",
+                  "coordinates": {
+                    "lat": 18.455222,
+                    "lon": 103.142167,
+                    "elevation_m": 290
+                  },
+                  "best_time": "afternoon",
+                  "view": {
+                    "description": "ступенчатые каскады и плотная лесная стенка"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "несколько ступеней водопада и окружающий лес"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "выделение отдельных каскадов с безопасной дистанции"
+                    }
+                  ],
+                  "source": {
+                    "type": "academic",
+                    "title": "Endemism and evolution of Podostemaceae in Phou Khao Khouay National Park and adjoining areas",
+                    "publisher": "Thai Forest Bulletin (Botany)",
+                    "url": "https://li01.tci-thaijo.org/index.php/ThaiForestBulletin/article/download/254338/175243/942621",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Тад-Леук в разгар дождей превращается из широкого спокойного каскада в мощный поток; в поздний сухой сезон воды значительно меньше.",
+                "Тад-Сай официально отмечается как особенно выразительный в дождливый сезон."
+              ],
+              "video_activity": [
+                "изменение скорости и ширины потока на песчаниковых каскадах",
+                "лодки и работа деревенской сервисной группы на маршрутах из Бан-Хаткхая",
+                "движение воды по ступеням Тад-Сай"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "водопады и песчаниковое русло"
+                },
+                {
+                  "type": "standard",
+                  "why": "visitor sector, тропа и масштаб каскадов"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "детали дальних каскадов и лесных склонов"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Пху-Кхао-Кхуай — национальный парк примерно в 2000 км², растянутый через несколько административных территорий к северо-востоку от Вьентьяна. Его рельеф сформирован песчаниковыми плато, обрывами, речными долинами и водопадами. Для путешественника ключевой факт — парк не имеет единого центра: Тад-Леук, Бан-Хаткхай/Тад-Сай и другие сектора требуют отдельных подъездов и собственной логистики.",
+            "culture_ethnography": "На периферии парка community tourism исторически развивался через Бан-Хаткхай и Бан-На: деревни предоставляли проводников, лодки, питание и ночёвки. Современный маршрут надо согласовывать с конкретной общиной, а не покупать абстрактный «тур по парку». В Бан-Хаткхае сохранены хозяйство, рисовые поля, плетение бытовых изделий и использование недревесных лесных ресурсов.",
+            "geography_geology": "Основу ландшафта образуют песчаниковые плато и уступы, прорезанные Нам-Леук, Нам-Манг и другими водотоками. Тад-Леук и Тад-Сай одновременно являются геоморфологическими точками и ботаническими микроместообитаниями: быстрые сезонные потоки на открытой породе поддерживают крайне специализированные речные растения семейства Podostemaceae.",
+            "myths_legends_beliefs": [
+              "Исторический официальный материал по Бан-Хаткхаю описывает небольшой общинный лес у дороги как место захоронений, где духам умерших дают новое жилище. Это локальная традиция конкретной деревни, а не общее верование всех жителей Пху-Кхао-Кхуая."
+            ],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Пху-Кхао-Кхуай — крупный национальный парк примерно в 2000 км² с песчаниковыми плато, лесами, речными ущельями и несколькими разнесёнными visitor sectors. Для самостоятельного доступа лучше всего документирован Тад-Леук; Бан-Хаткхай служит базой локальных лодочно-пеших маршрутов."
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Охраняемая территория была создана в 1993 году; в современной системе Lao Parks Пху-Кхао-Кхуай имеет статус национального парка площадью 200 000 га."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "В 2025 году Protected Area Management Division отдельно вынесла Тад-Леук, Тад-Сай и Xoy Voy в программу развития visitor-инфраструктуры; для Тад-Леук прямо отмечена необходимость обновления visitor center, ресторана, campsite и троп."
+                  }
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "Песчаниковый массив создаёт плоские плато, уступы и скальные русла. Водопады на открытой породе важны не только визуально: исследования Podostemaceae фиксируют на Тад-Леук, Тад-Сай и соседних каскадах редкие и эндемичные речные растения."
+              },
+              {
+                "section_id": "culture",
+                "content": "Туристическая модель в восточном секторе парка сочетает самостоятельный visitor sector Тад-Леук и community routes из Бан-Хаткхая. В последнем случае услуги проводников, лодочников, питания и ночёвки должны оставаться привязанными к деревне."
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Бан-Хаткхай — сельская община района Тхапхабат. Источники описывают рисовое и овощное хозяйство, сбор недревесных лесных продуктов и ремесленные навыки; текущие обычаи и правила гостеприимства следует подтверждать у принимающей семьи, а не переносить старые описания автоматически."
+              },
+              {
+                "section_id": "myths_beliefs",
+                "content": [
+                  {
+                    "type": "local_tradition",
+                    "text": "В community forest возле Бан-Хаткхая находится место захоронений; старый официальный ecotourism-материал объясняет сохранность участка представлением о том, что духи умерших получают там новое жилище."
+                  }
+                ]
+              }
+            ]
+          },
+          "traveler_reports": [
+            {
+              "topic": "infrastructure",
+              "summary": "Travelfish в августе 2025 года отмечал, что часть когда-то активно продвигаемой туристической инфраструктуры и активностей парка к тому времени была неактивна или разрушалась. Это согласуется с официальным проспектом Lao Parks 2025, который прямо требует обновления visitor center, ресторана, кемпинга и троп Тад-Леук.",
+              "observed_period": "2025-08",
+              "source_refs": [],
+              "confidence": "high"
+            },
+            {
+              "topic": "access",
+              "summary": "Travelfish считает собственный транспорт практичнее для разнесённых секторов парка; это не означает обязательность тура. Тад-Леук остаётся самостоятельным visitor sector, а локальный проводник нужен прежде всего на регулируемых маршрутах из деревень.",
+              "observed_period": "2025-08",
+              "source_refs": [],
+              "confidence": "medium"
+            }
+          ],
+          "accommodation": [
+            {
+              "name": "Ban Hatkhai Community Homestay",
+              "area": "Бан-Хаткхай, Тхапхабат",
+              "price_for_two": null,
+              "contact": null,
+              "social_or_web": "https://khiri.com/into-the-orchid-wild-trek-homestay-in-phou-khao-khouay-national-park/",
+              "source": "2025 field/operator report confirming an active village homestay; price/contact not treated as verified",
+              "coordinates": {
+                "lat": 18.40799,
+                "lon": 103.16104,
+                "elevation_m": 163
+              },
+              "checked_at": "2026-09-29"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bolikhamsai_TadLeuk1_tango7174.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Bolikhamsai_TadLeuk1_tango7174.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Tango7174",
+          "illustration_scope": "Tad Leuk visitor sector of Phou Khao Khouay National Park",
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bolikhamsai_TadLeuk1_tango7174.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Bolikhamsai_TadLeuk1_tango7174.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Tango7174",
+              "coordinates": {
+                "lat": 18.395,
+                "lon": 103.0719
+              },
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bolikhamsai_TadLeuk2_tango7174.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Bolikhamsai_TadLeuk2_tango7174.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Tango7174",
+              "coordinates": {
+                "lat": 18.395,
+                "lon": 103.0719
+              },
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "type": "park_authority",
+            "title": "Parks — Phou Khao Khouay",
+            "publisher": "Lao Parks / Protected Area Management Division",
+            "url": "https://laoparks.la/parks/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "current national park designation",
+              "area 200000 ha"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "park_authority",
+            "title": "Investment opportunities — Phou Khao Khouay National Park",
+            "publisher": "Lao Parks / Protected Area Management Division",
+            "url": "https://laoparks.la/invest/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "current visitor development",
+              "Tad Leuk",
+              "Tad Xai",
+              "Xoy Voy"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "park_authority",
+            "title": "Phou Khao Khouay National Park — Investment Prospectus 2025",
+            "publisher": "Lao Parks / Protected Area Management Division",
+            "url": "https://laoparks.la/wp-content/uploads/2025/09/Phou-Khao-Khouay-Prospectus-English-2025.09.03-final.pdf",
+            "language": "en",
+            "published_at": "2025-09",
+            "authority": "high",
+            "used_for": [
+              "Tad Leuk infrastructure",
+              "campsite",
+              "road access",
+              "visitor center",
+              "restaurant",
+              "trails"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Bolikhamxay Province",
+            "publisher": "Tourism Laos / Ministry of Culture and Tourism",
+            "url": "https://www.tourismlaos.org/central-provinces/bolikhamsai-province/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "park area",
+              "Tad Leuk camping",
+              "self-guided walks",
+              "Tad Xai access",
+              "wildlife context"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Phou Khao Khouay — ecotourism overview",
+            "publisher": "Ecotourism Laos / GMS Sustainable Tourism Development Project",
+            "url": "https://www.ecotourismlaos.com/phoukhaokouay/index",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "visitor sectors",
+              "historical route model"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Historical official tourism material; current prices/schedules are not carried forward."
+          },
+          {
+            "type": "official",
+            "title": "Tad Leuk",
+            "publisher": "Ecotourism Laos / GMS Sustainable Tourism Development Project",
+            "url": "https://www.ecotourismlaos.com/phoukhaokouay/tad_leuk",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "nature trail length",
+              "seasonal water behavior",
+              "historical camping details"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Historical page; used only for durable physical/route context, not current fee or timetable."
+          },
+          {
+            "type": "official",
+            "title": "Ban Hatkhai community routes",
+            "publisher": "Ecotourism Laos / GMS Sustainable Tourism Development Project",
+            "url": "https://www.ecotourismlaos.com/phoukhaokouay/ban_hatkha",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "community routes",
+              "homestay history",
+              "local tradition",
+              "boat access",
+              "water issue"
+            ],
+            "accessed": "2026-09-29",
+            "notes": "Historical official project page; current prices and contact numbers are intentionally not reused."
+          },
+          {
+            "type": "academic",
+            "title": "Two new genera of Podostemaceae from northern Central Laos: saltational evolution and enigmatic morphology",
+            "publisher": "Journal of Plant Research / Consensus discovery",
+            "url": "https://consensus.app/papers/two-new-genera-of-podostemaceae-from-northern-central-laos-koi-won/c861636f7d7a5a7aa2662f8380beaae8/?utm_source=chatgpt",
+            "language": "en",
+            "published_at": "2019",
+            "authority": "high",
+            "used_for": [
+              "botany",
+              "endemism",
+              "Podostemaceae"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "academic",
+            "title": "Endemism and evolution of Podostemaceae in Phou Khao Khouay National Park and adjoining areas",
+            "publisher": "Thai Forest Bulletin (Botany)",
+            "url": "https://li01.tci-thaijo.org/index.php/ThaiForestBulletin/article/download/254338/175243/942621",
+            "language": "en",
+            "published_at": "2022",
+            "authority": "high",
+            "used_for": [
+              "Tad Leuk coordinates/elevation",
+              "Tad Xai coordinates/elevation",
+              "botany",
+              "geology-linked habitat"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Ban Hatkhai",
+            "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+            "url": "https://mapcarta.com/fr/15674004",
+            "language": "fr",
+            "authority": "medium",
+            "used_for": [
+              "Ban Hatkhai coordinates",
+              "homestay locality"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Phou Khao Khouay National Park, Vientiane — Visitor guide & review",
+            "publisher": "Travelfish",
+            "url": "https://www.travelfish.org/sight_profile/laos/vientiane_and_surrounds/vientiane/vientiane/3358",
+            "language": "en",
+            "published_at": "2025-08-26",
+            "authority": "medium",
+            "used_for": [
+              "recent infrastructure condition",
+              "access friction",
+              "highest peaks"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Into the Orchid Wild: Trek & Homestay in Phou Khao Khouay National Park",
+            "publisher": "Khiri Travel",
+            "url": "https://khiri.com/into-the-orchid-wild-trek-homestay-in-phou-khao-khouay-national-park/",
+            "language": "en",
+            "published_at": "2025-02-17",
+            "authority": "medium",
+            "used_for": [
+              "recent Ban Hatkhai homestay activity",
+              "community tourism cross-check"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:Bolikhamsai TadLeuk1 tango7174.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Bolikhamsai_TadLeuk1_tango7174.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media",
+              "license",
+              "viewpoint coordinates"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:Bolikhamsai TadLeuk2 tango7174.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Bolikhamsai_TadLeuk2_tango7174.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media",
+              "license",
+              "viewpoint coordinates"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "road condition",
+            "visitor center hours",
+            "entry fee",
+            "campsite operation",
+            "homestay availability",
+            "guide availability",
+            "drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Пху-Кхао-Кхуай — транс-провинциальный национальный парк примерно в 2000 км² к северо-востоку от Вьентьяна. Для самостоятельного визита наиболее прозрачен сектор Тад-Леук с visitor center, официальным кемпингом и природной тропой; маршруты от Бан-Хаткхая к Тад-Сай относятся к отдельной community-guided логистике.",
+        "tags": [
+          "nature",
+          "national_park",
+          "sandstone",
+          "waterfall",
+          "forest",
+          "biodiversity",
+          "trekking",
+          "camping",
+          "community_tourism",
+          "ethnography",
+          "botany",
+          "visual_drone",
+          "class_nature"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "Координаты привязаны к конкретным visitor points; старые цены/расписания не перенесены; километраж и время оставлены null там, где нет надёжного актуального источника."
           }
         }
       }

@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.10.8"
-RELEASE_ID = "2026-09-28-r38"
+SCHEMA_VERSION = "2.10.9"
+RELEASE_ID = "2026-09-29-r39"
 SUPPORTED_SOURCE_MODELS = {"1.5", "1.6"}
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
@@ -689,9 +689,10 @@ def country_payload(source, code, slug, object_count, places_count):
 
 
 def build():
-    if PUBLIC.exists():
-        shutil.rmtree(PUBLIC)
+    PUBLIC.mkdir(parents=True, exist_ok=True)
     release = PUBLIC / RELEASE_ID
+    if release.exists():
+        shutil.rmtree(release)
     release.mkdir(parents=True, exist_ok=True)
 
     countries = []

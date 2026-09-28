@@ -131,7 +131,8 @@
         "la:tad-fane",
         "la:tad-yuang",
         "la:khone-phapheng-falls",
-        "la:li-phi-somphamit-falls"
+        "la:li-phi-somphamit-falls",
+        "la:xe-pian-national-park"
       ],
       "legacy_region_names": [
         "Чампасак / Си-Фан-Дон / Болавен"
@@ -558,6 +559,97 @@
       ],
       "notes_ru": "Остров Си-Фан-Дона с водопадом Тад-Сомпхамит, французской железнодорожной инфраструктурой и мостом на Дон-Дет.",
       "canonical_id": "geo_la_0062"
+    },
+    {
+      "id": "la:province:attapeu",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Аттапы",
+      "slug": "attapeu",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Восточная часть национального парка Се-Пиан заходит в провинцию Аттапы; речные маршруты по Секонгу и Се-Пиану описываются отдельно от западного входа Кьет-Нгонг.",
+      "canonical_id": "geo_la_0063"
+    },
+    {
+      "id": "la:district:pathoumphone",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Патхумпхон",
+      "slug": "pathoumphone",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Район западного visitor-кластера Се-Пиана, включая Кьет-Нгонг и болота Беунг-Кьет-Нгонг.",
+      "canonical_id": "geo_la_0064"
+    },
+    {
+      "id": "la:district:khong",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Кхонг",
+      "slug": "khong-district",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Часть юго-западного сектора Се-Пиана относится к району Кхонг.",
+      "canonical_id": "geo_la_0065"
+    },
+    {
+      "id": "la:district:sanamxay",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Санамсай",
+      "slug": "sanamxay",
+      "parent_id": "la:province:attapeu",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Восточный сектор национального парка Се-Пиан в провинции Аттапы; доступ по рекам и лесным маршрутам не смешивать с Кьет-Нгонгом.",
+      "canonical_id": "geo_la_0066"
+    },
+    {
+      "id": "la:village:kiet-ngong",
+      "kind": "village",
+      "axis": "administrative",
+      "name_ru": "Кьет-Нгонг",
+      "slug": "kiet-ngong",
+      "parent_id": "la:district:pathoumphone",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Главный западный самостоятельный узел доступа к заболоченным ландшафтам Се-Пиана и Пху-Аса.",
+      "canonical_id": "geo_la_0067"
+    },
+    {
+      "id": "la:protected-area:xe-pian",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Се-Пиан",
+      "slug": "xe-pian",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Транс-провинциальный национальный парк площадью 240 000 га; parent=country намеренно, чтобы не приписывать весь парк Чампасаку или Аттапы.",
+      "canonical_id": "geo_la_0068"
+    },
+    {
+      "id": "la:protected-area:beung-kiat-ngong-wetlands",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Болота Беунг-Кьет-Нгонг",
+      "slug": "beung-kiat-ngong-wetlands",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Рамсарское угодье площадью 2 360 га; лежит частично в Се-Пиане и частично в Донг-Хуа-Сао. Это отдельная географическая сущность, а не синоним всего национального парка.",
+      "canonical_id": "geo_la_0069"
     }
   ],
   "sources": [
@@ -670,6 +762,30 @@
       "publisher": "Tourism Laos",
       "used_for": [
         "Phongsaly Province and town"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Attapeu and Xe Pian eastern access geography"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.ecotourismlaos.com/directory/protected_areas/xepian",
+      "publisher": "Ecotourism Laos / historical official protected-area directory",
+      "used_for": [
+        "Xe Pian province/district extent and access geography"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://rsis.ramsar.org/sites/default/files/rsiswp_search/exports/Ramsar-Sites-annotated-summary-Lao-People-s-Democratic-Republic.pdf",
+      "publisher": "Ramsar Sites Information Service",
+      "used_for": [
+        "Beung Kiat Ngong Ramsar wetland identity and area"
       ],
       "checked_at": "2026-09-29"
     }

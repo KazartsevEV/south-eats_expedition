@@ -265,11 +265,21 @@ for row in objects:
     for source_id in (primary or {}).get("source_refs") or []:
         if source_id not in source_ids:
             fail(f"unknown primary geodata source {source_id} in {row['detail_path']}")
+    for source_id in (primary or {}).get("elevation_source_refs") or []:
+        if source_id not in source_ids:
+            fail(f"unknown primary elevation source {source_id} in {row['detail_path']}")
+    if ((primary or {}).get("coordinates") or {}).get("elevation_m") is not None and not (primary or {}).get("elevation_source_refs"):
+        fail(f"elevation without dedicated source in {row['detail_path']}")
     for index, point in enumerate(geo.get("points") or []):
         validate_point(point, row["detail_path"] + f":points[{index}]")
         for source_id in point.get("source_refs") or []:
             if source_id not in source_ids:
                 fail(f"unknown geodata source {source_id} in {row['detail_path']}[{index}]")
+        for source_id in point.get("elevation_source_refs") or []:
+            if source_id not in source_ids:
+                fail(f"unknown elevation source {source_id} in {row['detail_path']}[{index}]")
+        if (point.get("coordinates") or {}).get("elevation_m") is not None and not point.get("elevation_source_refs"):
+            fail(f"elevation without dedicated source in {row['detail_path']}[{index}]")
     search_coords = row.get("coordinates")
     detail_coords = (primary or {}).get("coordinates")
     if search_coords != detail_coords:

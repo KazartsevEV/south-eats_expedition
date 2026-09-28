@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "schema_version": "2.7.2",
+    "release_id": "2026-09-28-r19",
+    "page_type": "country_class",
+    "id": "country-class:my:island"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:water_coast_marine",
+    "page_path": "pages/countries/malaysia/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:hub:kuala-besut",
+      "name": "Kuala Besut",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/kuala-besut.json"
+    },
+    {
+      "id": "my:hub:langkawi",
+      "name": "Langkawi",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/langkawi.json"
+    },
+    {
+      "id": "my:hub:semporna",
+      "name": "Semporna",
+      "kind": "city_or_route_hub",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/city_or_route_hub/semporna.json"
+    },
+    {
+      "id": "my:region:langkawi-northwest-coast",
+      "name": "Langkawi / northwest coast",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/langkawi-northwest-coast.json"
+    },
+    {
+      "id": "my:region:perhentian-east-coast",
+      "name": "Perhentian / east coast",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/perhentian-east-coast.json"
+    },
+    {
+      "id": "my:region:semporna-sipadan-east-sabah",
+      "name": "Semporna / Sipadan / east Sabah",
+      "kind": "region",
+      "axis": "legacy_route_place",
+      "page_path": "pages/geography/malaysia/region/semporna-sipadan-east-sabah.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:langkawi",
+      "name": "Langkawi",
+      "geography_ids": [
+        "country:my",
+        "my:hub:langkawi",
+        "my:region:langkawi-northwest-coast"
+      ],
+      "region_legacy": "Langkawi / northwest coast",
+      "nearest_hub": "Langkawi",
+      "narrow": "Лангкави интересен не курортным набором развлечений, а сочетанием древних карстов, мангров Kilim, островных дорог, рыбацких поселений и доступных участков побережья в пределах одного архипелага.",
+      "detail_path": "countries/malaysia/objects/langkawi.json"
+    },
+    {
+      "id": "my:perhentian-islands",
+      "name": "Perhentian islands",
+      "geography_ids": [
+        "country:my",
+        "my:hub:kuala-besut",
+        "my:region:perhentian-east-coast"
+      ],
+      "region_legacy": "Perhentian / east coast",
+      "nearest_hub": "Kuala Besut",
+      "narrow": "Перхентианы — удобная морская база для самостоятельного островного режима: пешие связки между бухтами, лодочные переброски, рифы у берега и возможность собирать несколько дней вокруг воды и троп, а не вокруг пакетной экскурсии.",
+      "detail_path": "countries/malaysia/objects/perhentian-islands.json"
+    },
+    {
+      "id": "my:sipadan-island",
+      "name": "Sipadan Island",
+      "geography_ids": [
+        "country:my",
+        "my:hub:semporna",
+        "my:region:semporna-sipadan-east-sabah"
+      ],
+      "region_legacy": "Semporna / Sipadan / east Sabah",
+      "nearest_hub": "Semporna",
+      "narrow": "Сипадан — океанический остров на вершине подводного вулканического конуса с почти вертикальными рифовыми стенами, черепахами и пелагическими стаями; доступ строго ограничен разрешениями.",
+      "detail_path": "countries/malaysia/objects/sipadan-island.json"
+    }
+  ]
+}

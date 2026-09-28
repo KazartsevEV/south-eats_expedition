@@ -521,6 +521,9 @@ def story_from(obj):
         "culture_ethnography": compact_text(ann.get("culture_ethnography")) if isinstance(ann, dict) else None,
         "geography_geology": compact_text(ann.get("geography_geology")) if isinstance(ann, dict) else None,
         "myths_legends_beliefs": ann.get("myths_legends_beliefs") if isinstance(ann, dict) else None,
+        # v1.6 source files may carry already-researched canonical narrative sections.
+        # Keep legacy combined fields during migration, but prefer these sections downstream.
+        "sections": ann.get("sections") if isinstance(ann, dict) else None,
     }
 
 

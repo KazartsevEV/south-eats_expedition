@@ -212,6 +212,7 @@ def main():
         return {
             "id": node["id"],
             "kind": node["kind"],
+            "axis": node.get("axis"),
             "name": node["name"],
             "path": node["page_path"],
             "object_count": node["object_count"],
@@ -275,18 +276,19 @@ def main():
                     parent_page=node_page_path(node_by_id[parent_id])
                 dump(release / page_path, {
                     "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"page_type":"geography","id":node["id"]},
-                    "identity":{"name":node.get("name_ru") or node.get("name_local") or node["id"],"name_local":node.get("name_local"),"kind":node["kind"],"slug":node["slug"],"country_code":code},
+                    "identity":{"name":node.get("name_ru") or node.get("name_local") or node["id"],"name_local":node.get("name_local"),"kind":node["kind"],"slug":node["slug"],"country_code":code,"axis":node.get("axis")},
                     "layout":"geography",
                     "parent":{"id":parent_id,"page_path":parent_page},
                     "hierarchy_status":"formalized",
                     "children":[{"id":child["id"],"kind":child["kind"],"name":child["name"],"page_path":child["page_path"],"object_count":child["object_count"]} for child in children],
                     "legacy_region_names":node.get("legacy_region_names") or [],
+                    "notes_ru":node.get("notes_ru"),
                     "class_counts":[{"object_type":k,"label_ru":type_by_value.get(k,{}).get("label_ru",CLASS_LABELS.get(k,k)),"count":v} for k,v in sorted(class_counts.items())],
                     "objects":[{"id":o["id"],"name":o["name"],"object_type":o["object_type"],"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in pobj],
                     "provenance":{"sources":doc.get("sources") or [],"checked_at":(doc.get("meta") or {}).get("checked_at")},
                 })
                 geography_nodes += 1; place_page_count += 1
-                return {"id":node["id"],"kind":node["kind"],"name":node.get("name_ru") or node.get("name_local") or node["id"],"slug":node["slug"],"page_path":page_path,"object_count":len(object_ids),"children":children}
+                return {"id":node["id"],"kind":node["kind"],"axis":node.get("axis"),"name":node.get("name_ru") or node.get("name_local") or node["id"],"slug":node["slug"],"page_path":page_path,"object_count":len(object_ids),"children":children}
 
             roots=[build_formal_node(nid) for nid in sorted(children_by_parent.get(country_id,[]))]
             covered=set()

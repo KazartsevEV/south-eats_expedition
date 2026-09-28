@@ -51,11 +51,12 @@
       "commercial_tour_policy": "пакетные туры не используются как базовая модель доступа; приоритет — самостоятельный общественный транспорт, мопед/автомобиль, лодка, пеший маршрут и локальные услуги по необходимости"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "2.4.0",
+      "schema_target": "2.5.0",
       "updated": "2026-09-28",
-      "objects_with_primary_coordinates": 15,
+      "objects_with_primary_coordinates": 18,
       "total_objects": 18,
-      "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas use approximate reference points with explicit basis"
+      "objects_with_verified_elevation": 3,
+      "policy": "WGS84/EPSG:4326; unknown elevation remains null; broad areas and variable river departures are explicitly approximate"
     }
   },
   "overview": {
@@ -2794,7 +2795,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.2839292,
+              "lon": 114.4193007,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Brunei Tourism official location / Google Maps directions",
+              "url": "https://www.bruneitourism.com/places/teraja-longhouse/",
+              "basis": "official Brunei Tourism Get Directions target resolves to the longhouse location"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Автомобиль по Лаби дорога; заранее связаться с длинный дом.",
@@ -3028,7 +3043,21 @@
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
               "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
-            }
+            },
+            "coordinates": {
+              "lat": 4.3560154,
+              "lon": 114.4544645,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Brunei Tourism official location / Google Maps directions",
+              "url": "https://www.bruneitourism.com/places/mendaram-besar-longhouse/",
+              "basis": "official Brunei Tourism Get Directions target resolves to the longhouse location"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Автомобиль по Лаби дорога; контактировать заранее через длинный дом/Бруней туризм.",
@@ -3957,7 +3986,21 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается."
-            }
+            },
+            "coordinates": {
+              "lat": 4.88675,
+              "lon": 114.94301,
+              "elevation_m": null
+            },
+            "coordinate_type": "pier",
+            "accuracy": "approximate",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "provider": "Mapcarta / OpenStreetMap + Brunei government transport guidance",
+              "url": "https://mapcarta.com/W512363094",
+              "basis": "Bandar Seri Begawan Royal Wharf used as a central river-access reference point; actual safari departure jetty depends on the boat/operator and must not be inferred from this point"
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Отправление с набережной/причала Бандар-Сери-Бегаван по Бруней река в мангровые протоки; коммерческий тур обычно включает лодочника/гида.",

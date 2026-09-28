@@ -30,7 +30,8 @@
       "v1.6.3 QA-fix: у Nakai Nam Theun удалён центр Удомсука из object.geo_points, primary_location уточнён как приблизительный операционный лодочный доступ Тхаланга, 2–3 часа езды оставлены диапазоном в notes без ложного duration_min=120; медиа заменены на Commons с открытой лицензией.",
       "v1.6.5 draft: добавлен obj_la_0023 Tad Yuang; сохранены 800 м грунтового last-mile, 12 км/15 мин от Паксонга, динамические тарифы 2025 и честный elevation=null до надёжного абсолютного источника.",
       "v1.6.4 draft: добавлен obj_la_0023 Phou Khao Khouay National Park. Primary GPS — научно опубликованный Tad Leuk visitor sector, Tad Xai вынесен отдельной geo_point; официальные campsite и текущий road access отделены от исторических расписаний и старых тарифов.",
-      "v1.6.6 draft: добавлен obj_la_0024 Khone Phapheng Falls; OSM GPS и отдельный site elevation 79 м по EXIF без смешения с перепадом 21 м."
+      "v1.6.6 draft: добавлен obj_la_0024 Khone Phapheng Falls; OSM GPS и отдельный site elevation 79 м по EXIF без смешения с перепадом 21 м.",
+      "v1.6.7 draft: добавлен obj_la_0025 Tad Somphamit/Li Phi; официальная легенда отделена от истории, доступ с Дон-Дета структурирован как велосипед+пешком, исторический тариф 2017 не используется как текущий."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -84,10 +85,9 @@
     },
     "country_expansion_qa": {
       "status": "open",
-      "current_canonical_objects": 25,
+      "current_canonical_objects": 26,
       "note_ru": "В драфте сейчас 24 канонических карточек Лаоса. Прохождение структурного QA каждой существующей карточки не означает полноту страны: country QA остаётся открытым до завершения исследования приоритетных классов и кандидатов.",
       "priority_candidates": [
-        "Li Phi / Somphamit Falls",
         "Tham Pa Fa",
         "Tham Nang Aen",
         "Xe Pian National Protected Area",
@@ -11527,6 +11527,472 @@
             "status": "reviewed",
             "checked_at": "2026-09-29",
             "notes": "Перепад и абсолютная elevation разделены; изменяемая цена входа не выдумана."
+          }
+        }
+      },
+      {
+        "name": "Li Phi / Somphamit Falls",
+        "class": "nature",
+        "interest": [
+          "nature",
+          "waterfall",
+          "Mekong",
+          "Si Phan Don",
+          "Don Khon",
+          "fishing",
+          "legend",
+          "cycling"
+        ],
+        "why_go": "Тад-Сомпхамит — пороги западного Дон-Кхона, где один из рукавов Меконга сжимается между островами и валунами. В официальной лаосской версии «Li Phi» относится не только к этому каскаду, а к более широкому примерно 20-километровому поясу порогов Си-Фан-Дона; сам водопад корректнее называть Тад-Сомпхамит.",
+        "traveler_card": {
+          "location": {
+            "region": "Чампасак / Си-Фан-Дон / Дон-Кхон",
+            "nearest_hub": "Бан-Кхон-Тай / Дон-Дет",
+            "languages_spoken": [
+              "лаосский",
+              "английский в туристической зоне"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 13.9499779,
+              "lon": 105.9104776,
+              "elevation_m": null
+            },
+            "coordinate_type": "waterfall_base",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "traveler_report",
+              "title": "Li Phi Waterfall GPS",
+              "publisher": "Travelfish",
+              "url": "https://www.travelfish.org/sight_profile/laos/southern_laos/champasak/don_khon/601",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опубликованный GPS объекта; источник 2017 года, поэтому accuracy=medium."
+            },
+            "object_elevation": {
+              "representative_m": 68.6,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "media_metadata",
+                "title": "Li Phi falls at sunrise — EXIF altitude",
+                "publisher": "Wikimedia Commons",
+                "url": "https://commons.wikimedia.org/wiki/File:Li_Phi_falls_at_sunrise_with_colorful_clouds_in_Don_Khon_Laos.jpg",
+                "authority": "medium",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Абсолютная отметка геотегированной фототочки рядом с каскадом; не высота падения."
+            },
+            "geo_points": [
+              {
+                "type": "viewpoint",
+                "name": "Рассветная фототочка Basile Morin",
+                "coordinates": {
+                  "lat": 13.954685,
+                  "lon": 105.914807,
+                  "elevation_m": 68.6
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "media_metadata",
+                  "title": "Li Phi falls at sunrise",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:Li_Phi_falls_at_sunrise_with_colorful_clouds_in_Don_Khon_Laos.jpg",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "elevation_source": {
+                  "type": "media_metadata",
+                  "title": "Li Phi falls at sunrise — EXIF altitude",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:Li_Phi_falls_at_sunrise_with_colorful_clouds_in_Don_Khon_Laos.jpg",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              }
+            ],
+            "coordinates_checked_at": "2026-09-29"
+          },
+          "logistics": {
+            "access": "Основной самостоятельный доступ идёт с Дон-Кхона. С Дон-Дета перейти французский мост, затем повернуть направо и двигаться по островной дороге к западному берегу; Travelfish указывает около 1,5 км от моста до парковки/входа.",
+            "public_transport": "До островов — наземный транспорт до Накасанга и лодка на Дон-Дет; внутри Дон-Дета/Дон-Кхона общественного транспорта как базовой модели нет, практичнее велосипед или пешком.",
+            "last_mile": "От французского моста около 1,5 км по островной дороге до входа. От парковки к viewpoints — короткие пешие дорожки; точный контур внутри зоны не подтверждён.",
+            "permit_or_guide": "Гид не нужен.",
+            "access_requirements": "самостоятельный доступ; входной режим проверять на месте",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно",
+            "access_options": [
+              {
+                "id": "don_det_bicycle",
+                "origin": "Дон-Дет / французский мост",
+                "modes": [
+                  "bicycle",
+                  "walking"
+                ],
+                "checked_at": "2026-09-29",
+                "source_refs": [],
+                "legs": [
+                  {
+                    "mode": "bicycle",
+                    "distance_km": 1.5,
+                    "duration_min": null,
+                    "surface": "mixed",
+                    "condition": "островная дорога/грунтовые участки",
+                    "seasonality": "после дождя грунт хуже; возвращаться до темноты",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "после моста первый правый поворот, далее по указателям",
+                    "fords": 0,
+                    "notes": "Travelfish; расстояние от моста до parking/entrance."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "trail",
+                    "condition": "viewpoint paths",
+                    "seasonality": "в дождь скользко",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "официальная зона",
+                    "fords": 0,
+                    "notes": "Держаться за ограждениями у активных порогов."
+                  }
+                ]
+              }
+            ],
+            "water": "На Дон-Кхоне и у туристической зоны доступны напитки/еда; речную воду не считать питьевой.",
+            "water_structured": {
+              "summary": "Последняя надёжная вода — магазины/кафе Дон-Кхона и входная зона.",
+              "quality": "potable",
+              "last_reliable_source": "Бан-Кхон-Тай / туристическая зона",
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "river",
+                  "potability": "treatment_required",
+                  "notes": "рукав Меконга"
+                }
+              ],
+              "source_refs": []
+            },
+            "supplies": "Базовое снабжение есть в поселениях Дон-Дета и Дон-Кхона.",
+            "overnight_and_camping": "Свободный лагерь у порогов не подтверждён. Ночёвка — гостевые дома Дон-Дета/Дон-Кхона; региональный BABA Guesthouse уже хранится отдельной lodging-сущностью.",
+            "overnight_structured": {
+              "status": "unclear",
+              "summary": "Свободный кемпинг у порогов не подтверждён; использовать жильё островов.",
+              "source_refs": []
+            }
+          },
+          "climate": {
+            "best_period": "Сухой сезон удобнее для велосипеда и прогулок; влажный сезон показывает максимальный поток.",
+            "heat_rain_notes": "В сезон дождей островные грунтовки и камни у воды становятся скользкими.",
+            "site_specific_notes": "Рассвет и закат дают боковой свет на длинные рукава порогов."
+          },
+          "operations": {
+            "hours": "Актуальные официальные часы 2026 не найдены.",
+            "ticket": "Travelfish в 2017 указывал 35 000 LAK, включая bridge toll/admission; это исторический тариф и не переносится как текущая цена.",
+            "closure_notes": "Стандартный островной объект; фактический входной режим подтверждать на месте.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.tourismlaos.org/southern-provinces/champasak-province/"
+          },
+          "safety": {
+            "main_risks": [
+              "мощные пороги",
+              "скользкие валуны",
+              "ночная езда по грунтовым островным дорогам"
+            ],
+            "sensitive_areas": [
+              "не перелезать ограждения к активному потоку"
+            ]
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Геотегированная точка Basile Morin подтверждает хороший рассветный ракурс на пороги.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": "Общие правила Lao DCA; близость границы с Камбоджей требует проверки ограничений.",
+              "restrictions": [
+                "не выше 120 м",
+                "прямая видимость",
+                "не над людьми",
+                "проверить приграничные ограничения"
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+                "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+                "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "При съёмке рыбаков и местных жителей получать согласие; дрон не считать автоматически разрешённым.",
+            "visual_scouting": {
+              "best_time": "sunrise / sunset",
+              "best_weather_light": "Сухой сезон — больше видимой скальной структуры; влажный — мощнее поток.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "sunrise_viewpoint",
+                  "name": "Рассветная точка",
+                  "description": "Геотегированная точка на западной системе порогов.",
+                  "coordinates": {
+                    "lat": 13.954685,
+                    "lon": 105.914807,
+                    "elevation_m": 68.6
+                  },
+                  "best_time": "sunrise",
+                  "view": {
+                    "description": "пороги, островки, длинная линия потока"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "широкий рисунок порогов"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "рыболовные конструкции и отдельные каналы"
+                    }
+                  ],
+                  "source": {
+                    "type": "media_metadata",
+                    "title": "Li Phi falls at sunrise",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Li_Phi_falls_at_sunrise_with_colorful_clouds_in_Don_Khon_Laos.jpg",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Влажный сезон: больше активных каналов и белой воды.",
+                "Сухой сезон: сильнее видны валуны и традиционные рыболовные конструкции."
+              ],
+              "video_activity": [
+                "поток между валунами",
+                "рыболовные ловушки в боковых рукавах",
+                "велосипедное движение по островной дороге"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "пространство порогов"
+                },
+                {
+                  "type": "standard",
+                  "why": "рыболовные детали и люди"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Тад-Сомпхамит — часть большой системы порогов Си-Фан-Дона на западном краю Дон-Кхона. Tourism Laos подчёркивает, что название «Li Phi» корректнее относится к примерно 20-километровой полосе порогов региона, а не только к одному туристическому каскаду.",
+            "culture_ethnography": "У водопада видны традиционные рыболовные ловушки в небольших рукавах. Они относятся к живой речной экономике островов; конкретные техники и права на места лова нельзя обобщать без локального источника.",
+            "geography_geology": "Рукав Меконга сжимается между Дон-Лаем, Дон-Синиатом и валунами западного Дон-Кхона, формируя длинную систему бурных порогов.",
+            "myths_legends_beliefs": [
+              {
+                "type": "legend",
+                "text": "Официальный Tourism Laos связывает имя Som Pha Mit с рассказом о священном образе Будды, который якобы уронил в воду Фа Нгум и который так и не был найден. Это легендарная традиция, а не подтверждённый исторический эпизод."
+              },
+              {
+                "type": "local_tradition",
+                "text": "Tourism Laos объясняет Li Phi как «ловушку для духов/мертвецов»: li — ловушка, phi — дух/умерший; название подчёркивает смертельную опасность попытки пройти пороги."
+              }
+            ],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Пороги западного Дон-Кхона, доступные пешком или на велосипеде с Дон-Дета через французский мост."
+              },
+              {
+                "section_id": "culture",
+                "content": "Рыболовные ловушки в боковых рукавах показывают живую связь островной экономики с сезонным режимом Меконга."
+              },
+              {
+                "section_id": "geography",
+                "content": "Рукав Меконга сжимается между малыми островами и крупными валунами, создавая бурную систему каскадов."
+              },
+              {
+                "section_id": "myths_beliefs",
+                "content": [
+                  {
+                    "type": "legend",
+                    "text": "Som Pha Mit связывают с утраченным в воде священным образом Будды времён Фа Нгума."
+                  },
+                  {
+                    "type": "local_tradition",
+                    "text": "Название Li Phi толкуют как образ гигантской ловушки, смертельно опасной для человека, пытающегося пройти пороги."
+                  }
+                ]
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "После дождя островные грунтовки хуже для велосипеда.",
+              "Возвращение на Дон-Дет после заката неудобно из-за тёмных грунтовых дорог.",
+              "Ограждения у порогов имеют практический смысл: падение в поток крайне опасно."
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "BABA Guesthouse",
+              "area": "Дон-Дет",
+              "price_for_two": "бюджетный/среднебюджетный гостевой дом; цену на конкретные даты уточнять напрямую",
+              "contact": "+856 20 98 89 39 43; b@ici.la",
+              "social_or_web": "https://dondet.net/",
+              "source": "official guesthouse website"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Li_Phi_falls_at_sunrise_with_colorful_clouds_in_Don_Khon_Laos.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Li_Phi_falls_at_sunrise_with_colorful_clouds_in_Don_Khon_Laos.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Basile Morin",
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Li_Phi_falls_at_sunrise_with_colorful_clouds_in_Don_Khon_Laos.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Li_Phi_falls_at_sunrise_with_colorful_clouds_in_Don_Khon_Laos.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Basile Morin",
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Li_Phi_Falls_-_Laos.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Li_Phi_Falls_-_Laos.JPG",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "artist": "Adam Jones",
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "type": "official",
+            "title": "Champasak Province — Tad Somphamit",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "name distinction",
+              "legend",
+              "geography",
+              "access context"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Li Phi Waterfall, Don Khon",
+            "publisher": "Travelfish",
+            "url": "https://www.travelfish.org/sight_profile/laos/southern_laos/champasak/don_khon/601",
+            "language": "en",
+            "published_at": "2017-02-11",
+            "authority": "medium",
+            "used_for": [
+              "GPS",
+              "1.5 km access",
+              "bicycle",
+              "historical ticket",
+              "fishing traps"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Don Det maps",
+            "publisher": "BABA Guesthouse",
+            "url": "https://dondet.net/maps.html",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "regional access",
+              "1.5 km context"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "Li Phi falls at sunrise",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Li_Phi_falls_at_sunrise_with_colorful_clouds_in_Don_Khon_Laos.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media",
+              "viewpoint GPS",
+              "EXIF elevation"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "File:Li Phi Falls - Laos.JPG",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Li_Phi_Falls_-_Laos.JPG",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "media"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "ticket",
+            "bridge toll",
+            "island transport",
+            "trail condition",
+            "drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Тад-Сомпхамит — бурные пороги западного Дон-Кхона, до которых удобно доехать на велосипеде через французский мост с Дон-Дета. Официальная лаосская традиция отличает сам Somphamit от более широкого названия Li Phi для системы порогов Си-Фан-Дона.",
+        "tags": [
+          "nature",
+          "waterfall",
+          "mekong",
+          "si_phan_don",
+          "don_khon",
+          "fishing",
+          "legend",
+          "access_bicycle",
+          "visual_sunrise",
+          "class_nature"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "Легенда отделена от documented history; старый тариф 2017 не выдаётся за текущий."
           }
         }
       }

@@ -45,7 +45,7 @@
     "currency": {
       "code": "LAK",
       "name": "Lao kip",
-      "local_currency_per_1_usd": 22417.0,
+      "local_currency_per_1_usd": 22417,
       "as_of": "2026-09-27",
       "rate_type": "market/reference snapshot",
       "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip.",
@@ -55,8 +55,54 @@
   "geo": {
     "crs": "WGS84",
     "epsg": 4326,
-    "primary_location": null,
-    "points": []
+    "primary_location": {
+      "name": null,
+      "type": "archaeological_core",
+      "coordinates": {
+        "lat": 14.84804,
+        "lon": 105.82109,
+        "elevation_m": 125.0,
+        "elevation_range_m": null
+      },
+      "gps": {
+        "decimal": "14.848040, 105.821090",
+        "dms": "14°50′52.9″N 105°49′15.9″E"
+      },
+      "accuracy": "high",
+      "elevation_accuracy": "medium",
+      "source_refs": [
+        "src:757007162d0f04"
+      ],
+      "elevation_source_refs": [
+        "src:757007162d0f04"
+      ],
+      "checked_at": "2026-09-28"
+    },
+    "points": [
+      {
+        "name": "Западная точка у северного дворца — геопривязанная фотография",
+        "type": "viewpoint",
+        "coordinates": {
+          "lat": 14.848562,
+          "lon": 105.814653,
+          "elevation_m": 161.8,
+          "elevation_range_m": null
+        },
+        "gps": {
+          "decimal": "14.848562, 105.814653",
+          "dms": "14°50′54.8″N 105°48′52.8″E"
+        },
+        "accuracy": "high",
+        "elevation_accuracy": "medium",
+        "source_refs": [
+          "src:7e2819f354e0d7"
+        ],
+        "elevation_source_refs": [
+          "src:7e2819f354e0d7"
+        ],
+        "checked_at": "2026-09-28"
+      }
+    ]
   },
   "story": {
     "narrative": "Ват-Пху — ядро 1000-летнего культурного ландшафта Champasak, где храмовая ось тянется от равнины Меконга к горе Phou Kao. Комплекс развивался с V по XV век и особенно связан с кхмерской традицией; планировка сознательно соединяет воду, дорогу, террасы и гору.",
@@ -127,12 +173,90 @@
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
-    "best_time": null,
-    "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "useful_equipment": [],
+    "best_time": "06:00–08:00 для оси подъёма и 16:30–18:00 для нижних дворцов и западного света.",
+    "best_weather_light": "После дождей гора и лес насыщенно-зелёные, но каменные лестницы скользкие; ясный сухой день лучше показывает длинную ось от равнины к святилищу.",
+    "viewpoints": [
+      {
+        "id": "processional_axis",
+        "name": "Процессионная дорога перед подъёмом",
+        "description": "С нижней оси одновременно читаются каменные столбы, дворцы и склон священной горы — главный пространственный смысл Ват-Пху.",
+        "coordinates": {
+          "lat": 14.847753,
+          "lon": 105.820853,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "14.847753, 105.820853",
+          "dms": "14°50′51.9″N 105°49′15.1″E"
+        },
+        "access": null,
+        "view": {
+          "description": "процессионная дорога, дворцы и гора Phou Kao"
+        },
+        "best_time": "early_morning",
+        "best_weather_light": "Низкий свет вдоль оси лучше выделяет каменные столбы и рельеф горы.",
+        "useful_equipment": [
+          {
+            "type": "standard",
+            "why": "собирает длинную храмовую ось без чрезмерного растяжения"
+          },
+          {
+            "type": "telephoto",
+            "why": "сжимает дворцы и гору в одном плане"
+          }
+        ],
+        "source_refs": [
+          "src:1797093341725e"
+        ]
+      },
+      {
+        "id": "northern_palace_west",
+        "name": "Западная точка у северного дворца",
+        "description": "Геопривязанная точка показывает северный дворец в три четверти и склон за ним; EXIF фиксирует высоту этой конкретной позиции.",
+        "coordinates": {
+          "lat": 14.848562,
+          "lon": 105.814653,
+          "elevation_m": 161.8
+        },
+        "gps": {
+          "decimal": "14.848562, 105.814653",
+          "dms": "14°50′54.8″N 105°48′52.8″E"
+        },
+        "access": null,
+        "view": {
+          "description": "северный дворец и зелёный склон Phou Kao"
+        },
+        "best_time": "late_afternoon",
+        "best_weather_light": "Вечерний свет ложится на каменный фасад; грозовые облака дают выразительный фон над склоном.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "здание стоит близко, а гора важна как фон"
+          }
+        ],
+        "source_refs": [
+          "src:7e2819f354e0d7"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "После сезона дождей склон Phou Kao наиболее зелёный.",
+      "В сухой сезон дальняя видимость обычно стабильнее, но растительность светлее."
+    ],
+    "video_activity": [
+      "последовательное раскрытие оси от резервуаров через дворцы к лестницам",
+      "паломническое движение к верхнему святилищу во время религиозных периодов там, где съёмка допустима"
+    ],
+    "useful_equipment": [
+      {
+        "type": "wide",
+        "why": "тесные террасы и крупные здания"
+      },
+      {
+        "type": "telephoto",
+        "why": "связь дворцов, лестниц и горы на длинной оси"
+      }
+    ],
     "drone": "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска.",
     "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие."
   },
@@ -145,9 +269,17 @@
         "license": "CC BY-SA 4.0",
         "artist": "Tango7174",
         "last_checked": "2026-09-28"
+      },
+      {
+        "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Three_quarter_view_of_the_ruined_Khmer_Hindu_temple_of_Wat_Phou_with_blue_sky_in_Champasak_Laos.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Three_quarter_view_of_the_ruined_Khmer_Hindu_temple_of_Wat_Phou_with_blue_sky_in_Champasak_Laos.jpg",
+        "provider": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "artist": "Basile Morin",
+        "last_checked": "2026-09-28"
       }
     ],
-    "gallery_status": "single_image_source"
+    "gallery_status": "carousel_ready"
   },
   "provenance": {
     "source_refs": [

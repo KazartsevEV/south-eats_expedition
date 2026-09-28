@@ -41,7 +41,7 @@
     "currency": {
       "code": "LAK",
       "name": "Lao kip",
-      "local_currency_per_1_usd": 22417.0,
+      "local_currency_per_1_usd": 22417,
       "as_of": "2026-09-27",
       "rate_type": "market/reference snapshot",
       "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip."
@@ -50,8 +50,52 @@
   "geo": {
     "crs": "WGS84",
     "epsg": 4326,
-    "primary_location": null,
-    "points": []
+    "primary_location": {
+      "name": null,
+      "type": "temple_entrance",
+      "coordinates": {
+        "lat": 17.976169,
+        "lon": 102.63425,
+        "elevation_m": null,
+        "elevation_range_m": null
+      },
+      "gps": {
+        "decimal": "17.976169, 102.634250",
+        "dms": "17°58′34.2″N 102°38′03.3″E"
+      },
+      "accuracy": "high",
+      "elevation_accuracy": "unknown",
+      "source_refs": [
+        "src:0f60b2cb10af86"
+      ],
+      "elevation_source_refs": [],
+      "checked_at": "2026-09-28"
+    },
+    "points": [
+      {
+        "name": "Pha That Luang — восточная геопривязанная точка",
+        "type": "viewpoint",
+        "coordinates": {
+          "lat": 17.976661,
+          "lon": 102.636894,
+          "elevation_m": 164.978,
+          "elevation_range_m": null
+        },
+        "gps": {
+          "decimal": "17.976661, 102.636894",
+          "dms": "17°58′36.0″N 102°38′12.8″E"
+        },
+        "accuracy": "high",
+        "elevation_accuracy": "medium",
+        "source_refs": [
+          "src:08e0210b468def"
+        ],
+        "elevation_source_refs": [
+          "src:08e0210b468def"
+        ],
+        "checked_at": "2026-09-28"
+      }
+    ]
   },
   "story": {
     "narrative": "Сакральная архитектура Вьентьян читается как система: Pha That Luang — государственно-буддийский символ, Wat Si Saket — редкий уцелевший ранне-XIX-вековый храм, Wat Ho Phra Keo — бывшая королевская святыня, Wat Si Muang — активный городской центр обетов и защитных культов.",
@@ -123,12 +167,60 @@
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
-    "best_time": null,
-    "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "useful_equipment": [],
+    "best_time": "Тхат-Луанг — раннее утро или 16:00–17:00; Ват-Сисакет и Хо-Пхра-Кео лучше смотреть вскоре после открытия, пока дворы не перегреты.",
+    "best_weather_light": "На Тхат-Луанге низкий солнечный свет усиливает золотой цвет; равномерная облачность удобнее для деревянных и штукатурных деталей других храмов.",
+    "viewpoints": [
+      {
+        "id": "that_luang_east",
+        "name": "Восточная сторона Pha That Luang",
+        "description": "Геопривязанная точка с прямым видом на ступу и окружающий двор; отсюда хорошо читаются центральный шпиль и ряд малых ступ.",
+        "coordinates": {
+          "lat": 17.976661,
+          "lon": 102.636894,
+          "elevation_m": 164.978
+        },
+        "gps": {
+          "decimal": "17.976661, 102.636894",
+          "dms": "17°58′36.0″N 102°38′12.8″E"
+        },
+        "access": null,
+        "view": {
+          "description": "центральная ступа и окружающий сакральный двор"
+        },
+        "best_time": "late_afternoon",
+        "best_weather_light": "Низкий западный свет усиливает золотую поверхность ступы.",
+        "useful_equipment": [
+          {
+            "type": "standard",
+            "why": "расстояние достаточно для полного силуэта без сильных искажений"
+          },
+          {
+            "type": "telephoto",
+            "why": "декор шпиля и малых ступ"
+          }
+        ],
+        "source_refs": [
+          "src:08e0210b468def"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Во время That Luang Festival пространство вокруг ступы становится значительно плотнее и визуально превращается из памятника в живой религиозный центр."
+    ],
+    "video_activity": [
+      "паломники и подношения у действующих храмов при уважительной дистанции",
+      "вечерняя смена света на золотой поверхности Тхат-Луанга"
+    ],
+    "useful_equipment": [
+      {
+        "type": "standard",
+        "why": "городские храмовые дворы и фасады"
+      },
+      {
+        "type": "telephoto",
+        "why": "архитектурные детали и ритуальные элементы с дистанции"
+      }
+    ],
     "drone": "Для дрона в центральной части столицы и у памятников требуется явное разрешение.",
     "filming_restrictions": "Внутри храмов следовать указаниям персонала и монахов; не снимать молящихся навязчиво."
   },
@@ -141,9 +233,17 @@
         "license": "CC BY-SA 3.0",
         "artist": "Benh LIEU SONG",
         "last_checked": "2026-09-28"
+      },
+      {
+        "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pha_That_Luang_6.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Pha_That_Luang_6.jpg",
+        "provider": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "artist": "Christophe95",
+        "last_checked": "2026-09-28"
       }
     ],
-    "gallery_status": "single_image_source"
+    "gallery_status": "carousel_ready"
   },
   "provenance": {
     "source_refs": [

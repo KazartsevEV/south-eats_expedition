@@ -50,20 +50,18 @@
     "geodata_upgrade_progress": {
       "schema_target": "2.10.8",
       "updated": "2026-09-28",
-      "completed_objects": 18,
+      "completed_objects": 19,
       "total_objects": 19,
-      "current_chunk": "operational_geodata_round_2",
-      "remaining_objects": [
-        "Old Thakhek Town"
-      ],
-      "policy": "WGS84/EPSG:4326; broad objects use explicit operational/component anchors. Town centers are not substituted for missing attraction access points; unresolved geometry stays null."
+      "current_chunk": "primary_geodata_complete",
+      "remaining_objects": [],
+      "policy": "WGS84/EPSG:4326; broad objects use explicit operational/component anchors. No settlement coordinate is substituted for a missing attraction point."
     },
     "visual_recon_upgrade_progress": {
       "schema_target": "2.10.8",
       "updated": "2026-09-28",
-      "completed_objects": 11,
+      "completed_objects": 12,
       "total_objects": 19,
-      "current_chunk": "georeferenced_viewpoints_round_2",
+      "current_chunk": "georeferenced_viewpoints_round_3",
       "policy": "откуда + когда, если подтверждено + что видно + класс техники по геометрии; без ISO/выдержки/диафрагмы/shot list"
     },
     "country_source_normalization": {
@@ -4792,7 +4790,24 @@
               "rate_type": "market/reference snapshot",
               "notes": "Наличный и банковский курс может отличаться; THB/USD часто принимаются в туристических местах, но юридически основная валюта — kip."
             },
-            "coordinate_research_note": "Официальный Tourism Laos определяет центр старого города как Fountain Square у Меконга. OSM-объект Fountain Square найден (way 239207377), но точный центр полигона ещё не нормализован в source layer; городские координаты Thakhek или координаты собора намеренно не подставлены."
+            "coordinates": {
+              "lat": 17.394922,
+              "lon": 104.803814,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Fountain Square, Thakhek — OSM way 239207377",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/way/239207377",
+              "authority": "medium",
+              "accessed": "2026-09-28",
+              "notes": "Центр полигона Fountain Square рассчитан по восьми уникальным узлам OSM way 239207377. Tourism Laos определяет Fountain Square как центр старого Thakhek; координата относится к площади, а не к геометрическому центру города."
+            },
+            "coordinates_checked_at": "2026-09-28"
           },
           "logistics": {
             "access": "Тхакхэк — столица провинции на Меконге напротив Накхонпханома в Таиланде. Старый центр сосредоточен вокруг площади с фонтаном и набережной; большинство заметных старых зданий находится в пределах пяти–шести кварталов.",
@@ -4844,7 +4859,50 @@
             "video_suitability_5": 4,
             "best_light": "раннее утро и поздний день",
             "drone": "Для дрона в городе требуется разрешение и соблюдение авиационных правил.",
-            "filming_restrictions": "Перед входом в частные интерьеры и съёмкой внутри получать разрешение; улицы доступны как публичное пространство."
+            "filming_restrictions": "Перед входом в частные интерьеры и съёмкой внутри получать разрешение; улицы доступны как публичное пространство.",
+            "visual_scouting": {
+              "best_time": null,
+              "best_weather_light": null,
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "fountain_square",
+                  "name": "Fountain Square",
+                  "description": "Центральная площадь старого Тхакхэка у Меконга; официальный туристический ресурс использует её как ориентир исторического ядра.",
+                  "coordinates": {
+                    "lat": 17.394922,
+                    "lon": 104.803814,
+                    "elevation_m": null
+                  },
+                  "view": {
+                    "description": "площадь и прилегающие кварталы старой франко-лаосской застройки"
+                  },
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для площади и фасадов по обе стороны открытого пространства"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для отдельных фасадов и городской среды без сильных перспективных искажений"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Fountain Square, Thakhek — OSM way 239207377",
+                    "publisher": "OpenStreetMap",
+                    "url": "https://www.openstreetmap.org/way/239207377",
+                    "authority": "medium",
+                    "accessed": "2026-09-28",
+                    "notes": "Центр полигона Fountain Square рассчитан по восьми уникальным узлам OSM way 239207377. Tourism Laos определяет Fountain Square как центр старого Thakhek; координата относится к площади, а не к геометрическому центру города."
+                  }
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [],
+              "useful_equipment": []
+            }
           },
           "annotation": {
             "narrative": "Старый Тхакхэк — компактный квартал на Меконг с франко-лаосскими шопхаусами, католическим и буддийским слоями и ролью транзитного центра к карсту Кхаммуан. Для экспедиции он работает как человеческая прелюдия к Тхакхэк кольцевой маршрут и Конг-Лор.",

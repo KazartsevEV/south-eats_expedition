@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.5.0"
-RELEASE_ID = "2026-09-28-r14"
+SCHEMA_VERSION = "2.6.0"
+RELEASE_ID = "2026-09-28-r15"
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
@@ -458,6 +458,42 @@ def merged_logistics(card, route):
     return logistics
 
 
+def source_id_for(source):
+    source = source if isinstance(source, dict) else {}
+    identity = source.get("url") or "|".join(str(source.get(k) or "") for k in ("publisher", "title", "accessed"))
+    return "src:" + hashlib.sha1(identity.encode("utf-8")).hexdigest()[:14]
+
+def merge_source_entity(registry, source, object_id):
+    if not isinstance(source, dict):
+        return None
+    sid = source_id_for(source)
+    entity = registry.get(sid)
+    if entity is None:
+        entity = {
+            "id": sid,
+            "type": source.get("type"),
+            "title": source.get("title"),
+            "publisher": source.get("publisher"),
+            "url": source.get("url"),
+            "language": source.get("language"),
+            "published_at": source.get("published_at"),
+            "accessed_at": source.get("accessed") or source.get("accessed_at"),
+            "authority": source.get("authority"),
+            "used_for": list(source.get("used_for") or []),
+            "notes": source.get("notes"),
+            "referenced_by": [object_id],
+        }
+        registry[sid] = entity
+    else:
+        entity["referenced_by"] = list(dict.fromkeys((entity.get("referenced_by") or []) + [object_id]))
+        entity["used_for"] = list(dict.fromkeys((entity.get("used_for") or []) + list(source.get("used_for") or [])))
+        for key in ("type","title","publisher","url","language","published_at","accessed_at","authority","notes"):
+            if entity.get(key) in (None, "", []):
+                value = source.get("accessed") if key == "accessed_at" else source.get(key)
+                if value not in (None, "", []):
+                    entity[key] = value
+    return sid
+
 def visual_recon_from(card):
     media = card.get("media") or {}
     scout = media.get("visual_scouting") or {}
@@ -535,6 +571,7 @@ def build():
     prominence_counts = Counter()
     qa_objects = []
     lodging_registry = {}
+    source_registry = {}
 
     for filename, code, country_slug in PUBLISH:
         src_path = SRC / filename
@@ -571,6 +608,11 @@ def build():
             tags = canonical_tags((obj.get("tags") or []) + interests)
             logistics = merged_logistics(card, route)
             visual_recon = visual_recon_from(card)
+            source_refs = []
+            for source_row in obj.get("sources") or []:
+                sid = merge_source_entity(source_registry, source_row, object_id)
+                if sid and sid not in source_refs:
+                    source_refs.append(sid)
             lodging_ids = []
             for lodging in card.get("accommodation") or []:
                 if not isinstance(lodging, dict) or not lodging.get("name"):
@@ -636,7 +678,7 @@ def build():
                     "gallery_status": "carousel_ready" if len(gallery) >= 2 else "single_image_source",
                 },
                 "provenance": {
-                    "sources": obj.get("sources") or [],
+                    "source_refs": source_refs,
                     "verification": obj.get("verification"),
                     "source_country_file": filename,
                 },
@@ -849,6 +891,7 @@ def build():
             "place_search": "search/places.json",
             "geodata_contract": "schema/geodata-contract.json",
             "lodging": "infrastructure/lodging/index.json",
+            "sources": "sources/index.json",
         },
         "countries": countries,
     })
@@ -884,6 +927,23 @@ def build():
         ],
     }
     dump(release / "qa.json", qa)
+
+    source_index = []
+    for source_id, entity in sorted(source_registry.items()):
+        source_path = release / "sources" / f"{source_id.split(':',1)[1]}.json"
+        dump(source_path, entity)
+        source_index.append({
+            "id": source_id,
+            "publisher": entity.get("publisher"),
+            "title": entity.get("title"),
+            "url": entity.get("url"),
+            "detail_path": source_path.relative_to(release).as_posix(),
+            "referenced_by_count": len(entity.get("referenced_by") or []),
+        })
+    dump(release / "sources" / "index.json", {
+        "meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID, "count": len(source_index)},
+        "sources": source_index,
+    })
 
     lodging_index = []
     for lodging_id, entity in sorted(lodging_registry.items()):
@@ -942,6 +1002,7 @@ def build():
             "places": len(places_global),
             "object_types": len(object_types),
             "lodging": len(lodging_registry),
+            "sources": len(source_registry),
             "files": len(manifest_files),
         },
         "files": manifest_files,

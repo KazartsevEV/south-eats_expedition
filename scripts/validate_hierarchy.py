@@ -40,7 +40,17 @@ navigation = load(release / "navigation" / "tree.json")
 status = load(release / "hierarchy-status.json")
 types = load(release / "object-types.json")["object_types"]
 objects = load(release / "search" / "objects.json")["objects"]
+object_geography_doc = load(release / "search" / "object-geography.json")
 places = load(release / "search" / "places.json")["places"]
+
+if len(object_geography_doc.get("objects") or []) != len(objects):
+    fail("object-geography index count mismatch")
+for row in objects:
+    gids=row.get("geography_ids") or []
+    if not gids:
+        fail(f"object missing geography_ids: {row.get('id')}")
+    if f"country:{row['country_code'].lower()}" not in gids:
+        fail(f"object geography lacks country root: {row.get('id')}")
 
 place_ids = [p.get("id") for p in places]
 if any(not x for x in place_ids):
@@ -157,7 +167,7 @@ if set(layouts) != expected_layouts:
     fail(f"page layout set mismatch: {sorted(layouts)}")
 
 levels = status.get("levels") or {}
-for key in ["project","region","country_catalog","taxonomy_families","geography_contract","country_pages","geography_pages","class_family_pages","country_class_pages","object_classes","object_cards"]:
+for key in ["project","region","country_catalog","taxonomy_families","geography_contract","country_pages","geography_pages","object_geography_index","class_family_pages","country_class_pages","object_classes","object_cards"]:
     if key not in levels:
         fail(f"hierarchy status missing level: {key}")
 

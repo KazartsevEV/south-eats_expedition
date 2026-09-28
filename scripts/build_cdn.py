@@ -644,6 +644,22 @@ def visual_recon_from(card, source_registry=None, object_id=None):
             "useful_equipment": row.get("useful_equipment") or [],
             "source_refs": refs,
         })
+    drone = media.get("drone")
+    if isinstance(drone, dict):
+        drone = dict(drone)
+        drone_refs = list(drone.get("source_refs") or [])
+        drone_source = drone.pop("source", None)
+        if isinstance(drone_source, dict) and source_registry is not None and object_id is not None:
+            drone_source = dict(drone_source)
+            used_for = list(drone_source.get("used_for") or [])
+            if "drone rules" not in used_for:
+                used_for.append("drone rules")
+            drone_source["used_for"] = used_for
+            sid = merge_source_entity(source_registry, drone_source, object_id)
+            if sid and sid not in drone_refs:
+                drone_refs.append(sid)
+        drone["source_refs"] = drone_refs
+
     return {
         "photo_suitability_5": media.get("photo_suitability_5"),
         "video_suitability_5": media.get("video_suitability_5"),
@@ -653,7 +669,7 @@ def visual_recon_from(card, source_registry=None, object_id=None):
         "seasonal_visuals": scout.get("seasonal_visuals") or [],
         "video_activity": scout.get("video_activity") or [],
         "useful_equipment": scout.get("useful_equipment") or [],
-        "drone": media.get("drone"),
+        "drone": drone,
         "filming_restrictions": media.get("filming_restrictions"),
     }
 

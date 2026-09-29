@@ -38,7 +38,8 @@
       "2026-09-29 locality gap pass: filled remaining geography/climate gaps for Gerik, Kuala Kangsar, Batu Gajah, Kuching, Miri, Kota Kinabalu, Kudat, Lahad Datu and Batu Niah. Batu Niah deliberately keeps a sourced temperature range/seasonality instead of using a dubious annual precipitation aggregate.",
       "2026-09-29 Malaysia geo QA closure: filled the only remaining required region transport gaps and Batu Caves geography; six localities without robust annual climatology now carry an explicit not_normalized status instead of silent null or borrowed nearby-station values.",
       "2026-09-29 language cleanup: all 14 Malaysia regional reference profiles rewritten into natural Russian prose; proper geographic names remain unchanged, while English-Russian mixed explanatory text was removed.",
-      "2026-09-29 language cleanup: all 27 Malaysia locality profiles rewritten into natural Russian prose; technical dataset/product names are retained only as source names or methodology metadata."
+      "2026-09-29 language cleanup: all 27 Malaysia locality profiles rewritten into natural Russian prose; technical dataset/product names are retained only as source names or methodology metadata.",
+      "2026-09-29 language QA: remaining English common-language fragments in Malaysia regional/locality prose removed; Latin text now primarily proper names, source names and technical product names."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -653,7 +654,7 @@
           "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "С высотой быстро холодает; дождь и туман возможны круглый год.",
-        "best_period_general": "Более сухие окна февраля–апреля; вершина зависит от погоды и permit.",
+        "best_period_general": "Более сухие окна обычно приходятся на февраль–апрель; выход на вершину зависит от погоды и оформленного разрешения.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
@@ -889,7 +890,7 @@
         },
         "geology": {
           "sarawak_delta": "UNESCO связывает шов зоны Кучинг со столкновением древних блоков суши более 200 млн лет назад; геопарк сохраняет геологическую летопись возрастом свыше 250 млн лет.",
-          "niah": "Ниа — известняковый карстовый и археологический ландшафт. Детальная геология пещер пока остаётся на уровне объекта Niah National Park до завершения отдельного локального профиля.",
+          "niah": "Ниа — известняковый карстовый и археологический ландшафт. Детальная геология пещер пока остаётся на уровне национального парка Ниа и соответствующего объекта до завершения отдельного локального профиля.",
           "source_refs": [
             "src_000621",
             "src_000619"
@@ -1232,7 +1233,7 @@
         "climate": {
           "rainfall_pattern": "Северо-запад полуострова имеет два дождливых максимума и более сухие окна около января–февраля и июня–июля; помесячная серия воздуха/моря уже хранится в этом geo-профиле.",
           "floods": {
-            "risk_context": "DID имеет несколько rainfall/siren stations непосредственно в Langkawi, включая Padang Matsirat, Kg. Bohor и Sg. Kelibang; проверять перед выездом после сильных ливней.",
+            "risk_context": "DID имеет несколько станций дождемерного контроля и сирен непосредственно на Лангкави, включая Padang Matsirat, Kampung Bohor и Sungai Kelibang; после сильных ливней их данные нужно проверять перед выездом.",
             "live_monitoring": true
           },
           "source_refs": [
@@ -1248,7 +1249,7 @@
             "nearshore island waters"
           ],
           "fauna_and_flora": "Для Kilim характерны мангровые леса, известняковые цикадовые, морской гибискус, браминские коршуны и морские орлы.",
-          "water_context": "Northern Straits of Melaka marine forecast METMalaysia использовать перед лодочными выходами.",
+          "water_context": "Перед лодочными выходами использовать оперативный морской прогноз METMalaysia по северной части Малаккского пролива.",
           "tides": {
             "status": "official_table_identified_values_not_normalized",
             "official_source": "Pusat Hidrografi Nasional Tide Tables 2026",
@@ -8290,8 +8291,8 @@
             "public_transport": "Rapid Penang связывает паромный терминал и Komtar с остальной частью острова; внутри исторического ядра автобус обычно уступает пешему маршруту.",
             "walking": "Круг Armenian Street — Street of Harmony — Little India — Clan Jetties составляет примерно 3–5 км.",
             "modes": {
-              "public_transport": "Rapid Penang связывает ferry terminal/Komtar с островом; внутри UNESCO-core автобус обычно медленнее пешего маршрута.",
-              "taxi_ridehail": "Grab удобен на Penang Hill/аэропорт/дальние районы; в heritage core часто нет смысла.",
+              "public_transport": "Rapid Penang связывает паромный терминал и Komtar с остальной частью острова; внутри исторического ядра автобус обычно медленнее пешего маршрута.",
+              "taxi_ridehail": "Сервисы заказа машины удобны для поездок к Penang Hill, аэропорту и дальним районам; внутри исторического ядра они часто не нужны.",
               "moped": "Удобен вне ядра, но внутри старого города парковка и односторонние улицы мешают.",
               "walking": "Armenian Street–Harmony Street–Little India–Clan Jetties — около 3–5 км полноценного круга."
             }
@@ -8388,10 +8389,10 @@
             "public_transport": "Из Куала-Лумпура удобны междугородние автобусы до Melaka Sentral; внутри исторического ядра чаще практичнее пешком.",
             "walking": "Маршрут Dutch Square — St Paul — Jonker Street — набережная реки составляет около 3–4 км.",
             "modes": {
-              "public_transport": "Из Kuala Lumpur удобны междугородние автобусы до Melaka Sentral; в core — local bus/Grab, но сам центр пеший.",
-              "taxi_ridehail": "Grab полезен от Melaka Sentral и к Portuguese Settlement; в Jonker core часто медленнее пешком.",
+              "public_transport": "Из Куала-Лумпура удобны междугородние автобусы до Melaka Sentral; в историческом центре можно использовать местный автобус или сервис заказа машины, но само ядро пешее.",
+              "taxi_ridehail": "Сервис заказа машины полезен от Melaka Sentral и для поездок к Portuguese Settlement; внутри района Jonker Street пешком часто быстрее.",
               "moped": "Возможен, но weekend crowds и односторонние улицы снижают смысл.",
-              "walking": "Dutch Square–St Paul–Jonker–river loop около 3–4 км."
+              "walking": "Круг Dutch Square — St Paul — Jonker Street — набережная реки составляет около 3–4 км."
             }
           },
           "languages": {
@@ -8579,7 +8580,7 @@
             "walking": "Отдельные пляжи и населённые участки удобно проходить пешком, но перемещение по всему острову требует транспорта.",
             "modes": {
               "public_transport": "Полноценной островной автобусной сети для достопримечательностей нет.",
-              "taxi_ridehail": "Grab/такси работают на населённой части острова; Kilim/островные маршруты требуют boat operator.",
+              "taxi_ridehail": "Такси и сервисы заказа машины работают в населённой части острова; для Kilim и островных маршрутов требуется отдельная лодочная перевозка.",
               "moped": "Один из самых практичных способов для сухопутных точек; после ливня сельские дороги скользкие.",
               "walking": "Отдельные beaches/urban strips ходятся пешком, но остров целиком — нет."
             }
@@ -8680,7 +8681,7 @@
           },
           "transport": {
             "role": "mainland_gateway",
-            "note": "Department of Fisheries lists Besut District Fisheries Office on Jalan Jeti and the Pulau Perhentian Marine Park Centre on the islands. Коммерческое расписание лодок отдельно перепроверять в день поездки.",
+            "note": "Департамент рыболовства указывает районное управление Бесута в зоне Jalan Jeti и центр морского парка на Перхентианских островах. Коммерческое расписание лодок нужно отдельно перепроверять в день поездки.",
             "source_refs": [
               "src_000601"
             ]
@@ -9561,7 +9562,7 @@
           "summary": "Кота-Кинабалу — главный городской транспортный узел западного Сабаха для поездок к Кинабалу и Кундасангу; его климат нельзя использовать как климатический профиль горы.",
           "transport": {
             "role": "региональный транспортный узел",
-            "note": "К району Kinabalu Park и Кундасангу добираются по дороге в направлении Ранау; возможны автобусные и автомобильные варианты.",
+            "note": "К парку Кинабалу и Кундасангу добираются по дороге в направлении Ранау; доступны автобусные и автомобильные варианты.",
             "source_refs": [
               "src_000623",
               "src_000608"
@@ -9651,7 +9652,7 @@
           "Mount Kinabalu"
         ],
         "profile": {
-          "summary": "Кундасанг — высокогорный поселковый узел у Kinabalu Park и практичная база перед восхождением и после него.",
+          "summary": "Кундасанг — высокогорный поселковый узел у парка Кинабалу и практичная база перед восхождением и после него.",
           "geography": "Высокогорный внутренний Сабах; условия заметно прохладнее прибрежных низменностей.",
           "climate": {
             "summary": "Для высокогорий Ранау и Кундасанга Sabah Tourism приводит около 21 °C как практический средний ориентир; на вершине Кинабалу значительно холоднее.",
@@ -10067,7 +10068,7 @@
           "Niah National Park"
         ],
         "profile": {
-          "summary": "Бату-Ниа — ближайший небольшой город к Niah National Park; Мири остаётся более крупным транспортным узлом дальше по дороге.",
+          "summary": "Бату-Ниа — ближайший небольшой город к национальному парку Ниа; Мири остаётся более крупным транспортным узлом дальше по дороге.",
           "transport": {
             "summary": "По данным Sarawak Forestry, от Мири или Бинтулу до штаба парка Ниа около двух часов по дороге. На месте маршрут включает переправу через реку и дальнейший путь по настилам.",
             "source_refs": [
@@ -10084,7 +10085,7 @@
             "source_refs_complete": true,
             "note": null
           },
-          "geography": "Небольшой город в дивизионе Мири, ближайший населённый узел к Niah National Park и пещерному комплексу.",
+          "geography": "Небольшой город в дивизионе Мири, ближайший населённый узел к национальному парку Ниа и пещерному комплексу.",
           "climate": {
             "summary": "Тропический влажный климат; Sarawak Tourism для Niah указывает около 24–32 °C и частые дожди, особенно в ноябре–феврале.",
             "best_period": "Март–сентябрь обычно удобнее для маршрута к пещерам и движения по настилам.",
@@ -10099,7 +10100,7 @@
             }
           },
           "geology": {
-            "summary": "Локальный ландшафт связан с известняковыми формациями и карстовой системой Ниа; подробная археология и геология пещер остаются на уровне Niah National Park и соответствующего объекта.",
+            "summary": "Локальный ландшафт связан с известняковыми формациями и карстовой системой Ниа; подробная археология и геология пещер остаются на уровне национального парка Ниа и соответствующего объекта.",
             "source_refs": [
               "src_000656",
               "src_000619"

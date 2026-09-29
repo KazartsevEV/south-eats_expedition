@@ -467,10 +467,12 @@ def build():
                 "spoken": region_profile.get("languages_spoken") or [],
                 "notes": region_profile.get("language_notes"),
             }
-            entity["climate"] = {
-                "summary": region_profile.get("climate_summary"),
-                "best_period_general": region_profile.get("best_period_general"),
-            }
+            climate_detail = dict(region_profile.get("climate_detail") or {})
+            if region_profile.get("climate_summary") and not climate_detail.get("summary"):
+                climate_detail["summary"] = region_profile.get("climate_summary")
+            if region_profile.get("best_period_general") and not climate_detail.get("best_period_general"):
+                climate_detail["best_period_general"] = region_profile.get("best_period_general")
+            entity["climate"] = climate_detail
             entity["freshness"] = {"checked_at": region_profile.get("last_verified")}
             entity["provenance"] = {
                 "source_urls": region_profile.get("language_source_urls") or [],

@@ -23,7 +23,8 @@
       "v1.5: добавлены narrow, нормализованные теги, route_meta и привязка к географическим сущностям для сборки CDN.",
       "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны.",
       "2026-09-29 GPS normalization: 21/21 Malaysia objects receive sourced WGS84 map anchors; broad landscapes/parks use explicit center/approximate semantics, and Lenggong keeps four UNESCO archaeological component points.",
-      "2026-09-29 locality migration: the Langkawi monthly air/sea temperature series was removed from country climate and moved to the Langkawi / northwest coast geo profile; country climate now contains macro spatial context only."
+      "2026-09-29 locality migration: the Langkawi monthly air/sea temperature series was removed from country climate and moved to the Langkawi / northwest coast geo profile; country climate now contains macro spatial context only.",
+      "2026-09-29 locality migration: existing city/island research for Kuala Lumpur, George Town/Penang, Melaka City and Langkawi was copied into matching geo locality profiles; route hubs that are not equivalent to the destination remain linkage-only."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -6944,7 +6945,49 @@
         ],
         "object_names": [
           "Kuala Lumpur"
-        ]
+        ],
+        "profile": {
+          "summary": "Куала-Лумпур полезен как полевой срез современной Малайзии: колониальное ядро у слияния Кланга и Гомбак, малайский Kampung Baru, китайские и индийские кварталы, рынки и сверхвысотный центр читаются в одном городском маршруте.",
+          "history": "Куала-Лумпур вырос из оловодобывающего узла у слияния Klang и Gombak в колониальный административно-торговый центр, а затем в столичный мегаполис. Для экспедиционного рассказа интересен не один skyline: Masjid Jamek и старое колониальное ядро, Chinatown, индийские кварталы, Kampung Baru и башни конца XX–XXI века показывают несколько исторических слоёв в пределах одного дня пешком и на рельсовом транспорте.",
+          "culture": "Городская среда многоязычна и многоконфессиональна: малайские, китайские и индийские общины читаются не как музейные анклавы, а через рынки, храмы, мечети, еду и жилые кварталы. Kampung Baru особенно полезен как контраст малоэтажной малайской ткани с KLCC.",
+          "geography": "Город лежит в долине Klang; жара и ливни усиливаются плотной застройкой, а расстояния между визуально близкими районами часто режутся эстакадами и скоростными дорогами.",
+          "myths_beliefs": null,
+          "climate": {
+            "summary": "Экваториально жарко и влажно круглый год; грозы обычны.",
+            "best_period": "Круглый год; для длинной уличной съёмки удобнее сухое утро после ночного дождя.",
+            "local_notes": "После 11:00 тепловая дымка и жёсткий свет ухудшают skyline; грозовой ливень чаще полезнее переждать 30–60 минут и снимать отражения после него."
+          },
+          "transport": {
+            "access": "Самостоятельная база — Куала-Лумпур; историческое ядро удобно проходить пешком, между удалёнными районами использовать MRT/LRT/Monorail, KTM или Grab.",
+            "public_transport": "MRT/LRT/Monorail и KTM закрывают основные туристические оси; для Merdeka Square–Pasar Seni–Chinatown удобнее пешком, для KLCC/Bukit Bintang — MRT/LRT/Monorail.",
+            "walking": "Историческое ядро Merdeka Square–Central Market–Petaling Street — примерно 2–4 км; KLCC добавляет ещё несколько километров.",
+            "modes": {
+              "public_transport": "MRT/LRT/Monorail и KTM закрывают основные туристические оси; для Merdeka Square–Pasar Seni–Chinatown удобнее пешком, для KLCC/Bukit Bintang — MRT/LRT/Monorail.",
+              "taxi_ridehail": "Grab удобен между несвязанными рельсом районами, но в 17:00–20:00 может проигрывать MRT по времени.",
+              "moped": "Технически возможен, но для центра хуже общественного транспорта: сложная развязочная сеть, парковка и ливни.",
+              "walking": "Историческое ядро Merdeka Square–Central Market–Petaling Street — примерно 2–4 км; KLCC добавляет ещё несколько километров."
+            }
+          },
+          "languages": {
+            "spoken": [
+              "малайский",
+              "английский",
+              "путунхуа / кантонский",
+              "тамильский"
+            ]
+          },
+          "provenance": {
+            "source_object_name": "Kuala Lumpur",
+            "source_urls": [
+              "https://www.malaysia.travel/",
+              "https://www.dosm.gov.my/",
+              "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur_skyline_with_the_Petronas_Towers_on_the_left_and_the_Menara_KL_on_the_right_(18357017963).jpg"
+            ],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false,
+            "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued."
+          }
+        }
       },
       {
         "name": "George Town / Penang",
@@ -6953,7 +6996,54 @@
         ],
         "object_names": [
           "George Town"
-        ]
+        ],
+        "profile": {
+          "summary": "Джорджтаун — живой портовый город Малаккского пролива, где в пешем радиусе соседствуют китайские клановые дома, мечети, индуистские храмы, перанаканская архитектура, торговые дома и жилые Clan Jetties.",
+          "history": "George Town — портовый город Британской Ост-Индской компании с конца XVIII века, где торговля в Малаккском проливе создала плотную смесь shophouse, clan house, мечетей, индуистских и китайских храмов. UNESCO-ядро ценнее как действующая городская система, чем как набор murals.",
+          "culture": "Пенангские хokkien-китайцы, перанаканцы, индийские мусульмане, тамилы и малайцы оставили соседствующие религиозные и коммерческие кварталы. Clan jetties сохраняют происхождение от клановых общин докеров; это жилые мостки, а не декорация.",
+          "geography": "Исторический центр лежит на плоской прибрежной площадке; ключевой практический фактор — жара и минимум тени на набережной, тогда как five-foot ways дают непрерывные теневые коридоры.",
+          "myths_beliefs": [
+            "Китайские храмы и небольшие Datuk Kong shrines отражают живую народную религиозность; снимать алтари и молящихся только с согласия/дистанции."
+          ],
+          "climate": {
+            "summary": "Жаркое влажное побережье.",
+            "best_period": "Декабрь–февраль обычно суше; для street/documentary важнее ранний старт до туристических групп.",
+            "local_notes": "После дождя five-foot ways и плитка скользкие, зато фасады и вывески насыщеннее; в полдень открытые улицы перегреваются."
+          },
+          "transport": {
+            "access": "Самостоятельно: паром/автобус или аэропорт Пенанга, далее историческое ядро удобнее всего исследовать пешком; Rapid Penang и Grab нужны для связки с дальними районами острова.",
+            "public_transport": "Rapid Penang связывает ferry terminal/Komtar с островом; внутри UNESCO-core автобус обычно медленнее пешего маршрута.",
+            "walking": "Armenian Street–Harmony Street–Little India–Clan Jetties — около 3–5 км полноценного круга.",
+            "modes": {
+              "public_transport": "Rapid Penang связывает ferry terminal/Komtar с островом; внутри UNESCO-core автобус обычно медленнее пешего маршрута.",
+              "taxi_ridehail": "Grab удобен на Penang Hill/аэропорт/дальние районы; в heritage core часто нет смысла.",
+              "moped": "Удобен вне ядра, но внутри старого города парковка и односторонние улицы мешают.",
+              "walking": "Armenian Street–Harmony Street–Little India–Clan Jetties — около 3–5 км полноценного круга."
+            }
+          },
+          "languages": {
+            "spoken": [
+              "малайский",
+              "английский",
+              "пенангский хоккиен",
+              "путунхуа",
+              "тамильский"
+            ]
+          },
+          "provenance": {
+            "source_object_name": "George Town",
+            "source_urls": [
+              "https://whc.unesco.org/en/list/1223",
+              "https://commons.wikimedia.org/wiki/File:Penang_Malaysia_The-George-Town-Dispensary-01.jpg",
+              "https://www.dosm.gov.my/",
+              "https://gtwhi.com.my/contact/",
+              "https://gtwhi.com.my/historic-building-open-house-2026/"
+            ],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false,
+            "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued."
+          }
+        }
       },
       {
         "name": "Melaka City",
@@ -6962,7 +7052,51 @@
         ],
         "object_names": [
           "Melaka"
-        ]
+        ],
+        "profile": {
+          "summary": "Малакка — компактный слой истории Малаккского пролива: малайский султанат, португальская крепость, голландский административный центр, британский период, перанаканские дома и сохранившаяся евразийская община кристанг.",
+          "history": "Мелака выросла из султаната XV века в главный торговый узел пролива, затем последовательно прошла португальский, голландский и британский периоды. Красная Dutch Square — только один слой: важны A Famosa, St Paul, китайские guild/temple streets, мечети и речной торговый фронт.",
+          "culture": "Baba-Nyonya/Peranakan культура, Chitty, малайские и китайские торговые общины сформировали кухню, домашние интерьеры и ритуальный календарь города.",
+          "geography": "Город стоит на низком берегу реки Melaka у Малаккского пролива; историческое ядро компактно и реально проходится пешком.",
+          "myths_beliefs": [
+            "Легенды о Hang Tuah — важная часть малайской исторической памяти; их следует подавать как эпический/литературный пласт, а не как проверенную биографию."
+          ],
+          "climate": {
+            "summary": "Жарко и влажно круглый год.",
+            "best_period": "Более сухое окно удобно, но для съёмки важнее будний рассвет: weekend crowd сильнее влияет на материал, чем сезон.",
+            "local_notes": "Полуденное солнце плоско освещает Dutch Square; после дождя riverfront и красные фасады визуально выигрывают."
+          },
+          "transport": {
+            "access": "Самостоятельно: междугородний автобус до Melaka Sentral, затем местный автобус или Grab; историческое ядро рациональнее проходить пешком.",
+            "public_transport": "Из Kuala Lumpur удобны междугородние автобусы до Melaka Sentral; в core — local bus/Grab, но сам центр пеший.",
+            "walking": "Dutch Square–St Paul–Jonker–river loop около 3–4 км.",
+            "modes": {
+              "public_transport": "Из Kuala Lumpur удобны междугородние автобусы до Melaka Sentral; в core — local bus/Grab, но сам центр пеший.",
+              "taxi_ridehail": "Grab полезен от Melaka Sentral и к Portuguese Settlement; в Jonker core часто медленнее пешком.",
+              "moped": "Возможен, но weekend crowds и односторонние улицы снижают смысл.",
+              "walking": "Dutch Square–St Paul–Jonker–river loop около 3–4 км."
+            }
+          },
+          "languages": {
+            "spoken": [
+              "малайский",
+              "английский",
+              "путунхуа / хоккиен",
+              "баба-малайский; кристанг как язык культурного наследия"
+            ]
+          },
+          "provenance": {
+            "source_object_name": "Melaka",
+            "source_urls": [
+              "https://whc.unesco.org/en/list/1223",
+              "https://commons.wikimedia.org/wiki/File:Melaka_Malaysia_Document-Service-at-Stadhuys-Red-Square-01.jpg",
+              "https://www.dosm.gov.my/"
+            ],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false,
+            "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued."
+          }
+        }
       },
       {
         "name": "Kota Kinabalu / Kundasang",
@@ -6989,7 +7123,52 @@
         ],
         "object_names": [
           "Langkawi"
-        ]
+        ],
+        "profile": {
+          "summary": "Лангкави интересен не курортным набором развлечений, а сочетанием древних карстов, мангров Kilim, островных дорог, рыбацких поселений и доступных участков побережья в пределах одного архипелага.",
+          "history": "Langkawi — архипелаг из карстовых островов у северо-запада полуострова; его сильная сторона не resort strip, а сочетание древних известняков Kilim, мангров, горного массива Machinchang и малайского островного фольклора.",
+          "culture": "Рыбацкие деревни, rice-field landscape и малайские легенды дают более содержательный слой, чем duty-free tourism.",
+          "geography": "Langkawi UNESCO Global Geopark включает очень старые горные породы и известняковый карст; прилив определяет визуальную геометрию мангровых каналов.",
+          "myths_beliefs": [
+            "Махсури — центральная островная легенда о несправедливо казнённой женщине и проклятии “на семь поколений”; это фольклорно-исторический нарратив, а не проверяемый факт.",
+            "Tasik Dayang Bunting связывают с легендой о небесной принцессе и ребёнке; подаётся как местный миф."
+          ],
+          "climate": {
+            "summary": "Тропическое море; северо-запад полуострова имеет собственную сезонность осадков.",
+            "best_period": "Декабрь–март обычно суше; для mangrove и boat work выбирать день с умеренным ветром, а не только без дождя.",
+            "local_notes": "SkyCab и море реагируют на грозу/ветер быстрее, чем пляжный план; утром вода и воздух обычно спокойнее."
+          },
+          "transport": {
+            "access": "Практичная база — Langkawi; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
+            "public_transport": "Полноценной островной автобусной сети для достопримечательностей нет.",
+            "walking": "Отдельные beaches/urban strips ходятся пешком, но остров целиком — нет.",
+            "modes": {
+              "public_transport": "Полноценной островной автобусной сети для достопримечательностей нет.",
+              "taxi_ridehail": "Grab/такси работают на населённой части острова; Kilim/островные маршруты требуют boat operator.",
+              "moped": "Один из самых практичных способов для сухопутных точек; после ливня сельские дороги скользкие.",
+              "walking": "Отдельные beaches/urban strips ходятся пешком, но остров целиком — нет."
+            }
+          },
+          "languages": {
+            "spoken": [
+              "малайский",
+              "английский широко используется в туристической сфере",
+              "китайские языки и диалекты локально"
+            ]
+          },
+          "provenance": {
+            "source_object_name": "Langkawi",
+            "source_urls": [
+              "https://www.malaysia.travel/",
+              "https://commons.wikimedia.org/wiki/File:Langkawi_Malaysia_Langkawi-Sky-Bridge-01.jpg",
+              "https://www.dosm.gov.my/",
+              "https://www.malaysia.travel/explore/pulau-payar-marine-park"
+            ],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false,
+            "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued."
+          }
+        }
       },
       {
         "name": "Kuala Besut",

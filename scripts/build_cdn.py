@@ -1122,7 +1122,7 @@ def build():
 
     country_qa_rows = []
     country_qa_fields = blocking_required + expedition_required
-    for _, code, country_slug in PUBLISH:
+    for _, code, country_slug in PUBLISH + COUNTRY_ONLY:
         rows = [row for row in qa_objects if row.get("country_code") == code]
         missing = {
             key: [row["id"] for row in rows if not row.get(key)]
@@ -1262,7 +1262,7 @@ def build():
         "schema_version": SCHEMA_VERSION,
         "release_id": RELEASE_ID,
         "status": "reference_release",
-        "published_countries": [x[1] for x in PUBLISH],
+        "published_countries": [x[1] for x in PUBLISH + COUNTRY_ONLY],
         "target_countries_total": 11,
         "totals": {
             "countries": len(countries),

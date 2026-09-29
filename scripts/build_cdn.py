@@ -136,6 +136,10 @@ TYPE_BY_NAME = {
     "Tad Yuang": "waterfall",
     "Khone Phapheng Falls": "waterfall",
     "Li Phi / Somphamit Falls": "waterfall",
+    "Tham Pa Fa": "cave",
+    "Tham Nang Aen": "cave",
+    "Dong Hua Sao National Park": "national_park",
+    "Nong Fa / Dong Ampham landscape": "natural_landscape",
 }
 
 

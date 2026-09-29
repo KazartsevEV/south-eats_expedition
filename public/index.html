@@ -349,15 +349,15 @@ function geoReferenceHTML(g){
 }
 function inheritedGeoContextHTML(child,parent){
   if(!child||!parent)return '';
+  var allowed={health:'Здоровье и болезни',safety:'Безопасность и криминал',languages:'Языки'};
   var blocks=[];
-  GEO_FIELDS.forEach(function(x){
-    var key=x[1];
-    if(!hasValue(child[key])&&hasValue(parent[key]))blocks.push(factCard(x[0],parent[key]));
+  Object.keys(allowed).forEach(function(key){
+    if(!hasValue(child[key])&&hasValue(parent[key]))blocks.push(factCard(allowed[key],parent[key]));
   });
   blocks=blocks.filter(Boolean);
   if(!blocks.length)return '';
   var pname=parent.names&&(parent.names.ru||parent.names.primary)||parent.id;
-  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Inherited regional context</div><h2>Контекст родительского региона</h2></div><p>Это не локальные факты этой точки. Показаны недостающие поля из <b>'+esc(pname)+'</b>, чтобы не дублировать один и тот же факт в canonical данных.</p></div><div class="fact-grid">'+blocks.join('')+'</div></section>';
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Inherited regional context</div><h2>Контекст родительского региона</h2></div><p>Это не локальные факты этой точки. Показаны только безопасные для наследования поля из <b>'+esc(pname)+'</b>: health, safety и languages. Климат, море, геология, рельеф и природа не наследуются автоматически.</p></div><div class="fact-grid">'+blocks.join('')+'</div></section>';
 }
 function resetMaps(){
   state.mapInstances.forEach(function(m){try{m.remove()}catch(e){}});

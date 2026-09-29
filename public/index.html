@@ -135,7 +135,7 @@ const COUNTRY={
 };
 const state={
   release:null,objects:[],classRows:[],classes:{},tags:[],geo:[],geoById:new Map(),
-  countries:[],country:'',classId:'',tag:'',geoId:'',q:'',
+  countries:[],homeCountries:new Map(),country:'',classId:'',tag:'',geoId:'',q:'',
   detail:new Map(),media:new Map(),countryViews:new Map(),profiles:new Map()
 };
 const $=s=>document.querySelector(s);
@@ -299,7 +299,8 @@ async function renderHome(){
     const classCounts=new Map();
     for(const o of rows)classCounts.set(o.class_id,(classCounts.get(o.class_id)||0)+1);
     const top=[...classCounts.entries()].sort((a,b)=>b[1]-a[1]).slice(0,4).map(y=>className(y[0])+' '+y[1]).join(' · ');
-    const cover=(rows.find(o=>o.cover_media_id)||{}).cover_media_id||'';
+    const homeRow=state.homeCountries.get(cc)||{};
+    const cover=homeRow.cover_media_id||(rows.find(o=>o.cover_media_id)||{}).cover_media_id||'';
     return '<article class="country-card" data-country-card="'+esc(cc)+'" data-cover="'+esc(cover)+'">'+
       '<div class="country-card__image"></div><div class="country-card__scrim"></div>'+
       '<div class="country-card__body"><div class="country-card__title">'+x[0]+' '+esc(x[1])+'</div>'+
@@ -427,12 +428,13 @@ async function boot(){
     const latest=await j(CDN+'latest.json');
     state.release=latest.release_id;
     const base=CDN+state.release+'/';
-    const [search,classes,tags,manifest,geo]=await Promise.all([
+    const [search,classes,tags,manifest,geo,home]=await Promise.all([
       j(base+'search/global.json'),
       j(base+'taxonomy/object-classes.json'),
       j(base+'taxonomy/tags.json'),
       j(base+'manifest.json'),
-      j(base+'geo/index.json')
+      j(base+'geo/index.json'),
+      j(base+'views/home.json')
     ]);
     state.objects=search.objects||[];
     state.classRows=classes.classes||[];
@@ -440,7 +442,8 @@ async function boot(){
     state.tags=tags.tags||[];
     state.geo=geo.entities||[];
     state.geoById=new Map(state.geo.map(x=>[x.id,x]));
-    state.countries=(manifest.countries||[]).map(x=>String(x.code||'').toLowerCase()).filter(Boolean);
+    state.homeCountries=new Map((home.countries||[]).map(x=>[String(x.code||'').toLowerCase(),x]));
+    state.countries=(home.countries?.length?home.countries:manifest.countries||[]).map(x=>String(x.code||'').toLowerCase()).filter(Boolean);
     const route=parseHash();
     state.country=state.countries.includes(route.country)?route.country:'';
     state.classId=route.classId;state.tag=route.tag;state.geoId=route.geoId;

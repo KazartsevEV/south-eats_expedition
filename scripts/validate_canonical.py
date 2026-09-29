@@ -399,6 +399,17 @@ def main():
     if set(object_ids) != set(registry_object_values):
         fail("canonical object set differs from persistent object ID registry")
 
+    home_view = load(release / "views" / "home.json")
+    if home_view.get("layout_rule") != "home -> countries; country -> class_sections -> objects":
+        fail("home view layout_rule does not match canonical country-first UI contract")
+    home_country_rows = home_view.get("countries")
+    if not isinstance(home_country_rows, list):
+        fail("home view countries must be an array")
+    home_country_by_code = {row.get("code"): row for row in home_country_rows}
+    manifest_codes = {row.get("code") for row in manifest.get("countries") or []}
+    if set(home_country_by_code) != manifest_codes:
+        fail("home view country set differs from manifest")
+
     for country_row in manifest.get("countries") or []:
         code = country_row["code"]
         indexes = load(release / country_row["indexes"])
@@ -441,6 +452,19 @@ def main():
         country_search = load(release / country_row["search_index"])
         expected_rows = country_search.get("objects") or []
         expected_ids = [row.get("id") for row in expected_rows]
+        home_row = home_country_by_code.get(code) or {}
+        if home_row.get("country_view") != f"views/countries/{code}.json":
+            fail(f"{code}: home view country_view path mismatch")
+        if home_row.get("objects_count") != len(expected_rows):
+            fail(f"{code}: home view objects_count mismatch")
+        expected_class_ids = sorted({row.get("class_id") for row in expected_rows})
+        if home_row.get("classes_count") != len(expected_class_ids):
+            fail(f"{code}: home view classes_count mismatch")
+        if sorted(home_row.get("class_ids") or []) != expected_class_ids:
+            fail(f"{code}: home view class_ids mismatch")
+        cover_media_id = home_row.get("cover_media_id")
+        if cover_media_id is not None and cover_media_id not in media_ids:
+            fail(f"{code}: home view references unknown cover media {cover_media_id}")
         if sorted(view_ids) != sorted(expected_ids):
             fail(f"{code}: country view objects differ from country search index")
         expected_class_by_id = {row.get("id"): row.get("class_id") for row in expected_rows}

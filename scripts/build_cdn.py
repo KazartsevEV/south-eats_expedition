@@ -1004,9 +1004,12 @@ def build():
             row = {
                 "id": pid,
                 "kind": "region",
-                "name": name,
+                "name": region.get("name_ru") or name,
+                "canonical_name": name,
                 "slug": slugify(name),
+                "summary": region.get("summary"),
                 "languages_spoken": region.get("languages_spoken") or [],
+                "language_notes": region.get("language_notes"),
                 "currency": region.get("currency"),
                 "climate_summary": region.get("climate_summary"),
                 "best_period_general": region.get("best_period_general"),

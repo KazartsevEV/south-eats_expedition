@@ -7,8 +7,6 @@ from pathlib import Path
 
 
 LOCAL_PROFILE_KEYS = {
-    "dangerous_animals",
-    "poisonous_plants",
     "tides",
     "marine",
     "local_crime",
@@ -133,7 +131,7 @@ result = {
     "geo_coverage_gaps": len(geo_gaps),
     "geo_gaps": geo_gaps,
     "rules": {
-        "ownership": "country=macro context; geo=local climate/nature/safety facts",
+        "ownership": "country=macro context and non-localized country hazard inventories; geo=local climate/nature/safety occurrence and route-level relevance",
         "region_required": list(REGION_REQUIRED_KEYS) + ["provenance.source_refs"],
         "locality_required": list(LOCALITY_REQUIRED_KEYS) + [
             "provenance.source_refs",

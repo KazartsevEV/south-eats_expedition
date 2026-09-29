@@ -599,6 +599,32 @@ def merge_source_entity(registry, source, object_id):
 def visual_recon_from(card, source_registry=None, object_id=None):
     media = card.get("media") or {}
     scout = media.get("visual_scouting") or {}
+
+    # Legacy Malaysia/Indonesia cards used shooting_recommendation + field_planning.
+    # Convert that material into the canonical reconnaissance model without carrying
+    # photographer instructions, shot lists, focal lengths, or camera settings into CDN.
+    legacy_shoot = media.get("shooting_recommendation") or {}
+    if not scout and isinstance(legacy_shoot, dict):
+        positions = legacy_shoot.get("positions") or []
+        scout = {
+            "best_time": legacy_shoot.get("time") or media.get("best_light"),
+            "best_weather_light": legacy_shoot.get("weather"),
+            "viewpoints_for_photo_video": [
+                {
+                    "id": f"vp_{idx:02d}",
+                    "description": value.strip(),
+                    "best_time": legacy_shoot.get("time") or media.get("best_light"),
+                    "best_weather_light": legacy_shoot.get("weather"),
+                    "useful_equipment": [],
+                }
+                for idx, value in enumerate(positions, start=1)
+                if isinstance(value, str) and value.strip()
+            ],
+            "seasonal_visuals": [],
+            "video_activity": [],
+            "useful_equipment": [],
+        }
+
     viewpoints = []
     for idx, value in enumerate(scout.get("viewpoints_for_photo_video") or [], start=1):
         if isinstance(value, str) and value.strip():
@@ -610,8 +636,8 @@ def visual_recon_from(card, source_registry=None, object_id=None):
                 "gps": None,
                 "access": None,
                 "view": None,
-                "best_time": None,
-                "best_weather_light": None,
+                "best_time": scout.get("best_time"),
+                "best_weather_light": scout.get("best_weather_light"),
                 "useful_equipment": [],
                 "source_refs": [],
             })
@@ -651,8 +677,8 @@ def visual_recon_from(card, source_registry=None, object_id=None):
             "gps": gps,
             "access": row.get("access"),
             "view": row.get("view"),
-            "best_time": row.get("best_time"),
-            "best_weather_light": row.get("best_weather_light"),
+            "best_time": row.get("best_time") or scout.get("best_time"),
+            "best_weather_light": row.get("best_weather_light") or scout.get("best_weather_light"),
             "useful_equipment": row.get("useful_equipment") or [],
             "source_refs": refs,
         })

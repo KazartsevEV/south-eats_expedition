@@ -489,7 +489,17 @@ def build():
                 "source_region_names": locality_profile.get("regions") or [],
                 "source_object_names": locality_profile.get("object_names") or [],
             }
-            entity["migration"]["local_reference_status"] = "locality_linkage_migrated"
+            local_profile = locality_profile.get("profile") or {}
+            if local_profile:
+                if local_profile.get("summary"):
+                    entity["description"]["narrow"] = local_profile.get("summary")
+                for field in ("history", "culture", "geography", "geology", "ethnography", "myths_beliefs", "climate", "transport", "languages", "nature", "marine", "health", "safety", "architecture", "relief", "hydrology", "coast"):
+                    if local_profile.get(field) not in (None, "", [], {}):
+                        entity[field] = local_profile.get(field)
+                entity["provenance"] = local_profile.get("provenance") or entity.get("provenance")
+                entity["migration"]["local_reference_status"] = "migrated_existing_locality_profile"
+            else:
+                entity["migration"]["local_reference_status"] = "locality_linkage_migrated"
         geo_entities[geo_id] = entity
         canonical_geo_ids_by_country[code].append(geo_id)
         place_id_by_country_name_kind[(code, place.get("name"), place.get("kind"))] = geo_id

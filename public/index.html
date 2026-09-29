@@ -335,7 +335,7 @@ async function renderCountry(){
   const groups=classGroups(rows,cv);
   const cn=COUNTRY[cc]||['',cc.toUpperCase()];
   const classCounts=new Map();
-  all.forEach(o=>classCounts.set(o.class_id,(classCounts.get(o.class_id)||0)+1);
+  all.forEach(o=>classCounts.set(o.class_id,(classCounts.get(o.class_id)||0)+1));
   const classNav=[...classCounts.entries()].sort((a,b)=>className(a[0]).localeCompare(className(b[0]),'ru')).map(x=>
     '<button class="filter-chip'+(state.classId===x[0]?' active':'')+'" data-class="'+esc(x[0])+'">'+esc(className(x[0]))+' · '+x[1]+'</button>'
   ).join('');

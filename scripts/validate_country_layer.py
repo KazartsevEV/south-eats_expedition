@@ -21,6 +21,7 @@ COUNTRIES = {
     "SG": "singapore",
     "TH": "thailand",
     "TL": "timor-leste",
+    "VN": "vietnam",
 }
 PROFILE_FIELDS = [
     "history", "geography", "religion", "languages", "ethnography",

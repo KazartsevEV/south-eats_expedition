@@ -263,6 +263,11 @@ TYPE_BY_NAME.update({
     "Gua Tempurung": "cave",
 })
 
+TYPE_BY_NAME.update({
+    "Tabin Wildlife Reserve": "protected_area",
+    "Imbak Canyon Conservation Area": "protected_area",
+})
+
 TAG_ALIASES = {
     "unesco": "unesco",
     "living heritage": "living_heritage",

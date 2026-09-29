@@ -461,7 +461,7 @@ def build():
             "legacy_ids": [legacy_id],
             "migration": {
                 "source_kind": place.get("kind"),
-                "note": "Legacy route regions/hubs are kept as geographic_area until formal administrative or settlement identity is verified.",
+                "note": "Служебные маршрутные регионы и узлы временно сохраняются как geographic_area, пока не подтверждена их точная административная или поселенческая принадлежность.",
             },
         }
         region_profile = region_profile_by_country_name.get((code, place.get("name")))
@@ -487,7 +487,7 @@ def build():
                 "source_refs": region_source_refs,
                 "qa": {
                     "source_refs_complete": bool(region_source_refs),
-                    "note": "Regional profile has canonical source refs." if region_source_refs else "Existing local profile migrated from the country source; fact-level source normalization remains queued.",
+                    "note": "У региональной справки есть канонические ссылки на источники." if region_source_refs else "Существующая региональная справка перенесена из исходных данных страны; привязка источников к отдельным фактам ещё требует нормализации.",
                 },
             }
             entity["migration"]["local_reference_status"] = "migrated_existing_region_profile"

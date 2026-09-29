@@ -418,7 +418,7 @@ function inheritedGeoContextHTML(child,parent){
   blocks=blocks.filter(Boolean);
   if(!blocks.length)return '';
   var pname=parent.names&&(parent.names.ru||parent.names.primary)||parent.id;
-  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Inherited regional context</div><h2>Контекст родительского региона</h2></div><p>Это не локальные факты этой точки. Показаны только безопасные для наследования поля из <b>'+esc(pname)+'</b>: health, safety и languages. Климат, море, геология, рельеф и природа не наследуются автоматически.</p></div><div class="fact-grid">'+blocks.join('')+'</div></section>';
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Контекст родительского региона</div><h2>Контекст родительского региона</h2></div><p>Это не локальные факты этой точки. Показаны только те сведения из <b>'+esc(pname)+'</b>, которые допустимо наследовать: здоровье, безопасность и языки. Климат, море, геология, рельеф и природа не наследуются автоматически.</p></div><div class="fact-grid">'+blocks.join('')+'</div></section>';
 }
 function resetMaps(){
   state.mapInstances.forEach(function(m){try{m.remove()}catch(e){}});

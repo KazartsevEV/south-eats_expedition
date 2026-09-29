@@ -6,6 +6,8 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from build_expedition_layers import build_expedition_layers
+
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
@@ -1186,6 +1188,10 @@ def build():
         "next_work_rule": "country -> class -> object -> research -> normalization -> GPS/elevation -> sources -> object QA -> class QA -> country QA",
     })
 
+    # Maps and HTML are read models: they are rebuilt from the canonical files
+    # above and never become a second source of geographic facts.
+    layer_counts = build_expedition_layers(release, latest["schema_version"])
+
     manifest_path = release / "manifest.json"
     manifest = load(manifest_path)
     manifest["project_id"] = "expedition_sea"
@@ -1201,8 +1207,10 @@ def build():
         "surface_types": "taxonomy/surface-types.json",
         "source_types": "taxonomy/source-types.json",
     }
-    manifest["search"] = "search/global.json"
-    manifest["home"] = "views/home.json"
+    manifest["search"] = {"global": "search/global.json"}
+    manifest["views"] = {"home": "views/home.json"}
+    manifest["maps"] = {"index": "maps/index.json", "sea": "maps/sea/manifest.json"}
+    manifest["site"] = {"home": "site/index.html", "map": "site/map/index.html"}
     manifest["canonical_layer"] = {
         "status": "migration_active",
         "canonical_roots": [
@@ -1215,7 +1223,7 @@ def build():
             "sources",
             "taxonomy",
         ],
-        "derived_roots": ["search", "views", "qa"],
+        "derived_roots": ["search", "views", "maps", "site", "qa"],
         "legacy_compatibility_read_model": True,
     }
     manifest.setdefault("totals", {}).update({
@@ -1224,6 +1232,7 @@ def build():
         "canonical_lodging": len(canonical_lodging_ids),
         "canonical_sources": len(canonical_source_ids),
         "canonical_media": len(media_registry),
+        **layer_counts,
     })
     manifest["files"] = [
         file_entry(path, release)

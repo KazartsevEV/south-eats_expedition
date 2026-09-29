@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>urban_escape</title><meta name="expedition-view" content="/views/tags/urban_escape.json"></head>
+<body><main id="app"><h1>urban_escape</h1><p>Данные страницы загружаются из производного JSON-представления.</p></main>
+<script type="module">const p=document.querySelector('meta[name="expedition-view"]').content;
+fetch(p).then(r=>r.json()).then(v=>document.querySelector('#app').dataset.ready=String(Boolean(v)));
+</script></body></html>

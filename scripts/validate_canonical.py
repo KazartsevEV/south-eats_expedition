@@ -165,7 +165,9 @@ def main():
         "countries",
         "taxonomy",
         "search",
-        "home",
+        "views",
+        "maps",
+        "site",
     ]:
         if key not in manifest:
             fail(f"manifest missing canonical field: {key}")
@@ -190,8 +192,12 @@ def main():
         if not rel:
             fail(f"manifest taxonomy missing {key}")
         require_file(release, rel)
-    require_file(release, manifest["search"])
-    require_file(release, manifest["home"])
+    require_file(release, manifest["search"]["global"])
+    require_file(release, manifest["views"]["home"])
+    require_file(release, manifest["maps"]["index"])
+    require_file(release, manifest["maps"]["sea"])
+    require_file(release, manifest["site"]["home"])
+    require_file(release, manifest["site"]["map"])
 
     for rel in [
         "schema/schema-version.json",

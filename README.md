@@ -4,7 +4,7 @@ Public, versioned CDN read model for the **Expedition South East** expedition kn
 
 ## Current architecture
 
-Schema `2.4.0` is built top-down and traversed recursively:
+The current schema version is declared by each release in `schema/schema-version.json` and is built top-down:
 
 `project → Southeast Asia → country → geography / class family → primary class → object`
 
@@ -66,6 +66,25 @@ Object geodata uses WGS84 / EPSG:4326. A physical object may expose a primary op
 - missing geodata is exposed in QA gaps and is never replaced by invented zero values.
 
 The generated contract is published at `/cdn/v2/<release>/schema/geodata-contract.json`.
+
+## Canonical migration and derived layers
+
+The release keeps the researched source records and their stable registry IDs. Canonical roots are `geo`,
+`countries`, `objects`, `infrastructure`, `routes`, `media`, `sources`, and `taxonomy`. Search, views, maps,
+site HTML, and QA are deterministic read models rebuilt by the scripts; they must not be edited directly.
+
+`manifest.json` is the release entry point. It links the global search and home view, the SEA/country/region
+map manifests, and static site entry points. Map coordinates are projected from canonical entities rather
+than maintained in a parallel map dataset.
+
+### Migration audit / remaining gaps
+
+- Six researched countries are published; the eleven-country catalog retains explicit placeholders.
+- Existing stable object, geography, source, lodging, route, and media IDs are preserved.
+- Media metadata is canonical, but most published objects do not yet meet the five-image gallery rule.
+- Local 960×640 WebP previews are not fabricated. Missing binaries remain a QA gap until a suitable,
+  rights-compatible representative image has been selected and encoded.
+- GeoJSON boundary/linear geometries, infrastructure coverage, and route coverage remain incremental.
 
 ## Visual reconnaissance
 

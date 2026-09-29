@@ -18,6 +18,7 @@ COUNTRIES = {
     "MY": "malaysia",
     "MM": "myanmar",
     "PH": "philippines",
+    "SG": "singapore",
 }
 PROFILE_FIELDS = [
     "history", "geography", "religion", "languages", "ethnography",

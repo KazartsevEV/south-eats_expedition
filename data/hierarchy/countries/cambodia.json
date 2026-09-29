@@ -4,9 +4,10 @@
     "country_code": "KH",
     "country_slug": "cambodia",
     "status": "country_geography_draft_for_import_after_brunei",
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-29",
     "next_level": "object_level_geo_qa_and_country_profile_source_normalization",
-    "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; legacy route-place IDs remain migration-only."
+    "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; legacy route-place IDs remain migration-only.",
+    "reference_binding": "Formal nodes with source_region_names reuse existing country regional profiles; hierarchy remains ownership skeleton."
   },
   "rules": {
     "parentage": "Only documented administrative containment is encoded as hierarchy.",
@@ -30,7 +31,10 @@
         "Siem Reap / Angkor"
       ],
       "notes_ru": "Провинция служит родительским узлом для Ангкора. Бенг-Мелеа и Пном-Кулен вынесены ниже в подтверждённые локальные и физико-географические узлы.",
-      "canonical_id": "geo_kh_0024"
+      "canonical_id": "geo_kh_0024",
+      "source_region_names": [
+        "Сиемреап / Ангкор"
+      ]
     },
     {
       "id": "kh:district:svay-leu",
@@ -77,7 +81,10 @@
         "Phnom Penh"
       ],
       "notes_ru": "Столица имеет отдельный административный статус; на этом этапе город используется как подтверждённый родительский узел без выдумывания районов хан и сангкат для каждого объекта.",
-      "canonical_id": "geo_kh_0027"
+      "canonical_id": "geo_kh_0027",
+      "source_region_names": [
+        "Пномпень"
+      ]
     },
     {
       "id": "kh:province:preah-vihear",
@@ -96,7 +103,10 @@
         "Преахвихеа / северный храмовый пояс"
       ],
       "notes_ru": "ЮНЕСКО прямо помещает храм Преахвихеа и Кох-Кер в провинцию Преахвихеа; Преах-Кхан-Компонг-Свай — в коммуну Сангкум-Тхмей той же провинции.",
-      "canonical_id": "geo_kh_0028"
+      "canonical_id": "geo_kh_0028",
+      "source_region_names": [
+        "Преахвихеа / северный храмовый пояс"
+      ]
     },
     {
       "id": "kh:province:kampong-thom",
@@ -127,7 +137,10 @@
         "острова Сиамского залива / Ко-Ронг"
       ],
       "notes_ru": "Провинция служит родительским узлом для островов Ко-Ронг; морская и островная география будет детализироваться отдельно при покарточной проверке.",
-      "canonical_id": "geo_kh_0030"
+      "canonical_id": "geo_kh_0030",
+      "source_region_names": [
+        "острова Сиамского залива / Ко-Ронг"
+      ]
     },
     {
       "id": "kh:province:banteay-meanchey",
@@ -169,7 +182,10 @@
       "legacy_region_names": [
         "Баттамбанг"
       ],
-      "canonical_id": "geo_kh_0033"
+      "canonical_id": "geo_kh_0033",
+      "source_region_names": [
+        "Баттамбанг"
+      ]
     },
     {
       "id": "kh:province:koh-kong",
@@ -186,7 +202,10 @@
         "Кардамоновы горы / юго-запад"
       ],
       "notes_ru": "Объект использует Чи-Пхат как практический вход; физико-географическая система Кардамоновых гор вынесена в отдельный параллельный узел.",
-      "canonical_id": "geo_kh_0034"
+      "canonical_id": "geo_kh_0034",
+      "source_region_names": [
+        "Кардамоновы горы / юго-запад"
+      ]
     },
     {
       "id": "kh:geographic-area:cardamom-mountains",
@@ -217,7 +236,10 @@
         "Такео / наследие нижнего Меконга"
       ],
       "notes_ru": "ЮНЕСКО помещает Ангкор-Борей и Пном-Да в провинцию Такео.",
-      "canonical_id": "geo_kh_0036"
+      "canonical_id": "geo_kh_0036",
+      "source_region_names": [
+        "Такео / наследие нижнего Меконга"
+      ]
     },
     {
       "id": "kh:province:kratie",
@@ -233,7 +255,10 @@
       "legacy_region_names": [
         "Кратьэх / средний Меконг"
       ],
-      "canonical_id": "geo_kh_0037"
+      "canonical_id": "geo_kh_0037",
+      "source_region_names": [
+        "Кратьэх / средний Меконг"
+      ]
     },
     {
       "id": "kh:province:kampot",
@@ -249,7 +274,10 @@
       "legacy_region_names": [
         "Kampot / Бокор"
       ],
-      "canonical_id": "geo_kh_0038"
+      "canonical_id": "geo_kh_0038",
+      "source_region_names": [
+        "Кампот / Бокор"
+      ]
     },
     {
       "id": "kh:province:kandal",
@@ -280,7 +308,10 @@
         "Тонлесап"
       ],
       "notes_ru": "Озеро и биосферный резерват охватывают несколько провинций; объект не следует искусственно подчинять одному провинциальному родительскому узлу.",
-      "canonical_id": "geo_kh_0040"
+      "canonical_id": "geo_kh_0040",
+      "source_region_names": [
+        "Тонлесап"
+      ]
     }
   ],
   "sources": [

@@ -260,13 +260,52 @@ async function countryBoundary(cc){
   if(!state.boundary.has(cc))state.boundary.set(cc,maybe(CDN+state.release+'/geo/geometries/geo_'+cc+'.geojson'));
   return state.boundary.get(cc);
 }
-function scalar(v){
+var FIELD_LABELS={
+  summary:'Кратко',scope_note:'Границы применимости',rainfall_pattern:'Распределение осадков',floods:'Наводнения и подтопления',
+  risk_context:'Что учитывать',live_monitoring:'Оперативный мониторинг',dengue_reference_2022:'Денге: справочный фон 2022 года',
+  incidence_per_100k:'Случаев на 100 тыс.',interpretation:'Как понимать данные',crime:'Преступность',dataset_scope:'Территориальная основа',
+  public_transport:'Общественный транспорт',dynamic_status:'Текущий статус',water_context:'Морские условия',tides:'Приливы и отливы',
+  official_source:'Официальный источник',turtle_context:'Морские черепахи',protected_marine:'Морская охраняемая территория',
+  temperature_context:'Температура',documented_biodiversity:'Биоразнообразие',dangerous_animals:'Опасные животные',poisonous_plants:'Ядовитые растения',
+  malaria:'Малярия',mountain_weather:'Горная погода',mount_kinabalu:'Восхождение на Кинабалу',danum:'Долина Данум',kinabatangan:'Кинабантанган',
+  expedition:'Экспедиционные риски',security_advisory:'Предупреждения безопасности',lahad_datu_danum:'Лахад-Дату → Данум',
+  sandakan_kinabatangan:'Сандакан → Кинабантанган',expedition_note:'Примечание по логистике',delta:'Дельта',sarawak_delta:'Дельта Саравака',
+  niah:'Ниа',forest:'Лес',wilderness:'Дикая местность',park_access:'Доступ в парк',kelabit:'Келабиты',
+  dominant_expedition_risks:'Основные экспедиционные риски',air:'Авиация',road:'Дорога',marine:'Море',fauna_and_flora:'Фауна и флора',
+  documented_examples:'Характерные виды',protected_status:'Охранный статус',weather:'Морская погода',marine_life:'Морские обитатели',
+  gateway:'Транспортный узел',hydrography:'Гидрография',royal_belum:'Royal Belum',documented_fauna:'Отмеченная фауна',flora:'Флора',
+  fuel:'Топливо',sipadan:'Сипадан',tun_sakaran:'Tun Sakaran',terrestrial:'Наземная природа',marine_access:'Доступ по морю',
+  rungus:'Рунгусы',turtle_islands:'Turtle Islands',annual_reference:'Годовая климатическая справка',annual_reference_status:'Статус годовой нормы',
+  mean_annual_temperature_c:'Среднегодовая температура, °C',annual_precipitation_mm:'Осадки за год, мм',annual_precipitation_uncertainty_mm:'Неопределённость осадков, мм',
+  data_basis:'Основа данных',caveat:'Ограничения данных',best_period:'Предпочтительный период',role:'Роль в логистике',
+  rail:'Железная дорога',water:'Водный транспорт',police_district_2023:'Данные полицейского округа за 2023 год',
+  assault_all:'Преступления против личности',property_all:'Имущественные преступления',date:'Дата среза',unit:'Единица учёта',
+  mapping_note:'Привязка к территории',protected_area:'Охраняемая территория',ecosystems:'Экосистемы',habitats:'Местообитания',
+  note:'Примечание',status:'Статус',area:'Территория'
+};
+var VALUE_LABELS={
+  police_district:'полицейский округ',
+  local_dataset_available_not_yet_aggregated:'локальные данные доступны, но ещё не агрегированы',
+  district_data_available_not_yet_aggregated:'районные данные доступны, но ещё не агрегированы',
+  official_table_identified_values_not_normalized:'официальная таблица найдена; значения по конкретной станции ещё не нормализованы',
+  not_normalized_locally:'локальные данные ещё не нормализованы',
+  not_reduced_to_one_list:'единый список неприменим без локальной привязки',
+  urban_crime_metric_not_useful_for_remote_park:'городская статистика преступности неприменима к удалённому парку',
+  true:'да',false:'нет'
+};
+function fieldLabel(k){return FIELD_LABELS[k]||k.replace(/_/g,' ')}
+function scalar(v,key){
   if(v==null||v==='')return '';
-  if(typeof v==='string'||typeof v==='number'||typeof v==='boolean')return esc(v);
-  if(Array.isArray(v))return '<ul>'+v.map(function(x){return '<li>'+scalar(x)+'</li>'}).join('')+'</ul>';
+  if(typeof v==='boolean')return v?'да':'нет';
+  if(typeof v==='string'){
+    var mapped=VALUE_LABELS[v];
+    return esc(mapped||v);
+  }
+  if(typeof v==='number')return esc(v);
+  if(Array.isArray(v))return '<ul>'+v.map(function(x){return '<li>'+scalar(x,key)+'</li>'}).join('')+'</ul>';
   if(typeof v==='object'){
-    return '<ul>'+Object.keys(v).filter(function(k){return v[k]!=null&&v[k]!==''&&k!=='source_refs'&&k!=='qa'}).map(function(k){
-      return '<li><b>'+esc(k.replace(/_/g,' '))+':</b> '+scalar(v[k])+'</li>';
+    return '<ul>'+Object.keys(v).filter(function(k){return v[k]!=null&&v[k]!==''&&k!=='source_refs'&&k!=='qa'&&k!=='source_ids'}).map(function(k){
+      return '<li><b>'+esc(fieldLabel(k))+':</b> '+scalar(v[k],k)+'</li>';
     }).join('')+'</ul>';
   }
   return esc(v);

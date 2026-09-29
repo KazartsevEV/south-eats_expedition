@@ -126,6 +126,10 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .fact-card p,.fact-card li{color:#cbd3ce}
 .fact-card ul{margin:7px 0 0;padding-left:18px}
 .country-label-marker{background:transparent;border:0;color:#eef4ef;font-weight:800;font-size:12px;text-shadow:0 1px 4px #000,0 0 8px #000;white-space:nowrap}
+.map-gap{height:100%;min-height:220px;display:grid;place-items:center;text-align:center;padding:28px;color:var(--muted);background:linear-gradient(145deg,#121814,#0b0f0d);border:1px dashed var(--line);border-radius:inherit}
+.map-gap b{display:block;color:var(--text);margin-bottom:4px}
+.map-coverage{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
+.map-link{display:inline-block;margin-top:7px;color:var(--accent);font-weight:750}
 .locality-note{border-left:3px solid var(--accent2);padding:10px 12px;background:var(--panel);color:var(--muted);margin:12px 0 18px}
 .footer{border-top:1px solid var(--line);padding:22px 0 0;margin-top:50px;color:var(--muted);font-size:11px}
 .leaflet-container{font-family:inherit;background:#111613}
@@ -409,41 +413,57 @@ function bindObjectGrid(){
     if(obs)obs.observe(card);else if(o)hydratePreview(card,o);
   });
 }
+function mappedObjects(objects){
+  return (objects||[]).filter(function(o){return validCoord(o.coordinates)});
+}
+function mapCoverageHTML(objects,label){
+  var total=(objects||[]).length,mapped=mappedObjects(objects).length,missing=total-mapped;
+  return '<div class="map-coverage"><span class="pill">'+esc(label||'Карта')+': <b>'+mapped+'/'+total+'</b> с GPS</span>'+
+    (missing?'<span class="pill">без GPS <b>'+missing+'</b></span>':'<span class="pill"><b>полное покрытие</b></span>')+'</div>';
+}
 function addBaseMap(id,objects,opts){
   opts=opts||{};
   var el=document.getElementById(id);if(!el||!window.L)return null;
+  var rows=mappedObjects(objects);
+  if(!rows.length){
+    el.innerHTML='<div class="map-gap"><div><b>Карта не показана</b>'+esc(opts.emptyMessage||'У связанных объектов пока нет нормализованных GPS-координат.')+'</div></div>';
+    return null;
+  }
   var map=L.map(el,{zoomControl:true,minZoom:2,worldCopyJump:true});
   state.mapInstances.push(map);
-  if(!opts.englishOnly){
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-      maxZoom:18,attribution:'© OpenStreetMap contributors'
-    }).addTo(map);
-  }else{
-    el.style.background='linear-gradient(180deg,#17211d,#0b100e)';
-  }
+
+  // Reliable geographic context is preferable to an empty decorative canvas.
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    maxZoom:18,attribution:'© OpenStreetMap contributors'
+  }).addTo(map);
+
   var pts=[];
-  (objects||[]).forEach(function(o){
-    if(!validCoord(o.coordinates))return;
+  rows.forEach(function(o){
     var lat=Number(o.coordinates.lat),lon=Number(o.coordinates.lon);pts.push([lat,lon]);
-    var m=L.circleMarker([lat,lon],{radius:5,weight:1,fillOpacity:.72}).addTo(map);
-    m.bindPopup('<div class="popup-title">'+esc(o.title||o.id)+'</div><div class="popup-meta">'+esc(className(o.class_id))+'</div>');
-    m.on('click',function(){setTimeout(function(){var p=m.getPopup();if(p&&p.isOpen()){var node=p.getElement();if(node)node.onclick=function(){routeTo('#/object/'+o.id)}}},0)});
+    var m=L.circleMarker([lat,lon],{radius:6,weight:2,fillOpacity:.82}).addTo(map);
+    var title=esc(o.title||o.id),cls=esc(className(o.class_id));
+    m.bindTooltip(title,{direction:'top',offset:[0,-5],opacity:.94});
+    m.bindPopup('<div class="popup-title">'+title+'</div><div class="popup-meta">'+cls+'</div><a class="map-link" href="#/object/'+encodeURIComponent(o.id)+'">Открыть карточку →</a>');
   });
+
   if(opts.englishOnly){
     Object.keys(COUNTRY).forEach(function(cc){
-      var rows=(objects||[]).filter(function(o){return ccOf(o.id)===cc&&validCoord(o.coordinates)});
-      if(!rows.length)return;
-      var lat=rows.reduce(function(s,o){return s+Number(o.coordinates.lat)},0)/rows.length;
-      var lon=rows.reduce(function(s,o){return s+Number(o.coordinates.lon)},0)/rows.length;
+      var countryRows=rows.filter(function(o){return ccOf(o.id)===cc});
+      if(!countryRows.length)return;
+      var lat=countryRows.reduce(function(s,o){return s+Number(o.coordinates.lat)},0)/countryRows.length;
+      var lon=countryRows.reduce(function(s,o){return s+Number(o.coordinates.lon)},0)/countryRows.length;
       L.marker([lat,lon],{interactive:false,icon:L.divIcon({
-        className:'country-label-marker',html:esc(COUNTRY[cc].en),iconSize:[100,18],iconAnchor:[50,9]
+        className:'country-label-marker',html:esc(COUNTRY[cc].en),iconSize:[110,18],iconAnchor:[55,9]
       })}).addTo(map);
     });
   }
-  if(pts.length){
+
+  if(pts.length===1){
+    map.setView(pts[0],opts.singleZoom||Math.min(opts.maxZoom||12,12));
+  }else{
     var bounds=L.latLngBounds(pts);
     map.fitBounds(bounds.pad(opts.pad==null?.12:opts.pad),{maxZoom:opts.maxZoom||8});
-  }else map.setView([7,110],4);
+  }
   return map;
 }
 function renderHome(){
@@ -466,18 +486,18 @@ function renderHome(){
     '<span class="pill">объектов <b>'+state.objects.length+'</b></span>'+
     '<span class="pill">geo <b>'+state.geo.length+'</b></span></div></section>'+
     seaReferenceHTML()+
-    '<section class="layout-map"><div class="map-frame"><div class="map-overlay"><strong>Southeast Asia</strong><span>Основные подписи этой карты — English. Локальные подробности открываются на geo-уровнях.</span></div><div id="map"></div></div>'+
-    '<aside class="map-side"><h3>Слои карты</h3><div class="layer-list">'+
-    '<div class="layer"><span>Объекты</span><span class="layer-status live">LIVE</span></div>'+
+    '<section class="layout-map"><div class="map-frame"><div class="map-overlay"><strong>Southeast Asia</strong><span>На карте отображаются только объекты с подтверждёнными canonical GPS.</span></div><div id="map"></div></div>'+
+    '<aside class="map-side"><h3>Слои карты</h3>'+mapCoverageHTML(state.objects,'Объекты')+'<div class="layer-list">'+
+    '<div class="layer"><span>Объекты с GPS</span><span class="layer-status live">'+mappedObjects(state.objects).length+'</span></div>'+
     '<div class="layer"><span>Geo hierarchy</span><span class="layer-status live">'+state.geo.length+'</span></div>'+
     '<div class="layer"><span>Маршруты / infrastructure</span><span class="layer-status pending">следующий слой</span></div></div>'+
-    '<div class="arch-note">На главной намеренно нет локальных подписей OSM: country labels выводятся на английском из интерфейсного справочника.</div></aside></section>'+
+    '<div class="arch-note">Точки без GPS не рисуются и не используются для расчёта масштаба. Английские названия стран добавляются поверх базовой карты для стран, где уже есть map-ready объекты.</div></aside></section>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Countries</div><h2>Страны Юго-Восточной Азии</h2></div><p>Опубликованные страны открываются; остальные видны как очередь миграции.</p></div><div class="country-grid">'+cards+'</div></section>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Attractions</div><h2>Банк достопримечательностей</h2></div><p>Флаг, класс, географические теги и краткая аннотация. Полная карточка загружается при открытии объекта.</p></div>'+
     '<div class="toolbar"><input class="control" id="homeQ" placeholder="Поиск по банку…"><select class="control" id="homeCountry"><option value="">Все страны</option>'+Object.keys(counts).sort().map(function(cc){return '<option value="'+cc+'">'+esc(cname(cc).name)+'</option>'}).join('')+'</select><select class="control" id="homeClass"><option value="">Все классы</option>'+state.classes.map(function(x){return '<option value="'+esc(x.id)+'">'+esc(x.label_ru||x.id)+'</option>'}).join('')+'</select><button class="btn" id="homeReset">Сбросить</button></div>'+
     '<div id="homeObjectCount" class="hero-meta"></div><div id="homeObjects" class="object-grid"></div></section>'+
     '<footer class="footer">CDN read-model · <code>cdn/v2/latest.json</code></footer>';
-  addBaseMap('map',state.objects,{maxZoom:6,pad:.08,englishOnly:true});
+  addBaseMap('map',state.objects,{maxZoom:6,pad:.08,englishOnly:true,emptyMessage:'В текущем release нет объектов с GPS.'});
   document.querySelectorAll('[data-country]').forEach(function(x){x.onclick=function(){routeTo('#/country/'+x.getAttribute('data-country'))}});
   var q=document.getElementById('homeQ'),co=document.getElementById('homeCountry'),cl=document.getElementById('homeClass');
   function run(){
@@ -506,13 +526,14 @@ async function renderCountry(cc){
     '<p>'+esc(data&&data.profile&&(data.profile.summary||data.profile.narrow)||'Страновой справочный слой CDN.')+'</p>'+
     '<div class="hero-meta"><span class="pill">объектов <b>'+objs.length+'</b></span><span class="pill">geo узлов <b>'+regions.length+'</b></span><span class="pill">классов <b>'+Object.keys(classes).length+'</b></span></div></div>'+
     countryReferenceHTML(data)+
+    mapCoverageHTML(objs,'Карта страны')+
     '<div class="country-map" id="countryMap"></div>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Geography</div><h2>Провинции, регионы, города и местности</h2></div><p>Geo-иерархия отделена от банка объектов. Локальные климат и риски должны жить именно здесь.</p></div>'+
     '<div class="region-grid">'+regions.filter(function(g){return regionObjectCount(g.id)>0}).map(function(g){return '<article class="region-card" data-region="'+esc(g.id)+'"><h3>'+esc(g.name)+'</h3><p>'+esc(g.kind)+' · '+regionObjectCount(g.id)+' объектов</p></article>'}).join('')+'</div></section>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Банк достопримечательностей страны</h2></div></div>'+
     '<div class="toolbar"><input class="control" id="countrySearch" placeholder="Поиск внутри страны…"><select class="control" id="countryClass"><option value="">Все классы</option>'+Object.keys(classes).sort().map(function(id){return '<option value="'+esc(id)+'">'+esc(className(id))+' · '+classes[id]+'</option>'}).join('')+'</select><div></div><button class="btn" id="countryReset">Сбросить</button></div>'+
     '<div id="countryObjects" class="object-grid">'+objs.map(objectCard).join('')+'</div></section>';
-  addBaseMap('countryMap',objs,{maxZoom:8,pad:.14});
+  addBaseMap('countryMap',objs,{maxZoom:8,pad:.14,singleZoom:9,emptyMessage:'У объектов этой страны пока нет нормализованных GPS. Общая карта ЮВА здесь больше не подставляется.'});
   bindGo();bindObjectGrid();
   document.querySelectorAll('[data-region]').forEach(function(x){x.onclick=function(){routeTo('#/region/'+x.getAttribute('data-region'))}});
   var search=document.getElementById('countrySearch'),sel=document.getElementById('countryClass');
@@ -534,10 +555,11 @@ async function renderRegion(id){
     '<p>'+esc(full&&full.description&&(full.description.narrow||full.description.body)||'Локальный географический уровень справочника.')+'</p>'+
     '<div class="hero-meta"><span class="pill">geo id <b>'+esc(id)+'</b></span><span class="pill">объектов <b>'+objs.length+'</b></span></div></div>'+
     geoReferenceHTML(full)+
+    mapCoverageHTML(objs,'Карта территории')+
     '<div class="country-map" id="regionMap"></div>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Достопримечательности этой территории</h2></div></div>'+
     '<div class="object-grid">'+(objs.length?objs.map(objectCard).join(''):'<div class="empty">К этому geo-узлу пока нет привязанных объектов.</div>')+'</div></section>';
-  addBaseMap('regionMap',objs,{maxZoom:10,pad:.18});bindGo();bindObjectGrid();
+  addBaseMap('regionMap',objs,{maxZoom:10,pad:.18,singleZoom:11,emptyMessage:'Для этой территории нет ни одной связанной точки с canonical GPS. Карта не подменяется общим видом ЮВА.'});bindGo();bindObjectGrid();
 }
 function renderClasses(){
   resetMaps();
@@ -555,9 +577,10 @@ function renderClass(id,cc){
   items.push({label:className(id)});
   view.innerHTML=breadcrumb(items)+
     '<div class="page-head"><div class="eyebrow">Class</div><h1>'+esc(className(id))+'</h1><p>'+esc(id)+' · '+objs.length+' объектов в текущем срезе.</p></div>'+
+    mapCoverageHTML(objs,'Карта класса')+
     '<div class="country-map" id="classMap"></div>'+
     '<section class="section"><div class="object-grid">'+(objs.length?objs.map(objectCard).join(''):'<div class="empty">В текущем release объектов этого класса нет.</div>')+'</div></section>';
-  addBaseMap('classMap',objs,{maxZoom:7,pad:.12});bindGo();bindObjectGrid();
+  addBaseMap('classMap',objs,{maxZoom:7,pad:.12,singleZoom:9,emptyMessage:'В этом классе пока нет объектов с canonical GPS.'});bindGo();bindObjectGrid();
 }
 function narrativeHTML(n){
   var labels={overview:'Обзор',history:'История',culture:'Культура',geography:'География',geology:'Геология',ethnography:'Этнография',myths_beliefs:'Мифы и поверья'};
@@ -611,7 +634,10 @@ async function renderObject(id){
     '<div class="side-card"><h3>QA</h3><p><b>'+esc(d.qa&&d.qa.status||'—')+'</b></p><p class="popup-meta">'+esc(d.qa&&d.qa.last_reviewed_at||d.freshness&&d.freshness.checked_at||'—')+'</p></div></aside></div>';
   bindGo();
   var coord=(d.geo&&d.geo.primary_location)||o.coordinates;
-  addBaseMap('objectMap',[{id:id,title:d.names&&d.names.primary||id,class_id:d.classification&&d.classification.class_id,coordinates:coord}],{maxZoom:14,pad:.2});
+  addBaseMap('objectMap',[{id:id,title:d.names&&d.names.primary||id,class_id:d.classification&&d.classification.class_id,coordinates:coord}],{
+    maxZoom:14,singleZoom:13,pad:.2,
+    emptyMessage:'GPS объекта пока не нормализован. Пустая или приблизительная карта намеренно не показывается.'
+  });
 }
 function renderSearch(){
   resetMaps();
@@ -631,17 +657,18 @@ function renderSearch(){
 function renderMapPage(){
   resetMaps();
   view.innerHTML=breadcrumb([{label:'Главная',hash:'#/'},{label:'Карта'}])+
-    '<div class="page-head"><div class="eyebrow">Map</div><h1>Карта экспедиции</h1><p>Отдельный картографический уровень. Когда CDN получит GeoJSON и vector tiles, этот экран станет главным входом в географию справочника.</p></div>'+
-    '<section class="layout-map"><div class="map-frame"><div class="map-overlay"><strong>SEA / all objects</strong><span>Нажмите точку, чтобы открыть карточку.</span></div><div id="map"></div></div>'+
-    '<aside class="map-side"><h3>Проектные слои</h3><div class="layer-list">'+
-    '<div class="layer"><span>objects</span><span class="layer-status live">'+state.objects.length+'</span></div>'+
+    '<div class="page-head"><div class="eyebrow">Map</div><h1>Карта экспедиции</h1><p>Карта показывает только те объекты, у которых в canonical слое есть валидный WGS84 GPS. Непривязанные карточки не создают ложных точек.</p></div>'+
+    '<section class="layout-map"><div class="map-frame"><div class="map-overlay"><strong>SEA / map-ready objects</strong><span>Наведите на точку для названия; откройте popup для перехода в карточку.</span></div><div id="map"></div></div>'+
+    '<aside class="map-side"><h3>Покрытие</h3>'+mapCoverageHTML(state.objects,'Объекты')+'<div class="layer-list">'+
+    '<div class="layer"><span>map-ready objects</span><span class="layer-status live">'+mappedObjects(state.objects).length+'</span></div>'+
+    '<div class="layer"><span>без GPS</span><span class="layer-status pending">'+(state.objects.length-mappedObjects(state.objects).length)+'</span></div>'+
     '<div class="layer"><span>geo entities</span><span class="layer-status live">'+state.geo.length+'</span></div>'+
     '<div class="layer"><span>country polygons</span><span class="layer-status pending">pending build</span></div>'+
     '<div class="layer"><span>hydrography</span><span class="layer-status pending">pending build</span></div>'+
     '<div class="layer"><span>routes</span><span class="layer-status pending">pending build</span></div>'+
     '<div class="layer"><span>infrastructure</span><span class="layer-status pending">pending build</span></div>'+
     '<div class="layer"><span>viewpoints</span><span class="layer-status pending">pending build</span></div></div>'+
-    '<div class="arch-note">Слой карты — производный. Координаты остаются в canonical entities.</div></aside></section>';
+    '<div class="arch-note">Слой карты — производный. Координаты остаются в canonical entities. Никаких центров городов или стран вместо отсутствующего GPS объекта.</div></aside></section>';
   addBaseMap('map',state.objects,{maxZoom:7,pad:.08,englishOnly:true});bindGo();
 }
 function router(){

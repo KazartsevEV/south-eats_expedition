@@ -25,13 +25,14 @@
       "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны.",
       "v1.6.1 draft: 21/21 объектов получили WGS84 primary coordinates, coordinate_type, accuracy и source; для протяжённых парков/островов/реки reference point не выдаётся за вход. Высота заполняется только там, где найден надёжный источник, иначе остаётся null.",
       "v1.6.1 draft: визовый блок для паспорта РФ и MDAC перепроверены 2026-09-29 по Embassy of Malaysia Moscow / Immigration Department; общий drone baseline заменён на актуальную CAAM ATF-модель с 14 рабочими днями на стандартную заявку.",
-      "v1.6.2 draft: Malaysia expansion +10 objects (31 total): Taman Negara, Endau-Rompin Johor, Gunung Stong, Bako, Maliau Basin, Crocker Range/Salt Trail, Gomantong, Sungai Batu, Bujang Valley museum/candi landscape, Gua Tambun. Existing 21 preserved."
+      "v1.6.2 draft: Malaysia expansion +10 objects (31 total): Taman Negara, Endau-Rompin Johor, Gunung Stong, Bako, Maliau Basin, Crocker Range/Salt Trail, Gomantong, Sungai Batu, Bujang Valley museum/candi landscape, Gua Tambun. Existing 21 preserved.",
+      "v1.6.3 draft: second Malaysia expansion chunk +7; total 38."
     ],
     "object_card_upgrade_progress": {
-      "schema_target": "1.6.2",
-      "completed_objects": 31,
-      "total_objects": 31,
-      "status": "expanded_31_source_cards_complete_pending_structural_qa",
+      "schema_target": "1.6",
+      "completed_objects": 38,
+      "total_objects": 38,
+      "status": "expanded_38_source_cards_complete_pending_structural_qa",
       "updated": "2026-09-29"
     },
     "editorial_profile": {
@@ -44,17 +45,17 @@
     "geodata_upgrade_progress": {
       "schema_target": "2.10.10",
       "updated": "2026-09-29",
-      "completed_coordinates": 31,
-      "total_objects": 31,
-      "elevation_verified_objects": 13,
+      "completed_coordinates": 38,
+      "total_objects": 38,
+      "elevation_verified_objects": 18,
       "status": "coordinates_complete_elevation_partial",
-      "policy": "WGS84; entrances/trailheads/archaeological cores are typed explicitly; unknown elevation remains null."
+      "policy": "WGS84; unknown elevation remains null."
     },
     "country_expansion_qa": {
-      "status": "31_objects_expansion_chunk_added_pending_build_validate",
+      "status": "38_objects_two_expansion_chunks_pending_build_validate",
       "previous_objects": 21,
       "added_objects": 10,
-      "current_objects": 31,
+      "current_objects": 38,
       "added_names": [
         "Taman Negara National Park",
         "Endau-Rompin National Park (Johor)",
@@ -68,7 +69,16 @@
         "Gua Tambun rock art site"
       ],
       "checked_at": "2026-09-29",
-      "rule": "No existing object removed; new objects require authoritative access source, typed GPS, water/overnight, narrative, visual_recon and provenance."
+      "rule": "No existing object removed; new objects require authoritative access source, typed GPS, water/overnight, narrative, visual_recon and provenance.",
+      "added_second_chunk": [
+        "Fairy Cave and Wind Cave Nature Reserves",
+        "Gunung Gading National Park",
+        "Tawau Hills Park",
+        "Batang Ai National Park and Iban longhouse landscape",
+        "Gunung Jerai Geoforest Park",
+        "Tasik Chini Biosphere Reserve",
+        "Gua Tempurung"
+      ]
     }
   },
   "overview": {
@@ -10829,6 +10839,2092 @@
           "public_transport": "До Tambun/Ipoh — городской транспорт, но точный удобный маршрут к trail access не стабилен; последний участок лучше такси/ride-hailing.",
           "last_mile": "Около 0.5 км подхода + лестничный подъём по вторичному полевому описанию.",
           "mobility_notes": "Короткий подход по ровной периферии поля и затем ступени/уклон к скальному навесу."
+        }
+      },
+      {
+        "name": "Fairy Cave and Wind Cave Nature Reserves",
+        "class": "expanded",
+        "interest": [
+          "cave",
+          "karst",
+          "limestone",
+          "bats",
+          "geology",
+          "nature_reserve"
+        ],
+        "why_go": "Две разные карстовые системы Bau в одном компактном районе: Fairy Cave — высокий светлый rock chamber с растительностью, Wind Cave — тёмная речная пещера с колониями летучих мышей и настилом.",
+        "narrow": "Парные известняковые пещеры Bau: светлая Fairy Cave и тёмная Wind Cave с подземным ручьём и летучими мышами.",
+        "traveler_card": {
+          "location": {
+            "region": "Sarawak / Bau karst",
+            "nearest_hub": "Bau / Kuching",
+            "coordinates": {
+              "lat": 1.3817,
+              "lon": 110.1171,
+              "elevation_m": 50
+            },
+            "coordinate_type": "cave_entrance",
+            "accuracy": "medium",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Fairy Cave Nature Reserve",
+              "publisher": "published gazetteer",
+              "url": "https://www.researchgate.net/publication/372371713_HISTORY_ANNOTATED_GAZETTEER_AND_BIBLIOGRAPHY_OF_SARAWAK_ORNITHOLOGY",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "elevation_source": {
+              "type": "map",
+              "title": "Fairy Cave elevation",
+              "publisher": "published gazetteer",
+              "url": "https://www.researchgate.net/publication/372371713_HISTORY_ANNOTATED_GAZETTEER_AND_BIBLIOGRAPHY_OF_SARAWAK_ORNITHOLOGY",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "geo_points": [
+              {
+                "name": "Wind Cave Nature Reserve",
+                "type": "cave_entrance",
+                "coordinates": {
+                  "lat": 1.41525,
+                  "lon": 110.13515,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "coordinate_source": {
+                  "type": "academic",
+                  "title": "Wind Cave Nature Reserve study area",
+                  "publisher": "Universiti Malaysia Sarawak research",
+                  "url": "https://www.researchgate.net/publication/324644631_Roosting_behaviour_and_site_mapping_of_cave_dwelling_bats_in_wind_cave_nature_reserve_Bau_Sarawak_Malaysian_Borneo",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              }
+            ]
+          },
+          "logistics": {
+            "access": "Обе пещеры находятся у Bau и связаны дорогой; Fairy и Wind Cave можно пройти самостоятельно по официальным visitor routes.",
+            "modes": {
+              "public_transport": "До Bau есть наземный транспорт из Kuching; последний участок удобнее такси/ride-hailing.",
+              "taxi_ridehail": "Практичный вариант из Kuching/Bau.",
+              "moped": "Простой дорожный доступ к парковке.",
+              "walking": "Fairy Cave: лестница к высокому входу и внутренние настилы; Wind Cave: plankwalk сквозь пещеру."
+            },
+            "walking": "Короткие visitor routes; между двумя reserves около 8 км по дороге.",
+            "water": "Воду брать в Bau/у visitor facilities; пещерную воду не считать питьевой.",
+            "overnight_and_camping": "Camping внутри пещер/резерватов не планировать; ночёвка — Bau или Kuching.",
+            "permit_or_guide": "Обычный дневной visitor route допускается без обязательного guide; билет/регистрация через Sarawak Forestry.",
+            "best_period": "Круглый год; после ливней ступени и настилы скользкие.",
+            "route_scale": "полдня–день",
+            "terrain_and_movement": "Лестницы, влажный известняк, настилы, тёмные участки Wind Cave.",
+            "self_guided_default": true
+          },
+          "climate": {
+            "best_period": "Утро/день.",
+            "heat_rain_notes": "Снаружи жарко и влажно; внутри прохладнее.",
+            "site_specific_notes": "Фонарик особенно нужен в Wind Cave."
+          },
+          "operations": {
+            "current_status": "open/verify",
+            "hours": "Wind Cave official ecotourism hours published as 08:00–17:00; Fairy Cave hours verify at booking.",
+            "ticket": "Sarawak Forestry e-ticket / current fee schedule.",
+            "closure_notes": "Visitor numbers and cave access may be restricted.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/56"
+          },
+          "safety": {
+            "crime_context": "Отдельной официальной статистики преступности по объекту нет; важнее природные и операционные риски.",
+            "main_risks": [
+              "жара и обезвоживание",
+              "скользкие тропы после дождя",
+              "мокрые лестницы/настил",
+              "не беспокоить летучих мышей"
+            ],
+            "sensitive_areas": [],
+            "confidence": "операционные риски"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Fairy Cave лучше при дневном боковом свете; Wind Cave — контраст входов и тёмных проходов.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "CAAM rules apply; protected areas may impose additional restrictions."
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft System (UAS)",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Внутри cave reserve соблюдать SFC rules; не беспокоить bats.",
+            "visual_scouting": {
+              "best_time": "late_morning / afternoon",
+              "best_weather_light": "Fairy Cave зависит от лучей через большой вход; Wind Cave почти не зависит от наружного света.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "fairy",
+                  "name": "Fairy Cave main chamber",
+                  "description": "Высокий освещённый chamber с зеленью на известняке.",
+                  "coordinates": {
+                    "lat": 1.3817,
+                    "lon": 110.1171,
+                    "elevation_m": 50
+                  },
+                  "access": "Лестница и visitor walkway.",
+                  "view": {
+                    "description": "карстовый chamber и растительность"
+                  },
+                  "best_time": "late_morning",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "объём chamber"
+                    }
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Wind/Fairy Cave context",
+                    "publisher": "Sarawak Forestry Corporation",
+                    "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/56",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "После дождей известняк темнее, но ступени скользкие."
+              ],
+              "video_activity": [
+                "движение света по Fairy Cave",
+                "bat roost context in Wind Cave"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "пещерный объём"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Wind Cave и Fairy Cave — соседние, но визуально и экологически разные известняковые системы Bau. Sarawak Forestry охраняет обе как nature reserves; Wind Cave важна также как место обитания cave bats, Fairy Cave — как большой светлый chamber и limestone flora.",
+            "culture_ethnography": null,
+            "geography_geology": "Обе пещеры относятся к известняковому карсту Bau в Sarawak Delta Geopark.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "geology",
+                "content": "Карст Bau образует отдельные пещерные холмы; Wind Cave прорезана подземным водотоком, Fairy Cave раскрывается крупным высоким chamber."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "В Wind Cave реально нужен фонарь.",
+              "После дождя лестницы Fairy Cave и настилы становятся скользкими."
+            ]
+          },
+          "accommodation": []
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fairy%20Cave%2C%20Bau%2C%20Sarawak.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Fairy_Cave,_Bau,_Sarawak.jpg",
+          "provider": "Wikimedia Commons",
+          "license": null,
+          "artist": null,
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fairy%20Cave%2C%20Bau%2C%20Sarawak.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Fairy_Cave,_Bau,_Sarawak.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wind%20Cave%20Nature%20Reserve%20Sarawak.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Wind_Cave_Nature_Reserve_Sarawak.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/56",
+            "publisher": "Sarawak Forestry Corporation",
+            "used_for": [
+              "official access",
+              "Fairy/Wind Cave relation",
+              "visitor route"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://forestry.sarawak.gov.my/web/subpage/webpage_view/1014",
+            "publisher": "Forest Department Sarawak",
+            "used_for": [
+              "gazetted reserve status"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://sarawakforestry.com/latest-revised-sops-for-activities-allowed-at-our-national-parks-and-nature-reserve/sops-in-tpas-28-aug-2020/",
+            "publisher": "Sarawak Forestry",
+            "used_for": [
+              "Wind Cave visitor activities",
+              "hours"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "weather/season",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "route_meta": {
+          "region_ref": "Sarawak / Bau karst",
+          "locality_ref": "Bau / Kuching",
+          "transport_modes": {
+            "public_transport": "До Bau есть наземный транспорт из Kuching; последний участок удобнее такси/ride-hailing.",
+            "taxi_ridehail": "Практичный вариант из Kuching/Bau.",
+            "moped": "Простой дорожный доступ к парковке.",
+            "walking": "Fairy Cave: лестница к высокому входу и внутренние настилы; Wind Cave: plankwalk сквозь пещеру."
+          },
+          "walking": "Короткие visitor routes; между двумя reserves около 8 км по дороге.",
+          "water": "Воду брать в Bau/у visitor facilities; пещерную воду не считать питьевой.",
+          "overnight_and_camping": "Camping внутри пещер/резерватов не планировать; ночёвка — Bau или Kuching.",
+          "permit_or_guide": "Обычный дневной visitor route допускается без обязательного guide; билет/регистрация через Sarawak Forestry.",
+          "best_period": "Круглый год; после ливней ступени и настилы скользкие.",
+          "current_status": "open/verify",
+          "main_risks": [
+            "жара и обезвоживание",
+            "скользкие тропы после дождя",
+            "мокрые лестницы/настил",
+            "не беспокоить летучих мышей"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полдня–день",
+            "terrain_and_movement": "Лестницы, влажный известняк, настилы, тёмные участки Wind Cave.",
+            "physical_difficulty_policy": "длительность и уклон — параметры маршрута, не минусы",
+            "camping_assumption": "палатка доступна; ночёвка только по режиму территории",
+            "local_support": "Обычный дневной visitor route допускается без обязательного guide; билет/регистрация через Sarawak Forestry."
+          },
+          "guide_or_permit": "Обычный дневной visitor route допускается без обязательного guide; билет/регистрация через Sarawak Forestry.",
+          "access": "Обе пещеры находятся у Bau и связаны дорогой; Fairy и Wind Cave можно пройти самостоятельно по официальным visitor routes.",
+          "public_transport": "До Bau есть наземный транспорт из Kuching; последний участок удобнее такси/ride-hailing.",
+          "last_mile": "Короткие visitor routes; между двумя reserves около 8 км по дороге.",
+          "mobility_notes": "Лестницы, влажный известняк, настилы, тёмные участки Wind Cave."
+        }
+      },
+      {
+        "name": "Gunung Gading National Park",
+        "class": "expanded",
+        "interest": [
+          "national_park",
+          "rafflesia",
+          "rainforest",
+          "mountain",
+          "waterfall",
+          "hiking"
+        ],
+        "why_go": "Горный парк у Lundu, созданный для охраны Rafflesia tuan-mudae; кроме цветения — самостоятельные тропы к водопадам, viewpoints и вершине Gunung Gading.",
+        "narrow": "Горный лесной парк Саравака с Rafflesia tuan-mudae, водопадами и подъёмом на Gunung Gading.",
+        "traveler_card": {
+          "location": {
+            "region": "Sarawak / Lundu / Gunung Gading",
+            "nearest_hub": "Lundu / Kuching",
+            "coordinates": {
+              "lat": 1.690549,
+              "lon": 109.84583,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Gunung Gading National Park",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q65071172",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "object_elevation": {
+              "representative_m": 965,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "summit",
+              "accuracy": "high",
+              "source": {
+                "type": "official",
+                "title": "Gunung Gading summit height",
+                "publisher": "Sarawak Forestry Corporation",
+                "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/54",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29"
+            }
+          },
+          "logistics": {
+            "access": "Около 2 часов от Kuching до Lundu/park HQ; обычные park trails доступны самостоятельно после регистрации.",
+            "modes": {
+              "public_transport": "До Lundu возможен автобус/van; последний участок к парку — local transfer.",
+              "taxi_ridehail": "Из Lundu — локальное такси; из Kuching возможен дорогой direct transfer.",
+              "moped": "Дорожный доступ возможен.",
+              "walking": "Waterfall Trail и summit trail; вершина 965 м."
+            },
+            "walking": "От коротких троп к waterfalls до полноценного подъёма на Gunung Gading.",
+            "water": "У HQ есть инфраструктура; на трек брать воду.",
+            "overnight_and_camping": "Использовать только официальные park facilities/разрешённый camping; произвольный лагерь не планировать.",
+            "permit_or_guide": "Регистрация обязательна. Guide не обязателен для всех троп, но SFC рекомендует guide при поиске цветущей Rafflesia глубоко в лесу.",
+            "best_period": "Цветение Rafflesia непредсказуемо и длится 5–7 дней; звонить в park office перед выездом.",
+            "route_scale": "полдня–1 день",
+            "terrain_and_movement": "Горный влажный лес, водопады, корни, подъёмы.",
+            "self_guided_default": true
+          },
+          "climate": {
+            "best_period": "По текущему цветению и погоде.",
+            "heat_rain_notes": "Влажный тропический лес.",
+            "site_specific_notes": "Rafflesia нельзя планировать по календарю."
+          },
+          "operations": {
+            "current_status": "open",
+            "hours": "08:00–17:00 ежедневно по SFC.",
+            "ticket": "По текущему Sarawak Forestry fee schedule.",
+            "closure_notes": "Цветение не гарантируется.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/54"
+          },
+          "safety": {
+            "crime_context": "Отдельной официальной статистики преступности по объекту нет; важнее природные и операционные риски.",
+            "main_risks": [
+              "жара и обезвоживание",
+              "скользкие тропы после дождя",
+              "крутые влажные тропы"
+            ],
+            "sensitive_areas": [],
+            "confidence": "операционные риски"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 4,
+            "best_light": "Рассеянный лесной свет; Rafflesia снимать без приближения/касания.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "CAAM rules apply; protected areas may impose additional restrictions."
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft System (UAS)",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Park rules + CAAM.",
+            "visual_scouting": {
+              "best_time": "morning",
+              "best_weather_light": "Облачно удобно для леса и цветка.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "park_hq",
+                  "name": "Gunung Gading trailhead",
+                  "description": "Старт лесных троп к waterfalls и summit.",
+                  "coordinates": {
+                    "lat": 1.690549,
+                    "lon": 109.84583,
+                    "elevation_m": null
+                  },
+                  "access": "Park HQ.",
+                  "view": {
+                    "description": "горный rainforest"
+                  },
+                  "best_time": "morning",
+                  "useful_equipment": [
+                    {
+                      "type": "macro",
+                      "why": "Rafflesia/forest detail"
+                    },
+                    {
+                      "type": "wide",
+                      "why": "лес и водопады"
+                    }
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Gunung Gading National Park",
+                    "publisher": "Sarawak Forestry Corporation",
+                    "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/54",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Rafflesia bloom is event-driven, not seasonal guarantee."
+              ],
+              "video_activity": [
+                "forest trail",
+                "waterfalls"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "macro",
+                  "why": "растения"
+                },
+                {
+                  "type": "wide",
+                  "why": "лес"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Gunung Gading был gazetted в 1983 году для охраны Rafflesia и открыт посетителям в 1994-м. Парк ценен не только редким цветением: waterfall trails и summit route дают полный горный rainforest profile.",
+            "culture_ethnography": null,
+            "geography_geology": "Горный массив у западного Sarawak поднимается до 965 м и несёт влажный лесной пояс с водопадами.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Парк gazetted в 1983 году прежде всего для защиты Rafflesia."
+                  }
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Горный влажный лес с водопадами и summit route."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Люди приезжают «на Rafflesia», когда цветения нет — звонок в park office обязателен.",
+              "После дождя summit trail становится значительно медленнее."
+            ]
+          },
+          "accommodation": []
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waterfall%20in%20Mt%20Gading%20NP%20-%20panoramio.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Waterfall_in_Mt_Gading_NP_-_panoramio.jpg",
+          "provider": "Wikimedia Commons",
+          "license": null,
+          "artist": null,
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waterfall%20in%20Mt%20Gading%20NP%20-%20panoramio.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Waterfall_in_Mt_Gading_NP_-_panoramio.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rafflesia%20tuan-mudae%20Gunung%20Gading.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Rafflesia_tuan-mudae_Gunung_Gading.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/54",
+            "publisher": "Sarawak Forestry Corporation",
+            "used_for": [
+              "history",
+              "Rafflesia",
+              "trails",
+              "hours",
+              "summit elevation"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "weather/season",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "route_meta": {
+          "region_ref": "Sarawak / Lundu / Gunung Gading",
+          "locality_ref": "Lundu / Kuching",
+          "transport_modes": {
+            "public_transport": "До Lundu возможен автобус/van; последний участок к парку — local transfer.",
+            "taxi_ridehail": "Из Lundu — локальное такси; из Kuching возможен дорогой direct transfer.",
+            "moped": "Дорожный доступ возможен.",
+            "walking": "Waterfall Trail и summit trail; вершина 965 м."
+          },
+          "walking": "От коротких троп к waterfalls до полноценного подъёма на Gunung Gading.",
+          "water": "У HQ есть инфраструктура; на трек брать воду.",
+          "overnight_and_camping": "Использовать только официальные park facilities/разрешённый camping; произвольный лагерь не планировать.",
+          "permit_or_guide": "Регистрация обязательна. Guide не обязателен для всех троп, но SFC рекомендует guide при поиске цветущей Rafflesia глубоко в лесу.",
+          "best_period": "Цветение Rafflesia непредсказуемо и длится 5–7 дней; звонить в park office перед выездом.",
+          "current_status": "open",
+          "main_risks": [
+            "жара и обезвоживание",
+            "скользкие тропы после дождя",
+            "крутые влажные тропы"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полдня–1 день",
+            "terrain_and_movement": "Горный влажный лес, водопады, корни, подъёмы.",
+            "physical_difficulty_policy": "длительность и уклон — параметры маршрута, не минусы",
+            "camping_assumption": "палатка доступна; ночёвка только по режиму территории",
+            "local_support": "Регистрация обязательна. Guide не обязателен для всех троп, но SFC рекомендует guide при поиске цветущей Rafflesia глубоко в лесу."
+          },
+          "guide_or_permit": "Регистрация обязательна. Guide не обязателен для всех троп, но SFC рекомендует guide при поиске цветущей Rafflesia глубоко в лесу.",
+          "access": "Около 2 часов от Kuching до Lundu/park HQ; обычные park trails доступны самостоятельно после регистрации.",
+          "public_transport": "До Lundu возможен автобус/van; последний участок к парку — local transfer.",
+          "last_mile": "От коротких троп к waterfalls до полноценного подъёма на Gunung Gading.",
+          "mobility_notes": "Горный влажный лес, водопады, корни, подъёмы."
+        }
+      },
+      {
+        "name": "Tawau Hills Park",
+        "class": "expanded",
+        "interest": [
+          "national_park",
+          "volcanic_landscape",
+          "rainforest",
+          "mountain",
+          "waterfall",
+          "hot_spring",
+          "hiking"
+        ],
+        "why_go": "Низинно-горный парк над Tawau с вулканическим рельефом, горячими источниками, водопадами и 2–3-дневными маршрутами на Lucia/Magdalena.",
+        "narrow": "Вулканические холмы, низинный rainforest, hot springs и многодневные mountain trails в 24 км от Tawau.",
+        "traveler_card": {
+          "location": {
+            "region": "Sabah / Tawau Hills",
+            "nearest_hub": "Tawau",
+            "coordinates": {
+              "lat": 4.39801,
+              "lon": 117.88826,
+              "elevation_m": null
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Tawau Hills Park HQ",
+              "publisher": "OpenStreetMap / Mapcarta",
+              "url": "https://mapcarta.com/N4103941690",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 30,
+              "max_m": 1310,
+              "reference_type": "range",
+              "accuracy": "high",
+              "source": {
+                "type": "scientific_database",
+                "title": "Tawau Hills Park KBA",
+                "publisher": "Key Biodiversity Areas",
+                "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16045",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29"
+            }
+          },
+          "logistics": {
+            "access": "24 км NW от Tawau по sealed road.",
+            "modes": {
+              "public_transport": "Надёжный регулярный bus до gate не подтверждён.",
+              "taxi_ridehail": "Такси/local transfer из Tawau.",
+              "moped": "Дорожный доступ возможен.",
+              "walking": "Bombalai Hill ~30 min; Magdalena trail 14 км, рекомендовано 3 дня."
+            },
+            "walking": "От коротких trails к waterfalls до 14 км trail на Magdalena; mountain guide обязателен для peaks.",
+            "water": "HQ/restaurant + streams; природную воду обрабатывать.",
+            "overnight_and_camping": "Designated camping у HQ и hostel на km10.5 Magdalena trail.",
+            "permit_or_guide": "Для mountain peaks нужны climbing permit, insurance и compulsory guide; lowland/waterfall routes проще.",
+            "best_period": "Проверять дождь; wet/cold gear обязателен для mountain route.",
+            "route_scale": "несколько часов–3 дня",
+            "terrain_and_movement": "Низинный rainforest → lower montane forest; вулканические холмы, waterfalls, hot springs.",
+            "self_guided_default": true
+          },
+          "climate": {
+            "best_period": "По текущей погоде.",
+            "heat_rain_notes": "Низины жаркие; выше прохладнее и мокрее.",
+            "site_specific_notes": "Mountain trails требуют wet/cold layer."
+          },
+          "operations": {
+            "current_status": "open",
+            "hours": "Mon–Fri 08:00–16:00; weekends/holidays 07:30–15:30.",
+            "ticket": "International adult conservation fee RM20; mountain permits separate.",
+            "closure_notes": "Mountain access depends on permit/weather.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://sabahparks.org.my/tawau-hills-park"
+          },
+          "safety": {
+            "crime_context": "Отдельной официальной статистики преступности по объекту нет; важнее природные и операционные риски.",
+            "main_risks": [
+              "жара и обезвоживание",
+              "скользкие тропы после дождя",
+              "remote mountain trail",
+              "быстрое изменение погоды"
+            ],
+            "sensitive_areas": [],
+            "confidence": "операционные риски"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Раннее утро у giant trees и Bombalai; мягкий свет на waterfalls.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "CAAM rules apply; protected areas may impose additional restrictions."
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft System (UAS)",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Sabah Parks rules.",
+            "visual_scouting": {
+              "best_time": "early_morning",
+              "best_weather_light": "Туман и облака подчёркивают высотный rainforest.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "hq",
+                  "name": "Tawau Hills Park HQ",
+                  "description": "Операционная точка к lowland forest, waterfalls и mountain trails.",
+                  "coordinates": {
+                    "lat": 4.39801,
+                    "lon": 117.88826,
+                    "elevation_m": null
+                  },
+                  "access": "Sealed road from Tawau.",
+                  "view": {
+                    "description": "lowland rainforest"
+                  },
+                  "best_time": "morning",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "giant trees and forest"
+                    },
+                    {
+                      "type": "macro",
+                      "why": "orchids and forest detail"
+                    }
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Tawau Hills Park",
+                    "publisher": "Sabah Parks",
+                    "url": "https://sabahparks.org.my/tawau-hills-park",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Rain changes waterfalls and cloud forest."
+              ],
+              "video_activity": [
+                "waterfalls",
+                "hot spring",
+                "mountain trail"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "forest"
+                },
+                {
+                  "type": "macro",
+                  "why": "flora"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Tawau Hills was gazetted in 1979 to protect catchments feeding Tawau and Semporna Peninsula. Seven major rivers rise in the park. The terrain includes extinct-volcanic peaks and a full gradient from lowland dipterocarp to montane forest.",
+            "culture_ethnography": null,
+            "geography_geology": "KBA describes Quaternary pyroclastics and lava flows of dacitic, andesitic and basaltic character; Sabah Parks highlights hot springs and volcanic hills.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "geology",
+                "content": "Volcanic hills and geothermal features distinguish Tawau Hills from most Malaysian rainforest parks."
+              },
+              {
+                "section_id": "geography",
+                "content": "The park protects major water catchments and rises from lowland forest to peaks above 1300 m."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Mountain route is not a casual day hike; guide and permit required.",
+              "Weekend picnic crowds concentrate near HQ/waterfall."
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Tawau Hills Park KOKTAS campsite/hostel",
+              "area": "Park HQ / Magdalena trail",
+              "price_for_two": "Current KOKTAS rate verify before booking.",
+              "contact": "+60 89 768 719",
+              "social_or_web": "https://sabahparks.org.my/tawau-hills-park/activities-facilities",
+              "source": "Sabah Parks",
+              "checked_at": "2026-09-29"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tawau%20Hills%20Park%20Sabah.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Tawau_Hills_Park_Sabah.jpg",
+          "provider": "Wikimedia Commons",
+          "license": null,
+          "artist": null,
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tawau%20Hills%20Park%20Sabah.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tawau_Hills_Park_Sabah.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tawau%20Hills%20Waterfall.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tawau_Hills_Waterfall.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://sabahparks.org.my/tawau-hills-park",
+            "publisher": "Sabah Parks",
+            "used_for": [
+              "hours",
+              "fees",
+              "mountain permits",
+              "park profile"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://sabahparks.org.my/tawau-hills-park/activities-facilities",
+            "publisher": "Sabah Parks",
+            "used_for": [
+              "14 km Magdalena trail",
+              "camping",
+              "hostel",
+              "guide"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16045",
+            "publisher": "Key Biodiversity Areas",
+            "used_for": [
+              "geology",
+              "elevation range"
+            ],
+            "type": "scientific_database",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "weather/season",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "route_meta": {
+          "region_ref": "Sabah / Tawau Hills",
+          "locality_ref": "Tawau",
+          "transport_modes": {
+            "public_transport": "Надёжный регулярный bus до gate не подтверждён.",
+            "taxi_ridehail": "Такси/local transfer из Tawau.",
+            "moped": "Дорожный доступ возможен.",
+            "walking": "Bombalai Hill ~30 min; Magdalena trail 14 км, рекомендовано 3 дня."
+          },
+          "walking": "От коротких trails к waterfalls до 14 км trail на Magdalena; mountain guide обязателен для peaks.",
+          "water": "HQ/restaurant + streams; природную воду обрабатывать.",
+          "overnight_and_camping": "Designated camping у HQ и hostel на km10.5 Magdalena trail.",
+          "permit_or_guide": "Для mountain peaks нужны climbing permit, insurance и compulsory guide; lowland/waterfall routes проще.",
+          "best_period": "Проверять дождь; wet/cold gear обязателен для mountain route.",
+          "current_status": "open",
+          "main_risks": [
+            "жара и обезвоживание",
+            "скользкие тропы после дождя",
+            "remote mountain trail",
+            "быстрое изменение погоды"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "несколько часов–3 дня",
+            "terrain_and_movement": "Низинный rainforest → lower montane forest; вулканические холмы, waterfalls, hot springs.",
+            "physical_difficulty_policy": "длительность и уклон — параметры маршрута, не минусы",
+            "camping_assumption": "палатка доступна; ночёвка только по режиму территории",
+            "local_support": "Для mountain peaks нужны climbing permit, insurance и compulsory guide; lowland/waterfall routes проще."
+          },
+          "guide_or_permit": "Для mountain peaks нужны climbing permit, insurance и compulsory guide; lowland/waterfall routes проще.",
+          "access": "24 км NW от Tawau по sealed road.",
+          "public_transport": "Надёжный регулярный bus до gate не подтверждён.",
+          "last_mile": "От коротких trails к waterfalls до 14 км trail на Magdalena; mountain guide обязателен для peaks.",
+          "mobility_notes": "Низинный rainforest → lower montane forest; вулканические холмы, waterfalls, hot springs."
+        }
+      },
+      {
+        "name": "Batang Ai National Park and Iban longhouse landscape",
+        "class": "expanded",
+        "interest": [
+          "national_park",
+          "iban",
+          "longhouse",
+          "river",
+          "lake",
+          "orangutan",
+          "living_heritage"
+        ],
+        "why_go": "Лес и озёрно-речная система Batang Ai связаны с действующими Iban longhouses; лодочный доступ делает культурный и природный ландшафт одной маршрутной системой.",
+        "narrow": "Batang Ai — национальный парк, искусственное озеро, реки, дикие орангутаны и живые Iban longhouses в едином ландшафте.",
+        "traveler_card": {
+          "location": {
+            "region": "Sarawak / Batang Ai / Lubok Antu",
+            "nearest_hub": "Lubok Antu / Sri Aman",
+            "coordinates": {
+              "lat": 1.22778,
+              "lon": 111.95412,
+              "elevation_m": 276
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Batang Ai National Park",
+              "publisher": "OpenStreetMap / Mapcarta",
+              "url": "https://mapcarta.com/32687784",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "elevation_source": {
+              "type": "map",
+              "title": "Batang Ai National Park elevation",
+              "publisher": "OpenStreetMap / Mapcarta",
+              "url": "https://mapcarta.com/32687784",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29"
+          },
+          "logistics": {
+            "access": "Road to Batang Ai reservoir/Lubok Antu, then boat into lake/river system; longhouses are reached by local boat and permission/host arrangement.",
+            "modes": {
+              "public_transport": "Long-distance road transport to Sri Aman/Lubok Antu; final access is not regular public transit.",
+              "taxi_ridehail": "Local car/transfer to reservoir jetty.",
+              "boat": "Essential for many longhouses and park sectors.",
+              "walking": "Jungle trails extend from longhouses/river landings."
+            },
+            "walking": "Variable; cultural visits may be short, wildlife/forest routes are longer.",
+            "water": "Carry treated drinking water; river/lake water requires treatment.",
+            "overnight_and_camping": "Official/hosted overnight in Iban longhouses is documented; wild camping in park not assume legal without permit.",
+            "permit_or_guide": "Longhouse access requires local host/boatman and community consent; wildlife routes are best arranged locally. This is not a packaged-tour requirement but a physical/social access condition.",
+            "best_period": "River/lake level and rain affect boats and trails.",
+            "route_scale": "2–4+ days",
+            "terrain_and_movement": "Reservoir, narrow tributaries, river landings, rainforest trails.",
+            "self_guided_default": false
+          },
+          "climate": {
+            "best_period": "Choose by rainfall and river conditions.",
+            "heat_rain_notes": "Hot humid rainforest.",
+            "site_specific_notes": "Boat access dominates logistics."
+          },
+          "operations": {
+            "current_status": "open/verify",
+            "hours": "No single gate schedule for the whole cultural landscape.",
+            "ticket": "National park fee/boat/homestay vary; verify.",
+            "closure_notes": "Community access is by consent and arrangement.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/55"
+          },
+          "safety": {
+            "crime_context": "Отдельной официальной статистики преступности по объекту нет; важнее природные и операционные риски.",
+            "main_risks": [
+              "жара и обезвоживание",
+              "скользкие тропы после дождя",
+              "boat travel",
+              "remote medical access"
+            ],
+            "sensitive_areas": [],
+            "confidence": "операционные риски"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Утро на lake/river; interiors and people only with consent.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "CAAM rules apply; protected areas may impose additional restrictions."
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft System (UAS)",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Longhouse and portraits only with consent; park drone rules separate.",
+            "visual_scouting": {
+              "best_time": "early_morning / late_afternoon",
+              "best_weather_light": "Mist over reservoir and tributaries in morning.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "park_ref",
+                  "name": "Batang Ai forest-lake landscape",
+                  "description": "Lake and river corridors explain why boat, longhouse and forest routes form one system.",
+                  "coordinates": {
+                    "lat": 1.22778,
+                    "lon": 111.95412,
+                    "elevation_m": 276
+                  },
+                  "access": "By road to reservoir, then boat.",
+                  "view": {
+                    "description": "reservoir, rainforest, river corridors"
+                  },
+                  "best_time": "early_morning",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "river landscape"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "wildlife at distance"
+                    }
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Batang Ai National Park",
+                    "publisher": "Sarawak Forestry Corporation",
+                    "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/55",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Water level changes shore and boat access."
+              ],
+              "video_activity": [
+                "longboat movement",
+                "river-landscape transition"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "longhouse/river context"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "wildlife"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Batang Ai National Park covers forest around tributaries feeding a reservoir created by a hydroelectric scheme. Sarawak Forestry explicitly links the park to nearby Iban longhouses and wild orangutan habitat. The useful expedition unit is therefore not one viewpoint but the boat–longhouse–forest chain.",
+            "culture_ethnography": "Iban longhouses remain living residential communities. Overnight stays are meaningful only with host/community consent; old headhunting narratives should be treated as historical context, not spectacle.",
+            "geography_geology": "Artificial reservoir opens boat access into tributary valleys and forest around the national park.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "culture",
+                "content": "Iban longhouses are living communal settlements tied to river and lake transport."
+              },
+              {
+                "section_id": "geography",
+                "content": "Reservoir and tributaries structure all access to the park and settlements."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "A boat/host arrangement is essential; map distance understates logistics.",
+              "Do not treat longhouse as an attraction without resident consent."
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Iban longhouse hosted stay (Batang Ai area)",
+              "area": "Batang Ai tributaries",
+              "price_for_two": "Varies by community/boat arrangement; verify directly.",
+              "contact": null,
+              "social_or_web": null,
+              "source": "Sarawak Forestry documents longhouse stays; exact host must be confirmed",
+              "checked_at": "2026-09-29"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batang%20Ai%20National%20Park%20Sarawak.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Batang_Ai_National_Park_Sarawak.jpg",
+          "provider": "Wikimedia Commons",
+          "license": null,
+          "artist": null,
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batang%20Ai%20National%20Park%20Sarawak.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Batang_Ai_National_Park_Sarawak.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iban%20longhouse%20Sarawak%20Batang%20Ai.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Iban_longhouse_Sarawak_Batang_Ai.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/55",
+            "publisher": "Sarawak Forestry Corporation",
+            "used_for": [
+              "park",
+              "Iban longhouses",
+              "boat access",
+              "orangutan habitat"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://forestry.sarawak.gov.my/web/subpage/webpage_view/1012",
+            "publisher": "Forest Department Sarawak",
+            "used_for": [
+              "gazette status",
+              "visitor-open park"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "weather/season",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "route_meta": {
+          "region_ref": "Sarawak / Batang Ai / Lubok Antu",
+          "locality_ref": "Lubok Antu / Sri Aman",
+          "transport_modes": {
+            "public_transport": "Long-distance road transport to Sri Aman/Lubok Antu; final access is not regular public transit.",
+            "taxi_ridehail": "Local car/transfer to reservoir jetty.",
+            "boat": "Essential for many longhouses and park sectors.",
+            "walking": "Jungle trails extend from longhouses/river landings."
+          },
+          "walking": "Variable; cultural visits may be short, wildlife/forest routes are longer.",
+          "water": "Carry treated drinking water; river/lake water requires treatment.",
+          "overnight_and_camping": "Official/hosted overnight in Iban longhouses is documented; wild camping in park not assume legal without permit.",
+          "permit_or_guide": "Longhouse access requires local host/boatman and community consent; wildlife routes are best arranged locally. This is not a packaged-tour requirement but a physical/social access condition.",
+          "best_period": "River/lake level and rain affect boats and trails.",
+          "current_status": "open/verify",
+          "main_risks": [
+            "жара и обезвоживание",
+            "скользкие тропы после дождя",
+            "boat travel",
+            "remote medical access"
+          ],
+          "expedition_profile": {
+            "default_mode": "регулируемый доступ",
+            "route_scale": "2–4+ days",
+            "terrain_and_movement": "Reservoir, narrow tributaries, river landings, rainforest trails.",
+            "physical_difficulty_policy": "длительность и уклон — параметры маршрута, не минусы",
+            "camping_assumption": "палатка доступна; ночёвка только по режиму территории",
+            "local_support": "Longhouse access requires local host/boatman and community consent; wildlife routes are best arranged locally. This is not a packaged-tour requirement but a physical/social access condition."
+          },
+          "guide_or_permit": "Longhouse access requires local host/boatman and community consent; wildlife routes are best arranged locally. This is not a packaged-tour requirement but a physical/social access condition.",
+          "access": "Road to Batang Ai reservoir/Lubok Antu, then boat into lake/river system; longhouses are reached by local boat and permission/host arrangement.",
+          "public_transport": "Long-distance road transport to Sri Aman/Lubok Antu; final access is not regular public transit.",
+          "last_mile": "Variable; cultural visits may be short, wildlife/forest routes are longer.",
+          "mobility_notes": "Reservoir, narrow tributaries, river landings, rainforest trails."
+        }
+      },
+      {
+        "name": "Gunung Jerai Geoforest Park",
+        "class": "expanded",
+        "interest": [
+          "mountain",
+          "geology",
+          "geopark",
+          "archaeology",
+          "cultural_landscape",
+          "hiking"
+        ],
+        "why_go": "Изолированная гора над Kedah plain, морской ориентир древних торговцев и геологическое ядро Jerai Geopark; связывает Bujang Valley с рельефом, который был виден с моря.",
+        "narrow": "Gunung Jerai — 1217-метровый геологический и исторический ориентир над Bujang Valley и Малаккским проливом.",
+        "traveler_card": {
+          "location": {
+            "region": "Kedah / Gunung Jerai",
+            "nearest_hub": "Yan / Gurun / Merbok",
+            "coordinates": {
+              "lat": 5.787555,
+              "lon": 100.433937,
+              "elevation_m": 1217
+            },
+            "coordinate_type": "summit",
+            "accuracy": "high",
+            "elevation_accuracy": "high",
+            "coordinate_source": {
+              "type": "government_geospatial",
+              "title": "Gunung Jerai",
+              "publisher": "NGA GeoNames",
+              "url": "https://geonames.nga.mil/geon-ags/rest/services/RESEARCH/GIS_OUTPUT/MapServer/0/2064074/htmlPopup?f=html",
+              "authority": "high",
+              "accessed": "2026-09-29"
+            },
+            "elevation_source": {
+              "type": "official_geopark",
+              "title": "Gunung Jerai Geoforest Cambrian",
+              "publisher": "Jerai Geopark / Kedah",
+              "url": "https://jeraigeopark.kedah.gov.my/",
+              "authority": "high",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "object_elevation": {
+              "representative_m": 1217,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "summit",
+              "accuracy": "high",
+              "source": {
+                "type": "official_geopark",
+                "title": "Gunung Jerai summit elevation",
+                "publisher": "Jerai Geopark",
+                "url": "https://jeraigeopark.kedah.gov.my/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29"
+            }
+          },
+          "logistics": {
+            "access": "Road reaches high parts of mountain; hiking routes exist from lower slopes. The object is suitable both for self-drive/moped and foot ascent depending route.",
+            "modes": {
+              "public_transport": "Regional transport to Gurun/Yan; last mountain section not reliably served by public bus.",
+              "taxi_ridehail": "Local taxi/transfer possible.",
+              "moped": "Road ascent possible; weather/fog matter.",
+              "walking": "Multiple trails from lower slopes; exact chosen route should define km/elevation separately."
+            },
+            "walking": "Route-dependent; summit elevation 1217 m.",
+            "water": "Supplies at developed summit/resort area; on foot route carry water.",
+            "overnight_and_camping": "Use official accommodation/camping/permission where designated; do not assume wild camping on geopark/forest land.",
+            "permit_or_guide": "Guide not generally required for road access; hiking route rules verify locally.",
+            "best_period": "Clear morning gives strongest views over paddy plain and coast.",
+            "route_scale": "полдня–1 день",
+            "terrain_and_movement": "Steep isolated massif, humid forest, exposed viewpoints, fog possible.",
+            "self_guided_default": true
+          },
+          "climate": {
+            "best_period": "Clear early morning.",
+            "heat_rain_notes": "Summit much cooler than lowland; fog/rain common.",
+            "site_specific_notes": "View depends strongly on cloud base."
+          },
+          "operations": {
+            "current_status": "open/verify",
+            "hours": "Road/geopark access depends on specific facility; verify.",
+            "ticket": "No single universal ticket for mountain/geopark.",
+            "closure_notes": "Weather may reduce summit access/view.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://jeraigeopark.kedah.gov.my/"
+          },
+          "safety": {
+            "crime_context": "Отдельной официальной статистики преступности по объекту нет; важнее природные и операционные риски.",
+            "main_risks": [
+              "жара и обезвоживание",
+              "скользкие тропы после дождя",
+              "fog on mountain road",
+              "steep hiking routes"
+            ],
+            "sensitive_areas": [],
+            "confidence": "операционные риски"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Sunrise/early morning over Kedah plain.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "CAAM rules apply; protected areas may impose additional restrictions."
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft System (UAS)",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Check forest/geopark land rules.",
+            "visual_scouting": {
+              "best_time": "sunrise / early_morning",
+              "best_weather_light": "Clear post-rain air gives best coast/plain visibility.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "summit",
+                  "name": "Gunung Jerai summit zone",
+                  "description": "Panorama links paddy plain, coast and Bujang Valley geography.",
+                  "coordinates": {
+                    "lat": 5.787555,
+                    "lon": 100.433937,
+                    "elevation_m": 1217
+                  },
+                  "access": "Road or hiking route.",
+                  "view": {
+                    "description": "Kedah plain, coast, islands"
+                  },
+                  "best_time": "early_morning",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "panorama"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "coast/plain layers"
+                    }
+                  ],
+                  "source": {
+                    "type": "official_geopark",
+                    "title": "Jerai Geopark",
+                    "publisher": "Kedah",
+                    "url": "https://jeraigeopark.kedah.gov.my/",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Monsoon cloud can fully erase long-distance views."
+              ],
+              "video_activity": [
+                "cloud movement over isolated massif",
+                "view from ancient maritime landmark"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "landscape"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "distant coast"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Gunung Jerai is an isolated massif above the Kedah coastal plain and historically served as a conspicuous landmark for seafarers approaching Bujang Valley. Jerai Geopark links this cultural role with Cambrian-age formations and later granitic intrusion.",
+            "culture_ethnography": "Local sacred-place traditions exist around Tok Sheikh and summit sites, but individual legends should be sourced separately before inclusion as fact.",
+            "geography_geology": "Official geopark material describes ancient Jerai Formation rocks and a granitic intrusion history; summit 1217 m.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Gunung Jerai functioned for centuries as a maritime landmark for traders approaching Kedah."
+                  }
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "Jerai Geopark preserves Cambrian formations and younger granitic intrusion, making the mountain a geological island above the alluvial plain."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Cloud can make summit views worthless despite easy road access.",
+              "Road access and hiking are distinct experiences; do not confuse them in route planning."
+            ]
+          },
+          "accommodation": []
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gunung%20Jerai%20Kedah.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Gunung_Jerai_Kedah.jpg",
+          "provider": "Wikimedia Commons",
+          "license": null,
+          "artist": null,
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gunung%20Jerai%20Kedah.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Gunung_Jerai_Kedah.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/View%20from%20Gunung%20Jerai.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:View_from_Gunung_Jerai.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://jeraigeopark.kedah.gov.my/",
+            "publisher": "Jerai Geopark / Kedah",
+            "used_for": [
+              "geology",
+              "1217 m elevation",
+              "geopark recognition"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://pbt.kedah.gov.my/index.php/rekreasi-mpsp/",
+            "publisher": "Kedah local authority",
+            "used_for": [
+              "historical maritime landmark",
+              "visitor context"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://geonames.nga.mil/geon-ags/rest/services/RESEARCH/GIS_OUTPUT/MapServer/0/2064074/htmlPopup?f=html",
+            "publisher": "NGA GeoNames",
+            "used_for": [
+              "summit coordinates"
+            ],
+            "type": "government_geospatial",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "weather/season",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "route_meta": {
+          "region_ref": "Kedah / Gunung Jerai",
+          "locality_ref": "Yan / Gurun / Merbok",
+          "transport_modes": {
+            "public_transport": "Regional transport to Gurun/Yan; last mountain section not reliably served by public bus.",
+            "taxi_ridehail": "Local taxi/transfer possible.",
+            "moped": "Road ascent possible; weather/fog matter.",
+            "walking": "Multiple trails from lower slopes; exact chosen route should define km/elevation separately."
+          },
+          "walking": "Route-dependent; summit elevation 1217 m.",
+          "water": "Supplies at developed summit/resort area; on foot route carry water.",
+          "overnight_and_camping": "Use official accommodation/camping/permission where designated; do not assume wild camping on geopark/forest land.",
+          "permit_or_guide": "Guide not generally required for road access; hiking route rules verify locally.",
+          "best_period": "Clear morning gives strongest views over paddy plain and coast.",
+          "current_status": "open/verify",
+          "main_risks": [
+            "жара и обезвоживание",
+            "скользкие тропы после дождя",
+            "fog on mountain road",
+            "steep hiking routes"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полдня–1 день",
+            "terrain_and_movement": "Steep isolated massif, humid forest, exposed viewpoints, fog possible.",
+            "physical_difficulty_policy": "длительность и уклон — параметры маршрута, не минусы",
+            "camping_assumption": "палатка доступна; ночёвка только по режиму территории",
+            "local_support": "Guide not generally required for road access; hiking route rules verify locally."
+          },
+          "guide_or_permit": "Guide not generally required for road access; hiking route rules verify locally.",
+          "access": "Road reaches high parts of mountain; hiking routes exist from lower slopes. The object is suitable both for self-drive/moped and foot ascent depending route.",
+          "public_transport": "Regional transport to Gurun/Yan; last mountain section not reliably served by public bus.",
+          "last_mile": "Route-dependent; summit elevation 1217 m.",
+          "mobility_notes": "Steep isolated massif, humid forest, exposed viewpoints, fog possible."
+        }
+      },
+      {
+        "name": "Tasik Chini Biosphere Reserve",
+        "class": "expanded",
+        "interest": [
+          "lake",
+          "wetland",
+          "biosphere",
+          "jakun",
+          "orang_asli",
+          "ethnography",
+          "nature"
+        ],
+        "why_go": "Система из 12 открытых водных тел и болотных лесов в Pahang, где экологический ландшафт неотделим от жизни Jakun; сильный объект для воды, этнографии и вопросов сохранения среды.",
+        "narrow": "UNESCO biosphere reserve вокруг Tasik Chini: 12 водных тел, freshwater swamp forest и живой культурный ландшафт Jakun.",
+        "traveler_card": {
+          "location": {
+            "region": "Pahang / Tasik Chini",
+            "nearest_hub": "Pekan / Kuantan",
+            "coordinates": {
+              "lat": 3.428056,
+              "lon": 102.901667,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "university_official",
+              "title": "Tasik Chini coordinate extent midpoint",
+              "publisher": "Pusat Penyelidikan Tasik Chini, UKM",
+              "url": "https://www.ukm.my/pptc/introduction/",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "Center computed from official published bounding coordinates, not an entrance."
+            },
+            "coordinates_checked_at": "2026-09-29"
+          },
+          "logistics": {
+            "access": "Road to Tasik Chini/PPTC; lake and village visits require boat for full landscape.",
+            "modes": {
+              "public_transport": "Regional bus to Pekan/Kuantan; final local connection not reliably frequent.",
+              "taxi_ridehail": "Local transfer possible.",
+              "moped": "Road access possible.",
+              "boat": "Boat is the practical mode across the 12 'laut' water bodies.",
+              "walking": "PPTC forest trails available; village/lake route combines boat and walking."
+            },
+            "walking": "Short forest trails around research centre; broader landscape is water-based.",
+            "water": "Potable water from settlements/PPTC; lake water is not assumed potable.",
+            "overnight_and_camping": "Camping legality/location must be confirmed; use village/PPTC/local lodging by permission.",
+            "permit_or_guide": "Basic road access independent; village/boat/forest programmes can use PPTC/community guides. Community consent is required for ethnographic visits.",
+            "best_period": "Water level and lotus/water-lily condition vary seasonally; verify locally.",
+            "route_scale": "полдня–2 дня",
+            "terrain_and_movement": "Lake, swamp margins, lowland forest trails, boat landings.",
+            "self_guided_default": true
+          },
+          "climate": {
+            "best_period": "Check water level/flowering locally.",
+            "heat_rain_notes": "Hot humid lowland; flooding/rain alters lake connectivity.",
+            "site_specific_notes": "Hydrology is part of the object, not merely a weather nuisance."
+          },
+          "operations": {
+            "current_status": "open/verify",
+            "hours": "PPTC Mon–Fri 08:00–17:00 with lunch breaks; weekends/public holidays closed.",
+            "ticket": "Boat/community activity prices vary.",
+            "closure_notes": "Research-centre schedule is not same as whole lake access.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.ukm.my/pptc/introduction/"
+          },
+          "safety": {
+            "crime_context": "Отдельной официальной статистики преступности по объекту нет; важнее природные и операционные риски.",
+            "main_risks": [
+              "жара и обезвоживание",
+              "скользкие тропы после дождя",
+              "boat travel",
+              "swamp margins"
+            ],
+            "sensitive_areas": [],
+            "confidence": "операционные риски"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Early morning over lake/lotus; portraits and village life only with consent.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "CAAM rules apply; protected areas may impose additional restrictions."
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft System (UAS)",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Indigenous village filming only by consent.",
+            "visual_scouting": {
+              "best_time": "early_morning",
+              "best_weather_light": "Low mist and calm water strongest at dawn.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "lake_center",
+                  "name": "Tasik Chini lake system",
+                  "description": "Water/forest mosaic best understood from boat, not one shore viewpoint.",
+                  "coordinates": {
+                    "lat": 3.428056,
+                    "lon": 102.901667,
+                    "elevation_m": null
+                  },
+                  "access": "Road to lake, then boat.",
+                  "view": {
+                    "description": "lake basins, swamp forest, low hills"
+                  },
+                  "best_time": "early_morning",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "water landscape"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "birds and distant shore"
+                    }
+                  ],
+                  "source": {
+                    "type": "university_official",
+                    "title": "Tasik Chini introduction",
+                    "publisher": "UKM PPTC",
+                    "url": "https://www.ukm.my/pptc/introduction/",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Lotus/water-lily and water level vary."
+              ],
+              "video_activity": [
+                "boat movement through connected water bodies",
+                "forest trail"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "wetland"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "wildlife"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Tasik Chini is Malaysia's first UNESCO Biosphere Reserve, designated in 2009. UKM describes 12 open-water bodies locally called laut, freshwater swamp forest and a catchment linked to Pahang River through Sungai Chini.",
+            "culture_ethnography": "Jakun Orang Asli communities use the lake for livelihood and water. Any account of hunting, crafts or ritual life should remain community-specific and consent-based.",
+            "geography_geology": "The natural lake system covers permanent water, freshwater swamp and surrounding lowland forest within one catchment.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "ethnography",
+                "content": "Jakun communities are integral residents of the lake landscape, not an add-on attraction."
+              },
+              {
+                "section_id": "geography",
+                "content": "Twelve open-water bodies, swamp forest and tributaries form the biosphere reserve's hydrological core."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Do not reduce Tasik Chini to a lotus photo stop; the hydrology and Jakun landscape are the real object.",
+              "PPTC office hours do not define all local access."
+            ]
+          },
+          "accommodation": []
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tasik%20Chini%20Pahang.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Tasik_Chini_Pahang.jpg",
+          "provider": "Wikimedia Commons",
+          "license": null,
+          "artist": null,
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tasik%20Chini%20Pahang.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tasik_Chini_Pahang.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Chini%20Malaysia.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Lake_Chini_Malaysia.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://www.ukm.my/pptc/introduction/",
+            "publisher": "Universiti Kebangsaan Malaysia / Tasik Chini Research Centre",
+            "used_for": [
+              "coordinates extent",
+              "12 water bodies",
+              "Jakun",
+              "ecology",
+              "hours"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.unesco.org/en/countries/my/lists-and-nominations",
+            "publisher": "UNESCO",
+            "used_for": [
+              "biosphere reserve recognition"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://discovermalaysia-unesco.com/portfolio/lake-chini/",
+            "publisher": "Malaysia-UNESCO",
+            "used_for": [
+              "biosphere overview",
+              "Jakun relationship"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "weather/season",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "route_meta": {
+          "region_ref": "Pahang / Tasik Chini",
+          "locality_ref": "Pekan / Kuantan",
+          "transport_modes": {
+            "public_transport": "Regional bus to Pekan/Kuantan; final local connection not reliably frequent.",
+            "taxi_ridehail": "Local transfer possible.",
+            "moped": "Road access possible.",
+            "boat": "Boat is the practical mode across the 12 'laut' water bodies.",
+            "walking": "PPTC forest trails available; village/lake route combines boat and walking."
+          },
+          "walking": "Short forest trails around research centre; broader landscape is water-based.",
+          "water": "Potable water from settlements/PPTC; lake water is not assumed potable.",
+          "overnight_and_camping": "Camping legality/location must be confirmed; use village/PPTC/local lodging by permission.",
+          "permit_or_guide": "Basic road access independent; village/boat/forest programmes can use PPTC/community guides. Community consent is required for ethnographic visits.",
+          "best_period": "Water level and lotus/water-lily condition vary seasonally; verify locally.",
+          "current_status": "open/verify",
+          "main_risks": [
+            "жара и обезвоживание",
+            "скользкие тропы после дождя",
+            "boat travel",
+            "swamp margins"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "полдня–2 дня",
+            "terrain_and_movement": "Lake, swamp margins, lowland forest trails, boat landings.",
+            "physical_difficulty_policy": "длительность и уклон — параметры маршрута, не минусы",
+            "camping_assumption": "палатка доступна; ночёвка только по режиму территории",
+            "local_support": "Basic road access independent; village/boat/forest programmes can use PPTC/community guides. Community consent is required for ethnographic visits."
+          },
+          "guide_or_permit": "Basic road access independent; village/boat/forest programmes can use PPTC/community guides. Community consent is required for ethnographic visits.",
+          "access": "Road to Tasik Chini/PPTC; lake and village visits require boat for full landscape.",
+          "public_transport": "Regional bus to Pekan/Kuantan; final local connection not reliably frequent.",
+          "last_mile": "Short forest trails around research centre; broader landscape is water-based.",
+          "mobility_notes": "Lake, swamp margins, lowland forest trails, boat landings."
+        }
+      },
+      {
+        "name": "Gua Tempurung",
+        "class": "expanded",
+        "interest": [
+          "cave",
+          "karst",
+          "limestone",
+          "underground_river",
+          "geology",
+          "caving"
+        ],
+        "why_go": "Крупная известняковая пещера Kinta Valley с пятью dome chambers и 1.6-км underground river; есть как лёгкие show-cave участки, так и wet routes.",
+        "narrow": "Одна из крупнейших visitor caves полуострова: пять огромных limestone domes и подземная река в Kinta Valley.",
+        "traveler_card": {
+          "location": {
+            "region": "Perak / Gopeng / Kinta Geopark",
+            "nearest_hub": "Gopeng / Ipoh",
+            "coordinates": {
+              "lat": 4.416025,
+              "lon": 101.187682,
+              "elevation_m": null
+            },
+            "coordinate_type": "cave_entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "tourism_official",
+              "title": "Gua Tempurung location",
+              "publisher": "Tourism Perak Malaysia",
+              "url": "https://www.tourismperakmalaysia.com/gua-tempurung/",
+              "authority": "high",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29"
+          },
+          "logistics": {
+            "access": "Road access from Gopeng/Ipoh; walk-in visits are possible, but wet/long routes depend on weather/operator conditions.",
+            "modes": {
+              "public_transport": "Regional bus/train to Ipoh/Kampar/Gopeng; last segment local taxi/ride-hailing.",
+              "taxi_ridehail": "Practical from Gopeng/Ipoh.",
+              "moped": "Simple road approach.",
+              "walking": "Visitor-accessible cave section ~1.9 km; hikes commonly 1–3 h depending route."
+            },
+            "walking": "Up to about 1.9 km visitor-accessible cave; wet routes include river sections.",
+            "water": "Bring drinking water; underground river is not drinking supply.",
+            "overnight_and_camping": "No camping inside cave; base in Gopeng/Ipoh.",
+            "permit_or_guide": "Basic show-cave entry can be walk-in; longer/wet cave routes use operator/guide for route control and safety.",
+            "best_period": "Rainy season can affect wet routes; call operator before travel.",
+            "route_scale": "1–3+ hours",
+            "terrain_and_movement": "Stairs/show-cave paths, large chambers, wet river sections on longer routes.",
+            "self_guided_default": true
+          },
+          "climate": {
+            "best_period": "Any dry-enough day; wet route weather-dependent.",
+            "heat_rain_notes": "Cave climate stable but river responds to rain.",
+            "site_specific_notes": "Rainfall outside can close/alter wet route."
+          },
+          "operations": {
+            "current_status": "open/verify",
+            "hours": "Tourism Perak advises walk-in but to contact operator in rainy season; current daily hours verify.",
+            "ticket": "Route-dependent.",
+            "closure_notes": "Wet route access affected by water/weather.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.tourismperakmalaysia.com/gua-tempurung/"
+          },
+          "safety": {
+            "crime_context": "Отдельной официальной статистики преступности по объекту нет; важнее природные и операционные риски.",
+            "main_risks": [
+              "жара и обезвоживание",
+              "скользкие тропы после дождя",
+              "flash rise risk on wet cave route",
+              "slippery limestone"
+            ],
+            "sensitive_areas": [],
+            "confidence": "операционные риски"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Entrance chambers and skylight zones; deeper cave requires low-light equipment.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "CAAM rules apply; protected areas may impose additional restrictions."
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft System (UAS)",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "No drone inside; operator rules apply.",
+            "visual_scouting": {
+              "best_time": "daytime",
+              "best_weather_light": "External weather mainly affects river level; natural shafts provide strongest chamber light.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "entrance",
+                  "name": "Gua Tempurung entrance",
+                  "description": "Main visitor entrance to multi-dome cave system.",
+                  "coordinates": {
+                    "lat": 4.416025,
+                    "lon": 101.187682,
+                    "elevation_m": null
+                  },
+                  "access": "Road to tourism centre.",
+                  "view": {
+                    "description": "limestone hill and cave entrance"
+                  },
+                  "best_time": "daytime",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "large chambers"
+                    }
+                  ],
+                  "source": {
+                    "type": "tourism_official",
+                    "title": "Gua Tempurung",
+                    "publisher": "Tourism Perak Malaysia",
+                    "url": "https://www.tourismperakmalaysia.com/gua-tempurung/",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Wet-route water level changes with rain."
+              ],
+              "video_activity": [
+                "transition between domes",
+                "underground river on permitted route"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "cave volume"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "wet route where permitted"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Gua Tempurung is a major limestone cave in Kinta Valley. Tourism Perak describes a 4.5-km cave system, of which roughly 1.9 km is open to visitors, with five large domes and a 1.6-km underground river.",
+            "culture_ethnography": null,
+            "geography_geology": "The cave is part of the limestone karst of Kinta Valley; chamber morphology and river passages make hydrology as important as speleothem decoration.",
+            "myths_legends_beliefs": [
+              {
+                "type": "local_name_explanation",
+                "text": "Tourism Perak notes that tempurung means coconut shell in Malay and the interior is said to resemble coconut shells; this is an etymological/tourist explanation, not geological evidence."
+              }
+            ],
+            "sections": [
+              {
+                "section_id": "geology",
+                "content": "Large limestone chambers and an active underground river define the cave system."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Do not assume the wet route runs every day; rain can change access.",
+              "Show-cave and wet caving are different route products; choose by actual desired difficulty."
+            ]
+          },
+          "accommodation": []
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gua%20Tempurung.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Gua_Tempurung.jpg",
+          "provider": "Wikimedia Commons",
+          "license": null,
+          "artist": null,
+          "last_checked": "2026-09-29",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gua%20Tempurung.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Gua_Tempurung.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gua%20Tempurung%20interior.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Gua_Tempurung_interior.jpg",
+              "provider": "Wikimedia Commons",
+              "license": null,
+              "artist": null,
+              "last_checked": "2026-09-29"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "url": "https://www.tourismperakmalaysia.com/gua-tempurung/",
+            "publisher": "Tourism Perak Malaysia",
+            "used_for": [
+              "GPS",
+              "length",
+              "underground river",
+              "walk-in/weather"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.tourismperakmalaysia.com/tempurung-cave-gua-tempurung/",
+            "publisher": "Tourism Perak Malaysia",
+            "used_for": [
+              "4.5 km system",
+              "1.9 km visitor section",
+              "five domes"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "weather/season",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "route_meta": {
+          "region_ref": "Perak / Gopeng / Kinta Geopark",
+          "locality_ref": "Gopeng / Ipoh",
+          "transport_modes": {
+            "public_transport": "Regional bus/train to Ipoh/Kampar/Gopeng; last segment local taxi/ride-hailing.",
+            "taxi_ridehail": "Practical from Gopeng/Ipoh.",
+            "moped": "Simple road approach.",
+            "walking": "Visitor-accessible cave section ~1.9 km; hikes commonly 1–3 h depending route."
+          },
+          "walking": "Up to about 1.9 km visitor-accessible cave; wet routes include river sections.",
+          "water": "Bring drinking water; underground river is not drinking supply.",
+          "overnight_and_camping": "No camping inside cave; base in Gopeng/Ipoh.",
+          "permit_or_guide": "Basic show-cave entry can be walk-in; longer/wet cave routes use operator/guide for route control and safety.",
+          "best_period": "Rainy season can affect wet routes; call operator before travel.",
+          "current_status": "open/verify",
+          "main_risks": [
+            "жара и обезвоживание",
+            "скользкие тропы после дождя",
+            "flash rise risk on wet cave route",
+            "slippery limestone"
+          ],
+          "expedition_profile": {
+            "default_mode": "самостоятельно",
+            "route_scale": "1–3+ hours",
+            "terrain_and_movement": "Stairs/show-cave paths, large chambers, wet river sections on longer routes.",
+            "physical_difficulty_policy": "длительность и уклон — параметры маршрута, не минусы",
+            "camping_assumption": "палатка доступна; ночёвка только по режиму территории",
+            "local_support": "Basic show-cave entry can be walk-in; longer/wet cave routes use operator/guide for route control and safety."
+          },
+          "guide_or_permit": "Basic show-cave entry can be walk-in; longer/wet cave routes use operator/guide for route control and safety.",
+          "access": "Road access from Gopeng/Ipoh; walk-in visits are possible, but wet/long routes depend on weather/operator conditions.",
+          "public_transport": "Regional bus/train to Ipoh/Kampar/Gopeng; last segment local taxi/ride-hailing.",
+          "last_mile": "Up to about 1.9 km visitor-accessible cave; wet routes include river sections.",
+          "mobility_notes": "Stairs/show-cave paths, large chambers, wet river sections on longer routes."
         }
       }
     ],

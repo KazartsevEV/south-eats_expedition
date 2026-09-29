@@ -13,13 +13,20 @@
       },
       "fee_idr": 500000,
       "passport_validity": "минимум 6 месяцев",
-      "official_source": "Directorate General of Immigration Indonesia"
+      "official_source": "Directorate General of Immigration Indonesia",
+      "source_ids": [
+        "IMM",
+        "IMM2"
+      ]
     },
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000716",
+      "src_000717"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "visa_run": {
@@ -28,11 +35,14 @@
       "limits": "Не является гарантированным бессрочным механизмом проживания; решение о допуске принимается на каждом въезде.",
       "notes": "Для e-VOA и продления использовать официальный портал иммиграции; иметь обратный/дальнейший билет."
     },
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000716",
+      "src_000717"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "borders": {
@@ -42,13 +52,18 @@
         "Papua New Guinea",
         "Timor-Leste"
       ],
-      "transport": "Наземные международные переходы существуют на Borneo/Kalimantan, Timor и New Guinea, но далеко не все удобны для туриста и не все работают одинаково для конкретного визового режима."
+      "transport": "Наземные международные переходы существуют на Borneo/Kalimantan, Timor и New Guinea, но далеко не все удобны для туриста и не все работают одинаково для конкретного визового режима.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000719"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "airports": {
@@ -74,47 +89,79 @@
         "name": "Sultan Hasanuddin, Makassar"
       }
     ],
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000719"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "international_air_links": {
     "value": "Очень широкая сеть по ASEAN, East Asia, Gulf, Australia и далее с пересадками; прямые международные маршруты зависят от сезона/авиакомпаний.",
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000719"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "transport_rules": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "value": {
+      "road_side": "left",
+      "status": "foreign_licence_rule_requires_trip_specific_verification",
+      "summary": "Национальное дорожное законодательство требует действительного водительского удостоверения для управления транспортом. Нормализованные официальные материалы этого прохода не дают достаточно однозначного общего правила о признании российского национального удостоверения или МВУ для краткой туристической поездки, поэтому справочник не утверждает такое признание: перед вождением нужно проверить актуальные требования Korlantas, иммиграции и прокатчика для конкретной категории транспорта.",
+      "source_ids": [
+        "POLRI_SIM"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000731"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "camping": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "value": {
+      "status": "site_specific",
+      "summary": "Общенациональное право на свободный кемпинг не предполагается. В природоохранных территориях вход и виды деятельности регулирует администрация конкретной зоны; экспедиции, исследования, съёмки и другие специальные активности могут требовать SIMAKSI, а обычный рекреационный кемпинг подчиняется правилам конкретного парка.",
+      "source_ids": [
+        "KSDA_SIMAKSI"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000730"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "drones": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "value": {
+      "legal_status": "regulated",
+      "summary": "Полёты БПЛА регулируются постановлением Министерства транспорта PM 37/2020. Необходимость согласований зависит от воздушного пространства, места и типа операции; справочник хранит ссылку на действующее регулирование и требует проверки конкретной зоны вместо упрощённого универсального правила.",
+      "source_ids": [
+        "HUBUD_DRONE"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000729"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "No sufficiently authoritative country-wide drone rule was normalized in this pass; object/site-specific restrictions remain authoritative."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "laws_and_prohibitions": {
@@ -132,20 +179,32 @@
         "rule": "Действуют нормы о богохульстве и оскорблении государственных институтов; избегать провокационного поведения у религиозных объектов."
       }
     ],
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000718",
+      "src_000719"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "permits": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "value": {
+      "status": "site_specific",
+      "summary": "Единого национального туристического разрешения для обычного путешествия нет. Для природоохранных территорий и специальных видов деятельности действуют отдельные системы допуска; SIMAKSI требуется, в частности, для исследований, экспедиций, съёмок и журналистской работы в охраняемых зонах, а некоторые парки дополнительно вводят бронирование, квоты или обязательное сопровождение.",
+      "source_ids": [
+        "KSDA_SIMAKSI"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000730"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "currency": {
@@ -154,13 +213,18 @@
       "name": "Indonesian rupiah",
       "local_currency_per_1_usd": 17914.1,
       "as_of": "2026-09-27",
-      "rate_type": "market/reference snapshot"
+      "rate_type": "market/reference snapshot",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000719"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "safety_snapshot": {
@@ -178,15 +242,20 @@
         "strong currents"
       ],
       "sensitive_areas": [
-        "parts of Papua require special security awareness and may have access restrictions",
+        "В отдельных районах Папуа требуется повышенное внимание к обстановке; возможны ограничения доступа и дополнительные разрешительные требования.",
         "active volcano exclusion zones"
+      ],
+      "source_ids": [
+        "RUS_MFA"
       ]
     },
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000719"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   }
 }

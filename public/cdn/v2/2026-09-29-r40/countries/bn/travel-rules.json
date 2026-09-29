@@ -11,13 +11,20 @@
         "notes": "Не считать гарантированным способом долгосрочного проживания."
       },
       "passport_validity": "проверять минимум 6 месяцев перед поездкой",
-      "official_source": "Brunei MFA / Russian MFA"
+      "official_source": "Brunei MFA / Russian MFA",
+      "source_ids": [
+        "MFA_BN",
+        "RUS_MFA"
+      ]
     },
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "source_refs": [
+      "src_000699",
+      "src_000701"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "visa_run": {
@@ -26,11 +33,14 @@
       "limits": "Опубликованного права на неограниченные visa-runs не найдено.",
       "notes": "Не считать гарантированным способом долгосрочного проживания."
     },
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "source_refs": [
+      "src_000699",
+      "src_000701"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "borders": {
@@ -44,13 +54,18 @@
         "Labu",
         "Ujong Jalan"
       ],
-      "transport": "Автомобиль/такси/автобусные и частные трансферы; Temburong Bridge связывает восточный анклав с основной частью страны без транзита через Малайзию."
+      "transport": "Автомобиль/такси/автобусные и частные трансферы; Temburong Bridge связывает восточный анклав с основной частью страны без транзита через Малайзию.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "source_refs": [
+      "src_000701"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "airports": {
@@ -61,47 +76,82 @@
         "role": "main international gateway"
       }
     ],
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "source_refs": [
+      "src_000701"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "international_air_links": {
     "value": "Региональные и дальнемагистральные рейсы через BWN; сеть меняется, перед маршрутом проверять расписание авиакомпаний.",
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "source_refs": [
+      "src_000701"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "transport_rules": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "value": {
+      "road_side": "left",
+      "foreign_licence": "Для краткой поездки не следует считать факт выдачи машины прокатчиком подтверждением законности управления. Перед поездкой нужно проверить у Департамента наземного транспорта признание конкретного национального удостоверения и международного водительского удостоверения для нужной категории транспорта.",
+      "note": "Принятие удостоверения прокатной компанией само по себе не подтверждает его юридическую действительность.",
+      "source_ids": [
+        "JPD_LICENSE"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000710"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "camping": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "value": {
+      "status": "site_specific",
+      "summary": "Общее право на свободный кемпинг не предполагается. Для кемпинга и семейных мероприятий в государственных парках и рекреационных зонах JASTRe требует предварительное бронирование; для посещения лесных резерватов и отдельных территорий, включая Улу-Тембуронг, могут требоваться отдельные разрешения или пропуска Forestry Department.",
+      "source_ids": [
+        "JASTRE_CAMP",
+        "GOVBN_FOREST"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000711",
+      "src_000713"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "drones": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "value": {
+      "legal_status": "regulated",
+      "permit_required": true,
+      "summary": "Беспилотные воздушные суда регулируются Департаментом гражданской авиации Брунея. Ведомство публикует порядок регистрации и эксплуатационные требования; перед каждым полётом нужно отдельно проверять регистрацию, разрешение и ограничения конкретного воздушного пространства.",
+      "source_ids": [
+        "DCA_DRONE"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000712"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "No sufficiently authoritative country-wide drone rule was normalized in this pass; object/site-specific restrictions remain authoritative."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "laws_and_prohibitions": {
@@ -119,20 +169,32 @@
         "rule": "Действуют гражданское право и нормы шариата; в религиозных местах и во время Рамадана ожидается консервативное поведение."
       }
     ],
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "source_refs": [
+      "src_000700",
+      "src_000701"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "permits": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "value": {
+      "status": "site_specific",
+      "summary": "Единого туристического разрешения для обычного перемещения по стране нет. Отдельные разрешения действуют для доступа в лесные резерваты, использования лесных рекреационных парков и посещения национального парка Улу-Тембуронг; приоритет имеют правила конкретной территории.",
+      "source_ids": [
+        "GOVBN_FOREST"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000713"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "currency": {
@@ -142,13 +204,18 @@
       "local_currency_per_1_usd": 1.2769,
       "as_of": "2026-09-27",
       "rate_type": "market/reference snapshot",
-      "notes": "BND взаимозаменяем с SGD по номиналу в рамках Currency Interchangeability Arrangement; фактический наличный курс обменника отличается."
+      "notes": "BND взаимозаменяем с SGD по номиналу в рамках Currency Interchangeability Arrangement; фактический наличный курс обменника отличается.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "source_refs": [
+      "src_000701"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "safety_snapshot": {
@@ -164,14 +231,19 @@
         "crocodile habitat"
       ],
       "sensitive_areas": [
-        "government/military facilities — photography restrictions can apply"
+        "Государственные и военные объекты: на отдельных площадках могут действовать ограничения на фото- и видеосъёмку."
+      ],
+      "source_ids": [
+        "RUS_MFA"
       ]
     },
-    "source_refs": [],
-    "checked_at": "2026-09-28",
+    "source_refs": [
+      "src_000701"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   }
 }

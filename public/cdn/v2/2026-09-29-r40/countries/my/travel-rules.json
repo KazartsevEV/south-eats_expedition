@@ -11,13 +11,17 @@
         "limits": "Официального права на бесконечные последовательные визараны нет; серия коротких повторных въездов может вызвать дополнительные вопросы."
       },
       "passport_validity": "обычно требуется не менее 6 месяцев действия паспорта",
-      "official_source": "Malaysian Immigration / Russian MFA"
+      "official_source": "Malaysian Immigration / Russian MFA",
+      "source_ids": [
+        "IMM",
+        "RUS_MFA"
+      ]
     },
     "source_refs": [
       "src_000587",
       "src_000588"
     ],
-    "checked_at": "2026-09-29",
+    "checked_at": "2026-09-30",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -32,7 +36,7 @@
       "src_000587",
       "src_000588"
     ],
-    "checked_at": "2026-09-29",
+    "checked_at": "2026-09-30",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -46,12 +50,15 @@
         "Indonesia",
         "Brunei"
       ],
-      "transport": "Поезда и автобусы к границе Таиланда; автомобильные переходы и железнодорожный шаттл через Джохор—Сингапур; разветвлённые автодорожные переходы на Борнео с Брунеем и Индонезией."
+      "transport": "Поезда и автобусы к границе Таиланда; автомобильные переходы и железнодорожный шаттл через Джохор—Сингапур; разветвлённые автодорожные переходы на Борнео с Брунеем и Индонезией.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "source_refs": [
       "src_000588"
     ],
-    "checked_at": "2026-09-29",
+    "checked_at": "2026-09-30",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -80,47 +87,80 @@
         "name": "Kuching International Airport"
       }
     ],
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000588"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "international_air_links": {
     "value": "KUL — крупный региональный и межконтинентальный хаб; аэропорты Борнео и островные ворота имеют широкое сообщение по Юго-Восточной и Восточной Азии.",
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000588"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "transport_rules": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "value": {
+      "road_side": "left",
+      "status": "foreign_licence_requires_document_verification",
+      "summary": "Дорожное движение регулируется на федеральном уровне, а водительские документы администрирует JPJ. Справочник не считает согласие прокатной компании доказательством юридического признания иностранного удостоверения: перед вождением краткосрочному посетителю нужно проверить актуальное правило JPJ для конкретного национального удостоверения, МВУ и категории транспорта.",
+      "source_ids": [
+        "MOT_LICENSE"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000740"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "camping": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "value": {
+      "status": "site_specific_and_state_specific",
+      "summary": "Общего права на свободный кемпинг для всей федерации нет. Для рекреационной деятельности, включая кемпинг, в Permanent Forest Reserves требуется разрешение на вход, а национальные и штатные парки используют собственные системы бронирования и площадки. Кемпинг считается допустимым только там, где это разрешает соответствующая администрация штата или парка.",
+      "source_ids": [
+        "FORESTRY_MY"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000739"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "drones": {
-    "value": null,
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "value": {
+      "legal_status": "regulated",
+      "permit_required": true,
+      "summary": "CAAM регулирует эксплуатацию беспилотных авиационных систем. Ведомство требует разрешение и указывает, что заявление с подтверждающими документами следует подавать не менее чем за 14 рабочих дней до планируемого полёта; дополнительные ограничения зависят от воздушного пространства, близости аэродромов, высоты и типа операции.",
+      "source_ids": [
+        "CAAM_UAS"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000738"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "No sufficiently authoritative country-wide drone rule was normalized in this pass; object/site-specific restrictions remain authoritative."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "laws_and_prohibitions": {
@@ -138,19 +178,28 @@
         "rule": "Оскорбительные высказывания о монархии/религии и отдельные публичные действия могут подпадать под уголовные/административные нормы."
       }
     ],
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000588"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "permits": {
-    "value": null,
+    "value": {
+      "status": "site_specific_and_state_specific",
+      "summary": "Единого национального туристического разрешения для обычного путешествия нет. Для лесных резерватов, национальных и штатных парков, экспедиций и отдельных охраняемых территорий требуются разрешения или бронирование соответствующего федерального либо штатного органа; в Сабахе и Сараваке действуют собственные режимы.",
+      "source_ids": [
+        "FORESTRY_MY"
+      ],
+      "checked_at": "2026-09-30"
+    },
     "source_refs": [
-      "src_000604"
+      "src_000739"
     ],
-    "checked_at": "2026-09-29",
+    "checked_at": "2026-09-30",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -163,24 +212,29 @@
       "local_currency_per_1_usd": 4.0741,
       "as_of": "2026-09-27",
       "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-      "rate_type": "рыночный/справочный снимок"
+      "rate_type": "рыночный/справочный снимок",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
-    "source_refs": [],
-    "checked_at": "2026-09-29",
+    "source_refs": [
+      "src_000588"
+    ],
+    "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country-level fact still requires fact-level source normalization."
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "safety_snapshot": {
     "value": {
       "scope": "country_macro",
-      "note": "Crime, disease exposure, flood, marine and wildlife risk are spatially variable. Country level carries only the rule to consult geo-level profiles and current official advisories."
+      "note": "Риски преступности, заболеваний, наводнений, морской среды и дикой природы сильно различаются по территории. На страновом уровне фиксируется только необходимость сверяться с региональными профилями и актуальными официальными предупреждениями."
     },
     "source_refs": [
       "src_000588"
     ],
-    "checked_at": "2026-09-29",
+    "checked_at": "2026-09-30",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."

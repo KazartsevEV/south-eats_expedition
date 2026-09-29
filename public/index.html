@@ -744,7 +744,7 @@ async function renderCountry(cc){
     mapCoverageHTML(objs,'Карта страны')+
     '<div class="country-map" id="countryMap"></div>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Geography</div><h2>Провинции, регионы, города и местности</h2></div><p>Geo-иерархия отделена от банка объектов. Локальные климат и риски должны жить именно здесь.</p></div>'+
-    '<div class="region-grid">'+regions.filter(function(g){return regionObjectCount(g.id)>0}).map(function(g){return '<article class="region-card" data-region="'+esc(g.id)+'"><h3>'+esc(g.name)+'</h3><p>'+esc(g.kind)+' · '+regionObjectCount(g.id)+' объектов</p></article>'}).join('')+'</div></section>'+
+    '<div class="region-grid">'+regions.map(function(g){return '<article class="region-card" data-region="'+esc(g.id)+'"><h3>'+esc(g.name)+'</h3><p>'+esc(g.kind)+' · '+regionObjectCount(g.id)+' объектов</p></article>'}).join('')+'</div></section>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Банк достопримечательностей страны</h2></div></div>'+
     '<div class="toolbar"><input class="control" id="countrySearch" placeholder="Поиск внутри страны…"><select class="control" id="countryClass"><option value="">Все классы</option>'+Object.keys(classes).sort().map(function(id){return '<option value="'+esc(id)+'">'+esc(className(id))+' · '+classes[id]+'</option>'}).join('')+'</select><div></div><button class="btn" id="countryReset">Сбросить</button></div>'+
     '<div id="countryObjects" class="object-grid">'+objs.map(objectCard).join('')+'</div></section>';

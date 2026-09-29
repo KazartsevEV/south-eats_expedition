@@ -1015,7 +1015,7 @@ def build():
             {
                 "id": geo_id,
                 "kind": entity.get("kind"),
-                "name": (entity.get("names") or {}).get("primary"),
+                "name": ((entity.get("names") or {}).get("ru") or (entity.get("names") or {}).get("primary")),
                 "parent_id": entity.get("parent_id"),
                 "status": ((entity.get("migration") or {}).get("status") or "active"),
                 "coordinates": (

@@ -13,7 +13,7 @@ ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
 GEO_COUNTRIES = ROOT / "data" / "geo" / "countries"
 FORMAL_CANONICAL_GEO_CODES = {"KH", "LA"}
-COUNTRY_SOURCE_CANONICAL_CODES = {"KH", "LA"}
+COUNTRY_SOURCE_CANONICAL_CODES = {"KH", "LA", "MY"}
 
 GENERATED_AT = "2026-09-29T00:35:00+04:00"
 DEFAULT_LANGUAGE = "ru"
@@ -467,19 +467,24 @@ def build():
                 "spoken": region_profile.get("languages_spoken") or [],
                 "notes": region_profile.get("language_notes"),
             }
-            climate_detail = dict(region_profile.get("climate_detail") or {})
+            climate_detail = dict(region_profile.get("climate_detail") or region_profile.get("climate") or {})
             if region_profile.get("climate_summary") and not climate_detail.get("summary"):
                 climate_detail["summary"] = region_profile.get("climate_summary")
             if region_profile.get("best_period_general") and not climate_detail.get("best_period_general"):
                 climate_detail["best_period_general"] = region_profile.get("best_period_general")
             entity["climate"] = climate_detail
-            entity["freshness"] = {"checked_at": region_profile.get("last_verified")}
+            for field in ("geography", "relief", "geology", "hydrology", "coast", "marine", "nature", "health", "safety", "history", "ethnography", "culture", "architecture", "transport"):
+                if region_profile.get(field) not in (None, "", [], {}):
+                    entity[field] = region_profile.get(field)
+            entity["freshness"] = {"checked_at": region_profile.get("last_verified") or ((region_profile.get("local_reference_provenance") or {}).get("checked_at"))}
+            local_prov = region_profile.get("local_reference_provenance") or {}
+            region_source_refs = list(dict.fromkeys((local_prov.get("source_refs") or []) + (region_profile.get("source_refs") or [])))
             entity["provenance"] = {
                 "source_urls": region_profile.get("language_source_urls") or [],
-                "source_refs": [],
+                "source_refs": region_source_refs,
                 "qa": {
-                    "source_refs_complete": False,
-                    "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued.",
+                    "source_refs_complete": bool(region_source_refs),
+                    "note": "Regional profile has canonical source refs." if region_source_refs else "Existing local profile migrated from the country source; fact-level source normalization remains queued.",
                 },
             }
             entity["migration"]["local_reference_status"] = "migrated_existing_region_profile"

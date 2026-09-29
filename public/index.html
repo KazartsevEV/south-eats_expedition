@@ -449,6 +449,12 @@ function mapCoverageHTML(objects,label){
   return '<div class="map-coverage"><span class="pill">'+esc(label||'Карта')+': <b>'+mapped+'/'+total+'</b> с GPS</span>'+
     (missing?'<span class="pill">без GPS <b>'+missing+'</b></span>':'<span class="pill"><b>полное покрытие</b></span>')+'</div>';
 }
+function geoMapCoverageHTML(full,objects){
+  var hasAnchor=!!(full&&validCoord(full.primary_location));
+  var total=(objects||[]).length,mapped=mappedObjects(objects).length;
+  return '<div class="map-coverage"><span class="pill">geo anchor <b>'+(hasAnchor?'есть':'нет')+'</b></span>'+
+    '<span class="pill">объекты <b>'+mapped+'/'+total+'</b> с GPS</span></div>';
+}
 function forceEnglishMapLabels(glmap){
   function apply(){
     var style=glmap&&glmap.getStyle&&glmap.getStyle();
@@ -519,9 +525,10 @@ function addBaseMap(id,objects,opts){
   rows.forEach(function(o){
     var lat=Number(o.coordinates.lat),lon=Number(o.coordinates.lon);pts.push([lat,lon]);
     var m=L.circleMarker([lat,lon],{radius:6,weight:2,fillOpacity:.82}).addTo(map);
-    var title=esc(o.title||o.id),cls=esc(className(o.class_id));
+    var title=esc(o.title||o.id),cls=esc(o.map_meta||className(o.class_id));
+    var href=o.map_href||('#/object/'+encodeURIComponent(o.id));
     m.bindTooltip(title,{direction:'top',offset:[0,-5],opacity:.94});
-    m.bindPopup('<div class="popup-title">'+title+'</div><div class="popup-meta">'+cls+'</div><a class="map-link" href="#/object/'+encodeURIComponent(o.id)+'">Открыть карточку →</a>');
+    m.bindPopup('<div class="popup-title">'+title+'</div><div class="popup-meta">'+cls+'</div><a class="map-link" href="'+esc(href)+'">Открыть →</a>');
   });
   if(pts.length===1){
     map.setView(pts[0],opts.singleZoom||Math.min(opts.maxZoom||12,12));
@@ -620,6 +627,15 @@ async function renderRegion(id){
   var trail=geoTrail(id),crumbs=[{label:'Главная',hash:'#/'},{label:ctry.name,hash:'#/country/'+cc}];
   trail.slice(0,-1).forEach(function(x){crumbs.push({label:x.name,hash:'#/region/'+x.id})});
   crumbs.push({label:title});
+  var mapRows=objs.slice();
+  if(full&&validCoord(full.primary_location)){
+    mapRows.unshift({
+      id:id,title:title,class_id:'geo',
+      coordinates:{lat:full.primary_location.lat,lon:full.primary_location.lon},
+      map_href:'#/region/'+id,
+      map_meta:((full.kind||g.kind)+' / geo anchor')
+    });
+  }
   view.innerHTML=breadcrumb(crumbs)+
     '<div class="page-head"><div class="eyebrow">'+esc((full&&full.kind)||g.kind)+' / geo</div><h1>'+esc(title)+'</h1>'+
     '<p>'+esc(full&&full.description&&(full.description.narrow||full.description.body)||'Локальный географический уровень справочника.')+'</p>'+
@@ -627,11 +643,11 @@ async function renderRegion(id){
     geoReferenceHTML(full)+
     inheritedGeoContextHTML(full,parentFull)+
     (children.length?'<section class="section"><div class="section-head"><div><div class="eyebrow">Geo tree</div><h2>Ниже по дереву</h2></div><p>Города, локальные узлы и местности внутри этой территории.</p></div><div class="region-grid">'+children.map(function(x){return '<article class="region-card" data-region="'+esc(x.id)+'"><h3>'+esc(x.name)+'</h3><p>'+esc(x.kind)+' · '+regionObjectCount(x.id)+' объектов</p></article>'}).join('')+'</div></section>':'')+
-    mapCoverageHTML(objs,'Карта территории')+
+    geoMapCoverageHTML(full,objs)+
     '<div class="country-map" id="regionMap"></div>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Достопримечательности этой территории</h2></div></div>'+
     '<div class="object-grid">'+(objs.length?objs.map(objectCard).join(''):'<div class="empty">К этому geo-узлу пока нет привязанных объектов.</div>')+'</div></section>';
-  addBaseMap('regionMap',objs,{maxZoom:10,pad:.18,singleZoom:11,emptyMessage:'Для этой территории нет ни одной связанной точки с canonical GPS. Карта не подменяется общим видом ЮВА.'});
+  addBaseMap('regionMap',mapRows,{maxZoom:10,pad:.18,singleZoom:11,emptyMessage:'Для этой территории нет собственного geo anchor и ни одной связанной точки с canonical GPS. Карта не подменяется общим видом ЮВА.'});
   bindGo();bindObjectGrid();
   document.querySelectorAll('[data-region]').forEach(function(x){x.onclick=function(){routeTo('#/region/'+x.getAttribute('data-region'))}});
 }

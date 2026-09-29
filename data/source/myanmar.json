@@ -33,7 +33,8 @@
       "2026-09-29 Myanmar Inle pass: nature and ethnography added from the existing UNESCO MAB source without introducing new source duplication.",
       "2026-09-29 Myanmar regional health/hazard pass: Chin malaria and health-access context, Rakhine cyclone/health-access context, and WHO health-access caveats added to conflict-affected regions without converting regional data into locality-level risk scores.",
       "2026-09-29 Myanmar Tanintharyi pass: coastal/forest relief, geology, terrestrial and marine biodiversity, and Moken ethnography added from UNESCO tentative-list materials.",
-      "2026-09-29 Myanmar Rakhine/Mrauk-U pass: relief, history, culture and architecture added from the UNESCO tentative-list record and localized into the Mrauk-U child profile."
+      "2026-09-29 Myanmar Rakhine/Mrauk-U pass: relief, history, culture and architecture added from the UNESCO tentative-list record and localized into the Mrauk-U child profile.",
+      "2026-09-29 Myanmar Kayin/Pyu pass: Hpa-An relief, landscape and ethnography added from the official tourism profile; Pyu architecture and hydraulic urban landscape normalized from the existing UNESCO source."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -1163,6 +1164,19 @@
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
+        },
+        "architecture": {
+          "urban_form": "Халин, Бейктано и Шри-Кшетра — крупные кирпичные города с мощными стенами и воротами, окружённые рвами. Внутреннее пространство связывалось сетью дорог и каналов, а монументальные буддийские сооружения формировали сакральные узлы.",
+          "hydraulic_landscape": "Каналы, резервуары, плотины, рвы и водоёмы были частью городской планировки и обеспечивали интенсивное земледелие; часть древней гидротехнической системы продолжает использоваться.",
+          "source_refs": [
+            "src_000678"
+          ]
+        },
+        "relief": {
+          "summary": "Все три компонента лежат в равнинных и слабоволнистых ландшафтах сухой зоны бассейна Иравади; именно возможность управлять сезонной водой позволила создать большие орошаемые сельскохозяйственные территории.",
+          "source_refs": [
+            "src_000678"
+          ]
         }
       },
       {
@@ -1231,7 +1245,8 @@
             "src_000671",
             "src_000672",
             "src_000682",
-            "src_000685"
+            "src_000685",
+            "src_000690"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
@@ -1249,6 +1264,41 @@
             "context": "ВОЗ указывает существенные ограничения доступа к базовой медицинской помощи в этом регионе; в удалённых и конфликтных районах доступ особенно нестабилен.",
             "caveat": "Региональный гуманитарный показатель не описывает конкретное медицинское учреждение."
           }
+        },
+        "relief": {
+          "summary": "Пхаан окружён отдельными известняковыми массивами, резко поднимающимися над рисовыми равнинами. Гора Звегабин достигает около 722 м и образует главный высотный ориентир района.",
+          "source_refs": [
+            "src_000690"
+          ]
+        },
+        "nature": {
+          "landscape": "Для района характерно сочетание карстовых гор, пещер, лесных склонов, рисовых полей и речных долин.",
+          "note": "Официальный источник описывает природный ландшафт, но не даёт надёжного локального перечня опасных животных или ядовитых растений; такие списки сюда не переносятся.",
+          "source_refs": [
+            "src_000690"
+          ]
+        },
+        "ethnography": {
+          "communities": [
+            "карены",
+            "падаунг",
+            "бамар",
+            "шаны",
+            "па-о",
+            "моны",
+            "ракхайнцы"
+          ],
+          "religions": [
+            "буддизм",
+            "христианство",
+            "ислам",
+            "индуизм",
+            "анимистические традиции"
+          ],
+          "note": "Это региональный этнокультурный обзор из официального туристического профиля, а не исчерпывающая перепись населения.",
+          "source_refs": [
+            "src_000690"
+          ]
         }
       },
       {
@@ -6855,6 +6905,21 @@
         "geography",
         "architecture",
         "culture"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "MOHT_KAYIN",
+      "canonical_id": "src_000690",
+      "publisher": "Ministry of Hotels and Tourism, Myanmar",
+      "url": "https://tourism.gov.mm/en/regions/kayin",
+      "kind": "government",
+      "used_for": [
+        "Kayin",
+        "Hpa-An",
+        "relief",
+        "karst",
+        "ethnography"
       ],
       "accessed": "2026-09-29"
     }

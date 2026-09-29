@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "MY",
     "country_slug": "malaysia",
-    "status": "country_geography_formalized_draft",
+    "status": "country_geography_formalized_expanded_31_objects_draft",
     "checked_at": "2026-09-29",
-    "next_level": "object_level_geodata_visual_qa_then_country_qa",
+    "next_level": "build_validate_then_object_and_class_qa",
     "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; large physical areas are not forced under a city or route hub."
   },
   "rules": {
@@ -88,7 +88,10 @@
         "my:kinabatangan-river",
         "my:sipadan-island",
         "my:kampung-bavanggazo-rungus-longhouse",
-        "my:sepilok-orangutan-rehabilitation-centre"
+        "my:sepilok-orangutan-rehabilitation-centre",
+        "my:maliau-basin-conservation-area",
+        "my:crocker-range-park-and-salt-trail",
+        "my:gomantong-caves"
       ],
       "canonical_id": "geo_my_0036"
     },
@@ -199,7 +202,8 @@
         "my:gunung-mulu-national-park",
         "my:bario-kelabit-highlands",
         "my:niah-national-park",
-        "my:kuching-old-town-and-waterfront"
+        "my:kuching-old-town-and-waterfront",
+        "my:bako-national-park"
       ],
       "canonical_id": "geo_my_0045"
     },
@@ -271,7 +275,9 @@
       "slug": "kedah",
       "parent_id": "country:my",
       "object_ids": [
-        "my:langkawi"
+        "my:langkawi",
+        "my:sungai-batu-archaeological-site",
+        "my:bujang-valley-archaeological-museum-and-temple-landscape"
       ],
       "canonical_id": "geo_my_0051"
     },
@@ -323,7 +329,8 @@
         "my:kuala-kangsar",
         "my:belum-temengor",
         "my:kellie-s-castle",
-        "my:lenggong-valley-archaeological-landscape"
+        "my:lenggong-valley-archaeological-landscape",
+        "my:gua-tambun-rock-art-site"
       ],
       "canonical_id": "geo_my_0055"
     },
@@ -410,6 +417,167 @@
         "my:batu-caves"
       ],
       "canonical_id": "geo_my_0062"
+    },
+    {
+      "id": "my:state:pahang",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Паханг",
+      "slug": "pahang",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:taman-negara-national-park"
+      ],
+      "canonical_id": "geo_my_0063",
+      "notes_ru": "Один из трёх штатов, в которых лежит Taman Negara; основной экспедиционный вход карточки — Kuala Tahan, Pahang."
+    },
+    {
+      "id": "my:protected-area:taman-negara",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Таман-Негара",
+      "slug": "taman-negara",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:taman-negara-national-park"
+      ],
+      "canonical_id": "geo_my_0064",
+      "notes_ru": "Межштатный охраняемый массив Pahang–Kelantan–Terengganu; parent=country выбран намеренно."
+    },
+    {
+      "id": "my:state:johor",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Джохор",
+      "slug": "johor",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:endau-rompin-national-park-johor"
+      ],
+      "canonical_id": "geo_my_0065"
+    },
+    {
+      "id": "my:protected-area:endau-rompin-johor",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Эндау–Ромпин (Джохор)",
+      "slug": "endau-rompin-johor",
+      "parent_id": "my:state:johor",
+      "object_ids": [
+        "my:endau-rompin-national-park-johor"
+      ],
+      "canonical_id": "geo_my_0066",
+      "notes_ru": "Карточка относится к управляемым Johor National Parks секторам Selai/Peta, а не ко всему трансграничному лесному массиву."
+    },
+    {
+      "id": "my:state:kelantan",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Келантан",
+      "slug": "kelantan",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:gunung-stong-state-forest-park"
+      ],
+      "canonical_id": "geo_my_0067"
+    },
+    {
+      "id": "my:protected-area:gunung-stong",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Лесной парк штата Гунунг-Стонг",
+      "slug": "gunung-stong",
+      "parent_id": "my:state:kelantan",
+      "object_ids": [
+        "my:gunung-stong-state-forest-park"
+      ],
+      "canonical_id": "geo_my_0068"
+    },
+    {
+      "id": "my:protected-area:bako",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Бако",
+      "slug": "bako",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:bako-national-park"
+      ],
+      "canonical_id": "geo_my_0069"
+    },
+    {
+      "id": "my:protected-area:maliau-basin",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Охраняемая территория бассейна Малиау",
+      "slug": "maliau-basin",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:maliau-basin-conservation-area"
+      ],
+      "canonical_id": "geo_my_0070"
+    },
+    {
+      "id": "my:protected-area:crocker-range",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Парк Крокер-Рейндж",
+      "slug": "crocker-range",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:crocker-range-park-and-salt-trail"
+      ],
+      "canonical_id": "geo_my_0071"
+    },
+    {
+      "id": "my:protected-area:gomantong",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Пещеры Гомантонг и лесной резерват",
+      "slug": "gomantong",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:gomantong-caves"
+      ],
+      "canonical_id": "geo_my_0072"
+    },
+    {
+      "id": "my:geographic-area:bujang-valley",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "name_ru": "Долина Буджанг",
+      "slug": "bujang-valley",
+      "parent_id": "my:state:kedah",
+      "object_ids": [
+        "my:sungai-batu-archaeological-site",
+        "my:bujang-valley-archaeological-museum-and-temple-landscape"
+      ],
+      "canonical_id": "geo_my_0073",
+      "notes_ru": "Культурно-археологический ландшафт; Sungai Batu и музей/candi остаются отдельными объектами."
+    },
+    {
+      "id": "my:city:ipoh",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Ипох",
+      "slug": "ipoh",
+      "parent_id": "my:state:perak",
+      "object_ids": [
+        "my:gua-tambun-rock-art-site"
+      ],
+      "canonical_id": "geo_my_0074"
+    },
+    {
+      "id": "my:geographic-area:gua-tambun",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "name_ru": "Гуа-Тамбун",
+      "slug": "gua-tambun",
+      "parent_id": "my:city:ipoh",
+      "object_ids": [
+        "my:gua-tambun-rock-art-site"
+      ],
+      "canonical_id": "geo_my_0075"
     }
   ]
 }

@@ -3,7 +3,7 @@
     "country": "Indonesia",
     "country_code": "ID",
     "language": "ru",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-29",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -25,7 +25,8 @@
       "v1.3 migration progress: 11 of 21 Indonesia object cards completed; Bali/Nusa Tenggara cluster added after Java/Yogyakarta.",
       "v1.3: все 21 объектная карточка Indonesia расширена связной историко-культурной/географической аннотацией, транспортом по видам, пешим масштабом, водой, позицией по законной ночёвке/кемпингу, жильём, жалобами путешественников и объект-специфичным location-scouting для видео; шаблонные англо-русские формулировки в ключевых полях заменены содержательными.",
       "v1.5 migration: adds narrow, normalized tags, route_meta and locality linkage for canonical CDN build.",
-      "v1.6: завершён экспедиционный редакционный проход 21/21: самостоятельное путешествие — режим по умолчанию; многодневность, ступени и набор высоты описываются как параметры маршрута; гид/оператор указывается только при обязательном режиме доступа или явной практической ценности; сырые англо-русские формулировки вычищаются из человекочитаемых полей."
+      "v1.6: завершён экспедиционный редакционный проход 21/21: самостоятельное путешествие — режим по умолчанию; многодневность, ступени и набор высоты описываются как параметры маршрута; гид/оператор указывается только при обязательном режиме доступа или явной практической ценности; сырые англо-русские формулировки вычищаются из человекочитаемых полей.",
+      "2026-09-29 GPS normalization: 21/21 Indonesia objects receive sourced WGS84 map anchors. Broad parks, archipelagos and cultural landscapes use explicit center/approximate semantics rather than pretending to be entrances."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -369,7 +370,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -7.60793,
+              "lon": 110.20384
+            },
+            "coordinate_type": "archaeological_core",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Borobudur — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q42798",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Borobudur Temple coordinate; archaeological complex anchor."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Из Yogyakarta 1–1.5 ч на авто/shuttle; общественный автобус через Jombor/Borobudur Terminal.",
@@ -656,7 +673,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -7.752222,
+              "lon": 110.491667
+            },
+            "coordinate_type": "archaeological_core",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Prambanan — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q84403674",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Prambanan Temple Compounds reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Около 17 км от центра Yogyakarta; car/ride-hailing/bus/train to Prambanan area.",
@@ -953,7 +986,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -7.800457,
+              "lon": 110.39128
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Yogyakarta — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q7568",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "City reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Международный YIA + rail/airport bus; внутри города Trans Jogja, ride-hailing, becak.",
@@ -1247,7 +1296,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -8.5,
+              "lon": 115
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Bali temple landscapes — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q3125978",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Bali-wide cultural landscape anchor; this broad object is not a single temple and must not be interpreted as an entrance."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Основной транспорт по Bali — автомобиль, мопед или водитель; время в пути считать по текущему трафику, потому что 20–30 км легко занимают больше часа.",
@@ -1546,7 +1611,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -8.651625,
+              "lon": 119.576569
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "unesco",
+              "title": "Komodo National Park — coordinate location",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/609/maps/",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "UNESCO World Heritage property reference coordinate; not a pier or ranger-station entrance."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Основная самостоятельная база — Labuan Bajo; дальше к разрешённым высадкам на Komodo, Rinca, Padar и другие острова идут лицензированные лодки/операторы парка.",
@@ -1851,7 +1932,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -8.025194,
+              "lon": 112.960694
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Bromo-Tengger-Semeru — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1135025",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "National-park reference coordinate for the broad volcanic landscape."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Bromo: вход только с официальным online booking/QR через BBTNBTS; четыре основных подъезда — Tosari, Cemoro Lawang, Jemplang и Ranupani. Semeru trekking — отдельное online booking, re-registration и briefing в Ranupani.",
@@ -2176,7 +2273,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -8.083333,
+              "lon": 114.25
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Ijen — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q24941593",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Ijen mountain-range reference coordinate; not the crater trailhead."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Старт из Paltuding; official hiking gate. Обычно добираются road transfer из Banyuwangi/Bondowoso, далее пеший подъём ~3.8–4 км.",
@@ -2477,7 +2590,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -0.5,
+              "lon": 130
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Raja Ampat — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q26785",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Raja Ampat regional reference coordinate; archipelago object spans a large marine area."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно: перелёт до Sorong, пассажирский паром или скоростная лодка до Waisai либо трансфер прямо к выбранному жилью; дальше между островами перемещаются на местных лодках.",
@@ -2760,7 +2889,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -4.516667,
+              "lon": 129.903056
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Banda Neira — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1534265",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Banda Neira settlement reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельный вход через Ambon: далее региональный рейс при наличии либо морской транспорт. Расписание нестабильно и подтверждается непосредственно перед выездом; от гавани Banda Neira до Fort Belgica около 10 минут пешком.",
@@ -3044,7 +3189,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -6.683333,
+              "lon": 111.460556
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Lasem — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q2725549",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Lasem locality reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно по коридору Pantura из Semarang или Surabaya; исторические кварталы проходятся пешком, а разнесённые мастерские удобнее связывать мопедом или местным водителем.",
@@ -3324,7 +3485,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -0.682778,
+              "lon": 100.778333
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Sawahlunto — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q7263",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Sawahlunto city reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно из Padang по дороге через Solok, ориентировочно 2,5–3 часа; есть общественный транспорт, а отдельные туристические железнодорожные рейсы нужно проверять по актуальному расписанию.",
@@ -3613,7 +3790,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -3.166667,
+              "lon": 119.75
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Tana Toraja hinterland — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q14632",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Tana Toraja regency reference coordinate used only as an anchor for the broad cultural landscape."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Основная самостоятельная база — Rantepao: стабильный наземный вариант из Makassar занимает примерно 8–10 часов; при наличии рейса можно использовать Toraja Airport. Между удалёнными деревнями практичны мопед или машина.",
@@ -3909,7 +4102,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": 3.3,
+              "lon": 97.42
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Gunung Leuser National Park / Bukit Lawang — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q97214978",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Gunung Leuser National Park reference coordinate; Bukit Lawang access is a separate locality and must not be inferred from this point."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно добраться из Medan до Bukit Lawang можно дорогой или автобусом; жильё и снабжение есть в деревне. После входа в национальный парк маршрут продолжается пешком с местным проводником по правилам парка.",
@@ -4220,7 +4429,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -2.88,
+              "lon": 111.88
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Tanjung Puting National Park — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1378379",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "National-park reference coordinate; river access points are separate logistics entities."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно до Pangkalan Bun и Kumai; далее в парк идут на klotok по реке Sekonyer. Классическая связка включает Tanjung Harapan, Pondok Tanggui и Camp Leakey.",
@@ -4539,7 +4764,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -8.77,
+              "lon": 121.82
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Kelimutu National Park — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1738211",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Kelimutu volcanic complex reference coordinate, used as the park object's map anchor."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Обычная база — Moni или Ende; наземный трансфер до входа в парк, затем благоустроенная тропа и лестницы к смотровым на кратерные озёра.",
@@ -4836,7 +5077,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -7.2167,
+              "lon": 109.9
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Dieng Plateau — coordinate location",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/Dieng_Plateau",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Plateau reference coordinate for a broad highland landscape."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Из Yogyakarta/Semarang ехать через Wonosobo; последний горный участок извилистый, а утренний туман может резко снижать видимость.",
@@ -5121,7 +5378,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -5.319339,
+              "lon": 123.5948
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Wakatobi National Park — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q15375",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Wakatobi regional reference coordinate; marine national park spans a much larger area."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельный вход через Wangi-Wangi; дальше до Kaledupa, Tomia, Binongko и конкретных рифов идут местные лодки или трансфер выбранного жилья. Расписания подтверждать по каждому плечу.",
@@ -5412,7 +5685,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -0.333333,
+              "lon": 122
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Togean Islands — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1499683",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Archipelago reference coordinate; not a ferry pier."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно через Ampana или Gorontalo по конкретному расписанию парома/лодки; после прибытия на нужный остров часто требуется отдельная местная лодка до жилья.",
@@ -5699,7 +5988,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": 2.6042,
+              "lon": 98.8234
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Lake Toba / Samosir Batak cultural landscape — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Lake_Toba",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Lake Toba reference coordinate. The object includes Lake Toba and Samosir and is therefore not a single point."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно: из Medan до Parapat около 4–5 часов по дороге, затем паром на Samosir/Tuktuk; альтернативный вход возможен через Sisingamangaraja XII Airport с наземным трансфером.",
@@ -5999,7 +6304,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -8.769027,
+              "lon": 120.284261
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Wae Rebo — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q19744961",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Wae Rebo traditional village reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "До Denge по дороге, затем официальный Indonesia Travel указывает примерно 3–4 часа пешком до деревни; мобильной связи нет, электричество ограничено вечером.",
@@ -6294,7 +6615,23 @@
               "as_of": "2026-09-27",
               "rate_type": "market/reference snapshot",
               "practical_notes": "IDR основная расчётная валюта; наличные особенно важны на удалённых островах и вне крупных центров."
-            }
+            },
+            "coordinates": {
+              "lat": -9.5914,
+              "lon": 119.5728
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Sumba megalithic villages — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/27473448",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Anakalang is used as a representative anchor for the wider Sumba megalithic-village network; the object is explicitly multi-site."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "По острову нужен автомобиль/мотоцикл; конкретные деревни разбросаны. Ratenggaro примерно 90 мин от Tambolaka по Indonesia Travel, с последней милей на местном транспорте.",

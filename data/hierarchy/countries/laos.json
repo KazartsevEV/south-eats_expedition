@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "LA",
     "country_slug": "laos",
-    "status": "country_geography_formalized",
+    "status": "country_geography_formalized_27_objects",
     "checked_at": "2026-09-29",
-    "next_level": "object_level_qa_complete_then_country_qa",
+    "next_level": "build_validate_then_country_expansion_qa",
     "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; route hubs remain logistics metadata unless independently verified as settlements."
   },
   "rules": {
@@ -97,7 +97,8 @@
       "slug": "vientiane-province",
       "parent_id": "country:la",
       "object_ids": [
-        "la:vang-vieng-karst"
+        "la:vang-vieng-karst",
+        "la:phou-khao-khouay-national-park"
       ],
       "legacy_region_names": [
         "Ванг-Вьенг / провинция Вьентьян"
@@ -126,7 +127,12 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:wat-phou",
-        "la:si-phan-don-4000-islands"
+        "la:si-phan-don-4000-islands",
+        "la:tad-fane",
+        "la:tad-yuang",
+        "la:khone-phapheng-falls",
+        "la:li-phi-somphamit-falls",
+        "la:xe-pian-national-park"
       ],
       "legacy_region_names": [
         "Чампасак / Си-Фан-Дон / Болавен"
@@ -154,7 +160,9 @@
       "slug": "si-phan-don",
       "parent_id": "la:province:champasak",
       "object_ids": [
-        "la:si-phan-don-4000-islands"
+        "la:si-phan-don-4000-islands",
+        "la:khone-phapheng-falls",
+        "la:li-phi-somphamit-falls"
       ],
       "notes_ru": "Островная и протоковая система Меконга на юге Лаоса.",
       "canonical_id": "geo_la_0033"
@@ -167,7 +175,9 @@
       "slug": "bolaven-plateau",
       "parent_id": "country:la",
       "object_ids": [
-        "la:bolaven-plateau"
+        "la:bolaven-plateau",
+        "la:tad-fane",
+        "la:tad-yuang"
       ],
       "notes_ru": "Транс-провинциальное плато; не кодируется как дочернее одной провинции.",
       "canonical_id": "geo_la_0034"
@@ -222,7 +232,9 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:kong-lor-cave",
-        "la:old-thakhek-town"
+        "la:old-thakhek-town",
+        "la:hin-nam-no-national-park",
+        "la:nakai-nam-theun-national-park"
       ],
       "legacy_region_names": [
         "Кхаммуан / Конг-Лор"
@@ -363,6 +375,281 @@
         "la:phongsaly-old-town-and-ancient-tea-highlands"
       ],
       "canonical_id": "geo_la_0048"
+    },
+    {
+      "id": "la:district:boualapha",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Буалапа",
+      "slug": "boualapha",
+      "parent_id": "la:province:khammouane",
+      "object_ids": [
+        "la:hin-nam-no-national-park"
+      ],
+      "notes_ru": "Восточный приграничный район Кхаммуана; в его пределах находится национальный парк Хин-Нам-Но.",
+      "canonical_id": "geo_la_0049"
+    },
+    {
+      "id": "la:protected-area:hin-nam-no",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Хин-Нам-Но",
+      "slug": "hin-nam-no",
+      "parent_id": "la:district:boualapha",
+      "object_ids": [
+        "la:hin-nam-no-national-park"
+      ],
+      "notes_ru": "Карстовая охраняемая территория на границе с Вьетнамом; с 2025 года лаосская часть трансграничного объекта Всемирного наследия вместе с Фонгня-Кебанг.",
+      "canonical_id": "geo_la_0050"
+    },
+    {
+      "id": "la:district:nakai",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Накай",
+      "slug": "nakai",
+      "parent_id": "la:province:khammouane",
+      "object_ids": [
+        "la:nakai-nam-theun-national-park"
+      ],
+      "notes_ru": "Район плато Накaй и одна из основных административных опор доступа к национальному парку Накaй–Нам-Теун.",
+      "canonical_id": "geo_la_0051"
+    },
+    {
+      "id": "la:town:nakai",
+      "kind": "town",
+      "axis": "administrative",
+      "name_ru": "Накай (Удомсук)",
+      "slug": "nakai-town",
+      "parent_id": "la:district:nakai",
+      "object_ids": [
+        "la:nakai-nam-theun-national-park"
+      ],
+      "notes_ru": "Операционная база национального парка; официальные материалы парка указывают штаб-квартиру в деревне Удомсук.",
+      "canonical_id": "geo_la_0052"
+    },
+    {
+      "id": "la:protected-area:nakai-nam-theun",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Накай–Нам-Теун",
+      "slug": "nakai-nam-theun",
+      "parent_id": "la:district:nakai",
+      "object_ids": [
+        "la:nakai-nam-theun-national-park"
+      ],
+      "notes_ru": "Крупная охраняемая территория Аннамских гор; парк также заходит в соседние районы и провинцию Боликхамсай, поэтому административный parent здесь служит операционной привязкой, а не полным описанием границ.",
+      "canonical_id": "geo_la_0053"
+    },
+    {
+      "id": "la:district:paksong",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Паксонг",
+      "slug": "paksong",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:tad-fane",
+        "la:tad-yuang"
+      ],
+      "notes_ru": "Район плато Болавен; Tad Fane расположен у Ban Lak 38 на направлении Паксе–Паксонг.",
+      "canonical_id": "geo_la_0054"
+    },
+    {
+      "id": "la:protected-area:dong-houa-sao",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Донг-Хуа-Сао",
+      "slug": "dong-houa-sao",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:tad-fane",
+        "la:tad-yuang"
+      ],
+      "notes_ru": "Национальный парк площадью около 110 000 га; Tad Fane относится к его водопадному комплексу на Болавене.",
+      "canonical_id": "geo_la_0055"
+    },
+    {
+      "id": "la:province:bolikhamxay",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Боликхамсай",
+      "slug": "bolikhamxay",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Провинция содержит один из основных доступных туристических секторов Пху-Кхао-Кхуая, включая Тад-Леук и подходы из района Тхапхабат.",
+      "canonical_id": "geo_la_0056"
+    },
+    {
+      "id": "la:province:xaisomboun",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Сайсомбун",
+      "slug": "xaisomboun",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Часть большого массива Пху-Кхао-Кхуай относится к Сайсомбуну; оперативная visitor-инфраструктура этой карточки привязана не сюда, а к сектору Тад-Леук/Тхапхабат.",
+      "canonical_id": "geo_la_0057"
+    },
+    {
+      "id": "la:district:thaphabat",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Тхапхабат",
+      "slug": "thaphabat",
+      "parent_id": "la:province:bolikhamxay",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Район основного самостоятельного доступа к Тад-Леук и Тад-Сай.",
+      "canonical_id": "geo_la_0058"
+    },
+    {
+      "id": "la:village:ban-hatkhai",
+      "kind": "village",
+      "axis": "administrative",
+      "name_ru": "Бан-Хаткхай",
+      "slug": "ban-hatkhai",
+      "parent_id": "la:district:thaphabat",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Деревня-опорная точка для локальных маршрутов к Тад-Сай/Пха-Сай; подтверждены местные проводники и проживание в семьях.",
+      "canonical_id": "geo_la_0059"
+    },
+    {
+      "id": "la:protected-area:phou-khao-khouay",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Пху-Кхао-Кхуай",
+      "slug": "phou-khao-khouay",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:phou-khao-khouay-national-park"
+      ],
+      "notes_ru": "Транс-провинциальный национальный парк; parent=country выбран намеренно, чтобы не приписывать весь парк одной провинции. Карточка хранит рабочие точки доступа отдельно.",
+      "canonical_id": "geo_la_0060"
+    },
+    {
+      "id": "la:geographic-area:khone-phapheng",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Кхон-Папенг",
+      "slug": "khone-phapheng",
+      "parent_id": "la:geographic-area:si-phan-don",
+      "object_ids": [
+        "la:khone-phapheng-falls"
+      ],
+      "notes_ru": "Каскады и пороги Меконга в южной части Си-Фан-Дона у границы с Камбоджей.",
+      "canonical_id": "geo_la_0061"
+    },
+    {
+      "id": "la:island:don-khon",
+      "kind": "island",
+      "axis": "physical_geography",
+      "name_ru": "Дон-Кхон",
+      "slug": "don-khon",
+      "parent_id": "la:geographic-area:si-phan-don",
+      "object_ids": [
+        "la:li-phi-somphamit-falls"
+      ],
+      "notes_ru": "Остров Си-Фан-Дона с водопадом Тад-Сомпхамит, французской железнодорожной инфраструктурой и мостом на Дон-Дет.",
+      "canonical_id": "geo_la_0062"
+    },
+    {
+      "id": "la:province:attapeu",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Аттапы",
+      "slug": "attapeu",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Восточная часть национального парка Се-Пиан заходит в провинцию Аттапы; речные маршруты по Секонгу и Се-Пиану описываются отдельно от западного входа Кьет-Нгонг.",
+      "canonical_id": "geo_la_0063"
+    },
+    {
+      "id": "la:district:pathoumphone",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Патхумпхон",
+      "slug": "pathoumphone",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Район западного visitor-кластера Се-Пиана, включая Кьет-Нгонг и болота Беунг-Кьет-Нгонг.",
+      "canonical_id": "geo_la_0064"
+    },
+    {
+      "id": "la:district:khong",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Кхонг",
+      "slug": "khong-district",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Часть юго-западного сектора Се-Пиана относится к району Кхонг.",
+      "canonical_id": "geo_la_0065"
+    },
+    {
+      "id": "la:district:sanamxay",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Санамсай",
+      "slug": "sanamxay",
+      "parent_id": "la:province:attapeu",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Восточный сектор национального парка Се-Пиан в провинции Аттапы; доступ по рекам и лесным маршрутам не смешивать с Кьет-Нгонгом.",
+      "canonical_id": "geo_la_0066"
+    },
+    {
+      "id": "la:village:kiet-ngong",
+      "kind": "village",
+      "axis": "administrative",
+      "name_ru": "Кьет-Нгонг",
+      "slug": "kiet-ngong",
+      "parent_id": "la:district:pathoumphone",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Главный западный самостоятельный узел доступа к заболоченным ландшафтам Се-Пиана и Пху-Аса.",
+      "canonical_id": "geo_la_0067"
+    },
+    {
+      "id": "la:protected-area:xe-pian",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Се-Пиан",
+      "slug": "xe-pian",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Транс-провинциальный национальный парк площадью 240 000 га; parent=country намеренно, чтобы не приписывать весь парк Чампасаку или Аттапы.",
+      "canonical_id": "geo_la_0068"
+    },
+    {
+      "id": "la:protected-area:beung-kiat-ngong-wetlands",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Болота Беунг-Кьет-Нгонг",
+      "slug": "beung-kiat-ngong-wetlands",
+      "parent_id": "la:province:champasak",
+      "object_ids": [
+        "la:xe-pian-national-park"
+      ],
+      "notes_ru": "Рамсарское угодье площадью 2 360 га; лежит частично в Се-Пиане и частично в Донг-Хуа-Сао. Это отдельная географическая сущность, а не синоним всего национального парка.",
+      "canonical_id": "geo_la_0069"
     }
   ],
   "sources": [
@@ -475,6 +762,38 @@
       "publisher": "Tourism Laos",
       "used_for": [
         "Phongsaly Province and town"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/",
+      "publisher": "Tourism Laos",
+      "used_for": [
+        "Attapeu and Xe Pian eastern access geography"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.ecotourismlaos.com/directory/protected_areas/xepian",
+      "publisher": "Ecotourism Laos / historical official protected-area directory",
+      "used_for": [
+        "Xe Pian province/district extent and access geography"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://rsis.ramsar.org/sites/default/files/rsiswp_search/exports/Ramsar-Sites-annotated-summary-Lao-People-s-Democratic-Republic.pdf",
+      "publisher": "Ramsar Sites Information Service",
+      "used_for": [
+        "Beung Kiat Ngong Ramsar wetland identity and area"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    {
+      "url": "https://www.wwf.org.la//priority_sites/xe_pian_national_park/",
+      "publisher": "WWF Laos",
+      "used_for": [
+        "Xe Pian current national-park context and local-community landscape"
       ],
       "checked_at": "2026-09-29"
     }

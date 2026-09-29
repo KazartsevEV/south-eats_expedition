@@ -12,7 +12,7 @@
     "geo_my_0030"
   ],
   "description": {
-    "narrow": null,
+    "narrow": "Semporna — материковый морской gateway к Sipadan и Tun Sakaran Marine Park; основной экспедиционный контекст — лодки, permits/park rules, море и рифовые системы.",
     "body": null
   },
   "cover_media_id": null,
@@ -22,7 +22,7 @@
   "migration": {
     "source_kind": "city_or_route_hub",
     "note": "Legacy route regions/hubs are kept as geographic_area until formal administrative or settlement identity is verified.",
-    "local_reference_status": "locality_linkage_migrated",
+    "local_reference_status": "migrated_existing_locality_profile",
     "parent_status": "migrated_from_source_locality_relation"
   },
   "relations": {
@@ -32,5 +32,58 @@
     "source_object_names": [
       "Sipadan Island"
     ]
+  },
+  "geography": "Прибрежный город восточного Sabah у Darvel Bay/Celebes Sea; окружающие острова имеют вулканическое и коралловое происхождение.",
+  "geology": {
+    "summary": "Tun Sakaran islands include Quaternary pyroclastic volcanic landforms; Sipadan is an oceanic coral island built on a volcanic cone.",
+    "source_refs": [
+      "src_000611",
+      "src_000610"
+    ]
+  },
+  "transport": {
+    "role": "boat_gateway",
+    "note": "Sabah Parks identifies Semporna as gateway for both Sipadan and Tun Sakaran; in calm seas Sipadan is about 45 minutes by speedboat.",
+    "source_refs": [
+      "src_000610",
+      "src_000611"
+    ]
+  },
+  "marine": {
+    "biodiversity": "Tun Sakaran published records include 255 coral species, 528 reef-fish species, more than 240 marine invertebrates and six seagrass species; Sipadan has more than 400 fish species and hundreds of coral species.",
+    "weather": "Eastern Sabah marine forecast is mandatory context for boat transfers.",
+    "tides": {
+      "status": "official_table_identified_values_not_normalized",
+      "source_ref": "src_000606"
+    },
+    "source_refs": [
+      "src_000611",
+      "src_000610",
+      "src_000616",
+      "src_000606"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "dataset_scope": "Semporna police district",
+      "status": "dataset available_not_yet_aggregated",
+      "source_ref": "src_000594"
+    },
+    "dominant_risks": [
+      "marine weather",
+      "boat dependency",
+      "park-specific access/permit changes"
+    ]
+  },
+  "provenance": {
+    "source_refs": [
+      "src_000610",
+      "src_000611",
+      "src_000616",
+      "src_000606",
+      "src_000594"
+    ],
+    "checked_at": "2026-09-29",
+    "source_refs_complete": true
   }
 }

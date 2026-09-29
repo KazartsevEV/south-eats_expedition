@@ -12,7 +12,7 @@
     "geo_my_0019"
   ],
   "description": {
-    "narrow": null,
+    "narrow": "Kuala Besut — материковый портовый узел для Pulau Perhentian; его смысл в справочнике — jetty, снабжение и проверка состояния моря перед островным переходом.",
     "body": null
   },
   "cover_media_id": null,
@@ -22,7 +22,7 @@
   "migration": {
     "source_kind": "city_or_route_hub",
     "note": "Legacy route regions/hubs are kept as geographic_area until formal administrative or settlement identity is verified.",
-    "local_reference_status": "locality_linkage_migrated",
+    "local_reference_status": "migrated_existing_locality_profile",
     "parent_status": "migrated_from_source_locality_relation"
   },
   "relations": {
@@ -32,5 +32,45 @@
     "source_object_names": [
       "Perhentian islands"
     ]
+  },
+  "geography": "Низкое восточное побережье Terengganu у Южно-Китайского моря; материковый узел отделён от собственно островного Marine Park.",
+  "climate": {
+    "summary": "Восточное побережье получает максимум осадков в ноябре–январе; северо-восточный муссон может нарушать морское сообщение.",
+    "floods": "Для Besut есть DID river/rainfall monitoring; перед выездом после сильных осадков проверять Sg. Besut/Jerteh и подъездные дороги.",
+    "source_refs": [
+      "src_000593",
+      "src_000596"
+    ]
+  },
+  "transport": {
+    "role": "mainland_gateway",
+    "note": "Department of Fisheries lists Besut District Fisheries Office on Jalan Jeti and the Pulau Perhentian Marine Park Centre on the islands. Коммерческое расписание лодок отдельно перепроверять в день поездки.",
+    "source_refs": [
+      "src_000601"
+    ]
+  },
+  "marine": {
+    "weather": "Для островного перехода использовать METMalaysia Terengganu marine forecast.",
+    "tides": {
+      "status": "official_table_identified_values_not_normalized",
+      "source_ref": "src_000606"
+    },
+    "protected_area": "Pulau Perhentian archipelago относится к Terengganu Marine Park system.",
+    "source_refs": [
+      "src_000600",
+      "src_000601",
+      "src_000606"
+    ]
+  },
+  "provenance": {
+    "source_refs": [
+      "src_000593",
+      "src_000596",
+      "src_000600",
+      "src_000601",
+      "src_000606"
+    ],
+    "checked_at": "2026-09-29",
+    "source_refs_complete": true
   }
 }

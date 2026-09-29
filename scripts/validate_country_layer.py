@@ -115,7 +115,6 @@ for code, slug in COUNTRIES.items():
     report[code] = {
         "profile_fields": len(PROFILE_FIELDS),
         "source_count": len(source_rows),
-        "hierarchy_nodes": len(nodes),
         "dynamic_fields_sourced": len(DYNAMIC_SOURCE_FIELDS),
     }
 

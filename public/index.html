@@ -302,7 +302,22 @@ var FIELD_LABELS={
   vector_borne_diseases:'Инфекции, переносимые насекомыми',regional_note:'Региональная оговорка',field_context:'Практическое значение',
   hydrologic_context:'Гидрологический контекст',operational_context:'Практические риски',operational_rule:'Как использовать данные',
   river:'Река',rivers:'Реки',wetlands:'Водно-болотные угодья',coastline:'Береговая линия',mangroves:'Мангры',
-  road:'Автомобильные дороги',river_transport:'Речной транспорт',water_transport:'Водный транспорт',field_note:'Полевое примечание'
+  road:'Автомобильные дороги',river_transport:'Речной транспорт',water_transport:'Водный транспорт',field_note:'Полевое примечание',
+  crime_level:'Уровень преступности',qualitative:'Качественная оценка',risk:'Риск',where:'Где встречается',rule:'Правило',
+  geography:'География',economy:'Экономика',religions:'Религии',languages:'Языки',ethnography:'Этнография',culture:'Культура',history:'История',nature:'Природа',
+  cuisine:'Кухня',natural_risks:'Природные риски',safety_snapshot:'Безопасность',transport:'Транспорт',transport_rules:'Транспортные правила',
+  visa:'Виза',visa_run:'Визаран',borders:'Сухопутные границы',airports:'Аэропорты',international_air_links:'Международное авиасообщение',
+  laws_and_prohibitions:'Законы и ограничения',currency:'Валюта',camping:'Кемпинг',drones:'Дроны',permits:'Разрешения',limits:'Ограничения',
+  passport_validity:'Срок действия паспорта',stay_days:'Срок пребывания, дней',extension:'Продление',possible:'Возможно',
+  legal_status:'Правовой статус',permit_required:'Требуется разрешение',road_side:'Сторона движения',foreign_licence:'Иностранные права',
+  rental:'Аренда',temporary_import:'Временный ввоз',vehicle_standard_note:'Примечание по транспорту',restrictions:'Ограничения',
+  countries:'Страны',main_crossings:'Основные переходы',neighbors_land:'Сухопутные соседи',landlocked:'Нет выхода к морю',coastline_km:'Береговая линия, км',
+  iata:'Код IATA',local_currency_per_1_usd:'Местной валюты за 1 доллар США',rate_type:'Тип курса',typical_month:'Типичный месяц',
+  fee_usd_typical:'Ориентировочный сбор, долл. США',fee_idr:'Сбор, индонезийских рупий',entry_form:'Форма въезда',tourist_visa:'Туристическая виза',
+  visa_exemption_note:'Примечание о безвизовом режиме',general_rule:'Общее правило',general_status:'Общий статус',protected_areas:'Охраняемые территории',
+  category:'Категория',annual_cap_days:'Годовой лимит, дней',annual_cap_period:'Период годового лимита',tourist_use:'Использование туристами',
+  observation_time_note:'Примечание о времени наблюдений',spatial_variation:'Региональные различия',as_of:'По состоянию на',
+  Jan:'Январь',Feb:'Февраль',Mar:'Март',Apr:'Апрель',May:'Май',Jun:'Июнь',Jul:'Июль',Aug:'Август',Sep:'Сентябрь',Oct:'Октябрь',Nov:'Ноябрь',Dec:'Декабрь'
 };
 var VALUE_LABELS={
   police_district:'полицейский округ',
@@ -336,7 +351,7 @@ function scalar(v,key){
   if(typeof v==='number')return esc(v);
   if(Array.isArray(v))return '<ul>'+v.map(function(x){return '<li>'+scalar(x,key)+'</li>'}).join('')+'</ul>';
   if(typeof v==='object'){
-    var hidden={source_refs:1,source_ids:1,source_urls:1,checked_at:1,qa:1,provenance:1};
+    var hidden={source_refs:1,source_ids:1,source_urls:1,checked_at:1,qa:1,provenance:1,source_refs_complete:1,field_source_refs:1,source_file:1,country_id:1,topic:1};
     return '<ul>'+Object.keys(v).filter(function(k){return v[k]!=null&&v[k]!==''&&!hidden[k]}).map(function(k){
       return '<li><b>'+esc(fieldLabel(k))+':</b> '+scalar(v[k],k)+'</li>';
     }).join('')+'</ul>';

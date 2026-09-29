@@ -31,7 +31,8 @@
       "2026-09-30 country-layer pass: completed language, ethnography, culture, country narrow and country-wide travel-rule fields with canonical source IDs; attraction-card payloads were not edited.",
       "2026-09-30 regional-layer correction: Indonesia regions upgraded toward Malaysia reference standard with geography, relief, climate, geology/hydrology/marine where applicable, nature, health, safety, transport, ethnography and provenance; dynamic marine and volcanic conditions point to BMKG/PVMBG rather than frozen values; attraction cards unchanged.",
       "2026-09-30 second QA pass: normalized country nature/safety Russian and added regional fauna, dangerous animals, poisonous plants, marine life where applicable, and natural hazards across all 14 Indonesia nodes. Attraction cards unchanged.",
-      "2026-09-30 object QA started by class: archaeology.megalith and archaeology.site receive sourced object elevations plus normalized visual_recon; legacy shot lists/camera-setting guidance is not migrated."
+      "2026-09-30 object QA started by class: archaeology.megalith and archaeology.site receive sourced object elevations plus normalized visual_recon; legacy shot lists/camera-setting guidance is not migrated.",
+      "2026-09-30 object QA: ethnography.living_settlement / Wae Rebo receives official site elevation and normalized visual reconnaissance without camera-setting or shot-list instructions."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -6555,7 +6556,25 @@
               "accessed": "2026-09-29",
               "notes": "Wae Rebo traditional village reference coordinate."
             },
-            "coordinates_checked_at": "2026-09-29"
+            "coordinates_checked_at": "2026-09-29",
+            "object_elevation": {
+              "representative_m": 1120,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "high",
+              "checked_at": "2026-09-30",
+              "notes": "Высота относится к традиционной деревне Wae Rebo; это не высота окружающих хребтов.",
+              "source": {
+                "type": "official",
+                "title": "Survey Cagar Budaya di Kampung Adat Wae Rebo",
+                "publisher": "Balai Pelestarian Cagar Budaya Bali / Kementerian Pendidikan dan Kebudayaan",
+                "url": "https://kebudayaan.kemdikbud.go.id/bpcbbali/survey-cagar-budaya-di-kampung-adat-wae-rebo/",
+                "authority": "high",
+                "accessed": "2026-09-30",
+                "notes": "Полевое обследование культурного наследия указывает координаты деревни и высоту 1120 м над уровнем моря."
+              }
+            }
           },
           "logistics": {
             "access": "До Denge по дороге, затем официальный Indonesia Travel указывает примерно 3–4 часа пешком до деревни; мобильной связи нет, электричество ограничено вечером.",
@@ -6654,6 +6673,73 @@
                 "слегка приподнятая тропа над поляной на рассвете"
               ],
               "avoid": "Не запускать дрон без прямого разрешения общины/авиационных правил; не занимать центральное ритуальное пространство штативами."
+            },
+            "visual_scouting": {
+              "best_time": "05:45–07:30 после ночёвки в деревне; второе спокойное окно — примерно 16:30–17:45 после ухода части дневных посетителей.",
+              "best_weather_light": "Утренняя дымка и низкие облака часто заполняют чашу между холмами; после дождя тропа сложнее, но туман и насыщенная зелень выражены сильнее.",
+              "viewpoints": [
+                {
+                  "id": "vp_approach_reveal",
+                  "name": "Тропа на подходе над деревней",
+                  "description": "С приподнятого участка подходной тропы раскрывается весь круг Mbaru Niang внутри горной чаши.",
+                  "coordinates": null,
+                  "access": "Только пешком по маршруту Denge–Wae Rebo; точка находится на подходе к деревне.",
+                  "view": {
+                    "description": "Полный круг традиционных домов, центральная поляна и окружающие зелёные склоны."
+                  },
+                  "best_time": "early_morning",
+                  "best_weather_light": "После рассвета, когда туман начинает расходиться и крыши отделяются от склонов.",
+                  "useful_equipment": [
+                    "wide",
+                    "standard"
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Wae Rebo",
+                    "publisher": "Badan Pelaksana Otorita Labuan Bajo Flores / Ministry of Tourism",
+                    "url": "https://bpolbf.kemenpar.go.id/tourism/destination/wae-rebo",
+                    "authority": "high",
+                    "accessed": "2026-09-30",
+                    "notes": "Официальная страница описывает горное положение, пеший доступ и окружающий лес."
+                  }
+                },
+                {
+                  "id": "vp_village_edge",
+                  "name": "Край круга домов",
+                  "description": "С края жилого круга одновременно видны несколько Mbaru Niang, центральное пространство и стенка окружающих склонов.",
+                  "coordinates": null,
+                  "access": "Внутри деревни; съёмка людей, интерьеров и ритуальных действий — только после согласия общины.",
+                  "view": {
+                    "description": "Архитектурный круг Mbaru Niang и повседневная жизнь общины в природной чаше."
+                  },
+                  "best_time": "golden_hour",
+                  "best_weather_light": "Низкий вечерний свет подчёркивает конусные крыши; дым от кухонь заметнее после дневной активности.",
+                  "useful_equipment": [
+                    "wide",
+                    "standard"
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Wae Rebo heritage survey",
+                    "publisher": "Balai Pelestarian Cagar Budaya Bali",
+                    "url": "https://kebudayaan.kemdikbud.go.id/bpcbbali/survey-cagar-budaya-di-kampung-adat-wae-rebo/",
+                    "authority": "high",
+                    "accessed": "2026-09-30",
+                    "notes": "Официальное обследование подтверждает структуру поселения и его положение в окружённой холмами местности."
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "В сухой сезон май–октябрь подход обычно предсказуемее; во влажный период растительность ярче и туман выразительнее, но тропа становится более скользкой."
+              ],
+              "video_activity": [
+                "Подход через лес и первое раскрытие деревни показывают реальный масштаб пешего доступа.",
+                "Повседневная жизнь, кофе и традиционные занятия интересны только при согласии жителей; ритуалы не считать свободно доступной сценой."
+              ],
+              "useful_equipment": [
+                "wide",
+                "standard"
+              ]
             }
           },
           "annotation": {

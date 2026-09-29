@@ -462,6 +462,22 @@ function geoTrail(id){
   }
   return out;
 }
+function compactTransport(t){
+  if(!t)return '';
+  var keys=['summary','access','gateway','role','public_transport','road','rail','air','water'];
+  for(var i=0;i<keys.length;i++)if(typeof t[keys[i]]==='string'&&t[keys[i]])return t[keys[i]];
+  return '';
+}
+function childGeoCard(g,d){
+  var title=(d&&d.names&&(d.names.ru||d.names.primary))||g.name||g.id;
+  var narrow=d&&d.description&&(d.description.narrow||d.description.body)||'';
+  var tr=compactTransport(d&&d.transport);
+  return '<article class="region-card" data-region="'+esc(g.id)+'"><h3>'+esc(title)+'</h3>'+
+    '<p>'+esc(g.kind)+' · '+regionObjectCount(g.id)+' объектов</p>'+
+    (narrow?'<p class="popup-meta">'+esc(narrow)+'</p>':'')+
+    (tr?'<p class="popup-meta"><b>Транспорт:</b> '+esc(tr)+'</p>':'')+
+    '</article>';
+}
 function previewPath(o){return o.preview_asset||o.preview_path||null}
 async function hydratePreview(card,o){
   var box=card.querySelector('.preview');
@@ -684,6 +700,7 @@ async function renderRegion(id){
   if(!g){view.innerHTML='<div class="error">Geo entity не найдена: '+esc(id)+'</div>';return}
   var parentFull=(g.parent_id&&g.parent_id.indexOf('geo_')===0&&g.parent_id!=='geo_'+String(id).split('_')[1])?await geoDetail(g.parent_id):null;
   var cc=String(id).split('_')[1]||'',ctry=cname(cc),children=geoChildren(id);
+  var childDetails=children.length?await Promise.all(children.map(function(x){return geoDetail(x.id)})):[];
   var title=(full&&full.names&&(full.names.ru||full.names.primary))||g.name||id;
   var trail=geoTrail(id),crumbs=[{label:'Главная',hash:'#/'},{label:ctry.name,hash:'#/country/'+cc}];
   trail.slice(0,-1).forEach(function(x){crumbs.push({label:x.name,hash:'#/region/'+x.id})});
@@ -703,7 +720,7 @@ async function renderRegion(id){
     '<div class="hero-meta"><span class="pill">geo id <b>'+esc(id)+'</b></span><span class="pill">объектов <b>'+objs.length+'</b></span><span class="pill">дочерних geo <b>'+children.length+'</b></span></div></div>'+
     geoReferenceHTML(full)+
     inheritedGeoContextHTML(full,parentFull)+
-    (children.length?'<section class="section"><div class="section-head"><div><div class="eyebrow">Geo tree</div><h2>Ниже по дереву</h2></div><p>Города, локальные узлы и местности внутри этой территории.</p></div><div class="region-grid">'+children.map(function(x){return '<article class="region-card" data-region="'+esc(x.id)+'"><h3>'+esc(x.name)+'</h3><p>'+esc(x.kind)+' · '+regionObjectCount(x.id)+' объектов</p></article>'}).join('')+'</div></section>':'')+
+    (children.length?'<section class="section"><div class="section-head"><div><div class="eyebrow">Geo tree</div><h2>Ниже по дереву</h2></div><p>Города и локальные узлы. Краткая логистика берётся из дочерних canonical сущностей и здесь не дублируется.</p></div><div class="region-grid">'+children.map(function(x,i){return childGeoCard(x,childDetails[i])}).join('')+'</div></section>':'')+
     geoMapCoverageHTML(full,objs)+
     '<div class="country-map" id="regionMap"></div>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Достопримечательности этой территории</h2></div></div>'+

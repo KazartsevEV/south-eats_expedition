@@ -28,14 +28,15 @@
       "v1.7 draft: для 10 новых объектов traveler_reports переведены в структурированные записи с source_url; канонизатор теперь сохраняет точный source_ref каждого отчёта.",
       "v1.7 draft: для 10 новых объектов добавлен lodging layer; динамические цены датированы, отсутствующие официальные тарифы не выдумываются.",
       "v1.7 draft: object_elevation доведён до 30/31; протяжённые объекты используют range/highest_point, города и отдельные sites — representative/characteristic; DEM/GeoNames-производные значения помечены approximate. Bavanggazo оставлен null до надёжного site-level значения.",
-      "v1.7 draft: legacy media.field_planning/shooting_recommendation/blog_angle и дублирующие best_light/best_formats удалены; визуальная разведка хранится только в visual_scouting без shot list и параметров съёмки."
+      "v1.7 draft: legacy media.field_planning/shooting_recommendation/blog_angle и дублирующие best_light/best_formats удалены; визуальная разведка хранится только в visual_scouting без shot list и параметров съёмки.",
+      "v1.7 coverage batch завершён: 37 объектов; дальнейшее расширение после импорта — обычным country/class QA циклом."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.7-draft",
-      "completed_objects": 31,
-      "total_objects": 31,
+      "completed_objects": 37,
+      "total_objects": 37,
       "status": "draft_complete",
-      "updated": "2026-09-28"
+      "updated": "2026-09-29"
     },
     "editorial_profile": {
       "language": "русский; английский оставляется только в собственных именах, официальных названиях, кодах и поисковых терминах",
@@ -46,24 +47,25 @@
     },
     "geodata_upgrade_progress": {
       "schema_target": "canonical-v2.10.8",
-      "objects_with_primary_coordinates": 31,
-      "total_objects": 31,
+      "objects_with_primary_coordinates": 37,
+      "total_objects": 37,
       "status": "complete",
-      "updated": "2026-09-28"
+      "updated": "2026-09-29"
     },
     "visual_recon_upgrade_progress": {
       "schema_target": "canonical-v2.10.8",
-      "objects_with_visual_recon": 31,
-      "total_objects": 31,
+      "objects_with_visual_recon": 37,
+      "total_objects": 37,
       "status": "complete",
-      "updated": "2026-09-28"
+      "updated": "2026-09-29"
     },
     "elevation_upgrade_progress": {
       "schema_target": "canonical-v2.10.8",
-      "objects_with_object_elevation": 30,
-      "total_objects": 31,
+      "objects_with_object_elevation": 35,
+      "total_objects": 37,
       "unresolved_objects": [
-        "Kampung Bavanggazo / Rungus longhouse"
+        "Kampung Bavanggazo / Rungus longhouse",
+        "Gua Tambun rock art"
       ],
       "status": "partial",
       "updated": "2026-09-29"
@@ -910,6 +912,28 @@
         },
         "climate_summary": "Высотный влажный тропический лес; сильный дождь быстро меняет уровень рек.",
         "best_period_general": "По состоянию рек и официальному доступу.",
+        "language_source_urls": [
+          "https://www.dosm.gov.my/"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Terengganu / Redang",
+        "languages_spoken": [
+          "малайский",
+          "английский — в курортной/дайв-инфраструктуре"
+        ],
+        "language_notes": "Практический полевой профиль.",
+        "currency": {
+          "code": "MYR",
+          "name": "Malaysian ringgit",
+          "local_currency_per_1_usd": 4.0741,
+          "as_of": "2026-09-27",
+          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
+          "rate_type": "рыночный/справочный снимок"
+        },
+        "climate_summary": "Восточное побережье резко зависит от северо-восточного муссона.",
+        "best_period_general": "Вне пика северо-восточного муссона.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
@@ -12319,6 +12343,529 @@
           "overnight_and_camping": "база Semporna",
           "permit_or_guide": "fees + guide",
           "best_period": "calm/dry"
+        }
+      },
+      {
+        "name": "Semenggoh Wildlife Centre",
+        "class": "wildlife_site",
+        "interest": [
+          "nature",
+          "wildlife",
+          "orangutan",
+          "rehabilitation",
+          "forest"
+        ],
+        "why_go": "Центр с полу-дикими орангутанами в лесу у Kuching: не зоопарк и не гарантированная точка показа — животные сами решают приходить к подкормочным площадкам.",
+        "traveler_card": {
+          "location": {
+            "region": "Sarawak / Kuching / Niah",
+            "nearest_hub": "Kuching / Siburan",
+            "languages_spoken": [
+              "малайский",
+              "английский"
+            ],
+            "currency": {
+              "code": "MYR",
+              "name": "Malaysian ringgit",
+              "local_currency_per_1_usd": 4.0741,
+              "as_of": "2026-09-27",
+              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
+              "rate_type": "рыночный/справочный снимок"
+            },
+            "coordinates": {
+              "lat": 1.3998,
+              "lon": 110.32443
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "coordinates_checked_at": "2026-09-29",
+            "coordinate_source": {
+              "url": "https://mapcarta.com/15809410",
+              "publisher": "Mapcarta / OpenStreetMap",
+              "kind": "map",
+              "used_for": [
+                "coordinates"
+              ],
+              "accessed": "2026-09-29"
+            },
+            "object_elevation": {
+              "representative_m": 40,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "checked_at": "2026-09-29",
+              "source": {
+                "url": "https://www.researchgate.net/publication/372371713_HISTORY_ANNOTATED_GAZETTEER_AND_BIBLIOGRAPHY_OF_SARAWAK_ORNITHOLOGY",
+                "publisher": "Sarawak ornithological gazetteer",
+                "kind": "academic",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29"
+              }
+            }
+          },
+          "logistics": {
+            "access": "Около 24 км от Kuching; road transfer/ride-hailing или актуальный местный автобус.",
+            "public_transport": "Расписание городской сети проверять на дату.",
+            "last_mile": "От входа до feeding area пешком или парковым shuttle/land train, если работает.",
+            "walking": "Короткая лесная дорога; длиннее, чем кажется от входа.",
+            "water": "Вода у visitor infrastructure.",
+            "overnight_and_camping": "Кемпинг не является режимом посещения; база Kuching/Siburan.",
+            "permit_or_guide": "Проводник для стандартной feeding session не обязателен.",
+            "modes": {
+              "public_transport": "Kuching → Semenggoh",
+              "taxi_ridehail": "road access",
+              "walking": "вход → feeding area"
+            }
+          },
+          "climate": {
+            "best_period": "Утреннее/дневное feeding window; видимость зависит от плодоношения.",
+            "heat_rain_notes": "Жарко и влажно круглый год.",
+            "site_specific_notes": "Орангутаны могут не прийти."
+          },
+          "operations": {
+            "status": "действующий wildlife centre SFC",
+            "hours": "Посещение вокруг утреннего и дневного feeding windows; актуальные часы сверять у SFC.",
+            "ticket": "Актуальный тариф сверять у SFC.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/58"
+          },
+          "safety": {
+            "crime_context": "Приоритет — жара, дождь и дистанция до животных.",
+            "main_risks": [
+              "жара",
+              "ливень",
+              "контакт с дикой природой запрещён"
+            ],
+            "confidence": "полевой риск-профиль"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "score_type": "editorial_score",
+            "drone": "По SFC и CAAM.",
+            "filming_restrictions": "Следовать указаниям ranger staff.",
+            "visual_scouting": {
+              "best_time": "feeding_window",
+              "best_weather_light": "Рассеянный лесной свет.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_01",
+                  "description": "Feeding area показывает животных на лесной кромке, если они приходят.",
+                  "coordinates": null,
+                  "access": null,
+                  "view": {
+                    "description": "semi-wild orangutan habitat"
+                  },
+                  "best_time": "feeding_window",
+                  "best_weather_light": "diffuse",
+                  "useful_equipment": [
+                    "telephoto",
+                    "long_telephoto"
+                  ]
+                }
+              ],
+              "seasonal_visuals": [
+                "Во время обилия природных фруктов посещаемость feeding platform орангутанами падает."
+              ],
+              "video_activity": [
+                "появление и уход орангутанов",
+                "работа ranger staff"
+              ],
+              "useful_equipment": [
+                "standard",
+                "telephoto",
+                "long_telephoto"
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Semenggoh начал работу в 1975 году как центр реабилитации. После достижения ёмкости леса активная реабилитация была перенесена в Matang, а Semenggoh стал местом долгосрочного наблюдения за полу-дикими орангутанами.",
+            "culture_ethnography": null,
+            "geography_geology": "Низкий влажный лесной ландшафт южнее Kuching; природная среда определяет наблюдение.",
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Semenggoh — лесной wildlife centre с полу-дикими орангутанами, которые свободно используют окружающий лес.",
+                "source_refs": []
+              },
+              {
+                "section_id": "history",
+                "content": "Центр создан в 1975 году; после достижения ёмкости леса активная реабилитация была перенесена в Matang.",
+                "source_refs": []
+              },
+              {
+                "section_id": "geography",
+                "content": "Низкий влажный лесной ландшафт южнее Kuching определяет характер наблюдения.",
+                "source_refs": []
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              {
+                "summary": "Отзывы 2025–2026 подчёркивают, что орангутаны не обязаны появляться, а путь к feeding area длиннее ожидаемого; часть посетителей использует shuttle/land train.",
+                "source_url": "https://www.tripadvisor.com/Attraction_Review-g19755212-d1503816-Reviews-Semenggoh_Wildlife_Centre-Siburan_Sarawak.html"
+              }
+            ],
+            "note": "Наблюдение дикой природы не гарантируется."
+          },
+          "accommodation": [
+            {
+              "name": "Tune Hotel Waterfront Kuching",
+              "area": "Waterfront",
+              "price_for_two": "ориентир бюджетного Kuching RM70–130; конкретную дату проверять",
+              "contact": "+60 82-238 221",
+              "social_or_web": "официальный Tune / booking platforms",
+              "source": "актуальная карточка объекта размещения"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orangutan-semenggoh.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Orangutan-semenggoh.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "DIONYSIUS IVANDER",
+          "illustration_scope": "object-specific",
+          "last_checked": "2026-09-29"
+        },
+        "sources": [
+          {
+            "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/58",
+            "publisher": "Sarawak Forestry Corporation",
+            "kind": "park_authority",
+            "used_for": [
+              "history",
+              "management"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/42",
+            "publisher": "Sarawak Forestry Corporation",
+            "kind": "park_authority",
+            "used_for": [
+              "feeding",
+              "seasonality"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Orangutan-semenggoh.jpg",
+            "publisher": "Wikimedia Commons",
+            "kind": "media_repository",
+            "used_for": [
+              "illustration",
+              "license"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "narrow": "Центр с полу-дикими орангутанами в лесу у Kuching: не зоопарк и не гарантированная точка показа — животные сами решают приходить к подкормочным площадкам.",
+        "tags": [
+          "nature",
+          "wildlife",
+          "orangutan",
+          "rehabilitation",
+          "forest",
+          "walking"
+        ],
+        "route_meta": {
+          "region_ref": "Sarawak / Kuching / Niah",
+          "locality_ref": "Kuching / Siburan",
+          "transport_modes": {
+            "public_transport": "из Kuching",
+            "taxi_ridehail": "road access",
+            "walking": "до feeding area"
+          },
+          "walking": "короткий лесной подход",
+          "water": "visitor infrastructure",
+          "overnight_and_camping": "база Kuching",
+          "best_period": "feeding windows"
+        }
+      },
+      {
+        "name": "Redang Island / Redang Marine Park",
+        "class": "island",
+        "interest": [
+          "nature",
+          "island",
+          "marine_park",
+          "reef",
+          "diving",
+          "trekking"
+        ],
+        "why_go": "Крупный остров восточного побережья внутри Marine Parks Malaysia: пляжи, рифы, внутренний лес и морская логистика, полностью зависящая от сезона и лодок.",
+        "traveler_card": {
+          "location": {
+            "region": "Terengganu / Redang",
+            "nearest_hub": "Kuala Terengganu / Merang",
+            "languages_spoken": [
+              "малайский",
+              "английский"
+            ],
+            "currency": {
+              "code": "MYR",
+              "name": "Malaysian ringgit",
+              "local_currency_per_1_usd": 4.0741,
+              "as_of": "2026-09-27",
+              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
+              "rate_type": "рыночный/справочный снимок"
+            },
+            "coordinates": {
+              "lat": 5.7773608,
+              "lon": 103.0075912
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinates_checked_at": "2026-09-29",
+            "coordinate_source": {
+              "url": "https://geonames.nga.mil/geonames/",
+              "publisher": "NGA GeoNames",
+              "kind": "official_map",
+              "used_for": [
+                "coordinates"
+              ],
+              "accessed": "2026-09-29"
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 0,
+              "max_m": 359,
+              "reference_type": "range",
+              "accuracy": "medium",
+              "checked_at": "2026-09-29",
+              "source": {
+                "url": "https://digital.nahrim.gov.my/portal-main/publication-details?id=16",
+                "publisher": "NAHRIM",
+                "kind": "government",
+                "used_for": [
+                  "object elevation"
+                ],
+                "accessed": "2026-09-29"
+              }
+            }
+          },
+          "logistics": {
+            "access": "Финальный сегмент — лодка с материка; конкретный resort может использовать свой катер/точку высадки.",
+            "public_transport": "До Kuala Terengganu/Merang — межгород/road transfer; далее лодка.",
+            "last_mile": "Наземная сеть ограничена; между бухтами — лодки и пешие тропы.",
+            "walking": "Лесные и береговые тропы.",
+            "water": "Питьевая вода через деревню/размещение.",
+            "overnight_and_camping": "DoF публикует camping fee RM10/site/night до 4 человек, но конкретную разрешённую площадку надо подтвердить.",
+            "permit_or_guide": "Marine park charge для иностранцев RM30 adult / RM15 child/senior; filming/camping регулируются отдельно.",
+            "modes": {
+              "public_transport": "до Kuala Terengganu/Merang",
+              "ferry": "материк → Redang",
+              "boat": "между бухтами",
+              "walking": "тропы"
+            }
+          },
+          "climate": {
+            "best_period": "Вне пика северо-восточного муссона.",
+            "heat_rain_notes": "Погода, волна и прилив задерживают лодки.",
+            "site_specific_notes": "Некоторые resort packages привязаны к собственному boat schedule."
+          },
+          "operations": {
+            "status": "морской парк; лодочная доступность сезонна",
+            "hours": null,
+            "ticket": "Non-MYKAD RM30 adult / RM15 child/senior; camping RM10/site/night; commercial filming RM100/day.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.dof.gov.my/en/services/marine-park-resource-management/conservation-charge-fee-rates/"
+          },
+          "safety": {
+            "crime_context": "Приоритет — морская погода и лодочная логистика.",
+            "main_risks": [
+              "волна",
+              "муссон",
+              "задержка лодки"
+            ],
+            "confidence": "полевой риск-профиль"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "score_type": "editorial_score",
+            "drone": "По DoF/CAAM и правилам конкретного острова.",
+            "filming_restrictions": "Commercial filming имеет отдельный marine-park fee.",
+            "visual_scouting": {
+              "best_time": "morning",
+              "best_weather_light": "Спокойное море и хорошая прозрачность воды.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_01",
+                  "description": "Лодочный подход показывает гористый профиль острова.",
+                  "coordinates": null,
+                  "access": null,
+                  "view": {
+                    "description": "island profile"
+                  },
+                  "best_time": "morning",
+                  "best_weather_light": "calm sea",
+                  "useful_equipment": [
+                    "wide",
+                    "standard"
+                  ]
+                },
+                {
+                  "id": "vp_02",
+                  "description": "Береговые точки показывают переход рифа к пляжу и лесу.",
+                  "coordinates": null,
+                  "access": null,
+                  "view": {
+                    "description": "reef-beach-forest transition"
+                  },
+                  "best_time": "day",
+                  "best_weather_light": "clear water",
+                  "useful_equipment": [
+                    "wide",
+                    "underwater_camera"
+                  ]
+                }
+              ],
+              "seasonal_visuals": [
+                "Состояние моря и прозрачность воды сезонны."
+              ],
+              "video_activity": [
+                "лодочная логистика",
+                "рифовая жизнь",
+                "береговые тропы"
+              ],
+              "useful_equipment": [
+                "wide",
+                "standard",
+                "underwater_camera",
+                "action_camera"
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Redang — крупнейший остров группы из девяти островов у Terengganu и один из основных узлов морского парка. Экспедиционная ценность — коралловая зона, внутренний лесистый рельеф и островная логистика.",
+            "culture_ethnography": null,
+            "geography_geology": "Остров поднимается до Bukit Besar около 359 м; крутой внутренний рельеф ограничивает сухопутную связность между бухтами.",
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Redang — крупнейший остров группы у Terengganu и один из основных узлов морского парка.",
+                "source_refs": []
+              },
+              {
+                "section_id": "history",
+                "content": "Морские воды Redang включены в охраняемую marine-park систему; современный режим задаёт Department of Fisheries.",
+                "source_refs": []
+              },
+              {
+                "section_id": "geography",
+                "content": "Остров поднимается до Bukit Besar около 359 м; внутренний рельеф ограничивает сухопутную связность.",
+                "source_refs": []
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              {
+                "summary": "Отзывы 2025–2026 фиксируют задержки катеров из-за погоды, низкого прилива и технических проблем; нужен запас времени перед стыковками.",
+                "source_url": "https://www.tripadvisor.in/Hotel_Review-g304006-d308182-Reviews-or80-The_Taaras_Beach_Spa_Resort-Pulau_Redang_Terengganu.html"
+              },
+              {
+                "summary": "Свежие ferry reports показывают разброс качества: встречаются промокший багаж и несвоевременная лодка, хотя другие рейсы проходят штатно.",
+                "source_url": "https://12go.asia/en/ferry/redang-island/merang-jetty"
+              }
+            ],
+            "note": "Операторские отзывы не обобщаются на все рейсы."
+          },
+          "accommodation": [
+            {
+              "name": "Redang Pelangi Resort",
+              "area": "Pulau Redang",
+              "price_for_two": "Официальный 2026 3D2N Deluxe twin-sharing package: RM660/person weekday, RM1320 за двоих; это пакет, не room-only.",
+              "contact": "через официальный сайт",
+              "social_or_web": "https://redangpelangi.com/packages.php",
+              "source": "official 2026 package rates",
+              "source_url": "https://redangpelangi.com/packages.php",
+              "coordinates": null,
+              "checked_at": "2026-09-29"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Redang%20Island.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Redang_Island.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "WorldTravleerAndPhotoTaker",
+          "illustration_scope": "object-specific",
+          "last_checked": "2026-09-29"
+        },
+        "sources": [
+          {
+            "url": "https://www.malaysia.travel/explore/redang-island",
+            "publisher": "Tourism Malaysia",
+            "kind": "government",
+            "used_for": [
+              "island context",
+              "marine park"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.dof.gov.my/en/services/marine-park-resource-management/conservation-charge-fee-rates/",
+            "publisher": "Department of Fisheries Malaysia",
+            "kind": "government",
+            "used_for": [
+              "fees",
+              "camping",
+              "filming"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.dof.gov.my/en/services/marine-park-resource-management/marine-park-management/",
+            "publisher": "Department of Fisheries Malaysia",
+            "kind": "government",
+            "used_for": [
+              "management"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Redang_Island.jpg",
+            "publisher": "Wikimedia Commons",
+            "kind": "media_repository",
+            "used_for": [
+              "illustration",
+              "license"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "narrow": "Крупный остров восточного побережья внутри Marine Parks Malaysia: пляжи, рифы, внутренний лес и морская логистика, полностью зависящая от сезона и лодок.",
+        "tags": [
+          "nature",
+          "island",
+          "marine_park",
+          "reef",
+          "diving",
+          "trekking",
+          "walking"
+        ],
+        "route_meta": {
+          "region_ref": "Terengganu / Redang",
+          "locality_ref": "Kuala Terengganu / Merang",
+          "transport_modes": {
+            "public_transport": "до Merang",
+            "ferry": "до острова",
+            "boat": "между бухтами",
+            "walking": "тропы"
+          },
+          "walking": "береговые/лесные тропы",
+          "water": "через поселение/размещение",
+          "overnight_and_camping": "только подтверждённая площадка",
+          "permit_or_guide": "marine park charge",
+          "best_period": "outside NE monsoon"
         }
       }
     ],

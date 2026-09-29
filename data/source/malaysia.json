@@ -35,7 +35,8 @@
       "2026-09-29 climate pass: annual mean temperature/precipitation references added to selected Malaysia localities with explicit period and data basis; ERA5/WorldClim/NASA POWER are labelled as reanalysis/grid climatology rather than official station normals. Langkawi annual temperature is derived from the stored monthly climatology; annual rainfall remains null.",
       "2026-09-29 geo-map pass: 26 Malaysia real localities received their own sourced WGS84 center anchors. These anchors identify the geo entity itself and are not borrowed from attraction coordinates.",
       "2026-09-29 climate pass 2: annual climate references added for Gerik, Kuala Kangsar, Kundasang, Sukau, Batu Gajah, Kuala Besut and Sepilok. Sepilok preserves the published temperature range and precipitation uncertainty rather than inventing a single mean.",
-      "2026-09-29 locality gap pass: filled remaining geography/climate gaps for Gerik, Kuala Kangsar, Batu Gajah, Kuching, Miri, Kota Kinabalu, Kudat, Lahad Datu and Batu Niah. Batu Niah deliberately keeps a sourced temperature range/seasonality instead of using a dubious annual precipitation aggregate."
+      "2026-09-29 locality gap pass: filled remaining geography/climate gaps for Gerik, Kuala Kangsar, Batu Gajah, Kuching, Miri, Kota Kinabalu, Kudat, Lahad Datu and Batu Niah. Batu Niah deliberately keeps a sourced temperature range/seasonality instead of using a dubious annual precipitation aggregate.",
+      "2026-09-29 Malaysia geo QA closure: filled the only remaining required region transport gaps and Batu Caves geography; six localities without robust annual climatology now carry an explicit not_normalized status instead of silent null or borrowed nearby-station values."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -615,9 +616,17 @@
             "src_000606",
             "src_000601",
             "src_000595",
-            "src_000594"
+            "src_000594",
+            "src_000624"
           ],
           "checked_at": "2026-09-29"
+        },
+        "transport": {
+          "intercity": "Самостоятельный основной вход — междугородние автобусы до Melaka Sentral; историческое ядро дальше связывается local bus/Grab.",
+          "local": "Dutch Square–St Paul–Jonker–river loop рациональнее проходить пешком; ride-hailing полезен для Melaka Sentral и внешних районов.",
+          "source_refs": [
+            "src_000624"
+          ]
         }
       },
       {
@@ -824,9 +833,19 @@
             "src_000595",
             "src_000617",
             "src_000594",
-            "src_000588"
+            "src_000588",
+            "src_000628"
           ],
           "checked_at": "2026-09-29"
+        },
+        "transport": {
+          "lahad_datu_danum": "До Lahad Datu доступ обычным транспортом; въезд в Danum Valley дальше только заранее организованным разрешённым transfer.",
+          "sandakan_kinabatangan": "Для Kinabatangan практический городской gateway — Sandakan; road transfer к Sukau/Bilit, далее ключевая логистика по воде.",
+          "expedition_note": "Не сводить Danum и Kinabatangan к одному last-mile: первый — controlled forest access, второй — road + river corridor.",
+          "source_refs": [
+            "src_000615",
+            "src_000628"
+          ]
         }
       },
       {
@@ -1306,9 +1325,18 @@
             "src_000597",
             "src_000606",
             "src_000595",
-            "src_000594"
+            "src_000594",
+            "src_000624"
           ],
           "checked_at": "2026-09-29"
+        },
+        "transport": {
+          "road": "На главном острове полноценная автобусная сеть для достопримечательностей ограничена; road points рационально связывать ride-hailing/такси или собственным мопедом/машиной.",
+          "marine": "Kilim и островные маршруты требуют отдельной лодочной логистики; состояние моря проверять по marine forecast.",
+          "source_refs": [
+            "src_000624",
+            "src_000597"
+          ]
         }
       },
       {
@@ -8434,7 +8462,12 @@
             "summary": "Inland Sarawak очень влажный круглый год; более сухой период относительно чаще приходится на июнь–август, но горные склоны могут получать экстремально высокие годовые осадки.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference_status": {
+              "status": "not_normalized",
+              "reason": "Нет достаточно надёжной локальной годовой нормы, которую можно записать без подмены соседней станцией/районом.",
+              "checked_at": "2026-09-29"
+            }
           },
           "nature": {
             "summary": "Sarawak Forestry описывает 15 типов леса, 170 видов диких орхидей, 10 видов Nepenthes и крупные вылеты летучих мышей из Deer Cave.",
@@ -8981,7 +9014,12 @@
             "source_refs": [
               "src_000593",
               "src_000620"
-            ]
+            ],
+            "annual_reference_status": {
+              "status": "not_normalized",
+              "reason": "Нет достаточно надёжной локальной годовой нормы, которую можно записать без подмены соседней станцией/районом.",
+              "checked_at": "2026-09-29"
+            }
           },
           "ethnography": {
             "summary": "Bario — центр Kelabit community; сеть longhouses, wet-rice agriculture и высокогорная кухня остаются живой частью местной культуры.",
@@ -9436,7 +9474,12 @@
             "summary": "Жарко и влажно; сильный дождь ухудшает доступ к пещерам и полевым площадкам.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference_status": {
+              "status": "not_normalized",
+              "reason": "Нет достаточно надёжной локальной годовой нормы, которую можно записать без подмены соседней станцией/районом.",
+              "checked_at": "2026-09-29"
+            }
           },
           "transport": {
             "summary": "Практична самостоятельная база в Lenggong с road transfer/мопедом к разнесённым участкам; внутри valley общественный транспорт слабый.",
@@ -9643,7 +9686,12 @@
             "summary": "Экваториально жарко и влажно; грозовые ливни типичны для Klang Valley.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference_status": {
+              "status": "not_normalized",
+              "reason": "Нет достаточно надёжной локальной годовой нормы, которую можно записать без подмены соседней станцией/районом.",
+              "checked_at": "2026-09-29"
+            }
           },
           "transport": {
             "rail": "KTM Komuter до станции Batu Caves, далее короткий пеший подход.",
@@ -9655,12 +9703,14 @@
             "source_refs": [
               "src_000624",
               "src_000593",
-              "src_000626"
+              "src_000626",
+              "src_000647"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
             "note": null
-          }
+          },
+          "geography": "Town/locality в Gombak District на северной окраине агломерации Kuala Lumpur; известняковый mogote и храмовые пещеры образуют главный локальный рельефный ориентир."
         },
         "primary_location": {
           "lat": 3.23692,
@@ -9998,7 +10048,12 @@
             "annual_reference": null,
             "source_refs": [
               "src_000656"
-            ]
+            ],
+            "annual_reference_status": {
+              "status": "not_normalized",
+              "reason": "Нет достаточно надёжной локальной годовой нормы, которую можно записать без подмены соседней станцией/районом.",
+              "checked_at": "2026-09-29"
+            }
           },
           "geology": {
             "summary": "Локальный ландшафт связан с известняковыми формациями Niah cave/karst system; детальная археология и cave geology остаются на уровне Niah National Park/object.",
@@ -10040,7 +10095,12 @@
             "summary": "Жаркий тропический климат с сезонными ливнями; сухое окно облегчает сельские road transfers.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference_status": {
+              "status": "not_normalized",
+              "reason": "Нет достаточно надёжной локальной годовой нормы, которую можно записать без подмены соседней станцией/районом.",
+              "checked_at": "2026-09-29"
+            }
           },
           "ethnography": {
             "summary": "Rungus — одна из Dusunic groups Sabah; посещение и особенно ночёвка требуют прямой договорённости с принимающей общиной.",

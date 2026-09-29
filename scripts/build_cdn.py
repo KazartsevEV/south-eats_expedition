@@ -1283,7 +1283,7 @@ def build():
         "release_path": f"{RELEASE_ID}/",
         "manifest": f"{RELEASE_ID}/manifest.json",
         "status": "reference_release",
-        "published_countries": [x[1] for x in PUBLISH],
+        "published_countries": [x[1] for x in PUBLISH + COUNTRY_ONLY],
         "target_countries_total": 11,
     })
     print(json.dumps(manifest["totals"], ensure_ascii=False))

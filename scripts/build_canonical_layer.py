@@ -436,11 +436,13 @@ def build():
             continue
         geo_id = require_id(registry, "geo", legacy_id)
         country_id = f"geo_{code.lower()}"
+        source_locality = locality_profile_by_country_name.get((code, place.get("name")))
         kind = "geographic_area"
         if place.get("kind") == "region":
             kind = "geographic_area"
         elif place.get("kind") == "city_or_route_hub":
-            kind = "geographic_area"
+            requested_kind = (source_locality or {}).get("kind")
+            kind = requested_kind if requested_kind in GEO_KINDS else "geographic_area"
         if kind not in GEO_KINDS:
             kind = "geographic_area"
         entity = {

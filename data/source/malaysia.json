@@ -31,7 +31,8 @@
       "2026-09-29 ownership cleanup: national fauna/flora/dangerous-animal/poisonous-plant and generic crime/disease risk lists are retained in source as unlocalized legacy material but are no longer intended for country-level display; east-Sabah dynamic security context is attached to relevant geo regions.",
       "2026-09-29 hierarchy cleanup: 18 real Malaysia localities added beneath regional geo nodes; composite legacy route hubs retained and marked with replacement IDs; affected objects now reference real nearest localities instead of slash-combined hubs.",
       "2026-09-29 locality pass: normalized 2023 OpenDOSM/PDRM police-district assault/property counts for matching localities; added Kinta Valley geology for Ipoh/Batu Gajah and dynamic marine-weather sources for Kota Kinabalu and Miri. Counts are stored with methodology caveats and are not converted into safety ratings.",
-      "2026-09-29 geo semantics: exact pre-existing Malaysia localities retyped from generic route-hub geography to city/town/settlement/archipelago where identity is unambiguous."
+      "2026-09-29 geo semantics: exact pre-existing Malaysia localities retyped from generic route-hub geography to city/town/settlement/archipelago where identity is unambiguous.",
+      "2026-09-29 climate pass: annual mean temperature/precipitation references added to selected Malaysia localities with explicit period and data basis; ERA5/WorldClim/NASA POWER are labelled as reanalysis/grid climatology rather than official station normals. Langkawi annual temperature is derived from the stored monthly climatology; annual rainfall remains null."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -8145,7 +8146,17 @@
           "climate": {
             "summary": "Экваториально жарко и влажно круглый год; грозы обычны.",
             "best_period": "Круглый год; для длинной уличной съёмки удобнее сухое утро после ночного дождя.",
-            "local_notes": "После 11:00 тепловая дымка и жёсткий свет ухудшают skyline; грозовой ливень чаще полезнее переждать 30–60 минут и снимать отражения после него."
+            "local_notes": "После 11:00 тепловая дымка и жёсткий свет ухудшают skyline; грозовой ливень чаще полезнее переждать 30–60 минут и снимать отражения после него.",
+            "annual_reference": {
+              "mean_annual_temperature_c": 24.8,
+              "annual_precipitation_mm": 2637,
+              "period": "1940–2025",
+              "data_basis": "Copernicus ERA5 reanalysis",
+              "source_refs": [
+                "src_000645"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           },
           "transport": {
             "access": "Самостоятельная база — Куала-Лумпур; историческое ядро удобно проходить пешком, между удалёнными районами использовать MRT/LRT/Monorail, KTM или Grab.",
@@ -8174,8 +8185,11 @@
               "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur_skyline_with_the_Petronas_Towers_on_the_left_and_the_Menara_KL_on_the_right_(18357017963).jpg"
             ],
             "checked_at": "2026-09-29",
-            "source_refs_complete": false,
-            "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued."
+            "source_refs_complete": true,
+            "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued.",
+            "source_refs": [
+              "src_000645"
+            ]
           }
         },
         "kind": "city"
@@ -8199,7 +8213,17 @@
           "climate": {
             "summary": "Жаркое влажное побережье.",
             "best_period": "Декабрь–февраль обычно суше; для street/documentary важнее ранний старт до туристических групп.",
-            "local_notes": "После дождя five-foot ways и плитка скользкие, зато фасады и вывески насыщеннее; в полдень открытые улицы перегреваются."
+            "local_notes": "После дождя five-foot ways и плитка скользкие, зато фасады и вывески насыщеннее; в полдень открытые улицы перегреваются.",
+            "annual_reference": {
+              "mean_annual_temperature_c": 27.2,
+              "annual_precipitation_mm": 2229,
+              "period": "1940–2025",
+              "data_basis": "Copernicus ERA5 reanalysis",
+              "source_refs": [
+                "src_000635"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           },
           "transport": {
             "access": "Самостоятельно: паром/автобус или аэропорт Пенанга, далее историческое ядро удобнее всего исследовать пешком; Rapid Penang и Grab нужны для связки с дальними районами острова.",
@@ -8234,7 +8258,8 @@
             "source_refs_complete": true,
             "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued.",
             "source_refs": [
-              "src_000594"
+              "src_000594",
+              "src_000635"
             ]
           },
           "safety": {
@@ -8273,7 +8298,17 @@
           "climate": {
             "summary": "Жарко и влажно круглый год.",
             "best_period": "Более сухое окно удобно, но для съёмки важнее будний рассвет: weekend crowd сильнее влияет на материал, чем сезон.",
-            "local_notes": "Полуденное солнце плоско освещает Dutch Square; после дождя riverfront и красные фасады визуально выигрывают."
+            "local_notes": "Полуденное солнце плоско освещает Dutch Square; после дождя riverfront и красные фасады визуально выигрывают.",
+            "annual_reference": {
+              "mean_annual_temperature_c": 26.8,
+              "annual_precipitation_mm": 2021,
+              "period": "1940–2025",
+              "data_basis": "Copernicus ERA5 reanalysis",
+              "source_refs": [
+                "src_000636"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           },
           "transport": {
             "access": "Самостоятельно: междугородний автобус до Melaka Sentral, затем местный автобус или Grab; историческое ядро рациональнее проходить пешком.",
@@ -8305,7 +8340,8 @@
             "source_refs_complete": true,
             "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued.",
             "source_refs": [
-              "src_000594"
+              "src_000594",
+              "src_000636"
             ]
           },
           "safety": {
@@ -8421,7 +8457,17 @@
           "climate": {
             "summary": "Тропическое море; северо-запад полуострова имеет собственную сезонность осадков.",
             "best_period": "Декабрь–март обычно суше; для mangrove и boat work выбирать день с умеренным ветром, а не только без дождя.",
-            "local_notes": "SkyCab и море реагируют на грозу/ветер быстрее, чем пляжный план; утром вода и воздух обычно спокойнее."
+            "local_notes": "SkyCab и море реагируют на грозу/ветер быстрее, чем пляжный план; утром вода и воздух обычно спокойнее.",
+            "annual_reference": {
+              "mean_annual_temperature_c": 28.05,
+              "annual_precipitation_mm": null,
+              "period": "derived from existing monthly climatology",
+              "data_basis": "Arithmetic mean of 12 stored WeatherSpark monthly mean temperatures",
+              "source_refs": [
+                "src_000590"
+              ],
+              "caveat": "Derived from the already stored monthly series; rainfall annual total is intentionally left null."
+            }
           },
           "transport": {
             "access": "Практичная база — Langkawi; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -8453,7 +8499,8 @@
             "source_refs_complete": true,
             "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued.",
             "source_refs": [
-              "src_000594"
+              "src_000594",
+              "src_000590"
             ]
           },
           "safety": {
@@ -8672,10 +8719,23 @@
               "src_000611",
               "src_000616",
               "src_000606",
-              "src_000594"
+              "src_000594",
+              "src_000641"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true
+          },
+          "climate": {
+            "annual_reference": {
+              "mean_annual_temperature_c": 27.8,
+              "annual_precipitation_mm": 2419,
+              "period": "2001–2020",
+              "data_basis": "NASA POWER / MERRA-2",
+              "source_refs": [
+                "src_000641"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           }
         },
         "kind": "town"
@@ -8722,7 +8782,17 @@
             "summary": "Northeast Sabah получает максимум осадков около января и минимум около апреля; декабрь–март особенно чувствительны к северо-восточному муссону.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c": 27.3,
+              "annual_precipitation_mm": 2400,
+              "period": "source study climatological reference",
+              "data_basis": "Malaysia Meteorological Service data reported in peer-reviewed study",
+              "source_refs": [
+                "src_000642"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           },
           "marine": {
             "turtle_islands": "Turtle Islands Park находится примерно в 40 км к северу от Sandakan и защищает green и hawksbill turtles, reefs and surrounding seas.",
@@ -8772,7 +8842,8 @@
               "src_000612",
               "src_000616",
               "src_000606",
-              "src_000594"
+              "src_000594",
+              "src_000642"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true
@@ -8857,7 +8928,8 @@
               "src_000593",
               "src_000634",
               "src_000606",
-              "src_000594"
+              "src_000594",
+              "src_000637"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -8867,7 +8939,17 @@
             "summary": "Coastal Sarawak receives a strong northeast-monsoon signal, with the wettest period generally December–March and a relative minimum around June–July.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c": 26.7,
+              "annual_precipitation_mm": 2347,
+              "period": "1940–2025",
+              "data_basis": "Copernicus ERA5 reanalysis",
+              "source_refs": [
+                "src_000637"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           },
           "marine": {
             "weather": "Use METMalaysia Northern Sarawak waters forecast for dynamic wind, thunderstorms and wave height.",
@@ -8919,7 +9001,8 @@
               "src_000626",
               "src_000631",
               "src_000632",
-              "src_000594"
+              "src_000594",
+              "src_000639"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -8945,6 +9028,18 @@
             "source_refs": [
               "src_000594"
             ]
+          },
+          "climate": {
+            "annual_reference": {
+              "mean_annual_temperature_c": 26.2,
+              "annual_precipitation_mm": 2728,
+              "period": "1970–2000",
+              "data_basis": "WorldClim 2.1 (~9 km)",
+              "source_refs": [
+                "src_000639"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           }
         }
       },
@@ -8967,7 +9062,17 @@
             "summary": "Очень влажный город; для полевой работы важнее окно между ливнями, чем поиск полностью сухого сезона.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c": 27.4,
+              "annual_precipitation_mm": 3383,
+              "period": "1970–2000",
+              "data_basis": "WorldClim 2.1 (~9 km)",
+              "source_refs": [
+                "src_000640"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           },
           "transport": {
             "rail": "KTMB/ETS обеспечивает самостоятельный доступ; локальные точки города связаны короткими road/walking legs.",
@@ -8980,7 +9085,8 @@
               "src_000593",
               "src_000626",
               "src_000624",
-              "src_000594"
+              "src_000594",
+              "src_000640"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9164,7 +9270,8 @@
               "src_000593",
               "src_000633",
               "src_000606",
-              "src_000594"
+              "src_000594",
+              "src_000638"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9174,7 +9281,17 @@
             "summary": "West/northwest Sabah has two rainfall maxima, with the main maximum around October and secondary maximum around June; February and August are relative minima. The coast remains humid and thunderstorm-prone.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c": 26.7,
+              "annual_precipitation_mm": 2232,
+              "period": "1940–2025",
+              "data_basis": "Copernicus ERA5 reanalysis",
+              "source_refs": [
+                "src_000638"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           },
           "marine": {
             "weather": "Use the dynamic METMalaysia Western Sabah and Labuan waters forecast for wind/thunderstorms/wave height before island or coastal boat legs.",
@@ -9341,7 +9458,17 @@
             "summary": "Северо-западный Sabah имеет главный дождливый максимум около октября и второй около июня; более сухие минимумы обычно около февраля и августа.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c": 27.6,
+              "annual_precipitation_mm": 2480,
+              "period": "1991–2020",
+              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "source_refs": [
+                "src_000644"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           },
           "ethnography": {
             "summary": "Kudat и Matunggong являются важным районом Rungus communities.",
@@ -9359,7 +9486,8 @@
             "source_refs": [
               "src_000613",
               "src_000593",
-              "src_000594"
+              "src_000594",
+              "src_000644"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9404,7 +9532,8 @@
           "provenance": {
             "source_refs": [
               "src_000615",
-              "src_000594"
+              "src_000594",
+              "src_000643"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9422,6 +9551,18 @@
             "source_refs": [
               "src_000594"
             ]
+          },
+          "climate": {
+            "annual_reference": {
+              "mean_annual_temperature_c": 27.1,
+              "annual_precipitation_mm": 2157,
+              "period": "1991–2020",
+              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "source_refs": [
+                "src_000643"
+              ],
+              "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
+            }
           }
         }
       },
@@ -10291,6 +10432,160 @@
       ],
       "accessed": "2026-09-29",
       "notes": "Dynamic Northern Sarawak marine forecast."
+    },
+    {
+      "id": "CLIMATEMEMORY_GEORGETOWN",
+      "canonical_id": "src_000635",
+      "publisher": "Climate Memory / Copernicus ERA5",
+      "url": "https://climatememory.com/en/climate/malaysia/george-town",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "george_town"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "ERA5 reanalysis normals 1940–2025; not a station normal."
+    },
+    {
+      "id": "CLIMATEMEMORY_MALACCA",
+      "canonical_id": "src_000636",
+      "publisher": "Climate Memory / Copernicus ERA5",
+      "url": "https://climatememory.com/en/climate/malaysia/malacca",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "melaka"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "ERA5 reanalysis normals 1940–2025; not a station normal."
+    },
+    {
+      "id": "CLIMATEMEMORY_MIRI",
+      "canonical_id": "src_000637",
+      "publisher": "Climate Memory / Copernicus ERA5",
+      "url": "https://climatememory.com/en/climate/malaysia/miri",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "miri"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "ERA5 reanalysis normals 1940–2025; not a station normal."
+    },
+    {
+      "id": "CLIMATEMEMORY_KOTA_KINABALU",
+      "canonical_id": "src_000638",
+      "publisher": "Climate Memory / Copernicus ERA5",
+      "url": "https://climatememory.com/en/climate/malaysia/kota-kinabalu",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "kota_kinabalu"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "ERA5 reanalysis normals 1940–2025; not a station normal."
+    },
+    {
+      "id": "WORLDCLIM_IPOH",
+      "canonical_id": "src_000639",
+      "publisher": "Population Review / WorldClim 2.1",
+      "url": "https://www.populationreview.org/climate/malaysia/ipoh",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "ipoh"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "WorldClim 2.1 normals 1970–2000 sampled at ~9 km; secondary presentation of dataset."
+    },
+    {
+      "id": "WORLDCLIM_TAIPING",
+      "canonical_id": "src_000640",
+      "publisher": "Population Review / WorldClim 2.1",
+      "url": "https://www.populationreview.org/climate/malaysia/taiping",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "taiping"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "WorldClim 2.1 normals 1970–2000 sampled at ~9 km; secondary presentation of dataset."
+    },
+    {
+      "id": "NASA_POWER_SEMPORNA",
+      "canonical_id": "src_000641",
+      "publisher": "WeatherSweep / NASA POWER MERRA-2",
+      "url": "https://weathersweep.com/weather/malaysia/semporna/climate/",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "semporna"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "NASA POWER/MERRA-2 long-term averages 2001–2020; secondary presentation."
+    },
+    {
+      "id": "SCIENCE_SANDAKAN_CLIMATE",
+      "canonical_id": "src_000642",
+      "publisher": "Forest Ecology and Management / Malaysia Meteorological Service data cited in paper",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0378112717307247",
+      "kind": "academic",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "sandakan"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Scientific paper reports Sandakan ~2400 mm annual rainfall and 27.3°C mean annual temperature, citing Malaysia Meteorological Service monthly reports."
+    },
+    {
+      "id": "WORLDCLIM_LAHAD_DATU",
+      "canonical_id": "src_000643",
+      "publisher": "StatsClimat / WorldClim-CRU",
+      "url": "https://statsclimat.com/climate/malaysia/lahad-datu-1733953",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "lahad_datu"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "1991–2020 normals reported from WorldClim/CRU TS; secondary analytical presentation."
+    },
+    {
+      "id": "WORLDCLIM_KUDAT",
+      "canonical_id": "src_000644",
+      "publisher": "StatsClimat / WorldClim-CRU",
+      "url": "https://statsclimat.com/climate/malaysia/kudat-1736458",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "kudat"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "1991–2020 normals reported from WorldClim/CRU TS; secondary analytical presentation."
+    },
+    {
+      "id": "CLIMATEMEMORY_KUALA_LUMPUR",
+      "canonical_id": "src_000645",
+      "publisher": "Climate Memory / Copernicus ERA5",
+      "url": "https://climatememory.com/en/climate/malaysia/kuala-lumpur",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "kuala_lumpur"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "ERA5 reanalysis normals 1940–2025; grid-cell estimate, not an urban station normal."
     }
   ],
   "uncertainties": [

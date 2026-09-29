@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "ID",
+    "country_slug": "indonesia",
+    "status": "country_geography_formalized_from_existing_research",
+    "checked_at": "2026-09-29",
+    "next_level": "country_profile_and_regional_qa_before_object_cards",
+    "canonical_id_policy": "Stable geo IDs reuse the existing registry. Composite researched regions are geographic_area unless an administrative status is independently established."
+  },
+  "sources": [
+    {
+      "source_file": "data/source/indonesia.json",
+      "publisher": "Expedition South East project research layer",
+      "used_for": [
+        "researched region identities",
+        "region-to-object linkage",
+        "verified locality relations where canonical locality IDs already exist"
+      ],
+      "checked_at": "2026-09-29"
+    }
+  ],
+  "rules": {
+    "parentage": "No composite expedition region is promoted to province/state/district without independent evidence.",
+    "route_hubs": "Composite route hubs remain logistics metadata unless a real locality already has its own canonical geo ID.",
+    "object_visibility": "Every existing object must be reachable from at least one formal country geography node.",
+    "cards": "Object card payloads are not edited in this stage."
+  },
+  "nodes": [
+    {
+      "id": "id:region:yogyakarta-central-java",
+      "canonical_id": "geo_id_0001",
+      "kind": "geographic_area",
+      "name_ru": "Джокьякарта / Центральная Ява",
+      "name_local": "Yogyakarta / Central Java",
+      "slug": "yogyakarta-central-java",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Yogyakarta / Central Java"
+      ],
+      "object_ids": [
+        "id:borobudur",
+        "id:prambanan",
+        "id:yogyakarta",
+        "id:lasem",
+        "id:dieng-plateau"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:bali",
+      "canonical_id": "geo_id_0002",
+      "kind": "geographic_area",
+      "name_ru": "Бали",
+      "name_local": "Bali",
+      "slug": "bali",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Bali"
+      ],
+      "object_ids": [
+        "id:bali-temple-landscapes"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:flores-komodo",
+      "canonical_id": "geo_id_0003",
+      "kind": "geographic_area",
+      "name_ru": "Флорес / Комодо",
+      "name_local": "Flores / Komodo",
+      "slug": "flores-komodo",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Flores / Komodo"
+      ],
+      "object_ids": [
+        "id:komodo-national-park",
+        "id:kelimutu-national-park",
+        "id:wae-rebo"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:east-java",
+      "canonical_id": "geo_id_0004",
+      "kind": "geographic_area",
+      "name_ru": "Восточная Ява",
+      "name_local": "East Java",
+      "slug": "east-java",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "East Java"
+      ],
+      "object_ids": [
+        "id:bromo-tengger-semeru",
+        "id:ijen"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:raja-ampat-west-papua",
+      "canonical_id": "geo_id_0005",
+      "kind": "geographic_area",
+      "name_ru": "Раджа-Ампат / Западное Папуа",
+      "name_local": "Raja Ampat / West Papua",
+      "slug": "raja-ampat-west-papua",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Raja Ampat / West Papua"
+      ],
+      "object_ids": [
+        "id:raja-ampat"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:maluku-banda",
+      "canonical_id": "geo_id_0006",
+      "kind": "geographic_area",
+      "name_ru": "Молуккские острова / Банда",
+      "name_local": "Maluku / Banda",
+      "slug": "maluku-banda",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Maluku / Banda"
+      ],
+      "object_ids": [
+        "id:banda-neira"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:west-sumatra-sawahlunto",
+      "canonical_id": "geo_id_0007",
+      "kind": "geographic_area",
+      "name_ru": "Западная Суматра / Савахлунто",
+      "name_local": "West Sumatra / Sawahlunto",
+      "slug": "west-sumatra-sawahlunto",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "West Sumatra / Sawahlunto"
+      ],
+      "object_ids": [
+        "id:sawahlunto"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:toraja-south-sulawesi",
+      "canonical_id": "geo_id_0008",
+      "kind": "geographic_area",
+      "name_ru": "Тораджа / Южный Сулавеси",
+      "name_local": "Toraja / South Sulawesi",
+      "slug": "toraja-south-sulawesi",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Toraja / South Sulawesi"
+      ],
+      "object_ids": [
+        "id:tana-toraja-hinterland"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:north-sumatra-gunung-leuser",
+      "canonical_id": "geo_id_0009",
+      "kind": "geographic_area",
+      "name_ru": "Северная Суматра / Гунунг-Лёсер",
+      "name_local": "North Sumatra / Gunung Leuser",
+      "slug": "north-sumatra-gunung-leuser",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "North Sumatra / Gunung Leuser"
+      ],
+      "object_ids": [
+        "id:gunung-leuser-national-park-bukit-lawang"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:central-kalimantan-tanjung-puting",
+      "canonical_id": "geo_id_0010",
+      "kind": "geographic_area",
+      "name_ru": "Центральный Калимантан / Танджунг-Путинг",
+      "name_local": "Central Kalimantan / Tanjung Puting",
+      "slug": "central-kalimantan-tanjung-puting",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Central Kalimantan / Tanjung Puting"
+      ],
+      "object_ids": [
+        "id:tanjung-puting-national-park"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:wakatobi-se-sulawesi",
+      "canonical_id": "geo_id_0011",
+      "kind": "geographic_area",
+      "name_ru": "Вакатоби / Юго-Восточный Сулавеси",
+      "name_local": "Wakatobi / SE Sulawesi",
+      "slug": "wakatobi-se-sulawesi",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Wakatobi / SE Sulawesi"
+      ],
+      "object_ids": [
+        "id:wakatobi-national-park"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:togean-central-sulawesi",
+      "canonical_id": "geo_id_0012",
+      "kind": "geographic_area",
+      "name_ru": "Тогеанские острова / Центральный Сулавеси",
+      "name_local": "Togean / Central Sulawesi",
+      "slug": "togean-central-sulawesi",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Togean / Central Sulawesi"
+      ],
+      "object_ids": [
+        "id:togean-islands"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:north-sumatra-lake-toba-samosir",
+      "canonical_id": "geo_id_0013",
+      "kind": "geographic_area",
+      "name_ru": "Северная Суматра / озеро Тоба / Самосир",
+      "name_local": "North Sumatra / Lake Toba / Samosir",
+      "slug": "north-sumatra-lake-toba-samosir",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "North Sumatra / Lake Toba / Samosir"
+      ],
+      "object_ids": [
+        "id:lake-toba-samosir-batak-cultural-landscape"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "id:region:sumba-east-nusa-tenggara",
+      "canonical_id": "geo_id_0014",
+      "kind": "geographic_area",
+      "name_ru": "Сумба / Восточная Нуса-Тенгара",
+      "name_local": "Sumba / East Nusa Tenggara",
+      "slug": "sumba-east-nusa-tenggara",
+      "parent_id": "country:id",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Sumba / East Nusa Tenggara"
+      ],
+      "object_ids": [
+        "id:sumba-megalithic-villages"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    }
+  ]
+}

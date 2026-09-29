@@ -521,23 +521,28 @@ def location_context(location):
 def gallery_from(obj):
     ill = obj.get("illustration") or {}
     gallery = []
-    if isinstance(ill.get("gallery"), list):
-        for row in ill["gallery"]:
-            if isinstance(row, dict) and row.get("static_url"):
-                gallery.append(row)
-    if ill.get("static_url"):
-        candidate = {
-            "url": ill.get("static_url"),
-            "source_page": ill.get("source_page"),
-            "provider": ill.get("provider"),
-            "license": ill.get("license"),
-            "artist": ill.get("artist"),
-            "last_checked": ill.get("last_checked"),
-        }
-        if not any(x.get("url") == candidate["url"] for x in gallery):
-            gallery.insert(0, candidate)
-    return gallery
+    seen = set()
 
+    def add_media(row):
+        if not isinstance(row, dict):
+            return
+        url = row.get("url") or row.get("static_url")
+        if not url or url in seen:
+            return
+        seen.add(url)
+        gallery.append({
+            "url": url,
+            "source_page": row.get("source_page"),
+            "provider": row.get("provider"),
+            "license": row.get("license"),
+            "artist": row.get("artist"),
+            "last_checked": row.get("last_checked"),
+        })
+
+    add_media(ill)
+    for row in ill.get("gallery") or []:
+        add_media(row)
+    return gallery
 
 def story_from(obj):
     ann = ((obj.get("traveler_card") or {}).get("annotation") or {})

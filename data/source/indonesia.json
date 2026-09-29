@@ -30,7 +30,8 @@
       "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии.",
       "2026-09-30 country-layer pass: completed language, ethnography, culture, country narrow and country-wide travel-rule fields with canonical source IDs; attraction-card payloads were not edited.",
       "2026-09-30 regional-layer correction: Indonesia regions upgraded toward Malaysia reference standard with geography, relief, climate, geology/hydrology/marine where applicable, nature, health, safety, transport, ethnography and provenance; dynamic marine and volcanic conditions point to BMKG/PVMBG rather than frozen values; attraction cards unchanged.",
-      "2026-09-30 second QA pass: normalized country nature/safety Russian and added regional fauna, dangerous animals, poisonous plants, marine life where applicable, and natural hazards across all 14 Indonesia nodes. Attraction cards unchanged."
+      "2026-09-30 second QA pass: normalized country nature/safety Russian and added regional fauna, dangerous animals, poisonous plants, marine life where applicable, and natural hazards across all 14 Indonesia nodes. Attraction cards unchanged.",
+      "2026-09-30 object QA started by class: archaeology.megalith and archaeology.site receive sourced object elevations plus normalized visual_recon; legacy shot lists/camera-setting guidance is not migrated."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -445,7 +446,25 @@
               "accessed": "2026-09-29",
               "notes": "Borobudur Temple coordinate; archaeological complex anchor."
             },
-            "coordinates_checked_at": "2026-09-29"
+            "coordinates_checked_at": "2026-09-29",
+            "object_elevation": {
+              "representative_m": 272,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "checked_at": "2026-09-30",
+              "notes": "Высота относится к картографическому узлу самого храма; не путать с высотой сооружения над основанием.",
+              "source": {
+                "type": "map",
+                "title": "Borobudur — elevation",
+                "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+                "url": "https://mapcarta.com/Borobudur",
+                "authority": "medium",
+                "accessed": "2026-09-30",
+                "notes": "Картографический узел Borobudur: 272 м над уровнем моря."
+              }
+            }
           },
           "logistics": {
             "access": "Из Yogyakarta 1–1.5 ч на авто/shuttle; общественный автобус через Jombor/Borobudur Terminal.",
@@ -539,6 +558,74 @@
                 "галереи: камера почти параллельно рельефной стене"
               ],
               "avoid": "Не обещать sunrise с вершины по обычному билету; 11:00–14:00 даёт плоский свет."
+            },
+            "visual_scouting": {
+              "best_time": "04:45–06:15 — внешние обзорные холмы; на самом монументе — первое доступное утреннее окно или после 15:00.",
+              "best_weather_light": "Лёгкий утренний туман подчёркивает слои равнины Кеду; плотная облачность может закрыть Мерапи и Мербабу, но даёт мягкий свет для рельефов.",
+              "viewpoints": [
+                {
+                  "id": "vp_punthuk_setumbu",
+                  "name": "Punthuk Setumbu / Barede",
+                  "description": "Внешняя обзорная зона к западу от комплекса: Боробудур виден на фоне туманной равнины и вулканического горизонта.",
+                  "coordinates": null,
+                  "access": "Отдельный ранний выезд до открытия основной структуры; точную точку входа подтверждать по действующей схеме площадки.",
+                  "view": {
+                    "description": "Храм, равнина Кеду и при ясной погоде вулканический горизонт."
+                  },
+                  "best_time": "sunrise",
+                  "best_weather_light": "Лучше после ясной ночи или при тонком утреннем тумане.",
+                  "useful_equipment": [
+                    "standard",
+                    "telephoto"
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Sunrise viewpoints around Borobudur",
+                    "publisher": "Indonesia Travel",
+                    "url": "https://www.indonesia.travel/id/id/travel-ideas/heritage/7-tempat-indah-untuk-mengejar-matahari-terbit-di-sekitar-borobudur",
+                    "authority": "high",
+                    "accessed": "2026-09-30",
+                    "notes": "Официальная туристическая публикация перечисляет внешние точки рассветного обзора вокруг Боробудура."
+                  }
+                },
+                {
+                  "id": "vp_upper_terraces",
+                  "name": "Верхние круглые террасы Боробудура",
+                  "description": "С верхних террас читаются ступы, окружающая равнина и горные массивы; доступ зависит от отдельной квоты на подъём.",
+                  "coordinates": null,
+                  "access": "Только в доступный временной слот на структуру; обычный доступ начинается после рассвета.",
+                  "view": {
+                    "description": "Кольца ступ, равнина Кеду и горный горизонт."
+                  },
+                  "best_time": "morning",
+                  "best_weather_light": "Первое доступное утреннее окно уменьшает дымку и толпу.",
+                  "useful_equipment": [
+                    "wide",
+                    "telephoto"
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Borobudur Temple visitor information",
+                    "publisher": "InJourney Destination Management",
+                    "url": "https://ticket.injourneydestination.id/en/borobudur-temple/",
+                    "authority": "high",
+                    "accessed": "2026-09-30",
+                    "notes": "Официальный билетный ресурс используется для режима доступа к структуре."
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Май–сентябрь обычно суше и чаще дают ясный дальний горизонт; в дождливый сезон зелень насыщеннее, но облачность чаще скрывает вулканы."
+              ],
+              "video_activity": [
+                "Поток посетителей по галереям и лестницам хорошо показывает вертикальную логику памятника.",
+                "Во время Вайсака возможны буддийские церемонии; съёмку ритуалов вести только в разрешённом режиме."
+              ],
+              "useful_equipment": [
+                "wide",
+                "standard",
+                "telephoto"
+              ]
             }
           },
           "annotation": {
@@ -748,7 +835,25 @@
               "accessed": "2026-09-29",
               "notes": "Prambanan Temple Compounds reference coordinate."
             },
-            "coordinates_checked_at": "2026-09-29"
+            "coordinates_checked_at": "2026-09-29",
+            "object_elevation": {
+              "representative_m": 154,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "high",
+              "checked_at": "2026-09-30",
+              "notes": "Высота относится к территории храмового комплекса, а не к высоте центральной башни.",
+              "source": {
+                "type": "official",
+                "title": "Candi Prambanan",
+                "publisher": "Perpustakaan Nasional Republik Indonesia",
+                "url": "https://candi.perpusnas.go.id/temples/temples_map/mini_map.php?kodecandi=candi_prambanan_8",
+                "authority": "high",
+                "accessed": "2026-09-30",
+                "notes": "Национальная библиотека Индонезии указывает высоту территории комплекса 154 м над уровнем моря."
+              }
+            }
           },
           "logistics": {
             "access": "Около 17 км от центра Yogyakarta; car/ride-hailing/bus/train to Prambanan area.",
@@ -843,6 +948,77 @@
                 "70–200 мм издалека для сжатия ряда шпилей"
               ],
               "avoid": "Не откладывать главный кадр до фактического заката без подтверждённого позднего режима."
+            },
+            "visual_scouting": {
+              "best_time": "15:00–17:00 для бокового света; утром двор обычно визуально спокойнее.",
+              "best_weather_light": "После дождя тёмный камень сильнее отделяется от зелени; грозовая облачность выразительна, но открытый двор не подходит для работы во время грозы.",
+              "viewpoints": [
+                {
+                  "id": "vp_west_lawn",
+                  "name": "Западная и юго-западная лужайка",
+                  "description": "Открытая дистанция позволяет видеть ансамбль высоких башен целиком и отделять их от ближнего двора.",
+                  "coordinates": null,
+                  "access": "Внутри доступной посетителям территории комплекса.",
+                  "view": {
+                    "description": "Главный ансамбль башен Прамбанана с открытым небом и лужайкой перед ним."
+                  },
+                  "best_time": "afternoon",
+                  "best_weather_light": "Боковой свет во второй половине дня подчёркивает рельеф каменной кладки.",
+                  "useful_equipment": [
+                    "wide",
+                    "standard",
+                    "telephoto"
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Candi Prambanan",
+                    "publisher": "Indonesia Travel",
+                    "url": "https://www.indonesia.travel/id/id/travel-ideas/heritage/candi-prambanan",
+                    "authority": "high",
+                    "accessed": "2026-09-30",
+                    "notes": "Официальная справка объекта используется для планирования посещения и визуального контекста."
+                  }
+                },
+                {
+                  "id": "vp_inner_court",
+                  "name": "Внутренний двор",
+                  "description": "Близкая точка у основания главных храмов показывает масштаб башен и каменные рельефы.",
+                  "coordinates": null,
+                  "access": "Внутри посетительского маршрута; фактические ограничения зависят от режима комплекса.",
+                  "view": {
+                    "description": "Главные храмы, детали рельефов и вертикальный масштаб комплекса."
+                  },
+                  "best_time": "morning",
+                  "best_weather_light": "Мягкое утро удобнее для деталей камня и обычно даёт меньше посетителей.",
+                  "useful_equipment": [
+                    "ultra_wide",
+                    "wide",
+                    "standard"
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Candi Prambanan",
+                    "publisher": "Perpustakaan Nasional Republik Indonesia",
+                    "url": "https://candi.perpusnas.go.id/temples/temples_map/mini_map.php?kodecandi=candi_prambanan_8",
+                    "authority": "high",
+                    "accessed": "2026-09-30",
+                    "notes": "Национальная библиотека описывает расположение и характеристики комплекса."
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "После дождя камень темнеет, растительность становится насыщеннее; в сухой сезон дальний воздух обычно прозрачнее, но трава может быть менее яркой."
+              ],
+              "video_activity": [
+                "Посетительский поток между центральными храмами даёт масштаб сооружений.",
+                "Традиционные представления Рамаяны проходят по отдельному расписанию и не должны считаться ежедневной активностью комплекса."
+              ],
+              "useful_equipment": [
+                "ultra_wide",
+                "wide",
+                "standard",
+                "telephoto"
+              ]
             }
           },
           "annotation": {
@@ -6690,7 +6866,25 @@
               "accessed": "2026-09-29",
               "notes": "Anakalang is used as a representative anchor for the wider Sumba megalithic-village network; the object is explicitly multi-site."
             },
-            "coordinates_checked_at": "2026-09-29"
+            "coordinates_checked_at": "2026-09-29",
+            "object_elevation": {
+              "representative_m": 342,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "characteristic",
+              "accuracy": "approximate",
+              "checked_at": "2026-09-30",
+              "notes": "Репрезентативная отметка относится к картографическому якорю Anakalang, использованному для этого многоточечного объекта. Она не описывает высоту всех мегалитических деревень Сумбы.",
+              "source": {
+                "type": "map",
+                "title": "Anakalang — megalithic site elevation",
+                "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+                "url": "https://mapcarta.com/27473448",
+                "authority": "medium",
+                "accessed": "2026-09-30",
+                "notes": "Картографический якорь Anakalang: 342 м; карточка объекта охватывает более широкую сеть деревень."
+              }
+            }
           },
           "logistics": {
             "access": "По острову нужен автомобиль/мотоцикл; конкретные деревни разбросаны. Ratenggaro примерно 90 мин от Tambolaka по Indonesia Travel, с последней милей на местном транспорте.",
@@ -6789,6 +6983,49 @@
                 "Pasola: 100–400 мм из-за линии безопасности, не у траектории всадников"
               ],
               "avoid": "Не садиться/ставить технику на megalithic tombs; не запускать дрон над похоронной/ритуальной церемонией без явного согласия."
+            },
+            "visual_scouting": {
+              "best_time": "06:00–08:00 или 16:30–18:00; церемонии Pasola — только по фактическому локальному расписанию.",
+              "best_weather_light": "В сухой сезон саванна становится золотистой и пыльной; после дождей ландшафт зеленее, но грунтовые подъезды хуже. На западном и южном побережье часто сильный океанский ветер.",
+              "viewpoints": [
+                {
+                  "id": "vp_ratenggaro_outer",
+                  "name": "Внешняя приподнятая точка у Ratenggaro",
+                  "description": "Снаружи жилого круга одновременно читаются высокие крыши, каменные гробницы, устье и океан.",
+                  "coordinates": null,
+                  "access": "Подход с периферии деревни; вход в жилую и ритуальную часть — после согласования с общиной.",
+                  "view": {
+                    "description": "Деревня, мегалитические гробницы, речное устье и океан в одном культурном ландшафте."
+                  },
+                  "best_time": "golden_hour",
+                  "best_weather_light": "Низкий боковой свет подчёркивает вертикальные крыши и рельеф гробниц.",
+                  "useful_equipment": [
+                    "wide",
+                    "standard"
+                  ],
+                  "source": {
+                    "type": "official",
+                    "title": "Ratenggaro and Sumba cultural landscape",
+                    "publisher": "Indonesia Travel",
+                    "url": "https://www.indonesia.travel/id/id/travel-ideas/marine/10-tropical-paradise-s-in-sumba-for-your-magical-summer",
+                    "authority": "high",
+                    "accessed": "2026-09-30",
+                    "notes": "Официальная публикация используется для контекста Ratenggaro и доступа."
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Конец сухого сезона даёт жёлтую саванну и пыльные дороги; во влажный сезон ландшафт ярко-зелёный, но грунтовые подъезды менее предсказуемы."
+              ],
+              "video_activity": [
+                "Повседневная жизнь вокруг rumah adat и ткачество ikat возможны только с согласием участников.",
+                "Pasola даёт динамичную конную сцену только в даты ритуального календаря; безопасная зрительская дистанция обязательна."
+              ],
+              "useful_equipment": [
+                "wide",
+                "standard",
+                "telephoto"
+              ]
             }
           },
           "annotation": {

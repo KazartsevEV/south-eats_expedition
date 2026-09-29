@@ -992,8 +992,8 @@ def build():
             "cuisine": (travel.get("food") or {}).get("budget_food_summary"),
             "street_food": (travel.get("food") or {}).get("street_food"),
             "festivals": travel.get("festivals"),
-            "nature": source.get("nature"),
-            "natural_risks": (source.get("safety") or {}).get("common_traveler_risks"),
+            "nature": ((source.get("nature") or {}).get("country_macro") if code == "MY" else source.get("nature")),
+            "natural_risks": ((source.get("safety") or {}).get("country_macro") if code == "MY" else (source.get("safety") or {}).get("common_traveler_risks")),
             "summary": overview.get("summary"),
             "narrow": overview.get("narrow"),
             "source_file": source_path.name,
@@ -1042,7 +1042,7 @@ def build():
             "laws_and_prohibitions": wrap_dynamic(travel.get("laws_and_prohibitions"), checked_at, law_refs),
             "permits": wrap_dynamic(travel.get("tourist_permits"), checked_at, permit_refs),
             "currency": wrap_dynamic(travel.get("currency"), checked_at, currency_refs),
-            "safety_snapshot": wrap_dynamic(source.get("safety"), checked_at, safety_refs),
+            "safety_snapshot": wrap_dynamic(((source.get("safety") or {}).get("country_macro") if code == "MY" else source.get("safety")), checked_at, safety_refs),
         })
         indexes = {
             "country_id": f"geo_{code.lower()}",

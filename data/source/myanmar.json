@@ -3,7 +3,7 @@
     "country": "Myanmar",
     "country_code": "MM",
     "language": "ru",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-29",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -23,7 +23,8 @@
       "travel.regions and object-level location profiles add practical spoken languages and currency; language lists are field-use profiles, not exhaustive census enumerations.",
       "Object-level media.field_planning is editorial production guidance (gear/complexity/weather/audio/crowd), kept separate from sourced official operational rules.",
       "v1.5 migration: adds narrow, normalized tags, route_meta and locality linkage for canonical CDN build.",
-      "v1.6: начат экспедиционный проход Myanmar. Самостоятельное путешествие — режим по умолчанию; физическая сложность отделена от реальных ограничений доступа. Для регионов с продолжающимся конфликтом предупреждения и фактический контроль дорог считаются операционными ограничениями."
+      "v1.6: начат экспедиционный проход Myanmar. Самостоятельное путешествие — режим по умолчанию; физическая сложность отделена от реальных ограничений доступа. Для регионов с продолжающимся конфликтом предупреждения и фактический контроль дорог считаются операционными ограничениями.",
+      "2026-09-29 GPS normalization: 15/15 Myanmar objects receive sourced WGS84 map anchors. Serial/broad landscapes use explicit center/approximate semantics; Pyu Ancient Cities keeps all three UNESCO component points."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -637,7 +638,23 @@
               "rate_type": "справочный рыночный снимок",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 21.1317,
+              "lon": 94.8624
+            },
+            "coordinate_type": "archaeological_core",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Bagan — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Bagan",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Archaeological city reference coordinate; the Bagan landscape spans a large area."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "База — Nyaung-U, Old Bagan или New Bagan. До региона добираются самолётом или наземным транспортом по фактически открытым маршрутам; внутри археологической зоны рациональны велосипед/e-bike, тук-тук и длинные пешие связки.",
@@ -952,7 +969,23 @@
               "rate_type": "справочный рыночный снимок",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 16.79879,
+              "lon": 96.14951
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Shwedagon Pagoda — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/14939104",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Mapped Shwedagon Pagoda coordinate; not asserted as a specific gate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно из любого центрального района Yangon: городской автобус, такси/Grab или пешая связка через Kandawgyi/People’s Park в зависимости от базы. Подъём на общественную часть комплекса идёт по одному из четырёх крытых лестничных входов или доступной инфраструктуре комплекса.",
@@ -1287,7 +1320,23 @@
               "rate_type": "справочный рыночный снимок",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 20.5191,
+              "lon": 96.9244
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Inle Lake — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Inle_Lake",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Lake reference coordinate; the object is an extensive water and settlement landscape."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Практичная база — Nyaungshwe; сухопутный доступ идёт через Taunggyi/Heho по фактически открытым дорогам. На самом озере основной транспорт — длинная моторная лодка с местным лодочником.",
@@ -1616,7 +1665,23 @@
               "rate_type": "справочный рыночный снимок",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 21.9597,
+              "lon": 96.0949
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Mandalay heritage — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Mandalay",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Mandalay city anchor for a multi-site heritage object."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "База — Mandalay. Между Palace/Kuthodaw/Mandalay Hill можно двигаться велосипедом, такси или пешими связками; Amarapura/U Bein находится южнее и требует отдельной наземной переброски.",
@@ -1938,7 +2003,23 @@
               "rate_type": "справочный рыночный снимок",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 17.48187,
+              "lon": 97.09851
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Kyaiktiyo / Golden Rock — coordinate location",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/14980430",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Mapped Kyaiktiyo Pagoda / Golden Rock coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Базовая точка — Kinpun/Kin Mon Camp. Официальный Tourism Ministry указывает Kyaikhtiyoe Natural Reserve в Kyaikhto Township примерно в 102 милях по дороге от Yangon. Финальный подъём исторически обслуживают пассажирские грузовики/транспорт от Kinpun; текущую работу транспорта необходимо подтверждать непосредственно перед выездом.",
@@ -2269,7 +2350,23 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 16.4908,
+              "lon": 97.6285
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Mawlamyine colonial core — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Mawlamyine",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Mawlamyine city anchor for the colonial-core object."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Практичная база — Yangon / Mawlamyine depending object; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -2507,7 +2604,23 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 22.0331,
+              "lon": 96.4667
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Pyin Oo Lwin — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Pyin_U_Lwin",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Pyin Oo Lwin city reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Практичная база — Mandalay; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -2741,7 +2854,23 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 14.0797,
+              "lon": 98.199
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Dawei old town — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Dawei",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Dawei city anchor for the historic old-town object."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Удобнее всего из Dawei; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски.",
@@ -2983,7 +3112,23 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 20.5901,
+              "lon": 93.1916
+            },
+            "coordinate_type": "archaeological_core",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Mrauk U — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Mrauk_U",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Mrauk U historic-city reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Практичная база — Sittwe / Mrauk U; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -3217,7 +3362,76 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 18.798333,
+              "lon": 95.29
+            },
+            "coordinate_type": "archaeological_core",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "unesco",
+              "title": "Pyu Ancient Cities — coordinate location",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/1444/maps/",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "Sri Ksetra is used as the primary anchor for the serial UNESCO property; Halin and Beikthano are stored as additional points."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "geo_points": [
+              {
+                "name": "Halin",
+                "coordinate_type": "archaeological_core",
+                "coordinates": {
+                  "lat": 22.47,
+                  "lon": 95.818611
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "unesco",
+                  "title": "Pyu Ancient Cities — Halin",
+                  "publisher": "UNESCO World Heritage Centre",
+                  "url": "https://whc.unesco.org/en/list/1444/maps/",
+                  "authority": "high",
+                  "accessed": "2026-09-29"
+                }
+              },
+              {
+                "name": "Beikthano",
+                "coordinate_type": "archaeological_core",
+                "coordinates": {
+                  "lat": 20.003889,
+                  "lon": 95.379444
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "unesco",
+                  "title": "Pyu Ancient Cities — Beikthano",
+                  "publisher": "UNESCO World Heritage Centre",
+                  "url": "https://whc.unesco.org/en/list/1444/maps/",
+                  "authority": "high",
+                  "accessed": "2026-09-29"
+                }
+              },
+              {
+                "name": "Sri Ksetra",
+                "coordinate_type": "archaeological_core",
+                "coordinates": {
+                  "lat": 18.798333,
+                  "lon": 95.29
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "unesco",
+                  "title": "Pyu Ancient Cities — Sri Ksetra",
+                  "publisher": "UNESCO World Heritage Centre",
+                  "url": "https://whc.unesco.org/en/list/1444/maps/",
+                  "authority": "high",
+                  "accessed": "2026-09-29"
+                }
+              }
+            ]
           },
           "logistics": {
             "access": "Практичная база — Bago / Pyay; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -3454,7 +3668,23 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 16.8903,
+              "lon": 97.6363
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Hpa-An karst and caves — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Hpa-an",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Hpa-An city is used only as the anchor for the wider karst-and-caves cluster; individual cave entrances require separate geo_points."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Базироваться удобнее в Hpa-An; далее дорога до входной зоны и, где требуется, локальный гид/лодка/пеший участок. После сильных дождей доступ перепроверять.",
@@ -3706,7 +3936,23 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 20.445361,
+              "lon": 97.138806
+            },
+            "coordinate_type": "archaeological_core",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Kakku Pagodas — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q13073305",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Kakku pagoda-field coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Практичная база — Nyaungshwe / Taunggyi; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -3948,7 +4194,23 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 22.1182,
+              "lon": 95.1325
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Monywa / Thanboddhay and Bodhi Tataung — coordinate location",
+              "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+              "url": "https://mapcarta.com/Monywa",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Monywa city is used as a practical anchor for the multi-site Thanboddhay/Bodhi Tataung cluster; not an exact monument point."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Практичная база — Monywa / Mandalay; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -4188,7 +4450,23 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 25.134902,
+              "lon": 96.333336
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "other",
+              "title": "Indawgyi Lake — coordinate location",
+              "publisher": "GeoNames",
+              "url": "https://www.geonames.org/1322182/indawgyi-lake.html",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Indawgyi Lake reference coordinate; the lake is extensive."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Исторически доступ через Kachin/мелкие дороги к бассейну озера; текущую наземную доступность нельзя считать стабильной из-за конфликта.",
@@ -4415,7 +4693,23 @@
               "rate_type": "reference-market snapshot only",
               "notes": "Официальные/банковские и фактические наличные/параллельные курсы могут расходиться очень значительно. Не использовать эту цифру как гарантированный обменный курс на месте.",
               "practical_notes": "MMK основная валюта; банковский/официальный и фактический наличный курс могут сильно расходиться, карточная инфраструктура ненадёжна."
-            }
+            },
+            "coordinates": {
+              "lat": 21.2339,
+              "lon": 93.9026
+            },
+            "coordinate_type": "summit",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Nat Ma Taung / Mount Victoria — coordinate location",
+              "publisher": "OpenStreetMap / Wikidata via Mapcarta",
+              "url": "https://mapcarta.com/Nat_Ma_Taung_%28Mount_Victoria%29",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Nat Ma Taung summit coordinate; trailhead and park access are separate logistics points."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Традиционные маршруты идут через Kanpetlet/Mindat, но фактическую дорожную доступность в 2026 нельзя считать стабильной.",

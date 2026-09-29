@@ -226,6 +226,25 @@ TYPE_BY_NAME.update({
     "Nat Ma Taung / Mount Victoria": "mountain",
 })
 
+TYPE_BY_NAME.update({
+    "Taman Negara / Gunung Tahan": "national_park",
+    "Endau-Rompin Johor National Park": "national_park",
+    "Maliau Basin Conservation Area": "protected_area",
+    "Bako National Park": "national_park",
+    "Forest Research Institute Malaysia Forest Park Selangor": "cultural_landscape",
+    "Gomantong Caves": "cave",
+    "Gunung Gading National Park": "national_park",
+    "Tabin Wildlife Reserve": "protected_area",
+    "Penang National Park": "national_park",
+    "Tioman Island / Tioman Marine Park": "island",
+    "Sungai Batu Archaeological Site / Bujang Valley": "archaeological_site",
+    "Gua Tambun rock art": "archaeological_site",
+    "Crocker Range Park / Salt Trail": "national_park",
+    "Tun Sakaran Marine Park / Bohey Dulang": "protected_area",
+    "Semenggoh Wildlife Centre": "wildlife_site",
+    "Redang Island / Redang Marine Park": "island",
+})
+
 TAG_ALIASES = {
     "unesco": "unesco",
     "living heritage": "living_heritage",
@@ -782,6 +801,7 @@ def build():
                     "contact": lodging.get("contact"),
                     "social_or_web": lodging.get("social_or_web"),
                     "source": lodging.get("source"),
+                    "source_url": lodging.get("source_url"),
                     "coordinates": lodging.get("coordinates"),
                     "checked_at": lodging.get("checked_at") or lodging.get("last_checked"),
                     "referenced_by": [object_id],

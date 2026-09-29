@@ -12,7 +12,7 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
 FORMAL_CANONICAL_GEO_CODES = {"KH", "LA"}
-COUNTRY_SOURCE_CANONICAL_CODES = {"KH", "LA"}
+COUNTRY_SOURCE_CANONICAL_CODES = {"KH", "LA", "MY"}
 
 GENERATED_AT = "2026-09-29T00:35:00+04:00"
 DEFAULT_LANGUAGE = "ru"
@@ -276,23 +276,41 @@ def access_options(logistics):
     return options
 
 
-def traveler_reports_list(value):
+def traveler_reports_list(value, registry=None):
     if value in (None, "", [], {}):
         return []
+
+    def refs_for_item(item):
+        if not isinstance(item, dict) or not item.get("source_url") or not registry:
+            return []
+        old_id = "src:" + hashlib.sha1(str(item["source_url"]).encode("utf-8")).hexdigest()[:14]
+        canonical = (registry.get("sources") or {}).get(old_id)
+        return [canonical] if canonical else []
+
     if isinstance(value, list):
         return value
     if isinstance(value, dict):
         recurring = value.get("recurring_issues")
         if isinstance(recurring, list):
-            rows = [
-                {
-                    "kind": "aggregated_recurring_issue",
-                    "summary": item,
-                    "source_refs": [],
-                }
-                for item in recurring
-                if item not in (None, "")
-            ]
+            rows = []
+            for item in recurring:
+                if item in (None, ""):
+                    continue
+                if isinstance(item, dict):
+                    summary = item.get("summary")
+                    if summary in (None, ""):
+                        continue
+                    rows.append({
+                        "kind": item.get("kind") or "aggregated_recurring_issue",
+                        "summary": summary,
+                        "source_refs": refs_for_item(item),
+                    })
+                else:
+                    rows.append({
+                        "kind": "aggregated_recurring_issue",
+                        "summary": item,
+                        "source_refs": [],
+                    })
             other = {k: v for k, v in value.items() if k != "recurring_issues" and v not in (None, "", [], {})}
             if other:
                 rows.append({
@@ -595,6 +613,12 @@ def build():
         if not detail_path:
             raise RuntimeError(f"legacy lodging missing detail_path: {old_id}")
         detail = load(release / detail_path)
+        lodging_source_refs = []
+        if detail.get("source_url"):
+            old_source_id = "src:" + hashlib.sha1(str(detail["source_url"]).encode("utf-8")).hexdigest()[:14]
+            canonical_source_id = (registry.get("sources") or {}).get(old_source_id)
+            if canonical_source_id:
+                lodging_source_refs.append(canonical_source_id)
         entity = {
             "id": lodging_id,
             "kind": "lodging",
@@ -608,7 +632,7 @@ def build():
             "website_or_social": detail.get("social_or_web"),
             "features": detail.get("features") or [],
             "traveler_reports": detail.get("traveler_reports") or [],
-            "source_refs": [],
+            "source_refs": lodging_source_refs,
             "legacy_source": detail.get("source"),
             "relations": {
                 "legacy_ids": [old_id],
@@ -618,8 +642,8 @@ def build():
                 ],
             },
             "qa": {
-                "source_refs_complete": False,
-                "note": "Legacy lodging source must be normalized into canonical source_refs in the country research pass.",
+                "source_refs_complete": bool(lodging_source_refs),
+                "note": "Canonical lodging source_refs normalized from source_url." if lodging_source_refs else "Legacy lodging source must be normalized into canonical source_refs in the country research pass.",
             },
         }
         dump(release / "infrastructure" / "lodging" / code.lower() / f"{lodging_id}.json", entity)
@@ -703,7 +727,7 @@ def build():
         if isinstance(source_sections, list) and source_sections:
             story_payload["sections"] = source_sections
         sections = narrative_sections(story_payload, source_refs)
-        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
+        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"), registry)
         language_review = ((source_object or {}).get("qa") or {}).get("language_review") or {}
 
         checks = {

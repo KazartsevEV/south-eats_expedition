@@ -22,7 +22,8 @@
       "Блок media.field_planning — редакционная разведка для съёмки; официальные правила объекта и авиационные ограничения имеют приоритет.",
       "v1.5: добавлены narrow, нормализованные теги, route_meta и привязка к географическим сущностям для сборки CDN.",
       "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны.",
-      "2026-09-29 GPS normalization: 21/21 Malaysia objects receive sourced WGS84 map anchors; broad landscapes/parks use explicit center/approximate semantics, and Lenggong keeps four UNESCO archaeological component points."
+      "2026-09-29 GPS normalization: 21/21 Malaysia objects receive sourced WGS84 map anchors; broad landscapes/parks use explicit center/approximate semantics, and Lenggong keeps four UNESCO archaeological component points.",
+      "2026-09-29 locality migration: the Langkawi monthly air/sea temperature series was removed from country climate and moved to the Langkawi / northwest coast geo profile; country climate now contains macro spatial context only."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -134,37 +135,13 @@
     ]
   },
   "climate": {
-    "reference_location": "Langkawi",
-    "air_temp_mean_c_by_month": {
-      "Jan": 28.3,
-      "Feb": 28.3,
-      "Mar": 28.9,
-      "Apr": 28.9,
-      "May": 28.3,
-      "Jun": 28.3,
-      "Jul": 27.8,
-      "Aug": 27.8,
-      "Sep": 27.2,
-      "Oct": 27.2,
-      "Nov": 27.8,
-      "Dec": 27.8
-    },
-    "sea_temp_mean_c_by_month": {
-      "Jan": 28.3,
-      "Feb": 28.9,
-      "Mar": 29.4,
-      "Apr": 30,
-      "May": 30.6,
-      "Jun": 30.6,
-      "Jul": 30,
-      "Aug": 30,
-      "Sep": 29.4,
-      "Oct": 29.4,
-      "Nov": 28.9,
-      "Dec": 28.9
-    },
-    "notes": "Лангкави — опорная точка западного побережья; восточное побережье и Борнео имеют другую сезонность муссонов.",
-    "source_quality": "климатология WeatherSpark, значения переведены из °F"
+    "scope": "country_macro",
+    "summary": "Малайзия имеет в целом экваториально жаркий и влажный климат, но распределение осадков существенно меняется по территории из-за муссонов и рельефа. Восточное побережье полуострова, запад Саравака и северо-восток Сабаха особенно чувствительны к северо-восточному муссону; северо-запад полуострова, включая Langkawi, имеет другой годовой ход осадков.",
+    "spatial_variation": "Единую помесячную температуру воздуха, моря или осадков для всей страны не использовать. Месячные ряды должны храниться на уровне соответствующего geo-региона/города/острова.",
+    "source_urls": [
+      "https://www.met.gov.my/en/pendidikan/iklim-malaysia/"
+    ],
+    "checked_at": "2026-09-29"
   },
   "safety": {
     "crime_level": {
@@ -546,7 +523,46 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "climate_detail": {
+          "scope": "Langkawi / northwest coast",
+          "reference_location": "Langkawi",
+          "air_temp_mean_c_by_month": {
+            "Jan": 28.3,
+            "Feb": 28.3,
+            "Mar": 28.9,
+            "Apr": 28.9,
+            "May": 28.3,
+            "Jun": 28.3,
+            "Jul": 27.8,
+            "Aug": 27.8,
+            "Sep": 27.2,
+            "Oct": 27.2,
+            "Nov": 27.8,
+            "Dec": 27.8
+          },
+          "sea_temp_mean_c_by_month": {
+            "Jan": 28.3,
+            "Feb": 28.9,
+            "Mar": 29.4,
+            "Apr": 30,
+            "May": 30.6,
+            "Jun": 30.6,
+            "Jul": 30,
+            "Aug": 30,
+            "Sep": 29.4,
+            "Oct": 29.4,
+            "Nov": 28.9,
+            "Dec": 28.9
+          },
+          "notes": "Лангкави — опорная точка западного побережья; восточное побережье и Борнео имеют другую сезонность муссонов.",
+          "source_quality": "климатология WeatherSpark, значения переведены из °F",
+          "source_urls": [
+            "https://weatherspark.com/y/114682/Average-Weather-at-Langkawi-International-Airport-Malaysia-Year-Round",
+            "https://www.met.gov.my/en/pendidikan/iklim-malaysia/"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Perhentian / east coast",
@@ -7146,6 +7162,17 @@
         "fauna_conservation_status"
       ],
       "accessed": "2026-09-27"
+    },
+    {
+      "id": "MET_MY_CLIMATE",
+      "publisher": "Malaysian Meteorological Department (METMalaysia)",
+      "url": "https://www.met.gov.my/en/pendidikan/iklim-malaysia/",
+      "kind": "government",
+      "used_for": [
+        "climate"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Official macro description of Malaysia climate and regional monsoon/rainfall differences."
     }
   ],
   "uncertainties": [

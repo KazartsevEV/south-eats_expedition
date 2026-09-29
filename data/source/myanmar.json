@@ -24,7 +24,8 @@
       "Object-level media.field_planning is editorial production guidance (gear/complexity/weather/audio/crowd), kept separate from sourced official operational rules.",
       "v1.5 migration: adds narrow, normalized tags, route_meta and locality linkage for canonical CDN build.",
       "v1.6: начат экспедиционный проход Myanmar. Самостоятельное путешествие — режим по умолчанию; физическая сложность отделена от реальных ограничений доступа. Для регионов с продолжающимся конфликтом предупреждения и фактический контроль дорог считаются операционными ограничениями.",
-      "2026-09-29 GPS normalization: 15/15 Myanmar objects receive sourced WGS84 map anchors. Serial/broad landscapes use explicit center/approximate semantics; Pyu Ancient Cities keeps all three UNESCO component points."
+      "2026-09-29 GPS normalization: 15/15 Myanmar objects receive sourced WGS84 map anchors. Serial/broad landscapes use explicit center/approximate semantics; Pyu Ancient Cities keeps all three UNESCO component points.",
+      "2026-09-29 Myanmar hierarchy cleanup: composite route hubs split into real towns/cities while legacy hubs are retained for compatibility; existing Mandalay/Yangon/Dawei/Hpa-An nodes are reused rather than duplicated."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -323,7 +324,17 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Янгон и окрестности",
+        "geography": {
+          "summary": "Янгон расположен в низменной дельтовой зоне; Singuttara Hill и вытянутые латеритовые возвышенности заметно выделяются над плоским городским рельефом."
+        },
+        "climate": {
+          "summary": "Жаркий муссонный климат; май–октябрь значительно влажнее сухого сезона."
+        },
+        "transport": {
+          "summary": "Главный городской узел страны; внутри города самостоятельный маршрут строится на автобусах, такси и пеших связках."
+        }
       },
       {
         "name": "Bagan / central dry zone",
@@ -346,7 +357,23 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Баган / центральная засушливая зона",
+        "geography": {
+          "summary": "Центральная сухая равнина на изгибе Иравади; открытый пыльный рельеф и широкая пойма реки формируют ландшафт Багана."
+        },
+        "relief": {
+          "summary": "Преимущественно плоская и слабоволнистая равнина, удобная для длинных связок между храмовыми группами."
+        },
+        "climate": {
+          "summary": "Один из наиболее сухих и жарких районов страны; март–май особенно жаркие, ноябрь–февраль заметно мягче."
+        },
+        "history": {
+          "summary": "Баган был столичным ядром крупной региональной державы и пережил пик храмового строительства в XI–XIII веках."
+        },
+        "culture": {
+          "summary": "Буддийские пожертвования, монастырская жизнь, земледелие и современные поселения остаются частью живого сакрального ландшафта."
+        }
       },
       {
         "name": "Mandalay / central Myanmar",
@@ -369,7 +396,23 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Мандалай / центральная Мьянма",
+        "geography": {
+          "summary": "Центральная равнина вдоль Иравади; королевские столицы Мандалай, Амарапура, Инва, Сикайн и Мингун расположены сравнительно близко друг к другу."
+        },
+        "relief": {
+          "summary": "Равнинный городской и речной ландшафт ограничен с севера возвышенностью Mandalay Hill."
+        },
+        "climate": {
+          "summary": "Жаркая и сравнительно сухая центральная зона; весной жара особенно сильна."
+        },
+        "history": {
+          "summary": "Мандалай основан Миндоном в 1857 году и стал последней королевской столицей Бирмы до британской аннексии 1885 года."
+        },
+        "culture": {
+          "summary": "Монастыри, Mahamuni, Kuthodaw и ремесленные кварталы сохраняют религиозные и производственные традиции королевской столицы."
+        }
       },
       {
         "name": "Shan State / Inle / Kakku",
@@ -395,7 +438,20 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Штат Шан / Инле / Какку",
+        "geography": {
+          "summary": "Высокогорный южный Шан: межгорная котловина озера Инле, плато вокруг Таунджи и сельские районы Какку."
+        },
+        "relief": {
+          "summary": "Высокое плато и межгорные котловины; озеро Инле мелководно, поэтому сезонный уровень воды влияет на проход лодок по каналам."
+        },
+        "climate": {
+          "summary": "Высокогорье заметно прохладнее центральных низменностей; ноябрь–февраль обычно комфортнее."
+        },
+        "culture": {
+          "summary": "В районе Инле живут инта, шаны, па-о и дану; свайные поселения, плавучее земледелие и водное сообщение являются частью повседневной среды."
+        }
       },
       {
         "name": "Mon State / Kyaiktiyo / Mawlamyine",
@@ -419,7 +475,20 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Штат Мон / Кьяиктийо / Моулмейн",
+        "geography": {
+          "summary": "Влажный юго-восток страны: лесные горные хребты Кьяиктийо переходят к низменностям и прибрежно-речной среде Моулмейна."
+        },
+        "relief": {
+          "summary": "Кьяиктийо расположен на горном уступе в лесном хребте; Моулмейн лежит значительно ниже, у речной и прибрежной системы."
+        },
+        "climate": {
+          "summary": "Очень влажный муссонный юг; сухой прохладный сезон обычно удобнее для горных и городских маршрутов."
+        },
+        "culture": {
+          "summary": "Кьяиктийо — крупный буддийский паломнический центр; религиозная жизнь и поток паломников являются главным культурным контекстом горного узла."
+        }
       },
       {
         "name": "Pyin Oo Lwin",
@@ -443,7 +512,14 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Пьин-У-Луин",
+        "climate": {
+          "summary": "Высокое положение делает город заметно прохладнее Мандалая; ноябрь–февраль обычно наиболее мягкие."
+        },
+        "geography": {
+          "summary": "Высокогорный городской узел к востоку от Мандалая на краю Шанского плато."
+        }
       },
       {
         "name": "Tanintharyi / Dawei",
@@ -467,7 +543,14 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Танинтайи / Тавой",
+        "geography": {
+          "summary": "Южный вытянутый регион с влажными тропическими низменностями, прибрежной зоной и горными участками в глубине полуострова."
+        },
+        "climate": {
+          "summary": "Очень влажный тропический муссонный климат; сухой сезон существенно удобнее для наземных маршрутов."
+        }
       },
       {
         "name": "Rakhine / Mrauk U",
@@ -491,7 +574,14 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Ракхайн / Мраук-У",
+        "geography": {
+          "summary": "Западный Ракхайн отделён от центральной Мьянмы горным хребтом; Мраук-У расположен во внутренней речной низменности, связанной с прибрежной системой."
+        },
+        "climate": {
+          "summary": "Жаркий муссонный климат с тяжёлым сезоном дождей; ноябрь–февраль обычно суше."
+        }
       },
       {
         "name": "Pyu ancient cities / Bago-Magway belt",
@@ -514,7 +604,17 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Древние города пью / центральная Мьянма",
+        "geography": {
+          "summary": "Серийный археологический пояс центральной Мьянмы: компоненты древних городов пью разнесены между современными регионами Баго, Магуэ и Сикайн."
+        },
+        "climate": {
+          "summary": "Центральные низменности жарче и суше побережья; ноябрь–февраль обычно мягче."
+        },
+        "history": {
+          "summary": "Города пью представляют ранние урбанизированные буддийские центры Мьянмы и образуют серийный объект, а не одну локальную площадку."
+        }
       },
       {
         "name": "Kayin / Hpa-An",
@@ -538,7 +638,17 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Штат Карен / Пхаан",
+        "geography": {
+          "summary": "Юго-восточная карстовая область вокруг Пхаана: известняковые башни, пещеры, рисовые равнины и речные долины."
+        },
+        "geology": {
+          "summary": "Главный рельефный мотив района — известняковый карст с отдельными башенными массивами и пещерными системами."
+        },
+        "climate": {
+          "summary": "Влажный тропический юго-восток; сезон дождей усложняет пещерные и грунтовые подходы."
+        }
       },
       {
         "name": "Sagaing / Monywa",
@@ -561,7 +671,14 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Сикайн / Моунъюа",
+        "geography": {
+          "summary": "Центрально-северная сухая зона западнее Иравади и Чиндвина; Моунъюа служит основным городским узлом."
+        },
+        "climate": {
+          "summary": "Жаркая сухая центральная зона; ноябрь–февраль обычно комфортнее, март–май особенно жаркие."
+        }
       },
       {
         "name": "Kachin State / Indawgyi",
@@ -586,7 +703,20 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Штат Качин / Индавджи",
+        "geography": {
+          "summary": "Северная внутренняя Мьянма; озеро Индавджи лежит в крупной межгорной котловине и окружено лесными и заболоченными местообитаниями."
+        },
+        "relief": {
+          "summary": "Озёрная котловина окружена более высокими лесистыми хребтами; сезон дождей влияет на дороги и водный режим."
+        },
+        "climate": {
+          "summary": "Субтропический муссонный климат; влажный сезон осложняет наземный доступ."
+        },
+        "nature": {
+          "summary": "Индавджи — важный водно-болотный и лесной комплекс и биосферный резерват UNESCO."
+        }
       },
       {
         "name": "Chin State / Nat Ma Taung",
@@ -610,7 +740,20 @@
         "language_source_urls": [
           "https://www.dop.gov.mm/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "name_ru": "Штат Чин / Нат-Ма-Таун",
+        "geography": {
+          "summary": "Высокогорный запад страны в пределах Чинских гор; Нат-Ма-Таун является одной из главных высотных доминант района."
+        },
+        "relief": {
+          "summary": "Горный рельеф с длинными серпантинами, глубокими долинами и заметным высотным градиентом."
+        },
+        "climate": {
+          "summary": "В высокогорье прохладные и холодные ночи и утра, особенно в сухой сезон; туман и быстрая смена горной погоды обычны."
+        },
+        "nature": {
+          "summary": "Нат-Ма-Таун известен высокогорными лесами и эндемичной флорой; детальный видовой список требует отдельной нормализации."
+        }
       }
     ],
     "objects": [
@@ -625,7 +768,7 @@
         "traveler_card": {
           "location": {
             "region": "Bagan / центральная засушливая зона",
-            "nearest_hub": "Nyaung-U / Bagan",
+            "nearest_hub": "Nyaung-U",
             "languages_spoken": [
               "бирманский",
               "английский — в туристической инфраструктуре"
@@ -1304,7 +1447,7 @@
         "traveler_card": {
           "location": {
             "region": "штат Шан / Inle / Kakku",
-            "nearest_hub": "Nyaungshwe / Taunggyi",
+            "nearest_hub": "Nyaungshwe",
             "languages_spoken": [
               "бирманский",
               "шанский",
@@ -1989,7 +2132,7 @@
         "traveler_card": {
           "location": {
             "region": "штат Мон / Kyaiktiyo / Mawlamyine",
-            "nearest_hub": "Yangon / Mawlamyine — в зависимости от маршрута",
+            "nearest_hub": "Kinpun",
             "languages_spoken": [
               "бирманский",
               "монский",
@@ -2336,7 +2479,7 @@
         "traveler_card": {
           "location": {
             "region": "Mon State / Kyaiktiyo / Mawlamyine",
-            "nearest_hub": "Yangon / Mawlamyine depending object",
+            "nearest_hub": "Mawlamyine",
             "languages_spoken": [
               "Burmese",
               "Mon",
@@ -3098,7 +3241,7 @@
         "traveler_card": {
           "location": {
             "region": "Rakhine / Mrauk U",
-            "nearest_hub": "Sittwe / Mrauk U",
+            "nearest_hub": "Mrauk U",
             "languages_spoken": [
               "Rakhine Burmese",
               "Burmese",
@@ -3349,7 +3492,7 @@
         "traveler_card": {
           "location": {
             "region": "Pyu ancient cities / Bago-Magway belt",
-            "nearest_hub": "Bago / Pyay",
+            "nearest_hub": "Pyay",
             "languages_spoken": [
               "Burmese",
               "English limited"
@@ -3920,7 +4063,7 @@
         "traveler_card": {
           "location": {
             "region": "Shan State / Inle / Kakku",
-            "nearest_hub": "Nyaungshwe / Taunggyi",
+            "nearest_hub": "Taunggyi",
             "languages_spoken": [
               "Burmese",
               "Shan",
@@ -4181,7 +4324,7 @@
         "traveler_card": {
           "location": {
             "region": "Sagaing / Monywa",
-            "nearest_hub": "Monywa / Mandalay",
+            "nearest_hub": "Monywa",
             "languages_spoken": [
               "Burmese",
               "English limited"
@@ -4435,7 +4578,7 @@
         "traveler_card": {
           "location": {
             "region": "Kachin State / Indawgyi",
-            "nearest_hub": "Myitkyina / Hopin",
+            "nearest_hub": "Hopin",
             "languages_spoken": [
               "Burmese",
               "Jinghpaw/Kachin languages locally",
@@ -4679,7 +4822,7 @@
         "traveler_card": {
           "location": {
             "region": "Chin State / Nat Ma Taung",
-            "nearest_hub": "Kanpetlet / Mindat",
+            "nearest_hub": "Kanpetlet",
             "languages_spoken": [
               "Burmese",
               "Chin languages/local varieties",
@@ -4918,6 +5061,9 @@
         ],
         "object_names": [
           "Bagan"
+        ],
+        "replaced_by": [
+          "geo_mm_0027"
         ]
       },
       {
@@ -4927,7 +5073,25 @@
         ],
         "object_names": [
           "Shwedagon Pagoda"
-        ]
+        ],
+        "name_ru": "Янгон",
+        "kind": "city",
+        "profile": {
+          "summary": "Янгон — крупнейший городской узел страны и база для самостоятельного исследования старого центра и Шведагона.",
+          "geography": "Низменный дельтовый город; Singuttara Hill заметно возвышается над окружающей равниной.",
+          "climate": {
+            "summary": "Жаркий муссонный климат; май–октябрь значительно влажнее сухого сезона."
+          },
+          "transport": {
+            "summary": "Внутри города основа самостоятельной логистики — автобус, такси и пешие связки; мопед не является базовым вариантом для иностранного путешественника."
+          },
+          "provenance": {
+            "source_object_name": "Shwedagon Pagoda",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
       },
       {
         "name": "Nyaungshwe / Taunggyi",
@@ -4937,6 +5101,10 @@
         "object_names": [
           "Inle Lake",
           "Kakku Pagodas"
+        ],
+        "replaced_by": [
+          "geo_mm_0028",
+          "geo_mm_0029"
         ]
       },
       {
@@ -4948,7 +5116,34 @@
         "object_names": [
           "Mandalay heritage",
           "Pyin Oo Lwin"
-        ]
+        ],
+        "name_ru": "Мандалай",
+        "kind": "city",
+        "profile": {
+          "summary": "Мандалай — главный городской узел центральной Мьянмы и база для королевского наследия города, Амарапуры и соседних исторических центров.",
+          "geography": "Королевские столицы сдвигались в пределах примерно 30 км вдоль Ayeyarwady. Mandalay был спланирован регулярной сеткой вокруг центрального дворца; горный массив Mandalay Hill формирует северную визуальную границу города.",
+          "history": "Mandalay основан King Mindon в 1857 году и стал последней королевской столицей до британской аннексии 1885 года. UNESCO помещает его в цепочку близких королевских центров Sagaing, Innwa, Amarapura, Mingun и Mandalay на обоих берегах Ayeyarwady.",
+          "culture": "Город важен не только дворцом: монастыри, Kuthodaw с 729 мраморными плитами, Mahamuni и специализированные улицы ремесленников продолжают религиозные и производственные традиции. Amarapura добавляет ткачество и U Bein Bridge как часть бывшей столицы.",
+          "myths_beliefs": [
+            "Mahamuni Buddha Image является живым объектом поклонения; ритуальные практики и пожертвования важнее его статуса «достопримечательности»."
+          ],
+          "climate": {
+            "summary": "Сухая жаркая зона; сильная жара весной.",
+            "best_period": "Ноябрь–февраль прохладнее; северный храмовый кластер снимать утром, U Bein — либо на рассвете, либо на последнем свете."
+          },
+          "transport": {
+            "access": "База — Mandalay. Между Palace/Kuthodaw/Mandalay Hill можно двигаться велосипедом, такси или пешими связками; Amarapura/U Bein находится южнее и требует отдельной наземной переброски.",
+            "public_transport": "Городской транспорт фрагментарен; для независимого маршрута практичнее такси/местный водитель на дальние плечи и пешком/велосипедом внутри кластеров.",
+            "last_mile": "Palace–Kuthodaw–Mandalay Hill дают длинную городскую связку; подъём на Mandalay Hill добавляет лестницы и набор высоты. U Bein Bridge сам по себе около 1,2 км и не имеет ограждений на большей части."
+          },
+          "provenance": {
+            "source_object_name": "Mandalay heritage",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false,
+            "note": "Профиль перенесён из уже собранной карточки объекта; ссылки на источники будут нормализованы при региональном исследовательском проходе."
+          }
+        }
       },
       {
         "name": "Yangon / Mawlamyine depending object",
@@ -4958,6 +5153,11 @@
         "object_names": [
           "Kyaiktiyo / Golden Rock",
           "Mawlamyine colonial core"
+        ],
+        "replaced_by": [
+          "geo_mm_0024",
+          "geo_mm_0030",
+          "geo_mm_0031"
         ]
       },
       {
@@ -4967,7 +5167,32 @@
         ],
         "object_names": [
           "Dawei old town"
-        ]
+        ],
+        "name_ru": "Тавой",
+        "kind": "city",
+        "profile": {
+          "summary": "Тавой — главный городской узел юга Танинтайи и база для исследования исторической городской ткани и окружающего побережья.",
+          "geography": null,
+          "history": null,
+          "culture": null,
+          "myths_beliefs": null,
+          "climate": {
+            "summary": "Влажный тропический юг, сильный муссон.",
+            "best_period": "Сухой сезон; текущие travel advisories критичны."
+          },
+          "transport": {
+            "access": "Удобнее всего из Dawei; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски.",
+            "public_transport": "В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор.",
+            "last_mile": "Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+          },
+          "provenance": {
+            "source_object_name": "Dawei old town",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false,
+            "note": "Профиль перенесён из уже собранной карточки объекта; ссылки на источники будут нормализованы при региональном исследовательском проходе."
+          }
+        }
       },
       {
         "name": "Sittwe / Mrauk U",
@@ -4976,6 +5201,10 @@
         ],
         "object_names": [
           "Mrauk U"
+        ],
+        "replaced_by": [
+          "geo_mm_0032",
+          "geo_mm_0033"
         ]
       },
       {
@@ -4985,6 +5214,10 @@
         ],
         "object_names": [
           "Pyu Ancient Cities"
+        ],
+        "replaced_by": [
+          "geo_mm_0034",
+          "geo_mm_0035"
         ]
       },
       {
@@ -4994,7 +5227,32 @@
         ],
         "object_names": [
           "Hpa-An karst and caves"
-        ]
+        ],
+        "name_ru": "Пхаан",
+        "kind": "city",
+        "profile": {
+          "summary": "Пхаан — городской узел карстового района штата Карен и база для пещер, известняковых массивов и сельских маршрутов.",
+          "geography": null,
+          "history": null,
+          "culture": null,
+          "myths_beliefs": null,
+          "climate": {
+            "summary": "Влажный карстовый юго-восток.",
+            "best_period": "Ноябрь–февраль по погоде; региональные advisories могут запрещать поездку."
+          },
+          "transport": {
+            "access": "Базироваться удобнее в Hpa-An; далее дорога до входной зоны и, где требуется, локальный гид/лодка/пеший участок. После сильных дождей доступ перепроверять.",
+            "public_transport": "В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор.",
+            "last_mile": "Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+          },
+          "provenance": {
+            "source_object_name": "Hpa-An karst and caves",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false,
+            "note": "Профиль перенесён из уже собранной карточки объекта; ссылки на источники будут нормализованы при региональном исследовательском проходе."
+          }
+        }
       },
       {
         "name": "Monywa / Mandalay",
@@ -5003,6 +5261,10 @@
         ],
         "object_names": [
           "Monywa / Thanboddhay and Bodhi Tataung"
+        ],
+        "replaced_by": [
+          "geo_mm_0036",
+          "geo_mm_0018"
         ]
       },
       {
@@ -5012,6 +5274,10 @@
         ],
         "object_names": [
           "Indawgyi Lake"
+        ],
+        "replaced_by": [
+          "geo_mm_0037",
+          "geo_mm_0038"
         ]
       },
       {
@@ -5021,7 +5287,393 @@
         ],
         "object_names": [
           "Nat Ma Taung / Mount Victoria"
+        ],
+        "replaced_by": [
+          "geo_mm_0039",
+          "geo_mm_0040"
         ]
+      },
+      {
+        "name": "Nyaung-U",
+        "name_ru": "Ньяунг-У",
+        "canonical_id": "geo_mm_0027",
+        "legacy_id": "mm:locality:nyaung-u",
+        "slug": "nyaung-u",
+        "kind": "town",
+        "regions": [
+          "Bagan / central dry zone"
+        ],
+        "object_names": [
+          "Bagan"
+        ],
+        "profile": {
+          "summary": "Ньяунг-У — главный сервисный и транспортный узел Багана, удобная база для многодневного самостоятельного маршрута по археологической зоне.",
+          "geography": "Город расположен у Иравади на северо-восточной окраине археологического ландшафта Багана.",
+          "climate": {
+            "summary": "Сухая жаркая центральная зона; ноябрь–февраль мягче, март–май особенно жаркие."
+          },
+          "transport": {
+            "summary": "Из Ньяунг-У удобно связывать храмовые группы на велосипеде, электроскутере, тук-туке и пешими петлями; внутри археологической зоны регулярный общественный транспорт вторичен."
+          },
+          "provenance": {
+            "source_object_name": "Bagan",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Nyaungshwe",
+        "name_ru": "Ньяунгшве",
+        "canonical_id": "geo_mm_0028",
+        "legacy_id": "mm:locality:nyaungshwe",
+        "slug": "nyaungshwe",
+        "kind": "town",
+        "regions": [
+          "Shan State / Inle / Kakku"
+        ],
+        "object_names": [
+          "Inle Lake"
+        ],
+        "profile": {
+          "summary": "Ньяунгшве — главный сухопутный и лодочный узел озера Инле.",
+          "geography": "Город расположен у северного входа в озёрную систему и связан каналом с основным зеркалом Инле.",
+          "climate": {
+            "summary": "Высокогорье прохладнее низменностей; ноябрь–февраль обычно наиболее комфортны."
+          },
+          "transport": {
+            "summary": "До Ньяунгшве добираются по дороге через Таунджи или Хехо; по озеру основной транспорт — длинные моторные лодки с местным лодочником."
+          },
+          "provenance": {
+            "source_object_name": "Inle Lake",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Taunggyi",
+        "name_ru": "Таунджи",
+        "canonical_id": "geo_mm_0029",
+        "legacy_id": "mm:locality:taunggyi",
+        "slug": "taunggyi",
+        "kind": "city",
+        "regions": [
+          "Shan State / Inle / Kakku"
+        ],
+        "object_names": [
+          "Kakku Pagodas"
+        ],
+        "profile": {
+          "summary": "Таунджи — главный городской узел южного Шанского плато и практическая база для наземных поездок к Какку.",
+          "geography": "Город расположен на высоком плато над котловиной Инле.",
+          "climate": {
+            "summary": "Высокое положение делает район прохладнее центральных низменностей."
+          },
+          "transport": {
+            "summary": "Для Какку и удалённых сельских участков требуется отдельная наземная поездка; фактический режим дороги проверяется перед выездом."
+          },
+          "provenance": {
+            "source_object_name": "Kakku Pagodas",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Mawlamyine",
+        "name_ru": "Моулмейн",
+        "canonical_id": "geo_mm_0030",
+        "legacy_id": "mm:locality:mawlamyine",
+        "slug": "mawlamyine",
+        "kind": "city",
+        "regions": [
+          "Mon State / Kyaiktiyo / Mawlamyine"
+        ],
+        "object_names": [
+          "Mawlamyine colonial core"
+        ],
+        "profile": {
+          "summary": "Моулмейн — крупный речной и прибрежный город штата Мон и база для исследования колониального городского ядра.",
+          "climate": {
+            "summary": "Очень влажный муссонный юг; сухой сезон обычно удобнее для пешего городского маршрута."
+          },
+          "transport": {
+            "summary": "Историческое ядро исследуется пешком с короткими городскими переездами; актуальность междугороднего сообщения проверяется непосредственно перед поездкой."
+          },
+          "provenance": {
+            "source_object_name": "Mawlamyine colonial core",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Kinpun",
+        "name_ru": "Кинпун",
+        "canonical_id": "geo_mm_0031",
+        "legacy_id": "mm:locality:kinpun",
+        "slug": "kinpun",
+        "kind": "village",
+        "regions": [
+          "Mon State / Kyaiktiyo / Mawlamyine"
+        ],
+        "object_names": [
+          "Kyaiktiyo / Golden Rock"
+        ],
+        "profile": {
+          "summary": "Кинпун — нижний транспортный и паломнический узел для подъёма к Золотой скале Кьяиктийо.",
+          "geography": "Посёлок расположен у подножия горного лесного массива Кьяиктийо.",
+          "climate": {
+            "summary": "Очень влажный муссонный район; сухой сезон обычно удобнее для пешего подъёма."
+          },
+          "transport": {
+            "summary": "От Кинпуна начинается отдельный горный участок: местный транспорт и, при открытом маршруте, пеший подъём через лес."
+          },
+          "provenance": {
+            "source_object_name": "Kyaiktiyo / Golden Rock",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Sittwe",
+        "name_ru": "Ситуэ",
+        "canonical_id": "geo_mm_0032",
+        "legacy_id": "mm:locality:sittwe",
+        "slug": "sittwe",
+        "kind": "city",
+        "regions": [
+          "Rakhine / Mrauk U"
+        ],
+        "object_names": [],
+        "profile": {
+          "summary": "Ситуэ — главный прибрежный городской узел Ракхайна; исторически использовался как один из подходов к Мраук-У.",
+          "geography": "Город стоит у побережья Бенгальского залива в низкой дельтово-эстуарной среде.",
+          "climate": {
+            "summary": "Жаркий муссонный климат с очень влажным сезоном дождей."
+          },
+          "provenance": {
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false,
+            "note": "Текущая транспортная и безопасностная доступность будет добавлена только после проверки официальных источников."
+          }
+        }
+      },
+      {
+        "name": "Mrauk U",
+        "name_ru": "Мраук-У",
+        "canonical_id": "geo_mm_0033",
+        "legacy_id": "mm:locality:mrauk-u",
+        "slug": "mrauk-u",
+        "kind": "town",
+        "regions": [
+          "Rakhine / Mrauk U"
+        ],
+        "object_names": [
+          "Mrauk U"
+        ],
+        "profile": {
+          "summary": "Мраук-У — исторический город Ракхайна с храмовым ландшафтом среди невысоких холмов и сельских поселений.",
+          "climate": {
+            "summary": "Жарко; сезон дождей тяжёлый, ноябрь–февраль обычно суше."
+          },
+          "transport": {
+            "summary": "Исторический центр и храмовые группы требуют сочетания пеших участков и наземных переездов; фактический доступ проверяется отдельно."
+          },
+          "provenance": {
+            "source_object_name": "Mrauk U",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Bago",
+        "name_ru": "Баго",
+        "canonical_id": "geo_mm_0034",
+        "legacy_id": "mm:locality:bago",
+        "slug": "bago",
+        "kind": "city",
+        "regions": [
+          "Pyu ancient cities / Bago-Magway belt"
+        ],
+        "object_names": [],
+        "profile": {
+          "summary": "Баго — городской узел южной части центрального археологического пояса; не является координатной заменой отдельным городам пью.",
+          "provenance": {
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Pyay",
+        "name_ru": "Пьи",
+        "canonical_id": "geo_mm_0035",
+        "legacy_id": "mm:locality:pyay",
+        "slug": "pyay",
+        "kind": "city",
+        "regions": [
+          "Pyu ancient cities / Bago-Magway belt"
+        ],
+        "object_names": [
+          "Pyu Ancient Cities"
+        ],
+        "profile": {
+          "summary": "Пьи — ближайший крупный городской узел к Шри-Кшетре, одному из трёх компонентов древних городов пью.",
+          "climate": {
+            "summary": "Жаркая центральная низменность, суше побережья; ноябрь–февраль обычно мягче."
+          },
+          "transport": {
+            "summary": "Для серийного объекта Пьи обслуживает только компонент Шри-Кшетра; Бейктано и Халин требуют отдельных маршрутов и не должны географически сводиться к Пьи."
+          },
+          "provenance": {
+            "source_object_name": "Pyu Ancient Cities",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Monywa",
+        "name_ru": "Моунъюа",
+        "canonical_id": "geo_mm_0036",
+        "legacy_id": "mm:locality:monywa",
+        "slug": "monywa",
+        "kind": "city",
+        "regions": [
+          "Sagaing / Monywa"
+        ],
+        "object_names": [
+          "Monywa / Thanboddhay and Bodhi Tataung"
+        ],
+        "profile": {
+          "summary": "Моунъюа — главный городской узел района для Thanboddhay и Bodhi Tataung.",
+          "climate": {
+            "summary": "Жаркая сухая центральная зона; ноябрь–февраль обычно мягче, март–май особенно жаркие."
+          },
+          "transport": {
+            "summary": "От города к храмовым комплексам нужны отдельные наземные переезды; состояние дорог проверяется перед выездом."
+          },
+          "provenance": {
+            "source_object_name": "Monywa / Thanboddhay and Bodhi Tataung",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Myitkyina",
+        "name_ru": "Мьичина",
+        "canonical_id": "geo_mm_0037",
+        "legacy_id": "mm:locality:myitkyina",
+        "slug": "myitkyina",
+        "kind": "city",
+        "regions": [
+          "Kachin State / Indawgyi"
+        ],
+        "object_names": [],
+        "profile": {
+          "summary": "Мьичина — главный городской узел штата Качин; для Индавджи это удалённая отправная точка, а не ближайшая локальная база.",
+          "provenance": {
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Hopin",
+        "name_ru": "Хопин",
+        "canonical_id": "geo_mm_0038",
+        "legacy_id": "mm:locality:hopin",
+        "slug": "hopin",
+        "kind": "town",
+        "regions": [
+          "Kachin State / Indawgyi"
+        ],
+        "object_names": [
+          "Indawgyi Lake"
+        ],
+        "profile": {
+          "summary": "Хопин — ближайший сухопутный узел на подходе к бассейну озера Индавджи.",
+          "geography": "Небольшой город к западу от основной долины Иравади, откуда дороги уходят в озёрную котловину.",
+          "climate": {
+            "summary": "Муссонный север; сезон дождей осложняет дороги к озеру."
+          },
+          "provenance": {
+            "source_object_name": "Indawgyi Lake",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Kanpetlet",
+        "name_ru": "Канпетлет",
+        "canonical_id": "geo_mm_0039",
+        "legacy_id": "mm:locality:kanpetlet",
+        "slug": "kanpetlet",
+        "kind": "town",
+        "regions": [
+          "Chin State / Nat Ma Taung"
+        ],
+        "object_names": [
+          "Nat Ma Taung / Mount Victoria"
+        ],
+        "profile": {
+          "summary": "Канпетлет — один из традиционных нижних узлов для подхода к Нат-Ма-Таун.",
+          "geography": "Высокогорный город в Чинских горах с прохладным климатом и длинными горными дорогами.",
+          "climate": {
+            "summary": "Прохладнее низменностей; в сухой сезон ночи и ранние утра могут быть холодными."
+          },
+          "transport": {
+            "summary": "Горные дороги длинные и чувствительны к погоде; фактическая проходимость и доступ проверяются перед выездом."
+          },
+          "provenance": {
+            "source_object_name": "Nat Ma Taung / Mount Victoria",
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
+      },
+      {
+        "name": "Mindat",
+        "name_ru": "Миндат",
+        "canonical_id": "geo_mm_0040",
+        "legacy_id": "mm:locality:mindat",
+        "slug": "mindat",
+        "kind": "town",
+        "regions": [
+          "Chin State / Nat Ma Taung"
+        ],
+        "object_names": [],
+        "profile": {
+          "summary": "Миндат — высокогорный городской узел Чинского штата и один из традиционных подходов к району Нат-Ма-Таун.",
+          "geography": "Город расположен на горном хребте; дороги проходят по сложному серпантинному рельефу.",
+          "climate": {
+            "summary": "Высокогорный климат с прохладными ночами, туманом и быстрой сменой погоды."
+          },
+          "provenance": {
+            "source_refs": [],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": false
+          }
+        }
       }
     ]
   },

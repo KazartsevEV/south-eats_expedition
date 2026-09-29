@@ -3,7 +3,7 @@
     "schema": "expedition_geography_v1",
     "country_code": "MY",
     "country_slug": "malaysia",
-    "status": "country_geography_formalized_expanded_31_objects_draft",
+    "status": "country_geography_formalized_expanded_38_objects_draft",
     "checked_at": "2026-09-29",
     "next_level": "build_validate_then_object_and_class_qa",
     "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; large physical areas are not forced under a city or route hub."
@@ -91,7 +91,8 @@
         "my:sepilok-orangutan-rehabilitation-centre",
         "my:maliau-basin-conservation-area",
         "my:crocker-range-park-and-salt-trail",
-        "my:gomantong-caves"
+        "my:gomantong-caves",
+        "my:tawau-hills-park"
       ],
       "canonical_id": "geo_my_0036"
     },
@@ -203,7 +204,10 @@
         "my:bario-kelabit-highlands",
         "my:niah-national-park",
         "my:kuching-old-town-and-waterfront",
-        "my:bako-national-park"
+        "my:bako-national-park",
+        "my:fairy-cave-and-wind-cave-nature-reserves",
+        "my:gunung-gading-national-park",
+        "my:batang-ai-national-park-and-iban-longhouse-landscape"
       ],
       "canonical_id": "geo_my_0045"
     },
@@ -277,7 +281,8 @@
       "object_ids": [
         "my:langkawi",
         "my:sungai-batu-archaeological-site",
-        "my:bujang-valley-archaeological-museum-and-temple-landscape"
+        "my:bujang-valley-archaeological-museum-and-temple-landscape",
+        "my:gunung-jerai-geoforest-park"
       ],
       "canonical_id": "geo_my_0051"
     },
@@ -331,7 +336,8 @@
         "my:belum-temengor",
         "my:kellie-s-castle",
         "my:lenggong-valley-archaeological-landscape",
-        "my:gua-tambun-rock-art-site"
+        "my:gua-tambun-rock-art-site",
+        "my:gua-tempurung"
       ],
       "canonical_id": "geo_my_0055"
     },
@@ -427,7 +433,8 @@
       "slug": "pahang",
       "parent_id": "country:my",
       "object_ids": [
-        "my:taman-negara-national-park"
+        "my:taman-negara-national-park",
+        "my:tasik-chini-biosphere-reserve"
       ],
       "canonical_id": "geo_my_0063",
       "notes_ru": "Один из трёх штатов, в которых лежит Taman Negara; основной экспедиционный вход карточки — Kuala Tahan, Pahang."
@@ -580,6 +587,91 @@
         "my:gua-tambun-rock-art-site"
       ],
       "canonical_id": "geo_my_0075"
+    },
+    {
+      "id": "my:geographic-area:bau-karst",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Карст Бау",
+      "slug": "bau-karst",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:fairy-cave-and-wind-cave-nature-reserves"
+      ],
+      "canonical_id": "geo_my_0076"
+    },
+    {
+      "id": "my:protected-area:gunung-gading",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Гунунг-Гадинг",
+      "slug": "gunung-gading",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:gunung-gading-national-park"
+      ],
+      "canonical_id": "geo_my_0077"
+    },
+    {
+      "id": "my:protected-area:tawau-hills",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Парк Тавау-Хиллс",
+      "slug": "tawau-hills",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:tawau-hills-park"
+      ],
+      "canonical_id": "geo_my_0078"
+    },
+    {
+      "id": "my:protected-area:batang-ai",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Батанг-Ай",
+      "slug": "batang-ai",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:batang-ai-national-park-and-iban-longhouse-landscape"
+      ],
+      "canonical_id": "geo_my_0079"
+    },
+    {
+      "id": "my:geographic-area:gunung-jerai",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Гунунг-Джерай",
+      "slug": "gunung-jerai",
+      "parent_id": "my:state:kedah",
+      "object_ids": [
+        "my:gunung-jerai-geoforest-park"
+      ],
+      "canonical_id": "geo_my_0080"
+    },
+    {
+      "id": "my:geographic-area:tasik-chini",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Тасик-Чини",
+      "slug": "tasik-chini",
+      "parent_id": "my:state:pahang",
+      "object_ids": [
+        "my:tasik-chini-biosphere-reserve"
+      ],
+      "canonical_id": "geo_my_0081"
+    },
+    {
+      "id": "my:geographic-area:kinta-karst",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Карст долины Кинта",
+      "slug": "kinta-karst",
+      "parent_id": "my:state:perak",
+      "object_ids": [
+        "my:gua-tempurung",
+        "my:gua-tambun-rock-art-site"
+      ],
+      "canonical_id": "geo_my_0082"
     }
   ]
 }

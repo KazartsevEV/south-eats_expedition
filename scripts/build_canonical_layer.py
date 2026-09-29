@@ -769,6 +769,16 @@ def build():
         }
         status = "passed" if all(checks.values()) else "incomplete"
 
+        # Legacy source files carried pseudo-tags such as class_major,
+        # class_expanded and class_nature_wildlife. In the canonical model
+        # class membership lives only in classification.class_id; tags are
+        # secondary dimensions and must not duplicate or emulate a class.
+        canonical_tag_ids = list(dict.fromkeys(
+            str(tag)
+            for tag in ((detail.get("identity") or {}).get("tags") or [])
+            if tag not in (None, "") and not str(tag).startswith("class_")
+        ))
+
         canonical = {
             "id": object_id,
             "kind": "attraction",
@@ -778,7 +788,7 @@ def build():
             "summary": {"narrow": (detail.get("identity") or {}).get("narrow")},
             "classification": {
                 "class_id": class_id,
-                "tag_ids": (detail.get("identity") or {}).get("tags") or [],
+                "tag_ids": canonical_tag_ids,
             },
             "geo": {
                 "country_id": f"geo_{code.lower()}",
@@ -1043,7 +1053,7 @@ def build():
         })
     dump(release / "taxonomy" / "object-classes.json", {
         "classes": class_rows,
-        "rule": "Exactly one class_id per object; tags carry secondary dimensions.",
+        "rule": "Exactly one class_id per object; tags carry secondary dimensions; legacy class_* pseudo-tags are excluded.",
     })
 
     tag_counts = Counter()

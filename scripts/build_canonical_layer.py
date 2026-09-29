@@ -1119,20 +1119,34 @@ def build():
         })
 
     # Derived views from canonical entities only.
+    home_country_rows = []
+    for row in country_manifest_rows:
+        code = row["code"]
+        objects = object_rows_by_country[code.upper()]
+        per_class = Counter(obj["class_id"] for obj in objects)
+        cover_media_id = next(
+            (obj.get("cover_media_id") for obj in objects if obj.get("cover_media_id")),
+            None,
+        )
+        home_country_rows.append({
+            "id": row["id"],
+            "code": code,
+            "profile": row["profile"],
+            "search_index": row["search_index"],
+            "country_view": f"views/countries/{code}.json",
+            "objects_count": len(objects),
+            "classes_count": len(per_class),
+            "class_ids": sorted(per_class),
+            "cover_media_id": cover_media_id,
+        })
+
     home = {
         "project_id": "expedition_sea",
         "title": "Expedition Southeast Asia",
         "default_language": DEFAULT_LANGUAGE,
-        "countries": [
-            {
-                "id": row["id"],
-                "code": row["code"],
-                "profile": row["profile"],
-                "search_index": row["search_index"],
-            }
-            for row in country_manifest_rows
-        ],
+        "countries": home_country_rows,
         "search": "search/global.json",
+        "layout_rule": "home -> countries; country -> class_sections -> objects",
     }
     dump(release / "views" / "home.json", home)
 

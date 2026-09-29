@@ -1,0 +1,1067 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "status": "regional_geography_formalized",
+    "checked_at": "2026-09-30",
+    "next_level": "regional_qa_before_object_cards",
+    "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes."
+  },
+  "sources": [
+    {
+      "publisher": "Government of Vietnam",
+      "url": "https://xaydungchinhsach.chinhphu.vn/quoc-hoi-thong-qua-nghi-quyet-sap-xep-don-vi-hanh-chinh-cap-tinh-119250612101356465.htm",
+      "used_for": [
+        "34 provincial-level units effective 2025-2026"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    {
+      "publisher": "Government of Vietnam",
+      "url": "https://xaydungchinhsach.chinhphu.vn/bang-danh-muc-va-ma-so-cua-34-tinh-thanh-moi-cac-don-vi-hanh-chinh-cap-xa-moi-11925070418263625.htm",
+      "used_for": [
+        "official current unit names and codes"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    {
+      "publisher": "Expedition South East Drive draft",
+      "used_for": [
+        "legacy expedition regional nodes"
+      ],
+      "checked_at": "2026-09-30"
+    }
+  ],
+  "rules": {
+    "parentage": "Administrative units use verified current parentage. Composite expedition regions remain geographic_area when they span several administrative units or preserve legacy research geography.",
+    "route_hubs": "Cities and towns are geo entities only; they are not attraction cards.",
+    "object_visibility": "Object cards remain deferred for the second-chunk countries during this phase.",
+    "cards": "Object card payloads are not edited in this stage."
+  },
+  "nodes": [
+    {
+      "id": "vn:city:hanoi",
+      "canonical_id": "geo_vn_0001",
+      "kind": "city",
+      "name_ru": "Ханой",
+      "name_local": "Hanoi",
+      "slug": "hanoi",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Город центрального подчинения в действующей структуре 34 единиц провинциального уровня."
+    },
+    {
+      "id": "vn:province:cao-bang",
+      "canonical_id": "geo_vn_0002",
+      "kind": "province",
+      "name_ru": "Каобанг",
+      "name_local": "Cao Bằng",
+      "slug": "cao-bang",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:tuyen-quang",
+      "canonical_id": "geo_vn_0003",
+      "kind": "province",
+      "name_ru": "Туенкуанг",
+      "name_local": "Tuyên Quang",
+      "slug": "tuyen-quang",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:dien-bien",
+      "canonical_id": "geo_vn_0004",
+      "kind": "province",
+      "name_ru": "Дьенбьен",
+      "name_local": "Điện Biên",
+      "slug": "dien-bien",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:lai-chau",
+      "canonical_id": "geo_vn_0005",
+      "kind": "province",
+      "name_ru": "Лайтяу",
+      "name_local": "Lai Châu",
+      "slug": "lai-chau",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:son-la",
+      "canonical_id": "geo_vn_0006",
+      "kind": "province",
+      "name_ru": "Шонла",
+      "name_local": "Sơn La",
+      "slug": "son-la",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:lao-cai",
+      "canonical_id": "geo_vn_0007",
+      "kind": "province",
+      "name_ru": "Лаокай",
+      "name_local": "Lào Cai",
+      "slug": "lao-cai",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:thai-nguyen",
+      "canonical_id": "geo_vn_0008",
+      "kind": "province",
+      "name_ru": "Тхайнгуен",
+      "name_local": "Thái Nguyên",
+      "slug": "thai-nguyen",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:lang-son",
+      "canonical_id": "geo_vn_0009",
+      "kind": "province",
+      "name_ru": "Лангшон",
+      "name_local": "Lạng Sơn",
+      "slug": "lang-son",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:quang-ninh",
+      "canonical_id": "geo_vn_0010",
+      "kind": "province",
+      "name_ru": "Куангнинь",
+      "name_local": "Quảng Ninh",
+      "slug": "quang-ninh",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:bac-ninh",
+      "canonical_id": "geo_vn_0011",
+      "kind": "province",
+      "name_ru": "Бакнинь",
+      "name_local": "Bắc Ninh",
+      "slug": "bac-ninh",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:phu-tho",
+      "canonical_id": "geo_vn_0012",
+      "kind": "province",
+      "name_ru": "Футхо",
+      "name_local": "Phú Thọ",
+      "slug": "phu-tho",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:city:hai-phong",
+      "canonical_id": "geo_vn_0013",
+      "kind": "city",
+      "name_ru": "Хайфон",
+      "name_local": "Hải Phòng",
+      "slug": "hai-phong",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Город центрального подчинения в действующей структуре 34 единиц провинциального уровня."
+    },
+    {
+      "id": "vn:province:hung-yen",
+      "canonical_id": "geo_vn_0014",
+      "kind": "province",
+      "name_ru": "Хынгйен",
+      "name_local": "Hưng Yên",
+      "slug": "hung-yen",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:ninh-binh",
+      "canonical_id": "geo_vn_0015",
+      "kind": "province",
+      "name_ru": "Ниньбинь",
+      "name_local": "Ninh Bình",
+      "slug": "ninh-binh",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:thanh-hoa",
+      "canonical_id": "geo_vn_0016",
+      "kind": "province",
+      "name_ru": "Тханьхоа",
+      "name_local": "Thanh Hóa",
+      "slug": "thanh-hoa",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:nghe-an",
+      "canonical_id": "geo_vn_0017",
+      "kind": "province",
+      "name_ru": "Нгеан",
+      "name_local": "Nghệ An",
+      "slug": "nghe-an",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:ha-tinh",
+      "canonical_id": "geo_vn_0018",
+      "kind": "province",
+      "name_ru": "Хатинь",
+      "name_local": "Hà Tĩnh",
+      "slug": "ha-tinh",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:quang-tri",
+      "canonical_id": "geo_vn_0019",
+      "kind": "province",
+      "name_ru": "Куангчи",
+      "name_local": "Quảng Trị",
+      "slug": "quang-tri",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:city:hue",
+      "canonical_id": "geo_vn_0020",
+      "kind": "city",
+      "name_ru": "Хюэ",
+      "name_local": "Huế",
+      "slug": "hue",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Город центрального подчинения в действующей структуре 34 единиц провинциального уровня."
+    },
+    {
+      "id": "vn:city:da-nang",
+      "canonical_id": "geo_vn_0021",
+      "kind": "city",
+      "name_ru": "Дананг",
+      "name_local": "Đà Nẵng",
+      "slug": "da-nang",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Город центрального подчинения в действующей структуре 34 единиц провинциального уровня."
+    },
+    {
+      "id": "vn:province:quang-ngai",
+      "canonical_id": "geo_vn_0022",
+      "kind": "province",
+      "name_ru": "Куангнгай",
+      "name_local": "Quảng Ngãi",
+      "slug": "quang-ngai",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:gia-lai",
+      "canonical_id": "geo_vn_0023",
+      "kind": "province",
+      "name_ru": "Зялай",
+      "name_local": "Gia Lai",
+      "slug": "gia-lai",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:khanh-hoa",
+      "canonical_id": "geo_vn_0024",
+      "kind": "province",
+      "name_ru": "Кханьхоа",
+      "name_local": "Khánh Hòa",
+      "slug": "khanh-hoa",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:dak-lak",
+      "canonical_id": "geo_vn_0025",
+      "kind": "province",
+      "name_ru": "Даклак",
+      "name_local": "Đắk Lắk",
+      "slug": "dak-lak",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:lam-dong",
+      "canonical_id": "geo_vn_0026",
+      "kind": "province",
+      "name_ru": "Ламдонг",
+      "name_local": "Lâm Đồng",
+      "slug": "lam-dong",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:dong-nai",
+      "canonical_id": "geo_vn_0027",
+      "kind": "province",
+      "name_ru": "Донгнай",
+      "name_local": "Đồng Nai",
+      "slug": "dong-nai",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:city:ho-chi-minh-city",
+      "canonical_id": "geo_vn_0028",
+      "kind": "city",
+      "name_ru": "Хошимин",
+      "name_local": "Ho Chi Minh City",
+      "slug": "ho-chi-minh-city",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Город центрального подчинения в действующей структуре 34 единиц провинциального уровня."
+    },
+    {
+      "id": "vn:province:tay-ninh",
+      "canonical_id": "geo_vn_0029",
+      "kind": "province",
+      "name_ru": "Тэйнинь",
+      "name_local": "Tây Ninh",
+      "slug": "tay-ninh",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:vinh-long",
+      "canonical_id": "geo_vn_0030",
+      "kind": "province",
+      "name_ru": "Виньлонг",
+      "name_local": "Vĩnh Long",
+      "slug": "vinh-long",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:dong-thap",
+      "canonical_id": "geo_vn_0031",
+      "kind": "province",
+      "name_ru": "Донгтхап",
+      "name_local": "Đồng Tháp",
+      "slug": "dong-thap",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:ca-mau",
+      "canonical_id": "geo_vn_0032",
+      "kind": "province",
+      "name_ru": "Камау",
+      "name_local": "Cà Mau",
+      "slug": "ca-mau",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:province:an-giang",
+      "canonical_id": "geo_vn_0033",
+      "kind": "province",
+      "name_ru": "Анзянг",
+      "name_local": "An Giang",
+      "slug": "an-giang",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Действующая провинция после реформы административного деления 2025 года."
+    },
+    {
+      "id": "vn:city:can-tho",
+      "canonical_id": "geo_vn_0034",
+      "kind": "city",
+      "name_ru": "Кантхо",
+      "name_local": "Cần Thơ",
+      "slug": "can-tho",
+      "parent_id": "country:vn",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Город центрального подчинения в действующей структуре 34 единиц провинциального уровня."
+    },
+    {
+      "id": "vn:geographic_area:hanoi-red-river-delta",
+      "canonical_id": "geo_vn_0035",
+      "kind": "geographic_area",
+      "name_ru": "Ханой / дельта Красной реки",
+      "name_local": "Hanoi / Red River Delta",
+      "slug": "hanoi-red-river-delta",
+      "parent_id": "country:vn",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Hanoi / Red River Delta"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:ninh-binh-trang-an",
+      "canonical_id": "geo_vn_0036",
+      "kind": "geographic_area",
+      "name_ru": "Ниньбинь / Чанган",
+      "name_local": "Ninh Binh / Trang An",
+      "slug": "ninh-binh-trang-an",
+      "parent_id": "vn:province:ninh-binh",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Ninh Binh / Trang An"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:ha-long-cat-ba",
+      "canonical_id": "geo_vn_0037",
+      "kind": "geographic_area",
+      "name_ru": "Халонг / Катба",
+      "name_local": "Ha Long / Cat Ba",
+      "slug": "ha-long-cat-ba",
+      "parent_id": "country:vn",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Ha Long / Cat Ba"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:hue-central-coast",
+      "canonical_id": "geo_vn_0038",
+      "kind": "geographic_area",
+      "name_ru": "Хюэ / центральное побережье",
+      "name_local": "Hue / central coast",
+      "slug": "hue-central-coast",
+      "parent_id": "vn:city:hue",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Hue / central coast"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:hoi-an-quang-nam",
+      "canonical_id": "geo_vn_0039",
+      "kind": "geographic_area",
+      "name_ru": "Хойан / бывшая провинция Куангнам",
+      "name_local": "Hoi An / Quang Nam",
+      "slug": "hoi-an-quang-nam",
+      "parent_id": "vn:city:da-nang",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Hoi An / Quang Nam"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:quang-binh-phong-nha",
+      "canonical_id": "geo_vn_0040",
+      "kind": "geographic_area",
+      "name_ru": "Куангбинь / Фонгня",
+      "name_local": "Quang Binh / Phong Nha",
+      "slug": "quang-binh-phong-nha",
+      "parent_id": "vn:province:quang-tri",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Quang Binh / Phong Nha"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:ho-chi-minh-city-expedition",
+      "canonical_id": "geo_vn_0041",
+      "kind": "geographic_area",
+      "name_ru": "Хошимин",
+      "name_local": "Ho Chi Minh City",
+      "slug": "ho-chi-minh-city-expedition",
+      "parent_id": "vn:city:ho-chi-minh-city",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Ho Chi Minh City"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:mekong-delta",
+      "canonical_id": "geo_vn_0042",
+      "kind": "geographic_area",
+      "name_ru": "Дельта Меконга",
+      "name_local": "Mekong Delta",
+      "slug": "mekong-delta",
+      "parent_id": "country:vn",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Mekong Delta"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:cao-bang-expedition",
+      "canonical_id": "geo_vn_0043",
+      "kind": "geographic_area",
+      "name_ru": "Каобанг",
+      "name_local": "Cao Bang",
+      "slug": "cao-bang-expedition",
+      "parent_id": "vn:province:cao-bang",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Cao Bang"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:binh-dinh-quy-nhon",
+      "canonical_id": "geo_vn_0044",
+      "kind": "geographic_area",
+      "name_ru": "Биньдинь / Куинён",
+      "name_local": "Binh Dinh / Quy Nhon",
+      "slug": "binh-dinh-quy-nhon",
+      "parent_id": "vn:province:gia-lai",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Binh Dinh / Quy Nhon"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:central-highlands-kon-tum",
+      "canonical_id": "geo_vn_0045",
+      "kind": "geographic_area",
+      "name_ru": "Центральное нагорье / Контум",
+      "name_local": "Central Highlands / Kon Tum",
+      "slug": "central-highlands-kon-tum",
+      "parent_id": "country:vn",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Central Highlands / Kon Tum"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:nam-dinh-legacy",
+      "canonical_id": "geo_vn_0046",
+      "kind": "geographic_area",
+      "name_ru": "Намдинь",
+      "name_local": "Nam Dinh",
+      "slug": "nam-dinh-legacy",
+      "parent_id": "vn:province:ninh-binh",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Nam Dinh"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:con-dao",
+      "canonical_id": "geo_vn_0047",
+      "kind": "geographic_area",
+      "name_ru": "Кондао",
+      "name_local": "Con Dao",
+      "slug": "con-dao",
+      "parent_id": "vn:city:ho-chi-minh-city",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Con Dao"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:ha-giang-dong-van",
+      "canonical_id": "geo_vn_0048",
+      "kind": "geographic_area",
+      "name_ru": "Хазянг / Донгван",
+      "name_local": "Ha Giang / Dong Van",
+      "slug": "ha-giang-dong-van",
+      "parent_id": "vn:province:tuyen-quang",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Ha Giang / Dong Van"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:bac-kan-ba-be",
+      "canonical_id": "geo_vn_0049",
+      "kind": "geographic_area",
+      "name_ru": "Баккан / Бабе",
+      "name_local": "Bac Kan / Ba Be",
+      "slug": "bac-kan-ba-be",
+      "parent_id": "vn:province:thai-nguyen",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Bac Kan / Ba Be"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:ninh-binh-cuc-phuong",
+      "canonical_id": "geo_vn_0050",
+      "kind": "geographic_area",
+      "name_ru": "Ниньбинь / Кукфыонг",
+      "name_local": "Ninh Binh / Cuc Phuong",
+      "slug": "ninh-binh-cuc-phuong",
+      "parent_id": "vn:province:ninh-binh",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Ninh Binh / Cuc Phuong"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:yen-bai-mu-cang-chai",
+      "canonical_id": "geo_vn_0051",
+      "kind": "geographic_area",
+      "name_ru": "Йенбай / Мукангчай",
+      "name_local": "Yen Bai / Mu Cang Chai",
+      "slug": "yen-bai-mu-cang-chai",
+      "parent_id": "vn:province:lao-cai",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Yen Bai / Mu Cang Chai"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:sa-pa-lao-cai-hoang-lien",
+      "canonical_id": "geo_vn_0052",
+      "kind": "geographic_area",
+      "name_ru": "Шапа / Лаокай / Хоангльен",
+      "name_local": "Sa Pa / Lao Cai / Hoang Lien",
+      "slug": "sa-pa-lao-cai-hoang-lien",
+      "parent_id": "vn:province:lao-cai",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Sa Pa / Lao Cai / Hoang Lien"
+      ]
+    },
+    {
+      "id": "vn:geographic_area:dong-nai-cat-tien",
+      "canonical_id": "geo_vn_0053",
+      "kind": "geographic_area",
+      "name_ru": "Донгнай / Каттьен",
+      "name_local": "Dong Nai / Cat Tien",
+      "slug": "dong-nai-cat-tien",
+      "parent_id": "vn:province:dong-nai",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
+      "legacy_region_names": [
+        "Dong Nai / Cat Tien"
+      ]
+    },
+    {
+      "id": "vn:city:hanoi-hub",
+      "canonical_id": "geo_vn_0054",
+      "kind": "city",
+      "name_ru": "Ханой",
+      "name_local": "Hanoi",
+      "slug": "hanoi-hub",
+      "parent_id": "vn:city:hanoi",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Hanoi"
+      ]
+    },
+    {
+      "id": "vn:town:ninh-binh-hub",
+      "canonical_id": "geo_vn_0055",
+      "kind": "town",
+      "name_ru": "Ниньбинь",
+      "name_local": "Ninh Binh",
+      "slug": "ninh-binh-hub",
+      "parent_id": "vn:province:ninh-binh",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Ninh Binh"
+      ]
+    },
+    {
+      "id": "vn:city:ha-long",
+      "canonical_id": "geo_vn_0056",
+      "kind": "city",
+      "name_ru": "Халонг",
+      "name_local": "Ha Long",
+      "slug": "ha-long",
+      "parent_id": "vn:province:quang-ninh",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Ha Long"
+      ]
+    },
+    {
+      "id": "vn:town:cat-ba",
+      "canonical_id": "geo_vn_0057",
+      "kind": "town",
+      "name_ru": "Катба",
+      "name_local": "Cat Ba",
+      "slug": "cat-ba",
+      "parent_id": "vn:city:hai-phong",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Cat Ba"
+      ]
+    },
+    {
+      "id": "vn:city:hue-hub",
+      "canonical_id": "geo_vn_0058",
+      "kind": "city",
+      "name_ru": "Хюэ",
+      "name_local": "Hue",
+      "slug": "hue-hub",
+      "parent_id": "vn:city:hue",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Hue"
+      ]
+    },
+    {
+      "id": "vn:town:hoi-an",
+      "canonical_id": "geo_vn_0059",
+      "kind": "town",
+      "name_ru": "Хойан",
+      "name_local": "Hoi An",
+      "slug": "hoi-an",
+      "parent_id": "vn:city:da-nang",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Hoi An"
+      ]
+    },
+    {
+      "id": "vn:city:dong-hoi",
+      "canonical_id": "geo_vn_0060",
+      "kind": "city",
+      "name_ru": "Донгхой",
+      "name_local": "Dong Hoi",
+      "slug": "dong-hoi",
+      "parent_id": "vn:province:quang-tri",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Dong Hoi"
+      ]
+    },
+    {
+      "id": "vn:town:phong-nha",
+      "canonical_id": "geo_vn_0061",
+      "kind": "town",
+      "name_ru": "Фонгня",
+      "name_local": "Phong Nha",
+      "slug": "phong-nha",
+      "parent_id": "vn:province:quang-tri",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Phong Nha"
+      ]
+    },
+    {
+      "id": "vn:city:ho-chi-minh-hub",
+      "canonical_id": "geo_vn_0062",
+      "kind": "city",
+      "name_ru": "Хошимин",
+      "name_local": "Ho Chi Minh City",
+      "slug": "ho-chi-minh-hub",
+      "parent_id": "vn:city:ho-chi-minh-city",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Ho Chi Minh City"
+      ]
+    },
+    {
+      "id": "vn:city:can-tho-hub",
+      "canonical_id": "geo_vn_0063",
+      "kind": "city",
+      "name_ru": "Кантхо",
+      "name_local": "Can Tho",
+      "slug": "can-tho-hub",
+      "parent_id": "vn:city:can-tho",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Can Tho"
+      ]
+    },
+    {
+      "id": "vn:city:cao-bang-city",
+      "canonical_id": "geo_vn_0064",
+      "kind": "city",
+      "name_ru": "Каобанг",
+      "name_local": "Cao Bang",
+      "slug": "cao-bang-city",
+      "parent_id": "vn:province:cao-bang",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Cao Bang"
+      ]
+    },
+    {
+      "id": "vn:city:quy-nhon",
+      "canonical_id": "geo_vn_0065",
+      "kind": "city",
+      "name_ru": "Куинён",
+      "name_local": "Quy Nhon",
+      "slug": "quy-nhon",
+      "parent_id": "vn:province:gia-lai",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Quy Nhon"
+      ]
+    },
+    {
+      "id": "vn:city:kon-tum",
+      "canonical_id": "geo_vn_0066",
+      "kind": "city",
+      "name_ru": "Контум",
+      "name_local": "Kon Tum",
+      "slug": "kon-tum",
+      "parent_id": "vn:province:quang-ngai",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Kon Tum"
+      ]
+    },
+    {
+      "id": "vn:town:dong-van",
+      "canonical_id": "geo_vn_0067",
+      "kind": "town",
+      "name_ru": "Донгван",
+      "name_local": "Dong Van",
+      "slug": "dong-van",
+      "parent_id": "vn:province:tuyen-quang",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Dong Van"
+      ]
+    },
+    {
+      "id": "vn:settlement:ba-be",
+      "canonical_id": "geo_vn_0068",
+      "kind": "settlement",
+      "name_ru": "Бабе",
+      "name_local": "Ba Be",
+      "slug": "ba-be",
+      "parent_id": "vn:province:thai-nguyen",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Ba Be"
+      ]
+    },
+    {
+      "id": "vn:town:mu-cang-chai",
+      "canonical_id": "geo_vn_0069",
+      "kind": "town",
+      "name_ru": "Мукангчай",
+      "name_local": "Mu Cang Chai",
+      "slug": "mu-cang-chai",
+      "parent_id": "vn:province:lao-cai",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Mu Cang Chai"
+      ]
+    },
+    {
+      "id": "vn:town:sa-pa",
+      "canonical_id": "geo_vn_0070",
+      "kind": "town",
+      "name_ru": "Шапа",
+      "name_local": "Sa Pa",
+      "slug": "sa-pa",
+      "parent_id": "vn:province:lao-cai",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Sa Pa"
+      ]
+    },
+    {
+      "id": "vn:city:da-lat",
+      "canonical_id": "geo_vn_0071",
+      "kind": "city",
+      "name_ru": "Далат",
+      "name_local": "Da Lat",
+      "slug": "da-lat",
+      "parent_id": "vn:province:lam-dong",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Da Lat"
+      ]
+    },
+    {
+      "id": "vn:city:nha-trang",
+      "canonical_id": "geo_vn_0072",
+      "kind": "city",
+      "name_ru": "Нячанг",
+      "name_local": "Nha Trang",
+      "slug": "nha-trang",
+      "parent_id": "vn:province:khanh-hoa",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Nha Trang"
+      ]
+    },
+    {
+      "id": "vn:city:buon-ma-thuot",
+      "canonical_id": "geo_vn_0073",
+      "kind": "city",
+      "name_ru": "Буонметхуот",
+      "name_local": "Buon Ma Thuot",
+      "slug": "buon-ma-thuot",
+      "parent_id": "vn:province:dak-lak",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Buon Ma Thuot"
+      ]
+    },
+    {
+      "id": "vn:city:pleiku",
+      "canonical_id": "geo_vn_0074",
+      "kind": "city",
+      "name_ru": "Плейку",
+      "name_local": "Pleiku",
+      "slug": "pleiku",
+      "parent_id": "vn:province:gia-lai",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Pleiku"
+      ]
+    },
+    {
+      "id": "vn:town:con-son",
+      "canonical_id": "geo_vn_0075",
+      "kind": "town",
+      "name_ru": "Коншон",
+      "name_local": "Con Son",
+      "slug": "con-son",
+      "parent_id": "vn:city:ho-chi-minh-city",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Поселенческий/транспортный узел. Название населённого места сохраняется независимо от изменений административных уровней после реформы 2025 года.",
+      "legacy_locality_names": [
+        "Con Son"
+      ]
+    }
+  ]
+}

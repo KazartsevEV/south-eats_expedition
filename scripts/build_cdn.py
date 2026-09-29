@@ -252,6 +252,17 @@ TYPE_BY_NAME.update({
     "Gua Tambun rock art site": "archaeological_site",
 })
 
+
+TYPE_BY_NAME.update({
+    "Fairy Cave and Wind Cave Nature Reserves": "cave",
+    "Gunung Gading National Park": "national_park",
+    "Tawau Hills Park": "national_park",
+    "Batang Ai National Park and Iban longhouse landscape": "cultural_landscape",
+    "Gunung Jerai Geoforest Park": "mountain",
+    "Tasik Chini Biosphere Reserve": "lake",
+    "Gua Tempurung": "cave",
+})
+
 TAG_ALIASES = {
     "unesco": "unesco",
     "living heritage": "living_heritage",

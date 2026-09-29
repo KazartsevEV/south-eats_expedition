@@ -35,10 +35,24 @@
   },
   "climate": {
     "summary": "Очень влажный тропический муссонный климат; сухой сезон существенно удобнее для наземных маршрутов.",
+    "rainfall_pattern": "Танинтайи относится к самым влажным регионам страны в муссонный период.",
+    "source_refs": [
+      "src_000673"
+    ],
     "best_period_general": "Сухой сезон; текущие travel advisories критичны."
   },
   "geography": {
     "summary": "Южный вытянутый регион с влажными тропическими низменностями, прибрежной зоной и горными участками в глубине полуострова."
+  },
+  "marine": {
+    "summary": "Побережье Андаманского моря во время сильного муссона и тропических циклонов может испытывать шквалы и сильное волнение; оперативный морской прогноз важнее сезонной нормы.",
+    "tides": {
+      "status": "локальная официальная таблица в текущем проходе не нормализована",
+      "note": "Не подставлять приливы Янгона для Тавоя."
+    },
+    "source_refs": [
+      "src_000673"
+    ]
   },
   "safety": {
     "travel_advisory": {
@@ -55,16 +69,19 @@
     ]
   },
   "freshness": {
-    "checked_at": "2026-09-28"
+    "checked_at": "2026-09-29"
   },
   "provenance": {
     "source_urls": [
       "https://www.dop.gov.mm/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000673",
+      "src_000671"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

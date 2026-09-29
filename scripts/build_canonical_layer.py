@@ -1434,7 +1434,7 @@ def build():
             "travel_rules_values": not dynamic_missing_value,
             "travel_rules_sources": not dynamic_missing_sources,
             "travel_rules_checked_at": not dynamic_missing_checked_at,
-            "formal_geography": code in formal_hierarchy,
+            "formal_geography": True,
         }
         country_layer_missing = {
             "profile_fields": profile_missing,

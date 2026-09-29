@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="expedition-ui" content="architecture-preview-v2">
-<title>Expedition Southeast Asia — архитектура справочника</title>
+<meta name="expedition-ui" content="reference-preview-v3">
+<title>Expedition Southeast Asia — экспедиционный справочник</title>
 <link rel="preconnect" href="https://unpkg.com">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
@@ -116,6 +116,17 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .empty{border:1px dashed var(--line);border-radius:14px;padding:28px;color:var(--muted);text-align:center}
 .loading{padding:60px 0;color:var(--muted);text-align:center}
 .error{padding:30px;border:1px solid #6b3f32;background:#20130f;color:#ffc5a9;border-radius:14px}
+.reference-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.reference-card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px}
+.reference-card h3{margin:0 0 8px;font-size:17px}
+.reference-card p{margin:0;color:#cbd3ce}
+.fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fact-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px;min-width:0}
+.fact-card h3{margin:0 0 8px;font-size:16px}
+.fact-card p,.fact-card li{color:#cbd3ce}
+.fact-card ul{margin:7px 0 0;padding-left:18px}
+.country-label-marker{background:transparent;border:0;color:#eef4ef;font-weight:800;font-size:12px;text-shadow:0 1px 4px #000,0 0 8px #000;white-space:nowrap}
+.locality-note{border-left:3px solid var(--accent2);padding:10px 12px;background:var(--panel);color:var(--muted);margin:12px 0 18px}
 .footer{border-top:1px solid var(--line);padding:22px 0 0;margin-top:50px;color:var(--muted);font-size:11px}
 .leaflet-container{font-family:inherit;background:#111613}
 .leaflet-control-attribution{font-size:9px!important}
@@ -148,6 +159,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
   .preview{height:230px}
   .kv{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
+  .reference-grid,.fact-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -179,14 +191,14 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 
 var CDN='./cdn/v2/';
 var COUNTRY={
-  bn:{flag:'🇧🇳',name:'Бруней'},kh:{flag:'🇰🇭',name:'Камбоджа'},la:{flag:'🇱🇦',name:'Лаос'},
-  id:{flag:'🇮🇩',name:'Индонезия'},my:{flag:'🇲🇾',name:'Малайзия'},mm:{flag:'🇲🇲',name:'Мьянма'},
-  th:{flag:'🇹🇭',name:'Таиланд'},vn:{flag:'🇻🇳',name:'Вьетнам'},ph:{flag:'🇵🇭',name:'Филиппины'},
-  sg:{flag:'🇸🇬',name:'Сингапур'},tl:{flag:'🇹🇱',name:'Тимор-Лешти'}
+  bn:{flag:'🇧🇳',name:'Бруней',en:'Brunei'},kh:{flag:'🇰🇭',name:'Камбоджа',en:'Cambodia'},la:{flag:'🇱🇦',name:'Лаос',en:'Laos'},
+  id:{flag:'🇮🇩',name:'Индонезия',en:'Indonesia'},my:{flag:'🇲🇾',name:'Малайзия',en:'Malaysia'},mm:{flag:'🇲🇲',name:'Мьянма',en:'Myanmar'},
+  th:{flag:'🇹🇭',name:'Таиланд',en:'Thailand'},vn:{flag:'🇻🇳',name:'Вьетнам',en:'Vietnam'},ph:{flag:'🇵🇭',name:'Филиппины',en:'Philippines'},
+  sg:{flag:'🇸🇬',name:'Сингапур',en:'Singapore'},tl:{flag:'🇹🇱',name:'Тимор-Лешти',en:'Timor-Leste'}
 };
 var state={
-  release:null,latest:null,manifest:null,objects:[],classes:[],tags:[],geo:[],geoById:{},
-  classById:{},detail:new Map(),media:new Map(),mapsIndex:null,mapInstances:[]
+  release:null,latest:null,manifest:null,objects:[],classes:[],tags:[],geo:[],geoById:{},seaReference:null,
+  classById:{},detail:new Map(),media:new Map(),countryData:new Map(),geoDetail:new Map(),mapsIndex:null,mapInstances:[]
 };
 var view=document.getElementById('view');
 
@@ -223,6 +235,99 @@ async function media(id){
   if(!id)return null;
   if(!state.media.has(id))state.media.set(id,j(CDN+state.release+'/media/'+mediaCC(id)+'/'+id+'.json').catch(function(){return null}));
   return state.media.get(id);
+}
+async function countryData(cc){
+  if(!state.countryData.has(cc)){
+    var base=CDN+state.release+'/countries/'+cc+'/';
+    state.countryData.set(cc,Promise.all([
+      maybe(base+'profile.json'),maybe(base+'climate.json'),maybe(base+'travel-rules.json'),maybe(base+'indexes.json')
+    ]).then(function(x){return{profile:x[0],climate:x[1],travel:x[2],indexes:x[3]}}));
+  }
+  return state.countryData.get(cc);
+}
+async function geoDetail(id){
+  if(!state.geoDetail.has(id))state.geoDetail.set(id,maybe(CDN+state.release+'/geo/entities/'+id+'.json'));
+  return state.geoDetail.get(id);
+}
+function scalar(v){
+  if(v==null||v==='')return '';
+  if(typeof v==='string'||typeof v==='number'||typeof v==='boolean')return esc(v);
+  if(Array.isArray(v))return '<ul>'+v.map(function(x){return '<li>'+scalar(x)+'</li>'}).join('')+'</ul>';
+  if(typeof v==='object'){
+    return '<ul>'+Object.keys(v).filter(function(k){return v[k]!=null&&v[k]!==''&&k!=='source_refs'&&k!=='qa'}).map(function(k){
+      return '<li><b>'+esc(k.replace(/_/g,' '))+':</b> '+scalar(v[k])+'</li>';
+    }).join('')+'</ul>';
+  }
+  return esc(v);
+}
+function factCard(title,value){
+  if(value==null||value===''||(Array.isArray(value)&&!value.length))return '';
+  return '<article class="fact-card"><h3>'+esc(title)+'</h3>'+scalar(value)+'</article>';
+}
+function seaReferenceHTML(){
+  var r=state.seaReference,c=r&&r.content;if(!c)return '';
+  var labels={
+    definition:'Что такое Юго-Восточная Азия',
+    mainland_and_maritime:'Материковая и морская части',
+    natural_zones:'Природные зоны',
+    climate:'Климат и сезонность',
+    historical_layers:'Исторические слои',
+    languages:'Языки',
+    religions:'Религии',
+    ethnicity:'Этнография',
+    movement:'Перемещение по региону',
+    independent_travel:'Самостоятельное путешествие'
+  };
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Southeast Asia</div><h2>'+esc(c.title||'Юго-Восточная Азия')+'</h2></div><p>Региональный справочный слой CDN.</p></div>'+
+    '<div class="reference-grid">'+Object.keys(labels).filter(function(k){return c[k]}).map(function(k){
+      return '<article class="reference-card"><h3>'+esc(labels[k])+'</h3><p>'+esc(c[k])+'</p></article>';
+    }).join('')+'</div></section>';
+}
+function countryReferenceHTML(data){
+  var p=data&&data.profile,t=data&&data.travel,cl=data&&data.climate;
+  if(!p&&!t&&!cl)return '';
+  var blocks=[];
+  if(p){
+    blocks.push(factCard('Обзор',p.summary||p.narrow));
+    blocks.push(factCard('История',p.history));
+    blocks.push(factCard('География',p.geography));
+    blocks.push(factCard('Политический строй',p.political_system));
+    blocks.push(factCard('Экономика',p.economy));
+    blocks.push(factCard('Религии',p.religions));
+    blocks.push(factCard('Языки',p.languages));
+    blocks.push(factCard('Этнография',p.ethnography));
+    blocks.push(factCard('Культура',p.culture));
+    blocks.push(factCard('Кухня и street food',{overview:p.cuisine,street_food:p.street_food,festivals:p.festivals}));
+  }
+  if(t){
+    blocks.push(factCard('Въезд и виза для граждан РФ',t.visa&&t.visa.value));
+    blocks.push(factCard('Визаран',t.visa_run&&t.visa_run.value));
+    blocks.push(factCard('Сухопутные границы и соседи',t.borders&&t.borders.value));
+    blocks.push(factCard('Международные аэропорты',t.airports&&t.airports.value));
+    blocks.push(factCard('Международные авиасвязи',t.international_air_links&&t.international_air_links.value));
+    blocks.push(factCard('Законы и ограничения',t.laws_and_prohibitions&&t.laws_and_prohibitions.value));
+    blocks.push(factCard('Валюта',t.currency&&t.currency.value));
+  }
+  var climateNote='';
+  if(cl&&cl.data){
+    climateNote='<div class="locality-note"><b>Климат:</b> '+esc(cl.data.notes||'Локальные климатические профили будут отображаться на соответствующем geo-уровне.')+
+      (cl.data.reference_location?' Опорный профиль текущей базы: '+esc(cl.data.reference_location)+'. Он не трактуется как климат всей страны.':'')+'</div>';
+  }
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Country reference</div><h2>Справка страны</h2></div><p>На этом уровне показываются макрофакты и общегосударственные правила. Локальные климат, риски, фауна и приливы относятся к geo.</p></div>'+
+    climateNote+'<div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
+}
+function geoReferenceHTML(g){
+  if(!g)return '';
+  var blocks=[];
+  if(g.description)blocks.push(factCard('Описание',g.description));
+  [
+    ['География','geography'],['Рельеф','relief'],['Геология','geology'],['Климат','climate'],
+    ['Гидрология','hydrology'],['Побережье','coast'],['Морская среда','marine'],['Природа','nature'],
+    ['Здоровье и болезни','health'],['Безопасность и криминал','safety'],['История','history'],
+    ['Этнография','ethnography'],['Культура','culture'],['Архитектура','architecture'],['Транспорт','transport']
+  ].forEach(function(x){if(g[x[1]]!=null)blocks.push(factCard(x[0],g[x[1]]))});
+  if(!blocks.filter(Boolean).length)return '<div class="locality-note">Для этого geo-узла локальная справка ещё не мигрирована. Объекты и связи уже доступны, факты будут добавляться без изменения структуры страницы.</div>';
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Geo reference</div><h2>Локальная справка</h2></div></div><div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
 }
 function resetMaps(){
   state.mapInstances.forEach(function(m){try{m.remove()}catch(e){}});
@@ -284,6 +389,7 @@ function objectCard(o){
     '<div class="card-title">'+esc(o.title||o.id)+'</div>'+
     '<div class="card-narrow">'+esc(o.narrow||'')+'</div>'+
     '<div class="card-foot"><span class="badge">'+esc(coords(o.coordinates))+'</span>'+
+    (o.geo_ids||[]).filter(function(id){return id!=='geo_'+cc}).slice(0,2).map(function(id){var g=state.geoById[id];return '<span class="badge">'+esc(g&&g.name||id)+'</span>'}).join('')+
     '<span class="badge">'+esc((o.tag_ids||[]).length)+' тегов</span></div></div></article>';
 }
 function bindObjectGrid(){
@@ -302,9 +408,13 @@ function addBaseMap(id,objects,opts){
   var el=document.getElementById(id);if(!el||!window.L)return null;
   var map=L.map(el,{zoomControl:true,minZoom:2,worldCopyJump:true});
   state.mapInstances.push(map);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    maxZoom:18,attribution:'© OpenStreetMap contributors'
-  }).addTo(map);
+  if(!opts.englishOnly){
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+      maxZoom:18,attribution:'© OpenStreetMap contributors'
+    }).addTo(map);
+  }else{
+    el.style.background='linear-gradient(180deg,#17211d,#0b100e)';
+  }
   var pts=[];
   (objects||[]).forEach(function(o){
     if(!validCoord(o.coordinates))return;
@@ -313,6 +423,17 @@ function addBaseMap(id,objects,opts){
     m.bindPopup('<div class="popup-title">'+esc(o.title||o.id)+'</div><div class="popup-meta">'+esc(className(o.class_id))+'</div>');
     m.on('click',function(){setTimeout(function(){var p=m.getPopup();if(p&&p.isOpen()){var node=p.getElement();if(node)node.onclick=function(){routeTo('#/object/'+o.id)}}},0)});
   });
+  if(opts.englishOnly){
+    Object.keys(COUNTRY).forEach(function(cc){
+      var rows=(objects||[]).filter(function(o){return ccOf(o.id)===cc&&validCoord(o.coordinates)});
+      if(!rows.length)return;
+      var lat=rows.reduce(function(s,o){return s+Number(o.coordinates.lat)},0)/rows.length;
+      var lon=rows.reduce(function(s,o){return s+Number(o.coordinates.lon)},0)/rows.length;
+      L.marker([lat,lon],{interactive:false,icon:L.divIcon({
+        className:'country-label-marker',html:esc(COUNTRY[cc].en),iconSize:[100,18],iconAnchor:[50,9]
+      })}).addTo(map);
+    });
+  }
   if(pts.length){
     var bounds=L.latLngBounds(pts);
     map.fitBounds(bounds.pad(opts.pad==null?.12:opts.pad),{maxZoom:opts.maxZoom||8});
@@ -322,39 +443,45 @@ function addBaseMap(id,objects,opts){
 function renderHome(){
   resetMaps();
   var counts=countryCounts();
-  var cards=Object.keys(counts).sort().map(function(cc){
-    var c=cname(cc);
-    return '<article class="country-card" data-country="'+cc+'"><div class="country-top"><div><div class="country-code">'+cc.toUpperCase()+'</div><div class="country-name">'+c.flag+' '+esc(c.name)+'</div></div><span>→</span></div>'+
-      '<div class="country-stats"><span><b>'+counts[cc]+'</b> объектов</span><span><b>'+countryRegionCount(cc)+'</b> geo узлов</span></div></article>';
+  var sourceCountries=(state.seaReference&&state.seaReference.countries)||[];
+  var cards=(sourceCountries.length?sourceCountries:Object.keys(counts).sort().map(function(cc){var x=cname(cc);return{country_code:cc.toUpperCase(),name_ru:x.name,flag:x.flag,available:true}})).map(function(row){
+    var cc=String(row.country_code||'').toLowerCase(),available=row.available!==false&&!!counts[cc],x=cname(cc);
+    return '<article class="country-card"'+(available?' data-country="'+cc+'"':'')+'>'+
+      '<div class="country-top"><div><div class="country-code">'+esc((row.country_code||cc).toUpperCase())+'</div><div class="country-name">'+esc(row.flag||x.flag)+' '+esc(row.name_ru||x.name)+'</div></div><span>'+(available?'→':'pending')+'</span></div>'+
+      '<p class="popup-meta">'+esc(row.summary||'Страна ожидает миграции в текущий release.')+'</p>'+
+      '<div class="country-stats"><span><b>'+(counts[cc]||0)+'</b> объектов</span><span><b>'+countryRegionCount(cc)+'</b> geo узлов</span></div></article>';
   }).join('');
   view.innerHTML=
-    '<section class="hero"><div class="eyebrow">Expedition / architecture preview</div>'+
-    '<h1>Юго‑Восточная Азия как связанная экспедиционная карта</h1>'+
-    '<p>Новый интерфейс показывает архитектуру будущего CDN: карта → страна → регион → класс → объект. Сейчас он читает существующий release; содержание будет мигрироваться отдельно.</p>'+
+    '<section class="hero"><div class="eyebrow">Expedition Southeast Asia</div>'+
+    '<h1>Экспедиционный справочник Юго-Восточной Азии</h1>'+
+    '<p>Регион → страна → провинция / город / остров → конкретный объект. Справочный слой отделён от банка достопримечательностей.</p>'+
     '<div class="hero-meta"><span class="pill">release <b>'+esc(state.release)+'</b></span>'+
     '<span class="pill">schema <b>'+esc(state.latest.schema_version||'—')+'</b></span>'+
-    '<span class="pill">объектов сейчас <b>'+state.objects.length+'</b></span>'+
+    '<span class="pill">объектов <b>'+state.objects.length+'</b></span>'+
     '<span class="pill">geo <b>'+state.geo.length+'</b></span></div></section>'+
-    '<section class="layout-map"><div class="map-frame"><div class="map-overlay"><strong>Карта Юго‑Восточной Азии</strong><span>Сейчас видны объекты текущего release. GeoJSON границ, рек, городов и маршрутов подключится через maps layer без смены UI.</span></div><div id="map"></div></div>'+
+    seaReferenceHTML()+
+    '<section class="layout-map"><div class="map-frame"><div class="map-overlay"><strong>Southeast Asia</strong><span>Основные подписи этой карты — English. Локальные подробности открываются на geo-уровнях.</span></div><div id="map"></div></div>'+
     '<aside class="map-side"><h3>Слои карты</h3><div class="layer-list">'+
     '<div class="layer"><span>Объекты</span><span class="layer-status live">LIVE</span></div>'+
-    '<div class="layer"><span>Страны / регионы</span><span class="layer-status '+(state.mapsIndex?'live':'pending')+'">'+(state.mapsIndex?'LIVE':'contract ready')+'</span></div>'+
-    '<div class="layer"><span>Города / поселения</span><span class="layer-status pending">geo layer</span></div>'+
-    '<div class="layer"><span>Реки / озёра</span><span class="layer-status pending">hydrography</span></div>'+
-    '<div class="layer"><span>Маршруты</span><span class="layer-status pending">routes</span></div>'+
-    '<div class="layer"><span>Вода / POI / жильё</span><span class="layer-status pending">infrastructure</span></div>'+
-    '<div class="layer"><span>Viewpoints</span><span class="layer-status pending">visual recon</span></div></div>'+
-    '<div class="arch-note">Эти слои не должны хранить второй набор координат. Карта читает canonical geo / objects / infrastructure / routes и только строит представление.</div></aside></section>'+
-    '<section class="section"><div class="section-head"><div><div class="eyebrow">Countries</div><h2>Страны</h2></div><p>Каждая страна ведёт в собственный географический уровень: карта, регионы, классы и сетка объектов.</p></div>'+
-    '<div class="country-grid">'+cards+'</div></section>'+
-    '<section class="section"><div class="section-head"><div><div class="eyebrow">Object classes</div><h2>Классы объектов</h2></div></div>'+
-    '<div class="class-grid">'+state.classes.slice().sort(function(a,b){return (b.objects_count||0)-(a.objects_count||0)}).slice(0,12).map(function(x){
-      return '<article class="class-card" data-class="'+esc(x.id)+'"><h3>'+esc(x.label_ru||x.id)+'</h3><p>'+esc(x.objects_count||0)+' объектов · '+esc(x.id)+'</p></article>';
-    }).join('')+'</div></section>'+
-    '<footer class="footer">UI architecture preview · данные пока берутся из <code>cdn/v2/latest.json</code>. Следующий этап — привести сам CDN к новой схеме без изменения этого интерфейсного контракта.</footer>';
-  addBaseMap('map',state.objects,{maxZoom:6,pad:.08});
+    '<div class="layer"><span>Geo hierarchy</span><span class="layer-status live">'+state.geo.length+'</span></div>'+
+    '<div class="layer"><span>Маршруты / infrastructure</span><span class="layer-status pending">следующий слой</span></div></div>'+
+    '<div class="arch-note">На главной намеренно нет локальных подписей OSM: country labels выводятся на английском из интерфейсного справочника.</div></aside></section>'+
+    '<section class="section"><div class="section-head"><div><div class="eyebrow">Countries</div><h2>Страны Юго-Восточной Азии</h2></div><p>Опубликованные страны открываются; остальные видны как очередь миграции.</p></div><div class="country-grid">'+cards+'</div></section>'+
+    '<section class="section"><div class="section-head"><div><div class="eyebrow">Attractions</div><h2>Банк достопримечательностей</h2></div><p>Флаг, класс, географические теги и краткая аннотация. Полная карточка загружается при открытии объекта.</p></div>'+
+    '<div class="toolbar"><input class="control" id="homeQ" placeholder="Поиск по банку…"><select class="control" id="homeCountry"><option value="">Все страны</option>'+Object.keys(counts).sort().map(function(cc){return '<option value="'+cc+'">'+esc(cname(cc).name)+'</option>'}).join('')+'</select><select class="control" id="homeClass"><option value="">Все классы</option>'+state.classes.map(function(x){return '<option value="'+esc(x.id)+'">'+esc(x.label_ru||x.id)+'</option>'}).join('')+'</select><button class="btn" id="homeReset">Сбросить</button></div>'+
+    '<div id="homeObjectCount" class="hero-meta"></div><div id="homeObjects" class="object-grid"></div></section>'+
+    '<footer class="footer">CDN read-model · <code>cdn/v2/latest.json</code></footer>';
+  addBaseMap('map',state.objects,{maxZoom:6,pad:.08,englishOnly:true});
   document.querySelectorAll('[data-country]').forEach(function(x){x.onclick=function(){routeTo('#/country/'+x.getAttribute('data-country'))}});
-  document.querySelectorAll('[data-class]').forEach(function(x){x.onclick=function(){routeTo('#/class/'+encodeURIComponent(x.getAttribute('data-class')))}});
+  var q=document.getElementById('homeQ'),co=document.getElementById('homeCountry'),cl=document.getElementById('homeClass');
+  function run(){
+    var s=(q.value||'').trim().toLowerCase(),a=state.objects.filter(function(o){
+      return(!co.value||ccOf(o.id)===co.value)&&(!cl.value||o.class_id===cl.value)&&(!s||[o.title,o.narrow,o.class_id].concat(o.tag_ids||[]).join(' ').toLowerCase().indexOf(s)>=0);
+    });
+    document.getElementById('homeObjectCount').innerHTML='<span class="pill">показано <b>'+a.length+'</b></span>';
+    document.getElementById('homeObjects').innerHTML=a.map(objectCard).join('');bindObjectGrid();
+  }
+  q.oninput=run;co.onchange=run;cl.onchange=run;document.getElementById('homeReset').onclick=function(){q.value='';co.value='';cl.value='';run()};run();
 }
 function renderCountries(){
   resetMaps();
@@ -364,26 +491,24 @@ function renderCountries(){
     '<div class="country-grid">'+Object.keys(counts).sort().map(function(cc){var c=cname(cc);return '<article class="country-card" data-country="'+cc+'"><div class="country-top"><div><div class="country-code">'+cc.toUpperCase()+'</div><div class="country-name">'+c.flag+' '+esc(c.name)+'</div></div><span>→</span></div><div class="country-stats"><span><b>'+counts[cc]+'</b> объектов</span><span><b>'+countryRegionCount(cc)+'</b> geo узлов</span></div></article>'}).join('')+'</div>';
   bindGo();document.querySelectorAll('[data-country]').forEach(function(x){x.onclick=function(){routeTo('#/country/'+x.getAttribute('data-country'))}});
 }
-function renderCountry(cc){
+async function renderCountry(cc){
   resetMaps();
-  var c=cname(cc),objs=objectsForCountry(cc),geos=geoForCountry(cc),regions=geos.filter(function(g){return g.id!=='geo_'+cc}),classes={};
+  var ctry=cname(cc),objs=objectsForCountry(cc),geos=geoForCountry(cc),regions=geos.filter(function(g){return g.id!=='geo_'+cc}),classes={},data=await countryData(cc);
   objs.forEach(function(o){classes[o.class_id]=(classes[o.class_id]||0)+1});
-  view.innerHTML=breadcrumb([{label:'Главная',hash:'#/'},{label:'Страны',hash:'#/countries'},{label:c.name}])+
-    '<div class="page-head"><div class="eyebrow">'+esc(cc.toUpperCase())+' / country</div><h1>'+c.flag+' '+esc(c.name)+'</h1>'+
-    '<p>Страновой read-model: карта объектов, географические узлы, классы и карточки. Когда появятся новые <code>maps/*</code> и preview binaries, этот экран начнёт использовать их автоматически.</p>'+
+  view.innerHTML=breadcrumb([{label:'Главная',hash:'#/'},{label:'Страны',hash:'#/countries'},{label:ctry.name}])+
+    '<div class="page-head"><div class="eyebrow">'+esc(cc.toUpperCase())+' / country</div><h1>'+ctry.flag+' '+esc(ctry.name)+'</h1>'+
+    '<p>'+esc(data&&data.profile&&(data.profile.summary||data.profile.narrow)||'Страновой справочный слой CDN.')+'</p>'+
     '<div class="hero-meta"><span class="pill">объектов <b>'+objs.length+'</b></span><span class="pill">geo узлов <b>'+regions.length+'</b></span><span class="pill">классов <b>'+Object.keys(classes).length+'</b></span></div></div>'+
+    countryReferenceHTML(data)+
     '<div class="country-map" id="countryMap"></div>'+
-    '<section class="section"><div class="section-head"><div><div class="eyebrow">Geography</div><h2>Регионы и местности</h2></div><p>Пока отображается существующая geo-иерархия. После нормализации здесь будут провинции, районы, города, острова, protected areas и физическая география.</p></div>'+
+    '<section class="section"><div class="section-head"><div><div class="eyebrow">Geography</div><h2>Провинции, регионы, города и местности</h2></div><p>Geo-иерархия отделена от банка объектов. Локальные климат и риски должны жить именно здесь.</p></div>'+
     '<div class="region-grid">'+regions.filter(function(g){return regionObjectCount(g.id)>0}).map(function(g){return '<article class="region-card" data-region="'+esc(g.id)+'"><h3>'+esc(g.name)+'</h3><p>'+esc(g.kind)+' · '+regionObjectCount(g.id)+' объектов</p></article>'}).join('')+'</div></section>'+
-    '<section class="section"><div class="section-head"><div><div class="eyebrow">Classes</div><h2>Классы объектов</h2></div></div>'+
-    '<div class="class-grid">'+Object.keys(classes).sort().map(function(id){return '<article class="class-card" data-country-class="'+esc(id)+'"><h3>'+esc(className(id))+'</h3><p>'+classes[id]+' объектов</p></article>'}).join('')+'</div></section>'+
-    '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Сетка объектов</h2></div><p>Карточка рассчитана на локальный preview binary. Пока его нет в текущем release, используется cover media как временный fallback.</p></div>'+
+    '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Банк достопримечательностей страны</h2></div></div>'+
     '<div class="toolbar"><input class="control" id="countrySearch" placeholder="Поиск внутри страны…"><select class="control" id="countryClass"><option value="">Все классы</option>'+Object.keys(classes).sort().map(function(id){return '<option value="'+esc(id)+'">'+esc(className(id))+' · '+classes[id]+'</option>'}).join('')+'</select><div></div><button class="btn" id="countryReset">Сбросить</button></div>'+
     '<div id="countryObjects" class="object-grid">'+objs.map(objectCard).join('')+'</div></section>';
   addBaseMap('countryMap',objs,{maxZoom:8,pad:.14});
   bindGo();bindObjectGrid();
   document.querySelectorAll('[data-region]').forEach(function(x){x.onclick=function(){routeTo('#/region/'+x.getAttribute('data-region'))}});
-  document.querySelectorAll('[data-country-class]').forEach(function(x){x.onclick=function(){routeTo('#/country/'+cc+'/class/'+encodeURIComponent(x.getAttribute('data-country-class')))}});
   var search=document.getElementById('countrySearch'),sel=document.getElementById('countryClass');
   function filter(){
     var q=(search.value||'').trim().toLowerCase(),cl=sel.value;
@@ -392,17 +517,20 @@ function renderCountry(cc){
   }
   search.oninput=filter;sel.onchange=filter;document.getElementById('countryReset').onclick=function(){search.value='';sel.value='';filter()};
 }
-function renderRegion(id){
+async function renderRegion(id){
   resetMaps();
-  var g=state.geoById[id],objs=state.objects.filter(function(o){return (o.geo_ids||[]).indexOf(id)>=0});
+  var g=state.geoById[id],objs=state.objects.filter(function(o){return (o.geo_ids||[]).indexOf(id)>=0}),full=await geoDetail(id);
   if(!g){view.innerHTML='<div class="error">Geo entity не найдена: '+esc(id)+'</div>';return}
-  var cc=String(id).split('_')[1]||'',c=cname(cc);
-  view.innerHTML=breadcrumb([{label:'Главная',hash:'#/'},{label:c.name,hash:'#/country/'+cc},{label:g.name}])+
-    '<div class="page-head"><div class="eyebrow">'+esc(g.kind)+' / geo</div><h1>'+esc(g.name)+'</h1><p>Региональный уровень карты. Здесь должны сходиться объекты, маршруты, точки воды, ночёвки, trailheads, пирсы, парковки и viewpoints.</p>'+
-    '<div class="hero-meta"><span class="pill">geo id <b>'+esc(g.id)+'</b></span><span class="pill">объектов <b>'+objs.length+'</b></span></div></div>'+
+  var cc=String(id).split('_')[1]||'',ctry=cname(cc);
+  var title=(full&&full.names&&(full.names.ru||full.names.primary))||g.name||id;
+  view.innerHTML=breadcrumb([{label:'Главная',hash:'#/'},{label:ctry.name,hash:'#/country/'+cc},{label:title}])+
+    '<div class="page-head"><div class="eyebrow">'+esc((full&&full.kind)||g.kind)+' / geo</div><h1>'+esc(title)+'</h1>'+
+    '<p>'+esc(full&&full.description&&(full.description.narrow||full.description.body)||'Локальный географический уровень справочника.')+'</p>'+
+    '<div class="hero-meta"><span class="pill">geo id <b>'+esc(id)+'</b></span><span class="pill">объектов <b>'+objs.length+'</b></span></div></div>'+
+    geoReferenceHTML(full)+
     '<div class="country-map" id="regionMap"></div>'+
-    '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Объекты региона</h2></div></div>'+
-    '<div class="object-grid">'+(objs.length?objs.map(objectCard).join(''):'<div class="empty">В текущем release к этому узлу объекты не привязаны.</div>')+'</div></section>';
+    '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Достопримечательности этой территории</h2></div></div>'+
+    '<div class="object-grid">'+(objs.length?objs.map(objectCard).join(''):'<div class="empty">К этому geo-узлу пока нет привязанных объектов.</div>')+'</div></section>';
   addBaseMap('regionMap',objs,{maxZoom:10,pad:.18});bindGo();bindObjectGrid();
 }
 function renderClasses(){
@@ -508,7 +636,7 @@ function renderMapPage(){
     '<div class="layer"><span>infrastructure</span><span class="layer-status pending">pending build</span></div>'+
     '<div class="layer"><span>viewpoints</span><span class="layer-status pending">pending build</span></div></div>'+
     '<div class="arch-note">Слой карты — производный. Координаты остаются в canonical entities.</div></aside></section>';
-  addBaseMap('map',state.objects,{maxZoom:7,pad:.08});bindGo();
+  addBaseMap('map',state.objects,{maxZoom:7,pad:.08,englishOnly:true});bindGo();
 }
 function router(){
   setActiveNav();resetMaps();
@@ -532,10 +660,10 @@ async function boot(){
     var base=CDN+state.release+'/';
     var all=await Promise.all([
       j(base+'manifest.json'),j(base+'search/global.json'),j(base+'taxonomy/object-classes.json'),
-      j(base+'taxonomy/tags.json'),j(base+'geo/index.json'),maybe(base+'maps/index.json')
+      j(base+'taxonomy/tags.json'),j(base+'geo/index.json'),maybe(base+'maps/index.json'),maybe(base+'region/southeast-asia.json')
     ]);
     state.manifest=all[0];state.objects=all[1].objects||[];state.classes=all[2].classes||[];state.tags=all[3].tags||[];
-    state.geo=all[4].entities||[];state.mapsIndex=all[5];
+    state.geo=all[4].entities||[];state.mapsIndex=all[5];state.seaReference=all[6];
     state.classById=Object.fromEntries(state.classes.map(function(x){return[x.id,x.label_ru||x.id]}));
     state.geoById=Object.fromEntries(state.geo.map(function(x){return[x.id,x]}));
     document.getElementById('releasePill').textContent=state.release+' · schema '+(state.latest.schema_version||'—');

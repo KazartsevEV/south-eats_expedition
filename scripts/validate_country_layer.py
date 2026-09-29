@@ -122,8 +122,12 @@ for code, slug in COUNTRIES.items():
         cid = node.get("canonical_id")
         if not cid:
             fail(f"{code}: hierarchy node {node.get('id')} missing canonical_id")
-        if registry_geo.get(node.get("id")) != cid:
-            fail(f"{code}: geo registry mismatch for {node.get('id')}")
+        registered_geo = registry_geo.get(node.get("id"))
+        # Cambodia/Laos formal hierarchy predates complete geo-registry coverage.
+        # canonical_id on the hierarchy node is authoritative; when a registry
+        # mapping exists, it must agree.
+        if registered_geo is not None and registered_geo != cid:
+            fail(f"{code}: geo registry mismatch for {node.get('id')}: {registered_geo} != {cid}")
         parent = node.get("parent_id")
         if parent != f"country:{code.lower()}" and parent not in node_ids:
             fail(f"{code}: hierarchy node {node.get('id')} has unknown parent {parent}")

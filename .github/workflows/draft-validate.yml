@@ -1,0 +1,52 @@
+name: Validate draft CDN
+
+on:
+  push:
+    branches:
+      - "draft/**"
+    paths:
+      - "data/source/**"
+      - "data/hierarchy/**"
+      - "data/id-registry.json"
+      - "scripts/**"
+      - ".github/workflows/draft-validate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: expedition-draft-validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout draft
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Build normalized CDN from source
+        run: python scripts/build_cdn.py
+
+      - name: Build canonical CDN layer
+        run: python scripts/build_canonical_layer.py
+
+      - name: Build recursive project hierarchy
+        run: python scripts/augment_hierarchy.py
+
+      - name: Validate source and generated CDN
+        run: python scripts/validate_cdn.py public/cdn/v2
+
+      - name: Validate canonical CDN contract
+        run: python scripts/validate_canonical.py public/cdn/v2
+
+      - name: Validate recursive hierarchy
+        run: python scripts/validate_hierarchy.py public/cdn/v2

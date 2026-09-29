@@ -238,6 +238,36 @@ TYPE_BY_NAME.update({
     "Nat Ma Taung / Mount Victoria": "mountain",
 })
 
+
+TYPE_BY_NAME.update({
+    "Taman Negara National Park": "national_park",
+    "Endau-Rompin National Park (Johor)": "national_park",
+    "Gunung Stong State Forest Park": "protected_area",
+    "Bako National Park": "national_park",
+    "Maliau Basin Conservation Area": "protected_area",
+    "Crocker Range Park and Salt Trail": "protected_area",
+    "Gomantong Caves": "cave",
+    "Sungai Batu Archaeological Site": "archaeological_site",
+    "Bujang Valley Archaeological Museum and temple landscape": "archaeological_site",
+    "Gua Tambun rock art site": "archaeological_site",
+})
+
+
+TYPE_BY_NAME.update({
+    "Fairy Cave and Wind Cave Nature Reserves": "cave",
+    "Gunung Gading National Park": "national_park",
+    "Tawau Hills Park": "national_park",
+    "Batang Ai National Park and Iban longhouse landscape": "cultural_landscape",
+    "Gunung Jerai Geoforest Park": "mountain",
+    "Tasik Chini Biosphere Reserve": "lake",
+    "Gua Tempurung": "cave",
+})
+
+TYPE_BY_NAME.update({
+    "Tabin Wildlife Reserve": "protected_area",
+    "Imbak Canyon Conservation Area": "protected_area",
+})
+
 TAG_ALIASES = {
     "unesco": "unesco",
     "living heritage": "living_heritage",
@@ -507,23 +537,28 @@ def location_context(location):
 def gallery_from(obj):
     ill = obj.get("illustration") or {}
     gallery = []
-    if isinstance(ill.get("gallery"), list):
-        for row in ill["gallery"]:
-            if isinstance(row, dict) and row.get("static_url"):
-                gallery.append(row)
-    if ill.get("static_url"):
-        candidate = {
-            "url": ill.get("static_url"),
-            "source_page": ill.get("source_page"),
-            "provider": ill.get("provider"),
-            "license": ill.get("license"),
-            "artist": ill.get("artist"),
-            "last_checked": ill.get("last_checked"),
-        }
-        if not any(x.get("url") == candidate["url"] for x in gallery):
-            gallery.insert(0, candidate)
-    return gallery
+    seen = set()
 
+    def add_media(row):
+        if not isinstance(row, dict):
+            return
+        url = row.get("url") or row.get("static_url")
+        if not url or url in seen:
+            return
+        seen.add(url)
+        gallery.append({
+            "url": url,
+            "source_page": row.get("source_page"),
+            "provider": row.get("provider"),
+            "license": row.get("license"),
+            "artist": row.get("artist"),
+            "last_checked": row.get("last_checked"),
+        })
+
+    add_media(ill)
+    for row in ill.get("gallery") or []:
+        add_media(row)
+    return gallery
 
 def story_from(obj):
     ann = ((obj.get("traveler_card") or {}).get("annotation") or {})
@@ -599,6 +634,32 @@ def merge_source_entity(registry, source, object_id):
 def visual_recon_from(card, source_registry=None, object_id=None):
     media = card.get("media") or {}
     scout = media.get("visual_scouting") or {}
+
+    # Legacy Malaysia/Indonesia cards used shooting_recommendation + field_planning.
+    # Convert that material into the canonical reconnaissance model without carrying
+    # photographer instructions, shot lists, focal lengths, or camera settings into CDN.
+    legacy_shoot = media.get("shooting_recommendation") or {}
+    if not scout and isinstance(legacy_shoot, dict):
+        positions = legacy_shoot.get("positions") or []
+        scout = {
+            "best_time": legacy_shoot.get("time") or media.get("best_light"),
+            "best_weather_light": legacy_shoot.get("weather"),
+            "viewpoints_for_photo_video": [
+                {
+                    "id": f"vp_{idx:02d}",
+                    "description": value.strip(),
+                    "best_time": legacy_shoot.get("time") or media.get("best_light"),
+                    "best_weather_light": legacy_shoot.get("weather"),
+                    "useful_equipment": [],
+                }
+                for idx, value in enumerate(positions, start=1)
+                if isinstance(value, str) and value.strip()
+            ],
+            "seasonal_visuals": [],
+            "video_activity": [],
+            "useful_equipment": [],
+        }
+
     viewpoints = []
     for idx, value in enumerate(scout.get("viewpoints_for_photo_video") or [], start=1):
         if isinstance(value, str) and value.strip():
@@ -610,8 +671,8 @@ def visual_recon_from(card, source_registry=None, object_id=None):
                 "gps": None,
                 "access": None,
                 "view": None,
-                "best_time": None,
-                "best_weather_light": None,
+                "best_time": scout.get("best_time"),
+                "best_weather_light": scout.get("best_weather_light"),
                 "useful_equipment": [],
                 "source_refs": [],
             })
@@ -651,8 +712,8 @@ def visual_recon_from(card, source_registry=None, object_id=None):
             "gps": gps,
             "access": row.get("access"),
             "view": row.get("view"),
-            "best_time": row.get("best_time"),
-            "best_weather_light": row.get("best_weather_light"),
+            "best_time": row.get("best_time") or scout.get("best_time"),
+            "best_weather_light": row.get("best_weather_light") or scout.get("best_weather_light"),
             "useful_equipment": row.get("useful_equipment") or [],
             "source_refs": refs,
         })
@@ -943,9 +1004,12 @@ def build():
             row = {
                 "id": pid,
                 "kind": "region",
-                "name": name,
+                "name": region.get("name_ru") or name,
+                "canonical_name": name,
                 "slug": slugify(name),
+                "summary": region.get("summary"),
                 "languages_spoken": region.get("languages_spoken") or [],
+                "language_notes": region.get("language_notes"),
                 "currency": region.get("currency"),
                 "climate_summary": region.get("climate_summary"),
                 "best_period_general": region.get("best_period_general"),

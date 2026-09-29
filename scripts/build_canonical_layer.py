@@ -769,6 +769,16 @@ def build():
         }
         status = "passed" if all(checks.values()) else "incomplete"
 
+        # Legacy source files carried pseudo-tags such as class_major,
+        # class_expanded and class_nature_wildlife. In the canonical model
+        # class membership lives only in classification.class_id; tags are
+        # secondary dimensions and must not duplicate or emulate a class.
+        canonical_tag_ids = list(dict.fromkeys(
+            str(tag)
+            for tag in ((detail.get("identity") or {}).get("tags") or [])
+            if tag not in (None, "") and not str(tag).startswith("class_")
+        ))
+
         canonical = {
             "id": object_id,
             "kind": "attraction",
@@ -778,7 +788,7 @@ def build():
             "summary": {"narrow": (detail.get("identity") or {}).get("narrow")},
             "classification": {
                 "class_id": class_id,
-                "tag_ids": (detail.get("identity") or {}).get("tags") or [],
+                "tag_ids": canonical_tag_ids,
             },
             "geo": {
                 "country_id": f"geo_{code.lower()}",
@@ -1043,7 +1053,7 @@ def build():
         })
     dump(release / "taxonomy" / "object-classes.json", {
         "classes": class_rows,
-        "rule": "Exactly one class_id per object; tags carry secondary dimensions.",
+        "rule": "Exactly one class_id per object; tags carry secondary dimensions; legacy class_* pseudo-tags are excluded.",
     })
 
     tag_counts = Counter()
@@ -1109,33 +1119,78 @@ def build():
         })
 
     # Derived views from canonical entities only.
+    home_country_rows = []
+    for row in country_manifest_rows:
+        code = row["code"]
+        objects = object_rows_by_country[code.upper()]
+        per_class = Counter(obj["class_id"] for obj in objects)
+        cover_media_id = next(
+            (obj.get("cover_media_id") for obj in objects if obj.get("cover_media_id")),
+            None,
+        )
+        home_country_rows.append({
+            "id": row["id"],
+            "code": code,
+            "profile": row["profile"],
+            "search_index": row["search_index"],
+            "country_view": f"views/countries/{code}.json",
+            "objects_count": len(objects),
+            "classes_count": len(per_class),
+            "class_ids": sorted(per_class),
+            "cover_media_id": cover_media_id,
+        })
+
     home = {
         "project_id": "expedition_sea",
         "title": "Expedition Southeast Asia",
         "default_language": DEFAULT_LANGUAGE,
-        "countries": [
-            {
-                "id": row["id"],
-                "code": row["code"],
-                "profile": row["profile"],
-                "search_index": row["search_index"],
-            }
-            for row in country_manifest_rows
-        ],
+        "countries": home_country_rows,
         "search": "search/global.json",
+        "layout_rule": "home -> countries; country -> class_sections -> objects",
     }
     dump(release / "views" / "home.json", home)
+
+    class_meta = {
+        row["id"]: {
+            "label_ru": row.get("label_ru") or row["id"],
+            "legacy_type": row.get("legacy_type"),
+        }
+        for row in class_rows
+    }
 
     for country_row in country_manifest_rows:
         code = country_row["code"]
         upper = code.upper()
+        country_objects = sorted(
+            object_rows_by_country[upper],
+            key=lambda row: ((class_meta.get(row.get("class_id")) or {}).get("label_ru") or "", (row.get("title") or "").casefold()),
+        )
+        country_class_groups = defaultdict(list)
+        for row in country_objects:
+            country_class_groups[row["class_id"]].append(row)
+        class_sections = []
+        for class_id, rows in sorted(
+            country_class_groups.items(),
+            key=lambda item: ((class_meta.get(item[0]) or {}).get("label_ru") or item[0]).casefold(),
+        ):
+            meta = class_meta.get(class_id) or {}
+            class_sections.append({
+                "class_id": class_id,
+                "label_ru": meta.get("label_ru") or class_id,
+                "legacy_type": meta.get("legacy_type"),
+                "count": len(rows),
+                "object_ids": [row["id"] for row in rows],
+                "objects": rows,
+            })
         dump(release / "views" / "countries" / f"{code}.json", {
             "country_id": country_row["id"],
             "profile": country_row["profile"],
             "climate": country_row["climate"],
             "travel_rules": country_row["travel_rules"],
             "indexes": country_row["indexes"],
-            "objects": object_rows_by_country[upper],
+            "layout_rule": "country -> class_sections -> objects; tag_ids are secondary filters only",
+            "class_sections": class_sections,
+            "objects": country_objects,
         })
 
     for row in canonical_search:

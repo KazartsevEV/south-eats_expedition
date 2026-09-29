@@ -1,0 +1,705 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "status": "country_geography_formalized_expanded_40_objects_draft",
+    "checked_at": "2026-09-29",
+    "next_level": "build_validate_then_object_and_class_qa",
+    "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; large physical areas are not forced under a city or route hub."
+  },
+  "rules": {
+    "parentage": "Only documented administrative containment is encoded as hierarchy.",
+    "physical_geography": "Parks, archipelagos, valleys and other physical entities remain distinct from cities and route hubs.",
+    "object_visibility": "An object may attach to both an administrative node and a physical-geography node when both relations are supported."
+  },
+  "nodes": [
+    {
+      "id": "my:territory:kuala-lumpur",
+      "kind": "region",
+      "axis": "administrative",
+      "name_ru": "Куала-Лумпур",
+      "slug": "kuala-lumpur",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:kuala-lumpur"
+      ],
+      "canonical_id": "geo_my_0031",
+      "notes_ru": "Федеральная территория Куала-Лумпур; в текущем enum отдельного kind federal_territory нет, поэтому административный уровень хранится как region."
+    },
+    {
+      "id": "my:state:penang",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Пенанг",
+      "slug": "penang",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:george-town"
+      ],
+      "canonical_id": "geo_my_0032"
+    },
+    {
+      "id": "my:city:george-town",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Джорджтаун",
+      "slug": "george-town",
+      "parent_id": "my:state:penang",
+      "object_ids": [
+        "my:george-town"
+      ],
+      "canonical_id": "geo_my_0033"
+    },
+    {
+      "id": "my:state:melaka",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Малакка",
+      "slug": "melaka",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:melaka"
+      ],
+      "canonical_id": "geo_my_0034"
+    },
+    {
+      "id": "my:city:melaka",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Малакка",
+      "slug": "melaka-city",
+      "parent_id": "my:state:melaka",
+      "object_ids": [
+        "my:melaka"
+      ],
+      "canonical_id": "geo_my_0035"
+    },
+    {
+      "id": "my:state:sabah",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Сабах",
+      "slug": "sabah",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:mount-kinabalu",
+        "my:danum-valley-conservation-area",
+        "my:kinabatangan-river",
+        "my:sipadan-island",
+        "my:kampung-bavanggazo-rungus-longhouse",
+        "my:sepilok-orangutan-rehabilitation-centre",
+        "my:maliau-basin-conservation-area",
+        "my:crocker-range-park-and-salt-trail",
+        "my:gomantong-caves",
+        "my:tawau-hills-park",
+        "my:tabin-wildlife-reserve",
+        "my:imbak-canyon-conservation-area"
+      ],
+      "canonical_id": "geo_my_0036"
+    },
+    {
+      "id": "my:protected-area:kinabalu-park",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Парк Кинабалу",
+      "slug": "kinabalu-park",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:mount-kinabalu"
+      ],
+      "canonical_id": "geo_my_0037"
+    },
+    {
+      "id": "my:protected-area:danum-valley",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Долина Данум",
+      "slug": "danum-valley",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:danum-valley-conservation-area"
+      ],
+      "canonical_id": "geo_my_0038"
+    },
+    {
+      "id": "my:geographic-area:kinabatangan",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Долина Кинабатанган",
+      "slug": "kinabatangan",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:kinabatangan-river"
+      ],
+      "canonical_id": "geo_my_0039"
+    },
+    {
+      "id": "my:island:sipadan",
+      "kind": "island",
+      "axis": "physical_geography",
+      "name_ru": "Сипадан",
+      "slug": "sipadan",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:sipadan-island"
+      ],
+      "canonical_id": "geo_my_0040"
+    },
+    {
+      "id": "my:district:kudat",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Кудат",
+      "slug": "kudat",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:kampung-bavanggazo-rungus-longhouse"
+      ],
+      "canonical_id": "geo_my_0041"
+    },
+    {
+      "id": "my:village:bavanggazo",
+      "kind": "village",
+      "axis": "administrative",
+      "name_ru": "Баванггазо",
+      "slug": "bavanggazo",
+      "parent_id": "my:district:kudat",
+      "object_ids": [
+        "my:kampung-bavanggazo-rungus-longhouse"
+      ],
+      "canonical_id": "geo_my_0042"
+    },
+    {
+      "id": "my:district:sandakan",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Сандакан",
+      "slug": "sandakan",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:sepilok-orangutan-rehabilitation-centre"
+      ],
+      "canonical_id": "geo_my_0043"
+    },
+    {
+      "id": "my:settlement:sepilok",
+      "kind": "settlement",
+      "axis": "administrative",
+      "name_ru": "Сепилок",
+      "slug": "sepilok",
+      "parent_id": "my:district:sandakan",
+      "object_ids": [
+        "my:sepilok-orangutan-rehabilitation-centre"
+      ],
+      "canonical_id": "geo_my_0044"
+    },
+    {
+      "id": "my:state:sarawak",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Саравак",
+      "slug": "sarawak",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:gunung-mulu-national-park",
+        "my:bario-kelabit-highlands",
+        "my:niah-national-park",
+        "my:kuching-old-town-and-waterfront",
+        "my:bako-national-park",
+        "my:fairy-cave-and-wind-cave-nature-reserves",
+        "my:gunung-gading-national-park",
+        "my:batang-ai-national-park-and-iban-longhouse-landscape"
+      ],
+      "canonical_id": "geo_my_0045"
+    },
+    {
+      "id": "my:city:kuching",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Кучинг",
+      "slug": "kuching",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:kuching-old-town-and-waterfront"
+      ],
+      "canonical_id": "geo_my_0046"
+    },
+    {
+      "id": "my:protected-area:gunung-mulu",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Гунунг-Мулу",
+      "slug": "gunung-mulu",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:gunung-mulu-national-park"
+      ],
+      "canonical_id": "geo_my_0047"
+    },
+    {
+      "id": "my:geographic-area:kelabit-highlands",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Келабитское нагорье",
+      "slug": "kelabit-highlands",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:bario-kelabit-highlands"
+      ],
+      "canonical_id": "geo_my_0048"
+    },
+    {
+      "id": "my:settlement:bario",
+      "kind": "settlement",
+      "axis": "administrative",
+      "name_ru": "Барио",
+      "slug": "bario",
+      "parent_id": "my:geographic-area:kelabit-highlands",
+      "object_ids": [
+        "my:bario-kelabit-highlands"
+      ],
+      "canonical_id": "geo_my_0049"
+    },
+    {
+      "id": "my:protected-area:niah",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Ниа",
+      "slug": "niah",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:niah-national-park"
+      ],
+      "canonical_id": "geo_my_0050"
+    },
+    {
+      "id": "my:state:kedah",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Кедах",
+      "slug": "kedah",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:langkawi",
+        "my:sungai-batu-archaeological-site",
+        "my:bujang-valley-archaeological-museum-and-temple-landscape",
+        "my:gunung-jerai-geoforest-park"
+      ],
+      "canonical_id": "geo_my_0051"
+    },
+    {
+      "id": "my:archipelago:langkawi",
+      "kind": "archipelago",
+      "axis": "physical_geography",
+      "name_ru": "Лангкави",
+      "slug": "langkawi",
+      "parent_id": "my:state:kedah",
+      "object_ids": [
+        "my:langkawi"
+      ],
+      "canonical_id": "geo_my_0052"
+    },
+    {
+      "id": "my:state:terengganu",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Тренгану",
+      "slug": "terengganu",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:perhentian-islands",
+        "my:taman-negara-national-park"
+      ],
+      "canonical_id": "geo_my_0053"
+    },
+    {
+      "id": "my:archipelago:perhentian",
+      "kind": "archipelago",
+      "axis": "physical_geography",
+      "name_ru": "Перхентианские острова",
+      "slug": "perhentian",
+      "parent_id": "my:state:terengganu",
+      "object_ids": [
+        "my:perhentian-islands"
+      ],
+      "canonical_id": "geo_my_0054"
+    },
+    {
+      "id": "my:state:perak",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Перак",
+      "slug": "perak",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:taiping",
+        "my:kuala-kangsar",
+        "my:belum-temengor",
+        "my:kellie-s-castle",
+        "my:lenggong-valley-archaeological-landscape",
+        "my:gua-tambun-rock-art-site",
+        "my:gua-tempurung"
+      ],
+      "canonical_id": "geo_my_0055"
+    },
+    {
+      "id": "my:city:taiping",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Тайпинг",
+      "slug": "taiping",
+      "parent_id": "my:state:perak",
+      "object_ids": [
+        "my:taiping"
+      ],
+      "canonical_id": "geo_my_0056"
+    },
+    {
+      "id": "my:town:kuala-kangsar",
+      "kind": "town",
+      "axis": "administrative",
+      "name_ru": "Куала-Кангсар",
+      "slug": "kuala-kangsar",
+      "parent_id": "my:state:perak",
+      "object_ids": [
+        "my:kuala-kangsar"
+      ],
+      "canonical_id": "geo_my_0057"
+    },
+    {
+      "id": "my:protected-area:royal-belum",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Роял-Белум / Белум-Теменгор",
+      "slug": "royal-belum",
+      "parent_id": "my:state:perak",
+      "object_ids": [
+        "my:belum-temengor"
+      ],
+      "canonical_id": "geo_my_0058"
+    },
+    {
+      "id": "my:geographic-area:lenggong-valley",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "name_ru": "Археологическая долина Ленггонг",
+      "slug": "lenggong-valley",
+      "parent_id": "my:state:perak",
+      "object_ids": [
+        "my:lenggong-valley-archaeological-landscape"
+      ],
+      "canonical_id": "geo_my_0059"
+    },
+    {
+      "id": "my:state:selangor",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Селангор",
+      "slug": "selangor",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:batu-caves"
+      ],
+      "canonical_id": "geo_my_0060"
+    },
+    {
+      "id": "my:district:gombak",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Гомбак",
+      "slug": "gombak",
+      "parent_id": "my:state:selangor",
+      "object_ids": [
+        "my:batu-caves"
+      ],
+      "canonical_id": "geo_my_0061"
+    },
+    {
+      "id": "my:geographic-area:batu-caves",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "name_ru": "Бату-Кейвс",
+      "slug": "batu-caves",
+      "parent_id": "my:district:gombak",
+      "object_ids": [
+        "my:batu-caves"
+      ],
+      "canonical_id": "geo_my_0062"
+    },
+    {
+      "id": "my:state:pahang",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Паханг",
+      "slug": "pahang",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:taman-negara-national-park",
+        "my:tasik-chini-biosphere-reserve"
+      ],
+      "canonical_id": "geo_my_0063",
+      "notes_ru": "Один из трёх штатов, в которых лежит Taman Negara; основной экспедиционный вход карточки — Kuala Tahan, Pahang."
+    },
+    {
+      "id": "my:protected-area:taman-negara",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Таман-Негара",
+      "slug": "taman-negara",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:taman-negara-national-park"
+      ],
+      "canonical_id": "geo_my_0064",
+      "notes_ru": "Межштатный охраняемый массив Pahang–Kelantan–Terengganu; parent=country выбран намеренно."
+    },
+    {
+      "id": "my:state:johor",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Джохор",
+      "slug": "johor",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:endau-rompin-national-park-johor"
+      ],
+      "canonical_id": "geo_my_0065"
+    },
+    {
+      "id": "my:protected-area:endau-rompin-johor",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Эндау–Ромпин (Джохор)",
+      "slug": "endau-rompin-johor",
+      "parent_id": "my:state:johor",
+      "object_ids": [
+        "my:endau-rompin-national-park-johor"
+      ],
+      "canonical_id": "geo_my_0066",
+      "notes_ru": "Карточка относится к управляемым Johor National Parks секторам Selai/Peta, а не ко всему трансграничному лесному массиву."
+    },
+    {
+      "id": "my:state:kelantan",
+      "kind": "state",
+      "axis": "administrative",
+      "name_ru": "Келантан",
+      "slug": "kelantan",
+      "parent_id": "country:my",
+      "object_ids": [
+        "my:gunung-stong-state-forest-park",
+        "my:taman-negara-national-park"
+      ],
+      "canonical_id": "geo_my_0067"
+    },
+    {
+      "id": "my:protected-area:gunung-stong",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Лесной парк штата Гунунг-Стонг",
+      "slug": "gunung-stong",
+      "parent_id": "my:state:kelantan",
+      "object_ids": [
+        "my:gunung-stong-state-forest-park"
+      ],
+      "canonical_id": "geo_my_0068"
+    },
+    {
+      "id": "my:protected-area:bako",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Бако",
+      "slug": "bako",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:bako-national-park"
+      ],
+      "canonical_id": "geo_my_0069"
+    },
+    {
+      "id": "my:protected-area:maliau-basin",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Охраняемая территория бассейна Малиау",
+      "slug": "maliau-basin",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:maliau-basin-conservation-area"
+      ],
+      "canonical_id": "geo_my_0070"
+    },
+    {
+      "id": "my:protected-area:crocker-range",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Парк Крокер-Рейндж",
+      "slug": "crocker-range",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:crocker-range-park-and-salt-trail"
+      ],
+      "canonical_id": "geo_my_0071"
+    },
+    {
+      "id": "my:protected-area:gomantong",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Пещеры Гомантонг и лесной резерват",
+      "slug": "gomantong",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:gomantong-caves"
+      ],
+      "canonical_id": "geo_my_0072"
+    },
+    {
+      "id": "my:geographic-area:bujang-valley",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "name_ru": "Долина Буджанг",
+      "slug": "bujang-valley",
+      "parent_id": "my:state:kedah",
+      "object_ids": [
+        "my:sungai-batu-archaeological-site",
+        "my:bujang-valley-archaeological-museum-and-temple-landscape"
+      ],
+      "canonical_id": "geo_my_0073",
+      "notes_ru": "Культурно-археологический ландшафт; Sungai Batu и музей/candi остаются отдельными объектами."
+    },
+    {
+      "id": "my:city:ipoh",
+      "kind": "city",
+      "axis": "administrative",
+      "name_ru": "Ипох",
+      "slug": "ipoh",
+      "parent_id": "my:state:perak",
+      "object_ids": [
+        "my:gua-tambun-rock-art-site"
+      ],
+      "canonical_id": "geo_my_0074"
+    },
+    {
+      "id": "my:geographic-area:gua-tambun",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "name_ru": "Гуа-Тамбун",
+      "slug": "gua-tambun",
+      "parent_id": "my:city:ipoh",
+      "object_ids": [
+        "my:gua-tambun-rock-art-site"
+      ],
+      "canonical_id": "geo_my_0075"
+    },
+    {
+      "id": "my:geographic-area:bau-karst",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Карст Бау",
+      "slug": "bau-karst",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:fairy-cave-and-wind-cave-nature-reserves"
+      ],
+      "canonical_id": "geo_my_0076"
+    },
+    {
+      "id": "my:protected-area:gunung-gading",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Гунунг-Гадинг",
+      "slug": "gunung-gading",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:gunung-gading-national-park"
+      ],
+      "canonical_id": "geo_my_0077"
+    },
+    {
+      "id": "my:protected-area:tawau-hills",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Парк Тавау-Хиллс",
+      "slug": "tawau-hills",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:tawau-hills-park"
+      ],
+      "canonical_id": "geo_my_0078"
+    },
+    {
+      "id": "my:protected-area:batang-ai",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Национальный парк Батанг-Ай",
+      "slug": "batang-ai",
+      "parent_id": "my:state:sarawak",
+      "object_ids": [
+        "my:batang-ai-national-park-and-iban-longhouse-landscape"
+      ],
+      "canonical_id": "geo_my_0079"
+    },
+    {
+      "id": "my:geographic-area:gunung-jerai",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Гунунг-Джерай",
+      "slug": "gunung-jerai",
+      "parent_id": "my:state:kedah",
+      "object_ids": [
+        "my:gunung-jerai-geoforest-park"
+      ],
+      "canonical_id": "geo_my_0080"
+    },
+    {
+      "id": "my:geographic-area:tasik-chini",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Тасик-Чини",
+      "slug": "tasik-chini",
+      "parent_id": "my:state:pahang",
+      "object_ids": [
+        "my:tasik-chini-biosphere-reserve"
+      ],
+      "canonical_id": "geo_my_0081"
+    },
+    {
+      "id": "my:geographic-area:kinta-karst",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Карст долины Кинта",
+      "slug": "kinta-karst",
+      "parent_id": "my:state:perak",
+      "object_ids": [
+        "my:gua-tempurung",
+        "my:gua-tambun-rock-art-site"
+      ],
+      "canonical_id": "geo_my_0082"
+    },
+    {
+      "id": "my:protected-area:tabin",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Заповедник Табин",
+      "slug": "tabin",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:tabin-wildlife-reserve"
+      ],
+      "canonical_id": "geo_my_0083",
+      "notes_ru": "Крупный lowland wildlife reserve Dent Peninsula; primary_location карточки является reference center, не входом."
+    },
+    {
+      "id": "my:protected-area:imbak-canyon",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Охраняемая территория каньона Имбак",
+      "slug": "imbak-canyon",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:imbak-canyon-conservation-area"
+      ],
+      "canonical_id": "geo_my_0084",
+      "notes_ru": "Контролируемая conservation/research territory; primary_location — reference center, не visitor gate."
+    }
+  ]
+}

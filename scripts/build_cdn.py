@@ -29,6 +29,7 @@ COUNTRY_ONLY = [
     ("singapore.json", "SG", "singapore"),
     ("thailand.json", "TH", "thailand"),
     ("timor-leste.json", "TL", "timor-leste"),
+    ("vietnam.json", "VN", "vietnam"),
 ]
 
 TYPE_LABELS = {

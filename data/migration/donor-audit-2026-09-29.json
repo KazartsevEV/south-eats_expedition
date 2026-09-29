@@ -1,0 +1,233 @@
+{
+  "audit_date": "2026-09-29",
+  "scope": "country_and_regional_layer_before_attraction_card_work",
+  "policy": {
+    "donor_first": true,
+    "attraction_cards_locked": true,
+    "rule": "Сначала полностью мигрировать и довести страновой/региональный слой всех 11 стран. Карточки достопримечательностей редактировать только после закрытия этого этапа.",
+    "donor_priority": [
+      "current main",
+      "non-merged Git branches",
+      "Google Drive product legacy",
+      "official sources",
+      "academic search"
+    ]
+  },
+  "google_drive": {
+    "product_folder": {
+      "title": "expedition south east",
+      "url": "https://drive.google.com/drive/folders/1TgRQN8jkbpnvCO0pN87tmYfhyRU21zga"
+    },
+    "published_country_legacy": [
+      {
+        "code": "BN",
+        "file": "brunei.json",
+        "bytes": 326735,
+        "regions": 4,
+        "localities": 8,
+        "objects": 18,
+        "sources": 9
+      },
+      {
+        "code": "KH",
+        "file": "cambodia.json",
+        "bytes": 428250,
+        "regions": 10,
+        "localities": 13,
+        "objects": 19,
+        "sources": 8
+      },
+      {
+        "code": "LA",
+        "file": "laos.json",
+        "bytes": 412400,
+        "regions": 10,
+        "localities": 13,
+        "objects": 19,
+        "sources": 7
+      },
+      {
+        "code": "ID",
+        "file": "indonesia.json",
+        "bytes": 382860,
+        "regions": 14,
+        "localities": 0,
+        "objects": 21,
+        "sources": 10
+      },
+      {
+        "code": "MY",
+        "file": "malaysia.json",
+        "bytes": 332322,
+        "regions": 14,
+        "localities": 0,
+        "objects": 21,
+        "sources": 7
+      },
+      {
+        "code": "MM",
+        "file": "myanmar.json",
+        "bytes": 210065,
+        "regions": 13,
+        "localities": 0,
+        "objects": 15,
+        "sources": 8
+      }
+    ],
+    "pending_country_legacy": [
+      {
+        "code": "PH",
+        "file": "philippines.json",
+        "bytes": 235001,
+        "regions": 17,
+        "objects": 19,
+        "sources": 8
+      },
+      {
+        "code": "SG",
+        "file": "singapore.json",
+        "bytes": 196191,
+        "regions": 9,
+        "objects": 18,
+        "sources": 8
+      },
+      {
+        "code": "TH",
+        "file": "thailand.json",
+        "bytes": 249423,
+        "regions": 17,
+        "objects": 21,
+        "sources": 6
+      },
+      {
+        "code": "TL",
+        "file": "timor_leste.json",
+        "bytes": 197510,
+        "regions": 9,
+        "objects": 17,
+        "sources": 9
+      },
+      {
+        "code": "VN",
+        "file": "vietnam.json",
+        "bytes": 270420,
+        "regions": 19,
+        "objects": 23,
+        "sources": 8
+      }
+    ],
+    "conclusion": "Оставшиеся пять стран имеют полноценные legacy JSON и должны мигрироваться из них, а не создаваться с нуля."
+  },
+  "git_donors": {
+    "laos": {
+      "branch": "draft/laos-canonical-r41",
+      "hierarchy_nodes": 52,
+      "donor_objects_total": 31,
+      "current_objects": 19,
+      "donor_only_objects": [
+        "la:phou-khao-khouay-national-park",
+        "la:tad-fane",
+        "la:tad-yuang",
+        "la:khone-phapheng-falls",
+        "la:li-phi-somphamit-falls",
+        "la:xe-pian-national-park",
+        "la:dong-hua-sao-national-park",
+        "la:hin-nam-no-national-park",
+        "la:nakai-nam-theun-national-park",
+        "la:tham-pa-fa",
+        "la:tham-nang-aen",
+        "la:nong-fa-dong-ampham-landscape"
+      ],
+      "action": "52-node geography migrated now; donor-only cards remain pending and untouched."
+    },
+    "malaysia": {
+      "branch": "draft/malaysia-cdn-after-laos",
+      "hierarchy_nodes": 54,
+      "donor_objects_total": 40,
+      "current_objects": 21,
+      "donor_only_objects": [
+        "my:taman-negara-national-park",
+        "my:endau-rompin-national-park-johor",
+        "my:gunung-stong-state-forest-park",
+        "my:bako-national-park",
+        "my:maliau-basin-conservation-area",
+        "my:crocker-range-park-and-salt-trail",
+        "my:gomantong-caves",
+        "my:sungai-batu-archaeological-site",
+        "my:bujang-valley-archaeological-museum-and-temple-landscape",
+        "my:gua-tambun-rock-art-site",
+        "my:fairy-cave-and-wind-cave-nature-reserves",
+        "my:gunung-gading-national-park",
+        "my:tawau-hills-park",
+        "my:batang-ai-national-park-and-iban-longhouse-landscape",
+        "my:gunung-jerai-geoforest-park",
+        "my:tasik-chini-biosphere-reserve",
+        "my:gua-tempurung",
+        "my:tabin-wildlife-reserve",
+        "my:imbak-canyon-conservation-area"
+      ],
+      "action": "Donor hierarchy merged with current researched regions/localities; donor-only cards remain pending and untouched."
+    },
+    "cambodia": {
+      "branches_reviewed": [
+        "draft/cambodia-canonical",
+        "draft/cambodia-canonical-v2",
+        "draft/cambodia-canonical-v3",
+        "draft/cambodia-canonical-v4",
+        "draft/cambodia-canonical-v5"
+      ],
+      "donor_only_objects": [],
+      "conclusion": "Current main already contains the object set; donor value is mostly migration history."
+    },
+    "indonesia": {
+      "donor_only_objects": [],
+      "conclusion": "No richer formal hierarchy branch found; current regions/localities and cards are the donor for formalization."
+    },
+    "myanmar": {
+      "donor_only_objects": [],
+      "conclusion": "No richer formal hierarchy branch found; current regions/localities and cards are the donor for formalization."
+    }
+  },
+  "current_migration_branch": {
+    "name": "country-region-layer-audit-migration-2026-09-29",
+    "countries": {
+      "BN": {
+        "hierarchy_nodes": 16,
+        "current_objects": 18,
+        "status": "formalized_in_working_branch"
+      },
+      "KH": {
+        "hierarchy_nodes": 17,
+        "current_objects": 19,
+        "status": "formalized_existing"
+      },
+      "LA": {
+        "hierarchy_nodes": 52,
+        "current_objects": 19,
+        "pending_donor_cards": 12,
+        "status": "expanded_from_donor"
+      },
+      "ID": {
+        "hierarchy_nodes": 34,
+        "current_objects": 21,
+        "status": "formalized_from_existing_region_and_route_hubs"
+      },
+      "MY": {
+        "hierarchy_nodes": 83,
+        "current_objects": 21,
+        "pending_donor_cards": 19,
+        "status": "merged_current_reference_plus_donor_hierarchy"
+      },
+      "MM": {
+        "hierarchy_nodes": 31,
+        "current_objects": 15,
+        "status": "formalized_from_existing_region_and_exact_localities"
+      }
+    }
+  },
+  "next_phase": {
+    "after_first_six_validation": "Migrate PH, SG, TH, TL, VN from Drive legacy into canonical country + region/locality layers, preserving donor objects for later card phase.",
+    "research_policy": "After donor migration, use official/academic research only to close factual gaps and validate changing fields.",
+    "card_phase_gate": "Do not start attraction-card editing until all 11 countries pass country/regional QA."
+  }
+}

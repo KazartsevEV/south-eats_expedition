@@ -509,6 +509,61 @@ def build():
         canonical_geo_ids_by_country[code].append(geo_id)
         place_id_by_country_name_kind[(code, place.get("name"), place.get("kind"))] = geo_id
 
+    # Add source-only real localities without deleting legacy composite route hubs.
+    for code, (_, source_doc) in sources_by_code.items():
+        if code in formal_hierarchy:
+            continue
+        country_id = f"geo_{code.lower()}"
+        for locality in ((source_doc.get("travel") or {}).get("localities") or []):
+            if not locality.get("canonical_id"):
+                continue
+            name = locality.get("name")
+            existing_id = place_id_by_country_name_kind.get((code, name, "city_or_route_hub"))
+            if existing_id:
+                continue
+            legacy_id = locality.get("legacy_id")
+            if not legacy_id:
+                raise RuntimeError(f"{code}: source-only locality missing legacy_id: {name}")
+            geo_id = require_id(registry, "geo", legacy_id)
+            if geo_id != locality.get("canonical_id"):
+                raise RuntimeError(f"{code}: locality canonical_id mismatch for {name}: {geo_id} != {locality.get('canonical_id')}")
+            region_names = locality.get("regions") or []
+            parent_id = country_id
+            if region_names:
+                parent_id = place_id_by_country_name_kind.get((code, region_names[0], "region")) or country_id
+            kind = locality.get("kind") or "settlement"
+            if kind not in GEO_KINDS:
+                kind = "settlement"
+            profile = locality.get("profile") or {}
+            entity = {
+                "id": geo_id,
+                "kind": kind,
+                "names": {"primary": name},
+                "slug": locality.get("slug"),
+                "parent_id": parent_id,
+                "geo_path": [country_id, parent_id, geo_id] if parent_id != country_id else [country_id, geo_id],
+                "description": {"narrow": profile.get("summary"), "body": None},
+                "cover_media_id": None,
+                "legacy_ids": [legacy_id],
+                "relations": {
+                    "source_region_names": region_names,
+                    "source_object_names": locality.get("object_names") or [],
+                },
+                "migration": {
+                    "source_kind": "source_locality",
+                    "status": "canonical_locality",
+                    "note": "Real locality created from researched source data; legacy composite route hubs are retained separately for compatibility.",
+                },
+            }
+            for field in ("history", "culture", "geography", "geology", "ethnography", "myths_beliefs", "climate", "transport", "languages", "nature", "marine", "health", "safety", "architecture", "relief", "hydrology", "coast"):
+                if profile.get(field) not in (None, "", [], {}):
+                    entity[field] = profile.get(field)
+            if profile.get("provenance"):
+                entity["provenance"] = profile.get("provenance")
+            geo_entities[geo_id] = entity
+            canonical_geo_ids_by_country[code].append(geo_id)
+            place_id_by_country_name_kind[(code, name, "city_or_route_hub")] = geo_id
+
     # Rebuild the legacy region -> locality tree from explicit source relations.
     for code, (_, source_doc) in sources_by_code.items():
         country_id = f"geo_{code.lower()}"
@@ -525,6 +580,10 @@ def build():
             geo_entities[locality_id]["parent_id"] = parent_id
             geo_entities[locality_id]["geo_path"] = [country_id, parent_id, locality_id]
             geo_entities[locality_id]["migration"]["parent_status"] = "migrated_from_source_locality_relation"
+            replacements = locality.get("replaced_by") or []
+            if replacements:
+                geo_entities[locality_id]["migration"]["status"] = "legacy_route_hub"
+                geo_entities[locality_id]["migration"]["replaced_by"] = replacements
 
     for code, doc in formal_hierarchy.items():
         country_id = f"geo_{code.lower()}"

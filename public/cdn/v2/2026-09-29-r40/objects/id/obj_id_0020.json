@@ -47,7 +47,18 @@
       "checked_at": "2026-09-29"
     },
     "geo_points": [],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 1120.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "site",
+      "accuracy": "high",
+      "source_refs": [
+        "src_000761"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Высота относится к традиционной деревне Wae Rebo; это не высота окружающих хребтов."
+    }
   },
   "narrative": {
     "sections": [
@@ -291,12 +302,20 @@
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
-    "best_time": null,
-    "best_weather_light": null,
+    "best_time": "05:45–07:30 после ночёвки в деревне; второе спокойное окно — примерно 16:30–17:45 после ухода части дневных посетителей.",
+    "best_weather_light": "Утренняя дымка и низкие облака часто заполняют чашу между холмами; после дождя тропа сложнее, но туман и насыщенная зелень выражены сильнее.",
     "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "useful_equipment": [],
+    "seasonal_visuals": [
+      "В сухой сезон май–октябрь подход обычно предсказуемее; во влажный период растительность ярче и туман выразительнее, но тропа становится более скользкой."
+    ],
+    "video_activity": [
+      "Подход через лес и первое раскрытие деревни показывают реальный масштаб пешего доступа.",
+      "Повседневная жизнь, кофе и традиционные занятия интересны только при согласии жителей; ритуалы не считать свободно доступной сценой."
+    ],
+    "useful_equipment": [
+      "wide",
+      "standard"
+    ],
     "drone": "Без отдельного разрешения общины/авиационных властей не использовать; деревня мала и приватность важна.",
     "filming_restrictions": "Просить разрешение до съёмки жителей/интерьеров/ритуалов; не превращать sacred/community spaces в постановочную площадку."
   },
@@ -325,20 +344,20 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-28"
   }

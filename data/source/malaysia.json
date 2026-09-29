@@ -39,7 +39,8 @@
       "2026-09-29 Malaysia geo QA closure: filled the only remaining required region transport gaps and Batu Caves geography; six localities without robust annual climatology now carry an explicit not_normalized status instead of silent null or borrowed nearby-station values.",
       "2026-09-29 language cleanup: all 14 Malaysia regional reference profiles rewritten into natural Russian prose; proper geographic names remain unchanged, while English-Russian mixed explanatory text was removed.",
       "2026-09-29 language cleanup: all 27 Malaysia locality profiles rewritten into natural Russian prose; technical dataset/product names are retained only as source names or methodology metadata.",
-      "2026-09-29 language QA: remaining English common-language fragments in Malaysia regional/locality prose removed; Latin text now primarily proper names, source names and technical product names."
+      "2026-09-29 language QA: remaining English common-language fragments in Malaysia regional/locality prose removed; Latin text now primarily proper names, source names and technical product names.",
+      "2026-09-29 Malaysia regional gap pass: added relevant relief, biodiversity and ethnography for Penang, Kinabalu, Bario, Royal Belum, Perhentian, Semporna, Kudat and Sandakan from official/UNESCO sources; non-applicable fields remain absent instead of being fabricated."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -480,7 +481,8 @@
           "source_refs": [
             "src_000599",
             "src_000606",
-            "src_000601"
+            "src_000601",
+            "src_000657"
           ]
         },
         "health": {
@@ -532,7 +534,26 @@
           ],
           "checked_at": "2026-09-29"
         },
-        "name_ru": "Пенанг / Джорджтаун"
+        "name_ru": "Пенанг / Джорджтаун",
+        "relief": {
+          "summary": "Остров Пенанг имеет выраженный центральный холмистый массив с Penang Hill, от которого рельеф понижается к прибрежным равнинам и городской полосе Джорджтауна.",
+          "source_refs": [
+            "src_000657"
+          ]
+        },
+        "nature": {
+          "summary": "Биосферный резерват Penang Hill объединяет один из последних прибрежных дождевых лесов Малайзии, низменные и холмовые диптерокарповые леса, мангры, заболоченные участки, песчаные пляжи и коралловые рифы.",
+          "documented_fauna": [
+            "ирравадийский дельфин",
+            "зондский панголин",
+            "мигрирующие птицы",
+            "морские черепахи"
+          ],
+          "flora": "В профиле UNESCO указано более 2400 видов растений, включая свыше 200 видов орхидей.",
+          "source_refs": [
+            "src_000657"
+          ]
+        }
       },
       {
         "name": "Melaka",
@@ -694,7 +715,26 @@
           },
           "source_refs": [
             "src_000608"
-          ]
+          ],
+          "flora": {
+            "summary": "В парке отмечены 711 видов орхидей, 621 вид папоротников, 27 видов рододендронов, 9 видов Nepenthaceae, 2 вида раффлезии и множество других высокогорных растений.",
+            "ultramafic_specialists": [
+              "Nepenthes rajah",
+              "Nepenthes villosa",
+              "Paphiopedilum rothschildianum",
+              "Paphiopedilum dayanum"
+            ]
+          },
+          "fauna": {
+            "summary": "Sabah Parks указывает более 100 видов млекопитающих и очень высокое разнообразие птиц, бабочек и других беспозвоночных; часть горных видов и подвидов эндемична Кинабалу.",
+            "examples": [
+              "ринокеросовый калао",
+              "гиббоны Борнео",
+              "долгопят",
+              "медленный лори",
+              "землеройки Кинабалу"
+            ]
+          }
         },
         "health": {
           "dengue_reference_2022": {
@@ -1100,8 +1140,10 @@
         "ethnography": {
           "kelabit": "Барио находится в области расселения келабитов: здесь сохраняются деревни и длинные дома, рисоводство и характерная кухня нагорья.",
           "source_refs": [
-            "src_000620"
-          ]
+            "src_000620",
+            "src_000658"
+          ],
+          "orang_ulu": "Келабиты относятся к группе Orang Ulu — «людей верховьев». В нагорье они живут в рассредоточенных деревнях, сочетая длинные дома и отдельные дома; важны рисоводство и связи между высокогорными поселениями."
         },
         "health": {
           "dengue_reference_2022": {
@@ -1147,7 +1189,15 @@
           ],
           "checked_at": "2026-09-29"
         },
-        "name_ru": "Барио / Келабитское нагорье"
+        "name_ru": "Барио / Келабитское нагорье",
+        "nature": {
+          "summary": "Келабитское нагорье — высокогорная мозаика лесных склонов, рисовых полей, речных долин и удалённых поселений. Лес остаётся главным природным фоном переходов между деревнями.",
+          "note": "Источники в этом проходе не дают надёжного локального списка опасных животных и ядовитых растений; общестрановые списки сюда не переносятся.",
+          "source_refs": [
+            "src_000620",
+            "src_000658"
+          ]
+        }
       },
       {
         "name": "Langkawi / northwest coast",
@@ -1452,7 +1502,20 @@
           ],
           "checked_at": "2026-09-29"
         },
-        "name_ru": "Перхентианские острова / восточное побережье"
+        "name_ru": "Перхентианские острова / восточное побережье",
+        "nature": {
+          "marine_habitats": "Перхентианские острова входят в систему морских парков Тренгану; ключевые природные местообитания — коралловые рифы, мелководные прибрежные акватории и островная растительность.",
+          "coral_note": "Департамент рыболовства ведёт мониторинг состояния кораллов; в 2024 году Перхентианы входили в число районов, затронутых массовым обесцвечиванием рифов.",
+          "source_refs": [
+            "src_000601"
+          ]
+        },
+        "relief": {
+          "summary": "Островная территория состоит из холмистых покрытых лесом островов с узкими пляжными участками и рифовыми мелководьями; сухопутные связи между бухтами ограничены рельефом.",
+          "source_refs": [
+            "src_000601"
+          ]
+        }
       },
       {
         "name": "Perak / Taiping / Kuala Kangsar / Belum",
@@ -1559,7 +1622,21 @@
           ],
           "checked_at": "2026-09-29"
         },
-        "name_ru": "Перак / Тайпинг / Куала-Кангсар / Белум"
+        "name_ru": "Перак / Тайпинг / Куала-Кангсар / Белум",
+        "relief": {
+          "summary": "Регион пересекает западные низменности Перака, долины центральной части штата и более высокий внутренний пояс Хулу-Перака. Royal Belum связан с горно-лесным рельефом и водохранилищем Теменгор.",
+          "source_refs": [
+            "src_000604",
+            "src_000605"
+          ]
+        },
+        "ethnography": {
+          "jahai": "В Royal Belum живут общины Orang Asli народа джахай; официальный источник штата прямо фиксирует поселение Kampung Kelewang в пределах Royal Belum.",
+          "note": "Этнографический слой не означает, что все населённые пункты региона относятся к джахай; сведения привязаны именно к общинам Royal Belum.",
+          "source_refs": [
+            "src_000659"
+          ]
+        }
       },
       {
         "name": "Semporna / Sipadan / east Sabah",
@@ -1623,7 +1700,8 @@
           "source_refs": [
             "src_000610",
             "src_000611"
-          ]
+          ],
+          "island_vegetation": "Sabah Parks описывает на островах Tun Sakaran прибрежные смешанные леса, кустарниковые и скальные сообщества и пляжную растительность; часть растений представляет редкие или новые для Борнео находки."
         },
         "health": {
           "dengue_reference_2022": {
@@ -1692,7 +1770,19 @@
           ],
           "checked_at": "2026-09-29"
         },
-        "name_ru": "Семпорна / Сипадан / восточный Сабах"
+        "name_ru": "Семпорна / Сипадан / восточный Сабах",
+        "relief": {
+          "summary": "В морском парке Tun Sakaran вулканические острова резко поднимаются из лагун и рифовых мелководий; вершина Bohey Dulang достигает примерно 353 м.",
+          "source_refs": [
+            "src_000611"
+          ]
+        },
+        "ethnography": {
+          "bajau": "Семпорна тесно связана с культурой баджау. Праздник Regatta Lepa вырос из традиции морских сообществ и строится вокруг украшенных лодок lepa, которые поколениями использовались для морского передвижения.",
+          "source_refs": [
+            "src_000660"
+          ]
+        }
       },
       {
         "name": "Kudat / Rungus north Sabah",
@@ -1795,7 +1885,19 @@
           ],
           "checked_at": "2026-09-29"
         },
-        "name_ru": "Кудат / район рунгусов на севере Сабаха"
+        "name_ru": "Кудат / район рунгусов на севере Сабаха",
+        "relief": {
+          "summary": "Север Сабаха сочетает невысокие прибрежные возвышенности, сельские равнины и открытое морское побережье; внутри региона нет высокогорного рельефа уровня Кинабалу.",
+          "source_refs": [
+            "src_000613"
+          ]
+        },
+        "nature": {
+          "summary": "Для района характерна более открытая сельская и прибрежная среда, чем для внутренних дождевых лесов Сабаха. Детальный локальный список фауны и опасных видов пока не нормализован.",
+          "source_refs": [
+            "src_000613"
+          ]
+        }
       },
       {
         "name": "Sandakan / Sepilok",
@@ -1854,7 +1956,8 @@
           "source_refs": [
             "src_000614",
             "src_000612"
-          ]
+          ],
+          "turtles": "В Turtle Islands охраняются зелёные и биссовые морские черепахи; оба вида выходят на кладку круглый год, но сезонные пики различаются."
         },
         "health": {
           "dengue_reference_2022": {
@@ -1924,7 +2027,14 @@
           ],
           "checked_at": "2026-09-29"
         },
-        "name_ru": "Сандакан / Сепилок"
+        "name_ru": "Сандакан / Сепилок",
+        "relief": {
+          "summary": "Сандакан и Сепилок лежат в низменной восточной части Сабаха; рельеф в основном мягкий, а важнейшие природные переходы связаны с низменным лесом, заливом и речными системами к югу.",
+          "source_refs": [
+            "src_000614",
+            "src_000630"
+          ]
+        }
       }
     ],
     "objects": [
@@ -11280,6 +11390,88 @@
         "niah_climate",
         "niah_access",
         "niah_geology"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "UNESCO_PENANG_BIOSPHERE",
+      "canonical_id": "src_000657",
+      "publisher": "UNESCO",
+      "url": "https://www.unesco.org/en/articles/unesco-steps-efforts-biodiversity-conservation-designation-20-new-biosphere-reserves",
+      "kind": "international_organization",
+      "used_for": [
+        "penang",
+        "nature",
+        "relief",
+        "marine",
+        "biodiversity"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "SARAWAK_TOURISM_ORANG_ULU",
+      "canonical_id": "src_000658",
+      "publisher": "Sarawak Tourism Board",
+      "url": "https://www.sarawaktourism.com/web/stories/story-view/our-people-orang-ulu",
+      "kind": "government",
+      "used_for": [
+        "bario",
+        "kelabit",
+        "ethnography",
+        "relief"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "PERAK_JAHAI_ROYAL_BELUM",
+      "canonical_id": "src_000659",
+      "publisher": "Perak State Government",
+      "url": "https://pendakwaansyariah.perak.gov.my/index.php/info/berita/program-rehlah-dakwah-undang-undang-syariah-kepada-masyarakat-orang-asli-suku-kaum-jahai-kampung-kelewang-royal-belum",
+      "kind": "government",
+      "used_for": [
+        "royal_belum",
+        "jahai",
+        "ethnography"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "SABAH_TOURISM_SEMPORNA_BAJAU",
+      "canonical_id": "src_000660",
+      "publisher": "Sabah Tourism Board",
+      "url": "https://sabahtourism.com/event/regatta-lepa-2025/",
+      "kind": "government",
+      "used_for": [
+        "semporna",
+        "bajau",
+        "ethnography",
+        "festival"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "SABAH_TOURISM_SEMPORNA_DISTRICT",
+      "canonical_id": "src_000661",
+      "publisher": "Sabah Tourism Board",
+      "url": "https://sabahtourism.com/district/semporna/",
+      "kind": "government",
+      "used_for": [
+        "semporna",
+        "transport",
+        "geography"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "SABAH_TOURISM_GETTING_AROUND",
+      "canonical_id": "src_000662",
+      "publisher": "Sabah Tourism Board",
+      "url": "https://sabahtourism.com/essential/getting-around/",
+      "kind": "government",
+      "used_for": [
+        "sabah_transport",
+        "kota_kinabalu",
+        "semporna"
       ],
       "accessed": "2026-09-29"
     }

@@ -30,7 +30,8 @@
       "2026-09-29 Myanmar regional research chunk 1: official UNESCO/ASEAN/DMH/MPA/tourism sources added for climate, hydrology, tides, geology, biodiversity, history and ethnography. Dynamic water/tide values are referenced, not frozen as permanent regional facts.",
       "2026-09-29 Myanmar language pass: locality reference prose normalized into natural Russian; generic English travel terms removed while technical IDs and source metadata remain unchanged.",
       "2026-09-29 Myanmar health pass: regional malaria context added for Kachin, Kayin, Tanintharyi and Sagaing from WHO Health Cluster; 2025 dengue-response context added for Sagaing and Mandalay with explicit non-incidence caveats.",
-      "2026-09-29 Myanmar Inle pass: nature and ethnography added from the existing UNESCO MAB source without introducing new source duplication."
+      "2026-09-29 Myanmar Inle pass: nature and ethnography added from the existing UNESCO MAB source without introducing new source duplication.",
+      "2026-09-29 Myanmar regional health/hazard pass: Chin malaria and health-access context, Rakhine cyclone/health-access context, and WHO health-access caveats added to conflict-affected regions without converting regional data into locality-level risk scores."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -621,7 +622,8 @@
             "src_000677",
             "src_000673",
             "src_000671",
-            "src_000672"
+            "src_000672",
+            "src_000685"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
@@ -672,6 +674,15 @@
           "floating_agriculture": "Инта практикуют плавучее земледелие «ечан»: грядки формируются на плавающих органических матах и обслуживаются с лодок.",
           "source_refs": [
             "src_000677"
+          ]
+        },
+        "health": {
+          "healthcare_access": {
+            "context": "ВОЗ указывает существенные ограничения доступа к базовой медицинской помощи в этом регионе; в удалённых и конфликтных районах доступ особенно нестабилен.",
+            "caveat": "Региональный гуманитарный показатель не описывает конкретное медицинское учреждение."
+          },
+          "source_refs": [
+            "src_000685"
           ]
         }
       },
@@ -864,7 +875,8 @@
           "source_refs": [
             "src_000673",
             "src_000671",
-            "src_000682"
+            "src_000682",
+            "src_000685"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
@@ -875,8 +887,13 @@
             "caveat": "Это региональный фон, а не текущая оценка риска в самом Тавое."
           },
           "source_refs": [
-            "src_000682"
-          ]
+            "src_000682",
+            "src_000685"
+          ],
+          "healthcare_access": {
+            "context": "ВОЗ указывает существенные ограничения доступа к базовой медицинской помощи в этом регионе; в удалённых и конфликтных районах доступ особенно нестабилен.",
+            "caveat": "Региональный гуманитарный показатель не описывает конкретное медицинское учреждение."
+          }
         }
       },
       {
@@ -911,7 +928,14 @@
           "rainfall_pattern": "Ракхайн относится к наиболее влажным районам страны в летний муссон; побережье также подвержено тропическим циклонам.",
           "source_refs": [
             "src_000673"
-          ]
+          ],
+          "extreme_weather": {
+            "cyclone_exposure": "Побережье Ракхайна подвержено очень сильным тропическим циклонам. В мае 2023 года циклон Мокха вышел на побережье у Ракхайна с оценённой скоростью ветра до 250 км/ч и вызвал тяжёлые разрушения, ливни и наводнения.",
+            "expedition_meaning": "Для поездок в сезон циклонов нельзя опираться на средние месячные осадки: перед выездом нужен оперативный прогноз и проверка дорог, переправ и прибрежных участков.",
+            "source_refs": [
+              "src_000686"
+            ]
+          }
         },
         "safety": {
           "travel_advisory": {
@@ -951,10 +975,21 @@
             "src_000673",
             "src_000674",
             "src_000671",
-            "src_000672"
+            "src_000672",
+            "src_000685",
+            "src_000686"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
+        },
+        "health": {
+          "healthcare_access": {
+            "context": "Стратегия кластера здравоохранения ВОЗ на 2026–2027 годы указывает, что почти половина населения Ракхайна испытывает серьёзные трудности с доступом к базовой медицинской помощи.",
+            "caveat": "Это региональный гуманитарный контекст, а не характеристика конкретной больницы в Ситуэ или Мраук-У."
+          },
+          "source_refs": [
+            "src_000685"
+          ]
         }
       },
       {
@@ -1114,7 +1149,8 @@
             "src_000674",
             "src_000671",
             "src_000672",
-            "src_000682"
+            "src_000682",
+            "src_000685"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
@@ -1125,8 +1161,13 @@
             "caveat": "Не переносить этот фон автоматически на Пхаан или отдельную пещеру; локальная заболеваемость в источнике не дана."
           },
           "source_refs": [
-            "src_000682"
-          ]
+            "src_000682",
+            "src_000685"
+          ],
+          "healthcare_access": {
+            "context": "ВОЗ указывает существенные ограничения доступа к базовой медицинской помощи в этом регионе; в удалённых и конфликтных районах доступ особенно нестабилен.",
+            "caveat": "Региональный гуманитарный показатель не описывает конкретное медицинское учреждение."
+          }
         }
       },
       {
@@ -1191,7 +1232,8 @@
             "src_000671",
             "src_000672",
             "src_000682",
-            "src_000683"
+            "src_000683",
+            "src_000685"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
@@ -1207,8 +1249,13 @@
           },
           "source_refs": [
             "src_000682",
-            "src_000683"
-          ]
+            "src_000683",
+            "src_000685"
+          ],
+          "healthcare_access": {
+            "context": "ВОЗ указывает серьёзные трудности с доступом к базовой медицинской помощи в Сикайне.",
+            "caveat": "Региональный гуманитарный показатель не описывает конкретное медицинское учреждение."
+          }
         }
       },
       {
@@ -1292,7 +1339,8 @@
             "src_000673",
             "src_000671",
             "src_000672",
-            "src_000682"
+            "src_000682",
+            "src_000685"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
@@ -1303,8 +1351,13 @@
             "caveat": "Это региональный контекст, а не показатель для озера Индавджи или конкретной деревни; доступность эпиднадзора неполная."
           },
           "source_refs": [
-            "src_000682"
-          ]
+            "src_000682",
+            "src_000685"
+          ],
+          "healthcare_access": {
+            "context": "ВОЗ указывает существенные ограничения доступа к базовой медицинской помощи в этом регионе; в удалённых и конфликтных районах доступ особенно нестабилен.",
+            "caveat": "Региональный гуманитарный показатель не описывает конкретное медицинское учреждение."
+          }
         }
       },
       {
@@ -1380,7 +1433,14 @@
           "source_refs": [
             "src_000671",
             "src_000672"
-          ]
+          ],
+          "natural_hazards": {
+            "cyclone_history": "Циклон Мокха в мае 2023 года после выхода на побережье Ракхайна принёс сильный ветер, ливни и наводнения в том числе в Чин; четыре из семи городских округов штата тогда были объявлены пострадавшими.",
+            "interpretation": "Исторический пример показывает уязвимость дорог и склонов к экстремальным осадкам; это не текущий прогноз.",
+            "source_refs": [
+              "src_000686"
+            ]
+          }
         },
         "ethnography": {
           "summary": "Гора известна у местных народов Чин как Khaung Neu Thom — «Богиня-Мать Земли». ASEAN Centre for Biodiversity также описывает традиции народов Чин, включая праздник Chin National Day, ремёсла, стрельбу из лука и деревенские памятные Y-образные столбы.",
@@ -1393,10 +1453,27 @@
             "src_000680",
             "src_000673",
             "src_000671",
-            "src_000672"
+            "src_000672",
+            "src_000684",
+            "src_000685",
+            "src_000686"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
+        },
+        "health": {
+          "malaria": {
+            "regional_context": "ВОЗ относит штат Чин к районам, где в 2023 году отмечался заметный рост малярии. Высокая нагрузка в Мьянме сосредоточена прежде всего в приграничных городских округах.",
+            "caveat": "В источнике нет отдельного показателя для Канпетлета, Миндата или Нат-Ма-Тауна. Этот факт нельзя превращать в локальную вероятность заражения."
+          },
+          "healthcare_access": {
+            "context": "По стратегии кластера здравоохранения ВОЗ значительная часть населения штата Чин нуждается во внешней поддержке для доступа к базовой медицинской помощи.",
+            "caveat": "Это характеристика доступности системы здравоохранения, а не показатель качества конкретной клиники."
+          },
+          "source_refs": [
+            "src_000684",
+            "src_000685"
+          ]
         }
       }
     ],
@@ -6602,6 +6679,54 @@
       ],
       "accessed": "2026-09-29",
       "notes": "WHO targeted dengue prevention in earthquake-affected high-risk communities in Sagaing, Mandalay and Nay Pyi Taw in 2025; this is not a current incidence rate."
+    },
+    {
+      "id": "WHO_MM_TCS_2025_2028",
+      "canonical_id": "src_000684",
+      "publisher": "World Health Organization Myanmar",
+      "url": "https://www.who.int/publications/i/item/9789290220510",
+      "kind": "international_organization",
+      "used_for": [
+        "malaria",
+        "Chin",
+        "national_health_context"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "WHO transitional country strategy reports a 2023 malaria surge in Kayin, Kachin, Chin, Tanintharyi and Ayeyarwady; 52 border townships accounted for 67% of cases, with only 68% reporting coverage."
+    },
+    {
+      "id": "WHO_MM_HEALTH_STRATEGY_2026_2027",
+      "canonical_id": "src_000685",
+      "publisher": "World Health Organization / Myanmar Health Cluster",
+      "url": "https://healthcluster.who.int/docs/librariesprovider16/meeting-reports/myanmar-health-cluster-strategy-2026-2027.pdf?sfvrsn=6fb58c18_3",
+      "kind": "international_organization",
+      "used_for": [
+        "healthcare_access",
+        "Rakhine",
+        "Kachin",
+        "Tanintharyi",
+        "Kayin",
+        "Chin",
+        "Sagaing",
+        "Shan"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Strategy reports severe barriers to basic health access in several conflict-affected states/regions. This is service-access context, not disease incidence."
+    },
+    {
+      "id": "WHO_CYCLONE_MOCHA_2023",
+      "canonical_id": "src_000686",
+      "publisher": "World Health Organization South-East Asia",
+      "url": "https://www.who.int/southeastasia/news/detail/12-06-2023-who-responding-to-cyclone-mocha",
+      "kind": "international_organization",
+      "used_for": [
+        "cyclone",
+        "Rakhine",
+        "flood",
+        "Chin"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Historical 2023 event used as evidence of cyclone/storm/flood exposure, not as a current warning."
     }
   ],
   "uncertainties": [

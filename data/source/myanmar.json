@@ -32,7 +32,8 @@
       "2026-09-29 Myanmar health pass: regional malaria context added for Kachin, Kayin, Tanintharyi and Sagaing from WHO Health Cluster; 2025 dengue-response context added for Sagaing and Mandalay with explicit non-incidence caveats.",
       "2026-09-29 Myanmar Inle pass: nature and ethnography added from the existing UNESCO MAB source without introducing new source duplication.",
       "2026-09-29 Myanmar regional health/hazard pass: Chin malaria and health-access context, Rakhine cyclone/health-access context, and WHO health-access caveats added to conflict-affected regions without converting regional data into locality-level risk scores.",
-      "2026-09-29 Myanmar Tanintharyi pass: coastal/forest relief, geology, terrestrial and marine biodiversity, and Moken ethnography added from UNESCO tentative-list materials."
+      "2026-09-29 Myanmar Tanintharyi pass: coastal/forest relief, geology, terrestrial and marine biodiversity, and Moken ethnography added from UNESCO tentative-list materials.",
+      "2026-09-29 Myanmar Rakhine/Mrauk-U pass: relief, history, culture and architecture added from the UNESCO tentative-list record and localized into the Mrauk-U child profile."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -1030,7 +1031,8 @@
             "src_000671",
             "src_000672",
             "src_000685",
-            "src_000686"
+            "src_000686",
+            "src_000689"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
@@ -1042,6 +1044,32 @@
           },
           "source_refs": [
             "src_000685"
+          ]
+        },
+        "relief": {
+          "summary": "Мраук-У расположен на стыке дельтовой равнины и Араканских гор. Невысокие гряды, водотоки и болотистые участки образуют естественно расчленённый ландшафт.",
+          "source_refs": [
+            "src_000689"
+          ]
+        },
+        "history": {
+          "summary": "Мраук-У был столицей Араканского царства и крупным торговым и военным центром Бенгальского залива. Основной сохранившийся храмовый ландшафт относится прежде всего к XV–XVI векам.",
+          "trade_context": "Положение между морем, речной сетью и путями к Бенгалии сделало город зоной интенсивных торговых и культурных контактов.",
+          "source_refs": [
+            "src_000689"
+          ]
+        },
+        "culture": {
+          "summary": "ЮНЕСКО отмечает интенсивное взаимодействие буддийской традиции с исламским миром Бенгальских султанатов и с португальским присутствием. Этот культурный слой выражен не только в памятниках, но и в исторической роли города как пограничного торгового центра.",
+          "source_refs": [
+            "src_000689"
+          ]
+        },
+        "architecture": {
+          "summary": "На территории около 7 × 6 км сохранилось порядка 200 буддийских памятников — храмов, ступ и монастырей. Для ряда сооружений характерны хорошо обработанный камень, сложные своды и укреплённый характер храмов.",
+          "fortification": "Холмы, водные пути и болотистые участки использовались как часть оборонительной системы города.",
+          "source_refs": [
+            "src_000689"
           ]
         }
       },
@@ -6264,10 +6292,15 @@
           },
           "provenance": {
             "source_object_name": "Mrauk U",
-            "source_refs": [],
+            "source_refs": [
+              "src_000689"
+            ],
             "checked_at": "2026-09-29",
-            "source_refs_complete": false
-          }
+            "source_refs_complete": true
+          },
+          "geography": "Исторический город расположен среди невысоких холмов, водотоков и болотистой дельтовой равнины у подножия Араканских гор; природный рельеф был включён в систему укреплений.",
+          "history": "Мраук-У был столицей Араканского царства и одним из важных торговых центров Бенгальского залива; основной храмовый ансамбль сложился в XV–XVI веках.",
+          "architecture": "В пределах исторического города сохранилось около 200 буддийских памятников; часть храмов построена из тщательно обработанного камня и имеет укреплённый характер."
         }
       },
       {
@@ -6807,6 +6840,21 @@
         "forest",
         "fauna",
         "biogeography"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "UNESCO_MRAUK_U",
+      "canonical_id": "src_000689",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/tentativelists/824",
+      "kind": "international_organization",
+      "used_for": [
+        "Mrauk U",
+        "history",
+        "geography",
+        "architecture",
+        "culture"
       ],
       "accessed": "2026-09-29"
     }

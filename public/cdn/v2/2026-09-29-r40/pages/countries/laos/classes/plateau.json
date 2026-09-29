@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-29-r40",
+    "page_type": "country_class",
+    "id": "country-class:la:plateau"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "plateau",
+    "label_ru": "Плато и нагорья",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:relief_geology",
+    "page_path": "pages/countries/laos/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/plateau.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:geographic-area:bolaven-plateau",
+      "name": "Плато Болавен",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/geographic_area/bolaven-plateau.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:bolaven-plateau",
+      "name": "Bolaven Plateau",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:bolaven-plateau"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
+      "nearest_hub": "Pakse",
+      "narrow": "плато Болавен — приподнятое вулканическое плато к востоку от Паксе, известное более прохладным влажным климатом, водопадами и кофейными плантациями. Французское коммерческое кофейное наследие наложилось на земли Mon-кхмерский народов, включая Laven, Katu и Alak.",
+      "detail_path": "countries/laos/objects/bolaven-plateau.json"
+    }
+  ]
+}

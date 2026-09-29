@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-29-r40",
+    "page_type": "class_family",
+    "id": "country-family:kh:built_heritage"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "family_id": "built_heritage",
+    "label_ru": "Поселения и архитектурное наследие"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:kh",
+    "page_path": "pages/countries/cambodia.json"
+  },
+  "global_family_page": "pages/families/built_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "count": 2,
+  "classes": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1,
+      "global_page_path": "pages/classes/historic_city.json",
+      "country_page_path": "pages/countries/cambodia/classes/historic_city.json"
+    },
+    {
+      "object_type": "palace",
+      "label_ru": "Дворцы",
+      "count": 1,
+      "global_page_path": "pages/classes/palace.json",
+      "country_page_path": "pages/countries/cambodia/classes/palace.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:battambang-historic-shophouses",
+      "name": "Battambang historic shophouses",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:kh",
+        "kh:province:battambang"
+      ],
+      "region_legacy": "Баттамбанг",
+      "narrow": "Исторический центр Баттамбанга включает несколько слоёв: период тайских наследственных губернаторов, французскую модернизацию после 1907 года и архитектуру независимой Камбоджи 1950–1970-х годов. На центральных улицах сохранились торговые дома, виллы, банки, общественные здания и рынок ар-деко.",
+      "detail_path": "countries/cambodia/objects/battambang-historic-shophouses.json"
+    },
+    {
+      "id": "kh:royal-palace-phnom-penh",
+      "name": "Royal Palace Phnom Penh",
+      "object_type": "palace",
+      "geography_ids": [
+        "country:kh",
+        "kh:city:phnom-penh"
+      ],
+      "region_legacy": "Пномпень",
+      "narrow": "Королевский дворец формирует политический и церемониальный центр Пномпеня после переноса столицы из Удонга в XIX веке. Комплекс остаётся действующей королевской резиденцией, поэтому доступ зависит от государственных церемоний.",
+      "detail_path": "countries/cambodia/objects/royal-palace-phnom-penh.json"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-29-r40",
+    "page_type": "country_class",
+    "id": "country-class:kh:national_park"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "national_park",
+    "label_ru": "Национальные парки",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:protected_ecosystems",
+    "page_path": "pages/countries/cambodia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/national_park.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:geographic-area:phnom-kulen",
+      "name": "Пном-Кулен",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/cambodia/geographic_area/phnom-kulen.json"
+    },
+    {
+      "id": "kh:province:kampot",
+      "name": "Кампот",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/kampot.json"
+    },
+    {
+      "id": "kh:province:siem-reap",
+      "name": "Сиемреап",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/siem-reap.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:phnom-kulen-national-park",
+      "name": "Phnom Kulen National Park",
+      "geography_ids": [
+        "country:kh",
+        "kh:geographic-area:phnom-kulen",
+        "kh:province:siem-reap"
+      ],
+      "region_legacy": "Сиемреап / Ангкор",
+      "nearest_hub": "Сиемреап",
+      "narrow": "Пном-Кулен — песчаниковое плато к северо-востоку от Ангкора, где в начале IX века формировался Махендрапарвата и ранняя политико-религиозная программа Кхмерской империи.",
+      "detail_path": "countries/cambodia/objects/phnom-kulen-national-park.json"
+    },
+    {
+      "id": "kh:bokor-national-park-and-hill-station",
+      "name": "Bokor National Park and hill station",
+      "geography_ids": [
+        "country:kh",
+        "kh:province:kampot"
+      ],
+      "region_legacy": "Кампот / Бокор",
+      "nearest_hub": "Кампот",
+      "narrow": "Бокор сочетает влажный горный лес, колониальную горную станцию и современную курортную застройку. Поэтому распространённое описание «заброшенный город-призрак» сегодня неточно.",
+      "detail_path": "countries/cambodia/objects/bokor-national-park-and-hill-station.json"
+    }
+  ]
+}

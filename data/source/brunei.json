@@ -3,9 +3,9 @@
     "country": "Brunei Darussalam",
     "country_code": "BN",
     "language": "ru",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-30",
     "purpose": "Expedition South East",
-    "data_model_version": "1.5",
+    "data_model_version": "1.6",
     "dynamic_fields": [
       "visa",
       "visa_run",
@@ -25,7 +25,8 @@
       "QA 2026-09-28: медиаблоки исправлены в формат visual scouting: для каждого объекта оставлены только лучшие время/свет/погодные условия и конкретные точки/направления, откуда получаются сильные фото и видео; удалены ТЗ фотографу/оператору, техника, объективы, shot lists, production complexity, сценарные и монтажные указания.",
       "v1.4: добавлен человекочитаемый слой narrow: страна >=1000 знаков, маршрутные регионы >=500, локальные хабы >=250, каждая достопримечательность получила narrow и нормализованные tags; технические поля сохранены как маршрутные метаданные.",
       "v1.5: пользовательский слой очищен от русско-английской смеси; модель доступа переведена с пакетно-туристической на самостоятельную экспедиционную; физическая протяжённость, ступени и многодневность считаются параметрами маршрута, а не ограничениями; операторские ТЗ удалены.",
-      "2026-09-29 regional language normalization: all regional reference profiles use natural Russian prose; legacy linkage names remain unchanged where required for stable IDs and hierarchy matching."
+      "2026-09-29 regional language normalization: all regional reference profiles use natural Russian prose; legacy linkage names remain unchanged where required for stable IDs and hierarchy matching.",
+      "2026-09-30 country-layer pass: completed language, ethnography, culture and country-wide travel-rule fields with canonical source IDs; attraction-card payloads were not edited."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -82,11 +83,18 @@
         "name": "Bukit Pagon",
         "elevation_m": 1850
       },
-      "terrain": "Низменное побережье, холмистые и горные внутренние районы, влажные тропические леса; восточная часть Temburong более гористая и лесистая."
+      "terrain": "Низменное побережье, холмистые и горные внутренние районы, влажные тропические леса; восточная часть Temburong более гористая и лесистая.",
+      "source_ids": [
+        "AGC_ABOUT"
+      ]
     },
     "religion": {
       "official": "Islam",
-      "profile": "Ислам — официальная религия и доминирующая традиция; присутствуют буддисты, христиане и традиционные верования."
+      "profile": "Ислам — официальная религия и доминирующая традиция; присутствуют буддисты, христиане и традиционные верования.",
+      "source_ids": [
+        "RUS_MFA",
+        "AGC_ABOUT"
+      ]
     },
     "political_system": "Абсолютная наследственная монархия (султанат); султан является главой государства и правительства. Государственная идеология — Melayu Islam Beraja.",
     "economy": {
@@ -100,9 +108,41 @@
         "value_pct": null,
         "year": null,
         "notes": "На текущей странице Всемирного банка сопоставимый показатель отсутствует; не подменён национальной статистикой другого определения."
-      }
+      },
+      "source_ids": [
+        "WB"
+      ]
     },
-    "narrow": "Бруней-Даруссалам — небольшой султанат на северо-западе Борнео, где почти вся логика путешествия строится на резком соседстве трёх ландшафтов: компактной монархической столицы, нефтяного побережья и влажного тропического леса. Государство состоит из двух частей, разделённых территорией малайзийского Саравака, но мост через Тембуронг связал восточный анклав с основной частью страны без транзита через Малайзию. Исторически Бруней был крупным малайским султанатом, контролировавшим значительную часть прибрежного Борнео; в XIX–XX веках его территория сократилась, затем последовал британский протекторат, а полная независимость была получена в 1984 году. Современная идентичность государства опирается на монархию, ислам и малайскую культурную традицию, что особенно хорошо читается в архитектуре Бандар-Сери-Бегавана, придворной символике и правилах поведения в мечетях. Экономика сформирована нефтегазовой отраслью: Сериа и Белайт дают наглядный индустриальный слой, который полезно сопоставлять с официальной архитектурой столицы и с малонаселённым внутренним Борнео. Климат экваториальный, жаркий и влажный круглый год; сезонность проявляется прежде всего в количестве осадков, уровне рек и состоянии лесных троп. Для экспедиции Бруней удобен короткими расстояниями, английским языком в городской и туристической среде и низким уровнем уличной преступности, но общественный транспорт ограничен, поэтому маршруты часто завязаны на Dart, автомобиль, лодку и заранее организованные трансферы. Наиболее сильные сюжетные линии страны — водный город Кампонг-Айер, государственные мечети, нефтяное наследие Сериа, рынки и повседневная жизнь, мангры Бруней река и леса Тембуронг."
+    "narrow": "Бруней-Даруссалам — небольшой султанат на северо-западе Борнео, где почти вся логика путешествия строится на резком соседстве трёх ландшафтов: компактной монархической столицы, нефтяного побережья и влажного тропического леса. Государство состоит из двух частей, разделённых территорией малайзийского Саравака, но мост через Тембуронг связал восточный анклав с основной частью страны без транзита через Малайзию. Исторически Бруней был крупным малайским султанатом, контролировавшим значительную часть прибрежного Борнео; в XIX–XX веках его территория сократилась, затем последовал британский протекторат, а полная независимость была получена в 1984 году. Современная идентичность государства опирается на монархию, ислам и малайскую культурную традицию, что особенно хорошо читается в архитектуре Бандар-Сери-Бегавана, придворной символике и правилах поведения в мечетях. Экономика сформирована нефтегазовой отраслью: Сериа и Белайт дают наглядный индустриальный слой, который полезно сопоставлять с официальной архитектурой столицы и с малонаселённым внутренним Борнео. Климат экваториальный, жаркий и влажный круглый год; сезонность проявляется прежде всего в количестве осадков, уровне рек и состоянии лесных троп. Для экспедиции Бруней удобен короткими расстояниями, английским языком в городской и туристической среде и низким уровнем уличной преступности, но общественный транспорт ограничен, поэтому маршруты часто завязаны на Dart, автомобиль, лодку и заранее организованные трансферы. Наиболее сильные сюжетные линии страны — водный город Кампонг-Айер, государственные мечети, нефтяное наследие Сериа, рынки и повседневная жизнь, мангры Бруней река и леса Тембуронг.",
+    "languages": {
+      "official": "Малайский язык (Bahasa Melayu) — официальный язык Брунея.",
+      "practical": "Английский широко используется как второй язык в администрации, образовании, бизнесе и туристической среде; в повседневной речи распространён брунейский малайский.",
+      "diversity": "В стране также используются китайские языки и языки коренных групп Борнео.",
+      "source_ids": [
+        "BRUNEI_CONSTITUTION",
+        "AGC_ABOUT"
+      ]
+    },
+    "ethnography": {
+      "summary": "Бруней — многоэтничное государство. Перепись 2021 года выделяет Brunei Malays, Chinese и Others; внутри Brunei Malays официальная статистика различает семь групп: Brunei, Tutong, Kedayan, Dusun, Belait, Murut и Bisaya. В региональных справках эти группы привязываются к конкретным районам и поселениям, а не используются как единый фольклорный ярлык.",
+      "source_ids": [
+        "BRUNEI_CENSUS"
+      ]
+    },
+    "culture": {
+      "summary": "Государственная культурная рамка тесно связана с концепцией Melayu Islam Beraja. Официальная культурная политика отдельно поддерживает традиционные формы одежды, музыки, этикета и локального наследия; при этом в справочнике придворная культура, городская повседневность, традиции семи малайских групп и культуры иных общин рассматриваются раздельно.",
+      "source_ids": [
+        "KKBS_CULTURE"
+      ]
+    },
+    "history_source_ids": [
+      "RUS_MFA",
+      "AGC_ABOUT"
+    ],
+    "political_system_source_ids": [
+      "BRUNEI_CONSTITUTION",
+      "AGC_ABOUT"
+    ]
   },
   "nature": {
     "flora": [
@@ -197,7 +237,10 @@
       "crocodile habitat"
     ],
     "sensitive_areas": [
-      "government/military facilities — photography restrictions can apply"
+      "Государственные и военные объекты: на отдельных площадках могут действовать ограничения на фото- и видеосъёмку."
+    ],
+    "source_ids": [
+      "RUS_MFA"
     ]
   },
   "travel": {
@@ -279,7 +322,11 @@
         "notes": "Не считать гарантированным способом долгосрочного проживания."
       },
       "passport_validity": "проверять минимум 6 месяцев перед поездкой",
-      "official_source": "Brunei MFA / Russian MFA"
+      "official_source": "Brunei MFA / Russian MFA",
+      "source_ids": [
+        "MFA_BN",
+        "RUS_MFA"
+      ]
     },
     "airports": [
       {
@@ -299,7 +346,10 @@
         "Labu",
         "Ujong Jalan"
       ],
-      "transport": "Автомобиль/такси/автобусные и частные трансферы; Temburong Bridge связывает восточный анклав с основной частью страны без транзита через Малайзию."
+      "transport": "Автомобиль/такси/автобусные и частные трансферы; Temburong Bridge связывает восточный анклав с основной частью страны без транзита через Малайзию.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "currency": {
       "code": "BND",
@@ -307,7 +357,10 @@
       "local_currency_per_1_usd": 1.2769,
       "as_of": "2026-09-27",
       "rate_type": "market/reference snapshot",
-      "notes": "BND взаимозаменяем с SGD по номиналу в рамках Currency Interchangeability Arrangement; фактический наличный курс обменника отличается."
+      "notes": "BND взаимозаменяем с SGD по номиналу в рамках Currency Interchangeability Arrangement; фактический наличный курс обменника отличается.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "objects": [
       {
@@ -5342,6 +5395,51 @@
           "Berakas Forest Recreational Park"
         ]
       }
+    ],
+    "airports_source_ids": [
+      "RUS_MFA"
+    ],
+    "international_air_links_source_ids": [
+      "RUS_MFA"
+    ],
+    "transport_rules": {
+      "road_side": "left",
+      "foreign_licence": "Для краткой поездки не следует считать факт выдачи машины прокатчиком подтверждением законности управления. Перед поездкой нужно проверить у Департамента наземного транспорта признание конкретного национального удостоверения и международного водительского удостоверения для нужной категории транспорта.",
+      "note": "Принятие удостоверения прокатной компанией само по себе не подтверждает его юридическую действительность.",
+      "source_ids": [
+        "JPD_LICENSE"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "camping_rules": {
+      "status": "site_specific",
+      "summary": "Общее право на свободный кемпинг не предполагается. Для кемпинга и семейных мероприятий в государственных парках и рекреационных зонах JASTRe требует предварительное бронирование; для посещения лесных резерватов и отдельных территорий, включая Улу-Тембуронг, могут требоваться отдельные разрешения или пропуска Forestry Department.",
+      "source_ids": [
+        "JASTRE_CAMP",
+        "GOVBN_FOREST"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "drone_rules": {
+      "legal_status": "regulated",
+      "permit_required": true,
+      "summary": "Беспилотные воздушные суда регулируются Департаментом гражданской авиации Брунея. Ведомство публикует порядок регистрации и эксплуатационные требования; перед каждым полётом нужно отдельно проверять регистрацию, разрешение и ограничения конкретного воздушного пространства.",
+      "source_ids": [
+        "DCA_DRONE"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "tourist_permits": {
+      "status": "site_specific",
+      "summary": "Единого туристического разрешения для обычного перемещения по стране нет. Отдельные разрешения действуют для доступа в лесные резерваты, использования лесных рекреационных парков и посещения национального парка Улу-Тембуронг; приоритет имеют правила конкретной территории.",
+      "source_ids": [
+        "GOVBN_FOREST"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "laws_source_ids": [
+      "CUSTOMS_BN",
+      "RUS_MFA"
     ]
   },
   "sources": [
@@ -5354,7 +5452,8 @@
         "economy",
         "poverty"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000698"
     },
     {
       "id": "MFA_BN",
@@ -5364,7 +5463,8 @@
       "used_for": [
         "visa"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000699"
     },
     {
       "id": "CUSTOMS_BN",
@@ -5375,7 +5475,8 @@
         "alcohol_import",
         "customs"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000700"
     },
     {
       "id": "RUS_MFA",
@@ -5387,7 +5488,8 @@
         "safety",
         "country_profile"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000701"
     },
     {
       "id": "UNESCO",
@@ -5397,7 +5499,8 @@
       "used_for": [
         "heritage"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000702"
     },
     {
       "id": "CLIMATE",
@@ -5407,7 +5510,8 @@
       "used_for": [
         "air_temperature"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000703"
     },
     {
       "id": "SEA",
@@ -5417,7 +5521,8 @@
       "used_for": [
         "sea_temperature"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000704"
     },
     {
       "id": "WHO_SNAKEBITE",
@@ -5428,7 +5533,8 @@
         "venomous_snake_risk"
       ],
       "accessed": "2026-09-27",
-      "notes": "Региональный фон; не заменяет локальные данные."
+      "notes": "Региональный фон; не заменяет локальные данные.",
+      "canonical_id": "src_000705"
     },
     {
       "id": "IUCN_RED_LIST",
@@ -5438,7 +5544,111 @@
       "used_for": [
         "fauna_conservation_status"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000706"
+    },
+    {
+      "id": "BRUNEI_CONSTITUTION",
+      "publisher": "Attorney General's Chambers, Brunei Darussalam",
+      "url": "https://www.agc.gov.bn/documents/constitutional-matters-i-constitution-of-brunei-darussalam/",
+      "kind": "government",
+      "used_for": [
+        "official_language",
+        "political_system",
+        "country_profile"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000707"
+    },
+    {
+      "id": "BRUNEI_CENSUS",
+      "publisher": "Department of Economic Planning and Statistics, Ministry of Finance and Economy",
+      "url": "https://deps.mofe.gov.bn/wp-content/uploads/2025/11/RPT-2.pdf",
+      "kind": "government",
+      "used_for": [
+        "demography",
+        "ethnography",
+        "country_profile"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000708"
+    },
+    {
+      "id": "KKBS_CULTURE",
+      "publisher": "Ministry of Culture, Youth and Sports, Brunei Darussalam",
+      "url": "https://www.kkbs.gov.bn/bahagian-kebudayaan-dan-kesenian/",
+      "kind": "government",
+      "used_for": [
+        "culture",
+        "heritage",
+        "country_profile"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000709"
+    },
+    {
+      "id": "JPD_LICENSE",
+      "publisher": "Land Transport Department, Brunei Darussalam",
+      "url": "https://www.jpd.gov.bn/driving-licence/",
+      "kind": "government",
+      "used_for": [
+        "transport_rules",
+        "road_traffic_law"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000710"
+    },
+    {
+      "id": "JASTRE_CAMP",
+      "publisher": "Department of Environment, Parks and Recreation, Brunei Darussalam",
+      "url": "https://www.env.gov.bn/faq/",
+      "kind": "government",
+      "used_for": [
+        "camping_rules",
+        "protected_areas"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000711"
+    },
+    {
+      "id": "DCA_DRONE",
+      "publisher": "Department of Civil Aviation, Brunei Darussalam",
+      "url": "https://www.dca.gov.bn/dca-form-category/unmanned-aircraft/",
+      "kind": "government",
+      "used_for": [
+        "drone_rules",
+        "aviation_rules"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000712"
+    },
+    {
+      "id": "GOVBN_FOREST",
+      "publisher": "GOV.BN / Forestry Department",
+      "url": "https://www.gov.bn/services/Home.aspx",
+      "kind": "government",
+      "used_for": [
+        "permit",
+        "permits",
+        "protected_areas",
+        "camping_rules"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000713"
+    },
+    {
+      "id": "AGC_ABOUT",
+      "publisher": "Attorney General's Chambers, Brunei Darussalam",
+      "url": "https://www.agc.gov.bn/pages/aboutbrunei.aspx",
+      "kind": "government",
+      "used_for": [
+        "country_profile",
+        "geography",
+        "religion",
+        "languages"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000714"
     }
   ],
   "uncertainties": [

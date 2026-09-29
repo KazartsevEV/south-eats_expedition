@@ -30,13 +30,14 @@
       "v1.7 draft: object_elevation доведён до 30/31; протяжённые объекты используют range/highest_point, города и отдельные sites — representative/characteristic; DEM/GeoNames-производные значения помечены approximate. Bavanggazo оставлен null до надёжного site-level значения.",
       "v1.7 draft: legacy media.field_planning/shooting_recommendation/blog_angle и дублирующие best_light/best_formats удалены; визуальная разведка хранится только в visual_scouting без shot list и параметров съёмки.",
       "v1.7 coverage batch завершён: 37 объектов; дальнейшее расширение после импорта — обычным country/class QA циклом.",
-      "v1.7: traveler-report и lodging source_url продублированы только в provenance/source registry объекта; факты по-прежнему хранятся в traveler_reports/lodging, это не дублирование содержания."
+      "v1.7: traveler-report и lodging source_url продублированы только в provenance/source registry объекта; факты по-прежнему хранятся в traveler_reports/lodging, это не дублирование содержания.",
+      "v1.7 QA close: Gua Tambun elevation normalized to 72 m asl from ICOMOS thematic study; Bavanggazo elevation intentionally remains null because no reliable site-level absolute elevation was found in official/academic sources. Malaysia elevation QA is considered complete without invented DEM precision."
     ],
     "object_card_upgrade_progress": {
-      "schema_target": "1.7-draft",
+      "schema_target": "canonical-v2.10.10",
       "completed_objects": 37,
       "total_objects": 37,
-      "status": "draft_complete",
+      "status": "draft_complete_qa",
       "updated": "2026-09-29"
     },
     "editorial_profile": {
@@ -47,29 +48,29 @@
       "field_assumption": "путешественник имеет палатку и базовое походное снаряжение"
     },
     "geodata_upgrade_progress": {
-      "schema_target": "canonical-v2.10.8",
+      "schema_target": "canonical-v2.10.10",
       "objects_with_primary_coordinates": 37,
       "total_objects": 37,
       "status": "complete",
       "updated": "2026-09-29"
     },
     "visual_recon_upgrade_progress": {
-      "schema_target": "canonical-v2.10.8",
+      "schema_target": "canonical-v2.10.10",
       "objects_with_visual_recon": 37,
       "total_objects": 37,
       "status": "complete",
       "updated": "2026-09-29"
     },
     "elevation_upgrade_progress": {
-      "schema_target": "canonical-v2.10.8",
-      "objects_with_object_elevation": 35,
+      "schema_target": "canonical-v2.10.10",
+      "objects_with_numeric_object_elevation": 36,
       "total_objects": 37,
-      "unresolved_objects": [
-        "Kampung Bavanggazo / Rungus longhouse",
-        "Gua Tambun rock art"
+      "intentional_null_objects": [
+        "Kampung Bavanggazo / Rungus longhouse"
       ],
-      "status": "partial",
-      "updated": "2026-09-29"
+      "status": "complete",
+      "updated": "2026-09-29",
+      "note_ru": "Gua Tambun закрыт значением 72 м из ICOMOS. Для Bavanggazo site-level elevation не опубликована в проверенных источниках; null принят как корректный завершённый результат QA, а не как незакрытая задача."
     }
   },
   "overview": {
@@ -7104,7 +7105,7 @@
               "authority": "medium"
             },
             "object_elevation": null,
-            "elevation_note": "Надёжная абсолютная высота именно longhouse/деревни не найдена в текущем проходе; не подменять высотой Kudat или произвольной DEM-точкой."
+            "elevation_note": "Надёжная абсолютная высота именно longhouse/деревни не опубликована в проверенных официальных и академических источниках. Значение намеренно оставлено null; высотой Kudat, случайной DEM-точкой или высотой соседнего холма не подменяется."
           },
           "logistics": {
             "access": "Sabah Tourism: около 41 км южнее Kudat и около 98 км / 2.5 ч от Кота-Кинабалу.",
@@ -7285,6 +7286,16 @@
             ],
             "accessed": "2026-09-28",
             "notes": "Региональный языковой профиль собран для полевой практики и не является полной переписной таблицей."
+          },
+          {
+            "url": "https://journal-center.litpam.com/index.php/ijlic/article/download/2350/1538",
+            "publisher": "International Journal of Linguistics and Indigenous Culture",
+            "kind": "academic",
+            "used_for": [
+              "Rungus longhouse ethnography",
+              "Bavanggazo cultural context"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -7356,6 +7367,13 @@
           "public_transport": "До Kudat bus/minivan; дальше local transfer по предварительной договорённости.",
           "last_mile": "В самой деревне всё пешком; last-mile road drive.",
           "mobility_notes": "Внутри деревни всё проходится пешком; подъезд сельский, без необходимости специальной экспедиционной техники в обычную погоду."
+        },
+        "qa": {
+          "elevation_review": {
+            "status": "passed_with_null",
+            "checked_at": "2026-09-29",
+            "notes": "Проверены Sabah Tourism Board и академические материалы по Bavanggazo/Rungus; site-level absolute elevation не опубликована. Null соответствует правилу 'не выдумывать'."
+          }
         }
       },
       {
@@ -11655,8 +11673,25 @@
               ],
               "accessed": "2026-09-29"
             },
-            "object_elevation": null,
-            "elevation_note": "Надёжная абсолютная высота именно rock-art shelter не нормализована; не подменять высотой Ipoh."
+            "object_elevation": {
+              "representative_m": 72,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "academic",
+                "title": "Rock Art in Southeast Asia: A Thematic Study",
+                "publisher": "ICOMOS Open Archive",
+                "url": "https://openarchive.icomos.org/2086/2/Final-version_e-book_21052019-opt.pdf",
+                "authority": "high",
+                "accessed": "2026-09-29",
+                "notes": "В тематическом исследовании ICOMOS Gua Tambun описан как rock shelter на отметке 72 m asl; это абсолютная высота площадки, а не высота рисунков над полом."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Абсолютная высота rock-art shelter; не путать с положением отдельных изображений на стене."
+            },
+            "elevation_note": "ICOMOS приводит абсолютную отметку rock shelter 72 м над уровнем моря; высота отдельных панелей над полом хранится только в нарративе."
           },
           "logistics": {
             "access": "Подход со стороны Tambun Geopark/храма у Jalan Tambun, не через polo club.",
@@ -11827,6 +11862,16 @@
               "recurring practical issues"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://openarchive.icomos.org/2086/2/Final-version_e-book_21052019-opt.pdf",
+            "publisher": "ICOMOS Open Archive",
+            "kind": "academic",
+            "used_for": [
+              "site elevation",
+              "rock-art context"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "narrow": "Крупный комплекс доисторической наскальной живописи Малайского полуострова: сотни красно-оранжевых фигур на известняковом навесе над Kinta Valley.",
@@ -11848,6 +11893,13 @@
           "water": "брать в Tambun/Ipoh",
           "overnight_and_camping": "база Ipoh",
           "best_period": "утро/сухое окно"
+        },
+        "qa": {
+          "elevation_review": {
+            "status": "passed",
+            "checked_at": "2026-09-29",
+            "notes": "72 м взяты из ICOMOS thematic study; не из city-level DEM и не из пользовательского трека."
+          }
         }
       },
       {

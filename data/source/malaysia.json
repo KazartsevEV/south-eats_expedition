@@ -27,7 +27,8 @@
       "2026-09-29 locality migration: existing city/island research for Kuala Lumpur, George Town/Penang, Melaka City and Langkawi was copied into matching geo locality profiles; route hubs that are not equivalent to the destination remain linkage-only.",
       "2026-09-29 regional locality research chunk 1: KL/Klang Valley, Penang, Melaka, Langkawi, Perak/Belum and Perhentian/east coast enriched with local climate/flood, marine/tide-source status, health, crime-dataset scope, nature/geology and transport where supported.",
       "2026-09-29 regional locality research chunk 2: Sabah and Sarawak top-level geo regions enriched with climate/flood, marine/tide-source status, biodiversity, geology, health, crime-scope and transport from Sabah Parks, Sarawak Forestry, state tourism, METMalaysia, MOH, DID, DOSM and UNESCO.",
-      "2026-09-29 locality pass: exact child geo profiles added for Kuala Besut, Mulu, Sandakan and Semporna. Composite route hubs remain linkage-only instead of being misrepresented as single cities."
+      "2026-09-29 locality pass: exact child geo profiles added for Kuala Besut, Mulu, Sandakan and Semporna. Composite route hubs remain linkage-only instead of being misrepresented as single cities.",
+      "2026-09-29 ownership cleanup: national fauna/flora/dangerous-animal/poisonous-plant and generic crime/disease risk lists are retained in source as unlocalized legacy material but are no longer intended for country-level display; east-Sabah dynamic security context is attached to relevant geo regions."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -136,7 +137,23 @@
         "name": "Gloriosa superba",
         "risk": "токсично"
       }
-    ]
+    ],
+    "country_macro": {
+      "scope": "country_macro",
+      "ecosystems": [
+        "lowland tropical rainforest",
+        "mangrove and estuarine ecosystems",
+        "montane and cloud forest",
+        "island and marine ecosystems"
+      ],
+      "note": "Specific species, dangerous animals and poisonous plants must be attached to the relevant geo region/locality instead of being presented as uniformly present across Malaysia."
+    },
+    "legacy_unlocalized_status": {
+      "dangerous_animals": "retained_in_source_pending_local_assignment",
+      "poisonous_plants": "retained_in_source_pending_local_assignment",
+      "fauna": "retained_in_source_pending_local_assignment",
+      "flora": "retained_in_source_pending_local_assignment"
+    }
   },
   "climate": {
     "scope": "country_macro",
@@ -162,7 +179,11 @@
     ],
     "sensitive_areas": [
       "морская зона восточного Сабаха — перед поездкой проверять актуальные предупреждения"
-    ]
+    ],
+    "country_macro": {
+      "scope": "country_macro",
+      "note": "Crime, disease exposure, flood, marine and wildlife risk are spatially variable. Country level carries only the rule to consult geo-level profiles and current official advisories."
+    }
   },
   "travel": {
     "major_attractions": [
@@ -769,7 +790,14 @@
             "src_000594",
             "src_000615",
             "src_000596"
-          ]
+          ],
+          "security_advisory": {
+            "note": "Для восточного Sabah и морских маршрутов перед поездкой проверять актуальные государственные предупреждения безопасности; контекст меняется и не должен кэшироваться как постоянная оценка.",
+            "source_refs": [
+              "src_000588"
+            ],
+            "checked_at": "2026-09-29"
+          }
         },
         "local_reference_provenance": {
           "source_ids": [
@@ -788,7 +816,8 @@
             "src_000614",
             "src_000595",
             "src_000617",
-            "src_000594"
+            "src_000594",
+            "src_000588"
           ],
           "checked_at": "2026-09-29"
         }
@@ -1560,7 +1589,14 @@
             "src_000594",
             "src_000616",
             "src_000610"
-          ]
+          ],
+          "security_advisory": {
+            "note": "Для восточного Sabah и морских маршрутов перед поездкой проверять актуальные государственные предупреждения безопасности; контекст меняется и не должен кэшироваться как постоянная оценка.",
+            "source_refs": [
+              "src_000588"
+            ],
+            "checked_at": "2026-09-29"
+          }
         },
         "transport": {
           "gateway": "Semporna is the mainland gateway. Sabah Parks states Sipadan is about 45 minutes by speedboat in calm seas; Tun Sakaran is also reached by fast boat from Semporna.",
@@ -1588,7 +1624,8 @@
             "src_000606",
             "src_000595",
             "src_000617",
-            "src_000594"
+            "src_000594",
+            "src_000588"
           ],
           "checked_at": "2026-09-29"
         }
@@ -1764,7 +1801,14 @@
           },
           "source_refs": [
             "src_000594"
-          ]
+          ],
+          "security_advisory": {
+            "note": "Для восточного Sabah и морских маршрутов перед поездкой проверять актуальные государственные предупреждения безопасности; контекст меняется и не должен кэшироваться как постоянная оценка.",
+            "source_refs": [
+              "src_000588"
+            ],
+            "checked_at": "2026-09-29"
+          }
         },
         "transport": {
           "summary": "Sandakan functions as the principal urban gateway for Sepilok and Lower Kinabatangan; Turtle Islands use Sandakan as gateway for protected-island visits.",
@@ -1794,7 +1838,8 @@
             "src_000606",
             "src_000595",
             "src_000617",
-            "src_000594"
+            "src_000594",
+            "src_000588"
           ],
           "checked_at": "2026-09-29"
         }

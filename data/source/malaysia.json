@@ -3,7 +3,7 @@
     "country": "Malaysia",
     "country_code": "MY",
     "language": "ru",
-    "last_updated": "2026-09-29",
+    "last_updated": "2026-09-30",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -44,7 +44,8 @@
       "2026-09-29 language normalization: regional and locality reference prose rewritten into natural Russian; technical IDs and source metadata preserved, scientific Latin names retained where appropriate.",
       "2026-09-29 language normalization pass 2: locality prose cleaned of remaining English generic terms and mixed-language phrases; official brands/acronyms and source-product names retained where useful.",
       "2026-09-29 language normalization pass 3: fixed Russian case/government around official organization names and removed remaining English display values for police-district and tide-table fields.",
-      "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии."
+      "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии.",
+      "2026-09-30 country-layer pass: completed language, ethnography, culture, country narrow and country-wide transport/camping/drone/permit fields; attraction-card payloads were not edited."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -84,11 +85,17 @@
         "name": "Mount Kinabalu",
         "elevation_m": 4095
       },
-      "terrain": "Гористые лесистые хребты полуострова и Борнео, прибрежные низменности, крупные карстовые массивы."
+      "terrain": "Гористые лесистые хребты полуострова и Борнео, прибрежные низменности, крупные карстовые массивы.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "religion": {
       "official": "Ислам — религия Федерации по Конституции.",
-      "profile": "Мусульманское большинство; крупные буддийские, христианские, индуистские и китайские религиозные традиции."
+      "profile": "Мусульманское большинство; крупные буддийские, христианские, индуистские и китайские религиозные традиции.",
+      "source_ids": [
+        "MYGOV_RELIGION"
+      ]
     },
     "political_system": "Федеральная конституционная выборная монархия и парламентская система; Yang di-Pertuan Agong избирается на срок среди наследственных правителей штатов.",
     "economy": {
@@ -102,8 +109,39 @@
         "value_pct": 0,
         "year": 2021,
         "notes": "Последний отображаемый международно сопоставимый показатель; национальная относительная/абсолютная бедность рассчитывается иначе."
-      }
-    }
+      },
+      "source_ids": [
+        "WB"
+      ]
+    },
+    "languages": {
+      "official": "Малайский язык (Bahasa Melayu / Bahasa Malaysia) — официальный и национальный язык.",
+      "diversity": "Китайские языки, тамильский и многочисленные языки коренных народов Сабаха и Саравака сохраняют широкое региональное употребление; английский заметно используется в торговле, индустрии и туристической среде.",
+      "source_ids": [
+        "MYGOV_LANGUAGE"
+      ]
+    },
+    "ethnography": {
+      "summary": "Малайзия многоэтнична. Текущая статистика DOSM различает малайцев и другие bumiputera, китайцев, индийцев, других граждан и неграждан; в Восточной Малайзии эта агрегированная схема скрывает десятки коренных групп. Поэтому региональный слой отдельно ведёт Kelabit, Rungus, Bajau/Sama, Orang Ulu, Jahai и другие общины там, где они связаны с конкретной местностью.",
+      "source_ids": [
+        "DOSM_2026",
+        "HERITAGE_MY"
+      ]
+    },
+    "culture": {
+      "summary": "Культурный ландшафт складывается из малайских, китайских, индийских и многочисленных коренных традиций полуострова, Сабаха и Саравака. Национальный реестр наследия охватывает исполнительские искусства, языковую и письменную традицию, ремёсла, обычаи, кухню и верования; региональные карточки должны сохранять локальную принадлежность этих практик.",
+      "source_ids": [
+        "HERITAGE_MY"
+      ]
+    },
+    "narrow": "Малайзия состоит из двух резко различающихся частей: полуостровной страны на Малаккском проливе и северного Борнео, разделённых Южно-Китайским морем. Исторически её пространство связывают торговые султанаты, Малакка, португальский, голландский и британский колониальные слои, миграции китайских и индийских общин и образование федерации в XX веке. Современная страна федеральна и культурно неоднородна: малайский служит общегосударственным языком, ислам имеет конституционный статус религии Федерации, но повседневная среда включает китайские языки, тамильский, английский и множество языков коренных народов Сабаха и Саравака. Для экспедиции особенно важно не смешивать Куала-Лумпур и долину Кланг, Пенанг, Малакку, Перак, Лангкави, восточное побережье полуострова, высокогорья Сабаха, восточный Сабах, Кучинг и Ниа, внутренний Саравак, Мулу, Барио и север Сабаха: климат, рельеф, этнография и режим доступа там различаются сильнее, чем кажется по масштабу страны. Природный слой даёт известняковый карст, старые тропические леса, гору Кинабалу, пещерные системы, реки, островные рифы и богатую фауну Борнео. Самостоятельное путешествие обычно возможно, но разрешения и проводники становятся объективно значимыми в отдельных лесных резерватах, национальных парках, на регулируемых вершинах, при экспедициях в Саравак и на охраняемых морских объектах. Поэтому country-layer задаёт только общую рамку, а реальные правила доступа спускаются на штат, парк и конкретный объект.",
+    "history_source_ids": [
+      "RUS_MFA",
+      "UNESCO"
+    ],
+    "political_system_source_ids": [
+      "RUS_MFA"
+    ]
   },
   "nature": {
     "flora": [
@@ -199,7 +237,10 @@
     "country_macro": {
       "scope": "country_macro",
       "note": "Crime, disease exposure, flood, marine and wildlife risk are spatially variable. Country level carries only the rule to consult geo-level profiles and current official advisories."
-    }
+    },
+    "source_ids": [
+      "RUS_MFA"
+    ]
   },
   "travel": {
     "major_attractions": [
@@ -299,7 +340,11 @@
         "limits": "Официального права на бесконечные последовательные визараны нет; серия коротких повторных въездов может вызвать дополнительные вопросы."
       },
       "passport_validity": "обычно требуется не менее 6 месяцев действия паспорта",
-      "official_source": "Malaysian Immigration / Russian MFA"
+      "official_source": "Malaysian Immigration / Russian MFA",
+      "source_ids": [
+        "IMM",
+        "RUS_MFA"
+      ]
     },
     "airports": [
       {
@@ -331,7 +376,10 @@
         "Indonesia",
         "Brunei"
       ],
-      "transport": "Поезда и автобусы к границе Таиланда; автомобильные переходы и железнодорожный шаттл через Джохор—Сингапур; разветвлённые автодорожные переходы на Борнео с Брунеем и Индонезией."
+      "transport": "Поезда и автобусы к границе Таиланда; автомобильные переходы и железнодорожный шаттл через Джохор—Сингапур; разветвлённые автодорожные переходы на Борнео с Брунеем и Индонезией.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "currency": {
       "code": "MYR",
@@ -339,7 +387,10 @@
       "local_currency_per_1_usd": 4.0741,
       "as_of": "2026-09-27",
       "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-      "rate_type": "рыночный/справочный снимок"
+      "rate_type": "рыночный/справочный снимок",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "regions": [
       {
@@ -10450,6 +10501,49 @@
         },
         "name_ru": "Сепилок"
       }
+    ],
+    "airports_source_ids": [
+      "RUS_MFA"
+    ],
+    "international_air_links_source_ids": [
+      "RUS_MFA"
+    ],
+    "transport_rules": {
+      "road_side": "left",
+      "status": "foreign_licence_requires_document_verification",
+      "summary": "Road transport is regulated federally and by JPJ. The country layer does not infer that a rental company's acceptance equals legal recognition of a foreign licence; a short-term visitor should verify the current JPJ rule for the exact national licence/IDP and vehicle class before driving.",
+      "source_ids": [
+        "MOT_LICENSE"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "camping_rules": {
+      "status": "site_specific_and_state_specific",
+      "summary": "There is no blanket free-camping rule for the federation. Permanent Forest Reserves require entry permission for recreational activities including camping, and national/state parks use their own booking and campsite regimes. Treat camping as permitted only where the relevant state/park authority allows it.",
+      "source_ids": [
+        "FORESTRY_MY"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "drone_rules": {
+      "legal_status": "regulated",
+      "permit_required": true,
+      "summary": "CAAM regulates UAS operations. The authority requires authorization and states that applications with supporting documents should be submitted at least 14 working days before the intended flight; airspace, aerodrome zones, height and operation type impose additional restrictions.",
+      "source_ids": [
+        "CAAM_UAS"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "tourist_permits": {
+      "status": "site_specific_and_state_specific",
+      "summary": "There is no single national tourist permit for ordinary travel. Forest reserves, national/state parks, expeditions and some protected areas require permits or bookings from the relevant federal/state authority; Sarawak and Sabah may have separate regimes.",
+      "source_ids": [
+        "FORESTRY_MY"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "laws_source_ids": [
+      "RUS_MFA"
     ]
   },
   "sources": [
@@ -11478,6 +11572,97 @@
         "semporna"
       ],
       "accessed": "2026-09-29"
+    },
+    {
+      "id": "DOSM_2026",
+      "publisher": "Department of Statistics Malaysia",
+      "url": "https://www.dosm.gov.my/portal-main/release-content/current-population-estimates-2026",
+      "kind": "government",
+      "used_for": [
+        "demography",
+        "ethnography",
+        "country_profile"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000734"
+    },
+    {
+      "id": "MYGOV_LANGUAGE",
+      "publisher": "Government of Malaysia / Jabatan Penerangan Malaysia",
+      "url": "https://www.malaysia.gov.my/en/government/kenali-malaysia/bahasa-rasmi",
+      "kind": "government",
+      "used_for": [
+        "official_language",
+        "languages",
+        "country_profile"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000735"
+    },
+    {
+      "id": "MYGOV_RELIGION",
+      "publisher": "Government of Malaysia / Jabatan Penerangan Malaysia",
+      "url": "https://www.malaysia.gov.my/en/government/kenali-malaysia/agama-rasmi",
+      "kind": "government",
+      "used_for": [
+        "religion",
+        "state_religion",
+        "country_profile"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000736"
+    },
+    {
+      "id": "HERITAGE_MY",
+      "publisher": "Department of National Heritage Malaysia",
+      "url": "https://www.heritage.gov.my/en/home.html",
+      "kind": "government",
+      "used_for": [
+        "culture",
+        "heritage",
+        "ethnography",
+        "country_profile"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000737"
+    },
+    {
+      "id": "CAAM_UAS",
+      "publisher": "Civil Aviation Authority of Malaysia",
+      "url": "https://www.caam.gov.my/resources/aviation-professional/unmanned-aircraft-system-uas/",
+      "kind": "government",
+      "used_for": [
+        "drone_rules",
+        "aviation_rules"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000738"
+    },
+    {
+      "id": "FORESTRY_MY",
+      "publisher": "Forestry Department Peninsular Malaysia",
+      "url": "https://www.forestry.gov.my/en/soalan-lazim",
+      "kind": "government",
+      "used_for": [
+        "camping_rules",
+        "protected_areas",
+        "permit",
+        "permits"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000739"
+    },
+    {
+      "id": "MOT_LICENSE",
+      "publisher": "Ministry of Transport Malaysia",
+      "url": "https://www.mot.gov.my/en/land/operators/driving-licenses",
+      "kind": "government",
+      "used_for": [
+        "transport_rules",
+        "road_traffic_law"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000740"
     }
   ],
   "uncertainties": [

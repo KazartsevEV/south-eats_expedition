@@ -1136,7 +1136,17 @@ def build():
             "cuisine": (travel.get("food") or {}).get("budget_food_summary"),
             "street_food": (travel.get("food") or {}).get("street_food"),
             "festivals": travel.get("festivals"),
-            "nature": ((source.get("nature") or {}).get("country_macro") if code == "MY" else source.get("nature")),
+            "nature": (
+                {
+                    **((source.get("nature") or {}).get("country_macro") or {}),
+                    "flora": (source.get("nature") or {}).get("flora"),
+                    "fauna": (source.get("nature") or {}).get("fauna"),
+                    "dangerous_animals": (source.get("nature") or {}).get("dangerous_animals"),
+                    "poisonous_plants": (source.get("nature") or {}).get("poisonous_plants"),
+                }
+                if code == "MY"
+                else source.get("nature")
+            ),
             "natural_risks": ((source.get("safety") or {}).get("country_macro") if code == "MY" else (source.get("safety") or {}).get("common_traveler_risks")),
             "summary": overview.get("summary"),
             "narrow": overview.get("narrow"),

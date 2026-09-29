@@ -1,0 +1,831 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "TH",
+    "country_slug": "thailand",
+    "status": "regional_geography_formalized",
+    "checked_at": "2026-09-30",
+    "next_level": "regional_qa_before_object_cards",
+    "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes."
+  },
+  "sources": [
+    {
+      "publisher": "Government of Thailand",
+      "url": "https://thailand.go.th/page/thai-politic",
+      "used_for": [
+        "76-province administrative system and Bangkok special local government"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    {
+      "publisher": "Expedition South East Drive draft",
+      "used_for": [
+        "expedition regional nodes"
+      ],
+      "checked_at": "2026-09-30"
+    }
+  ],
+  "rules": {
+    "parentage": "Administrative units use verified current parentage. Composite expedition regions remain geographic_area when they span several administrative units or preserve legacy research geography.",
+    "route_hubs": "Cities and towns are geo entities only; they are not attraction cards.",
+    "object_visibility": "Object cards remain deferred for the second-chunk countries during this phase.",
+    "cards": "Object card payloads are not edited in this stage."
+  },
+  "nodes": [
+    {
+      "id": "th:geographic_area:north",
+      "canonical_id": "geo_th_0001",
+      "kind": "geographic_area",
+      "name_ru": "Северный Таиланд",
+      "name_local": "Northern Thailand",
+      "slug": "north",
+      "parent_id": "country:th",
+      "axis": "physical_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "th:geographic_area:northeast",
+      "canonical_id": "geo_th_0002",
+      "kind": "geographic_area",
+      "name_ru": "Северо-восток / Исан",
+      "name_local": "Northeastern Thailand / Isan",
+      "slug": "northeast",
+      "parent_id": "country:th",
+      "axis": "physical_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "th:geographic_area:central",
+      "canonical_id": "geo_th_0003",
+      "kind": "geographic_area",
+      "name_ru": "Центральный Таиланд",
+      "name_local": "Central Thailand",
+      "slug": "central",
+      "parent_id": "country:th",
+      "axis": "physical_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "th:geographic_area:east",
+      "canonical_id": "geo_th_0004",
+      "kind": "geographic_area",
+      "name_ru": "Восточный Таиланд",
+      "name_local": "Eastern Thailand",
+      "slug": "east",
+      "parent_id": "country:th",
+      "axis": "physical_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "th:geographic_area:west",
+      "canonical_id": "geo_th_0005",
+      "kind": "geographic_area",
+      "name_ru": "Западный Таиланд",
+      "name_local": "Western Thailand",
+      "slug": "west",
+      "parent_id": "country:th",
+      "axis": "physical_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "th:geographic_area:south",
+      "canonical_id": "geo_th_0006",
+      "kind": "geographic_area",
+      "name_ru": "Южный Таиланд",
+      "name_local": "Southern Thailand",
+      "slug": "south",
+      "parent_id": "country:th",
+      "axis": "physical_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "th:city:bangkok",
+      "canonical_id": "geo_th_0007",
+      "kind": "city",
+      "name_ru": "Бангкок",
+      "name_local": "Bangkok",
+      "slug": "bangkok",
+      "parent_id": "country:th",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Бангкок — особая административная территория и отдельная форма местного управления, не обычная провинция."
+    },
+    {
+      "id": "th:province:phra-nakhon-si-ayutthaya",
+      "canonical_id": "geo_th_0008",
+      "kind": "province",
+      "name_ru": "Аюттхая",
+      "name_local": "Phra Nakhon Si Ayutthaya",
+      "slug": "phra-nakhon-si-ayutthaya",
+      "parent_id": "th:geographic_area:central",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:sukhothai",
+      "canonical_id": "geo_th_0009",
+      "kind": "province",
+      "name_ru": "Сукхотхай",
+      "name_local": "Sukhothai",
+      "slug": "sukhothai",
+      "parent_id": "th:geographic_area:north",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:chiang-mai",
+      "canonical_id": "geo_th_0010",
+      "kind": "province",
+      "name_ru": "Чиангмай",
+      "name_local": "Chiang Mai",
+      "slug": "chiang-mai",
+      "parent_id": "th:geographic_area:north",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:nan",
+      "canonical_id": "geo_th_0011",
+      "kind": "province",
+      "name_ru": "Нан",
+      "name_local": "Nan",
+      "slug": "nan",
+      "parent_id": "th:geographic_area:north",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:phrae",
+      "canonical_id": "geo_th_0012",
+      "kind": "province",
+      "name_ru": "Пхрэ",
+      "name_local": "Phrae",
+      "slug": "phrae",
+      "parent_id": "th:geographic_area:north",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:phuket",
+      "canonical_id": "geo_th_0013",
+      "kind": "province",
+      "name_ru": "Пхукет",
+      "name_local": "Phuket",
+      "slug": "phuket",
+      "parent_id": "th:geographic_area:south",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:krabi",
+      "canonical_id": "geo_th_0014",
+      "kind": "province",
+      "name_ru": "Краби",
+      "name_local": "Krabi",
+      "slug": "krabi",
+      "parent_id": "th:geographic_area:south",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:surat-thani",
+      "canonical_id": "geo_th_0015",
+      "kind": "province",
+      "name_ru": "Сураттхани",
+      "name_local": "Surat Thani",
+      "slug": "surat-thani",
+      "parent_id": "th:geographic_area:south",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:songkhla",
+      "canonical_id": "geo_th_0016",
+      "kind": "province",
+      "name_ru": "Сонгкхла",
+      "name_local": "Songkhla",
+      "slug": "songkhla",
+      "parent_id": "th:geographic_area:south",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:buriram",
+      "canonical_id": "geo_th_0017",
+      "kind": "province",
+      "name_ru": "Бурирам",
+      "name_local": "Buriram",
+      "slug": "buriram",
+      "parent_id": "th:geographic_area:northeast",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:nakhon-ratchasima",
+      "canonical_id": "geo_th_0018",
+      "kind": "province",
+      "name_ru": "Накхонратчасима",
+      "name_local": "Nakhon Ratchasima",
+      "slug": "nakhon-ratchasima",
+      "parent_id": "th:geographic_area:northeast",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:kanchanaburi",
+      "canonical_id": "geo_th_0019",
+      "kind": "province",
+      "name_ru": "Канчанабури",
+      "name_local": "Kanchanaburi",
+      "slug": "kanchanaburi",
+      "parent_id": "th:geographic_area:west",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:loei",
+      "canonical_id": "geo_th_0020",
+      "kind": "province",
+      "name_ru": "Лёй",
+      "name_local": "Loei",
+      "slug": "loei",
+      "parent_id": "th:geographic_area:northeast",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:ubon-ratchathani",
+      "canonical_id": "geo_th_0021",
+      "kind": "province",
+      "name_ru": "Убонратчатхани",
+      "name_local": "Ubon Ratchathani",
+      "slug": "ubon-ratchathani",
+      "parent_id": "th:geographic_area:northeast",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:satun",
+      "canonical_id": "geo_th_0022",
+      "kind": "province",
+      "name_ru": "Сатун",
+      "name_local": "Satun",
+      "slug": "satun",
+      "parent_id": "th:geographic_area:south",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:mae-hong-son",
+      "canonical_id": "geo_th_0023",
+      "kind": "province",
+      "name_ru": "Мэхонгсон",
+      "name_local": "Mae Hong Son",
+      "slug": "mae-hong-son",
+      "parent_id": "th:geographic_area:north",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:chiang-rai",
+      "canonical_id": "geo_th_0024",
+      "kind": "province",
+      "name_ru": "Чианграй",
+      "name_local": "Chiang Rai",
+      "slug": "chiang-rai",
+      "parent_id": "th:geographic_area:north",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:province:prachuap-khiri-khan",
+      "canonical_id": "geo_th_0025",
+      "kind": "province",
+      "name_ru": "Прачуапкхирикхан",
+      "name_local": "Prachuap Khiri Khan",
+      "slug": "prachuap-khiri-khan",
+      "parent_id": "th:geographic_area:central",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "th:geographic_area:bangkok-expedition",
+      "canonical_id": "geo_th_0026",
+      "kind": "geographic_area",
+      "name_ru": "Бангкок",
+      "name_local": "Bangkok",
+      "slug": "bangkok-expedition",
+      "parent_id": "th:city:bangkok",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Bangkok"
+      ]
+    },
+    {
+      "id": "th:geographic_area:central-plains-ayutthaya",
+      "canonical_id": "geo_th_0027",
+      "kind": "geographic_area",
+      "name_ru": "Центральная равнина / Аюттхая",
+      "name_local": "Central plains / Ayutthaya",
+      "slug": "central-plains-ayutthaya",
+      "parent_id": "th:province:phra-nakhon-si-ayutthaya",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Central plains / Ayutthaya"
+      ]
+    },
+    {
+      "id": "th:geographic_area:lower-north-sukhothai",
+      "canonical_id": "geo_th_0028",
+      "kind": "geographic_area",
+      "name_ru": "Нижний Север / Сукхотхай",
+      "name_local": "Lower North / Sukhothai",
+      "slug": "lower-north-sukhothai",
+      "parent_id": "th:province:sukhothai",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Lower North / Sukhothai"
+      ]
+    },
+    {
+      "id": "th:geographic_area:northern-thailand-chiang-mai",
+      "canonical_id": "geo_th_0029",
+      "kind": "geographic_area",
+      "name_ru": "Северный Таиланд / Чиангмай",
+      "name_local": "Northern Thailand / Chiang Mai",
+      "slug": "northern-thailand-chiang-mai",
+      "parent_id": "th:province:chiang-mai",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Northern Thailand / Chiang Mai"
+      ]
+    },
+    {
+      "id": "th:geographic_area:nan-phrae",
+      "canonical_id": "geo_th_0030",
+      "kind": "geographic_area",
+      "name_ru": "Нан / Пхрэ",
+      "name_local": "Nan / Phrae",
+      "slug": "nan-phrae",
+      "parent_id": "th:geographic_area:north",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Nan / Phrae"
+      ]
+    },
+    {
+      "id": "th:geographic_area:andaman-phuket-krabi",
+      "canonical_id": "geo_th_0031",
+      "kind": "geographic_area",
+      "name_ru": "Андаманское побережье / Пхукет / Краби",
+      "name_local": "Andaman / Phuket / Krabi",
+      "slug": "andaman-phuket-krabi",
+      "parent_id": "th:geographic_area:south",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Andaman / Phuket / Krabi"
+      ]
+    },
+    {
+      "id": "th:geographic_area:khao-sok-surat-thani",
+      "canonical_id": "geo_th_0032",
+      "kind": "geographic_area",
+      "name_ru": "Као-Сок / Сураттхани",
+      "name_local": "Khao Sok / Surat Thani",
+      "slug": "khao-sok-surat-thani",
+      "parent_id": "th:province:surat-thani",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Khao Sok / Surat Thani"
+      ]
+    },
+    {
+      "id": "th:geographic_area:songkhla-expedition",
+      "canonical_id": "geo_th_0033",
+      "kind": "geographic_area",
+      "name_ru": "Сонгкхла",
+      "name_local": "Songkhla",
+      "slug": "songkhla-expedition",
+      "parent_id": "th:province:songkhla",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Songkhla"
+      ]
+    },
+    {
+      "id": "th:geographic_area:lower-isan-buriram-korat",
+      "canonical_id": "geo_th_0034",
+      "kind": "geographic_area",
+      "name_ru": "Нижний Исан / Бурирам / Корат",
+      "name_local": "Lower Isan / Buriram / Nakhon Ratchasima",
+      "slug": "lower-isan-buriram-korat",
+      "parent_id": "th:geographic_area:northeast",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Lower Isan / Buriram / Nakhon Ratchasima"
+      ]
+    },
+    {
+      "id": "th:geographic_area:khao-yai-korat-edge",
+      "canonical_id": "geo_th_0035",
+      "kind": "geographic_area",
+      "name_ru": "Као-Яй / окраина Кората",
+      "name_local": "Khao Yai / Korat edge",
+      "slug": "khao-yai-korat-edge",
+      "parent_id": "th:province:nakhon-ratchasima",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Khao Yai / Korat edge"
+      ]
+    },
+    {
+      "id": "th:geographic_area:kanchanaburi-erawan",
+      "canonical_id": "geo_th_0036",
+      "kind": "geographic_area",
+      "name_ru": "Канчанабури / Эраван",
+      "name_local": "Kanchanaburi / Erawan",
+      "slug": "kanchanaburi-erawan",
+      "parent_id": "th:province:kanchanaburi",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Kanchanaburi / Erawan"
+      ]
+    },
+    {
+      "id": "th:geographic_area:loei-phu-kradueng",
+      "canonical_id": "geo_th_0037",
+      "kind": "geographic_area",
+      "name_ru": "Лёй / Пху-Краденг",
+      "name_local": "Loei / Phu Kradueng",
+      "slug": "loei-phu-kradueng",
+      "parent_id": "th:province:loei",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Loei / Phu Kradueng"
+      ]
+    },
+    {
+      "id": "th:geographic_area:ubon-mekong-pha-taem",
+      "canonical_id": "geo_th_0038",
+      "kind": "geographic_area",
+      "name_ru": "Убон / Меконг / Пха-Таем",
+      "name_local": "Ubon / Mekong / Pha Taem",
+      "slug": "ubon-mekong-pha-taem",
+      "parent_id": "th:province:ubon-ratchathani",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Ubon / Mekong / Pha Taem"
+      ]
+    },
+    {
+      "id": "th:geographic_area:satun-ko-tarutao",
+      "canonical_id": "geo_th_0039",
+      "kind": "geographic_area",
+      "name_ru": "Сатун / Ко-Тарутао",
+      "name_local": "Satun / Ko Tarutao",
+      "slug": "satun-ko-tarutao",
+      "parent_id": "th:province:satun",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Satun / Ko Tarutao"
+      ]
+    },
+    {
+      "id": "th:geographic_area:mae-hong-son-pang-mapha",
+      "canonical_id": "geo_th_0040",
+      "kind": "geographic_area",
+      "name_ru": "Мэхонгсон / Панг-Мапха",
+      "name_local": "Mae Hong Son / Pang Mapha",
+      "slug": "mae-hong-son-pang-mapha",
+      "parent_id": "th:province:mae-hong-son",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Mae Hong Son / Pang Mapha"
+      ]
+    },
+    {
+      "id": "th:geographic_area:chiang-rai-far-north",
+      "canonical_id": "geo_th_0041",
+      "kind": "geographic_area",
+      "name_ru": "Чианграй / дальний север",
+      "name_local": "Chiang Rai / far north",
+      "slug": "chiang-rai-far-north",
+      "parent_id": "th:province:chiang-rai",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Chiang Rai / far north"
+      ]
+    },
+    {
+      "id": "th:geographic_area:prachuap-upper-gulf",
+      "canonical_id": "geo_th_0042",
+      "kind": "geographic_area",
+      "name_ru": "Прачуапкхирикхан / верхняя часть залива",
+      "name_local": "Prachuap Khiri Khan / upper Gulf",
+      "slug": "prachuap-upper-gulf",
+      "parent_id": "th:province:prachuap-khiri-khan",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Prachuap Khiri Khan / upper Gulf"
+      ]
+    },
+    {
+      "id": "th:city:ayutthaya-city",
+      "canonical_id": "geo_th_0043",
+      "kind": "city",
+      "name_ru": "Аюттхая",
+      "name_local": "Ayutthaya",
+      "slug": "ayutthaya-city",
+      "parent_id": "th:province:phra-nakhon-si-ayutthaya",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Ayutthaya"
+      ]
+    },
+    {
+      "id": "th:city:sukhothai-city",
+      "canonical_id": "geo_th_0044",
+      "kind": "city",
+      "name_ru": "Сукхотхай",
+      "name_local": "Sukhothai",
+      "slug": "sukhothai-city",
+      "parent_id": "th:province:sukhothai",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Sukhothai"
+      ]
+    },
+    {
+      "id": "th:city:chiang-mai-city",
+      "canonical_id": "geo_th_0045",
+      "kind": "city",
+      "name_ru": "Чиангмай",
+      "name_local": "Chiang Mai",
+      "slug": "chiang-mai-city",
+      "parent_id": "th:province:chiang-mai",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Chiang Mai"
+      ]
+    },
+    {
+      "id": "th:town:nan-city",
+      "canonical_id": "geo_th_0046",
+      "kind": "town",
+      "name_ru": "Нан",
+      "name_local": "Nan",
+      "slug": "nan-city",
+      "parent_id": "th:province:nan",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Nan"
+      ]
+    },
+    {
+      "id": "th:town:phrae-city",
+      "canonical_id": "geo_th_0047",
+      "kind": "town",
+      "name_ru": "Пхрэ",
+      "name_local": "Phrae",
+      "slug": "phrae-city",
+      "parent_id": "th:province:phrae",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Phrae"
+      ]
+    },
+    {
+      "id": "th:city:phuket-city",
+      "canonical_id": "geo_th_0048",
+      "kind": "city",
+      "name_ru": "Пхукет",
+      "name_local": "Phuket City",
+      "slug": "phuket-city",
+      "parent_id": "th:province:phuket",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Phuket City"
+      ]
+    },
+    {
+      "id": "th:town:krabi-town",
+      "canonical_id": "geo_th_0049",
+      "kind": "town",
+      "name_ru": "Краби",
+      "name_local": "Krabi",
+      "slug": "krabi-town",
+      "parent_id": "th:province:krabi",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Krabi"
+      ]
+    },
+    {
+      "id": "th:city:surat-thani-city",
+      "canonical_id": "geo_th_0050",
+      "kind": "city",
+      "name_ru": "Сураттхани",
+      "name_local": "Surat Thani",
+      "slug": "surat-thani-city",
+      "parent_id": "th:province:surat-thani",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Surat Thani"
+      ]
+    },
+    {
+      "id": "th:city:hat-yai",
+      "canonical_id": "geo_th_0051",
+      "kind": "city",
+      "name_ru": "Хатъяй",
+      "name_local": "Hat Yai",
+      "slug": "hat-yai",
+      "parent_id": "th:province:songkhla",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Hat Yai"
+      ]
+    },
+    {
+      "id": "th:city:nakhon-ratchasima-city",
+      "canonical_id": "geo_th_0052",
+      "kind": "city",
+      "name_ru": "Накхонратчасима",
+      "name_local": "Nakhon Ratchasima",
+      "slug": "nakhon-ratchasima-city",
+      "parent_id": "th:province:nakhon-ratchasima",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Nakhon Ratchasima"
+      ]
+    },
+    {
+      "id": "th:city:kanchanaburi-city",
+      "canonical_id": "geo_th_0053",
+      "kind": "city",
+      "name_ru": "Канчанабури",
+      "name_local": "Kanchanaburi",
+      "slug": "kanchanaburi-city",
+      "parent_id": "th:province:kanchanaburi",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Kanchanaburi"
+      ]
+    },
+    {
+      "id": "th:town:loei-city",
+      "canonical_id": "geo_th_0054",
+      "kind": "town",
+      "name_ru": "Лёй",
+      "name_local": "Loei",
+      "slug": "loei-city",
+      "parent_id": "th:province:loei",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Loei"
+      ]
+    },
+    {
+      "id": "th:city:ubon-ratchathani-city",
+      "canonical_id": "geo_th_0055",
+      "kind": "city",
+      "name_ru": "Убонратчатхани",
+      "name_local": "Ubon Ratchathani",
+      "slug": "ubon-ratchathani-city",
+      "parent_id": "th:province:ubon-ratchathani",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Ubon Ratchathani"
+      ]
+    },
+    {
+      "id": "th:town:mae-hong-son-town",
+      "canonical_id": "geo_th_0056",
+      "kind": "town",
+      "name_ru": "Мэхонгсон",
+      "name_local": "Mae Hong Son",
+      "slug": "mae-hong-son-town",
+      "parent_id": "th:province:mae-hong-son",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Mae Hong Son"
+      ]
+    },
+    {
+      "id": "th:city:chiang-rai-city",
+      "canonical_id": "geo_th_0057",
+      "kind": "city",
+      "name_ru": "Чианграй",
+      "name_local": "Chiang Rai",
+      "slug": "chiang-rai-city",
+      "parent_id": "th:province:chiang-rai",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Chiang Rai"
+      ]
+    },
+    {
+      "id": "th:town:hua-hin",
+      "canonical_id": "geo_th_0058",
+      "kind": "town",
+      "name_ru": "Хуахин",
+      "name_local": "Hua Hin",
+      "slug": "hua-hin",
+      "parent_id": "th:province:prachuap-khiri-khan",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Hua Hin"
+      ]
+    }
+  ]
+}

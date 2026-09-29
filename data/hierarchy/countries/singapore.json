@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "status": "regional_geography_formalized",
+    "checked_at": "2026-09-30",
+    "next_level": "regional_qa_before_object_cards",
+    "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes."
+  },
+  "sources": [
+    {
+      "publisher": "Singapore planning geography / project research layer",
+      "url": "https://www.ura.gov.sg/Corporate/Planning/Master-Plan",
+      "used_for": [
+        "planning and expedition geography"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    {
+      "publisher": "Expedition South East Drive draft",
+      "used_for": [
+        "expedition regional nodes"
+      ],
+      "checked_at": "2026-09-30"
+    }
+  ],
+  "rules": {
+    "parentage": "Administrative units use verified current parentage. Composite expedition regions remain geographic_area when they span several administrative units or preserve legacy research geography.",
+    "route_hubs": "Cities and towns are geo entities only; they are not attraction cards.",
+    "object_visibility": "Object cards remain deferred for the second-chunk countries during this phase.",
+    "cards": "Object card payloads are not edited in this stage."
+  },
+  "nodes": [
+    {
+      "id": "sg:region:central-region",
+      "canonical_id": "geo_sg_0001",
+      "kind": "region",
+      "name_ru": "Центральный регион",
+      "name_local": "Central Region",
+      "slug": "central-region",
+      "parent_id": "country:sg",
+      "axis": "planning_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "sg:region:east-region",
+      "canonical_id": "geo_sg_0002",
+      "kind": "region",
+      "name_ru": "Восточный регион",
+      "name_local": "East Region",
+      "slug": "east-region",
+      "parent_id": "country:sg",
+      "axis": "planning_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "sg:region:north-region",
+      "canonical_id": "geo_sg_0003",
+      "kind": "region",
+      "name_ru": "Северный регион",
+      "name_local": "North Region",
+      "slug": "north-region",
+      "parent_id": "country:sg",
+      "axis": "planning_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "sg:region:north-east-region",
+      "canonical_id": "geo_sg_0004",
+      "kind": "region",
+      "name_ru": "Северо-восточный регион",
+      "name_local": "North-East Region",
+      "slug": "north-east-region",
+      "parent_id": "country:sg",
+      "axis": "planning_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "sg:region:west-region",
+      "canonical_id": "geo_sg_0005",
+      "kind": "region",
+      "name_ru": "Западный регион",
+      "name_local": "West Region",
+      "slug": "west-region",
+      "parent_id": "country:sg",
+      "axis": "planning_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
+    },
+    {
+      "id": "sg:geographic_area:central-marina-civic",
+      "canonical_id": "geo_sg_0006",
+      "kind": "geographic_area",
+      "name_ru": "Центр / Марина / Сивик-Дистрикт",
+      "name_local": "Central / Marina / Civic District",
+      "slug": "central-marina-civic",
+      "parent_id": "sg:region:central-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Central / Marina / Civic District"
+      ]
+    },
+    {
+      "id": "sg:geographic_area:chinatown-central-heritage",
+      "canonical_id": "geo_sg_0007",
+      "kind": "geographic_area",
+      "name_ru": "Чайна-таун / центральное наследие",
+      "name_local": "Chinatown / central heritage",
+      "slug": "chinatown-central-heritage",
+      "parent_id": "sg:region:central-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Chinatown / central heritage"
+      ]
+    },
+    {
+      "id": "sg:geographic_area:little-india",
+      "canonical_id": "geo_sg_0008",
+      "kind": "geographic_area",
+      "name_ru": "Литл-Индия",
+      "name_local": "Little India",
+      "slug": "little-india",
+      "parent_id": "sg:region:central-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Little India"
+      ]
+    },
+    {
+      "id": "sg:geographic_area:kampong-glam",
+      "canonical_id": "geo_sg_0009",
+      "kind": "geographic_area",
+      "name_ru": "Кампонг-Глам",
+      "name_local": "Kampong Glam",
+      "slug": "kampong-glam",
+      "parent_id": "sg:region:central-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Kampong Glam"
+      ]
+    },
+    {
+      "id": "sg:geographic_area:north-kranji-sungei-buloh",
+      "canonical_id": "geo_sg_0010",
+      "kind": "geographic_area",
+      "name_ru": "Север / Кранджи / Сунгей-Булох",
+      "name_local": "North / Kranji / Sungei Buloh",
+      "slug": "north-kranji-sungei-buloh",
+      "parent_id": "sg:region:north-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "North / Kranji / Sungei Buloh"
+      ]
+    },
+    {
+      "id": "sg:geographic_area:pulau-ubin",
+      "canonical_id": "geo_sg_0011",
+      "kind": "geographic_area",
+      "name_ru": "Пулау-Убин",
+      "name_local": "Pulau Ubin",
+      "slug": "pulau-ubin",
+      "parent_id": "sg:region:north-east-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Pulau Ubin"
+      ]
+    },
+    {
+      "id": "sg:geographic_area:katong-joo-chiat",
+      "canonical_id": "geo_sg_0012",
+      "kind": "geographic_area",
+      "name_ru": "Катонг / Джу-Чиат",
+      "name_local": "Katong / Joo Chiat",
+      "slug": "katong-joo-chiat",
+      "parent_id": "sg:region:east-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Katong / Joo Chiat"
+      ]
+    },
+    {
+      "id": "sg:geographic_area:southern-ridges-gillman",
+      "canonical_id": "geo_sg_0013",
+      "kind": "geographic_area",
+      "name_ru": "Южные хребты / Гиллман",
+      "name_local": "Southern Ridges / Gillman",
+      "slug": "southern-ridges-gillman",
+      "parent_id": "sg:region:central-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Southern Ridges / Gillman"
+      ]
+    },
+    {
+      "id": "sg:geographic_area:southern-coast-labrador-pasir-panjang",
+      "canonical_id": "geo_sg_0014",
+      "kind": "geographic_area",
+      "name_ru": "Южное побережье / Лабрадор / Пасир-Панджанг",
+      "name_local": "Southern coast / Labrador / Pasir Panjang",
+      "slug": "southern-coast-labrador-pasir-panjang",
+      "parent_id": "sg:region:central-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Southern coast / Labrador / Pasir Panjang"
+      ]
+    },
+    {
+      "id": "sg:city:downtown-core",
+      "canonical_id": "geo_sg_0015",
+      "kind": "city",
+      "name_ru": "Даунтаун-Кор",
+      "name_local": "Downtown Core",
+      "slug": "downtown-core",
+      "parent_id": "sg:geographic_area:central-marina-civic",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "sg:settlement:chinatown",
+      "canonical_id": "geo_sg_0016",
+      "kind": "settlement",
+      "name_ru": "Чайна-таун",
+      "name_local": "Chinatown",
+      "slug": "chinatown",
+      "parent_id": "sg:geographic_area:chinatown-central-heritage",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Chinatown"
+      ]
+    },
+    {
+      "id": "sg:settlement:little-india-hub",
+      "canonical_id": "geo_sg_0017",
+      "kind": "settlement",
+      "name_ru": "Литл-Индия",
+      "name_local": "Little India",
+      "slug": "little-india-hub",
+      "parent_id": "sg:geographic_area:little-india",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Little India"
+      ]
+    },
+    {
+      "id": "sg:settlement:bugis-kampong-glam",
+      "canonical_id": "geo_sg_0018",
+      "kind": "settlement",
+      "name_ru": "Бугис / Кампонг-Глам",
+      "name_local": "Bugis / Kampong Glam",
+      "slug": "bugis-kampong-glam",
+      "parent_id": "sg:geographic_area:kampong-glam",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Bugis / Kampong Glam"
+      ]
+    },
+    {
+      "id": "sg:town:woodlands",
+      "canonical_id": "geo_sg_0019",
+      "kind": "town",
+      "name_ru": "Вудлендс",
+      "name_local": "Woodlands",
+      "slug": "woodlands",
+      "parent_id": "sg:region:north-region",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Woodlands"
+      ]
+    },
+    {
+      "id": "sg:town:changi",
+      "canonical_id": "geo_sg_0020",
+      "kind": "town",
+      "name_ru": "Чанги",
+      "name_local": "Changi",
+      "slug": "changi",
+      "parent_id": "sg:region:east-region",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Changi"
+      ]
+    },
+    {
+      "id": "sg:settlement:harbourfront",
+      "canonical_id": "geo_sg_0021",
+      "kind": "settlement",
+      "name_ru": "ХарборФронт",
+      "name_local": "HarbourFront",
+      "slug": "harbourfront",
+      "parent_id": "sg:geographic_area:southern-ridges-gillman",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "HarbourFront"
+      ]
+    },
+    {
+      "id": "sg:village:pulau-ubin-village",
+      "canonical_id": "geo_sg_0022",
+      "kind": "village",
+      "name_ru": "деревня Пулау-Убин",
+      "name_local": "Pulau Ubin village",
+      "slug": "pulau-ubin-village",
+      "parent_id": "sg:geographic_area:pulau-ubin",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Pulau Ubin village"
+      ]
+    }
+  ]
+}

@@ -6,7 +6,8 @@
     "status": "country_geography_formalized",
     "checked_at": "2026-09-29",
     "next_level": "object_level_qa_complete_then_country_qa",
-    "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; route hubs remain logistics metadata unless independently verified as settlements."
+    "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; route hubs remain logistics metadata unless independently verified as settlements.",
+    "last_updated": "2026-09-29"
   },
   "rules": {
     "parentage": "Only documented administrative containment is encoded as hierarchy.",
@@ -132,7 +133,8 @@
         "la:tad-yuang",
         "la:khone-phapheng-falls",
         "la:li-phi-somphamit-falls",
-        "la:xe-pian-national-park"
+        "la:xe-pian-national-park",
+        "la:dong-hua-sao-national-park"
       ],
       "legacy_region_names": [
         "Чампасак / Си-Фан-Дон / Болавен"
@@ -234,7 +236,9 @@
         "la:kong-lor-cave",
         "la:old-thakhek-town",
         "la:hin-nam-no-national-park",
-        "la:nakai-nam-theun-national-park"
+        "la:nakai-nam-theun-national-park",
+        "la:tham-pa-fa",
+        "la:tham-nang-aen"
       ],
       "legacy_region_names": [
         "Кхаммуан / Конг-Лор"
@@ -262,7 +266,9 @@
       "slug": "thakhek",
       "parent_id": "la:province:khammouane",
       "object_ids": [
-        "la:old-thakhek-town"
+        "la:old-thakhek-town",
+        "la:tham-pa-fa",
+        "la:tham-nang-aen"
       ],
       "canonical_id": "geo_la_0040"
     },
@@ -464,7 +470,8 @@
       "parent_id": "la:province:champasak",
       "object_ids": [
         "la:tad-fane",
-        "la:tad-yuang"
+        "la:tad-yuang",
+        "la:dong-hua-sao-national-park"
       ],
       "notes_ru": "Национальный парк площадью около 110 000 га; Tad Fane относится к его водопадному комплексу на Болавене.",
       "canonical_id": "geo_la_0055"
@@ -568,7 +575,8 @@
       "slug": "attapeu",
       "parent_id": "country:la",
       "object_ids": [
-        "la:xe-pian-national-park"
+        "la:xe-pian-national-park",
+        "la:nong-fa-dong-ampham-landscape"
       ],
       "notes_ru": "Восточная часть национального парка Се-Пиан заходит в провинцию Аттапы; речные маршруты по Секонгу и Се-Пиану описываются отдельно от западного входа Кьет-Нгонг.",
       "canonical_id": "geo_la_0063"
@@ -650,6 +658,85 @@
       ],
       "notes_ru": "Рамсарское угодье площадью 2 360 га; лежит частично в Се-Пиане и частично в Донг-Хуа-Сао. Это отдельная географическая сущность, а не синоним всего национального парка.",
       "canonical_id": "geo_la_0069"
+    },
+    {
+      "id": "la:district:thakhek",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Район Тхакхэк",
+      "slug": "thakhek-district",
+      "parent_id": "la:province:khammouane",
+      "object_ids": [
+        "la:tham-pa-fa",
+        "la:tham-nang-aen"
+      ],
+      "notes_ru": "Административный район вокруг города Тхакхэк; используется для пещерного кластера к востоку от города.",
+      "canonical_id": "geo_la_0070"
+    },
+    {
+      "id": "la:village:na-khang-xang",
+      "kind": "village",
+      "axis": "administrative",
+      "name_ru": "На-Кханг-Санг",
+      "slug": "na-khang-xang",
+      "parent_id": "la:district:thakhek",
+      "object_ids": [
+        "la:tham-pa-fa"
+      ],
+      "notes_ru": "Деревня у Tham Pa Fa; написание нормализовано из Na Khang Xang/Nakhang Xang.",
+      "canonical_id": "geo_la_0071"
+    },
+    {
+      "id": "la:village:xiangliab",
+      "kind": "village",
+      "axis": "administrative",
+      "name_ru": "Сианглиаб",
+      "slug": "xiangliab",
+      "parent_id": "la:district:thakhek",
+      "object_ids": [
+        "la:tham-nang-aen"
+      ],
+      "notes_ru": "Деревня у Tham Nang Aen на коридоре Route 12.",
+      "canonical_id": "geo_la_0072"
+    },
+    {
+      "id": "la:district:sanxay",
+      "kind": "district",
+      "axis": "administrative",
+      "name_ru": "Сансай",
+      "slug": "sanxay",
+      "parent_id": "la:province:attapeu",
+      "object_ids": [
+        "la:nong-fa-dong-ampham-landscape"
+      ],
+      "notes_ru": "Северо-восточный район Аттапы; здесь расположено озеро Nong Fa.",
+      "canonical_id": "geo_la_0073"
+    },
+    {
+      "id": "la:protected-area:dong-ampham",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Донг-Амфам",
+      "slug": "dong-ampham",
+      "parent_id": "la:district:sanxay",
+      "object_ids": [
+        "la:nong-fa-dong-ampham-landscape"
+      ],
+      "notes_ru": "Удалённый охраняемый горно-лесной массив в северо-восточной части Аттапы.",
+      "canonical_id": "geo_la_0074"
+    },
+    {
+      "id": "la:geographic-area:nong-fa",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "name_ru": "Озеро Нонг-Фа",
+      "slug": "nong-fa",
+      "parent_id": "la:protected-area:dong-ampham",
+      "object_ids": [
+        "la:nong-fa-dong-ampham-landscape"
+      ],
+      "notes_ru": "Высокогорное кратерное озеро; геоточка объекта хранится как центр водного зеркала, а не trailhead.",
+      "canonical_id": "geo_la_0075"
     }
   ],
   "sources": [

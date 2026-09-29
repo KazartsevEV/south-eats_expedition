@@ -25,7 +25,8 @@
       "v1.5 migration: adds narrow, normalized tags, route_meta and locality linkage for canonical CDN build.",
       "v1.6: начат экспедиционный проход Myanmar. Самостоятельное путешествие — режим по умолчанию; физическая сложность отделена от реальных ограничений доступа. Для регионов с продолжающимся конфликтом предупреждения и фактический контроль дорог считаются операционными ограничениями.",
       "2026-09-29 GPS normalization: 15/15 Myanmar objects receive sourced WGS84 map anchors. Serial/broad landscapes use explicit center/approximate semantics; Pyu Ancient Cities keeps all three UNESCO component points.",
-      "2026-09-29 Myanmar hierarchy cleanup: composite route hubs split into real towns/cities while legacy hubs are retained for compatibility; existing Mandalay/Yangon/Dawei/Hpa-An nodes are reused rather than duplicated."
+      "2026-09-29 Myanmar hierarchy cleanup: composite route hubs split into real towns/cities while legacy hubs are retained for compatibility; existing Mandalay/Yangon/Dawei/Hpa-An nodes are reused rather than duplicated.",
+      "2026-09-29 Myanmar regional safety normalization: current FCDO and Australian Smartraveller regional advisories stored as dated dynamic geo facts; old mixed-language object safety text is not promoted as canonical regional prose."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -334,6 +335,21 @@
         },
         "transport": {
           "summary": "Главный городской узел страны; внутри города самостоятельный маршрут строится на автобусах, такси и пеших связках."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "повышенный риск без общего запрета FCDO",
+            "summary": "FCDO не относит весь Yangon Region к зонам, куда рекомендуются только необходимые поездки, однако подчёркивает сохраняющийся повышенный риск и возможность введения локальных комендантских ограничений без долгого предупреждения.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Инциденты могут затрагивать объекты, связанные с военными и государственными структурами; ограничения движения и режим отдельных районов нужно проверять непосредственно перед выходом.",
+          "source_refs": [
+            "src_000671"
+          ]
         }
       },
       {
@@ -373,6 +389,21 @@
         },
         "culture": {
           "summary": "Буддийские пожертвования, монастырская жизнь, земледелие и современные поселения остаются частью живого сакрального ландшафта."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: только необходимые поездки",
+            "summary": "Баган находится в Mandalay Region. Для большей части региона FCDO рекомендует только необходимые поездки; для северной части Mandalay Region действует более строгая рекомендация не ездить.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Состояние дорог и междугороднего сообщения может меняться быстро; после землетрясения марта 2025 года в центральной Мьянме также сохраняются последствия повреждений инфраструктуры.",
+          "source_refs": [
+            "src_000671"
+          ]
         }
       },
       {
@@ -412,6 +443,21 @@
         },
         "culture": {
           "summary": "Монастыри, Mahamuni, Kuthodaw и ремесленные кварталы сохраняют религиозные и производственные традиции королевской столицы."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: только необходимые поездки; север региона — не ездить",
+            "summary": "Для большей части Mandalay Region FCDO рекомендует только необходимые поездки, а для северной части региона — не ездить.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Продолжающийся конфликт создаёт риск внезапных закрытий дорог, вооружённых столкновений и авиаударов; регион также значительно пострадал от землетрясения марта 2025 года.",
+          "source_refs": [
+            "src_000671"
+          ]
         }
       },
       {
@@ -451,6 +497,22 @@
         },
         "culture": {
           "summary": "В районе Инле живут инта, шаны, па-о и дану; свайные поселения, плавучее земледелие и водное сообщение являются частью повседневной среды."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: южный и восточный Шан — только необходимые поездки",
+            "summary": "Для Shan State South and East FCDO рекомендует только необходимые поездки; для северного Шана действует рекомендация не ездить.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Smartraveller отмечает продолжающиеся вооружённые столкновения, перемещения населения и риск мин на дорогах в штате Шан. Статус конкретной дороги к Инле, Таунджи или Какку нужно проверять отдельно.",
+          "source_refs": [
+            "src_000671",
+            "src_000672"
+          ]
         }
       },
       {
@@ -488,6 +550,21 @@
         },
         "culture": {
           "summary": "Кьяиктийо — крупный буддийский паломнический центр; религиозная жизнь и поток паломников являются главным культурным контекстом горного узла."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: не ездить",
+            "summary": "FCDO рекомендует не ездить в штат Мон.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Доступ к Кьяиктийо и Моулмейну нельзя считать стабильным только потому, что объект или гостиница формально открыты; важнее фактический режим дорог и района.",
+          "source_refs": [
+            "src_000671"
+          ]
         }
       },
       {
@@ -519,6 +596,20 @@
         },
         "geography": {
           "summary": "Высокогорный городской узел к востоку от Мандалая на краю Шанского плато."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "Mandalay Region: ограничения различаются по части региона",
+            "summary": "Для Mandalay Region действует как минимум рекомендация FCDO совершать только необходимые поездки, а для северной части региона — не ездить. Для конкретного маршрута к Пьин-У-Луину нужно сверять актуальную карту предупреждений.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "source_refs": [
+            "src_000671"
+          ]
         }
       },
       {
@@ -550,6 +641,20 @@
         },
         "climate": {
           "summary": "Очень влажный тропический муссонный климат; сухой сезон существенно удобнее для наземных маршрутов."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: для района Тавоя — не ездить",
+            "summary": "FCDO рекомендует не ездить в большую часть Tanintharyi Region; исключения и более мягкий режим относятся к отдельным южным районам и не должны автоматически переноситься на Тавой.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "source_refs": [
+            "src_000671"
+          ]
         }
       },
       {
@@ -581,6 +686,22 @@
         },
         "climate": {
           "summary": "Жаркий муссонный климат с тяжёлым сезоном дождей; ноябрь–февраль обычно суше."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: не ездить",
+            "summary": "FCDO рекомендует не ездить в Rakhine State.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Smartraveller сообщает о продолжающемся конфликте в северном и центральном Ракхайне, нарушениях связи и дорожного сообщения, применении взрывных устройств и риске задержаний и похищений. Ситуэ и Мраук-У нельзя считать доступными по старым туристическим схемам.",
+          "source_refs": [
+            "src_000671",
+            "src_000672"
+          ]
         }
       },
       {
@@ -614,6 +735,21 @@
         },
         "history": {
           "summary": "Города пью представляют ранние урбанизированные буддийские центры Мьянмы и образуют серийный объект, а не одну локальную площадку."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "различается по компонентам серийного объекта",
+            "summary": "Компоненты древних городов пью разнесены по нескольким регионам: для Magway и Sagaing FCDO рекомендует не ездить; для большей части Bago Region — только необходимые поездки, а восточнее Yangon–Mandalay Expressway — не ездить.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Шри-Кшетра, Бейктано и Халин нельзя объединять одним статусом доступности: каждый компонент требует отдельной проверки маршрута.",
+          "source_refs": [
+            "src_000671"
+          ]
         }
       },
       {
@@ -648,6 +784,22 @@
         },
         "climate": {
           "summary": "Влажный тропический юго-восток; сезон дождей усложняет пещерные и грунтовые подходы."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: не ездить",
+            "summary": "FCDO рекомендует не ездить в Kayin State.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Smartraveller описывает вооружённые столкновения, блокпосты, повреждение гражданской инфраструктуры и периодические перебои связи на юго-востоке страны.",
+          "source_refs": [
+            "src_000671",
+            "src_000672"
+          ]
         }
       },
       {
@@ -678,6 +830,22 @@
         },
         "climate": {
           "summary": "Жаркая сухая центральная зона; ноябрь–февраль обычно комфортнее, март–май особенно жаркие."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: не ездить",
+            "summary": "FCDO рекомендует не ездить в Sagaing Region.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Для региона характерна нестабильная ситуация с вооружённым конфликтом; прежние междугородние маршруты нельзя считать автоматически действующими.",
+          "source_refs": [
+            "src_000671",
+            "src_000672"
+          ]
         }
       },
       {
@@ -716,6 +884,22 @@
         },
         "nature": {
           "summary": "Индавджи — важный водно-болотный и лесной комплекс и биосферный резерват UNESCO."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: не ездить",
+            "summary": "FCDO рекомендует не ездить в Kachin State.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Smartraveller отмечает вооружённые столкновения и нарушения дорожной инфраструктуры и сообщения в Качине; старые маршруты к Индавджи нельзя использовать как подтверждение текущей доступности.",
+          "source_refs": [
+            "src_000671",
+            "src_000672"
+          ]
         }
       },
       {
@@ -753,6 +937,22 @@
         },
         "nature": {
           "summary": "Нат-Ма-Таун известен высокогорными лесами и эндемичной флорой; детальный видовой список требует отдельной нормализации."
+        },
+        "safety": {
+          "travel_advisory": {
+            "level": "FCDO: не ездить",
+            "summary": "FCDO рекомендует не ездить в Chin State.",
+            "checked_at": "2026-09-29",
+            "source_refs": [
+              "src_000671"
+            ],
+            "dynamic": true
+          },
+          "operational_context": "Smartraveller относит Чин к регионам продолжающегося вооружённого конфликта. Горные дороги и связь требуют отдельной проверки, даже если погодные условия хорошие.",
+          "source_refs": [
+            "src_000671",
+            "src_000672"
+          ]
         }
       }
     ],
@@ -5687,7 +5887,8 @@
         "economy",
         "poverty"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000663"
     },
     {
       "id": "RUS_MFA",
@@ -5699,7 +5900,8 @@
         "entry_points",
         "safety"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000664"
     },
     {
       "id": "REUTERS_POL",
@@ -5709,7 +5911,8 @@
       "used_for": [
         "current_political_context"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000665"
     },
     {
       "id": "UN_IIMM",
@@ -5719,7 +5922,8 @@
       "used_for": [
         "conflict_security"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000666"
     },
     {
       "id": "UNESCO",
@@ -5729,7 +5933,8 @@
       "used_for": [
         "heritage"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000667"
     },
     {
       "id": "CLIMATE",
@@ -5739,7 +5944,8 @@
       "used_for": [
         "air_temperature"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000668"
     },
     {
       "id": "WHO_SNAKEBITE",
@@ -5750,7 +5956,8 @@
         "venomous_snake_risk"
       ],
       "accessed": "2026-09-27",
-      "notes": "Региональный фон; не заменяет локальные данные."
+      "notes": "Региональный фон; не заменяет локальные данные.",
+      "canonical_id": "src_000669"
     },
     {
       "id": "IUCN_RED_LIST",
@@ -5760,7 +5967,37 @@
       "used_for": [
         "fauna_conservation_status"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000670"
+    },
+    {
+      "id": "FCDO_MM_REGIONAL",
+      "canonical_id": "src_000671",
+      "publisher": "UK Foreign, Commonwealth & Development Office",
+      "url": "https://www.gov.uk/foreign-travel-advice/myanmar/regional-risks",
+      "kind": "government",
+      "used_for": [
+        "regional_security",
+        "travel_restrictions",
+        "conflict"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Current regional travel advice; status can change at short notice."
+    },
+    {
+      "id": "SMARTTRAVELLER_MM",
+      "canonical_id": "src_000672",
+      "publisher": "Australian Government Smartraveller",
+      "url": "https://www.smartraveller.gov.au/destinations/asia/myanmar",
+      "kind": "government",
+      "used_for": [
+        "regional_security",
+        "road_access",
+        "landmines",
+        "communications"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Current country and regional security context; dynamic."
     }
   ],
   "uncertainties": [

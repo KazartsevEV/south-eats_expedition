@@ -33,7 +33,8 @@
       "2026-09-29 locality pass: normalized 2023 OpenDOSM/PDRM police-district assault/property counts for matching localities; added Kinta Valley geology for Ipoh/Batu Gajah and dynamic marine-weather sources for Kota Kinabalu and Miri. Counts are stored with methodology caveats and are not converted into safety ratings.",
       "2026-09-29 geo semantics: exact pre-existing Malaysia localities retyped from generic route-hub geography to city/town/settlement/archipelago where identity is unambiguous.",
       "2026-09-29 climate pass: annual mean temperature/precipitation references added to selected Malaysia localities with explicit period and data basis; ERA5/WorldClim/NASA POWER are labelled as reanalysis/grid climatology rather than official station normals. Langkawi annual temperature is derived from the stored monthly climatology; annual rainfall remains null.",
-      "2026-09-29 geo-map pass: 26 Malaysia real localities received their own sourced WGS84 center anchors. These anchors identify the geo entity itself and are not borrowed from attraction coordinates."
+      "2026-09-29 geo-map pass: 26 Malaysia real localities received their own sourced WGS84 center anchors. These anchors identify the geo entity itself and are not borrowed from attraction coordinates.",
+      "2026-09-29 climate pass 2: annual climate references added for Gerik, Kuala Kangsar, Kundasang, Sukau, Batu Gajah, Kuala Besut and Sepilok. Sepilok preserves the published temperature range and precipitation uncertainty rather than inventing a single mean."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -8597,7 +8598,17 @@
             "source_refs": [
               "src_000593",
               "src_000596"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c": 26.8,
+              "annual_precipitation_mm": 2766,
+              "period": "climatological normal on source page",
+              "data_basis": "Climate-Data.org local climatology",
+              "source_refs": [
+                "src_000654"
+              ],
+              "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
+            }
           },
           "marine": {
             "weather": "Для островного перехода использовать METMalaysia Terengganu marine forecast.",
@@ -8626,7 +8637,8 @@
               "src_000600",
               "src_000601",
               "src_000606",
-              "src_000594"
+              "src_000594",
+              "src_000654"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true
@@ -9276,7 +9288,8 @@
           "provenance": {
             "source_refs": [
               "src_000604",
-              "src_000594"
+              "src_000594",
+              "src_000649"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9294,6 +9307,18 @@
             "source_refs": [
               "src_000594"
             ]
+          },
+          "climate": {
+            "annual_reference": {
+              "mean_annual_temperature_c": 27.1,
+              "annual_precipitation_mm": 2327,
+              "period": "1991–2020",
+              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "source_refs": [
+                "src_000649"
+              ],
+              "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
+            }
           }
         },
         "primary_location": {
@@ -9334,7 +9359,8 @@
             "source_refs": [
               "src_000624",
               "src_000626",
-              "src_000594"
+              "src_000594",
+              "src_000650"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9352,6 +9378,18 @@
             "source_refs": [
               "src_000594"
             ]
+          },
+          "climate": {
+            "annual_reference": {
+              "mean_annual_temperature_c": 27.5,
+              "annual_precipitation_mm": 2697,
+              "period": "1991–2020",
+              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "source_refs": [
+                "src_000650"
+              ],
+              "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
+            }
           }
         },
         "primary_location": {
@@ -9531,7 +9569,17 @@
             "summary": "Sabah Tourism использует около 21°C как практический средний ориентир для highlands Ranau/Kundasang; вершина Kinabalu значительно холоднее.",
             "source_refs": [
               "src_000623"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c": 19.7,
+              "annual_precipitation_mm": 2940,
+              "period": "climatological normal on source page",
+              "data_basis": "Climate-Data.org local climatology",
+              "source_refs": [
+                "src_000651"
+              ],
+              "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
+            }
           },
           "transport": {
             "summary": "Road access из Kota Kinabalu по направлению Ranau; для summit climb регистрация/booking идёт по правилам Sabah Parks.",
@@ -9542,7 +9590,8 @@
           "provenance": {
             "source_refs": [
               "src_000623",
-              "src_000608"
+              "src_000608",
+              "src_000651"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9839,7 +9888,17 @@
             "source_refs": [
               "src_000593",
               "src_000596"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c": 25.8,
+              "annual_precipitation_mm": 2963,
+              "period": "climatological normal on source page",
+              "data_basis": "Climate-Data.org local climatology",
+              "source_refs": [
+                "src_000652"
+              ],
+              "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
+            }
           },
           "nature": {
             "summary": "Sabah Tourism treats Kinabatangan River as a major wildlife corridor; наблюдение строится вокруг реки и floodplain habitats.",
@@ -9857,7 +9916,8 @@
             "source_refs": [
               "src_000628",
               "src_000593",
-              "src_000596"
+              "src_000596",
+              "src_000652"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -10000,7 +10060,8 @@
               "src_000624",
               "src_000631",
               "src_000632",
-              "src_000594"
+              "src_000594",
+              "src_000653"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -10026,6 +10087,18 @@
             "source_refs": [
               "src_000594"
             ]
+          },
+          "climate": {
+            "annual_reference": {
+              "mean_annual_temperature_c": 28,
+              "annual_precipitation_mm": 2724,
+              "period": "1991–2020",
+              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "source_refs": [
+                "src_000653"
+              ],
+              "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
+            }
           }
         },
         "primary_location": {
@@ -10060,7 +10133,21 @@
             "summary": "Жаркий влажный климат восточного Sabah; ливни возможны круглый год, с более влажным северо-восточным муссонным периодом.",
             "source_refs": [
               "src_000593"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c_range": [
+                26.7,
+                27.7
+              ],
+              "annual_precipitation_mm": 2929,
+              "annual_precipitation_uncertainty_mm": 134,
+              "period": "study-area climatological reference",
+              "data_basis": "peer-reviewed Sepilok Forest Reserve study; Sandakan Airport climate data cited from Malaysia Meteorological Service",
+              "source_refs": [
+                "src_000642"
+              ],
+              "caveat": "Температура опубликована диапазоном; не сводится искусственно к одной цифре."
+            }
           },
           "nature": {
             "summary": "Главный природоохранный контекст — rehabilitation of orangutans в лесной среде; presence at feeding platforms is not guaranteed.",
@@ -10077,7 +10164,8 @@
           "provenance": {
             "source_refs": [
               "src_000630",
-              "src_000593"
+              "src_000593",
+              "src_000642"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -10933,6 +11021,87 @@
       "used_for": [
         "geo_coordinates",
         "gazetteer"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "WORLDCLIM_GERIK",
+      "canonical_id": "src_000649",
+      "publisher": "StatsClimat / WorldClim-CRU",
+      "url": "https://statsclimat.com/climate/malaysia/gerik-1734372",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "gerik"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "1991–2020 normals; secondary analytical presentation."
+    },
+    {
+      "id": "WORLDCLIM_KUALA_KANGSAR",
+      "canonical_id": "src_000650",
+      "publisher": "StatsClimat / WorldClim-CRU",
+      "url": "https://statsclimat.com/climate/malaysia/kuala-kangsar-1734599",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "kuala_kangsar"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "1991–2020 normals; secondary analytical presentation."
+    },
+    {
+      "id": "CLIMATEDATA_KUNDASANG",
+      "canonical_id": "src_000651",
+      "publisher": "Climate-Data.org",
+      "url": "https://en.climate-data.org/asia/malaysia/sabah/kundasang-703701/",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "kundasang"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "CLIMATEDATA_SUKAU",
+      "canonical_id": "src_000652",
+      "publisher": "Climate-Data.org",
+      "url": "https://en.climate-data.org/asia/malaysia/sabah/sukau-632590/",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "sukau"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "WORLDCLIM_BATU_GAJAH",
+      "canonical_id": "src_000653",
+      "publisher": "StatsClimat / WorldClim-CRU",
+      "url": "https://statsclimat.com/climate/malaysia/batu-gajah-1735268",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "batu_gajah"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "1991–2020 normals; secondary analytical presentation."
+    },
+    {
+      "id": "CLIMATEDATA_KUALA_BESUT",
+      "canonical_id": "src_000654",
+      "publisher": "Climate-Data.org",
+      "url": "https://en.climate-data.org/asia/malaysia/terengganu/kuala-besut-35131/",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "kuala_besut"
       ],
       "accessed": "2026-09-29"
     }

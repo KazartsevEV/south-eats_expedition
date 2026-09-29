@@ -56,6 +56,16 @@ jobs:
       - name: Validate recursive hierarchy
         run: python scripts/validate_hierarchy.py public/cdn/v2
 
+      - name: Build and validate derived maps in scratch CDN
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/expedition-cdn-v2
+          cp -a public/cdn/v2 /tmp/expedition-cdn-v2
+          python scripts/build_expedition_layers.py /tmp/expedition-cdn-v2
+          python scripts/validate_maps.py /tmp/expedition-cdn-v2
+          python scripts/validate_locality.py public/cdn/v2
+
       - name: Publish generated CDN from latest main
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         shell: bash

@@ -12,7 +12,7 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
 GEO_COUNTRIES = ROOT / "data" / "geo" / "countries"
-FORMAL_CANONICAL_GEO_CODES = {"KH", "LA"}
+FORMAL_CANONICAL_GEO_CODES = {"BN", "KH", "LA", "ID", "MY", "MM"}
 COUNTRY_SOURCE_CANONICAL_CODES = {"KH", "LA", "MY", "MM"}
 
 GENERATED_AT = "2026-09-29T00:35:00+04:00"
@@ -633,7 +633,7 @@ def build():
             kind = node.get("kind") or "geographic_area"
             if kind not in GEO_KINDS:
                 kind = "geographic_area"
-            geo_entities[geo_id] = {
+            entity = {
                 "id": geo_id,
                 "kind": kind,
                 "names": {"primary": node.get("name_ru") or node.get("name_local") or node_id, "local": node.get("name_local")},
@@ -646,6 +646,70 @@ def build():
                 "migration": {"source_kind": "formal_hierarchy", "axis": node.get("axis"), "status": "formalized"},
                 "provenance": {"checked_at": (doc.get("meta") or {}).get("checked_at"), "sources": doc.get("sources") or []},
             }
+
+            # A formal hierarchy must not discard already researched regional/locality content.
+            # Hierarchy nodes carry stable identity/parentage; descriptive facts remain sourced
+            # from the existing country research layer and are merged into the canonical geo entity.
+            region_names = list(node.get("legacy_region_names") or [])
+            locality_names = list(node.get("legacy_locality_names") or [])
+            region_profile = next(
+                (region_profile_by_country_name.get((code, name)) for name in region_names
+                 if region_profile_by_country_name.get((code, name))),
+                None,
+            )
+            locality_profile = next(
+                (locality_profile_by_country_name.get((code, name)) for name in locality_names
+                 if locality_profile_by_country_name.get((code, name))),
+                None,
+            )
+
+            if region_profile:
+                if region_profile.get("narrow"):
+                    entity["description"]["narrow"] = region_profile.get("narrow")
+                entity["languages"] = {
+                    "spoken": region_profile.get("languages_spoken") or [],
+                    "notes": region_profile.get("language_notes"),
+                }
+                climate_detail = dict(region_profile.get("climate_detail") or region_profile.get("climate") or {})
+                if region_profile.get("climate_summary") and not climate_detail.get("summary"):
+                    climate_detail["summary"] = region_profile.get("climate_summary")
+                if region_profile.get("best_period_general") and not climate_detail.get("best_period_general"):
+                    climate_detail["best_period_general"] = region_profile.get("best_period_general")
+                if climate_detail:
+                    entity["climate"] = climate_detail
+                for field in ("geography", "relief", "geology", "hydrology", "coast", "marine", "nature", "health", "safety", "history", "ethnography", "culture", "architecture", "transport"):
+                    if region_profile.get(field) not in (None, "", [], {}):
+                        entity[field] = region_profile.get(field)
+                local_prov = region_profile.get("local_reference_provenance") or {}
+                region_source_refs = list(dict.fromkeys((local_prov.get("source_refs") or []) + (region_profile.get("source_refs") or [])))
+                entity["provenance"].update({
+                    "source_urls": region_profile.get("language_source_urls") or [],
+                    "source_refs": region_source_refs,
+                    "research_checked_at": local_prov.get("checked_at") or region_profile.get("last_verified"),
+                })
+                entity["freshness"] = {"checked_at": local_prov.get("checked_at") or region_profile.get("last_verified")}
+                entity["migration"]["regional_content_status"] = "migrated_existing_region_profile"
+
+            if locality_profile:
+                entity["primary_location"] = locality_profile.get("primary_location")
+                entity["relations"] = {
+                    "source_region_names": locality_profile.get("regions") or [],
+                    "source_object_names": locality_profile.get("object_names") or [],
+                }
+                profile = locality_profile.get("profile") or {}
+                if profile.get("summary"):
+                    entity["description"]["narrow"] = profile.get("summary")
+                for field in ("history", "culture", "geography", "geology", "ethnography", "myths_beliefs", "climate", "transport", "languages", "nature", "marine", "health", "safety", "architecture", "relief", "hydrology", "coast"):
+                    if profile.get(field) not in (None, "", [], {}):
+                        entity[field] = profile.get(field)
+                profile_prov = profile.get("provenance") or {}
+                if profile_prov:
+                    entity["provenance"]["locality_profile"] = profile_prov
+                    if profile_prov.get("checked_at"):
+                        entity["freshness"] = {"checked_at": profile_prov.get("checked_at")}
+                entity["migration"]["local_reference_status"] = "migrated_existing_locality_profile"
+
+            geo_entities[geo_id] = entity
             canonical_geo_ids_by_country[code].append(geo_id)
             for old_object_id in node.get("object_ids") or []:
                 for ref in formal_geo_path(node_id)[1:]:

@@ -3,7 +3,7 @@
     "country": "Malaysia",
     "country_code": "MY",
     "language": "ru",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-29",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -21,7 +21,8 @@
       "Карточки охраняемых территорий Малайзии отделяют свободно доступные городские объекты от территорий Сабаха, Саравака и Перака с разрешительным режимом; отдельное разрешение может требоваться и для съёмки.",
       "Блок media.field_planning — редакционная разведка для съёмки; официальные правила объекта и авиационные ограничения имеют приоритет.",
       "v1.5: добавлены narrow, нормализованные теги, route_meta и привязка к географическим сущностям для сборки CDN.",
-      "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны."
+      "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны.",
+      "v1.6.1 draft: 21/21 объектов получили WGS84 primary coordinates, coordinate_type, accuracy и source; для протяжённых парков/островов/реки reference point не выдаётся за вход. Высота заполняется только там, где найден надёжный источник, иначе остаётся null."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -36,6 +37,15 @@
       "guide_policy": "проводник или тур указываются как обязательные только при требовании администрации/разрешительного режима; как рекомендуемые — лишь когда это существенно улучшает доступ, навигацию или понимание объекта",
       "difficulty_policy": "расстояние, набор высоты, ступени и многодневность описываются как параметры маршрута, а не как недостатки сами по себе",
       "field_assumption": "путешественник имеет палатку и базовое походное снаряжение"
+    },
+    "geodata_upgrade_progress": {
+      "schema_target": "2.10.10",
+      "updated": "2026-09-29",
+      "completed_coordinates": 21,
+      "total_objects": 21,
+      "elevation_verified_objects": 9,
+      "status": "coordinates_complete_elevation_partial",
+      "policy": "WGS84; large-area reference points are typed center/reference and never presented as entrances; unknown absolute elevation remains null."
     }
   },
   "overview": {
@@ -699,7 +709,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 3.1517,
+              "lon": 101.6942,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kuala Lumpur — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=3.1517&mlon=101.6942#map=13/3.1517/101.6942",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка объекта-город; не используется как координата отдельной достопримечательности."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Самостоятельная база — Куала-Лумпур; историческое ядро удобно проходить пешком, между удалёнными районами использовать MRT/LRT/Monorail, KTM или Grab.",
@@ -952,6 +980,51 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+            },
+            "coordinates": {
+              "lat": 5.416518,
+              "lon": 100.338735,
+              "elevation_m": 4
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "George Town UNESCO World Heritage Site — Wikidata",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q131465681",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Точка относится к UNESCO heritage site George Town; объект карточки — исторический город."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "medium",
+            "elevation_source": {
+              "type": "map",
+              "title": "George Town UNESCO World Heritage Site — Wikidata",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q131465681",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Точка относится к UNESCO heritage site George Town; объект карточки — исторический город."
+            },
+            "object_elevation": {
+              "representative_m": 4,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "George Town UNESCO World Heritage Site — Wikidata",
+                "publisher": "Wikidata",
+                "url": "https://www.wikidata.org/wiki/Q131465681",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "Точка относится к UNESCO heritage site George Town; объект карточки — исторический город."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота в опорной точке объекта; не высота здания и не перепад рельефа."
             }
           },
           "logistics": {
@@ -1232,6 +1305,51 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+            },
+            "coordinates": {
+              "lat": 2.188889,
+              "lon": 102.251111,
+              "elevation_m": 14
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Melaka historic city — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=2.188889&mlon=102.251111#map=14/2.188889/102.251111",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка исторического городского ядра."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "medium",
+            "elevation_source": {
+              "type": "map",
+              "title": "Melaka historic city — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=2.188889&mlon=102.251111#map=14/2.188889/102.251111",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка исторического городского ядра."
+            },
+            "object_elevation": {
+              "representative_m": 14,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Melaka historic city — OpenStreetMap reference point",
+                "publisher": "OpenStreetMap",
+                "url": "https://www.openstreetmap.org/?mlat=2.188889&mlon=102.251111#map=14/2.188889/102.251111",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "Опорная точка исторического городского ядра."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота в опорной точке объекта; не высота здания и не перепад рельефа."
             }
           },
           "logistics": {
@@ -1498,6 +1616,51 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+            },
+            "coordinates": {
+              "lat": 6.075,
+              "lon": 116.558,
+              "elevation_m": 4095.2
+            },
+            "coordinate_type": "summit",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Mount Kinabalu / Low's Peak — OpenStreetMap reference",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=6.075&mlon=116.558#map=15/6.075/116.558",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Координата вершины Low's Peak; высота относится к вершине, а не к парковой инфраструктуре."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "high",
+            "elevation_source": {
+              "type": "map",
+              "title": "Mount Kinabalu / Low's Peak — OpenStreetMap reference",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=6.075&mlon=116.558#map=15/6.075/116.558",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Координата вершины Low's Peak; высота относится к вершине, а не к парковой инфраструктуре."
+            },
+            "object_elevation": {
+              "representative_m": 4095.2,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "summit",
+              "accuracy": "high",
+              "source": {
+                "type": "map",
+                "title": "Mount Kinabalu / Low's Peak — OpenStreetMap reference",
+                "publisher": "OpenStreetMap",
+                "url": "https://www.openstreetmap.org/?mlat=6.075&mlon=116.558#map=15/6.075/116.558",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "Координата вершины Low's Peak; высота относится к вершине, а не к парковой инфраструктуре."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота вершины над средним уровнем моря."
             }
           },
           "logistics": {
@@ -1794,7 +1957,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 4.13333,
+              "lon": 114.91667,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "UNESCO World Heritage Centre — Gunung Mulu National Park geographical data",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/1013/maps/",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "UNESCO reference point inscribed property; не является входом или trailhead."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Самостоятельная базовая схема — перелёт в Mulu, размещение у Park HQ и самостоятельная сборка маршрутов. Проводник подключается только к тем пещерам и трекам, где он обязателен правилами парка.",
@@ -2108,7 +2289,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 6.35,
+              "lon": 99.8,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Langkawi archipelago — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=6.35&mlon=99.8#map=11/6.35/99.8",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка острова/архипелага; не точка доступа."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Практичная база — Langkawi; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -2379,7 +2578,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.916667,
+              "lon": 102.733333,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Perhentian Islands — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=5.916667&mlon=102.733333#map=12/5.916667/102.733333",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка архипелага; пирсы и точки высадки должны храниться отдельно."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Основной подход через Kuala Besut; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки.",
@@ -2669,6 +2886,51 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+            },
+            "coordinates": {
+              "lat": 4.8547,
+              "lon": 100.7439,
+              "elevation_m": 19
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Taiping — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=4.8547&mlon=100.7439#map=14/4.8547/100.7439",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Центр объекта-город."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "medium",
+            "elevation_source": {
+              "type": "map",
+              "title": "Taiping — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=4.8547&mlon=100.7439#map=14/4.8547/100.7439",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Центр объекта-город."
+            },
+            "object_elevation": {
+              "representative_m": 19,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Taiping — OpenStreetMap reference point",
+                "publisher": "OpenStreetMap",
+                "url": "https://www.openstreetmap.org/?mlat=4.8547&mlon=100.7439#map=14/4.8547/100.7439",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "Центр объекта-город."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота в опорной точке объекта; не высота здания и не перепад рельефа."
             }
           },
           "logistics": {
@@ -2930,6 +3192,51 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+            },
+            "coordinates": {
+              "lat": 4.7721,
+              "lon": 100.9409,
+              "elevation_m": 42
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kuala Kangsar — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=4.7721&mlon=100.9409#map=14/4.7721/100.9409",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Центр объекта-город."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "medium",
+            "elevation_source": {
+              "type": "map",
+              "title": "Kuala Kangsar — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=4.7721&mlon=100.9409#map=14/4.7721/100.9409",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Центр объекта-город."
+            },
+            "object_elevation": {
+              "representative_m": 42,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Kuala Kangsar — OpenStreetMap reference point",
+                "publisher": "OpenStreetMap",
+                "url": "https://www.openstreetmap.org/?mlat=4.7721&mlon=100.9409#map=14/4.7721/100.9409",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "Центр объекта-город."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота в опорной точке объекта; не высота здания и не перепад рельефа."
             }
           },
           "logistics": {
@@ -3199,7 +3506,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.67,
+              "lon": 101.38,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Belum Temenggor Forest Reserve — Wikidata",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q14206230",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Точка большой охраняемой территории; не выдаётся за вход."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Самостоятельно доехать до Pulau Banding/Герика можно без тура; вход в Royal Belum оформляется по разрешительному режиму, а лодка и уполномоченный проводник нужны уже внутри охраняемой территории.",
@@ -3480,6 +3805,51 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+            },
+            "coordinates": {
+              "lat": 3.75,
+              "lon": 115.45,
+              "elevation_m": 1000
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Bario / Kelabit Highlands — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=3.75&mlon=115.45#map=12/3.75/115.45",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка Барио внутри более широкого культурного ландшафта Келабитского нагорья."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "medium",
+            "elevation_source": {
+              "type": "map",
+              "title": "Bario / Kelabit Highlands — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=3.75&mlon=115.45#map=12/3.75/115.45",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка Барио внутри более широкого культурного ландшафта Келабитского нагорья."
+            },
+            "object_elevation": {
+              "representative_m": 1000,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Bario / Kelabit Highlands — OpenStreetMap reference point",
+                "publisher": "OpenStreetMap",
+                "url": "https://www.openstreetmap.org/?mlat=3.75&mlon=115.45#map=12/3.75/115.45",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "Опорная точка Барио внутри более широкого культурного ландшафта Келабитского нагорья."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота в опорной точке объекта; не высота здания и не перепад рельефа."
             }
           },
           "logistics": {
@@ -3774,7 +4144,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 4.8833,
+              "lon": 117.75,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Danum Valley Conservation Area — Key Biodiversity Areas",
+              "publisher": "Key Biodiversity Areas",
+              "url": "https://www.keybiodiversityareas.org/site/factsheet/15837",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "Центральная координата охраняемой территории; не visitor centre."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Самостоятельно добраться до Lahad Datu можно обычным транспортом. Дальнейший въезд в Danum Valley требует предварительного разрешения и организованного трансфера через уполномоченную инфраструктуру территории.",
@@ -4037,6 +4425,51 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+            },
+            "coordinates": {
+              "lat": 5.699,
+              "lon": 118.3857,
+              "elevation_m": 14
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kinabatangan River — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=5.699&mlon=118.3857#map=11/5.699/118.3857",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка протяжённой реки; лодочные базы и пристани должны быть отдельными geo/POI."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "medium",
+            "elevation_source": {
+              "type": "map",
+              "title": "Kinabatangan River — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=5.699&mlon=118.3857#map=11/5.699/118.3857",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка протяжённой реки; лодочные базы и пристани должны быть отдельными geo/POI."
+            },
+            "object_elevation": {
+              "representative_m": 14,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Kinabatangan River — OpenStreetMap reference point",
+                "publisher": "OpenStreetMap",
+                "url": "https://www.openstreetmap.org/?mlat=5.699&mlon=118.3857#map=11/5.699/118.3857",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "Опорная точка протяжённой реки; лодочные базы и пристани должны быть отдельными geo/POI."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота в опорной точке объекта; не высота здания и не перепад рельефа."
             }
           },
           "logistics": {
@@ -4319,7 +4752,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 3.804292,
+              "lon": 113.780767,
+              "elevation_m": null
+            },
+            "coordinate_type": "archaeological_core",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map",
+              "title": "UNESCO World Heritage Centre — The Archaeological Heritage of Niah National Park’s Caves Complex",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/1014/maps/",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "UNESCO reference point archaeological property; не visitor centre."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Ближайшая практичная база — Kuching / Miri depending object; обычно нужен дорожный трансфер, затем пеший/лодочный участок в зависимости от маршрута. Для удалённых зон заранее подтверждать разрешение/проводник.",
@@ -4644,6 +5095,51 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+            },
+            "coordinates": {
+              "lat": 4.42778,
+              "lon": 101.03724,
+              "elevation_m": 46
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kellie's Castle — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=4.42778&mlon=101.03724#map=17/4.42778/101.03724",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Точка здания/руин; точный вход хранить отдельной точкой после верификации."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "medium",
+            "elevation_source": {
+              "type": "map",
+              "title": "Kellie's Castle — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=4.42778&mlon=101.03724#map=17/4.42778/101.03724",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Точка здания/руин; точный вход хранить отдельной точкой после верификации."
+            },
+            "object_elevation": {
+              "representative_m": 46,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Kellie's Castle — OpenStreetMap reference point",
+                "publisher": "OpenStreetMap",
+                "url": "https://www.openstreetmap.org/?mlat=4.42778&mlon=101.03724#map=17/4.42778/101.03724",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "Точка здания/руин; точный вход хранить отдельной точкой после верификации."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота в опорной точке объекта; не высота здания и не перепад рельефа."
             }
           },
           "logistics": {
@@ -4911,7 +5407,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 1.55959,
+              "lon": 110.34618,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kuching Waterfront Management Office — OpenStreetMap/Mapcarta",
+              "publisher": "OpenStreetMap / Mapcarta",
+              "url": "https://mapcarta.com/W233688666",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Рабочая опорная точка на Kuching Waterfront; не геометрический центр всего исторического квартала."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Самостоятельная база — центр Кучинга; старый город проходится пешком, через реку удобно пользоваться tambang — небольшими пассажирскими лодками.",
@@ -5176,7 +5690,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.0679083,
+              "lon": 100.9723278,
+              "elevation_m": null
+            },
+            "coordinate_type": "archaeological_core",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map",
+              "title": "UNESCO World Heritage Centre — Archaeological Heritage of the Lenggong Valley maps",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/1396/maps/",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "Опорная точка одного из компонентов серийного археологического объекта; не центр всей долины."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Практичная схема — автомобиль из Ipoh/Kuala Kangsar в Lenggong; Tourism Malaysia рекомендует Archaeological Gallery как введение, затем отдельные cave/site visits.",
@@ -5439,6 +5971,51 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+            },
+            "coordinates": {
+              "lat": 4.1148,
+              "lon": 118.6289,
+              "elevation_m": 22
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Sipadan Island — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=4.1148&mlon=118.6289#map=15/4.1148/118.6289",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Центр острова; точки высадки/дайвинга отдельны."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "medium",
+            "elevation_source": {
+              "type": "map",
+              "title": "Sipadan Island — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=4.1148&mlon=118.6289#map=15/4.1148/118.6289",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Центр острова; точки высадки/дайвинга отдельны."
+            },
+            "object_elevation": {
+              "representative_m": 22,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Sipadan Island — OpenStreetMap reference point",
+                "publisher": "OpenStreetMap",
+                "url": "https://www.openstreetmap.org/?mlat=4.1148&mlon=118.6289#map=15/4.1148/118.6289",
+                "authority": "medium",
+                "accessed": "2026-09-29",
+                "notes": "Центр острова; точки высадки/дайвинга отдельны."
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота в опорной точке объекта; не высота здания и не перепад рельефа."
             }
           },
           "logistics": {
@@ -5729,7 +6306,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 6.761144,
+              "lon": 116.695397,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Bavanggazo Rungus Longhouse — Travelfish GPS",
+              "publisher": "Travelfish",
+              "url": "https://www.travelfish.org/sight_profile/malaysia/sabah/kudat/kudat/4051",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "GPS опубликован для деревни/longhouse; официальный Sabah Tourism используется отдельно для идентификации и доступа."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Sabah Tourism: около 41 км южнее Kudat и около 98 км / 2.5 ч от Кота-Кинабалу.",
@@ -5999,7 +6594,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 3.2375,
+              "lon": 101.683889,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Batu Caves — Wikidata/OpenStreetMap reference",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q2044",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Точка комплекса; не объявляется координатой конкретного пещерного входа."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "KTM Komuter до Batu Caves station, затем около 5 минут пешком; также bus/taxi/Grab.",
@@ -6278,7 +6891,25 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.865,
+              "lon": 117.9488,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Sepilok Orangutan Rehabilitation Centre — OpenStreetMap reference point",
+              "publisher": "OpenStreetMap",
+              "url": "https://www.openstreetmap.org/?mlat=5.865&mlon=117.9488#map=16/5.865/117.9488",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Точка центра объекта; вход/касса требуют отдельной верификации."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "elevation_accuracy": "unknown"
           },
           "logistics": {
             "access": "Около 23 км / 40 минут от Sandakan City Centre; taxi/Grab/driver, рядом lodges.",

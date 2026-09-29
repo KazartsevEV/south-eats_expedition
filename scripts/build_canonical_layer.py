@@ -448,7 +448,7 @@ def build():
         entity = {
             "id": geo_id,
             "kind": kind,
-            "names": {"primary": place.get("name")},
+            "names": {"primary": place.get("name"), "ru": ((locality_profile_by_country_name.get((code, place.get("name"))) or {}).get("name_ru") or (region_profile_by_country_name.get((code, place.get("name"))) or {}).get("name_ru"))},
             "slug": place.get("slug"),
             "parent_id": country_id,
             "geo_path": [country_id, geo_id],
@@ -543,7 +543,7 @@ def build():
             entity = {
                 "id": geo_id,
                 "kind": kind,
-                "names": {"primary": name},
+                "names": {"primary": name, "ru": locality.get("name_ru")},
                 "slug": locality.get("slug"),
                 "parent_id": parent_id,
                 "geo_path": [country_id, parent_id, geo_id] if parent_id != country_id else [country_id, geo_id],

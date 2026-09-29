@@ -327,8 +327,8 @@ function countryReferenceHTML(data){
   }
   var climateNote='';
   if(cl&&cl.data){
-    climateNote='<div class="locality-note"><b>Климат:</b> '+esc(cl.data.notes||'Локальные климатические профили будут отображаться на соответствующем geo-уровне.')+
-      (cl.data.reference_location?' Опорный профиль текущей базы: '+esc(cl.data.reference_location)+'. Он не трактуется как климат всей страны.':'')+'</div>';
+    climateNote='<div class="locality-note"><b>Климат:</b> '+esc(cl.data.summary||cl.data.notes||'Локальные климатические профили отображаются на соответствующем geo-уровне.')+
+      (cl.data.spatial_variation?' '+esc(cl.data.spatial_variation):'')+'</div>';
   }
   return '<section class="section"><div class="section-head"><div><div class="eyebrow">Country reference</div><h2>Справка страны</h2></div><p>На этом уровне показываются макрофакты и общегосударственные правила. Локальные климат, риски, фауна и приливы относятся к geo.</p></div>'+
     climateNote+'<div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';

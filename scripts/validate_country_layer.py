@@ -93,10 +93,7 @@ for code, slug in COUNTRIES.items():
         if not short_id or not canonical_id:
             fail(f"{code}: source without id/canonical_id")
         expected = registry_sources.get(f"country:{code.lower()}:{short_id}")
-        # Older canonical country-source rows (notably Cambodia/Laos) predate
-        # source-ID registry coverage. Their canonical_id remains authoritative.
-        # If a registry mapping exists, it must agree; absence alone is not an error.
-        if expected is not None and expected != canonical_id:
+        if expected != canonical_id:
             fail(f"{code}: source registry mismatch {short_id}: {expected} != {canonical_id}")
         source_by_id[short_id] = row
 
@@ -122,12 +119,8 @@ for code, slug in COUNTRIES.items():
         cid = node.get("canonical_id")
         if not cid:
             fail(f"{code}: hierarchy node {node.get('id')} missing canonical_id")
-        registered_geo = registry_geo.get(node.get("id"))
-        # Cambodia/Laos formal hierarchy predates complete geo-registry coverage.
-        # canonical_id on the hierarchy node is authoritative; when a registry
-        # mapping exists, it must agree.
-        if registered_geo is not None and registered_geo != cid:
-            fail(f"{code}: geo registry mismatch for {node.get('id')}: {registered_geo} != {cid}")
+        if registry_geo.get(node.get("id")) != cid:
+            fail(f"{code}: geo registry mismatch for {node.get('id')}")
         parent = node.get("parent_id")
         if parent != f"country:{code.lower()}" and parent not in node_ids:
             fail(f"{code}: hierarchy node {node.get('id')} has unknown parent {parent}")

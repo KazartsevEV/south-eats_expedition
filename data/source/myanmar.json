@@ -241,7 +241,7 @@
       "petty theft"
     ],
     "sensitive_areas": [
-      "Значительная часть приграничных штатов, территорий под контролем сил сопротивления и спорных зон.",
+      "large parts of border states and resistance-held/contested areas",
       "military facilities",
       "demonstrations/political gatherings"
     ],
@@ -6210,7 +6210,7 @@
         }
       }
     ],
-    "region_model_note": "Регионы используются как канонические географические и фильтрационные сущности; локальные узлы — как практические пункты маршрута, связанные с объектами через ближайшие населённые пункты.",
+    "region_model_note": "v1.5: regions are canonical geographic/filter entities; localities are practical route hubs derived from object-level nearest_hub linkage.",
     "localities": [
       {
         "name": "Nyaung-U / Bagan",
@@ -6881,7 +6881,7 @@
     ],
     "transport_rules": {
       "status": "security_and_permit_constrained",
-      "summary": "В условиях продолжающегося конфликта страновой слой не устанавливает общего правила самостоятельного вождения для иностранных туристов. Доступ по дорогам зависит от закрытых зон, блокпостов и фактического контроля территории; организованный въезд колонной на собственных автомобилях, мотоциклах или велосипедах относится к видам поездок, для которых туристические правила предусматривают разрешительный режим.",
+      "summary": "The country layer does not normalize a blanket rule for self-driving by foreign tourists under current conflict conditions. Road access is subordinate to restricted-area rules, checkpoints and local control; special inbound caravan tours using private vehicles/motorcycles/bicycles require permission under tourism rules.",
       "source_ids": [
         "MOHT_PERMITS",
         "RUS_MFA",
@@ -6891,7 +6891,7 @@
     },
     "camping_rules": {
       "status": "not_assumed_permitted",
-      "summary": "Актуальные официальные правила eVisa требуют, чтобы туристы останавливались в зарегистрированных гостиницах, мотелях, постоялых домах, гостевых домах, курортах либо на судах. Поэтому справочник не считает самостоятельную ночёвку в палатке общеразрешённым вариантом; любое исключение должно быть подтверждено для конкретного места и действующего режима безопасности.",
+      "summary": "Current official eVisa guidance requires tourists to stay in registered hotels, motels, inns, guest houses, resorts or on boats. The handbook therefore does not treat independent tent camping as a generally lawful overnight option; any exception must be documented for the specific location and security regime.",
       "source_ids": [
         "MOHT_EVISA"
       ],
@@ -6900,7 +6900,7 @@
     "drone_rules": {
       "legal_status": "restricted_and_authorization_based",
       "permit_required": true,
-      "summary": "Департамент гражданской авиации Мьянмы публикует ограничения для БПЛА, включая зоны аэродромов и опасные, запрещённые и ограниченные районы. С учётом текущей обстановки ни один полёт не считается разрешённым по умолчанию: перед запуском необходимо проверить требования DCA и местные ограничения безопасности.",
+      "summary": "Myanmar DCA publishes restrictions for drone/UAS operations, including aerodromes and danger/prohibited/restricted areas. Given the current security environment, no flight is treated as presumptively allowed; DCA and local/security restrictions must be checked before operation.",
       "source_ids": [
         "DCA_DRONE_MM"
       ],
@@ -6908,7 +6908,7 @@
     },
     "tourist_permits": {
       "status": "restricted_areas_and_activity_specific",
-      "summary": "Для закрытых и ограниченных районов требуется разрешение. Туристические правила также относят к разрешительным категориям автомобильные караваны, яхтенные и речные маршруты, круизы, чартерные рейсы, полёты на аэростатах и специальные пакетные маршруты. Фактический доступ в конкретный регион может быть строже из-за вооружённого конфликта.",
+      "summary": "Restricted areas require permission; tourism guidance also lists caravan, yacht, riverine, cruise, charter-flight, balloon and special-package tours as permission-based categories. Actual regional access may be more restrictive because of the conflict.",
       "source_ids": [
         "MOHT_PERMITS",
         "MOHT_EVISA",

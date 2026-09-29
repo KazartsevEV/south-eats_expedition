@@ -27,7 +27,8 @@
       "v1.5 migration: adds narrow, normalized tags, route_meta and locality linkage for canonical CDN build.",
       "v1.6: завершён экспедиционный редакционный проход 21/21: самостоятельное путешествие — режим по умолчанию; многодневность, ступени и набор высоты описываются как параметры маршрута; гид/оператор указывается только при обязательном режиме доступа или явной практической ценности; сырые англо-русские формулировки вычищаются из человекочитаемых полей.",
       "2026-09-29 GPS normalization: 21/21 Indonesia objects receive sourced WGS84 map anchors. Broad parks, archipelagos and cultural landscapes use explicit center/approximate semantics rather than pretending to be entrances.",
-      "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии."
+      "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии.",
+      "2026-09-29 country-layer migration: country languages, ethnography, culture and narrow normalized from existing regional/project donor material; no attraction cards edited."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -101,6 +102,28 @@
         "year": 2025,
         "notes": "Международная сопоставимая черта; национальная бедность рассчитывается иначе."
       }
+    },
+    "narrow": "Индонезия — огромный вулканический архипелаг между Индийским и Тихим океанами, где единое государство объединяет резко различающиеся островные миры: от Явы и Бали до Суматры, Сулавеси, Молукк и Папуа.",
+    "languages": {
+      "official": "индонезийский",
+      "practical": "Индонезийский является общегосударственным языком. Региональный слой справочника фиксирует также яванский, балийский, минангкабау, батакские языки, языки тораджа и даяков, манггарай, лио, тенгерский, осинг, папуасский малайский и местные папуасские языки, баджо и ряд других островных языков.",
+      "source_ids": [
+        "BPS_SP2022"
+      ]
+    },
+    "ethnography": {
+      "summary": "Архипелаг объединяет множество этнокультурных регионов. В уже собранных материалах отдельно представлены яванская придворная среда, балийские общины, минангкабау, батакские группы, тораджа, даякские сообщества Калимантана, народы Флореса и Сумбы, баджо и папуасские общины. Эти характеристики должны храниться на уровне соответствующих островов и локальностей.",
+      "source_ids": [
+        "BPS_SP2022",
+        "INDONESIA_TRAVEL"
+      ]
+    },
+    "culture": {
+      "summary": "Культурный слой страны включает буддийское и индуистское наследие Центральной Явы, исламские и придворные традиции Явы, живую индуистскую культуру Бали, мегалитические и погребальные традиции Тораджа и Сумбы, ремесленные и морские культуры восточных островов. В справочнике этот материал разворачивается регионально, а не сводится к единому усреднённому описанию.",
+      "source_ids": [
+        "INDONESIA_TRAVEL",
+        "UNESCO"
+      ]
     }
   },
   "nature": {
@@ -7540,6 +7563,36 @@
         "fauna_conservation_status"
       ],
       "accessed": "2026-09-27"
+    },
+    {
+      "id": "BPS_SP2022",
+      "canonical_id": "src_000701",
+      "kind": "government",
+      "title": "Sensus Penduduk 2020/2022 thematic tables",
+      "publisher": "Badan Pusat Statistik (BPS-Statistics Indonesia)",
+      "url": "https://sensus.bps.go.id/topik/tabular/sp2022/204/0/0",
+      "used_for": [
+        "country_profile",
+        "demography",
+        "languages",
+        "ethnography"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "INDONESIA_TRAVEL",
+      "canonical_id": "src_000702",
+      "kind": "government",
+      "title": "Indonesia Travel — official destination and cultural material",
+      "publisher": "Ministry of Tourism, Republic of Indonesia",
+      "url": "https://www.indonesia.travel/",
+      "used_for": [
+        "country_profile",
+        "culture",
+        "ethnography",
+        "heritage"
+      ],
+      "accessed": "2026-09-29"
     }
   ],
   "uncertainties": [

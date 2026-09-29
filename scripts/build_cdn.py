@@ -15,7 +15,7 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 
 SCHEMA_VERSION = "2.10.10"
 RELEASE_ID = "2026-09-29-r40"
-SUPPORTED_SOURCE_MODELS = {"1.5", "1.6"}
+SUPPORTED_SOURCE_MODELS = {"1.2", "1.5", "1.6"}
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
     ("cambodia.json", "KH", "cambodia"),
@@ -23,6 +23,9 @@ PUBLISH = [
     ("indonesia.json", "ID", "indonesia"),
     ("malaysia.json", "MY", "malaysia"),
     ("myanmar.json", "MM", "myanmar"),
+]
+COUNTRY_ONLY = [
+    ("philippines.json", "PH", "philippines"),
 ]
 
 TYPE_LABELS = {
@@ -994,6 +997,37 @@ def build():
             "objects_path": f"countries/{country_slug}/objects.json",
             "places_path": f"countries/{country_slug}/places.json",
             "collections_path": f"countries/{country_slug}/collections.json",
+        })
+
+    # Country-first migration stage: publish country reference payloads without
+    # generating regional/object layers until their own QA phase begins.
+    for filename, code, country_slug in COUNTRY_ONLY:
+        src_path = SRC / filename
+        if not src_path.exists():
+            raise RuntimeError(f"country source missing: {src_path}")
+        source = load(src_path)
+        source_model = (source.get("meta") or {}).get("data_model_version")
+        if source_model not in SUPPORTED_SOURCE_MODELS:
+            raise RuntimeError(f"{filename}: unsupported source model {source_model!r}")
+        cdir = release / "countries" / country_slug
+        dump(cdir / "country.json", country_payload(source, code, country_slug, 0, 0))
+        dump(cdir / "objects.json", {"meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID, "country_code": code, "count": 0}, "objects": []})
+        dump(cdir / "places.json", {"meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID, "country_code": code, "count": 0}, "places": []})
+        dump(cdir / "collections.json", {"meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID, "country_code": code}, "collections": []})
+        countries.append({
+            "country_code": code,
+            "slug": country_slug,
+            "country": (source.get("meta") or {}).get("country"),
+            "summary": (source.get("overview") or {}).get("summary"),
+            "objects_count": 0,
+            "regions_count": 0,
+            "currency": ((source.get("travel") or {}).get("currency") or {}).get("code"),
+            "cover": None,
+            "country_path": f"countries/{country_slug}/country.json",
+            "objects_path": f"countries/{country_slug}/objects.json",
+            "places_path": f"countries/{country_slug}/places.json",
+            "collections_path": f"countries/{country_slug}/collections.json",
+            "migration_stage": "country_only",
         })
 
     dump(release / "countries.json", {"meta": {"schema_version": SCHEMA_VERSION, "release_id": RELEASE_ID}, "countries": countries})

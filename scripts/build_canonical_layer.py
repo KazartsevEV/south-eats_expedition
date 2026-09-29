@@ -613,6 +613,9 @@ def build():
         "international_organization": "other",
         "secondary_climatology": "other",
         "scientific_database": "other",
+        "park_authority": "park_authority",
+        "museum": "museum",
+        "archaeological_service": "archaeological_service",
         "academic": "academic",
         "university": "university",
     }

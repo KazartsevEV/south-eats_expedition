@@ -12,7 +12,7 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
 GEO_COUNTRIES = ROOT / "data" / "geo" / "countries"
-FORMAL_CANONICAL_GEO_CODES = {"BN", "KH", "LA", "ID", "MY", "MM"}
+FORMAL_CANONICAL_GEO_CODES = {"BN", "KH", "LA", "ID", "MY", "MM", "PH", "SG", "TH", "TL", "VN"}
 COUNTRY_SOURCE_CANONICAL_CODES = {"BN", "KH", "LA", "ID", "MY", "MM", "PH", "SG", "TH", "TL", "VN"}
 
 GENERATED_AT = "2026-09-29T00:35:00+04:00"

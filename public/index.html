@@ -291,7 +291,33 @@ var FIELD_LABELS={
   taxi_ridehail:'Такси и заказ машины',moped:'Мопед',gateway_for:'Связи',tickets:'Билеты и регистрация',
   mountains_m:'Высоты гор, м',summit_m:'Высота вершины, м',bajau:'Баджау',orang_ulu:'Оранг-улу',jahai:'Джахай',
   spoken:'Языки',protected_marine:'Морские охраняемые территории',annual_precipitation_mm:'Осадки за год, мм',
-  annual_precipitation_uncertainty_mm:'Неопределённость осадков, мм',period:'Период'
+  annual_precipitation_uncertainty_mm:'Неопределённость осадков, мм',period:'Период',
+  region:'Регион',neighbors:'Соседи',coastline_km_approx:'Протяжённость береговой линии, км',seas_and_oceans:'Моря и океанические бассейны',
+  highest_point:'Высшая точка',name:'Название',elevation_m:'Высота, м',elevation_m_approx:'Примерная высота, м',terrain:'Рельеф и ландшафт',
+  official:'Официальная религия',profile:'Описание',primary:'Основной язык',practical:'Практическое использование',diversity:'Языковое разнообразие',
+  gdp_current_usd_billion:'ВВП, млрд долл. США',gdp_per_capita_usd:'ВВП на душу населения, долл. США',gdp_growth_pct:'Рост ВВП, %',year:'Год',
+  poverty:'Бедность',metric:'Показатель',value_pct:'Значение, %',notes:'Примечания',overview:'Обзор',street_food:'Уличная еда',festivals:'Праздники и фестивали',
+  fauna:'Фауна',common_traveler_risks:'Основные риски для путешественника',sensitive_areas:'Чувствительные и ограниченные зоны',
+  natural_hazards:'Природные явления и риски',natural_phenomena:'Природные явления',marine_fauna:'Морские обитатели',
+  vector_borne_diseases:'Инфекции, переносимые насекомыми',regional_note:'Региональная оговорка',field_context:'Практическое значение',
+  hydrologic_context:'Гидрологический контекст',operational_context:'Практические риски',operational_rule:'Как использовать данные',
+  river:'Река',rivers:'Реки',wetlands:'Водно-болотные угодья',coastline:'Береговая линия',mangroves:'Мангры',
+  road:'Автомобильные дороги',river_transport:'Речной транспорт',water_transport:'Водный транспорт',field_note:'Полевое примечание',
+  crime_level:'Уровень преступности',qualitative:'Качественная оценка',risk:'Риск',where:'Где встречается',rule:'Правило',
+  geography:'География',economy:'Экономика',religions:'Религии',languages:'Языки',ethnography:'Этнография',culture:'Культура',history:'История',nature:'Природа',
+  cuisine:'Кухня',natural_risks:'Природные риски',safety_snapshot:'Безопасность',transport:'Транспорт',transport_rules:'Транспортные правила',
+  visa:'Виза',visa_run:'Визаран',borders:'Сухопутные границы',airports:'Аэропорты',international_air_links:'Международное авиасообщение',
+  laws_and_prohibitions:'Законы и ограничения',currency:'Валюта',camping:'Кемпинг',drones:'Дроны',permits:'Разрешения',limits:'Ограничения',
+  passport_validity:'Срок действия паспорта',stay_days:'Срок пребывания, дней',extension:'Продление',possible:'Возможно',
+  legal_status:'Правовой статус',permit_required:'Требуется разрешение',road_side:'Сторона движения',foreign_licence:'Иностранные права',
+  rental:'Аренда',temporary_import:'Временный ввоз',vehicle_standard_note:'Примечание по транспорту',restrictions:'Ограничения',
+  countries:'Страны',main_crossings:'Основные переходы',neighbors_land:'Сухопутные соседи',landlocked:'Нет выхода к морю',coastline_km:'Береговая линия, км',
+  iata:'Код IATA',local_currency_per_1_usd:'Местной валюты за 1 доллар США',rate_type:'Тип курса',typical_month:'Типичный месяц',
+  fee_usd_typical:'Ориентировочный сбор, долл. США',fee_idr:'Сбор, индонезийских рупий',entry_form:'Форма въезда',tourist_visa:'Туристическая виза',
+  visa_exemption_note:'Примечание о безвизовом режиме',general_rule:'Общее правило',general_status:'Общий статус',protected_areas:'Охраняемые территории',
+  category:'Категория',annual_cap_days:'Годовой лимит, дней',annual_cap_period:'Период годового лимита',tourist_use:'Использование туристами',
+  observation_time_note:'Примечание о времени наблюдений',spatial_variation:'Региональные различия',as_of:'По состоянию на',
+  Jan:'Январь',Feb:'Февраль',Mar:'Март',Apr:'Апрель',May:'Май',Jun:'Июнь',Jul:'Июль',Aug:'Август',Sep:'Сентябрь',Oct:'Октябрь',Nov:'Ноябрь',Dec:'Декабрь'
 };
 var VALUE_LABELS={
   police_district:'полицейский округ',
@@ -325,7 +351,7 @@ function scalar(v,key){
   if(typeof v==='number')return esc(v);
   if(Array.isArray(v))return '<ul>'+v.map(function(x){return '<li>'+scalar(x,key)+'</li>'}).join('')+'</ul>';
   if(typeof v==='object'){
-    var hidden={source_refs:1,source_ids:1,source_urls:1,checked_at:1,qa:1,provenance:1};
+    var hidden={source_refs:1,source_ids:1,source_urls:1,checked_at:1,qa:1,provenance:1,source_refs_complete:1,field_source_refs:1,source_file:1,country_id:1,topic:1};
     return '<ul>'+Object.keys(v).filter(function(k){return v[k]!=null&&v[k]!==''&&!hidden[k]}).map(function(k){
       return '<li><b>'+esc(fieldLabel(k))+':</b> '+scalar(v[k],k)+'</li>';
     }).join('')+'</ul>';
@@ -375,7 +401,7 @@ function countryReferenceHTML(data){
     blocks.push(factCard('Языки',p.languages));
     blocks.push(factCard('Этнография',p.ethnography));
     blocks.push(factCard('Культура',p.culture));
-    blocks.push(factCard('Кухня и street food',{overview:p.cuisine,street_food:p.street_food,festivals:p.festivals}));
+    blocks.push(factCard('Кухня и уличная еда',{overview:p.cuisine,street_food:p.street_food,festivals:p.festivals}));
   }
   if(t){
     blocks.push(factCard('Въезд и виза для граждан РФ',t.visa&&t.visa.value));
@@ -391,7 +417,7 @@ function countryReferenceHTML(data){
     climateNote='<div class="locality-note"><b>Климат:</b> '+esc(cl.data.summary||cl.data.notes||'Локальные климатические профили отображаются на соответствующем geo-уровне.')+
       (cl.data.spatial_variation?' '+esc(cl.data.spatial_variation):'')+'</div>';
   }
-  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Country reference</div><h2>Справка страны</h2></div><p>На этом уровне показываются макрофакты и общегосударственные правила. Локальные климат, риски, фауна и приливы относятся к geo.</p></div>'+
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Страна</div><h2>Справка страны</h2></div><p>На этом уровне показываются макрофакты и общегосударственные правила. Локальные климат, риски, фауна и приливы относятся к geo.</p></div>'+
     climateNote+'<div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
 }
 var GEO_FIELDS=[
@@ -406,7 +432,7 @@ function geoReferenceHTML(g){
   if(g.description)blocks.push(factCard('Описание',g.description));
   GEO_FIELDS.forEach(function(x){if(g[x[1]]!=null)blocks.push(factCard(x[0],g[x[1]]))});
   if(!blocks.filter(Boolean).length)return '<div class="locality-note">Для этого geo-узла локальная справка ещё не мигрирована. Объекты и связи уже доступны, факты будут добавляться без изменения структуры страницы.</div>';
-  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Geo reference</div><h2>Локальная справка</h2></div></div><div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Регион</div><h2>Локальная справка</h2></div></div><div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
 }
 function inheritedGeoContextHTML(child,parent){
   if(!child||!parent)return '';

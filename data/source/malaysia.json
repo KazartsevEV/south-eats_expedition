@@ -26,13 +26,14 @@
       "v1.6.1 draft: 21/21 объектов получили WGS84 primary coordinates, coordinate_type, accuracy и source; для протяжённых парков/островов/реки reference point не выдаётся за вход. Высота заполняется только там, где найден надёжный источник, иначе остаётся null.",
       "v1.6.1 draft: визовый блок для паспорта РФ и MDAC перепроверены 2026-09-29 по Embassy of Malaysia Moscow / Immigration Department; общий drone baseline заменён на актуальную CAAM ATF-модель с 14 рабочими днями на стандартную заявку.",
       "v1.6.2 draft: Malaysia expansion +10 objects (31 total): Taman Negara, Endau-Rompin Johor, Gunung Stong, Bako, Maliau Basin, Crocker Range/Salt Trail, Gomantong, Sungai Batu, Bujang Valley museum/candi landscape, Gua Tambun. Existing 21 preserved.",
-      "v1.6.3 draft: second Malaysia expansion chunk +7; total 38."
+      "v1.6.3 draft: second Malaysia expansion chunk +7; total 38.",
+      "v1.6 expansion: Malaysia expanded from 21 to 40 objects in two source-backed chunks."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
-      "completed_objects": 38,
-      "total_objects": 38,
-      "status": "expanded_38_source_cards_complete_pending_structural_qa",
+      "completed_objects": 40,
+      "total_objects": 40,
+      "status": "expanded_40_source_cards_complete_pending_structural_qa",
       "updated": "2026-09-29"
     },
     "editorial_profile": {
@@ -45,40 +46,19 @@
     "geodata_upgrade_progress": {
       "schema_target": "2.10.10",
       "updated": "2026-09-29",
-      "completed_coordinates": 38,
-      "total_objects": 38,
-      "elevation_verified_objects": 18,
+      "completed_coordinates": 40,
+      "total_objects": 40,
+      "elevation_verified_objects": 19,
       "status": "coordinates_complete_elevation_partial",
-      "policy": "WGS84; unknown elevation remains null."
+      "policy": "WGS84 typed points; unknown elevation remains null."
     },
     "country_expansion_qa": {
-      "status": "38_objects_two_expansion_chunks_pending_build_validate",
+      "status": "40_objects_two_expansion_chunks_pending_build_validate",
       "previous_objects": 21,
-      "added_objects": 10,
-      "current_objects": 38,
-      "added_names": [
-        "Taman Negara National Park",
-        "Endau-Rompin National Park (Johor)",
-        "Gunung Stong State Forest Park",
-        "Bako National Park",
-        "Maliau Basin Conservation Area",
-        "Crocker Range Park and Salt Trail",
-        "Gomantong Caves",
-        "Sungai Batu Archaeological Site",
-        "Bujang Valley Archaeological Museum and temple landscape",
-        "Gua Tambun rock art site"
-      ],
+      "added_objects": 19,
+      "current_objects": 40,
       "checked_at": "2026-09-29",
-      "rule": "No existing object removed; new objects require authoritative access source, typed GPS, water/overnight, narrative, visual_recon and provenance.",
-      "added_second_chunk": [
-        "Fairy Cave and Wind Cave Nature Reserves",
-        "Gunung Gading National Park",
-        "Tawau Hills Park",
-        "Batang Ai National Park and Iban longhouse landscape",
-        "Gunung Jerai Geoforest Park",
-        "Tasik Chini Biosphere Reserve",
-        "Gua Tempurung"
-      ]
+      "rule": "No existing object removed."
     }
   },
   "overview": {
@@ -908,6 +888,46 @@
         },
         "climate_summary": "Жаркая известняковая долина; краткие сильные ливни обычны.",
         "best_period_general": "Проверять объектную сезонность и текущий доступ.",
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Sabah east / Tabin",
+        "climate_summary": "Низинный влажный rainforest; дороги чувствительны к осадкам.",
+        "languages_spoken": [
+          "малайский",
+          "английский в visitor/research infrastructure"
+        ],
+        "language_notes": "Практический профиль.",
+        "currency": {
+          "code": "MYR",
+          "name": "Malaysian ringgit",
+          "local_currency_per_1_usd": 4.0741,
+          "as_of": "2026-09-27",
+          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
+          "rate_type": "рыночный/справочный снимок",
+          "practical_notes": "MYR; remote access требует наличных/предоплаты."
+        },
+        "best_period_general": "Проверять current access.",
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Sabah interior / Imbak Canyon",
+        "climate_summary": "Удалённый canyon rainforest; ливни влияют на 4WD access и river conditions.",
+        "languages_spoken": [
+          "малайский",
+          "английский в visitor/research infrastructure"
+        ],
+        "language_notes": "Практический профиль.",
+        "currency": {
+          "code": "MYR",
+          "name": "Malaysian ringgit",
+          "local_currency_per_1_usd": 4.0741,
+          "as_of": "2026-09-27",
+          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
+          "rate_type": "рыночный/справочный снимок",
+          "practical_notes": "MYR; remote access требует наличных/предоплаты."
+        },
+        "best_period_general": "Проверять current access.",
         "last_verified": "2026-09-29"
       }
     ],
@@ -12904,6 +12924,624 @@
           "public_transport": "Regional bus/train to Ipoh/Kampar/Gopeng; last segment local taxi/ride-hailing.",
           "last_mile": "Up to about 1.9 km visitor-accessible cave; wet routes include river sections.",
           "mobility_notes": "Stairs/show-cave paths, large chambers, wet river sections on longer routes."
+        }
+      },
+      {
+        "name": "Tabin Wildlife Reserve",
+        "class": "expanded",
+        "interest": [
+          "protected_area",
+          "wildlife",
+          "rainforest",
+          "mud_volcano",
+          "birding",
+          "sabah"
+        ],
+        "why_go": "Крупный низинный резерват Dent Peninsula с Lipad mud volcano, минеральными выходами и одной из сильнейших wildlife-зон восточного Сабаха; он дополняет Danum и Kinabatangan другим сочетанием геологии, леса и крупных млекопитающих.",
+        "traveler_card": {
+          "location": {
+            "region": "Sabah east / Tabin",
+            "nearest_hub": "Lahad Datu",
+            "coordinates": {
+              "lat": 5.266667,
+              "lon": 118.7,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "official_brochure",
+              "title": "Tabin Wildlife Reserve coordinate",
+              "publisher": "Tourism Malaysia",
+              "url": "https://storage.ebrochures.malaysia.travel/storage/IDB_PDF_BP_EN.pdf",
+              "authority": "high",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 100,
+              "max_m": 571,
+              "reference_type": "range",
+              "accuracy": "high",
+              "source": {
+                "type": "scientific_database",
+                "title": "Tabin Wildlife Reserve KBA",
+                "publisher": "Key Biodiversity Areas",
+                "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16042",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29"
+            }
+          },
+          "logistics": {
+            "access": "Практический вход строится через Lahad Datu и заранее согласованный 4WD/local transfer; общественный транспорт внутрь reserve не является рабочей схемой.",
+            "modes": {
+              "public_transport": "До Lahad Datu — междугородний транспорт/авиация; прямого общественного транспорта внутрь reserve не подтверждено.",
+              "taxi_ridehail": "Работает только до регионального хаба; последний участок требует согласованного transfer.",
+              "car": "4WD/local transfer от Lahad Datu.",
+              "walking": "Лесные маршруты к mud volcano, wildlife sectors и river/forest trails."
+            },
+            "walking": "Дистанция зависит от согласованного сектора; не публикуется как одна универсальная тропа.",
+            "water": "Питьевая вода у visitor/lodge infrastructure; природные источники требуют обработки.",
+            "overnight_and_camping": "Ночёвка — только разрешённая lodge/visitor infrastructure или согласованный camp; произвольный лагерь в reserve не считать законным.",
+            "permit_or_guide": "Внутренний доступ рационально и местами необходимо вести через ranger/guide и согласованную логистику reserve; пакетный тур как продукт не является целью карточки.",
+            "best_period": "Более сухое окно облегчает дороги и mud-volcano trails; wildlife активнее утром и вечером.",
+            "route_scale": "1–3+ дня",
+            "terrain_and_movement": "Низинный дождевой лес, грязевые участки, river crossings и 4WD roads.",
+            "self_guided_default": false,
+            "guide_status": "регулируемый/сопровождаемый доступ",
+            "expedition_note": "Ограничение задаётся режимом reserve и удалённостью, а не физической длиной маршрута."
+          },
+          "climate": {
+            "best_period": "Проверять текущие осадки и дорожный доступ.",
+            "heat_rain_notes": "Жарко и влажно; дождь быстро ухудшает forest roads.",
+            "site_specific_notes": "Mud volcano и wildlife trails наиболее чувствительны к недавним осадкам."
+          },
+          "operations": {
+            "current_status": "restricted/verify",
+            "hours": "Подтверждать при бронировании доступа.",
+            "ticket": "Permit/entry/transfer fees подтверждать у управляющей стороны перед поездкой.",
+            "closure_notes": "Сектора могут временно закрываться из-за погоды, wildlife management и состояния дорог.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://sabahtourism.com/destination/tabin-wildlife-reserve/"
+          },
+          "safety": {
+            "crime_context": "Основные риски природные и операционные.",
+            "main_risks": [
+              "удалённость",
+              "грязевые дороги",
+              "крупные дикие животные",
+              "пиявки и насекомые",
+              "ограниченная быстрая медицинская помощь"
+            ],
+            "sensitive_areas": [],
+            "confidence": "официальный reserve context"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Раннее утро и поздний день.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "Соблюдать правила CAAM и дополнительные ограничения управляющей организации охраняемой территории."
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft System (UAS)",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Профессиональная съёмка и БПЛА требуют отдельного согласования с управляющей территорией.",
+            "visual_scouting": {
+              "best_time": "early_morning / late_afternoon",
+              "best_weather_light": "Рассеянный свет в лесу; сухое окно облегчает mud-volcano sector.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "tabin_ref",
+                  "name": "Tabin reserve reference",
+                  "description": "Опорная точка большого reserve; конкретные hides и Lipad mud volcano должны храниться отдельными geo_points после точной верификации.",
+                  "coordinates": {
+                    "lat": 5.266667,
+                    "lon": 118.7,
+                    "elevation_m": null
+                  },
+                  "access": "Через согласованный reserve access.",
+                  "view": {
+                    "description": "lowland rainforest landscape"
+                  },
+                  "best_time": "early_morning",
+                  "useful_equipment": [
+                    {
+                      "type": "telephoto",
+                      "why": "дикая природа с дистанции"
+                    },
+                    {
+                      "type": "wide",
+                      "why": "лесной контекст"
+                    }
+                  ],
+                  "source": {
+                    "type": "official_brochure",
+                    "title": "Tabin Wildlife Reserve",
+                    "publisher": "Tourism Malaysia",
+                    "url": "https://storage.ebrochures.malaysia.travel/storage/IDB_PDF_BP_EN.pdf",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Сухое окно облегчает лесные дороги; после дождей mud-volcano landscape выразительнее, но доступ тяжелее."
+              ],
+              "video_activity": [
+                "лесной маршрут",
+                "wildlife observation",
+                "mud-volcano activity"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "telephoto",
+                  "why": "животные"
+                },
+                {
+                  "type": "wide",
+                  "why": "лес"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Tabin Wildlife Reserve был gazetted в 1984 году как большой охраняемый низинный лес Dent Peninsula. Его отличительная черта — сочетание богатой фауны с грязевыми вулканами и минеральными выходами, к которым приходят животные.",
+            "culture_ethnography": null,
+            "geography_geology": "Резерват лежит в низинном восточном Sabah; KBA фиксирует высотный диапазон примерно 100–571 м. Mud volcano связан с геологическими процессами и минерализованными субстратами.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Крупный wildlife reserve восточного Sabah с низинным rainforest и грязевыми вулканами."
+              },
+              {
+                "section_id": "geology",
+                "content": "Lipad mud volcano и другие минеральные участки создают отдельный геологический сюжет внутри лесного резервата."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Wildlife sightings не гарантированы.",
+              "Обычная легковая/ride-hailing схема не заменяет согласованный последний участок."
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Tabin reserve lodging / field accommodation",
+              "area": "Tabin Wildlife Reserve",
+              "price_for_two": "Цена зависит от даты и схемы доступа; без свежего подтверждения не фиксируется.",
+              "contact": null,
+              "social_or_web": "https://sabahtourism.com/destination/tabin-wildlife-reserve/",
+              "source": "Sabah Tourism / reserve access",
+              "checked_at": "2026-09-29"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": null,
+          "gallery": []
+        },
+        "sources": [
+          {
+            "url": "https://storage.ebrochures.malaysia.travel/storage/IDB_PDF_BP_EN.pdf",
+            "publisher": "Tourism Malaysia",
+            "used_for": [
+              "coordinates",
+              "reserve profile",
+              "mud volcano"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://sabahtourism.com/destination/tabin-wildlife-reserve/",
+            "publisher": "Sabah Tourism Board",
+            "used_for": [
+              "access",
+              "visitor context"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16042",
+            "publisher": "Key Biodiversity Areas",
+            "used_for": [
+              "elevation range",
+              "habitat"
+            ],
+            "type": "scientific_database",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "weather/season",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Крупный низинный резерват Dent Peninsula с Lipad mud volcano, минеральными выходами и одной из сильнейших wildlife-зон восточного Сабаха; он дополняет Danum и Kinabatangan другим сочетанием геологии, леса и крупных млекопитающих.",
+        "tags": [
+          "protected_area",
+          "wildlife",
+          "rainforest",
+          "mud_volcano",
+          "birding",
+          "sabah"
+        ],
+        "route_meta": {
+          "region_ref": "Sabah east / Tabin",
+          "locality_ref": "Lahad Datu",
+          "transport_modes": {
+            "public_transport": "До Lahad Datu — междугородний транспорт/авиация; прямого общественного транспорта внутрь reserve не подтверждено.",
+            "taxi_ridehail": "Работает только до регионального хаба; последний участок требует согласованного transfer.",
+            "car": "4WD/local transfer от Lahad Datu.",
+            "walking": "Лесные маршруты к mud volcano, wildlife sectors и river/forest trails."
+          },
+          "walking": "Дистанция зависит от согласованного сектора; не публикуется как одна универсальная тропа.",
+          "water": "Питьевая вода у visitor/lodge infrastructure; природные источники требуют обработки.",
+          "overnight_and_camping": "Ночёвка — только разрешённая lodge/visitor infrastructure или согласованный camp; произвольный лагерь в reserve не считать законным.",
+          "permit_or_guide": "Внутренний доступ рационально и местами необходимо вести через ranger/guide и согласованную логистику reserve; пакетный тур как продукт не является целью карточки.",
+          "best_period": "Более сухое окно облегчает дороги и mud-volcano trails; wildlife активнее утром и вечером.",
+          "current_status": "restricted/verify",
+          "main_risks": [
+            "удалённость",
+            "грязевые дороги",
+            "крупные дикие животные",
+            "пиявки и насекомые",
+            "ограниченная быстрая медицинская помощь"
+          ],
+          "expedition_profile": {
+            "default_mode": "регулируемый доступ",
+            "route_scale": "1–3+ дня",
+            "terrain_and_movement": "Низинный дождевой лес, грязевые участки, river crossings и 4WD roads.",
+            "physical_difficulty_policy": "длительность, грязь, броды и многодневность являются параметрами маршрута",
+            "camping_assumption": "палатка доступна, но ночёвка определяется режимом территории",
+            "local_support": "Внутренний доступ рационально и местами необходимо вести через ranger/guide и согласованную логистику reserve; пакетный тур как продукт не является целью карточки."
+          },
+          "guide_or_permit": "Внутренний доступ рационально и местами необходимо вести через ranger/guide и согласованную логистику reserve; пакетный тур как продукт не является целью карточки.",
+          "independent_travel": {
+            "default": false,
+            "guide_status": "регулируемый/сопровождаемый доступ",
+            "guide_reason": "Внутренний доступ рационально и местами необходимо вести через ranger/guide и согласованную логистику reserve; пакетный тур как продукт не является целью карточки.",
+            "expedition_note": "Ограничение задаётся режимом reserve и удалённостью, а не физической длиной маршрута."
+          },
+          "access": "Практический вход строится через Lahad Datu и заранее согласованный 4WD/local transfer; общественный транспорт внутрь reserve не является рабочей схемой.",
+          "public_transport": "До Lahad Datu — междугородний транспорт/авиация; прямого общественного транспорта внутрь reserve не подтверждено.",
+          "last_mile": "Дистанция зависит от согласованного сектора; не публикуется как одна универсальная тропа.",
+          "mobility_notes": "Низинный дождевой лес, грязевые участки, river crossings и 4WD roads."
+        }
+      },
+      {
+        "name": "Imbak Canyon Conservation Area",
+        "class": "expanded",
+        "interest": [
+          "protected_area",
+          "rainforest",
+          "canyon",
+          "waterfall",
+          "research",
+          "camping",
+          "sabah"
+        ],
+        "why_go": "Строго контролируемый sandstone-canyon комплекс центрального Сабаха между крупными лесными блоками региона: около 30 тысяч гектаров, полевые станции, Imbak Falls и настоящий permit-based expedition access.",
+        "traveler_card": {
+          "location": {
+            "region": "Sabah interior / Imbak Canyon",
+            "nearest_hub": "Tongod / Sandakan",
+            "coordinates": {
+              "lat": 5.160605,
+              "lon": 116.929972,
+              "elevation_m": null
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "government_official",
+              "title": "Imbak Canyon Conservation Area",
+              "publisher": "Sabah Biodiversity Centre",
+              "url": "https://sabaes.sabah.gov.my/about/resource-manager",
+              "authority": "high",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29"
+          },
+          "logistics": {
+            "access": "Вход только после предварительного разрешения Yayasan Sabah; 4WD/организованный transfer является частью доступа.",
+            "modes": {
+              "public_transport": "Прямого общественного транспорта внутрь ICCA нет.",
+              "taxi_ridehail": "Не является рабочим последним участком.",
+              "car": "4WD через согласованный entry route.",
+              "walking": "Jungle trekking и station trails только внутри approved visit."
+            },
+            "walking": "Километраж зависит от утверждённого маршрута; единая свободная public trail отсутствует.",
+            "water": "Питьевая вода доступна на research/visitor stations; природные источники требуют обработки.",
+            "overnight_and_camping": "Camping указан как разрешённая visitor activity, но только в согласованной схеме; произвольный лагерь вне неё не считать допустимым.",
+            "permit_or_guide": "Предварительное разрешение Yayasan Sabah обязательно; вне designated self-guided trail посетителей сопровождает ranger.",
+            "best_period": "Более сухое окно облегчает 4WD access и canyon trails.",
+            "route_scale": "2–5+ дней",
+            "terrain_and_movement": "Sandstone canyon, river valleys, влажный forest, 4WD access и удалённые stations.",
+            "self_guided_default": false,
+            "guide_status": "permit + ranger required",
+            "expedition_note": "Это именно экспедиционный объект с административно контролируемым доступом."
+          },
+          "climate": {
+            "best_period": "Выбирать по состоянию дорог и рек.",
+            "heat_rain_notes": "Высокая влажность; ливни быстро влияют на грунтовые дороги.",
+            "site_specific_notes": "Доступ к canyon interior зависит от 4WD road condition."
+          },
+          "operations": {
+            "current_status": "restricted/permit-required",
+            "hours": "Согласуются с approved visit.",
+            "ticket": "Permit/visitor fees подтверждать у Yayasan Sabah.",
+            "closure_notes": "Доступ может ограничиваться исследованиями, погодой и управлением reserve.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://sabahtourism.com/destination/imbak-canyon-conservation-area/"
+          },
+          "safety": {
+            "crime_context": "Основные риски связаны с удалённостью.",
+            "main_risks": [
+              "длительная удалённость",
+              "4WD roads",
+              "реки и ливни",
+              "ограниченная связь",
+              "эвакуация требует планирования"
+            ],
+            "sensitive_areas": [],
+            "confidence": "official visitor conditions"
+          },
+          "media": {
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Раннее утро; рассеянный свет в canyon forest.",
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "Соблюдать правила CAAM и дополнительные ограничения управляющей организации охраняемой территории."
+              ],
+              "checked_at": "2026-09-29",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft System (UAS)",
+                "publisher": "Civil Aviation Authority of Malaysia",
+                "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              }
+            },
+            "filming_restrictions": "Помимо CAAM требуется разрешение управляющей организации ICCA.",
+            "visual_scouting": {
+              "best_time": "early_morning",
+              "best_weather_light": "Рассеянный свет; после дождей водопады полноводнее, но дороги хуже.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "imbak_ref",
+                  "name": "Imbak Canyon conservation-area reference",
+                  "description": "Опорная точка большой территории; research stations и Imbak Falls требуют отдельных подтверждённых координат.",
+                  "coordinates": {
+                    "lat": 5.160605,
+                    "lon": 116.929972,
+                    "elevation_m": null
+                  },
+                  "access": "Только по permission.",
+                  "view": {
+                    "description": "sandstone canyon rainforest"
+                  },
+                  "best_time": "morning",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "каньон и лес"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "wildlife"
+                    }
+                  ],
+                  "source": {
+                    "type": "government_official",
+                    "title": "Imbak Canyon Conservation Area",
+                    "publisher": "Sabah Biodiversity Centre",
+                    "url": "https://sabaes.sabah.gov.my/about/resource-manager",
+                    "authority": "high",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Осадки меняют waterfall flow и дорожную доступность."
+              ],
+              "video_activity": [
+                "jungle trekking",
+                "river/canyon landscape",
+                "field-station activity"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "каньон"
+                },
+                {
+                  "type": "macro",
+                  "why": "forest biodiversity"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Imbak Canyon Conservation Area управляется прежде всего как научно-природоохранная территория, а не как обычный туристический парк. Sabah Tourism указывает permission requirement, jungle trekking, camping и birdwatching; условия посещения Borneo Forest Heritage требуют заранее оформленного допуска.",
+            "culture_ethnography": null,
+            "geography_geology": "Территория представляет собой глубокую внутреннюю долину/каньон с песчаниковыми грядами, river system и несколькими лесными поясами.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Контролируемая conservation/research territory центрального Сабаха."
+              },
+              {
+                "section_id": "geography",
+                "content": "Sandstone canyon и водосбор образуют удалённый внутренний лесной ландшафт."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Без предварительного permission поездка не состоится.",
+              "Нужно заранее проверять требования к страховке/эвакуации и дороге."
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Imbak Canyon research/visitor accommodation",
+              "area": "ICCA",
+              "price_for_two": "Зависит от approved visit; без актуального quotation не фиксируется.",
+              "contact": null,
+              "social_or_web": "https://borneoforestheritage.org.my/visitor-information-ic/",
+              "source": "Borneo Forest Heritage / Yayasan Sabah",
+              "checked_at": "2026-09-29"
+            }
+          ]
+        },
+        "illustration": {
+          "static_url": null,
+          "gallery": []
+        },
+        "sources": [
+          {
+            "url": "https://sabahtourism.com/destination/imbak-canyon-conservation-area/",
+            "publisher": "Sabah Tourism Board",
+            "used_for": [
+              "permission",
+              "activities",
+              "visitor context"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://borneoforestheritage.org.my/visitor-information-ic/",
+            "publisher": "Borneo Forest Heritage / Yayasan Sabah",
+            "used_for": [
+              "visitor conditions",
+              "ranger",
+              "camping",
+              "insurance"
+            ],
+            "type": "official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://sabaes.sabah.gov.my/about/resource-manager",
+            "publisher": "Sabah Biodiversity Centre",
+            "used_for": [
+              "coordinates",
+              "resource manager"
+            ],
+            "type": "government_official",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.mybis.gov.my/pa/313",
+            "publisher": "Malaysia Biodiversity Information System",
+            "used_for": [
+              "protected-area status"
+            ],
+            "type": "government_database",
+            "authority": "high",
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "tickets",
+            "permits",
+            "access",
+            "weather/season",
+            "filming/drone"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Строго контролируемый sandstone-canyon комплекс центрального Сабаха между крупными лесными блоками региона: около 30 тысяч гектаров, полевые станции, Imbak Falls и настоящий permit-based expedition access.",
+        "tags": [
+          "protected_area",
+          "rainforest",
+          "canyon",
+          "waterfall",
+          "research",
+          "camping",
+          "sabah"
+        ],
+        "route_meta": {
+          "region_ref": "Sabah interior / Imbak Canyon",
+          "locality_ref": "Tongod / Sandakan",
+          "transport_modes": {
+            "public_transport": "Прямого общественного транспорта внутрь ICCA нет.",
+            "taxi_ridehail": "Не является рабочим последним участком.",
+            "car": "4WD через согласованный entry route.",
+            "walking": "Jungle trekking и station trails только внутри approved visit."
+          },
+          "walking": "Километраж зависит от утверждённого маршрута; единая свободная public trail отсутствует.",
+          "water": "Питьевая вода доступна на research/visitor stations; природные источники требуют обработки.",
+          "overnight_and_camping": "Camping указан как разрешённая visitor activity, но только в согласованной схеме; произвольный лагерь вне неё не считать допустимым.",
+          "permit_or_guide": "Предварительное разрешение Yayasan Sabah обязательно; вне designated self-guided trail посетителей сопровождает ranger.",
+          "best_period": "Более сухое окно облегчает 4WD access и canyon trails.",
+          "current_status": "restricted/permit-required",
+          "main_risks": [
+            "длительная удалённость",
+            "4WD roads",
+            "реки и ливни",
+            "ограниченная связь",
+            "эвакуация требует планирования"
+          ],
+          "expedition_profile": {
+            "default_mode": "регулируемый доступ",
+            "route_scale": "2–5+ дней",
+            "terrain_and_movement": "Sandstone canyon, river valleys, влажный forest, 4WD access и удалённые stations.",
+            "physical_difficulty_policy": "длительность, грязь, броды и многодневность являются параметрами маршрута",
+            "camping_assumption": "палатка доступна, но ночёвка определяется режимом территории",
+            "local_support": "Предварительное разрешение Yayasan Sabah обязательно; вне designated self-guided trail посетителей сопровождает ranger."
+          },
+          "guide_or_permit": "Предварительное разрешение Yayasan Sabah обязательно; вне designated self-guided trail посетителей сопровождает ranger.",
+          "independent_travel": {
+            "default": false,
+            "guide_status": "permit + ranger required",
+            "guide_reason": "Предварительное разрешение Yayasan Sabah обязательно; вне designated self-guided trail посетителей сопровождает ranger.",
+            "expedition_note": "Это именно экспедиционный объект с административно контролируемым доступом."
+          },
+          "access": "Вход только после предварительного разрешения Yayasan Sabah; 4WD/организованный transfer является частью доступа.",
+          "public_transport": "Прямого общественного транспорта внутрь ICCA нет.",
+          "last_mile": "Километраж зависит от утверждённого маршрута; единая свободная public trail отсутствует.",
+          "mobility_notes": "Sandstone canyon, river valleys, влажный forest, 4WD access и удалённые stations."
         }
       }
     ],

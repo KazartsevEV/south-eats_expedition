@@ -51,6 +51,9 @@ jobs:
       - name: Build recursive project hierarchy
         run: python scripts/augment_hierarchy.py
 
+      - name: Validate country and regional layer
+        run: python scripts/validate_country_layer.py
+
       - name: Validate source and generated CDN
         run: python scripts/validate_cdn.py public/cdn/v2
 

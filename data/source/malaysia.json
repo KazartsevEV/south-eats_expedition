@@ -30,7 +30,8 @@
       "2026-09-29 locality pass: exact child geo profiles added for Kuala Besut, Mulu, Sandakan and Semporna. Composite route hubs remain linkage-only instead of being misrepresented as single cities.",
       "2026-09-29 ownership cleanup: national fauna/flora/dangerous-animal/poisonous-plant and generic crime/disease risk lists are retained in source as unlocalized legacy material but are no longer intended for country-level display; east-Sabah dynamic security context is attached to relevant geo regions.",
       "2026-09-29 hierarchy cleanup: 18 real Malaysia localities added beneath regional geo nodes; composite legacy route hubs retained and marked with replacement IDs; affected objects now reference real nearest localities instead of slash-combined hubs.",
-      "2026-09-29 locality pass: normalized 2023 OpenDOSM/PDRM police-district assault/property counts for matching localities; added Kinta Valley geology for Ipoh/Batu Gajah and dynamic marine-weather sources for Kota Kinabalu and Miri. Counts are stored with methodology caveats and are not converted into safety ratings."
+      "2026-09-29 locality pass: normalized 2023 OpenDOSM/PDRM police-district assault/property counts for matching localities; added Kinta Valley geology for Ipoh/Batu Gajah and dynamic marine-weather sources for Kota Kinabalu and Miri. Counts are stored with methodology caveats and are not converted into safety ratings.",
+      "2026-09-29 geo semantics: exact pre-existing Malaysia localities retyped from generic route-hub geography to city/town/settlement/archipelago where identity is unambiguous."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -8176,7 +8177,8 @@
             "source_refs_complete": false,
             "note": "Existing object research migrated into the matching geo locality; fact-level source normalization remains queued."
           }
-        }
+        },
+        "kind": "city"
       },
       {
         "name": "George Town / Penang",
@@ -8249,7 +8251,8 @@
             ],
             "mapping_note": "Used for George Town because the historic/core city lies in the Northeast Penang Island police district; do not apply this count to all of Penang state."
           }
-        }
+        },
+        "kind": "city"
       },
       {
         "name": "Melaka City",
@@ -8319,7 +8322,8 @@
             ],
             "mapping_note": "Used for Melaka City / historic core; do not apply to the whole state."
           }
-        }
+        },
+        "kind": "city"
       },
       {
         "name": "Kota Kinabalu / Kundasang",
@@ -8394,7 +8398,8 @@
             "checked_at": "2026-09-29",
             "source_refs_complete": true
           }
-        }
+        },
+        "kind": "settlement"
       },
       {
         "name": "Langkawi",
@@ -8464,7 +8469,8 @@
               "src_000594"
             ]
           }
-        }
+        },
+        "kind": "archipelago"
       },
       {
         "name": "Kuala Besut",
@@ -8530,7 +8536,8 @@
               "src_000594"
             ]
           }
-        }
+        },
+        "kind": "town"
       },
       {
         "name": "Ipoh / Taiping / Gerik",
@@ -8670,7 +8677,8 @@
             "checked_at": "2026-09-29",
             "source_refs_complete": true
           }
-        }
+        },
+        "kind": "town"
       },
       {
         "name": "Kudat / Kota Kinabalu",
@@ -8769,7 +8777,8 @@
             "checked_at": "2026-09-29",
             "source_refs_complete": true
           }
-        }
+        },
+        "kind": "city"
       },
       {
         "name": "Bario",

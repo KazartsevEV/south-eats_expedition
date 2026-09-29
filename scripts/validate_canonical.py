@@ -218,6 +218,12 @@ def main():
     tag_ids = {row.get("id") for row in tag_rows}
     if None in tag_ids:
         fail("canonical tag taxonomy contains blank ID")
+    legacy_class_tags = sorted(
+        tag_id for tag_id in tag_ids
+        if isinstance(tag_id, str) and tag_id.startswith("class_")
+    )
+    if legacy_class_tags:
+        fail(f"canonical tags must not contain legacy class_* pseudo-tags: {legacy_class_tags}")
 
     geo_index = load(release / "geo" / "index.json")
     if geo_index.get("crs") != "WGS84" or geo_index.get("epsg") != 4326:
@@ -426,7 +432,42 @@ def main():
         require_file(release, f"infrastructure/transport/{code}/index.json")
         require_file(release, f"media/{code}/index.json")
         require_file(release, f"qa/countries/{code}.json")
-        require_file(release, f"views/countries/{code}.json")
+        country_view_path = require_file(release, f"views/countries/{code}.json")
+        country_view = load(country_view_path)
+        if country_view.get("layout_rule") != "country -> class_sections -> objects; tag_ids are secondary filters only":
+            fail(f"{code}: country view layout_rule does not match canonical class-first UI contract")
+        view_objects = country_view.get("objects") or []
+        view_ids = [row.get("id") for row in view_objects]
+        country_search = load(release / country_row["search_index"])
+        expected_rows = country_search.get("objects") or []
+        expected_ids = [row.get("id") for row in expected_rows]
+        if sorted(view_ids) != sorted(expected_ids):
+            fail(f"{code}: country view objects differ from country search index")
+        expected_class_by_id = {row.get("id"): row.get("class_id") for row in expected_rows}
+        class_sections = country_view.get("class_sections")
+        if not isinstance(class_sections, list):
+            fail(f"{code}: country view class_sections must be an array")
+        section_ids = []
+        section_object_ids = []
+        for section in class_sections:
+            class_id = section.get("class_id")
+            if class_id not in class_ids:
+                fail(f"{code}: country view uses unknown class {class_id}")
+            if class_id in section_ids:
+                fail(f"{code}: duplicate class section {class_id}")
+            section_ids.append(class_id)
+            rows = section.get("objects") or []
+            ids = section.get("object_ids") or []
+            if section.get("count") != len(rows) or len(rows) != len(ids):
+                fail(f"{code}: class section count mismatch for {class_id}")
+            if ids != [row.get("id") for row in rows]:
+                fail(f"{code}: class section object_ids mismatch for {class_id}")
+            for object_id in ids:
+                if expected_class_by_id.get(object_id) != class_id:
+                    fail(f"{code}: object {object_id} is placed under wrong class section {class_id}")
+            section_object_ids.extend(ids)
+        if sorted(section_object_ids) != sorted(expected_ids):
+            fail(f"{code}: country class sections do not cover each object exactly once")
 
     global_qa = load(release / "qa" / "global.json")
     if global_qa.get("objects_total") != len(object_ids):

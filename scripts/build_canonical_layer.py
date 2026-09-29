@@ -457,7 +457,7 @@ def build():
                 "body": None,
             },
             "cover_media_id": None,
-            "primary_location": locality_profile.get("primary_location") if locality_profile else None,
+            "primary_location": (locality_profile_by_country_name.get((code, place.get("name"))) or {}).get("primary_location"),
             "legacy_ids": [legacy_id],
             "migration": {
                 "source_kind": place.get("kind"),

@@ -478,7 +478,7 @@ def build():
             for field in ("geography", "relief", "geology", "hydrology", "coast", "marine", "nature", "health", "safety", "history", "ethnography", "culture", "architecture", "transport"):
                 if region_profile.get(field) not in (None, "", [], {}):
                     entity[field] = region_profile.get(field)
-            entity["freshness"] = {"checked_at": region_profile.get("last_verified") or ((region_profile.get("local_reference_provenance") or {}).get("checked_at"))}
+            entity["freshness"] = {"checked_at": ((region_profile.get("local_reference_provenance") or {}).get("checked_at")) or region_profile.get("last_verified")}
             local_prov = region_profile.get("local_reference_provenance") or {}
             region_source_refs = list(dict.fromkeys((local_prov.get("source_refs") or []) + (region_profile.get("source_refs") or [])))
             entity["provenance"] = {
@@ -504,6 +504,8 @@ def build():
                     if local_profile.get(field) not in (None, "", [], {}):
                         entity[field] = local_profile.get(field)
                 entity["provenance"] = local_profile.get("provenance") or entity.get("provenance")
+                if (local_profile.get("provenance") or {}).get("checked_at"):
+                    entity["freshness"] = {"checked_at": (local_profile.get("provenance") or {}).get("checked_at")}
                 entity["migration"]["local_reference_status"] = "migrated_existing_locality_profile"
             else:
                 entity["migration"]["local_reference_status"] = "locality_linkage_migrated"
@@ -562,6 +564,7 @@ def build():
                     entity[field] = profile.get(field)
             if profile.get("provenance"):
                 entity["provenance"] = profile.get("provenance")
+                entity["freshness"] = {"checked_at": (profile.get("provenance") or {}).get("checked_at")}
             geo_entities[geo_id] = entity
             canonical_geo_ids_by_country[code].append(geo_id)
             place_id_by_country_name_kind[(code, name, "city_or_route_hub")] = geo_id

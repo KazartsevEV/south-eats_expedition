@@ -468,7 +468,14 @@ function bindGo(){
 }
 function countryCounts(){
   var out={};
-  state.objects.forEach(function(o){var cc=ccOf(o.id);out[cc]=(out[cc]||0)+1});
+  (state.manifest&&state.manifest.countries||[]).forEach(function(row){
+    var cc=String(row.code||'').toLowerCase();
+    if(cc)out[cc]=0;
+  });
+  state.objects.forEach(function(o){
+    var cc=ccOf(o.id);
+    out[cc]=(out[cc]||0)+1;
+  });
   return out;
 }
 function objectsForCountry(cc){return state.objects.filter(function(o){return ccOf(o.id)===cc})}
@@ -667,7 +674,7 @@ function renderHome(){
     '<div class="layer"><span>Geo hierarchy</span><span class="layer-status live">'+state.geo.length+'</span></div>'+
     '<div class="layer"><span>Маршруты / infrastructure</span><span class="layer-status pending">следующий слой</span></div></div>'+
     '<div class="arch-note">Все базовые карты используют vector tiles; подписи принудительно берутся из English name, с латинской транслитерацией как fallback.</div></aside></section>'+
-    '<section class="section"><div class="section-head"><div><div class="eyebrow">Countries</div><h2>Страны Юго-Восточной Азии</h2></div><p>Опубликованные страны открываются; остальные видны как очередь миграции.</p></div><div class="country-grid">'+cards+'</div></section>'+
+    '<section class="section"><div class="section-head"><div><div class="eyebrow">Countries</div><h2>Страны Юго-Восточной Азии</h2></div><p>Все страны с готовым страновым слоем открываются; регионы и объекты подключаются по мере прохождения следующих стадий QA.</p></div><div class="country-grid">'+cards+'</div></section>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Attractions</div><h2>Банк достопримечательностей</h2></div><p>Флаг, класс, географические теги и краткая аннотация. Полная карточка загружается при открытии объекта.</p></div>'+
     '<div class="toolbar"><input class="control" id="homeQ" placeholder="Поиск по банку…"><select class="control" id="homeCountry"><option value="">Все страны</option>'+Object.keys(counts).sort().map(function(cc){return '<option value="'+cc+'">'+esc(cname(cc).name)+'</option>'}).join('')+'</select><select class="control" id="homeClass"><option value="">Все классы</option>'+state.classes.map(function(x){return '<option value="'+esc(x.id)+'">'+esc(x.label_ru||x.id)+'</option>'}).join('')+'</select><button class="btn" id="homeReset">Сбросить</button></div>'+
     '<div id="homeObjectCount" class="hero-meta"></div><div id="homeObjects" class="object-grid"></div></section>'+

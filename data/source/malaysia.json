@@ -24,7 +24,8 @@
       "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны.",
       "2026-09-29 GPS normalization: 21/21 Malaysia objects receive sourced WGS84 map anchors; broad landscapes/parks use explicit center/approximate semantics, and Lenggong keeps four UNESCO archaeological component points.",
       "2026-09-29 locality migration: the Langkawi monthly air/sea temperature series was removed from country climate and moved to the Langkawi / northwest coast geo profile; country climate now contains macro spatial context only.",
-      "2026-09-29 locality migration: existing city/island research for Kuala Lumpur, George Town/Penang, Melaka City and Langkawi was copied into matching geo locality profiles; route hubs that are not equivalent to the destination remain linkage-only."
+      "2026-09-29 locality migration: existing city/island research for Kuala Lumpur, George Town/Penang, Melaka City and Langkawi was copied into matching geo locality profiles; route hubs that are not equivalent to the destination remain linkage-only.",
+      "2026-09-29 regional locality research chunk 1: KL/Klang Valley, Penang, Melaka, Langkawi, Perak/Belum and Perhentian/east coast enriched with local climate/flood, marine/tide-source status, health, crime-dataset scope, nature/geology and transport where supported."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -325,7 +326,73 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Низменная долина Klang с плотной городской агломерацией; известняковые массивы и карстовые формы встречаются по северо-восточной окраине, включая район Gombak/Batu Caves.",
+          "scope_note": "Klang Valley шире административной территории Kuala Lumpur и включает части Selangor; локальные риски и статистику нельзя сводить к одному административному субъекту."
+        },
+        "climate": {
+          "summary": "Экваториально жарко и влажно круглый год. Для большей части западной/центральной части полуострова характерны два дождливых максимума — примерно в апреле–мае и октябре–ноябре.",
+          "rainfall_pattern": "По METMalaysia западная и внутренняя часть полуострова имеет двойной максимум осадков; локальные грозы и кратковременные сильные ливни важнее средней температуры.",
+          "floods": {
+            "risk_context": "Низкие участки долины, речные коридоры и городская дренажная сеть чувствительны к интенсивным ливням. Для оперативного решения использовать DID PublicInfoBanjir по Kuala Lumpur и Selangor.",
+            "live_monitoring": true
+          },
+          "source_refs": [
+            "src_000593",
+            "src_000596"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": [
+            {
+              "area": "Selangor",
+              "incidence_per_100k": 532.84
+            },
+            {
+              "area": "W.P. Kuala Lumpur (includes Putrajaya in source table)",
+              "incidence_per_100k": 325.05
+            }
+          ],
+          "interpretation": "Это исторический state-level фон за 2022 год, а не текущая вероятность заражения и не показатель конкретного квартала.",
+          "source_refs": [
+            "src_000595"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "local_dataset_available_not_yet_aggregated",
+            "interpretation": "Использовать районные данные PDRM/DOSM, а не общий рейтинг Малайзии. Klang Valley пересекает несколько police districts и административных границ."
+          },
+          "source_refs": [
+            "src_000594"
+          ]
+        },
+        "transport": {
+          "public_transport": "Rapid KL объединяет MRT, LRT, Monorail и автобусные сервисы; на уровне агломерации это основной самостоятельный каркас перемещения.",
+          "dynamic_status": "Перед поездкой проверять service alerts MyRapid.",
+          "source_refs": [
+            "src_000603"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "DID_PUBLICINFOBANJIR",
+            "MOH_HEALTH_INDICATORS_2023",
+            "DOSM_CRIME_DISTRICT",
+            "MYRAPID"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000596",
+            "src_000595",
+            "src_000594",
+            "src_000603"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Penang / George Town",
@@ -351,7 +418,85 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Остров Penang и прибрежная материковая часть Seberang Perai образуют проливную городскую систему; George Town находится на восточном берегу острова, а центральная часть острова заметно более холмиста.",
+          "coast": "Малаккский пролив; локальные поездки к пляжам и морю требуют отделять городскую береговую линию от открытых участков северного/западного побережья."
+        },
+        "climate": {
+          "summary": "Жаркий влажный климат северо-запада полуострова. METMalaysia указывает для северо-запада основной минимум осадков в январе–феврале, второй минимум в июне–июле и два дождливых максимума, обычно в апреле–мае и октябре–ноябре.",
+          "floods": {
+            "risk_context": "Интенсивные ливни могут быстро перегружать городскую дренажную сеть и водотоки; оперативные данные — DID PublicInfoBanjir Pulau Pinang.",
+            "live_monitoring": true
+          },
+          "source_refs": [
+            "src_000593",
+            "src_000596"
+          ]
+        },
+        "marine": {
+          "water_context": "Penang waters monitored by METMalaysia for wind, thunderstorms and wave height; this is dynamic marine-weather data, not a tide table.",
+          "tides": {
+            "status": "official_table_identified_values_not_normalized",
+            "official_source": "Pusat Hidrografi Nasional Tide Tables 2026",
+            "note": "Не выводить амплитуды/время прилива без конкретной станции и таблицы."
+          },
+          "turtle_context": "Department of Fisheries lists Pantai Kerachut, Pulau Pinang among turtle conservation/information centres.",
+          "source_refs": [
+            "src_000599",
+            "src_000606",
+            "src_000601"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Pulau Pinang",
+            "incidence_per_100k": 93.06
+          },
+          "interpretation": "State-level historical reference for 2022 only.",
+          "source_refs": [
+            "src_000595"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "local_dataset_available_not_yet_aggregated",
+            "interpretation": "George Town/Penang should use the relevant PDRM police districts, not a country score."
+          },
+          "source_refs": [
+            "src_000594"
+          ]
+        },
+        "transport": {
+          "public_transport": "Rapid Penang is the official bus network; walking remains primary inside the heritage core, while bus/ride-hailing links the airport and outer island.",
+          "source_refs": [
+            "src_000603"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "DID_PUBLICINFOBANJIR",
+            "MET_MARINE_PENANG",
+            "PHN_TIDE_TABLES_2026",
+            "DOF_MARINE_PARKS",
+            "MOH_HEALTH_INDICATORS_2023",
+            "DOSM_CRIME_DISTRICT",
+            "MYRAPID"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000596",
+            "src_000599",
+            "src_000606",
+            "src_000601",
+            "src_000595",
+            "src_000594",
+            "src_000603"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Melaka",
@@ -376,7 +521,74 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Низкое прибрежное побережье у Малаккского пролива с историческим городом на реке Melaka; для поездок вдоль воды важны речные и прибрежные участки отдельно от компактного старого центра."
+        },
+        "climate": {
+          "summary": "Жарко и влажно круглый год. METMalaysia выделяет юго-западное побережье полуострова: осадки здесь заметно связаны с утренними 'Sumatras' в мае–августе; максимум обычно приходится на октябрь–ноябрь, минимум — на февраль.",
+          "floods": {
+            "risk_context": "При сильных продолжительных ливнях низкие участки и зоны у рек подвержены подтоплению; DID ведёт water-level monitoring для Melaka.",
+            "live_monitoring": true
+          },
+          "source_refs": [
+            "src_000593",
+            "src_000596"
+          ]
+        },
+        "marine": {
+          "water_context": "Melaka waters и Southern Straits of Melaka имеют оперативный METMalaysia forecast по грозам, ветру и высоте волн.",
+          "tides": {
+            "status": "official_table_identified_values_not_normalized",
+            "official_source": "Pusat Hidrografi Nasional Tide Tables 2026"
+          },
+          "protected_marine": "Department of Fisheries lists Melaka Marine Park around Pulau Undan, Pulau Dodol and Pulau Nangka.",
+          "source_refs": [
+            "src_000598",
+            "src_000606",
+            "src_000601"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Melaka",
+            "incidence_per_100k": 65.69
+          },
+          "interpretation": "State-level historical reference for 2022 only.",
+          "source_refs": [
+            "src_000595"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "local_dataset_available_not_yet_aggregated"
+          },
+          "source_refs": [
+            "src_000594"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "DID_PUBLICINFOBANJIR",
+            "MET_MARINE_SOUTH_STRAITS",
+            "PHN_TIDE_TABLES_2026",
+            "DOF_MARINE_PARKS",
+            "MOH_HEALTH_INDICATORS_2023",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000596",
+            "src_000598",
+            "src_000606",
+            "src_000601",
+            "src_000595",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Sabah highlands / Kinabalu",
@@ -563,6 +775,127 @@
             "https://www.met.gov.my/en/pendidikan/iklim-malaysia/"
           ],
           "checked_at": "2026-09-29"
+        },
+        "geography": {
+          "summary": "Архипелаг из 99 островов у северо-запада полуострова. Три ключевых geoforest park — Machinchang Cambrian, Kilim Karst и Dayang Bunting Marble — показывают разные геологические комплексы и связаны морем, манграми и карстом.",
+          "source_refs": [
+            "src_000602"
+          ]
+        },
+        "geology": {
+          "summary": "Langkawi сохраняет очень древнюю последовательность пород: песчаники Machinchang Formation, ордовикско-силурийские известняки Setul, более молодые Singa Formation и Chuping Limestone; последующие столкновения террейнов, гранитные интрузии, поднятие и эрозия сформировали нынешние складки, разломы и карст.",
+          "source_refs": [
+            "src_000602",
+            "src_000607"
+          ]
+        },
+        "relief": {
+          "summary": "Machinchang — расчленённый горный массив с гребнями, утёсами, ущельями и водопадами; Kilim — низменный мангрово-карстовый ландшафт с башнями, арками и морскими останцами.",
+          "source_refs": [
+            "src_000602"
+          ]
+        },
+        "climate": {
+          "rainfall_pattern": "Северо-запад полуострова имеет два дождливых максимума и более сухие окна около января–февраля и июня–июля; помесячная серия воздуха/моря уже хранится в этом geo-профиле.",
+          "floods": {
+            "risk_context": "DID имеет несколько rainfall/siren stations непосредственно в Langkawi, включая Padang Matsirat, Kg. Bohor и Sg. Kelibang; проверять перед выездом после сильных ливней.",
+            "live_monitoring": true
+          },
+          "source_refs": [
+            "src_000593",
+            "src_000596",
+            "src_000590"
+          ]
+        },
+        "marine": {
+          "ecosystems": [
+            "mangrove channels",
+            "limestone karst coast",
+            "nearshore island waters"
+          ],
+          "fauna_and_flora": "Kilim Geoforest Park отмечает mangrove forest, limestone cycad, sea hibiscus, brahminy kite и sea eagle как характерные элементы комплекса.",
+          "water_context": "Northern Straits of Melaka marine forecast METMalaysia использовать перед лодочными выходами.",
+          "tides": {
+            "status": "official_table_identified_values_not_normalized",
+            "official_source": "Pusat Hidrografi Nasional Tide Tables 2026",
+            "expedition_note": "Прилив меняет доступ и визуальную геометрию мангровых каналов, но точное время/высоту брать только по конкретной станции."
+          },
+          "source_refs": [
+            "src_000602",
+            "src_000597",
+            "src_000606"
+          ]
+        },
+        "nature": {
+          "habitats": [
+            "mangrove forest",
+            "limestone cliffs",
+            "lowland tropical forest",
+            "island coast"
+          ],
+          "documented_examples": [
+            "great hornbill",
+            "brahminy kite",
+            "sea eagle",
+            "limestone cycad",
+            "sea hibiscus",
+            "climbing bamboo"
+          ],
+          "dangerous_animals": {
+            "status": "not_normalized_locally",
+            "note": "Не переносить общестрановой список змей/морских животных в Langkawi без локального источника."
+          },
+          "poisonous_plants": {
+            "status": "not_normalized_locally"
+          },
+          "source_refs": [
+            "src_000602"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Kedah",
+            "incidence_per_100k": 67.16
+          },
+          "interpretation": "State-level historical reference for 2022; Langkawi-specific current incidence not inferred.",
+          "source_refs": [
+            "src_000595"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "district_data_available_not_yet_aggregated",
+            "note": "OpenDOSM/PDRM contains district-level data; Langkawi should be read from its district rows, not from a Malaysia-wide score."
+          },
+          "source_refs": [
+            "src_000594"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "LANGKAWI_GEOPARK",
+            "UNESCO_GEOPARKS",
+            "MET_MY_CLIMATE",
+            "DID_PUBLICINFOBANJIR",
+            "CLIMATE",
+            "MET_MARINE_NORTH_STRAITS",
+            "PHN_TIDE_TABLES_2026",
+            "MOH_HEALTH_INDICATORS_2023",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000602",
+            "src_000607",
+            "src_000593",
+            "src_000596",
+            "src_000590",
+            "src_000597",
+            "src_000606",
+            "src_000595",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
         }
       },
       {
@@ -586,7 +919,86 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Островной комплекс у побережья Besut, Terengganu; логистика завязана на Kuala Besut и морской переход.",
+          "coast": "Открытое восточное побережье полуострова обращено к Южно-Китайскому морю и значительно сильнее зависит от северо-восточного муссона, чем западное побережье."
+        },
+        "climate": {
+          "summary": "Для восточного побережья Peninsular Malaysia METMalaysia указывает максимум осадков в ноябре–январе и более сухой период около июня–июля.",
+          "monsoon": "Северо-восточный муссон — главный дождливый сезон; METMalaysia связывает его с сильными дождями и крупными наводнениями на восточном побережье, включая Terengganu.",
+          "floods": {
+            "risk_context": "Для материкового Besut и подъездов использовать DID PublicInfoBanjir; есть станции Sg. Besut/Jerteh. Островная доступность дополнительно определяется состоянием моря.",
+            "live_monitoring": true
+          },
+          "source_refs": [
+            "src_000593",
+            "src_000596"
+          ]
+        },
+        "marine": {
+          "protected_status": "Pulau Perhentian Archipelago входит в Terengganu Marine Park system Department of Fisheries.",
+          "weather": "METMalaysia публикует отдельный marine forecast для waters of Terengganu.",
+          "tides": {
+            "status": "official_table_identified_values_not_normalized",
+            "official_source": "Pusat Hidrografi Nasional Tide Tables 2026"
+          },
+          "marine_life": "Marine-park status означает охрану морских местообитаний и aquatic marine life; конкретный species list не расширять без отдельного локального источника.",
+          "source_refs": [
+            "src_000601",
+            "src_000600",
+            "src_000606"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Terengganu",
+            "incidence_per_100k": 20.64
+          },
+          "interpretation": "State-level historical reference for 2022; островной текущий риск не выводится из него напрямую.",
+          "source_refs": [
+            "src_000595"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "Besut district data available_not_yet_aggregated"
+          },
+          "dominant_expedition_risk": "В сезон северо-восточного муссона морская доступность и погода важнее обычной городской crime-метрики.",
+          "source_refs": [
+            "src_000594",
+            "src_000593"
+          ]
+        },
+        "transport": {
+          "gateway": "Kuala Besut — материковый gateway; Department of Fisheries Terengganu lists the Besut district office at Jalan Jeti and the Pulau Perhentian Marine Park Centre on the islands.",
+          "note": "Расписание коммерческих лодок динамично и не нормализовано в этом чанке.",
+          "source_refs": [
+            "src_000601"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "DID_PUBLICINFOBANJIR",
+            "DOF_MARINE_PARKS",
+            "MET_MARINE_TERENGGANU",
+            "PHN_TIDE_TABLES_2026",
+            "MOH_HEALTH_INDICATORS_2023",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000596",
+            "src_000601",
+            "src_000600",
+            "src_000606",
+            "src_000595",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Perak / Taiping / Kuala Kangsar / Belum",
@@ -611,7 +1023,88 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Большой поперечный регион от влажной западной части Perak через долины и города к горному Hulu Perak и Belum–Temengor у границы с Таиландом; климат и доступ внутри него существенно различаются.",
+          "hydrography": "Royal Belum связан с крупным искусственным озером Temenggor; доступ во многие внутренние точки идёт по воде."
+        },
+        "climate": {
+          "summary": "Западная часть Perak испытывает характерный для западного полуострова режим осадков, а внутренние горные районы получают сильную орографическую вариацию. Для Taiping/Belum нельзя использовать один помесячный ряд.",
+          "floods": {
+            "risk_context": "DID flood telemetry действует в Larut Matang, Kuala Kangsar и Hulu Perak; после сильных ливней проверять конкретный район/реку.",
+            "live_monitoring": true
+          },
+          "source_refs": [
+            "src_000593",
+            "src_000596"
+          ]
+        },
+        "nature": {
+          "royal_belum": {
+            "area_ha": 117500,
+            "governance": "Perak State Parks Corporation",
+            "iucn_category": "II"
+          },
+          "documented_fauna": [
+            "Malayan tiger",
+            "Asian elephant",
+            "Malayan sun bear",
+            "white-handed gibbon",
+            "hornbills"
+          ],
+          "flora": "Royal Belum tourism material documents Rafflesia and very high rainforest biodiversity.",
+          "source_refs": [
+            "src_000605",
+            "src_000604"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Perak",
+            "incidence_per_100k": 54.76
+          },
+          "interpretation": "State-level historical reference for 2022 only.",
+          "source_refs": [
+            "src_000595"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "local_dataset_available_not_yet_aggregated"
+          },
+          "wilderness": "В Belum практический профиль риска отличается от городов Taiping/Kuala Kangsar: связь, лодочная логистика, погода и парк важнее городской crime-rate.",
+          "source_refs": [
+            "src_000594",
+            "src_000604"
+          ]
+        },
+        "transport": {
+          "royal_belum": "Официальный State Parks Corporation указывает Gerik как сухопутный узел и Pulau Banding public jetty как gateway; дальше вход в Royal Belum идёт по воде.",
+          "fuel": "Официальная страница парка отдельно предупреждает, что Gerik — последняя надёжная точка заправки перед East-West Highway в сторону Banding.",
+          "source_refs": [
+            "src_000604"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "DID_PUBLICINFOBANJIR",
+            "MYBIS_ROYAL_BELUM",
+            "ROYAL_BELUM",
+            "MOH_HEALTH_INDICATORS_2023",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000596",
+            "src_000605",
+            "src_000604",
+            "src_000595",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Semporna / Sipadan / east Sabah",
@@ -7277,7 +7770,8 @@
         "economy",
         "poverty"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000586"
     },
     {
       "id": "IMM",
@@ -7287,7 +7781,8 @@
       "used_for": [
         "visa"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000587"
     },
     {
       "id": "RUS_MFA",
@@ -7298,7 +7793,8 @@
         "entry",
         "safety"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000588"
     },
     {
       "id": "UNESCO",
@@ -7308,7 +7804,8 @@
       "used_for": [
         "heritage"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000589"
     },
     {
       "id": "CLIMATE",
@@ -7319,7 +7816,8 @@
         "air_temperature",
         "sea_temperature"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000590"
     },
     {
       "id": "WHO_SNAKEBITE",
@@ -7330,7 +7828,8 @@
         "venomous_snake_risk"
       ],
       "accessed": "2026-09-27",
-      "notes": "Региональный фон; не заменяет локальные данные."
+      "notes": "Региональный фон; не заменяет локальные данные.",
+      "canonical_id": "src_000591"
     },
     {
       "id": "IUCN_RED_LIST",
@@ -7340,7 +7839,8 @@
       "used_for": [
         "fauna_conservation_status"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000592"
     },
     {
       "id": "MET_MY_CLIMATE",
@@ -7351,7 +7851,192 @@
         "climate"
       ],
       "accessed": "2026-09-29",
-      "notes": "Official macro description of Malaysia climate and regional monsoon/rainfall differences."
+      "notes": "Official macro description of Malaysia climate and regional monsoon/rainfall differences.",
+      "canonical_id": "src_000593"
+    },
+    {
+      "id": "DOSM_CRIME_DISTRICT",
+      "publisher": "Department of Statistics Malaysia / Royal Malaysia Police",
+      "url": "https://open.dosm.gov.my/data-catalogue/crime_district",
+      "kind": "government",
+      "used_for": [
+        "crime"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "District-level annual recorded crime dataset. Police districts are not identical to administrative districts; use locally and do not turn it into a country-wide safety score.",
+      "canonical_id": "src_000594"
+    },
+    {
+      "id": "MOH_HEALTH_INDICATORS_2023",
+      "publisher": "Ministry of Health Malaysia",
+      "url": "https://www.moh.gov.my/moh/resources/Penerbitan/Penerbitan%20Utama/1a._Petunjuk_Kesihatan_Health_Indicator_2023_KKM_FINAL_%28hyperlink%29_v1_.pdf",
+      "kind": "government",
+      "used_for": [
+        "dengue",
+        "health"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Health Indicators 2023; state-level communicable-disease tables include 2022 dengue incidence.",
+      "canonical_id": "src_000595"
+    },
+    {
+      "id": "DID_PUBLICINFOBANJIR",
+      "publisher": "Department of Irrigation and Drainage Malaysia",
+      "url": "https://publicinfobanjir.water.gov.my/real-time-status/?lang=en",
+      "kind": "government",
+      "used_for": [
+        "flood",
+        "rainfall",
+        "river_level"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Official rainfall/water-level/flood monitoring. District/station data must be interpreted locally.",
+      "canonical_id": "src_000596"
+    },
+    {
+      "id": "MET_MARINE_NORTH_STRAITS",
+      "publisher": "Malaysian Meteorological Department (METMalaysia)",
+      "url": "https://www.met.gov.my/en/forecast/marine/shipping/?hl=en-US",
+      "kind": "government",
+      "used_for": [
+        "marine_weather",
+        "wave_height",
+        "wind"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Northern Straits of Melaka marine forecast; dynamic.",
+      "canonical_id": "src_000597"
+    },
+    {
+      "id": "MET_MARINE_SOUTH_STRAITS",
+      "publisher": "Malaysian Meteorological Department (METMalaysia)",
+      "url": "https://www.met.gov.my/en/forecast/marine/shipping/Sh003/",
+      "kind": "government",
+      "used_for": [
+        "marine_weather",
+        "wave_height",
+        "wind"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Southern Straits of Melaka marine forecast; dynamic.",
+      "canonical_id": "src_000598"
+    },
+    {
+      "id": "MET_MARINE_PENANG",
+      "publisher": "Malaysian Meteorological Department (METMalaysia)",
+      "url": "https://www.met.gov.my/en/forecast/marine/waters/Co008/",
+      "kind": "government",
+      "used_for": [
+        "marine_weather",
+        "wave_height",
+        "wind"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Penang waters marine forecast; dynamic.",
+      "canonical_id": "src_000599"
+    },
+    {
+      "id": "MET_MARINE_TERENGGANU",
+      "publisher": "Malaysian Meteorological Department (METMalaysia)",
+      "url": "https://www.met.gov.my/en/forecast/marine/waters/Co002/",
+      "kind": "government",
+      "used_for": [
+        "marine_weather",
+        "wave_height",
+        "wind"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Terengganu waters marine forecast; dynamic.",
+      "canonical_id": "src_000600"
+    },
+    {
+      "id": "DOF_MARINE_PARKS",
+      "publisher": "Department of Fisheries Malaysia",
+      "url": "https://www.dof.gov.my/en/services/marine-park-resource-management/marine-park-management/",
+      "kind": "government",
+      "used_for": [
+        "marine_park",
+        "marine_life",
+        "turtles"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000601"
+    },
+    {
+      "id": "LANGKAWI_GEOPARK",
+      "publisher": "Langkawi UNESCO Global Geopark / LADA",
+      "url": "https://www.langkawigeopark.com.my/our-geoforest-parks/",
+      "kind": "government",
+      "used_for": [
+        "geology",
+        "geography",
+        "flora",
+        "fauna",
+        "marine"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000602"
+    },
+    {
+      "id": "MYRAPID",
+      "publisher": "Prasarana Malaysia Berhad / MyRapid",
+      "url": "https://myrapid.com.my/",
+      "kind": "government",
+      "used_for": [
+        "public_transport"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000603"
+    },
+    {
+      "id": "ROYAL_BELUM",
+      "publisher": "Perak State Parks Corporation",
+      "url": "https://www.royalbelum.my/eng/howtogetthere/index.html",
+      "kind": "government",
+      "used_for": [
+        "transport",
+        "permit",
+        "water",
+        "access"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000604"
+    },
+    {
+      "id": "MYBIS_ROYAL_BELUM",
+      "publisher": "Malaysia Biodiversity Information System (MyBIS)",
+      "url": "https://www.mybis.gov.my/pa/209",
+      "kind": "government",
+      "used_for": [
+        "protected_area",
+        "biodiversity"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000605"
+    },
+    {
+      "id": "PHN_TIDE_TABLES_2026",
+      "publisher": "Pusat Hidrografi Nasional",
+      "url": "https://ehydro.hydro.gov.my/index.php?product_id=8738&route=product%2Fproduct",
+      "kind": "government",
+      "used_for": [
+        "tides"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Official 2026 tide-table publication. Exact station predictions are not reproduced here because the table itself is a paid publication.",
+      "canonical_id": "src_000606"
+    },
+    {
+      "id": "UNESCO_GEOPARKS",
+      "publisher": "UNESCO",
+      "url": "https://www.unesco.org/en/iggp/list?fq%5Bsm_unsc_field_ref_countries_label%5D%5B%5D=Malaysia",
+      "kind": "international_organization",
+      "used_for": [
+        "geology",
+        "geopark"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000607"
     }
   ],
   "uncertainties": [

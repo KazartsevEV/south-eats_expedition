@@ -32,7 +32,8 @@
       "2026-09-29 hierarchy cleanup: 18 real Malaysia localities added beneath regional geo nodes; composite legacy route hubs retained and marked with replacement IDs; affected objects now reference real nearest localities instead of slash-combined hubs.",
       "2026-09-29 locality pass: normalized 2023 OpenDOSM/PDRM police-district assault/property counts for matching localities; added Kinta Valley geology for Ipoh/Batu Gajah and dynamic marine-weather sources for Kota Kinabalu and Miri. Counts are stored with methodology caveats and are not converted into safety ratings.",
       "2026-09-29 geo semantics: exact pre-existing Malaysia localities retyped from generic route-hub geography to city/town/settlement/archipelago where identity is unambiguous.",
-      "2026-09-29 climate pass: annual mean temperature/precipitation references added to selected Malaysia localities with explicit period and data basis; ERA5/WorldClim/NASA POWER are labelled as reanalysis/grid climatology rather than official station normals. Langkawi annual temperature is derived from the stored monthly climatology; annual rainfall remains null."
+      "2026-09-29 climate pass: annual mean temperature/precipitation references added to selected Malaysia localities with explicit period and data basis; ERA5/WorldClim/NASA POWER are labelled as reanalysis/grid climatology rather than official station normals. Langkawi annual temperature is derived from the stored monthly climatology; annual rainfall remains null.",
+      "2026-09-29 geo-map pass: 26 Malaysia real localities received their own sourced WGS84 center anchors. These anchors identify the geo entity itself and are not borrowed from attraction coordinates."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -8192,7 +8193,19 @@
             ]
           }
         },
-        "kind": "city"
+        "kind": "city",
+        "primary_location": {
+          "lat": 3.1517,
+          "lon": 101.6942,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/Kuala_Lumpur",
+          "checked_at": "2026-09-29",
+          "note": "city node"
+        }
       },
       {
         "name": "George Town / Penang",
@@ -8277,7 +8290,19 @@
             "mapping_note": "Used for George Town because the historic/core city lies in the Northeast Penang Island police district; do not apply this count to all of Penang state."
           }
         },
-        "kind": "city"
+        "kind": "city",
+        "primary_location": {
+          "lat": 5.41444,
+          "lon": 100.32917,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q61092",
+          "checked_at": "2026-09-29",
+          "note": "city reference"
+        }
       },
       {
         "name": "Melaka City",
@@ -8359,7 +8384,19 @@
             "mapping_note": "Used for Melaka City / historic core; do not apply to the whole state."
           }
         },
-        "kind": "city"
+        "kind": "city",
+        "primary_location": {
+          "lat": 2.188889,
+          "lon": 102.251111,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q61089",
+          "checked_at": "2026-09-29",
+          "note": "city reference"
+        }
       },
       {
         "name": "Kota Kinabalu / Kundasang",
@@ -8435,7 +8472,19 @@
             "source_refs_complete": true
           }
         },
-        "kind": "settlement"
+        "kind": "settlement",
+        "primary_location": {
+          "lat": 4.04439,
+          "lon": 114.80858,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/N2629398009",
+          "checked_at": "2026-09-29",
+          "note": "town/locality node near Mulu Airport"
+        }
       },
       {
         "name": "Langkawi",
@@ -8517,7 +8566,19 @@
             ]
           }
         },
-        "kind": "archipelago"
+        "kind": "archipelago",
+        "primary_location": {
+          "lat": 6.35,
+          "lon": 99.8,
+          "coordinate_type": "center",
+          "accuracy": "approximate",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q24874722",
+          "checked_at": "2026-09-29",
+          "note": "archipelago center"
+        }
       },
       {
         "name": "Kuala Besut",
@@ -8584,7 +8645,19 @@
             ]
           }
         },
-        "kind": "town"
+        "kind": "town",
+        "primary_location": {
+          "lat": 5.833333,
+          "lon": 102.566667,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q3493187",
+          "checked_at": "2026-09-29",
+          "note": "town reference"
+        }
       },
       {
         "name": "Ipoh / Taiping / Gerik",
@@ -8738,7 +8811,19 @@
             }
           }
         },
-        "kind": "town"
+        "kind": "town",
+        "primary_location": {
+          "lat": 4.4791,
+          "lon": 118.6119,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/Semporna",
+          "checked_at": "2026-09-29",
+          "note": "OSM place=town node"
+        }
       },
       {
         "name": "Kudat / Kota Kinabalu",
@@ -8849,7 +8934,19 @@
             "source_refs_complete": true
           }
         },
-        "kind": "city"
+        "kind": "city",
+        "primary_location": {
+          "lat": 5.8391,
+          "lon": 118.1159,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/Sandakan",
+          "checked_at": "2026-09-29",
+          "note": "OSM place=city node"
+        }
       },
       {
         "name": "Bario",
@@ -8895,6 +8992,18 @@
             "source_refs_complete": true,
             "note": null
           }
+        },
+        "primary_location": {
+          "lat": 3.75,
+          "lon": 115.45,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q2884535",
+          "checked_at": "2026-09-29",
+          "note": "settlement reference"
         }
       },
       {
@@ -8975,6 +9084,18 @@
               "src_000594"
             ]
           }
+        },
+        "primary_location": {
+          "lat": 4.394,
+          "lon": 113.988,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/Miri",
+          "checked_at": "2026-09-29",
+          "note": "OSM place=city node"
         }
       },
       {
@@ -9041,6 +9162,18 @@
               "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
             }
           }
+        },
+        "primary_location": {
+          "lat": 4.6,
+          "lon": 101.07,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q12823512",
+          "checked_at": "2026-09-29",
+          "note": "city reference"
         }
       },
       {
@@ -9105,6 +9238,18 @@
               "src_000594"
             ]
           }
+        },
+        "primary_location": {
+          "lat": 4.85,
+          "lon": 100.733,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/Taiping",
+          "checked_at": "2026-09-29",
+          "note": "city reference; matches existing object anchor"
         }
       },
       {
@@ -9150,6 +9295,18 @@
               "src_000594"
             ]
           }
+        },
+        "primary_location": {
+          "lat": 5.43066,
+          "lon": 101.12964,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/15814422",
+          "checked_at": "2026-09-29",
+          "note": "OSM place=town node"
         }
       },
       {
@@ -9196,6 +9353,18 @@
               "src_000594"
             ]
           }
+        },
+        "primary_location": {
+          "lat": 4.766667,
+          "lon": 100.933333,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q1790832",
+          "checked_at": "2026-09-29",
+          "note": "royal town reference"
         }
       },
       {
@@ -9241,6 +9410,18 @@
             "source_refs_complete": true,
             "note": null
           }
+        },
+        "primary_location": {
+          "lat": 5.1,
+          "lon": 100.966667,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q3449469",
+          "checked_at": "2026-09-29",
+          "note": "town reference"
         }
       },
       {
@@ -9317,6 +9498,18 @@
               "src_000594"
             ]
           }
+        },
+        "primary_location": {
+          "lat": 5.975,
+          "lon": 116.0725,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q137271",
+          "checked_at": "2026-09-29",
+          "note": "city reference from GNS"
         }
       },
       {
@@ -9355,6 +9548,18 @@
             "source_refs_complete": true,
             "note": null
           }
+        },
+        "primary_location": {
+          "lat": 5.9857,
+          "lon": 116.5745,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/Kundasang",
+          "checked_at": "2026-09-29",
+          "note": "OSM place=town node"
         }
       },
       {
@@ -9399,6 +9604,18 @@
             "source_refs_complete": true,
             "note": null
           }
+        },
+        "primary_location": {
+          "lat": 3.23692,
+          "lon": 101.68335,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/N1686561043",
+          "checked_at": "2026-09-29",
+          "note": "OSM place=town node"
         }
       },
       {
@@ -9440,6 +9657,18 @@
             "source_refs_complete": true,
             "note": null
           }
+        },
+        "primary_location": {
+          "lat": 1.5606,
+          "lon": 110.3494,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/Kuching",
+          "checked_at": "2026-09-29",
+          "note": "OSM place=city node"
         }
       },
       {
@@ -9506,6 +9735,18 @@
               "src_000594"
             ]
           }
+        },
+        "primary_location": {
+          "lat": 6.883333,
+          "lon": 116.85,
+          "coordinate_type": "center",
+          "accuracy": "approximate",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q111387551",
+          "checked_at": "2026-09-29",
+          "note": "port point used as town/port anchor"
         }
       },
       {
@@ -9564,6 +9805,18 @@
               "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
             }
           }
+        },
+        "primary_location": {
+          "lat": 5.016667,
+          "lon": 118.316667,
+          "coordinate_type": "center",
+          "accuracy": "approximate",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q111387569",
+          "checked_at": "2026-09-29",
+          "note": "port point used as town/port anchor"
         }
       },
       {
@@ -9610,6 +9863,18 @@
             "source_refs_complete": true,
             "note": null
           }
+        },
+        "primary_location": {
+          "lat": 5.50974,
+          "lon": 118.28699,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/15813802",
+          "checked_at": "2026-09-29",
+          "note": "OSM place=village node"
         }
       },
       {
@@ -9640,6 +9905,18 @@
             "source_refs_complete": true,
             "note": null
           }
+        },
+        "primary_location": {
+          "lat": 3.80302,
+          "lon": 113.75538,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/15820126",
+          "checked_at": "2026-09-29",
+          "note": "OSM place=town node"
         }
       },
       {
@@ -9684,6 +9961,18 @@
             "source_refs_complete": true,
             "note": null
           }
+        },
+        "primary_location": {
+          "lat": 6.761144,
+          "lon": 116.695397,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://www.travelfish.org/sight_profile/malaysia/sabah/sabah/kudat/3863",
+          "checked_at": "2026-09-29",
+          "note": "settlement-area anchor from existing research"
         }
       },
       {
@@ -9738,6 +10027,18 @@
               "src_000594"
             ]
           }
+        },
+        "primary_location": {
+          "lat": 4.48,
+          "lon": 101.04,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000646"
+          ],
+          "source_url": "https://www.wikidata.org/wiki/Q1917064",
+          "checked_at": "2026-09-29",
+          "note": "human settlement coordinate"
         }
       },
       {
@@ -9782,6 +10083,18 @@
             "source_refs_complete": true,
             "note": null
           }
+        },
+        "primary_location": {
+          "lat": 5.87734,
+          "lon": 117.95051,
+          "coordinate_type": "center",
+          "accuracy": "high",
+          "source_refs": [
+            "src_000647"
+          ],
+          "source_url": "https://mapcarta.com/15813684",
+          "checked_at": "2026-09-29",
+          "note": "locality node; not the rehabilitation-centre entrance"
         }
       }
     ]
@@ -10586,6 +10899,42 @@
       ],
       "accessed": "2026-09-29",
       "notes": "ERA5 reanalysis normals 1940–2025; grid-cell estimate, not an urban station normal."
+    },
+    {
+      "id": "WIKIDATA_GEO",
+      "canonical_id": "src_000646",
+      "publisher": "Wikidata",
+      "url": "https://www.wikidata.org/",
+      "kind": "map_osm",
+      "used_for": [
+        "geo_coordinates"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Structured place coordinates. Exact item URL is stored with each geo anchor."
+    },
+    {
+      "id": "MAPCARTA_OSM_GEO",
+      "canonical_id": "src_000647",
+      "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+      "url": "https://mapcarta.com/",
+      "kind": "map_osm",
+      "used_for": [
+        "geo_coordinates"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Used only where the returned feature is explicitly the settlement/locality, not a nearby attraction."
+    },
+    {
+      "id": "MYGEONAME_GAZETTEER",
+      "canonical_id": "src_000648",
+      "publisher": "MyGeoportal / Malaysia Geospatial Data Infrastructure",
+      "url": "https://mygeoname.mygeoportal.gov.my/",
+      "kind": "government",
+      "used_for": [
+        "geo_coordinates",
+        "gazetteer"
+      ],
+      "accessed": "2026-09-29"
     }
   ],
   "uncertainties": [

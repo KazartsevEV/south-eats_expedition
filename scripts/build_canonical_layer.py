@@ -11,6 +11,7 @@ SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
+GEO_COUNTRIES = ROOT / "data" / "geo" / "countries"
 FORMAL_CANONICAL_GEO_CODES = {"KH", "LA"}
 COUNTRY_SOURCE_CANONICAL_CODES = {"KH", "LA"}
 
@@ -355,10 +356,19 @@ def build():
     sources_by_code = source_files_by_code(published_codes)
     country_slug_by_code = {row["country_code"]: row["slug"] for row in legacy_countries if row.get("country_code") and row.get("slug")}
     source_object_by_country_name = {}
+    region_profile_by_country_name = {}
+    locality_profile_by_country_name = {}
     for code, (_, source_doc) in sources_by_code.items():
-        for row in ((source_doc.get("travel") or {}).get("objects") or []):
+        travel = source_doc.get("travel") or {}
+        for row in travel.get("objects") or []:
             if row.get("name"):
                 source_object_by_country_name[(code, row.get("name"))] = row
+        for row in travel.get("regions") or []:
+            if row.get("name"):
+                region_profile_by_country_name[(code, row.get("name"))] = row
+        for row in travel.get("localities") or []:
+            if row.get("name"):
+                locality_profile_by_country_name[(code, row.get("name"))] = row
     formal_hierarchy = {}
     for code in sorted(published_codes & FORMAL_CANONICAL_GEO_CODES):
         slug = country_slug_by_code.get(code)
@@ -394,6 +404,11 @@ def build():
     for code in sorted(published_codes):
         source = sources_by_code[code][1]
         country_id = f"geo_{code.lower()}"
+        geometry_path = None
+        geometry_source = GEO_COUNTRIES / f"{code.lower()}.geojson"
+        if geometry_source.exists():
+            geometry_path = f"geo/geometries/{country_id}.geojson"
+            dump(release / geometry_path, load(geometry_source))
         geo_entities[country_id] = {
             "id": country_id,
             "kind": "country",
@@ -407,6 +422,7 @@ def build():
                 "body": (source.get("overview") or {}).get("summary"),
             },
             "cover_media_id": None,
+            "geometry_path": geometry_path,
             "legacy_ids": [f"country:{code.lower()}"],
         }
         canonical_geo_ids_by_country[code].append(country_id)
@@ -445,9 +461,53 @@ def build():
                 "note": "Legacy route regions/hubs are kept as geographic_area until formal administrative or settlement identity is verified.",
             },
         }
+        region_profile = region_profile_by_country_name.get((code, place.get("name")))
+        if region_profile:
+            entity["languages"] = {
+                "spoken": region_profile.get("languages_spoken") or [],
+                "notes": region_profile.get("language_notes"),
+            }
+            entity["climate"] = {
+                "summary": region_profile.get("climate_summary"),
+                "best_period_general": region_profile.get("best_period_general"),
+            }
+            entity["freshness"] = {"checked_at": region_profile.get("last_verified")}
+            entity["provenance"] = {
+                "source_urls": region_profile.get("language_source_urls") or [],
+                "source_refs": [],
+                "qa": {
+                    "source_refs_complete": False,
+                    "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued.",
+                },
+            }
+            entity["migration"]["local_reference_status"] = "migrated_existing_region_profile"
+        locality_profile = locality_profile_by_country_name.get((code, place.get("name")))
+        if locality_profile:
+            entity["relations"] = {
+                "source_region_names": locality_profile.get("regions") or [],
+                "source_object_names": locality_profile.get("object_names") or [],
+            }
+            entity["migration"]["local_reference_status"] = "locality_linkage_migrated"
         geo_entities[geo_id] = entity
         canonical_geo_ids_by_country[code].append(geo_id)
         place_id_by_country_name_kind[(code, place.get("name"), place.get("kind"))] = geo_id
+
+    # Rebuild the legacy region -> locality tree from explicit source relations.
+    for code, (_, source_doc) in sources_by_code.items():
+        country_id = f"geo_{code.lower()}"
+        for locality in ((source_doc.get("travel") or {}).get("localities") or []):
+            locality_id = place_id_by_country_name_kind.get((code, locality.get("name"), "city_or_route_hub"))
+            if not locality_id or locality_id not in geo_entities:
+                continue
+            region_names = locality.get("regions") or []
+            if not region_names:
+                continue
+            parent_id = place_id_by_country_name_kind.get((code, region_names[0], "region"))
+            if not parent_id or parent_id not in geo_entities:
+                continue
+            geo_entities[locality_id]["parent_id"] = parent_id
+            geo_entities[locality_id]["geo_path"] = [country_id, parent_id, locality_id]
+            geo_entities[locality_id]["migration"]["parent_status"] = "migrated_from_source_locality_relation"
 
     for code, doc in formal_hierarchy.items():
         country_id = f"geo_{code.lower()}"

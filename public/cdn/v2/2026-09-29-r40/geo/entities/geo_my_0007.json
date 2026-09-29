@@ -32,8 +32,63 @@
     "notes": "Практический полевой профиль: перечислены языки, с которыми путешественник реально столкнётся в регионе; это не полный этнолингвистический перечень."
   },
   "climate": {
-    "summary": "Очень влажный тропический лес, пещеры и частые ливни.",
+    "summary": "Inland Sarawak generally has rainfall distributed through the year, with a somewhat drier June–August period. Hill slopes in interior Sarawak can be exceptionally wet; METMalaysia cites Long Akah at more than 5,000 mm mean annual rainfall.",
+    "source_refs": [
+      "src_000593"
+    ],
     "best_period_general": "Гибкий план; экскурсии зависят от погоды/парка."
+  },
+  "geography": {
+    "summary": "Внутренний горно-карстовый Sarawak. Mulu is dominated by Gunung Mulu, Gunung Api and Gunung Benarat and extensive cave systems under primary rainforest."
+  },
+  "relief": {
+    "mountains_m": {
+      "Gunung_Mulu": 2376,
+      "Gunung_Api": 1750,
+      "Gunung_Benarat": 1858
+    },
+    "source_refs": [
+      "src_000618"
+    ]
+  },
+  "geology": {
+    "summary": "Limestone mountain ranges are honeycombed by extensive cave and underground-river systems; Sarawak Chamber, Deer Cave and Clearwater Cave System are among the defining features.",
+    "source_refs": [
+      "src_000618"
+    ]
+  },
+  "nature": {
+    "forest": "Sarawak Forestry lists 15 forest types, 170 wild orchid species and 10 pitcher-plant species in Mulu, plus large bat emergences from Deer Cave.",
+    "source_refs": [
+      "src_000618"
+    ]
+  },
+  "health": {
+    "dengue_reference_2022": {
+      "area": "Sarawak",
+      "incidence_per_100k": 26.95
+    },
+    "note": "Remote-jungle medical/logistical risk is not represented by this state dengue rate.",
+    "source_refs": [
+      "src_000595"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "status": "urban crime metric_not_useful_for_remote_park",
+      "note": "Do not present Kuching/Miri police-district statistics as Mulu risk."
+    },
+    "wilderness": "Rain, caves, river levels, guide requirements and communications dominate operational risk.",
+    "source_refs": [
+      "src_000618"
+    ]
+  },
+  "transport": {
+    "park_access": "Sarawak Forestry describes trekking and overnight jungle camps; specific guide requirements vary by route and must be read from current park rules.",
+    "source_refs": [
+      "src_000618",
+      "src_000622"
+    ]
   },
   "freshness": {
     "checked_at": "2026-09-28"
@@ -42,10 +97,15 @@
     "source_urls": [
       "https://www.dosm.gov.my/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000593",
+      "src_000618",
+      "src_000622",
+      "src_000595"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

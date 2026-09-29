@@ -34,8 +34,62 @@
     "notes": "Практический полевой профиль: перечислены языки, с которыми путешественник реально столкнётся в регионе; это не полный этнолингвистический перечень."
   },
   "climate": {
-    "summary": "Экваториально влажно; Sarawak имеет выраженные очень дождливые периоды.",
+    "summary": "Coastal/western Sarawak receives a strong northeast-monsoon signal: December–March are especially wet and January is typically the maximum; coastal minimum tends to occur around June–July.",
+    "floods": {
+      "risk_context": "DID operates multiple Kuching river-level stations in the Sungai Sarawak system; use live levels during prolonged rain.",
+      "live_monitoring": true
+    },
+    "source_refs": [
+      "src_000593",
+      "src_000596"
+    ],
     "best_period_general": "Более сухие месяцы, но дождь возможен всегда."
+  },
+  "geography": {
+    "summary": "Широкий западно-северный коридор Sarawak; в текущем legacy-region объединены Kuching/Sarawak Delta и удалённый Niah возле Miri, поэтому факты, относящиеся только к одной части, помечаются явно.",
+    "delta": "Sarawak Delta UNESCO Global Geopark around Kuching includes an extensive river-delta system and transition from low plains to higher inland ground.",
+    "source_refs": [
+      "src_000621"
+    ]
+  },
+  "geology": {
+    "sarawak_delta": "UNESCO describes the Kuching Zone suture as evidence of collision between ancient landmasses more than 200 million years ago; the geopark preserves a geological record exceeding 250 million years.",
+    "niah": "Niah is a limestone cave/karst and archaeological landscape, but detailed cave geology remains attached to the Niah object until a dedicated Niah locality profile is formalized.",
+    "source_refs": [
+      "src_000621",
+      "src_000619"
+    ]
+  },
+  "nature": {
+    "niah": "Sarawak Forestry describes Niah as lowland rainforest with bats, swiftlets, endemic Niah Cave gecko, birds, butterflies, squirrels, monkeys and occasional hornbills.",
+    "source_refs": [
+      "src_000619"
+    ]
+  },
+  "health": {
+    "dengue_reference_2022": {
+      "area": "Sarawak",
+      "incidence_per_100k": 26.95
+    },
+    "interpretation": "State-level historical reference for 2022; Kuching and Niah cannot be assigned the same current risk.",
+    "source_refs": [
+      "src_000595"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "dataset_scope": "police district",
+      "status": "Kuching/Miri district data available_not_yet_aggregated"
+    },
+    "source_refs": [
+      "src_000594"
+    ]
+  },
+  "transport": {
+    "niah": "Sarawak Forestry places park HQ roughly two hours by road from Miri or Bintulu; access continues by motorised boat across Niah River and about one hour on raised plankwalk to Great Cave.",
+    "source_refs": [
+      "src_000619"
+    ]
   },
   "freshness": {
     "checked_at": "2026-09-28"
@@ -44,10 +98,17 @@
     "source_urls": [
       "https://www.dosm.gov.my/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000621",
+      "src_000593",
+      "src_000596",
+      "src_000619",
+      "src_000595",
+      "src_000594"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

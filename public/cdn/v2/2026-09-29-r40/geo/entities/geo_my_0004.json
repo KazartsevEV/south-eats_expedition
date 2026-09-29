@@ -33,8 +33,70 @@
     "notes": "Практический полевой профиль: перечислены языки, с которыми путешественник реально столкнётся в регионе; это не полный этнолингвистический перечень."
   },
   "climate": {
-    "summary": "С высотой быстро холодает; дождь и туман возможны круглый год.",
+    "summary": "В центральных холмистых районах Sabah осадки распределены более равномерно, чем на побережьях; METMalaysia отмечает менее выраженные максимумы около мая и октября и минимумы около февраля и августа.",
+    "temperature_context": "Sabah Tourism приводит около 21°C как практический средний ориентир для highlands Ranau/Kundasang, но вершина Kinabalu имеет отдельный высокогорный климат и выше 3,500 м температура может опускаться к 0°C.",
+    "source_refs": [
+      "src_000593",
+      "src_000623"
+    ],
     "best_period_general": "Более сухие окна февраля–апреля; вершина зависит от погоды и permit."
+  },
+  "geography": {
+    "summary": "Горный внутренний узел северо-западного Sabah вокруг Ranau–Kundasang и массива Kinabalu. Высота меняет температуру, облачность и доступ намного сильнее, чем на низменном побережье.",
+    "source_refs": [
+      "src_000608"
+    ]
+  },
+  "relief": {
+    "summit_m": 4095.2,
+    "summary": "Mount Kinabalu поднимается до 4,095.2 м; в одном регионе соседствуют низкогорные леса, высокогорные склоны и вершина с условиями, не похожими на прибрежный Sabah.",
+    "source_refs": [
+      "src_000608"
+    ]
+  },
+  "geology": {
+    "summary": "Kinabalu UNESCO Global Geopark включает ultramafic rocks, гранитные интрузии и складчато-разломанные осадочные породы района Ranau–Tambunan; Poring Hot Springs также относится к геологическому контексту.",
+    "source_refs": [
+      "src_000609"
+    ]
+  },
+  "nature": {
+    "documented_biodiversity": "Kinabalu Park — hotspot растительного разнообразия; Sabah Parks приводит 711 видов орхидей, 621 вид папоротников и более 100 видов млекопитающих в опубликованном профиле.",
+    "dangerous_animals": {
+      "status": "not_reduced_to_one_list",
+      "note": "Высотная зональность слишком велика; опасных животных не переносить сюда из общестранового списка без высотной/локальной привязки."
+    },
+    "source_refs": [
+      "src_000608"
+    ]
+  },
+  "health": {
+    "dengue_reference_2022": {
+      "area": "Sabah",
+      "incidence_per_100k": 209.15
+    },
+    "malaria": "MOH 2022: zoonotic malaria (P. knowlesi) remained the main malaria burden in Malaysia; 39 Sabah localities were selected for outdoor residual spray. Это не означает одинаковый риск во всех highlands.",
+    "source_refs": [
+      "src_000595",
+      "src_000617"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "dataset_scope": "police district",
+      "status": "Ranau/Kota Belud/Kota Kinabalu-area rows require separate aggregation; no single highlands crime rate."
+    },
+    "mountain_weather": "Сильный дождь/ветер и изменения условий на высоте — отдельный экспедиционный риск.",
+    "source_refs": [
+      "src_000594",
+      "src_000608"
+    ]
+  },
+  "transport": {
+    "mount_kinabalu": "Sabah Parks requires online climbing reservation for 2026; summit climb is not walk-up access.",
+    "source_refs": [
+      "src_000608"
+    ]
   },
   "freshness": {
     "checked_at": "2026-09-28"
@@ -43,10 +105,18 @@
     "source_urls": [
       "https://www.dosm.gov.my/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000593",
+      "src_000623",
+      "src_000608",
+      "src_000609",
+      "src_000595",
+      "src_000617",
+      "src_000594"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

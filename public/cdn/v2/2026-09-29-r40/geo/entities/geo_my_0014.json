@@ -33,8 +33,67 @@
     "notes": "Практический полевой профиль: перечислены языки, с которыми путешественник реально столкнётся в регионе; это не полный этнолингвистический перечень."
   },
   "climate": {
-    "summary": "Жаркий влажный тропический климат восточного Sabah; ливни возможны круглый год.",
+    "summary": "Northeast Sabah получает выраженный максимум осадков около января, минимум около апреля; большая часть дождя приходится на декабрь–март северо-восточного муссона.",
+    "floods": {
+      "risk_context": "Для рек и дорог восточного Sabah использовать DID monitoring по конкретному бассейну/району.",
+      "live_monitoring": true
+    },
+    "source_refs": [
+      "src_000593",
+      "src_000596"
+    ],
     "best_period_general": "Круглый год; дикой природы не гарантирован, а дождь и плодоношение леса влияют на видимость животных."
+  },
+  "geography": {
+    "summary": "Восточное побережье Sabah; Sandakan — городской/портовый узел и gateway к Sepilok, Lower Kinabatangan и Turtle Islands."
+  },
+  "marine": {
+    "turtle_islands": "Turtle Islands Park lies about 40 km north of Sandakan and protects Green and Hawksbill turtles, surrounding reefs and seas.",
+    "tides": {
+      "status": "official_table_identified_values_not_normalized",
+      "official_source": "Pusat Hidrografi Nasional Tide Tables 2026"
+    },
+    "weather": "Eastern Sabah marine forecast METMalaysia applies to coastal trips.",
+    "source_refs": [
+      "src_000612",
+      "src_000616",
+      "src_000606"
+    ]
+  },
+  "nature": {
+    "gateway": "Sabah Tourism describes Sandakan as a wildlife gateway including Sepilok and Lower Kinabatangan.",
+    "marine": "Turtle Islands Park supports Green and Hawksbill turtle nesting throughout the year; peak periods differ by species.",
+    "source_refs": [
+      "src_000614",
+      "src_000612"
+    ]
+  },
+  "health": {
+    "dengue_reference_2022": {
+      "area": "Sabah",
+      "incidence_per_100k": 209.15
+    },
+    "malaria": "Zoonotic malaria context applies at Sabah level; no Sandakan-specific incidence normalized.",
+    "source_refs": [
+      "src_000595",
+      "src_000617"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "dataset_scope": "police district",
+      "status": "Sandakan district data available_not_yet_aggregated"
+    },
+    "source_refs": [
+      "src_000594"
+    ]
+  },
+  "transport": {
+    "summary": "Sandakan functions as the principal urban gateway for Sepilok and Lower Kinabatangan; Turtle Islands use Sandakan as gateway for protected-island visits.",
+    "source_refs": [
+      "src_000614",
+      "src_000612"
+    ]
   },
   "freshness": {
     "checked_at": "2026-09-28"
@@ -43,10 +102,20 @@
     "source_urls": [
       "https://www.dosm.gov.my/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000593",
+      "src_000596",
+      "src_000614",
+      "src_000612",
+      "src_000616",
+      "src_000606",
+      "src_000595",
+      "src_000617",
+      "src_000594"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

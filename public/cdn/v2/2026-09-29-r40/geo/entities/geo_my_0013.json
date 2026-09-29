@@ -32,8 +32,56 @@
     "notes": "Практический полевой профиль: перечислены языки, с которыми путешественник реально столкнётся в регионе; это не полный этнолингвистический перечень."
   },
   "climate": {
-    "summary": "Жаркий тропический климат с сезонными ливнями; сельская местность северного Sabah.",
+    "summary": "Северо-западное побережье Sabah имеет два дождливых максимума: основной около октября и второй около июня; более сухие минимумы обычно около февраля и августа.",
+    "source_refs": [
+      "src_000593"
+    ],
     "best_period_general": "Круглый год, но сухие окна удобнее для деревень и дорог."
+  },
+  "geography": {
+    "summary": "Северная оконечность Sabah вокруг Kudat и Matunggong; район включает прибрежные участки, сельские Rungus communities и островные связи Kudat district."
+  },
+  "marine": {
+    "tides": {
+      "status": "official_table_identified_values_not_normalized",
+      "official_source": "Pusat Hidrografi Nasional Tide Tables 2026"
+    },
+    "note": "Береговой/островной район; точные tide predictions требуют станции из PHN 2026.",
+    "source_refs": [
+      "src_000606"
+    ]
+  },
+  "health": {
+    "dengue_reference_2022": {
+      "area": "Sabah",
+      "incidence_per_100k": 209.15
+    },
+    "malaria": "Zoonotic malaria is a Sabah field-health issue; no Kudat-specific rate normalized in this pass.",
+    "source_refs": [
+      "src_000595",
+      "src_000617"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "dataset_scope": "police district",
+      "status": "Kudat district data available_not_yet_aggregated"
+    },
+    "source_refs": [
+      "src_000594"
+    ]
+  },
+  "ethnography": {
+    "rungus": "Kudat is a major centre of the Rungus community; Matunggong также имеет значительную Rungus population. Kampung Bavanggazo preserves communal longhouse living and craft traditions.",
+    "source_refs": [
+      "src_000613"
+    ]
+  },
+  "transport": {
+    "summary": "Sabah Tourism identifies Kudat as a district centre with a STOLport linking Kudat to Kota Kinabalu and Sandakan; rural Rungus sites require road travel from Kudat/KK.",
+    "source_refs": [
+      "src_000613"
+    ]
   },
   "freshness": {
     "checked_at": "2026-09-28"
@@ -42,10 +90,17 @@
     "source_urls": [
       "https://www.dosm.gov.my/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000593",
+      "src_000613",
+      "src_000606",
+      "src_000595",
+      "src_000617",
+      "src_000594"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

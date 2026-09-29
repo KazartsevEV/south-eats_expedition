@@ -33,8 +33,75 @@
     "notes": "Практический полевой профиль: перечислены языки, с которыми путешественник реально столкнётся в регионе; это не полный этнолингвистический перечень."
   },
   "climate": {
-    "summary": "Жаркий влажный морской тропический климат; состояние моря и видимость меняются по сезону.",
+    "summary": "Южный Sabah в среднем получает более равномерные осадки; февраль–апрель несколько суше. Перед лодочными переходами важнее оперативный Eastern Sabah marine forecast, чем годовая средняя.",
+    "source_refs": [
+      "src_000593",
+      "src_000616"
+    ],
     "best_period_general": "Дайв-поездку планировать по наличию разрешения, состоянию моря, видимости и текущим условиям оператора."
+  },
+  "geography": {
+    "summary": "Морской регион вокруг Semporna и Celebes Sea: океанический Sipadan, коралловые рифы и вулканические острова Tun Sakaran требуют отдельного морского профиля от материкового Sabah."
+  },
+  "geology": {
+    "sipadan": "Sipadan — океанический остров, сформированный живым коралловым массивом на вулканическом конусе и поднимающийся примерно на 600 м от морского дна.",
+    "tun_sakaran": "Острова Tun Sakaran сложены Quaternary pyroclastic material, связанным с взрывным вулканизмом; Bohey Dulang и Bodgaya сохраняют выраженный вулканический рельеф.",
+    "source_refs": [
+      "src_000610",
+      "src_000611"
+    ]
+  },
+  "marine": {
+    "sipadan": "Sabah Parks указывает более 400 видов рыб и сотни видов кораллов в экосистеме Sipadan.",
+    "tun_sakaran": "Для Tun Sakaran опубликованы 255 видов кораллов, 528 видов reef fish, более 240 видов marine invertebrates и шесть видов seagrass.",
+    "tides": {
+      "status": "official_table_identified_values_not_normalized",
+      "official_source": "Pusat Hidrografi Nasional Tide Tables 2026"
+    },
+    "weather": "Eastern Sabah marine forecast METMalaysia использовать непосредственно перед выходом.",
+    "source_refs": [
+      "src_000610",
+      "src_000611",
+      "src_000616",
+      "src_000606"
+    ]
+  },
+  "nature": {
+    "terrestrial": "Sipadan: tropical birds, fruit bats, monitor lizards and nesting turtles; Tun Sakaran: coastal forest, mangrove, birds, reptiles and macaques.",
+    "source_refs": [
+      "src_000610",
+      "src_000611"
+    ]
+  },
+  "health": {
+    "dengue_reference_2022": {
+      "area": "Sabah",
+      "incidence_per_100k": 209.15
+    },
+    "malaria": "Sabah has operational zoonotic-malaria foci; do not convert state context into an island-specific rate.",
+    "source_refs": [
+      "src_000595",
+      "src_000617"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "dataset_scope": "police district",
+      "status": "Semporna district data available_not_yet_aggregated"
+    },
+    "marine_access": "Состояние моря и park access/permit are dynamic; exact availability must be checked before departure.",
+    "source_refs": [
+      "src_000594",
+      "src_000616",
+      "src_000610"
+    ]
+  },
+  "transport": {
+    "gateway": "Semporna is the mainland gateway. Sabah Parks states Sipadan is about 45 minutes by speedboat in calm seas; Tun Sakaran is also reached by fast boat from Semporna.",
+    "source_refs": [
+      "src_000610",
+      "src_000611"
+    ]
   },
   "freshness": {
     "checked_at": "2026-09-28"
@@ -43,10 +110,19 @@
     "source_urls": [
       "https://www.dosm.gov.my/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000610",
+      "src_000611",
+      "src_000593",
+      "src_000616",
+      "src_000606",
+      "src_000595",
+      "src_000617",
+      "src_000594"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

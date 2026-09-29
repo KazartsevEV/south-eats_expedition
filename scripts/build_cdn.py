@@ -27,6 +27,7 @@ PUBLISH = [
 COUNTRY_ONLY = [
     ("philippines.json", "PH", "philippines"),
     ("singapore.json", "SG", "singapore"),
+    ("thailand.json", "TH", "thailand"),
 ]
 
 TYPE_LABELS = {

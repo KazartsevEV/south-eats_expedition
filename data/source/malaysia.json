@@ -3,7 +3,7 @@
     "country": "Malaysia",
     "country_code": "MY",
     "language": "ru",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-29",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -21,7 +21,8 @@
       "Карточки охраняемых территорий Малайзии отделяют свободно доступные городские объекты от территорий Сабаха, Саравака и Перака с разрешительным режимом; отдельное разрешение может требоваться и для съёмки.",
       "Блок media.field_planning — редакционная разведка для съёмки; официальные правила объекта и авиационные ограничения имеют приоритет.",
       "v1.5: добавлены narrow, нормализованные теги, route_meta и привязка к географическим сущностям для сборки CDN.",
-      "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны."
+      "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны.",
+      "2026-09-29 GPS normalization: 21/21 Malaysia objects receive sourced WGS84 map anchors; broad landscapes/parks use explicit center/approximate semantics, and Lenggong keeps four UNESCO archaeological component points."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -699,7 +700,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 3.147778,
+              "lon": 101.695278
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kuala Lumpur — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1865",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "City reference coordinate; used as the map anchor for the broad city object."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельная база — Куала-Лумпур; историческое ядро удобно проходить пешком, между удалёнными районами использовать MRT/LRT/Monorail, KTM или Grab.",
@@ -952,7 +969,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.41444,
+              "lon": 100.32917
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "George Town, Penang — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q61092",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "City reference coordinate; the UNESCO historic core is smaller than the whole city object."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно: паром/автобус или аэропорт Пенанга, далее историческое ядро удобнее всего исследовать пешком; Rapid Penang и Grab нужны для связки с дальними районами острова.",
@@ -1232,7 +1265,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 2.188889,
+              "lon": 102.251111
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Malacca City — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q61089",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "City reference coordinate for Melaka; not an entrance point."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно: междугородний автобус до Melaka Sentral, затем местный автобус или Grab; историческое ядро рациональнее проходить пешком.",
@@ -1498,7 +1547,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 6.075,
+              "lon": 116.558611
+            },
+            "coordinate_type": "summit",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Mount Kinabalu — summit coordinate",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q60967",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Summit coordinate; access trailhead is a separate logistical point and must not be inferred from this summit."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно добраться до Kinabalu Park/Kundasang несложно; восхождение заранее бронируется через Sabah Parks, а на горе обязателен зарегистрированный проводник.",
@@ -1794,7 +1859,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 4.13333,
+              "lon": 114.91667
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "official",
+              "title": "Gunung Mulu National Park — geographical data",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/1013/maps/",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "UNESCO property reference coordinate. The park is extensive; this is not an entrance or trailhead."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельная базовая схема — перелёт в Mulu, размещение у Park HQ и самостоятельная сборка маршрутов. Проводник подключается только к тем пещерам и трекам, где он обязателен правилами парка.",
@@ -2108,7 +2189,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 6.35,
+              "lon": 99.8
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Langkawi — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q24874722",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Archipelago reference coordinate; not a jetty, beach or attraction entrance."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Практичная база — Langkawi; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -2379,7 +2476,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.916667,
+              "lon": 102.733333
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Perhentian Islands — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q2070782",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Island-group reference coordinate; individual jetties and beaches require separate points."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Основной подход через Kuala Besut; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки.",
@@ -2669,7 +2782,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 4.85,
+              "lon": 100.733
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Taiping, Perak — coordinate location",
+              "publisher": "Wikimedia / Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Taiping,_Perak",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "City reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Практичная база — Ipoh / Taiping / Gerik; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -2930,7 +3059,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 4.766667,
+              "lon": 100.933333
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kuala Kangsar — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1790832",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Town reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Практичная база — Ipoh / Taiping / Gerik; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
@@ -3199,7 +3344,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.67,
+              "lon": 101.38
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Belum Temenggor Forest Reserve — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q14206230",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Broad reserve reference coordinate; not a pier, ranger station or trailhead."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно доехать до Pulau Banding/Герика можно без тура; вход в Royal Belum оформляется по разрешительному режиму, а лодка и уполномоченный проводник нужны уже внутри охраняемой территории.",
@@ -3480,7 +3641,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 3.75,
+              "lon": 115.45
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Bario — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q2884535",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Bario settlement is used as the practical anchor for the broader Kelabit Highlands cultural landscape."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Основной доступ — небольшой самолёт Miri–Bario, около 45–50 минут. Наземная альтернатива — долгий путь по лесовозным дорогам на 4×4, сильно зависящий от погоды.",
@@ -3774,7 +3951,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 4.916667,
+              "lon": 117.666667
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Danum Valley Conservation Area — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1165128",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Protected-area reference coordinate; not the field centre entrance."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно добраться до Lahad Datu можно обычным транспортом. Дальнейший въезд в Danum Valley требует предварительного разрешения и организованного трансфера через уполномоченную инфраструктуру территории.",
@@ -4037,7 +4230,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.5374,
+              "lon": 118.3071
+            },
+            "coordinate_type": "center",
+            "accuracy": "approximate",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kinabatangan River — mapped river reference near Sukau",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/W923615152",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Representative river point in the Sukau expedition corridor. The river is linear; this is not a claim that the object is a single point."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно доехать до Sukau/Bilit можно через Sandakan; лодка с местным лодочником нужна непосредственно для наблюдения на реке и протоках.",
@@ -4319,7 +4528,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 3.813889,
+              "lon": 113.781389
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Niah National Park — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q1984562",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Park/cave-complex reference coordinate; entrance should be stored separately when verified."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Ближайшая практичная база — Kuching / Miri depending object; обычно нужен дорожный трансфер, затем пеший/лодочный участок в зависимости от маршрута. Для удалённых зон заранее подтверждать разрешение/проводник.",
@@ -4644,7 +4869,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 4.474361,
+              "lon": 101.087806
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kellie's Castle — mapped monument coordinate",
+              "publisher": "Wikimedia Commons",
+              "url": "https://commons.wikimedia.org/wiki/Category:Kellie%27s_Castle",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Mapped monument coordinate for the castle complex."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Jalan Gopeng, Batu Gajah; about 30 minutes by road from Ipoh and roughly 2 hours from Куала-Лумпур depending on traffic.",
@@ -4911,7 +5152,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 1.55912,
+              "lon": 110.3481
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kuching Waterfront — mapped attraction",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/W233688826",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Waterfront anchor for the broader old-town object."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельная база — центр Кучинга; старый город проходится пешком, через реку удобно пользоваться tambang — небольшими пассажирскими лодками.",
@@ -5176,7 +5433,89 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.067908,
+              "lon": 100.972328
+            },
+            "coordinate_type": "archaeological_core",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "official",
+              "title": "Archaeological Heritage of the Lenggong Valley — geographical data",
+              "publisher": "UNESCO World Heritage Centre",
+              "url": "https://whc.unesco.org/en/list/1396/maps/",
+              "authority": "high",
+              "accessed": "2026-09-29",
+              "notes": "Primary anchor is UNESCO component 1396-001 Bukit Bunuh–Kota Tampan; additional inscribed components are stored in geo_points."
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "geo_points": [
+              {
+                "coordinate_type": "archaeological_core",
+                "coordinates": {
+                  "lat": 5.067908,
+                  "lon": 100.972328
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "official",
+                  "title": "Lenggong Valley 1396-001 Bukit Bunuh–Kota Tampan",
+                  "publisher": "UNESCO World Heritage Centre",
+                  "url": "https://whc.unesco.org/en/list/1396/maps/",
+                  "authority": "high",
+                  "accessed": "2026-09-29"
+                }
+              },
+              {
+                "coordinate_type": "archaeological_core",
+                "coordinates": {
+                  "lat": 5.128889,
+                  "lon": 100.992778
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "official",
+                  "title": "Lenggong Valley 1396-002 Bukit Jawa",
+                  "publisher": "UNESCO World Heritage Centre",
+                  "url": "https://whc.unesco.org/en/list/1396/maps/",
+                  "authority": "high",
+                  "accessed": "2026-09-29"
+                }
+              },
+              {
+                "coordinate_type": "archaeological_core",
+                "coordinates": {
+                  "lat": 5.126194,
+                  "lon": 100.966692
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "official",
+                  "title": "Lenggong Valley 1396-003 Bukit Kepala Gajah",
+                  "publisher": "UNESCO World Heritage Centre",
+                  "url": "https://whc.unesco.org/en/list/1396/maps/",
+                  "authority": "high",
+                  "accessed": "2026-09-29"
+                }
+              },
+              {
+                "coordinate_type": "archaeological_core",
+                "coordinates": {
+                  "lat": 5.1494,
+                  "lon": 100.980733
+                },
+                "accuracy": "high",
+                "coordinate_source": {
+                  "type": "official",
+                  "title": "Lenggong Valley 1396-004 Bukit Gua Harimau",
+                  "publisher": "UNESCO World Heritage Centre",
+                  "url": "https://whc.unesco.org/en/list/1396/maps/",
+                  "authority": "high",
+                  "accessed": "2026-09-29"
+                }
+              }
+            ]
           },
           "logistics": {
             "access": "Практичная схема — автомобиль из Ipoh/Kuala Kangsar в Lenggong; Tourism Malaysia рекомендует Archaeological Gallery как введение, затем отдельные cave/site visits.",
@@ -5439,7 +5778,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 4.114681,
+              "lon": 118.628761
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Sipadan — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q13202046",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Small-island reference coordinate."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Самостоятельно добраться до Semporna и выбрать размещение можно без пакета. На сам Сипадан допускают только по разрешению через зарегистрированного дайв-оператора.",
@@ -5729,7 +6084,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 6.761144,
+              "lon": 116.695397
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "traveler_report",
+              "title": "Rungus villages, Kudat — GPS",
+              "publisher": "Travelfish",
+              "url": "https://www.travelfish.org/sight_profile/malaysia/sabah/sabah/kudat/3863",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "GPS published for the Rungus villages/longhouse area near Kampung Bavanggazo; treated as a settlement-area anchor, not a building entrance."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Sabah Tourism: около 41 км южнее Kudat и около 98 км / 2.5 ч от Кота-Кинабалу.",
@@ -5999,7 +6370,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 3.2375,
+              "lon": 101.683889
+            },
+            "coordinate_type": "center",
+            "accuracy": "high",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Batu Caves — coordinate location",
+              "publisher": "Wikidata",
+              "url": "https://www.wikidata.org/wiki/Q687629",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Site reference coordinate; not claimed as the exact temple stair entrance."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "KTM Komuter до Batu Caves station, затем около 5 минут пешком; также bus/taxi/Grab.",
@@ -6278,7 +6665,23 @@
               "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
               "rate_type": "рыночный/справочный снимок",
               "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
-            }
+            },
+            "coordinates": {
+              "lat": 5.865,
+              "lon": 117.9488
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Sepilok Orangutan Rehabilitation Centre — mapped attraction",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/Sepilok",
+              "authority": "medium",
+              "accessed": "2026-09-29",
+              "notes": "Mapped visitor attraction node for the rehabilitation centre."
+            },
+            "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
             "access": "Около 23 км / 40 минут от Sandakan City Centre; taxi/Grab/driver, рядом lodges.",

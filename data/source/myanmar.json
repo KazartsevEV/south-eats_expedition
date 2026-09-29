@@ -36,7 +36,8 @@
       "2026-09-29 Myanmar Rakhine/Mrauk-U pass: relief, history, culture and architecture added from the UNESCO tentative-list record and localized into the Mrauk-U child profile.",
       "2026-09-29 Myanmar Kayin/Pyu pass: Hpa-An relief, landscape and ethnography added from the official tourism profile; Pyu architecture and hydraulic urban landscape normalized from the existing UNESCO source.",
       "2026-09-29 Myanmar official-tourism pass: Pyin-Oo-Lwin geography/history/nature/transport, Mon history/ethnography/coastal context, and Dawei/Tanintharyi history/culture/transport added from Ministry of Hotels and Tourism sources.",
-      "2026-09-29 Myanmar Yangon/Mandalay pass: Shwedagon-derived sacred history/culture/architecture and Mandalay royal-capitals urban planning/transport normalized from UNESCO and official tourism sources."
+      "2026-09-29 Myanmar Yangon/Mandalay pass: Shwedagon-derived sacred history/culture/architecture and Mandalay royal-capitals urban planning/transport normalized from UNESCO and official tourism sources.",
+      "2026-09-29 Myanmar northern nature pass: Indawgyi hydrology/water-quality and Nat-Ma-Taung elevation, watershed, vegetation, fauna and Chin cultural landscape expanded from existing UNESCO/ASEAN sources."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -1558,7 +1559,22 @@
           ],
           "source_refs": [
             "src_000679"
-          ]
+          ],
+          "habitats": [
+            "открытая вода",
+            "болота",
+            "плавающая растительность",
+            "сезонно затапливаемые луга",
+            "субтропические влажные широколиственные леса"
+          ],
+          "notable_fauna": [
+            "тонкоклювый сип",
+            "бенгальский сип",
+            "индийский свиной олень",
+            "восточный хулок",
+            "лангур Шортриджа"
+          ],
+          "note": "ЮНЕСКО указывает более 160 видов птиц; перечень относится к озеру, болотам и лесному водосбору биосферного резервата, а не ко всему штату Качин."
         },
         "safety": {
           "travel_advisory": {
@@ -1607,6 +1623,17 @@
             "context": "ВОЗ указывает существенные ограничения доступа к базовой медицинской помощи в этом регионе; в удалённых и конфликтных районах доступ особенно нестабилен.",
             "caveat": "Региональный гуманитарный показатель не описывает конкретное медицинское учреждение."
           }
+        },
+        "hydrology": {
+          "lake": {
+            "surface_area_ha": 12000,
+            "summary": "Индавджи — крупнейшее пресноводное озеро Мьянмы; оно окружено болотами, плавающей растительностью и сезонно затапливаемыми лугами."
+          },
+          "watershed": "Озеро имеет в основном сохранившийся лесной водосбор; сток направлен на север.",
+          "water_quality": "ЮНЕСКО характеризует общее качество воды как хорошее, но отмечает документированные риски повышенной ртути и заиления из-за гидравлической и мелкомасштабной золотодобычи в водосборе.",
+          "source_refs": [
+            "src_000679"
+          ]
         }
       },
       {
@@ -1637,7 +1664,12 @@
           "summary": "Высокогорный запад страны в пределах Чинских гор; Нат-Ма-Таун является одной из главных высотных доминант района."
         },
         "relief": {
-          "summary": "Нат-Ма-Таун — высшая вершина Чинских гор; парк охватывает около 72 300 га на территории Kanpetlet, Matupi и Mindat.",
+          "elevation_range_m": [
+            740,
+            3051
+          ],
+          "summit_m": 3051,
+          "summary": "Нат-Ма-Таун поднимается примерно на 2200 м над окружающими Чинскими горами. Перепад высот от 740 до 3051 м создаёт резкую смену климата и растительности.",
           "source_refs": [
             "src_000680"
           ]
@@ -1646,24 +1678,25 @@
           "summary": "В высокогорье прохладные и холодные ночи и утра, особенно в сухой сезон; туман и быстрая смена горной погоды обычны."
         },
         "nature": {
-          "habitats": [
+          "vegetation_zones": [
             "низменный диптерокарповый лес",
-            "вечнозелёный горный лес",
-            "влажные смешанные листопадные леса",
+            "горный вечнозелёный лес",
+            "влажный смешанный листопадный лес",
             "сосновый лес",
-            "горная саванна"
+            "дубово-рододендроновый высокогорный лес",
+            "горные саванны"
           ],
-          "flora": [
-            "Potentilla montis-victoriae",
-            "Rhododendron burmanicum",
-            "редкие орхидеи и мхи"
-          ],
+          "flora": "Предварительные исследования фиксировали более 800 видов растений и большое разнообразие орхидей; высокогорная флора содержит изолированный комплекс видов голарктического происхождения.",
           "fauna": [
             "белобровый поползень",
-            "сероу",
-            "гиббоны",
-            "гималайский чёрный медведь"
+            "трагопан Блита",
+            "рыжешейный калао",
+            "дымчатый леопард",
+            "бенгальский медленный лори",
+            "хулоки"
           ],
+          "endemic_bird": "Белобровый поползень (Sitta victoriae) эндемичен Нат-Ма-Тауну и связан прежде всего с дубово-рододендроновыми лесами примерно на 2300–3000 м.",
+          "caveat": "Источники отмечают сильное историческое давление охоты; наличие крупных млекопитающих нельзя гарантировать путешественнику.",
           "source_refs": [
             "src_000680"
           ]
@@ -1692,7 +1725,13 @@
           }
         },
         "ethnography": {
-          "summary": "Гора известна у местных народов Чин как Khaung Neu Thom — «Богиня-Мать Земли». ASEAN Centre for Biodiversity также описывает традиции народов Чин, включая праздник Chin National Day, ремёсла, стрельбу из лука и деревенские памятные Y-образные столбы.",
+          "chin_settlements": "Чинские деревни расположены в основном ниже 2500 м; Канпетлет находится примерно на 1390 м. Вокруг парка живут разные группы чин с отдельными локальными идентичностями.",
+          "livelihoods": [
+            "подсечно-огневое земледелие",
+            "сбор недревесных лесных продуктов",
+            "традиционное природопользование"
+          ],
+          "sacred_name": "В материалах ASEAN Centre for Biodiversity гора приводится также под чинским названием Khaung Neu Thom — «Мать-земля».",
           "source_refs": [
             "src_000680"
           ]
@@ -1722,6 +1761,12 @@
           "source_refs": [
             "src_000684",
             "src_000685"
+          ]
+        },
+        "hydrology": {
+          "watershed": "Национальный парк создавался в том числе для охраны верховьев рек Лемро и Мьитта; горный массив является важным водосбором.",
+          "source_refs": [
+            "src_000680"
           ]
         }
       }
@@ -6602,9 +6647,15 @@
           },
           "provenance": {
             "source_object_name": "Indawgyi Lake",
-            "source_refs": [],
+            "source_refs": [
+              "src_000679"
+            ],
             "checked_at": "2026-09-29",
             "source_refs_complete": false
+          },
+          "transport": {
+            "summary": "Хопин — ближайший сухопутный узел перед переходом в котловину Индавджи; дальнейшая дорога к озеру чувствительна к сезону дождей и текущей безопасности.",
+            "caveat": "Текущее расписание транспорта в этом проходе не нормализовано."
           }
         }
       },
@@ -6632,9 +6683,24 @@
           },
           "provenance": {
             "source_object_name": "Nat Ma Taung / Mount Victoria",
-            "source_refs": [],
+            "source_refs": [
+              "src_000680"
+            ],
             "checked_at": "2026-09-29",
-            "source_refs_complete": false
+            "source_refs_complete": true
+          },
+          "relief": {
+            "elevation_m": 1390,
+            "summary": "Канпетлет расположен высоко в Чинских горах и служит одним из нижних узлов для подхода к Нат-Ма-Тауну.",
+            "source_refs": [
+              "src_000680"
+            ]
+          },
+          "nature": {
+            "context": "Высотные лесные пояса быстро меняются выше Канпетлета; наиболее специализированная высокогорная флора и белобровый поползень связаны с более высокими отметками.",
+            "source_refs": [
+              "src_000680"
+            ]
           }
         }
       },

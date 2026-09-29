@@ -31,7 +31,8 @@
       "2026-09-29 Myanmar language pass: locality reference prose normalized into natural Russian; generic English travel terms removed while technical IDs and source metadata remain unchanged.",
       "2026-09-29 Myanmar health pass: regional malaria context added for Kachin, Kayin, Tanintharyi and Sagaing from WHO Health Cluster; 2025 dengue-response context added for Sagaing and Mandalay with explicit non-incidence caveats.",
       "2026-09-29 Myanmar Inle pass: nature and ethnography added from the existing UNESCO MAB source without introducing new source duplication.",
-      "2026-09-29 Myanmar regional health/hazard pass: Chin malaria and health-access context, Rakhine cyclone/health-access context, and WHO health-access caveats added to conflict-affected regions without converting regional data into locality-level risk scores."
+      "2026-09-29 Myanmar regional health/hazard pass: Chin malaria and health-access context, Rakhine cyclone/health-access context, and WHO health-access caveats added to conflict-affected regions without converting regional data into locality-level risk scores.",
+      "2026-09-29 Myanmar Tanintharyi pass: coastal/forest relief, geology, terrestrial and marine biodiversity, and Moken ethnography added from UNESCO tentative-list materials."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -876,7 +877,9 @@
             "src_000673",
             "src_000671",
             "src_000682",
-            "src_000685"
+            "src_000685",
+            "src_000687",
+            "src_000688"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
@@ -894,6 +897,56 @@
             "context": "ВОЗ указывает существенные ограничения доступа к базовой медицинской помощи в этом регионе; в удалённых и конфликтных районах доступ особенно нестабилен.",
             "caveat": "Региональный гуманитарный показатель не описывает конкретное медицинское учреждение."
           }
+        },
+        "relief": {
+          "summary": "Регион тянется от Андаманского побережья и островных гряд к хребту Танинтайи на границе с Таиландом. В ландшафте сочетаются низкие влажные равнины, мангровые берега, острова и среднегорные лесные участки.",
+          "source_refs": [
+            "src_000687",
+            "src_000688"
+          ]
+        },
+        "geology": {
+          "coastal_islands": "Архипелаг Мьей включает около 800 островов, сложенных главным образом известняками и гранитами.",
+          "source_refs": [
+            "src_000687"
+          ]
+        },
+        "nature": {
+          "terrestrial": {
+            "habitats": [
+              "низменные влажные вечнозелёные леса",
+              "среднегорные вечнозелёные леса",
+              "мангровые леса"
+            ],
+            "notable_fauna": [
+              "азиатский слон",
+              "малайский тапир",
+              "зондский панголин",
+              "гиббон-лар",
+              "питта Герни"
+            ],
+            "context": "Лесной коридор Танинтайи лежит в переходной зоне между индокитайской и зондской фауной и сохраняет один из крупнейших блоков низменного вечнозелёного леса материковой Юго-Восточной Азии."
+          },
+          "marine": {
+            "habitats": [
+              "коралловые рифы",
+              "мангры",
+              "пляжные и дюнные леса",
+              "луга морских трав"
+            ],
+            "context": "Архипелаг Мьей образует крупный морской природный комплекс Андаманского моря; в нём есть морской национальный парк Лампи, охраняемые участки для акул и места размножения морских черепах."
+          },
+          "source_refs": [
+            "src_000687",
+            "src_000688"
+          ]
+        },
+        "ethnography": {
+          "moken": "ЮНЕСКО отмечает в архипелаге Мьей около тысячи представителей коренного морского народа мокенов, сохраняющих связь с островной и морской средой; часть общин уже не ведёт кочевой образ жизни.",
+          "note": "Этот этнографический факт относится к архипелагу и прибрежной части Танинтайи, а не ко всему региону одинаково.",
+          "source_refs": [
+            "src_000687"
+          ]
         }
       },
       {
@@ -6727,6 +6780,35 @@
       ],
       "accessed": "2026-09-29",
       "notes": "Historical 2023 event used as evidence of cyclone/storm/flood exposure, not as a current warning."
+    },
+    {
+      "id": "UNESCO_MYEIK_ARCHIPELAGO",
+      "canonical_id": "src_000687",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/tentativelists/5874",
+      "kind": "international_organization",
+      "used_for": [
+        "Tanintharyi",
+        "marine",
+        "nature",
+        "geology",
+        "Moken"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "UNESCO_TANINTHAYI_FOREST",
+      "canonical_id": "src_000688",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/tentativelists/5876/",
+      "kind": "international_organization",
+      "used_for": [
+        "Tanintharyi",
+        "forest",
+        "fauna",
+        "biogeography"
+      ],
+      "accessed": "2026-09-29"
     }
   ],
   "uncertainties": [

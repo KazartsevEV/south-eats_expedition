@@ -8058,7 +8058,30 @@
     "laws_source_ids": [
       "RUS_MFA",
       "UXO"
-    ]
+    ],
+    "transport_rules": {
+      "road_side": "left",
+      "foreign_licence": "По актуальной консульской справке МИД РФ управление автотранспортом допускается при наличии российского национального водительского удостоверения; для мотоцикла нужна соответствующая категория.",
+      "rental": "При аренде автомобиля или мотоцикла проверять действующую страховку и техническое состояние.",
+      "temporary_import": "Land Transport Law допускает временный ввоз автомобиля без смены номерного знака для туризма/визита; автомобиль должен соответствовать требованиям технической, экологической и дорожной безопасности и применимым международным соглашениям.",
+      "vehicle_standard_note": "Для постоянного импорта закон требует левый руль; для временного ввоза сделано исключение.",
+      "source_ids": [
+        "LAO_LAND_TRANSPORT",
+        "RUS_MFA"
+      ],
+      "checked_at": "2026-09-29"
+    },
+    "tourist_permits": {
+      "general_status": "site_specific",
+      "general_rule": "Единого национального туристического разрешения для обычного самостоятельного путешествия в используемых официальных источниках не опубликовано. Специальные разрешения зависят от конкретной территории и активности.",
+      "protected_areas": "В национальных охраняемых территориях действуют собственные режимы посещения; кемпинг, треккинг и иные активности следует считать разрешёнными только в рамках опубликованного режима конкретного парка/маршрута.",
+      "sensitive_areas": "В приграничных и иных чувствительных районах возможны локальные ограничения; перед маршрутом проверять актуальный допуск.",
+      "source_ids": [
+        "LAO_PARKS",
+        "RUS_MFA"
+      ],
+      "checked_at": "2026-09-29"
+    }
   },
   "sources": [
     {
@@ -8083,7 +8106,9 @@
         "visa",
         "safety",
         "country_profile",
-        "entry"
+        "entry",
+        "transport_rules",
+        "permits"
       ],
       "accessed": "2026-09-27",
       "canonical_id": "src_000496",
@@ -8207,10 +8232,28 @@
       "language": "en",
       "used_for": [
         "camping_rules",
-        "protected_areas"
+        "protected_areas",
+        "permit",
+        "permits"
       ],
       "accessed": "2026-09-29",
       "notes": "Подтверждает наличие кемпинга как регулируемой активности в отдельных охраняемых территориях; не является общим разрешением на свободный кемпинг по стране."
+    },
+    {
+      "id": "LAO_LAND_TRANSPORT",
+      "canonical_id": "src_900021",
+      "title": "Land Transport Law No. 04/NA, 16 November 2021",
+      "publisher": "Lao PDR National Assembly / Lao Trade Portal",
+      "url": "https://www.laotradeportal.gov.la/en-gb/site/display/2475",
+      "kind": "government",
+      "language": "en",
+      "used_for": [
+        "transport_rules",
+        "road_traffic_law",
+        "vehicle_temporary_import"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "Articles 6–7 apply the law to foreign users; Articles 18–19 cover temporary vehicle import for tourism/visits and technical conditions."
     }
   ],
   "uncertainties": [

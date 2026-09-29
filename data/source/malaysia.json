@@ -37,7 +37,8 @@
       "2026-09-29 climate pass 2: annual climate references added for Gerik, Kuala Kangsar, Kundasang, Sukau, Batu Gajah, Kuala Besut and Sepilok. Sepilok preserves the published temperature range and precipitation uncertainty rather than inventing a single mean.",
       "2026-09-29 locality gap pass: filled remaining geography/climate gaps for Gerik, Kuala Kangsar, Batu Gajah, Kuching, Miri, Kota Kinabalu, Kudat, Lahad Datu and Batu Niah. Batu Niah deliberately keeps a sourced temperature range/seasonality instead of using a dubious annual precipitation aggregate.",
       "2026-09-29 Malaysia geo QA closure: filled the only remaining required region transport gaps and Batu Caves geography; six localities without robust annual climatology now carry an explicit not_normalized status instead of silent null or borrowed nearby-station values.",
-      "2026-09-29 language cleanup: all 14 Malaysia regional reference profiles rewritten into natural Russian prose; proper geographic names remain unchanged, while English-Russian mixed explanatory text was removed."
+      "2026-09-29 language cleanup: all 14 Malaysia regional reference profiles rewritten into natural Russian prose; proper geographic names remain unchanged, while English-Russian mixed explanatory text was removed.",
+      "2026-09-29 language cleanup: all 27 Malaysia locality profiles rewritten into natural Russian prose; technical dataset/product names are retained only as source names or methodology metadata."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -8185,19 +8186,19 @@
         ],
         "profile": {
           "summary": "Куала-Лумпур полезен как полевой срез современной Малайзии: колониальное ядро у слияния Кланга и Гомбак, малайский Kampung Baru, китайские и индийские кварталы, рынки и сверхвысотный центр читаются в одном городском маршруте.",
-          "history": "Куала-Лумпур вырос из оловодобывающего узла у слияния Klang и Gombak в колониальный административно-торговый центр, а затем в столичный мегаполис. Для экспедиционного рассказа интересен не один skyline: Masjid Jamek и старое колониальное ядро, Chinatown, индийские кварталы, Kampung Baru и башни конца XX–XXI века показывают несколько исторических слоёв в пределах одного дня пешком и на рельсовом транспорте.",
-          "culture": "Городская среда многоязычна и многоконфессиональна: малайские, китайские и индийские общины читаются не как музейные анклавы, а через рынки, храмы, мечети, еду и жилые кварталы. Kampung Baru особенно полезен как контраст малоэтажной малайской ткани с KLCC.",
-          "geography": "Город лежит в долине Klang; жара и ливни усиливаются плотной застройкой, а расстояния между визуально близкими районами часто режутся эстакадами и скоростными дорогами.",
+          "history": "Куала-Лумпур вырос из оловодобывающего узла у слияния Кланга и Гомбак в колониальный административно-торговый центр, а затем в столичный мегаполис. Старое ядро у Masjid Jamek, Chinatown, индийские кварталы, Kampung Baru и высотная застройка конца XX–XXI веков позволяют читать несколько исторических слоёв в одном городском маршруте.",
+          "culture": "Город многоязычен и многоконфессионален: малайские, китайские и индийские общины заметны в рынках, храмах, мечетях, кухне и жилой среде. Kampung Baru особенно показателен как малоэтажный малайский район рядом с деловым центром KLCC.",
+          "geography": "Город лежит в долине Кланг у слияния рек Кланг и Гомбак. Плотная застройка, эстакады и скоростные дороги местами разрывают пешие связи между визуально близкими районами.",
           "myths_beliefs": null,
           "climate": {
             "summary": "Экваториально жарко и влажно круглый год; грозы обычны.",
             "best_period": "Круглый год; для длинной уличной съёмки удобнее сухое утро после ночного дождя.",
-            "local_notes": "После 11:00 тепловая дымка и жёсткий свет ухудшают skyline; грозовой ливень чаще полезнее переждать 30–60 минут и снимать отражения после него.",
+            "local_notes": "После полудня усиливаются жара и дымка; короткий грозовой ливень часто быстро меняет условия на улицах.",
             "annual_reference": {
               "mean_annual_temperature_c": 24.8,
               "annual_precipitation_mm": 2637,
               "period": "1940–2025",
-              "data_basis": "Copernicus ERA5 reanalysis",
+              "data_basis": "реанализ Copernicus ERA5",
               "source_refs": [
                 "src_000645"
               ],
@@ -8205,9 +8206,9 @@
             }
           },
           "transport": {
-            "access": "Самостоятельная база — Куала-Лумпур; историческое ядро удобно проходить пешком, между удалёнными районами использовать MRT/LRT/Monorail, KTM или Grab.",
-            "public_transport": "MRT/LRT/Monorail и KTM закрывают основные туристические оси; для Merdeka Square–Pasar Seni–Chinatown удобнее пешком, для KLCC/Bukit Bintang — MRT/LRT/Monorail.",
-            "walking": "Историческое ядро Merdeka Square–Central Market–Petaling Street — примерно 2–4 км; KLCC добавляет ещё несколько километров.",
+            "access": "Самостоятельная база — Куала-Лумпур; историческое ядро удобно проходить пешком, между удалёнными районами использовать MRT, LRT, монорельс, KTM или сервисы заказа машины.",
+            "public_transport": "MRT, LRT, монорельс и KTM закрывают основные городские направления; участок Merdeka Square — Pasar Seni — Chinatown удобнее проходить пешком.",
+            "walking": "Историческое ядро Merdeka Square — Central Market — Petaling Street составляет примерно 2–4 км; выход к KLCC добавляет ещё несколько километров.",
             "modes": {
               "public_transport": "MRT/LRT/Monorail и KTM закрывают основные туристические оси; для Merdeka Square–Pasar Seni–Chinatown удобнее пешком, для KLCC/Bukit Bintang — MRT/LRT/Monorail.",
               "taxi_ridehail": "Grab удобен между несвязанными рельсом районами, но в 17:00–20:00 может проигрывать MRT по времени.",
@@ -8250,7 +8251,8 @@
           "source_url": "https://mapcarta.com/Kuala_Lumpur",
           "checked_at": "2026-09-29",
           "note": "city node"
-        }
+        },
+        "name_ru": "Куала-Лумпур"
       },
       {
         "name": "George Town / Penang",
@@ -8262,21 +8264,21 @@
         ],
         "profile": {
           "summary": "Джорджтаун — живой портовый город Малаккского пролива, где в пешем радиусе соседствуют китайские клановые дома, мечети, индуистские храмы, перанаканская архитектура, торговые дома и жилые Clan Jetties.",
-          "history": "George Town — портовый город Британской Ост-Индской компании с конца XVIII века, где торговля в Малаккском проливе создала плотную смесь shophouse, clan house, мечетей, индуистских и китайских храмов. UNESCO-ядро ценнее как действующая городская система, чем как набор murals.",
-          "culture": "Пенангские хokkien-китайцы, перанаканцы, индийские мусульмане, тамилы и малайцы оставили соседствующие религиозные и коммерческие кварталы. Clan jetties сохраняют происхождение от клановых общин докеров; это жилые мостки, а не декорация.",
-          "geography": "Исторический центр лежит на плоской прибрежной площадке; ключевой практический фактор — жара и минимум тени на набережной, тогда как five-foot ways дают непрерывные теневые коридоры.",
+          "history": "Джорджтаун возник как порт Британской Ост-Индской компании в конце XVIII века. Торговля в Малаккском проливе создала плотную среду шопхаусов, клановых домов, мечетей, индуистских и китайских храмов. Историческое ядро важно прежде всего как действующая городская система, а не как набор отдельных достопримечательностей.",
+          "culture": "Пенангские хоккиенцы, перанаканцы, индийские мусульмане, тамилы и малайцы сформировали соседствующие религиозные и торговые кварталы. Clan Jetties происходят от клановых общин портовых работников и остаются жилой средой.",
+          "geography": "Исторический центр лежит на плоской прибрежной площадке. Пятифутовые крытые галереи вдоль шопхаусов дают непрерывные теневые проходы, тогда как открытая набережная быстро перегревается.",
           "myths_beliefs": [
             "Китайские храмы и небольшие Datuk Kong shrines отражают живую народную религиозность; снимать алтари и молящихся только с согласия/дистанции."
           ],
           "climate": {
             "summary": "Жаркое влажное побережье.",
-            "best_period": "Декабрь–февраль обычно суше; для street/documentary важнее ранний старт до туристических групп.",
-            "local_notes": "После дождя five-foot ways и плитка скользкие, зато фасады и вывески насыщеннее; в полдень открытые улицы перегреваются.",
+            "best_period": "Декабрь–февраль обычно суше; для пешего исследования исторического центра полезнее ранний старт до основной жары и наплыва посетителей.",
+            "local_notes": "После дождя крытые галереи и плитка становятся скользкими; в полдень открытые улицы заметно перегреваются.",
             "annual_reference": {
               "mean_annual_temperature_c": 27.2,
               "annual_precipitation_mm": 2229,
               "period": "1940–2025",
-              "data_basis": "Copernicus ERA5 reanalysis",
+              "data_basis": "реанализ Copernicus ERA5",
               "source_refs": [
                 "src_000635"
               ],
@@ -8284,9 +8286,9 @@
             }
           },
           "transport": {
-            "access": "Самостоятельно: паром/автобус или аэропорт Пенанга, далее историческое ядро удобнее всего исследовать пешком; Rapid Penang и Grab нужны для связки с дальними районами острова.",
-            "public_transport": "Rapid Penang связывает ferry terminal/Komtar с островом; внутри UNESCO-core автобус обычно медленнее пешего маршрута.",
-            "walking": "Armenian Street–Harmony Street–Little India–Clan Jetties — около 3–5 км полноценного круга.",
+            "access": "Самостоятельно удобно прибывать паромом, автобусом или через аэропорт Пенанга; историческое ядро лучше исследовать пешком, а Rapid Penang и сервисы заказа машины использовать для дальних районов острова.",
+            "public_transport": "Rapid Penang связывает паромный терминал и Komtar с остальной частью острова; внутри исторического ядра автобус обычно уступает пешему маршруту.",
+            "walking": "Круг Armenian Street — Street of Harmony — Little India — Clan Jetties составляет примерно 3–5 км.",
             "modes": {
               "public_transport": "Rapid Penang связывает ferry terminal/Komtar с островом; внутри UNESCO-core автобус обычно медленнее пешего маршрута.",
               "taxi_ridehail": "Grab удобен на Penang Hill/аэропорт/дальние районы; в heritage core часто нет смысла.",
@@ -8326,13 +8328,13 @@
               "assault_all": 338,
               "property_all": 903,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ],
-            "mapping_note": "Used for George Town because the historic/core city lies in the Northeast Penang Island police district; do not apply this count to all of Penang state."
+            "mapping_note": "Данные привязаны к полицейскому округу Timur Laut, в котором находится исторический центр Джорджтауна; распространять эти числа на весь штат Пенанг нельзя."
           }
         },
         "kind": "city",
@@ -8347,7 +8349,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q61092",
           "checked_at": "2026-09-29",
           "note": "city reference"
-        }
+        },
+        "name_ru": "Джорджтаун / Пенанг"
       },
       {
         "name": "Melaka City",
@@ -8359,21 +8362,21 @@
         ],
         "profile": {
           "summary": "Малакка — компактный слой истории Малаккского пролива: малайский султанат, португальская крепость, голландский административный центр, британский период, перанаканские дома и сохранившаяся евразийская община кристанг.",
-          "history": "Мелака выросла из султаната XV века в главный торговый узел пролива, затем последовательно прошла португальский, голландский и британский периоды. Красная Dutch Square — только один слой: важны A Famosa, St Paul, китайские guild/temple streets, мечети и речной торговый фронт.",
-          "culture": "Baba-Nyonya/Peranakan культура, Chitty, малайские и китайские торговые общины сформировали кухню, домашние интерьеры и ритуальный календарь города.",
-          "geography": "Город стоит на низком берегу реки Melaka у Малаккского пролива; историческое ядро компактно и реально проходится пешком.",
+          "history": "Малакка выросла из султаната XV века в главный торговый узел пролива, затем последовательно пережила португальский, голландский и британский периоды. Dutch Square — только один слой: важны также A Famosa, холм St Paul, китайские храмовые и торговые улицы, мечети и речной торговый фронт.",
+          "culture": "Культура баба-ньонья и перанаканцев, община Chitty, малайские и китайские торговые сообщества сформировали местную кухню, домашние интерьеры и праздничный календарь.",
+          "geography": "Город стоит на низком берегу реки Малакка у Малаккского пролива; историческое ядро компактно и реально проходится пешком.",
           "myths_beliefs": [
             "Легенды о Hang Tuah — важная часть малайской исторической памяти; их следует подавать как эпический/литературный пласт, а не как проверенную биографию."
           ],
           "climate": {
             "summary": "Жарко и влажно круглый год.",
-            "best_period": "Более сухое окно удобно, но для съёмки важнее будний рассвет: weekend crowd сильнее влияет на материал, чем сезон.",
-            "local_notes": "Полуденное солнце плоско освещает Dutch Square; после дождя riverfront и красные фасады визуально выигрывают.",
+            "best_period": "Более сухие месяцы удобнее для долгих пеших маршрутов; в выходные на условия в центре сильнее влияет поток посетителей.",
+            "local_notes": "После дождя набережная и мощёные участки могут быть скользкими; открытые площади в полдень сильно нагреваются.",
             "annual_reference": {
               "mean_annual_temperature_c": 26.8,
               "annual_precipitation_mm": 2021,
               "period": "1940–2025",
-              "data_basis": "Copernicus ERA5 reanalysis",
+              "data_basis": "реанализ Copernicus ERA5",
               "source_refs": [
                 "src_000636"
               ],
@@ -8381,9 +8384,9 @@
             }
           },
           "transport": {
-            "access": "Самостоятельно: междугородний автобус до Melaka Sentral, затем местный автобус или Grab; историческое ядро рациональнее проходить пешком.",
-            "public_transport": "Из Kuala Lumpur удобны междугородние автобусы до Melaka Sentral; в core — local bus/Grab, но сам центр пеший.",
-            "walking": "Dutch Square–St Paul–Jonker–river loop около 3–4 км.",
+            "access": "Самостоятельно: междугородний автобус до Melaka Sentral, затем местный автобус или сервис заказа машины; историческое ядро рациональнее проходить пешком.",
+            "public_transport": "Из Куала-Лумпура удобны междугородние автобусы до Melaka Sentral; внутри исторического ядра чаще практичнее пешком.",
+            "walking": "Маршрут Dutch Square — St Paul — Jonker Street — набережная реки составляет около 3–4 км.",
             "modes": {
               "public_transport": "Из Kuala Lumpur удобны междугородние автобусы до Melaka Sentral; в core — local bus/Grab, но сам центр пеший.",
               "taxi_ridehail": "Grab полезен от Melaka Sentral и к Portuguese Settlement; в Jonker core часто медленнее пешком.",
@@ -8420,13 +8423,13 @@
               "assault_all": 229,
               "property_all": 755,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ],
-            "mapping_note": "Used for Melaka City / historic core; do not apply to the whole state."
+            "mapping_note": "Данные относятся к полицейскому округу Melaka Tengah, где находится историческое ядро; на весь штат их распространять нельзя."
           }
         },
         "kind": "city",
@@ -8441,7 +8444,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q61089",
           "checked_at": "2026-09-29",
           "note": "city reference"
-        }
+        },
+        "name_ru": "Малакка"
       },
       {
         "name": "Kota Kinabalu / Kundasang",
@@ -8465,16 +8469,16 @@
           "Gunung Mulu National Park"
         ],
         "profile": {
-          "summary": "Mulu — локальный узел Gunong Mulu National Park: известняковые горы, гигантские пещерные системы, первичный лес и маршруты с ночёвками в jungle camps.",
-          "geography": "Удалённый внутренний Sarawak; local context определяется парком и горно-карстовой системой, а не городской средой.",
+          "summary": "Мулу — локальный узел национального парка Gunong Mulu: известняковые горы, гигантские пещерные системы, первичный лес и маршруты с ночёвками в лесных лагерях.",
+          "geography": "Удалённый внутренний район Саравака, где географический контекст определяется национальным парком, горами и карстовой системой, а не городской средой.",
           "geology": {
-            "summary": "Gunong Mulu, Gunung Api и Gunung Benarat связаны с одной из крупнейших известняковых пещерных систем; среди ключевых форм — Sarawak Chamber, Deer Cave и Clearwater Cave System.",
+            "summary": "Горы Gunong Mulu, Gunung Api и Gunung Benarat связаны с одной из крупнейших известняковых пещерных систем мира; среди ключевых форм — Саравакская камера, Оленья пещера и система Clearwater.",
             "source_refs": [
               "src_000618"
             ]
           },
           "climate": {
-            "summary": "Inland Sarawak очень влажный круглый год; более сухой период относительно чаще приходится на июнь–август, но горные склоны могут получать экстремально высокие годовые осадки.",
+            "summary": "Во внутреннем Сараваке очень влажно круглый год. Июнь–август обычно несколько суше, однако горные склоны всё равно получают очень большие суммы осадков.",
             "source_refs": [
               "src_000593"
             ],
@@ -8485,14 +8489,14 @@
             }
           },
           "nature": {
-            "summary": "Sarawak Forestry описывает 15 типов леса, 170 видов диких орхидей, 10 видов Nepenthes и крупные вылеты летучих мышей из Deer Cave.",
+            "summary": "Sarawak Forestry описывает в Мулу 15 типов леса, 170 видов диких орхидей, 10 видов непентесов и крупные вечерние вылеты летучих мышей из Оленьей пещеры.",
             "source_refs": [
               "src_000618"
             ]
           },
           "transport": {
-            "expedition": "Маршруты в глубину парка включают jungle/mountain treks и ночёвки; конкретные guide/permit requirements читать по текущему park product, не переносить правило одного маршрута на весь Mulu.",
-            "tickets": "Для части Sarawak protected areas используется официальный e-ticket/self-registration ecosystem; Mulu-specific booking проверять отдельно.",
+            "expedition": "Маршруты в глубину парка включают горные и лесные переходы и ночёвки. Требования к проводнику и разрешениям зависят от конкретного маршрута и должны проверяться по действующим правилам парка.",
+            "tickets": "Для охраняемых территорий Саравака действует официальная система электронных билетов и регистрации; порядок бронирования именно для Мулу нужно проверять отдельно.",
             "source_refs": [
               "src_000618",
               "src_000622"
@@ -8503,10 +8507,10 @@
               "status": "not_applicable_as_city_metric"
             },
             "dominant_risks": [
-              "heavy rain",
-              "cave/river conditions",
-              "remote communications",
-              "route-specific guide requirements"
+              "сильные дожди",
+              "состояние пещер и рек",
+              "ограниченная связь",
+              "требования к проводнику на отдельных маршрутах"
             ],
             "source_refs": [
               "src_000618"
@@ -8534,7 +8538,8 @@
           "source_url": "https://mapcarta.com/N2629398009",
           "checked_at": "2026-09-29",
           "note": "town/locality node near Mulu Airport"
-        }
+        },
+        "name_ru": "Мулу"
       },
       {
         "name": "Langkawi",
@@ -8546,32 +8551,32 @@
         ],
         "profile": {
           "summary": "Лангкави интересен не курортным набором развлечений, а сочетанием древних карстов, мангров Kilim, островных дорог, рыбацких поселений и доступных участков побережья в пределах одного архипелага.",
-          "history": "Langkawi — архипелаг из карстовых островов у северо-запада полуострова; его сильная сторона не resort strip, а сочетание древних известняков Kilim, мангров, горного массива Machinchang и малайского островного фольклора.",
-          "culture": "Рыбацкие деревни, rice-field landscape и малайские легенды дают более содержательный слой, чем duty-free tourism.",
-          "geography": "Langkawi UNESCO Global Geopark включает очень старые горные породы и известняковый карст; прилив определяет визуальную геометрию мангровых каналов.",
+          "history": "Лангкави — архипелаг у северо-запада полуострова, где древние известняки Kilim и горный массив Machinchang сочетаются с манграми, рыбацкими поселениями и малайским островным фольклором.",
+          "culture": "Рыбацкие деревни, рисовые поля и местные малайские легенды дают более содержательный культурный слой, чем собственно курортная инфраструктура.",
+          "geography": "Лангкави входит в глобальный геопарк UNESCO: здесь сочетаются очень древние горные породы, известняковый карст и мангровые побережья; прилив заметно меняет доступность и геометрию мангровых каналов.",
           "myths_beliefs": [
             "Махсури — центральная островная легенда о несправедливо казнённой женщине и проклятии “на семь поколений”; это фольклорно-исторический нарратив, а не проверяемый факт.",
             "Tasik Dayang Bunting связывают с легендой о небесной принцессе и ребёнке; подаётся как местный миф."
           ],
           "climate": {
             "summary": "Тропическое море; северо-запад полуострова имеет собственную сезонность осадков.",
-            "best_period": "Декабрь–март обычно суше; для mangrove и boat work выбирать день с умеренным ветром, а не только без дождя.",
-            "local_notes": "SkyCab и море реагируют на грозу/ветер быстрее, чем пляжный план; утром вода и воздух обычно спокойнее.",
+            "best_period": "Декабрь–март обычно суше; для мангровых и лодочных маршрутов важен также умеренный ветер, а не только отсутствие дождя.",
+            "local_notes": "Канатная дорога SkyCab и морские маршруты чувствительны к грозе и ветру; утром вода и воздух обычно спокойнее.",
             "annual_reference": {
               "mean_annual_temperature_c": 28.05,
               "annual_precipitation_mm": null,
-              "period": "derived from existing monthly climatology",
-              "data_basis": "Arithmetic mean of 12 stored WeatherSpark monthly mean temperatures",
+              "period": "рассчитано по сохранённой помесячной климатологии",
+              "data_basis": "среднее арифметическое 12 сохранённых месячных средних температур WeatherSpark",
               "source_refs": [
                 "src_000590"
               ],
-              "caveat": "Derived from the already stored monthly series; rainfall annual total is intentionally left null."
+              "caveat": "Значение рассчитано из уже сохранённого помесячного ряда; годовая сумма осадков намеренно не заполняется без отдельного источника."
             }
           },
           "transport": {
-            "access": "Практичная база — Langkawi; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
+            "access": "Практичная база — главный остров Лангкави; большинство наземных точек достигаются по дороге с коротким пешим участком. Состояние подъездов и лодочных маршрутов нужно проверять перед выездом.",
             "public_transport": "Полноценной островной автобусной сети для достопримечательностей нет.",
-            "walking": "Отдельные beaches/urban strips ходятся пешком, но остров целиком — нет.",
+            "walking": "Отдельные пляжи и населённые участки удобно проходить пешком, но перемещение по всему острову требует транспорта.",
             "modes": {
               "public_transport": "Полноценной островной автобусной сети для достопримечательностей нет.",
               "taxi_ridehail": "Grab/такси работают на населённой части острова; Kilim/островные маршруты требуют boat operator.",
@@ -8608,9 +8613,9 @@
               "assault_all": 44,
               "property_all": 200,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
@@ -8628,7 +8633,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q24874722",
           "checked_at": "2026-09-29",
           "note": "archipelago center"
-        }
+        },
+        "name_ru": "Лангкави"
       },
       {
         "name": "Kuala Besut",
@@ -8639,11 +8645,11 @@
           "Perhentian islands"
         ],
         "profile": {
-          "summary": "Kuala Besut — материковый портовый узел для Pulau Perhentian; его смысл в справочнике — jetty, снабжение и проверка состояния моря перед островным переходом.",
-          "geography": "Низкое восточное побережье Terengganu у Южно-Китайского моря; материковый узел отделён от собственно островного Marine Park.",
+          "summary": "Куала-Бесут — материковый портовый узел для Перхентианских островов; здесь сосредоточены причал, снабжение и проверка морских условий перед переходом.",
+          "geography": "Низкое восточное побережье Тренгану у Южно-Китайского моря; Куала-Бесут — материковый портовый узел, а сами Перхентианские острова относятся к отдельной морской территории.",
           "climate": {
             "summary": "Восточное побережье получает максимум осадков в ноябре–январе; северо-восточный муссон может нарушать морское сообщение.",
-            "floods": "Для Besut есть DID river/rainfall monitoring; перед выездом после сильных осадков проверять Sg. Besut/Jerteh и подъездные дороги.",
+            "floods": "В районе Бесута действует мониторинг уровней рек и осадков DID; после сильных дождей нужно проверять Sg. Besut, район Джертеха и подъездные дороги.",
             "source_refs": [
               "src_000593",
               "src_000596"
@@ -8651,8 +8657,8 @@
             "annual_reference": {
               "mean_annual_temperature_c": 26.8,
               "annual_precipitation_mm": 2766,
-              "period": "climatological normal on source page",
-              "data_basis": "Climate-Data.org local climatology",
+              "period": "климатическая норма, указанная в источнике",
+              "data_basis": "локальная климатология Climate-Data.org",
               "source_refs": [
                 "src_000654"
               ],
@@ -8660,12 +8666,12 @@
             }
           },
           "marine": {
-            "weather": "Для островного перехода использовать METMalaysia Terengganu marine forecast.",
+            "weather": "Для перехода на острова использовать оперативный морской прогноз METMalaysia по водам Тренгану.",
             "tides": {
               "status": "official_table_identified_values_not_normalized",
               "source_ref": "src_000606"
             },
-            "protected_area": "Pulau Perhentian archipelago относится к Terengganu Marine Park system.",
+            "protected_area": "Перхентианский архипелаг входит в систему морских парков Тренгану.",
             "source_refs": [
               "src_000600",
               "src_000601",
@@ -8698,9 +8704,9 @@
               "assault_all": 58,
               "property_all": 172,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
@@ -8718,7 +8724,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q3493187",
           "checked_at": "2026-09-29",
           "note": "town reference"
-        }
+        },
+        "name_ru": "Куала-Бесут"
       },
       {
         "name": "Ipoh / Taiping / Gerik",
@@ -8803,18 +8810,18 @@
           "Sipadan Island"
         ],
         "profile": {
-          "summary": "Semporna — материковый морской gateway к Sipadan и Tun Sakaran Marine Park; основной экспедиционный контекст — лодки, permits/park rules, море и рифовые системы.",
-          "geography": "Прибрежный город восточного Sabah у Darvel Bay/Celebes Sea; окружающие острова имеют вулканическое и коралловое происхождение.",
+          "summary": "Семпорна — материковый морской узел для Сипадана и морского парка Tun Sakaran; ключевой контекст здесь — лодки, правила доступа, состояние моря и рифовые системы.",
+          "geography": "Прибрежный город восточного Сабаха у Darvel Bay и моря Сулавеси; окружающие острова имеют вулканическое и коралловое происхождение.",
           "geology": {
-            "summary": "Tun Sakaran islands include Quaternary pyroclastic volcanic landforms; Sipadan is an oceanic coral island built on a volcanic cone.",
+            "summary": "Острова Tun Sakaran сохраняют четвертичные вулканические формы, а Сипадан представляет собой коралловый океанический остров на вершине вулканического конуса.",
             "source_refs": [
               "src_000611",
               "src_000610"
             ]
           },
           "marine": {
-            "biodiversity": "Tun Sakaran published records include 255 coral species, 528 reef-fish species, more than 240 marine invertebrates and six seagrass species; Sipadan has more than 400 fish species and hundreds of coral species.",
-            "weather": "Eastern Sabah marine forecast is mandatory context for boat transfers.",
+            "biodiversity": "Для Tun Sakaran опубликованы 255 видов кораллов, 528 видов рифовых рыб, более 240 видов морских беспозвоночных и шесть видов морских трав; для Сипадана — более 400 видов рыб и сотни видов кораллов.",
+            "weather": "Перед любым морским переходом использовать оперативный прогноз METMalaysia по восточному Сабаху.",
             "tides": {
               "status": "official_table_identified_values_not_normalized",
               "source_ref": "src_000606"
@@ -8828,7 +8835,7 @@
           },
           "transport": {
             "role": "boat_gateway",
-            "note": "Sabah Parks identifies Semporna as gateway for both Sipadan and Tun Sakaran; in calm seas Sipadan is about 45 minutes by speedboat.",
+            "note": "Sabah Parks указывает Семпорну как основной узел для Сипадана и Tun Sakaran; при спокойном море путь до Сипадана на скоростной лодке занимает около 45 минут.",
             "source_refs": [
               "src_000610",
               "src_000611"
@@ -8840,11 +8847,16 @@
               "assault_all": 36,
               "property_all": 184,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
+            ],
+            "dominant_risks": [
+              "морская погода",
+              "зависимость от лодочного сообщения",
+              "изменения правил и разрешений парка"
             ]
           },
           "provenance": {
@@ -8884,7 +8896,8 @@
           "source_url": "https://mapcarta.com/Semporna",
           "checked_at": "2026-09-29",
           "note": "OSM place=town node"
-        }
+        },
+        "name_ru": "Семпорна"
       },
       {
         "name": "Kudat / Kota Kinabalu",
@@ -8922,8 +8935,8 @@
           "Sepilok Orangutan Rehabilitation Centre"
         ],
         "profile": {
-          "summary": "Sandakan — городской gateway восточного Sabah к Sepilok, Lower Kinabatangan и Turtle Islands; прибрежная логистика и wildlife access важнее обычного city-break.",
-          "geography": "Город на восточном побережье Sabah; из него расходятся сухопутные маршруты к Sepilok/Kinabatangan и морской маршрут к Turtle Islands.",
+          "summary": "Сандакан — городской узел восточного Сабаха для поездок в Сепилок, нижний Кинабантанган и Turtle Islands.",
+          "geography": "Город расположен на восточном побережье Сабаха; отсюда расходятся сухопутные маршруты к Сепилоку и Кинабантангану и морские маршруты к Turtle Islands.",
           "climate": {
             "summary": "Northeast Sabah получает максимум осадков около января и минимум около апреля; декабрь–март особенно чувствительны к северо-восточному муссону.",
             "source_refs": [
@@ -8941,8 +8954,8 @@
             }
           },
           "marine": {
-            "turtle_islands": "Turtle Islands Park находится примерно в 40 км к северу от Sandakan и защищает green и hawksbill turtles, reefs and surrounding seas.",
-            "weather": "Перед морским выходом использовать Eastern Sabah marine forecast.",
+            "turtle_islands": "Turtle Islands находятся примерно в 40 км к северу от Сандакана и охраняют зелёных и биссовых морских черепах, рифы и окружающую акваторию.",
+            "weather": "Перед морскими выходами использовать оперативный прогноз METMalaysia по восточному Сабаху.",
             "tides": {
               "status": "official_table_identified_values_not_normalized",
               "source_ref": "src_000606"
@@ -8954,7 +8967,7 @@
             ]
           },
           "nature": {
-            "gateway": "Sabah Tourism identifies Sandakan as a gateway to Sepilok and Lower Kinabatangan wildlife destinations.",
+            "gateway": "Сандакан служит практической городской базой для Сепилока и нижнего Кинабантангана.",
             "source_refs": [
               "src_000614",
               "src_000612"
@@ -8962,7 +8975,7 @@
           },
           "transport": {
             "role": "regional_gateway",
-            "note": "Sandakan links urban services with Sepilok/Lower Kinabatangan by road and Turtle Islands by boat; each downstream destination keeps its own access rules.",
+            "note": "Сандакан связывает городскую инфраструктуру с Сепилоком и нижним Кинабантанганом по дороге; отсюда же организуется доступ к Turtle Islands.",
             "source_refs": [
               "src_000614",
               "src_000612"
@@ -8974,9 +8987,9 @@
               "assault_all": 47,
               "property_all": 494,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
@@ -9007,7 +9020,8 @@
           "source_url": "https://mapcarta.com/Sandakan",
           "checked_at": "2026-09-29",
           "note": "OSM place=city node"
-        }
+        },
+        "name_ru": "Сандакан"
       },
       {
         "name": "Bario",
@@ -9022,10 +9036,10 @@
           "Bario / Kelabit Highlands"
         ],
         "profile": {
-          "summary": "Bario — главный населённый узел Kelabit Highlands: высокогорное поселение, аэродром, рисовые поля и отправная точка для переходов между келабитскими деревнями.",
-          "geography": "Высокогорная долина немного выше 1,000 м; окружающий рельеф и погода заметно прохладнее и влажнее прибрежного Sarawak.",
+          "summary": "Барио — главный населённый узел Келабитского нагорья: высокогорное поселение, аэродром, рисовые поля и отправная точка для переходов между келабитскими деревнями.",
+          "geography": "Высокогорная долина немного выше 1000 м; здесь заметно прохладнее и влажнее, чем на прибрежных низменностях Саравака.",
           "climate": {
-            "summary": "Прохладнее низменностей; дождь и низкая облачность напрямую влияют на small-aircraft и logging-road access.",
+            "summary": "В нагорье прохладнее низменностей; дождь и низкая облачность напрямую влияют на малую авиацию и состояние дорог.",
             "source_refs": [
               "src_000593",
               "src_000620"
@@ -9037,14 +9051,14 @@
             }
           },
           "ethnography": {
-            "summary": "Bario — центр Kelabit community; сеть longhouses, wet-rice agriculture и высокогорная кухня остаются живой частью местной культуры.",
+            "summary": "Барио — один из центров келабитской общины; здесь сохраняются длинные дома, влажное рисоводство и характерная кухня нагорья.",
             "source_refs": [
               "src_000620"
             ]
           },
           "transport": {
             "air": "Miri–Bario на малом самолёте около 45 минут.",
-            "road": "4WD по logging roads может занимать порядка 10–14 часов и сильно зависит от погоды.",
+            "road": "Поездка на полноприводной машине из Мири по лесовозным дорогам может занять порядка 10–14 часов и сильно зависит от погоды.",
             "source_refs": [
               "src_000620"
             ]
@@ -9070,7 +9084,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q2884535",
           "checked_at": "2026-09-29",
           "note": "settlement reference"
-        }
+        },
+        "name_ru": "Барио"
       },
       {
         "name": "Miri",
@@ -9083,14 +9098,14 @@
         ],
         "object_names": [],
         "profile": {
-          "summary": "Miri — северный городской транспортный узел Sarawak для Niah и полётов в Kelabit Highlands/Mulu; в текущем справочнике фиксируется прежде всего как gateway, а не как заменитель самих удалённых территорий.",
+          "summary": "Мири — северный городской транспортный узел Саравака для поездок в Ниа и перелётов в Келабитское нагорье и Мулу; он не подменяет географию этих удалённых территорий.",
           "transport": {
             "gateway_for": [
               "Niah",
               "Bario / Kelabit Highlands",
               "Mulu"
             ],
-            "note": "Niah — около двух часов road travel по данным Sarawak Forestry; Bario связан с Miri малой авиацией.",
+            "note": "До Ниа из Мири около двух часов по дороге; Барио связан с Мири малой авиацией.",
             "source_refs": [
               "src_000619",
               "src_000620"
@@ -9109,10 +9124,10 @@
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
-            "note": "Пока только gateway-профиль; городской climate/crime слой исследуется отдельно."
+            "note": "Пока это профиль транспортного узла; городская справка будет расширяться отдельно."
           },
           "climate": {
-            "summary": "Coastal Sarawak receives a strong northeast-monsoon signal, with the wettest period generally December–March and a relative minimum around June–July.",
+            "summary": "Прибрежный Саравак сильно зависит от северо-восточного муссона: наиболее влажный период обычно приходится на декабрь–март, а относительный минимум — на июнь–июль.",
             "source_refs": [
               "src_000593"
             ],
@@ -9120,7 +9135,7 @@
               "mean_annual_temperature_c": 26.7,
               "annual_precipitation_mm": 2347,
               "period": "1940–2025",
-              "data_basis": "Copernicus ERA5 reanalysis",
+              "data_basis": "реанализ Copernicus ERA5",
               "source_refs": [
                 "src_000637"
               ],
@@ -9128,7 +9143,7 @@
             }
           },
           "marine": {
-            "weather": "Use METMalaysia Northern Sarawak waters forecast for dynamic wind, thunderstorms and wave height.",
+            "weather": "Перед выходом в море использовать оперативный прогноз METMalaysia для вод северного Саравака.",
             "tides": {
               "status": "official_table_identified_values_not_normalized",
               "source_ref": "src_000606"
@@ -9144,14 +9159,14 @@
               "assault_all": 51,
               "property_all": 241,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
           },
-          "geography": "Прибрежный город северного Sarawak у Южно-Китайского моря; практический городской gateway к Niah, Mulu и Kelabit Highlands."
+          "geography": "Прибрежный город северного Саравака у Южно-Китайского моря; практический узел для Ниа, Мулу и Келабитского нагорья."
         },
         "primary_location": {
           "lat": 4.394,
@@ -9164,7 +9179,8 @@
           "source_url": "https://mapcarta.com/Miri",
           "checked_at": "2026-09-29",
           "note": "OSM place=city node"
-        }
+        },
+        "name_ru": "Мири"
       },
       {
         "name": "Ipoh",
@@ -9177,9 +9193,9 @@
         ],
         "object_names": [],
         "profile": {
-          "summary": "Ipoh — основной городской и железнодорожный узел центрального Perak для радиальных выездов к Batu Gajah, Kuala Kangsar и Lenggong; не используется как координата этих объектов.",
+          "summary": "Ипох — главный городской и железнодорожный узел центрального Перака для радиальных выездов к Batu Gajah, Kuala Kangsar и Lenggong; координаты этих мест не подменяются координатами Ипоха.",
           "transport": {
-            "rail": "ETS/KTMB связывает Ipoh с основным коридором полуострова.",
+            "rail": "По железной дороге KTMB/ETS Ипох связан с основным транспортным коридором полуострова.",
             "role": "regional_gateway",
             "source_refs": [
               "src_000626"
@@ -9195,11 +9211,11 @@
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
-            "note": "Gateway-only profile; local city reference remains in research queue."
+            "note": "Городской профиль ещё будет расширяться; сейчас зафиксированы геология, транспорт и локальная статистика."
           },
-          "geography": "Ipoh sits in Kinta Valley between the Kledang Range to the west and Titiwangsa Range to the east.",
+          "geography": "Ипох лежит в долине Кинта между хребтом Кледанг на западе и Титивангса на востоке.",
           "geology": {
-            "summary": "Official NRES material describes Ipoh as broadly underlain by Kinta Formation limestone, with isolated mogote-style limestone hills; the wider Kinta Valley also carries granite, alluvial and former tin-mining landscapes.",
+            "summary": "По материалам NRES, основание района Ипоха в значительной степени образовано известняками формации Kinta; над равниной поднимаются отдельные известняковые останцы. В более широком ландшафте долины Кинта сочетаются граниты, аллювий и следы оловодобычи.",
             "source_refs": [
               "src_000631",
               "src_000632"
@@ -9211,9 +9227,9 @@
               "assault_all": 373,
               "property_all": 1077,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
@@ -9223,7 +9239,7 @@
               "mean_annual_temperature_c": 26.2,
               "annual_precipitation_mm": 2728,
               "period": "1970–2000",
-              "data_basis": "WorldClim 2.1 (~9 km)",
+              "data_basis": "WorldClim 2.1, сетка около 9 км",
               "source_refs": [
                 "src_000639"
               ],
@@ -9242,7 +9258,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q12823512",
           "checked_at": "2026-09-29",
           "note": "city reference"
-        }
+        },
+        "name_ru": "Ипох"
       },
       {
         "name": "Taiping",
@@ -9257,8 +9274,8 @@
           "Taiping"
         ],
         "profile": {
-          "summary": "Taiping — исторический оловодобывающий и колониальный центр Perak у подножия Bintang Range, известный очень влажным климатом и ландшафтом Lake Gardens.",
-          "geography": "Город стоит у подножия Bintang Range; бывшие mining pits стали озёрами и частью городской ландшафтной системы.",
+          "summary": "Тайпинг — исторический центр оловодобычи и колониальной эпохи у подножия хребта Бинтанг, известный очень влажным климатом и ландшафтом Lake Gardens.",
+          "geography": "Город стоит у подножия хребта Бинтанг; бывшие горные выработки и карьеры частично превратились в озёра и элементы городского ландшафта.",
           "climate": {
             "summary": "Очень влажный город; для полевой работы важнее окно между ливнями, чем поиск полностью сухого сезона.",
             "source_refs": [
@@ -9268,7 +9285,7 @@
               "mean_annual_temperature_c": 27.4,
               "annual_precipitation_mm": 3383,
               "period": "1970–2000",
-              "data_basis": "WorldClim 2.1 (~9 km)",
+              "data_basis": "WorldClim 2.1, сетка около 9 км",
               "source_refs": [
                 "src_000640"
               ],
@@ -9276,7 +9293,7 @@
             }
           },
           "transport": {
-            "rail": "KTMB/ETS обеспечивает самостоятельный доступ; локальные точки города связаны короткими road/walking legs.",
+            "rail": "KTMB/ETS обеспечивает самостоятельный железнодорожный доступ; основные городские точки дальше связаны короткими автомобильными и пешими участками.",
             "source_refs": [
               "src_000626"
             ]
@@ -9299,9 +9316,9 @@
               "assault_all": 108,
               "property_all": 243,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
@@ -9318,7 +9335,8 @@
           "source_url": "https://mapcarta.com/Taiping",
           "checked_at": "2026-09-29",
           "note": "city reference; matches existing object anchor"
-        }
+        },
+        "name_ru": "Тайпинг"
       },
       {
         "name": "Gerik",
@@ -9333,10 +9351,10 @@
           "Belum-Temengor"
         ],
         "profile": {
-          "summary": "Gerik — последний крупный сухопутный сервисный узел перед Royal Belum/Pulau Banding и East-West Highway.",
+          "summary": "Герик — последний крупный сухопутный сервисный узел перед Royal Belum, Pulau Banding и дорогой East–West Highway.",
           "transport": {
-            "role": "Royal Belum gateway",
-            "fuel": "Perak State Parks отдельно указывает Gerik как последнюю надёжную точку заправки перед дальнейшим движением к Banding.",
+            "role": "транспортный узел для Royal Belum",
+            "fuel": "Perak State Parks отдельно указывает Герик как последнюю надёжную точку заправки перед дальнейшим движением к Banding.",
             "source_refs": [
               "src_000604"
             ]
@@ -9357,9 +9375,9 @@
               "assault_all": 19,
               "property_all": 50,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
@@ -9369,7 +9387,7 @@
               "mean_annual_temperature_c": 27.1,
               "annual_precipitation_mm": 2327,
               "period": "1991–2020",
-              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "data_basis": "вторичный анализ WorldClim/CRU TS",
               "source_refs": [
                 "src_000649"
               ],
@@ -9377,7 +9395,7 @@
             },
             "summary": "Влажный внутренний тропический климат; октябрь–ноябрь относятся к более дождливой части года, февраль суше по локальной климатологии."
           },
-          "geography": "Внутренний Hulu Perak на East–West Highway; Gerik — сухопутный сервисный узел перед Pulau Banding/Royal Belum, а не часть озёрного парка."
+          "geography": "Внутренний район Хулу-Перак на East–West Highway; Герик — сервисная база перед Pulau Banding и Royal Belum, а не часть самого озёрного парка."
         },
         "primary_location": {
           "lat": 5.43066,
@@ -9390,7 +9408,8 @@
           "source_url": "https://mapcarta.com/15814422",
           "checked_at": "2026-09-29",
           "note": "OSM place=town node"
-        }
+        },
+        "name_ru": "Герик"
       },
       {
         "name": "Kuala Kangsar",
@@ -9405,10 +9424,10 @@
           "Kuala Kangsar"
         ],
         "profile": {
-          "summary": "Kuala Kangsar — королевский город Perak на реке Perak; отдельный локальный узел, а не часть составного `Ipoh / Taiping / Gerik`.",
-          "geography": "Городская ось связана с Perak River и Bukit Chandan.",
+          "summary": "Куала-Кангсар — королевский город Перака на реке Перак; отдельный локальный узел, а не часть составного маршрута через Ипох, Тайпинг и Герик.",
+          "geography": "Городская ось связана с рекой Перак и возвышенностью Bukit Chandan.",
           "transport": {
-            "rail": "Доступен по железнодорожному коридору KTMB/ETS; royal precinct дальше проходится пешком/локальным road transfer.",
+            "rail": "Город доступен по железнодорожному коридору KTMB/ETS; королевский район дальше удобно проходить пешком или добираться коротким местным трансфером.",
             "source_refs": [
               "src_000626"
             ]
@@ -9430,9 +9449,9 @@
               "assault_all": 24,
               "property_all": 75,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
@@ -9442,13 +9461,13 @@
               "mean_annual_temperature_c": 27.5,
               "annual_precipitation_mm": 2697,
               "period": "1991–2020",
-              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "data_basis": "вторичный анализ WorldClim/CRU TS",
               "source_refs": [
                 "src_000650"
               ],
               "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
             },
-            "summary": "Влажный низменный климат Perak; локальная климатология показывает максимум осадков около октября и более сухой июнь."
+            "summary": "Влажный низменный климат Перака; локальная климатология показывает максимум осадков примерно в октябре и более сухой июнь."
           }
         },
         "primary_location": {
@@ -9462,7 +9481,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q1790832",
           "checked_at": "2026-09-29",
           "note": "royal town reference"
-        }
+        },
+        "name_ru": "Куала-Кангсар"
       },
       {
         "name": "Lenggong",
@@ -9477,8 +9497,8 @@
           "Lenggong Valley archaeological landscape"
         ],
         "profile": {
-          "summary": "Lenggong — локальная база для серийного археологического ландшафта UNESCO: долины, пещеры, музей и разнесённые палеолитические площадки.",
-          "geography": "Археологическая последовательность связана с древними river terraces, paleolake deposits и limestone caves; география долины является частью значения объекта.",
+          "summary": "Ленггонг — локальная база для серийного археологического ландшафта UNESCO: долин, пещер, музея и разнесённых палеолитических площадок.",
+          "geography": "Археологическая последовательность связана с древними речными террасами, отложениями палеоозёр и известняковыми пещерами; география долины является частью значения объекта.",
           "geology": {
             "summary": "Карстовые пещеры и древние речные/озёрные отложения образуют геологический контекст археологических компонентов.",
             "source_refs": [
@@ -9497,7 +9517,7 @@
             }
           },
           "transport": {
-            "summary": "Практична самостоятельная база в Lenggong с road transfer/мопедом к разнесённым участкам; внутри valley общественный транспорт слабый.",
+            "summary": "Для самостоятельного исследования удобно базироваться в Ленггонге и связывать разнесённые участки дорогой или мопедом; местный общественный транспорт внутри долины слабый.",
             "source_refs": [
               "src_000624"
             ]
@@ -9524,7 +9544,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q3449469",
           "checked_at": "2026-09-29",
           "note": "town reference"
-        }
+        },
+        "name_ru": "Ленггонг"
       },
       {
         "name": "Kota Kinabalu",
@@ -9537,10 +9558,10 @@
         ],
         "object_names": [],
         "profile": {
-          "summary": "Kota Kinabalu — главный городской транспортный gateway западного Sabah к Kinabalu/Kundasang; не используется как локальный климатический профиль горы.",
+          "summary": "Кота-Кинабалу — главный городской транспортный узел западного Сабаха для поездок к Кинабалу и Кундасангу; его климат нельзя использовать как климатический профиль горы.",
           "transport": {
-            "role": "regional_gateway",
-            "note": "Для Kinabalu Park используются road transfers/автобусы в сторону Ranau–Kundasang.",
+            "role": "региональный транспортный узел",
+            "note": "К району Kinabalu Park и Кундасангу добираются по дороге в направлении Ранау; возможны автобусные и автомобильные варианты.",
             "source_refs": [
               "src_000623",
               "src_000608"
@@ -9562,7 +9583,7 @@
             "note": "Gateway-only profile; city climate and crime require separate normalization."
           },
           "climate": {
-            "summary": "West/northwest Sabah has two rainfall maxima, with the main maximum around October and secondary maximum around June; February and August are relative minima. The coast remains humid and thunderstorm-prone.",
+            "summary": "На западном и северо-западном побережье Сабаха обычно выражены два максимума осадков: основной около октября и второй около июня. Относительные минимумы приходятся примерно на февраль и август; побережье остаётся влажным и грозовым круглый год.",
             "source_refs": [
               "src_000593"
             ],
@@ -9570,7 +9591,7 @@
               "mean_annual_temperature_c": 26.7,
               "annual_precipitation_mm": 2232,
               "period": "1940–2025",
-              "data_basis": "Copernicus ERA5 reanalysis",
+              "data_basis": "реанализ Copernicus ERA5",
               "source_refs": [
                 "src_000638"
               ],
@@ -9578,7 +9599,7 @@
             }
           },
           "marine": {
-            "weather": "Use the dynamic METMalaysia Western Sabah and Labuan waters forecast for wind/thunderstorms/wave height before island or coastal boat legs.",
+            "weather": "Перед островными и прибрежными переходами использовать оперативный прогноз METMalaysia по водам западного Сабаха и Лабуана.",
             "tides": {
               "status": "official_table_identified_values_not_normalized",
               "source_ref": "src_000606"
@@ -9594,14 +9615,14 @@
               "assault_all": 81,
               "property_all": 915,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
           },
-          "geography": "Столица Sabah на западном побережье Борнео; городской берег обращён к South China Sea, а горный Kinabalu/Kundasang лежит далеко во внутреннем высотном поясе."
+          "geography": "Столица Сабаха расположена на западном побережье Борнео у Южно-Китайского моря; горный район Кинабалу и Кундасанга лежит далеко во внутреннем высотном поясе."
         },
         "primary_location": {
           "lat": 5.975,
@@ -9614,7 +9635,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q137271",
           "checked_at": "2026-09-29",
           "note": "city reference from GNS"
-        }
+        },
+        "name_ru": "Кота-Кинабалу"
       },
       {
         "name": "Kundasang",
@@ -9629,18 +9651,18 @@
           "Mount Kinabalu"
         ],
         "profile": {
-          "summary": "Kundasang — высокогорный поселковый узел у Kinabalu Park и практичная база перед/после восхождения.",
-          "geography": "Высокогорный внутренний Sabah; условия заметно прохладнее побережья.",
+          "summary": "Кундасанг — высокогорный поселковый узел у Kinabalu Park и практичная база перед восхождением и после него.",
+          "geography": "Высокогорный внутренний Сабах; условия заметно прохладнее прибрежных низменностей.",
           "climate": {
-            "summary": "Sabah Tourism использует около 21°C как практический средний ориентир для highlands Ranau/Kundasang; вершина Kinabalu значительно холоднее.",
+            "summary": "Для высокогорий Ранау и Кундасанга Sabah Tourism приводит около 21 °C как практический средний ориентир; на вершине Кинабалу значительно холоднее.",
             "source_refs": [
               "src_000623"
             ],
             "annual_reference": {
               "mean_annual_temperature_c": 19.7,
               "annual_precipitation_mm": 2940,
-              "period": "climatological normal on source page",
-              "data_basis": "Climate-Data.org local climatology",
+              "period": "климатическая норма, указанная в источнике",
+              "data_basis": "локальная климатология Climate-Data.org",
               "source_refs": [
                 "src_000651"
               ],
@@ -9648,7 +9670,7 @@
             }
           },
           "transport": {
-            "summary": "Road access из Kota Kinabalu по направлению Ranau; для summit climb регистрация/booking идёт по правилам Sabah Parks.",
+            "summary": "Из Кота-Кинабалу сюда едут по дороге в сторону Ранау; для восхождения на вершину регистрация и бронирование проходят по правилам Sabah Parks.",
             "source_refs": [
               "src_000608"
             ]
@@ -9675,7 +9697,8 @@
           "source_url": "https://mapcarta.com/Kundasang",
           "checked_at": "2026-09-29",
           "note": "OSM place=town node"
-        }
+        },
+        "name_ru": "Кундасанг"
       },
       {
         "name": "Batu Caves",
@@ -9690,15 +9713,15 @@
           "Batu Caves"
         ],
         "profile": {
-          "summary": "Batu Caves — населённая/карстовая локальность у северной окраины Kuala Lumpur вокруг известнякового массива и крупного индуистского храмового комплекса.",
+          "summary": "Пещеры Бату — карстовая локальность у северной окраины Куала-Лумпура вокруг известнякового массива и крупного индуистского храмового комплекса.",
           "geology": {
-            "summary": "Известняковый карст формирует Cathedral Cave и другие пещеры массива.",
+            "summary": "Известняковый карст образует Cathedral Cave и другие пещеры массива.",
             "source_refs": [
               "src_000624"
             ]
           },
           "climate": {
-            "summary": "Экваториально жарко и влажно; грозовые ливни типичны для Klang Valley.",
+            "summary": "Жарко и влажно; для долины Кланг типичны кратковременные сильные грозовые ливни.",
             "source_refs": [
               "src_000593"
             ],
@@ -9709,7 +9732,7 @@
             }
           },
           "transport": {
-            "rail": "KTM Komuter до станции Batu Caves, далее короткий пеший подход.",
+            "rail": "До станции Batu Caves идёт KTM Komuter, от станции до комплекса — короткий пеший подход.",
             "source_refs": [
               "src_000626"
             ]
@@ -9725,7 +9748,7 @@
             "source_refs_complete": true,
             "note": null
           },
-          "geography": "Town/locality в Gombak District на северной окраине агломерации Kuala Lumpur; известняковый mogote и храмовые пещеры образуют главный локальный рельефный ориентир."
+          "geography": "Локальность находится в округе Гомбак на северной окраине агломерации Куала-Лумпура; известняковый останец и храмовые пещеры образуют главный рельефный ориентир."
         },
         "primary_location": {
           "lat": 3.23692,
@@ -9738,7 +9761,8 @@
           "source_url": "https://mapcarta.com/N1686561043",
           "checked_at": "2026-09-29",
           "note": "OSM place=town node"
-        }
+        },
+        "name_ru": "Пещеры Бату"
       },
       {
         "name": "Kuching",
@@ -9753,11 +9777,11 @@
           "Kuching old town and waterfront"
         ],
         "profile": {
-          "summary": "Kuching — речной столичный узел Sarawak на Sungai Sarawak; старый порт, торговые кварталы и kampung через реку образуют отдельный городской слой.",
-          "geography": "Sarawak River — основная пространственная ось; город входит в более широкий Sarawak Delta geological/river system.",
+          "summary": "Кучинг — столичный речной узел Саравака на реке Саравак; старый порт, торговые кварталы и кампунги на противоположном берегу образуют отдельный городской слой.",
+          "geography": "Река Саравак — главная пространственная ось города; Кучинг входит в более широкую систему дельты Саравака.",
           "climate": {
-            "summary": "Западный прибрежный Sarawak особенно влажный в период северо-восточного муссона; январь обычно относится к самым дождливым месяцам.",
-            "floods": "При длительных ливнях проверять DID уровни Sungai Sarawak.",
+            "summary": "Западный прибрежный Саравак особенно влажный во время северо-восточного муссона; январь обычно относится к самым дождливым месяцам.",
+            "floods": "При длительных ливнях проверять оперативные уровни воды DID по реке Саравак.",
             "source_refs": [
               "src_000593",
               "src_000596"
@@ -9766,15 +9790,15 @@
               "mean_annual_temperature_c": 25.7,
               "annual_precipitation_mm": 3247,
               "period": "1940–2025",
-              "data_basis": "Copernicus ERA5 reanalysis",
+              "data_basis": "реанализ Copernicus ERA5",
               "source_refs": [
                 "src_000655"
               ],
-              "caveat": "Grid reanalysis, not an official station normal."
+              "caveat": "Сеточный реанализ, а не официальная норма конкретной метеостанции."
             }
           },
           "transport": {
-            "water": "Небольшие tambang boats используются для коротких пересечений Sarawak River; heritage core в основном пеший.",
+            "water": "Небольшие лодки tambang используются для коротких переправ через реку Саравак; историческое ядро в основном удобно проходить пешком.",
             "source_refs": [
               "src_000627"
             ]
@@ -9802,7 +9826,8 @@
           "source_url": "https://mapcarta.com/Kuching",
           "checked_at": "2026-09-29",
           "note": "OSM place=city node"
-        }
+        },
+        "name_ru": "Кучинг"
       },
       {
         "name": "Kudat",
@@ -9815,9 +9840,9 @@
         ],
         "object_names": [],
         "profile": {
-          "summary": "Kudat — северный районный/транспортный узел Sabah для Rungus villages и поездок к северному побережью.",
+          "summary": "Кудат — северный районный и транспортный узел Сабаха для поездок к поселениям рунгусов и северному побережью.",
           "climate": {
-            "summary": "Северо-западный Sabah имеет главный дождливый максимум около октября и второй около июня; более сухие минимумы обычно около февраля и августа.",
+            "summary": "На северо-западе Сабаха основной дождливый максимум приходится примерно на октябрь, второй — на июнь; более сухие минимумы обычно наблюдаются около февраля и августа.",
             "source_refs": [
               "src_000593"
             ],
@@ -9825,7 +9850,7 @@
               "mean_annual_temperature_c": 27.6,
               "annual_precipitation_mm": 2480,
               "period": "1991–2020",
-              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "data_basis": "вторичный анализ WorldClim/CRU TS",
               "source_refs": [
                 "src_000644"
               ],
@@ -9833,13 +9858,13 @@
             }
           },
           "ethnography": {
-            "summary": "Kudat и Matunggong являются важным районом Rungus communities.",
+            "summary": "Кудат и Матунггонг — важные районы расселения рунгусов.",
             "source_refs": [
               "src_000613"
             ]
           },
           "transport": {
-            "summary": "Sabah Tourism указывает Kudat STOLport и road connection с Kota Kinabalu; деревни Rungus требуют дальнейшего локального transfer.",
+            "summary": "Sabah Tourism указывает небольшой аэропорт Кудата и дорожную связь с Кота-Кинабалу; до деревень рунгусов дальше нужен местный автомобильный трансфер.",
             "source_refs": [
               "src_000613"
             ]
@@ -9862,14 +9887,14 @@
               "assault_all": 14,
               "property_all": 42,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
           },
-          "geography": "Северный прибрежный town/port Sabah; служит сухопутным узлом к Rungus villages и северной оконечности Борнео."
+          "geography": "Прибрежный город и порт на севере Сабаха; служит сухопутной базой для деревень рунгусов и поездок к северной оконечности Борнео."
         },
         "primary_location": {
           "lat": 6.883333,
@@ -9882,7 +9907,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q111387551",
           "checked_at": "2026-09-29",
           "note": "port point used as town/port anchor"
-        }
+        },
+        "name_ru": "Кудат"
       },
       {
         "name": "Lahad Datu",
@@ -9897,10 +9923,10 @@
           "Danum Valley Conservation Area"
         ],
         "profile": {
-          "summary": "Lahad Datu — материковый gateway восточного Sabah к Danum Valley; сам conservation area остаётся отдельной удалённой территорией.",
+          "summary": "Лахад-Дату — материковый узел восточного Сабаха для поездок в долину Данум; сама охраняемая территория остаётся отдельным удалённым лесным районом.",
           "transport": {
-            "role": "Danum Valley gateway",
-            "note": "До Lahad Datu можно добраться обычным транспортом; дальнейший въезд в Danum Valley требует заранее организованного разрешённого transfer.",
+            "role": "транспортный узел для долины Данум",
+            "note": "До Лахад-Дату можно добраться обычным транспортом; дальнейший въезд в долину Данум требует заранее организованного разрешённого трансфера.",
             "source_refs": [
               "src_000615"
             ]
@@ -9922,9 +9948,9 @@
               "assault_all": 43,
               "property_all": 162,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
@@ -9934,15 +9960,15 @@
               "mean_annual_temperature_c": 27.1,
               "annual_precipitation_mm": 2157,
               "period": "1991–2020",
-              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "data_basis": "вторичный анализ WorldClim/CRU TS",
               "source_refs": [
                 "src_000643"
               ],
               "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
             },
-            "summary": "Влажный экваториальный климат восточного Sabah; локальная WorldClim/CRU-норма показывает сильные осадки круглый год."
+            "summary": "Влажный экваториальный климат восточного Сабаха; локальная климатическая норма показывает сильные осадки в течение всего года."
           },
-          "geography": "Портовый город восточного Sabah у Darvel Bay; самостоятельный транспортный gateway к Danum Valley, но не климатическая/географическая замена самому conservation area."
+          "geography": "Портовый город восточного Сабаха у Darvel Bay; это самостоятельный транспортный узел для Данума, но не географическая или климатическая замена самому заповедному лесу."
         },
         "primary_location": {
           "lat": 5.016667,
@@ -9955,7 +9981,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q111387569",
           "checked_at": "2026-09-29",
           "note": "port point used as town/port anchor"
-        }
+        },
+        "name_ru": "Лахад-Дату"
       },
       {
         "name": "Sukau",
@@ -9970,8 +9997,8 @@
           "Kinabatangan River"
         ],
         "profile": {
-          "summary": "Sukau — основной речной village/gateway среднего–нижнего Kinabatangan для повторных dawn/dusk boat outings.",
-          "geography": "Пойма Kinabatangan с oxbow lakes и floodplain forest; уровень воды меняет доступ в протоки и точки наблюдения.",
+          "summary": "Сукау — основной речной посёлок и база среднего–нижнего Кинабантангана для повторных утренних и вечерних выходов на лодке.",
+          "geography": "Пойма Кинабантангана включает старицы и пойменные леса; уровень воды меняет доступ в протоки и точки наблюдения.",
           "climate": {
             "summary": "Очень влажный речной низменный ландшафт; паводки и ливни напрямую меняют лодочные маршруты.",
             "source_refs": [
@@ -9981,8 +10008,8 @@
             "annual_reference": {
               "mean_annual_temperature_c": 25.8,
               "annual_precipitation_mm": 2963,
-              "period": "climatological normal on source page",
-              "data_basis": "Climate-Data.org local climatology",
+              "period": "климатическая норма, указанная в источнике",
+              "data_basis": "локальная климатология Climate-Data.org",
               "source_refs": [
                 "src_000652"
               ],
@@ -9990,13 +10017,13 @@
             }
           },
           "nature": {
-            "summary": "Sabah Tourism treats Kinabatangan River as a major wildlife corridor; наблюдение строится вокруг реки и floodplain habitats.",
+            "summary": "Кинабантанган рассматривается как один из ключевых речных коридоров дикой природы Сабаха; наблюдение строится вокруг реки и пойменных местообитаний.",
             "source_refs": [
               "src_000628"
             ]
           },
           "transport": {
-            "summary": "Road transfer из Sandakan к Sukau/Bilit, далее ключевые маршруты проходят на лодке с местным лодочником.",
+            "summary": "Из Сандакана едут по дороге к Сукау или Билиту, после чего основная логистика проходит на лодке с местным лодочником.",
             "source_refs": [
               "src_000628"
             ]
@@ -10024,7 +10051,8 @@
           "source_url": "https://mapcarta.com/15813802",
           "checked_at": "2026-09-29",
           "note": "OSM place=village node"
-        }
+        },
+        "name_ru": "Сукау"
       },
       {
         "name": "Batu Niah",
@@ -10039,9 +10067,9 @@
           "Niah National Park"
         ],
         "profile": {
-          "summary": "Batu Niah — ближайший локальный town/gateway к Niah National Park; Miri остаётся крупным городским узлом дальше по дороге.",
+          "summary": "Бату-Ниа — ближайший небольшой город к Niah National Park; Мири остаётся более крупным транспортным узлом дальше по дороге.",
           "transport": {
-            "summary": "Sarawak Forestry places Niah park HQ roughly two hours by road from Miri/Bintulu; local approach is through the Batu Niah/Niah area, затем river crossing и plankwalk.",
+            "summary": "По данным Sarawak Forestry, от Мири или Бинтулу до штаба парка Ниа около двух часов по дороге. На месте маршрут включает переправу через реку и дальнейший путь по настилам.",
             "source_refs": [
               "src_000619"
             ]
@@ -10056,10 +10084,10 @@
             "source_refs_complete": true,
             "note": null
           },
-          "geography": "Небольшой town в Miri Division, ближайший городской узел к Niah National Park и cave complex.",
+          "geography": "Небольшой город в дивизионе Мири, ближайший населённый узел к Niah National Park и пещерному комплексу.",
           "climate": {
             "summary": "Тропический влажный климат; Sarawak Tourism для Niah указывает около 24–32 °C и частые дожди, особенно в ноябре–феврале.",
-            "best_period": "Март–сентябрь обычно удобнее для cave trail и настилов.",
+            "best_period": "Март–сентябрь обычно удобнее для маршрута к пещерам и движения по настилам.",
             "annual_reference": null,
             "source_refs": [
               "src_000656"
@@ -10071,7 +10099,7 @@
             }
           },
           "geology": {
-            "summary": "Локальный ландшафт связан с известняковыми формациями Niah cave/karst system; детальная археология и cave geology остаются на уровне Niah National Park/object.",
+            "summary": "Локальный ландшафт связан с известняковыми формациями и карстовой системой Ниа; подробная археология и геология пещер остаются на уровне Niah National Park и соответствующего объекта.",
             "source_refs": [
               "src_000656",
               "src_000619"
@@ -10089,7 +10117,8 @@
           "source_url": "https://mapcarta.com/15820126",
           "checked_at": "2026-09-29",
           "note": "OSM place=town node"
-        }
+        },
+        "name_ru": "Бату-Ниа"
       },
       {
         "name": "Kampung Bavanggazo",
@@ -10104,10 +10133,10 @@
           "Kampung Bavanggazo / Rungus longhouse"
         ],
         "profile": {
-          "summary": "Kampung Bavanggazo — Rungus village/longhouse community south of Kudat, где longhouse, beadwork, gong music и сельская жизнь являются частью действующей общины.",
-          "geography": "Сельский северный Sabah; более открытый аграрный ландшафт, чем внутренние дождевые леса.",
+          "summary": "Кампунг Баванггазо — деревня рунгусов с длинным общинным домом к югу от Кудата, где сохраняются бисерные ремёсла, гонговая музыка и повседневная сельская жизнь.",
+          "geography": "Сельский северный Сабах с более открытым аграрным ландшафтом, чем во внутренних дождевых лесах.",
           "climate": {
-            "summary": "Жаркий тропический климат с сезонными ливнями; сухое окно облегчает сельские road transfers.",
+            "summary": "Жаркий тропический климат с сезонными ливнями; более сухие периоды упрощают подъезд по сельским дорогам.",
             "source_refs": [
               "src_000593"
             ],
@@ -10118,13 +10147,13 @@
             }
           },
           "ethnography": {
-            "summary": "Rungus — одна из Dusunic groups Sabah; посещение и особенно ночёвка требуют прямой договорённости с принимающей общиной.",
+            "summary": "Рунгусы относятся к дусунской группе народов Сабаха; посещение и особенно ночёвка требуют прямой договорённости с принимающей общиной.",
             "source_refs": [
               "src_000629"
             ]
           },
           "transport": {
-            "summary": "Sabah Tourism: около 41 км южнее Kudat и около 98 км / 2.5 ч от Kota Kinabalu; last-mile road transfer.",
+            "summary": "По данным Sabah Tourism, деревня находится примерно в 41 км к югу от Кудата и примерно в 98 км, или около 2,5 часа езды, от Кота-Кинабалу; последний участок проходит по дороге.",
             "source_refs": [
               "src_000629"
             ]
@@ -10150,7 +10179,8 @@
           "source_url": "https://www.travelfish.org/sight_profile/malaysia/sabah/sabah/kudat/3863",
           "checked_at": "2026-09-29",
           "note": "settlement-area anchor from existing research"
-        }
+        },
+        "name_ru": "Кампунг Баванггазо"
       },
       {
         "name": "Batu Gajah",
@@ -10165,9 +10195,9 @@
           "Kellie's Castle"
         ],
         "profile": {
-          "summary": "Batu Gajah — ближайший town/locality для Kellie’s Castle и сельского плантационного ландшафта южнее Ipoh.",
+          "summary": "Бату-Гаджа — ближайший городской узел для Kellie’s Castle и сельского плантационного ландшафта южнее Ипоха.",
           "transport": {
-            "summary": "Kellie’s Castle находится у Batu Gajah; road access из Ipoh около получаса в нормальном трафике, прямой общественный транспорт ограничен.",
+            "summary": "Kellie’s Castle находится у Бату-Гаджа; из Ипоха по дороге обычно около получаса при нормальном движении, прямой общественный транспорт ограничен.",
             "source_refs": [
               "src_000624"
             ]
@@ -10184,9 +10214,9 @@
             "source_refs_complete": true,
             "note": null
           },
-          "geography": "Batu Gajah lies inside the broader Kinta Valley geopark/mining landscape south of Ipoh.",
+          "geography": "Бату-Гаджа находится в более широком геопарковом и горнопромышленном ландшафте долины Кинта к югу от Ипоха.",
           "geology": {
-            "summary": "Kinta Valley geology links limestone karst, granitic highlands, placer tin deposits and extensive ex-mining landscapes; Batu Gajah falls inside the geopark administrative footprint described by Perak/NRES sources.",
+            "summary": "Геология долины Кинта сочетает известняковый карст, гранитные возвышенности, россыпные оловянные месторождения и обширные бывшие горные выработки; Бату-Гаджа входит в административный охват геопарка.",
             "source_refs": [
               "src_000631",
               "src_000632"
@@ -10198,9 +10228,9 @@
               "assault_all": 19,
               "property_all": 86,
               "date": "2023-01-01",
-              "unit": "conviction-secured crimes in OpenDOSM/PDRM dataset"
+              "unit": "число преступлений, учтённых в наборе OpenDOSM/PDRM"
             },
-            "caveat": "Police district is not necessarily the same as the administrative district; unreported crimes are absent. These are absolute counts, not a population-normalized rate and not a safety score.",
+            "caveat": "Полицейский округ не всегда совпадает с административным районом; незаявленные преступления в набор не входят. Это абсолютные числа, а не показатель на душу населения и не рейтинг безопасности.",
             "source_refs": [
               "src_000594"
             ]
@@ -10210,13 +10240,13 @@
               "mean_annual_temperature_c": 28,
               "annual_precipitation_mm": 2724,
               "period": "1991–2020",
-              "data_basis": "WorldClim/CRU TS secondary analysis",
+              "data_basis": "вторичный анализ WorldClim/CRU TS",
               "source_refs": [
                 "src_000653"
               ],
               "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
             },
-            "summary": "Влажный тропический климат Kinta Valley; локальная норма 1991–2020 показывает максимум осадков в ноябре и относительный минимум в июне."
+            "summary": "Влажный тропический климат долины Кинта; локальная норма 1991–2020 показывает максимум осадков в ноябре и относительный минимум в июне."
           }
         },
         "primary_location": {
@@ -10230,7 +10260,8 @@
           "source_url": "https://www.wikidata.org/wiki/Q1917064",
           "checked_at": "2026-09-29",
           "note": "human settlement coordinate"
-        }
+        },
+        "name_ru": "Бату-Гаджа"
       },
       {
         "name": "Sepilok",
@@ -10245,10 +10276,10 @@
           "Sepilok Orangutan Rehabilitation Centre"
         ],
         "profile": {
-          "summary": "Sepilok — лесная visitor locality западнее Sandakan вокруг Kabili-Sepilok reserve и orangutan rehabilitation infrastructure.",
-          "geography": "Lowland tropical rainforest edge; visitor movement идёт по road access и разрешённым boardwalks.",
+          "summary": "Сепилок — лесная локальность к западу от Сандакана вокруг резервата Kabili-Sepilok и инфраструктуры центра реабилитации орангутанов.",
+          "geography": "Край низменного тропического дождевого леса; посетители перемещаются по подъездной дороге и разрешённым настилам.",
           "climate": {
-            "summary": "Жаркий влажный климат восточного Sabah; ливни возможны круглый год, с более влажным северо-восточным муссонным периодом.",
+            "summary": "Жаркий влажный климат восточного Сабаха; ливни возможны круглый год, а период северо-восточного муссона обычно более влажный.",
             "source_refs": [
               "src_000593"
             ],
@@ -10259,8 +10290,8 @@
               ],
               "annual_precipitation_mm": 2929,
               "annual_precipitation_uncertainty_mm": 134,
-              "period": "study-area climatological reference",
-              "data_basis": "peer-reviewed Sepilok Forest Reserve study; Sandakan Airport climate data cited from Malaysia Meteorological Service",
+              "period": "климатическая справка по исследуемой территории",
+              "data_basis": "рецензируемое исследование лесного резервата Сепилок с климатическими данными аэропорта Сандакан от метеослужбы Малайзии",
               "source_refs": [
                 "src_000642"
               ],
@@ -10268,13 +10299,13 @@
             }
           },
           "nature": {
-            "summary": "Главный природоохранный контекст — rehabilitation of orangutans в лесной среде; presence at feeding platforms is not guaranteed.",
+            "summary": "Главный природоохранный контекст — реабилитация орангутанов в лесной среде; появление животных на кормовых площадках не гарантируется.",
             "source_refs": [
               "src_000630"
             ]
           },
           "transport": {
-            "summary": "Sabah Tourism places Sepilok roughly 23 km / about 40 min from Sandakan city centre; road access, затем visitor boardwalks.",
+            "summary": "По данным Sabah Tourism, Сепилок находится примерно в 23 км, или около 40 минут езды, от центра Сандакана; дальше движение идёт по разрешённым посетительским настилам.",
             "source_refs": [
               "src_000630"
             ]
@@ -10301,7 +10332,8 @@
           "source_url": "https://mapcarta.com/15813684",
           "checked_at": "2026-09-29",
           "note": "locality node; not the rehabilitation-centre entrance"
-        }
+        },
+        "name_ru": "Сепилок"
       }
     ]
   },

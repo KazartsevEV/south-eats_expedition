@@ -44,7 +44,8 @@
       "2026-09-29 language normalization: regional and locality reference prose rewritten into natural Russian; technical IDs and source metadata preserved, scientific Latin names retained where appropriate.",
       "2026-09-29 language normalization pass 2: locality prose cleaned of remaining English generic terms and mixed-language phrases; official brands/acronyms and source-product names retained where useful.",
       "2026-09-29 language normalization pass 3: fixed Russian case/government around official organization names and removed remaining English display values for police-district and tide-table fields.",
-      "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии."
+      "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии.",
+      "2026-09-29 country-layer migration: country languages, ethnography, culture and narrow normalized from existing regional/project donor material; no attraction cards edited."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -103,6 +104,33 @@
         "year": 2021,
         "notes": "Последний отображаемый международно сопоставимый показатель; национальная относительная/абсолютная бедность рассчитывается иначе."
       }
+    },
+    "narrow": "Малайзия — федерация между Малаккским проливом и Борнео: полуостровные штаты, Сабах и Саравак образуют один государственный каркас, но заметно различаются по рельефу, этнографии, языкам, природной среде и полевой логистике.",
+    "languages": {
+      "official": "малайский",
+      "practical": "Малайский — основной государственный язык; английский широко используется в городах и туристической инфраструктуре. Региональные профили также фиксируют путунхуа, кантонский и хоккиен, тамильский, ибанский, кадазан-дусунские и мурутские языки, келабитский, рунгус, языки баджау/сама и другие местные языки Сабаха и Саравака.",
+      "source_ids": [
+        "DOSM_POPULATION"
+      ]
+    },
+    "ethnography": {
+      "summary": "Страновой слой должен сохранять различия между малайскими, китайскими и индийскими общинами полуострова и коренными народами Борнео. В уже собранных региональных материалах отдельно документированы келабиты и другие оранг-улу Саравака, джахай Ройал-Белум, баджау Семпорны и рунгусы северного Сабаха.",
+      "source_ids": [
+        "DOSM_POPULATION",
+        "SARAWAK_TOURISM_ORANG_ULU",
+        "PERAK_JAHAI_ROYAL_BELUM",
+        "SABAH_TOURISM_SEMPORNA_BAJAU",
+        "SABAH_TOURISM_RUNGUS"
+      ]
+    },
+    "culture": {
+      "summary": "Культурный ландшафт Малайзии многослойный: малайская исламская традиция и султанаты, китайское и индийское городское наследие, портовые города Малаккского пролива, а также длинные дома, земледельческие и морские традиции коренных общин Сабаха и Саравака. Региональные различия важнее единого туристического образа страны.",
+      "source_ids": [
+        "TOURISM_MALAYSIA",
+        "UNESCO",
+        "SARAWAK_TOURISM_ORANG_ULU",
+        "SABAH_TOURISM_RUNGUS"
+      ]
     }
   },
   "nature": {
@@ -11476,6 +11504,21 @@
         "sabah_transport",
         "kota_kinabalu",
         "semporna"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "DOSM_POPULATION",
+      "canonical_id": "src_000703",
+      "kind": "government",
+      "title": "Population and Demographic Statistics",
+      "publisher": "Department of Statistics Malaysia",
+      "url": "https://www.dosm.gov.my/",
+      "used_for": [
+        "country_profile",
+        "demography",
+        "languages",
+        "ethnography"
       ],
       "accessed": "2026-09-29"
     }

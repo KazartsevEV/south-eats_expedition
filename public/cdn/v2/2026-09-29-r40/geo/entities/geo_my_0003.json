@@ -33,8 +33,51 @@
     "notes": "Практический полевой профиль: перечислены языки, с которыми путешественник реально столкнётся в регионе; это не полный этнолингвистический перечень."
   },
   "climate": {
-    "summary": "Жарко и влажно круглый год.",
+    "summary": "Жарко и влажно круглый год. METMalaysia выделяет юго-западное побережье полуострова: осадки здесь заметно связаны с утренними 'Sumatras' в мае–августе; максимум обычно приходится на октябрь–ноябрь, минимум — на февраль.",
+    "floods": {
+      "risk_context": "При сильных продолжительных ливнях низкие участки и зоны у рек подвержены подтоплению; DID ведёт water-level monitoring для Melaka.",
+      "live_monitoring": true
+    },
+    "source_refs": [
+      "src_000593",
+      "src_000596"
+    ],
     "best_period_general": "Утро/вечер; более сухие месяцы комфортнее для пешего центра."
+  },
+  "geography": {
+    "summary": "Низкое прибрежное побережье у Малаккского пролива с историческим городом на реке Melaka; для поездок вдоль воды важны речные и прибрежные участки отдельно от компактного старого центра."
+  },
+  "marine": {
+    "water_context": "Melaka waters и Southern Straits of Melaka имеют оперативный METMalaysia forecast по грозам, ветру и высоте волн.",
+    "tides": {
+      "status": "official_table_identified_values_not_normalized",
+      "official_source": "Pusat Hidrografi Nasional Tide Tables 2026"
+    },
+    "protected_marine": "Department of Fisheries lists Melaka Marine Park around Pulau Undan, Pulau Dodol and Pulau Nangka.",
+    "source_refs": [
+      "src_000598",
+      "src_000606",
+      "src_000601"
+    ]
+  },
+  "health": {
+    "dengue_reference_2022": {
+      "area": "Melaka",
+      "incidence_per_100k": 65.69
+    },
+    "interpretation": "State-level historical reference for 2022 only.",
+    "source_refs": [
+      "src_000595"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "dataset_scope": "police district",
+      "status": "local_dataset_available_not_yet_aggregated"
+    },
+    "source_refs": [
+      "src_000594"
+    ]
   },
   "freshness": {
     "checked_at": "2026-09-28"
@@ -43,10 +86,18 @@
     "source_urls": [
       "https://www.dosm.gov.my/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000593",
+      "src_000596",
+      "src_000598",
+      "src_000606",
+      "src_000601",
+      "src_000595",
+      "src_000594"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

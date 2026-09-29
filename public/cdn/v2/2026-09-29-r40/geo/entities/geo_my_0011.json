@@ -33,8 +33,67 @@
     "notes": "Практический полевой профиль: перечислены языки, с которыми путешественник реально столкнётся в регионе; это не полный этнолингвистический перечень."
   },
   "climate": {
-    "summary": "Тайпинг особенно дождлив; Belum — влажный тропический дождевой лес.",
+    "summary": "Западная часть Perak испытывает характерный для западного полуострова режим осадков, а внутренние горные районы получают сильную орографическую вариацию. Для Taiping/Belum нельзя использовать один помесячный ряд.",
+    "floods": {
+      "risk_context": "DID flood telemetry действует в Larut Matang, Kuala Kangsar и Hulu Perak; после сильных ливней проверять конкретный район/реку.",
+      "live_monitoring": true
+    },
+    "source_refs": [
+      "src_000593",
+      "src_000596"
+    ],
     "best_period_general": "Планировать запас по погоде, особенно в лесу."
+  },
+  "geography": {
+    "summary": "Большой поперечный регион от влажной западной части Perak через долины и города к горному Hulu Perak и Belum–Temengor у границы с Таиландом; климат и доступ внутри него существенно различаются.",
+    "hydrography": "Royal Belum связан с крупным искусственным озером Temenggor; доступ во многие внутренние точки идёт по воде."
+  },
+  "nature": {
+    "royal_belum": {
+      "area_ha": 117500,
+      "governance": "Perak State Parks Corporation",
+      "iucn_category": "II"
+    },
+    "documented_fauna": [
+      "Malayan tiger",
+      "Asian elephant",
+      "Malayan sun bear",
+      "white-handed gibbon",
+      "hornbills"
+    ],
+    "flora": "Royal Belum tourism material documents Rafflesia and very high rainforest biodiversity.",
+    "source_refs": [
+      "src_000605",
+      "src_000604"
+    ]
+  },
+  "health": {
+    "dengue_reference_2022": {
+      "area": "Perak",
+      "incidence_per_100k": 54.76
+    },
+    "interpretation": "State-level historical reference for 2022 only.",
+    "source_refs": [
+      "src_000595"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "dataset_scope": "police district",
+      "status": "local_dataset_available_not_yet_aggregated"
+    },
+    "wilderness": "В Belum практический профиль риска отличается от городов Taiping/Kuala Kangsar: связь, лодочная логистика, погода и парк важнее городской crime-rate.",
+    "source_refs": [
+      "src_000594",
+      "src_000604"
+    ]
+  },
+  "transport": {
+    "royal_belum": "Официальный State Parks Corporation указывает Gerik как сухопутный узел и Pulau Banding public jetty как gateway; дальше вход в Royal Belum идёт по воде.",
+    "fuel": "Официальная страница парка отдельно предупреждает, что Gerik — последняя надёжная точка заправки перед East-West Highway в сторону Banding.",
+    "source_refs": [
+      "src_000604"
+    ]
   },
   "freshness": {
     "checked_at": "2026-09-28"
@@ -43,10 +102,17 @@
     "source_urls": [
       "https://www.dosm.gov.my/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000593",
+      "src_000596",
+      "src_000605",
+      "src_000604",
+      "src_000595",
+      "src_000594"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

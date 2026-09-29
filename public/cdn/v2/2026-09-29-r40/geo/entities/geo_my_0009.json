@@ -72,6 +72,90 @@
     "summary": "Тропическое море; северо-запад полуострова имеет собственную сезонность осадков.",
     "best_period_general": "Декабрь–март обычно наиболее сухо."
   },
+  "geography": {
+    "summary": "Архипелаг из 99 островов у северо-запада полуострова. Три ключевых geoforest park — Machinchang Cambrian, Kilim Karst и Dayang Bunting Marble — показывают разные геологические комплексы и связаны морем, манграми и карстом.",
+    "source_refs": [
+      "src_000602"
+    ]
+  },
+  "relief": {
+    "summary": "Machinchang — расчленённый горный массив с гребнями, утёсами, ущельями и водопадами; Kilim — низменный мангрово-карстовый ландшафт с башнями, арками и морскими останцами.",
+    "source_refs": [
+      "src_000602"
+    ]
+  },
+  "geology": {
+    "summary": "Langkawi сохраняет очень древнюю последовательность пород: песчаники Machinchang Formation, ордовикско-силурийские известняки Setul, более молодые Singa Formation и Chuping Limestone; последующие столкновения террейнов, гранитные интрузии, поднятие и эрозия сформировали нынешние складки, разломы и карст.",
+    "source_refs": [
+      "src_000602",
+      "src_000607"
+    ]
+  },
+  "marine": {
+    "ecosystems": [
+      "mangrove channels",
+      "limestone karst coast",
+      "nearshore island waters"
+    ],
+    "fauna_and_flora": "Kilim Geoforest Park отмечает mangrove forest, limestone cycad, sea hibiscus, brahminy kite и sea eagle как характерные элементы комплекса.",
+    "water_context": "Northern Straits of Melaka marine forecast METMalaysia использовать перед лодочными выходами.",
+    "tides": {
+      "status": "official_table_identified_values_not_normalized",
+      "official_source": "Pusat Hidrografi Nasional Tide Tables 2026",
+      "expedition_note": "Прилив меняет доступ и визуальную геометрию мангровых каналов, но точное время/высоту брать только по конкретной станции."
+    },
+    "source_refs": [
+      "src_000602",
+      "src_000597",
+      "src_000606"
+    ]
+  },
+  "nature": {
+    "habitats": [
+      "mangrove forest",
+      "limestone cliffs",
+      "lowland tropical forest",
+      "island coast"
+    ],
+    "documented_examples": [
+      "great hornbill",
+      "brahminy kite",
+      "sea eagle",
+      "limestone cycad",
+      "sea hibiscus",
+      "climbing bamboo"
+    ],
+    "dangerous_animals": {
+      "status": "not_normalized_locally",
+      "note": "Не переносить общестрановой список змей/морских животных в Langkawi без локального источника."
+    },
+    "poisonous_plants": {
+      "status": "not_normalized_locally"
+    },
+    "source_refs": [
+      "src_000602"
+    ]
+  },
+  "health": {
+    "dengue_reference_2022": {
+      "area": "Kedah",
+      "incidence_per_100k": 67.16
+    },
+    "interpretation": "State-level historical reference for 2022; Langkawi-specific current incidence not inferred.",
+    "source_refs": [
+      "src_000595"
+    ]
+  },
+  "safety": {
+    "crime": {
+      "dataset_scope": "police district",
+      "status": "district_data_available_not_yet_aggregated",
+      "note": "OpenDOSM/PDRM contains district-level data; Langkawi should be read from its district rows, not from a Malaysia-wide score."
+    },
+    "source_refs": [
+      "src_000594"
+    ]
+  },
   "freshness": {
     "checked_at": "2026-09-28"
   },
@@ -79,10 +163,20 @@
     "source_urls": [
       "https://www.dosm.gov.my/"
     ],
-    "source_refs": [],
+    "source_refs": [
+      "src_000602",
+      "src_000607",
+      "src_000593",
+      "src_000596",
+      "src_000590",
+      "src_000597",
+      "src_000606",
+      "src_000595",
+      "src_000594"
+    ],
     "qa": {
-      "source_refs_complete": false,
-      "note": "Existing local profile migrated from the country source; fact-level source normalization remains queued."
+      "source_refs_complete": true,
+      "note": "Regional profile has canonical source refs."
     }
   }
 }

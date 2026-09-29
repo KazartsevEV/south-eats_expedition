@@ -13,7 +13,7 @@ ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
 GEO_COUNTRIES = ROOT / "data" / "geo" / "countries"
 FORMAL_CANONICAL_GEO_CODES = {"BN", "KH", "LA", "ID", "MY", "MM"}
-COUNTRY_SOURCE_CANONICAL_CODES = {"BN", "KH", "LA", "ID", "MY", "MM", "PH", "SG"}
+COUNTRY_SOURCE_CANONICAL_CODES = {"BN", "KH", "LA", "ID", "MY", "MM", "PH", "SG", "TH"}
 
 GENERATED_AT = "2026-09-29T00:35:00+04:00"
 DEFAULT_LANGUAGE = "ru"

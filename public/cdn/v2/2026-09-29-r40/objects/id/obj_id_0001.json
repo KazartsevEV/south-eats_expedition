@@ -45,7 +45,18 @@
       "checked_at": "2026-09-29"
     },
     "geo_points": [],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 272.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "site",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_000759"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Высота относится к картографическому узлу самого храма; не путать с высотой сооружения над основанием."
+    }
   },
   "narrative": {
     "sections": [
@@ -296,12 +307,21 @@
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
-    "best_time": null,
-    "best_weather_light": null,
+    "best_time": "04:45–06:15 — внешние обзорные холмы; на самом монументе — первое доступное утреннее окно или после 15:00.",
+    "best_weather_light": "Лёгкий утренний туман подчёркивает слои равнины Кеду; плотная облачность может закрыть Мерапи и Мербабу, но даёт мягкий свет для рельефов.",
     "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "useful_equipment": [],
+    "seasonal_visuals": [
+      "Май–сентябрь обычно суше и чаще дают ясный дальний горизонт; в дождливый сезон зелень насыщеннее, но облачность чаще скрывает вулканы."
+    ],
+    "video_activity": [
+      "Поток посетителей по галереям и лестницам хорошо показывает вертикальную логику памятника.",
+      "Во время Вайсака возможны буддийские церемонии; съёмку ритуалов вести только в разрешённом режиме."
+    ],
+    "useful_equipment": [
+      "wide",
+      "standard",
+      "telephoto"
+    ],
     "drone": "Только по действующим авиационным и локальным правилам; в нацпарках/храмах/аэропортовых зонах обычно требуется отдельное разрешение.",
     "filming_restrictions": "Обычная любительская съёмка зависит от правил объекта; коммерческую/постановочную съёмку согласовывать."
   },
@@ -331,20 +351,20 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-28"
   }

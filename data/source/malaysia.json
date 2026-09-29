@@ -25,7 +25,8 @@
       "2026-09-29 GPS normalization: 21/21 Malaysia objects receive sourced WGS84 map anchors; broad landscapes/parks use explicit center/approximate semantics, and Lenggong keeps four UNESCO archaeological component points.",
       "2026-09-29 locality migration: the Langkawi monthly air/sea temperature series was removed from country climate and moved to the Langkawi / northwest coast geo profile; country climate now contains macro spatial context only.",
       "2026-09-29 locality migration: existing city/island research for Kuala Lumpur, George Town/Penang, Melaka City and Langkawi was copied into matching geo locality profiles; route hubs that are not equivalent to the destination remain linkage-only.",
-      "2026-09-29 regional locality research chunk 1: KL/Klang Valley, Penang, Melaka, Langkawi, Perak/Belum and Perhentian/east coast enriched with local climate/flood, marine/tide-source status, health, crime-dataset scope, nature/geology and transport where supported."
+      "2026-09-29 regional locality research chunk 1: KL/Klang Valley, Penang, Melaka, Langkawi, Perak/Belum and Perhentian/east coast enriched with local climate/flood, marine/tide-source status, health, crime-dataset scope, nature/geology and transport where supported.",
+      "2026-09-29 regional locality research chunk 2: Sabah and Sarawak top-level geo regions enriched with climate/flood, marine/tide-source status, biodiversity, geology, health, crime-scope and transport from Sabah Parks, Sarawak Forestry, state tourism, METMalaysia, MOH, DID, DOSM and UNESCO."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -613,7 +614,93 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Горный внутренний узел северо-западного Sabah вокруг Ranau–Kundasang и массива Kinabalu. Высота меняет температуру, облачность и доступ намного сильнее, чем на низменном побережье.",
+          "source_refs": [
+            "src_000608"
+          ]
+        },
+        "relief": {
+          "summit_m": 4095.2,
+          "summary": "Mount Kinabalu поднимается до 4,095.2 м; в одном регионе соседствуют низкогорные леса, высокогорные склоны и вершина с условиями, не похожими на прибрежный Sabah.",
+          "source_refs": [
+            "src_000608"
+          ]
+        },
+        "geology": {
+          "summary": "Kinabalu UNESCO Global Geopark включает ultramafic rocks, гранитные интрузии и складчато-разломанные осадочные породы района Ranau–Tambunan; Poring Hot Springs также относится к геологическому контексту.",
+          "source_refs": [
+            "src_000609"
+          ]
+        },
+        "climate": {
+          "summary": "В центральных холмистых районах Sabah осадки распределены более равномерно, чем на побережьях; METMalaysia отмечает менее выраженные максимумы около мая и октября и минимумы около февраля и августа.",
+          "temperature_context": "Sabah Tourism приводит около 21°C как практический средний ориентир для highlands Ranau/Kundasang, но вершина Kinabalu имеет отдельный высокогорный климат и выше 3,500 м температура может опускаться к 0°C.",
+          "source_refs": [
+            "src_000593",
+            "src_000623"
+          ]
+        },
+        "nature": {
+          "documented_biodiversity": "Kinabalu Park — hotspot растительного разнообразия; Sabah Parks приводит 711 видов орхидей, 621 вид папоротников и более 100 видов млекопитающих в опубликованном профиле.",
+          "dangerous_animals": {
+            "status": "not_reduced_to_one_list",
+            "note": "Высотная зональность слишком велика; опасных животных не переносить сюда из общестранового списка без высотной/локальной привязки."
+          },
+          "source_refs": [
+            "src_000608"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Sabah",
+            "incidence_per_100k": 209.15
+          },
+          "malaria": "MOH 2022: zoonotic malaria (P. knowlesi) remained the main malaria burden in Malaysia; 39 Sabah localities were selected for outdoor residual spray. Это не означает одинаковый риск во всех highlands.",
+          "source_refs": [
+            "src_000595",
+            "src_000617"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "Ranau/Kota Belud/Kota Kinabalu-area rows require separate aggregation; no single highlands crime rate."
+          },
+          "mountain_weather": "Сильный дождь/ветер и изменения условий на высоте — отдельный экспедиционный риск.",
+          "source_refs": [
+            "src_000594",
+            "src_000608"
+          ]
+        },
+        "transport": {
+          "mount_kinabalu": "Sabah Parks requires online climbing reservation for 2026; summit climb is not walk-up access.",
+          "source_refs": [
+            "src_000608"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "SABAH_TOURISM_BOARD",
+            "SABAH_PARKS_KINABALU",
+            "UNESCO_KINABALU",
+            "MOH_HEALTH_INDICATORS_2023",
+            "MOH_ANNUAL_2022",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000623",
+            "src_000608",
+            "src_000609",
+            "src_000595",
+            "src_000617",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Sabah east coast / Danum / Kinabatangan",
@@ -637,7 +724,73 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Восточный Sabah сочетает низменные дождевые леса Danum, речные поймы Kinabatangan и выход к восточному побережью. Это не единая климатическая точка: речная долина и прибрежная зона реагируют на осадки по-разному."
+        },
+        "climate": {
+          "summary": "Северо-восточное побережье Sabah получает максимум осадков примерно в январе и минимум около апреля; декабрь–март особенно связаны с северо-восточным муссоном. Южнее режим становится более равномерным.",
+          "floods": {
+            "risk_context": "Для Kinabatangan и подъездов к восточным районам после сильных дождей проверять DID water-level/flood monitoring по конкретным бассейнам.",
+            "live_monitoring": true
+          },
+          "source_refs": [
+            "src_000593",
+            "src_000596"
+          ]
+        },
+        "nature": {
+          "danum": "Danum Valley protects about 438 km² unlogged lowland rainforest and serves as a long-running research/conservation landscape.",
+          "kinabatangan": "Lower Kinabatangan is treated by Sabah tourism as a principal wildlife river corridor; species-level claims are not expanded here without sanctuary-specific source normalization.",
+          "source_refs": [
+            "src_000615",
+            "src_000614"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Sabah",
+            "incidence_per_100k": 209.15
+          },
+          "malaria": "Zoonotic P. knowlesi is a real Sabah field-health issue, but risk must be localized by foci rather than assigned uniformly to all east Sabah.",
+          "source_refs": [
+            "src_000595",
+            "src_000617"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "Lahad Datu/Kinabatangan/Sandakan district rows available_not_yet_aggregated"
+          },
+          "expedition": "Remote forest/river access, communications, water level and road condition can dominate operational risk.",
+          "source_refs": [
+            "src_000594",
+            "src_000615",
+            "src_000596"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "DID_PUBLICINFOBANJIR",
+            "DANUM_VALLEY",
+            "SABAH_TOURISM_SANDAKAN",
+            "MOH_HEALTH_INDICATORS_2023",
+            "MOH_ANNUAL_2022",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000596",
+            "src_000615",
+            "src_000614",
+            "src_000595",
+            "src_000617",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Sarawak / Kuching / Niah",
@@ -663,7 +816,83 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Широкий западно-северный коридор Sarawak; в текущем legacy-region объединены Kuching/Sarawak Delta и удалённый Niah возле Miri, поэтому факты, относящиеся только к одной части, помечаются явно.",
+          "delta": "Sarawak Delta UNESCO Global Geopark around Kuching includes an extensive river-delta system and transition from low plains to higher inland ground.",
+          "source_refs": [
+            "src_000621"
+          ]
+        },
+        "geology": {
+          "sarawak_delta": "UNESCO describes the Kuching Zone suture as evidence of collision between ancient landmasses more than 200 million years ago; the geopark preserves a geological record exceeding 250 million years.",
+          "niah": "Niah is a limestone cave/karst and archaeological landscape, but detailed cave geology remains attached to the Niah object until a dedicated Niah locality profile is formalized.",
+          "source_refs": [
+            "src_000621",
+            "src_000619"
+          ]
+        },
+        "climate": {
+          "summary": "Coastal/western Sarawak receives a strong northeast-monsoon signal: December–March are especially wet and January is typically the maximum; coastal minimum tends to occur around June–July.",
+          "floods": {
+            "risk_context": "DID operates multiple Kuching river-level stations in the Sungai Sarawak system; use live levels during prolonged rain.",
+            "live_monitoring": true
+          },
+          "source_refs": [
+            "src_000593",
+            "src_000596"
+          ]
+        },
+        "nature": {
+          "niah": "Sarawak Forestry describes Niah as lowland rainforest with bats, swiftlets, endemic Niah Cave gecko, birds, butterflies, squirrels, monkeys and occasional hornbills.",
+          "source_refs": [
+            "src_000619"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Sarawak",
+            "incidence_per_100k": 26.95
+          },
+          "interpretation": "State-level historical reference for 2022; Kuching and Niah cannot be assigned the same current risk.",
+          "source_refs": [
+            "src_000595"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "Kuching/Miri district data available_not_yet_aggregated"
+          },
+          "source_refs": [
+            "src_000594"
+          ]
+        },
+        "transport": {
+          "niah": "Sarawak Forestry places park HQ roughly two hours by road from Miri or Bintulu; access continues by motorised boat across Niah River and about one hour on raised plankwalk to Great Cave.",
+          "source_refs": [
+            "src_000619"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "UNESCO_SARAWAK_DELTA",
+            "MET_MY_CLIMATE",
+            "DID_PUBLICINFOBANJIR",
+            "SARAWAK_FORESTRY_NIAH",
+            "MOH_HEALTH_INDICATORS_2023",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000621",
+            "src_000593",
+            "src_000596",
+            "src_000619",
+            "src_000595",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Mulu / interior Sarawak",
@@ -687,7 +916,80 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Внутренний горно-карстовый Sarawak. Mulu is dominated by Gunung Mulu, Gunung Api and Gunung Benarat and extensive cave systems under primary rainforest."
+        },
+        "relief": {
+          "mountains_m": {
+            "Gunung_Mulu": 2376,
+            "Gunung_Api": 1750,
+            "Gunung_Benarat": 1858
+          },
+          "source_refs": [
+            "src_000618"
+          ]
+        },
+        "geology": {
+          "summary": "Limestone mountain ranges are honeycombed by extensive cave and underground-river systems; Sarawak Chamber, Deer Cave and Clearwater Cave System are among the defining features.",
+          "source_refs": [
+            "src_000618"
+          ]
+        },
+        "climate": {
+          "summary": "Inland Sarawak generally has rainfall distributed through the year, with a somewhat drier June–August period. Hill slopes in interior Sarawak can be exceptionally wet; METMalaysia cites Long Akah at more than 5,000 mm mean annual rainfall.",
+          "source_refs": [
+            "src_000593"
+          ]
+        },
+        "nature": {
+          "forest": "Sarawak Forestry lists 15 forest types, 170 wild orchid species and 10 pitcher-plant species in Mulu, plus large bat emergences from Deer Cave.",
+          "source_refs": [
+            "src_000618"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Sarawak",
+            "incidence_per_100k": 26.95
+          },
+          "note": "Remote-jungle medical/logistical risk is not represented by this state dengue rate.",
+          "source_refs": [
+            "src_000595"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "status": "urban crime metric_not_useful_for_remote_park",
+            "note": "Do not present Kuching/Miri police-district statistics as Mulu risk."
+          },
+          "wilderness": "Rain, caves, river levels, guide requirements and communications dominate operational risk.",
+          "source_refs": [
+            "src_000618"
+          ]
+        },
+        "transport": {
+          "park_access": "Sarawak Forestry describes trekking and overnight jungle camps; specific guide requirements vary by route and must be read from current park rules.",
+          "source_refs": [
+            "src_000618",
+            "src_000622"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "SARAWAK_FORESTRY_MULU",
+            "SARAWAK_FORESTRY_TICKETS",
+            "MOH_HEALTH_INDICATORS_2023"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000618",
+            "src_000622",
+            "src_000595"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Bario / Kelabit Highlands",
@@ -712,7 +1014,73 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Kelabit Highlands — серия высокогорных долин северо-восточного Sarawak, в основном свыше 1,000 м, окружённых лесными вершинами; Bario is the principal settlement/gateway."
+        },
+        "relief": {
+          "summary": "Sarawak Tourism describes valleys a little above 1,000 m, with surrounding peaks above 2,400 m in parts of the highlands.",
+          "source_refs": [
+            "src_000620"
+          ]
+        },
+        "climate": {
+          "summary": "Cooler highland climate than the lowlands; inland Sarawak stays wet year-round, with somewhat less rain June–August. Weather directly affects small-aircraft and logging-road access.",
+          "source_refs": [
+            "src_000593",
+            "src_000620"
+          ]
+        },
+        "ethnography": {
+          "kelabit": "Bario is a Kelabit territory with dispersed villages/longhouses, rice cultivation and distinctive highland food traditions.",
+          "source_refs": [
+            "src_000620"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Sarawak",
+            "incidence_per_100k": 26.95
+          },
+          "note": "This is state-level background only; highland/vector exposure is not inferred from it.",
+          "source_refs": [
+            "src_000595"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "status": "urban district crime metric_not_meaningful_for_bario_without_local_mapping"
+          },
+          "dominant_expedition_risks": [
+            "weather disruption",
+            "remote road condition",
+            "limited transport capacity",
+            "communications"
+          ],
+          "source_refs": [
+            "src_000620"
+          ]
+        },
+        "transport": {
+          "air": "Sarawak Tourism Board: Miri–Bario Twin Otter flight is about 45 minutes.",
+          "road": "4WD via logging roads from Miri can take roughly 10–14 hours depending on road condition and weather.",
+          "source_refs": [
+            "src_000620"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "SARAWAK_TOURISM_BARIO",
+            "MOH_HEALTH_INDICATORS_2023"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000620",
+            "src_000595"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Langkawi / northwest coast",
@@ -1129,7 +1497,100 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Морской регион вокруг Semporna и Celebes Sea: океанический Sipadan, коралловые рифы и вулканические острова Tun Sakaran требуют отдельного морского профиля от материкового Sabah."
+        },
+        "geology": {
+          "sipadan": "Sipadan — океанический остров, сформированный живым коралловым массивом на вулканическом конусе и поднимающийся примерно на 600 м от морского дна.",
+          "tun_sakaran": "Острова Tun Sakaran сложены Quaternary pyroclastic material, связанным с взрывным вулканизмом; Bohey Dulang и Bodgaya сохраняют выраженный вулканический рельеф.",
+          "source_refs": [
+            "src_000610",
+            "src_000611"
+          ]
+        },
+        "climate": {
+          "summary": "Южный Sabah в среднем получает более равномерные осадки; февраль–апрель несколько суше. Перед лодочными переходами важнее оперативный Eastern Sabah marine forecast, чем годовая средняя.",
+          "source_refs": [
+            "src_000593",
+            "src_000616"
+          ]
+        },
+        "marine": {
+          "sipadan": "Sabah Parks указывает более 400 видов рыб и сотни видов кораллов в экосистеме Sipadan.",
+          "tun_sakaran": "Для Tun Sakaran опубликованы 255 видов кораллов, 528 видов reef fish, более 240 видов marine invertebrates и шесть видов seagrass.",
+          "tides": {
+            "status": "official_table_identified_values_not_normalized",
+            "official_source": "Pusat Hidrografi Nasional Tide Tables 2026"
+          },
+          "weather": "Eastern Sabah marine forecast METMalaysia использовать непосредственно перед выходом.",
+          "source_refs": [
+            "src_000610",
+            "src_000611",
+            "src_000616",
+            "src_000606"
+          ]
+        },
+        "nature": {
+          "terrestrial": "Sipadan: tropical birds, fruit bats, monitor lizards and nesting turtles; Tun Sakaran: coastal forest, mangrove, birds, reptiles and macaques.",
+          "source_refs": [
+            "src_000610",
+            "src_000611"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Sabah",
+            "incidence_per_100k": 209.15
+          },
+          "malaria": "Sabah has operational zoonotic-malaria foci; do not convert state context into an island-specific rate.",
+          "source_refs": [
+            "src_000595",
+            "src_000617"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "Semporna district data available_not_yet_aggregated"
+          },
+          "marine_access": "Состояние моря и park access/permit are dynamic; exact availability must be checked before departure.",
+          "source_refs": [
+            "src_000594",
+            "src_000616",
+            "src_000610"
+          ]
+        },
+        "transport": {
+          "gateway": "Semporna is the mainland gateway. Sabah Parks states Sipadan is about 45 minutes by speedboat in calm seas; Tun Sakaran is also reached by fast boat from Semporna.",
+          "source_refs": [
+            "src_000610",
+            "src_000611"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "SABAH_PARKS_SIPADAN",
+            "SABAH_PARKS_TUN_SAKARAN",
+            "MET_MY_CLIMATE",
+            "MET_MARINE_EASTERN_SABAH",
+            "PHN_TIDE_TABLES_2026",
+            "MOH_HEALTH_INDICATORS_2023",
+            "MOH_ANNUAL_2022",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000610",
+            "src_000611",
+            "src_000593",
+            "src_000616",
+            "src_000606",
+            "src_000595",
+            "src_000617",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Kudat / Rungus north Sabah",
@@ -1153,7 +1614,77 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Северная оконечность Sabah вокруг Kudat и Matunggong; район включает прибрежные участки, сельские Rungus communities и островные связи Kudat district."
+        },
+        "climate": {
+          "summary": "Северо-западное побережье Sabah имеет два дождливых максимума: основной около октября и второй около июня; более сухие минимумы обычно около февраля и августа.",
+          "source_refs": [
+            "src_000593"
+          ]
+        },
+        "ethnography": {
+          "rungus": "Kudat is a major centre of the Rungus community; Matunggong также имеет значительную Rungus population. Kampung Bavanggazo preserves communal longhouse living and craft traditions.",
+          "source_refs": [
+            "src_000613"
+          ]
+        },
+        "marine": {
+          "tides": {
+            "status": "official_table_identified_values_not_normalized",
+            "official_source": "Pusat Hidrografi Nasional Tide Tables 2026"
+          },
+          "note": "Береговой/островной район; точные tide predictions требуют станции из PHN 2026.",
+          "source_refs": [
+            "src_000606"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Sabah",
+            "incidence_per_100k": 209.15
+          },
+          "malaria": "Zoonotic malaria is a Sabah field-health issue; no Kudat-specific rate normalized in this pass.",
+          "source_refs": [
+            "src_000595",
+            "src_000617"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "Kudat district data available_not_yet_aggregated"
+          },
+          "source_refs": [
+            "src_000594"
+          ]
+        },
+        "transport": {
+          "summary": "Sabah Tourism identifies Kudat as a district centre with a STOLport linking Kudat to Kota Kinabalu and Sandakan; rural Rungus sites require road travel from Kudat/KK.",
+          "source_refs": [
+            "src_000613"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "SABAH_TOURISM_KUDAT",
+            "PHN_TIDE_TABLES_2026",
+            "MOH_HEALTH_INDICATORS_2023",
+            "MOH_ANNUAL_2022",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000613",
+            "src_000606",
+            "src_000595",
+            "src_000617",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
+        }
       },
       {
         "name": "Sandakan / Sepilok",
@@ -1178,7 +1709,94 @@
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-28",
+        "geography": {
+          "summary": "Восточное побережье Sabah; Sandakan — городской/портовый узел и gateway к Sepilok, Lower Kinabatangan и Turtle Islands."
+        },
+        "climate": {
+          "summary": "Northeast Sabah получает выраженный максимум осадков около января, минимум около апреля; большая часть дождя приходится на декабрь–март северо-восточного муссона.",
+          "floods": {
+            "risk_context": "Для рек и дорог восточного Sabah использовать DID monitoring по конкретному бассейну/району.",
+            "live_monitoring": true
+          },
+          "source_refs": [
+            "src_000593",
+            "src_000596"
+          ]
+        },
+        "marine": {
+          "turtle_islands": "Turtle Islands Park lies about 40 km north of Sandakan and protects Green and Hawksbill turtles, surrounding reefs and seas.",
+          "tides": {
+            "status": "official_table_identified_values_not_normalized",
+            "official_source": "Pusat Hidrografi Nasional Tide Tables 2026"
+          },
+          "weather": "Eastern Sabah marine forecast METMalaysia applies to coastal trips.",
+          "source_refs": [
+            "src_000612",
+            "src_000616",
+            "src_000606"
+          ]
+        },
+        "nature": {
+          "gateway": "Sabah Tourism describes Sandakan as a wildlife gateway including Sepilok and Lower Kinabatangan.",
+          "marine": "Turtle Islands Park supports Green and Hawksbill turtle nesting throughout the year; peak periods differ by species.",
+          "source_refs": [
+            "src_000614",
+            "src_000612"
+          ]
+        },
+        "health": {
+          "dengue_reference_2022": {
+            "area": "Sabah",
+            "incidence_per_100k": 209.15
+          },
+          "malaria": "Zoonotic malaria context applies at Sabah level; no Sandakan-specific incidence normalized.",
+          "source_refs": [
+            "src_000595",
+            "src_000617"
+          ]
+        },
+        "safety": {
+          "crime": {
+            "dataset_scope": "police district",
+            "status": "Sandakan district data available_not_yet_aggregated"
+          },
+          "source_refs": [
+            "src_000594"
+          ]
+        },
+        "transport": {
+          "summary": "Sandakan functions as the principal urban gateway for Sepilok and Lower Kinabatangan; Turtle Islands use Sandakan as gateway for protected-island visits.",
+          "source_refs": [
+            "src_000614",
+            "src_000612"
+          ]
+        },
+        "local_reference_provenance": {
+          "source_ids": [
+            "MET_MY_CLIMATE",
+            "DID_PUBLICINFOBANJIR",
+            "SABAH_TOURISM_SANDAKAN",
+            "SABAH_PARKS_TURTLE_ISLANDS",
+            "MET_MARINE_EASTERN_SABAH",
+            "PHN_TIDE_TABLES_2026",
+            "MOH_HEALTH_INDICATORS_2023",
+            "MOH_ANNUAL_2022",
+            "DOSM_CRIME_DISTRICT"
+          ],
+          "source_refs": [
+            "src_000593",
+            "src_000596",
+            "src_000614",
+            "src_000612",
+            "src_000616",
+            "src_000606",
+            "src_000595",
+            "src_000617",
+            "src_000594"
+          ],
+          "checked_at": "2026-09-29"
+        }
       }
     ],
     "objects": [
@@ -8037,6 +8655,228 @@
       ],
       "accessed": "2026-09-29",
       "canonical_id": "src_000607"
+    },
+    {
+      "id": "SABAH_PARKS_KINABALU",
+      "publisher": "Sabah Parks",
+      "url": "https://www.sabahparks.org.my/kinabalu-park",
+      "kind": "government",
+      "used_for": [
+        "geography",
+        "relief",
+        "flora",
+        "fauna",
+        "protected_area"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000608"
+    },
+    {
+      "id": "UNESCO_KINABALU",
+      "publisher": "UNESCO",
+      "url": "https://www.unesco.org/en/articles/unesco-names-18-new-global-geoparks",
+      "kind": "international_organization",
+      "used_for": [
+        "geology",
+        "geopark",
+        "flora",
+        "fauna"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000609"
+    },
+    {
+      "id": "SABAH_PARKS_SIPADAN",
+      "publisher": "Sabah Parks",
+      "url": "https://www.sabahparks.org.my/sipadan-island-park",
+      "kind": "government",
+      "used_for": [
+        "marine",
+        "marine_life",
+        "geology",
+        "access",
+        "fees"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000610"
+    },
+    {
+      "id": "SABAH_PARKS_TUN_SAKARAN",
+      "publisher": "Sabah Parks",
+      "url": "https://sabahparks.org.my/tun-sakaran-marine-park",
+      "kind": "government",
+      "used_for": [
+        "marine",
+        "marine_life",
+        "geology",
+        "flora",
+        "fauna",
+        "access"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000611"
+    },
+    {
+      "id": "SABAH_PARKS_TURTLE_ISLANDS",
+      "publisher": "Sabah Parks",
+      "url": "https://sabahparks.org.my/turtle-islands-park",
+      "kind": "government",
+      "used_for": [
+        "marine",
+        "turtles",
+        "access"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000612"
+    },
+    {
+      "id": "SABAH_TOURISM_KUDAT",
+      "publisher": "Sabah Tourism Board",
+      "url": "https://sabahtourism.com/district/kudat/",
+      "kind": "government",
+      "used_for": [
+        "ethnography",
+        "transport",
+        "settlement"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000613"
+    },
+    {
+      "id": "SABAH_TOURISM_SANDAKAN",
+      "publisher": "Sabah Tourism Board",
+      "url": "https://sabahtourism.com/district/sandakan/",
+      "kind": "government",
+      "used_for": [
+        "transport",
+        "wildlife_gateway",
+        "settlement"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000614"
+    },
+    {
+      "id": "DANUM_VALLEY",
+      "publisher": "Danum Valley Conservation Area",
+      "url": "https://www.danumvalley.info/conservation/",
+      "kind": "park_authority",
+      "used_for": [
+        "forest",
+        "biodiversity",
+        "conservation"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000615"
+    },
+    {
+      "id": "MET_MARINE_EASTERN_SABAH",
+      "publisher": "Malaysian Meteorological Department (METMalaysia)",
+      "url": "https://www.met.gov.my/en/forecast/marine/waters/Co504/",
+      "kind": "government",
+      "used_for": [
+        "marine_weather",
+        "wave_height",
+        "wind"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000616"
+    },
+    {
+      "id": "MOH_ANNUAL_2022",
+      "publisher": "Ministry of Health Malaysia",
+      "url": "https://www.moh.gov.my/images/04-penerbitan/laporan-tahunan/4a._MOH_Annual_Report_2022_FINAL_hyperlink__compressed.pdf",
+      "kind": "government",
+      "used_for": [
+        "malaria",
+        "dengue",
+        "health"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000617"
+    },
+    {
+      "id": "SARAWAK_FORESTRY_MULU",
+      "publisher": "Sarawak Forestry Corporation",
+      "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/66",
+      "kind": "park_authority",
+      "used_for": [
+        "geology",
+        "caves",
+        "forest",
+        "flora",
+        "fauna",
+        "access"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000618"
+    },
+    {
+      "id": "SARAWAK_FORESTRY_NIAH",
+      "publisher": "Sarawak Forestry Corporation",
+      "url": "https://sfc.sarawak.gov.my/web/subpage/webpage_view/62",
+      "kind": "park_authority",
+      "used_for": [
+        "archaeology",
+        "forest",
+        "fauna",
+        "transport",
+        "culture"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000619"
+    },
+    {
+      "id": "SARAWAK_TOURISM_BARIO",
+      "publisher": "Sarawak Tourism Board",
+      "url": "https://www.sarawaktourism.com/web/stories/story-view/bario-highland-baram-miri",
+      "kind": "government",
+      "used_for": [
+        "ethnography",
+        "relief",
+        "transport",
+        "climate"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000620"
+    },
+    {
+      "id": "UNESCO_SARAWAK_DELTA",
+      "publisher": "UNESCO",
+      "url": "https://www.unesco.org/en/iggp/sarawak-delta-unesco-global-geopark",
+      "kind": "international_organization",
+      "used_for": [
+        "geology",
+        "geography",
+        "biodiversity",
+        "culture"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000621"
+    },
+    {
+      "id": "SARAWAK_FORESTRY_TICKETS",
+      "publisher": "Sarawak Forestry Corporation / Service Sarawak",
+      "url": "https://services.sarawak.gov.my/web/web/home/sla_view/211/690/",
+      "kind": "government",
+      "used_for": [
+        "park_access",
+        "tickets"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000622"
+    },
+    {
+      "id": "SABAH_TOURISM_BOARD",
+      "publisher": "Sabah Tourism Board",
+      "url": "https://sabahtourism.com/essential/travel-tips/",
+      "kind": "government",
+      "used_for": [
+        "climate",
+        "temperature",
+        "transport"
+      ],
+      "accessed": "2026-09-29",
+      "canonical_id": "src_000623"
     }
   ],
   "uncertainties": [

@@ -705,6 +705,8 @@ def build():
                 profile_prov = profile.get("provenance") or {}
                 if profile_prov:
                     entity["provenance"]["locality_profile"] = profile_prov
+                    if profile_prov.get("source_refs"):
+                        entity["provenance"]["source_refs"] = list(profile_prov.get("source_refs") or [])
                     if profile_prov.get("checked_at"):
                         entity["freshness"] = {"checked_at": profile_prov.get("checked_at")}
                 entity["migration"]["local_reference_status"] = "migrated_existing_locality_profile"

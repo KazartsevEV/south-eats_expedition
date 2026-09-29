@@ -951,6 +951,7 @@ def build():
         law_refs = refs_from_ids(travel.get("laws_source_ids")) or refs_for("heritage_law", "environmental_rules")
         currency_refs = refs_from_ids((travel.get("currency") or {}).get("source_ids")) or refs_for("currency", "exchange_rate")
         safety_refs = refs_from_ids((source.get("safety") or {}).get("source_ids")) or refs_for("safety")
+        permit_refs = refs_from_ids((travel.get("tourist_permits") or {}).get("source_ids")) or refs_for("permit", "permits")
         dump(release / "countries" / code.lower() / "travel-rules.json", {
             "country_id": f"geo_{code.lower()}",
             "visa": wrap_dynamic(travel.get("visa_for_russian_passport"), checked_at, visa_refs),
@@ -962,7 +963,7 @@ def build():
             "camping": wrap_dynamic(travel.get("camping_rules"), checked_at, camping_refs),
             "drones": wrap_dynamic(travel.get("drone_rules"), checked_at, drone_refs, "No sufficiently authoritative country-wide drone rule was normalized in this pass; object/site-specific restrictions remain authoritative." if not drone_refs else None),
             "laws_and_prohibitions": wrap_dynamic(travel.get("laws_and_prohibitions"), checked_at, law_refs),
-            "permits": wrap_dynamic(travel.get("tourist_permits"), checked_at, refs_for("permit", "permits")),
+            "permits": wrap_dynamic(travel.get("tourist_permits"), checked_at, permit_refs),
             "currency": wrap_dynamic(travel.get("currency"), checked_at, currency_refs),
             "safety_snapshot": wrap_dynamic(source.get("safety"), checked_at, safety_refs),
         })

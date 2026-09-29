@@ -1012,6 +1012,7 @@ def build():
                 "kind": entity.get("kind"),
                 "name": (entity.get("names") or {}).get("primary"),
                 "parent_id": entity.get("parent_id"),
+                "status": ((entity.get("migration") or {}).get("status") or "active"),
                 "path": f"geo/entities/{geo_id}.json",
             }
             for geo_id, entity in sorted(geo_entities.items())

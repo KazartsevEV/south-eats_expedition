@@ -239,6 +239,15 @@ TYPE_BY_NAME.update({
     "Tioman Island / Tioman Marine Park": "island",
 })
 
+TYPE_BY_NAME.update({
+    "Sungai Batu Archaeological Site / Bujang Valley": "archaeological_site",
+    "Gua Tambun rock art": "archaeological_site",
+    "Crocker Range Park / Salt Trail": "national_park",
+    "Tun Sakaran Marine Park / Bohey Dulang": "protected_area",
+    "Semenggoh Wildlife Centre": "wildlife_site",
+    "Redang Island / Redang Marine Park": "island",
+})
+
 TAG_ALIASES = {
     "unesco": "unesco",
     "living heritage": "living_heritage",

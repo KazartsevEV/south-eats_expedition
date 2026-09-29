@@ -1126,16 +1126,47 @@ def build():
     }
     dump(release / "views" / "home.json", home)
 
+    class_meta = {
+        row["id"]: {
+            "label_ru": row.get("label_ru") or row["id"],
+            "legacy_type": row.get("legacy_type"),
+        }
+        for row in class_rows
+    }
+
     for country_row in country_manifest_rows:
         code = country_row["code"]
         upper = code.upper()
+        country_objects = sorted(
+            object_rows_by_country[upper],
+            key=lambda row: ((class_meta.get(row.get("class_id")) or {}).get("label_ru") or "", (row.get("title") or "").casefold()),
+        )
+        country_class_groups = defaultdict(list)
+        for row in country_objects:
+            country_class_groups[row["class_id"]].append(row)
+        class_sections = []
+        for class_id, rows in sorted(
+            country_class_groups.items(),
+            key=lambda item: ((class_meta.get(item[0]) or {}).get("label_ru") or item[0]).casefold(),
+        ):
+            meta = class_meta.get(class_id) or {}
+            class_sections.append({
+                "class_id": class_id,
+                "label_ru": meta.get("label_ru") or class_id,
+                "legacy_type": meta.get("legacy_type"),
+                "count": len(rows),
+                "object_ids": [row["id"] for row in rows],
+                "objects": rows,
+            })
         dump(release / "views" / "countries" / f"{code}.json", {
             "country_id": country_row["id"],
             "profile": country_row["profile"],
             "climate": country_row["climate"],
             "travel_rules": country_row["travel_rules"],
             "indexes": country_row["indexes"],
-            "objects": object_rows_by_country[upper],
+            "layout_rule": "country -> class_sections -> objects; tag_ids are secondary filters only",
+            "class_sections": class_sections,
+            "objects": country_objects,
         })
 
     for row in canonical_search:

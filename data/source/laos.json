@@ -5,7 +5,7 @@
     "language": "ru",
     "last_updated": "2026-09-29",
     "purpose": "Expedition South East",
-    "data_model_version": "1.6",
+    "data_model_version": "1.6.8-draft",
     "dynamic_fields": [
       "visa",
       "border_operation",
@@ -31,7 +31,8 @@
       "v1.6.5 draft: добавлен obj_la_0023 Tad Yuang; сохранены 800 м грунтового last-mile, 12 км/15 мин от Паксонга, динамические тарифы 2025 и честный elevation=null до надёжного абсолютного источника.",
       "v1.6.4 draft: добавлен obj_la_0023 Phou Khao Khouay National Park. Primary GPS — научно опубликованный Tad Leuk visitor sector, Tad Xai вынесен отдельной geo_point; официальные campsite и текущий road access отделены от исторических расписаний и старых тарифов.",
       "v1.6.6 draft: добавлен obj_la_0024 Khone Phapheng Falls; OSM GPS и отдельный site elevation 79 м по EXIF без смешения с перепадом 21 м.",
-      "v1.6.7 draft: добавлен obj_la_0025 Tad Somphamit/Li Phi; официальная легенда отделена от истории, доступ с Дон-Дета структурирован как велосипед+пешком, исторический тариф 2017 не используется как текущий."
+      "v1.6.7 draft: добавлен obj_la_0025 Tad Somphamit/Li Phi; официальная легенда отделена от истории, доступ с Дон-Дета структурирован как велосипед+пешком, исторический тариф 2017 не используется как текущий.",
+      "v1.6.8 draft: закрыт приоритетный expansion chunk Лаоса: восстановлен отсутствовавший Xe Pian и добавлены Tham Pa Fa, Tham Nang Aen, Dong Hua Sao и Nong Fa/Dong Ampham. Для протяжённых/удалённых объектов координаты маркированы по типу; неподтверждённые высоты, кемпинг, расписания и тарифы оставлены null/unclear."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -84,18 +85,13 @@
       "note_ru": "Ветка предназначена для исследования, нормализации и CI-проверки Лаоса. Не переводить в latest/current до отдельного решения после Камбоджи."
     },
     "country_expansion_qa": {
-      "status": "open",
-      "current_canonical_objects": 26,
-      "note_ru": "В драфте сейчас 24 канонических карточек Лаоса. Прохождение структурного QA каждой существующей карточки не означает полноту страны: country QA остаётся открытым до завершения исследования приоритетных классов и кандидатов.",
-      "priority_candidates": [
-        "Tham Pa Fa",
-        "Tham Nang Aen",
-        "Xe Pian National Protected Area",
-        "Dong Hua Sao National Protected Area",
-        "Nong Fa / Dong Ampham landscape",
+      "status": "draft_31_objects_pending_ci",
+      "current_canonical_objects": 31,
+      "note_ru": "Приоритетный expansion chunk закрыт без удаления существующих карточек. Ho Chi Minh Trail остаётся набором кандидатов/route heritage cluster до получения объектного реестра с пригодными GPS; не создаётся одна ложная точка для распределённого наследия.",
+      "deferred_candidates": [
         "Ho Chi Minh Trail heritage sites in southern Laos"
       ],
-      "rule": "Кандидат становится объектом только после источников, GPS подходящего coordinate_type, высоты или честного null, логистики, воды/ночёвки, narrative и visual_recon."
+      "rule": "Новый объект допускается только при источниках, GPS подходящего coordinate_type либо честном null, логистике, воде/ночёвке, narrative и visual_recon."
     }
   },
   "overview": {
@@ -11993,6 +11989,1530 @@
             "status": "reviewed",
             "checked_at": "2026-09-29",
             "notes": "Легенда отделена от documented history; старый тариф 2017 не выдаётся за текущий."
+          }
+        }
+      },
+      {
+        "name": "Xe Pian National Park",
+        "class": "nature",
+        "interest": [
+          "nature",
+          "national_park",
+          "wetland",
+          "wildlife",
+          "trekking",
+          "ethnography"
+        ],
+        "why_go": "Большой южнолаосский парк, где лес, сезонные болота, деревенские маршруты и Пху-Аса образуют самостоятельный экспедиционный кластер, а не одну обзорную остановку.",
+        "traveler_card": {
+          "location": {
+            "region": "Чампасак / Аттапы / Се-Пиан",
+            "nearest_hub": "Pakse",
+            "languages_spoken": [
+              "лаосский",
+              "английский — ограниченно в туристической инфраструктуре"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 14.77242,
+              "lon": 106.03811,
+              "elevation_m": 171
+            },
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Kiet Ngong Village Office",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/N3811210812",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "geo_points": [
+              {
+                "type": "viewpoint",
+                "name": "Phou Asa",
+                "coordinates": {
+                  "lat": 14.7653,
+                  "lon": 106.0277,
+                  "elevation_m": null
+                },
+                "accuracy": "medium",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Phou Asa ruins",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/N653304326",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              }
+            ],
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 150,
+              "max_m": 300,
+              "reference_type": "dominant terrain of protected area",
+              "accuracy": "approximate",
+              "source": {
+                "type": "official",
+                "title": "Xe Pian NBCA",
+                "publisher": "Ecotourism Laos",
+                "url": "https://www.ecotourismlaos.com/xepian",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Диапазон относится к преобладающим равнинным и холмистым участкам; не трактовать как полный min/max всего парка."
+            }
+          },
+          "logistics": {
+            "access": "Западный самостоятельный вход удобно строить через Паксе и Кьет-Нгонг. Официальный профиль указывает главный доступ по Route 13: южнее Паксе у км 48 Route 6 идёт вдоль северной границы парка и разветвляется к деревням. Кьет-Нгонг — подтверждённый деревенский узел доступа к заболоченным ландшафтам и Пху-Аса.",
+            "public_transport": "Стабильного официального расписания непосредственно до Кьет-Нгонга на 2026 год не найдено. До района Route 13/Route 6 возможен местный транспорт, последний участок и обратный выезд подтверждать в Паксе.",
+            "last_mile": "Из Кьет-Нгонга начинаются локальные пешие маршруты к Пху-Аса и более глубокие маршруты в парк. Исторические официальные программы используют деревенских проводников; это не означает обязательность пакетного тура для подъезда к деревне.",
+            "permit_or_guide": "Для деревенских треков внутрь охраняемой территории использовать местную систему доступа и проводника. Самостоятельный подъезд к Кьет-Нгонгу возможен; режим конкретной тропы внутри парка подтверждать перед выходом.",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно до Кьет-Нгонга; внутри парка — по разрешённому маршруту, при необходимости с деревенским проводником",
+            "modes": {
+              "public_transport": "Через Паксе и коридор Route 13/Route 6; расписание до Кьет-Нгонга не подтверждено.",
+              "taxi_ridehail": "Частный автомобиль из Паксе практичен; обратный app-based вызов из деревни не считать гарантированным.",
+              "moped": "Дорожный подъезд к Кьет-Нгонгу возможен; сезонное состояние ответвлений внутри парка проверять отдельно.",
+              "walking": "Пху-Аса доступен пешком из Кьет-Нгонга; более глубокие треки оформлять отдельными route после GPS-проверки.",
+              "boat": "В восточной части Се-Пиана официально описаны речные подходы по Секонгу и Се-Пиану; это отдельная логистика от западного Кьет-Нгонга."
+            },
+            "water": "Надёжный публичный питьевой источник внутри лесного маршрута не подтверждён. Запас питьевой воды формировать в Кьет-Нгонге; природную воду считать treatment_required/unknown до конкретной проверки.",
+            "water_structured": {
+              "summary": "Питьевая вода — из деревенской инфраструктуры; качество природных источников не подтверждено.",
+              "quality": "unknown",
+              "last_reliable_source": "Кьет-Нгонг",
+              "distance_m": null,
+              "natural_sources": [],
+              "source_refs": []
+            },
+            "overnight_and_camping": "Официальные материалы по экотуризму описывают проживание в Кьет-Нгонге и 1–2-дневные программы с лагерем. Свободный лагерь вне согласованного маршрута не считать разрешённым.",
+            "overnight_structured": {
+              "status": "permission_required",
+              "summary": "Ночёвка в деревне и организованный кемпинг подтверждены; произвольный лагерь в национальном парке не подтверждён.",
+              "source_refs": []
+            },
+            "supplies": "Базовые припасы и вода — в Кьет-Нгонге/на подъезде; ассортимент не фиксируется без актуальной проверки."
+          },
+          "climate": {
+            "best_period": "сухой сезон для наземных маршрутов; конкретные речные участки зависят от уровня воды",
+            "heat_rain_notes": "Сезонные болота и грунтовые ответвления меняют проходимость после сильных дождей.",
+            "site_specific_notes": "Восточная речная и западная болотная логистика — разные маршруты."
+          },
+          "operations": {
+            "hours": null,
+            "ticket": null,
+            "closure_notes": "Текущие тарифы, режим конкретных троп и разрешения перепроверять в Паксе/Кьет-Нгонге.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.ecotourismlaos.com/xepian"
+          },
+          "safety": {
+            "main_risks": [
+              "сезонное подтопление низин",
+              "удалённые лесные участки",
+              "неопределённость режима отдельных троп"
+            ],
+            "sensitive_areas": "Охраняемая территория; не сходить на неразрешённые лесные маршруты без локального подтверждения."
+          },
+          "media": {
+            "photo_suitability_5": null,
+            "video_suitability_5": null,
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "Национальные авиационные правила Лаоса и локальные правила охраняемой территории применяются одновременно; разрешение на запуск у конкретного объекта в доступных источниках не подтверждено."
+              ],
+              "checked_at": "2026-09-29",
+              "source_refs": []
+            },
+            "filming_restrictions": null,
+            "visual_scouting": {
+              "best_time": "early_morning / late_afternoon",
+              "best_weather_light": "В сухой сезон легче получить открытые дальние виды с Пху-Аса; в сезон дождей болота и лес визуально насыщеннее, но доступ менее предсказуем.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "phou_asa",
+                  "name": "Пху-Аса",
+                  "description": "Скальный выступ над Кьет-Нгонгом с обзором заболоченной равнины и лесов Се-Пиана.",
+                  "coordinates": {
+                    "lat": 14.7653,
+                    "lon": 106.0277,
+                    "elevation_m": null
+                  },
+                  "best_time": "early_morning",
+                  "view": {
+                    "description": "болота Кьет-Нгонг, лесная равнина, окрестные гряды"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "панорама заболоченной равнины"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "дальние участки леса и птицы без схода с маршрута"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Phou Asa ruins",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N653304326",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Сезонный уровень воды заметно меняет рисунок болот и открытых водных зеркал."
+              ],
+              "video_activity": [
+                "движение воды и лодок в болотной зоне",
+                "деревенская жизнь Кьет-Нгонга",
+                "смена света над равниной с Пху-Аса"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "болота и лесной горизонт"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "наблюдение птиц и удалённых деталей"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Се-Пиан — крупная охраняемая территория юга Лаоса площадью около 2 400 км² в Чампасаке и Аттапы. Её ландшафт — это низкие холмистые леса, сезонные водно-болотные угодья и бассейны Се-Пиана, Се-Кхамфо и Секонга. Для самостоятельной экспедиции важно разделять западный кластер Кьет-Нгонг/Пху-Аса и восточные речные подходы: это разные маршруты, а не один «вход в парк».",
+            "culture_ethnography": "Кьет-Нгонг — не декоративная туристическая деревня, а реальный узел community-based доступа. Исторические официальные материалы связывают местные семьи с проводниками, ночёвками и маршрутами; актуальный набор услуг нужно проверять в самой деревне.",
+            "geography_geology": "Преобладают низкие равнинные и холмистые участки, сезонные болота и речные системы, стекающие к Камбодже. В западной части Пху-Аса поднимается над заболоченной равниной и даёт естественную точку обзора.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Се-Пиан — около 2 400 км² лесов и сезонных водно-болотных угодий на юге Лаоса, с раздельной западной и восточной логистикой."
+              },
+              {
+                "section_id": "geography",
+                "content": "Парк охватывает части Чампасак и Аттапы; крупные водотоки — Се-Пиан, Се-Кхамфо и Секонг. Равнины и сезонные болота определяют доступ и наблюдение за птицами."
+              },
+              {
+                "section_id": "culture",
+                "content": "Западный доступ исторически развивается через Кьет-Нгонг: деревенские услуги связывают треки, ночёвку и локальное сопровождение с конкретной общиной."
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Этнографические сведения не переносить с одной деревни на весь парк; Кьет-Нгонг описывать как отдельную общину и проверять текущие практики на месте."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Официальные материалы по маршрутам и кемпингу в основном исторические; текущие тарифы, проводники и доступность программ требуют проверки перед выходом.",
+              "Западный Кьет-Нгонг и восточные речные маршруты нельзя смешивать в одну логистическую схему."
+            ]
+          },
+          "accommodation": [
+            {
+              "name": "Kingfisher Ecolodge",
+              "area": "Кьет-Нгонг",
+              "price_for_two": null,
+              "contact": null,
+              "social_or_web": "https://kingfisherecolodge.com",
+              "coordinates": {
+                "lat": 14.77283,
+                "lon": 106.0436,
+                "elevation_m": null
+              },
+              "source": "OpenStreetMap/Mapcarta + официальный сайт",
+              "checked_at": "2026-09-29"
+            }
+          ]
+        },
+        "illustration": {},
+        "sources": [
+          {
+            "type": "official",
+            "title": "Attapeu Province",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "eastern access geography",
+              "rivers and waterfalls"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "park_authority",
+            "title": "Xe Pian NBCA",
+            "publisher": "Ecotourism Laos",
+            "url": "https://www.ecotourismlaos.com/xepian",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "area",
+              "habitat",
+              "access"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Camping",
+            "publisher": "Ecotourism Laos",
+            "url": "https://www.ecotourismlaos.com/activities/act_camping",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "organized camping from Kiet Ngong"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Kiet Ngong Village Office",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N3811210812",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "primary access coordinates"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Phou Asa ruins",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N653304326",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "viewpoint coordinates"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "access",
+            "camping",
+            "local guide availability"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Национальный парк юга Лаоса с лесами, сезонными болотами и разнесёнными маршрутами; западный самостоятельный узел доступа — Кьет-Нгонг и Пху-Аса.",
+        "tags": [
+          "activity.trekking",
+          "stay.camping",
+          "theme.ethnography",
+          "environment.jungle",
+          "environment.wetland",
+          "visual.sunrise"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "Русский слой и факты проверены; динамические услуги оставлены датированными."
+          }
+        }
+      },
+      {
+        "name": "Tham Pa Fa",
+        "class": "nature/culture",
+        "interest": [
+          "cave",
+          "religion",
+          "history",
+          "karst",
+          "archaeology"
+        ],
+        "why_go": "Редкое сочетание живого сакрального объекта и карстовой пещеры: 229 изображений Будды были обнаружены здесь только в 2004 году.",
+        "traveler_card": {
+          "location": {
+            "region": "Кхаммуан / Тхакхэк",
+            "nearest_hub": "Thakhek",
+            "languages_spoken": [
+              "лаосский",
+              "английский — ограниченно в туристической инфраструктуре"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 17.47659,
+              "lon": 104.85173,
+              "elevation_m": null
+            },
+            "coordinate_type": "cave_entrance",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Tham Pa Fa route point",
+              "publisher": "RideAsia traveler GPS",
+              "url": "https://www.rideasia.net/motorcycle-forum/threads/khammouane-things-to-see-and-do.8195/",
+              "authority": "low",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "geo_points": [],
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "cave entrance",
+              "accuracy": "unknown",
+              "source": null,
+              "checked_at": "2026-09-29",
+              "notes": "Надёжную абсолютную высоту входа не удалось подтвердить; оставлено null."
+            }
+          },
+          "logistics": {
+            "access": "Пещера находится возле Na Khang Xang в районе Тхакхэк. Официальный Tourism Laos описывает её как конечную точку локального трека; современный бетонный доступ к верхней сакральной пещере существует, но актуальный режим входа подтверждать на месте.",
+            "public_transport": "Прямого официального регулярного расписания до пещеры не найдено. Базовый хаб — Тхакхэк; дальше местный транспорт/мопед до деревни и пеший подход.",
+            "last_mile": "К входу ведёт локальный подход из района Na Khang Xang; внутри сакральной верхней пещеры действуют местные правила.",
+            "permit_or_guide": "Официальный туристический материал предлагает маршрут с местными ecoguide. Сам факт подъезда к району не означает обязательности коммерческого тура; текущий режим самой пещеры нужно подтвердить у деревни/туристического офиса.",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно до деревни; локальное сопровождение — если его требует текущий режим сакральной пещеры",
+            "modes": {
+              "public_transport": "Тхакхэк как пересадочный хаб; прямое расписание не найдено.",
+              "taxi_ridehail": "Тук-тук/частный транспорт из Тхакхэка возможен; цену не фиксировать без актуальной проверки.",
+              "moped": "Подъезд по коридору Route 12 и местным дорогам; точное состояние последнего участка зависит от сезона.",
+              "walking": "Финальный подход и лестница к входу; длину не фиксировать без GPS-трека."
+            },
+            "water": "Подтверждённого питьевого источника у входа в надёжных источниках нет; природную воду нижней пещеры не считать питьевой.",
+            "water_structured": {
+              "summary": "Питьевую воду брать из Тхакхэка/деревни; вода пещеры не классифицирована.",
+              "quality": "unknown",
+              "last_reliable_source": "Na Khang Xang / Тхакхэк",
+              "distance_m": null,
+              "natural_sources": [],
+              "source_refs": []
+            },
+            "overnight_and_camping": "Подтверждённого законного кемпинга непосредственно у Tham Pa Fa не найдено. Базироваться в Тхакхэке; ночёвка у пещеры — unclear до локального разрешения.",
+            "overnight_structured": {
+              "status": "unclear",
+              "summary": "Кемпинг у объекта не подтверждён; городской базовый вариант — Тхакхэк.",
+              "source_refs": []
+            },
+            "supplies": "Основные припасы — в Тхакхэке; наличие постоянной торговли у входа не фиксируется как гарантированное."
+          },
+          "climate": {
+            "best_period": null,
+            "heat_rain_notes": null,
+            "site_specific_notes": null
+          },
+          "operations": {
+            "hours": null,
+            "ticket": null,
+            "closure_notes": "Тарифы и режим, опубликованные старыми источниками, не переносятся как актуальные на 2026 год. Для сакральной пещеры проверить правила одежды и съёмки на входе.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.tourismlaos.org/caves/"
+          },
+          "safety": {
+            "main_risks": [
+              "скользкий известняк и лестницы после дождя",
+              "темнота/влажность нижней пещеры",
+              "сакральный режим верхней пещеры"
+            ],
+            "sensitive_areas": "Не сходить с используемого маршрута в карсте без локальной проверки UXO и разрешения."
+          },
+          "media": {
+            "photo_suitability_5": null,
+            "video_suitability_5": null,
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "Национальные авиационные правила Лаоса и локальные правила охраняемой территории применяются одновременно; разрешение на запуск у конкретного объекта в доступных источниках не подтверждено."
+              ],
+              "checked_at": "2026-09-29",
+              "source_refs": []
+            },
+            "filming_restrictions": "Независимый современный путеводитель сообщает о запрете фотосъёмки внутри сакральной пещеры; считать это динамическим правилом и проверять на входе.",
+            "visual_scouting": {
+              "best_time": "morning",
+              "best_weather_light": "Внешние известняковые стены и долина лучше читаются при боковом свете; внутри свет определяется текущим режимом и естественными проёмами.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "cave_entrance",
+                  "name": "Вход Tham Pa Fa",
+                  "description": "Сакральный вход в известняковой стене над долиной.",
+                  "coordinates": {
+                    "lat": 17.47659,
+                    "lon": 104.85173,
+                    "elevation_m": null
+                  },
+                  "best_time": "morning",
+                  "view": {
+                    "description": "известняковая стена, вход и долина"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "близкая дистанция до стены и входа"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Tham Pa Fa route point",
+                    "publisher": "RideAsia traveler GPS",
+                    "url": "https://www.rideasia.net/motorcycle-forum/threads/khammouane-things-to-see-and-do.8195/",
+                    "authority": "low",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "После дождей растительность ярче, но подход и известняк скользкие."
+              ],
+              "video_activity": [
+                "движение паломников и посетителей у входа — только с уважением к локальным правилам"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "тесная геометрия входа и карстовой стены"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Tham Pa Fa, «Пещера Будд», стала известна после открытия в 2004 году 229 изображений Будды в ранее не описанной верхней пещере. Это одновременно археолого-религиозный объект и часть карстового ландшафта Кхаммуана; история находки документирована, но возраст и происхождение отдельных статуй не следует сводить к одной неподтверждённой легенде.",
+            "culture_ethnography": "Пещера действует как сакральное место, а не только природная достопримечательность. Правила поведения и съёмки определяются локальной религиозной практикой и могут меняться.",
+            "geography_geology": "Объект лежит в известняковом карсте Кхаммуана. Верхняя сухая сакральная полость и нижняя водная часть связаны с локальной карстовой гидрологией.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Сакральная карстовая пещера возле Тхакхэка, известная находкой 229 изображений Будды в 2004 году."
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "В апреле 2004 года местный житель, обследуя отверстие в скале, обнаружил группу из 229 изображений Будды; открытие быстро сделало пещеру одним из известных объектов Кхаммуана."
+                  }
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "Статуи, рукописи и культовое использование делают верхнюю пещеру религиозным объектом; текущие правила одежды, входа и съёмки проверять локально."
+              },
+              {
+                "section_id": "geology",
+                "content": "Пещера расположена в известняковом карсте; нижний уровень связан с водой, верхний — сухой сакральный зал."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Данные о тарифах и обязательности конкретного формата сопровождения в открытых источниках устаревают; не переносить старые цены 2008–2025 как текущие.",
+              "Для внутренней фотосъёмки встречается сообщение о запрете; правило нужно подтвердить на входе."
+            ]
+          },
+          "accommodation": []
+        },
+        "illustration": {},
+        "sources": [
+          {
+            "type": "official",
+            "title": "Caves: Tham Pa Fa",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/caves/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "location near Na Khang Xang",
+              "2004 discovery",
+              "229 Buddha images"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Buddha Cave (Tham Pa Fa)",
+            "publisher": "Ecotourism Laos",
+            "url": "https://www.ecotourismlaos.com/activities/buddhacave",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "community trek and access model"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "traveler_blog",
+            "title": "Khammouane - Things to See and Do",
+            "publisher": "RideAsia",
+            "url": "https://www.rideasia.net/motorcycle-forum/threads/khammouane-things-to-see-and-do.8195/",
+            "language": "en",
+            "authority": "low",
+            "used_for": [
+              "GPS approach point"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "Tham Pa Fa",
+            "publisher": "Lonely Planet",
+            "url": "https://www.lonelyplanet.com/points-of-interest/tham-pa-fa/1114828",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "filming restriction report",
+              "distance context"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "fee",
+            "photography rule",
+            "guide requirement"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Сакральная карстовая пещера у Тхакхэка, где в 2004 году обнаружили 229 изображений Будды; текущий режим входа и съёмки требует локальной проверки.",
+        "tags": [
+          "theme.archaeology",
+          "theme.mythology",
+          "environment.karst",
+          "activity.trekking"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "История отделена от непроверенных датировок; динамические правила не зафиксированы как вечные."
+          }
+        }
+      },
+      {
+        "name": "Tham Nang Aen",
+        "class": "nature",
+        "interest": [
+          "cave",
+          "karst",
+          "geology",
+          "legend",
+          "boat"
+        ],
+        "why_go": "Одна из крупнейших доступных речных пещер в районе Тхакхэка: гигантская входная камера, карстовый водный маршрут и хорошо документированная местная легенда.",
+        "traveler_card": {
+          "location": {
+            "region": "Кхаммуан / Тхакхэк",
+            "nearest_hub": "Thakhek",
+            "languages_spoken": [
+              "лаосский",
+              "английский — ограниченно в туристической инфраструктуре"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 17.444045,
+              "lon": 104.948519,
+              "elevation_m": 336
+            },
+            "coordinate_type": "cave_entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Tham Nang Ene",
+              "publisher": "ShowCaves",
+              "url": "https://www.showcaves.com/english/la/showcaves/NangEne.html",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "geo_points": [],
+            "object_elevation": {
+              "representative_m": 336,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "cave entrance/site",
+              "accuracy": "medium",
+              "source": {
+                "type": "other",
+                "title": "Tham Nang Ene",
+                "publisher": "ShowCaves",
+                "url": "https://www.showcaves.com/english/la/showcaves/NangEne.html",
+                "authority": "medium",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Опубликованная абсолютная высота площадки пещеры."
+            }
+          },
+          "logistics": {
+            "access": "Tham Nang Aen находится у Xiangliab на направлении Route 12 из Тхакхэка. От Route 12 есть короткий местный подъезд; объект развит как show cave с лестницами, дорожками и водным участком.",
+            "public_transport": "Прямого актуального официального расписания до входа не найдено. База — Тхакхэк; далее местный транспорт/мопед по Route 12.",
+            "last_mile": "От парковочной зоны — развитый пешеходный вход. Дальняя часть пещеры включает лодочный и пеший сегменты; актуальную доступность дальнего участка проверять на кассе.",
+            "permit_or_guide": "Для развитой входной части отдельный внешний тур не нужен. Лодочный/дальний маршрут проводится в рамках локального режима пещеры.",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно до объекта; локальная лодка/сопровождение только для соответствующего участка",
+            "modes": {
+              "public_transport": "До района Xiangliab по направлению Тхакхэк—Nakai; прямой рейс до входа не подтверждён.",
+              "taxi_ridehail": "Частный транспорт из Тхакхэка возможен; цену не фиксировать.",
+              "moped": "Route 12 + короткий местный подъезд.",
+              "walking": "Развитые лестницы и дорожки в передней части.",
+              "boat": "В дальней части существует подземный водный маршрут; условия и тариф перепроверять."
+            },
+            "water": "Внутри есть подземная вода, но питьевое качество не подтверждено; питьевую воду рассчитывать получить у входной инфраструктуры либо привезти из Тхакхэка.",
+            "water_structured": {
+              "summary": "Подземную воду не считать питьевой; надёжность бутилированной воды на месте перепроверить.",
+              "quality": "unknown",
+              "last_reliable_source": "Тхакхэк / входная инфраструктура",
+              "distance_m": null,
+              "natural_sources": [],
+              "source_refs": []
+            },
+            "overnight_and_camping": "Кемпинг у входа не подтверждён. Ночёвку планировать в Тхакхэке; палатка непосредственно у объекта — unclear без разрешения.",
+            "overnight_structured": {
+              "status": "unclear",
+              "summary": "Официального кемпинга у пещеры в проверенных источниках нет.",
+              "source_refs": []
+            },
+            "supplies": "У развитой входной зоны исторически отмечались кафе/магазины, но их текущий режим не фиксируется без проверки."
+          },
+          "climate": {
+            "best_period": null,
+            "heat_rain_notes": null,
+            "site_specific_notes": null
+          },
+          "operations": {
+            "hours": null,
+            "ticket": null,
+            "closure_notes": "ShowCaves приводит часы/цены как данные 2021 года; в CDN они намеренно не используются как текущие.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.tourismlaos.org/central-provinces/khammouane-province/"
+          },
+          "safety": {
+            "main_risks": [
+              "скользкие ступени и влажные поверхности",
+              "изменение доступности лодочного участка"
+            ],
+            "sensitive_areas": null
+          },
+          "media": {
+            "photo_suitability_5": null,
+            "video_suitability_5": null,
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "Национальные авиационные правила Лаоса и локальные правила охраняемой территории применяются одновременно; разрешение на запуск у конкретного объекта в доступных источниках не подтверждено."
+              ],
+              "checked_at": "2026-09-29",
+              "source_refs": []
+            },
+            "filming_restrictions": null,
+            "visual_scouting": {
+              "best_time": "morning / midday",
+              "best_weather_light": "Наружный портал и известняковый склон читаются при дневном свете; внутренний визуальный эффект в значительной степени задаётся установленным освещением.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "main_entrance",
+                  "name": "Главный вход Tham Nang Aen",
+                  "description": "Крупный портал и входная камера развитой речной пещеры.",
+                  "coordinates": {
+                    "lat": 17.444045,
+                    "lon": 104.948519,
+                    "elevation_m": 336
+                  },
+                  "best_time": "morning",
+                  "view": {
+                    "description": "портал, известняковый склон и входная камера"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "ultra_wide",
+                      "why": "большая камера и близкие стены"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "масштаб дорожек и посетителей"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Tham Nang Ene",
+                    "publisher": "ShowCaves",
+                    "url": "https://www.showcaves.com/english/la/showcaves/NangEne.html",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Влажный сезон усиливает ощущение речной пещеры, но условия лодочного участка следует проверять отдельно."
+              ],
+              "video_activity": [
+                "лодочный участок при его работе",
+                "поток посетителей по лестницам и переходам"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "ultra_wide",
+                  "why": "масштаб входной камеры"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Tham Nang Aen — крупная речная карстовая пещера у Route 12, известная просторной входной камерой, подземным водным участком и развитой посетительской инфраструктурой. Официальное туристическое описание указывает длину более 1,5 км и высоту залов до 30 м; спелеологические публикации связывают современное исследование пещеры с экспедициями начала 1990-х.",
+            "culture_ethnography": "Название пещеры объясняется местной любовной легендой, связанной с соседней Tham Xienglieb: это local tradition, а не документированная история.",
+            "geography_geology": "Это речная карстовая система в известняках Кхаммуана. Передняя часть развита дорожками, а дальний маршрут включает воду и более естественные участки.",
+            "myths_legends_beliefs": [
+              {
+                "type": "legend",
+                "text": "Легенда связывает название с молодым бывшим послушником Сиенгом и дочерью отшельника: у входа они якобы сидели (nang) и флиртовали (aen kan)."
+              }
+            ],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Большая речная карстовая пещера у Route 12 с развитой входной частью и подземным водным маршрутом."
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Современные спелеологические исследования начались в 1992 году; в 1990-х объект был развит как show cave."
+                  }
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "Речная пещера включает огромную входную камеру, водный участок и сухие верхние части; известняковая система относится к карсту Кхаммуана."
+              },
+              {
+                "section_id": "myths_beliefs",
+                "content": [
+                  {
+                    "type": "legend",
+                    "text": "Tourism Laos связывает название Nang Aen с историей двух влюблённых, встретившихся у входа."
+                  }
+                ]
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Опубликованные часы и цены в независимом справочнике датированы 2021 годом и не должны использоваться как текущие.",
+              "Передняя часть сильно благоустроена и освещена; более естественный опыт относится к дальнему водно-пешему сегменту."
+            ]
+          },
+          "accommodation": []
+        },
+        "illustration": {},
+        "sources": [
+          {
+            "type": "official",
+            "title": "Khammouane Province: Tham Nang Aen",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/central-provinces/khammouane-province/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "dimensions",
+              "legend",
+              "visitor context"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "other",
+            "title": "Tham Nang Ene",
+            "publisher": "ShowCaves",
+            "url": "https://www.showcaves.com/english/la/showcaves/NangEne.html",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "coordinates",
+              "elevation",
+              "cave exploration history",
+              "historical operations"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "hours",
+            "fee",
+            "boat availability"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Крупная речная карстовая пещера у Route 12 с огромной входной камерой и лодочно-пешим дальним участком; цены и часы перепроверять.",
+        "tags": [
+          "environment.karst",
+          "activity.boat",
+          "theme.mythology",
+          "visual.low_light"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "Легенда отделена от документированной истории."
+          }
+        }
+      },
+      {
+        "name": "Dong Hua Sao National Park",
+        "class": "nature",
+        "interest": [
+          "national_park",
+          "forest",
+          "waterfall",
+          "Bolaven",
+          "wildlife",
+          "trekking"
+        ],
+        "why_go": "Большой лесной массив на резком уступе Болавенского плато: от низин 100–300 м до пиков почти 1300 м, с водопадами и сильным высотным экологическим градиентом.",
+        "traveler_card": {
+          "location": {
+            "region": "Чампасак / Болавен",
+            "nearest_hub": "Pakse",
+            "languages_spoken": [
+              "лаосский",
+              "английский — ограниченно в туристической инфраструктуре"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 15.18714,
+              "lon": 106.12637,
+              "elevation_m": null
+            },
+            "coordinate_type": "viewpoint",
+            "accuracy": "medium",
+            "elevation_accuracy": "unknown",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Dong hua sao national protected area information point",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/N12606437402",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "geo_points": [
+              {
+                "type": "viewpoint",
+                "name": "Tad Fane visitor sector",
+                "coordinates": {
+                  "lat": 15.18714,
+                  "lon": 106.12637,
+                  "elevation_m": null
+                },
+                "accuracy": "medium",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Dong hua sao national protected area information point",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/N12606437402",
+                  "authority": "medium",
+                  "accessed": "2026-09-29"
+                },
+                "checked_at": "2026-09-29"
+              }
+            ],
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 100,
+              "max_m": 1300,
+              "reference_type": "protected area elevation range",
+              "accuracy": "approximate",
+              "source": {
+                "type": "park_authority",
+                "title": "Dong Hua Sao",
+                "publisher": "Ecotourism Laos",
+                "url": "https://www.ecotourismlaos.com/donghouasao",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Низины в основном 100–300 м; край Болавена около 1000 м, пики почти 1300 м."
+            }
+          },
+          "logistics": {
+            "access": "Dong Hua Sao расположен между Route 13 South и дорогой Pakse–Paksong. Официальный профиль называет обе магистрали круглогодичными точками доступа; для самостоятельного путешествия наиболее прозрачный туристический сектор — край Болавена у Tad Fane, но он не является геометрическим центром парка.",
+            "public_transport": "До Paksong и по оси Pakse–Paksong существует местный транспорт, однако прямое расписание к конкретному входу парка в официальных источниках не опубликовано.",
+            "last_mile": "У Tad Fane есть развитый visitor sector. Более глубокие лесные дороги и деревенские маршруты требуют отдельной проверки; старый официальный профиль упоминает 4WD-доступ к отдельным анклавам.",
+            "permit_or_guide": "Подъезд к Tad Fane не требует пакетного тура. Для лесных маршрутов вне развитого visitor sector режим доступа подтверждать у администрации/деревни.",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно по дорожным visitor-секторам; глубокие маршруты — только после проверки режима",
+            "modes": {
+              "public_transport": "Pakse–Paksong как основной коридор; высадку у конкретного сектора согласовать с водителем.",
+              "taxi_ridehail": "Частный транспорт из Паксе возможен.",
+              "moped": "Асфальтированный коридор Pakse–Paksong даёт доступ к северной границе; ответвления в лес не считать автоматически проезжаемыми.",
+              "walking": "Короткие маршруты visitor-секторов и отдельные деревенские треки; километры глубоких маршрутов не фиксировать без трека."
+            },
+            "water": "На туристическом секторе Tad Fane есть коммерческая инфраструктура, однако отдельный подтверждённый питьевой источник для маршрутов внутрь парка не найден.",
+            "water_structured": {
+              "summary": "На visitor-sector воду можно получить в коммерческой инфраструктуре; природные источники внутри парка требуют обработки.",
+              "quality": "unknown",
+              "last_reliable_source": "Tad Fane / Paksong",
+              "distance_m": null,
+              "natural_sources": [],
+              "source_refs": []
+            },
+            "overnight_and_camping": "Официальный профиль исторически упоминает деревенские overnight tours; свободный кемпинг на территории парка не подтверждён. У Tad Fane есть легальное коммерческое жильё, вынесенное отдельной сущностью.",
+            "overnight_structured": {
+              "status": "permission_required",
+              "summary": "Ночёвка внутри охраняемой территории — только в разрешённой схеме; свободный лагерь не подтверждён.",
+              "source_refs": []
+            },
+            "supplies": "Paksong — последний крупный хаб снабжения для плато; локальная инфраструктура есть у Tad Fane."
+          },
+          "climate": {
+            "best_period": null,
+            "heat_rain_notes": null,
+            "site_specific_notes": null
+          },
+          "operations": {
+            "hours": null,
+            "ticket": null,
+            "closure_notes": "Данные полного профиля включают исторические управленческие сведения; текущий режим конкретных лесных маршрутов перепроверять.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.ecotourismlaos.com/donghouasao"
+          },
+          "safety": {
+            "main_risks": [
+              "крутые лесные склоны у края плато",
+              "сильные осадки",
+              "неопределённость состояния старых лесных дорог"
+            ],
+            "sensitive_areas": "Охраняемая территория; доступ за пределы visitor-сектора проверять отдельно."
+          },
+          "media": {
+            "photo_suitability_5": null,
+            "video_suitability_5": null,
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "Национальные авиационные правила Лаоса и локальные правила охраняемой территории применяются одновременно; разрешение на запуск у конкретного объекта в доступных источниках не подтверждено."
+              ],
+              "checked_at": "2026-09-29",
+              "source_refs": []
+            },
+            "filming_restrictions": null,
+            "visual_scouting": {
+              "best_time": "morning / afternoon",
+              "best_weather_light": "Край Болавена часто облачен; после дождя лес насыщеннее и водопады сильнее, но туман может закрывать дальний рельеф.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "tad_fane_sector",
+                  "name": "Сектор Tad Fane",
+                  "description": "Край Болавенского плато над лесной чашей Dong Hua Sao; вид раскрывает резкий переход от плато к низинам.",
+                  "coordinates": {
+                    "lat": 15.18714,
+                    "lon": 106.12637,
+                    "elevation_m": null
+                  },
+                  "best_time": "morning",
+                  "view": {
+                    "description": "лесная чаша, край плато, водопадный сектор"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "масштаб лесной чаши"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "дальние лесные склоны и водопадные детали"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Dong hua sao national protected area information point",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N12606437402",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Во влажный сезон водопады и лес наиболее насыщены водой; сухой сезон упрощает наземный доступ."
+              ],
+              "video_activity": [
+                "движение облаков вдоль края плато",
+                "потоки воды Tad Fane и соседних ручьёв"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "ландшафтный масштаб края плато"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "удалённые склоны и детали леса"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Dong Hua Sao — национальный парк на западном и юго-западном краю Болавенского плато площадью около 1 100 км². Более половины территории лежит в низинах 100–300 м, затем рельеф резко поднимается к плато около 1 000 м и пикам почти 1 300 м. Именно этот перепад создаёт водопады и важный экологический градиент между низинным и горным лесом.",
+            "culture_ethnography": "Старые материалы управления описывают десятки деревень разных групп — преимущественно Lao Loum в низинах и Lao Theung в районе Paksong/Bachiang. Эти сведения исторические и не должны автоматически переноситься на современный этнический состав каждой деревни.",
+            "geography_geology": "Парк расположен на переходе от низменной Меконгской равнины к вулканическому плато Болавен. Дренаж идёт на запад и юго-запад по нескольким крупным водотокам; резкий уступ плато формирует каскады, включая комплекс Tad Fane.",
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Национальный парк на краю Болавенского плато, соединяющий низинные леса, крутые склоны и водопадные верховья."
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Охраняемый лес Dong Hua Sao был формализован в 1990-х; современный официальный профиль указывает статус, основанный на декрете 164 от 29 октября 2024 года."
+                  }
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Более половины территории лежит на 100–300 м, затем склоны поднимаются к плато около 1 000 м; отдельные вершины достигают почти 1 300 м."
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Исторические управленческие материалы фиксируют Lao Loum и Lao Theung в разных районах вокруг парка; использовать эти данные только как контекст, а не как современную перепись."
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Глубокие лесные дороги и деревенские overnight-маршруты описаны преимущественно историческими официальными материалами; их текущую проходимость и режим нужно проверять.",
+              "Tad Fane — удобный visitor sector, но его координаты нельзя выдавать за центр всего парка."
+            ]
+          },
+          "accommodation": []
+        },
+        "illustration": {},
+        "sources": [
+          {
+            "type": "park_authority",
+            "title": "Dong Hua Sao",
+            "publisher": "Ecotourism Laos",
+            "url": "https://www.ecotourismlaos.com/donghouasao",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "area",
+              "elevation",
+              "access",
+              "history",
+              "ecology"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "official",
+            "title": "Champasak Province",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "Tad Fane and Dong Hua Sao relationship"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Dong hua sao national protected area information point",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N12606437402",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "visitor-sector coordinates"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "trail access",
+            "camping",
+            "local services"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Национальный парк на краю Болавена: низинные леса, крутой подъём к плато и водопадные сектора; Tad Fane — удобная точка доступа, но не центр парка.",
+        "tags": [
+          "environment.jungle",
+          "activity.trekking",
+          "visual.drone",
+          "environment.waterfall"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "Точка Tad Fane маркирована как visitor sector, не геометрический центр."
+          }
+        }
+      },
+      {
+        "name": "Nong Fa / Dong Ampham landscape",
+        "class": "nature",
+        "interest": [
+          "lake",
+          "volcanic_landscape",
+          "protected_area",
+          "remote",
+          "trekking",
+          "mythology"
+        ],
+        "why_go": "Удалённое высокогорное кратерное озеро в массиве Dong Ampham: сильный экспедиционный объект, где важнее проверка дороги и снабжения, чем туристическая инфраструктура.",
+        "traveler_card": {
+          "location": {
+            "region": "Аттапы / Донг-Амфам",
+            "nearest_hub": "Sanxay",
+            "languages_spoken": [
+              "лаосский",
+              "английский — ограниченно в туристической инфраструктуре"
+            ],
+            "currency": {
+              "code": "LAK",
+              "name": "Lao kip",
+              "local_currency_per_1_usd": 22332,
+              "as_of": "2026-09-28",
+              "rate_type": "official_reference_rate",
+              "notes": "Официальный reference rate Банка Лаоса на 28.09.2026: 22 332 LAK/USD. Наличный и банковский курс может отличаться.",
+              "source_ids": [
+                "BOL"
+              ]
+            },
+            "coordinates": {
+              "lat": 15.1075,
+              "lon": 107.424444,
+              "elevation_m": 1154
+            },
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "map",
+              "title": "Nong Fa Lake",
+              "publisher": "Wikidata / GeoNames",
+              "url": "https://www.wikidata.org/wiki/Q7049340",
+              "authority": "medium",
+              "accessed": "2026-09-29"
+            },
+            "coordinates_checked_at": "2026-09-29",
+            "geo_points": [],
+            "object_elevation": {
+              "representative_m": 1154,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "lake surface elevation",
+              "accuracy": "medium",
+              "source": {
+                "type": "map",
+                "title": "Nong Fa Lake",
+                "publisher": "Wikidata / GeoNames",
+                "url": "https://www.wikidata.org/wiki/Q7049340",
+                "authority": "medium",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-09-29",
+              "notes": "Высота относится к озеру; весь Dong Ampham имеет намного больший высотный диапазон."
+            }
+          },
+          "logistics": {
+            "access": "Nong Fa лежит в удалённой северо-восточной части Аттапы внутри Dong Ampham. Tourism Laos прямо отмечает, что прежний подход занимал около трёх дней пешком из Sanxay, а теперь к озеру существует грунтовая дорога. Текущая проходимость этой дороги по сезону в надёжном источнике не детализирована.",
+            "public_transport": "Прямого общественного транспорта к озеру в официальных источниках не найдено. Базовый хаб — Аттапы/Sanxay; последний участок требует собственного транспорта или локальной договорённости.",
+            "last_mile": "Грунтовая дорога ведёт в удалённый горный район; длину и время не фиксировать без актуального трека. Исторический трёхдневный пеший подход показывает масштаб местности, но не используется как текущая дорожная оценка.",
+            "permit_or_guide": "Tourism Laos рекомендует локальных проводников для исследования удалённых участков Dong Ampham. Это рационально из-за удалённости и навигации; юридическую обязательность проводника для конкретной дороги к озеру подтвердить не удалось.",
+            "self_guided_default": true,
+            "travel_model": "самостоятельная экспедиция до Sanxay; локальная разведка состояния дороги и режима доступа перед последним участком",
+            "modes": {
+              "public_transport": "До районного хаба; прямой рейс к озеру не подтверждён.",
+              "taxi_ridehail": "На удалённый последний участок app-based транспорт не считать доступным.",
+              "moped": "Грунтовая дорога существует, но текущая сезонная проходимость для обычного скутера не подтверждена.",
+              "walking": "Исторически путь занимал около трёх дней; современный точный пеший километраж не найден."
+            },
+            "water": "Озеро и водотоки являются природной водой с неизвестным качеством; пить без обработки не считать допустимым. Последний надёжный магазин/источник по маршруту не подтверждён.",
+            "water_structured": {
+              "summary": "Природную воду озера считать treatment_required; последний надёжный пункт снабжения уточнять в Sanxay.",
+              "quality": "treatment_required",
+              "last_reliable_source": "Sanxay (точная торговая точка не зафиксирована)",
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "lake",
+                  "potability": "treatment_required"
+                }
+              ],
+              "source_refs": []
+            },
+            "overnight_and_camping": "Официального кемпинга у Nong Fa в проверенных источниках не найдено. Законность свободной палатки внутри охраняемой территории не подтверждена; статус — unclear/permission_required до местного согласования.",
+            "overnight_structured": {
+              "status": "unclear",
+              "summary": "Надёжного подтверждения официального лагеря или свободного кемпинга нет; согласовать локально.",
+              "source_refs": []
+            },
+            "supplies": "Полный запас еды/топлива/воды планировать до удалённого участка; конкретные POI требуют отдельной полевой проверки."
+          },
+          "climate": {
+            "best_period": "сухой сезон для грунтового доступа",
+            "heat_rain_notes": "Муссон может резко ухудшать грунтовые дороги и видимость в горах.",
+            "site_specific_notes": "Высота озера около 1154 м; температура и облачность заметно отличаются от низин Аттапы."
+          },
+          "operations": {
+            "hours": null,
+            "ticket": null,
+            "closure_notes": "Официальных часов/кассы для самого озера не опубликовано. Режим охраняемой территории и состояние дороги проверять перед выездом.",
+            "last_verified": "2026-09-29",
+            "official_url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/"
+          },
+          "safety": {
+            "main_risks": [
+              "удалённость",
+              "непредсказуемая проходимость грунтовой дороги",
+              "отсутствие подтверждённых точек снабжения",
+              "горная погода"
+            ],
+            "sensitive_areas": "Охраняемая приграничная территория; не отклоняться в сторону границы без проверки режима."
+          },
+          "media": {
+            "photo_suitability_5": null,
+            "video_suitability_5": null,
+            "drone": {
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "Национальные авиационные правила Лаоса и локальные правила охраняемой территории применяются одновременно; разрешение на запуск у конкретного объекта в доступных источниках не подтверждено."
+              ],
+              "checked_at": "2026-09-29",
+              "source_refs": []
+            },
+            "filming_restrictions": null,
+            "visual_scouting": {
+              "best_time": "early_morning / late_afternoon",
+              "best_weather_light": "На высоте около 1154 м облачность может быстро закрыть чашу; раннее утро чаще даёт спокойную поверхность воды и низкий туман.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "lake_center_reference",
+                  "name": "Nong Fa — географическая точка озера",
+                  "description": "Референсная точка водного зеркала кратерного озера; фактическую береговую точку съёмки нужно фиксировать отдельно в поле, а не подменять центром озера.",
+                  "coordinates": {
+                    "lat": 15.1075,
+                    "lon": 107.424444,
+                    "elevation_m": 1154
+                  },
+                  "best_time": "early_morning",
+                  "view": {
+                    "description": "озеро в горной чаше и окружающий лес"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "озеро и горная чаша"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "противоположный берег и слои леса"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Nong Fa Lake",
+                    "publisher": "Wikidata / GeoNames",
+                    "url": "https://www.wikidata.org/wiki/Q7049340",
+                    "authority": "medium",
+                    "accessed": "2026-09-29"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "В сухой сезон выше шанс сухого дорожного доступа; в сезон дождей лес насыщеннее, но облачность и грязь сильнее."
+              ],
+              "video_activity": [
+                "туман над водой",
+                "ветер и отражения на поверхности озера"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "форма озёрной чаши"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "удалённые берега и лесные слои"
+                }
+              ]
+            }
+          },
+          "annotation": {
+            "narrative": "Nong Fa — высокогорное озеро в удалённой северо-восточной части провинции Аттапы, внутри охраняемого массива Dong Ampham. Tourism Laos описывает его как крупнейшее кратерное озеро страны и подчёркивает удалённость района; картографические базы дают высоту около 1154 м. Для экспедиции это не «точка у дороги», а конечная цель отдельного удалённого захода с предварительной проверкой грунтового доступа.",
+            "culture_ethnography": "Tourism Laos прямо отмечает сакральное восприятие озера местными жителями. Этот тезис хранится как local_tradition, без попытки достраивать легенду о происхождении или существах озера без источников.",
+            "geography_geology": "Официальный туристический источник называет Nong Fa кратерным озером и связывает его с Dong Ampham; при этом конкретный механизм и возраст образования в источнике сформулированы упрощённо. В карточке не фиксируется точный возраст вулканизма без отдельной геологической публикации.",
+            "myths_legends_beliefs": [
+              {
+                "type": "local_tradition",
+                "text": "Tourism Laos сообщает, что жители окрестностей считают Nong Fa сакральным озером."
+              }
+            ],
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Высокогорное удалённое озеро внутри Dong Ampham, доступное по грунтовой дороге, состояние которой нужно проверять по сезону."
+              },
+              {
+                "section_id": "geography",
+                "content": "Озеро находится в Sanxay District примерно на 1154 м над уровнем моря, в горном лесном массиве недалеко от границы с Вьетнамом."
+              },
+              {
+                "section_id": "geology",
+                "content": "Tourism Laos классифицирует Nong Fa как кратерное озеро. Точный возраст и механизм формирования не фиксируются без специализированного геологического источника."
+              },
+              {
+                "section_id": "myths_beliefs",
+                "content": [
+                  {
+                    "type": "local_tradition",
+                    "text": "В официальном туристическом описании озеро названо сакральным для местных жителей."
+                  }
+                ]
+              }
+            ]
+          },
+          "traveler_reports": {
+            "recurring_issues": [
+              "Современная грунтовая дорога заменила исторический многодневный пеший подход, но её текущая сезонная проходимость в надёжных открытых источниках не описана.",
+              "Координата в карточке — центр водного объекта, а не проверенный береговой trailhead; это сознательно не подменяется ложной точностью."
+            ]
+          },
+          "accommodation": []
+        },
+        "illustration": {},
+        "sources": [
+          {
+            "type": "official",
+            "title": "Attapeu Province: Nong Fa Lake and Dong Amphanh NPA",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "access history",
+              "protected area",
+              "local tradition",
+              "landscape"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Nong Fa Lake",
+            "publisher": "Wikidata / GeoNames",
+            "url": "https://www.wikidata.org/wiki/Q7049340",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "coordinates",
+              "elevation"
+            ],
+            "accessed": "2026-09-29"
+          },
+          {
+            "type": "map",
+            "title": "Nong Fa Lake",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/15660648",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "coordinate cross-check",
+              "OSM feature"
+            ],
+            "accessed": "2026-09-29"
+          }
+        ],
+        "verification": {
+          "dynamic_fields": [
+            "road condition",
+            "access regime",
+            "camping"
+          ],
+          "verify_before_departure": true
+        },
+        "narrow": "Удалённое высокогорное озеро внутри Dong Ampham; координата хранится как центр озера, а состояние грунтового последнего участка и ночёвку нужно проверять отдельно.",
+        "tags": [
+          "environment.lake",
+          "activity.trekking",
+          "theme.mythology",
+          "stay.camping",
+          "visual.sunrise"
+        ],
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-09-29",
+            "notes": "Не подтверждённые легенды и точный возраст кратера не добавлялись."
           }
         }
       }

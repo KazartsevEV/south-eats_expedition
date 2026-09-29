@@ -10,7 +10,8 @@
       "entry_forms",
       "visa",
       "air_links",
-      "currency"
+      "currency",
+      "drone_rules"
     ],
     "research_notes": [
       "Поля, которые быстро меняются, фиксируются как датированный снимок и не гарантируют будущие условия въезда или транспорта.",
@@ -22,7 +23,8 @@
       "Блок media.field_planning — редакционная разведка для съёмки; официальные правила объекта и авиационные ограничения имеют приоритет.",
       "v1.5: добавлены narrow, нормализованные теги, route_meta и привязка к географическим сущностям для сборки CDN.",
       "v1.6: русскоязычная редактура и экспедиционная оптика; самостоятельное путешествие является режимом по умолчанию, а проводники и операторы указаны только там, где они обязательны или действительно рациональны.",
-      "v1.6.1 draft: 21/21 объектов получили WGS84 primary coordinates, coordinate_type, accuracy и source; для протяжённых парков/островов/реки reference point не выдаётся за вход. Высота заполняется только там, где найден надёжный источник, иначе остаётся null."
+      "v1.6.1 draft: 21/21 объектов получили WGS84 primary coordinates, coordinate_type, accuracy и source; для протяжённых парков/островов/реки reference point не выдаётся за вход. Высота заполняется только там, где найден надёжный источник, иначе остаётся null.",
+      "v1.6.1 draft: визовый блок для паспорта РФ и MDAC перепроверены 2026-09-29 по Embassy of Malaysia Moscow / Immigration Department; общий drone baseline заменён на актуальную CAAM ATF-модель с 14 рабочими днями на стандартную заявку."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -281,16 +283,27 @@
       }
     ],
     "visa_for_russian_passport": {
-      "status": "без визы для краткой туристической/социальной поездки",
+      "status": "без визы для краткой социальной/туристической поездки",
       "stay_days": 30,
-      "entry_form": "Malaysia Digital Arrival Card (MDAC) обычно заполняется в течение 3 дней до въезда; действуют отдельные исключения.",
-      "extension": "Продление Short Term Social Visit Pass обычно возможно только по специальным основаниям.",
+      "entry_form": "Malaysia Digital Arrival Card (MDAC): официальный иммиграционный портал требует заполнение в пределах 3 дней до прибытия; перед поездкой проверять список исключений.",
+      "extension": "Продление Social/Business Pass не является обычной туристической процедурой и допускается только с одобрением руководства Immigration Department.",
       "visa_run": {
-        "possible": "Повторный въезд формально возможен, но решение о допуске и новом сроке принимает сотрудник иммиграционной службы.",
-        "limits": "Официального права на бесконечные последовательные визараны нет; серия коротких повторных въездов может вызвать дополнительные вопросы."
+        "possible": "Новый въезд рассматривается иммиграционной службой как отдельное решение; безвизовый режим не создаёт права на автоматическое последовательное продление пребывания через частые выезды.",
+        "limits": "Не планировать цепочку border runs как гарантированный механизм продления. Решение о допуске и сроке пребывания остаётся за иммиграционной службой.",
+        "source_ids": [
+          "KLN_MOSCOW_VISA",
+          "IMM"
+        ],
+        "checked_at": "2026-09-29"
       },
-      "passport_validity": "обычно требуется не менее 6 месяцев действия паспорта",
-      "official_source": "Malaysian Immigration / Russian MFA"
+      "passport_validity": "Для въезда использовать паспорт с достаточным остаточным сроком; конкретное требование перепроверять перед поездкой по Immigration Department/перевозчику.",
+      "official_source": "Malaysian Immigration / Russian MFA",
+      "source_ids": [
+        "KLN_MOSCOW_VISA",
+        "IMM_MDAC",
+        "IMM"
+      ],
+      "checked_at": "2026-09-29"
     },
     "airports": [
       {
@@ -7298,7 +7311,25 @@
           "Sepilok Orangutan Rehabilitation Centre"
         ]
       }
-    ]
+    ],
+    "drone_rules": {
+      "legal_status": "regulated",
+      "permit_required": true,
+      "summary": "CAAM указывает, что полёты UAS регулируются Civil Aviation Regulations и Civil Aviation Directives; для стандартных низкорисковых полётов используется Authorisation to Fly (ATF).",
+      "standard_atf": {
+        "scope": "VLOS/EVLOS low-risk operations, без spraying/dispensing; ниже 400 ft AGL, если ATC не разрешил иное.",
+        "application_lead_time_working_days": 14
+      },
+      "restrictions": [
+        "ограничения по воздушному пространству и аэродромным зонам",
+        "выше 400 ft AGL — только с соответствующим разрешением",
+        "для surveillance UAS действуют дополнительные дистанции до designated areas, людей, транспорта и сооружений"
+      ],
+      "source_ids": [
+        "CAAM_UAS"
+      ],
+      "checked_at": "2026-09-29"
+    }
   },
   "sources": [
     {
@@ -7374,6 +7405,37 @@
         "fauna_conservation_status"
       ],
       "accessed": "2026-09-27"
+    },
+    {
+      "id": "KLN_MOSCOW_VISA",
+      "publisher": "Embassy of Malaysia in Moscow / Ministry of Foreign Affairs Malaysia",
+      "url": "https://www.kln.gov.my/web/rus_moscow/requirement_foreigner",
+      "kind": "government",
+      "used_for": [
+        "visa_for_russian_passport",
+        "extension"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "IMM_MDAC",
+      "publisher": "Immigration Department of Malaysia",
+      "url": "https://www.imi.gov.my/index.php/pengumuman/url-bagi-portal-malaysia-digital-arrival-card-dan-infografik-2/",
+      "kind": "government",
+      "used_for": [
+        "entry_form"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "CAAM_UAS",
+      "publisher": "Civil Aviation Authority of Malaysia",
+      "url": "https://www.caam.gov.my/public/unmanned-aircraft-system-uas/",
+      "kind": "government",
+      "used_for": [
+        "drone_rules"
+      ],
+      "accessed": "2026-09-29"
     }
   ],
   "uncertainties": [

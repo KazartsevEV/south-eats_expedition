@@ -31,13 +31,16 @@
       "v1.7 draft: legacy media.field_planning/shooting_recommendation/blog_angle и дублирующие best_light/best_formats удалены; визуальная разведка хранится только в visual_scouting без shot list и параметров съёмки.",
       "v1.7 coverage batch завершён: 37 объектов; дальнейшее расширение после импорта — обычным country/class QA циклом.",
       "v1.7: traveler-report и lodging source_url продублированы только в provenance/source registry объекта; факты по-прежнему хранятся в traveler_reports/lodging, это не дублирование содержания.",
-      "v1.7 QA close: Gua Tambun elevation normalized to 72 m asl from ICOMOS thematic study; Bavanggazo elevation intentionally remains null because no reliable site-level absolute elevation was found in official/academic sources. Malaysia elevation QA is considered complete without invented DEM precision."
+      "v1.7 QA close: Gua Tambun elevation normalized to 72 m asl from ICOMOS thematic study; Bavanggazo elevation intentionally remains null because no reliable site-level absolute elevation was found in official/academic sources. Malaysia elevation QA is considered complete without invented DEM precision.",
+      "v1.7 import-prep: добавлен country/region/locality human-readable layer; route hubs отделены от административной географии.",
+      "v1.7 import-prep: исправлена география Tioman — остров относится к штату Pahang; Mersing (Johor) остаётся только логистическим хабом.",
+      "v1.7 import-prep: динамические данные визы/MDAC и USD/MYR актуализированы по официальным источникам на 2026-09-29."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "canonical-v2.10.10",
       "completed_objects": 37,
       "total_objects": 37,
-      "status": "draft_complete_qa",
+      "status": "draft_complete_import_prep",
       "updated": "2026-09-29"
     },
     "editorial_profile": {
@@ -71,6 +74,14 @@
       "status": "complete",
       "updated": "2026-09-29",
       "note_ru": "Gua Tambun закрыт значением 72 м из ICOMOS. Для Bavanggazo site-level elevation не опубликована в проверенных источниках; null принят как корректный завершённый результат QA, а не как незакрытая задача."
+    },
+    "human_readable_layer": {
+      "schema_target": "canonical-v2.10.10",
+      "country_narrow": true,
+      "regions_with_narrow": 22,
+      "localities_with_narrow": 31,
+      "status": "draft_complete",
+      "updated": "2026-09-29"
     }
   },
   "overview": {
@@ -136,7 +147,8 @@
         "DOSM",
         "UNESCO"
       ]
-    }
+    },
+    "narrow": "Малайзия — федерация, разделённая Южно-Китайским морем на полуостровную часть и малайзийский Борнео. Для экспедиционного маршрута это не одна «тропическая страна», а несколько резко различающихся систем: портовые и колониальные города Малаккского пролива, известняковый карст и древние археологические ландшафты полуострова, экваториальные леса Сабаха и Саравака, высокогорья Кинабалу и Келабит, морские парки и рифовые острова. Исторический слой складывается из малайских султанатов, индийско-океанской торговли, китайских и индийских миграций, португальского, голландского и британского присутствия и последующей федерализации. Ислам является религией Федерации, но полевая реальность многоконфессиональна и многоязычна; на Борнео особенно важны коренные сообщества и локальные земельные и ритуальные практики. Логистика в городах и на западном побережье полуострова плотная, тогда как удалённые охраняемые территории Борнео, горные треки и морские парки требуют заранее проверять разрешения, лодки, местный транспорт и правила конкретной администрации. Сезонность определяется не одним сезоном дождей: северо-восточный муссон сильнее влияет на восточное побережье полуострова, запад Саравака и восток Сабаха, тогда как западное побережье полуострова живёт по иной ритмике осадков. База ниже построена под самостоятельное путешествие: общественный транспорт, мотоцикл/мопед, лодки, пешие переходы и палатка считаются нормальными инструментами, а гид появляется только там, где его требует администрация или где без локальной навигации доступ существенно теряет практический смысл."
   },
   "nature": {
     "flora": [
@@ -218,7 +230,7 @@
       "Nov": 28.9,
       "Dec": 28.9
     },
-    "notes": "Лангкави — опорная точка западного побережья; восточное побережье и Борнео имеют другую сезонность муссонов.",
+    "notes": "Малайзия имеет два основных муссонных режима: юго-западный муссон обычно с конца мая по сентябрь и северо-восточный с ноября по март. Северо-восточный муссон приносит особенно сильные осадки на восточное побережье полуострова, запад Sarawak и восток Sabah; западное побережье и Борнео нельзя планировать по одной месячной таблице. Месячный ряд Langkawi ниже используется только как ориентир западного побережья.",
     "source_quality": "климатология WeatherSpark, значения переведены из °F",
     "zones": [
       {
@@ -253,7 +265,12 @@
           "MET"
         ]
       }
-    ]
+    ],
+    "official_monsoon_source": {
+      "url": "https://www.met.gov.my/en/pendidikan/fenomena-cuaca/",
+      "publisher": "METMalaysia",
+      "accessed": "2026-09-29"
+    }
   },
   "safety": {
     "crime_level": {
@@ -363,14 +380,15 @@
     "visa_for_russian_passport": {
       "status": "без визы для краткой туристической/социальной поездки",
       "stay_days": 30,
-      "entry_form": "Malaysia Digital Arrival Card (MDAC) обычно заполняется в течение 3 дней до въезда; действуют отдельные исключения.",
-      "extension": "Продление Short Term Social Visit Pass обычно возможно только по специальным основаниям.",
+      "entry_form": "Для иностранного посетителя действует Malaysia Digital Arrival Card (MDAC); использовать официальный портал Immigration Department и проверять исключения/актуальные объявления перед въездом.",
+      "extension": "Посольство Малайзии в Москве указывает для граждан Российской Федерации безвизовый срок 1 месяц; продление social/business pass не является автоматическим и требует одобрения иммиграционных властей.",
       "visa_run": {
-        "possible": "Повторный въезд формально возможен, но решение о допуске и новом сроке принимает сотрудник иммиграционной службы.",
-        "limits": "Официального права на бесконечные последовательные визараны нет; серия коротких повторных въездов может вызвать дополнительные вопросы."
+        "possible": "Повторный въезд сам по себе не гарантирует новый срок пребывания: допуск и срок определяются иммиграционной службой при каждом въезде.",
+        "limits": "Не трактовать последовательные выезды/въезды как гарантированное право на бессрочное пребывание."
       },
-      "passport_validity": "обычно требуется не менее 6 месяцев действия паспорта",
-      "official_source": "Malaysian Immigration / Russian MFA"
+      "passport_validity": "перед поездкой проверять актуальное требование Immigration Department/авиаперевозчика к сроку действия паспорта",
+      "official_source": "Embassy of Malaysia in Moscow / Immigration Department of Malaysia",
+      "checked_at": "2026-09-29"
     },
     "airports": [
       {
@@ -407,10 +425,11 @@
     "currency": {
       "code": "MYR",
       "name": "Malaysian ringgit",
-      "local_currency_per_1_usd": 4.0741,
-      "as_of": "2026-09-27",
-      "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-      "rate_type": "рыночный/справочный снимок"
+      "local_currency_per_1_usd": 4.0802,
+      "as_of": "2026-09-28",
+      "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+      "rate_type": "официальный справочный курс",
+      "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
     },
     "regions": [
       {
@@ -425,18 +444,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Экваториально жарко и влажно круглый год; грозы обычны.",
         "best_period_general": "Круглый год; для фото планировать утро/blue hour и резерв под ливень.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Столичная агломерация вокруг долин Klang и Gombak — главный транспортный узел полуострова и удобная база для городской истории, Batu Caves и FRIM. В пределах коротких переездов соседствуют колониальное ядро, малайские кварталы, китайские и индийские торговые районы и современный высотный центр. Для маршрута важнее рельсовая сеть и время пересадок, чем аренда автомобиля.",
+        "tags": [
+          "city",
+          "multicultural",
+          "transport_hub",
+          "heritage"
+        ]
       },
       {
         "name": "Penang / George Town",
@@ -451,18 +477,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Жаркое влажное побережье.",
         "best_period_general": "Декабрь–февраль обычно удобнее по осадкам.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Пенанг объединяет островной портовый город George Town, холмистый лесной интерьер и северо-западное побережье с национальным парком. Историческая ткань связана с торговлей Малаккского пролива, китайскими клановыми организациями, индийскими и малайскими общинами. Остров удобен как компактный узел, но западные тропы и морские участки уже требуют полевой логистики.",
+        "tags": [
+          "unesco",
+          "historic_city",
+          "island",
+          "national_park"
+        ]
       },
       {
         "name": "Melaka",
@@ -476,18 +509,24 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Жарко и влажно круглый год.",
         "best_period_general": "Утро/вечер; более сухие месяцы комфортнее для пешего центра.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Мелака — город и штат на Малаккском проливе, где читаются слои малайского султаната, португальского, голландского и британского контроля. Историческое ядро компактно и проходится пешком, а главная ценность для справочника — связать архитектуру с торговыми сетями пролива, а не рассматривать её как набор фасадов.",
+        "tags": [
+          "unesco",
+          "historic_city",
+          "straits_of_malacca"
+        ]
       },
       {
         "name": "Sabah highlands / Kinabalu",
@@ -501,18 +540,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "С высотой быстро холодает; дождь и туман возможны круглый год.",
         "best_period_general": "Более сухие окна февраля–апреля; вершина зависит от погоды и permit.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Высокогорный пояс западного Сабаха строится вокруг массива Кинабалу, Kundasang и Ranau. Здесь экваториальная широта сочетается с резким высотным градиентом: от влажного горного леса к субальпийным сообществам и гранитному высокогорью. Доступ к вершине регулируется Sabah Parks; высота и расписание маршрута — параметры экспедиции, а не повод исключать объект.",
+        "tags": [
+          "mountain",
+          "unesco",
+          "geopark",
+          "trekking"
+        ]
       },
       {
         "name": "Sabah east coast / Danum / Kinabatangan",
@@ -525,18 +571,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Очень влажный тропического дождевого леса; реки и дороги реагируют на ливни.",
         "best_period_general": "Наблюдение за животными возможно круглый год; перед выездом проверять состояние рек, дорог и текущие ограничения.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Восточный Сабах — система низинных лесов, речных пойм и охраняемых территорий от Lahad Datu до Kinabatangan и Gomantong. Самостоятельная поездка возможна по магистральным дорогам и через местные хабы, но глубокий вход в резерват часто регулируется администрацией. Важны сезон воды, состояние грунтовых дорог и ранние/вечерние окна наблюдения за фауной.",
+        "tags": [
+          "rainforest",
+          "river",
+          "wildlife",
+          "protected_area"
+        ]
       },
       {
         "name": "Sarawak / Kuching / Niah",
@@ -551,18 +604,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Экваториально влажно; Sarawak имеет выраженные очень дождливые периоды.",
         "best_period_general": "Более сухие месяцы, но дождь возможен всегда.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Западный и прибрежный Саравак связывает Kuching с национальными парками, известняковыми пещерами и археологией Niah. Городские и природные объекты здесь требуют разной логистики: Kuching работает как крупный хаб, а Niah и Gunung Gading привязаны к отдельным дорогам, парковым часам и локальным поселениям.",
+        "tags": [
+          "historic_city",
+          "caves",
+          "archaeology",
+          "national_park"
+        ]
       },
       {
         "name": "Mulu / interior Sarawak",
@@ -575,18 +635,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Очень влажный тропический лес, пещеры и частые ливни.",
         "best_period_general": "Гибкий план; экскурсии зависят от погоды/парка.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Внутренний Саравак в районе Gunung Mulu — карстовый горно-лесной массив с гигантскими пещерными системами и ограниченным наземным доступом. Основной хаб — Mulu; маршруты внутри парка регулируются его администрацией, часть требует проводника. Съёмочная и полевая ценность сосредоточена в масштабе карста, рек, пещерных залов и лесного рельефа.",
+        "tags": [
+          "unesco",
+          "karst",
+          "caves",
+          "rainforest"
+        ]
       },
       {
         "name": "Bario / Kelabit Highlands",
@@ -600,18 +667,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Прохладнее низменностей; дождь и грунтовые дороги определяют доступ.",
         "best_period_general": "Более сухие окна, авиарейсы/дороги перепроверять.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Келабитское нагорье — удалённое высокогорье восточного Саравака вокруг Bario, рисовых долин и старых троп к длинным домам и пограничным районам. Самолёт из Miri остаётся базовым способом входа, 4WD и пешие переходы расширяют маршрут. Этнографический слой требует привязки к конкретным сообществам, а не общего ярлыка «племенная культура».",
+        "tags": [
+          "highlands",
+          "kelabit",
+          "ethnography",
+          "trekking"
+        ]
       },
       {
         "name": "Langkawi / northwest coast",
@@ -624,18 +698,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Тропическое море; северо-запад полуострова имеет собственную сезонность осадков.",
         "best_period_general": "Декабрь–март обычно наиболее сухо.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Лангкави — архипелаг у северо-западного побережья Kedah с древними осадочными толщами, карстом, мангровыми эстуариями и туристической инфраструктурой. Для экспедиционного чтения остров важен как геологический ландшафт и морская система; дороги дают самостоятельный доступ, а лодка нужна для части геосайтов и островов.",
+        "tags": [
+          "island",
+          "geopark",
+          "karst",
+          "mangrove"
+        ]
       },
       {
         "name": "Perhentian / east coast",
@@ -647,18 +728,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Северо-восточный муссон сильно ограничивает островную инфраструктуру.",
         "best_period_general": "Обычно март–октябрь; в муссон многие сервисы закрываются.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Перхентианы лежат у восточного побережья Terengganu и зависят от морского сообщения через Kuala Besut. Сезонность здесь жёстче, чем на западном побережье: северо-восточный муссон влияет на лодки, размещение и море. Пешие тропы островов короткие, но снабжение и обратный транспорт надо планировать вокруг рейсов катеров.",
+        "tags": [
+          "island",
+          "marine",
+          "snorkeling",
+          "monsoon"
+        ]
       },
       {
         "name": "Perak / Taiping / Kuala Kangsar / Belum",
@@ -672,18 +760,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Тайпинг особенно дождлив; Belum — влажный тропический дождевой лес.",
         "best_period_general": "Планировать запас по погоде, особенно в лесу.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Северный Perak связывает исторические города, археологию Lenggong, известняковый пояс и огромный лесной комплекс Belum-Temengor. Ipoh, Taiping, Kuala Kangsar, Lenggong и Gerik образуют последовательность наземных хабов; дальше к Royal Belum возрастает роль лодок, разрешений и локальной организации доступа.",
+        "tags": [
+          "historic_city",
+          "archaeology",
+          "rainforest",
+          "royal_heritage"
+        ]
       },
       {
         "name": "Semporna / Sipadan / east Sabah",
@@ -697,18 +792,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Жаркий влажный морской тропический климат; состояние моря и видимость меняются по сезону.",
         "best_period_general": "Дайв-поездку планировать по наличию разрешения, состоянию моря, видимости и текущим условиям оператора.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Семпорна — морской узел восточного Сабаха для Sipadan, Tun Sakaran и островных маршрутов. Здесь решающими становятся разрешения, оператор лодки, состояние моря и дневная квота конкретной охраняемой территории. Сам город — логистическая база; ценность маршрута лежит в рифах, вулканических островах и морском культурном ландшафте.",
+        "tags": [
+          "marine",
+          "diving",
+          "reef",
+          "permit"
+        ]
       },
       {
         "name": "Kudat / Rungus north Sabah",
@@ -721,18 +823,24 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Жаркий тропический климат с сезонными ливнями; сельская местность северного Sabah.",
         "best_period_general": "Круглый год, но сухие окна удобнее для деревень и дорог.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Север Сабаха вокруг Kudat — территория прибрежных и сельских поселений, где важен живой Rungus-контекст: длинные дома, ремёсла и сельскохозяйственный ландшафт. Доступ по дороге относительно прост, но ночёвки и посещение традиционных домов лучше координировать с конкретным сообществом, а не через абстрактный «этнотур».",
+        "tags": [
+          "rungus",
+          "traditional_settlement",
+          "ethnography"
+        ]
       },
       {
         "name": "Sandakan / Sepilok",
@@ -746,18 +854,24 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок",
-          "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Жаркий влажный тропический климат восточного Sabah; ливни возможны круглый год.",
         "best_period_general": "Круглый год; дикой природы не гарантирован, а дождь и плодоношение леса влияют на видимость животных.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Sandakan и Sepilok образуют удобный восточно-сабахский узел для реабилитационных центров, лесных резерватов и дальнейшего движения к Kinabatangan. Автомобильный доступ прост, но режим центров определяется расписанием и правилами наблюдения за животными. Это база, а не замена полевому маршруту по восточному Сабаху.",
+        "tags": [
+          "wildlife",
+          "forest",
+          "transport_hub"
+        ]
       },
       {
         "name": "Pahang / Taman Negara",
@@ -770,17 +884,24 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок"
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Влажный экваториальный лес; реки и тропы быстро реагируют на сильные ливни.",
         "best_period_general": "Маршруты на Gunung Tahan планировать по разрешению, состоянию рек и официальной доступности.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Taman Negara — трансграничная по штатам охраняемая система, а Kuala Tahan в Pahang — лишь один из основных входов. Для экспедиционного маршрута важны многодневные треки, реки, лагеря и Gunung Tahan; парк нельзя сводить к короткой прогулке по canopy walkway. Разрешения и требования к проводникам проверяются для конкретного маршрута.",
+        "tags": [
+          "national_park",
+          "rainforest",
+          "multi_day_trek"
+        ]
       },
       {
         "name": "Johor / Endau-Rompin",
@@ -793,17 +914,24 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок"
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Влажный тропический лес; северо-восточный муссон может вызывать паводки.",
         "best_period_general": "Доступ Peta перепроверять в сезон северо-восточного муссона.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Endau-Rompin в Johor — крупный массив низинного и холмистого дождевого леса с реками, водопадами и удалёнными входами. Практическая схема строится через Kahang и Kampung Peta; последние участки зависят от дорожных условий и паркового режима. Палаточный формат естественен там, где разрешён администрацией.",
+        "tags": [
+          "national_park",
+          "rainforest",
+          "waterfall"
+        ]
       },
       {
         "name": "Maliau Basin / south-central Sabah",
@@ -816,17 +944,24 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок"
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Очень влажный внутренний район Sabah; грунтовый доступ зависит от осадков.",
         "best_period_general": "Нужен запас по погоде и предварительное согласование доступа.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Maliau Basin — удалённая лесная котловина южно-центрального Сабаха, известная сложным рельефом, водопадами и исследовательской инфраструктурой. Подъезд длинный и частично грунтовый; доступ организуется через Studies Centre и правила охраняемой территории. Это многодневный объект, где автономность маршрута сочетается с обязательным административным контролем.",
+        "tags": [
+          "protected_area",
+          "rainforest",
+          "multi_day_trek"
+        ]
       },
       {
         "name": "Selangor / FRIM",
@@ -839,20 +974,27 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок"
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Жаркий влажный климат Klang Valley; ливни и грозы круглый год.",
         "best_period_general": "Круглый год; для леса полезны утренние часы и резерв под грозу.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "FRIM Forest Park Selangor находится у северо-западной окраины Kuala Lumpur и представляет не «дикий первичный лес», а столетний научно созданный лесной ландшафт на деградированных землях. В 2025 году он включён в Список всемирного наследия UNESCO. Доступ городской, но территория научная и управляемая, поэтому часы и правила посещения имеют значение.",
+        "tags": [
+          "unesco",
+          "forest_restoration",
+          "research_landscape"
+        ]
       },
       {
-        "name": "Johor / Tioman",
+        "name": "Pahang / Tioman",
         "languages_spoken": [
           "малайский",
           "английский — в туристической инфраструктуре"
@@ -861,17 +1003,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок"
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Остров восточного побережья сильно зависит от северо-восточного муссона и состояния моря.",
         "best_period_general": "Основной морской сезон — вне пика северо-восточного муссона; рейсы проверять по фактической погоде.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-28"
+        "last_verified": "2026-09-29",
+        "narrow": "Tioman административно относится к штату Pahang, хотя один из основных паромных входов — Mersing в Johor. Остров сочетает горный гранитный рельеф, лес, деревни и морской парк; Tekek — внутренний хаб. Для маршрута следует разделять административную географию и логистику: Mersing — порт отправления, а не родительская территория объекта.",
+        "tags": [
+          "island",
+          "marine_park",
+          "mountain",
+          "pahang"
+        ]
       },
       {
         "name": "Kedah / Bujang Valley",
@@ -884,17 +1034,24 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок"
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Жарко и влажно; открытые раскопы быстро нагреваются и размокают после ливня.",
         "best_period_general": "Утро и сухое окно.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-29"
+        "last_verified": "2026-09-29",
+        "narrow": "Bujang Valley в Kedah — археологический ландшафт у подножия Gunung Jerai и нижнего бассейна Merbok, связанный с ранней торговлей, металлургией и религиозными комплексами. Sungai Batu даёт ключевой археологический слой; наземный доступ строится через Sungai Petani и Merbok.",
+        "tags": [
+          "archaeology",
+          "early_trade",
+          "cultural_landscape"
+        ]
       },
       {
         "name": "Sabah west coast / Crocker Range",
@@ -907,17 +1064,24 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок"
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Высотный влажный тропический лес; сильный дождь быстро меняет уровень рек.",
         "best_period_general": "По состоянию рек и официальному доступу.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-29"
+        "last_verified": "2026-09-29",
+        "narrow": "Crocker Range — длинный горный пояс западного Сабаха, отделяющий прибрежную низменность от внутренней части острова. Парк и Salt Trail связывают перевалы, лесные поселения и традиционные маршруты через хребет. Для планирования важны набор высоты, дождь, состояние троп и конкретные точки входа.",
+        "tags": [
+          "mountain",
+          "national_park",
+          "salt_trail"
+        ]
       },
       {
         "name": "Terengganu / Redang",
@@ -929,17 +1093,25 @@
         "currency": {
           "code": "MYR",
           "name": "Malaysian ringgit",
-          "local_currency_per_1_usd": 4.0741,
-          "as_of": "2026-09-27",
-          "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-          "rate_type": "рыночный/справочный снимок"
+          "local_currency_per_1_usd": 4.0802,
+          "as_of": "2026-09-28",
+          "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+          "rate_type": "официальный справочный курс",
+          "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
         },
         "climate_summary": "Восточное побережье резко зависит от северо-восточного муссона.",
         "best_period_general": "Вне пика северо-восточного муссона.",
         "language_source_urls": [
           "https://www.dosm.gov.my/"
         ],
-        "last_verified": "2026-09-29"
+        "last_verified": "2026-09-29",
+        "narrow": "Redang и его морской парк лежат у побережья Terengganu; вход обычно строится через Merang или Kuala Terengganu. Рифовая среда и лодочная логистика зависят от муссона, прозрачности воды и режима морского парка. На острове полезно заранее разделять публичные пляжи, курортные участки и охраняемую морскую акваторию.",
+        "tags": [
+          "island",
+          "marine_park",
+          "reef",
+          "monsoon"
+        ]
       }
     ],
     "objects": [
@@ -966,11 +1138,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 3.14864,
@@ -1123,7 +1295,24 @@
           "annotation": {
             "narrative": "Куала-Лумпур вырос из оловодобывающего узла у слияния Klang и Gombak в колониальный административно-торговый центр, а затем в столичный мегаполис. Для экспедиционного рассказа интересен не один skyline: Masjid Jamek и старое колониальное ядро, Chinatown, индийские кварталы, Kampung Baru и башни конца XX–XXI века показывают несколько исторических слоёв в пределах одного дня пешком и на рельсовом транспорте.",
             "culture_ethnography": "Городская среда многоязычна и многоконфессиональна: малайские, китайские и индийские общины читаются не как музейные анклавы, а через рынки, храмы, мечети, еду и жилые кварталы. Kampung Baru особенно полезен как контраст малоэтажной малайской ткани с KLCC.",
-            "geography_geology": "Город лежит в долине Klang; жара и ливни усиливаются плотной застройкой, а расстояния между визуально близкими районами часто режутся эстакадами и скоростными дорогами."
+            "geography_geology": "Город лежит в долине Klang; жара и ливни усиливаются плотной застройкой, а расстояния между визуально близкими районами часто режутся эстакадами и скоростными дорогами.",
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Куала-Лумпур вырос из оловодобывающего узла у слияния Klang и Gombak в колониальный административно-торговый центр, а затем в столичный мегаполис. Для экспедиционного рассказа интересен не один skyline: Masjid Jamek и старое колониальное ядро, Chinatown, индийские кварталы, Kampung Baru и башни конца XX–XXI века показывают несколько исторических слоёв в пределах одного дня пешком и на рельсовом транспорте."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Городская среда многоязычна и многоконфессиональна: малайские, китайские и индийские общины читаются не как музейные анклавы, а через рынки, храмы, мечети, еду и жилые кварталы. Kampung Baru особенно полезен как контраст малоэтажной малайской ткани с KLCC."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Город лежит в долине Klang; жара и ливни усиливаются плотной застройкой, а расстояния между визуально близкими районами часто режутся эстакадами и скоростными дорогами."
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -1282,11 +1471,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.419776,
@@ -1444,6 +1633,30 @@
             "geography_geology": "Исторический центр лежит на плоской прибрежной площадке; ключевой практический фактор — жара и минимум тени на набережной, тогда как five-foot ways дают непрерывные теневые коридоры.",
             "myths_legends_beliefs": [
               "Китайские храмы и небольшие Datuk Kong shrines отражают живую народную религиозность; снимать алтари и молящихся только с согласия/дистанции."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "George Town — портовый город Британской Ост-Индской компании с конца XVIII века, где торговля в Малаккском проливе создала плотную смесь shophouse, clan house, мечетей, индуистских и китайских храмов. UNESCO-ядро ценнее как действующая городская система, чем как набор murals."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Пенангские хokkien-китайцы, перанаканцы, индийские мусульмане, тамилы и малайцы оставили соседствующие религиозные и коммерческие кварталы. Clan jetties сохраняют происхождение от клановых общин докеров; это жилые мостки, а не декорация."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Исторический центр лежит на плоской прибрежной площадке; ключевой практический фактор — жара и минимум тени на набережной, тогда как five-foot ways дают непрерывные теневые коридоры."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "Китайские храмы и небольшие Datuk Kong shrines отражают живую народную религиозность; снимать алтари и молящихся только с согласия/дистанции."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -1622,11 +1835,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 2.191667,
@@ -1784,6 +1997,30 @@
             "geography_geology": "Город стоит на низком берегу реки Melaka у Малаккского пролива; историческое ядро компактно и реально проходится пешком.",
             "myths_legends_beliefs": [
               "Легенды о Hang Tuah — важная часть малайской исторической памяти; их следует подавать как эпический/литературный пласт, а не как проверенную биографию."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Мелака выросла из султаната XV века в главный торговый узел пролива, затем последовательно прошла португальский, голландский и британский периоды. Красная Dutch Square — только один слой: важны A Famosa, St Paul, китайские guild/temple streets, мечети и речной торговый фронт."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Baba-Nyonya/Peranakan культура, Chitty, малайские и китайские торговые общины сформировали кухню, домашние интерьеры и ритуальный календарь города."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Город стоит на низком берегу реки Melaka у Малаккского пролива; историческое ядро компактно и реально проходится пешком."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "Легенды о Hang Tuah — важная часть малайской исторической памяти; их следует подавать как эпический/литературный пласт, а не как проверенную биографию."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -1948,11 +2185,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 6.075,
@@ -2116,6 +2353,30 @@
             "geography_geology": "Современный рельеф сформирован гранитной интрузией, поднятием и ледниково-эрозионными процессами; верхняя часть — огромные открытые гранитные плиты, из-за чего погода меняет не только видимость, но и сцепление/ветровую нагрузку.",
             "myths_legends_beliefs": [
               "В Kadazan-Dusun традиции гора связана с духами предков; популярное объяснение имени через “Aki Nabalu” широко известно, но этимология обсуждается и не должна подаваться как единственная доказанная версия."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Kinabalu — гранитный массив высотой 4 095,2 м и биогеографический “остров” высотных поясов: от диптерокарпового леса через монтанный лес к открытым гранитным плитам вершины. После землетрясения 2015 маршрутная инфраструктура была перестроена; сейчас стандартный доступ идёт через Timpohon, Mesilau закрыт."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Для Kadazan-Dusun гора традиционно сакральна и связана с предками; туристский подъём существует внутри территории, которая имеет не только спортивное, но и культурное значение."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Современный рельеф сформирован гранитной интрузией, поднятием и ледниково-эрозионными процессами; верхняя часть — огромные открытые гранитные плиты, из-за чего погода меняет не только видимость, но и сцепление/ветровую нагрузку."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "В Kadazan-Dusun традиции гора связана с духами предков; популярное объяснение имени через “Aki Nabalu” широко известно, но этимология обсуждается и не должна подаваться как единственная доказанная версия."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -2297,11 +2558,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.04131,
@@ -2468,7 +2729,29 @@
             "narrative": "Mulu — карстовый массив и система гигантских пещер северного Sarawak, UNESCO-site с Deer Cave, Clearwater/Wind caves и маршрутом к Pinnacles. Масштаб здесь читается через переход от тропического дождевого леса к полостям: огромный cave entrance, подземная река, летучие мыши и razor karst.",
             "culture_ethnography": "Район связан с Penan, Berawan и другими общинами внутреннего Sarawak; проводники и речная логистика — часть живой местной инфраструктуры, а не декорация к “дикому лесу”.",
             "geography_geology": "Известняк растворялся водой миллионы лет; результат — многокилометровые cave passages, sinkholes и острый известняковый рельеф Pinnacles. Вода напрямую определяет доступ в adventure caves.",
-            "myths_legends_beliefs": []
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Mulu — карстовый массив и система гигантских пещер северного Sarawak, UNESCO-site с Deer Cave, Clearwater/Wind caves и маршрутом к Pinnacles. Масштаб здесь читается через переход от тропического дождевого леса к полостям: огромный cave entrance, подземная река, летучие мыши и razor karst."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Район связан с Penan, Berawan и другими общинами внутреннего Sarawak; проводники и речная логистика — часть живой местной инфраструктуры, а не декорация к “дикому лесу”."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Известняк растворялся водой миллионы лет; результат — многокилометровые cave passages, sinkholes и острый известняковый рельеф Pinnacles. Вода напрямую определяет доступ в adventure caves."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": []
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -2662,11 +2945,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 6.329722,
@@ -2827,6 +3110,31 @@
             "myths_legends_beliefs": [
               "Махсури — центральная островная легенда о несправедливо казнённой женщине и проклятии “на семь поколений”; это фольклорно-исторический нарратив, а не проверяемый факт.",
               "Tasik Dayang Bunting связывают с легендой о небесной принцессе и ребёнке; подаётся как местный миф."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Langkawi — архипелаг из карстовых островов у северо-запада полуострова; его сильная сторона не resort strip, а сочетание древних известняков Kilim, мангров, горного массива Machinchang и малайского островного фольклора."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Рыбацкие деревни, rice-field landscape и малайские легенды дают более содержательный слой, чем duty-free tourism."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Langkawi UNESCO Global Geopark включает очень старые горные породы и известняковый карст; прилив определяет визуальную геометрию мангровых каналов."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "Махсури — центральная островная легенда о несправедливо казнённой женщине и проклятии “на семь поколений”; это фольклорно-исторический нарратив, а не проверяемый факт.",
+                  "Tasik Dayang Bunting связывают с легендой о небесной принцессе и ребёнке; подаётся как местный миф."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -2996,11 +3304,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.9145,
@@ -3164,7 +3472,24 @@
           "annotation": {
             "narrative": "Perhentian — небольшие острова восточного побережья с коралловыми рифами, пляжами и сезонной туристической инфраструктурой. Важная особенность для маршрута — не “тропический остров”, а резкая сезонность северо-восточного муссона.",
             "culture_ethnography": "Kampung на Perhentian Kecil остаётся постоянным поселением; остальная туристическая инфраструктура во многом сезонна.",
-            "geography_geology": "Гранитные острова с узкими пляжами и прибрежным reef shelf; прозрачность и boat access меняются со swell и осадками."
+            "geography_geology": "Гранитные острова с узкими пляжами и прибрежным reef shelf; прозрачность и boat access меняются со swell и осадками.",
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Perhentian — небольшие острова восточного побережья с коралловыми рифами, пляжами и сезонной туристической инфраструктурой. Важная особенность для маршрута — не “тропический остров”, а резкая сезонность северо-восточного муссона."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Kampung на Perhentian Kecil остаётся постоянным поселением; остальная туристическая инфраструктура во многом сезонна."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Гранитные острова с узкими пляжами и прибрежным reef shelf; прозрачность и boat access меняются со swell и осадками."
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -3349,11 +3674,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.85,
@@ -3506,7 +3831,24 @@
           "annotation": {
             "narrative": "Taiping — город, выросший на оловянном буме Larut и ставший ранним британским административным центром Perak. Его редкий визуальный характер создают Lake Gardens на месте старых шахт, дождевые деревья, колониальные здания и почти постоянная влажность.",
             "culture_ethnography": "Городская история тесно связана с китайскими горняцкими общинами, малайской администрацией и британскими институтами; это полезный кейс превращения mining frontier в плановый город.",
-            "geography_geology": "Taiping у подножия Bintang Range получает очень много осадков; бывшие mining pits стали озёрами Lake Gardens."
+            "geography_geology": "Taiping у подножия Bintang Range получает очень много осадков; бывшие mining pits стали озёрами Lake Gardens.",
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Taiping — город, выросший на оловянном буме Larut и ставший ранним британским административным центром Perak. Его редкий визуальный характер создают Lake Gardens на месте старых шахт, дождевые деревья, колониальные здания и почти постоянная влажность."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Городская история тесно связана с китайскими горняцкими общинами, малайской администрацией и британскими институтами; это полезный кейс превращения mining frontier в плановый город."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Taiping у подножия Bintang Range получает очень много осадков; бывшие mining pits стали озёрами Lake Gardens."
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -3673,11 +4015,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.766667,
@@ -3834,7 +4176,29 @@
             "narrative": "Kuala Kangsar — королевский город Perak на излучине реки, где дворцовая архитектура, Ubudiah Mosque и ремесленная традиция labu sayong дают цельный сюжет о султанате вне мегаполиса.",
             "culture_ethnography": "Город остаётся связан с дворцом и малайскими ремёслами; labu sayong — чёрные глиняные сосуды из соседних деревень — хороший предметный слой.",
             "geography_geology": "Городская ось привязана к Perak River и холмам Bukit Chandan; дистанции между главными объектами умеренные, но жара делает круг длиннее.",
-            "myths_legends_beliefs": []
+            "myths_legends_beliefs": [],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Kuala Kangsar — королевский город Perak на излучине реки, где дворцовая архитектура, Ubudiah Mosque и ремесленная традиция labu sayong дают цельный сюжет о султанате вне мегаполиса."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Город остаётся связан с дворцом и малайскими ремёслами; labu sayong — чёрные глиняные сосуды из соседних деревень — хороший предметный слой."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Городская ось привязана к Perak River и холмам Bukit Chandan; дистанции между главными объектами умеренные, но жара делает круг длиннее."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": []
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -4003,11 +4367,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.551617,
@@ -4167,6 +4531,30 @@
             "geography_geology": "Современное озеро образовано плотиной, поэтому лесистые хребты выглядят как острова и полуострова; last-mile почти всегда лодочный.",
             "myths_legends_beliefs": [
               "У Orang Asli лес имеет социально-духовное значение; конкретные сакральные места нельзя выдумывать или раскрывать без местного согласия."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Belum-Temengor — большой лесной комплекс на севере Perak вокруг искусственного озера Temengor; Royal Belum — охраняемая часть, куда попадают по permit и лодке. Для экспедиционного материала сильнее всего сочетание древнего диптерокарпового леса, озёрной навигации и Orang Asli settlements."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "В регионе живут Jahai и Temiar Orang Asli; посещение поселений должно идти через разрешённого guide/operator, а не как свободный “этно-объект”."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Современное озеро образовано плотиной, поэтому лесистые хребты выглядят как острова и полуострова; last-mile почти всегда лодочный."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "У Orang Asli лес имеет социально-духовное значение; конкретные сакральные места нельзя выдумывать или раскрывать без местного согласия."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -4347,11 +4735,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 3.74792,
@@ -4511,6 +4899,30 @@
             "geography_geology": "Плато около 1 000 м окружено горами; прохладнее низменного Sarawak, дороги и airstrip чувствительны к дождю.",
             "myths_legends_beliefs": [
               "Мегалиты и старые burial/commemorative landscapes имеют родовую память; объяснение конкретного камня лучше получать от host/guide, а не универсализировать."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Bario — высокогорная Kelabit территория в Sarawak: рисовые поля, длинный общинный дом, соляные источники, megalithic monuments и маленькая авиационная связь делают её почти готовым экспедиционным эпизодом. Это не “деревня без цивилизации”, а удалённая сеть поселений с сильной культурной самоорганизацией."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Kelabit известны wet-rice agriculture, salt production, длинный общинный дом hospitality, beadwork и традицией erecting megaliths/stone monuments. Многие семьи христиане; старые практики и генеалогическая память продолжают существовать внутри современной жизни."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Плато около 1 000 м окружено горами; прохладнее низменного Sarawak, дороги и airstrip чувствительны к дождю."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "Мегалиты и старые burial/commemorative landscapes имеют родовую память; объяснение конкретного камня лучше получать от host/guide, а не универсализировать."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -4703,11 +5115,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.96477,
@@ -4868,7 +5280,24 @@
           "annotation": {
             "narrative": "Danum Valley — один из ключевых участков низинного диптерокарпового тропического дождевого леса Sabah, сохранившийся без постоянного поселения и промышленной вырубки внутри core. Визуальный сюжет — вертикальность леса: emergent trees, canopy bridges, реки, ночная фауна.",
             "culture_ethnography": "Это прежде всего research/conservation landscape; “этнографический” слой лучше искать не внутри core, а в wider Sabah context, не приписывая лесу выдуманные деревни.",
-            "geography_geology": "Холмистая низина с реками Segama system; высокая влажность, пиявки и короткие visibility windows — практическая норма."
+            "geography_geology": "Холмистая низина с реками Segama system; высокая влажность, пиявки и короткие visibility windows — практическая норма.",
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Danum Valley — один из ключевых участков низинного диптерокарпового тропического дождевого леса Sabah, сохранившийся без постоянного поселения и промышленной вырубки внутри core. Визуальный сюжет — вертикальность леса: emergent trees, canopy bridges, реки, ночная фауна."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Это прежде всего research/conservation landscape; “этнографический” слой лучше искать не внутри core, а в wider Sabah context, не приписывая лесу выдуманные деревни."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Холмистая низина с реками Segama system; высокая влажность, пиявки и короткие visibility windows — практическая норма."
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -5019,11 +5448,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.507889,
@@ -5184,7 +5613,24 @@
           "annotation": {
             "narrative": "Kinabatangan — большая река восточного Sabah и один из самых доступных дикой природы corridors Borneo. Сюжет сильнее сафари-списка: узкая пойменная полоса леса зажата между рекой и сельхозландшафтами, поэтому здесь особенно наглядны и богатство фауны, и фрагментация habitat.",
             "culture_ethnography": "Orang Sungai communities живут вдоль river system; домашнее размещение у местных и boat operators позволяют показывать реку как транспортную и жилую среду, а не только “зоопарк”.",
-            "geography_geology": "Медленная мутная река, oxbow lakes и floodplain forest; уровень воды определяет доступ в притоки и расположение животных."
+            "geography_geology": "Медленная мутная река, oxbow lakes и floodplain forest; уровень воды определяет доступ в притоки и расположение животных.",
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Kinabatangan — большая река восточного Sabah и один из самых доступных дикой природы corridors Borneo. Сюжет сильнее сафари-списка: узкая пойменная полоса леса зажата между рекой и сельхозландшафтами, поэтому здесь особенно наглядны и богатство фауны, и фрагментация habitat."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Orang Sungai communities живут вдоль river system; домашнее размещение у местных и boat operators позволяют показывать реку как транспортную и жилую среду, а не только “зоопарк”."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Медленная мутная река, oxbow lakes и floodplain forest; уровень воды определяет доступ в притоки и расположение животных."
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -5360,11 +5806,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 3.804292,
@@ -5532,6 +5978,30 @@
             "geography_geology": "Большой limestone massif с колоссальными cave mouths; внутри свет быстро падает, а настила после дождя становится скользким.",
             "myths_legends_beliefs": [
               "Painted Cave содержит красные наскальные изображения и boat-shaped burials; интерпретацию ритуала следует давать по археологическим источникам, не как “доказанный шаманизм”."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Niah Great Cave — одновременно гигантский карстовый объект и один из важнейших археологических комплексов островной ЮВА. Люди использовали пещеры десятки тысяч лет; отдельный исторический слой — bird-nest harvesting и сбор гуано. В 2024 cave complex включён в UNESCO World Heritage List."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Пещеры связаны с местными Iban и другими общинами вокруг Niah; традиционные права/практики bird-nest collection — часть современной истории места."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Большой limestone massif с колоссальными cave mouths; внутри свет быстро падает, а настила после дождя становится скользким."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "Painted Cave содержит красные наскальные изображения и boat-shaped burials; интерпретацию ритуала следует давать по археологическим источникам, не как “доказанный шаманизм”."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -5747,11 +6217,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.47448,
@@ -5907,6 +6377,30 @@
             "geography_geology": "Замок стоит в сельском Perak среди бывших плантационных ландшафтов; объект компактный, но открытые верхние площадки чувствительны к грозе.",
             "myths_legends_beliefs": [
               "Истории о призраке Kellie Smith, “таинственных туннелях” и paranormal sightings — туристический фольклор; подавать как легенды, а не факт."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Недостроенный особняк шотландского плантатора William Kellie Smith начала XX века — редкий малайзийский объект, где колониальная предпринимательская история перешла в массовый ghost folklore. Архитектура смешивает европейские и индийские мотивы, а незавершённость делает конструкцию визуально читаемой."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Для рассказа полезно отделять документируемую историю plantation economy и семьи Smith от поздних легенд о призраках."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Замок стоит в сельском Perak среди бывших плантационных ландшафтов; объект компактный, но открытые верхние площадки чувствительны к грозе."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "Истории о призраке Kellie Smith, “таинственных туннелях” и paranormal sightings — туристический фольклор; подавать как легенды, а не факт."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -6077,11 +6571,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 1.56047,
@@ -6240,6 +6734,30 @@
             "geography_geology": "Sarawak River — главная пространственная ось; лодки tambang до сих пор полезны как короткий городской транспорт.",
             "myths_legends_beliefs": [
               "Популярные истории о названии Kuching как “город кошек” конкурируют с другими этимологиями; cat-statues — современный городской бренд, не доказательство происхождения названия."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Kuching вырос как столица Brooke Raj и порт на Sarawak River. Waterfront позволяет в одном кадре связать старые shophouse/Chinese temples, Brooke-era civic buildings, Malay kampung через реку и современный State Assembly."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Город — один из лучших входов в многоэтничный Sarawak: Malay, Chinese, Iban, Bidayuh и другие Dayak communities присутствуют в рынках, музеях и городской повседневности."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Sarawak River — главная пространственная ось; лодки tambang до сих пор полезны как короткий городской транспорт."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "Популярные истории о названии Kuching как “город кошек” конкурируют с другими этимологиями; cat-statues — современный городской бренд, не доказательство происхождения названия."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -6404,11 +6922,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.054861,
@@ -6560,7 +7078,24 @@
           "annotation": {
             "narrative": "Lenggong Valley хранит почти двухмиллионную последовательность человеческой деятельности — open-air stone-tool workshops, caves и захоронения. Ключевой персонаж популярного рассказа — Perak Man, но UNESCO-ценность шире одной находки: важна непрерывная археологическая последовательность.",
             "culture_ethnography": "Современные kampung нельзя смешивать с археологическими культурами прошлого; полезно показывать gallery, valley landscape и caves как разные уровни знания.",
-            "geography_geology": "Археология связана с древними river terraces, paleolake deposits и limestone caves; поэтому ландшафт важен так же, как музейные витрины."
+            "geography_geology": "Археология связана с древними river terraces, paleolake deposits и limestone caves; поэтому ландшафт важен так же, как музейные витрины.",
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Lenggong Valley хранит почти двухмиллионную последовательность человеческой деятельности — open-air stone-tool workshops, caves и захоронения. Ключевой персонаж популярного рассказа — Perak Man, но UNESCO-ценность шире одной находки: важна непрерывная археологическая последовательность."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Современные kampung нельзя смешивать с археологическими культурами прошлого; полезно показывать gallery, valley landscape и caves как разные уровни знания."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Археология связана с древними river terraces, paleolake deposits и limestone caves; поэтому ландшафт важен так же, как музейные витрины."
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -6727,11 +7262,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.1148,
@@ -6897,7 +7432,24 @@
           "annotation": {
             "narrative": "Sipadan — единственный океанический остров Малайзии: коралловый массив, выросший на вершине вулканического конуса и резко падающий в глубокое Celebes Sea. После закрытия островного жилья в 2004 посещение стало day-use и permit-controlled.",
             "culture_ethnography": "Культурный контекст маршрута находится скорее в Semporna/Sama-Bajau maritime world; сам Sipadan — прежде всего строго управляемая marine protected area.",
-            "geography_geology": "Рифовая стенка почти сразу уходит на сотни метров; именно эта геометрия концентрирует pelagic life и делает wide-angle underwater главным визуальным языком."
+            "geography_geology": "Рифовая стенка почти сразу уходит на сотни метров; именно эта геометрия концентрирует pelagic life и делает wide-angle underwater главным визуальным языком.",
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Sipadan — единственный океанический остров Малайзии: коралловый массив, выросший на вершине вулканического конуса и резко падающий в глубокое Celebes Sea. После закрытия островного жилья в 2004 посещение стало day-use и permit-controlled."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Культурный контекст маршрута находится скорее в Semporna/Sama-Bajau maritime world; сам Sipadan — прежде всего строго управляемая marine protected area."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Рифовая стенка почти сразу уходит на сотни метров; именно эта геометрия концентрирует pelagic life и делает wide-angle underwater главным визуальным языком."
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -7080,11 +7632,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 6.761144,
@@ -7228,6 +7780,30 @@
             "geography_geology": "Северный Kudat — более открытый сельский ландшафт, чем влажные interior forests; длинный общинный дом стоит в аграрной среде.",
             "myths_legends_beliefs": [
               "В традиционной культуре важную роль играли ritual specialists и представления о духах; конкретные ритуалы нужно описывать со слов общины, не реконструировать самостоятельно."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Bavanggazo — Rungus community длинный общинный дом на севере Sabah, где длинный общий дом остаётся архитектурой социальной организации, а не сценографией. Сильный сюжет — конструкция дома, beadwork, gong music, сельская работа и современная жизнь в одной системе."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Rungus — одна из Dusunic groups Sabah. Традиционные длинные дома, beadwork и сельскохозяйственный календарь сосуществуют с христианством и современным образованием; старые ритуальные представления не следует выдавать за повседневную практику каждого жителя."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Северный Kudat — более открытый сельский ландшафт, чем влажные interior forests; длинный общинный дом стоит в аграрной среде."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "В традиционной культуре важную роль играли ritual specialists и представления о духах; конкретные ритуалы нужно описывать со слов общины, не реконструировать самостоятельно."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -7400,11 +7976,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 3.23774,
@@ -7565,6 +8141,30 @@
             "geography_geology": "Карстовые пещеры сформированы в древнем известняке; высокая Cathedral Cave создаёт естественный световой колодец и сильный вертикальный масштаб.",
             "myths_legends_beliefs": [
               "Murugan связан с победой над демоническими силами в индуистской традиции; конкретные храмовые сюжеты лучше связывать с официальной/общинной интерпретацией."
+            ],
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Batu Caves — известняковый массив у северной окраины Kuala Lumpur и главный индуистский комплекс, посвящённый Murugan. Современный цветной staircase и 42-метровая статуя — новый визуальный слой на фоне древнего карста; религиозный смысл особенно читается во время Thaipusam."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Комплекс — действующая тамильская индуистская святыня. Во время Thaipusam паломники несут kavadi и совершают обеты; это религиозная практика, не “фестиваль костюмов”."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Карстовые пещеры сформированы в древнем известняке; высокая Cathedral Cave создаёт естественный световой колодец и сильный вертикальный масштаб."
+              },
+              {
+                "source_refs": [],
+                "section_id": "myths_legends_beliefs",
+                "content": [
+                  "Murugan связан с победой над демоническими силами в индуистской традиции; конкретные храмовые сюжеты лучше связывать с официальной/общинной интерпретацией."
+                ]
+              }
             ]
           },
           "traveler_reports": {
@@ -7737,11 +8337,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок",
-              "practical_notes": "MYR основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.865,
@@ -7902,7 +8502,24 @@
           "annotation": {
             "narrative": "Sepilok создан в 1964 году для реабилитации осиротевших/конфискованных orangutan и возвращения их к более самостоятельной лесной жизни. Для фильма важно объяснить, что feeding platform — не zoo show, а управляемый этап rehabilitation, поэтому присутствие животных не гарантируется.",
             "culture_ethnography": "Главный слой здесь природоохранный и институциональный; локальную этнографию не надо искусственно приклеивать к дикой природы centre.",
-            "geography_geology": "Центр находится в lowland тропического дождевого леса Sepilok-Kabili; elevated настила позволяет войти в forest edge без свободного блуждания."
+            "geography_geology": "Центр находится в lowland тропического дождевого леса Sepilok-Kabili; elevated настила позволяет войти в forest edge без свободного блуждания.",
+            "sections": [
+              {
+                "source_refs": [],
+                "section_id": "overview",
+                "content": "Sepilok создан в 1964 году для реабилитации осиротевших/конфискованных orangutan и возвращения их к более самостоятельной лесной жизни. Для фильма важно объяснить, что feeding platform — не zoo show, а управляемый этап rehabilitation, поэтому присутствие животных не гарантируется."
+              },
+              {
+                "source_refs": [],
+                "section_id": "culture_ethnography",
+                "content": "Главный слой здесь природоохранный и институциональный; локальную этнографию не надо искусственно приклеивать к дикой природы centre."
+              },
+              {
+                "source_refs": [],
+                "section_id": "geography_geology",
+                "content": "Центр находится в lowland тропического дождевого леса Sepilok-Kabili; elevated настила позволяет войти в forest edge без свободного блуждания."
+              }
+            ]
           },
           "traveler_reports": {
             "recurring_issues": [
@@ -8063,10 +8680,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.38,
@@ -8383,10 +9001,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 2.531433,
@@ -8728,10 +9347,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.74332,
@@ -9065,10 +9685,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 1.71749,
@@ -9401,10 +10022,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 3.22925,
@@ -9723,10 +10345,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.53068,
@@ -10042,10 +10665,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 1.69084,
@@ -10363,10 +10987,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.22188,
@@ -10697,10 +11322,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.393556,
@@ -11031,7 +11657,7 @@
         "why_go": "Гористый гранитный остров и морской парк восточного побережья: паромные деревни, внутренние тропы, рифы и Mount Kajang около 1030 м.",
         "traveler_card": {
           "location": {
-            "region": "Johor / Tioman",
+            "region": "Pahang / Tioman",
             "nearest_hub": "Mersing / Tekek",
             "languages_spoken": [
               "малайский",
@@ -11040,10 +11666,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 2.82028,
@@ -11303,6 +11930,16 @@
               "contact"
             ],
             "accessed": "2026-09-29"
+          },
+          {
+            "url": "https://www.mybis.gov.my/pa/177",
+            "publisher": "Malaysia Biodiversity Information System (MyBIS)",
+            "kind": "government",
+            "used_for": [
+              "state=Pahang",
+              "marine park status"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -11328,7 +11965,7 @@
           "walking"
         ],
         "route_meta": {
-          "region_ref": "Johor / Tioman",
+          "region_ref": "Pahang / Tioman",
           "locality_ref": "Mersing / Tekek",
           "transport_modes": {
             "public_transport": "межгород до Mersing",
@@ -11379,10 +12016,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.6953,
@@ -11652,10 +12290,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.60306,
@@ -11925,10 +12564,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.8585,
@@ -12199,10 +12839,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 4.5993,
@@ -12471,10 +13112,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 1.3998,
@@ -12724,10 +13366,11 @@
             "currency": {
               "code": "MYR",
               "name": "Malaysian ringgit",
-              "local_currency_per_1_usd": 4.0741,
-              "as_of": "2026-09-27",
-              "observation_time_note": "последнее рыночное наблюдение в источнике может относиться к 2026-09-25",
-              "rate_type": "рыночный/справочный снимок"
+              "local_currency_per_1_usd": 4.0802,
+              "as_of": "2026-09-28",
+              "observation_time_note": "официальный KL USD/MYR Reference Rate Bank Negara Malaysia / FMIP",
+              "rate_type": "официальный справочный курс",
+              "practical_notes": "MYR — основная валюта; карты распространены в городах, наличные полезны в сельской местности, на островах и рынках."
             },
             "coordinates": {
               "lat": 5.7773608,
@@ -13023,7 +13666,12 @@
         ],
         "object_names": [
           "Kuala Lumpur"
-        ]
+        ],
+        "narrow": "Главный национальный авиационный и железнодорожный узел; локально удобны MRT/LRT/Monorail и пригородные поезда. Для старого центра и рынков эффективнее пешие связки с рельсовым транспортом.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "George Town / Penang",
@@ -13032,7 +13680,12 @@
         ],
         "object_names": [
           "George Town"
-        ]
+        ],
+        "narrow": "George Town — основной городской хаб острова Penang; автобусы и e-hailing закрывают большую часть острова, а Teluk Bahang служит входом к национальному парку.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Melaka City",
@@ -13041,7 +13694,12 @@
         ],
         "object_names": [
           "Melaka"
-        ]
+        ],
+        "narrow": "Историческое ядро Мелаки компактно; между автовокзалом и центром работают городской транспорт и e-hailing. Для ядра основной режим — пешком.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Kota Kinabalu / Kundasang",
@@ -13050,7 +13708,12 @@
         ],
         "object_names": [
           "Mount Kinabalu"
-        ]
+        ],
+        "narrow": "Kota Kinabalu — главный авиационный хаб западного Sabah; Kundasang и Kinabalu Park находятся в горной зоне к востоку и требуют отдельного наземного перехода.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Mulu",
@@ -13059,7 +13722,12 @@
         ],
         "object_names": [
           "Gunung Mulu National Park"
-        ]
+        ],
+        "narrow": "Небольшой локальный хаб у аэропорта и входа в Gunung Mulu National Park. Большинство дальнейших перемещений внутри объекта определяется тропами, лодками и правилами парка.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Langkawi",
@@ -13068,7 +13736,12 @@
         ],
         "object_names": [
           "Langkawi"
-        ]
+        ],
+        "narrow": "Островной хаб с аэропортом и паромами; для самостоятельного обследования геосайтов удобен мопед/автомобиль, а для морских участков — лодка.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Kuala Besut",
@@ -13077,7 +13750,12 @@
         ],
         "object_names": [
           "Perhentian islands"
-        ]
+        ],
+        "narrow": "Основной портовый узел для Perhentian Islands; критичны расписание катеров, состояние моря и сезон работы размещения на островах.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Ipoh / Taiping / Gerik",
@@ -13089,7 +13767,12 @@
           "Kuala Kangsar",
           "Belum-Temengor",
           "Kellie's Castle"
-        ]
+        ],
+        "narrow": "Цепочка наземных баз Perak: Ipoh удобен для Kinta и Tambun, Taiping — для северо-запада штата, Gerik — для Belum-Temengor. Это логистическая связка, а не единый населённый пункт.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Bario / Miri",
@@ -13098,7 +13781,12 @@
         ],
         "object_names": [
           "Bario / Kelabit Highlands"
-        ]
+        ],
+        "narrow": "Miri — главный городской/авиационный вход к Bario; Bario — высокогорная полевая база Kelabit Highlands. Между ними обычна малая авиация, наземный 4WD значительно медленнее.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Sandakan / Lahad Datu",
@@ -13108,7 +13796,12 @@
         "object_names": [
           "Danum Valley Conservation Area",
           "Kinabatangan River"
-        ]
+        ],
+        "narrow": "Два восточно-сабахских хаба: Sandakan обслуживает Sepilok, Gomantong и часть Kinabatangan; Lahad Datu — Danum Valley и Tabin. Не считать их взаимозаменяемыми без расчёта дороги.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Kuching / Miri depending object",
@@ -13118,7 +13811,12 @@
         "object_names": [
           "Niah National Park",
           "Kuching old town and waterfront"
-        ]
+        ],
+        "narrow": "Составной логистический ярлык старой схемы: Kuching обслуживает западный Sarawak, Miri — север и Niah/Mulu. В формальной географии эти города разделяются.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Lenggong / Kuala Kangsar / Ipoh",
@@ -13127,7 +13825,12 @@
         ],
         "object_names": [
           "Lenggong Valley archaeological landscape"
-        ]
+        ],
+        "narrow": "Наземная связка для археологии Lenggong и центрального Perak. Ipoh — крупный транспортный узел, Lenggong — локальная база ближе к серийному археологическому объекту.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Semporna",
@@ -13135,8 +13838,14 @@
           "Semporna / Sipadan / east Sabah"
         ],
         "object_names": [
-          "Sipadan Island"
-        ]
+          "Sipadan Island",
+          "Tun Sakaran Marine Park / Bohey Dulang"
+        ],
+        "narrow": "Портовая база для Sipadan и Tun Sakaran. Почти вся дальнейшая логистика морская и зависит от разрешений, операторов и погодного окна.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Kudat / Kota Kinabalu",
@@ -13144,8 +13853,14 @@
           "Kudat / Rungus north Sabah"
         ],
         "object_names": [
-          "Kampung Bavanggazo / Rungus длинный общинный дом"
-        ]
+          "Kampung Bavanggazo / Rungus длинный общинный дом",
+          "Kampung Bavanggazo / Rungus longhouse"
+        ],
+        "narrow": "Kota Kinabalu — дальний авиационный вход; Kudat — местный северо-сабахский узел для Rungus villages и побережья.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Kuala Lumpur / Gombak",
@@ -13154,7 +13869,12 @@
         ],
         "object_names": [
           "Batu Caves"
-        ]
+        ],
+        "narrow": "Городская агломерация для доступа к Batu Caves; KTM Komuter и автомобильный транспорт дают независимый доступ без тура.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       },
       {
         "name": "Sandakan",
@@ -13163,7 +13883,222 @@
         ],
         "object_names": [
           "Sepilok Orangutan Rehabilitation Centre"
-        ]
+        ],
+        "narrow": "Авиационный и автомобильный хаб восточного Sabah для Sepilok и части маршрутов к Kinabatangan/Gomantong.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Kuala Tahan / Jerantut",
+        "regions": [
+          "Pahang / Taman Negara"
+        ],
+        "object_names": [
+          "Taman Negara / Gunung Tahan"
+        ],
+        "narrow": "Jerantut — наземный пересадочный узел, Kuala Tahan — главный речной/парковый вход в Taman Negara со стороны Pahang.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Kahang / Kampung Peta",
+        "regions": [
+          "Johor / Endau-Rompin"
+        ],
+        "object_names": [
+          "Endau-Rompin Johor National Park"
+        ],
+        "narrow": "Kahang — дорожный вход, Kampung Peta — локальная база у Endau-Rompin Johor National Park; последний участок зависит от состояния дороги и режима парка.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Keningau / Maliau Basin Studies Centre",
+        "regions": [
+          "Maliau Basin / south-central Sabah"
+        ],
+        "object_names": [
+          "Maliau Basin Conservation Area"
+        ],
+        "narrow": "Keningau — ближайший крупный внутренний хаб; Studies Centre — контролируемая полевая база Maliau Basin, а не обычный населённый пункт.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Kuching / Bako",
+        "regions": [
+          "Sarawak / Kuching / Niah"
+        ],
+        "object_names": [
+          "Bako National Park"
+        ],
+        "narrow": "Kuching — крупный хаб; Bako village/boat terminal — практическая точка пересадки на лодку к национальному парку.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Kuala Lumpur / Kepong",
+        "regions": [
+          "Selangor / FRIM"
+        ],
+        "object_names": [
+          "Forest Research Institute Malaysia Forest Park Selangor"
+        ],
+        "narrow": "Kuala Lumpur даёт транспортный вход, Kepong — непосредственную городскую базу для FRIM. Объект расположен на краю агломерации, а не в удалённом лесу.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Sandakan / Gomantong",
+        "regions": [
+          "Sabah east coast / Danum / Kinabatangan"
+        ],
+        "object_names": [
+          "Gomantong Caves"
+        ],
+        "narrow": "Sandakan — дальний хаб; район Gomantong/Kinabatangan — локальная дорожная точка для доступа к пещерам.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Kuching / Lundu",
+        "regions": [
+          "Sarawak / Kuching / Niah"
+        ],
+        "object_names": [
+          "Gunung Gading National Park"
+        ],
+        "narrow": "Kuching — основной авиационный вход, Lundu — местная база для Gunung Gading и западного побережья Sarawak.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Lahad Datu / Tabin",
+        "regions": [
+          "Sabah east coast / Danum / Kinabatangan"
+        ],
+        "object_names": [
+          "Tabin Wildlife Reserve"
+        ],
+        "narrow": "Lahad Datu — городской хаб; Tabin — удалённая охраняемая территория, где последний участок организуется по правилам резервата.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "George Town / Teluk Bahang",
+        "regions": [
+          "Penang / George Town"
+        ],
+        "object_names": [
+          "Penang National Park"
+        ],
+        "narrow": "George Town — городской хаб Penang; Teluk Bahang — локальный вход на тропы и лодочные маршруты Penang National Park.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Mersing / Tekek",
+        "regions": [
+          "Pahang / Tioman"
+        ],
+        "object_names": [
+          "Tioman Island / Tioman Marine Park"
+        ],
+        "narrow": "Mersing в Johor — один из ключевых портов отправления, но сам Tioman относится к Pahang. Tekek — основной островной хаб с аэропортом, пристанью и дорогой.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Merbok / Sungai Petani",
+        "regions": [
+          "Kedah / Bujang Valley"
+        ],
+        "object_names": [
+          "Sungai Batu Archaeological Site / Bujang Valley"
+        ],
+        "narrow": "Sungai Petani — крупный транспортный узел Kedah, Merbok — ближайшая локальная база к Bujang Valley и Sungai Batu.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Ipoh / Tambun",
+        "regions": [
+          "Perak / Taiping / Kuala Kangsar / Belum"
+        ],
+        "object_names": [
+          "Gua Tambun rock art"
+        ],
+        "narrow": "Ipoh — городской хаб; Tambun — северо-восточная окраина агломерации у известнякового массива и Gua Tambun.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Kota Kinabalu / Inobong / Tambunan",
+        "regions": [
+          "Sabah west coast / Crocker Range"
+        ],
+        "object_names": [
+          "Crocker Range Park / Salt Trail"
+        ],
+        "narrow": "Kota Kinabalu — дальний хаб; Inobong и Tambunan дают разные точки входа к Crocker Range и Salt Trail.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Kuching / Siburan",
+        "regions": [
+          "Sarawak / Kuching / Niah"
+        ],
+        "object_names": [
+          "Semenggoh Wildlife Centre"
+        ],
+        "narrow": "Kuching — основной городской хаб, Siburan/Semenggoh — южное направление по дороге к wildlife centre.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
+      },
+      {
+        "name": "Kuala Terengganu / Merang",
+        "regions": [
+          "Terengganu / Redang"
+        ],
+        "object_names": [
+          "Redang Island / Redang Marine Park"
+        ],
+        "narrow": "Kuala Terengganu — авиационный/автобусный узел, Merang — один из основных морских портов для Redang.",
+        "tags": [
+          "route_hub"
+        ],
+        "last_verified": "2026-09-29"
       }
     ],
     "drone_rules": {
@@ -13437,6 +14372,67 @@
       ],
       "accessed": "2026-09-28",
       "canonical_id": "src_000568"
+    },
+    {
+      "id": "MY_EMB_MOSCOW",
+      "publisher": "Embassy of Malaysia, Moscow / Ministry of Foreign Affairs Malaysia",
+      "url": "https://www.kln.gov.my/web/rus_moscow/requirement_foreigner",
+      "kind": "government",
+      "used_for": [
+        "visa for Russian Federation"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "MDAC",
+      "publisher": "Immigration Department of Malaysia",
+      "url": "https://imigresen-online.imi.gov.my/mdac/main",
+      "kind": "government",
+      "used_for": [
+        "Malaysia Digital Arrival Card"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "BNM_FX",
+      "publisher": "Bank Negara Malaysia / Financial Markets Malaysia",
+      "url": "https://financialmarkets.bnm.gov.my/Foreign-Exchange-Market",
+      "kind": "central_bank",
+      "used_for": [
+        "USD/MYR reference rate"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "MET_MY",
+      "publisher": "METMalaysia",
+      "url": "https://www.met.gov.my/en/pendidikan/fenomena-cuaca/",
+      "kind": "government",
+      "used_for": [
+        "monsoon regimes"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "FORESTRY_FAQ",
+      "publisher": "Forestry Department of Peninsular Malaysia",
+      "url": "https://www.forestry.gov.my/en/soalan-lazim",
+      "kind": "government",
+      "used_for": [
+        "permanent reserved forest entry/camping permits"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "TIOMAN_MYBIS",
+      "publisher": "Malaysia Biodiversity Information System",
+      "url": "https://www.mybis.gov.my/pa/177",
+      "kind": "government",
+      "used_for": [
+        "Tioman state=Pahang",
+        "marine park"
+      ],
+      "accessed": "2026-09-29"
     }
   ],
   "uncertainties": [

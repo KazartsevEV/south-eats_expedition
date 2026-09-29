@@ -3,7 +3,7 @@
     "schema": "expedition_geography_v1",
     "country_code": "MY",
     "country_slug": "malaysia",
-    "status": "country_geography_formalized_expanded_38_objects_draft",
+    "status": "country_geography_formalized_expanded_40_objects_draft",
     "checked_at": "2026-09-29",
     "next_level": "build_validate_then_object_and_class_qa",
     "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; large physical areas are not forced under a city or route hub."
@@ -92,7 +92,9 @@
         "my:maliau-basin-conservation-area",
         "my:crocker-range-park-and-salt-trail",
         "my:gomantong-caves",
-        "my:tawau-hills-park"
+        "my:tawau-hills-park",
+        "my:tabin-wildlife-reserve",
+        "my:imbak-canyon-conservation-area"
       ],
       "canonical_id": "geo_my_0036"
     },
@@ -672,6 +674,32 @@
         "my:gua-tambun-rock-art-site"
       ],
       "canonical_id": "geo_my_0082"
+    },
+    {
+      "id": "my:protected-area:tabin",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Заповедник Табин",
+      "slug": "tabin",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:tabin-wildlife-reserve"
+      ],
+      "canonical_id": "geo_my_0083",
+      "notes_ru": "Крупный lowland wildlife reserve Dent Peninsula; primary_location карточки является reference center, не входом."
+    },
+    {
+      "id": "my:protected-area:imbak-canyon",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "name_ru": "Охраняемая территория каньона Имбак",
+      "slug": "imbak-canyon",
+      "parent_id": "my:state:sabah",
+      "object_ids": [
+        "my:imbak-canyon-conservation-area"
+      ],
+      "canonical_id": "geo_my_0084",
+      "notes_ru": "Контролируемая conservation/research territory; primary_location — reference center, не visitor gate."
     }
   ]
 }

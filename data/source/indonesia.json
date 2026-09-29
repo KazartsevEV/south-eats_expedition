@@ -3,7 +3,7 @@
     "country": "Indonesia",
     "country_code": "ID",
     "language": "ru",
-    "last_updated": "2026-09-29",
+    "last_updated": "2026-09-30",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -27,7 +27,8 @@
       "v1.5 migration: adds narrow, normalized tags, route_meta and locality linkage for canonical CDN build.",
       "v1.6: завершён экспедиционный редакционный проход 21/21: самостоятельное путешествие — режим по умолчанию; многодневность, ступени и набор высоты описываются как параметры маршрута; гид/оператор указывается только при обязательном режиме доступа или явной практической ценности; сырые англо-русские формулировки вычищаются из человекочитаемых полей.",
       "2026-09-29 GPS normalization: 21/21 Indonesia objects receive sourced WGS84 map anchors. Broad parks, archipelagos and cultural landscapes use explicit center/approximate semantics rather than pretending to be entrances.",
-      "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии."
+      "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии.",
+      "2026-09-30 country-layer pass: completed language, ethnography, culture, country narrow and country-wide travel-rule fields with canonical source IDs; attraction-card payloads were not edited."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -83,10 +84,17 @@
         "name": "Puncak Jaya (Carstensz Pyramid)",
         "elevation_m": 4884
       },
-      "terrain": "Вулканические островные дуги, высокие горы Новой Гвинеи, тропические низменности, торфяники и мангры; высокая сейсмичность."
+      "terrain": "Вулканические островные дуги, высокие горы Новой Гвинеи, тропические низменности, торфяники и мангры; высокая сейсмичность.",
+      "source_ids": [
+        "BPS_2026",
+        "RUS_MFA"
+      ]
     },
     "religion": {
-      "profile": "Крупнейшее в мире мусульманское население; также христиане, индуисты (особенно Bali), буддисты, конфуцианцы и местные традиции."
+      "profile": "Крупнейшее в мире мусульманское население; также христиане, индуисты (особенно Bali), буддисты, конфуцианцы и местные традиции.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "political_system": "Президентская республика с выборным президентом и значительной децентрализацией провинций/регентств.",
     "economy": {
@@ -100,8 +108,43 @@
         "value_pct": 4,
         "year": 2025,
         "notes": "Международная сопоставимая черта; национальная бедность рассчитывается иначе."
-      }
-    }
+      },
+      "source_ids": [
+        "WB",
+        "BPS_2026"
+      ]
+    },
+    "languages": {
+      "official": "Индонезийский язык (Bahasa Indonesia) — общегосударственный язык.",
+      "diversity": "Государственная языковая база содержит сотни региональных языков; на 2026 год Master Data Bahasa показывает 718 записей. Для экспедиции язык конкретной общины фиксируется на региональном/локальном уровне, а не выводится из провинции.",
+      "practical": "Индонезийский является основной межрегиональной рабочей лингва-франка; английский полезен в крупных туристических узлах, но не заменяет индонезийский в удалённых районах.",
+      "source_ids": [
+        "BAHASA_MASTER",
+        "RUS_MFA"
+      ]
+    },
+    "ethnography": {
+      "summary": "Индонезия — крайне многоэтничный архипелаг. Яванцы и сунданцы образуют крупнейшие группы, но экспедиционный слой отдельно различает минангкабау, батаков, балийцев, даяков, тораджа, народы Молукк, Нуса-Тенгары, Сулавеси и Папуа. Численные доли не переносятся между переписями и локальными справками; этнографические признаки закрепляются за конкретными регионами и общинами.",
+      "source_ids": [
+        "BPS_2026",
+        "DAPOBUD_WBTB"
+      ]
+    },
+    "culture": {
+      "summary": "Культурный слой страны принципиально регионален: яванские дворцовые традиции, балийские индуистские ритуалы и субак, батакские и тораджские культурные ландшафты, морские традиции Сулавеси и Молукк, папуасские ремёсла и сотни иных локальных практик не сводятся к единой «индонезийской экзотике». Национальная база нематериального наследия и списки ЮНЕСКО используются как реестр подтверждённых традиций, а локальный смысл раскрывается в региональном слое.",
+      "source_ids": [
+        "DAPOBUD_WBTB",
+        "UNESCO_ICH_ID"
+      ]
+    },
+    "narrow": "Индонезия — огромный экваториальный архипелаг между Индийским и Тихим океанами, где логистика, климат, культура и даже смысл слова «регион» меняются от острова к острову. Исторический слой строится от морских государств Шривиджая и Маджапахит через исламизацию торговых портов, голландскую колониальную систему и борьбу за независимость к современной децентрализованной республике. Геологически страна лежит на стыке крупных литосферных плит: вулканические дуги Явы и Суматры, поднятые горы Новой Гвинеи, коралловые моря, карст, мангры и торфяные низменности формируют очень разные экспедиционные условия. Страна многоэтнична и многоязычна: индонезийский связывает регионы как общегосударственный язык, но локальные языки, религии и системы обычаев остаются критически важными для маршрута. Поэтому Джокьякарта и Центральная Ява, Бали, Флорес и Комодо, Восточная Ява, Западная Суматра, Тораджа, север Суматры, Калимантан, Молуккские острова, Раджа-Ампат, Вакатоби, Тогеаны и Сумба рассматриваются как самостоятельные культурно-географические блоки. Для самостоятельной экспедиции ключевые ограничения связаны не с «дальностью от курорта», а с вулканической активностью, погодой и морем, разрешительным режимом национальных парков и заповедников, доступом на удалённые острова и местными правилами общин. Сильнейшие сюжетные линии — храмовые ландшафты Явы и Бали, вулканизм, морские цивилизации и колониальная торговля специями, индустриальное наследие, мегалитические и погребальные традиции, тропические леса и морское биоразнообразие.",
+    "history_source_ids": [
+      "RUS_MFA",
+      "UNESCO"
+    ],
+    "political_system_source_ids": [
+      "RUS_MFA"
+    ]
   },
   "nature": {
     "flora": [
@@ -208,6 +251,9 @@
     "sensitive_areas": [
       "parts of Papua require special security awareness and may have access restrictions",
       "active volcano exclusion zones"
+    ],
+    "source_ids": [
+      "RUS_MFA"
     ]
   },
   "travel": {
@@ -304,7 +350,11 @@
       },
       "fee_idr": 500000,
       "passport_validity": "минимум 6 месяцев",
-      "official_source": "Directorate General of Immigration Indonesia"
+      "official_source": "Directorate General of Immigration Indonesia",
+      "source_ids": [
+        "IMM",
+        "IMM2"
+      ]
     },
     "airports": [
       {
@@ -335,14 +385,20 @@
         "Papua New Guinea",
         "Timor-Leste"
       ],
-      "transport": "Наземные международные переходы существуют на Borneo/Kalimantan, Timor и New Guinea, но далеко не все удобны для туриста и не все работают одинаково для конкретного визового режима."
+      "transport": "Наземные международные переходы существуют на Borneo/Kalimantan, Timor и New Guinea, но далеко не все удобны для туриста и не все работают одинаково для конкретного визового режима.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "currency": {
       "code": "IDR",
       "name": "Indonesian rupiah",
       "local_currency_per_1_usd": 17914.1,
       "as_of": "2026-09-27",
-      "rate_type": "market/reference snapshot"
+      "rate_type": "market/reference snapshot",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "objects": [
       {
@@ -7433,6 +7489,49 @@
           "Sumba megalithic villages"
         ]
       }
+    ],
+    "airports_source_ids": [
+      "RUS_MFA"
+    ],
+    "international_air_links_source_ids": [
+      "RUS_MFA"
+    ],
+    "transport_rules": {
+      "road_side": "left",
+      "status": "foreign_licence_rule_requires_trip_specific_verification",
+      "summary": "National traffic law requires a valid driving licence for motor-vehicle operation. The official material normalized in this pass does not provide a sufficiently clear one-line rule for acceptance of a Russian national licence/IDP by a short-term visitor, so the handbook does not assert one; verify current Korlantas/immigration and rental requirements for the exact vehicle category.",
+      "source_ids": [
+        "POLRI_SIM"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "camping_rules": {
+      "status": "site_specific",
+      "summary": "No country-wide right to wild camp is assumed. In conservation areas, entry and activities are controlled by the managing authority; expeditions, research, filming and other special activities can require SIMAKSI, while ordinary recreation and camping rules remain park-specific.",
+      "source_ids": [
+        "KSDA_SIMAKSI"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "drone_rules": {
+      "legal_status": "regulated",
+      "summary": "Drone operation is regulated under Ministry of Transportation Regulation PM 37/2020. Airspace, location and operation type determine the required approvals; the handbook therefore stores the regulation and requires site/airspace verification rather than inventing one simplified nationwide flight rule.",
+      "source_ids": [
+        "HUBUD_DRONE"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "tourist_permits": {
+      "status": "site_specific",
+      "summary": "There is no single national tourist permit for ordinary travel. Conservation areas and special activities use their own entry/permit systems; SIMAKSI is required for categories such as research, expeditions, filming and journalism in protected areas, while some parks impose separate reservations, quotas or mandatory ranger/guide rules.",
+      "source_ids": [
+        "KSDA_SIMAKSI"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "laws_source_ids": [
+      "REUTERS_CODE",
+      "RUS_MFA"
     ]
   },
   "sources": [
@@ -7445,7 +7544,8 @@
         "economy",
         "poverty"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000715"
     },
     {
       "id": "IMM",
@@ -7456,7 +7556,8 @@
         "visa",
         "entry"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000716"
     },
     {
       "id": "IMM2",
@@ -7467,7 +7568,8 @@
         "visa_extension",
         "passport"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000717"
     },
     {
       "id": "REUTERS_CODE",
@@ -7477,7 +7579,8 @@
       "used_for": [
         "criminal_code"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000718"
     },
     {
       "id": "RUS_MFA",
@@ -7488,7 +7591,8 @@
         "safety",
         "country_profile"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000719"
     },
     {
       "id": "UNESCO",
@@ -7498,7 +7602,8 @@
       "used_for": [
         "heritage"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000720"
     },
     {
       "id": "CLIMATE_AIR",
@@ -7508,7 +7613,8 @@
       "used_for": [
         "air_temperature"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000721"
     },
     {
       "id": "CLIMATE_SEA",
@@ -7518,7 +7624,8 @@
       "used_for": [
         "sea_temperature"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000722"
     },
     {
       "id": "WHO_SNAKEBITE",
@@ -7529,7 +7636,8 @@
         "venomous_snake_risk"
       ],
       "accessed": "2026-09-27",
-      "notes": "Региональный фон; не заменяет локальные данные."
+      "notes": "Региональный фон; не заменяет локальные данные.",
+      "canonical_id": "src_000723"
     },
     {
       "id": "IUCN_RED_LIST",
@@ -7539,7 +7647,100 @@
       "used_for": [
         "fauna_conservation_status"
       ],
-      "accessed": "2026-09-27"
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000724"
+    },
+    {
+      "id": "BPS_2026",
+      "publisher": "Badan Pusat Statistik Indonesia",
+      "url": "https://www.bps.go.id/id/publication/2026/02/27/a43f03f45543dc4e9942f44c/statistik-indonesia-2026.html",
+      "kind": "government",
+      "used_for": [
+        "country_profile",
+        "demography",
+        "geography",
+        "economy"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000725"
+    },
+    {
+      "id": "BAHASA_MASTER",
+      "publisher": "Kementerian Pendidikan Dasar dan Menengah / Badan Bahasa",
+      "url": "https://bahasa.data.kemdikbud.go.id/",
+      "kind": "government",
+      "used_for": [
+        "languages",
+        "official_language",
+        "country_profile"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000726"
+    },
+    {
+      "id": "DAPOBUD_WBTB",
+      "publisher": "Direktorat Jenderal Kebudayaan, Indonesia",
+      "url": "https://dapobud.kemdikbud.go.id/wbtb",
+      "kind": "government",
+      "used_for": [
+        "culture",
+        "heritage",
+        "ethnography",
+        "country_profile"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000727"
+    },
+    {
+      "id": "UNESCO_ICH_ID",
+      "publisher": "UNESCO Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/en-state/indonesia-ID",
+      "kind": "international_organization",
+      "used_for": [
+        "culture",
+        "heritage"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000728"
+    },
+    {
+      "id": "HUBUD_DRONE",
+      "publisher": "Directorate General of Civil Aviation, Ministry of Transportation Indonesia",
+      "url": "https://hubud.kemenhub.go.id/regulasi/cari/4296",
+      "kind": "government",
+      "used_for": [
+        "drone_rules",
+        "aviation_rules"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000729"
+    },
+    {
+      "id": "KSDA_SIMAKSI",
+      "publisher": "Directorate General of Natural Resources and Ecosystem Conservation, Indonesia",
+      "url": "https://tnbbs.ksdae.menlhk.go.id/tata-cara-permohonan-simaksi/",
+      "kind": "government",
+      "used_for": [
+        "permit",
+        "permits",
+        "protected_areas",
+        "camping_rules",
+        "expedition_access"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000730"
+    },
+    {
+      "id": "POLRI_SIM",
+      "publisher": "Kepolisian Negara Republik Indonesia",
+      "url": "https://polri.go.id/layanan/sim",
+      "kind": "government",
+      "used_for": [
+        "transport_rules",
+        "road_traffic_law"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000731"
     }
   ],
   "uncertainties": [

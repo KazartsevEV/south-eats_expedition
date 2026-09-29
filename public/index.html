@@ -281,7 +281,17 @@ var FIELD_LABELS={
   rail:'Железная дорога',water:'Водный транспорт',police_district_2023:'Данные полицейского округа за 2023 год',
   assault_all:'Преступления против личности',property_all:'Имущественные преступления',date:'Дата среза',unit:'Единица учёта',
   mapping_note:'Привязка к территории',protected_area:'Охраняемая территория',ecosystems:'Экосистемы',habitats:'Местообитания',
-  note:'Примечание',status:'Статус',area:'Территория'
+  note:'Примечание',status:'Статус',area:'Территория',scope:'Область',reference_location:'Опорная точка',
+  air_temp_mean_c_by_month:'Средняя температура воздуха по месяцам, °C',sea_temp_mean_c_by_month:'Средняя температура моря по месяцам, °C',
+  source_quality:'Качество источника',best_period_general:'Предпочтительный период',local_notes:'Местные особенности',
+  coast:'Побережье',expedition_note:'Практическое значение',turtle_context:'Морские черепахи',
+  dangerous_animals:'Опасные животные',poisonous_plants:'Ядовитые растения',documented_fauna:'Отмеченная фауна',
+  terrestrial:'Наземная природа',island_vegetation:'Растительность островов',dominant_expedition_risk:'Основной экспедиционный риск',
+  intercity:'Междугороднее сообщение',local:'Местное перемещение',walking:'Пешком',modes:'Способы передвижения',
+  taxi_ridehail:'Такси и заказ машины',moped:'Мопед',gateway_for:'Связи',tickets:'Билеты и регистрация',
+  mountains_m:'Высоты гор, м',summit_m:'Высота вершины, м',bajau:'Баджау',orang_ulu:'Оранг-улу',jahai:'Джахай',
+  spoken:'Языки',protected_marine:'Морские охраняемые территории',annual_precipitation_mm:'Осадки за год, мм',
+  annual_precipitation_uncertainty_mm:'Неопределённость осадков, мм',period:'Период'
 };
 var VALUE_LABELS={
   police_district:'полицейский округ',
@@ -291,6 +301,17 @@ var VALUE_LABELS={
   not_normalized_locally:'локальные данные ещё не нормализованы',
   not_reduced_to_one_list:'единый список неприменим без локальной привязки',
   urban_crime_metric_not_useful_for_remote_park:'городская статистика преступности неприменима к удалённому парку',
+  'urban crime metric_not_useful_for_remote_park':'городская статистика преступности неприменима к удалённому парку',
+  'urban district crime metric_not_meaningful_for_bario_without_local_mapping':'районная городская статистика неприменима к Барио без отдельной локальной привязки',
+  'not_applicable_as_city_metric':'городская статистика преступности здесь неприменима',
+  'Besut district data available_not_yet_aggregated':'данные по округу Бесут есть, но ещё не сведены',
+  'Kudat district data available_not_yet_aggregated':'данные по округу Кудат есть, но ещё не сведены',
+  'Sandakan district data available_not_yet_aggregated':'данные по округу Сандакан есть, но ещё не сведены',
+  'Semporna district data available_not_yet_aggregated':'данные по округу Семпорна есть, но ещё не сведены',
+  'Lahad Datu/Kinabatangan/Sandakan district rows available_not_yet_aggregated':'данные по округам Лахад-Дату, Кинабантанган и Сандакан есть, но ещё не сведены',
+  'Kuching/Miri district data available_not_yet_aggregated':'данные по округам Кучинг и Мири есть, но ещё не сведены',
+  'Ranau/Kota Belud/Kota Kinabalu-area rows require separate aggregation; no single highlands crime rate.':'данные по Ранау, Кота-Белуду и Кота-Кинабалу нужно рассматривать раздельно; единого показателя для высокогорья нет',
+  'regional_gateway':'региональный транспортный узел','boat_gateway':'узел лодочного сообщения','mainland_gateway':'материковый транспортный узел',
   true:'да',false:'нет'
 };
 function fieldLabel(k){return FIELD_LABELS[k]||k.replace(/_/g,' ')}
@@ -304,7 +325,8 @@ function scalar(v,key){
   if(typeof v==='number')return esc(v);
   if(Array.isArray(v))return '<ul>'+v.map(function(x){return '<li>'+scalar(x,key)+'</li>'}).join('')+'</ul>';
   if(typeof v==='object'){
-    return '<ul>'+Object.keys(v).filter(function(k){return v[k]!=null&&v[k]!==''&&k!=='source_refs'&&k!=='qa'&&k!=='source_ids'}).map(function(k){
+    var hidden={source_refs:1,source_ids:1,source_urls:1,checked_at:1,qa:1,provenance:1};
+    return '<ul>'+Object.keys(v).filter(function(k){return v[k]!=null&&v[k]!==''&&!hidden[k]}).map(function(k){
       return '<li><b>'+esc(fieldLabel(k))+':</b> '+scalar(v[k],k)+'</li>';
     }).join('')+'</ul>';
   }

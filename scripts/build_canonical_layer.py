@@ -457,6 +457,7 @@ def build():
                 "body": None,
             },
             "cover_media_id": None,
+            "primary_location": locality_profile.get("primary_location") if locality_profile else None,
             "legacy_ids": [legacy_id],
             "migration": {
                 "source_kind": place.get("kind"),
@@ -548,6 +549,7 @@ def build():
                 "geo_path": [country_id, parent_id, geo_id] if parent_id != country_id else [country_id, geo_id],
                 "description": {"narrow": profile.get("summary"), "body": None},
                 "cover_media_id": None,
+                "primary_location": locality.get("primary_location"),
                 "legacy_ids": [legacy_id],
                 "relations": {
                     "source_region_names": region_names,
@@ -1016,6 +1018,14 @@ def build():
                 "name": (entity.get("names") or {}).get("primary"),
                 "parent_id": entity.get("parent_id"),
                 "status": ((entity.get("migration") or {}).get("status") or "active"),
+                "coordinates": (
+                    {
+                        "lat": (entity.get("primary_location") or {}).get("lat"),
+                        "lon": (entity.get("primary_location") or {}).get("lon"),
+                    }
+                    if (entity.get("primary_location") or {}).get("lat") is not None and (entity.get("primary_location") or {}).get("lon") is not None
+                    else None
+                ),
                 "path": f"geo/entities/{geo_id}.json",
             }
             for geo_id, entity in sorted(geo_entities.items())

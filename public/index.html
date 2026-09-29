@@ -648,6 +648,39 @@ function addBaseMap(id,objects,opts){
   }
   return map;
 }
+
+function addCountryMap(id,objects,cc,opts){
+  opts=opts||{};
+  var el=document.getElementById(id);if(!el||!window.L)return null;
+  var rows=mappedObjects(objects);
+  var map=L.map(el,{zoomControl:true,minZoom:1,worldCopyJump:true});
+  state.mapInstances.push(map);
+  addEnglishVectorBase(map);
+  rows.forEach(function(o){
+    var lat=Number(o.coordinates.lat),lon=Number(o.coordinates.lon);
+    var m=L.circleMarker([lat,lon],{radius:6,weight:2,fillOpacity:.82}).addTo(map);
+    var title=esc(o.title||o.id),cls=esc(o.map_meta||className(o.class_id));
+    var href=o.map_href||('#/object/'+encodeURIComponent(o.id));
+    m.bindTooltip(title,{direction:'top',offset:[0,-5],opacity:.94});
+    m.bindPopup('<div class="popup-title">'+title+'</div><div class="popup-meta">'+cls+'</div><a class="map-link" href="'+esc(href)+'">Открыть →</a>');
+  });
+  countryBoundary(cc).then(function(boundary){
+    if(boundary){
+      addCountryMask(map,boundary);
+      try{
+        var b=L.geoJSON(boundary).getBounds();
+        if(b&&b.isValid())map.fitBounds(b.pad(opts.pad==null?.08:opts.pad),{maxZoom:opts.maxZoom||8});
+      }catch(e){}
+    }else if(rows.length){
+      var pts=rows.map(function(o){return[Number(o.coordinates.lat),Number(o.coordinates.lon)]});
+      if(pts.length===1)map.setView(pts[0],opts.singleZoom||9);
+      else map.fitBounds(L.latLngBounds(pts).pad(opts.pad==null?.12:opts.pad),{maxZoom:opts.maxZoom||8});
+    }else{
+      map.setView([8,110],3);
+    }
+  });
+  return map;
+}
 function renderHome(){
   resetMaps();
   var counts=countryCounts();
@@ -715,8 +748,7 @@ async function renderCountry(cc){
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Банк достопримечательностей страны</h2></div></div>'+
     '<div class="toolbar"><input class="control" id="countrySearch" placeholder="Поиск внутри страны…"><select class="control" id="countryClass"><option value="">Все классы</option>'+Object.keys(classes).sort().map(function(id){return '<option value="'+esc(id)+'">'+esc(className(id))+' · '+classes[id]+'</option>'}).join('')+'</select><div></div><button class="btn" id="countryReset">Сбросить</button></div>'+
     '<div id="countryObjects" class="object-grid">'+objs.map(objectCard).join('')+'</div></section>';
-  var countryMap=addBaseMap('countryMap',objs,{maxZoom:8,pad:.14,singleZoom:9,emptyMessage:'У объектов этой страны пока нет нормализованных GPS. Общая карта ЮВА здесь больше не подставляется.'});
-  countryBoundary(cc).then(function(boundary){addCountryMask(countryMap,boundary)});
+  var countryMap=addCountryMap('countryMap',objs,cc,{maxZoom:8,pad:.08,singleZoom:9});
   bindGo();bindObjectGrid();
   document.querySelectorAll('[data-region]').forEach(function(x){x.onclick=function(){routeTo('#/region/'+x.getAttribute('data-region'))}});
   var search=document.getElementById('countrySearch'),sel=document.getElementById('countryClass');

@@ -28,7 +28,8 @@
       "2026-09-29 Myanmar hierarchy cleanup: composite route hubs split into real towns/cities while legacy hubs are retained for compatibility; existing Mandalay/Yangon/Dawei/Hpa-An nodes are reused rather than duplicated.",
       "2026-09-29 Myanmar regional safety normalization: current FCDO and Australian Smartraveller regional advisories stored as dated dynamic geo facts; old mixed-language object safety text is not promoted as canonical regional prose.",
       "2026-09-29 Myanmar regional research chunk 1: official UNESCO/ASEAN/DMH/MPA/tourism sources added for climate, hydrology, tides, geology, biodiversity, history and ethnography. Dynamic water/tide values are referenced, not frozen as permanent regional facts.",
-      "2026-09-29 Myanmar language pass: locality reference prose normalized into natural Russian; generic English travel terms removed while technical IDs and source metadata remain unchanged."
+      "2026-09-29 Myanmar language pass: locality reference prose normalized into natural Russian; generic English travel terms removed while technical IDs and source metadata remain unchanged.",
+      "2026-09-29 Myanmar health pass: regional malaria context added for Kachin, Kayin, Tanintharyi and Sagaing from WHO Health Cluster; 2025 dengue-response context added for Sagaing and Mandalay with explicit non-incidence caveats."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -526,10 +527,20 @@
           "source_refs": [
             "src_000673",
             "src_000674",
-            "src_000671"
+            "src_000671",
+            "src_000683"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
+        },
+        "health": {
+          "dengue": {
+            "context_2025": "После землетрясения 2025 года ВОЗ проводила в Мандалайском регионе целевую профилактику денге в пострадавших и уязвимых сообществах.",
+            "caveat": "Это контекст 2025 года, а не текущий показатель заболеваемости для города Мандалай."
+          },
+          "source_refs": [
+            "src_000683"
+          ]
         }
       },
       {
@@ -803,10 +814,20 @@
         "local_reference_provenance": {
           "source_refs": [
             "src_000673",
-            "src_000671"
+            "src_000671",
+            "src_000682"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
+        },
+        "health": {
+          "malaria": {
+            "regional_context": "Танинтайи входит в группу регионов с высокой малярийной нагрузкой; в бюллетене ВОЗ за август 2025 года два из десяти наиболее рискованных городских округов находились здесь.",
+            "caveat": "Это региональный фон, а не текущая оценка риска в самом Тавое."
+          },
+          "source_refs": [
+            "src_000682"
+          ]
         }
       },
       {
@@ -1043,10 +1064,20 @@
             "src_000673",
             "src_000674",
             "src_000671",
-            "src_000672"
+            "src_000672",
+            "src_000682"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
+        },
+        "health": {
+          "malaria": {
+            "regional_context": "В августе 2025 года ВОЗ относила штат Карен к районам с одной из самых высоких малярийных нагрузок; три из десяти выделенных наиболее рискованных городских округов находились в штате.",
+            "caveat": "Не переносить этот фон автоматически на Пхаан или отдельную пещеру; локальная заболеваемость в источнике не дана."
+          },
+          "source_refs": [
+            "src_000682"
+          ]
         }
       },
       {
@@ -1109,10 +1140,26 @@
             "src_000673",
             "src_000674",
             "src_000671",
-            "src_000672"
+            "src_000672",
+            "src_000682",
+            "src_000683"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
+        },
+        "health": {
+          "malaria": {
+            "regional_context": "Сикайн входит в число регионов с высокой малярийной нагрузкой; в перечне ВОЗ за август 2025 года один из десяти наиболее рискованных городских округов находился в регионе.",
+            "caveat": "Данные не позволяют присвоить этот уровень риска самой Моунъюа без отдельной локальной статистики."
+          },
+          "dengue": {
+            "context_2025": "После землетрясения 2025 года ВОЗ проводила в Сикайне целевые мероприятия по профилактике денге в пострадавших и уязвимых сообществах.",
+            "caveat": "Это эпидемиологический контекст 2025 года, а не текущая заболеваемость."
+          },
+          "source_refs": [
+            "src_000682",
+            "src_000683"
+          ]
         }
       },
       {
@@ -1195,10 +1242,20 @@
             "src_000679",
             "src_000673",
             "src_000671",
-            "src_000672"
+            "src_000672",
+            "src_000682"
           ],
           "checked_at": "2026-09-29",
           "source_refs_complete": true
+        },
+        "health": {
+          "malaria": {
+            "regional_context": "В бюллетене кластера здравоохранения ВОЗ за август 2025 года Качин относится к главным очагам высокой малярийной нагрузки: четыре из десяти выделенных наиболее рискованных городских округов находились в этом штате.",
+            "caveat": "Это региональный контекст, а не показатель для озера Индавджи или конкретной деревни; доступность эпиднадзора неполная."
+          },
+          "source_refs": [
+            "src_000682"
+          ]
         }
       },
       {
@@ -6464,6 +6521,38 @@
         "access"
       ],
       "accessed": "2026-09-29"
+    },
+    {
+      "id": "WHO_MM_HEALTH_CLUSTER_2025",
+      "canonical_id": "src_000682",
+      "publisher": "World Health Organization / Myanmar Health Cluster",
+      "url": "https://healthcluster.who.int/docs/librariesprovider16/meeting-reports/myanmar-health-cluster-bulletin-august2025.pdf",
+      "kind": "international_organization",
+      "used_for": [
+        "malaria",
+        "regional_health",
+        "Kachin",
+        "Kayin",
+        "Tanintharyi",
+        "Sagaing"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "August 2025 Health Cluster bulletin: highest-risk malaria townships concentrated in Kachin, Kayin, Tanintharyi and Sagaing; data are incomplete and must not be read as locality incidence."
+    },
+    {
+      "id": "WHO_MM_DENGUE_EQ_2025",
+      "canonical_id": "src_000683",
+      "publisher": "World Health Organization Myanmar",
+      "url": "https://www.who.int/myanmar/news/feature-stories/detail/amid-earthquake-recovery--who-steps-in-to-prevent-dengue-outbreaks-in-myanmar",
+      "kind": "international_organization",
+      "used_for": [
+        "dengue",
+        "Mandalay",
+        "Sagaing",
+        "earthquake_health"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "WHO targeted dengue prevention in earthquake-affected high-risk communities in Sagaing, Mandalay and Nay Pyi Taw in 2025; this is not a current incidence rate."
     }
   ],
   "uncertainties": [

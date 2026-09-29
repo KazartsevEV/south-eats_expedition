@@ -297,7 +297,10 @@ def main():
                 pobj=[objects_by_id[oid] for oid in object_ids]
                 class_counts=Counter(o["object_type"] for o in pobj)
                 page_path=node_page_path(node)
-                geography_lookup[node["id"]]={"id":node["id"],"name":node.get("name_ru") or node.get("name_local") or node["id"],"kind":node["kind"],"axis":node.get("axis"),"page_path":page_path}
+                canonical_geo_id=node.get("canonical_id")
+                canonical_geo_path=(release / "geo" / "entities" / f"{canonical_geo_id}.json") if canonical_geo_id else None
+                canonical_geo=load(canonical_geo_path) if canonical_geo_path and canonical_geo_path.exists() else None
+                geography_lookup[node["id"]]={"id":node["id"],"canonical_geo_id":canonical_geo_id,"name":node.get("name_ru") or node.get("name_local") or node["id"],"kind":node["kind"],"axis":node.get("axis"),"page_path":page_path}
                 for oid in object_ids:
                     object_geography[oid].add(node["id"])
                 parent_id=node.get("parent_id")
@@ -313,6 +316,9 @@ def main():
                     "hierarchy_status":"formalized",
                     "children":[{"id":child["id"],"kind":child["kind"],"name":child["name"],"page_path":child["page_path"],"object_count":child["object_count"]} for child in children],
                     "legacy_region_names":node.get("legacy_region_names") or [],
+                    "legacy_locality_names":node.get("legacy_locality_names") or [],
+                    "canonical_geo_id":canonical_geo_id,
+                    "geo_profile":canonical_geo,
                     "notes_ru":node.get("notes_ru"),
                     "class_counts":[{"object_type":k,"label_ru":type_by_value.get(k,{}).get("label_ru",CLASS_LABELS.get(k,k)),"count":v} for k,v in sorted(class_counts.items())],
                     "class_families":class_families_for_objects(pobj, meta["slug"], node["id"]),

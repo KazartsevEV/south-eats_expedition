@@ -1,0 +1,466 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "MM",
+    "country_slug": "myanmar",
+    "status": "country_geography_formalized_from_existing_research",
+    "checked_at": "2026-09-29",
+    "next_level": "country_profile_and_regional_qa_before_object_cards",
+    "canonical_id_policy": "Stable geo IDs reuse the existing registry. Composite researched regions are geographic_area unless an administrative status is independently established."
+  },
+  "sources": [
+    {
+      "source_file": "data/source/myanmar.json",
+      "publisher": "Expedition South East project research layer",
+      "used_for": [
+        "researched region identities",
+        "region-to-object linkage",
+        "verified locality relations where canonical locality IDs already exist"
+      ],
+      "checked_at": "2026-09-29"
+    }
+  ],
+  "rules": {
+    "parentage": "No composite expedition region is promoted to province/state/district without independent evidence.",
+    "route_hubs": "Composite route hubs remain logistics metadata unless a real locality already has its own canonical geo ID.",
+    "object_visibility": "Every existing object must be reachable from at least one formal country geography node.",
+    "cards": "Object card payloads are not edited in this stage."
+  },
+  "nodes": [
+    {
+      "id": "mm:region:yangon",
+      "canonical_id": "geo_mm_0001",
+      "kind": "geographic_area",
+      "name_ru": "Янгон и окрестности",
+      "name_local": "Yangon",
+      "slug": "yangon",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Yangon"
+      ],
+      "object_ids": [
+        "mm:shwedagon-pagoda"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:bagan-central-dry-zone",
+      "canonical_id": "geo_mm_0002",
+      "kind": "geographic_area",
+      "name_ru": "Баган / центральная засушливая зона",
+      "name_local": "Bagan / central dry zone",
+      "slug": "bagan-central-dry-zone",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Bagan / central dry zone"
+      ],
+      "object_ids": [],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:mandalay-central-myanmar",
+      "canonical_id": "geo_mm_0003",
+      "kind": "geographic_area",
+      "name_ru": "Мандалай / центральная Мьянма",
+      "name_local": "Mandalay / central Myanmar",
+      "slug": "mandalay-central-myanmar",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Mandalay / central Myanmar"
+      ],
+      "object_ids": [
+        "mm:mandalay-heritage"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:shan-state-inle-kakku",
+      "canonical_id": "geo_mm_0004",
+      "kind": "geographic_area",
+      "name_ru": "Штат Шан / Инле / Какку",
+      "name_local": "Shan State / Inle / Kakku",
+      "slug": "shan-state-inle-kakku",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Shan State / Inle / Kakku"
+      ],
+      "object_ids": [],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:mon-state-kyaiktiyo-mawlamyine",
+      "canonical_id": "geo_mm_0005",
+      "kind": "geographic_area",
+      "name_ru": "Штат Мон / Кьяиктийо / Моулмейн",
+      "name_local": "Mon State / Kyaiktiyo / Mawlamyine",
+      "slug": "mon-state-kyaiktiyo-mawlamyine",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Mon State / Kyaiktiyo / Mawlamyine"
+      ],
+      "object_ids": [],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:pyin-oo-lwin",
+      "canonical_id": "geo_mm_0006",
+      "kind": "geographic_area",
+      "name_ru": "Пьин-У-Луин",
+      "name_local": "Pyin Oo Lwin",
+      "slug": "pyin-oo-lwin",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Pyin Oo Lwin"
+      ],
+      "object_ids": [
+        "mm:pyin-oo-lwin"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:tanintharyi-dawei",
+      "canonical_id": "geo_mm_0007",
+      "kind": "geographic_area",
+      "name_ru": "Танинтайи / Тавой",
+      "name_local": "Tanintharyi / Dawei",
+      "slug": "tanintharyi-dawei",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Tanintharyi / Dawei"
+      ],
+      "object_ids": [
+        "mm:dawei-old-town"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:rakhine-mrauk-u",
+      "canonical_id": "geo_mm_0008",
+      "kind": "geographic_area",
+      "name_ru": "Ракхайн / Мраук-У",
+      "name_local": "Rakhine / Mrauk U",
+      "slug": "rakhine-mrauk-u",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Rakhine / Mrauk U"
+      ],
+      "object_ids": [],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:pyu-ancient-cities-bago-magway-belt",
+      "canonical_id": "geo_mm_0009",
+      "kind": "geographic_area",
+      "name_ru": "Древние города пью / центральная Мьянма",
+      "name_local": "Pyu ancient cities / Bago-Magway belt",
+      "slug": "pyu-ancient-cities-bago-magway-belt",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Pyu ancient cities / Bago-Magway belt"
+      ],
+      "object_ids": [],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:kayin-hpa-an",
+      "canonical_id": "geo_mm_0010",
+      "kind": "geographic_area",
+      "name_ru": "Штат Карен / Пхаан",
+      "name_local": "Kayin / Hpa-An",
+      "slug": "kayin-hpa-an",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Kayin / Hpa-An"
+      ],
+      "object_ids": [
+        "mm:hpa-an-karst-and-caves"
+      ],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:sagaing-monywa",
+      "canonical_id": "geo_mm_0011",
+      "kind": "geographic_area",
+      "name_ru": "Сикайн / Моунъюа",
+      "name_local": "Sagaing / Monywa",
+      "slug": "sagaing-monywa",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Sagaing / Monywa"
+      ],
+      "object_ids": [],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:kachin-state-indawgyi",
+      "canonical_id": "geo_mm_0012",
+      "kind": "geographic_area",
+      "name_ru": "Штат Качин / Индавджи",
+      "name_local": "Kachin State / Indawgyi",
+      "slug": "kachin-state-indawgyi",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Kachin State / Indawgyi"
+      ],
+      "object_ids": [],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:region:chin-state-nat-ma-taung",
+      "canonical_id": "geo_mm_0013",
+      "kind": "geographic_area",
+      "name_ru": "Штат Чин / Нат-Ма-Таун",
+      "name_local": "Chin State / Nat Ma Taung",
+      "slug": "chin-state-nat-ma-taung",
+      "parent_id": "country:mm",
+      "axis": "expedition_geography",
+      "legacy_region_names": [
+        "Chin State / Nat Ma Taung"
+      ],
+      "object_ids": [],
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+    },
+    {
+      "id": "mm:locality:nyaung-u",
+      "canonical_id": "geo_mm_0027",
+      "kind": "town",
+      "name_ru": "Ньяунг-У",
+      "name_local": "Nyaung-U",
+      "slug": "nyaung-u",
+      "parent_id": "mm:region:bagan-central-dry-zone",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Nyaung-U"
+      ],
+      "object_ids": [
+        "mm:bagan"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:nyaungshwe",
+      "canonical_id": "geo_mm_0028",
+      "kind": "town",
+      "name_ru": "Ньяунгшве",
+      "name_local": "Nyaungshwe",
+      "slug": "nyaungshwe",
+      "parent_id": "mm:region:shan-state-inle-kakku",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Nyaungshwe"
+      ],
+      "object_ids": [
+        "mm:inle-lake"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:taunggyi",
+      "canonical_id": "geo_mm_0029",
+      "kind": "city",
+      "name_ru": "Таунджи",
+      "name_local": "Taunggyi",
+      "slug": "taunggyi",
+      "parent_id": "mm:region:shan-state-inle-kakku",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Taunggyi"
+      ],
+      "object_ids": [
+        "mm:kakku-pagodas"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:mawlamyine",
+      "canonical_id": "geo_mm_0030",
+      "kind": "city",
+      "name_ru": "Моулмейн",
+      "name_local": "Mawlamyine",
+      "slug": "mawlamyine",
+      "parent_id": "mm:region:mon-state-kyaiktiyo-mawlamyine",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Mawlamyine"
+      ],
+      "object_ids": [
+        "mm:mawlamyine-colonial-core"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:kinpun",
+      "canonical_id": "geo_mm_0031",
+      "kind": "village",
+      "name_ru": "Кинпун",
+      "name_local": "Kinpun",
+      "slug": "kinpun",
+      "parent_id": "mm:region:mon-state-kyaiktiyo-mawlamyine",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Kinpun"
+      ],
+      "object_ids": [
+        "mm:kyaiktiyo-golden-rock"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:sittwe",
+      "canonical_id": "geo_mm_0032",
+      "kind": "city",
+      "name_ru": "Ситуэ",
+      "name_local": "Sittwe",
+      "slug": "sittwe",
+      "parent_id": "mm:region:rakhine-mrauk-u",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Sittwe"
+      ],
+      "object_ids": [],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:mrauk-u",
+      "canonical_id": "geo_mm_0033",
+      "kind": "town",
+      "name_ru": "Мраук-У",
+      "name_local": "Mrauk U",
+      "slug": "mrauk-u",
+      "parent_id": "mm:region:rakhine-mrauk-u",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Mrauk U"
+      ],
+      "object_ids": [
+        "mm:mrauk-u"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:bago",
+      "canonical_id": "geo_mm_0034",
+      "kind": "city",
+      "name_ru": "Баго",
+      "name_local": "Bago",
+      "slug": "bago",
+      "parent_id": "mm:region:pyu-ancient-cities-bago-magway-belt",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Bago"
+      ],
+      "object_ids": [],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:pyay",
+      "canonical_id": "geo_mm_0035",
+      "kind": "city",
+      "name_ru": "Пьи",
+      "name_local": "Pyay",
+      "slug": "pyay",
+      "parent_id": "mm:region:pyu-ancient-cities-bago-magway-belt",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Pyay"
+      ],
+      "object_ids": [
+        "mm:pyu-ancient-cities"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:monywa",
+      "canonical_id": "geo_mm_0036",
+      "kind": "city",
+      "name_ru": "Моунъюа",
+      "name_local": "Monywa",
+      "slug": "monywa",
+      "parent_id": "mm:region:sagaing-monywa",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Monywa"
+      ],
+      "object_ids": [
+        "mm:monywa-thanboddhay-and-bodhi-tataung"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:myitkyina",
+      "canonical_id": "geo_mm_0037",
+      "kind": "city",
+      "name_ru": "Мьичина",
+      "name_local": "Myitkyina",
+      "slug": "myitkyina",
+      "parent_id": "mm:region:kachin-state-indawgyi",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Myitkyina"
+      ],
+      "object_ids": [],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:hopin",
+      "canonical_id": "geo_mm_0038",
+      "kind": "town",
+      "name_ru": "Хопин",
+      "name_local": "Hopin",
+      "slug": "hopin",
+      "parent_id": "mm:region:kachin-state-indawgyi",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Hopin"
+      ],
+      "object_ids": [
+        "mm:indawgyi-lake"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:kanpetlet",
+      "canonical_id": "geo_mm_0039",
+      "kind": "town",
+      "name_ru": "Канпетлет",
+      "name_local": "Kanpetlet",
+      "slug": "kanpetlet",
+      "parent_id": "mm:region:chin-state-nat-ma-taung",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Kanpetlet"
+      ],
+      "object_ids": [
+        "mm:nat-ma-taung-mount-victoria"
+      ],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    },
+    {
+      "id": "mm:locality:mindat",
+      "canonical_id": "geo_mm_0040",
+      "kind": "town",
+      "name_ru": "Миндат",
+      "name_local": "Mindat",
+      "slug": "mindat",
+      "parent_id": "mm:region:chin-state-nat-ma-taung",
+      "axis": "settlement_geography",
+      "legacy_locality_names": [
+        "Mindat"
+      ],
+      "object_ids": [],
+      "notes_ru": "Реальный населённый пункт из уже нормализованного регионального материала; связь с родительским экспедиционным регионом используется для навигации, а не как утверждение административного подчинения."
+    }
+  ]
+}

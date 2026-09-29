@@ -34,7 +34,8 @@
       "2026-09-29 geo semantics: exact pre-existing Malaysia localities retyped from generic route-hub geography to city/town/settlement/archipelago where identity is unambiguous.",
       "2026-09-29 climate pass: annual mean temperature/precipitation references added to selected Malaysia localities with explicit period and data basis; ERA5/WorldClim/NASA POWER are labelled as reanalysis/grid climatology rather than official station normals. Langkawi annual temperature is derived from the stored monthly climatology; annual rainfall remains null.",
       "2026-09-29 geo-map pass: 26 Malaysia real localities received their own sourced WGS84 center anchors. These anchors identify the geo entity itself and are not borrowed from attraction coordinates.",
-      "2026-09-29 climate pass 2: annual climate references added for Gerik, Kuala Kangsar, Kundasang, Sukau, Batu Gajah, Kuala Besut and Sepilok. Sepilok preserves the published temperature range and precipitation uncertainty rather than inventing a single mean."
+      "2026-09-29 climate pass 2: annual climate references added for Gerik, Kuala Kangsar, Kundasang, Sukau, Batu Gajah, Kuala Besut and Sepilok. Sepilok preserves the published temperature range and precipitation uncertainty rather than inventing a single mean.",
+      "2026-09-29 locality gap pass: filled remaining geography/climate gaps for Gerik, Kuala Kangsar, Batu Gajah, Kuching, Miri, Kota Kinabalu, Kudat, Lahad Datu and Batu Niah. Batu Niah deliberately keeps a sourced temperature range/seasonality instead of using a dubious annual precipitation aggregate."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -9050,7 +9051,8 @@
               "src_000634",
               "src_000606",
               "src_000594",
-              "src_000637"
+              "src_000637",
+              "src_000647"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9095,7 +9097,8 @@
             "source_refs": [
               "src_000594"
             ]
-          }
+          },
+          "geography": "Прибрежный город северного Sarawak у Южно-Китайского моря; практический городской gateway к Niah, Mulu и Kelabit Highlands."
         },
         "primary_location": {
           "lat": 4.394,
@@ -9318,8 +9321,10 @@
                 "src_000649"
               ],
               "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
-            }
-          }
+            },
+            "summary": "Влажный внутренний тропический климат; октябрь–ноябрь относятся к более дождливой части года, февраль суше по локальной климатологии."
+          },
+          "geography": "Внутренний Hulu Perak на East–West Highway; Gerik — сухопутный сервисный узел перед Pulau Banding/Royal Belum, а не часть озёрного парка."
         },
         "primary_location": {
           "lat": 5.43066,
@@ -9389,7 +9394,8 @@
                 "src_000650"
               ],
               "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
-            }
+            },
+            "summary": "Влажный низменный климат Perak; локальная климатология показывает максимум осадков около октября и более сухой июнь."
           }
         },
         "primary_location": {
@@ -9490,7 +9496,8 @@
               "src_000633",
               "src_000606",
               "src_000594",
-              "src_000638"
+              "src_000638",
+              "src_000646"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9535,7 +9542,8 @@
             "source_refs": [
               "src_000594"
             ]
-          }
+          },
+          "geography": "Столица Sabah на западном побережье Борнео; городской берег обращён к South China Sea, а горный Kinabalu/Kundasang лежит далеко во внутреннем высотном поясе."
         },
         "primary_location": {
           "lat": 5.975,
@@ -9688,7 +9696,17 @@
             "source_refs": [
               "src_000593",
               "src_000596"
-            ]
+            ],
+            "annual_reference": {
+              "mean_annual_temperature_c": 25.7,
+              "annual_precipitation_mm": 3247,
+              "period": "1940–2025",
+              "data_basis": "Copernicus ERA5 reanalysis",
+              "source_refs": [
+                "src_000655"
+              ],
+              "caveat": "Grid reanalysis, not an official station normal."
+            }
           },
           "transport": {
             "water": "Небольшие tambang boats используются для коротких пересечений Sarawak River; heritage core в основном пеший.",
@@ -9700,7 +9718,8 @@
             "source_refs": [
               "src_000627",
               "src_000593",
-              "src_000596"
+              "src_000596",
+              "src_000655"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9765,7 +9784,8 @@
               "src_000613",
               "src_000593",
               "src_000594",
-              "src_000644"
+              "src_000644",
+              "src_000646"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9783,7 +9803,8 @@
             "source_refs": [
               "src_000594"
             ]
-          }
+          },
+          "geography": "Северный прибрежный town/port Sabah; служит сухопутным узлом к Rungus villages и северной оконечности Борнео."
         },
         "primary_location": {
           "lat": 6.883333,
@@ -9823,7 +9844,8 @@
             "source_refs": [
               "src_000615",
               "src_000594",
-              "src_000643"
+              "src_000643",
+              "src_000646"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
@@ -9852,8 +9874,10 @@
                 "src_000643"
               ],
               "caveat": "Климатическая справочная норма/реанализ; не текущая погода и не прогноз."
-            }
-          }
+            },
+            "summary": "Влажный экваториальный климат восточного Sabah; локальная WorldClim/CRU-норма показывает сильные осадки круглый год."
+          },
+          "geography": "Портовый город восточного Sabah у Darvel Bay; самостоятельный транспортный gateway к Danum Valley, но не климатическая/географическая замена самому conservation area."
         },
         "primary_location": {
           "lat": 5.016667,
@@ -9959,11 +9983,29 @@
           },
           "provenance": {
             "source_refs": [
-              "src_000619"
+              "src_000619",
+              "src_000656",
+              "src_000647"
             ],
             "checked_at": "2026-09-29",
             "source_refs_complete": true,
             "note": null
+          },
+          "geography": "Небольшой town в Miri Division, ближайший городской узел к Niah National Park и cave complex.",
+          "climate": {
+            "summary": "Тропический влажный климат; Sarawak Tourism для Niah указывает около 24–32 °C и частые дожди, особенно в ноябре–феврале.",
+            "best_period": "Март–сентябрь обычно удобнее для cave trail и настилов.",
+            "annual_reference": null,
+            "source_refs": [
+              "src_000656"
+            ]
+          },
+          "geology": {
+            "summary": "Локальный ландшафт связан с известняковыми формациями Niah cave/karst system; детальная археология и cave geology остаются на уровне Niah National Park/object.",
+            "source_refs": [
+              "src_000656",
+              "src_000619"
+            ]
           }
         },
         "primary_location": {
@@ -10098,7 +10140,8 @@
                 "src_000653"
               ],
               "caveat": "Климатическая справочная норма/модель; не текущая погода и не прогноз."
-            }
+            },
+            "summary": "Влажный тропический климат Kinta Valley; локальная норма 1991–2020 показывает максимум осадков в ноябре и относительный минимум в июне."
           }
         },
         "primary_location": {
@@ -11102,6 +11145,33 @@
         "annual_temperature",
         "annual_rainfall",
         "kuala_besut"
+      ],
+      "accessed": "2026-09-29"
+    },
+    {
+      "id": "CLIMATEMEMORY_KUCHING",
+      "canonical_id": "src_000655",
+      "publisher": "Climate Memory / Copernicus ERA5",
+      "url": "https://climatememory.com/en/climate/malaysia/kuching",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "annual_temperature",
+        "annual_rainfall",
+        "kuching"
+      ],
+      "accessed": "2026-09-29",
+      "notes": "ERA5 reanalysis normals 1940–2025; not a station normal."
+    },
+    {
+      "id": "SARAWAK_TOURISM_NIAH",
+      "canonical_id": "src_000656",
+      "publisher": "Sarawak Tourism Board",
+      "url": "https://www.sarawaktourism.com/web/things-to-do/thing-view/nature/national-parks-wildlife-reserves/niah-national-park",
+      "kind": "government",
+      "used_for": [
+        "niah_climate",
+        "niah_access",
+        "niah_geology"
       ],
       "accessed": "2026-09-29"
     }

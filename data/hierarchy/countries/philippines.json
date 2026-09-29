@@ -1,0 +1,962 @@
+{
+  "meta": {
+    "schema": "expedition_geography_v1",
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "status": "regional_geography_formalized",
+    "checked_at": "2026-09-30",
+    "next_level": "regional_qa_before_object_cards",
+    "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes."
+  },
+  "sources": [
+    {
+      "publisher": "Philippine Statistics Authority — PSGC",
+      "url": "https://psa.gov.ph/classification/psgc/regions",
+      "used_for": [
+        "current regions"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    {
+      "publisher": "Philippine Statistics Authority — PSGC",
+      "url": "https://psa.gov.ph/classification/psgc/provinces",
+      "used_for": [
+        "current provinces"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    {
+      "publisher": "Expedition South East Drive draft",
+      "used_for": [
+        "expedition regional nodes"
+      ],
+      "checked_at": "2026-09-30"
+    }
+  ],
+  "rules": {
+    "parentage": "Administrative units use verified current parentage. Composite expedition regions remain geographic_area when they span several administrative units or preserve legacy research geography.",
+    "route_hubs": "Cities and towns are geo entities only; they are not attraction cards.",
+    "object_visibility": "Object cards remain deferred for the second-chunk countries during this phase.",
+    "cards": "Object card payloads are not edited in this stage."
+  },
+  "nodes": [
+    {
+      "id": "ph:region:ncr",
+      "canonical_id": "geo_ph_0001",
+      "kind": "region",
+      "name_ru": "Национальный столичный регион",
+      "name_local": "National Capital Region (NCR)",
+      "slug": "ncr",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:car",
+      "canonical_id": "geo_ph_0002",
+      "kind": "region",
+      "name_ru": "Кордильерский административный регион",
+      "name_local": "Cordillera Administrative Region (CAR)",
+      "slug": "car",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:ilocos-region",
+      "canonical_id": "geo_ph_0003",
+      "kind": "region",
+      "name_ru": "Илокос",
+      "name_local": "Ilocos Region",
+      "slug": "ilocos-region",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:cagayan-valley",
+      "canonical_id": "geo_ph_0004",
+      "kind": "region",
+      "name_ru": "Долина Кагаян",
+      "name_local": "Cagayan Valley",
+      "slug": "cagayan-valley",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:central-luzon",
+      "canonical_id": "geo_ph_0005",
+      "kind": "region",
+      "name_ru": "Центральный Лусон",
+      "name_local": "Central Luzon",
+      "slug": "central-luzon",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:calabarzon",
+      "canonical_id": "geo_ph_0006",
+      "kind": "region",
+      "name_ru": "КАЛАБАРСОН",
+      "name_local": "CALABARZON",
+      "slug": "calabarzon",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:mimaropa",
+      "canonical_id": "geo_ph_0007",
+      "kind": "region",
+      "name_ru": "МИМАРОПА",
+      "name_local": "MIMAROPA",
+      "slug": "mimaropa",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:bicol-region",
+      "canonical_id": "geo_ph_0008",
+      "kind": "region",
+      "name_ru": "Бикол",
+      "name_local": "Bicol Region",
+      "slug": "bicol-region",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:western-visayas",
+      "canonical_id": "geo_ph_0009",
+      "kind": "region",
+      "name_ru": "Западные Висайи",
+      "name_local": "Western Visayas",
+      "slug": "western-visayas",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:negros-island-region",
+      "canonical_id": "geo_ph_0010",
+      "kind": "region",
+      "name_ru": "Регион острова Негрос",
+      "name_local": "Negros Island Region",
+      "slug": "negros-island-region",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:central-visayas",
+      "canonical_id": "geo_ph_0011",
+      "kind": "region",
+      "name_ru": "Центральные Висайи",
+      "name_local": "Central Visayas",
+      "slug": "central-visayas",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:eastern-visayas",
+      "canonical_id": "geo_ph_0012",
+      "kind": "region",
+      "name_ru": "Восточные Висайи",
+      "name_local": "Eastern Visayas",
+      "slug": "eastern-visayas",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:zamboanga-peninsula",
+      "canonical_id": "geo_ph_0013",
+      "kind": "region",
+      "name_ru": "Полуостров Замбоанга",
+      "name_local": "Zamboanga Peninsula",
+      "slug": "zamboanga-peninsula",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:northern-mindanao",
+      "canonical_id": "geo_ph_0014",
+      "kind": "region",
+      "name_ru": "Северный Минданао",
+      "name_local": "Northern Mindanao",
+      "slug": "northern-mindanao",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:davao-region",
+      "canonical_id": "geo_ph_0015",
+      "kind": "region",
+      "name_ru": "Регион Давао",
+      "name_local": "Davao Region",
+      "slug": "davao-region",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:soccsksargen",
+      "canonical_id": "geo_ph_0016",
+      "kind": "region",
+      "name_ru": "СОККСКСАРХЕН",
+      "name_local": "SOCCSKSARGEN",
+      "slug": "soccsksargen",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:caraga",
+      "canonical_id": "geo_ph_0017",
+      "kind": "region",
+      "name_ru": "Карага",
+      "name_local": "Caraga",
+      "slug": "caraga",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:region:barmm",
+      "canonical_id": "geo_ph_0018",
+      "kind": "region",
+      "name_ru": "Бангсаморо",
+      "name_local": "Bangsamoro Autonomous Region in Muslim Mindanao",
+      "slug": "barmm",
+      "parent_id": "country:ph",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:palawan",
+      "canonical_id": "geo_ph_0019",
+      "kind": "province",
+      "name_ru": "Палаван",
+      "name_local": "Palawan",
+      "slug": "palawan",
+      "parent_id": "ph:region:mimaropa",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:ifugao",
+      "canonical_id": "geo_ph_0020",
+      "kind": "province",
+      "name_ru": "Ифугао",
+      "name_local": "Ifugao",
+      "slug": "ifugao",
+      "parent_id": "ph:region:car",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:mountain-province",
+      "canonical_id": "geo_ph_0021",
+      "kind": "province",
+      "name_ru": "Горная провинция",
+      "name_local": "Mountain Province",
+      "slug": "mountain-province",
+      "parent_id": "ph:region:car",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:bohol",
+      "canonical_id": "geo_ph_0022",
+      "kind": "province",
+      "name_ru": "Бохоль",
+      "name_local": "Bohol",
+      "slug": "bohol",
+      "parent_id": "ph:region:central-visayas",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:ilocos-sur",
+      "canonical_id": "geo_ph_0023",
+      "kind": "province",
+      "name_ru": "Южный Илокос",
+      "name_local": "Ilocos Sur",
+      "slug": "ilocos-sur",
+      "parent_id": "ph:region:ilocos-region",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:aklan",
+      "canonical_id": "geo_ph_0024",
+      "kind": "province",
+      "name_ru": "Аклан",
+      "name_local": "Aklan",
+      "slug": "aklan",
+      "parent_id": "ph:region:western-visayas",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:iloilo",
+      "canonical_id": "geo_ph_0025",
+      "kind": "province",
+      "name_ru": "Илоило",
+      "name_local": "Iloilo",
+      "slug": "iloilo",
+      "parent_id": "ph:region:western-visayas",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:samar",
+      "canonical_id": "geo_ph_0026",
+      "kind": "province",
+      "name_ru": "Самар",
+      "name_local": "Samar",
+      "slug": "samar",
+      "parent_id": "ph:region:eastern-visayas",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:siquijor",
+      "canonical_id": "geo_ph_0027",
+      "kind": "province",
+      "name_ru": "Сикихор",
+      "name_local": "Siquijor",
+      "slug": "siquijor",
+      "parent_id": "ph:region:negros-island-region",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:negros-occidental",
+      "canonical_id": "geo_ph_0028",
+      "kind": "province",
+      "name_ru": "Западный Негрос",
+      "name_local": "Negros Occidental",
+      "slug": "negros-occidental",
+      "parent_id": "ph:region:negros-island-region",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:batanes",
+      "canonical_id": "geo_ph_0029",
+      "kind": "province",
+      "name_ru": "Батанес",
+      "name_local": "Batanes",
+      "slug": "batanes",
+      "parent_id": "ph:region:cagayan-valley",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:zambales",
+      "canonical_id": "geo_ph_0030",
+      "kind": "province",
+      "name_ru": "Самбалес",
+      "name_local": "Zambales",
+      "slug": "zambales",
+      "parent_id": "ph:region:central-luzon",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:occidental-mindoro",
+      "canonical_id": "geo_ph_0031",
+      "kind": "province",
+      "name_ru": "Западный Миндоро",
+      "name_local": "Occidental Mindoro",
+      "slug": "occidental-mindoro",
+      "parent_id": "ph:region:mimaropa",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:batangas",
+      "canonical_id": "geo_ph_0032",
+      "kind": "province",
+      "name_ru": "Батангас",
+      "name_local": "Batangas",
+      "slug": "batangas",
+      "parent_id": "ph:region:calabarzon",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:albay",
+      "canonical_id": "geo_ph_0033",
+      "kind": "province",
+      "name_ru": "Албай",
+      "name_local": "Albay",
+      "slug": "albay",
+      "parent_id": "ph:region:bicol-region",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:province:negros-oriental",
+      "canonical_id": "geo_ph_0034",
+      "kind": "province",
+      "name_ru": "Восточный Негрос",
+      "name_local": "Negros Oriental",
+      "slug": "negros-oriental",
+      "parent_id": "ph:region:negros-island-region",
+      "axis": "administrative",
+      "object_ids": [],
+      "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника."
+    },
+    {
+      "id": "ph:geographic_area:palawan-expedition",
+      "canonical_id": "geo_ph_0035",
+      "kind": "geographic_area",
+      "name_ru": "Палаван",
+      "name_local": "Palawan",
+      "slug": "palawan-expedition",
+      "parent_id": "ph:province:palawan",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Palawan"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:cordillera-ifugao-sagada",
+      "canonical_id": "geo_ph_0036",
+      "kind": "geographic_area",
+      "name_ru": "Кордильеры / Ифугао / Сагада",
+      "name_local": "Cordillera / Ifugao / Sagada",
+      "slug": "cordillera-ifugao-sagada",
+      "parent_id": "ph:region:car",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Cordillera / Ifugao / Sagada"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:bohol-expedition",
+      "canonical_id": "geo_ph_0037",
+      "kind": "geographic_area",
+      "name_ru": "Бохоль",
+      "name_local": "Bohol",
+      "slug": "bohol-expedition",
+      "parent_id": "ph:province:bohol",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Bohol"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:metro-manila",
+      "canonical_id": "geo_ph_0038",
+      "kind": "geographic_area",
+      "name_ru": "Метро Манила",
+      "name_local": "Metro Manila",
+      "slug": "metro-manila",
+      "parent_id": "ph:region:ncr",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Metro Manila"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:ilocos-vigan",
+      "canonical_id": "geo_ph_0039",
+      "kind": "geographic_area",
+      "name_ru": "Илокос / Виган",
+      "name_local": "Ilocos / Vigan",
+      "slug": "ilocos-vigan",
+      "parent_id": "ph:province:ilocos-sur",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Ilocos / Vigan"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:boracay-western-visayas",
+      "canonical_id": "geo_ph_0040",
+      "kind": "geographic_area",
+      "name_ru": "Боракай / Западные Висайи",
+      "name_local": "Boracay / Western Visayas",
+      "slug": "boracay-western-visayas",
+      "parent_id": "ph:region:western-visayas",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Boracay / Western Visayas"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:tubbataha-sulu-sea",
+      "canonical_id": "geo_ph_0041",
+      "kind": "geographic_area",
+      "name_ru": "Туббатаха / море Сулу",
+      "name_local": "Tubbataha / Sulu Sea",
+      "slug": "tubbataha-sulu-sea",
+      "parent_id": "ph:province:palawan",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Tubbataha / Sulu Sea"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:iloilo-expedition",
+      "canonical_id": "geo_ph_0042",
+      "kind": "geographic_area",
+      "name_ru": "Илоило",
+      "name_local": "Iloilo",
+      "slug": "iloilo-expedition",
+      "parent_id": "ph:province:iloilo",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Iloilo"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:samar-expedition",
+      "canonical_id": "geo_ph_0043",
+      "kind": "geographic_area",
+      "name_ru": "Самар",
+      "name_local": "Samar",
+      "slug": "samar-expedition",
+      "parent_id": "ph:province:samar",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Samar"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:siquijor-expedition",
+      "canonical_id": "geo_ph_0044",
+      "kind": "geographic_area",
+      "name_ru": "Сикихор",
+      "name_local": "Siquijor",
+      "slug": "siquijor-expedition",
+      "parent_id": "ph:province:siquijor",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Siquijor"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:negros-expedition",
+      "canonical_id": "geo_ph_0045",
+      "kind": "geographic_area",
+      "name_ru": "Негрос",
+      "name_local": "Negros",
+      "slug": "negros-expedition",
+      "parent_id": "ph:region:negros-island-region",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Negros"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:batanes-expedition",
+      "canonical_id": "geo_ph_0046",
+      "kind": "geographic_area",
+      "name_ru": "Батанес",
+      "name_local": "Batanes",
+      "slug": "batanes-expedition",
+      "parent_id": "ph:province:batanes",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Batanes"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:central-luzon-pinatubo",
+      "canonical_id": "geo_ph_0047",
+      "kind": "geographic_area",
+      "name_ru": "Центральный Лусон / Пинатубо",
+      "name_local": "Central Luzon / Pinatubo",
+      "slug": "central-luzon-pinatubo",
+      "parent_id": "ph:region:central-luzon",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Central Luzon / Pinatubo"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:occidental-mindoro-apo-reef",
+      "canonical_id": "geo_ph_0048",
+      "kind": "geographic_area",
+      "name_ru": "Западный Миндоро / риф Апо",
+      "name_local": "Occidental Mindoro / Apo Reef",
+      "slug": "occidental-mindoro-apo-reef",
+      "parent_id": "ph:province:occidental-mindoro",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Occidental Mindoro / Apo Reef"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:batangas-taal",
+      "canonical_id": "geo_ph_0049",
+      "kind": "geographic_area",
+      "name_ru": "Батангас / Тааль",
+      "name_local": "Batangas / Taal",
+      "slug": "batangas-taal",
+      "parent_id": "ph:province:batangas",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Batangas / Taal"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:albay-bicol",
+      "canonical_id": "geo_ph_0050",
+      "kind": "geographic_area",
+      "name_ru": "Албай / Бикол",
+      "name_local": "Albay / Bicol",
+      "slug": "albay-bicol",
+      "parent_id": "ph:province:albay",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Albay / Bicol"
+      ]
+    },
+    {
+      "id": "ph:geographic_area:negros-oriental-dauin-apo-island",
+      "canonical_id": "geo_ph_0051",
+      "kind": "geographic_area",
+      "name_ru": "Восточный Негрос / Дауин / остров Апо",
+      "name_local": "Negros Oriental / Dauin / Apo Island",
+      "slug": "negros-oriental-dauin-apo-island",
+      "parent_id": "ph:province:negros-oriental",
+      "axis": "expedition_geography",
+      "object_ids": [],
+      "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "legacy_region_names": [
+        "Negros Oriental / Dauin / Apo Island"
+      ]
+    },
+    {
+      "id": "ph:city:manila",
+      "canonical_id": "geo_ph_0052",
+      "kind": "city",
+      "name_ru": "Манила",
+      "name_local": "Manila",
+      "slug": "manila",
+      "parent_id": "ph:region:ncr",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Manila"
+      ]
+    },
+    {
+      "id": "ph:city:puerto-princesa",
+      "canonical_id": "geo_ph_0053",
+      "kind": "city",
+      "name_ru": "Пуэрто-Принсеса",
+      "name_local": "Puerto Princesa",
+      "slug": "puerto-princesa",
+      "parent_id": "ph:province:palawan",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Puerto Princesa"
+      ]
+    },
+    {
+      "id": "ph:town:banaue",
+      "canonical_id": "geo_ph_0054",
+      "kind": "town",
+      "name_ru": "Банауэ",
+      "name_local": "Banaue",
+      "slug": "banaue",
+      "parent_id": "ph:province:ifugao",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Banaue"
+      ]
+    },
+    {
+      "id": "ph:town:sagada",
+      "canonical_id": "geo_ph_0055",
+      "kind": "town",
+      "name_ru": "Сагада",
+      "name_local": "Sagada",
+      "slug": "sagada",
+      "parent_id": "ph:province:mountain-province",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Sagada"
+      ]
+    },
+    {
+      "id": "ph:city:tagbilaran",
+      "canonical_id": "geo_ph_0056",
+      "kind": "city",
+      "name_ru": "Тагбиларан",
+      "name_local": "Tagbilaran",
+      "slug": "tagbilaran",
+      "parent_id": "ph:province:bohol",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Tagbilaran"
+      ]
+    },
+    {
+      "id": "ph:city:vigan",
+      "canonical_id": "geo_ph_0057",
+      "kind": "city",
+      "name_ru": "Виган",
+      "name_local": "Vigan",
+      "slug": "vigan",
+      "parent_id": "ph:province:ilocos-sur",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Vigan"
+      ]
+    },
+    {
+      "id": "ph:town:kalibo",
+      "canonical_id": "geo_ph_0058",
+      "kind": "town",
+      "name_ru": "Калибо",
+      "name_local": "Kalibo",
+      "slug": "kalibo",
+      "parent_id": "ph:province:aklan",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Kalibo"
+      ]
+    },
+    {
+      "id": "ph:city:iloilo-city",
+      "canonical_id": "geo_ph_0059",
+      "kind": "city",
+      "name_ru": "Илоило",
+      "name_local": "Iloilo City",
+      "slug": "iloilo-city",
+      "parent_id": "ph:province:iloilo",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Iloilo City"
+      ]
+    },
+    {
+      "id": "ph:city:catbalogan",
+      "canonical_id": "geo_ph_0060",
+      "kind": "city",
+      "name_ru": "Катбалоган",
+      "name_local": "Catbalogan",
+      "slug": "catbalogan",
+      "parent_id": "ph:province:samar",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Catbalogan"
+      ]
+    },
+    {
+      "id": "ph:town:san-juan-siquijor",
+      "canonical_id": "geo_ph_0061",
+      "kind": "town",
+      "name_ru": "Сан-Хуан",
+      "name_local": "San Juan, Siquijor",
+      "slug": "san-juan-siquijor",
+      "parent_id": "ph:province:siquijor",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "San Juan, Siquijor"
+      ]
+    },
+    {
+      "id": "ph:city:bacolod",
+      "canonical_id": "geo_ph_0062",
+      "kind": "city",
+      "name_ru": "Баколод",
+      "name_local": "Bacolod",
+      "slug": "bacolod",
+      "parent_id": "ph:province:negros-occidental",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Bacolod"
+      ]
+    },
+    {
+      "id": "ph:town:basco",
+      "canonical_id": "geo_ph_0063",
+      "kind": "town",
+      "name_ru": "Баско",
+      "name_local": "Basco",
+      "slug": "basco",
+      "parent_id": "ph:province:batanes",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Basco"
+      ]
+    },
+    {
+      "id": "ph:city:angeles-clark",
+      "canonical_id": "geo_ph_0064",
+      "kind": "city",
+      "name_ru": "Анджелес / Кларк",
+      "name_local": "Angeles / Clark",
+      "slug": "angeles-clark",
+      "parent_id": "ph:region:central-luzon",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Angeles / Clark"
+      ]
+    },
+    {
+      "id": "ph:town:san-jose-occidental-mindoro",
+      "canonical_id": "geo_ph_0065",
+      "kind": "town",
+      "name_ru": "Сан-Хосе",
+      "name_local": "San Jose, Occidental Mindoro",
+      "slug": "san-jose-occidental-mindoro",
+      "parent_id": "ph:province:occidental-mindoro",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "San Jose, Occidental Mindoro"
+      ]
+    },
+    {
+      "id": "ph:city:batangas-city",
+      "canonical_id": "geo_ph_0066",
+      "kind": "city",
+      "name_ru": "Батангас",
+      "name_local": "Batangas City",
+      "slug": "batangas-city",
+      "parent_id": "ph:province:batangas",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Batangas City"
+      ]
+    },
+    {
+      "id": "ph:city:legazpi",
+      "canonical_id": "geo_ph_0067",
+      "kind": "city",
+      "name_ru": "Легаспи",
+      "name_local": "Legazpi",
+      "slug": "legazpi",
+      "parent_id": "ph:province:albay",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Legazpi"
+      ]
+    },
+    {
+      "id": "ph:city:dumaguete",
+      "canonical_id": "geo_ph_0068",
+      "kind": "city",
+      "name_ru": "Думагете",
+      "name_local": "Dumaguete",
+      "slug": "dumaguete",
+      "parent_id": "ph:province:negros-oriental",
+      "axis": "settlement_geography",
+      "object_ids": [],
+      "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "legacy_locality_names": [
+        "Dumaguete"
+      ]
+    }
+  ]
+}

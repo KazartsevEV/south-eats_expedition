@@ -2,8 +2,8 @@
   "id": "geo_my_0003",
   "kind": "geographic_area",
   "names": {
-    "primary": "Melaka",
-    "ru": "Малакка"
+    "primary": "Малакка",
+    "local": "Melaka"
   },
   "slug": "melaka",
   "parent_id": "geo_my",
@@ -12,18 +12,47 @@
     "geo_my_0003"
   ],
   "description": {
-    "narrow": null,
+    "narrow": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
   "legacy_ids": [
     "my:region:melaka"
   ],
   "migration": {
-    "source_kind": "region",
-    "note": "Служебные маршрутные регионы и узлы временно сохраняются как geographic_area, пока не подтверждена их точная административная или поселенческая принадлежность.",
-    "local_reference_status": "migrated_existing_region_profile"
+    "source_kind": "formal_hierarchy",
+    "axis": "expedition_geography",
+    "status": "formalized",
+    "regional_content_status": "migrated_existing_region_profile"
+  },
+  "provenance": {
+    "checked_at": "2026-09-29",
+    "sources": [
+      {
+        "source_file": "data/source/malaysia.json",
+        "publisher": "Expedition South East project research layer",
+        "used_for": [
+          "researched region identities",
+          "region-to-object linkage",
+          "verified locality relations where canonical locality IDs already exist"
+        ],
+        "checked_at": "2026-09-29"
+      }
+    ],
+    "source_urls": [
+      "https://www.dosm.gov.my/"
+    ],
+    "source_refs": [
+      "src_000593",
+      "src_000596",
+      "src_000598",
+      "src_000606",
+      "src_000601",
+      "src_000595",
+      "src_000594",
+      "src_000624"
+    ],
+    "research_checked_at": "2026-09-29"
   },
   "languages": {
     "spoken": [
@@ -90,24 +119,5 @@
   },
   "freshness": {
     "checked_at": "2026-09-29"
-  },
-  "provenance": {
-    "source_urls": [
-      "https://www.dosm.gov.my/"
-    ],
-    "source_refs": [
-      "src_000593",
-      "src_000596",
-      "src_000598",
-      "src_000606",
-      "src_000601",
-      "src_000595",
-      "src_000594",
-      "src_000624"
-    ],
-    "qa": {
-      "source_refs_complete": true,
-      "note": "У региональной справки есть канонические ссылки на источники."
-    }
   }
 }

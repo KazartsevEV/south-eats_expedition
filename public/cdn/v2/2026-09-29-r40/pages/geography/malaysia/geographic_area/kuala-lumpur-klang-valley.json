@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-29-r40",
+    "page_type": "geography",
+    "id": "my:region:kuala-lumpur-klang-valley"
+  },
+  "identity": {
+    "name": "Куала-Лумпур / долина Кланг",
+    "name_local": "Kuala Lumpur / Klang Valley",
+    "kind": "geographic_area",
+    "slug": "kuala-lumpur-klang-valley",
+    "country_code": "MY",
+    "axis": "expedition_geography"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:my",
+    "page_path": "pages/countries/malaysia.json"
+  },
+  "hierarchy_status": "formalized",
+  "children": [
+    {
+      "id": "my:locality:batu-caves",
+      "kind": "town",
+      "name": "Пещеры Бату",
+      "page_path": "pages/geography/malaysia/town/batu-caves.json",
+      "object_count": 1
+    }
+  ],
+  "legacy_region_names": [
+    "Kuala Lumpur / Klang Valley"
+  ],
+  "legacy_locality_names": [],
+  "canonical_geo_id": "geo_my_0001",
+  "geo_profile": {
+    "id": "geo_my_0001",
+    "kind": "geographic_area",
+    "names": {
+      "primary": "Куала-Лумпур / долина Кланг",
+      "local": "Kuala Lumpur / Klang Valley"
+    },
+    "slug": "kuala-lumpur-klang-valley",
+    "parent_id": "geo_my",
+    "geo_path": [
+      "geo_my",
+      "geo_my_0001"
+    ],
+    "description": {
+      "narrow": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+      "body": null
+    },
+    "cover_media_id": null,
+    "legacy_ids": [
+      "my:region:kuala-lumpur-klang-valley"
+    ],
+    "migration": {
+      "source_kind": "formal_hierarchy",
+      "axis": "expedition_geography",
+      "status": "formalized",
+      "regional_content_status": "migrated_existing_region_profile"
+    },
+    "provenance": {
+      "checked_at": "2026-09-29",
+      "sources": [
+        {
+          "source_file": "data/source/malaysia.json",
+          "publisher": "Expedition South East project research layer",
+          "used_for": [
+            "researched region identities",
+            "region-to-object linkage",
+            "verified locality relations where canonical locality IDs already exist"
+          ],
+          "checked_at": "2026-09-29"
+        }
+      ],
+      "source_urls": [
+        "https://www.dosm.gov.my/"
+      ],
+      "source_refs": [
+        "src_000593",
+        "src_000596",
+        "src_000595",
+        "src_000594",
+        "src_000603"
+      ],
+      "research_checked_at": "2026-09-29"
+    },
+    "languages": {
+      "spoken": [
+        "малайский",
+        "английский",
+        "путунхуа / кантонский",
+        "тамильский"
+      ],
+      "notes": "Практический полевой профиль: перечислены языки, с которыми путешественник реально столкнётся в регионе; это не полный этнолингвистический перечень."
+    },
+    "climate": {
+      "summary": "Экваториально жарко и влажно круглый год. Для большей части западной/центральной части полуострова характерны два дождливых максимума — примерно в апреле–мае и октябре–ноябре.",
+      "rainfall_pattern": "На западе и во внутренних районах полуострова обычно выражены два дождливых максимума — весной и осенью. Для поездок важнее локальные грозы и короткие сильные ливни, чем небольшие сезонные колебания температуры.",
+      "floods": {
+        "risk_context": "Низкие участки долины, речные коридоры и городская дренажная сеть чувствительны к интенсивным ливням. После сильных осадков перед выездом нужно смотреть оперативные данные официальной системы мониторинга паводков PublicInfoBanjir по Куала-Лумпуру и Селангору.",
+        "live_monitoring": true
+      },
+      "source_refs": [
+        "src_000593",
+        "src_000596"
+      ],
+      "best_period_general": "Круглый год; для съёмки и пеших выходов лучше закладывать утренние и вечерние окна и резерв на ливни."
+    },
+    "geography": {
+      "summary": "Низменная долина Кланг занята плотной городской агломерацией; по северо-восточной окраине встречаются известняковые массивы и карст, включая район Гомбак и пещеры Бату.",
+      "scope_note": "Долина Кланг шире федеральной территории Куала-Лумпура и захватывает части Селангора, поэтому местные риски и статистику нельзя сводить к одной административной единице."
+    },
+    "health": {
+      "dengue_reference_2022": [
+        {
+          "area": "Селангор",
+          "incidence_per_100k": 532.84
+        },
+        {
+          "area": "Федеральная территория Куала-Лумпур (в таблице источника вместе с Путраджаей)",
+          "incidence_per_100k": 325.05
+        }
+      ],
+      "interpretation": "Это исторический фон по штатам за 2022 год, а не оценка текущей вероятности заражения и не показатель для конкретного квартала.",
+      "source_refs": [
+        "src_000595"
+      ]
+    },
+    "safety": {
+      "crime": {
+        "dataset_scope": "полицейский округ",
+        "status": "локальные данные есть, но ещё не сведены",
+        "interpretation": "Для Куала-Лумпура и долины Кланг следует использовать районные данные полиции и DOSM, а не единый показатель по стране: агломерация пересекает несколько полицейских округов и административных границ."
+      },
+      "source_refs": [
+        "src_000594"
+      ]
+    },
+    "transport": {
+      "public_transport": "Основу самостоятельного перемещения по агломерации составляют MRT, LRT, монорельс и автобусы Rapid KL.",
+      "dynamic_status": "Перед поездкой проверять текущие изменения движения и сообщения MyRapid.",
+      "source_refs": [
+        "src_000603"
+      ]
+    },
+    "freshness": {
+      "checked_at": "2026-09-29"
+    }
+  },
+  "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+  "class_counts": [
+    {
+      "object_type": "cave",
+      "label_ru": "Пещеры",
+      "count": 1
+    },
+    {
+      "object_type": "city",
+      "label_ru": "Города",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "city",
+          "label_ru": "Города",
+          "count": 1,
+          "country_class_page": "pages/countries/malaysia/classes/city.json",
+          "filter": {
+            "geography_id": "my:region:kuala-lumpur-klang-valley"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "relief_geology",
+      "label_ru": "Рельеф и геология",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "cave",
+          "label_ru": "Пещеры",
+          "count": 1,
+          "country_class_page": "pages/countries/malaysia/classes/cave.json",
+          "filter": {
+            "geography_id": "my:region:kuala-lumpur-klang-valley"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:kuala-lumpur",
+      "name": "Kuala Lumpur",
+      "object_type": "city",
+      "narrow": "Куала-Лумпур полезен как полевой срез современной Малайзии: колониальное ядро у слияния Кланга и Гомбак, малайский Kampung Baru, китайские и индийские кварталы, рынки и сверхвысотный центр читаются в одном городском маршруте.",
+      "detail_path": "countries/malaysia/objects/kuala-lumpur.json"
+    },
+    {
+      "id": "my:batu-caves",
+      "name": "Batu Caves",
+      "object_type": "cave",
+      "narrow": "Batu Caves — индуистский храмовый комплекс в известняковом массиве у Куала-Лумпура: 272 ступени, 43-метровая статуя Муругана и огромная Cathedral Cave связывают геологию карста с действующей религиозной практикой.",
+      "detail_path": "countries/malaysia/objects/batu-caves.json"
+    }
+  ],
+  "provenance": {
+    "sources": [
+      {
+        "source_file": "data/source/malaysia.json",
+        "publisher": "Expedition South East project research layer",
+        "used_for": [
+          "researched region identities",
+          "region-to-object linkage",
+          "verified locality relations where canonical locality IDs already exist"
+        ],
+        "checked_at": "2026-09-29"
+      }
+    ],
+    "checked_at": "2026-09-29"
+  }
+}

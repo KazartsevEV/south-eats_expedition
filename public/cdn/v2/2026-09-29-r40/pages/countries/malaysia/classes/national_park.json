@@ -30,32 +30,28 @@
       "page_path": "pages/countries/malaysia.json"
     },
     {
-      "id": "my:hub:batu-niah",
-      "name": "Batu Niah",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/city_or_route_hub/batu-niah.json"
-    },
-    {
-      "id": "my:hub:mulu",
-      "name": "Mulu",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/city_or_route_hub/mulu.json"
+      "id": "my:locality:batu-niah",
+      "canonical_geo_id": "geo_my_0045",
+      "name": "Бату-Ниа",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/town/batu-niah.json"
     },
     {
       "id": "my:region:mulu-interior-sarawak",
-      "name": "Mulu / interior Sarawak",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/region/mulu-interior-sarawak.json"
+      "canonical_geo_id": "geo_my_0007",
+      "name": "Мулу / внутренний Саравак",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/mulu-interior-sarawak.json"
     },
     {
       "id": "my:region:sarawak-kuching-niah",
-      "name": "Sarawak / Kuching / Niah",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/region/sarawak-kuching-niah.json"
+      "canonical_geo_id": "geo_my_0006",
+      "name": "Саравак / Кучинг / Ниа",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/sarawak-kuching-niah.json"
     }
   ],
   "objects": [
@@ -64,7 +60,6 @@
       "name": "Gunung Mulu National Park",
       "geography_ids": [
         "country:my",
-        "my:hub:mulu",
         "my:region:mulu-interior-sarawak"
       ],
       "region_legacy": "Mulu / interior Sarawak",
@@ -77,7 +72,7 @@
       "name": "Niah National Park",
       "geography_ids": [
         "country:my",
-        "my:hub:batu-niah",
+        "my:locality:batu-niah",
         "my:region:sarawak-kuching-niah"
       ],
       "region_legacy": "Sarawak / Kuching / Niah",

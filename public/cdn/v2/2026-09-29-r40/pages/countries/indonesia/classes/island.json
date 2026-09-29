@@ -30,25 +30,20 @@
       "page_path": "pages/countries/indonesia.json"
     },
     {
-      "id": "id:hub:ampana-gorontalo",
-      "name": "Ampana / Gorontalo",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/indonesia/city_or_route_hub/ampana-gorontalo.json"
-    },
-    {
-      "id": "id:hub:sorong-waisai",
-      "name": "Sorong / Waisai",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/indonesia/city_or_route_hub/sorong-waisai.json"
-    },
-    {
       "id": "id:region:raja-ampat-west-papua",
-      "name": "Raja Ampat / West Papua",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/indonesia/region/raja-ampat-west-papua.json"
+      "canonical_geo_id": "geo_id_0005",
+      "name": "Раджа-Ампат / Западное Папуа",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/indonesia/geographic_area/raja-ampat-west-papua.json"
+    },
+    {
+      "id": "id:region:togean-central-sulawesi",
+      "canonical_geo_id": "geo_id_0012",
+      "name": "Тогеанские острова / Центральный Сулавеси",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/indonesia/geographic_area/togean-central-sulawesi.json"
     }
   ],
   "objects": [
@@ -57,7 +52,6 @@
       "name": "Raja Ampat",
       "geography_ids": [
         "country:id",
-        "id:hub:sorong-waisai",
         "id:region:raja-ampat-west-papua"
       ],
       "region_legacy": "Raja Ampat / West Papua",
@@ -70,7 +64,7 @@
       "name": "Togean Islands",
       "geography_ids": [
         "country:id",
-        "id:hub:ampana-gorontalo"
+        "id:region:togean-central-sulawesi"
       ],
       "region_legacy": "Togean / Central Сулавеси",
       "nearest_hub": "Ampana / Gorontalo",

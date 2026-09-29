@@ -30,53 +30,68 @@
       "page_path": "pages/countries/myanmar.json"
     },
     {
-      "id": "mm:hub:mrauk-u",
-      "name": "Mrauk U",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/city_or_route_hub/mrauk-u.json"
+      "id": "mm:locality:mrauk-u",
+      "canonical_geo_id": "geo_mm_0033",
+      "name": "Мраук-У",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/town/mrauk-u.json"
     },
     {
-      "id": "mm:hub:nyaung-u",
-      "name": "Nyaung-U",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/city_or_route_hub/nyaung-u.json"
+      "id": "mm:locality:nyaung-u",
+      "canonical_geo_id": "geo_mm_0027",
+      "name": "Ньяунг-У",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/town/nyaung-u.json"
     },
     {
-      "id": "mm:hub:pyay",
-      "name": "Pyay",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/city_or_route_hub/pyay.json"
+      "id": "mm:locality:pyay",
+      "canonical_geo_id": "geo_mm_0035",
+      "name": "Пьи",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/city/pyay.json"
     },
     {
-      "id": "mm:hub:taunggyi",
-      "name": "Taunggyi",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/city_or_route_hub/taunggyi.json"
+      "id": "mm:locality:taunggyi",
+      "canonical_geo_id": "geo_mm_0029",
+      "name": "Таунджи",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/city/taunggyi.json"
+    },
+    {
+      "id": "mm:region:bagan-central-dry-zone",
+      "canonical_geo_id": "geo_mm_0002",
+      "name": "Баган / центральная засушливая зона",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/bagan-central-dry-zone.json"
     },
     {
       "id": "mm:region:pyu-ancient-cities-bago-magway-belt",
-      "name": "Pyu ancient cities / Bago-Magway belt",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/region/pyu-ancient-cities-bago-magway-belt.json"
+      "canonical_geo_id": "geo_mm_0009",
+      "name": "Древние города пью / центральная Мьянма",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/pyu-ancient-cities-bago-magway-belt.json"
     },
     {
       "id": "mm:region:rakhine-mrauk-u",
-      "name": "Rakhine / Mrauk U",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/region/rakhine-mrauk-u.json"
+      "canonical_geo_id": "geo_mm_0008",
+      "name": "Ракхайн / Мраук-У",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/rakhine-mrauk-u.json"
     },
     {
       "id": "mm:region:shan-state-inle-kakku",
-      "name": "Shan State / Inle / Kakku",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/region/shan-state-inle-kakku.json"
+      "canonical_geo_id": "geo_mm_0004",
+      "name": "Штат Шан / Инле / Какку",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/shan-state-inle-kakku.json"
     }
   ],
   "objects": [
@@ -85,7 +100,8 @@
       "name": "Bagan",
       "geography_ids": [
         "country:mm",
-        "mm:hub:nyaung-u"
+        "mm:locality:nyaung-u",
+        "mm:region:bagan-central-dry-zone"
       ],
       "region_legacy": "Bagan / центральная засушливая зона",
       "nearest_hub": "Nyaung-U",
@@ -97,7 +113,7 @@
       "name": "Mrauk U",
       "geography_ids": [
         "country:mm",
-        "mm:hub:mrauk-u",
+        "mm:locality:mrauk-u",
         "mm:region:rakhine-mrauk-u"
       ],
       "region_legacy": "Rakhine / Mrauk U",
@@ -110,7 +126,7 @@
       "name": "Pyu Ancient Cities",
       "geography_ids": [
         "country:mm",
-        "mm:hub:pyay",
+        "mm:locality:pyay",
         "mm:region:pyu-ancient-cities-bago-magway-belt"
       ],
       "region_legacy": "Pyu ancient cities / Bago-Magway belt",
@@ -123,7 +139,7 @@
       "name": "Kakku Pagodas",
       "geography_ids": [
         "country:mm",
-        "mm:hub:taunggyi",
+        "mm:locality:taunggyi",
         "mm:region:shan-state-inle-kakku"
       ],
       "region_legacy": "Shan State / Inle / Kakku",

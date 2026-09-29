@@ -1,7 +1,35 @@
 {
   "country": "la",
+  "country_layer": {
+    "status": "incomplete",
+    "checks": {
+      "profile_required_fields": false,
+      "profile_nature_risks": true,
+      "profile_fact_sources": false,
+      "climate_data": true,
+      "climate_sources": true,
+      "climate_checked_at": true,
+      "travel_rules_values": true,
+      "travel_rules_sources": true,
+      "travel_rules_checked_at": true,
+      "formal_geography": true
+    },
+    "missing": {
+      "profile_fields": [
+        "languages",
+        "ethnography",
+        "culture"
+      ],
+      "profile_fact_sources": [
+        "religions",
+        "political_system"
+      ]
+    },
+    "hierarchy_nodes": 25,
+    "checked_at": "2026-09-29"
+  },
   "objects_total": 19,
   "objects_passed": 19,
   "objects_incomplete": 0,
-  "missing": {}
+  "object_missing": {}
 }

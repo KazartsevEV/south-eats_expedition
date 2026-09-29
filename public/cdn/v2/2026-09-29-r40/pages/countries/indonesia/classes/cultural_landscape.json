@@ -30,25 +30,20 @@
       "page_path": "pages/countries/indonesia.json"
     },
     {
-      "id": "id:hub:denpasar-ubud",
-      "name": "Denpasar / Ubud",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/indonesia/city_or_route_hub/denpasar-ubud.json"
-    },
-    {
-      "id": "id:hub:rantepao-makale",
-      "name": "Rantepao / Makale",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/indonesia/city_or_route_hub/rantepao-makale.json"
-    },
-    {
       "id": "id:region:bali",
-      "name": "Bali",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/indonesia/region/bali.json"
+      "canonical_geo_id": "geo_id_0002",
+      "name": "Бали",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/indonesia/geographic_area/bali.json"
+    },
+    {
+      "id": "id:region:toraja-south-sulawesi",
+      "canonical_geo_id": "geo_id_0008",
+      "name": "Тораджа / Южный Сулавеси",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/indonesia/geographic_area/toraja-south-sulawesi.json"
     }
   ],
   "objects": [
@@ -57,7 +52,6 @@
       "name": "Bali temple landscapes",
       "geography_ids": [
         "country:id",
-        "id:hub:denpasar-ubud",
         "id:region:bali"
       ],
       "region_legacy": "Bali",
@@ -70,7 +64,7 @@
       "name": "Tana Toraja hinterland",
       "geography_ids": [
         "country:id",
-        "id:hub:rantepao-makale"
+        "id:region:toraja-south-sulawesi"
       ],
       "region_legacy": "Toraja / South Сулавеси",
       "nearest_hub": "Rantepao / Makale",

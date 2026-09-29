@@ -30,67 +30,60 @@
       "page_path": "pages/countries/malaysia.json"
     },
     {
-      "id": "my:hub:george-town-penang",
-      "name": "George Town / Penang",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/city_or_route_hub/george-town-penang.json"
+      "id": "my:locality:kuala-kangsar",
+      "canonical_geo_id": "geo_my_0036",
+      "name": "Куала-Кангсар",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/town/kuala-kangsar.json"
     },
     {
-      "id": "my:hub:kuala-kangsar",
-      "name": "Kuala Kangsar",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/city_or_route_hub/kuala-kangsar.json"
+      "id": "my:locality:kuching",
+      "canonical_geo_id": "geo_my_0041",
+      "name": "Кучинг",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/city/kuching.json"
     },
     {
-      "id": "my:hub:kuching",
-      "name": "Kuching",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/city_or_route_hub/kuching.json"
-    },
-    {
-      "id": "my:hub:melaka-city",
-      "name": "Melaka City",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/city_or_route_hub/melaka-city.json"
-    },
-    {
-      "id": "my:hub:taiping",
-      "name": "Taiping",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/city_or_route_hub/taiping.json"
+      "id": "my:locality:taiping",
+      "canonical_geo_id": "geo_my_0034",
+      "name": "Тайпинг",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/city/taiping.json"
     },
     {
       "id": "my:region:melaka",
-      "name": "Melaka",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/region/melaka.json"
+      "canonical_geo_id": "geo_my_0003",
+      "name": "Малакка",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/melaka.json"
     },
     {
       "id": "my:region:penang-george-town",
-      "name": "Penang / George Town",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/region/penang-george-town.json"
+      "canonical_geo_id": "geo_my_0002",
+      "name": "Пенанг / Джорджтаун",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/penang-george-town.json"
     },
     {
       "id": "my:region:perak-taiping-kuala-kangsar-belum",
-      "name": "Perak / Taiping / Kuala Kangsar / Belum",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/region/perak-taiping-kuala-kangsar-belum.json"
+      "canonical_geo_id": "geo_my_0011",
+      "name": "Перак / Тайпинг / Куала-Кангсар / Белум",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/perak-taiping-kuala-kangsar-belum.json"
     },
     {
       "id": "my:region:sarawak-kuching-niah",
-      "name": "Sarawak / Kuching / Niah",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/malaysia/region/sarawak-kuching-niah.json"
+      "canonical_geo_id": "geo_my_0006",
+      "name": "Саравак / Кучинг / Ниа",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/sarawak-kuching-niah.json"
     }
   ],
   "objects": [
@@ -99,7 +92,6 @@
       "name": "George Town",
       "geography_ids": [
         "country:my",
-        "my:hub:george-town-penang",
         "my:region:penang-george-town"
       ],
       "region_legacy": "Penang / George Town",
@@ -112,7 +104,6 @@
       "name": "Melaka",
       "geography_ids": [
         "country:my",
-        "my:hub:melaka-city",
         "my:region:melaka"
       ],
       "region_legacy": "Melaka",
@@ -125,7 +116,7 @@
       "name": "Taiping",
       "geography_ids": [
         "country:my",
-        "my:hub:taiping",
+        "my:locality:taiping",
         "my:region:perak-taiping-kuala-kangsar-belum"
       ],
       "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
@@ -138,7 +129,7 @@
       "name": "Kuala Kangsar",
       "geography_ids": [
         "country:my",
-        "my:hub:kuala-kangsar",
+        "my:locality:kuala-kangsar",
         "my:region:perak-taiping-kuala-kangsar-belum"
       ],
       "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
@@ -151,7 +142,7 @@
       "name": "Kuching old town and waterfront",
       "geography_ids": [
         "country:my",
-        "my:hub:kuching",
+        "my:locality:kuching",
         "my:region:sarawak-kuching-niah"
       ],
       "region_legacy": "Sarawak / Kuching / Niah",

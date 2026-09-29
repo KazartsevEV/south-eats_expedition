@@ -30,25 +30,36 @@
       "page_path": "pages/countries/myanmar.json"
     },
     {
-      "id": "mm:hub:hopin",
-      "name": "Hopin",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/city_or_route_hub/hopin.json"
+      "id": "mm:locality:hopin",
+      "canonical_geo_id": "geo_mm_0038",
+      "name": "Хопин",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/town/hopin.json"
     },
     {
-      "id": "mm:hub:nyaungshwe",
-      "name": "Nyaungshwe",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/city_or_route_hub/nyaungshwe.json"
+      "id": "mm:locality:nyaungshwe",
+      "canonical_geo_id": "geo_mm_0028",
+      "name": "Ньяунгшве",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/town/nyaungshwe.json"
     },
     {
       "id": "mm:region:kachin-state-indawgyi",
-      "name": "Kachin State / Indawgyi",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/region/kachin-state-indawgyi.json"
+      "canonical_geo_id": "geo_mm_0012",
+      "name": "Штат Качин / Индавджи",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/kachin-state-indawgyi.json"
+    },
+    {
+      "id": "mm:region:shan-state-inle-kakku",
+      "canonical_geo_id": "geo_mm_0004",
+      "name": "Штат Шан / Инле / Какку",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/shan-state-inle-kakku.json"
     }
   ],
   "objects": [
@@ -57,7 +68,8 @@
       "name": "Inle Lake",
       "geography_ids": [
         "country:mm",
-        "mm:hub:nyaungshwe"
+        "mm:locality:nyaungshwe",
+        "mm:region:shan-state-inle-kakku"
       ],
       "region_legacy": "штат Шан / Inle / Kakku",
       "nearest_hub": "Nyaungshwe",
@@ -69,7 +81,7 @@
       "name": "Indawgyi Lake",
       "geography_ids": [
         "country:mm",
-        "mm:hub:hopin",
+        "mm:locality:hopin",
         "mm:region:kachin-state-indawgyi"
       ],
       "region_legacy": "Kachin State / Indawgyi",

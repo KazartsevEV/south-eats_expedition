@@ -2,8 +2,8 @@
   "id": "geo_id_0003",
   "kind": "geographic_area",
   "names": {
-    "primary": "Flores / Komodo",
-    "ru": "Флорес / Комодо"
+    "primary": "Флорес / Комодо",
+    "local": "Flores / Komodo"
   },
   "slug": "flores-komodo",
   "parent_id": "geo_id",
@@ -12,18 +12,38 @@
     "geo_id_0003"
   ],
   "description": {
-    "narrow": null,
+    "narrow": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
   "legacy_ids": [
     "id:region:flores-komodo"
   ],
   "migration": {
-    "source_kind": "region",
-    "note": "Служебные маршрутные регионы и узлы временно сохраняются как geographic_area, пока не подтверждена их точная административная или поселенческая принадлежность.",
-    "local_reference_status": "migrated_existing_region_profile"
+    "source_kind": "formal_hierarchy",
+    "axis": "expedition_geography",
+    "status": "formalized",
+    "regional_content_status": "migrated_existing_region_profile"
+  },
+  "provenance": {
+    "checked_at": "2026-09-29",
+    "sources": [
+      {
+        "source_file": "data/source/indonesia.json",
+        "publisher": "Expedition South East project research layer",
+        "used_for": [
+          "researched region identities",
+          "region-to-object linkage",
+          "verified locality relations where canonical locality IDs already exist"
+        ],
+        "checked_at": "2026-09-29"
+      }
+    ],
+    "source_urls": [
+      "https://sensus.bps.go.id/topik/tabular/sp2022/204/0/0"
+    ],
+    "source_refs": [],
+    "research_checked_at": "2026-09-28"
   },
   "languages": {
     "spoken": [
@@ -40,15 +60,5 @@
   },
   "freshness": {
     "checked_at": "2026-09-28"
-  },
-  "provenance": {
-    "source_urls": [
-      "https://sensus.bps.go.id/topik/tabular/sp2022/204/0/0"
-    ],
-    "source_refs": [],
-    "qa": {
-      "source_refs_complete": false,
-      "note": "Существующая региональная справка перенесена из исходных данных страны; привязка источников к отдельным фактам ещё требует нормализации."
-    }
   }
 }

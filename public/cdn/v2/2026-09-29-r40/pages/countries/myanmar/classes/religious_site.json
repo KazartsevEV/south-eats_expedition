@@ -30,39 +30,44 @@
       "page_path": "pages/countries/myanmar.json"
     },
     {
-      "id": "mm:hub:kinpun",
-      "name": "Kinpun",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/city_or_route_hub/kinpun.json"
+      "id": "mm:locality:kinpun",
+      "canonical_geo_id": "geo_mm_0031",
+      "name": "Кинпун",
+      "kind": "village",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/village/kinpun.json"
     },
     {
-      "id": "mm:hub:monywa",
-      "name": "Monywa",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/city_or_route_hub/monywa.json"
+      "id": "mm:locality:monywa",
+      "canonical_geo_id": "geo_mm_0036",
+      "name": "Моунъюа",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/city/monywa.json"
     },
     {
-      "id": "mm:hub:yangon",
-      "name": "Yangon",
-      "kind": "city_or_route_hub",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/city_or_route_hub/yangon.json"
+      "id": "mm:region:mon-state-kyaiktiyo-mawlamyine",
+      "canonical_geo_id": "geo_mm_0005",
+      "name": "Штат Мон / Кьяиктийо / Моулмейн",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/mon-state-kyaiktiyo-mawlamyine.json"
     },
     {
       "id": "mm:region:sagaing-monywa",
-      "name": "Sagaing / Monywa",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/region/sagaing-monywa.json"
+      "canonical_geo_id": "geo_mm_0011",
+      "name": "Сикайн / Моунъюа",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/sagaing-monywa.json"
     },
     {
       "id": "mm:region:yangon",
-      "name": "Yangon",
-      "kind": "region",
-      "axis": "legacy_route_place",
-      "page_path": "pages/geography/myanmar/region/yangon.json"
+      "canonical_geo_id": "geo_mm_0001",
+      "name": "Янгон и окрестности",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/yangon.json"
     }
   ],
   "objects": [
@@ -71,7 +76,6 @@
       "name": "Shwedagon Pagoda",
       "geography_ids": [
         "country:mm",
-        "mm:hub:yangon",
         "mm:region:yangon"
       ],
       "region_legacy": "Yangon",
@@ -84,7 +88,8 @@
       "name": "Kyaiktiyo / Golden Rock",
       "geography_ids": [
         "country:mm",
-        "mm:hub:kinpun"
+        "mm:locality:kinpun",
+        "mm:region:mon-state-kyaiktiyo-mawlamyine"
       ],
       "region_legacy": "штат Мон / Kyaiktiyo / Mawlamyine",
       "nearest_hub": "Kinpun",
@@ -96,7 +101,7 @@
       "name": "Monywa / Thanboddhay and Bodhi Tataung",
       "geography_ids": [
         "country:mm",
-        "mm:hub:monywa",
+        "mm:locality:monywa",
         "mm:region:sagaing-monywa"
       ],
       "region_legacy": "Sagaing / Monywa",

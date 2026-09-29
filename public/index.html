@@ -260,8 +260,14 @@ function scalar(v){
   }
   return esc(v);
 }
+function hasValue(value){
+  if(value==null||value==='')return false;
+  if(Array.isArray(value))return value.some(hasValue);
+  if(typeof value==='object')return Object.keys(value).some(function(k){return k!=='source_refs'&&k!=='qa'&&hasValue(value[k])});
+  return true;
+}
 function factCard(title,value){
-  if(value==null||value===''||(Array.isArray(value)&&!value.length))return '';
+  if(!hasValue(value))return '';
   return '<article class="fact-card"><h3>'+esc(title)+'</h3>'+scalar(value)+'</article>';
 }
 function seaReferenceHTML(){

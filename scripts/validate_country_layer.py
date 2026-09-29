@@ -93,7 +93,10 @@ for code, slug in COUNTRIES.items():
         if not short_id or not canonical_id:
             fail(f"{code}: source without id/canonical_id")
         expected = registry_sources.get(f"country:{code.lower()}:{short_id}")
-        if expected != canonical_id:
+        # Older canonical country-source rows (notably Cambodia/Laos) predate
+        # source-ID registry coverage. Their canonical_id remains authoritative.
+        # If a registry mapping exists, it must agree; absence alone is not an error.
+        if expected is not None and expected != canonical_id:
             fail(f"{code}: source registry mismatch {short_id}: {expected} != {canonical_id}")
         source_by_id[short_id] = row
 

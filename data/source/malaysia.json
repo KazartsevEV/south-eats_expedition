@@ -26,7 +26,8 @@
       "2026-09-29 locality migration: the Langkawi monthly air/sea temperature series was removed from country climate and moved to the Langkawi / northwest coast geo profile; country climate now contains macro spatial context only.",
       "2026-09-29 locality migration: existing city/island research for Kuala Lumpur, George Town/Penang, Melaka City and Langkawi was copied into matching geo locality profiles; route hubs that are not equivalent to the destination remain linkage-only.",
       "2026-09-29 regional locality research chunk 1: KL/Klang Valley, Penang, Melaka, Langkawi, Perak/Belum and Perhentian/east coast enriched with local climate/flood, marine/tide-source status, health, crime-dataset scope, nature/geology and transport where supported.",
-      "2026-09-29 regional locality research chunk 2: Sabah and Sarawak top-level geo regions enriched with climate/flood, marine/tide-source status, biodiversity, geology, health, crime-scope and transport from Sabah Parks, Sarawak Forestry, state tourism, METMalaysia, MOH, DID, DOSM and UNESCO."
+      "2026-09-29 regional locality research chunk 2: Sabah and Sarawak top-level geo regions enriched with climate/flood, marine/tide-source status, biodiversity, geology, health, crime-scope and transport from Sabah Parks, Sarawak Forestry, state tourism, METMalaysia, MOH, DID, DOSM and UNESCO.",
+      "2026-09-29 locality pass: exact child geo profiles added for Kuala Besut, Mulu, Sandakan and Semporna. Composite route hubs remain linkage-only instead of being misrepresented as single cities."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -8225,7 +8226,60 @@
         ],
         "object_names": [
           "Gunung Mulu National Park"
-        ]
+        ],
+        "profile": {
+          "summary": "Mulu — локальный узел Gunong Mulu National Park: известняковые горы, гигантские пещерные системы, первичный лес и маршруты с ночёвками в jungle camps.",
+          "geography": "Удалённый внутренний Sarawak; local context определяется парком и горно-карстовой системой, а не городской средой.",
+          "geology": {
+            "summary": "Gunong Mulu, Gunung Api и Gunung Benarat связаны с одной из крупнейших известняковых пещерных систем; среди ключевых форм — Sarawak Chamber, Deer Cave и Clearwater Cave System.",
+            "source_refs": [
+              "src_000618"
+            ]
+          },
+          "climate": {
+            "summary": "Inland Sarawak очень влажный круглый год; более сухой период относительно чаще приходится на июнь–август, но горные склоны могут получать экстремально высокие годовые осадки.",
+            "source_refs": [
+              "src_000593"
+            ]
+          },
+          "nature": {
+            "summary": "Sarawak Forestry описывает 15 типов леса, 170 видов диких орхидей, 10 видов Nepenthes и крупные вылеты летучих мышей из Deer Cave.",
+            "source_refs": [
+              "src_000618"
+            ]
+          },
+          "transport": {
+            "expedition": "Маршруты в глубину парка включают jungle/mountain treks и ночёвки; конкретные guide/permit requirements читать по текущему park product, не переносить правило одного маршрута на весь Mulu.",
+            "tickets": "Для части Sarawak protected areas используется официальный e-ticket/self-registration ecosystem; Mulu-specific booking проверять отдельно.",
+            "source_refs": [
+              "src_000618",
+              "src_000622"
+            ]
+          },
+          "safety": {
+            "crime": {
+              "status": "not_applicable_as_city_metric"
+            },
+            "dominant_risks": [
+              "heavy rain",
+              "cave/river conditions",
+              "remote communications",
+              "route-specific guide requirements"
+            ],
+            "source_refs": [
+              "src_000618"
+            ]
+          },
+          "provenance": {
+            "source_refs": [
+              "src_000593",
+              "src_000618",
+              "src_000622"
+            ],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": true
+          }
+        }
       },
       {
         "name": "Langkawi",
@@ -8288,7 +8342,50 @@
         ],
         "object_names": [
           "Perhentian islands"
-        ]
+        ],
+        "profile": {
+          "summary": "Kuala Besut — материковый портовый узел для Pulau Perhentian; его смысл в справочнике — jetty, снабжение и проверка состояния моря перед островным переходом.",
+          "geography": "Низкое восточное побережье Terengganu у Южно-Китайского моря; материковый узел отделён от собственно островного Marine Park.",
+          "climate": {
+            "summary": "Восточное побережье получает максимум осадков в ноябре–январе; северо-восточный муссон может нарушать морское сообщение.",
+            "floods": "Для Besut есть DID river/rainfall monitoring; перед выездом после сильных осадков проверять Sg. Besut/Jerteh и подъездные дороги.",
+            "source_refs": [
+              "src_000593",
+              "src_000596"
+            ]
+          },
+          "marine": {
+            "weather": "Для островного перехода использовать METMalaysia Terengganu marine forecast.",
+            "tides": {
+              "status": "official_table_identified_values_not_normalized",
+              "source_ref": "src_000606"
+            },
+            "protected_area": "Pulau Perhentian archipelago относится к Terengganu Marine Park system.",
+            "source_refs": [
+              "src_000600",
+              "src_000601",
+              "src_000606"
+            ]
+          },
+          "transport": {
+            "role": "mainland_gateway",
+            "note": "Department of Fisheries lists Besut District Fisheries Office on Jalan Jeti and the Pulau Perhentian Marine Park Centre on the islands. Коммерческое расписание лодок отдельно перепроверять в день поездки.",
+            "source_refs": [
+              "src_000601"
+            ]
+          },
+          "provenance": {
+            "source_refs": [
+              "src_000593",
+              "src_000596",
+              "src_000600",
+              "src_000601",
+              "src_000606"
+            ],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": true
+          }
+        }
       },
       {
         "name": "Ipoh / Taiping / Gerik",
@@ -8347,7 +8444,63 @@
         ],
         "object_names": [
           "Sipadan Island"
-        ]
+        ],
+        "profile": {
+          "summary": "Semporna — материковый морской gateway к Sipadan и Tun Sakaran Marine Park; основной экспедиционный контекст — лодки, permits/park rules, море и рифовые системы.",
+          "geography": "Прибрежный город восточного Sabah у Darvel Bay/Celebes Sea; окружающие острова имеют вулканическое и коралловое происхождение.",
+          "geology": {
+            "summary": "Tun Sakaran islands include Quaternary pyroclastic volcanic landforms; Sipadan is an oceanic coral island built on a volcanic cone.",
+            "source_refs": [
+              "src_000611",
+              "src_000610"
+            ]
+          },
+          "marine": {
+            "biodiversity": "Tun Sakaran published records include 255 coral species, 528 reef-fish species, more than 240 marine invertebrates and six seagrass species; Sipadan has more than 400 fish species and hundreds of coral species.",
+            "weather": "Eastern Sabah marine forecast is mandatory context for boat transfers.",
+            "tides": {
+              "status": "official_table_identified_values_not_normalized",
+              "source_ref": "src_000606"
+            },
+            "source_refs": [
+              "src_000611",
+              "src_000610",
+              "src_000616",
+              "src_000606"
+            ]
+          },
+          "transport": {
+            "role": "boat_gateway",
+            "note": "Sabah Parks identifies Semporna as gateway for both Sipadan and Tun Sakaran; in calm seas Sipadan is about 45 minutes by speedboat.",
+            "source_refs": [
+              "src_000610",
+              "src_000611"
+            ]
+          },
+          "safety": {
+            "crime": {
+              "dataset_scope": "Semporna police district",
+              "status": "dataset available_not_yet_aggregated",
+              "source_ref": "src_000594"
+            },
+            "dominant_risks": [
+              "marine weather",
+              "boat dependency",
+              "park-specific access/permit changes"
+            ]
+          },
+          "provenance": {
+            "source_refs": [
+              "src_000610",
+              "src_000611",
+              "src_000616",
+              "src_000606",
+              "src_000594"
+            ],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": true
+          }
+        }
       },
       {
         "name": "Kudat / Kota Kinabalu",
@@ -8374,7 +8527,64 @@
         ],
         "object_names": [
           "Sepilok Orangutan Rehabilitation Centre"
-        ]
+        ],
+        "profile": {
+          "summary": "Sandakan — городской gateway восточного Sabah к Sepilok, Lower Kinabatangan и Turtle Islands; прибрежная логистика и wildlife access важнее обычного city-break.",
+          "geography": "Город на восточном побережье Sabah; из него расходятся сухопутные маршруты к Sepilok/Kinabatangan и морской маршрут к Turtle Islands.",
+          "climate": {
+            "summary": "Northeast Sabah получает максимум осадков около января и минимум около апреля; декабрь–март особенно чувствительны к северо-восточному муссону.",
+            "source_refs": [
+              "src_000593"
+            ]
+          },
+          "marine": {
+            "turtle_islands": "Turtle Islands Park находится примерно в 40 км к северу от Sandakan и защищает green и hawksbill turtles, reefs and surrounding seas.",
+            "weather": "Перед морским выходом использовать Eastern Sabah marine forecast.",
+            "tides": {
+              "status": "official_table_identified_values_not_normalized",
+              "source_ref": "src_000606"
+            },
+            "source_refs": [
+              "src_000612",
+              "src_000616",
+              "src_000606"
+            ]
+          },
+          "nature": {
+            "gateway": "Sabah Tourism identifies Sandakan as a gateway to Sepilok and Lower Kinabatangan wildlife destinations.",
+            "source_refs": [
+              "src_000614",
+              "src_000612"
+            ]
+          },
+          "transport": {
+            "role": "regional_gateway",
+            "note": "Sandakan links urban services with Sepilok/Lower Kinabatangan by road and Turtle Islands by boat; each downstream destination keeps its own access rules.",
+            "source_refs": [
+              "src_000614",
+              "src_000612"
+            ]
+          },
+          "safety": {
+            "crime": {
+              "dataset_scope": "Sandakan police district",
+              "status": "dataset available_not_yet_aggregated",
+              "source_ref": "src_000594"
+            }
+          },
+          "provenance": {
+            "source_refs": [
+              "src_000593",
+              "src_000614",
+              "src_000612",
+              "src_000616",
+              "src_000606",
+              "src_000594"
+            ],
+            "checked_at": "2026-09-29",
+            "source_refs_complete": true
+          }
+        }
       }
     ]
   },

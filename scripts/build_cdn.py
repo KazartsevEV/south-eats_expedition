@@ -238,6 +238,20 @@ TYPE_BY_NAME.update({
     "Nat Ma Taung / Mount Victoria": "mountain",
 })
 
+
+TYPE_BY_NAME.update({
+    "Taman Negara National Park": "national_park",
+    "Endau-Rompin National Park (Johor)": "national_park",
+    "Gunung Stong State Forest Park": "protected_area",
+    "Bako National Park": "national_park",
+    "Maliau Basin Conservation Area": "protected_area",
+    "Crocker Range Park and Salt Trail": "protected_area",
+    "Gomantong Caves": "cave",
+    "Sungai Batu Archaeological Site": "archaeological_site",
+    "Bujang Valley Archaeological Museum and temple landscape": "archaeological_site",
+    "Gua Tambun rock art site": "archaeological_site",
+})
+
 TAG_ALIASES = {
     "unesco": "unesco",
     "living heritage": "living_heritage",

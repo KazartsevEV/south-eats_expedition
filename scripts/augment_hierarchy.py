@@ -305,6 +305,21 @@ def main():
                     parent_page=f"pages/countries/{meta['slug']}.json"
                 else:
                     parent_page=node_page_path(node_by_id[parent_id])
+                canonical_reference = {}
+                canonical_id = node.get("canonical_id")
+                canonical_geo_path = release / "geo" / "entities" / f"{canonical_id}.json" if canonical_id else None
+                if canonical_geo_path and canonical_geo_path.exists():
+                    canonical_geo = load(canonical_geo_path)
+                    reference_fields = (
+                        "description", "languages", "climate", "geography", "relief", "geology",
+                        "hydrology", "coast", "marine", "nature", "health", "safety", "history",
+                        "ethnography", "culture", "architecture", "transport", "freshness", "provenance",
+                    )
+                    canonical_reference = {
+                        key: canonical_geo.get(key)
+                        for key in reference_fields
+                        if canonical_geo.get(key) not in (None, "", [], {})
+                    }
                 dump(release / page_path, {
                     "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"page_type":"geography","id":node["id"]},
                     "identity":{"name":node.get("name_ru") or node.get("name_local") or node["id"],"name_local":node.get("name_local"),"kind":node["kind"],"slug":node["slug"],"country_code":code,"axis":node.get("axis")},
@@ -314,6 +329,8 @@ def main():
                     "children":[{"id":child["id"],"kind":child["kind"],"name":child["name"],"page_path":child["page_path"],"object_count":child["object_count"]} for child in children],
                     "legacy_region_names":node.get("legacy_region_names") or [],
                     "notes_ru":node.get("notes_ru"),
+                    "reference":canonical_reference,
+                    "pending_donor_object_ids":node.get("donor_object_ids_pending_migration") or [],
                     "class_counts":[{"object_type":k,"label_ru":type_by_value.get(k,{}).get("label_ru",CLASS_LABELS.get(k,k)),"count":v} for k,v in sorted(class_counts.items())],
                     "class_families":class_families_for_objects(pobj, meta["slug"], node["id"]),
                     "objects":[{"id":o["id"],"name":o["name"],"object_type":o["object_type"],"narrow":o.get("narrow"),"detail_path":o["detail_path"]} for o in pobj],
@@ -422,10 +439,22 @@ def main():
             class_families.append({"family_id":family["id"],"label_ru":family["label_ru"],"count":family_count,"page_path":country_family_path,"global_page_path":f"pages/families/{family['id']}.json","classes":family_classes})
             class_nav_families.append({"id":f"country-family:{code.lower()}:{family['id']}","kind":"class_family","label_ru":family["label_ru"],"count":family_count,"path":country_family_path,"children":family_nav_classes})
         geography_rows=[{"id":p["id"],"kind":p["kind"],"name":p["name"],"page_path":p["page_path"],"object_count":p["object_count"],"children_count":len(p.get("children") or [])} for p in country_geo_roots.get(code,[])]
+        country_reference = {}
+        if src:
+            profile_path = release / "countries" / code.lower() / "profile.json"
+            climate_path = release / "countries" / code.lower() / "climate.json"
+            rules_path = release / "countries" / code.lower() / "travel-rules.json"
+            if profile_path.exists():
+                country_reference["profile"] = load(profile_path)
+            if climate_path.exists():
+                country_reference["climate"] = load(climate_path)
+            if rules_path.exists():
+                country_reference["travel_rules"] = load(rules_path)
         dump(release / "pages" / "countries" / f"{meta['slug']}.json", {
             "meta":{"schema_version":latest["schema_version"],"release_id":latest["release_id"],"page_type":"country","id":f"country:{code.lower()}"},
             "identity":{"country_code":code,"slug":meta["slug"],"name_ru":meta["name_ru"],"name_en":meta["name_en"],"name_local":meta["name_local"],"flag":meta["flag"],"subregions":meta["subregions"],"tags":meta["tags"]},
             "layout":"country","status":"published" if src else "pending_source_migration","hero":src.get("cover") if src else None,"summary":src.get("summary") if src else None,"content_ref":src.get("country_path") if src else None,
+            "reference":country_reference,
             "geography":geography_rows,"geography_status":country_geo_mode.get(code),"legacy_route_places_ref":f"countries/{meta['slug']}/places.json" if code in formal_geography else None,"class_families":class_families,"objects_count":len(cobjects),
             "migration_note":None if src else "Исходный страновой файл ещё не перенесён в Git/CDN; страница существует как узел общей архитектуры без выдуманного содержимого.",
         })

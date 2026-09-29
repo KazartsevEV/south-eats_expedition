@@ -1368,12 +1368,85 @@ def build():
                 **obj["qa"],
             })
 
+        # Country-layer QA is separate from object-card QA. A country must not look
+        # "passed" merely because its attraction cards happen to pass.
+        profile_doc = load(release / "countries" / code.lower() / "profile.json")
+        climate_doc = load(release / "countries" / code.lower() / "climate.json")
+        rules_doc = load(release / "countries" / code.lower() / "travel-rules.json")
+        required_profile_fields = [
+            "history", "geography", "religions", "languages", "ethnography",
+            "economy", "culture", "cuisine", "street_food", "natural_risks",
+        ]
+        profile_missing = [
+            key for key in required_profile_fields
+            if profile_doc.get(key) in (None, "", [], {})
+        ]
+        nature_payload = profile_doc.get("nature") or {}
+        nature_missing = [
+            key for key in ("dangerous_animals", "poisonous_plants")
+            if nature_payload.get(key) in (None, "", [], {})
+        ]
+        stable_source_fields = [
+            "history", "geography", "religions", "languages", "ethnography",
+            "economy", "political_system", "culture",
+        ]
+        field_source_refs = profile_doc.get("field_source_refs") or {}
+        profile_source_gaps = [
+            key for key in stable_source_fields
+            if profile_doc.get(key) not in (None, "", [], {})
+            and not (field_source_refs.get(key) or [])
+        ]
+        dynamic_missing_value = []
+        dynamic_missing_sources = []
+        dynamic_missing_checked_at = []
+        for key, wrapper in rules_doc.items():
+            if key == "country_id":
+                continue
+            if not isinstance(wrapper, dict) or "value" not in wrapper:
+                dynamic_missing_value.append(key)
+                continue
+            if wrapper.get("value") in (None, "", [], {}):
+                dynamic_missing_value.append(key)
+            elif not (wrapper.get("source_refs") or []):
+                dynamic_missing_sources.append(key)
+            if not wrapper.get("checked_at"):
+                dynamic_missing_checked_at.append(key)
+
+        country_checks = {
+            "profile_required_fields": not profile_missing,
+            "profile_nature_risks": not nature_missing,
+            "profile_fact_sources": not profile_source_gaps,
+            "climate_data": climate_doc.get("data") not in (None, "", [], {}),
+            "climate_sources": bool(climate_doc.get("source_refs")),
+            "climate_checked_at": bool(climate_doc.get("checked_at")),
+            "travel_rules_values": not dynamic_missing_value,
+            "travel_rules_sources": not dynamic_missing_sources,
+            "travel_rules_checked_at": not dynamic_missing_checked_at,
+            "formal_geography": code in formal_hierarchy,
+        }
+        country_layer_missing = {
+            "profile_fields": profile_missing,
+            "nature_fields": nature_missing,
+            "profile_fact_sources": profile_source_gaps,
+            "travel_rules_values": dynamic_missing_value,
+            "travel_rules_sources": dynamic_missing_sources,
+            "travel_rules_checked_at": dynamic_missing_checked_at,
+        }
+        country_layer_missing = {k: v for k, v in country_layer_missing.items() if v}
+
         country_payload = {
             "country": code.lower(),
+            "country_layer": {
+                "status": "passed" if all(country_checks.values()) else "incomplete",
+                "checks": country_checks,
+                "missing": country_layer_missing,
+                "hierarchy_nodes": len((formal_hierarchy.get(code) or {}).get("nodes") or []),
+                "checked_at": ((sources_by_code[code][1].get("meta") or {}).get("last_updated")),
+            },
             "objects_total": len(objects),
             "objects_passed": passed,
             "objects_incomplete": len(objects) - passed,
-            "missing": dict(sorted(missing.items())),
+            "object_missing": dict(sorted(missing.items())),
         }
         dump(release / "qa" / "countries" / f"{code.lower()}.json", country_payload)
         country_qa_rows.append(country_payload)
@@ -1402,7 +1475,7 @@ def build():
         "objects_incomplete": sum(1 for obj in canonical_objects.values() if (obj.get("qa") or {}).get("status") != "passed"),
         "missing_counts": dict(sorted(global_missing.items())),
         "countries": country_qa_rows,
-        "next_work_rule": "country -> class -> object -> research -> normalization -> GPS/elevation -> sources -> object QA -> class QA -> country QA",
+        "next_work_rule": "country layer -> regional geography -> country QA -> next country; object-card work is blocked until all country/regional layers are complete",
     })
 
     manifest_path = release / "manifest.json"

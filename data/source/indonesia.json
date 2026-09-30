@@ -43,7 +43,8 @@
       "Regional QA pass 2026-09-30: deepened West Sumatra / Sawahlunto with UNESCO Ombilin material; separated mining-city history, mountain railway, social/labour history and current regional transport.",
       "Regional QA pass 2026-09-30: deepened Raja Ampat access and island-community context with current Indonesia Travel material; separated Sorong→Waisai gateway logistics from onward island boat legs and added locally anchored Matbat/Wala cultural context.",
       "Regional language pass 2026-09-30: replaced avoidable English logistics/editorial terms such as gateway, road/boat legs, communities and trailheads with natural Russian equivalents while preserving proper names and technical meaning.",
-      "Indonesia locality normalization 2026-10-01: 34 real city/town/village geo nodes added with stable IDs geo_id_0035..0068 and independent settlement centre anchors. Legacy composite route-hub IDs geo_id_0015..0034 are preserved for compatibility and are not reclassified as cities. Object cards unchanged."
+      "Indonesia locality normalization 2026-10-01: 34 real city/town/village geo nodes added with stable IDs geo_id_0035..0068 and independent settlement centre anchors. Legacy composite route-hub IDs geo_id_0015..0034 are preserved for compatibility and are not reclassified as cities. Object cards unchanged.",
+      "Indonesia geometry QA 2026-10-01: sourced approximate masks added only for Yogyakarta/Central Java, Bali, East Java and West Sumatra/Sawahlunto using verified BIG province geometry. Ten other composite expedition regions remain without polygons because the inspected Kabupaten mirror exposes village-level features rather than defensible dissolved ADM2 boundaries, and parent-province cloning would overstate coverage. Maluku/Banda also remains null rather than using all Maluku. Object cards unchanged."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -12076,7 +12077,8 @@
         "name_ru": "Медан",
         "kind": "city",
         "regions": [
-          "North Sumatra / Gunung Leuser"
+          "North Sumatra / Gunung Leuser",
+          "North Sumatra / Lake Toba / Samosir"
         ],
         "object_names": [],
         "primary_location": {
@@ -12107,7 +12109,9 @@
               "src_000725",
               "src_903006",
               "src_903020",
-              "src_903021"
+              "src_903021",
+              "src_903005",
+              "src_903027"
             ],
             "research_source_refs": [
               "src_000720",
@@ -13447,6 +13451,20 @@
       ],
       "accessed": "2026-10-01",
       "notes": "Used where indexed OSM/GeoNames-backed locality records provide a clearer settlement centre than broad administrative or physical-feature entries."
+    },
+    {
+      "id": "ID_BIG_ADMIN_BOUNDARIES_2022_2025",
+      "canonical_id": "src_910102",
+      "publisher": "Badan Informasi Geospasial (BIG) geometry via mashadinoor/Indonesia-Geojson-2026",
+      "url": "https://github.com/mashadinoor/Indonesia-Geojson-2026",
+      "kind": "map",
+      "used_for": [
+        "indonesia_expedition_region_masks",
+        "province_boundary_components",
+        "geometry_provenance"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Repository states that geometry is sourced from Indonesia's Badan Informasi Geospasial (BIG) and province coding follows current 38-province administrative structure. Only province-level files verified as province boundaries are used here. Kabupaten files in this mirror were not used after QA showed village-level feature content rather than dissolved regency boundaries."
     }
   ],
   "uncertainties": [

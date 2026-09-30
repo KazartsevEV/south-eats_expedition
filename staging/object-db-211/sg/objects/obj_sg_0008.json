@@ -29,20 +29,20 @@
       "lon": null,
       "elevation_m": null,
       "elevation_range_m": null,
-      "coordinate_type": null,
+      "coordinate_type": "center",
       "accuracy": "unknown",
       "elevation_accuracy": "unknown",
       "source_refs": [],
       "elevation_source_refs": [],
-      "checked_at": null
+      "checked_at": "2026-09-28"
     },
     "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Pulau Ubin — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+        "type": "overview",
+        "text": "Pulau Ubin — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
         "source_refs": [
           "src_stage_sg_0003",
           "src_stage_sg_0012"
@@ -52,21 +52,40 @@
   },
   "visit": {
     "entry": {
-      "hours": "Bumboats обычно по спросу 06:00–19:00; сама островная среда не имеет единого графика. Chek Jawa boardwalks 07:00–19:00 по NParks.",
-      "ticket": "Bumboat обычно S$4 в одну сторону + доплата за велосипед; подтверждать на месте.",
-      "closure_notes": "Лодки зависят от пассажиропотока/погоды; отдельные объекты имеют свои часы.",
-      "status": null,
-      "official_url": "https://pulau-ubin.nparks.gov.sg/visitubin/",
-      "notes": "До Changi Point Ferry Terminal автобус/такси; bumboat до Pulau Ubin обычно около 10 минут и отправляется по заполнению. На острове — пешком, велосипед или локальный van.",
+      "access_status": "unknown",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Bumboat обычно S$4 в одну сторону + доплата за велосипед; подтверждать на месте.",
+        "source_refs": [
+          "src_stage_sg_0003",
+          "src_stage_sg_0012"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Bumboats обычно по спросу 06:00–19:00; сама островная среда не имеет единого графика. Chek Jawa boardwalks 07:00–19:00 по NParks.",
+        "source_refs": [
+          "src_stage_sg_0003",
+          "src_stage_sg_0012"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_stage_sg_0003",
         "src_stage_sg_0012"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://pulau-ubin.nparks.gov.sg/visitubin/",
+      "closure_notes": "Лодки зависят от пассажиропотока/погоды; отдельные объекты имеют свои часы.",
+      "notes": "До Changi Point Ferry Terminal автобус/такси; bumboat до Pulau Ubin обычно около 10 минут и отправляется по заполнению. На острове — пешком, велосипед или локальный van."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "other"
         ],
@@ -75,14 +94,6 @@
             "mode": "other",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "До Changi Point Ferry Terminal автобус/такси; bumboat до Pulau Ubin обычно около 10 минут и отправляется по заполнению. На острове — пешком, велосипед или локальный van. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
           }
         ]
@@ -172,11 +183,11 @@
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": true,
+      "access": false,
       "water": false,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": true
+      "visual_recon": false
     },
     "last_reviewed_at": "2026-09-30"
   }

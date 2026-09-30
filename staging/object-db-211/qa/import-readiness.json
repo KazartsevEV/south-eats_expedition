@@ -20,7 +20,7 @@
     "object_inventory_248": true,
     "permanent_object_ids_locked": true,
     "full_replace_strategy": true,
-    "all_countries_structurally_rebuilt": false,
+    "all_countries_structurally_rebuilt": true,
     "temporary_source_ids_eliminated": false,
     "canonical_geo_refs_reconciled": false,
     "canonical_lodging_refs_reconciled": false,
@@ -120,13 +120,84 @@
           "language": 9
         }
       }
+    },
+    "sg": {
+      "objects": 18,
+      "structural": "passed",
+      "factual_qa": {
+        "passed": 0,
+        "incomplete": 18,
+        "missing": {
+          "geo": 18,
+          "coordinates": 18,
+          "elevation": 18,
+          "access": 18,
+          "water": 18,
+          "overnight": 18,
+          "traveler_reports": 18,
+          "visual_recon": 18,
+          "language": 7
+        }
+      }
+    },
+    "th": {
+      "objects": 21,
+      "structural": "passed",
+      "factual_qa": {
+        "passed": 0,
+        "incomplete": 21,
+        "missing": {
+          "language": 12,
+          "geo": 21,
+          "coordinates": 21,
+          "elevation": 21,
+          "access": 21,
+          "water": 21,
+          "overnight": 21,
+          "traveler_reports": 21,
+          "visual_recon": 21
+        }
+      }
+    },
+    "tl": {
+      "objects": 17,
+      "structural": "passed",
+      "factual_qa": {
+        "passed": 0,
+        "incomplete": 17,
+        "missing": {
+          "language": 12,
+          "geo": 17,
+          "coordinates": 17,
+          "elevation": 17,
+          "access": 17,
+          "water": 17,
+          "overnight": 17,
+          "traveler_reports": 17,
+          "visual_recon": 17
+        }
+      }
+    },
+    "vn": {
+      "objects": 23,
+      "structural": "passed",
+      "factual_qa": {
+        "passed": 0,
+        "incomplete": 23,
+        "missing": {
+          "language": 14,
+          "geo": 23,
+          "coordinates": 23,
+          "elevation": 23,
+          "access": 23,
+          "water": 23,
+          "overnight": 23,
+          "traveler_reports": 23,
+          "visual_recon": 23
+        }
+      }
     }
   },
-  "pending_full_rebuild": [
-    "sg",
-    "th",
-    "tl",
-    "vn"
-  ],
+  "pending_full_rebuild": [],
   "note": "Do not import until every hard guard required for structural safety is true. Factual unknowns may remain only where the contract explicitly permits null/unknown and QA records the gap."
 }

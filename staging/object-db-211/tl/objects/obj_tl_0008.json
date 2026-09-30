@@ -29,20 +29,20 @@
       "lon": null,
       "elevation_m": null,
       "elevation_range_m": null,
-      "coordinate_type": null,
+      "coordinate_type": "center",
       "accuracy": "unknown",
       "elevation_accuracy": "unknown",
       "source_refs": [],
       "elevation_source_refs": [],
-      "checked_at": null
+      "checked_at": "2026-09-28"
     },
     "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Maubisse–Ainaro highlands — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+        "type": "overview",
+        "text": "Maubisse–Ainaro highlands — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
         "source_refs": [
           "src_stage_tl_0001",
           "src_stage_tl_0014",
@@ -55,12 +55,33 @@
   },
   "visit": {
     "entry": {
-      "hours": "Maubisse — открытый город/горный район без единого графика. Pousada — действующий hospitality property; интерьер/услуги зависят от режима объекта.",
-      "ticket": "Сам регион без входного билета; проживание, питание и guided walks оплачиваются отдельно.",
-      "closure_notes": "Горная дорога и пешие маршруты сильнее зависят от дождя; частные/деревенские визиты согласовывать.",
-      "status": null,
-      "official_url": "https://timorleste.tl/destinations/maubisse",
-      "notes": "Maubisse примерно 70 km к югу от Dili, 2–3 часа по дороге через Aileu.",
+      "access_status": "unknown",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Сам регион без входного билета; проживание, питание и guided walks оплачиваются отдельно.",
+        "source_refs": [
+          "src_stage_tl_0001",
+          "src_stage_tl_0014",
+          "src_stage_tl_0003",
+          "src_stage_tl_0015",
+          "src_stage_tl_0008"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Maubisse — открытый город/горный район без единого графика. Pousada — действующий hospitality property; интерьер/услуги зависят от режима объекта.",
+        "source_refs": [
+          "src_stage_tl_0001",
+          "src_stage_tl_0014",
+          "src_stage_tl_0003",
+          "src_stage_tl_0015",
+          "src_stage_tl_0008"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_stage_tl_0001",
         "src_stage_tl_0014",
@@ -68,11 +89,15 @@
         "src_stage_tl_0015",
         "src_stage_tl_0008"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://timorleste.tl/destinations/maubisse",
+      "closure_notes": "Горная дорога и пешие маршруты сильнее зависят от дождя; частные/деревенские визиты согласовывать.",
+      "notes": "Maubisse примерно 70 km к югу от Dili, 2–3 часа по дороге через Aileu."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "other"
         ],
@@ -81,14 +106,6 @@
             "mode": "other",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Maubisse примерно 70 km к югу от Dili, 2–3 часа по дороге через Aileu. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Город на высоте около 1,400 m; окрестные деревни и кофейные районы — пешком/с местным транспортом."
           }
         ]
@@ -187,11 +204,11 @@
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": true,
+      "access": false,
       "water": false,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": true
+      "visual_recon": false
     },
     "last_reviewed_at": "2026-09-30"
   }

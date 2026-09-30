@@ -57,3 +57,11 @@ Facts belonging to geo, lodging, POI, routes, media or sources must ultimately l
 5. Reconcile source/geo/lodging/media/route refs before import.
 6. Run build CDN → validate CDN → validate hierarchy on this branch.
 7. Do not create a PR, merge to `main`, or promote `latest/current` until the replacement layer is structurally valid.
+
+- SG: 18/18 structurally rebuilt; factual QA remains incomplete according to qa/sg.json.
+
+- TH: 21/21 structurally rebuilt; factual QA remains incomplete according to qa/th.json.
+
+- TL: 17/17 structurally rebuilt; factual QA remains incomplete according to qa/tl.json.
+
+- VN: 23/23 structurally rebuilt; factual QA remains incomplete according to qa/vn.json.

@@ -30,20 +30,20 @@
       "lon": null,
       "elevation_m": null,
       "elevation_range_m": null,
-      "coordinate_type": null,
+      "coordinate_type": "center",
       "accuracy": "unknown",
       "elevation_accuracy": "unknown",
       "source_refs": [],
       "elevation_source_refs": [],
-      "checked_at": null
+      "checked_at": "2026-09-28"
     },
     "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Один из лучших cave-story объектов северного Таиланда: подземная река, bamboo raft, гигантские образования и археологические следы соединяются в одном маршруте.",
+        "type": "overview",
+        "text": "Один из лучших cave-story объектов северного Таиланда: подземная река, bamboo raft, гигантские образования и археологические следы соединяются в одном маршруте.",
         "source_refs": [
           "src_stage_th_0036",
           "src_stage_th_0037",
@@ -54,22 +54,43 @@
   },
   "visit": {
     "entry": {
-      "hours": "Thailand Film Office / Department of Tourism: ежедневно 08:00–17:00.",
-      "ticket": "Guide, lantern и bamboo-raft service оплачиваются по текущему локальному тарифу; TAT рекомендует уточнять актуальные fees у providers.",
-      "closure_notes": "Самостоятельный вход не допускается; уровень воды может изменить доступный маршрут.",
-      "status": "open_guided_cave_weather_water_dependent",
-      "official_url": "https://tfo.dot.go.th/th/locations/12789/",
-      "notes": "Из Pai/Mae Hong Son по Highway 1095 к Pang Mapha/Tham Lod; последний road segment к Ban Tham Lod. Thailand Film Office указывает объект в Pang Mapha.",
+      "access_status": "open_guided_cave_weather_water_dependent",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Guide, lantern и bamboo-raft service оплачиваются по текущему локальному тарифу; TAT рекомендует уточнять актуальные fees у providers.",
+        "source_refs": [
+          "src_stage_th_0036",
+          "src_stage_th_0037",
+          "src_stage_th_0038"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Thailand Film Office / Department of Tourism: ежедневно 08:00–17:00.",
+        "source_refs": [
+          "src_stage_th_0036",
+          "src_stage_th_0037",
+          "src_stage_th_0038"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_stage_th_0036",
         "src_stage_th_0037",
         "src_stage_th_0038"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://tfo.dot.go.th/th/locations/12789/",
+      "closure_notes": "Самостоятельный вход не допускается; уровень воды может изменить доступный маршрут.",
+      "notes": "Из Pai/Mae Hong Son по Highway 1095 к Pang Mapha/Tham Lod; последний road segment к Ban Tham Lod. Thailand Film Office указывает объект в Pang Mapha."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "other"
         ],
@@ -78,14 +99,6 @@
             "mode": "other",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Из Pai/Mae Hong Son по Highway 1095 к Pang Mapha/Tham Lod; последний road segment к Ban Tham Lod. Thailand Film Office указывает объект в Pang Mapha. До Pai/Pang Mapha ходят vans/buses; на последний участок практичнее local transfer/motorbike/car. Внутри — пеший маршрут с lantern и участками bamboo raft по подземной реке."
           }
         ]
@@ -171,18 +184,18 @@
   "qa": {
     "status": "incomplete",
     "checks": {
-      "language": true,
+      "language": false,
       "classification": true,
       "geo": false,
       "coordinates": false,
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": true,
+      "access": false,
       "water": false,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": true
+      "visual_recon": false
     },
     "last_reviewed_at": "2026-09-30"
   }

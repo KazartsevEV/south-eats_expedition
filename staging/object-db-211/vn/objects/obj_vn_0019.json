@@ -26,20 +26,20 @@
       "lon": null,
       "elevation_m": null,
       "elevation_range_m": null,
-      "coordinate_type": null,
+      "coordinate_type": "center",
       "accuracy": "unknown",
       "elevation_accuracy": "unknown",
       "source_refs": [],
       "elevation_source_refs": [],
-      "checked_at": null
+      "checked_at": "2026-09-28"
     },
     "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Long Bien Bridge — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "type": "overview",
+        "text": "Long Bien Bridge — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
         "source_refs": [
           "src_stage_vn_0001",
           "src_stage_vn_0043",
@@ -51,23 +51,46 @@
   },
   "visit": {
     "entry": {
-      "hours": "Long Bien Bridge — действующая транспортная инфраструктура, а не ticketed attraction; доступ определяется текущей схемой движения/ремонта.",
-      "ticket": "Отдельного туристического билета нет.",
-      "closure_notes": "Узкий pedestrian edge и действующее движение требуют съёмки без выхода на железнодорожное полотно. Ремонт/ограничения движения могут меняться.",
-      "status": "open_transport_infrastructure",
-      "official_url": "https://vietnam.travel/node/643",
-      "notes": "Пеший подход из Old Quarter через Long Bien station area; для фото использовать разрешённую боковую пешеходную часть. Не выходить на rail track ради кадра.",
+      "access_status": "open_transport_infrastructure",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Отдельного туристического билета нет.",
+        "source_refs": [
+          "src_stage_vn_0001",
+          "src_stage_vn_0043",
+          "src_stage_vn_0003",
+          "src_stage_vn_0044"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Long Bien Bridge — действующая транспортная инфраструктура, а не ticketed attraction; доступ определяется текущей схемой движения/ремонта.",
+        "source_refs": [
+          "src_stage_vn_0001",
+          "src_stage_vn_0043",
+          "src_stage_vn_0003",
+          "src_stage_vn_0044"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_stage_vn_0001",
         "src_stage_vn_0043",
         "src_stage_vn_0003",
         "src_stage_vn_0044"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://vietnam.travel/node/643",
+      "closure_notes": "Узкий pedestrian edge и действующее движение требуют съёмки без выхода на железнодорожное полотно. Ремонт/ограничения движения могут меняться.",
+      "notes": "Пеший подход из Old Quarter через Long Bien station area; для фото использовать разрешённую боковую пешеходную часть. Не выходить на rail track ради кадра."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "other"
         ],
@@ -76,14 +99,6 @@
             "mode": "other",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Пеший подход из Old Quarter через Long Bien station area; для фото использовать разрешённую боковую пешеходную часть. Не выходить на rail track ради кадра. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
           }
         ]
@@ -179,11 +194,11 @@
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": true,
+      "access": false,
       "water": false,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": true
+      "visual_recon": false
     },
     "last_reviewed_at": "2026-09-30"
   }

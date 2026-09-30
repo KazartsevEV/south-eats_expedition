@@ -29,20 +29,20 @@
       "lon": null,
       "elevation_m": null,
       "elevation_range_m": null,
-      "coordinate_type": null,
+      "coordinate_type": "center",
       "accuracy": "unknown",
       "elevation_accuracy": "unknown",
       "source_refs": [],
       "elevation_source_refs": [],
-      "checked_at": null
+      "checked_at": "2026-09-28"
     },
     "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Duong Lam Ancient Village — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+        "type": "overview",
+        "text": "Duong Lam Ancient Village — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
         "source_refs": [
           "src_stage_vn_0001",
           "src_stage_vn_0042",
@@ -53,22 +53,43 @@
   },
   "visit": {
     "entry": {
-      "hours": "Duong Lam — жилая heritage village, поэтому улицы не имеют единого графика; communal houses, temples и private ancient houses открываются по собственному режиму.",
-      "ticket": "Въезд/heritage management и отдельные дома могут иметь local fee; текущую сумму подтверждать у village management, а не считать единым музейным билетом.",
-      "closure_notes": "Это жилая среда: интерьерные фото/видео и съёмка жителей — только с согласия; религиозные ceremonies могут закрывать отдельные здания.",
-      "status": "open_living_heritage_village",
-      "official_url": "https://vietnam.travel/",
-      "notes": "Практичная база — Hanoi; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
+      "access_status": "open_living_heritage_village",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Въезд/heritage management и отдельные дома могут иметь local fee; текущую сумму подтверждать у village management, а не считать единым музейным билетом.",
+        "source_refs": [
+          "src_stage_vn_0001",
+          "src_stage_vn_0042",
+          "src_stage_vn_0003"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Duong Lam — жилая heritage village, поэтому улицы не имеют единого графика; communal houses, temples и private ancient houses открываются по собственному режиму.",
+        "source_refs": [
+          "src_stage_vn_0001",
+          "src_stage_vn_0042",
+          "src_stage_vn_0003"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_stage_vn_0001",
         "src_stage_vn_0042",
         "src_stage_vn_0003"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://vietnam.travel/",
+      "closure_notes": "Это жилая среда: интерьерные фото/видео и съёмка жителей — только с согласия; религиозные ceremonies могут закрывать отдельные здания.",
+      "notes": "Практичная база — Hanoi; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "other"
         ],
@@ -77,14 +98,6 @@
             "mode": "other",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Практичная база — Hanoi; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
           }
         ]
@@ -170,18 +183,18 @@
   "qa": {
     "status": "incomplete",
     "checks": {
-      "language": true,
+      "language": false,
       "classification": true,
       "geo": false,
       "coordinates": false,
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": true,
+      "access": false,
       "water": false,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": true
+      "visual_recon": false
     },
     "last_reviewed_at": "2026-09-30"
   }

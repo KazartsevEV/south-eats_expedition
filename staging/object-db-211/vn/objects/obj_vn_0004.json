@@ -26,20 +26,20 @@
       "lon": null,
       "elevation_m": null,
       "elevation_range_m": null,
-      "coordinate_type": null,
+      "coordinate_type": "center",
       "accuracy": "unknown",
       "elevation_accuracy": "unknown",
       "source_refs": [],
       "elevation_source_refs": [],
-      "checked_at": null
+      "checked_at": "2026-09-28"
     },
     "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Hue monuments — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "type": "overview",
+        "text": "Hue monuments — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
         "source_refs": [
           "src_stage_vn_0001",
           "src_stage_vn_0011",
@@ -52,12 +52,33 @@
   },
   "visit": {
     "entry": {
-      "hours": "Different monuments have their own visiting hours; use the Hue Monuments Conservation Center e-ticket portal's 'visiting time' section for the travel date.",
-      "ticket": "Rates applied from 4 Jan 2026: Hue Imperial City VND 200,000 adult / 40,000 child 7–12; Minh Mang, Tu Duc, Khai Dinh tombs VND 150,000 adult / 30,000 child; Gia Long VND 150,000; Dong Khanh VND 100,000; several smaller sites VND 50,000. Combo tickets available.",
-      "closure_notes": "Ceremonies, conservation works and peak-season crowd controls may affect access. E-ticket platform supports QR entry and 24/7 purchasing.",
-      "status": "ticketed multi-site heritage complex",
-      "official_url": "https://hue.gov.vn/en-us/Home/Tourism/Details/tb/Hue-Monuments-Complex-721558",
-      "notes": "Distributed monument complex around central Hue and Perfume River; Imperial City is central, royal tombs require road transport/taxi/ride-hailing.",
+      "access_status": "ticketed multi-site heritage complex",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Rates applied from 4 Jan 2026: Hue Imperial City VND 200,000 adult / 40,000 child 7–12; Minh Mang, Tu Duc, Khai Dinh tombs VND 150,000 adult / 30,000 child; Gia Long VND 150,000; Dong Khanh VND 100,000; several smaller sites VND 50,000. Combo tickets available.",
+        "source_refs": [
+          "src_stage_vn_0001",
+          "src_stage_vn_0011",
+          "src_stage_vn_0003",
+          "src_stage_vn_0012",
+          "src_stage_vn_0013"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Different monuments have their own visiting hours; use the Hue Monuments Conservation Center e-ticket portal's 'visiting time' section for the travel date.",
+        "source_refs": [
+          "src_stage_vn_0001",
+          "src_stage_vn_0011",
+          "src_stage_vn_0003",
+          "src_stage_vn_0012",
+          "src_stage_vn_0013"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_stage_vn_0001",
         "src_stage_vn_0011",
@@ -65,11 +86,15 @@
         "src_stage_vn_0012",
         "src_stage_vn_0013"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://hue.gov.vn/en-us/Home/Tourism/Details/tb/Hue-Monuments-Complex-721558",
+      "closure_notes": "Ceremonies, conservation works and peak-season crowd controls may affect access. E-ticket platform supports QR entry and 24/7 purchasing.",
+      "notes": "Distributed monument complex around central Hue and Perfume River; Imperial City is central, royal tombs require road transport/taxi/ride-hailing."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "other"
         ],
@@ -78,14 +103,6 @@
             "mode": "other",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Distributed monument complex around central Hue and Perfume River; Imperial City is central, royal tombs require road transport/taxi/ride-hailing. Taxi/ride-hailing/private driver practical for multi-tomb day; e-ticket can reduce queueing. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
           }
         ]
@@ -177,18 +194,18 @@
   "qa": {
     "status": "incomplete",
     "checks": {
-      "language": true,
+      "language": false,
       "classification": true,
       "geo": false,
       "coordinates": false,
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": true,
+      "access": false,
       "water": false,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": true
+      "visual_recon": false
     },
     "last_reviewed_at": "2026-09-30"
   }

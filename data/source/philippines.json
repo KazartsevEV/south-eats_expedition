@@ -20,7 +20,8 @@
       "Regional research profiles restored from the existing Google Drive draft; attraction object payloads remain deferred.",
       "Regional QA pass 2026-09-30: deepened Ilocos/Vigan, Negros and Samar with UNESCO, PHIVOLCS and NCCA sources; added locally anchored ethnography, living heritage, volcanic geology and Waray cultural context without changing object payloads.",
       "Locality pass 2026-09-30: added 17 researched city/town base profiles with map anchors, source provenance and explicit separation between settlement coordinates and attraction/trailhead coordinates.",
-      "Geo-mask pass 2026-09-30: added sourced administrative boundary geometry for CAR → Ifugao/Mountain Province → Banaue/Sagada, with a separately marked approximate composite mask for Cordillera / Ifugao / Sagada."
+      "Geo-mask pass 2026-09-30: added sourced administrative boundary geometry for CAR → Ifugao/Mountain Province → Banaue/Sagada, with a separately marked approximate composite mask for Cordillera / Ifugao / Sagada.",
+      "Geo-mask completion pass 2026-09-30: administrative region/province/city masks are stored as sourced node geometry; expedition-area masks are derived from canonical administrative coverage bases unless a legal protected-area boundary is available."
     ]
   },
   "overview": {
@@ -3477,6 +3478,33 @@
         "regional_climate",
         "altitude_temperature_effect",
         "rainfall_seasonality"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_ADMIN_BOUNDARIES_NIR_HUC",
+      "canonical_id": "src_910008",
+      "publisher": "tordecilla/ph-drilldown-map — NIR-aligned Philippine administrative boundary derivative",
+      "url": "https://github.com/tordecilla/ph-drilldown-map",
+      "kind": "map",
+      "used_for": [
+        "geo_boundary_masks",
+        "current_nir_alignment",
+        "highly_urbanized_city_boundaries",
+        "region_boundaries"
+      ],
+      "accessed": "2026-09-30",
+      "notes": "Derived web-map boundary layer built from philippines-json-maps plus explicit NIR/HUC adjustments. Used for display geometry only; current administrative names/codes remain checked against PSGC."
+    },
+    {
+      "id": "PH_TUBBATAHA_RA10067_BOUNDARY",
+      "canonical_id": "src_910009",
+      "publisher": "Senate of the Philippines Legislative Reference Bureau — Republic Act No. 10067",
+      "url": "https://ldr.senate.gov.ph/legislative%2Bissuances/Republic%20Act%20No.%2010067",
+      "kind": "government",
+      "used_for": [
+        "tubbataha_legal_boundary",
+        "protected_area_geometry"
       ],
       "accessed": "2026-09-30"
     }

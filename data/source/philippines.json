@@ -6,7 +6,7 @@
     "last_updated": "2026-09-30",
     "purpose": "Expedition South East",
     "data_model_version": "1.2",
-    "migration_stage": "country_only",
+    "migration_stage": "country_and_regional",
     "migration_source_drive_file_id": "1m_l1Hk9P77ljKfb75tPctPwmaO3uzSQl",
     "dynamic_fields": [
       "visa",
@@ -16,7 +16,8 @@
       "weather_typhoon"
     ],
     "research_notes": [
-      "Country-first migration from the existing Google Drive draft. Regional and object payloads remain queued and are intentionally not migrated in this phase."
+      "Country-first migration from the existing Google Drive draft. Regional and object payloads remain queued and are intentionally not migrated in this phase.",
+      "Regional research profiles restored from the existing Google Drive draft; attraction object payloads remain deferred."
     ]
   },
   "overview": {
@@ -392,6 +393,417 @@
       "PH_DEATH_PENALTY_ABOLITION",
       "PH_FLAG_CODE",
       "PH_PENAL_CODE"
+    ],
+    "regions": [
+      {
+        "name": "Palawan",
+        "languages_spoken": [
+          "Filipino/Tagalog",
+          "English",
+          "Cuyonon and Palawano languages locally"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Островной тропический климат; тайфуны/муссоны и море определяют лодки.",
+        "best_period_general": "Обычно сухие месяцы; отдельные части Palawan различаются по погоде.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Cordillera / Ifugao / Sagada",
+        "languages_spoken": [
+          "Ifugao languages",
+          "Kankanaey in Sagada",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Высокогорье прохладнее, туман/дожди часты.",
+        "best_period_general": "Сухие месяцы для троп и рисовых террас; сезон посадки/зелени меняет визуал.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Bohol",
+        "languages_spoken": [
+          "Cebuano/Boholano",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Тропический островной климат.",
+        "best_period_general": "Сухие месяцы, при этом ливни возможны круглый год.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Metro Manila",
+        "languages_spoken": [
+          "Filipino/Tagalog",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Жарко и влажно; сезон дождей и тайфуны осложняют городскую логистику.",
+        "best_period_general": "Декабрь–февраль комфортнее для пешего города.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Ilocos / Vigan",
+        "languages_spoken": [
+          "Ilocano",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Жаркое северо-западное побережье; сезон дождей летом.",
+        "best_period_general": "Ноябрь–февраль/март.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Boracay / Western Visayas",
+        "languages_spoken": [
+          "Aklanon",
+          "Hiligaynon/Kinaray-a nearby",
+          "Filipino",
+          "English widely used in tourism"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Морской тропический климат; Habagat/Amihan меняют ветер и состояние пляжей.",
+        "best_period_general": "Сухой Amihan-season обычно удобнее.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Tubbataha / Sulu Sea",
+        "languages_spoken": [
+          "Filipino/English on liveaboards and ranger station"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Удалённый морской парк; доступ полностью сезонный и зависит от моря.",
+        "best_period_general": "Только в официальный дайв-сезон/окно операторов.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Iloilo",
+        "languages_spoken": [
+          "Hiligaynon",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Тропический городской климат.",
+        "best_period_general": "Сухие месяцы удобнее для heritage-walk.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Samar",
+        "languages_spoken": [
+          "Waray",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Один из более влажных/тайфуноопасных районов; пещеры чувствительны к ливням.",
+        "best_period_general": "Сухое погодное окно; пещеры не планировать после сильных дождей.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Siquijor",
+        "languages_spoken": [
+          "Cebuano",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Тропический островной климат.",
+        "best_period_general": "Сухой сезон; водопады визуально сильнее после дождей, но тропы скользкие.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Negros",
+        "languages_spoken": [
+          "Hiligaynon in west",
+          "Cebuano in east",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Тропический; горы создают локальные различия осадков.",
+        "best_period_general": "Сухие месяцы для архитектуры/road trip.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Batanes",
+        "languages_spoken": [
+          "Ivatan",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Ветреный северный островной климат, тайфуны могут полностью отменять транспорт.",
+        "best_period_general": "Выбирать стабильное погодное окно и запасные дни.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Central Luzon / Pinatubo",
+        "languages_spoken": [
+          "Kapampangan",
+          "Sambal",
+          "Aeta languages locally",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Сухой сезон облегчает 4x4 и трек; лахары/реки опаснее при ливнях.",
+        "best_period_general": "Сухой сезон; не ехать при сильных дождях.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Occidental Mindoro / Apo Reef",
+        "languages_spoken": [
+          "Tagalog",
+          "Mangyan languages locally",
+          "English via dive tourism"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Морской парк: ветер, волна и сезон определяют лодки.",
+        "best_period_general": "Стабильный сухой сезон, подтверждать у оператора/парка.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Batangas / Taal",
+        "languages_spoken": [
+          "Tagalog",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Жаркое побережье/озёрная котловина; вулканический статус динамический.",
+        "best_period_general": "Сухой сезон, но вулканические advisories важнее календаря.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Albay / Bicol",
+        "languages_spoken": [
+          "Bikol languages",
+          "Filipino",
+          "English"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Влажный тропический климат с тайфунным риском; вулканическая опасность контролируется PHIVOLCS.",
+        "best_period_general": "Для чистых видов Mayon чаще полезны ранние утра; статус вулкана проверять непосредственно перед поездкой.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      },
+      {
+        "name": "Negros Oriental / Dauin / Apo Island",
+        "languages_spoken": [
+          "Cebuano",
+          "Filipino",
+          "English widely used in dive tourism"
+        ],
+        "language_notes": "Практический полевой профиль: перечислены языки, которые реально вероятно встретить путешественнику в регионе; не полный перечень всех этнолингвистических групп.",
+        "currency": {
+          "code": "PHP",
+          "name": "Philippine peso",
+          "local_currency_per_1_usd": 62.35,
+          "as_of": "2026-09-27",
+          "rate_type": "approx market/reference snapshot",
+          "notes": "Источник давал внутридневные значения около 62.15–62.35; сохранено округлённое reference value.",
+          "practical_notes": "PHP основная валюта; наличные особенно нужны на островах, в горах и небольших муниципалитетах."
+        },
+        "climate_summary": "Тропический морской климат; лодки и подводная видимость зависят от ветра и состояния моря.",
+        "best_period_general": "Планировать по sea state; дайвинг/снорклинг возможны круглый год, но условия меняются.",
+        "language_source_urls": [
+          "https://psa.gov.ph/"
+        ],
+        "last_verified": "2026-09-28"
+      }
     ]
   },
   "sources": [

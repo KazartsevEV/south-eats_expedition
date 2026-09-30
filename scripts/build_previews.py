@@ -20,6 +20,7 @@ MAX_DOWNLOAD_BYTES = 40 * 1024 * 1024
 MAX_SIZE = (720, 480)
 USER_AGENT = "ExpeditionSoutheastAsiaPreviewBuilder/1.2 (+https://github.com/KazartsevEV/south-eats_expedition)"
 WIKIMEDIA_DELAY_SECONDS = 1.25
+# CI diagnostic trigger: preview pipeline v2
 _last_wikimedia_request = 0.0
 
 

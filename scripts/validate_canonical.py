@@ -305,6 +305,14 @@ def main():
         cover = row.get("cover_media_id")
         if cover is not None and cover not in media_ids:
             fail(f"search object {object_id} references unknown cover media {cover}")
+        preview_asset = row.get("preview_asset")
+        if not preview_asset:
+            fail(f"search object {object_id} is missing local preview_asset")
+        preview_path = root / preview_asset
+        if not preview_path.is_file():
+            fail(f"search object {object_id} preview binary is missing: {preview_asset}")
+        if preview_path.suffix.lower() != ".webp" or preview_path.stat().st_size < 256:
+            fail(f"search object {object_id} has invalid preview binary: {preview_asset}")
 
         parts = object_id.split("_")
         code = parts[1]
@@ -363,6 +371,8 @@ def main():
         cover_id = media.get("cover_id")
         if cover_id is not None and cover_id not in media_ids:
             fail(f"{object_id}: unknown cover media {cover_id}")
+        if media.get("preview_asset") != row.get("preview_asset"):
+            fail(f"{object_id}: canonical media.preview_asset diverges from search preview")
         gallery_ids = media.get("gallery_ids") or []
         if len(gallery_ids) != len(set(gallery_ids)):
             fail(f"{object_id}: duplicate media IDs in gallery")

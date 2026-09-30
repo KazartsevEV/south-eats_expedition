@@ -33,7 +33,8 @@
       "2026-09-30 second QA pass: normalized country nature/safety Russian and added regional fauna, dangerous animals, poisonous plants, marine life where applicable, and natural hazards across all 14 Indonesia nodes. Attraction cards unchanged.",
       "2026-09-30 object QA started by class: archaeology.megalith and archaeology.site receive sourced object elevations plus normalized visual_recon; legacy shot lists/camera-setting guidance is not migrated.",
       "2026-09-30 object QA: ethnography.living_settlement / Wae Rebo receives official site elevation and normalized visual reconnaissance without camera-setting or shot-list instructions.",
-      "Regional QA pass 2026-09-30: deepened Toraja / South Sulawesi and Central Kalimantan / Tanjung Puting with UNESCO, KSDAE and Indonesia Travel sources; replaced unsupported generic regional claims with locally sourced structure, access and ethnography."
+      "Regional QA pass 2026-09-30: deepened Toraja / South Sulawesi and Central Kalimantan / Tanjung Puting with UNESCO, KSDAE and Indonesia Travel sources; replaced unsupported generic regional claims with locally sourced structure, access and ethnography.",
+      "Regional QA pass 2026-09-30: deepened East Java and Wakatobi with official Indonesia Travel material; separated Bromo–Tengger–Semeru cultural/ritual geography and Wakatobi gateway/island/community structure."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -7670,10 +7671,16 @@
         "last_verified": "2026-09-28",
         "name_ru": "Восточная Ява",
         "geography": {
-          "summary": "Восточная Ява включает плотную цепь действующих вулканов, межгорные котловины и побережья Индийского океана и Балийского пролива."
+          "summary": "Восточная Ява — плотный вулканический коридор с несколькими самостоятельными горными системами. Bromo–Tengger–Semeru образует огромную кальдерную и высокогорную зону, но Ijen, побережье и городские узлы относятся к другим маршрутам; объединять их одним entrance или одной «вулканической» координатой нельзя.",
+          "source_refs": [
+            "src_903012"
+          ]
         },
         "relief": {
-          "summary": "Высокие вулканические массивы Бромо-Тенггер-Семеру и Иджен создают большие перепады высот; ночные температуры на плато значительно ниже побережья."
+          "summary": "Bromo–Tengger–Semeru сочетает песчаную кальдерную равнину, конусы внутри древней кальдеры и высочайшие вулканические массивы Явы. Официальный tourism source указывает Semeru 3 676 м и отдельные высоты конусов внутри Tengger; это объясняет резкие перепады температуры и времени подходов.",
+          "source_refs": [
+            "src_903012"
+          ]
         },
         "geology": {
           "summary": "Один из наиболее вулканически активных регионов страны; Бромо, Семеру и Иджен относятся к системам, статус которых меняется.",
@@ -7684,7 +7691,9 @@
         "climate": {
           "summary": "Горные районы прохладны и туманны, низменности жаркие.",
           "field_context": "Дождливый сезон повышает вероятность оползней, лахаров и закрытий горных маршрутов.",
-          "source_refs": []
+          "source_refs": [
+            "src_903012"
+          ]
         },
         "health": {
           "malaria": {
@@ -7712,7 +7721,10 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Регион имеет плотную железнодорожную и дорожную сеть; вулканические районы требуют последнего участка по горным дорогам и пешком."
+          "summary": "Регион имеет плотную внешнюю дорожную и железнодорожную сеть, но последние legs резко различаются. Bromo, Semeru и Ijen требуют разных баз, park gates и trailheads; наличие хорошего транспорта до Malang, Probolinggo или Banyuwangi не означает простого доступа к самому вулкану.",
+          "source_refs": [
+            "src_903012"
+          ]
         },
         "ethnography": {
           "summary": "Помимо большинства яванцев, в Тенггере сохраняется отдельная тенггерская культурная традиция, а район Баньюванги связан с осингской культурой.",
@@ -7725,7 +7737,9 @@
             "src_903002",
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903012",
+            "src_903013"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -7754,7 +7768,20 @@
           ],
           "checked_at": "2026-09-30"
         },
-        "narrow": "Восточная Ява — один из главных вулканических коридоров Индонезии: Бромо, Семеру и Иджен стоят в плотной цепи действующих систем между межгорными котловинами и двумя морями. Наряду с яванским большинством здесь важны отдельные тенггерская и осингская культурные традиции."
+        "narrow": "Восточная Ява — один из главных вулканических коридоров Индонезии: Бромо, Семеру и Иджен стоят в плотной цепи действующих систем между межгорными котловинами и двумя морями. Наряду с яванским большинством здесь важны отдельные тенггерская и осингская культурные традиции.",
+        "culture": {
+          "summary": "Тенггерцы сохраняют отдельную культурную и религиозную традицию внутри преимущественно яванского региона. Indonesia Travel фиксирует Tengger Hindu communities, Ngadas и локальные ритуалы; их нельзя описывать как «типичную культуру Восточной Явы» в целом.",
+          "source_refs": [
+            "src_903012",
+            "src_903013"
+          ]
+        },
+        "myths_beliefs": {
+          "summary": "Yadnya Kasada — живая тенггерская ритуальная традиция, связанная с подношениями в кратер Bromo и легендой Roro Anteng и Joko Seger. Легендарный сюжет должен храниться как local_tradition / legend, отдельно от документированной современной церемонии.",
+          "source_refs": [
+            "src_903013"
+          ]
+        }
       },
       {
         "name": "Raja Ampat / West Papua",
@@ -8468,15 +8495,23 @@
         "last_verified": "2026-09-28",
         "name_ru": "Вакатоби / Юго-Восточный Сулавеси",
         "geography": {
-          "summary": "Удалённый архипелаг юго-восточного Сулавеси с коралловыми островами и глубокими проливами."
+          "summary": "Wakatobi — удалённый архипелаг Юго-Восточного Сулавеси, название которого образовано от четырёх главных островов Wangi-Wangi, Kaledupa, Tomia и Binongko. Внутри региона нет единого наземного коридора: Wangi-Wangi работает как основной gateway, а остальные острова требуют самостоятельных морских переходов.",
+          "source_refs": [
+            "src_903014"
+          ]
         },
         "relief": {
-          "summary": "Низкие кораллово-известняковые острова; вертикальный рельеф суши невелик, но подводные склоны резко уходят в глубину."
+          "summary": "Суша в основном низкая кораллово-известняковая, но подводный рельеф резко сложнее: official tourism описывает reef flats, slopes, walls и глубокие dive profiles. Для базы это повод отделять island topography от underwater sites, а не переносить одно описание на весь архипелаг.",
+          "source_refs": [
+            "src_903014"
+          ]
         },
         "climate": {
           "summary": "Морской тропический климат.",
           "field_context": "Ветер и сезон волн важнее небольших температурных колебаний.",
-          "source_refs": []
+          "source_refs": [
+            "src_903001"
+          ]
         },
         "marine": {
           "forecast": "BMKG публикует оперативные прогнозы ветра, погоды и высоты волн по морским районам и портам.",
@@ -8486,9 +8521,9 @@
             "src_903001"
           ],
           "marine_life": {
-            "summary": "Вакатоби — крупный рифовый архипелаг; рифовые рыбы, морские черепахи и другая морская фауна привязаны к конкретным островам и охраняемым зонам.",
+            "summary": "Главная природная ценность — рифовая система национального парка с fringing, atoll и barrier reef типами. Конкретные coral/fish counts из promotional sources не сохраняем как универсальные константы без профильной научной проверки; для маршрутов важнее локальные dive/snorkel zones и режим парка.",
             "source_refs": [
-              "src_903001"
+              "src_903014"
             ]
           }
         },
@@ -8522,12 +8557,17 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Доступ авиацией/морем до Ванчи и далее лодками между островами; запасные дни нужны из-за морской погоды."
+          "summary": "Wangi-Wangi / Matahora Airport — один из основных входов, после чего Kaledupa, Tomia, Binongko и отдельные marine sites требуют морских legs. Official Indonesia Travel также описывает морской доступ из Baubau/Kendari. Расписания и наличие рейсов динамичны, поэтому в canonical regional layer фиксируем только структуру маршрута, а не вечное расписание.",
+          "source_refs": [
+            "src_903014",
+            "src_903015"
+          ]
         },
         "ethnography": {
-          "summary": "Архипелаг связан с языками туканг-беси/Вакатоби и морскими сообществами; в регионе также присутствуют баджо.",
+          "summary": "Острова связаны с собственными языками Tukang Besi/Wakatobi и разными морскими общинами. Отдельно важны Bajo: official Indonesia Travel описывает Mola/Sampela как водные поселения со свайными домами и морской экономикой. Это конкретные communities, а не ярлык для всего Wakatobi.",
           "source_refs": [
-            "src_000725"
+            "src_000725",
+            "src_903015"
           ]
         },
         "local_reference_provenance": {
@@ -8535,7 +8575,9 @@
             "src_903001",
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903014",
+            "src_903015"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8552,7 +8594,13 @@
           ],
           "checked_at": "2026-09-30"
         },
-        "narrow": "Вакатоби — удалённый коралловый архипелаг юго-восточного Сулавеси с глубокими проливами и морской логистикой. Его главный природный слой — рифовые экосистемы национального парка, а культурный — островные языки Туканг-Беси/Вакатоби и морские сообщества, включая баджо."
+        "narrow": "Вакатоби — удалённый коралловый архипелаг юго-восточного Сулавеси с глубокими проливами и морской логистикой. Его главный природный слой — рифовые экосистемы национального парка, а культурный — островные языки Туканг-Беси/Вакатоби и морские сообщества, включая баджо.",
+        "culture": {
+          "summary": "Помимо морской культуры Bajo, на Kaledupa и других островах сохраняются ремесленные и локальные культурные практики, включая hand-woven textiles и собственные варианты pencak silat. Такие факты должны привязываться к конкретной деревне/острову, а не дублироваться как общая культура архипелага.",
+          "source_refs": [
+            "src_903015"
+          ]
+        }
       },
       {
         "name": "Togean / Central Sulawesi",
@@ -9470,6 +9518,65 @@
         "kumai",
         "klotok",
         "sekonyer"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_BROMO_TENGGER_SEMERU_TOURISM",
+      "canonical_id": "src_903012",
+      "publisher": "Indonesia Travel — Bromo Tengger Semeru National Park",
+      "url": "https://www.indonesia.travel/id/id/destination/java/east-java/bromo-tengger-semeru-national-park---mount-bromo",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_culture",
+        "tengger",
+        "transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_YADNYA_KASADA_TOURISM",
+      "canonical_id": "src_903013",
+      "publisher": "Indonesia Travel — Yadnya Kasada Ceremony",
+      "url": "https://www.indonesia.travel/gb/en/travel-ideas/adventure/bromo-tengger-semeru-national-park---yadnya-kasada-ceremony",
+      "kind": "government",
+      "used_for": [
+        "myths_beliefs",
+        "regional_culture",
+        "tengger",
+        "yadnya_kasada"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_WAKATOBI_TOURISM",
+      "canonical_id": "src_903014",
+      "publisher": "Indonesia Travel — Wakatobi",
+      "url": "https://www.indonesia.travel/id/id/destination/sulawesi/southeast-sulawesi/wakatobi",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_marine",
+        "regional_transport",
+        "national_park"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_WAKATOBI_ISLANDS_CULTURE",
+      "canonical_id": "src_903015",
+      "publisher": "Indonesia Travel — Four islands of Wakatobi",
+      "url": "https://www.indonesia.travel/id/en/travel-ideas/adventure/experience-the-4-unforgettable-islands-of-wakatobi",
+      "kind": "government",
+      "used_for": [
+        "regional_ethnography",
+        "bajo",
+        "regional_culture",
+        "regional_transport",
+        "kaledupa",
+        "wangi_wangi"
       ],
       "accessed": "2026-09-30"
     }

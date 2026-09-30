@@ -93,8 +93,8 @@ For each country, without skipping levels:
 
 | # | Country | Status |
 |---|---|---|
-| 1 | BN Brunei | in progress |
-| 2 | KH Cambodia | queued |
+| 1 | BN Brunei | complete |
+| 2 | KH Cambodia | in progress |
 | 3 | LA Laos | queued |
 | 4 | ID Indonesia | queued |
 | 5 | MY Malaysia | queued |

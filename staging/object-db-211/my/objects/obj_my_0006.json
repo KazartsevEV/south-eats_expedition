@@ -46,13 +46,15 @@
     "geo_points": [],
     "object_elevation": {
       "representative_m": null,
-      "min_m": null,
-      "max_m": null,
-      "reference_type": null,
-      "accuracy": "unknown",
-      "source_refs": [],
-      "checked_at": null,
-      "notes": null
+      "min_m": 0,
+      "max_m": 881,
+      "reference_type": "range",
+      "accuracy": "high",
+      "source_refs": [
+        "src_stage_my_0210"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Диапазон от уровня моря до Gunung Raya, высшей точки Langkawi (881 м); не высота конкретной пляжной или городской точки."
     }
   },
   "narrative": {
@@ -232,27 +234,72 @@
     }
   ],
   "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_langkawi_gunung_raya",
+        "name": "Gunung Raya",
+        "coordinates": {
+          "lat": 6.3689,
+          "lon": 99.8186,
+          "elevation_m": 881
+        },
+        "gps": {
+          "decimal": "6.368900, 99.818600"
+        },
+        "access": {
+          "walk_km": null
+        },
+        "view": {
+          "description": "Панорама острова Langkawi, лесных массивов, малых островов и Андаманского моря."
+        },
+        "best_time": "early_morning / late_afternoon",
+        "best_weather_light": "Низкая дымка критична для дальних островных планов.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для панорамы острова и моря"
+          },
+          {
+            "type": "telephoto",
+            "why": "для отдельных островов и сжатия дальних планов"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0210"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Влажная дымка может резко сокращать дальность видимости; после дождя при прояснении воздух часто прозрачнее."
+    ],
+    "video_activity": [
+      "движение облаков над центральным хребтом",
+      "смена дальних островных планов с высоты Gunung Raya"
+    ],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска."
+        "не считать вершину или геопарк зоной свободного запуска; проверять CAAM и локальные ограничения"
       ],
       "source_refs": [
-        "src_stage_my_0001",
-        "src_stage_my_0025",
-        "src_stage_my_0002",
-        "src_stage_my_0026"
+        "src_stage_my_0210"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-30"
     },
-    "useful_equipment": [],
-    "best_time": "Восточный берег и мангры — рассвет; западные пляжи — закат; карст лучше читается при боковом свете и после дождя.",
-    "best_weather_light": null
+    "useful_equipment": [
+      {
+        "type": "wide",
+        "why": "широкая островная панорама"
+      },
+      {
+        "type": "telephoto",
+        "why": "удалённые острова и морские планы"
+      }
+    ],
+    "best_time": "early_morning / late_afternoon",
+    "best_weather_light": "Прозрачный воздух после дождя или при слабой дымке."
   },
   "media": {
     "cover_id": null,
@@ -333,14 +380,14 @@
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

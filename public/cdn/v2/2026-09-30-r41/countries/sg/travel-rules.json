@@ -1,0 +1,321 @@
+{
+  "country_id": "geo_sg",
+  "visa": {
+    "value": {
+      "status": "visa required",
+      "application": "Электронная подача через местный контакт/стратегического партнёра либо через зарубежное представительство и уполномоченного визового агента.",
+      "fee_sgd": 30,
+      "processing_time": "обычно 3 рабочих дня без учёта дня подачи; отдельные заявления рассматриваются дольше",
+      "passport_validity": "не менее 6 месяцев со дня въезда",
+      "stay_days": "Срок пребывания определяется электронным Visit Pass на границе, а не сроком действия визы.",
+      "entry_form": "SG Arrival Card подаётся перед въездом по действующим правилам ICA.",
+      "visa_run": {
+        "possible": "Повторный въезд возможен только при новом решении ICA и наличии необходимых документов/визы.",
+        "limits": "Виза сама по себе не гарантирует въезд и не создаёт права на автоматический сброс срока пребывания."
+      },
+      "source_ids": [
+        "ICA_RU",
+        "ICA_GENERAL"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000779",
+      "src_000780"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "visa_run": {
+    "value": {
+      "possible": "Повторный въезд возможен только при новом решении ICA и наличии необходимых документов/визы.",
+      "limits": "Виза сама по себе не гарантирует въезд и не создаёт права на автоматический сброс срока пребывания."
+    },
+    "source_refs": [
+      "src_000779",
+      "src_000780"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "borders": {
+    "value": {
+      "countries": [
+        "Малайзия"
+      ],
+      "main_crossings": [
+        "Woodlands Checkpoint",
+        "Tuas Checkpoint"
+      ],
+      "transport": "Автобусы, автомобили и приграничные транспортные связки через Джохорский пролив; фактическое время сильно зависит от очередей на границе.",
+      "source_ids": [
+        "ICA_LAND"
+      ]
+    },
+    "source_refs": [
+      "src_000797"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "airports": {
+    "value": [
+      {
+        "iata": "SIN",
+        "name": "Singapore Changi Airport",
+        "role": "главный международный аэропорт"
+      },
+      {
+        "iata": "XSP",
+        "name": "Seletar Airport",
+        "role": "деловая и общая авиация"
+      }
+    ],
+    "source_refs": [
+      "src_000794"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "international_air_links": {
+    "value": "Changi — главный международный авиаузел страны; Seletar обслуживает часть деловой, частной и несcheduled авиации. Для международного пассажира основной вход — Changi.",
+    "source_refs": [
+      "src_000794"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "transport_rules": {
+    "value": {
+      "road_side": "left",
+      "foreign_licence": "Иностранец, находящийся в Сингапуре менее 12 месяцев, может использовать действующее иностранное водительское удостоверение; для удостоверения не на английском требуется IDP либо официальный перевод по правилам SPF.",
+      "source_ids": [
+        "SPF_LICENSE"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000792"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "camping": {
+    "value": {
+      "status": "designated_sites_only",
+      "summary": "В парках NParks кемпинг разрешён только на обозначенных площадках и с требуемым разрешением. Некоторые схемы бронирования требуют сингапурский адрес и идентификатор, поэтому иностранный путешественник не должен считать палаточную ночёвку общедоступной.",
+      "source_ids": [
+        "NPARKS_CAMP"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000795"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "drones": {
+    "value": {
+      "legal_status": "regulated",
+      "permit_required": "depends_on_weight_purpose_and_location",
+      "summary": "CAAS требует регистрацию аппаратов тяжелее 250 г; дополнительные operator/activity permits зависят от цели, массы и места. Полёты вблизи аэродромов, в restricted/danger/protected areas и при ряде иных условий требуют разрешений; актуальную карту зон следует проверять перед каждым запуском.",
+      "source_ids": [
+        "CAAS_UA"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000793"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "laws_and_prohibitions": {
+    "value": [
+      {
+        "topic": "vaping",
+        "rule": "Вейпы и связанные товары запрещены; действует активное правоприменение."
+      },
+      {
+        "topic": "drugs",
+        "rule": "Наркопреступления караются крайне строго."
+      },
+      {
+        "topic": "protected_areas",
+        "rule": "В природных резерватах нельзя сходить с разрешённых маршрутов и входить в закрытые зоны."
+      }
+    ],
+    "source_refs": [
+      "src_000781",
+      "src_000796"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "criminal_liability": {
+    "value": {
+      "scope": "Не исчерпывающий перечень. Сингапурский слой специально показывает нормы, где привычное для туриста поведение может иметь значительно более серьёзные правовые последствия, чем ожидается.",
+      "items": [
+        {
+          "topic": "controlled_drugs",
+          "offence": "Незаконное хранение, употребление, ввоз/вывоз, производство и сбыт контролируемых наркотиков и психоактивных веществ являются уголовными правонарушениями.",
+          "what_counts": "Закон различает хранение, употребление, оборот и импорт/экспорт; действуют доказательственные презумпции и специальные полномочия CNB.",
+          "penalty": "Санкции зависят от вещества, количества и состава: от штрафов и лишения свободы до крайне тяжёлых наказаний; отдельные формы наркотрафика могут подпадать под смертную казнь.",
+          "nuance": "Не писать «за наркотики смертная казнь» без уточнения состава: это неверно для всех случаев.",
+          "source_ids": [
+            "SG_MDA_2026"
+          ]
+        },
+        {
+          "topic": "vaping",
+          "offence": "Вейпы и связанные запрещённые vaporiser products подпадают под специальный запрет и усиленный режим правоприменения.",
+          "what_counts": "Для иностранцев использование/владение может повлечь изъятие и штраф; повторные нарушения могут иметь иммиграционные последствия, а etomidate-vapes — более жёсткий режим.",
+          "penalty": "Штрафы и иные меры по Tobacco and Vaporisers Control Act; для иностранцев возможны аннулирование пропуска, депортация и запрет на повторный въезд в предусмотренных случаях.",
+          "nuance": "Отдельно от обычных табачных правил.",
+          "source_ids": [
+            "SG_VAPE_2026"
+          ]
+        },
+        {
+          "topic": "vandalism",
+          "offence": "Акты вандализма в отношении публичной или частной собственности образуют самостоятельное уголовное правонарушение.",
+          "what_counts": "В том числе определённые надписи, рисунки, маркировка, повреждение или изменение имущества без разрешения.",
+          "penalty": "Штраф до S$2,000 или лишение свободы до 3 лет; закон также предусматривает телесное наказание палками в установленных случаях, с исключениями.",
+          "nuance": "Не сводить к «штрафу за граффити»: состав шире, а санкция необычна.",
+          "source_ids": [
+            "SG_VANDALISM_ACT"
+          ]
+        },
+        {
+          "topic": "public_assemblies",
+          "offence": "Публичные собрания и шествия регулируются Public Order Act; во многих случаях требуется уведомление и permit.",
+          "what_counts": "Политически направленное собрание с участием иностранца может быть основанием для отказа в permit; участие и организация регулируются отдельно.",
+          "penalty": "Нарушение permit regime образует правонарушение; конкретная санкция зависит от применимой нормы.",
+          "nuance": "Для иностранца это важнее, чем обычная туристическая рекомендация «не участвовать в митингах».",
+          "source_ids": [
+            "SG_PUBLIC_ORDER_ACT"
+          ]
+        },
+        {
+          "topic": "religion_race_offences",
+          "offence": "Умышленное оскорбление религиозных или расовых чувств, осквернение места поклонения и действия, направленные на разжигание вражды между религиозными или расовыми группами, образуют уголовные составы по Penal Code.",
+          "what_counts": "Норма касается не просто «невежливости»: закон отдельно охватывает повреждение/осквернение мест поклонения, умышленное причинение религиозного или расового оскорбления словами/жестами и действия, способные нарушить межгрупповую гармонию.",
+          "penalty": "В зависимости от состава возможны штраф и лишение свободы; например, §295 предусматривает до 5 лет, §§296–298 — до 3 лет лишения свободы или штраф либо оба наказания.",
+          "nuance": "Не обобщать это как запрет на любую критику религии или расы: для конкретных статей важны умысел, контекст и конкретное действие.",
+          "source_ids": [
+            "SG_PENAL_CODE"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000851",
+      "src_000852",
+      "src_000853",
+      "src_000854",
+      "src_000883"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Traveller-facing criminal-law summary; not an exhaustive legal code."
+    }
+  },
+  "permits": {
+    "value": {
+      "status": "site_specific",
+      "summary": "Для обычного индивидуального посещения большинства парков единого туристического разрешения нет, но отдельные активности регулируются. NParks требует разрешения, например, для организованных групп свыше установленного порога в ряде природных территорий и для коммерческой съёмки; закрытые зоны недоступны.",
+      "source_ids": [
+        "NPARKS_PERMIT"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000796"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "currency": {
+    "value": {
+      "code": "SGD",
+      "name": "Singapore dollar",
+      "local_currency_per_1_usd": 1.2784,
+      "as_of": "2026-09-27",
+      "rate_type": "market/reference snapshot",
+      "notes": "Справочный курс; фактический банковский/обменный курс отличается.",
+      "source_ids": [
+        "MAS_FX"
+      ]
+    },
+    "source_refs": [
+      "src_000798"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  },
+  "safety_snapshot": {
+    "value": {
+      "crime_level": {
+        "qualitative": "низкий",
+        "notes": "Уровень уличной преступности низкий; при этом действует строгая правоприменительная система и важна точная проверка запретов."
+      },
+      "common_traveler_risks": [
+        "мелкие кражи",
+        "жара и влажность",
+        "дорожные риски",
+        "нарушение строгих местных правил"
+      ],
+      "sensitive_areas": [
+        "закрытые государственные и военные объекты",
+        "закрытые части природных резерватов"
+      ],
+      "source_ids": [
+        "MFA_ABOUT"
+      ]
+    },
+    "source_refs": [
+      "src_000789"
+    ],
+    "checked_at": "2026-09-30",
+    "qa": {
+      "source_refs_complete": true,
+      "note": "Country-level fact has normalized canonical source refs."
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-30-r41",
+    "page_type": "class_family",
+    "id": "country-family:mm:relief_geology"
+  },
+  "identity": {
+    "country_code": "MM",
+    "country_slug": "myanmar",
+    "family_id": "relief_geology",
+    "label_ru": "Рельеф и геология"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:mm",
+    "page_path": "pages/countries/myanmar.json"
+  },
+  "global_family_page": "pages/families/relief_geology.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "count": 2,
+  "classes": [
+    {
+      "object_type": "mountain",
+      "label_ru": "Горы",
+      "count": 1,
+      "global_page_path": "pages/classes/mountain.json",
+      "country_page_path": "pages/countries/myanmar/classes/mountain.json"
+    },
+    {
+      "object_type": "karst",
+      "label_ru": "Карстовые районы",
+      "count": 1,
+      "global_page_path": "pages/classes/karst.json",
+      "country_page_path": "pages/countries/myanmar/classes/karst.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "mm:nat-ma-taung-mount-victoria",
+      "name": "Nat Ma Taung / Mount Victoria",
+      "object_type": "mountain",
+      "geography_ids": [
+        "country:mm",
+        "mm:locality:kanpetlet",
+        "mm:region:chin-state-nat-ma-taung"
+      ],
+      "region_legacy": "Chin State / Nat Ma Taung",
+      "narrow": "Высокогорный Nat Ma Taung в Chin State — ASEAN heritage/biodiversity landscape с эндемичной флорой, горными лесами и Chin cultural context; сейчас объект только для исследования базы.",
+      "detail_path": "countries/myanmar/objects/nat-ma-taung-mount-victoria.json"
+    },
+    {
+      "id": "mm:hpa-an-karst-and-caves",
+      "name": "Hpa-An karst and caves",
+      "object_type": "karst",
+      "geography_ids": [
+        "country:mm",
+        "mm:region:kayin-hpa-an"
+      ],
+      "region_legacy": "Kayin / Hpa-An",
+      "narrow": "Hpa-An karst and caves — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/myanmar/objects/hpa-an-karst-and-caves.json"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-30-r41",
+    "page_type": "country_class",
+    "id": "country-class:my:mountain"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "mountain",
+    "label_ru": "Горы",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:relief_geology",
+    "page_path": "pages/countries/malaysia/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/mountain.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:locality:kundasang",
+      "canonical_geo_id": "geo_my_0039",
+      "name": "Кундасанг",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/town/kundasang.json"
+    },
+    {
+      "id": "my:region:sabah-highlands-kinabalu",
+      "canonical_geo_id": "geo_my_0004",
+      "name": "Высокогорья Сабаха / Кинабалу",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/sabah-highlands-kinabalu.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:mount-kinabalu",
+      "name": "Mount Kinabalu",
+      "geography_ids": [
+        "country:my",
+        "my:locality:kundasang",
+        "my:region:sabah-highlands-kinabalu"
+      ],
+      "region_legacy": "Sabah highlands / Kinabalu",
+      "nearest_hub": "Kundasang",
+      "narrow": "Кинабалу — 4095-метровый гранитный массив и один из ключевых высотных маршрутов Борнео: переход от горного дождевого леса к открытым гранитным плитам сам по себе является содержанием экспедиции.",
+      "detail_path": "countries/malaysia/objects/mount-kinabalu.json"
+    }
+  ]
+}

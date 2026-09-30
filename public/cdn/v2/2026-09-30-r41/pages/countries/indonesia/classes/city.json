@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-30-r41",
+    "page_type": "country_class",
+    "id": "country-class:id:city"
+  },
+  "identity": {
+    "country_code": "ID",
+    "country_slug": "indonesia",
+    "object_type": "city",
+    "label_ru": "Города",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:id:built_heritage",
+    "page_path": "pages/countries/indonesia/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:region:yogyakarta-central-java",
+      "canonical_geo_id": "geo_id_0001",
+      "name": "Джокьякарта / Центральная Ява",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/indonesia/geographic_area/yogyakarta-central-java.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "id:yogyakarta",
+      "name": "Yogyakarta",
+      "geography_ids": [
+        "country:id",
+        "id:region:yogyakarta-central-java"
+      ],
+      "region_legacy": "Yogyakarta / Central Java",
+      "nearest_hub": "Yogyakarta",
+      "narrow": "Лучший городской культурный узел Явы: kraton, Malioboro, рынки, batik, студенческая среда и доступ к храмам/вулканам.",
+      "detail_path": "countries/indonesia/objects/yogyakarta.json"
+    }
+  ]
+}

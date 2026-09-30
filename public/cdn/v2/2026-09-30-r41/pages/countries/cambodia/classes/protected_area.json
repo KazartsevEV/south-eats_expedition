@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-30-r41",
+    "page_type": "country_class",
+    "id": "country-class:kh:protected_area"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "protected_area",
+    "label_ru": "Заповедники и охраняемые территории",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:protected_ecosystems",
+    "page_path": "pages/countries/cambodia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/protected_area.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:geographic-area:cardamom-mountains",
+      "canonical_geo_id": "geo_kh_0035",
+      "name": "Кардамоновы горы",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/cambodia/geographic_area/cardamom-mountains.json"
+    },
+    {
+      "id": "kh:province:koh-kong",
+      "canonical_geo_id": "geo_kh_0034",
+      "name": "Кохконг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/koh-kong.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:cardamom-mountains-community-routes",
+      "name": "Cardamom Mountains community routes",
+      "geography_ids": [
+        "country:kh",
+        "kh:geographic-area:cardamom-mountains",
+        "kh:province:koh-kong"
+      ],
+      "region_legacy": "Кардамоновы горы / юго-запад",
+      "nearest_hub": "Кохконг / Пурсат",
+      "narrow": "Кардамоновы горы — один из крупнейших непрерывных лесных массивов материковой Юго-Восточной Азии. Для самостоятельного путешественника это не единый парк с воротами: доступ строится через конкретные общины и маршруты, например Чи-Пат, с лодками, велосипедами, пешими переходами и разрешёнными лесными лагерями.",
+      "detail_path": "countries/cambodia/objects/cardamom-mountains-community-routes.json"
+    }
+  ]
+}

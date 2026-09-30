@@ -1180,6 +1180,7 @@ def build():
         camping_refs = refs_from_ids((travel.get("camping_rules") or {}).get("source_ids")) or refs_for("camping_rules", "protected_areas")
         drone_refs = refs_from_ids((travel.get("drone_rules") or {}).get("source_ids"))
         law_refs = refs_from_ids(travel.get("laws_source_ids")) or refs_for("heritage_law", "environmental_rules")
+        criminal_refs = refs_from_ids(travel.get("criminal_law_source_ids")) or refs_for("criminal_law", "drug_law", "national_symbols")
         currency_refs = refs_from_ids((travel.get("currency") or {}).get("source_ids")) or refs_for("currency", "exchange_rate")
         safety_refs = refs_from_ids((source.get("safety") or {}).get("source_ids")) or refs_for("safety")
         permit_refs = refs_from_ids((travel.get("tourist_permits") or {}).get("source_ids")) or refs_for("permit", "permits")
@@ -1194,6 +1195,7 @@ def build():
             "camping": wrap_dynamic(travel.get("camping_rules"), checked_at, camping_refs),
             "drones": wrap_dynamic(travel.get("drone_rules"), checked_at, drone_refs, "No sufficiently authoritative country-wide drone rule was normalized in this pass; object/site-specific restrictions remain authoritative." if not drone_refs else None),
             "laws_and_prohibitions": wrap_dynamic(travel.get("laws_and_prohibitions"), checked_at, law_refs),
+            "criminal_liability": wrap_dynamic(travel.get("criminal_liability"), checked_at, criminal_refs, "Traveller-facing criminal-law summary; not an exhaustive legal code." if travel.get("criminal_liability") else "Country criminal-law layer not yet normalized."),
             "permits": wrap_dynamic(travel.get("tourist_permits"), checked_at, permit_refs),
             "currency": wrap_dynamic(travel.get("currency"), checked_at, currency_refs),
             "safety_snapshot": wrap_dynamic(((source.get("safety") or {}).get("country_macro") if code == "MY" else source.get("safety")), checked_at, safety_refs),

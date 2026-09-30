@@ -66,15 +66,31 @@ def present(value):
 def validate_geojson_coordinates(value, label):
     if not isinstance(value, list) or not value:
         fail(f"{label}: geometry coordinates must be a non-empty array")
-    if isinstance(value[0], (int, float)):
+    if isinstance(value[0], (int, float)) and not isinstance(value[0], bool):
         if len(value) < 2:
             fail(f"{label}: coordinate pair is incomplete")
         lon, lat = value[0], value[1]
+        if not isinstance(lon, (int, float)) or isinstance(lon, bool):
+            fail(f"{label}: longitude must be numeric")
+        if not isinstance(lat, (int, float)) or isinstance(lat, bool):
+            fail(f"{label}: latitude must be numeric")
         if not (-180 <= lon <= 180 and -90 <= lat <= 90):
             fail(f"{label}: coordinate outside WGS84 range: {lon}, {lat}")
         return
     for child in value:
         validate_geojson_coordinates(child, label)
+
+def validate_polygon_rings(geometry, label):
+    geometry_type = geometry.get("type")
+    polygons = [geometry.get("coordinates")] if geometry_type == "Polygon" else (geometry.get("coordinates") or [])
+    for polygon_index, polygon in enumerate(polygons):
+        if not isinstance(polygon, list) or not polygon:
+            fail(f"{label}: polygon {polygon_index} has no rings")
+        for ring_index, ring in enumerate(polygon):
+            if not isinstance(ring, list) or len(ring) < 4:
+                fail(f"{label}: polygon {polygon_index} ring {ring_index} needs at least four coordinate pairs")
+            if ring[0][:2] != ring[-1][:2]:
+                fail(f"{label}: polygon {polygon_index} ring {ring_index} is not closed")
 
 def validate_node_geometry(code, node, known_source_ids):
     geometry_meta = node.get("geometry") or {}
@@ -89,21 +105,35 @@ def validate_node_geometry(code, node, known_source_ids):
     unknown = sorted(set(geometry_meta.get("source_refs") or []) - known_source_ids)
     if unknown:
         fail(f"{code}: geo node {node.get('id')!r} geometry references unknown canonical sources {unknown}")
-    if geometry_meta.get("accuracy") == "approximate" and not (
+    accuracy = geometry_meta.get("accuracy")
+    if accuracy not in {"simplified_sourced_boundary", "approximate"}:
+        fail(f"{code}: geo node {node.get('id')!r} has unsupported geometry accuracy {accuracy!r}")
+    if accuracy == "simplified_sourced_boundary":
+        if geometry_meta.get("simplified") is not True:
+            fail(f"{code}: simplified boundary {node.get('id')!r} must declare simplified=true")
+        if geometry_meta.get("intended_use") != "map_mask_navigation_not_cadastral":
+            fail(f"{code}: simplified boundary {node.get('id')!r} must declare navigation-only intended_use")
+    if accuracy == "approximate" and not (
         geometry_meta.get("coverage_basis") or geometry_meta.get("note")
     ):
         fail(f"{code}: approximate geo node {node.get('id')!r} lacks coverage_basis/note")
+    if geometry_meta.get("geometry_type") == "administrative_boundary" and not geometry_meta.get("psgc"):
+        fail(f"{code}: administrative boundary {node.get('id')!r} lacks PSGC code")
     doc = load(path)
     if doc.get("type") != "FeatureCollection" or not (doc.get("features") or []):
         fail(f"{code}: geometry file for {geo_id} must be a non-empty FeatureCollection")
     for index, feature in enumerate(doc.get("features") or []):
+        properties = (feature or {}).get("properties") or {}
+        if properties.get("geo_id") != geo_id:
+            fail(f"{code}: geometry {geo_id} feature {index} geo_id mismatch")
+        if geometry_meta.get("psgc") and properties.get("psgc") != geometry_meta.get("psgc"):
+            fail(f"{code}: geometry {geo_id} feature {index} PSGC mismatch")
         geometry = (feature or {}).get("geometry") or {}
         if geometry.get("type") not in {"Polygon", "MultiPolygon"}:
             fail(f"{code}: geometry {geo_id} feature {index} must be Polygon/MultiPolygon")
-        validate_geojson_coordinates(
-            geometry.get("coordinates"),
-            f"{code}: geometry {geo_id} feature {index}",
-        )
+        label = f"{code}: geometry {geo_id} feature {index}"
+        validate_geojson_coordinates(geometry.get("coordinates"), label)
+        validate_polygon_rings(geometry, label)
     return True
 
 registry = load(REGISTRY)

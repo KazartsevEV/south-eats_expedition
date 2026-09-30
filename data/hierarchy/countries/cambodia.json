@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "KH",
     "country_slug": "cambodia",
-    "status": "regional_geography_standardized",
-    "checked_at": "2026-09-30",
-    "next_level": "country_and_regional_layer_complete_object_cards_frozen",
+    "status": "geo_profile_qa_in_progress",
+    "checked_at": "2026-10-01",
+    "next_level": "validate_admin_locality_geometry_then_close_geo_qa",
     "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; legacy route-place IDs remain migration-only.",
     "canonical_source_id": "src_906002",
     "qa_contract": "geo_profile_roles_v1"
@@ -33,7 +33,20 @@
         "Сиемреап / Ангкор"
       ],
       "notes_ru": "Провинция служит родительским узлом для Ангкора. Бенг-Мелеа и Пном-Кулен вынесены ниже в подтверждённые локальные и физико-географические узлы.",
-      "canonical_id": "geo_kh_0024"
+      "canonical_id": "geo_kh_0024",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:district:svay-leu",
@@ -47,7 +60,55 @@
         "kh:beng-mealea"
       ],
       "notes_ru": "ЮНЕСКО указывает деревню Бенг-Мелеа, коммуну Бенг-Мелеа, район Свай-Леу и провинцию Сиемреап.",
-      "canonical_id": "geo_kh_0025"
+      "canonical_id": "geo_kh_0025",
+      "profile": {
+        "narrow": "Свай-Леу — северо-восточный район провинции Сиемреап, в котором лежат Beng Mealea и часть подходов к Phnom Kulen; это административный контейнер для удалённых археологических и горных маршрутов, а не единая достопримечательность.",
+        "geography": {
+          "summary": "UNESCO помещает Beng Mealea в Beng Mealea commune, Svay Leu district, Siem Reap province; официальный материал по Phnom Kulen также связывает горный массив со Svay Leu.",
+          "source_refs": [
+            "src_910039",
+            "src_910040",
+            "src_910037"
+          ]
+        },
+        "climate": {
+          "summary": "Тропический муссонный режим: сильные дожди и сезонные паводки могут менять состояние дорог и грунтовых подходов; перед полевым выходом требуется актуальная проверка погоды.",
+          "source_refs": [
+            "src_910046",
+            "src_901008"
+          ]
+        },
+        "transport": {
+          "summary": "Из Siem Reap к удалённым узлам района используется наземный доступ; точное состояние последнего участка и trailhead должны храниться на уровне конкретного объекта или маршрута.",
+          "source_refs": [
+            "src_910039",
+            "src_910040",
+            "src_900013"
+          ]
+        },
+        "source_refs": [
+          "src_910039",
+          "src_910040",
+          "src_910037",
+          "src_910046",
+          "src_901008",
+          "src_900013"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:geographic-area:phnom-kulen",
@@ -61,7 +122,47 @@
         "kh:phnom-kulen-national-park"
       ],
       "notes_ru": "Физико-географический узел хребта/плато Пном-Кулен в провинции Сиемреап; не подменяется одной административной коммуной.",
-      "canonical_id": "geo_kh_0026"
+      "canonical_id": "geo_kh_0026",
+      "profile": {
+        "narrow": "Пном-Кулен — отдельный горный массив и священный культурный ландшафт к северо-востоку от Ангкора; в CDN он остаётся физико-культурной областью, а не подменяется границей района Svay Leu или провинции Siem Reap.",
+        "geography": {
+          "summary": "Ministry of Tourism описывает Phnom Kulen как изолированный горный массив в Svay Leu district примерно в 48 км от Siem Reap; UNESCO рассматривает его как археологический ландшафт Mahendraparvata.",
+          "source_refs": [
+            "src_910040"
+          ]
+        },
+        "climate": {
+          "summary": "Тропический муссонный режим: сильные дожди и сезонные паводки могут менять состояние дорог и грунтовых подходов; перед полевым выходом требуется актуальная проверка погоды.",
+          "source_refs": [
+            "src_910046",
+            "src_901008"
+          ]
+        },
+        "transport": {
+          "summary": "Доступ к массиву строится отдельным наземным плечом из района Siem Reap; режим входа, парковки и доступ к отдельным священным/археологическим участкам должен проверяться по конкретной зоне, а не задаваться одной региональной цифрой.",
+          "source_refs": [
+            "src_910040"
+          ]
+        },
+        "history": {
+          "summary": "Пном-Кулен связан с ранним ангкорским политическим и сакральным ландшафтом; конкретные археологические площадки и датировки остаются объектным уровнем.",
+          "source_refs": [
+            "src_910040"
+          ]
+        },
+        "culture": {
+          "summary": "Гора остаётся значимым священным местом; культовые точки, водные резьбы и паломнические практики нельзя сводить к одной объектной карточке всего массива.",
+          "source_refs": [
+            "src_910040"
+          ]
+        },
+        "source_refs": [
+          "src_910040",
+          "src_910046",
+          "src_901008"
+        ],
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:city:phnom-penh",
@@ -81,7 +182,23 @@
         "Пномпень"
       ],
       "notes_ru": "Столица имеет отдельный административный статус; на этом этапе город используется как подтверждённый родительский узел без выдумывания районов хан и сангкат для каждого объекта.",
-      "canonical_id": "geo_kh_0027"
+      "canonical_id": "geo_kh_0027",
+      "legacy_locality_names": [
+        "Пномпень"
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:preah-vihear",
@@ -96,11 +213,64 @@
         "kh:koh-ker",
         "kh:preah-khan-kompong-svay"
       ],
-      "legacy_region_names": [
-        "Преахвихеа / северный храмовый пояс"
-      ],
+      "legacy_region_names": [],
       "notes_ru": "ЮНЕСКО прямо помещает храм Преахвихеа и Кох-Кер в провинцию Преахвихеа; Преах-Кхан-Компонг-Свай — в коммуну Сангкум-Тхмей той же провинции.",
-      "canonical_id": "geo_kh_0028"
+      "canonical_id": "geo_kh_0028",
+      "profile": {
+        "narrow": "Преахвихеа — северная провинция Камбоджи с резко различающимися археологическими и природными зонами: Dangrek escarpment, Preah Vihear, Koh Ker и лесной внутренний пояс. Она не равна всему «северному храмовому поясу».",
+        "geography": {
+          "summary": "Ministry of Tourism и UNESCO связывают Temple of Preah Vihear с северной провинцией Preah Vihear; другие комплексы провинции лежат в иной рельефной и дорожной среде.",
+          "source_refs": [
+            "src_910049",
+            "src_901019",
+            "src_910037"
+          ]
+        },
+        "climate": {
+          "summary": "Тропический муссонный режим: сильные дожди и сезонные паводки могут менять состояние дорог и грунтовых подходов; перед полевым выходом требуется актуальная проверка погоды.",
+          "source_refs": [
+            "src_910046",
+            "src_901008"
+          ]
+        },
+        "transport": {
+          "summary": "Провинция требует длинных наземных плеч; подъезд к отдельным храмовым и лесным участкам сезонно различается. Приграничные объекты проверяются отдельно по текущему режиму доступа.",
+          "source_refs": [
+            "src_910049",
+            "src_900013"
+          ]
+        },
+        "history": {
+          "summary": "Провинция включает несколько самостоятельных археологических центров разных эпох; историю Preah Vihear, Koh Ker и Preah Khan Kompong Svay нельзя сводить в одну объектную хронику.",
+          "source_refs": [
+            "src_901019",
+            "src_900005"
+          ]
+        },
+        "source_refs": [
+          "src_910049",
+          "src_901019",
+          "src_910037",
+          "src_910046",
+          "src_901008",
+          "src_900013",
+          "src_900005"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:kampong-thom",
@@ -114,7 +284,60 @@
         "kh:sambor-prei-kuk"
       ],
       "notes_ru": "ЮНЕСКО помещает Самбор-Прей-Кук, древнюю Ишанапуру, в провинцию Кампонгтхом.",
-      "canonical_id": "geo_kh_0029"
+      "canonical_id": "geo_kh_0029",
+      "profile": {
+        "narrow": "Кампонгтхом — центральная провинция на оси Phnom Penh–Siem Reap, включающая Sambor Prei Kuk и лесо-равнинные районы между Tonle Sap и северо-востоком; провинция шире одного археологического комплекса.",
+        "geography": {
+          "summary": "Официальный Ministry of Tourism профиль помещает Kampong Thom между Phnom Penh и Siem Reap и связывает провинцию с Sambor Prei Kuk и внутренними сельскими районами.",
+          "source_refs": [
+            "src_910042",
+            "src_910037"
+          ]
+        },
+        "climate": {
+          "summary": "Тропический муссонный режим: сильные дожди и сезонные паводки могут менять состояние дорог и грунтовых подходов; перед полевым выходом требуется актуальная проверка погоды.",
+          "source_refs": [
+            "src_910046",
+            "src_901008"
+          ]
+        },
+        "transport": {
+          "summary": "Основная наземная ось проходит по National Road 6; Kampong Thom town работает как самостоятельная дорожная база, а удалённые памятники требуют отдельных последних плеч.",
+          "source_refs": [
+            "src_910042",
+            "src_900013"
+          ]
+        },
+        "history": {
+          "summary": "Ключевой раннеисторический слой провинции связан с Sambor Prei Kuk / древней Ishanapura; подробности комплекса остаются object-level.",
+          "source_refs": [
+            "src_910042",
+            "src_900005"
+          ]
+        },
+        "source_refs": [
+          "src_910042",
+          "src_910037",
+          "src_910046",
+          "src_901008",
+          "src_900013",
+          "src_900005"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:preah-sihanouk",
@@ -131,7 +354,20 @@
         "острова Сиамского залива / Ко-Ронг"
       ],
       "notes_ru": "Провинция служит родительским узлом для островов Ко-Ронг; морская и островная география будет детализироваться отдельно при покарточной проверке.",
-      "canonical_id": "geo_kh_0030"
+      "canonical_id": "geo_kh_0030",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:banteay-meanchey",
@@ -143,7 +379,62 @@
       "parent_id": "country:kh",
       "object_ids": [],
       "notes_ru": "Бантей-Чмар находится в этой провинции; объект ниже привязан к подтверждённому району Тхма-Пуок.",
-      "canonical_id": "geo_kh_0031"
+      "canonical_id": "geo_kh_0031",
+      "profile": {
+        "narrow": "Бантеаймеанчей — северо-западная пограничная провинция и наземный коридор между центральной Камбоджей и Таиландом; Banteay Chhmar — важный археологический узел, но не географический заменитель всей провинции.",
+        "geography": {
+          "summary": "Официальный провинциальный профиль и UNESCO помещают Banteay Chhmar в Banteay Meanchey; административно комплекс лежит в Thma Puok district.",
+          "source_refs": [
+            "src_910043",
+            "src_910041",
+            "src_910037"
+          ]
+        },
+        "climate": {
+          "summary": "Тропический муссонный режим: сильные дожди и сезонные паводки могут менять состояние дорог и грунтовых подходов; перед полевым выходом требуется актуальная проверка погоды.",
+          "source_refs": [
+            "src_910046",
+            "src_901008"
+          ]
+        },
+        "transport": {
+          "summary": "Провинция связана национальными дорогами; Ministry of Tourism описывает отдельный road segment по NR56 к Banteay Chhmar, поэтому последний подъезд должен храниться отдельно от общего провинциального доступа.",
+          "source_refs": [
+            "src_910043",
+            "src_910047",
+            "src_900013"
+          ]
+        },
+        "history": {
+          "summary": "Археологический слой Banteay Chhmar относится к ангкорскому периоду и требует отдельной объектной истории; провинциальный профиль не переносит его свойства на весь Banteay Meanchey.",
+          "source_refs": [
+            "src_910041"
+          ]
+        },
+        "source_refs": [
+          "src_910043",
+          "src_910041",
+          "src_910047",
+          "src_910037",
+          "src_910046",
+          "src_901008",
+          "src_900013"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:district:thma-puok",
@@ -157,7 +448,53 @@
         "kh:banteay-chhmar"
       ],
       "notes_ru": "ЮНЕСКО указывает коммуну Бантей-Чмар, район Тхма-Пуок и провинцию Бантеаймеанчей.",
-      "canonical_id": "geo_kh_0032"
+      "canonical_id": "geo_kh_0032",
+      "profile": {
+        "narrow": "Тхма-Пуок — район Banteay Meanchey, в котором находится Banteay Chhmar; его роль в справочнике — административный и дорожный контекст для северо-западного храмового кластера.",
+        "geography": {
+          "summary": "UNESCO указывает Banteay Chhmar commune, Thma Puok district, Banteay Meanchey province.",
+          "source_refs": [
+            "src_910041",
+            "src_910037"
+          ]
+        },
+        "climate": {
+          "summary": "Тропический муссонный режим: сильные дожди и сезонные паводки могут менять состояние дорог и грунтовых подходов; перед полевым выходом требуется актуальная проверка погоды.",
+          "source_refs": [
+            "src_910046",
+            "src_901008"
+          ]
+        },
+        "transport": {
+          "summary": "Ministry of Tourism описывает доступ к Banteay Chhmar из провинциального центра через National Road 56 с отдельным последним плечом; точные времена и состояние дороги остаются динамическими.",
+          "source_refs": [
+            "src_910047",
+            "src_900013"
+          ]
+        },
+        "source_refs": [
+          "src_910041",
+          "src_910047",
+          "src_910037",
+          "src_910046",
+          "src_901008",
+          "src_900013"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:battambang",
@@ -174,7 +511,20 @@
         "Баттамбанг"
       ],
       "canonical_id": "geo_kh_0033",
-      "notes_ru": null
+      "notes_ru": null,
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:koh-kong",
@@ -187,11 +537,65 @@
       "object_ids": [
         "kh:cardamom-mountains-community-routes"
       ],
-      "legacy_region_names": [
-        "Кардамоновы горы / юго-запад"
-      ],
+      "legacy_region_names": [],
       "notes_ru": "Объект использует Чи-Пхат как практический вход; физико-географическая система Кардамоновых гор вынесена в отдельный параллельный узел.",
-      "canonical_id": "geo_kh_0034"
+      "canonical_id": "geo_kh_0034",
+      "profile": {
+        "narrow": "Кохконг — юго-западная прибрежно-горная провинция у границы с Таиландом: мангры, острова, реки и западные отроги Кардамоновых гор образуют несколько разных экспедиционных зон.",
+        "geography": {
+          "summary": "Ministry of Tourism описывает Koh Kong как юго-западную приграничную провинцию у Сиамского залива с островами, горами, реками, водопадами и мангровыми лесами.",
+          "source_refs": [
+            "src_910048",
+            "src_910037"
+          ]
+        },
+        "climate": {
+          "summary": "Тропический муссонный режим: сильные дожди и сезонные паводки могут менять состояние дорог и грунтовых подходов; перед полевым выходом требуется актуальная проверка погоды.",
+          "source_refs": [
+            "src_910046",
+            "src_901008",
+            "src_901022"
+          ]
+        },
+        "transport": {
+          "summary": "Основной провинциальный доступ наземный через дорожную сеть и пограничный коридор; внутренние Cardamom/river/island маршруты требуют отдельных лодочных, мотоциклетных или пеших плеч.",
+          "source_refs": [
+            "src_910048",
+            "src_901023",
+            "src_900013"
+          ]
+        },
+        "nature": {
+          "summary": "Мангровые, речные и горно-лесные среды являются ключевыми природными слоями провинции; Central Cardamom landscape при этом выходит за её административные границы.",
+          "source_refs": [
+            "src_910048",
+            "src_901022"
+          ]
+        },
+        "source_refs": [
+          "src_910048",
+          "src_910037",
+          "src_910046",
+          "src_901008",
+          "src_901022",
+          "src_901023",
+          "src_900013"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:geographic-area:cardamom-mountains",
@@ -205,7 +609,10 @@
         "kh:cardamom-mountains-community-routes"
       ],
       "notes_ru": "Физико-географическая система, пересекающая несколько провинций; не используется как административный родительский узел.",
-      "canonical_id": "geo_kh_0035"
+      "canonical_id": "geo_kh_0035",
+      "legacy_region_names": [
+        "Кардамоновы горы / юго-запад"
+      ]
     },
     {
       "id": "kh:province:takeo",
@@ -222,7 +629,20 @@
         "Такео / наследие нижнего Меконга"
       ],
       "notes_ru": "ЮНЕСКО помещает Ангкор-Борей и Пном-Да в провинцию Такео.",
-      "canonical_id": "geo_kh_0036"
+      "canonical_id": "geo_kh_0036",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:kratie",
@@ -239,7 +659,20 @@
         "Кратьэх / средний Меконг"
       ],
       "canonical_id": "geo_kh_0037",
-      "notes_ru": null
+      "notes_ru": null,
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:kampot",
@@ -257,7 +690,20 @@
         "Кампот / Бокор"
       ],
       "canonical_id": "geo_kh_0038",
-      "notes_ru": null
+      "notes_ru": null,
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:kandal",
@@ -271,7 +717,58 @@
         "kh:oudong"
       ],
       "notes_ru": "Исправляет старую маршрутную привязку Удонга к Пномпеню: исторический Удонг административно находится в провинции Кандаль.",
-      "canonical_id": "geo_kh_0039"
+      "canonical_id": "geo_kh_0039",
+      "profile": {
+        "narrow": "Кандаль — центральная низменная провинция, окружающая Phnom Penh и включающая исторический Oudong и островно-речные участки Меконга; столичная логистика не делает её частью Phnom Penh.",
+        "geography": {
+          "summary": "Официальный Gazetteer и Ministry of Tourism показывают Kandal как отдельную провинцию вокруг столицы; Oudong расположен в Kandal, а не в Phnom Penh.",
+          "source_refs": [
+            "src_910044",
+            "src_910037"
+          ]
+        },
+        "climate": {
+          "summary": "Тропический муссонный режим: сильные дожди и сезонные паводки могут менять состояние дорог и грунтовых подходов; перед полевым выходом требуется актуальная проверка погоды.",
+          "source_refs": [
+            "src_910046",
+            "src_901008"
+          ]
+        },
+        "transport": {
+          "summary": "Провинция связана с Phnom Penh несколькими национальными дорожными направлениями; Ministry of Tourism отдельно указывает Oudong по National Route 5. Конкретные переправы и подъезды к речным островам должны храниться ниже.",
+          "source_refs": [
+            "src_910044",
+            "src_900013"
+          ]
+        },
+        "history": {
+          "summary": "Oudong был бывшей столицей Камбоджи; его исторический сюжет относится к конкретному узлу внутри Kandal и не подменяет историю всей провинции.",
+          "source_refs": [
+            "src_910044"
+          ]
+        },
+        "source_refs": [
+          "src_910044",
+          "src_910037",
+          "src_910046",
+          "src_901008",
+          "src_900013"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "simplified_sourced_boundary",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910037",
+          "src_910038"
+        ],
+        "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:geographic-area:tonle-sap",

@@ -305,6 +305,58 @@ def access_options(logistics, origin=None):
     return options
 
 
+def access_complete(logistics, origin=None):
+    rows = access_options(logistics, origin)
+    if not rows:
+        return False
+    for row in rows:
+        if not isinstance(row, dict):
+            return False
+        if row.get("origin") in (None, ""):
+            return False
+        modes = row.get("modes")
+        legs = row.get("legs")
+        if not isinstance(modes, list) or not modes:
+            return False
+        if not isinstance(legs, list) or not legs:
+            return False
+        for leg in legs:
+            if not isinstance(leg, dict) or leg.get("mode") in (None, ""):
+                return False
+    return True
+
+
+WATER_QUALITY = {"potable", "filter_required", "treatment_required", "technical_only", "unknown"}
+OVERNIGHT_STATUS = {"official", "allowed", "permission_required", "tolerated_in_practice", "prohibited", "unclear"}
+
+
+def water_complete(logistics):
+    water = (logistics or {}).get("water_structured")
+    if not isinstance(water, dict):
+        return False
+    if "at_object" not in water or "last_reliable_source" not in water or "natural_sources" not in water:
+        return False
+    if water.get("quality") not in WATER_QUALITY:
+        return False
+    if water.get("at_object") not in (True, False, None):
+        return False
+    if not isinstance(water.get("natural_sources"), list):
+        return False
+    last = water.get("last_reliable_source")
+    if last is not None and not isinstance(last, dict):
+        return False
+    return True
+
+
+def overnight_complete(logistics):
+    overnight = (logistics or {}).get("overnight")
+    if not isinstance(overnight, dict):
+        return False
+    if overnight.get("status") not in OVERNIGHT_STATUS:
+        return False
+    return bool(overnight.get("summary"))
+
+
 def traveler_reports_list(value, registry=None):
     if value in (None, "", [], {}):
         return []
@@ -1181,9 +1233,9 @@ def build():
             ),
             "narrative": bool(sections),
             "sources": bool(source_refs),
-            "access": bool(access_options(logistics, location.get("nearest_hub")) or logistics.get("access")),
-            "water": bool(logistics.get("water")),
-            "overnight": bool(logistics.get("overnight_and_camping")),
+            "access": access_complete(logistics, location.get("nearest_hub")),
+            "water": water_complete(logistics),
+            "overnight": overnight_complete(logistics),
             "traveler_reports": traveler_reports_complete(reports),
             "visual_recon": visual_recon_complete(visual_recon),
             "editorial_rebuild": code != "KH" or rebuild_review.get("status") == "passed",

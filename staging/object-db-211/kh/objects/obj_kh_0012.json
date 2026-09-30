@@ -294,8 +294,8 @@
     },
     "supplies": null,
     "overnight": {
-      "status": "unclear",
-      "summary": "Самовольный дикий кемпинг в охраняемом лесу не считать допустимым вариантом. В Чи-Пате многодневные программы включают разрешённые лесные лагеря — это корректный способ ночевать внутри маршрута.",
+      "status": "permission_required",
+      "summary": "В Чи-Пате действуют организованные многодневные маршруты с лесными ночёвками и лагерями через общинный экотуристический центр. Самовольный дикий кемпинг вне согласованного маршрута не считать разрешённым.",
       "source_refs": [
         "src_000198",
         "src_000035",
@@ -330,25 +330,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "Электричество в Чи-Пате может быть ограничено; официальная страница предупреждает, что в простом размещении могут отсутствовать кондиционер и горячая вода.",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "в высокий сезон общинная туристическая инициатива рекомендует бронировать за несколько недель",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "дождь влияет не “вообще”, а конкретно на проходимость треков, уровень рек и место ночёвки",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "access_and_lodging",
+      "summary": "Отзывы января–мая 2026 подтверждают двухчасовой речной подход, простое размещение, многодневные треки и ночные маршруты через общинный центр. Одновременно встречаются жалобы на качество отдельных бунгало и медленные ответы при бронировании.",
+      "observed_period": "2026-01/2026-05",
+      "source_refs": [
+        "src_stage_kh_0012"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -457,11 +445,12 @@
       "src_000468",
       "src_000159",
       "src_000389",
-      "src_000423"
+      "src_000423",
+      "src_stage_kh_0012"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -472,8 +461,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

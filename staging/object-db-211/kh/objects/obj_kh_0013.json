@@ -252,7 +252,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "ночёвка в храме/лесу не планируется; либо Сиемреап, либо официальная база Srayang при связке с Кох-Кер",
+      "summary": "Рядом существуют коммерческие варианты размещения, включая Beng Mealea Lodge. Свободная ночёвка в храме или лесу вокруг руин источниками не подтверждена.",
       "source_refs": [
         "src_000170",
         "src_000201",
@@ -282,25 +282,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "после дождя настилы/камни скользкие",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "группы часто приезжают одновременно из Сиемреап; ритм заметно спокойнее в начале/конце дня",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "часть “эффектных” обвалов закрыта для лазания — не строить съёмочный план на старых блогах",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "footing",
+      "summary": "В 2026 посетители по-прежнему описывают Бенг-Мелеа как в значительной степени обрушенный храм; основной настил облегчает проход, но вне него остаются неровные камни, а во влажную погоду поверхность становится скользкой.",
+      "observed_period": "2026-04",
+      "source_refs": [
+        "src_stage_kh_0013"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -429,11 +417,12 @@
       "src_000201",
       "src_000476",
       "src_000289",
-      "src_000273"
+      "src_000273",
+      "src_stage_kh_0013"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -444,8 +433,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

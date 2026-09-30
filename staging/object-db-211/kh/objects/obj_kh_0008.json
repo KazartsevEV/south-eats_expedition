@@ -263,7 +263,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "самовольная палатка на “пустом” пляже не гарантированно законна: земля может быть частной/концессионной. Для палатки спрашивать владельца участка/отель; безопаснее бюджетный общей комнате",
+      "summary": "На острове есть коммерческое жильё, но общий режим свободной палатки на пляжах источниками не подтверждён: берег может относиться к частному участку или конкретному объекту размещения. Для палатки требуется согласование с владельцем или управляющим конкретной площадки.",
       "source_refs": [
         "src_000334",
         "src_000216",
@@ -295,25 +295,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "Расписания скоростных катеров публикуются, но задержки обычны; не стоит ставить авиарейс из Сиануквиля вплотную к расчётному прибытию парома.",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "во время гроз/сильного волнения поездка может быть неприятной или переноситься; это конкретный риск, а не абстрактная “зависимость от погоды”",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "нужно покупать билет до правильного pier: Koh Touch и Long Set — не одно и то же место",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "ferry_reliability",
+      "summary": "В отзывах марта–апреля 2026 по морским перевозчикам встречаются задержки, отмены и пропущенные стыковки; при обратном переходе с острова нельзя планировать поезд или самолёт вплотную к заявленному времени прибытия.",
+      "observed_period": "2026-03/2026-04",
+      "source_refs": [
+        "src_stage_kh_0008"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -420,11 +408,12 @@
       "src_000476",
       "src_000109",
       "src_000163",
-      "src_000443"
+      "src_000443",
+      "src_stage_kh_0008"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -435,8 +424,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

@@ -263,7 +263,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "не считать руины свободной кемпинговой зоной; ночёвка только с разрешением местных/землевладельца/гида либо возвращение в город. В лесу также остаётся риск UXO вне проверенных путей",
+      "summary": "Для удалённого археологического комплекса надёжного общего разрешения на свободную палатку не найдено. Ночёвку планировать в ближайшем населённом пункте либо только по прямому разрешению на конкретной площадке.",
       "source_refs": [
         "src_000361",
         "src_000286",
@@ -291,25 +291,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "путешественники часто недооценивают время на плохие последние километры",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "связь и помощь ограничены; одиночный визит без местного контакта даёт мало выигрыша",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "после дождя дорога может стать главным ограничением дня, а не храм",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "remote_access",
+      "summary": "Отзывы путешественников описывают Преах-Кхан-Компонг-Свай как крупный и удалённый комплекс, где самостоятельный доступ сложнее, чем к основным ангкорским объектам; транспорт нужно планировать как отдельное плечо.",
+      "observed_period": "2026",
+      "source_refs": [
+        "src_stage_kh_0010"
+      ],
+      "confidence": "low"
     }
   ],
   "visual_recon": {
@@ -406,11 +394,12 @@
       "src_000361",
       "src_000286",
       "src_000476",
-      "src_000347"
+      "src_000347",
+      "src_stage_kh_0010"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -421,8 +410,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

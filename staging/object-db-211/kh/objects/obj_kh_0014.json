@@ -289,7 +289,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "Самовольную палатку в национальном парке и у святынь не планировать; ночёвка возможна только там, где она прямо разрешена администрацией или организатором маршрута.",
+      "summary": "Общего подтверждения свободного палаточного кемпинга в национальном парке и у святынь не найдено. Ночёвка допустима только на конкретной площадке, для которой есть явное разрешение администрации или владельца.",
       "source_refs": [
         "src_000467",
         "src_000479",
@@ -319,25 +319,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "Официальный дневной сбор для иностранца указан как US$20 плюс небольшая парковочная плата; это отдельный билет, не входящий в Angkor Pass.",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "в дождливый сезон водопад зрелищнее, но лесные подходы скользкие",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "в выходные/праздники у водопад и Preah Ang Thom заметно больше местных посетителей",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "road_and_crowding",
+      "summary": "В июле 2026 посетители сообщали о неровной дороге и примерно 80 ступенях к водопаду; в апреле в жаркий день зона водопада была переполнена местными посетителями, а в отзывах отдельно упоминался мусор.",
+      "observed_period": "2026-04/2026-07",
+      "source_refs": [
+        "src_stage_kh_0014"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -471,11 +459,12 @@
       "src_000479",
       "src_000476",
       "src_000374",
-      "src_000252"
+      "src_000252",
+      "src_stage_kh_0014"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -486,8 +475,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

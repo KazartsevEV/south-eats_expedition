@@ -259,8 +259,8 @@
     },
     "supplies": null,
     "overnight": {
-      "status": "unclear",
-      "summary": "редкий случай подтверждённого легального кемпинга: общинная туристическая инициатива организует Adventure Tents в районе главного храма с туалетом, едой, гидом, водой и входным билетом; не путать с самовольной палаткой среди руин",
+      "status": "official",
+      "summary": "Общинная туристическая программа Бантей-Чмара организует ночёвки и палаточные варианты; это не равнозначно свободному кемпингу среди руин. Использовать только согласованную площадку или программу.",
       "source_refs": [
         "src_000021",
         "src_000440",
@@ -293,25 +293,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "последний опубликованный официальный прайс на странице подписан как 2025 — использовать его только как ориентир и подтвердить перед поездкой",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "сезонные дороги влияют на удалённые храмы и место лагеря",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "часть барельефов/кладки уязвима: не рассчитывать на свободное лазание по руинам",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "remoteness",
+      "summary": "Свежие страницы отзывов продолжают характеризовать Бантей-Чмар как большой удалённый комплекс, на который разумно выделять более трёх часов; восстановительные работы и обрушенные галереи остаются частью фактического состояния объекта.",
+      "observed_period": "2026",
+      "source_refs": [
+        "src_stage_kh_0009"
+      ],
+      "confidence": "low"
     }
   ],
   "visual_recon": {
@@ -412,11 +400,12 @@
       "src_000476",
       "src_000231",
       "src_000074",
-      "src_000267"
+      "src_000267",
+      "src_stage_kh_0009"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -427,8 +416,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

@@ -4,24 +4,24 @@
     "value": {
       "status": "visa-free",
       "stay_days": 14,
-      "extension": "Для более долгого пребывания требуется соответствующая виза/разрешение.",
+      "extension": "Для пребывания свыше 14 дней требуется соответствующая виза/разрешение; безвизовый режим не предназначен для работы, учёбы или иной оплачиваемой деятельности.",
       "visa_run": {
         "possible": "Технически новый въезд после выезда возможен только при новом допуске пограничной службы.",
         "limits": "Опубликованного права на неограниченные visa-runs не найдено.",
         "notes": "Не считать гарантированным способом долгосрочного проживания."
       },
-      "passport_validity": "проверять минимум 6 месяцев перед поездкой",
-      "official_source": "Brunei MFA / Russian MFA",
+      "passport_validity": "Не менее 6 месяцев на момент въезда.",
+      "official_source": "Консульский департамент МИД России; соглашение РФ—Бруней от 8 ноября 2017 года",
       "source_ids": [
-        "MFA_BN",
         "RUS_MFA"
-      ]
+      ],
+      "checked_at": "2026-10-01",
+      "notes": "Актуальная справка Консульского департамента МИД России подтверждает до 14 дней без визы по обычному паспорту. На части зарубежных страниц МИД Брунея всё ещё встречается более старая таблица, где для граждан России указаны только дипломатические/служебные паспорта; для канонического правила используется действующее двустороннее соглашение 2017 года и актуальная российская консульская справка."
     },
     "source_refs": [
-      "src_000699",
       "src_000701"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -40,13 +40,15 @@
       ],
       "transport": "Автомобиль/такси/автобусные и частные трансферы; Temburong Bridge связывает восточный анклав с основной частью страны без транзита через Малайзию.",
       "source_ids": [
-        "RUS_MFA"
-      ]
+        "IMM_CONTROL_POSTS_2026"
+      ],
+      "checked_at": "2026-10-01",
+      "operation_notes": "Официальный Immigration Department перечисляет наземные пункты Kuala Lurah, Sungai Tujoh, Ujung Jalan и Labu. Эта запись подтверждает сами контрольные посты, но не гарантирует часы работы на конкретную дату; режим пересечения проверять перед выездом."
     },
     "source_refs": [
-      "src_000701"
+      "src_911001"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -61,20 +63,21 @@
       }
     ],
     "source_refs": [
-      "src_000701"
+      "src_911002"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "international_air_links": {
-    "value": "Региональные и дальнемагистральные рейсы через BWN; сеть меняется, перед маршрутом проверять расписание авиакомпаний.",
+    "value": "Brunei International Airport (BWN) — основной международный узел. Официальное табло DCA в сентябре 2026 показывало регулярные прямые вылеты, в частности, в Кота-Кинабалу, Куала-Лумпур, Сингапур, Гонконг, Бангкок, Джакарту, Манилу, Кучинг, Сурабаю и Мельбурн; Royal Brunei публикует более широкую сеть. Направления и частоты считать динамическими и проверять на дату поездки.",
     "source_refs": [
-      "src_000701"
+      "src_911002",
+      "src_911003"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -83,17 +86,17 @@
   "transport_rules": {
     "value": {
       "road_side": "left",
-      "foreign_licence": "Для краткой поездки не следует считать факт выдачи машины прокатчиком подтверждением законности управления. Перед поездкой нужно проверить у Департамента наземного транспорта признание конкретного национального удостоверения и международного водительского удостоверения для нужной категории транспорта.",
-      "note": "Принятие удостоверения прокатной компанией само по себе не подтверждает его юридическую действительность.",
+      "foreign_licence": "JPD указывает, что иностранцу с иностранным водительским удостоверением для управления в Брунее нужен международный водительский документ (IDP), выданный компетентным органом страны происхождения. На той же официальной странице отдельно описано краткосрочное признание частных иностранных удостоверений стран — участниц Женевской конвенции 1949 года; если применимость исключения к конкретному российскому удостоверению не подтверждена JPD, рабочее правило для поездки — иметь IDP вместе с национальными правами.",
+      "note": "Не считать выдачу автомобиля прокатчиком юридическим подтверждением права управления; категория национального удостоверения и IDP должна соответствовать транспортному средству.",
       "source_ids": [
         "JPD_LICENSE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000710"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -107,13 +110,13 @@
         "JASTRE_CAMP",
         "GOVBN_FOREST"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000711",
       "src_000713"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -123,16 +126,16 @@
     "value": {
       "legal_status": "regulated",
       "permit_required": true,
-      "summary": "Беспилотные воздушные суда регулируются Департаментом гражданской авиации Брунея. Ведомство публикует порядок регистрации и эксплуатационные требования; перед каждым полётом нужно отдельно проверять регистрацию, разрешение и ограничения конкретного воздушного пространства.",
+      "summary": "DCA Brunei сохраняет отдельный действующий раздел Unmanned Aircraft и формы регистрации. Для экспедиционного планирования считать дрон регулируемым: регистрация обязательна по опубликованной процедуре, а разрешения/ограничения конкретного воздушного пространства проверяются до каждого запуска.",
       "source_ids": [
         "DCA_DRONE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000712"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -157,7 +160,7 @@
       "src_000700",
       "src_000701"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -194,7 +197,7 @@
       "src_000700",
       "src_000701"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Traveller-facing criminal-law summary; not an exhaustive legal code."
@@ -207,12 +210,12 @@
       "source_ids": [
         "GOVBN_FOREST"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000713"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -233,7 +236,7 @@
     "source_refs": [
       "src_000701"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -261,7 +264,7 @@
     "source_refs": [
       "src_000701"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."

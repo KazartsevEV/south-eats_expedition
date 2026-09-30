@@ -1,90 +1,75 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "generated_at": "2026-09-30",
   "import_ready": false,
-  "hard_guards": {
-    "object_inventory_211": true,
-    "permanent_object_ids_locked": true,
-    "uniform_per_object_paths": true,
-    "temporary_source_ids_eliminated": false,
-    "all_object_qa_passed": false
+  "objects_total": 248,
+  "country_counts": {
+    "bn": 18,
+    "kh": 19,
+    "id": 21,
+    "la": 31,
+    "my": 46,
+    "mm": 15,
+    "ph": 19,
+    "sg": 18,
+    "th": 21,
+    "tl": 17,
+    "vn": 23
   },
-  "incomplete_countries": {
-    "ph": {
-      "objects": 19,
-      "incomplete": 19,
-      "missing": {
-        "coordinates": 19,
-        "elevation": 19,
-        "narrative": 0,
-        "sources": 0,
-        "access": 0,
-        "water": 19,
-        "overnight": 19,
-        "traveler_reports": 19,
-        "visual_recon": 0
-      }
-    },
-    "sg": {
+  "hard_guards": {
+    "object_inventory_248": true,
+    "permanent_object_ids_locked": true,
+    "full_replace_strategy": true,
+    "all_countries_structurally_rebuilt": false,
+    "temporary_source_ids_eliminated": false,
+    "canonical_geo_refs_reconciled": false,
+    "canonical_lodging_refs_reconciled": false,
+    "canonical_media_refs_reconciled": false,
+    "canonical_route_refs_reconciled": false,
+    "all_object_qa_passed": false,
+    "build_cdn_passed": false,
+    "validate_cdn_passed": false,
+    "validate_hierarchy_passed": false
+  },
+  "rebuilt_countries": {
+    "bn": {
       "objects": 18,
-      "incomplete": 18,
-      "missing": {
-        "coordinates": 18,
-        "elevation": 18,
-        "narrative": 0,
-        "sources": 0,
-        "access": 0,
-        "water": 18,
-        "overnight": 18,
-        "traveler_reports": 18,
-        "visual_recon": 0
+      "structural": "passed"
+    },
+    "la": {
+      "objects": 31,
+      "structural": "passed",
+      "factual_qa": {
+        "passed": 26,
+        "incomplete": 5,
+        "missing": {
+          "traveler_reports": 3,
+          "elevation": 2
+        }
       }
     },
-    "th": {
-      "objects": 21,
-      "incomplete": 21,
-      "missing": {
-        "coordinates": 21,
-        "elevation": 21,
-        "narrative": 0,
-        "sources": 0,
-        "access": 0,
-        "water": 21,
-        "overnight": 21,
-        "traveler_reports": 21,
-        "visual_recon": 0
-      }
-    },
-    "tl": {
-      "objects": 17,
-      "incomplete": 17,
-      "missing": {
-        "coordinates": 17,
-        "elevation": 17,
-        "narrative": 0,
-        "sources": 0,
-        "access": 0,
-        "water": 17,
-        "overnight": 17,
-        "traveler_reports": 17,
-        "visual_recon": 0
-      }
-    },
-    "vn": {
-      "objects": 23,
-      "incomplete": 23,
-      "missing": {
-        "coordinates": 23,
-        "elevation": 23,
-        "narrative": 0,
-        "sources": 0,
-        "access": 0,
-        "water": 23,
-        "overnight": 23,
-        "traveler_reports": 23,
-        "visual_recon": 0
+    "my": {
+      "objects": 46,
+      "structural": "passed",
+      "factual_qa": {
+        "passed": 16,
+        "incomplete": 30,
+        "missing": {
+          "elevation": 21,
+          "visual_recon": 21
+        }
       }
     }
   },
-  "note": "Import to live canonical layer is blocked until temporary staging source IDs are deduplicated/remapped and incomplete object QA checks are resolved or explicitly accepted as unknown with schema-valid provenance."
+  "pending_full_rebuild": [
+    "kh",
+    "id",
+    "mm",
+    "ph",
+    "sg",
+    "th",
+    "tl",
+    "vn"
+  ],
+  "note": "Do not import until every hard guard required for structural safety is true. Factual unknowns may remain only where the contract explicitly permits null/unknown and QA records the gap."
 }

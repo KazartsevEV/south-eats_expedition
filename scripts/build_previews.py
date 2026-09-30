@@ -4,6 +4,8 @@ from __future__ import annotations
 import io
 import json
 import shutil
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
@@ -16,7 +18,9 @@ CDN = ROOT / "public" / "cdn" / "v2"
 PREVIEW_ROOT = CDN / "previews"
 MAX_DOWNLOAD_BYTES = 40 * 1024 * 1024
 MAX_SIZE = (720, 480)
-USER_AGENT = "ExpeditionSoutheastAsiaPreviewBuilder/1.0 (+https://github.com/KazartsevEV/south-eats_expedition)"
+USER_AGENT = "ExpeditionSoutheastAsiaPreviewBuilder/1.1 (+https://github.com/KazartsevEV/south-eats_expedition)"
+WIKIMEDIA_DELAY_SECONDS = 1.25
+_last_wikimedia_request = 0.0
 
 
 def load(path: Path):
@@ -37,25 +41,75 @@ def normalized_url(url: str) -> str:
     return urllib.parse.urlunsplit((parts.scheme, parts.netloc, path, parts.query, parts.fragment))
 
 
+def is_wikimedia(url: str) -> bool:
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    return host.endswith("wikimedia.org")
+
+
+def wikimedia_thumbnail_url(source_url: str, source_page: str | None) -> str:
+    filename = None
+    if source_page and "/wiki/File:" in source_page:
+        filename = source_page.split("/wiki/File:", 1)[1]
+    elif "upload.wikimedia.org" in source_url:
+        filename = urllib.parse.unquote(urllib.parse.urlsplit(source_url).path.rsplit("/", 1)[-1])
+    if not filename:
+        return source_url
+    filename = urllib.parse.quote(urllib.parse.unquote(filename), safe="()_',.-")
+    return f"https://commons.wikimedia.org/wiki/Special:Redirect/file/{filename}?width={MAX_SIZE[0]}"
+
+
+def throttle_wikimedia():
+    global _last_wikimedia_request
+    now = time.monotonic()
+    remaining = WIKIMEDIA_DELAY_SECONDS - (now - _last_wikimedia_request)
+    if remaining > 0:
+        time.sleep(remaining)
+    _last_wikimedia_request = time.monotonic()
+
+
 def download_bytes(url: str) -> bytes:
-    req = urllib.request.Request(
-        normalized_url(url),
-        headers={
-            "User-Agent": USER_AGENT,
-            "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=45) as response:
-        data = response.read(MAX_DOWNLOAD_BYTES + 1)
-        if len(data) > MAX_DOWNLOAD_BYTES:
-            raise RuntimeError(f"image exceeds {MAX_DOWNLOAD_BYTES} bytes")
-        if not data:
-            raise RuntimeError("empty response")
-        return data
+    attempts = 5 if is_wikimedia(url) else 3
+    delays = [3, 8, 18, 35, 60]
+    last_error = None
+    for attempt in range(attempts):
+        if is_wikimedia(url):
+            throttle_wikimedia()
+        req = urllib.request.Request(
+            normalized_url(url),
+            headers={
+                "User-Agent": USER_AGENT,
+                "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+            },
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as response:
+                data = response.read(MAX_DOWNLOAD_BYTES + 1)
+                if len(data) > MAX_DOWNLOAD_BYTES:
+                    raise RuntimeError(f"image exceeds {MAX_DOWNLOAD_BYTES} bytes")
+                if not data:
+                    raise RuntimeError("empty response")
+                return data
+        except urllib.error.HTTPError as exc:
+            last_error = exc
+            if exc.code not in {429, 500, 502, 503, 504} or attempt == attempts - 1:
+                raise
+            retry_after = exc.headers.get("Retry-After")
+            try:
+                wait = max(float(retry_after), delays[attempt]) if retry_after else delays[attempt]
+            except (TypeError, ValueError):
+                wait = delays[attempt]
+            time.sleep(wait)
+        except (urllib.error.URLError, TimeoutError) as exc:
+            last_error = exc
+            if attempt == attempts - 1:
+                raise
+            time.sleep(delays[attempt])
+    raise RuntimeError(f"download failed: {last_error}")
 
 
-def build_webp(source_url: str, output: Path):
-    data = download_bytes(source_url)
+def build_webp(source_url: str, output: Path, source_page: str | None = None):
+    fetch_url = wikimedia_thumbnail_url(source_url, source_page) if is_wikimedia(source_url) else source_url
+    data = download_bytes(fetch_url)
     try:
         with Image.open(io.BytesIO(data)) as src:
             try:
@@ -139,7 +193,7 @@ def main():
 
         if not preview_path.exists() or preview_path.stat().st_size < 256:
             try:
-                build_webp(source_url, preview_path)
+                build_webp(source_url, preview_path, media_doc.get("source_page"))
             except Exception as exc:
                 failures.append(f"{object_id}: {media_id}: {source_url}: {exc}")
                 continue

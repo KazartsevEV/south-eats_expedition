@@ -610,7 +610,9 @@ def build():
                 }
             entity.setdefault("provenance", {})
             entity["provenance"]["source_refs"] = list(dict.fromkeys(
-                (entity["provenance"].get("source_refs") or []) + collect_source_refs(entity)
+                (entity["provenance"].get("structural_source_refs") or [])
+                + (entity["provenance"].get("research_source_refs") or [])
+                + (entity["provenance"].get("source_refs") or [])
             ))
             geo_entities[geo_id] = entity
             canonical_geo_ids_by_country[code].append(geo_id)
@@ -694,6 +696,9 @@ def build():
                 "provenance": {
                     "checked_at": (doc.get("meta") or {}).get("checked_at"),
                     "sources": doc.get("sources") or [],
+                    "structural_source_refs": [((doc.get("meta") or {}).get("canonical_source_id"))]
+                    if (doc.get("meta") or {}).get("canonical_source_id") else [],
+                    "research_source_refs": [],
                     "source_refs": [((doc.get("meta") or {}).get("canonical_source_id"))]
                     if (doc.get("meta") or {}).get("canonical_source_id") else [],
                 },
@@ -733,15 +738,24 @@ def build():
                     if region_profile.get(field) not in (None, "", [], {}):
                         entity[field] = region_profile.get(field)
                 local_prov = region_profile.get("local_reference_provenance") or {}
-                region_source_refs = list(dict.fromkeys((local_prov.get("source_refs") or []) + (region_profile.get("source_refs") or [])))
+                region_source_refs = list(dict.fromkeys(
+                    (local_prov.get("source_refs") or [])
+                    + (region_profile.get("source_refs") or [])
+                    + collect_source_refs(region_profile)
+                ))
+                structural_refs = entity["provenance"].get("structural_source_refs") or []
                 entity["provenance"].update({
                     "source_urls": region_profile.get("language_source_urls") or [],
-                    "source_refs": region_source_refs,
+                    "research_source_refs": region_source_refs,
+                    "source_refs": list(dict.fromkeys(structural_refs + region_source_refs)),
                     "research_checked_at": local_prov.get("checked_at") or region_profile.get("last_verified"),
                 })
                 entity["freshness"] = {"checked_at": local_prov.get("checked_at") or region_profile.get("last_verified")}
-                entity["migration"]["regional_content_status"] = "migrated_existing_region_profile"
-                entity["coverage_role"] = "regional_profile"
+                entity["migration"]["regional_content_status"] = (
+                    "migrated_existing_region_profile"
+                    if region_source_refs else "migrated_region_profile_requires_source_normalization"
+                )
+                entity["coverage_role"] = "regional_profile" if region_source_refs else "structural"
 
             if locality_profile:
                 entity["primary_location"] = locality_profile.get("primary_location")
@@ -756,15 +770,29 @@ def build():
                     if profile.get(field) not in (None, "", [], {}):
                         entity[field] = profile.get(field)
                 profile_prov = profile.get("provenance") or {}
+                locality_source_refs = list(dict.fromkeys(
+                    (profile_prov.get("source_refs") or []) + collect_source_refs(profile)
+                ))
                 if profile_prov:
                     entity["provenance"]["locality_profile"] = profile_prov
-                    if profile_prov.get("source_refs"):
-                        entity["provenance"]["source_refs"] = list(profile_prov.get("source_refs") or [])
                     if profile_prov.get("checked_at"):
                         entity["freshness"] = {"checked_at": profile_prov.get("checked_at")}
-                entity["migration"]["local_reference_status"] = "migrated_existing_locality_profile"
-                if profile or locality_profile.get("primary_location"):
+                existing_research_refs = entity["provenance"].get("research_source_refs") or []
+                entity["provenance"]["research_source_refs"] = list(dict.fromkeys(
+                    existing_research_refs + locality_source_refs
+                ))
+                entity["provenance"]["source_refs"] = list(dict.fromkeys(
+                    (entity["provenance"].get("structural_source_refs") or [])
+                    + entity["provenance"]["research_source_refs"]
+                ))
+                entity["migration"]["local_reference_status"] = (
+                    "migrated_existing_locality_profile"
+                    if locality_source_refs else "migrated_locality_profile_requires_source_normalization"
+                )
+                if (profile or locality_profile.get("primary_location")) and locality_source_refs:
                     entity["coverage_role"] = "locality_profile"
+                elif profile or locality_profile.get("primary_location"):
+                    entity["coverage_role"] = "structural"
 
             if entity.get("coverage_role") == "locality_profile" and not entity.get("primary_location"):
                 entity["primary_location_status"] = node.get("primary_location_status") or {

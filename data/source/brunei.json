@@ -28,7 +28,8 @@
       "2026-09-29 regional language normalization: all regional reference profiles use natural Russian prose; legacy linkage names remain unchanged where required for stable IDs and hierarchy matching.",
       "2026-09-30 country-layer pass: completed language, ethnography, culture and country-wide travel-rule fields with canonical source IDs; attraction-card payloads were not edited.",
       "2026-09-30 regional-layer correction: Brunei regions upgraded to Malaysia-level reference structure (geography, relief, climate, hydrology/marine where applicable, nature, health, safety, transport, ethnography and provenance); attraction cards unchanged.",
-      "2026-09-30 country-language and regional-nature audit: normalized remaining user-facing English in country profile; added regional fauna, dangerous animals, poisonous plants, marine/estuarine life and natural-hazard fields with local evidence or explicit not-localized status. Attraction cards unchanged."
+      "2026-09-30 country-language and regional-nature audit: normalized remaining user-facing English in country profile; added regional fauna, dangerous animals, poisonous plants, marine/estuarine life and natural-hazard fields with local evidence or explicit not-localized status. Attraction cards unchanged.",
+      "Regional QA pass 2026-09-30: added locally supported history/culture for Brunei-Muara and Belait, and culture for Tutong and Temburong. No unsupported chronology was added where official regional sources did not support it."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -5321,7 +5322,9 @@
             "src_000748",
             "src_000749",
             "src_000751",
-            "src_000708"
+            "src_000708",
+            "src_904106",
+            "src_904107"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -5339,6 +5342,20 @@
             "src_000746"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Историческое ядро Брунея сформировалось вокруг нижнего течения реки Бруней и Кампонг-Айера. Официальный туристический профиль округа прямо связывает эту речную зону с ранним развитием государства и многовековым пребыванием правящей династии; Кампонг-Айер на протяжении веков был крупным портовым и жилым центром.",
+          "source_refs": [
+            "src_904106",
+            "src_904107"
+          ]
+        },
+        "culture": {
+          "summary": "Кампонг-Айер сохраняет живую культуру водного поселения: дома на сваях, деревянные переходы, речной транспорт, ремесленные и бытовые традиции. В столичном округе этот слой сосуществует с современной государственной и исламской архитектурой; их следует описывать как разные культурные пласты, а не сводить к единому «старому городу».",
+          "source_refs": [
+            "src_904106",
+            "src_904107"
+          ]
         }
       },
       {
@@ -5488,7 +5505,8 @@
             "src_000749",
             "src_000750",
             "src_000751",
-            "src_000708"
+            "src_000708",
+            "src_904110"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -5507,6 +5525,12 @@
             "src_000757"
           ],
           "checked_at": "2026-09-30"
+        },
+        "culture": {
+          "summary": "Культурный слой Тембуронга связан с Бангарами, рынком Tamu Bangar, плетением ротанга и общинами длинных домов во внутренних районах. Официальный профиль округа и материалы по Улу-Тембуронгу прямо связывают лесной ландшафт с борнейскими общинами длинных домов; конкретные традиции и поселения следует хранить на уровне деревень и маршрутов.",
+          "source_refs": [
+            "src_904110"
+          ]
         }
       },
       {
@@ -5625,7 +5649,8 @@
             "src_000750",
             "src_000749",
             "src_000751",
-            "src_000708"
+            "src_000708",
+            "src_904108"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -5644,6 +5669,18 @@
             "src_000757"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Современная история Белайта тесно связана с нефтяной промышленностью: в Сериа нефть обнаружили в 1929 году, после чего район стал главным нефтегазовым центром страны. Этот индустриальный слой следует отделять от более старых сельских и коренных поселений Лаби и внутренних районов.",
+          "source_refs": [
+            "src_904108"
+          ]
+        },
+        "culture": {
+          "summary": "Белайт сочетает современный индустриальный ландшафт Сериа и Куала-Белайта с живыми традициями внутренних общин. Официальные материалы отдельно описывают ибанские длинные дома Мендарам-Бесар и Тераджа, плетёные ремёсла, кухню и танец ngajat; эти практики относятся к конкретным общинам Лаби и не должны переноситься на весь округ.",
+          "source_refs": [
+            "src_904108"
+          ]
         }
       },
       {
@@ -5770,7 +5807,8 @@
             "src_000748",
             "src_000749",
             "src_000751",
-            "src_000708"
+            "src_000708",
+            "src_904109"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -5788,6 +5826,12 @@
             "src_000754"
           ],
           "checked_at": "2026-09-30"
+        },
+        "culture": {
+          "summary": "Тутонг — один из наиболее выраженных этнокультурных районов страны. Официальный профиль отмечает заметное присутствие тутонгов, кедаянов, дусунов и ибанов; в районе Сунгай-Басонг показаны традиционные дома кедаянов и дусунов, а Тасек-Меримбун связан с дусунским культурным наследием. Эти традиции нужно привязывать к конкретным общинам и местам.",
+          "source_refs": [
+            "src_904109"
+          ]
         }
       }
     ],
@@ -6325,6 +6369,81 @@
       "used_for": [
         "Selirong fauna",
         "Temburong mangrove wildlife"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "BN_TOURISM_BRUNEI_MUARA",
+      "canonical_id": "src_904106",
+      "publisher": "Brunei Tourism — Brunei-Muara District",
+      "url": "https://www.bruneitourism.com/brunei-muara/",
+      "kind": "government_tourism",
+      "used_for": [
+        "regional_history",
+        "regional_culture",
+        "kampong_ayer",
+        "brunei_muara"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "BN_TOURISM_KAMPONG_AYER",
+      "canonical_id": "src_904107",
+      "publisher": "Brunei Tourism — Kampong Ayer",
+      "url": "https://www.bruneitourism.com/places/kampong-ayer/",
+      "kind": "government_tourism",
+      "used_for": [
+        "regional_history",
+        "regional_culture",
+        "water_settlement",
+        "kampong_ayer"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "BN_TOURISM_BELAIT",
+      "canonical_id": "src_904108",
+      "publisher": "Brunei Tourism — Belait District",
+      "url": "https://www.bruneitourism.com/belait/",
+      "kind": "government_tourism",
+      "used_for": [
+        "regional_history",
+        "oil_history",
+        "regional_culture",
+        "iban",
+        "longhouses",
+        "belait"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "BN_TOURISM_TUTONG",
+      "canonical_id": "src_904109",
+      "publisher": "Brunei Tourism — Tutong District",
+      "url": "https://www.bruneitourism.com/tutong/",
+      "kind": "government_tourism",
+      "used_for": [
+        "regional_culture",
+        "tutong",
+        "kedayan",
+        "dusun",
+        "iban",
+        "tasek_merimbun"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "BN_TOURISM_TEMBURONG",
+      "canonical_id": "src_904110",
+      "publisher": "Brunei Tourism — Temburong District",
+      "url": "https://www.bruneitourism.com/temburong/",
+      "kind": "government_tourism",
+      "used_for": [
+        "regional_culture",
+        "temburong",
+        "bangar",
+        "longhouse_communities",
+        "local_crafts"
       ],
       "accessed": "2026-09-30"
     }

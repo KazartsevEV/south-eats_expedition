@@ -744,7 +744,7 @@ function renderHome(){
   var counts=countryCounts();
   var sourceCountries=(state.seaReference&&state.seaReference.countries)||[];
   var cards=(sourceCountries.length?sourceCountries:Object.keys(counts).sort().map(function(cc){var x=cname(cc);return{country_code:cc.toUpperCase(),name_ru:x.name,flag:x.flag,available:true}})).map(function(row){
-    var cc=String(row.country_code||'').toLowerCase(),available=row.available!==false&&!!counts[cc],x=cname(cc);
+    var cc=String(row.country_code||'').toLowerCase(),available=row.available!==false&&(!!state.geoById['geo_'+cc]||!!counts[cc]),x=cname(cc);
     return '<article class="country-card"'+(available?' data-country="'+cc+'"':'')+'>'+
       '<div class="country-top"><div><div class="country-code">'+esc((row.country_code||cc).toUpperCase())+'</div><div class="country-name">'+esc(row.flag||x.flag)+' '+esc(row.name_ru||x.name)+'</div></div><span>'+(available?'→':'pending')+'</span></div>'+
       '<p class="popup-meta">'+esc(row.summary||'Страна ожидает миграции в текущий release.')+'</p>'+

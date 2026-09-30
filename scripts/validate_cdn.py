@@ -180,6 +180,15 @@ if not geodata_contract_path.exists():
 geodata_contract = load(geodata_contract_path)
 if geodata_contract.get("crs") != "WGS84" or geodata_contract.get("epsg") != 4326:
     fail("geodata contract must be WGS84 / EPSG:4326")
+boundary_contract = geodata_contract.get("boundary_geometry") or {}
+if boundary_contract.get("format") != "GeoJSON FeatureCollection":
+    fail("geodata contract must define GeoJSON FeatureCollection boundary geometry")
+if set(boundary_contract.get("allowed_geometry_types") or []) != {"Polygon", "MultiPolygon"}:
+    fail("geodata contract must allow Polygon and MultiPolygon boundary geometry")
+if boundary_contract.get("coordinate_order") != ["lon", "lat"]:
+    fail("boundary geometry coordinate order must be lon, lat")
+if boundary_contract.get("accuracy_values") != ["simplified_sourced_boundary", "approximate"]:
+    fail("boundary geometry accuracy semantics are incomplete")
 
 country_qa_index = release / "qa" / "countries" / "index.json"
 if not country_qa_index.exists():

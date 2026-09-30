@@ -1026,6 +1026,25 @@
         "source_url": "https://www.geonames.org/search.html?country=&q=Palawan",
         "checked_at": "2026-09-30",
         "note": "Approximate provincial center for map framing; not an attraction coordinate."
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "geo_ph_0019",
+          "geo_ph_0053"
+        ],
+        "source_refs": [
+          "src_000863",
+          "src_000864",
+          "src_910005"
+        ],
+        "source_vintage": "2023+2019",
+        "checked_at": "2026-09-30",
+        "note": "Approximate expedition coverage combines Palawan province with the geographically embedded but administratively separate Puerto Princesa HUC; it is not an official administrative unit."
       }
     },
     {
@@ -1085,7 +1104,24 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Bohol"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "island_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "geo_ph_0022:largest_physical_island"
+        ],
+        "source_refs": [
+          "src_904001",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30",
+        "note": "Approximate Bohol Island mask derived by selecting the largest physical island polygon from the sourced Bohol province multipolygon; smaller provincial islands and municipal waters are intentionally excluded."
+      }
     },
     {
       "id": "ph:geographic_area:metro-manila",
@@ -1145,7 +1181,26 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Tubbataha / Sulu Sea"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "protected_area_boundary",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "RA10067:TRNP_boundary"
+        ],
+        "source_refs": [
+          "src_904053",
+          "src_904054",
+          "src_910010",
+          "src_910011"
+        ],
+        "source_vintage": "2010 legal boundary",
+        "checked_at": "2026-09-30",
+        "note": "Protected-area polygon follows the six statutory TRNP control points in RA 10067. PRS92 coordinates were transformed to WGS84 with EPSG operation 15708 and rounded to four decimals; this masks TRNP itself, not the whole Sulu Sea."
+      }
     },
     {
       "id": "ph:geographic_area:iloilo-expedition",
@@ -1160,7 +1215,26 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Iloilo"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "geo_ph_0025",
+          "geo_ph_0059"
+        ],
+        "source_refs": [
+          "src_904055",
+          "src_904056",
+          "src_910005"
+        ],
+        "source_vintage": "2023+2019",
+        "checked_at": "2026-09-30",
+        "note": "Approximate expedition coverage combines Iloilo province and the separate Iloilo City HUC because the project regional node explicitly spans both provincial and city heritage/logistics."
+      }
     },
     {
       "id": "ph:geographic_area:samar-expedition",
@@ -1175,7 +1249,27 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Samar"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "island_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Eastern Samar",
+          "Northern Samar",
+          "Samar"
+        ],
+        "source_refs": [
+          "src_904057",
+          "src_904058",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30",
+        "note": "Approximate Samar Island expedition mask combines the three Samar-island provinces and excludes Leyte, Southern Leyte and Biliran."
+      }
     },
     {
       "id": "ph:geographic_area:siquijor-expedition",
@@ -1205,7 +1299,26 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Negros"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "island_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "geo_ph_0028",
+          "geo_ph_0034"
+        ],
+        "source_refs": [
+          "src_904060",
+          "src_904061",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30",
+        "note": "Approximate physical-island coverage combines Negros Occidental and Negros Oriental and deliberately excludes Siquijor, although Siquijor belongs to the current Negros Island Region administratively."
+      }
     },
     {
       "id": "ph:geographic_area:batanes-expedition",
@@ -1235,7 +1348,28 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Central Luzon / Pinatubo"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Botolan",
+          "Capas",
+          "Porac"
+        ],
+        "source_refs": [
+          "src_904063",
+          "src_904064",
+          "src_904065",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30",
+        "note": "Approximate Pinatubo expedition mask uses the three municipality polygons that meet around the volcano—Botolan, Capas and Porac—rather than the entire Central Luzon region."
+      }
     },
     {
       "id": "ph:geographic_area:occidental-mindoro-apo-reef",
@@ -1295,7 +1429,26 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Negros Oriental / Dauin / Apo Island"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Dauin",
+          "Dumaguete"
+        ],
+        "source_refs": [
+          "src_904073",
+          "src_905114",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30",
+        "note": "Approximate east-Negros expedition mask combines Dauin municipality, which contains Apo Island, with Dumaguete as the documented transport hub; it intentionally does not cover all Negros Oriental."
+      }
     },
     {
       "id": "ph:city:manila",

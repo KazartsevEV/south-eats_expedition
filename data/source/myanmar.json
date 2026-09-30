@@ -43,7 +43,8 @@
       "2026-09-29: все региональные справки приведены к естественному русскому языку; служебные исходные названия сохранены только там, где они нужны для стабильных ID и сопоставления иерархии.",
       "2026-09-30 country-layer pass: completed language, ethnography, culture, country narrow and country-wide permit/camping/drone fields; attraction-card payloads were not edited.",
       "2026-09-30 regional-layer correction: Myanmar regional coverage completed to the Malaysia reference baseline; missing health/transport/nature/ethnography fields filled where applicable and user-facing Russian normalized. Attraction cards unchanged.",
-      "2026-09-30 second QA pass: normalized country nature/safety Russian and completed regional fauna, dangerous animals, poisonous plants, marine life where applicable, and natural hazards across all Myanmar nodes. Attraction cards unchanged."
+      "2026-09-30 second QA pass: normalized country nature/safety Russian and completed regional fauna, dangerous animals, poisonous plants, marine life where applicable, and natural hazards across all Myanmar nodes. Attraction cards unchanged.",
+      "Regional QA pass 2026-09-30: normalized Mandalay / central Myanmar against existing MOHT and UNESCO Upper Myanmar Capitals sources; added missing source_refs and separated regional capital network from object-level monuments."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -661,10 +662,18 @@
         "last_verified": "2026-09-28",
         "name_ru": "Мандалай / центральная Мьянма",
         "geography": {
-          "summary": "Центральная равнина вдоль Иравади; королевские столицы Мандалай, Амарапура, Инва, Сикайн и Мингун расположены сравнительно близко друг к другу."
+          "summary": "Мандалайский регион образует центральный исторический коридор вдоль Иравади, где Мандалай, Амарапура, Инва, Сикайн и Мингун расположены в пределах сравнительно компактной зоны, но разделены рекой, мостами и радиальными дорогами. Это сеть связанных королевских центров, а не один городской объект.",
+          "source_refs": [
+            "src_000691",
+            "src_000695"
+          ]
         },
         "relief": {
-          "summary": "Равнинный городской и речной ландшафт ограничен с севера холмом Мандалай."
+          "summary": "Основной ландшафт — сухая центральная равнина Иравади с локальными возвышенностями, включая Mandalay Hill и холмистый Сикайн. Для маршрутов важнее речные переправы и распределение исторических центров, чем большие высотные перепады.",
+          "source_refs": [
+            "src_000691",
+            "src_000695"
+          ]
         },
         "climate": {
           "summary": "Жаркая и сравнительно сухая центральная зона; весной жара особенно сильна.",
@@ -674,10 +683,18 @@
           ]
         },
         "history": {
-          "summary": "Мандалай основан Миндоном в 1857 году и стал последней королевской столицей Бирмы до британской аннексии 1885 года."
+          "summary": "Мандалай был основан королём Миндоном в 1857 году как новая столица династии Конбаун и оставался последней королевской столицей до британской аннексии 1885 года. UNESCO рассматривает его вместе с Инвой, Амарапурой, Сикайном и Мингуном как последовательность политических и религиозных центров Верхней Мьянмы.",
+          "source_refs": [
+            "src_000691",
+            "src_000695"
+          ]
         },
         "culture": {
-          "summary": "Монастыри, Махамуни, Кутодо и ремесленные кварталы сохраняют религиозные и производственные традиции королевской столицы."
+          "summary": "Культурный слой региона связан с живыми буддийскими институтами, монастырями, паломническими центрами и ремесленными традициями, но эти практики распределены между разными городами и объектами. Региональная карточка фиксирует общую связь королевской столицы с религиозной и ремесленной средой, а конкретные монастыри, мастерские и ритуалы должны раскрываться на object-level.",
+          "source_refs": [
+            "src_000691",
+            "src_000695"
+          ]
         },
         "safety": {
           "travel_advisory": {
@@ -729,7 +746,7 @@
           ]
         },
         "transport": {
-          "summary": "Мандалай — основной узел центральной Мьянмы; исторические столицы вокруг него достигаются радиальными поездками по дороге и через речные переправы. Пьин-У-Луин связан дорогой и железной дорогой.",
+          "summary": "Мандалай — главный транспортный хаб центральной зоны, но Амарапура, Инва, Сикайн и Мингун требуют отдельных road/ferry legs. UNESCO подчёркивает пространственную близость королевских центров, а MOHT — их отдельные маршруты; поэтому одна координата Mandalay city не заменяет самостоятельные access_options.",
           "dynamic_status": "Из-за конфликта, повреждений инфраструктуры и локальных ограничений фактическую проходимость дорог и работу транспорта проверять непосредственно перед выездом.",
           "source_refs": [
             "src_000671",

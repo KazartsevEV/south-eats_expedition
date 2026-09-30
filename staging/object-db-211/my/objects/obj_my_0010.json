@@ -45,14 +45,16 @@
     },
     "geo_points": [],
     "object_elevation": {
-      "representative_m": null,
+      "representative_m": 245,
       "min_m": null,
       "max_m": null,
-      "reference_type": null,
-      "accuracy": "unknown",
-      "source_refs": [],
-      "checked_at": null,
-      "notes": null
+      "reference_type": "operational_landscape",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_my_0214"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "245 м — отметка Temenggor Lake, главного операционного водного слоя Belum-Temengor; это не средняя и не максимальная высота всего лесного массива."
     }
   },
   "narrative": {
@@ -239,28 +241,70 @@
     }
   ],
   "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_belum_temenggor_lake",
+        "name": "Temenggor Lake / Pulau Banding",
+        "coordinates": {
+          "lat": 5.51,
+          "lon": 101.36,
+          "elevation_m": 245
+        },
+        "gps": {
+          "decimal": "5.510000, 101.360000"
+        },
+        "access": {
+          "walk_km": null
+        },
+        "view": {
+          "description": "Большая водная поверхность, лесистые берега и острова — основной читаемый масштаб Belum-Temengor до выхода вглубь леса."
+        },
+        "best_time": "early_morning / late_afternoon",
+        "best_weather_light": "Утром возможен низкий туман над водой; вечером рельеф берегов читается в боковом свете.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для водохранилища и лесных берегов"
+          },
+          {
+            "type": "telephoto",
+            "why": "для удалённых берегов, птиц и лодок"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0214"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Уровень воды, туман и облачность меняют характер береговой линии; после дождей лес темнее и насыщеннее."
+    ],
+    "video_activity": [
+      "лодочный переход по Temenggor Lake",
+      "туман и облака над лесными берегами"
+    ],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска."
+        "охраняемую лесную территорию не считать зоной свободного запуска; проверять разрешение управляющей структуры и CAAM"
       ],
-      "source_refs": [
-        "src_stage_my_0001",
-        "src_stage_my_0038",
-        "src_stage_my_0002",
-        "src_stage_my_0039",
-        "src_stage_my_0040"
-      ],
-      "checked_at": "2026-09-28"
+      "source_refs": [],
+      "checked_at": "2026-09-30"
     },
-    "useful_equipment": [],
-    "best_time": "Рассвет над водой и туман в лесу; поздний день полезен для птиц и дальних планов вдоль берегов.",
-    "best_weather_light": null
+    "useful_equipment": [
+      {
+        "type": "wide",
+        "why": "масштаб водохранилища и лесного массива"
+      },
+      {
+        "type": "long_telephoto",
+        "why": "дикая фауна и удалённые детали берегов"
+      }
+    ],
+    "best_time": "early_morning / late_afternoon",
+    "best_weather_light": "Туманное утро или чистый боковой свет."
   },
   "media": {
     "cover_id": null,
@@ -341,14 +385,14 @@
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

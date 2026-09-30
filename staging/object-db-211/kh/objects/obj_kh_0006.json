@@ -272,7 +272,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "внутри археологических руин самовольную палатку не ставить. В районе Srayang существует коммерческий кемпинг Kohker & Restaurant; отдельно подтверждать работу/цену. Для обычной ночёвки есть Кох-Кер отель & Restaurant",
+      "summary": "В районе Сраянга есть коммерческое жильё рядом с Кох-Кером. Отдельного надёжного подтверждения свободного палаточного кемпинга среди руин нет; ночёвку внутри археологического комплекса не считать разрешённой по умолчанию.",
       "source_refs": [
         "src_000195",
         "src_000335",
@@ -308,25 +308,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "Длинная однодневная поездка из Сиемреапа часто превращает осмотр в гонку; ночёвка в районе Сраяна позволяет спокойно работать утром и вечером.",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "в дождь грунтовые ответвления к второстепенным храмам хуже",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "в феврале 2026 в отзывах Кох-Кер отель упоминались мелкие бытовые проблемы вроде протечки кондиционера/мыши — полезно как реальное ожидание удалённой базы",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "lodging",
+      "summary": "Проверенные отзывы февраля 2026 по базе рядом с Кох-Кером отмечают удобное положение относительно пирамиды, но также сообщают о жёстких кроватях и эпизодах, когда персонал приходилось искать по прибытии.",
+      "observed_period": "2026-02",
+      "source_refs": [
+        "src_stage_kh_0006"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -431,11 +419,12 @@
       "src_000387",
       "src_000047",
       "src_000394",
-      "src_000255"
+      "src_000255",
+      "src_stage_kh_0006"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -446,8 +435,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

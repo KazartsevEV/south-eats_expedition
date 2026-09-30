@@ -272,7 +272,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "не ночевать в приграничной зоне и не искать “обходной” кемпинг; база — город Преахвихеа / Тбенг-Мианчей только если туда есть самостоятельная причина ехать",
+      "summary": "Для приграничного храма и прилегающей военной зоны самостоятельный кемпинг нельзя считать разрешённым без прямого актуального подтверждения властей. Ночёвку планировать вне чувствительной приграничной зоны.",
       "source_refs": [
         "src_000333",
         "src_000475",
@@ -302,18 +302,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "главная “жалоба” сейчас не сервисная, а операционная: объект закрыт; старые отзывы о подъезде не должны использоваться как инструкция 2026",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "район имеет отдельный риск мин и неразорвавшихся боеприпасов и военную чувствительность",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "current_access",
+      "summary": "В 2026 публиковались отзывы посетителей комбинированных поездок к Преахвихеа и Кох-Керу; из-за приграничной чувствительности старые отчёты о доступе необходимо подчинять текущему официальному статусу границы и самого храма.",
+      "observed_period": "2026-05",
+      "source_refs": [
+        "src_stage_kh_0005"
+      ],
+      "confidence": "low"
     }
   ],
   "visual_recon": {
@@ -412,11 +407,12 @@
       "src_000475",
       "src_000476",
       "src_000330",
-      "src_000073"
+      "src_000073",
+      "src_stage_kh_0005"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -427,8 +423,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

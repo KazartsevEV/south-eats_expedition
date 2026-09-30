@@ -234,7 +234,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "ночёвка/палатка на территории мемориала неприемлема; возвращаться в Пномпень",
+      "summary": "Мемориал не является местом ночёвки. Практическая база — Пномпень; отдельного подтверждённого легального кемпинга при объекте нет.",
       "source_refs": [
         "src_000072",
         "src_000375",
@@ -264,25 +264,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "дорога может занять столько же времени, сколько короткий осмотр, если попасть в трафик",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "открытый участок жаркий и мало тени",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "путешественники иногда объединяют объект с Туол-Сленгом в один день; эмоционально это тяжёлый блок, а не просто логистически удобная пара",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "access_and_pace",
+      "summary": "Отзывы февраля–июля 2026 подтверждают обычный самостоятельный доступ через Grab и спокойный осмотр с аудиогидом; многие советуют не превращать посещение в быстрый чек-лист.",
+      "observed_period": "2026-02/2026-07",
+      "source_refs": [
+        "src_stage_kh_0004"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -381,11 +369,12 @@
       "src_000375",
       "src_000476",
       "src_000226",
-      "src_000462"
+      "src_000462",
+      "src_stage_kh_0004"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -396,8 +385,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

@@ -235,7 +235,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "ночёвка на территории мемориала исключена; использовать городское жильё",
+      "summary": "Музей не является местом ночёвки. Практическая база — городское жильё Пномпеня; отдельного подтверждённого легального кемпинга при объекте нет.",
       "source_refs": [
         "src_000203",
         "src_000477",
@@ -265,25 +265,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "на полный осмотр с аудиогидом нужно заметно больше часа; быстрый “чек-лист” обедняет контекст",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "часть посетителей тяжело переносит фото жертв и камеры; планировать паузу после посещения",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "в старых корпусах жарко, лестницы узкие; не рассчитывать на комфорт музейного здания",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "visit_duration",
+      "summary": "В отзывах марта–июля 2026 на полноценный самостоятельный осмотр с аудиогидом обычно закладывают около двух часов; посетители отдельно отмечают жару в старых корпусах и эмоциональную тяжесть экспозиции.",
+      "observed_period": "2026-03/2026-07",
+      "source_refs": [
+        "src_stage_kh_0003"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -382,11 +370,12 @@
       "src_000477",
       "src_000476",
       "src_000290",
-      "src_000462"
+      "src_000462",
+      "src_stage_kh_0003"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -397,8 +386,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

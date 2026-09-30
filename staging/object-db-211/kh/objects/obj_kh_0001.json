@@ -296,7 +296,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "самовольную палатку внутри археологического парка не планировать: это охраняемый культурный ландшафт с деревнями и святыми местами; ночевать в Сиемреап",
+      "summary": "Надёжного общего разрешения на самостоятельную палатку внутри археологического парка не найдено. Для обычной ночёвки использовать жильё в Сиемреапе; отдельные деревни и монастыри внутри охраняемого ландшафта не означают свободного права на кемпинг.",
       "source_refs": [
         "src_000429",
         "src_000135",
@@ -328,25 +328,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "главная жалоба фотографов — толпа на рассвет у западных отражающих прудов; “приехать раньше” не решает проблему, потому что большинство рассвет-групп делает то же самое",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "стоимость тук-тук и маршрут лучше согласовывать заранее; в 2025 путешественники отдельно жаловались на завышенные цены в туристических ресторанах у храмов",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "при попытке “ходить весь день” недооценивают расстояния и полуденную жару",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "crowding",
+      "summary": "В январе–июне 2026 путешественники снова описывали плотную толпу у отражающих прудов на рассвете; после рассветного пика внутренние части комплекса могут заметно разгружаться.",
+      "observed_period": "2026-01/2026-06",
+      "source_refs": [
+        "src_stage_kh_0001"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -478,11 +466,12 @@
       "src_000476",
       "src_000289",
       "src_000013",
-      "src_000273"
+      "src_000273",
+      "src_stage_kh_0001"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -493,8 +482,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

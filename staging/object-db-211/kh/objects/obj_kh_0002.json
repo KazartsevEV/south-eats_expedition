@@ -252,7 +252,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "палатка/ночёвка на набережной, территории дворца или при пагодах без приглашения не является разумным легальным вариантом; ночёвка в городе",
+      "summary": "Ночёвка на территории действующей королевской резиденции не является вариантом посещения. Практическая ночёвка — городское жильё Пномпеня; режим палатки на соседних общественных пространствах отдельно не подтверждён.",
       "source_refs": [
         "src_000033",
         "src_000369",
@@ -282,25 +282,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "дворец может закрываться на церемонии без длинного туристического уведомления",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "Требования к одежде действительно проверяют.",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "На набережной сохраняется риск рывка телефона или сумки с проезжающего мотоцикла.",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "visitor_rules",
+      "summary": "Отзывы 2026 подтверждают, что требования к закрытым плечам и коленям реально применяются; часть внутренних помещений нельзя фотографировать, а жара заметно влияет на комфорт осмотра.",
+      "observed_period": "2026",
+      "source_refs": [
+        "src_stage_kh_0002"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -399,11 +387,12 @@
       "src_000369",
       "src_000476",
       "src_000469",
-      "src_000462"
+      "src_000462",
+      "src_stage_kh_0002"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -414,8 +403,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

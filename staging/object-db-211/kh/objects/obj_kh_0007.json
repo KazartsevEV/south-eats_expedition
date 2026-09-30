@@ -264,7 +264,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "самовольная палатка среди храмов/лесной наследие zone не подходит; ночёвка в Kampong Thom или официально согласованной местное сообщество проживание в семье",
+      "summary": "Для ночёвки использовать Кампонгтхом либо официально согласованное размещение у местного сообщества. Свободная палатка внутри лесной археологической зоны источниками не подтверждена.",
       "source_refs": [
         "src_000401",
         "src_000220",
@@ -294,25 +294,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "лесные тропы и кирпичные площадки после дождя скользкие",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "часть путешественников недооценивает размер зоны и приезжает слишком поздно",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "старые бюджетные цены гостевых домов Kampong Thom быстро устаревают — их нельзя использовать как тариф 2026 без звонка",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "site_scale_and_heat",
+      "summary": "Посетители декабря 2025–января 2026 описывали основные храмовые группы как проходимые примерно за два часа при спокойном темпе; даже на коротких плоских переходах жара остаётся заметным фактором.",
+      "observed_period": "2025-12/2026-01",
+      "source_refs": [
+        "src_stage_kh_0007"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -440,11 +428,12 @@
       "src_000220",
       "src_000476",
       "src_000172",
-      "src_000327"
+      "src_000327",
+      "src_stage_kh_0007"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -455,8 +444,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

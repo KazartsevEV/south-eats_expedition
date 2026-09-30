@@ -1235,6 +1235,24 @@ def build():
         },
         "coordinate_types": sorted(COORDINATE_TYPES),
         "accuracy_values": ["high", "medium", "approximate", "unknown"],
+        "boundary_geometry": {
+            "format": "GeoJSON FeatureCollection",
+            "allowed_geometry_types": ["Polygon", "MultiPolygon"],
+            "coordinate_order": ["lon", "lat"],
+            "crs": "WGS84",
+            "epsg": 4326,
+            "entity_field": "geometry_path",
+            "metadata_required_when_available": ["geometry_type", "accuracy", "source_refs", "checked_at"],
+            "accuracy_values": ["simplified_sourced_boundary", "approximate"],
+            "rules": {
+                "feature_geo_id_must_match_entity": True,
+                "administrative_psgc_must_match_metadata": True,
+                "polygon_rings_must_be_closed": True,
+                "simplified_boundaries_must_be_marked": True,
+                "approximate_composites_must_explain_coverage_basis": True,
+                "navigation_mask_not_cadastral": True
+            }
+        },
         "rules": {
             "lat_range": [-90, 90],
             "lon_range": [-180, 180],

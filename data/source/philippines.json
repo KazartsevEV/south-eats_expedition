@@ -17,7 +17,8 @@
     ],
     "research_notes": [
       "Country-first migration from the existing Google Drive draft. Regional and object payloads remain queued and are intentionally not migrated in this phase.",
-      "Regional research profiles restored from the existing Google Drive draft; attraction object payloads remain deferred."
+      "Regional research profiles restored from the existing Google Drive draft; attraction object payloads remain deferred.",
+      "Regional QA pass 2026-09-30: deepened Ilocos/Vigan, Negros and Samar with UNESCO, PHIVOLCS and NCCA sources; added locally anchored ethnography, living heritage, volcanic geology and Waray cultural context without changing object payloads."
     ]
   },
   "overview": {
@@ -714,9 +715,10 @@
           ]
         },
         "culture": {
-          "summary": "UNESCO подчёркивает смешение местных, китайских, европейских и мексиканских влияний. Поэтому Виган следует описывать как гибридный торговый город, а не просто «испанский старый город».",
+          "summary": "UNESCO подчёркивает не только смешение местных, китайских, европейских и мексиканских влияний, но и продолжающуюся роль традиционных ремёсел и локального сообщества в сохранении города. В современной системе сохранения heritage houses участвуют владельцы домов, ремесленники и городские учреждения; jar-making и weaving поддерживаются как живые навыки, а не музейный декор.",
           "source_refs": [
-            "src_904050"
+            "src_904050",
+            "src_905116"
           ]
         },
         "transport": {
@@ -741,10 +743,23 @@
         "local_reference_provenance": {
           "source_refs": [
             "src_904050",
-            "src_904051"
+            "src_904051",
+            "src_905116"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
+        },
+        "ethnography": {
+          "summary": "Историческое ядро Вигана выросло как смешанный Ilocano–Chinese trading settlement. UNESCO отдельно отмечает Mestizo district и семьи смешанного китайско-илоканского происхождения; это конкретный городской социальный слой, а не универсальная характеристика всего Илокоса.",
+          "source_refs": [
+            "src_904050"
+          ]
+        },
+        "religion": {
+          "summary": "Католические институты входят в исходную планировочную структуру Вигана: главные площади связаны с собором и церковно-административными зданиями. На региональном уровне важно фиксировать эту роль религиозной инфраструктуры в городской форме, а конкретные храмы хранить отдельными объектами.",
+          "source_refs": [
+            "src_904050"
+          ]
         }
       },
       {
@@ -1040,10 +1055,29 @@
         "local_reference_provenance": {
           "source_refs": [
             "src_904057",
-            "src_904058"
+            "src_904058",
+            "src_905118"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
+        },
+        "ethnography": {
+          "summary": "Самар является ядром Waray-speaking cultural area. NCCA фиксирует Waray как основной язык острова, но также подчёркивает локальные различия и отдельные группы — например Abaknon на Capul, чей язык относится к Sama-related, а не к Waray. Поэтому этнографию региона нельзя сводить к одному языковому ярлыку.",
+          "source_refs": [
+            "src_905118"
+          ]
+        },
+        "culture": {
+          "summary": "NCCA описывает живые Waray культурные практики, тесно связанные с островной средой и локальными ремёслами. В Basey особенно важна традиция плетения tikog mats с орнаментами и сюжетами; Waray oral/literary tradition также сохраняется в песнях и поэзии. Эти факты должны привязываться к конкретным городам и communities.",
+          "source_refs": [
+            "src_905118"
+          ]
+        },
+        "history": {
+          "summary": "Региональная история Самара не исчерпывается военными сюжетами XX века. Для экспедиционного слоя важнее различать long-term Waray settlement, прибрежные и речные communities, а также отдельные исторические узлы вроде Basey и Capul; конкретные события и памятники должны храниться object-level.",
+          "source_refs": [
+            "src_905118"
+          ]
         }
       },
       {
@@ -1167,21 +1201,36 @@
           },
           "dominant_expedition_risks": [
             "горные дороги",
-            "вулканические advisories для активных массивов",
+            "вулканические advisories для Kanlaon и других активных массивов",
             "ливни и оползни",
             "морская погода на островных переходах"
           ],
           "source_refs": [
-            "src_904060"
+            "src_904060",
+            "src_905117"
           ]
         },
         "local_reference_provenance": {
           "source_refs": [
             "src_904060",
-            "src_904061"
+            "src_904061",
+            "src_905117"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
+        },
+        "relief": {
+          "summary": "Центральная ось Негроса образована вулканическими и горными массивами, разделяющими западное и восточное побережья. Kanlaon — главный активный вулкан этой системы; его состояние напрямую влияет на доступ к центральной части острова и на road planning между Negros Occidental и Negros Oriental.",
+          "source_refs": [
+            "src_905117",
+            "src_904060"
+          ]
+        },
+        "geology": {
+          "summary": "Kanlaon — активный вулкан центрального Негроса с документированной серией фреатических и взрывных извержений. PHIVOLCS ведёт отдельную eruption-history database и текущие alert levels; геология острова поэтому имеет прямое операционное значение, а не только ландшафтное.",
+          "source_refs": [
+            "src_905117"
+          ]
         }
       },
       {
@@ -2570,6 +2619,50 @@
         "community_management",
         "fisheries",
         "tourism"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_VIGAN_UNESCO_BEST_PRACTICE",
+      "canonical_id": "src_905116",
+      "publisher": "UNESCO World Heritage Centre — Historic City of Vigan, best-practice case study",
+      "url": "https://whc.unesco.org/en/list/502/bestpractice",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_culture",
+        "heritage_management",
+        "traditional_crafts",
+        "vigan"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_KANLAON_PHIVOLCS",
+      "canonical_id": "src_905117",
+      "publisher": "DOST-PHIVOLCS — Kanlaon Volcano eruption history and monitoring",
+      "url": "https://wovodat.phivolcs.dost.gov.ph/volcano/erupt-history?btn-search=&edate=&sdate=&volcan=565",
+      "kind": "government",
+      "used_for": [
+        "regional_geology",
+        "regional_relief",
+        "regional_safety",
+        "kanlaon",
+        "eruption_history"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_WARAY_NCCA",
+      "canonical_id": "src_905118",
+      "publisher": "National Commission for Culture and the Arts — Waray",
+      "url": "https://ncca.gov.ph/about-culture-and-arts/culture-profile/glimpses-peoples-of-the-philippines/waray/",
+      "kind": "government",
+      "used_for": [
+        "regional_ethnography",
+        "regional_culture",
+        "waray",
+        "basey",
+        "samar"
       ],
       "accessed": "2026-09-30"
     }

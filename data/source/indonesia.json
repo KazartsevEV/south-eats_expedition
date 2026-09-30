@@ -39,7 +39,8 @@
       "Regional QA pass 2026-09-30: deepened Gunung Leuser, Yogyakarta/Central Java and Banda with specific UNESCO and Indonesia Travel sources; replaced generic country-level heritage references with regional sources and separated forest gateways, cosmological/temple landscapes and spice-island logistics.",
       "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Indonesia; schema keys and official proper names remain unchanged.",
       "Regional QA pass 2026-09-30: deepened North Sumatra / Lake Toba / Samosir with official Indonesia Travel support; added gateway/ferry structure, Batak cultural landscape and missing transport/safety source_refs.",
-      "Regional QA pass 2026-09-30: deepened Bali and Flores/Komodo with UNESCO and Indonesia Travel sources; separated subak hydrology/culture, Bali transport, Flores road corridor, Labuan Bajo gateway and Komodo protected-area geography."
+      "Regional QA pass 2026-09-30: deepened Bali and Flores/Komodo with UNESCO and Indonesia Travel sources; separated subak hydrology/culture, Bali transport, Flores road corridor, Labuan Bajo gateway and Komodo protected-area geography.",
+      "Regional QA pass 2026-09-30: deepened West Sumatra / Sawahlunto with UNESCO Ombilin material; separated mining-city history, mountain railway, social/labour history and current regional transport."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -8157,7 +8158,10 @@
           ]
         },
         "relief": {
-          "summary": "Горный рельеф с крутыми дорогами, долинами и вулканическими массивами; Савахлунто окружён холмами."
+          "summary": "Западная Суматра пересечена хребтом Букит-Барисан; Савахлунто расположен в изолированной горной котловине, а историческая железная дорога Омбилина пересекает примерно 155 км сложного горного рельефа до побережья. Для региональной логистики это важнее абстрактного тезиса о «гористой местности».",
+          "source_refs": [
+            "src_903032"
+          ]
         },
         "geology": {
           "summary": "Регион связан с вулканической дугой Суматры и угленосными бассейнами, на которых сформировался Омбилинский горнопромышленный ландшафт.",
@@ -8169,7 +8173,9 @@
         "climate": {
           "summary": "Очень влажный экваториальный климат с осадками круглый год.",
           "field_context": "Горные дороги чувствительны к оползням после продолжительных ливней.",
-          "source_refs": []
+          "source_refs": [
+            "src_000721"
+          ]
         },
         "marine": {
           "forecast": "BMKG публикует оперативные прогнозы ветра, погоды и высоты волн по морским районам и портам.",
@@ -8211,7 +8217,10 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Паданг — главный транспортный вход; Савахлунто и горные районы требуют автомобильных маршрутов по серпантинам."
+          "summary": "Региональная транспортная история связана с железнодорожной системой Омбилин, построенной для вывоза угля через горный рельеф к побережью. Для современной поездки Padang, Bukittinggi и Sawahlunto требуют самостоятельных road/rail legs; историческую 155-км промышленную железную дорогу нельзя выдавать за текущий пассажирский маршрут.",
+          "source_refs": [
+            "src_903032"
+          ]
         },
         "ethnography": {
           "summary": "Западная Суматра — ядро культуры минангкабау с матрилинейными традициями и характерной архитектурой; городской промышленный Савахлунто имеет отдельную многоэтничную историю.",
@@ -8227,7 +8236,8 @@
             "src_903001",
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903032"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8241,7 +8251,11 @@
           },
           "poisonous_plants": {
             "status": "Надёжная локальная привязка токсичных растений к этому узлу пока не подтверждена отдельным источником; общестрановой список не переносится автоматически."
-          }
+          },
+          "summary": "Природный слой региона определяется горными лесами, вулканическими массивами и прибрежными экосистемами, но Савахлунто прежде всего индустриально-исторический узел. Локальную фауну и природные риски нужно привязывать к конкретным protected areas и маршрутам, а не к mining landscape целиком.",
+          "source_refs": [
+            "src_903006"
+          ]
         },
         "natural_hazards": {
           "hazards": [
@@ -8256,7 +8270,25 @@
           ],
           "checked_at": "2026-09-30"
         },
-        "narrow": "Западная Суматра соединяет вулканический хребет Букит-Барисан, культуру минангкабау и промышленный ландшафт Савахлунто во внутренней горной котловине. Угленосный бассейн Омбилин и горная география здесь так же важны, как матрилинейные традиции и характерная архитектура."
+        "narrow": "Западная Суматра соединяет вулканический хребет Букит-Барисан, культуру минангкабау и промышленный ландшафт Савахлунто во внутренней горной котловине. Угленосный бассейн Омбилин и горная география здесь так же важны, как матрилинейные традиции и характерная архитектура.",
+        "history": {
+          "summary": "Савахлунто развивался с конца XIX века как специализированный угледобывающий город в составе интегрированной колониальной системы Омбилин. UNESCO описывает её как связку шахт, обогатительных объектов, planned company town, горной железной дороги и порта Emmahaven, а не как один промышленный памятник.",
+          "source_refs": [
+            "src_903032"
+          ]
+        },
+        "architecture": {
+          "summary": "Городская среда Савахлунто формировалась как purpose-built mining town с производственными, административными, жилыми, образовательными и социальными объектами. Конкретные здания должны храниться как отдельные object entities, но региональная карточка фиксирует их принадлежность к единой промышленной системе.",
+          "source_refs": [
+            "src_903032"
+          ]
+        },
+        "culture": {
+          "summary": "Промышленный ландшафт Омбилина отражает взаимодействие европейской инженерии, местных практик и многоэтничной рабочей среды: Minangkabau, Javanese, Chinese contract workers и convict labourers orang rantai. Это социальная история индустриализации, а не декоративный «колониальный стиль».",
+          "source_refs": [
+            "src_903032"
+          ]
+        }
       },
       {
         "name": "Toraja / South Sulawesi",
@@ -10025,6 +10057,23 @@
         "regional_ethnography",
         "regional_culture",
         "komodo"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_OMBILIN_SAWAHLUNTO_UNESCO",
+      "canonical_id": "src_903032",
+      "publisher": "UNESCO World Heritage Centre — Ombilin Coal Mining Heritage of Sawahlunto",
+      "url": "https://whc.unesco.org/en/list/1610/",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_relief",
+        "regional_history",
+        "regional_architecture",
+        "regional_culture",
+        "regional_transport",
+        "sawahlunto",
+        "ombilin"
       ],
       "accessed": "2026-09-30"
     }

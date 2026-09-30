@@ -28,7 +28,8 @@
       "2026-09-30 second QA pass: normalized country-facing nature/safety Russian and added regional fauna, dangerous animals, poisonous plants and natural hazards for all Laos regional nodes. Marine-life field intentionally omitted because Laos is landlocked; aquatic fauna is used where river ecology is relevant. Attraction cards unchanged.",
       "Regional QA pass 2026-09-30: deepened Vang Vieng / Vientiane Province and Phongsaly highlands with official Tourism Laos sources; added locally sourced transport, community-management, ethnography and tea-landscape detail.",
       "Regional QA pass 2026-09-30: deepened Xieng Khouang, Houaphanh/Viengxay/Nam Et–Phou Louey and Luang Namtha/Nam Ha with UNESCO, Tourism Laos and national-park sources; separated archaeology, UXO, cave history, protected-area access and village ethnography.",
-      "Regional QA pass 2026-09-30: deepened Savannakhet with official Tourism Laos material; separated river/transborder geography, Route 9 logistics, archaeology, religious sites and ethnic/craft traditions."
+      "Regional QA pass 2026-09-30: deepened Savannakhet with official Tourism Laos material; separated river/transborder geography, Route 9 logistics, archaeology, religious sites and ethnic/craft traditions.",
+      "Regional QA pass 2026-09-30: deepened Vientiane Capital, Khammouane/Kong Lor, Luang Prabang/Nam Ou and Champasak/Si Phan Don/Bolaven with specific Tourism Laos and UNESCO sources; added locally supported relief, karst/hydrology, urban/cultural landscape and highland logistics."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -392,14 +393,18 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Луангпхабанг / север долины Нам-У",
         "geography": {
-          "summary": "Речной культурный ландшафт в месте слияния Меконга и Нам-Кхана; севернее долина Нам-У прорезает известняковые и горные массивы.",
+          "summary": "Луангпхабанг расположен на полуострове между Меконгом и Nam Khan в окружении гор. Севернее городской котловины начинается более крутой карстовый и речной ландшафт Nam Ou, где Nong Khiaw и Muang Ngoi образуют самостоятельные узлы, а не продолжение городского центра.",
           "source_refs": [
             "src_000497",
-            "src_902001"
+            "src_902001",
+            "src_902015"
           ]
         },
         "relief": {
-          "summary": "Луангпхабанг лежит в речной долине, окружённой холмами; к северу рельеф становится более крутым и карстовым."
+          "summary": "UNESCO подчёркивает горное окружение Луангпхабанга; сам город лежит в речной долине, а севернее рельеф быстро становится более крутым и карстовым. Это объясняет разницу между городскими пешими маршрутами и длинными дорожными/речными legs долины Nam Ou.",
+          "source_refs": [
+            "src_902015"
+          ]
         },
         "climate": {
           "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -467,9 +472,10 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Город связан дорогами, железной дорогой и речными маршрутами; северные долины требуют комбинации дороги, лодки и пеших участков.",
+          "summary": "Luang Prabang — городской, железнодорожный и воздушный hub. Nong Khiaw, Muang Ngoi, Pak Ou и Kuang Si требуют разных road/boat legs; северную Nam Ou нельзя описывать одной городской точкой доступа.",
           "source_refs": [
-            "src_902001"
+            "src_902001",
+            "src_902015"
           ]
         },
         "ethnography": {
@@ -488,7 +494,8 @@
             "src_000498",
             "src_000732",
             "src_902003",
-            "src_000500"
+            "src_000500",
+            "src_902015"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -506,6 +513,18 @@
             "src_902001"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Луангпхабанг был столицей Lan Xang в XIV–XVI веках и сохраняет уникальную смесь традиционной лаосской архитектуры и европейской колониальной застройки XIX–XX веков. Северная долина Nam Ou относится к иной региональной истории и не должна сливаться с urban heritage города.",
+          "source_refs": [
+            "src_902015"
+          ]
+        },
+        "culture": {
+          "summary": "Город остаётся живым религиозным центром с монастырями, процессиями и повседневной буддийской практикой. UNESCO подчёркивает именно сочетание материального городского наследия и продолжающихся культурных традиций, а не музейную консервацию.",
+          "source_refs": [
+            "src_902015"
+          ]
         }
       },
       {
@@ -789,17 +808,26 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Чампасак / Си-Фан-Дон / Болавен",
         "geography": {
-          "summary": "Южный узел соединяет долину Меконга, островную систему Си-Фан-Дон и приподнятое плато Болавен.",
+          "summary": "Южный регион объединяет три резко разных ландшафта: долину Меконга и Champasak Plain, островную систему Si Phan Don и поднятое Bolaven Plateau. Pakse — главный сервисный hub, но Vat Phou, Don Det/Don Khon и plateau waterfalls требуют независимых road/boat loops.",
           "source_refs": [
             "src_000497",
-            "src_902001"
+            "src_902001",
+            "src_902016",
+            "src_902017"
           ]
         },
         "relief": {
-          "summary": "От низкой поймы Меконга рельеф резко поднимается к плато Болавен; это создаёт выраженный климатический и растительный градиент."
+          "summary": "От низкой поймы Меконга рельеф поднимается к Bolaven Plateau выше 1 500 м; UNESCO отдельно описывает ось Vat Phou от Mekong riverbank к Phou Kao mountain. Поэтому внутри одного региона соседствуют почти плоские речные острова и прохладное высокое плато.",
+          "source_refs": [
+            "src_902016",
+            "src_902017"
+          ]
         },
         "geology": {
-          "summary": "Водопады и пороги юга связаны с уступами и базальтовыми/вулканическими поверхностями плато; детальную литологию фиксировать только по профильным источникам."
+          "summary": "Tourism Laos прямо характеризует Bolaven как высокое плато с богатыми вулканическими почвами. На уровне региона фиксируем этот volcanic-soil context; литологию отдельных водопадов и уступов без профильного геологического источника не детализируем.",
+          "source_refs": [
+            "src_902017"
+          ]
         },
         "climate": {
           "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -870,9 +898,10 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Паксе — главный узел; Си-Фан-Дон требует сочетания дороги и лодки, Болавен — дорожных и пеших маршрутов.",
+          "summary": "Pakse — главный gateway. Vat Phou требует отдельного southbound road leg, Si Phan Don — road + boat combination, Bolaven — отдельный highland loop по Route E16/локальным дорогам. Эти три схемы нельзя хранить одним regional access.",
           "source_refs": [
-            "src_902001"
+            "src_902001",
+            "src_902017"
           ]
         },
         "ethnography": {
@@ -891,7 +920,9 @@
             "src_000498",
             "src_000732",
             "src_902003",
-            "src_000500"
+            "src_000500",
+            "src_902016",
+            "src_902017"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -911,6 +942,20 @@
             "src_902001"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Vat Phou и связанные древние поселения формируют плановый культурный ландшафт V–XV веков, главным образом связанный с Кхмерской империей. Si Phan Don и Bolaven имеют иные исторические траектории, поэтому temple landscape нельзя переносить на весь юг Лаоса.",
+          "source_refs": [
+            "src_902016"
+          ]
+        },
+        "culture": {
+          "summary": "UNESCO рассматривает Vat Phou как сакральный ландшафт, где храмы, водные сооружения, древние города, Mekong и Phou Kao связаны единой индуистской космологической осью. На Bolaven этнокультурный слой другой — Laven, Alak, Katu и другие мон-кхмерские communities.",
+          "source_refs": [
+            "src_902016",
+            "src_902017",
+            "src_000732"
+          ]
         }
       },
       {
@@ -1074,15 +1119,21 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Кхаммуан / Конг-Лор",
         "geography": {
-          "summary": "Центральнолаосская карстовая область между Меконгом и Аннамскими горами; известняковые массивы прорезаны подземными и поверхностными реками."
+          "summary": "Кхаммуан тянется от долины Меконга на западе к Аннамитским горам у границы с Вьетнамом. Между ними лежит крупный известняковый карстовый пояс с Phou Hin Poun, Hin Nam No и системой пещер; Thakhek, Ban Khoun Kham и Kong Lor — разные сервисные узлы.",
+          "source_refs": [
+            "src_902014"
+          ]
         },
         "relief": {
-          "summary": "Резкий карстовый рельеф с башнями, закрытыми долинами и пещерными системами."
+          "summary": "Запад региона — более низкая долина Меконга, центральная часть занята известняковыми массивами и карстовыми плато, восток поднимается к Аннамитам. Поэтому дорожные времена резко меняются даже при небольших расстояниях по карте.",
+          "source_refs": [
+            "src_902014"
+          ]
         },
         "geology": {
-          "summary": "Хин-Нам-Но и Пху-Хин-Пун — ключевые известняковые карстовые районы страны.",
+          "summary": "Главная геологическая особенность региона — мощный известняковый карст с многочисленными пещерами. Tourism Laos отдельно описывает Phou Hin Poun и Hin Nam No как limestone landscapes; Kong Lor — 7,5-километровый тоннель, сформированный рекой Hinboun.",
           "source_refs": [
-            "src_000505"
+            "src_902014"
           ]
         },
         "climate": {
@@ -1094,12 +1145,17 @@
           ]
         },
         "hydrology": {
-          "summary": "Пещерные реки и карстовый сток — центральный фактор маршрута; уровень воды в Конг-Лоре определяет возможность лодочного прохождения."
+          "summary": "Hinboun River проходит через Kong Lor Cave и сохраняет проток круглый год. Уровень воды влияет на лодочный проход внутри пещеры и на отдельные river access points; конкретное состояние нужно проверять локально перед маршрутом.",
+          "source_refs": [
+            "src_902014",
+            "src_902003"
+          ]
         },
         "nature": {
           "summary": "Официальная система охраняемых территорий включает Хин-Нам-Но и Пху-Хин-Пун с карстовыми лесами и пещерами.",
           "source_refs": [
-            "src_000505"
+            "src_000505",
+            "src_902014"
           ],
           "dangerous_animals": {
             "status": "Ядовитые змеи и комары являются общестрановыми рисками, но точную локальную встречаемость видов необходимо подтверждать отдельно.",
@@ -1143,9 +1199,10 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Тхакхэк — базовый дорожный узел; пещерные районы требуют дороги/мопеда и лодки, а последний участок часто пеший.",
+          "summary": "Thakhek — главный западный городской hub. Kong Lor обычно достигается через Ban Khoun Kham и отдельный road leg, альтернативно возможен более длинный речной подход. Пещерный проход затем требует отдельной boat leg; это не единая «дорога в Конг-Лор».",
           "source_refs": [
-            "src_000505"
+            "src_000505",
+            "src_902014"
           ]
         },
         "ethnography": {
@@ -1162,7 +1219,8 @@
             "src_000498",
             "src_000732",
             "src_902003",
-            "src_000500"
+            "src_000500",
+            "src_902014"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -1488,13 +1546,17 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Вьентьян",
         "geography": {
-          "summary": "Столица лежит на низкой левобережной террасе Меконга напротив Таиланда; городской ландшафт плоский и растянутый.",
+          "summary": "Вьентьян расположен на изгибе Меконга в широкой аллювиальной низменности. Городская структура растянута вдоль реки и включает старый храмовый центр, административные районы, ремесленные кварталы и периферийные поселения; одна точка «центр Вьентьяна» не описывает всю столицу.",
           "source_refs": [
+            "src_902013",
             "src_902001"
           ]
         },
         "relief": {
-          "summary": "Преимущественно ровная речная равнина; значительных естественных перепадов высоты в центральной части нет."
+          "summary": "Столица лежит почти полностью на плоской речной равнине, поэтому значительные естественные перепады высоты для городских маршрутов нехарактерны. Основной рельефный фактор — низкие пойменные участки и удаление от Меконга.",
+          "source_refs": [
+            "src_902013"
+          ]
         },
         "climate": {
           "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -1530,9 +1592,10 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Городские перемещения строятся на автобусах, тук-туках, такси/сервисах заказа машины, велосипеде и пеших связках.",
+          "summary": "Городские перемещения строятся на автобусах, тук-туках, такси/ride-hailing, велосипеде и пеших связках; внешние railway/border/airport gateways находятся в разных частях агломерации и должны храниться отдельными transport entities.",
           "source_refs": [
-            "src_902001"
+            "src_902001",
+            "src_902013"
           ]
         },
         "ethnography": {
@@ -1548,7 +1611,8 @@
             "src_902002",
             "src_000732",
             "src_902003",
-            "src_000500"
+            "src_000500",
+            "src_902013"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -1581,6 +1645,18 @@
             "src_902001"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Официальный Tourism Laos связывает развитие Вьентьяна с плодородной аллювиальной равниной Меконга и указывает, что город стал столицей Лаоса в середине XVI века. Историю отдельных храмов и памятников нужно хранить на уровне объектов, а не повторять в региональной карточке.",
+          "source_refs": [
+            "src_902013"
+          ]
+        },
+        "culture": {
+          "summary": "Вьентьян сохраняет действующую религиозную и ремесленную среду: That Luang, Wat Sisaket, Wat Si Muang и другие храмы остаются частью повседневной практики, а городские рынки и ремесленные центры поддерживают современный культурный слой столицы.",
+          "source_refs": [
+            "src_902013"
+          ]
         }
       },
       {
@@ -9568,6 +9644,85 @@
         "regional_religion",
         "regional_ethnography",
         "regional_transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_VIENTIANE_CAPITAL_TOURISM",
+      "canonical_id": "src_902013",
+      "publisher": "Tourism Laos — Vientiane Capital",
+      "url": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_history",
+        "regional_culture",
+        "regional_transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_KHAMMOUANE_TOURISM",
+      "canonical_id": "src_902014",
+      "publisher": "Tourism Laos — Khammouane Province",
+      "url": "https://www.tourismlaos.org/central-provinces/khammouane-province/",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_geology",
+        "regional_hydrology",
+        "kong_lor",
+        "regional_transport",
+        "regional_nature"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_LUANG_PRABANG_UNESCO",
+      "canonical_id": "src_902015",
+      "publisher": "UNESCO World Heritage Centre — Town of Luang Prabang",
+      "url": "https://whc.unesco.org/en/list/479",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_history",
+        "regional_culture",
+        "luang_prabang"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_VAT_PHOU_UNESCO",
+      "canonical_id": "src_902016",
+      "publisher": "UNESCO World Heritage Centre — Vat Phou and Associated Ancient Settlements within the Champasak Cultural Landscape",
+      "url": "https://whc.unesco.org/en/list/481",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_history",
+        "regional_culture",
+        "vat_phou",
+        "champasak"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_CHAMPASAK_TOURISM",
+      "canonical_id": "src_902017",
+      "publisher": "Tourism Laos — Champasak Province",
+      "url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_geology",
+        "bolaven",
+        "regional_transport",
+        "regional_culture"
       ],
       "accessed": "2026-09-30"
     }

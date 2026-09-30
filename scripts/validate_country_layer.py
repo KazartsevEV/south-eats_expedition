@@ -76,14 +76,23 @@ def validate_geojson_coordinates(value, label):
     for child in value:
         validate_geojson_coordinates(child, label)
 
-def validate_node_geometry(code, node, known_source_ids):
+def validate_geometry_doc(code, geo_id, doc):
+    if doc.get("type") != "FeatureCollection" or not (doc.get("features") or []):
+        fail(f"{code}: geometry for {geo_id} must be a non-empty FeatureCollection")
+    for index, feature in enumerate(doc.get("features") or []):
+        geometry = (feature or {}).get("geometry") or {}
+        if geometry.get("type") not in {"Polygon", "MultiPolygon"}:
+            fail(f"{code}: geometry {geo_id} feature {index} must be Polygon/MultiPolygon")
+        validate_geojson_coordinates(
+            geometry.get("coordinates"),
+            f"{code}: geometry {geo_id} feature {index}",
+        )
+
+def validate_node_geometry(code, node, known_source_ids, known_geo_ids):
     geometry_meta = node.get("geometry") or {}
     if geometry_meta.get("status") != "available":
         return False
     geo_id = node.get("canonical_id")
-    path = GEO_NODES / f"{geo_id}.geojson"
-    if not path.exists():
-        fail(f"{code}: geo node {node.get('id')!r} declares geometry but file is missing: {path}")
     if not geometry_meta.get("source_refs") or not geometry_meta.get("checked_at"):
         fail(f"{code}: geo node {node.get('id')!r} has incomplete geometry provenance")
     unknown = sorted(set(geometry_meta.get("source_refs") or []) - known_source_ids)
@@ -93,17 +102,22 @@ def validate_node_geometry(code, node, known_source_ids):
         geometry_meta.get("coverage_basis") or geometry_meta.get("note")
     ):
         fail(f"{code}: approximate geo node {node.get('id')!r} lacks coverage_basis/note")
-    doc = load(path)
-    if doc.get("type") != "FeatureCollection" or not (doc.get("features") or []):
-        fail(f"{code}: geometry file for {geo_id} must be a non-empty FeatureCollection")
-    for index, feature in enumerate(doc.get("features") or []):
-        geometry = (feature or {}).get("geometry") or {}
-        if geometry.get("type") not in {"Polygon", "MultiPolygon"}:
-            fail(f"{code}: geometry {geo_id} feature {index} must be Polygon/MultiPolygon")
-        validate_geojson_coordinates(
-            geometry.get("coordinates"),
-            f"{code}: geometry {geo_id} feature {index}",
-        )
+
+    path = GEO_NODES / f"{geo_id}.geojson"
+    if path.exists():
+        validate_geometry_doc(code, geo_id, load(path))
+        return True
+
+    basis = geometry_meta.get("coverage_basis") or []
+    if not basis:
+        fail(f"{code}: geo node {node.get('id')!r} declares geometry but has neither file nor coverage_basis")
+    for basis_geo_id in basis:
+        if basis_geo_id not in known_geo_ids:
+            fail(f"{code}: geo node {node.get('id')!r} references unknown geometry basis {basis_geo_id}")
+        basis_path = GEO_NODES / f"{basis_geo_id}.geojson"
+        if not basis_path.exists():
+            fail(f"{code}: geo node {node.get('id')!r} basis file is missing: {basis_path}")
+        validate_geometry_doc(code, basis_geo_id, load(basis_path))
     return True
 
 registry = load(REGISTRY)
@@ -256,9 +270,12 @@ for code, slug in COUNTRIES.items():
         geometry_known_sources = set(canonical_source_ids)
         if hierarchy_meta.get("canonical_source_id"):
             geometry_known_sources.add(hierarchy_meta.get("canonical_source_id"))
-        if validate_node_geometry(code, node, geometry_known_sources):
+        if validate_node_geometry(code, node, geometry_known_sources, set(canonical_ids)):
             geometry_nodes += 1
         legacy_region_names.update(node.get("legacy_region_names") or [])
+
+    if code == "PH" and geometry_nodes != len(nodes):
+        fail(f"{code}: every published geo node must have validated geometry: {geometry_nodes}/{len(nodes)}")
 
     for region in regions:
         for field in REGIONAL_REQUIRED_FIELDS:

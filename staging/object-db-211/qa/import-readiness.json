@@ -106,17 +106,13 @@
       "objects": 19,
       "structural": "passed",
       "factual_qa": {
-        "passed": 1,
-        "incomplete": 18,
+        "passed": 2,
+        "incomplete": 17,
         "missing": {
-          "geo": 4,
-          "coordinates": 4,
-          "elevation": 11,
-          "access": 4,
-          "water": 9,
-          "overnight": 15,
-          "traveler_reports": 8,
-          "visual_recon": 4
+          "elevation": 8,
+          "water": 6,
+          "overnight": 14,
+          "traveler_reports": 4
         }
       }
     },
@@ -198,5 +194,5 @@
     }
   },
   "pending_full_rebuild": [],
-  "note": "Do not import until every hard guard required for structural safety is true. PH factual enrichment is complete through obj_ph_0015; full build/validate guards remain false until staging is integrated and the repository validation pipeline is run."
+  "note": "Do not import until every hard guard required for structural safety is true. PH first-pass factual enrichment now covers all 19 cards; residual QA gaps remain. Full build/validate guards remain false because the staging layer has not been integrated and the repository validation pipeline has not run."
 }

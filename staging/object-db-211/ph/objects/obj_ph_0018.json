@@ -4,10 +4,11 @@
   "slug": "mayon-volcano",
   "status": "migration_draft",
   "names": {
-    "primary": "Mayon Volcano"
+    "primary": "Вулкан Майон",
+    "en": "Mayon Volcano"
   },
   "summary": {
-    "narrow": "Идеальный вулканический конус Mayon плюс Cagsawa ruins дают один из самых сильных вулканико-культурных кадров страны — но только из разрешённых внешних точек обзора."
+    "narrow": "Майон — активный стратовулкан Албая высотой 2462 м, известный почти симметричным конусом. На 30 сентября 2026 действует Alert Level 2: вход в 6‑км Permanent Danger Zone запрещён, поэтому экспедиционная карточка привязана к внешним точкам наблюдения, прежде всего Cagsawa Ruins."
   },
   "classification": {
     "class_id": "nature.volcano",
@@ -21,150 +22,262 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
-    "nearest_place_id": null,
+    "region_ids": [
+      "geo_ph_0008",
+      "geo_ph_0033",
+      "geo_ph_0050"
+    ],
+    "nearest_place_id": "geo_ph_0067",
     "nearest_place_name_raw": "Legazpi / Daraga",
     "primary_location": {
-      "lat": null,
-      "lon": null,
-      "elevation_m": null,
-      "elevation_range_m": null,
-      "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "lat": 13.257,
+      "lon": 123.685,
+      "elevation_m": 2462,
+      "coordinate_type": "summit",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_ph_0153"
+      ],
+      "elevation_source_refs": [
+        "src_stage_ph_0153"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Smithsonian GVP summit reference; not an access point. Entry into the current 6-km PDZ is prohibited."
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 13.16606,
+        "lon": 123.70105,
+        "elevation_m": null,
+        "coordinate_type": "viewpoint",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0156"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Cagsawa Ruins — external cultural/volcano viewpoint."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Идеальный вулканический конус Mayon плюс Cagsawa ruins дают один из самых сильных вулканико-культурных кадров страны — но только из разрешённых внешних точек обзора.",
+        "text": "Майон — активный стратовулкан Албая высотой 2462 м, известный почти симметричным конусом. На 30 сентября 2026 действует Alert Level 2: вход в 6‑км Permanent Danger Zone запрещён, поэтому экспедиционная карточка привязана к внешним точкам наблюдения, прежде всего Cagsawa Ruins.",
         "source_refs": [
-          "src_stage_ph_0045",
-          "src_stage_ph_0046",
-          "src_stage_ph_0003",
-          "src_stage_ph_0047"
+          "src_stage_ph_0152",
+          "src_stage_ph_0153"
+        ]
+      },
+      {
+        "type": "geology",
+        "text": "Smithsonian GVP даёт вершину 2462 м и координаты 13.257° N, 123.685° E. Современный конус — результат многократных извержений активного стратовулкана; PHIVOLCS на текущем уровне отдельно предупреждает о внезапных phreatic eruptions, rockfalls/landslides и лахарах при сильном длительном дожде.",
+        "source_refs": [
+          "src_stage_ph_0152",
+          "src_stage_ph_0153"
+        ]
+      },
+      {
+        "type": "history",
+        "text": "Извержение 1814 года уничтожило поселения вокруг вулкана и похоронило церковь Cagsaua; сохранившаяся колокольня стала главным культурным контрапунктом к конусу Майона. National Museum указывает более 50 зарегистрированных извержений с XVII века.",
+        "source_refs": [
+          "src_stage_ph_0154",
+          "src_stage_ph_0155"
         ]
       }
     ]
   },
   "visit": {
     "entry": {
-      "access_status": "restricted_volcanic_hazard",
+      "access_status": "external_viewpoints_only_current_pdz_restricted",
       "fee": {
         "amount": null,
         "currency": null,
         "pricing_basis": null,
-        "description": "Viewpoint/park fees зависят от конкретной точки; PHIVOLCS safety restriction бесплатна и обязательна.",
+        "description": "Сборы зависят от конкретной внешней точки/парка; запрет на вход в 6-км PDZ обязателен и не снимается покупкой тура.",
         "source_refs": [
-          "src_stage_ph_0045",
-          "src_stage_ph_0046",
-          "src_stage_ph_0003",
-          "src_stage_ph_0047"
+          "src_stage_ph_0152"
         ],
-        "checked_at": "2026-09-28"
+        "checked_at": "2026-09-30"
       },
       "hours": {
-        "value": "Внешние viewpoints имеют собственные часы; вулканическая зона регулируется alert level, не обычным графиком.",
+        "value": "Внешние viewpoints имеют собственный режим; вулканическая опасная зона регулируется alert level, а не туристическим графиком.",
         "source_refs": [
-          "src_stage_ph_0045",
-          "src_stage_ph_0046",
-          "src_stage_ph_0003",
-          "src_stage_ph_0047"
+          "src_stage_ph_0152"
         ],
-        "checked_at": "2026-09-28"
+        "checked_at": "2026-09-30"
       },
       "permit_required": null,
       "source_refs": [
-        "src_stage_ph_0045",
-        "src_stage_ph_0046",
-        "src_stage_ph_0003",
-        "src_stage_ph_0047"
+        "src_stage_ph_0152"
       ],
-      "checked_at": "2026-09-28",
-      "official_url": "https://volcano.phivolcs.dost.gov.ph/bulletin/activity-mvo?bid=16810&lang=en",
-      "closure_notes": "25 Sep 2026: Alert Level 2; вход в 6-km Permanent Danger Zone не допускается.",
-      "notes": "Просмотр из Legazpi/Daraga, Cagsawa и других разрешённых внешних точек; вход в PDZ не является туристическим маршрутом."
+      "checked_at": "2026-09-30",
+      "official_url": "https://wovodat.phivolcs.dost.gov.ph/bulletin/activity-mvo?bid=16830&lang=en",
+      "closure_notes": "30 сентября 2026: Alert Level 2. Вход в 6-км PDZ и полёты aircraft close to volcano не допускаются.",
+      "notes": "Для самостоятельного посещения использовать Cagsawa/Daraga/Legazpi и другие официально доступные внешние точки; не планировать подъём на вулкан."
     },
     "access_options": [
       {
-        "id": "access_01",
-        "origin_place_id": null,
+        "id": "access_legazpi_cagsawa",
+        "origin_place_id": "geo_ph_0067",
+        "origin_raw": "Legazpi → Cagsawa Ruins",
         "modes": [
-          "other"
+          "public_transport",
+          "walking"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Просмотр из Legazpi/Daraga, Cagsawa и других разрешённых внешних точек; вход в PDZ не является туристическим маршрутом."
+            "notes": "В апреле 2026 местный ответ подтверждал jeep или bus из Legazpi в направлении Cagsawa/Daraga; водителю нужно сказать Cagsawa."
+          },
+          {
+            "mode": "walking",
+            "distance_km": null,
+            "duration_min": null,
+            "notes": "После высадки на highway остаётся пеший подход к ruins; точная дистанция в надёжном источнике не нормализована."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0157"
+        ]
+      },
+      {
+        "id": "access_ride_hailing_recent",
+        "origin_place_id": "geo_ph_0067",
+        "origin_raw": "Legazpi / Daraga",
+        "modes": [
+          "taxi"
+        ],
+        "legs": [
+          {
+            "mode": "taxi",
+            "distance_km": null,
+            "duration_min": null,
+            "notes": "В обсуждении 27 сентября 2026 пользователи подтверждали, что daytime Grab до Daraga/Cagsawa обычно доступен; ночью доступность не гарантирована."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0158"
         ]
       }
     ],
     "water": {
-      "summary": null,
+      "summary": "У Cagsawa Ruins картографически подтверждены коммерческие souvenir/refreshment точки. Это полезный supply node перед осмотром; природного питьевого источника у вулкана карточка не подтверждает.",
       "quality": "unknown",
-      "last_reliable_source": null,
+      "last_reliable_source": "Cagsawa visitor area commercial refreshment points",
       "distance_m": null,
       "natural_sources": [],
-      "source_refs": []
+      "source_refs": [
+        "src_stage_ph_0156"
+      ]
     },
-    "supplies": null,
+    "supplies": "В visitor area Cagsawa есть коммерческие точки и рядом National Museum — Bicol Regional Museum.",
     "overnight": {
-      "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "status": "prohibited",
+      "summary": "В 6-км PDZ вход запрещён, поэтому ночёвка/лагерь внутри опасной зоны не являются допустимым вариантом. Жильё следует искать вне PDZ в Legazpi/Daraga и нормализовать отдельным lodging-слоем.",
+      "source_refs": [
+        "src_stage_ph_0152"
+      ]
     },
     "lodging_ids": [],
     "rules": {
-      "permit_or_guide": null,
-      "access_requirements": null,
+      "permit_or_guide": "Гид не обязателен для доступных внешних viewpoints; никакой гид не превращает PDZ в разрешённый туристический маршрут.",
+      "access_requirements": "Следить за свежим PHIVOLCS bulletin и лахаровым риском после сильных дождей.",
       "source_refs": [
-        "src_stage_ph_0045",
-        "src_stage_ph_0046",
-        "src_stage_ph_0003",
-        "src_stage_ph_0047"
+        "src_stage_ph_0152"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-30"
     },
     "seasonality": {
-      "best_period": "Для чистых видов Mayon чаще полезны ранние утра; статус вулкана проверять непосредственно перед поездкой.",
-      "heat_rain_notes": "Влажный тропический климат с тайфунным риском; вулканическая опасность контролируется PHIVOLCS.",
-      "site_specific_notes": null
+      "best_period": null,
+      "heat_rain_notes": "Облачность часто закрывает конус, а сильный длительный дождь повышает лахаровую опасность.",
+      "site_specific_notes": "Вулканический alert level проверять непосредственно перед выездом."
     }
   },
-  "traveler_reports": [],
+  "traveler_reports": [
+    {
+      "topic": "public_transport",
+      "summary": "В апреле 2026 местные участники описывали commute Legazpi→Cagsawa на jeep/bus с высадкой у поворота и последующим пешим участком.",
+      "observed_period": "2026-04",
+      "source_refs": [
+        "src_stage_ph_0157"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "ride_hailing",
+      "summary": "27 сентября 2026 в локальном обсуждении Grab до Daraga/Cagsawa описывался как обычно доступный днём; ночью уверенности не было.",
+      "observed_period": "2026-09",
+      "source_refs": [
+        "src_stage_ph_0158"
+      ],
+      "confidence": "low"
+    }
+  ],
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
-    "best_time": "рассвет — выше шанс чистого конуса и мягкий свет",
-    "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "best_time": null,
+    "best_weather_light": "Главный фактор — отсутствие облачной шапки на конусе; конкретное время не гарантирует открытый Mayon.",
+    "viewpoints": [
+      {
+        "id": "vp_cagsawa_ruins",
+        "name": "Cagsawa Ruins",
+        "description": "Колокольня руин даёт исторический передний план на конус Майона из внешней разрешённой зоны.",
+        "coordinates": {
+          "lat": 13.16606,
+          "lon": 123.70105,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "13.166060, 123.701050"
+        },
+        "access": null,
+        "view": {
+          "description": "Колокольня руин даёт исторический передний план на конус Майона из внешней разрешённой зоны."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "standard",
+            "why": "для связки колокольни и вулкана без чрезмерного расширения перспективы"
+          },
+          {
+            "type": "telephoto",
+            "why": "для сжатия планов и деталей вулканического склона с безопасной дистанции"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0154",
+          "src_stage_ph_0155",
+          "src_stage_ph_0156"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "После сильных дождей важен не визуальный эффект, а возможный лахаровый риск; облачность может полностью скрывать вершину."
+    ],
+    "video_activity": [
+      "облака и паровой шлейф над конусом с разрешённой внешней точки",
+      "пешеходное движение по Cagsawa heritage site"
+    ],
     "useful_equipment": [],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "PHIVOLCS прямо запрещает полёты aircraft close to volcano при текущем alert; дрон возле вулкана не использовать."
+        "PHIVOLCS на 30 сентября 2026 не допускает полёты aircraft close to Mayon; обычный доступ к Cagsawa не является разрешением на дрон возле вулкана."
       ],
       "source_refs": [
-        "src_stage_ph_0045",
-        "src_stage_ph_0046",
-        "src_stage_ph_0003",
-        "src_stage_ph_0047"
+        "src_stage_ph_0152"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-30"
     },
-    "filming_restrictions": "Снимать только из разрешённых зон; не пересекать PDZ ради кадра."
+    "filming_restrictions": "Не пересекать 6-км PDZ ради съёмки; в museum/heritage zones соблюдать локальные правила."
   },
   "media": {
     "cover_id": null,
@@ -178,30 +291,33 @@
     "legacy_order": 18
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
-      "src_stage_ph_0045",
-      "src_stage_ph_0046",
-      "src_stage_ph_0003",
-      "src_stage_ph_0047"
+      "src_stage_ph_0152",
+      "src_stage_ph_0153",
+      "src_stage_ph_0154",
+      "src_stage_ph_0155",
+      "src_stage_ph_0156",
+      "src_stage_ph_0157",
+      "src_stage_ph_0158"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
-      "elevation": false,
+      "geo": true,
+      "coordinates": true,
+      "elevation": true,
       "narrative": true,
       "sources": true,
-      "access": false,
-      "water": false,
-      "overnight": false,
-      "traveler_reports": false,
-      "visual_recon": false
+      "access": true,
+      "water": true,
+      "overnight": true,
+      "traveler_reports": true,
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

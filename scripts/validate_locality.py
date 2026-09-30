@@ -19,8 +19,9 @@ LOCAL_CLIMATE_KEYS = {
     "tides",
     "marine",
 }
-REGION_REQUIRED_KEYS = ("geography", "climate", "health", "safety", "transport")
-LOCALITY_REQUIRED_KEYS = ("geography", "climate", "transport", "primary_location")
+REGION_REQUIRED_KEYS = ("geography", "climate", "transport")
+LOCALITY_REQUIRED_KEYS = ()
+VALID_COVERAGE_ROLES = {"structural", "regional_profile", "locality_profile"}
 
 
 def load(path: Path):
@@ -94,18 +95,39 @@ for row in geo_index.get("entities", []):
         continue
 
     entity = load(release / row["path"])
-    country_id = f"geo_{code}"
-    is_region = entity.get("parent_id") == country_id
-    required = REGION_REQUIRED_KEYS if is_region else LOCALITY_REQUIRED_KEYS
-    missing = [key for key in required if not has_value(entity.get(key))]
+    role = entity.get("coverage_role") or "structural"
+    missing = []
+
+    if role not in VALID_COVERAGE_ROLES:
+        missing.append("coverage_role")
+        required = ()
+    elif role == "regional_profile":
+        required = REGION_REQUIRED_KEYS
+    elif role == "locality_profile":
+        required = LOCALITY_REQUIRED_KEYS
+    else:
+        required = ()
+
+    missing.extend(key for key in required if not has_value(entity.get(key)))
 
     refs = ((entity.get("provenance") or {}).get("source_refs") or [])
     if not refs:
         missing.append("provenance.source_refs")
+    if not has_value((entity.get("provenance") or {}).get("checked_at")):
+        missing.append("provenance.checked_at")
 
-    if not is_region:
+    description = entity.get("description") or {}
+    if role in {"regional_profile", "locality_profile"} and not has_value(description.get("narrow")):
+        missing.append("description.narrow")
+
+    if role == "locality_profile":
+        primary = entity.get("primary_location")
+        location_status = entity.get("primary_location_status") or {}
+        if not has_value(primary):
+            if location_status.get("status") not in {"unresolved", "not_applicable"} or not has_value(location_status.get("reason")):
+                missing.append("primary_location_or_explicit_status")
         climate = entity.get("climate") or {}
-        if not has_value(climate.get("annual_reference")) and not has_value(climate.get("annual_reference_status")):
+        if climate and not has_value(climate.get("annual_reference")) and not has_value(climate.get("annual_reference_status")):
             missing.append("climate.annual_reference_or_status")
 
     if missing:
@@ -114,7 +136,7 @@ for row in geo_index.get("entities", []):
             "name": (entity.get("names") or {}).get("primary"),
             "kind": entity.get("kind"),
             "parent_id": entity.get("parent_id"),
-            "level": "region" if is_region else "locality",
+            "coverage_role": role,
             "missing": missing,
         })
 
@@ -134,11 +156,21 @@ result = {
     "geo_gaps": geo_gaps,
     "rules": {
         "ownership": "country=macro context and non-localized country hazard inventories; geo=local climate/nature/safety occurrence and route-level relevance",
-        "region_required": list(REGION_REQUIRED_KEYS) + ["provenance.source_refs"],
-        "locality_required": list(LOCALITY_REQUIRED_KEYS) + [
-            "provenance.source_refs",
-            "climate.annual_reference_or_status",
-        ],
+        "coverage_roles": {
+            "structural": ["provenance.source_refs", "provenance.checked_at"],
+            "regional_profile": list(REGION_REQUIRED_KEYS) + [
+                "description.narrow",
+                "provenance.source_refs",
+                "provenance.checked_at",
+            ],
+            "locality_profile": [
+                "description.narrow",
+                "primary_location_or_explicit_status",
+                "provenance.source_refs",
+                "provenance.checked_at",
+                "climate.annual_reference_or_status_when_climate_present",
+            ],
+        },
     },
 }
 print(json.dumps(result, ensure_ascii=False, indent=2))

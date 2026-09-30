@@ -82,7 +82,18 @@
       "checked_at": "2026-09-29"
     },
     "points": [],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 900.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "water_surface",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src:cd25d231485fa4"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Около 900 м — высота поверхности Lake Toba над уровнем моря по официальному Indonesia Travel. Это базовая высотная отметка озёрной части объекта; центральное плато Samosir поднимается примерно ещё на 780 м над водой."
+    }
   },
   "story": {
     "narrative": "Lake Toba — гигантская вулканическая кальдера, связанная с серией извержений; крупнейшее молодое событие произошло около 74 тысяч лет назад. Последующее поднятие дна кальдеры сформировало Samosir, который сегодня является центром культуры Batak Toba.",
@@ -159,12 +170,72 @@
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
-    "best_time": null,
-    "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "useful_equipment": [],
+    "best_time": "Раннее утро для спокойной воды, тумана и паромных подходов; поздний день для бокового света по грядам кальдеры и традиционной архитектуре.",
+    "best_weather_light": "Для чтения масштаба кальдеры нужен открытый дальний горизонт; низкая облачность может скрыть противоположный край, но локальный туман над водой добавляет глубину.",
+    "viewpoints": [
+      {
+        "id": "vp_holbung_hill",
+        "name": "Bukit Holbung / Holbung Hill",
+        "description": "Высокая травянистая точка на западной стороне Samosir с широким обзором Lake Toba и окружающих гряд.",
+        "coordinates": {
+          "lat": 2.506389,
+          "lon": 98.628333,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "2.506389, 98.628333",
+          "dms": "02°30′23.0″N 098°37′42.0″E"
+        },
+        "access": "Подъезд по дорогам Samosir с последним пешим подъёмом по открытому холму; после дождя грунт и трава могут быть скользкими.",
+        "view": "Широкая акватория Lake Toba, берега Samosir и кальдерные гряды; точка полезна именно для масштаба ландшафта.",
+        "best_time": "morning / late_afternoon",
+        "best_weather_light": "Боковой свет подчёркивает складки рельефа; при дымке дальняя стенка кальдеры теряет контраст.",
+        "useful_equipment": [
+          "wide",
+          "standard",
+          "telephoto",
+          "phone"
+        ],
+        "source_refs": [
+          "src:092e29a3aba22b"
+        ]
+      },
+      {
+        "id": "vp_ferry_approach_samosir",
+        "name": "Паромный подход Parapat → Samosir",
+        "description": "Движущаяся водная точка обзора, полезная для чтения Samosir как поднятого массива внутри кальдерного озера.",
+        "coordinates": null,
+        "gps": null,
+        "access": "Пассажирский паром из района Parapat к Samosir; конкретный маршрут и пирс зависят от рейса.",
+        "view": "Берег Samosir, традиционные поселения у воды и стенки кальдеры, постепенно раскрывающиеся при подходе.",
+        "best_time": "early_morning / afternoon",
+        "best_weather_light": "Утром вода чаще спокойнее; вечером боковой свет лучше моделирует береговые склоны.",
+        "useful_equipment": [
+          "wide",
+          "standard",
+          "telephoto",
+          "phone"
+        ],
+        "source_refs": [
+          "src:cd25d231485fa4"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "После дождей склоны и сельскохозяйственные участки Samosir выглядят насыщеннее, но горные дороги становятся скользкими.",
+      "Сухие и ясные утренние окна лучше раскрывают противоположный край кальдеры; при низкой облачности масштаб озера визуально сжимается."
+    ],
+    "video_activity": [
+      "паромный подход к Samosir и движение местных лодок",
+      "ветер по открытым холмам и смена планов от воды к центральному плато",
+      "повседневная жизнь Batak Toba в деревнях и у rumah bolon только без постановки и с разрешением там, где оно требуется"
+    ],
+    "useful_equipment": [
+      "wide",
+      "standard",
+      "telephoto",
+      "phone"
+    ],
     "drone": "Проверять индонезийские авиационные правила, локальные ограничения и согласие общины/владельца земли; не летать над церемониями без разрешения.",
     "filming_restrictions": "В традиционных домах, у могил/сакральных объектов и на церемониях спрашивать разрешение; коммерческая съёмка может требовать отдельного согласования."
   },
@@ -177,9 +248,17 @@
         "license": "CC BY-SA 3.0",
         "artist": "Raul Heinrich",
         "last_checked": "2026-09-28"
+      },
+      {
+        "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Panoramic_View_of_Lake_Toba_from_Holbung_Hill,_Samosir,_North_Sumatra.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Panoramic_View_of_Lake_Toba_from_Holbung_Hill,_Samosir,_North_Sumatra.jpg",
+        "provider": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "artist": "Sophia Guevara",
+        "last_checked": "2026-09-30"
       }
     ],
-    "gallery_status": "single_image_source"
+    "gallery_status": "carousel_ready"
   },
   "provenance": {
     "source_refs": [

@@ -15,7 +15,6 @@ LOCAL_PROFILE_KEYS = {
     "diseases",
 }
 LOCAL_CLIMATE_KEYS = {
-    "sea_temp_mean_c_by_month",
     "tides",
     "marine",
 }
@@ -80,6 +79,15 @@ for path in climate_paths:
                 "file": path.relative_to(release).as_posix(),
                 "field": ".".join(key_path),
             })
+
+    data = value.get("data") or {}
+    sea_series = data.get("sea_temp_mean_c_by_month")
+    if has_value(sea_series) and not has_value(data.get("reference_location")):
+        findings.append({
+            "file": path.relative_to(release).as_posix(),
+            "field": "data.sea_temp_mean_c_by_month",
+            "reason": "country-level monthly sea series must be explicitly scoped by data.reference_location",
+        })
 
 geo_gaps = []
 geo_index = load(release / "geo" / "index.json")
@@ -155,7 +163,7 @@ result = {
     "geo_coverage_gaps": len(geo_gaps),
     "geo_gaps": geo_gaps,
     "rules": {
-        "ownership": "country=macro context and non-localized country hazard inventories; geo=local climate/nature/safety occurrence and route-level relevance",
+        "ownership": "country=macro climate context plus explicitly scoped reference-location series; geo=regional/local climate, nature, safety occurrence and route-level relevance",
         "coverage_roles": {
             "structural": ["provenance.source_refs", "provenance.checked_at"],
             "regional_profile": list(REGION_REQUIRED_KEYS) + [

@@ -11,7 +11,7 @@
         "primary": "Palawan / El Nido / Coron"
       },
       "summary": {
-        "narrow": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео."
+        "narrow": "Северный Палаван здесь рассматривается как связка двух морских узлов: карстовых лагун Bacuit Bay вокруг Эль-Нидо и островов Calamianes/Coron. Главная логистика самостоятельного путешествия — не «экскурсия», а лодочный доступ: материковые точки доступны по суше, но ключевые лагуны, озёра и рифы физически отделены морем."
       },
       "classification": {
         "class_id": "nature.reserve",
@@ -23,34 +23,76 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
+        "region_ids": [
+          "geo_ph_0007",
+          "geo_ph_0019",
+          "geo_ph_0035"
+        ],
         "nearest_place_id": null,
         "nearest_place_name_raw": "Puerto Princesa / El Nido / Busuanga",
         "primary_location": {
-          "lat": null,
-          "lon": null,
-          "elevation_m": null,
-          "elevation_range_m": null,
+          "lat": 11.18,
+          "lon": 119.3905,
+          "elevation_m": 36,
           "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "accuracy": "medium",
+          "source_refs": [
+            "src_stage_ph_0053"
+          ],
+          "checked_at": "2026-09-30",
+          "notes": "Операционный центр Эль-Нидо; это не геометрический центр всей составной карточки Palawan / El Nido / Coron."
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 11.99077,
+            "lon": 120.21189,
+            "elevation_m": null,
+            "coordinate_type": "pier",
+            "accuracy": "medium",
+            "source_refs": [
+              "src_stage_ph_0055"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Coron Wharf — операционная точка лодочного доступа."
+          },
+          {
+            "lat": 11.9986,
+            "lon": 120.2052,
+            "elevation_m": 10,
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "source_refs": [
+              "src_stage_ph_0054"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Coron town hub."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+            "text": "Северный Палаван здесь рассматривается как связка двух морских узлов: карстовых лагун Bacuit Bay вокруг Эль-Нидо и островов Calamianes/Coron. Главная логистика самостоятельного путешествия — не «экскурсия», а лодочный доступ: материковые точки доступны по суше, но ключевые лагуны, озёра и рифы физически отделены морем.",
             "source_refs": [
-              "src_stage_ph_0001",
-              "src_stage_ph_0002",
-              "src_stage_ph_0003",
               "src_stage_ph_0004",
-              "src_stage_ph_0005"
+              "src_stage_ph_0051",
+              "src_stage_ph_0052"
+            ]
+          },
+          {
+            "type": "geography",
+            "text": "El Nido Managed Resource Protected Area объединяет наземные и морские экосистемы северо-западного Палавана; DENR фиксирует здесь известняковый рельеф, рифы, мангры, морские экосистемы и максимальную высоту территории около 640 м. В районе Эль-Нидо именно сочетание карста и моря формирует систему бухт, лагун и островов.",
+            "source_refs": [
+              "src_stage_ph_0051",
+              "src_stage_ph_0052"
+            ]
+          },
+          {
+            "type": "ethnography",
+            "text": "Coron Island связан с ancestral domain народа тагбанва. В материалах DENR управление этой территорией прямо рассматривается с учётом прав коренного населения; поэтому доступ к озёрам и островным участкам нельзя трактовать как свободное использование ничейной территории.",
+            "source_refs": [
+              "src_stage_ph_0052"
             ]
           }
         ]
@@ -98,23 +140,66 @@
         },
         "access_options": [
           {
-            "id": "access_01",
+            "id": "access_el_nido_boat",
             "origin_place_id": null,
+            "origin_raw": "El Nido",
             "modes": [
-              "other"
+              "boat"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "boat",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "El Nido и Coron используются как отдельные island-hopping hubs; между объектами требуется лодка. Для Coron основной авиационный вход — Busuanga; El Nido доступен авиацией/дорогой из Puerto Princesa. Для съёмочного дня закладывать полный дневной boat itinerary. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+                "notes": "К лагунам, островам и пляжам Bacuit Bay добираются по воде; DOT прямо описывает island-hopping, kayak и snorkel как базовые способы доступа."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0004"
+            ]
+          },
+          {
+            "id": "access_coron_boat",
+            "origin_place_id": null,
+            "origin_raw": "Coron Wharf",
+            "modes": [
+              "boat"
+            ],
+            "legs": [
+              {
+                "mode": "boat",
+                "distance_km": null,
+                "duration_min": null,
+                "notes": "К островным озёрам и рифам Coron Island нужен лодочный переход; точка отправления привязана к Coron Wharf."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0055",
+              "src_stage_ph_0052"
+            ]
+          },
+          {
+            "id": "access_between_hubs",
+            "origin_place_id": null,
+            "origin_raw": "El Nido / Coron",
+            "modes": [
+              "ferry"
+            ],
+            "legs": [
+              {
+                "mode": "ferry",
+                "distance_km": null,
+                "duration_min": null,
+                "notes": "Между Coron и El Nido путешественники в 2026 году описывали морской переход как заметно более долгий и погодозависимый, чем перелёт; точное расписание и длительность перепроверять у перевозчика."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0056"
             ]
           }
         ],
         "water": {
-          "summary": null,
+          "summary": "Надёжная вода подтверждена только в городских хабах; для островных точек и лодочных дней источник питьевой воды в карточке пока не нормализован.",
           "quality": "unknown",
           "last_reliable_source": null,
           "distance_m": null,
@@ -124,8 +209,11 @@
         "supplies": null,
         "overnight": {
           "status": "unclear",
-          "summary": null,
-          "source_refs": []
+          "summary": "Городское жильё доступно в El Nido и Coron; законность палатки на охраняемых и ancestral-domain островах без отдельного разрешения не подтверждена.",
+          "source_refs": [
+            "src_stage_ph_0051",
+            "src_stage_ph_0052"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -146,16 +234,124 @@
           "site_specific_notes": "Перед выездом смотреть фактический прогноз; для моря, гор, рек, пещер и вулканов оперативная погода важнее климатической нормы."
         }
       },
-      "traveler_reports": [],
+      "traveler_reports": [
+        {
+          "topic": "crowding",
+          "summary": "В отчёте мая 2026 популярные точки El Nido описаны как заметно перегруженные лодками и посетителями.",
+          "observed_period": "2026-05",
+          "source_refs": [
+            "src_stage_ph_0056"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "topic": "sea_transfer",
+          "summary": "Тот же отчёт отмечает грубое море на переходе к Coron и более «сырой» лодочный опыт по сравнению с El Nido.",
+          "observed_period": "2026-05",
+          "source_refs": [
+            "src_stage_ph_0056"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "topic": "weather",
+          "summary": "В июльском обсуждении 2026 путешественники отдельно предупреждали, что в сентябре тайфуны и сильное течение могут сокращать набор доступных лодочных маршрутов.",
+          "observed_period": "2026-07",
+          "source_refs": [
+            "src_stage_ph_0057"
+          ],
+          "confidence": "low"
+        }
+      ],
       "visual_recon": {
         "photo_suitability_5": 5,
         "video_suitability_5": 5,
         "best_time": "рассвет/раннее утро и поздний день; для подводной съёмки важнее прозрачность воды/солнце",
         "best_weather_light": null,
-        "viewpoints": [],
-        "seasonal_visuals": [],
-        "video_activity": [],
-        "useful_equipment": [],
+        "viewpoints": [
+          {
+            "id": "vp_el_nido_sunset",
+            "name": "Южная точка обзора на известняковые стены El Nido",
+            "description": "Карстовые стены и залив; геопривязанная фотография сделана на закате.",
+            "coordinates": {
+              "lat": 11.155468,
+              "lon": 119.398194,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "11.155468, 119.398194"
+            },
+            "access": null,
+            "view": {
+              "description": "Карстовые стены и залив; геопривязанная фотография сделана на закате."
+            },
+            "best_time": "sunset",
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "карстовая стенка и залив требуют широкого охвата"
+              },
+              {
+                "type": "telephoto",
+                "why": "помогает отделять отдельные гребни и лодки от сложного фона"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0058"
+            ]
+          },
+          {
+            "id": "vp_kayangan",
+            "name": "Kayangan Lake / Coron Island",
+            "description": "Озеро и известняковый карст Coron Island; точка подтверждена геопривязанным снимком.",
+            "coordinates": {
+              "lat": 11.957794,
+              "lon": 120.226136,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "11.957794, 120.226136"
+            },
+            "access": null,
+            "view": {
+              "description": "Озеро и известняковый карст Coron Island; точка подтверждена геопривязанным снимком."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "нужен для озера и окружающих карстовых стен"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0059"
+            ]
+          }
+        ],
+        "seasonal_visuals": [
+          "В сезон тайфунов и сильного муссона визуальная доступность морских точек определяется фактическим состоянием моря, а не календарём."
+        ],
+        "video_activity": [
+          "движение лодок между карстовыми островами",
+          "каяки в лагунах",
+          "подводная активность на рифах там, где доступ разрешён"
+        ],
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "карстовые бухты и лагуны"
+          },
+          {
+            "type": "underwater_camera",
+            "why": "рифы и прозрачная вода"
+          },
+          {
+            "type": "action_camera",
+            "why": "лодочные переходы и каяк"
+          }
+        ],
         "drone": {
           "visual_value": null,
           "legal_status": "unknown",
@@ -186,14 +382,19 @@
         "legacy_order": 1
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0001",
           "src_stage_ph_0002",
           "src_stage_ph_0003",
           "src_stage_ph_0004",
-          "src_stage_ph_0005"
+          "src_stage_ph_0005",
+          "src_stage_ph_0051",
+          "src_stage_ph_0052",
+          "src_stage_ph_0053",
+          "src_stage_ph_0054",
+          "src_stage_ph_0055"
         ]
       },
       "qa": {
@@ -201,16 +402,16 @@
         "checks": {
           "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
-          "elevation": false,
+          "geo": true,
+          "coordinates": true,
+          "elevation": true,
           "narrative": true,
           "sources": true,
-          "access": false,
+          "access": true,
           "water": false,
           "overnight": false,
-          "traveler_reports": false,
-          "visual_recon": false
+          "traveler_reports": true,
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -224,7 +425,7 @@
         "primary": "Banaue and Batad rice terraces"
       },
       "summary": {
-        "narrow": "Banaue and Batad rice terraces — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео."
+        "narrow": "Batad и соседние террасы Banaue — не декорация и не музей, а действующий культурный ландшафт ифугао. Террасы, деревни, горные леса-водосборы и ирригация работают как единая система; для самостоятельного посещения ключевой вопрос — последний дорожный участок и крутой пеший спуск по лестницам к деревне."
       },
       "classification": {
         "class_id": "ethnography.village",
@@ -240,34 +441,76 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
-        "nearest_place_id": null,
+        "region_ids": [
+          "geo_ph_0002",
+          "geo_ph_0020",
+          "geo_ph_0036"
+        ],
+        "nearest_place_id": "geo_ph_0054",
         "nearest_place_name_raw": "Baguio / Banaue",
         "primary_location": {
-          "lat": null,
-          "lon": null,
-          "elevation_m": null,
-          "elevation_range_m": null,
-          "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "lat": 16.932915,
+          "lon": 121.138947,
+          "elevation_m": 1197.2,
+          "coordinate_type": "viewpoint",
+          "accuracy": "approximate",
+          "source_refs": [
+            "src_stage_ph_0061"
+          ],
+          "checked_at": "2026-09-30",
+          "notes": "Геопривязанная точка съёмки на террасах Batad; высота взята из EXIF и считается приблизительной."
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 16.924444,
+            "lon": 121.065556,
+            "elevation_m": null,
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "source_refs": [
+              "src_stage_ph_0060"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Координата UNESCO для компонента Battad; это reference point объекта Всемирного наследия."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Banaue and Batad rice terraces — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+            "text": "Batad и соседние террасы Banaue — не декорация и не музей, а действующий культурный ландшафт ифугао. Террасы, деревни, горные леса-водосборы и ирригация работают как единая система; для самостоятельного посещения ключевой вопрос — последний дорожный участок и крутой пеший спуск по лестницам к деревне.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0007",
-              "src_stage_ph_0003",
-              "src_stage_ph_0008",
               "src_stage_ph_0009"
+            ]
+          },
+          {
+            "type": "history",
+            "text": "UNESCO описывает террасы Филиппинских Кордильер как культурный ландшафт с традицией, прослеживаемой примерно на две тысячи лет. Batad — один из пяти наиболее целостных кластеров объекта Всемирного наследия.",
+            "source_refs": [
+              "src_stage_ph_0009"
+            ]
+          },
+          {
+            "type": "geography",
+            "text": "Batad расположен в крутом горном рельефе и образует амфитеатральную систему полей. Террасы удерживаются каменными или земляными стенами, а вода поступает из лесных водосборов выше по склонам через сложную сеть ирригации.",
+            "source_refs": [
+              "src_stage_ph_0009"
+            ]
+          },
+          {
+            "type": "ethnography",
+            "text": "Это территория ифугао, где земледелие, право на землю, коллективное обслуживание террас и религиозные ритуалы связаны между собой. UNESCO подчёркивает, что отдельные террасы находятся в частном/ancestral владении и поддерживаются традиционными нормами общины.",
+            "source_refs": [
+              "src_stage_ph_0009"
+            ]
+          },
+          {
+            "type": "culture",
+            "text": "Сельскохозяйственный цикл здесь остаётся культурной практикой, а не реконструкцией для посетителей: обработка полей, сбор урожая и ритуалы продолжаются в живых деревнях.",
+            "source_refs": [
+              "src_stage_ph_0009",
+              "src_stage_ph_0063"
             ]
           }
         ]
@@ -315,18 +558,65 @@
         },
         "access_options": [
           {
-            "id": "access_01",
-            "origin_place_id": null,
+            "id": "access_banaue_to_batad",
+            "origin_place_id": "geo_ph_0054",
             "modes": [
-              "other"
+              "public_transport",
+              "walking"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "public_transport",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "Banaue — дорожный hub. Batad расположен в горной местности: последний участок обычно требует local road/tricycle/jeep transfer и пешего спуска/подъёма; для фото на рассвете разумна ночёвка в Batad. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+                "notes": "Из Banaue до Barangay Batad используют местный дорожный транспорт; в отчёте июля 2025 дорога занимала около часа из-за состояния/маршрута."
+              },
+              {
+                "mode": "walking",
+                "distance_km": null,
+                "duration_min": 60,
+                "elevation_gain_m": null,
+                "elevation_loss_m": null,
+                "trailhead": null,
+                "trail": {
+                  "type": "stairs_and_village_path",
+                  "condition": "длинные цементные и каменные лестницы; после мороси участки становятся мокрыми и скользкими",
+                  "navigation": "маршрут через деревню читаемый, но развилки лучше уточнять у местных",
+                  "river_crossings": null
+                },
+                "notes": "В том же отчёте спуск от дороги до центра/гостевых домов занял у группы около часа; цифра наблюдаемая, не нормативная."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0062"
+            ]
+          },
+          {
+            "id": "access_tappiya_extension",
+            "origin_place_id": null,
+            "origin_raw": "Batad village",
+            "modes": [
+              "walking"
+            ],
+            "legs": [
+              {
+                "mode": "walking",
+                "distance_km": null,
+                "duration_min": null,
+                "elevation_gain_m": null,
+                "elevation_loss_m": null,
+                "trailhead": null,
+                "trail": {
+                  "type": "steep_stairs",
+                  "condition": "крутые ступени",
+                  "navigation": null,
+                  "river_crossings": null
+                },
+                "notes": "Переход к Tappiya Falls заметно увеличивает нагрузку; в отчёте июня 2026 особенно тяжёлым назван обратный подъём."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0063"
             ]
           }
         ],
@@ -341,8 +631,11 @@
         "supplies": null,
         "overnight": {
           "status": "unclear",
-          "summary": null,
-          "source_refs": []
+          "summary": "В Batad работают homestay/guesthouse варианты, что подтверждается недавними отчётами; правовой режим палатки на террасах и частной ancestral земле отдельно не подтверждён.",
+          "source_refs": [
+            "src_stage_ph_0062",
+            "src_stage_ph_0009"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -363,15 +656,72 @@
           "site_specific_notes": "Перед выездом смотреть фактический прогноз; для моря, гор, рек, пещер и вулканов оперативная погода важнее климатической нормы."
         }
       },
-      "traveler_reports": [],
+      "traveler_reports": [
+        {
+          "topic": "trail",
+          "summary": "Июль 2025: дорога до Barangay Batad была проезжей, но часть старого маршрута была закрыта; затем около часа крутого спуска по длинным лестницам до деревни.",
+          "observed_period": "2025-07",
+          "source_refs": [
+            "src_stage_ph_0062"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "topic": "trail",
+          "summary": "Июнь 2026: путешественники снова отмечают очень крутые ступени на направлении Tappiya Falls и тяжёлый обратный подъём.",
+          "observed_period": "2026-05",
+          "source_refs": [
+            "src_stage_ph_0063"
+          ],
+          "confidence": "medium"
+        }
+      ],
       "visual_recon": {
         "photo_suitability_5": 5,
         "video_suitability_5": 5,
         "best_time": "рассвет и последние часы дня; в rainforest мягкий свет после дождя часто лучше жёсткого полудня",
         "best_weather_light": null,
-        "viewpoints": [],
-        "seasonal_visuals": [],
-        "video_activity": [],
+        "viewpoints": [
+          {
+            "id": "vp_batad_recent",
+            "name": "Амфитеатр Batad",
+            "description": "Террасы, деревня и амфитеатральный рельеф; координата и высота взяты из геотега недавней фотографии.",
+            "coordinates": {
+              "lat": 16.932915,
+              "lon": 121.138947,
+              "elevation_m": 1197.2
+            },
+            "gps": {
+              "decimal": "16.932915, 121.138947"
+            },
+            "access": null,
+            "view": {
+              "description": "Террасы, деревня и амфитеатральный рельеф; координата и высота взяты из геотега недавней фотографии."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "амфитеатр террас занимает большой угол"
+              },
+              {
+                "type": "telephoto",
+                "why": "позволяет выделять отдельные уровни полей и работу жителей"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0061"
+            ]
+          }
+        ],
+        "seasonal_visuals": [
+          "По сообщениям местных путешественников, наиболее насыщенная зелень обычно приходится примерно на июнь — первую половину июля; сельскохозяйственный цикл меняется по году и требует проверки перед поездкой."
+        ],
+        "video_activity": [
+          "работа на рисовых террасах, если она реально идёт и съёмка не мешает жителям",
+          "пешее движение по системе лестниц и межевых дорожек"
+        ],
         "useful_equipment": [],
         "drone": {
           "visual_value": null,
@@ -403,31 +753,35 @@
         "legacy_order": 2
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0006",
           "src_stage_ph_0007",
           "src_stage_ph_0003",
           "src_stage_ph_0008",
-          "src_stage_ph_0009"
+          "src_stage_ph_0009",
+          "src_stage_ph_0060",
+          "src_stage_ph_0061",
+          "src_stage_ph_0062",
+          "src_stage_ph_0063"
         ]
       },
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": false,
+          "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
-          "elevation": false,
+          "geo": true,
+          "coordinates": true,
+          "elevation": true,
           "narrative": true,
           "sources": true,
-          "access": false,
+          "access": true,
           "water": false,
           "overnight": false,
-          "traveler_reports": false,
-          "visual_recon": false
+          "traveler_reports": true,
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -441,7 +795,7 @@
         "primary": "Chocolate Hills"
       },
       "summary": {
-        "narrow": "Chocolate Hills — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео."
+        "narrow": "Chocolate Hills — поле из примерно 1 776 почти правильных известняковых конусов в центральном Бохоле. Это не вулканические шлаковые холмы, а тропический конусный карст: поднятая кораллово-известняковая платформа миллионы лет растворялась дождевой и грунтовой водой."
       },
       "classification": {
         "class_id": "geology.site",
@@ -454,33 +808,71 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
-        "nearest_place_id": null,
+        "region_ids": [
+          "geo_ph_0011",
+          "geo_ph_0022",
+          "geo_ph_0037"
+        ],
+        "nearest_place_id": "geo_ph_0056",
         "nearest_place_name_raw": "Tagbilaran / Panglao",
         "primary_location": {
-          "lat": null,
-          "lon": null,
-          "elevation_m": null,
-          "elevation_range_m": null,
-          "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "lat": 9.79828,
+          "lon": 124.1684,
+          "elevation_m": 108,
+          "coordinate_type": "viewpoint",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_stage_ph_0066"
+          ],
+          "checked_at": "2026-09-30",
+          "notes": "Основная туристическая точка обзора в Carmen, не геометрический центр всей зоны Chocolate Hills."
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 9.80035,
+            "lon": 124.16435,
+            "elevation_m": null,
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "source_refs": [
+              "src_stage_ph_0067"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Касса/входная инфраструктура по OSM."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Chocolate Hills — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+            "text": "Chocolate Hills — поле из примерно 1 776 почти правильных известняковых конусов в центральном Бохоле. Это не вулканические шлаковые холмы, а тропический конусный карст: поднятая кораллово-известняковая платформа миллионы лет растворялась дождевой и грунтовой водой.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0010",
-              "src_stage_ph_0003",
-              "src_stage_ph_0011"
+              "src_stage_ph_0064",
+              "src_stage_ph_0065"
+            ]
+          },
+          {
+            "type": "geology",
+            "text": "Провинциальный геопарк и научная литература связывают происхождение холмов с известняковой платформой, сформированной из древних коралловых отложений в плиоцене. После поднятия над уровнем моря трещиноватый известняк подвергался растворению дождевой, поверхностной и подземной водой, что сформировало систему конусного карста.",
+            "source_refs": [
+              "src_stage_ph_0064",
+              "src_stage_ph_0065"
+            ]
+          },
+          {
+            "type": "geography",
+            "text": "DOT указывает около 1 776 холмов, распределённых по нескольким муниципалитетам Бохола. В дождливый сезон травяной покров зелёный, а в сухой сезон выгорает до коричневого оттенка, от которого происходит современное название.",
+            "source_refs": [
+              "src_stage_ph_0011",
+              "src_stage_ph_0064"
+            ]
+          },
+          {
+            "type": "myths_beliefs",
+            "text": "Местная туристическая традиция рассказывает о двух великанах, которые бросались друг в друга камнями и песком, а затем помирились и оставили после себя груды материала. В карточке это хранится как легенда, а не как объяснение геологии.",
+            "source_refs": [
+              "src_stage_ph_0069"
             ]
           }
         ]
@@ -525,28 +917,67 @@
         },
         "access_options": [
           {
-            "id": "access_01",
+            "id": "access_from_panglao_moped",
             "origin_place_id": null,
+            "origin_raw": "Panglao",
             "modes": [
-              "other"
+              "moped"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "moped",
+                "distance_km": null,
+                "duration_min": 90,
+                "road": {
+                  "surface": null,
+                  "condition": null,
+                  "seasonality": null
+                },
+                "notes": "DOT даёт ориентир около 1,5 часа на мотоцикле из Panglao до Carmen."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0011"
+            ]
+          },
+          {
+            "id": "access_view_deck",
+            "origin_place_id": null,
+            "origin_raw": "Chocolate Hills Complex",
+            "modes": [
+              "walking"
+            ],
+            "legs": [
+              {
+                "mode": "walking",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "Carmen, Bohol; официальный DOT ориентир — около 1.5 часа на motorcycle из Panglao либо group tour. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Около 200 ступеней до viewing deck."
+                "elevation_gain_m": null,
+                "elevation_loss_m": null,
+                "trailhead": null,
+                "trail": {
+                  "type": "stairs",
+                  "condition": "устроенная лестница",
+                  "navigation": "очевидная",
+                  "river_crossings": 0
+                },
+                "notes": "До основной площадки около 200 ступеней по DOT."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0011"
             ]
           }
         ],
         "water": {
-          "summary": null,
-          "quality": "unknown",
+          "summary": "По OSM/Mapcarta рядом с входной зоной отмечена отдельная точка продажи питьевой воды примерно в 200 м; природный источник для питья не используется.",
+          "quality": "potable",
           "last_reliable_source": null,
-          "distance_m": null,
+          "distance_m": 200,
           "natural_sources": [],
-          "source_refs": []
+          "source_refs": [
+            "src_stage_ph_0067"
+          ]
         },
         "supplies": null,
         "overnight": {
@@ -572,15 +1003,64 @@
           "site_specific_notes": "Открытая смотровая площадка: жара и грозы/ливни влияют на комфорт и видимость."
         }
       },
-      "traveler_reports": [],
+      "traveler_reports": [
+        {
+          "topic": "travel_time",
+          "summary": "В июле 2026 один самостоятельный путешественник оценил поездку из Panglao на скутере как заметно более длинную, чем официальный ориентир DOT; использовать это как сигнал закладывать запас времени, а не как норматив.",
+          "observed_period": "2026-07",
+          "source_refs": [
+            "src_stage_ph_0068"
+          ],
+          "confidence": "low"
+        }
+      ],
       "visual_recon": {
         "photo_suitability_5": 5,
         "video_suitability_5": 5,
         "best_time": "раннее утро/поздний день; боковой свет лучше подчёркивает рельеф 1,776 холмов",
         "best_weather_light": null,
-        "viewpoints": [],
-        "seasonal_visuals": [],
-        "video_activity": [],
+        "viewpoints": [
+          {
+            "id": "vp_chocolate_main",
+            "name": "Главная площадка Chocolate Hills Complex",
+            "description": "Панорама на плотное поле конусных холмов вокруг Carmen.",
+            "coordinates": {
+              "lat": 9.79828,
+              "lon": 124.1684,
+              "elevation_m": 108
+            },
+            "gps": {
+              "decimal": "9.798280, 124.168400"
+            },
+            "access": null,
+            "view": {
+              "description": "Панорама на плотное поле конусных холмов вокруг Carmen."
+            },
+            "best_time": "early_morning",
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "нужен для плотного поля холмов"
+              },
+              {
+                "type": "telephoto",
+                "why": "полезен для сжатия повторяющихся гряд и масштаба рельефа"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0066"
+            ]
+          }
+        ],
+        "seasonal_visuals": [
+          "В дождливый сезон холмы зелёные; в сухие месяцы трава выгорает до коричневого цвета.",
+          "DOT рекомендует январь–май как основной период посещения."
+        ],
+        "video_activity": [
+          "изменение масштаба рельефа по мере подъёма на смотровую",
+          "движение облаков и тумана над повторяющимися грядами"
+        ],
         "useful_equipment": [],
         "drone": {
           "visual_value": null,
@@ -611,30 +1091,36 @@
         "legacy_order": 3
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0006",
           "src_stage_ph_0010",
           "src_stage_ph_0003",
-          "src_stage_ph_0011"
+          "src_stage_ph_0011",
+          "src_stage_ph_0064",
+          "src_stage_ph_0065",
+          "src_stage_ph_0066",
+          "src_stage_ph_0067",
+          "src_stage_ph_0068",
+          "src_stage_ph_0069"
         ]
       },
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": false,
+          "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
-          "elevation": false,
+          "geo": true,
+          "coordinates": true,
+          "elevation": true,
           "narrative": true,
           "sources": true,
-          "access": false,
-          "water": false,
+          "access": true,
+          "water": true,
           "overnight": false,
-          "traveler_reports": false,
-          "visual_recon": false
+          "traveler_reports": true,
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -648,7 +1134,7 @@
         "primary": "Intramuros"
       },
       "summary": {
-        "narrow": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео."
+        "narrow": "Интрамурос — историческое ядро Манилы внутри испанской системы стен и бастионов. Район вырос из колониального города XVI века, был административным центром Испанской Ост-Индии и почти полностью разрушен в 1945 году; сегодня это одновременно живой городской квартал и управляемый комплекс памятников."
       },
       "classification": {
         "class_id": "settlement.historic_city",
@@ -659,40 +1145,66 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
-        "nearest_place_id": null,
+        "region_ids": [
+          "geo_ph_0001",
+          "geo_ph_0038"
+        ],
+        "nearest_place_id": "geo_ph_0052",
         "nearest_place_name_raw": "Manila",
         "primary_location": {
-          "lat": null,
-          "lon": null,
-          "elevation_m": null,
-          "elevation_range_m": null,
+          "lat": 14.59096,
+          "lon": 120.97465,
+          "elevation_m": 6,
           "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "accuracy": "medium",
+          "source_refs": [
+            "src_stage_ph_0071"
+          ],
+          "checked_at": "2026-09-30"
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 14.59387,
+            "lon": 120.97072,
+            "elevation_m": null,
+            "coordinate_type": "entrance",
+            "accuracy": "medium",
+            "source_refs": [
+              "src_stage_ph_0072"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Fort Santiago — один из основных управляемых входов/узлов внутри района."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+            "text": "Интрамурос — историческое ядро Манилы внутри испанской системы стен и бастионов. Район вырос из колониального города XVI века, был административным центром Испанской Ост-Индии и почти полностью разрушен в 1945 году; сегодня это одновременно живой городской квартал и управляемый комплекс памятников.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0012",
-              "src_stage_ph_0003",
-              "src_stage_ph_0013"
+              "src_stage_ph_0070"
+            ]
+          },
+          {
+            "type": "history",
+            "text": "Intramuros Administration датирует основание испанского города 1571 годом. Стены и фортификации строились примерно с 1590 по 1825 год; город был конечной точкой манильско-акапулькской галеонной торговли, пережил британскую оккупацию 1762–1764 годов, американский колониальный период и разрушение во время Второй мировой войны.",
+            "source_refs": [
+              "src_stage_ph_0070"
+            ]
+          },
+          {
+            "type": "culture",
+            "text": "Современный Интрамурос важен не только отдельными музеями: здесь в одном квартале сосуществуют религиозные здания, учебные учреждения, реконструированные дома, площади и фортификационные линии. Государственная Intramuros Administration отвечает за сохранение и восстановление района как национального историко-культурного ансамбля.",
+            "source_refs": [
+              "src_stage_ph_0070"
             ]
           }
         ]
       },
       "visit": {
         "entry": {
-          "access_status": "unknown",
+          "access_status": "open_public_district_with_gated_sites",
           "fee": {
             "amount": null,
             "currency": null,
@@ -721,7 +1233,8 @@
             "src_stage_ph_0006",
             "src_stage_ph_0012",
             "src_stage_ph_0003",
-            "src_stage_ph_0013"
+            "src_stage_ph_0013",
+            "src_stage_ph_0070"
           ],
           "checked_at": "2026-09-28",
           "official_url": "https://intramuros.gov.ph/hours/",
@@ -730,34 +1243,96 @@
         },
         "access_options": [
           {
-            "id": "access_01",
-            "origin_place_id": null,
+            "id": "access_from_manila",
+            "origin_place_id": "geo_ph_0052",
             "modes": [
-              "other"
+              "ride_hailing",
+              "walking"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "ride_hailing",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "Удобнее всего из Manila; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+                "road": {
+                  "surface": "paved",
+                  "condition": "urban",
+                  "seasonality": null
+                },
+                "notes": "Подброска до ворот/границы Интрамуроса; дальше район удобнее разбирать пешком."
+              },
+              {
+                "mode": "walking",
+                "distance_km": null,
+                "duration_min": null,
+                "elevation_gain_m": 0,
+                "elevation_loss_m": 0,
+                "trailhead": null,
+                "trail": {
+                  "type": "urban_streets",
+                  "condition": "мощёные и асфальтированные улицы",
+                  "navigation": "простая городская сетка",
+                  "river_crossings": 0
+                },
+                "notes": "Основной режим внутри исторического ядра — пешком."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0071"
+            ]
+          },
+          {
+            "id": "access_public_transport",
+            "origin_place_id": "geo_ph_0052",
+            "modes": [
+              "public_transport",
+              "walking"
+            ],
+            "legs": [
+              {
+                "mode": "public_transport",
+                "distance_km": null,
+                "duration_min": null,
+                "notes": "Городской общественный транспорт довозит к центральной части Manila; точный маршрут зависит от исходной точки."
+              },
+              {
+                "mode": "walking",
+                "distance_km": null,
+                "duration_min": null,
+                "elevation_gain_m": 0,
+                "elevation_loss_m": 0,
+                "trailhead": null,
+                "trail": {
+                  "type": "urban_streets",
+                  "condition": null,
+                  "navigation": null,
+                  "river_crossings": 0
+                },
+                "notes": "Финишный участок до конкретных ворот/музея пешком."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0071"
             ]
           }
         ],
         "water": {
-          "summary": null,
+          "summary": "В Intramuros Visitors Center есть refreshment kiosks; это надёжная staffed-точка пополнения напитков, но источник не перечисляет ассортимент воды отдельно.",
           "quality": "unknown",
           "last_reliable_source": null,
           "distance_m": null,
           "natural_sources": [],
-          "source_refs": []
+          "source_refs": [
+            "src_stage_ph_0073"
+          ]
         },
         "supplies": null,
         "overnight": {
           "status": "unclear",
-          "summary": null,
-          "source_refs": []
+          "summary": "Ночёвка решается городским жильём Manila/Intramuros. Разрешение на палатку на стенах, площадях или в managed sites источниками не подтверждено.",
+          "source_refs": [
+            "src_stage_ph_0070"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -783,9 +1358,46 @@
         "video_suitability_5": 5,
         "best_time": "06:00–09:00 на стенах/улицах; late afternoon и blue hour для gates/walls",
         "best_weather_light": null,
-        "viewpoints": [],
+        "viewpoints": [
+          {
+            "id": "vp_fort_santiago",
+            "name": "Fort Santiago",
+            "description": "Фортификационный узел северной части Интрамуроса; удобно читать стены, ворота и связь крепости с рекой.",
+            "coordinates": {
+              "lat": 14.59387,
+              "lon": 120.97072,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "14.593870, 120.970720"
+            },
+            "access": null,
+            "view": {
+              "description": "Фортификационный узел северной части Интрамуроса; удобно читать стены, ворота и связь крепости с рекой."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "для ворот, стен и дворов"
+              },
+              {
+                "type": "standard",
+                "why": "для архитектурных деталей без сильной перспективной деформации"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0072"
+            ]
+          }
+        ],
         "seasonal_visuals": [],
-        "video_activity": [],
+        "video_activity": [
+          "пешеходное движение по историческим улицам",
+          "работа музейных и общественных пространств",
+          "религиозная жизнь вокруг действующих храмов — только там, где съёмка уместна"
+        ],
         "useful_equipment": [],
         "drone": {
           "visual_value": null,
@@ -816,30 +1428,34 @@
         "legacy_order": 4
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0006",
           "src_stage_ph_0012",
           "src_stage_ph_0003",
-          "src_stage_ph_0013"
+          "src_stage_ph_0013",
+          "src_stage_ph_0070",
+          "src_stage_ph_0071",
+          "src_stage_ph_0072",
+          "src_stage_ph_0073"
         ]
       },
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": false,
+          "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
-          "elevation": false,
+          "geo": true,
+          "coordinates": true,
+          "elevation": true,
           "narrative": true,
           "sources": true,
-          "access": false,
-          "water": false,
+          "access": true,
+          "water": true,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": false
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -853,7 +1469,7 @@
         "primary": "Vigan"
       },
       "summary": {
-        "narrow": "Vigan — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео."
+        "narrow": "Виган — редкий для Азии хорошо сохранившийся испанский колониальный город, где европейская планировочная сетка смешалась с китайскими, илоканскими и филиппинскими строительными традициями. Ценность города — не одна улица Calle Crisologo, а целый исторический core из кварталов, площадей и сотен старых домов."
       },
       "classification": {
         "class_id": "settlement.historic_city",
@@ -864,32 +1480,70 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
-        "nearest_place_id": null,
+        "region_ids": [
+          "geo_ph_0003",
+          "geo_ph_0023",
+          "geo_ph_0039"
+        ],
+        "nearest_place_id": "geo_ph_0057",
         "nearest_place_name_raw": "Vigan / Laoag",
         "primary_location": {
-          "lat": null,
-          "lon": null,
-          "elevation_m": null,
-          "elevation_range_m": null,
+          "lat": 17.575,
+          "lon": 120.3875,
+          "elevation_m": 19,
           "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "accuracy": "high",
+          "source_refs": [
+            "src_stage_ph_0075",
+            "src_stage_ph_0076"
+          ],
+          "checked_at": "2026-09-30",
+          "notes": "Координата UNESCO для исторического города; высота — картографическая отметка Vigan."
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 17.570536,
+            "lon": 120.388548,
+            "elevation_m": null,
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "source_refs": [
+              "src_stage_ph_0077"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Геопривязанная точка на Calle Crisologo, снятая в апреле 2026."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Vigan — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+            "text": "Виган — редкий для Азии хорошо сохранившийся испанский колониальный город, где европейская планировочная сетка смешалась с китайскими, илоканскими и филиппинскими строительными традициями. Ценность города — не одна улица Calle Crisologo, а целый исторический core из кварталов, площадей и сотен старых домов.",
             "source_refs": [
-              "src_stage_ph_0014",
-              "src_stage_ph_0015",
-              "src_stage_ph_0003"
+              "src_stage_ph_0074"
+            ]
+          },
+          {
+            "type": "history",
+            "text": "Виган сформировался в XVI веке как колониальный город и торговый центр. UNESCO подчёркивает, что его историческое ядро сохранило планировку испанского типа, но архитектурный язык был адаптирован к местным материалам и смешанной китайско-илоканско-филиппинской среде.",
+            "source_refs": [
+              "src_stage_ph_0074"
+            ]
+          },
+          {
+            "type": "culture",
+            "text": "Исторический Mestizo district отражает роль семей смешанного китайско-илоканского происхождения и торговой экономики северо-западного Лусона. В объект Всемирного наследия входят 233 исторических здания на сетке из 25 улиц, поэтому город лучше читать как цельную ткань, а не как одну «открыточную» улицу.",
+            "source_refs": [
+              "src_stage_ph_0074"
+            ]
+          },
+          {
+            "type": "geography",
+            "text": "Город расположен на северо-западе Лусона в провинции Ilocos Sur, в дельтовой зоне реки Abra. Историческое ядро компактное и преимущественно плоское, что делает его удобным для самостоятельной пешей разведки.",
+            "source_refs": [
+              "src_stage_ph_0074",
+              "src_stage_ph_0076"
             ]
           }
         ]
@@ -931,23 +1585,36 @@
         },
         "access_options": [
           {
-            "id": "access_01",
-            "origin_place_id": null,
+            "id": "access_historic_core_walk",
+            "origin_place_id": "geo_ph_0057",
             "modes": [
-              "other"
+              "walking"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "walking",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "Удобнее всего из Vigan / Laoag; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+                "elevation_gain_m": 0,
+                "elevation_loss_m": 0,
+                "trailhead": null,
+                "trail": {
+                  "type": "urban_heritage_streets",
+                  "condition": "преимущественно плоская городская сеть",
+                  "navigation": "простая",
+                  "river_crossings": 0
+                },
+                "notes": "Историческое ядро компактно; внутри него базовый режим — пешком."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0074",
+              "src_stage_ph_0076"
             ]
           }
         ],
         "water": {
-          "summary": null,
+          "summary": "Надёжная конкретная точка воды в каноническом POI-слое для этой карточки пока не заведена; городская инфраструктура есть, но её не подменяю неподтверждённым POI.",
           "quality": "unknown",
           "last_reliable_source": null,
           "distance_m": null,
@@ -957,8 +1624,10 @@
         "supplies": null,
         "overnight": {
           "status": "unclear",
-          "summary": null,
-          "source_refs": []
+          "summary": "Ночёвка решается городским жильём Vigan; законность палатки в историческом ядре не подтверждена.",
+          "source_refs": [
+            "src_stage_ph_0074"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -983,9 +1652,45 @@
         "video_suitability_5": 5,
         "best_time": "раннее утро, golden hour и blue hour; интерьер — по режиму естественного света",
         "best_weather_light": null,
-        "viewpoints": [],
+        "viewpoints": [
+          {
+            "id": "vp_calle_crisologo",
+            "name": "Calle Crisologo",
+            "description": "Мощёная улица и непрерывный ряд исторических фасадов; точка подтверждена геопривязанным снимком апреля 2026.",
+            "coordinates": {
+              "lat": 17.570536,
+              "lon": 120.388548,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "17.570536, 120.388548"
+            },
+            "access": null,
+            "view": {
+              "description": "Мощёная улица и непрерывный ряд исторических фасадов; точка подтверждена геопривязанным снимком апреля 2026."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "улица и фасадный фронт"
+              },
+              {
+                "type": "standard",
+                "why": "детали первых этажей, вывесок и окон без сильного растяжения перспективы"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0077"
+            ]
+          }
+        ],
         "seasonal_visuals": [],
-        "video_activity": [],
+        "video_activity": [
+          "движение пешеходов и kalesa по историческим улицам",
+          "повседневная жизнь действующего городского ядра"
+        ],
         "useful_equipment": [],
         "drone": {
           "visual_value": null,
@@ -1015,12 +1720,16 @@
         "legacy_order": 5
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0014",
           "src_stage_ph_0015",
-          "src_stage_ph_0003"
+          "src_stage_ph_0003",
+          "src_stage_ph_0074",
+          "src_stage_ph_0075",
+          "src_stage_ph_0076",
+          "src_stage_ph_0077"
         ]
       },
       "qa": {
@@ -1028,16 +1737,16 @@
         "checks": {
           "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
-          "elevation": false,
+          "geo": true,
+          "coordinates": true,
+          "elevation": true,
           "narrative": true,
           "sources": true,
-          "access": false,
+          "access": true,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": false
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -1232,7 +1941,7 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": false,
+          "language": true,
           "classification": true,
           "geo": false,
           "coordinates": false,
@@ -1454,7 +2163,7 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": false,
+          "language": true,
           "classification": true,
           "geo": false,
           "coordinates": false,
@@ -1866,7 +2575,7 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
@@ -2708,7 +3417,7 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": false,
+          "language": true,
           "classification": true,
           "geo": false,
           "coordinates": false,
@@ -3335,7 +4044,7 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": false,
+          "language": true,
           "classification": true,
           "geo": false,
           "coordinates": false,

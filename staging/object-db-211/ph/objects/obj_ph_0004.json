@@ -7,7 +7,7 @@
     "primary": "Intramuros"
   },
   "summary": {
-    "narrow": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео."
+    "narrow": "Интрамурос — историческое ядро Манилы внутри испанской системы стен и бастионов. Район вырос из колониального города XVI века, был административным центром Испанской Ост-Индии и почти полностью разрушен в 1945 году; сегодня это одновременно живой городской квартал и управляемый комплекс памятников."
   },
   "classification": {
     "class_id": "settlement.historic_city",
@@ -18,40 +18,66 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
-    "nearest_place_id": null,
+    "region_ids": [
+      "geo_ph_0001",
+      "geo_ph_0038"
+    ],
+    "nearest_place_id": "geo_ph_0052",
     "nearest_place_name_raw": "Manila",
     "primary_location": {
-      "lat": null,
-      "lon": null,
-      "elevation_m": null,
-      "elevation_range_m": null,
+      "lat": 14.59096,
+      "lon": 120.97465,
+      "elevation_m": 6,
       "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_ph_0071"
+      ],
+      "checked_at": "2026-09-30"
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 14.59387,
+        "lon": 120.97072,
+        "elevation_m": null,
+        "coordinate_type": "entrance",
+        "accuracy": "medium",
+        "source_refs": [
+          "src_stage_ph_0072"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Fort Santiago — один из основных управляемых входов/узлов внутри района."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "text": "Интрамурос — историческое ядро Манилы внутри испанской системы стен и бастионов. Район вырос из колониального города XVI века, был административным центром Испанской Ост-Индии и почти полностью разрушен в 1945 году; сегодня это одновременно живой городской квартал и управляемый комплекс памятников.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0012",
-          "src_stage_ph_0003",
-          "src_stage_ph_0013"
+          "src_stage_ph_0070"
+        ]
+      },
+      {
+        "type": "history",
+        "text": "Intramuros Administration датирует основание испанского города 1571 годом. Стены и фортификации строились примерно с 1590 по 1825 год; город был конечной точкой манильско-акапулькской галеонной торговли, пережил британскую оккупацию 1762–1764 годов, американский колониальный период и разрушение во время Второй мировой войны.",
+        "source_refs": [
+          "src_stage_ph_0070"
+        ]
+      },
+      {
+        "type": "culture",
+        "text": "Современный Интрамурос важен не только отдельными музеями: здесь в одном квартале сосуществуют религиозные здания, учебные учреждения, реконструированные дома, площади и фортификационные линии. Государственная Intramuros Administration отвечает за сохранение и восстановление района как национального историко-культурного ансамбля.",
+        "source_refs": [
+          "src_stage_ph_0070"
         ]
       }
     ]
   },
   "visit": {
     "entry": {
-      "access_status": "unknown",
+      "access_status": "open_public_district_with_gated_sites",
       "fee": {
         "amount": null,
         "currency": null,
@@ -80,7 +106,8 @@
         "src_stage_ph_0006",
         "src_stage_ph_0012",
         "src_stage_ph_0003",
-        "src_stage_ph_0013"
+        "src_stage_ph_0013",
+        "src_stage_ph_0070"
       ],
       "checked_at": "2026-09-28",
       "official_url": "https://intramuros.gov.ph/hours/",
@@ -89,34 +116,96 @@
     },
     "access_options": [
       {
-        "id": "access_01",
-        "origin_place_id": null,
+        "id": "access_from_manila",
+        "origin_place_id": "geo_ph_0052",
         "modes": [
-          "other"
+          "ride_hailing",
+          "walking"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Удобнее всего из Manila; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+            "road": {
+              "surface": "paved",
+              "condition": "urban",
+              "seasonality": null
+            },
+            "notes": "Подброска до ворот/границы Интрамуроса; дальше район удобнее разбирать пешком."
+          },
+          {
+            "mode": "walking",
+            "distance_km": null,
+            "duration_min": null,
+            "elevation_gain_m": 0,
+            "elevation_loss_m": 0,
+            "trailhead": null,
+            "trail": {
+              "type": "urban_streets",
+              "condition": "мощёные и асфальтированные улицы",
+              "navigation": "простая городская сетка",
+              "river_crossings": 0
+            },
+            "notes": "Основной режим внутри исторического ядра — пешком."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0071"
+        ]
+      },
+      {
+        "id": "access_public_transport",
+        "origin_place_id": "geo_ph_0052",
+        "modes": [
+          "public_transport",
+          "walking"
+        ],
+        "legs": [
+          {
+            "mode": "public_transport",
+            "distance_km": null,
+            "duration_min": null,
+            "notes": "Городской общественный транспорт довозит к центральной части Manila; точный маршрут зависит от исходной точки."
+          },
+          {
+            "mode": "walking",
+            "distance_km": null,
+            "duration_min": null,
+            "elevation_gain_m": 0,
+            "elevation_loss_m": 0,
+            "trailhead": null,
+            "trail": {
+              "type": "urban_streets",
+              "condition": null,
+              "navigation": null,
+              "river_crossings": 0
+            },
+            "notes": "Финишный участок до конкретных ворот/музея пешком."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0071"
         ]
       }
     ],
     "water": {
-      "summary": null,
+      "summary": "В Intramuros Visitors Center есть refreshment kiosks; это надёжная staffed-точка пополнения напитков, но источник не перечисляет ассортимент воды отдельно.",
       "quality": "unknown",
       "last_reliable_source": null,
       "distance_m": null,
       "natural_sources": [],
-      "source_refs": []
+      "source_refs": [
+        "src_stage_ph_0073"
+      ]
     },
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "summary": "Ночёвка решается городским жильём Manila/Intramuros. Разрешение на палатку на стенах, площадях или в managed sites источниками не подтверждено.",
+      "source_refs": [
+        "src_stage_ph_0070"
+      ]
     },
     "lodging_ids": [],
     "rules": {
@@ -142,9 +231,46 @@
     "video_suitability_5": 5,
     "best_time": "06:00–09:00 на стенах/улицах; late afternoon и blue hour для gates/walls",
     "best_weather_light": null,
-    "viewpoints": [],
+    "viewpoints": [
+      {
+        "id": "vp_fort_santiago",
+        "name": "Fort Santiago",
+        "description": "Фортификационный узел северной части Интрамуроса; удобно читать стены, ворота и связь крепости с рекой.",
+        "coordinates": {
+          "lat": 14.59387,
+          "lon": 120.97072,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "14.593870, 120.970720"
+        },
+        "access": null,
+        "view": {
+          "description": "Фортификационный узел северной части Интрамуроса; удобно читать стены, ворота и связь крепости с рекой."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для ворот, стен и дворов"
+          },
+          {
+            "type": "standard",
+            "why": "для архитектурных деталей без сильной перспективной деформации"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0072"
+        ]
+      }
+    ],
     "seasonal_visuals": [],
-    "video_activity": [],
+    "video_activity": [
+      "пешеходное движение по историческим улицам",
+      "работа музейных и общественных пространств",
+      "религиозная жизнь вокруг действующих храмов — только там, где съёмка уместна"
+    ],
     "useful_equipment": [],
     "drone": {
       "visual_value": null,
@@ -175,30 +301,34 @@
     "legacy_order": 4
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
       "src_stage_ph_0006",
       "src_stage_ph_0012",
       "src_stage_ph_0003",
-      "src_stage_ph_0013"
+      "src_stage_ph_0013",
+      "src_stage_ph_0070",
+      "src_stage_ph_0071",
+      "src_stage_ph_0072",
+      "src_stage_ph_0073"
     ]
   },
   "qa": {
     "status": "incomplete",
     "checks": {
-      "language": false,
+      "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
-      "elevation": false,
+      "geo": true,
+      "coordinates": true,
+      "elevation": true,
       "narrative": true,
       "sources": true,
-      "access": false,
-      "water": false,
+      "access": true,
+      "water": true,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

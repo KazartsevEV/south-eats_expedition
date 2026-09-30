@@ -7,7 +7,7 @@
     "primary": "Palawan / El Nido / Coron"
   },
   "summary": {
-    "narrow": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео."
+    "narrow": "Северный Палаван здесь рассматривается как связка двух морских узлов: карстовых лагун Bacuit Bay вокруг Эль-Нидо и островов Calamianes/Coron. Главная логистика самостоятельного путешествия — не «экскурсия», а лодочный доступ: материковые точки доступны по суше, но ключевые лагуны, озёра и рифы физически отделены морем."
   },
   "classification": {
     "class_id": "nature.reserve",
@@ -19,34 +19,76 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
+    "region_ids": [
+      "geo_ph_0007",
+      "geo_ph_0019",
+      "geo_ph_0035"
+    ],
     "nearest_place_id": null,
     "nearest_place_name_raw": "Puerto Princesa / El Nido / Busuanga",
     "primary_location": {
-      "lat": null,
-      "lon": null,
-      "elevation_m": null,
-      "elevation_range_m": null,
+      "lat": 11.18,
+      "lon": 119.3905,
+      "elevation_m": 36,
       "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_ph_0053"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Операционный центр Эль-Нидо; это не геометрический центр всей составной карточки Palawan / El Nido / Coron."
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 11.99077,
+        "lon": 120.21189,
+        "elevation_m": null,
+        "coordinate_type": "pier",
+        "accuracy": "medium",
+        "source_refs": [
+          "src_stage_ph_0055"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Coron Wharf — операционная точка лодочного доступа."
+      },
+      {
+        "lat": 11.9986,
+        "lon": 120.2052,
+        "elevation_m": 10,
+        "coordinate_type": "center",
+        "accuracy": "medium",
+        "source_refs": [
+          "src_stage_ph_0054"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Coron town hub."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+        "text": "Северный Палаван здесь рассматривается как связка двух морских узлов: карстовых лагун Bacuit Bay вокруг Эль-Нидо и островов Calamianes/Coron. Главная логистика самостоятельного путешествия — не «экскурсия», а лодочный доступ: материковые точки доступны по суше, но ключевые лагуны, озёра и рифы физически отделены морем.",
         "source_refs": [
-          "src_stage_ph_0001",
-          "src_stage_ph_0002",
-          "src_stage_ph_0003",
           "src_stage_ph_0004",
-          "src_stage_ph_0005"
+          "src_stage_ph_0051",
+          "src_stage_ph_0052"
+        ]
+      },
+      {
+        "type": "geography",
+        "text": "El Nido Managed Resource Protected Area объединяет наземные и морские экосистемы северо-западного Палавана; DENR фиксирует здесь известняковый рельеф, рифы, мангры, морские экосистемы и максимальную высоту территории около 640 м. В районе Эль-Нидо именно сочетание карста и моря формирует систему бухт, лагун и островов.",
+        "source_refs": [
+          "src_stage_ph_0051",
+          "src_stage_ph_0052"
+        ]
+      },
+      {
+        "type": "ethnography",
+        "text": "Coron Island связан с ancestral domain народа тагбанва. В материалах DENR управление этой территорией прямо рассматривается с учётом прав коренного населения; поэтому доступ к озёрам и островным участкам нельзя трактовать как свободное использование ничейной территории.",
+        "source_refs": [
+          "src_stage_ph_0052"
         ]
       }
     ]
@@ -94,23 +136,66 @@
     },
     "access_options": [
       {
-        "id": "access_01",
+        "id": "access_el_nido_boat",
         "origin_place_id": null,
+        "origin_raw": "El Nido",
         "modes": [
-          "other"
+          "boat"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "boat",
             "distance_km": null,
             "duration_min": null,
-            "notes": "El Nido и Coron используются как отдельные island-hopping hubs; между объектами требуется лодка. Для Coron основной авиационный вход — Busuanga; El Nido доступен авиацией/дорогой из Puerto Princesa. Для съёмочного дня закладывать полный дневной boat itinerary. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+            "notes": "К лагунам, островам и пляжам Bacuit Bay добираются по воде; DOT прямо описывает island-hopping, kayak и snorkel как базовые способы доступа."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0004"
+        ]
+      },
+      {
+        "id": "access_coron_boat",
+        "origin_place_id": null,
+        "origin_raw": "Coron Wharf",
+        "modes": [
+          "boat"
+        ],
+        "legs": [
+          {
+            "mode": "boat",
+            "distance_km": null,
+            "duration_min": null,
+            "notes": "К островным озёрам и рифам Coron Island нужен лодочный переход; точка отправления привязана к Coron Wharf."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0055",
+          "src_stage_ph_0052"
+        ]
+      },
+      {
+        "id": "access_between_hubs",
+        "origin_place_id": null,
+        "origin_raw": "El Nido / Coron",
+        "modes": [
+          "ferry"
+        ],
+        "legs": [
+          {
+            "mode": "ferry",
+            "distance_km": null,
+            "duration_min": null,
+            "notes": "Между Coron и El Nido путешественники в 2026 году описывали морской переход как заметно более долгий и погодозависимый, чем перелёт; точное расписание и длительность перепроверять у перевозчика."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0056"
         ]
       }
     ],
     "water": {
-      "summary": null,
+      "summary": "Надёжная вода подтверждена только в городских хабах; для островных точек и лодочных дней источник питьевой воды в карточке пока не нормализован.",
       "quality": "unknown",
       "last_reliable_source": null,
       "distance_m": null,
@@ -120,8 +205,11 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "summary": "Городское жильё доступно в El Nido и Coron; законность палатки на охраняемых и ancestral-domain островах без отдельного разрешения не подтверждена.",
+      "source_refs": [
+        "src_stage_ph_0051",
+        "src_stage_ph_0052"
+      ]
     },
     "lodging_ids": [],
     "rules": {
@@ -142,16 +230,124 @@
       "site_specific_notes": "Перед выездом смотреть фактический прогноз; для моря, гор, рек, пещер и вулканов оперативная погода важнее климатической нормы."
     }
   },
-  "traveler_reports": [],
+  "traveler_reports": [
+    {
+      "topic": "crowding",
+      "summary": "В отчёте мая 2026 популярные точки El Nido описаны как заметно перегруженные лодками и посетителями.",
+      "observed_period": "2026-05",
+      "source_refs": [
+        "src_stage_ph_0056"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "sea_transfer",
+      "summary": "Тот же отчёт отмечает грубое море на переходе к Coron и более «сырой» лодочный опыт по сравнению с El Nido.",
+      "observed_period": "2026-05",
+      "source_refs": [
+        "src_stage_ph_0056"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "weather",
+      "summary": "В июльском обсуждении 2026 путешественники отдельно предупреждали, что в сентябре тайфуны и сильное течение могут сокращать набор доступных лодочных маршрутов.",
+      "observed_period": "2026-07",
+      "source_refs": [
+        "src_stage_ph_0057"
+      ],
+      "confidence": "low"
+    }
+  ],
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
     "best_time": "рассвет/раннее утро и поздний день; для подводной съёмки важнее прозрачность воды/солнце",
     "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "useful_equipment": [],
+    "viewpoints": [
+      {
+        "id": "vp_el_nido_sunset",
+        "name": "Южная точка обзора на известняковые стены El Nido",
+        "description": "Карстовые стены и залив; геопривязанная фотография сделана на закате.",
+        "coordinates": {
+          "lat": 11.155468,
+          "lon": 119.398194,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "11.155468, 119.398194"
+        },
+        "access": null,
+        "view": {
+          "description": "Карстовые стены и залив; геопривязанная фотография сделана на закате."
+        },
+        "best_time": "sunset",
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "карстовая стенка и залив требуют широкого охвата"
+          },
+          {
+            "type": "telephoto",
+            "why": "помогает отделять отдельные гребни и лодки от сложного фона"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0058"
+        ]
+      },
+      {
+        "id": "vp_kayangan",
+        "name": "Kayangan Lake / Coron Island",
+        "description": "Озеро и известняковый карст Coron Island; точка подтверждена геопривязанным снимком.",
+        "coordinates": {
+          "lat": 11.957794,
+          "lon": 120.226136,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "11.957794, 120.226136"
+        },
+        "access": null,
+        "view": {
+          "description": "Озеро и известняковый карст Coron Island; точка подтверждена геопривязанным снимком."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "нужен для озера и окружающих карстовых стен"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0059"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "В сезон тайфунов и сильного муссона визуальная доступность морских точек определяется фактическим состоянием моря, а не календарём."
+    ],
+    "video_activity": [
+      "движение лодок между карстовыми островами",
+      "каяки в лагунах",
+      "подводная активность на рифах там, где доступ разрешён"
+    ],
+    "useful_equipment": [
+      {
+        "type": "wide",
+        "why": "карстовые бухты и лагуны"
+      },
+      {
+        "type": "underwater_camera",
+        "why": "рифы и прозрачная вода"
+      },
+      {
+        "type": "action_camera",
+        "why": "лодочные переходы и каяк"
+      }
+    ],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
@@ -182,14 +378,19 @@
     "legacy_order": 1
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
       "src_stage_ph_0001",
       "src_stage_ph_0002",
       "src_stage_ph_0003",
       "src_stage_ph_0004",
-      "src_stage_ph_0005"
+      "src_stage_ph_0005",
+      "src_stage_ph_0051",
+      "src_stage_ph_0052",
+      "src_stage_ph_0053",
+      "src_stage_ph_0054",
+      "src_stage_ph_0055"
     ]
   },
   "qa": {
@@ -197,16 +398,16 @@
     "checks": {
       "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
-      "elevation": false,
+      "geo": true,
+      "coordinates": true,
+      "elevation": true,
       "narrative": true,
       "sources": true,
-      "access": false,
+      "access": true,
       "water": false,
       "overnight": false,
-      "traveler_reports": false,
-      "visual_recon": false
+      "traveler_reports": true,
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

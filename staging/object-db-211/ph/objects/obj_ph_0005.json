@@ -7,7 +7,7 @@
     "primary": "Vigan"
   },
   "summary": {
-    "narrow": "Vigan — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео."
+    "narrow": "Виган — редкий для Азии хорошо сохранившийся испанский колониальный город, где европейская планировочная сетка смешалась с китайскими, илоканскими и филиппинскими строительными традициями. Ценность города — не одна улица Calle Crisologo, а целый исторический core из кварталов, площадей и сотен старых домов."
   },
   "classification": {
     "class_id": "settlement.historic_city",
@@ -18,32 +18,70 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
-    "nearest_place_id": null,
+    "region_ids": [
+      "geo_ph_0003",
+      "geo_ph_0023",
+      "geo_ph_0039"
+    ],
+    "nearest_place_id": "geo_ph_0057",
     "nearest_place_name_raw": "Vigan / Laoag",
     "primary_location": {
-      "lat": null,
-      "lon": null,
-      "elevation_m": null,
-      "elevation_range_m": null,
+      "lat": 17.575,
+      "lon": 120.3875,
+      "elevation_m": 19,
       "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "accuracy": "high",
+      "source_refs": [
+        "src_stage_ph_0075",
+        "src_stage_ph_0076"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Координата UNESCO для исторического города; высота — картографическая отметка Vigan."
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 17.570536,
+        "lon": 120.388548,
+        "elevation_m": null,
+        "coordinate_type": "viewpoint",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0077"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Геопривязанная точка на Calle Crisologo, снятая в апреле 2026."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Vigan — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "text": "Виган — редкий для Азии хорошо сохранившийся испанский колониальный город, где европейская планировочная сетка смешалась с китайскими, илоканскими и филиппинскими строительными традициями. Ценность города — не одна улица Calle Crisologo, а целый исторический core из кварталов, площадей и сотен старых домов.",
         "source_refs": [
-          "src_stage_ph_0014",
-          "src_stage_ph_0015",
-          "src_stage_ph_0003"
+          "src_stage_ph_0074"
+        ]
+      },
+      {
+        "type": "history",
+        "text": "Виган сформировался в XVI веке как колониальный город и торговый центр. UNESCO подчёркивает, что его историческое ядро сохранило планировку испанского типа, но архитектурный язык был адаптирован к местным материалам и смешанной китайско-илоканско-филиппинской среде.",
+        "source_refs": [
+          "src_stage_ph_0074"
+        ]
+      },
+      {
+        "type": "culture",
+        "text": "Исторический Mestizo district отражает роль семей смешанного китайско-илоканского происхождения и торговой экономики северо-западного Лусона. В объект Всемирного наследия входят 233 исторических здания на сетке из 25 улиц, поэтому город лучше читать как цельную ткань, а не как одну «открыточную» улицу.",
+        "source_refs": [
+          "src_stage_ph_0074"
+        ]
+      },
+      {
+        "type": "geography",
+        "text": "Город расположен на северо-западе Лусона в провинции Ilocos Sur, в дельтовой зоне реки Abra. Историческое ядро компактное и преимущественно плоское, что делает его удобным для самостоятельной пешей разведки.",
+        "source_refs": [
+          "src_stage_ph_0074",
+          "src_stage_ph_0076"
         ]
       }
     ]
@@ -85,23 +123,36 @@
     },
     "access_options": [
       {
-        "id": "access_01",
-        "origin_place_id": null,
+        "id": "access_historic_core_walk",
+        "origin_place_id": "geo_ph_0057",
         "modes": [
-          "other"
+          "walking"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Удобнее всего из Vigan / Laoag; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+            "elevation_gain_m": 0,
+            "elevation_loss_m": 0,
+            "trailhead": null,
+            "trail": {
+              "type": "urban_heritage_streets",
+              "condition": "преимущественно плоская городская сеть",
+              "navigation": "простая",
+              "river_crossings": 0
+            },
+            "notes": "Историческое ядро компактно; внутри него базовый режим — пешком."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0074",
+          "src_stage_ph_0076"
         ]
       }
     ],
     "water": {
-      "summary": null,
+      "summary": "Надёжная конкретная точка воды в каноническом POI-слое для этой карточки пока не заведена; городская инфраструктура есть, но её не подменяю неподтверждённым POI.",
       "quality": "unknown",
       "last_reliable_source": null,
       "distance_m": null,
@@ -111,8 +162,10 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "summary": "Ночёвка решается городским жильём Vigan; законность палатки в историческом ядре не подтверждена.",
+      "source_refs": [
+        "src_stage_ph_0074"
+      ]
     },
     "lodging_ids": [],
     "rules": {
@@ -137,9 +190,45 @@
     "video_suitability_5": 5,
     "best_time": "раннее утро, golden hour и blue hour; интерьер — по режиму естественного света",
     "best_weather_light": null,
-    "viewpoints": [],
+    "viewpoints": [
+      {
+        "id": "vp_calle_crisologo",
+        "name": "Calle Crisologo",
+        "description": "Мощёная улица и непрерывный ряд исторических фасадов; точка подтверждена геопривязанным снимком апреля 2026.",
+        "coordinates": {
+          "lat": 17.570536,
+          "lon": 120.388548,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "17.570536, 120.388548"
+        },
+        "access": null,
+        "view": {
+          "description": "Мощёная улица и непрерывный ряд исторических фасадов; точка подтверждена геопривязанным снимком апреля 2026."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "улица и фасадный фронт"
+          },
+          {
+            "type": "standard",
+            "why": "детали первых этажей, вывесок и окон без сильного растяжения перспективы"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0077"
+        ]
+      }
+    ],
     "seasonal_visuals": [],
-    "video_activity": [],
+    "video_activity": [
+      "движение пешеходов и kalesa по историческим улицам",
+      "повседневная жизнь действующего городского ядра"
+    ],
     "useful_equipment": [],
     "drone": {
       "visual_value": null,
@@ -169,12 +258,16 @@
     "legacy_order": 5
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
       "src_stage_ph_0014",
       "src_stage_ph_0015",
-      "src_stage_ph_0003"
+      "src_stage_ph_0003",
+      "src_stage_ph_0074",
+      "src_stage_ph_0075",
+      "src_stage_ph_0076",
+      "src_stage_ph_0077"
     ]
   },
   "qa": {
@@ -182,16 +275,16 @@
     "checks": {
       "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
-      "elevation": false,
+      "geo": true,
+      "coordinates": true,
+      "elevation": true,
       "narrative": true,
       "sources": true,
-      "access": false,
+      "access": true,
       "water": false,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

@@ -15,6 +15,8 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 
 SCHEMA_VERSION = "2.10.10"
 RELEASE_ID = "2026-09-29-r40"
+LATEST_RELEASE_ID = "2026-09-29-r40"
+RELEASE_STATUS = "reference_release"
 SUPPORTED_SOURCE_MODELS = {"1.2", "1.5", "1.6"}
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),
@@ -1260,7 +1262,7 @@ def build():
         "project": "Expedition South East",
         "schema_version": SCHEMA_VERSION,
         "release_id": RELEASE_ID,
-        "status": "reference_release",
+        "status": RELEASE_STATUS,
         "published_countries": [x[1] for x in PUBLISH + COUNTRY_ONLY],
         "target_countries_total": 11,
         "totals": {
@@ -1275,16 +1277,21 @@ def build():
         "files": manifest_files,
     }
     dump(release / "manifest.json", manifest)
-    dump(PUBLIC / "latest.json", {
-        "project": "Expedition South East",
-        "schema_version": SCHEMA_VERSION,
-        "release_id": RELEASE_ID,
-        "release_path": f"{RELEASE_ID}/",
-        "manifest": f"{RELEASE_ID}/manifest.json",
-        "status": "reference_release",
-        "published_countries": [x[1] for x in PUBLISH + COUNTRY_ONLY],
-        "target_countries_total": 11,
-    })
+    if RELEASE_ID == LATEST_RELEASE_ID and RELEASE_STATUS == "reference_release":
+        dump(PUBLIC / "latest.json", {
+            "project": "Expedition South East",
+            "schema_version": SCHEMA_VERSION,
+            "release_id": RELEASE_ID,
+            "release_path": f"{RELEASE_ID}/",
+            "manifest": f"{RELEASE_ID}/manifest.json",
+            "status": "reference_release",
+            "published_countries": [x[1] for x in PUBLISH + COUNTRY_ONLY],
+            "target_countries_total": 11,
+        })
+    elif not (PUBLIC / "latest.json").exists():
+        raise RuntimeError(
+            "latest.json is missing while the build target is not the promoted reference release"
+        )
     print(json.dumps(manifest["totals"], ensure_ascii=False))
 
 

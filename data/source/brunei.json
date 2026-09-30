@@ -2282,9 +2282,35 @@
               "best_time": "последние 90 минут до заката и синий час",
               "best_weather_light": "сухой вечер с умеренным ветром",
               "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_billionth_area_01",
+                  "name": "Публичная зона у Billionth Barrel Monument",
+                  "description": "Документированная наземная точка у памятника: от неё видны монумент, прибрежная полоса и элементы действующего нефтяного ландшафта Seria.",
+                  "coordinates": {
+                    "lat": 4.616853,
+                    "lon": 114.317069,
+                    "elevation_m": null
+                  },
+                  "access": "Открытая прибрежная площадка у Jalan Utara; производственные зоны за ограждениями не пересекать.",
+                  "best_time": "sunset",
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    "wide",
+                    "standard",
+                    "telephoto"
+                  ],
+                  "source": {
+                    "type": "media_repository",
+                    "title": "One Billionth Barrel Monument — documented camera location",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:One_Billionth_Barrel_Monument.jpg",
+                    "accessed": "2026-10-01"
+                  }
+                }
+              ],
+              "viewpoint_candidates_unverified": [
                 "публичная дорога с несколькими pumpjacks в перспективе",
-                "граница жилого квартала и нефтяной инфраструктуры",
-                "морской горизонт для финального плана"
+                "граница жилого квартала и нефтяной инфраструктуры"
               ]
             },
             "drone": "Не запускать над нефтегазовой инфраструктурой без явного разрешения.",
@@ -2295,12 +2321,34 @@
             "culture_ethnography": "Нефть сформировала рабочие кварталы, инфраструктуру Бруней каркас здания Petroleum и международные инженерные связи; это социальный ландшафт, а не только техника.",
             "geography_geology": "Месторождение связано с осадочными бассейнами северо-западного Борнео; историю удобно объяснять на берегу и у pumpjacks как результат накопления углеводородов в молодых дельтово-морских толщах."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "часть объектов за ограждениями",
-              "ветер и дорожный шум"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "industrial_context",
+              "summary": "Свежие отзывы о Billionth Barrel Monument подтверждают, что рядом с публичной зоной продолжают работать nodding-donkey pumps; поэтому нефтяной ландшафт читается прямо с общедоступной прибрежной зоны, без входа на производственные площадки.",
+              "observed_period": "2025-12/2026-03",
+              "confidence": "medium",
+              "source": {
+                "type": "review_aggregator",
+                "title": "Billionth Barrel Monument recent Google reviews aggregation",
+                "publisher": "Wanderlog",
+                "url": "https://wanderlog.com/place/details/313892/billionth-barrel-monument",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "facilities",
+              "summary": "Отзыв октября 2025 у памятника отмечает отсутствие укрытия от солнца и трудности с поиском туалета; для полевого маршрута по нефтяному ландшафту это означает, что воду и санитарную остановку лучше закрыть в Seria заранее.",
+              "observed_period": "2025-10",
+              "confidence": "medium",
+              "source": {
+                "type": "review_aggregator",
+                "title": "Billionth Barrel Monument recent Google reviews aggregation",
+                "publisher": "Wanderlog",
+                "url": "https://wanderlog.com/place/details/313892/billionth-barrel-monument",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Tat Place Hotel",
@@ -2506,28 +2554,46 @@
           },
           "logistics": {
             "access": "Из Kuala Белайт/Сериа по Лаби дорога; для удалённых лесных маршрутов нужен локальный контакт или гид.",
-            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
+            "public_transport": "Официальный Explore Labi прямо указывает отсутствие общественного транспорта к ключевым точкам Labi; нужен собственный транспорт или заранее согласованный водитель.",
             "last_mile": null,
             "typical_visit_hours": [
               6,
               10
             ],
-            "permit_or_guide": "местный проводник разумен только для удалённых лесных троп или когда нужен перевод/согласование с общиной",
+            "permit_or_guide": "Гид не нужен для самой дороги и публичных точек. Для лесных треков официальный Explore Labi рекомендует/требует предварительный контакт с центром или Teraja Longhouse и авторизованного проводника.",
             "mobility_notes": null,
             "modes": {
-              "public_transport": "удобного регулярного транспорта по Лаби дорога нет",
+              "public_transport": "нет практического регулярного общественного транспорта к внутренним объектам",
               "taxi_ridehail": "нужен заранее согласованный водитель/гид",
               "moped": "по основной дороге возможен в сухую погоду",
               "walking": "между объектами десятки км; пешком только локальные тропы"
             },
-            "water": "в деревнях по договорённости; в лес брать 1.5–2 л/чел на полдня",
+            "water": {
+              "at_object": null,
+              "last_reliable_point": {
+                "description": "магазины и населённые пункты вдоль северной части коридора Labi; конкретный последний магазин зависит от выбранного трека",
+                "distance_to_object_km": null
+              },
+              "natural_sources": [
+                {
+                  "type": "stream",
+                  "potability": "treatment_required",
+                  "notes": "лесные ручьи не считать питьевой водой без обработки"
+                }
+              ],
+              "notes": "Для лесного выхода свой запас воды обязателен; точку последнего пополнения привязывать к конкретному треку, а не к широкому объекту Labi interior."
+            },
             "overnight_and_camping": "у длинный дом/на частной земле только с разрешения; лес — согласованная площадка",
-            "access_requirements": "местный проводник разумен только для удалённых лесных троп или когда нужен перевод/согласование с общиной",
+            "access_requirements": "По основной Jalan Labi можно ехать самостоятельно. Для двух открытых лесных треков официальный буклет требует сначала связаться с Tropical Biodiversity Centre или Teraja Longhouse; незнакомые лесные маршруты в одиночку не проходить.",
             "self_guided_default": true,
-            "travel_model": "самостоятельно по дорогам и доступным тропам; визиты в общины — по предварительной договорённости"
+            "travel_model": "самостоятельно по дорогам и доступным тропам; визиты в общины — по предварительной договорённости",
+            "overnight": {
+              "status": "permission_required",
+              "summary": "Ночёвка в longhouse — только по договорённости; лесной кемпинг возможен только в рамках согласованной активности/площадки. Официальный Explore Labi прямо описывает trekking & camping, но не даёт общего разрешения на произвольный лагерь."
+            }
           },
           "climate": {
-            "best_period": "Более сухие окна предпочтительнее; избегать лесных маршрутов при сильном дожде и подъёме воды.",
+            "best_period": "Избегать самых влажных периодов и сильных дождей с конца октября по январь: официальный Explore Labi предупреждает, что они могут ограничивать доступ.",
             "heat_rain_notes": "Экваториальный климат: высокая влажность и жара круглый год; сильный ливень возможен в любой месяц.",
             "site_specific_notes": null
           },
@@ -2535,7 +2601,7 @@
             "hours": "Единого графика нет; деревни и природные маршруты зависят от договорённостей и погоды.",
             "ticket": "Зависит от длинный дом/гида/активности.",
             "closure_notes": null,
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/teraja-forest-reserve/"
           },
           "safety": {
@@ -2556,9 +2622,9 @@
             "visual_scouting": {
               "best_time": "длинный дом утром; лес после 08:00; водопады в рассеянном свете",
               "best_weather_light": "день после ночного дождя при стабильном прогнозе",
-              "viewpoints_for_photo_video": [
-                "дорога Лаби с переходом от открытых участков к лесу",
-                "общая галерея ruai — только с разрешения",
+              "viewpoints_for_photo_video": [],
+              "viewpoint_candidates_unverified": [
+                "дорога Labi с переходом от открытых участков к лесу",
                 "берег ручья/водопад на проверенной тропе"
               ]
             },
@@ -2570,12 +2636,34 @@
             "culture_ethnography": "Ибанский длинный дом — не 'один большой дом племени', а архитектура соседства: отдельные семейные секции связаны общей галереей ruai. В ибанской традиции этнографически описаны толкование птиц-знамений beburong, снов и представления о Sebayan; подавать их следует как традиции, а не как универсальную современную веру каждого жителя.",
             "geography_geology": "Влажный низменный и холмистый лес; после сильных ливней небольшие водотоки и грунтовые ответвления быстро меняют проходимость."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "слабая связь",
-              "после ливня боковые дороги и переправы меняются"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "recent_visual_and_access",
+              "summary": "Отзыв апреля 2025 описывает Luagan Lalak как действующую природную точку Labi с зеркальной поверхностью воды при ясной безветренной погоде.",
+              "observed_period": "2025-04",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Labi Rainforest traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d546254-Reviews-Labi_Rainforest-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "trail_condition",
+              "summary": "Для Teraja Waterfall в январе 2025 зафиксированы очень грязная муссонная тропа и неочевидные переходы через ручей; это локальное наблюдение по одному из маршрутов Labi, а не характеристика всей дороги.",
+              "observed_period": "2025-01",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Teraja Waterfall traveler report",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g1024132-d12955587-Reviews-Teraja_Waterfall-Seria_Belait_District.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Tat Place Hotel",
@@ -2660,6 +2748,19 @@
             ],
             "accessed": "2026-09-28",
             "notes": "Этнографические традиции в аннотации обозначены как традиции, а не как универсальная современная практика."
+          },
+          {
+            "url": "https://www.bruneitourism.com/wp-content/uploads/2025/03/explore-labi.pdf",
+            "publisher": "Brunei Tourism",
+            "used_for": [
+              "access",
+              "weather seasonality",
+              "trekking",
+              "camping",
+              "mobile coverage",
+              "guide/contact requirements"
+            ],
+            "accessed": "2026-10-01"
           }
         ],
         "verification": {
@@ -4316,10 +4417,10 @@
             "site_specific_notes": null
           },
           "operations": {
-            "hours": "Открытая площадка; единый кассовый график не нужен, но местные ограничения/работы проверять.",
+            "hours": "Открытая наружная площадка без кассы; текущие агрегированные листинги показывают доступ 24/7, но временные работы/ограждения проверять на месте.",
             "ticket": "Свободный доступ к публичной зоне.",
             "closure_notes": null,
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/billionth-barrel-monument/"
           },
           "safety": {
@@ -4340,9 +4441,33 @@
               "best_time": "последний час до заката + синий час",
               "best_weather_light": "умеренный ветер; после дождя полезны отражения",
               "viewpoints_for_photo_video": [
-                "фронтальная ось через арку",
-                "боковой ракурс с морем/горизонтом",
-                "точка, связывающая монумент с нефтяной инфраструктурой Сериа"
+                {
+                  "id": "vp_monument_01",
+                  "name": "Наземная точка перед монументом",
+                  "description": "EXIF-точка Commons-фотографии фиксирует фронтально-боковой вид на арку Billionth Barrel Monument с публичной площадки.",
+                  "coordinates": {
+                    "lat": 4.616853,
+                    "lon": 114.317069,
+                    "elevation_m": 22.836
+                  },
+                  "access": "Публичная площадка у Jalan Utara, рядом с парковкой.",
+                  "best_time": "sunset",
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    "wide",
+                    "standard"
+                  ],
+                  "source": {
+                    "type": "media_repository",
+                    "title": "One Billionth Barrel Monument — documented camera location",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:One_Billionth_Barrel_Monument.jpg",
+                    "accessed": "2026-10-01"
+                  }
+                }
+              ],
+              "viewpoint_candidates_unverified": [
+                "боковой ракурс с морем и промышленным горизонтом"
               ]
             },
             "drone": "Не запускать над нефтяной инфраструктурой без разрешения.",
@@ -4353,12 +4478,47 @@
             "culture_ethnography": "Это памятник экономической биографии страны: нефтяная рента изменила инфраструктуру, государственные услуги и международное положение Брунея.",
             "geography_geology": "Стоит почти на берегу Южно-Китайского моря; открытый горизонт даёт сильный закат, но морской ветер ухудшает звук."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "сам объект короткий без исторического контекста",
-              "сильный морской ветер"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "facilities",
+              "summary": "Отзыв октября 2025 отмечает отсутствие укрытия от солнца и трудность с поиском туалета; ближайшую санитарную остановку лучше планировать в Seria.",
+              "observed_period": "2025-10",
+              "confidence": "medium",
+              "source": {
+                "type": "review_aggregator",
+                "title": "Billionth Barrel Monument recent Google reviews aggregation",
+                "publisher": "Wanderlog",
+                "url": "https://wanderlog.com/place/details/313892/billionth-barrel-monument",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "current_surroundings",
+              "summary": "Отзывы декабря 2025 — марта 2026 подтверждают, что рядом с монументом видны действующие нефтяные качалки и открыт морской горизонт.",
+              "observed_period": "2025-12/2026-03",
+              "confidence": "medium",
+              "source": {
+                "type": "review_aggregator",
+                "title": "Billionth Barrel Monument recent Google reviews aggregation",
+                "publisher": "Wanderlog",
+                "url": "https://wanderlog.com/place/details/313892/billionth-barrel-monument",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "beach_condition",
+              "summary": "Отзыв апреля 2026 жалуется на мусор вдоль пляжа. Это субъективное датированное наблюдение о состоянии береговой полосы, а не постоянная характеристика объекта.",
+              "observed_period": "2026-04",
+              "confidence": "low",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Billionth Barrel Monument traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.ca/Attraction_Review-g1024132-d4355435-Reviews-Billionth_Barrel_Monument-Seria_Belait_District.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Tat Place Hotel",
@@ -4434,6 +4594,17 @@
               "social/web contacts"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.bsp.com.bn/main/about-bsp/billionth-barrel-monument",
+            "publisher": "Brunei Shell Petroleum",
+            "used_for": [
+              "history",
+              "1991 construction",
+              "relationship to S-1 well",
+              "maintenance"
+            ],
+            "accessed": "2026-10-01"
           }
         ],
         "verification": {

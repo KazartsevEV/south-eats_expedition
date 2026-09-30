@@ -4,7 +4,7 @@
   "slug": "sepilok-orangutan-rehabilitation-centre",
   "status": "migration_draft",
   "names": {
-    "primary": "Sepilok Orangutan Rehabilitation Centre"
+    "primary": "Центр реабилитации орангутанов Сепилок"
   },
   "summary": {
     "narrow": "Sepilok — центр реабилитации орангутанов внутри лесного резервата Kabili-Sepilok; важнее наблюдения за животными здесь сама логика возвращения их к самостоятельной жизни в лесу."
@@ -45,14 +45,16 @@
     },
     "geo_points": [],
     "object_elevation": {
-      "representative_m": null,
+      "representative_m": 13,
       "min_m": null,
       "max_m": null,
-      "reference_type": null,
-      "accuracy": "unknown",
-      "source_refs": [],
-      "checked_at": null,
-      "notes": null
+      "reference_type": "terrain_context",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src_stage_my_0229"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "13 м — картографическая отметка населённой местности Sepilok, используемая как приблизительный контекст рельефа; точная высота платформы центра источником не подтверждена."
     }
   },
   "narrative": {
@@ -75,7 +77,7 @@
         "amount": null,
         "currency": null,
         "pricing_basis": null,
-        "description": "Non-Malaysian adult RM30, child RM15; сеанс кормленияs 10:00 and 15:00. Fees/hours last reviewed by Sabah Tourism Feb 2025 — verify.",
+        "description": "Для иностранцев Sabah Tourism указывает отдельный взрослый и детский тариф; перед поездкой сумму перепроверять у центра, поскольку цены могут меняться.",
         "source_refs": [
           "src_stage_my_0079",
           "src_stage_my_0080",
@@ -114,7 +116,7 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Из Sandakan есть bus/van до Sepilok junction, дальше walk/transfer."
+            "notes": "Из Сандакана можно доехать автобусом или минивэном до поворота на Сепилок, затем пройти пешком или взять короткий трансфер."
           }
         ]
       },
@@ -130,7 +132,7 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Grab/такси 30–40 минут из Sandakan; обратную машину лучше планировать заранее."
+            "notes": "Такси или сервис заказа машины из Сандакана обычно удобнее общественного транспорта; обратную машину лучше планировать заранее."
           }
         ]
       },
@@ -146,7 +148,7 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Простой road access, парковка у комплекса."
+            "notes": "Подъезд по обычной дороге; парковка у комплекса."
           }
         ]
       },
@@ -162,14 +164,14 @@
             "mode": "walk",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Boardwalk/centre route несколько км максимум."
+            "notes": "Внутри центра маршрут идёт по настилам и коротким лесным дорожкам."
           }
         ]
       }
     ],
     "water": {
       "at_object": null,
-      "summary": "Кафе/visitor area рядом; внутри настила держать руки свободными и не носить открытую еду.",
+      "summary": "Питьевую воду и еду можно взять в зоне центра и рядом с ним; на настилах не стоит нести открытую еду из-за животных.",
       "quality": "unknown",
       "last_reliable_point": null,
       "natural_sources": [],
@@ -189,7 +191,9 @@
         "src_stage_my_0081"
       ]
     },
-    "lodging_ids": [],
+    "lodging_ids": [
+      "lod_my_0017"
+    ],
     "rules": {
       "permit_or_guide": "Обычный вход по билету, без проводника. Специальный доступ и профессиональную съёмку согласовывать с Sabah Wildlife Department.",
       "access_requirements": null,
@@ -208,42 +212,94 @@
   },
   "traveler_reports": [
     {
-      "topic": "general",
-      "summary": "на feeding session orangutan могут вообще не прийти",
-      "source_refs": []
-    },
-    {
-      "topic": "general",
-      "summary": "feeding crowd концентрируется у одной платформы",
-      "source_refs": []
-    },
-    {
-      "topic": "general",
-      "summary": "влажность и тёмный лес требуют светосильной/стабилизированной оптики",
-      "source_refs": []
-    }
-  ],
-  "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "drone": {
-      "visual_value": null,
-      "legal_status": "unknown",
-      "permit_required": null,
-      "restrictions": [
-        "Без разрешения дикой природы facility/авиационных властей не использовать."
-      ],
+      "topic": "wildlife",
+      "summary": "Появление орангутанов на кормовой платформе не гарантируется: цель реабилитации — самостоятельное питание животных в лесу.",
+      "observed_period": null,
       "source_refs": [
         "src_stage_my_0079",
         "src_stage_my_0080",
         "src_stage_my_0081"
       ],
-      "checked_at": "2026-09-28"
+      "confidence": "high"
     },
-    "useful_equipment": [],
-    "best_time": "Приходить до кормления, чтобы снять путь через лес и ожидание; мягкая облачность лучше пятнистого жёсткого света.",
-    "best_weather_light": null
+    {
+      "topic": "crowding",
+      "summary": "Основная плотность посетителей концентрируется вокруг времени кормления; до него лесные настилы обычно дают более спокойный контекст.",
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": "low"
+    }
+  ],
+  "visual_recon": {
+    "viewpoints": [
+      {
+        "id": "vp_sepilok_centre",
+        "name": "Лесные настилы и кормовая платформа Сепилока",
+        "coordinates": {
+          "lat": 5.865,
+          "lon": 117.9488,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "5.865000, 117.948800"
+        },
+        "access": {
+          "walk_km": null
+        },
+        "view": {
+          "description": "Низинный диптерокарповый лес, настилы и зона наблюдения за реабилитируемыми орангутанами."
+        },
+        "best_time": "morning / afternoon feeding window",
+        "best_weather_light": "Мягкая облачность снижает пятнистый контраст в тёмном лесу; сильный дождь ухудшает наблюдение и съёмку.",
+        "useful_equipment": [
+          {
+            "type": "telephoto",
+            "why": "животные находятся на деревьях и платформах на дистанции"
+          },
+          {
+            "type": "long_telephoto",
+            "why": "для поведения в кронах без приближения к животным"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0228",
+          "src_stage_my_0079"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Плодоношение леса и дождь влияют на вероятность появления животных у кормовой площадки; сам лес остаётся зелёным круглый год."
+    ],
+    "video_activity": [
+      "передвижение орангутанов по кронам и канатам без привлечения их внимания",
+      "переход по лесным настилам",
+      "поведение макак и другой фауны при естественном появлении"
+    ],
+    "drone": {
+      "visual_value": null,
+      "legal_status": "permission_required",
+      "permit_required": true,
+      "restrictions": [
+        "Центр реабилитации и лесной резерват не являются зоной свободного запуска; требуется отдельное согласование с Sabah Wildlife Department и авиационными властями."
+      ],
+      "source_refs": [
+        "src_stage_my_0079",
+        "src_stage_my_0080"
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "useful_equipment": [
+      {
+        "type": "long_telephoto",
+        "why": "для орангутанов в кронах с уважительной дистанции"
+      },
+      {
+        "type": "standard",
+        "why": "для настилов и лесной среды"
+      }
+    ],
+    "best_time": "до и во время официальных окон наблюдения",
+    "best_weather_light": "Мягкая облачность или ровный лесной свет."
   },
   "media": {
     "cover_id": null,
@@ -268,16 +324,6 @@
       "moped_access",
       "taxi_ridehail",
       "guide_or_permit"
-    ],
-    "unmigrated_accommodation": [
-      {
-        "name": "Sepilok Forest Edge Resort",
-        "area": "Sepilok",
-        "price_for_two": "не самый дешёвый, но рядом; тариф динамический — бюджетные варианты Sandakan обычно дешевле",
-        "contact": "+60 16-523 3190; sepilokforestedge@gmail.com",
-        "social_or_web": "https://www.sepilokforestedgeresort.com/",
-        "source": "official property contact page"
-      }
     ],
     "illustration": {
       "static_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Sandakan_Sabah_Sepilok-Orangutan-Rehabilitation-Centre-02a.jpg",
@@ -315,20 +361,20 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

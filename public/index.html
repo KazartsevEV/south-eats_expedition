@@ -459,7 +459,16 @@ function setActiveNav(){
     b.classList.toggle('active',r==='#/'?h==='#/'||h==='':h.indexOf(r)===0);
   });
 }
-function routeTo(hash){location.hash=hash}
+function scrollRouteTop(){
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  document.documentElement.scrollTop=0;
+  document.body.scrollTop=0;
+  window.scrollTo(0,0);
+}
+function routeTo(hash){
+  scrollRouteTop();
+  location.hash=hash;
+}
 function breadcrumb(items){
   return '<div class="breadcrumb">'+items.map(function(x){
     return x.hash?'<button data-go="'+esc(x.hash)+'">'+esc(x.label)+'</button>':'<span>'+esc(x.label)+'</span>';
@@ -963,6 +972,7 @@ function renderMapPage(){
   addBaseMap('map',state.objects,{maxZoom:7,pad:.08,englishOnly:true});bindGo();
 }
 function router(){
+  scrollRouteTop();
   setActiveNav();resetMaps();
   var h=(location.hash||'#/').replace(/^#/,'');
   var p=h.split('/').filter(Boolean);

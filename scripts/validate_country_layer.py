@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 HIER = ROOT / "data" / "hierarchy" / "countries"
+GEO_NODES = ROOT / "data" / "geo" / "nodes"
 REGISTRY = ROOT / "data" / "id-registry.json"
 
 COUNTRIES = {
@@ -62,6 +63,49 @@ def fail(message: str):
 def present(value):
     return value not in (None, "", [], {})
 
+def validate_geojson_coordinates(value, label):
+    if not isinstance(value, list) or not value:
+        fail(f"{label}: geometry coordinates must be a non-empty array")
+    if isinstance(value[0], (int, float)):
+        if len(value) < 2:
+            fail(f"{label}: coordinate pair is incomplete")
+        lon, lat = value[0], value[1]
+        if not (-180 <= lon <= 180 and -90 <= lat <= 90):
+            fail(f"{label}: coordinate outside WGS84 range: {lon}, {lat}")
+        return
+    for child in value:
+        validate_geojson_coordinates(child, label)
+
+def validate_node_geometry(code, node, known_source_ids):
+    geometry_meta = node.get("geometry") or {}
+    if geometry_meta.get("status") != "available":
+        return False
+    geo_id = node.get("canonical_id")
+    path = GEO_NODES / f"{geo_id}.geojson"
+    if not path.exists():
+        fail(f"{code}: geo node {node.get('id')!r} declares geometry but file is missing: {path}")
+    if not geometry_meta.get("source_refs") or not geometry_meta.get("checked_at"):
+        fail(f"{code}: geo node {node.get('id')!r} has incomplete geometry provenance")
+    unknown = sorted(set(geometry_meta.get("source_refs") or []) - known_source_ids)
+    if unknown:
+        fail(f"{code}: geo node {node.get('id')!r} geometry references unknown canonical sources {unknown}")
+    if geometry_meta.get("accuracy") == "approximate" and not (
+        geometry_meta.get("coverage_basis") or geometry_meta.get("note")
+    ):
+        fail(f"{code}: approximate geo node {node.get('id')!r} lacks coverage_basis/note")
+    doc = load(path)
+    if doc.get("type") != "FeatureCollection" or not (doc.get("features") or []):
+        fail(f"{code}: geometry file for {geo_id} must be a non-empty FeatureCollection")
+    for index, feature in enumerate(doc.get("features") or []):
+        geometry = (feature or {}).get("geometry") or {}
+        if geometry.get("type") not in {"Polygon", "MultiPolygon"}:
+            fail(f"{code}: geometry {geo_id} feature {index} must be Polygon/MultiPolygon")
+        validate_geojson_coordinates(
+            geometry.get("coordinates"),
+            f"{code}: geometry {geo_id} feature {index}",
+        )
+    return True
+
 registry = load(REGISTRY)
 registry_sources = registry.get("sources") or {}
 registry_geo = registry.get("geo") or {}
@@ -101,6 +145,7 @@ for code, slug in COUNTRIES.items():
 
     source_rows = doc.get("sources") or []
     source_by_id = {}
+    canonical_source_ids = set()
     for row in source_rows:
         short_id = row.get("id")
         canonical_id = row.get("canonical_id")
@@ -113,6 +158,7 @@ for code, slug in COUNTRIES.items():
         if expected is not None and expected != canonical_id:
             fail(f"{code}: source registry mismatch {short_id}: {expected} != {canonical_id}")
         source_by_id[short_id] = row
+        canonical_source_ids.add(canonical_id)
 
     for field, resolver in DYNAMIC_SOURCE_FIELDS.items():
         ids = resolver(travel, doc.get("safety") or {})
@@ -182,6 +228,7 @@ for code, slug in COUNTRIES.items():
     node_id_set = set(node_ids)
     country_parent = f"country:{code.lower()}"
     legacy_region_names = set()
+    geometry_nodes = 0
     for node in nodes:
         missing_keys = GEO_NODE_REQUIRED_KEYS - set(node)
         if missing_keys:
@@ -199,6 +246,18 @@ for code, slug in COUNTRIES.items():
                 f"{code}: geo registry mismatch {node.get('id')}: "
                 f"{expected_geo_id} != {node.get('canonical_id')}"
             )
+        profile = node.get("profile") or {}
+        if profile:
+            if not profile.get("source_refs") or not profile.get("checked_at"):
+                fail(f"{code}: geo node {node.get('id')!r} profile has incomplete provenance")
+            profile_unknown = sorted(set(profile.get("source_refs") or []) - canonical_source_ids)
+            if profile_unknown:
+                fail(f"{code}: geo node {node.get('id')!r} profile references unknown canonical sources {profile_unknown}")
+        geometry_known_sources = set(canonical_source_ids)
+        if hierarchy_meta.get("canonical_source_id"):
+            geometry_known_sources.add(hierarchy_meta.get("canonical_source_id"))
+        if validate_node_geometry(code, node, geometry_known_sources):
+            geometry_nodes += 1
         legacy_region_names.update(node.get("legacy_region_names") or [])
 
     for region in regions:
@@ -222,6 +281,7 @@ for code, slug in COUNTRIES.items():
         "criminal_law_items": len((travel.get("criminal_liability") or {}).get("items") or []),
         "regional_profiles": len(regions),
         "geo_nodes": len(nodes),
+        "geometry_nodes": geometry_nodes,
         "regional_geo_contract": True,
     }
 

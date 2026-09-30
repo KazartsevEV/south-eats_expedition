@@ -1,16 +1,16 @@
 {
   "project_id": "expedition_sea",
   "schema_contract": "expedition-sea",
-  "branch_purpose": "object database consolidation before live migration",
+  "branch_purpose": "full object-layer rebuild for later atomic replacement in main",
   "generated_at": "2026-09-30",
   "release_pointer_changed": false,
   "pr_created": false,
   "merge_to_main": false,
   "inventory": {
-    "drive_objects_total": 211,
-    "main_canonical_objects_before_work": 113,
-    "recovered_missing_objects": 98,
-    "expected_objects_after_source_recovery": 211
+    "source_objects_total": 211,
+    "target_object_cards_total": 211,
+    "replacement_scope": "entire canonical objects layer",
+    "main_object_cards_are_source_material_not_target_format": true
   },
   "countries": [
     {
@@ -71,9 +71,20 @@
   ],
   "staging_root": "staging/object-db-211",
   "notes": [
-    "Staging object cards use the approved top-level object structure.",
-    "Unknown GPS/elevation/water/overnight values remain null/unknown and fail QA rather than being invented.",
-    "Source IDs in staging are temporary migration IDs and must be deduplicated/remapped against data/id-registry.json before live canonical generation.",
-    "Regional branches were audited separately; they are not merged wholesale into this object DB because they mainly alter country/region prose rather than object inventory."
-  ]
+    "All 211 object cards must be rebuilt into the approved canonical contract before import.",
+    "Existing main object cards are treated only as source material; their current shape is not accepted as the target contract.",
+    "The future import is intended to replace the entire canonical objects layer atomically, not append 98 cards to 113 legacy-format cards.",
+    "Unknown GPS/elevation/water/overnight/permits/prices/routes remain null/unknown and fail QA rather than being invented.",
+    "All source, geo, lodging, media and route refs must be reconciled before import.",
+    "Do not create PR, merge to main, or promote latest/current until structural validation passes."
+  ],
+  "import_strategy": {
+    "mode": "full_replace_objects_layer",
+    "preserve_permanent_object_ids": true,
+    "preserve_and_reconcile_refs": true,
+    "delete_only_proven_duplicates": true,
+    "merge_into_main_now": false,
+    "pr_created": false,
+    "release_pointer_changed": false
+  }
 }

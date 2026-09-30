@@ -95,8 +95,8 @@ For each country, without skipping levels:
 |---|---|---|
 | 1 | BN Brunei | complete |
 | 2 | KH Cambodia | complete |
-| 3 | LA Laos | in progress |
-| 4 | ID Indonesia | queued |
+| 3 | LA Laos | regional/locality content complete; geometry subchunk pending |
+| 4 | ID Indonesia | active |
 | 5 | MY Malaysia | queued |
 | 6 | MM Myanmar | queued |
 | 7 | SG Singapore | queued |
@@ -104,3 +104,14 @@ For each country, without skipping levels:
 | 9 | TL Timor-Leste | queued |
 | 10 | VN Vietnam | queued |
 | — | PH Philippines | reference complete |
+
+
+## Live execution notes — 2026-10-01
+
+- BN and KH are already at the pre-object geo-complete marker and are verify-only.
+- PH remains the reference implementation and is not part of the remaining queue.
+- LA regional ownership and real locality profiles have passed full CI and are merged; sourced administrative/physical geometry remains the open Laos subchunk.
+- ID regional ownership is the active country; legacy composite route hubs must remain for compatibility while real settlement nodes receive separate stable IDs.
+- MY → MM → SG → TH → TL → VN follow strictly after ID, one country at a time.
+- A country is not marked complete merely because regional prose exists. It must pass role QA, geometry QA, canonical build, recursive hierarchy validation and derived-map validation.
+- Object-card migration/rewrite stays frozen globally until all ten countries are complete or explicitly marked verify-only.

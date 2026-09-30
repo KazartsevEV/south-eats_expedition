@@ -3,7 +3,7 @@
     "country": "Cambodia",
     "country_code": "KH",
     "language": "ru",
-    "last_updated": "2026-09-28",
+    "last_updated": "2026-09-30",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -28,7 +28,8 @@
       "v1.6: страновой слой нормализован под canonical CDN: добавлены язык, этнография и культура; официальные источники выделены для визы, e-Arrival, конституционных фактов, аэропорта KTI, дорожного законодательства и режима охраняемых территорий; старые маршрутные названия очищены от русско-английской смеси. Формальная административная география хранится отдельно в data/hierarchy/countries/cambodia.json.",
       "2026-09-29 regional language normalization: all regional reference profiles use natural Russian prose; legacy linkage names remain unchanged where required for stable IDs and hierarchy matching.",
       "2026-09-30 regional-layer correction: Cambodia regions upgraded toward Malaysia reference standard with geography, relief, climate, hydrology/marine where applicable, nature, health, safety, transport, ethnography/culture and fact-level provenance; attraction cards unchanged.",
-      "2026-09-30 second QA pass: restored regional fauna/dangerous animals/poisonous plants/natural hazards for all Cambodia regional nodes and marine-life fields for coastal nodes; where local species evidence is not yet normalized the field explicitly records that limitation. Attraction cards unchanged."
+      "2026-09-30 second QA pass: restored regional fauna/dangerous animals/poisonous plants/natural hazards for all Cambodia regional nodes and marine-life fields for coastal nodes; where local species evidence is not yet normalized the field explicitly records that limitation. Attraction cards unchanged.",
+      "Regional QA pass 2026-09-30: deepened Takeo / Angkor Borei–Phnom Da, Battambang and Koh Rong with UNESCO and Ministry of Tourism sources; added archaeology, hydraulic landscape, gastronomy and current island-infrastructure context."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -7882,9 +7883,10 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Баттамбанг",
         "geography": {
-          "summary": "Город расположен на реке Сангкер в западной низменной части страны; сельская периферия связана с рисовыми равнинами и дорогами к северо-западной границе.",
+          "summary": "Баттамбанг — низменный речной город на Сангкере и крупный сельскохозяйственный узел западной Камбоджи. Городская ткань вытянута вдоль реки, а внешние маршруты расходятся к сельским равнинам и отдельным известняковым возвышенностям; городской центр и провинциальная периферия требуют разных логистических моделей.",
           "source_refs": [
-            "src_900013"
+            "src_900013",
+            "src_901011"
           ]
         },
         "relief": {
@@ -7926,7 +7928,7 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "road": "Баттамбанг — крупный дорожный узел; центр удобен пешком, внешние объекты требуют тук-тука, мопеда или автомобиля.",
+          "road": "Центр Баттамбанга удобно проходить пешком, но сельские и скальные объекты требуют тук-тука, мотоцикла или автомобиля. Транспортные legs нужно отделять от городской карточки; сезон дождей особенно влияет на грунтовые подъезды за пределами центра.",
           "source_refs": [
             "src_900013"
           ]
@@ -7944,7 +7946,8 @@
             "src_901003",
             "src_900010",
             "src_901008",
-            "src_900014"
+            "src_900014",
+            "src_901011"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -7975,6 +7978,12 @@
             "src_901008"
           ],
           "checked_at": "2026-09-30"
+        },
+        "culture": {
+          "summary": "С 2023 года Battambang входит в UNESCO Creative Cities Network как Creative City of Gastronomy. UNESCO связывает это не только с отдельными блюдами, но и с использованием гастрономии как инструмента городской культуры и локального развития; среди локальных продуктов и блюд перечисляются nem, prahok, kralan, rice paper и другие региональные специалитеты.",
+          "source_refs": [
+            "src_901011"
+          ]
         }
       },
       {
@@ -8118,7 +8127,10 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Острова Сиамского залива / Ко-Ронг",
         "geography": {
-          "summary": "Морской островной узел у побережья Преах-Сианука в Сиамском заливе; береговая линия состоит из пляжей, бухт, скалистых мысов и лесистого интерьера."
+          "summary": "Ко-Ронг — крупный лесистый островной узел у побережья Преах-Сианука. Современная дорожная сеть соединяет основные поселения и пляжные зоны, но остров остаётся морской системой: въезд зависит от материкового pier, boat leg и конкретного места высадки; другие острова архипелага требуют собственной схемы.",
+          "source_refs": [
+            "src_901012"
+          ]
         },
         "relief": {
           "summary": "Низкие прибрежные участки переходят во внутренние холмы; пешие переходы между бухтами могут быть существенно медленнее прямого расстояния по карте."
@@ -8183,22 +8195,27 @@
           "checked_at": "2026-09-30"
         },
         "safety": {
-          "operational_context": "Перед лодочным переходом проверять фактическую морскую погоду; не считать календарный «сухой сезон» гарантией спокойного моря.",
+          "operational_context": "Перед морским переходом проверять фактический ветер и волну; внутри острова отдельно учитывать сезонное состояние второстепенных дорог и удалённость медицины от основных поселений.",
           "source_refs": [
-            "src_901006"
+            "src_901006",
+            "src_901012"
           ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "water_transport": "Основная связь с материком — пассажирские суда/паромы; между бухтами возможны местные лодки.",
-          "island_transport": "На острове используются пешие тропы, мотоциклы/местный транспорт и лодки; состояние дорог сезонно."
+          "water_transport": "Основная связь с материком остаётся морской через Сиануквиль. На самом Ко-Ронге дорожная связность между крупными зонами заметно улучшилась, но ferry/boat landing и последний сухопутный участок всё равно должны храниться отдельно для каждой бухты или поселения.",
+          "island_transport": "Министерство туризма отмечает, что основные направления на Ко-Ронге уже связаны твёрдыми дорогами. Это не означает одинаковое состояние всех второстепенных дорог и троп: последние километры к отдельным пляжам и природным точкам остаются объектно-зависимыми.",
+          "source_refs": [
+            "src_901012"
+          ]
         },
         "local_reference_provenance": {
           "source_refs": [
             "src_901006",
             "src_900014",
             "src_901004",
-            "src_901008"
+            "src_901008",
+            "src_901012"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8216,6 +8233,12 @@
             "src_901008"
           ],
           "checked_at": "2026-09-30"
+        },
+        "infrastructure": {
+          "summary": "На острове продолжается активное инфраструктурное развитие: дороги, электроснабжение и новые крупные проекты. Такие изменения требуют checked_at и не должны превращаться в постоянные свойства конкретной бухты без повторной проверки.",
+          "source_refs": [
+            "src_901012"
+          ]
         }
       },
       {
@@ -8377,10 +8400,16 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Такео / наследие нижнего Меконга",
         "geography": {
-          "summary": "Низменный культурный ландшафт юга Камбоджи с каналами, рисовыми равнинами и отдельными скальными/холмовыми возвышенностями вокруг ранних археологических центров."
+          "summary": "Такео — низменный культурный ландшафт юга Камбоджи, где археологический центр Angkor Borei связан с системой рвов, каналов, водоёмов и отдельных возвышенностей вроде Phnom Da. UNESCO прямо описывает древний город как гидравлически организованную территорию, связанную длинным каналом с другими центрами Фунани и районом Oc Eo.",
+          "source_refs": [
+            "src_901010"
+          ]
         },
         "relief": {
-          "summary": "Преимущественно плоская равнина; отдельные возвышенности вроде Пном-Да резко выделяются над окружающей низменностью."
+          "summary": "Преимущественно плоская аллювиальная равнина резко прерывается отдельными возвышенностями. Phnom Da выделяется как самостоятельный храмовый холм к югу от Angkor Borei; конкретные caves и temples должны существовать отдельными объектами, а не частью одной региональной точки.",
+          "source_refs": [
+            "src_901010"
+          ]
         },
         "climate": {
           "summary": "Жаркая низменность с выраженным дождливым сезоном.",
@@ -8389,7 +8418,10 @@
           "source_refs": []
         },
         "hydrology": {
-          "summary": "Каналы и сезонно затапливаемые низины являются частью исторического и современного ландшафта нижнемеконгской равнины."
+          "summary": "Древняя городская структура Angkor Borei включала рвы, каналы и водоёмы, часть которых UNESCO описывает как сохранившиеся и продолжающие использоваться. Это важный историко-гидрологический слой региона, а не просто сезонная особенность современной сельской местности.",
+          "source_refs": [
+            "src_901010"
+          ]
         },
         "health": {
           "malaria": {
@@ -8421,7 +8453,8 @@
             "src_901004",
             "src_900010",
             "src_900014",
-            "src_901008"
+            "src_901008",
+            "src_901010"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8459,6 +8492,24 @@
             "src_901008"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Angkor Borei был одним из ранних политических центров Юго-Восточной Азии и важным центром Фунани; UNESCO датирует развитие комплекса периодом примерно от 500 года до н.э. до конца VI века н.э. Здесь найдены древнейшая сохранившаяся датированная кхмерская надпись и ранние образцы архитектуры и скульптуры, важные для формирования последующей кхмерской традиции.",
+          "source_refs": [
+            "src_901010"
+          ]
+        },
+        "archaeology": {
+          "summary": "Комплекс Angkor Borei–Phnom Da включает городскую стену, рвы, каналы, кирпичные сооружения, культовые зоны, погребения, пещеры и два сохранившихся храма на Phnom Da. UNESCO подчёркивает смешение индуистского и буддийского материала и ранний «Phnom Da style»; конкретные памятники следует хранить отдельными object entities.",
+          "source_refs": [
+            "src_901010"
+          ]
+        },
+        "culture": {
+          "summary": "Регион важен как ранний слой формирования кхмерской религиозной и художественной традиции. В материале Phnom Da одновременно представлены индуистские и буддийские элементы; это документированная история религиозного сосуществования, а не основание переносить один культ на весь современный район.",
+          "source_refs": [
+            "src_901010"
+          ]
         }
       },
       {
@@ -9290,6 +9341,50 @@
         "Tonle Sap biodiversity",
         "wetlands",
         "climate resilience"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_ANGKOR_BOREI_PHNOM_DA_UNESCO",
+      "canonical_id": "src_901010",
+      "publisher": "UNESCO World Heritage Centre — The Site of Angkor Borei and Phnom Da",
+      "url": "https://whc.unesco.org/en/tentativelists/6455/",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_geography",
+        "regional_history",
+        "regional_archaeology",
+        "hydrology",
+        "religion",
+        "early_khmer_art"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_BATTAMBANG_UNESCO_CREATIVE_CITY",
+      "canonical_id": "src_901011",
+      "publisher": "UNESCO — Battambang joins Creative Cities Network",
+      "url": "https://www.unesco.org/en/articles/unesco-congratulates-battambang-joining-unesco-creative-cities-network",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_culture",
+        "gastronomy",
+        "urban_development",
+        "battambang"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_KOH_RONG_TOURISM_INFRASTRUCTURE",
+      "canonical_id": "src_901012",
+      "publisher": "Ministry of Tourism Cambodia — Koh Rong infrastructure and tourism development",
+      "url": "https://www.tourismcambodia.org/public/official-activities/koh-rong-gears-up-to-receive-high-end-tourists",
+      "kind": "government",
+      "used_for": [
+        "regional_transport",
+        "roads",
+        "infrastructure",
+        "koh_rong"
       ],
       "accessed": "2026-09-30"
     }

@@ -31,7 +31,9 @@
       "2026-09-30 country-language and regional-nature audit: normalized remaining user-facing English in country profile; added regional fauna, dangerous animals, poisonous plants, marine/estuarine life and natural-hazard fields with local evidence or explicit not-localized status. Attraction cards unchanged.",
       "Regional QA pass 2026-09-30: added locally supported history/culture for Brunei-Muara and Belait, and culture for Tutong and Temburong. No unsupported chronology was added where official regional sources did not support it.",
       "Regional QA pass 2026-09-30: deepened Tutong using existing Brunei Tourism and river sources; separated river, wetland, agricultural and ethnocultural layers without duplicating object-level sites.",
-      "Regional language pass 2026-09-30: removed avoidable English-Russian mixing in Temburong, Belait and Tutong summaries while preserving proper names and source-backed meaning."
+      "Regional language pass 2026-09-30: removed avoidable English-Russian mixing in Temburong, Belait and Tutong summaries while preserving proper names and source-backed meaning.",
+      "Pre-object geo QA 2026-10-01: added sourced profiles for included mukim/physical areas, locality profiles for Bandar Seri Begawan and Kampong Jerudong, and sourced district/mukim WGS84 navigation masks; object payloads unchanged.",
+      "Brunei pre-object geo QA complete 2026-10-01: district/regional research profiles, included mukim and physical-area profiles, settlement profiles, and 7 sourced administrative navigation masks pass the canonical country/hierarchy contract; object payloads remain frozen."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -5998,7 +6000,7 @@
     "localities": [
       {
         "name": "Bandar Seri Begawan",
-        "kind": "city_or_route_hub",
+        "kind": "city",
         "regions": [
           "Бандар-Сери-Бегаван / Бруней-Муара"
         ],
@@ -6010,7 +6012,51 @@
           "Tasek Lama Park",
           "Malay Technology Museum",
           "Tamu Kianggeh"
-        ]
+        ],
+        "name_ru": "Бандар-Сери-Бегаван",
+        "primary_location": {
+          "lat": 4.89035,
+          "lon": 114.94006,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_910033"
+          ],
+          "source_url": "https://www.geonames.org/search.html?country=BN&q=Bandar+Seri+Begawan",
+          "checked_at": "2026-10-01",
+          "note": "Опорная точка населённого пункта; не координата достопримечательности."
+        },
+        "profile": {
+          "summary": "Бандар-Сери-Бегаван — столичный городской узел Брунея у реки Бруней. В справочнике он служит базой для городских кластеров и речной логистики, но не подменяет округ Бруней-Муара или отдельные mukim.",
+          "geography": "Город расположен в Brunei-Muara у реки Бруней и включает муниципальную городскую среду, которая не совпадает с административными границами всех окружающих mukim.",
+          "climate": {
+            "summary": "Экваториальный жаркий и влажный климат; сильные ливни и речные условия могут менять время городских и лодочных перемещений.",
+            "source_refs": [
+              "src_000746"
+            ]
+          },
+          "transport": {
+            "summary": "Город является главным наземным и речным узлом страны; конкретные времена поездок и лодочные плечи хранятся на уровне маршрута или объекта.",
+            "source_refs": [
+              "src_910034",
+              "src_000747"
+            ]
+          },
+          "culture": "Исторический водный слой Kampong Ayer, государственная и религиозная архитектура и современный столичный центр сосуществуют в одном городском пространстве, но раскрываются отдельными geo- и object-узлами.",
+          "provenance": {
+            "source_refs": [
+              "src_910033",
+              "src_910034",
+              "src_904106",
+              "src_904107",
+              "src_000746",
+              "src_000747"
+            ],
+            "checked_at": "2026-10-01",
+            "source_refs_complete": true,
+            "note": "Координата — GeoNames; городской контекст — муниципальные и официальные туристические источники."
+          }
+        }
       },
       {
         "name": "набережная Бандар-Сери-Бегавана",
@@ -6093,6 +6139,54 @@
         "object_names": [
           "Berakas Forest Recreational Park"
         ]
+      },
+      {
+        "name": "Kampong Jerudong",
+        "name_ru": "Джерудонг",
+        "kind": "village",
+        "regions": [
+          "Бандар-Сери-Бегаван / Бруней-Муара"
+        ],
+        "object_names": [],
+        "primary_location": {
+          "lat": 4.92946636,
+          "lon": 114.83476169,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_910033"
+          ],
+          "source_url": "https://www.geonames.org/search.html?country=BN&q=Jerudong",
+          "checked_at": "2026-10-01",
+          "note": "Опорная точка населённого пункта; не координата достопримечательности."
+        },
+        "profile": {
+          "summary": "Джерудонг — населённый пункт в Mukim Sengkurong к западу от столичного ядра; в экспедиционной иерархии используется как локальный географический узел, а не как координата расположенных рядом объектов.",
+          "geography": "Министерство внутренних дел относит Kampong Jerudong к Mukim Sengkurong в округе Бруней-Муара.",
+          "climate": {
+            "summary": "Экваториальный жаркий и влажный климат; ливни учитываются при наземных и лесопарковых выездах.",
+            "source_refs": [
+              "src_000746"
+            ]
+          },
+          "transport": {
+            "summary": "Доступ наземный из столичного района; конкретные подъезды к природным и инфраструктурным объектам должны иметь собственные координаты и плечи.",
+            "source_refs": [
+              "src_910036"
+            ]
+          },
+          "provenance": {
+            "source_refs": [
+              "src_910033",
+              "src_910036",
+              "src_000746",
+              "src_000749"
+            ],
+            "checked_at": "2026-10-01",
+            "source_refs_complete": true,
+            "note": "Поселенческий центр — GeoNames; административная принадлежность — MOHA."
+          }
+        }
       }
     ],
     "airports_source_ids": [
@@ -6635,6 +6729,83 @@
         "local_crafts"
       ],
       "accessed": "2026-09-30"
+    },
+    {
+      "id": "BN_SURVEY_GEOPORTAL",
+      "canonical_id": "src_910031",
+      "publisher": "Survey Department, Ministry of Development, Brunei Darussalam — Geoportal",
+      "url": "https://geoportal.survey.gov.bn/map",
+      "kind": "government_map",
+      "used_for": [
+        "district_boundary_structure",
+        "mukim_boundary_structure",
+        "official_geography_crosscheck"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official Survey Department Geoportal exposes District and Mukim layers and supports WGS84 display. Used to verify the administrative layer structure; published CDN polygons are simplified navigation masks, not survey-grade cadastral geometry."
+    },
+    {
+      "id": "BN_OSM_NOMINATIM_BOUNDARIES",
+      "canonical_id": "src_910032",
+      "publisher": "OpenStreetMap contributors / Nominatim",
+      "url": "https://nominatim.openstreetmap.org/",
+      "kind": "map",
+      "used_for": [
+        "district_wgs84_polygons",
+        "mukim_wgs84_polygons"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Current OSM administrative relations used as the technical WGS84 polygon source after cross-checking district/mukim existence against the official Brunei Survey Geoportal. Polygons were simplified for navigation/display."
+    },
+    {
+      "id": "BN_GEONAMES_LOCALITIES",
+      "canonical_id": "src_910033",
+      "publisher": "GeoNames",
+      "url": "https://www.geonames.org/search.html?country=BN",
+      "kind": "map",
+      "used_for": [
+        "bandar_seri_begawan_center",
+        "jerudong_center"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Settlement centre points only; never reused as attraction coordinates."
+    },
+    {
+      "id": "BN_BSB_MUNICIPAL",
+      "canonical_id": "src_910034",
+      "publisher": "Bandar Seri Begawan Municipal Department",
+      "url": "https://www.bandaran-bsb.gov.bn/maklumat-bandaran/",
+      "kind": "government",
+      "used_for": [
+        "bandar_seri_begawan_municipal_identity",
+        "capital_locality_context"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_JUDICIARY_ZONING",
+      "canonical_id": "src_910035",
+      "publisher": "Judiciary of Brunei Darussalam — Coroner Zoning",
+      "url": "https://www.judiciary.gov.bn/subordinate-court/magistrates-court/coroner-zoning/",
+      "kind": "government",
+      "used_for": [
+        "mukim_kianggeh",
+        "mukim_kota_batu",
+        "local_admin_context"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_MOHA_PMKK_DIRECTORY",
+      "canonical_id": "src_910036",
+      "publisher": "Ministry of Home Affairs, Brunei Darussalam — Penghulu/Mukim/Kampung directory",
+      "url": "https://www.moha.gov.bn/Downloads/2023/DirektoriPMKK_V04%20APRIL2024.pdf",
+      "kind": "government",
+      "used_for": [
+        "mukim_sengkurong",
+        "kampong_jerudong_parentage"
+      ],
+      "accessed": "2026-10-01"
     }
   ],
   "uncertainties": [

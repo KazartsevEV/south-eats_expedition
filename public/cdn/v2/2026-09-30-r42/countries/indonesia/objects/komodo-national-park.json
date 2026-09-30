@@ -75,7 +75,18 @@
       "checked_at": "2026-09-29"
     },
     "points": [],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": null,
+      "min_m": null,
+      "max_m": 735.0,
+      "reference_type": "highest_point",
+      "accuracy": "high",
+      "source_refs": [
+        "src:c55adc6c6c252d"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "735 м относится к высшей точке парка — Gunung Satalibo на острове Komodo; это не высота Padar viewpoint и не отметка береговой зоны."
+    }
   },
   "story": {
     "narrative": "Komodo National Park объединяет сухие саванновые острова, коралловые акватории и единственную естественную популяцию крупнейших варанов мира. Для путешественника парк — морской маршрут, где качество лодки и расписание посадок определяют опыт не меньше, чем сами животные.",
@@ -150,12 +161,74 @@
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
-    "best_time": null,
-    "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "useful_equipment": [],
+    "best_time": "Для Padar официальные материалы Indonesia Travel прямо рекомендуют sunrise и sunset; для наблюдения варанов — раннее утро, когда прохладнее и животные активнее.",
+    "best_weather_light": "Для Padar важен открытый горизонт над бухтами; цвет склонов резко меняется по сезону — от зелёного после дождей к золотисто-бурому в сухой период.",
+    "viewpoints": [
+      {
+        "id": "vp_padar_south",
+        "name": "Padar Island southern viewpoint",
+        "description": "Южная обзорная точка на хребте Padar с видом на несколько серповидных бухт и расчленённые саванные гряды.",
+        "coordinates": {
+          "lat": -8.679653,
+          "lon": 119.556543,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "-8.679653, 119.556543",
+          "dms": "08°40′46.8″S 119°33′23.6″E"
+        },
+        "access": "Подъём от места высадки; официальный Indonesia Travel описывает крутой подъём примерно на 30 минут, фактический режим зависит от разрешённой высадки и состояния маршрута.",
+        "view": "Несколько бухт Padar, сухие вулканические гряды и морские проливы; одна из ключевых панорам парка.",
+        "best_time": "sunrise / sunset",
+        "best_weather_light": "Боковой низкий свет подчёркивает рельеф гряд; плотная облачность снижает цветовой контраст воды и склонов.",
+        "useful_equipment": [
+          "wide",
+          "standard",
+          "telephoto",
+          "phone"
+        ],
+        "source_refs": [
+          "src:67d65d67c32f94"
+        ]
+      },
+      {
+        "id": "vp_ranger_route_context",
+        "name": "Komodo/Rinca ranger route context",
+        "description": "Наземный визуальный слой парка на разрешённых ranger routes — саванна, лесные участки и вараны в естественной среде.",
+        "coordinates": null,
+        "gps": null,
+        "access": "Только по открытому маршруту с ranger/уполномоченным сопровождением; текущую точку высадки и маршрут подтверждать в день посещения.",
+        "view": "Вараны в природном контексте, саванновые склоны и переходы между сухим лесом и открытыми участками.",
+        "best_time": "early_morning",
+        "best_weather_light": "Прохладнее и выше шанс активности животных; жёсткий полуденный свет и жара ухудшают и наблюдение, и визуальную читаемость.",
+        "useful_equipment": [
+          "telephoto",
+          "long_telephoto",
+          "standard"
+        ],
+        "source_refs": [
+          "src:c7eac1dd9b7c1d"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "В сухой сезон холмы Padar становятся золотисто-бурыми; в дождливый период заметно зеленеют.",
+      "Морская видимость и доступность конкретных высадок меняются с ветром, волной и течением сильнее, чем с календарным месяцем."
+    ],
+    "video_activity": [
+      "движение лодок через проливы и подход к островам",
+      "ветер по саванновым склонам Padar",
+      "наблюдение варанов только с разрешённой дистанции и без вмешательства в поведение животных",
+      "течения и рифовая среда на разрешённых морских точках"
+    ],
+    "useful_equipment": [
+      "wide",
+      "telephoto",
+      "long_telephoto",
+      "action_camera",
+      "underwater_camera",
+      "phone"
+    ],
     "drone": "Для дрона нужен соответствующий авиационный допуск и отдельное разрешение Balai Taman Nasional Komodo.",
     "filming_restrictions": "Указания рейнджера имеют приоритет над съёмочным планом; самостоятельно приближаться к варанам нельзя. Исследовательская и коммерческая съёмка требует отдельного согласования с парком."
   },
@@ -168,9 +241,17 @@
         "license": "CC BY-SA 4.0",
         "artist": "Charles J. Sharp",
         "last_checked": "2026-09-28"
+      },
+      {
+        "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Padar_Island_in_Komodo_National_Park.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Padar_Island_in_Komodo_National_Park.jpg",
+        "provider": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "artist": "Lydia Kristiani",
+        "last_checked": "2026-09-30"
       }
     ],
-    "gallery_status": "single_image_source"
+    "gallery_status": "carousel_ready"
   },
   "provenance": {
     "source_refs": [

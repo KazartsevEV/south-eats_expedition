@@ -36,42 +36,24 @@
       "geo_bn_0013"
     ],
     "nearest_place_id": null,
-    "nearest_place_name_raw": "набережная Бандар-Сери-Бегавана",
     "primary_location": {
       "lat": 4.8825,
       "lon": 114.9425,
-      "elevation_m": 7.0,
-      "elevation_range_m": null,
+      "elevation_m": 7,
       "coordinate_type": "center",
       "accuracy": "medium",
-      "elevation_accuracy": "approximate",
       "source_refs": [
         "src_000329"
       ],
-      "elevation_source_refs": [
-        "src_000483"
-      ],
       "checked_at": "2026-09-28"
     },
-    "geo_points": [],
-    "object_elevation": {
-      "representative_m": 0.0,
-      "min_m": null,
-      "max_m": null,
-      "reference_type": "water_surface",
-      "accuracy": "approximate",
-      "source_refs": [
-        "src_000492"
-      ],
-      "checked_at": "2026-09-28",
-      "notes": "Около 0 м MSL — характеристика водной поверхности среды объекта, а не отметка пола домов/настилов. Поселение стоит на сваях над приливной рекой; фактический уровень воды меняется с приливом."
-    }
+    "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Кампонг-Айер — сеть водных деревень на сваях вдоль Бруней река. Европейские путешественники описывали огромный водный город здесь уже в XVI веке; сегодня это жилые кварталы со школами, мечетями, пожарной и полицейской инфраструктурой.",
+        "type": "overview",
+        "text": "Кампонг-Айер — сеть водных деревень на сваях вдоль Бруней река. Европейские путешественники описывали огромный водный город здесь уже в XVI веке; сегодня это жилые кварталы со школами, мечетями, пожарной и полицейской инфраструктурой.",
         "source_refs": [
           "src_000360",
           "src_000453",
@@ -80,8 +62,8 @@
         ]
       },
       {
-        "section_id": "culture",
-        "content": "Ключ — повседневность, а не экзотика свай: лодка заменяет улицу, пристань — подъезд, мостки — тротуар. Частный дом не является музеем; интерьеры и портреты снимаются только по приглашению.",
+        "type": "culture",
+        "text": "Ключ — повседневность, а не экзотика свай: лодка заменяет улицу, пристань — подъезд, мостки — тротуар. Частный дом не является музеем; интерьеры и портреты снимаются только по приглашению.",
         "source_refs": [
           "src_000360",
           "src_000453",
@@ -91,8 +73,8 @@
         "migration_note": "Legacy combined section retained under culture until country research splits it."
       },
       {
-        "section_id": "geography",
-        "content": "Приливная среда Бруней река меняет уровень воды, свет и доступ в течение дня; утром и вечером вода становится сильным естественным отражателем.",
+        "type": "geography",
+        "text": "Приливная среда Бруней река меняет уровень воды, свет и доступ в течение дня; утром и вечером вода становится сильным естественным отражателем.",
         "source_refs": [
           "src_000360",
           "src_000453",
@@ -105,23 +87,45 @@
   },
   "visit": {
     "entry": {
-      "hours": "Жилой район не имеет единого графика; отдельные галереи/дома имеют собственные часы.",
-      "ticket": "Лодка и частные посещения оплачиваются отдельно; цену вода такси согласовывать до посадки.",
-      "closure_notes": null,
-      "status": null,
-      "official_url": "https://www.bruneitourism.com/places/kampong-ayer/",
-      "notes": "С набережной BSB на вода такси, затем пешком по деревянным мосткам.",
+      "access_status": "unknown",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Лодка и частные посещения оплачиваются отдельно; цену вода такси согласовывать до посадки.",
+        "source_refs": [
+          "src_000360",
+          "src_000453",
+          "src_000209",
+          "src_000460"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Жилой район не имеет единого графика; отдельные галереи/дома имеют собственные часы.",
+        "source_refs": [
+          "src_000360",
+          "src_000453",
+          "src_000209",
+          "src_000460"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_000360",
         "src_000453",
         "src_000209",
         "src_000460"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.bruneitourism.com/places/kampong-ayer/",
+      "notes": "С набережной BSB на вода такси, затем пешком по деревянным мосткам."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "public_transport"
         ],
@@ -130,20 +134,13 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "до набережная автобус/пешком, далее вода такси"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
         "modes": [
           "ride_hailing"
         ],
@@ -152,20 +149,13 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Dart до набережная"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
         "modes": [
           "moped"
         ],
@@ -174,20 +164,13 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "оставить на суше"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
         "modes": [
           "walking"
         ],
@@ -196,14 +179,6 @@
             "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "после лодки обычно 0.5–3 км по мосткам"
           }
         ]
@@ -267,10 +242,6 @@
     }
   ],
   "visual_recon": {
-    "photo_suitability_5": 5,
-    "video_suitability_5": 5,
-    "best_time": "06:30–09:00 и 16:30–18:15",
-    "best_weather_light": "пасмурно после дождя даёт мягкий свет; сильный ливень опасен на мостках",
     "viewpoints": [
       {
         "id": "vp_01",
@@ -314,9 +285,10 @@
     ],
     "seasonal_visuals": [],
     "video_activity": [],
-    "useful_equipment": [],
     "drone": "Не запускать над жилыми домами без разрешения и проверки авиационных правил.",
-    "filming_restrictions": "Для портретов и интерьеров получать согласие; не снимать детей и частную жизнь навязчиво."
+    "useful_equipment": [],
+    "best_time": "06:30–09:00 и 16:30–18:15",
+    "best_weather_light": "пасмурно после дождя даёт мягкий свет; сильный ливень опасен на мостках"
   },
   "media": {
     "cover_id": "med_bn_664bec55b118",

@@ -705,13 +705,34 @@ def build():
                 },
             }
 
+            geometry_meta = node.get("geometry") or {}
             geometry_source = GEO_NODES / f"{geo_id}.geojson"
-            if geometry_source.exists():
+            geometry_doc = load(geometry_source) if geometry_source.exists() else None
+            if geometry_doc is None and geometry_meta.get("coverage_basis"):
+                derived_features = []
+                for basis_geo_id in geometry_meta.get("coverage_basis") or []:
+                    basis_source = GEO_NODES / f"{basis_geo_id}.geojson"
+                    if not basis_source.exists():
+                        raise RuntimeError(
+                            f"{code}: derived geometry for {geo_id} references missing basis {basis_geo_id}"
+                        )
+                    basis_doc = load(basis_source)
+                    for feature in basis_doc.get("features") or []:
+                        derived = dict(feature)
+                        derived["properties"] = dict(feature.get("properties") or {})
+                        derived["properties"]["coverage_component"] = basis_geo_id
+                        derived_features.append(derived)
+                if derived_features:
+                    geometry_doc = {
+                        "type": "FeatureCollection",
+                        "features": derived_features,
+                    }
+            if geometry_doc is not None:
                 geometry_path = f"geo/geometries/{geo_id}.geojson"
-                dump(release / geometry_path, load(geometry_source))
+                dump(release / geometry_path, geometry_doc)
                 entity["geometry_path"] = geometry_path
-            if node.get("geometry") not in (None, "", [], {}):
-                entity["geometry"] = node.get("geometry")
+            if geometry_meta:
+                entity["geometry"] = geometry_meta
 
             hierarchy_profile = node.get("profile") or {}
             if hierarchy_profile:

@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "ID",
     "country_slug": "indonesia",
-    "status": "preobject_geo_qa_in_progress",
+    "status": "geo_profile_qa_complete_before_object_cards",
     "checked_at": "2026-10-01",
-    "next_level": "geometry_qa",
+    "next_level": "country_and_regional_layer_complete_object_cards_frozen",
     "canonical_id_policy": "Stable geo IDs reuse the existing registry. Composite researched regions are geographic_area unless an administrative status is independently established.",
     "canonical_source_id": "src_906004",
     "qa_contract": "geo_profile_roles_v1"
@@ -48,7 +48,24 @@
         "id:lasem",
         "id:dieng-plateau"
       ],
-      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Daerah Istimewa Yogyakarta",
+          "Jawa Tengah"
+        ],
+        "source_refs": [
+          "src_910102"
+        ],
+        "source_vintage": "BIG administrative geometry; repository updated for 2022/2023 province structure",
+        "checked_at": "2026-10-01",
+        "note": "Approximate expedition coverage is the union of the two official provincial components named by this research region."
+      }
     },
     {
       "id": "id:region:bali",
@@ -65,7 +82,23 @@
       "object_ids": [
         "id:bali-temple-landscapes"
       ],
-      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Bali province"
+        ],
+        "source_refs": [
+          "src_910102"
+        ],
+        "source_vintage": "BIG administrative geometry; repository updated for 2022/2023 province structure",
+        "checked_at": "2026-10-01",
+        "note": "Expedition region follows the Bali provincial component for map navigation; it remains marked approximate because the node is an expedition geographic_area, not an administrative province entity."
+      }
     },
     {
       "id": "id:region:flores-komodo",
@@ -102,7 +135,23 @@
         "id:bromo-tengger-semeru",
         "id:ijen"
       ],
-      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Jawa Timur province"
+        ],
+        "source_refs": [
+          "src_910102"
+        ],
+        "source_vintage": "BIG administrative geometry; repository updated for 2022/2023 province structure",
+        "checked_at": "2026-10-01",
+        "note": "Expedition region follows the East Java provincial component for map navigation; it remains marked approximate because the node is an expedition geographic_area."
+      }
     },
     {
       "id": "id:region:raja-ampat-west-papua",
@@ -153,7 +202,23 @@
       "object_ids": [
         "id:sawahlunto"
       ],
-      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Sumatera Barat province"
+        ],
+        "source_refs": [
+          "src_910102"
+        ],
+        "source_vintage": "BIG administrative geometry; repository updated for 2022/2023 province structure",
+        "checked_at": "2026-10-01",
+        "note": "Approximate expedition coverage uses the West Sumatra provincial boundary because the researched node explicitly spans West Sumatra with Sawahlunto as an internal focus."
+      }
     },
     {
       "id": "id:region:toraja-south-sulawesi",

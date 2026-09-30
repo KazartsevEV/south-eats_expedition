@@ -46,7 +46,7 @@
     },
     "geo_points": [],
     "object_elevation": {
-      "representative_m": 5.0,
+      "representative_m": 5,
       "min_m": null,
       "max_m": null,
       "reference_type": "characteristic",
@@ -61,8 +61,8 @@
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Lasem — старый портовый город северной Явы, где китайская миграция, яванская культура и колониальная торговля оставили сеть klenteng, закрытых дворов, торгово-жилые дома и мастерских batik. Его ценность не в одном памятнике, а в городской ткани.",
+        "type": "overview",
+        "text": "Lasem — старый портовый город северной Явы, где китайская миграция, яванская культура и колониальная торговля оставили сеть klenteng, закрытых дворов, торгово-жилые дома и мастерских batik. Его ценность не в одном памятнике, а в городской ткани.",
         "source_refs": [
           "src_000239",
           "src_000118",
@@ -72,34 +72,30 @@
         ]
       },
       {
-        "section_id": "culture",
-        "content": "Batik Tiga Negeri и характерные красные ткани Lasem — продукт культурного смешения: китайских мотивов и цветовой традиции, яванской техники и позднейших европейских влияний. Многие “достопримечательности” остаются частными домами или работающими мастерскими.",
+        "type": "culture",
+        "text": "Batik Tiga Negeri и характерные красные ткани Lasem — продукт культурного смешения: китайских мотивов и цветовой традиции, яванской техники и позднейших европейских влияний. Многие “достопримечательности” остаются частными домами или работающими мастерскими.",
         "source_refs": [
           "src_000239",
           "src_000118",
           "src_000080",
           "src_000211",
           "src_000291"
-        ],
-        "migration_note": "Legacy combined section retained under culture until country research splits it."
+        ]
       },
       {
-        "section_id": "geography",
-        "content": "Город лежит на жарком северном побережье Java/Pantura; плоская структура и короткие расстояния удобны пешком, но дневная жара делает раннее утро существенно продуктивнее.",
+        "type": "geography",
+        "text": "Город лежит на жарком северном побережье Java/Pantura; плоская структура и короткие расстояния удобны пешком, но дневная жара делает раннее утро существенно продуктивнее.",
         "source_refs": [
           "src_000239",
           "src_000118",
           "src_000080",
           "src_000211",
           "src_000291"
-        ],
-        "migration_note": "Legacy combined section retained under geography until country research splits it."
+        ]
       },
       {
-        "section_id": "myths_beliefs",
-        "content": [
-          "Indonesia Travel связывает местную историческую традицию с Putri Campa и Bi Nang Un/эпохой экспедиций Чжэн Хэ; это следует подавать как передаваемую местную традицию, а не как бесспорную датированную биографию."
-        ],
+        "type": "myths_beliefs",
+        "text": "Indonesia Travel связывает местную историческую традицию с Putri Campa и Bi Nang Un/эпохой экспедиций Чжэн Хэ; это следует подавать как передаваемую местную традицию, а не как бесспорную датированную биографию.",
         "source_refs": [
           "src_000239",
           "src_000118",
@@ -112,12 +108,33 @@
   },
   "visit": {
     "entry": {
-      "hours": "Улицы доступны весь день; храмы, частные исторические дома и мастерские работают по собственному режиму, а вход в жилой дом зависит от согласия хозяев.",
-      "ticket": "Городские улицы бесплатны; пожертвования в храмах, визиты в мастерские и частные дома согласуются отдельно.",
-      "closure_notes": null,
-      "status": "open/verify",
-      "official_url": "https://www.indonesia.travel/id/id/travel-ideas/heritage/lasem",
-      "notes": "Самостоятельно по коридору Pantura из Semarang или Surabaya; исторические кварталы проходятся пешком, а разнесённые мастерские удобнее связывать мопедом или местным водителем.",
+      "access_status": "open/verify",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Городские улицы бесплатны; пожертвования в храмах, визиты в мастерские и частные дома согласуются отдельно.",
+        "source_refs": [
+          "src_000239",
+          "src_000118",
+          "src_000080",
+          "src_000211",
+          "src_000291"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Улицы доступны весь день; храмы, частные исторические дома и мастерские работают по собственному режиму, а вход в жилой дом зависит от согласия хозяев.",
+        "source_refs": [
+          "src_000239",
+          "src_000118",
+          "src_000080",
+          "src_000211",
+          "src_000291"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_000239",
         "src_000118",
@@ -125,11 +142,15 @@
         "src_000211",
         "src_000291"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.indonesia.travel/id/id/travel-ideas/heritage/lasem",
+      "closure_notes": null,
+      "notes": "Самостоятельно по коридору Pantura из Semarang или Surabaya; исторические кварталы проходятся пешком, а разнесённые мастерские удобнее связывать мопедом или местным водителем."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "public_transport"
         ],
@@ -138,20 +159,13 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "междугородние автобусы по Pantura до Lasem/Rembang; внутри города — angkot/ojek по наличию"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
         "modes": [
           "ride_hailing"
         ],
@@ -160,20 +174,18 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "онлайн-такси/ojek возможны, но покрытие слабее Semarang; для съёмочного дня проще местный водитель"
+            "notes": "онлайн-такси/ojek возможны, но покрытие слабее Semarang; для съёмочного дня проще местный водитель",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
         "modes": [
           "moped"
         ],
@@ -182,20 +194,18 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "самый удобный способ связать старые кварталы, klenteng и мастерские; скорость низкая из-за городской застройки"
+            "notes": "самый удобный способ связать старые кварталы, klenteng и мастерские; скорость низкая из-за городской застройки",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
         "modes": [
           "walking"
         ],
@@ -204,15 +214,16 @@
             "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
+            "notes": "Karangturi/старый центр — 2–5 км пешего маршрута, отдельные дома и мастерские дальше",
             "elevation_gain_m": null,
             "elevation_loss_m": null,
             "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "Karangturi/старый центр — 2–5 км пешего маршрута, отдельные дома и мастерские дальше"
+            "trail": {
+              "type": null,
+              "condition": null,
+              "navigation": null,
+              "river_crossings": null
+            }
           }
         ]
       }
@@ -266,26 +277,32 @@
   },
   "traveler_reports": [
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "частные исторические дома нельзя считать музеями: дверь может быть закрыта и вход зависит от хозяев",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "английский вне гостиниц/туризма ограничен; переводчик заметно упрощает договорённости с мастерскими",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "полуденная жара и трафик Pantura ухудшают пеший маршрут и звук для видео",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "legacy_aggregate",
-      "data": {
-        "note": "Повторяющиеся практические проблемы из актуальных/доступных отзывов и полевых источников; где свежих отзывов мало, это прямо отмечено."
-      },
-      "source_refs": []
+      "topic": "legacy_aggregate",
+      "summary": "",
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     }
   ],
   "visual_recon": {
@@ -305,10 +322,22 @@
         "best_time": "early_morning / late_afternoon",
         "best_weather_light": "Косой свет подчёркивает рельеф штукатурки, дерева и черепицы; при пасмурном небе цветовые контрасты мягче.",
         "useful_equipment": [
-          "wide",
-          "standard",
-          "telephoto",
-          "phone"
+          {
+            "type": "wide",
+            "why": null
+          },
+          {
+            "type": "standard",
+            "why": null
+          },
+          {
+            "type": "telephoto",
+            "why": null
+          },
+          {
+            "type": "phone",
+            "why": null
+          }
         ],
         "source_refs": [
           "src_903067"
@@ -325,10 +354,22 @@
         "best_time": "late_morning / midday",
         "best_weather_light": "Рассеянный естественный свет из дверей и дворов лучше для фактуры ткани; прямой солнечный свет даёт слишком жёсткий контраст.",
         "useful_equipment": [
-          "standard",
-          "telephoto",
-          "macro",
-          "phone"
+          {
+            "type": "standard",
+            "why": null
+          },
+          {
+            "type": "telephoto",
+            "why": null
+          },
+          {
+            "type": "macro",
+            "why": null
+          },
+          {
+            "type": "phone",
+            "why": null
+          }
         ],
         "source_refs": [
           "src_903035"
@@ -352,7 +393,22 @@
       "macro",
       "phone"
     ],
-    "drone": "Только по действующим авиационным и локальным правилам; в нацпарках/храмах/аэропортовых зонах обычно требуется отдельное разрешение.",
+    "drone": {
+      "visual_value": null,
+      "legal_status": "unknown",
+      "permit_required": null,
+      "restrictions": [
+        "Только по действующим авиационным и локальным правилам; в нацпарках/храмах/аэропортовых зонах обычно требуется отдельное разрешение."
+      ],
+      "source_refs": [
+        "src_000239",
+        "src_000118",
+        "src_000080",
+        "src_000211",
+        "src_000291"
+      ],
+      "checked_at": "2026-09-28"
+    },
     "filming_restrictions": "Многие исторические дома остаются частными: до входа и съёмки интерьера получить согласие хозяев."
   },
   "media": {
@@ -380,7 +436,7 @@
     ]
   },
   "qa": {
-    "status": "passed",
+    "status": "incomplete",
     "checks": {
       "language": true,
       "classification": true,
@@ -391,10 +447,10 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": true,
-      "traveler_reports": true,
-      "visual_recon": true
+      "overnight": false,
+      "traveler_reports": false,
+      "visual_recon": false
     },
-    "last_reviewed_at": "2026-09-28"
+    "last_reviewed_at": "2026-09-30"
   }
 }

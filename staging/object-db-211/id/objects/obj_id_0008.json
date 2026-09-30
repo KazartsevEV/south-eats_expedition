@@ -35,7 +35,7 @@
     "nearest_place_name_raw": "Sorong / Waisai",
     "primary_location": {
       "lat": -0.5,
-      "lon": 130.0,
+      "lon": 130,
       "elevation_m": null,
       "elevation_range_m": null,
       "coordinate_type": "center",
@@ -50,8 +50,8 @@
     "geo_points": [],
     "object_elevation": {
       "representative_m": null,
-      "min_m": 0.0,
-      "max_m": 920.0,
+      "min_m": 0,
+      "max_m": 920,
       "reference_type": "range",
       "accuracy": "high",
       "source_refs": [
@@ -64,8 +64,8 @@
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Raja Ampat лежит у западной оконечности Новой Гвинеи и состоит из множества известняковых островов, лагун и охраняемых акваторий с исключительно богатой рифовой системой. Для самостоятельной экспедиции это сеть баз и лодочных переходов, а не одна достопримечательность.",
+        "type": "overview",
+        "text": "Raja Ampat лежит у западной оконечности Новой Гвинеи и состоит из множества известняковых островов, лагун и охраняемых акваторий с исключительно богатой рифовой системой. Для самостоятельной экспедиции это сеть баз и лодочных переходов, а не одна достопримечательность.",
         "source_refs": [
           "src_000016",
           "src_000179",
@@ -75,39 +75,58 @@
         ]
       },
       {
-        "section_id": "culture",
-        "content": "Маршрут проходит через папуасские островные общины, для которых море и лес — рабочее и культурное пространство. Пляж, риф или участок берега могут управляться деревней или семьёй, поэтому доступ и съёмку лучше согласовывать на месте, а не считать всё побережье публичным.",
+        "type": "culture",
+        "text": "Маршрут проходит через папуасские островные общины, для которых море и лес — рабочее и культурное пространство. Пляж, риф или участок берега могут управляться деревней или семьёй, поэтому доступ и съёмку лучше согласовывать на месте, а не считать всё побережье публичным.",
         "source_refs": [
           "src_000016",
           "src_000179",
           "src_000080",
           "src_000339",
           "src_000134"
-        ],
-        "migration_note": "Legacy combined section retained under culture until country research splits it."
+        ]
       },
       {
-        "section_id": "geography",
-        "content": "Характерный рельеф Piaynemo и Wayag создан тропическим карстом: растворённые известняки оставили крутые башни и островки, разделённые мелководными лагунами. Под водой этот ландшафт продолжается рифами Coral Triangle.",
+        "type": "geography",
+        "text": "Характерный рельеф Piaynemo и Wayag создан тропическим карстом: растворённые известняки оставили крутые башни и островки, разделённые мелководными лагунами. Под водой этот ландшафт продолжается рифами Coral Triangle.",
         "source_refs": [
           "src_000016",
           "src_000179",
           "src_000080",
           "src_000339",
           "src_000134"
-        ],
-        "migration_note": "Legacy combined section retained under geography until country research splits it."
+        ]
       }
     ]
   },
   "visit": {
     "entry": {
-      "hours": "Единого графика нет: выходы на морские точки зависят от прилива, течения, состояния моря и правил конкретной охраняемой зоны.",
-      "ticket": "Единого билета на весь архипелаг нет; местные природоохранные и посетительские сборы зависят от выбранной зоны и подтверждаются перед выходом.",
-      "closure_notes": null,
-      "status": "open/verify",
-      "official_url": "https://www.indonesia.travel/id/en/destination/maluku-papua/west-papua/raja-ampat",
-      "notes": "Самостоятельно: перелёт до Sorong, пассажирский паром или скоростная лодка до Waisai либо трансфер прямо к выбранному жилью; дальше между островами перемещаются на местных лодках.",
+      "access_status": "open/verify",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Единого билета на весь архипелаг нет; местные природоохранные и посетительские сборы зависят от выбранной зоны и подтверждаются перед выходом.",
+        "source_refs": [
+          "src_000016",
+          "src_000179",
+          "src_000080",
+          "src_000339",
+          "src_000134"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Единого графика нет: выходы на морские точки зависят от прилива, течения, состояния моря и правил конкретной охраняемой зоны.",
+        "source_refs": [
+          "src_000016",
+          "src_000179",
+          "src_000080",
+          "src_000339",
+          "src_000134"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_000016",
         "src_000179",
@@ -115,11 +134,15 @@
         "src_000339",
         "src_000134"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.indonesia.travel/id/en/destination/maluku-papua/west-papua/raja-ampat",
+      "closure_notes": null,
+      "notes": "Самостоятельно: перелёт до Sorong, пассажирский паром или скоростная лодка до Waisai либо трансфер прямо к выбранному жилью; дальше между островами перемещаются на местных лодках."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "public_transport"
         ],
@@ -128,20 +151,13 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "самолёт/паром до Sorong–Waisai; общественного наземного транспорта между островами нет"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
         "modes": [
           "ride_hailing"
         ],
@@ -150,20 +166,18 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "в Sorong — такси/сервис заказа машины до порта; после Waisai нужен лодка трансфер"
+            "notes": "в Sorong — такси/сервис заказа машины до порта; после Waisai нужен лодка трансфер",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
         "modes": [
           "moped"
         ],
@@ -172,20 +186,18 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "имеет смысл только на крупных населённых островах/в Waisai; для Piaynemo, дайв-сайтов и большинства семейное размещение не заменяет лодку"
+            "notes": "имеет смысл только на крупных населённых островах/в Waisai; для Piaynemo, дайв-сайтов и большинства семейное размещение не заменяет лодку",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
         "modes": [
           "walking"
         ],
@@ -194,15 +206,16 @@
             "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
+            "notes": "в деревнях и на смотровые точки обычно сотни метров–2 км; Piaynemo — короткий, но крутой лестничный подъём от причала",
             "elevation_gain_m": null,
             "elevation_loss_m": null,
             "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "в деревнях и на смотровые точки обычно сотни метров–2 км; Piaynemo — короткий, но крутой лестничный подъём от причала"
+            "trail": {
+              "type": null,
+              "condition": null,
+              "navigation": null,
+              "river_crossings": null
+            }
           }
         ]
       }
@@ -255,26 +268,32 @@
   },
   "traveler_reports": [
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "лодочные переходы — главная статья времени и бюджета; на удалённых островах один пропущенный трансфер ломает маршрут на день",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "на части островов нет банкоматов и стабильной связи: наличные нужны до выхода из Sorong/Waisai",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "На некоторых дайв-сайтах сильные течения; конкретную точку выбирают с местным дайв-оператором по фактическим условиям, а не по списку «лучших мест».",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "legacy_aggregate",
-      "data": {
-        "note": "Повторяющиеся практические проблемы из актуальных/доступных отзывов и полевых источников; где свежих отзывов мало, это прямо отмечено."
-      },
-      "source_refs": []
+      "topic": "legacy_aggregate",
+      "summary": "",
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     }
   ],
   "visual_recon": {
@@ -301,10 +320,22 @@
         "best_time": "early_morning / late_afternoon",
         "best_weather_light": "Боковой свет сильнее моделирует известняковые башни; при более высоком солнце лучше читается цвет мелководья.",
         "useful_equipment": [
-          "wide",
-          "standard",
-          "telephoto",
-          "phone"
+          {
+            "type": "wide",
+            "why": null
+          },
+          {
+            "type": "standard",
+            "why": null
+          },
+          {
+            "type": "telephoto",
+            "why": null
+          },
+          {
+            "type": "phone",
+            "why": null
+          }
         ],
         "source_refs": [
           "src_903071"
@@ -321,10 +352,22 @@
         "best_time": "morning / late_afternoon",
         "best_weather_light": "Низкий боковой свет подчёркивает объём карста; в полдень сильнее проявляется цвет воды.",
         "useful_equipment": [
-          "wide",
-          "standard",
-          "telephoto",
-          "phone"
+          {
+            "type": "wide",
+            "why": null
+          },
+          {
+            "type": "standard",
+            "why": null
+          },
+          {
+            "type": "telephoto",
+            "why": null
+          },
+          {
+            "type": "phone",
+            "why": null
+          }
         ],
         "source_refs": [
           "src_903004"
@@ -349,7 +392,22 @@
       "action_camera",
       "phone"
     ],
-    "drone": "Только по действующим авиационным и локальным правилам; в нацпарках/храмах/аэропортовых зонах обычно требуется отдельное разрешение.",
+    "drone": {
+      "visual_value": null,
+      "legal_status": "unknown",
+      "permit_required": null,
+      "restrictions": [
+        "Только по действующим авиационным и локальным правилам; в нацпарках/храмах/аэропортовых зонах обычно требуется отдельное разрешение."
+      ],
+      "source_refs": [
+        "src_000016",
+        "src_000179",
+        "src_000080",
+        "src_000339",
+        "src_000134"
+      ],
+      "checked_at": "2026-09-28"
+    },
     "filming_restrictions": "Обычная любительская съёмка зависит от правил объекта; коммерческую/постановочную съёмку согласовывать."
   },
   "media": {
@@ -377,7 +435,7 @@
     ]
   },
   "qa": {
-    "status": "passed",
+    "status": "incomplete",
     "checks": {
       "language": true,
       "classification": true,
@@ -388,10 +446,10 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": true,
-      "traveler_reports": true,
+      "overnight": false,
+      "traveler_reports": false,
       "visual_recon": true
     },
-    "last_reviewed_at": "2026-09-28"
+    "last_reviewed_at": "2026-09-30"
   }
 }

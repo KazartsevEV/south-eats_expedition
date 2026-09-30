@@ -126,6 +126,12 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .fact-card h3{margin:0 0 8px;font-size:16px}
 .fact-card p,.fact-card li{color:#cbd3ce}
 .fact-card ul{margin:7px 0 0;padding-left:18px}
+.legal-risk-list{display:grid;gap:0}
+.legal-risk-item{padding:10px 0;border-top:1px solid var(--line)}
+.legal-risk-item:first-child{border-top:0;padding-top:2px}
+.legal-risk-title{font-weight:800;color:var(--text);margin-bottom:4px}
+.legal-risk-item p{margin:4px 0;color:#cbd3ce}
+.legal-risk-consequence{color:var(--muted)!important}
 .country-label-marker{background:transparent;border:0;color:#eef4ef;font-weight:800;font-size:12px;text-shadow:0 1px 4px #000,0 0 8px #000;white-space:nowrap}
 .map-gap{height:100%;min-height:220px;display:grid;place-items:center;text-align:center;padding:28px;color:var(--muted);background:linear-gradient(145deg,#121814,#0b0f0d);border:1px dashed var(--line);border-radius:inherit}
 .map-gap b{display:block;color:var(--text);margin-bottom:4px}
@@ -368,6 +374,17 @@ function factCard(title,value){
   if(!hasValue(value))return '';
   return '<article class="fact-card"><h3>'+esc(title)+'</h3>'+scalar(value)+'</article>';
 }
+function legalRisksCard(value){
+  var items=value&&Array.isArray(value.items)?value.items:[];
+  if(!items.length)return '';
+  return '<article class="fact-card legal-risks-card"><h3>Уголовно наказуемые и чувствительные правовые риски</h3><div class="legal-risk-list">'+
+    items.map(function(item){
+      return '<div class="legal-risk-item"><div class="legal-risk-title">'+esc(item.title||'Правовой риск')+'</div>'+
+        '<p>'+esc(item.rule||'')+'</p>'+
+        (item.consequence?'<p class="legal-risk-consequence"><b>Последствия:</b> '+esc(item.consequence)+'</p>':'')+
+        '</div>';
+    }).join('')+'</div></article>';
+}
 function seaReferenceHTML(){
   var r=state.seaReference,c=r&&r.content;if(!c)return '';
   var labels={
@@ -409,7 +426,7 @@ function countryReferenceHTML(data){
     blocks.push(factCard('Сухопутные границы и соседи',t.borders&&t.borders.value));
     blocks.push(factCard('Международные аэропорты',t.airports&&t.airports.value));
     blocks.push(factCard('Международные авиасвязи',t.international_air_links&&t.international_air_links.value));
-    blocks.push(factCard('Уголовно наказуемые и чувствительные правовые риски',t.criminal_liability&&t.criminal_liability.value));
+    blocks.push(legalRisksCard(t.criminal_liability&&t.criminal_liability.value));
     blocks.push(factCard('Запреты и правовые ограничения',t.laws_and_prohibitions&&t.laws_and_prohibitions.value));
     blocks.push(factCard('Преступность и безопасность',t.safety_snapshot&&t.safety_snapshot.value));
     blocks.push(factCard('Валюта',t.currency&&t.currency.value));

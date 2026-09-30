@@ -28,7 +28,6 @@ PROFILE_FIELDS = [
     "economy", "political_system", "culture", "summary", "narrow",
 ]
 NATURE_FIELDS = ["flora", "fauna", "dangerous_animals", "poisonous_plants"]
-SECOND_CHUNK = {"PH", "SG", "TH", "TL", "VN"}
 REGIONAL_REQUIRED_FIELDS = [
     "name", "languages_spoken", "climate_summary", "best_period_general",
     "last_verified", "narrow", "geography", "transport", "safety",
@@ -123,15 +122,38 @@ for code, slug in COUNTRIES.items():
         if missing:
             fail(f"{code}: dynamic field {field} references unknown source_ids {missing}")
 
-    if code in SECOND_CHUNK:
-        if not present(travel.get("criminal_liability")):
-            fail(f"{code}: missing traveller criminal_liability layer")
-        criminal_ids = travel.get("criminal_law_source_ids") or []
-        if not criminal_ids:
-            fail(f"{code}: criminal_liability lacks source_ids")
-        missing = [x for x in criminal_ids if x not in source_by_id]
-        if missing:
-            fail(f"{code}: criminal_liability references unknown source_ids {missing}")
+    criminal = travel.get("criminal_liability")
+    if not present(criminal):
+        fail(f"{code}: missing traveller criminal_liability layer")
+    if not isinstance(criminal, dict):
+        fail(f"{code}: criminal_liability must be an object")
+    items = criminal.get("items") or []
+    if not isinstance(items, list) or not items:
+        fail(f"{code}: criminal_liability.items must be a non-empty list")
+    if any(key in criminal for key in ("scope", "offence", "what_counts", "penalty", "nuance")):
+        fail(f"{code}: criminal_liability contains legacy/internal presentation fields")
+    for index, item in enumerate(items):
+        if not isinstance(item, dict):
+            fail(f"{code}: criminal_liability.items[{index}] must be an object")
+        for field in ("title", "rule", "source_ids"):
+            if not present(item.get(field)):
+                fail(f"{code}: criminal_liability.items[{index}] missing {field}")
+        if any(key in item for key in ("offence", "what_counts", "penalty", "nuance", "scope")):
+            fail(f"{code}: criminal_liability.items[{index}] contains legacy/internal presentation fields")
+        item_missing = [x for x in (item.get("source_ids") or []) if x not in source_by_id]
+        if item_missing:
+            fail(f"{code}: criminal_liability.items[{index}] references unknown source_ids {item_missing}")
+
+    criminal_ids = travel.get("criminal_law_source_ids") or []
+    if not criminal_ids:
+        fail(f"{code}: criminal_liability lacks source_ids")
+    missing = [x for x in criminal_ids if x not in source_by_id]
+    if missing:
+        fail(f"{code}: criminal_liability references unknown source_ids {missing}")
+    item_source_ids = {x for item in items for x in (item.get("source_ids") or [])}
+    unlisted = sorted(item_source_ids - set(criminal_ids))
+    if unlisted:
+        fail(f"{code}: criminal_liability item source_ids missing from criminal_law_source_ids {unlisted}")
 
     # Regional research and formal geography are canonical requirements for every
     # published country, not only for the second migration chunk.
@@ -196,7 +218,8 @@ for code, slug in COUNTRIES.items():
         "profile_fields": len(PROFILE_FIELDS),
         "source_count": len(source_rows),
         "dynamic_fields_sourced": len(DYNAMIC_SOURCE_FIELDS),
-        "criminal_law_layer": code not in SECOND_CHUNK or bool(travel.get("criminal_liability")),
+        "criminal_law_layer": bool(travel.get("criminal_liability")),
+        "criminal_law_items": len((travel.get("criminal_liability") or {}).get("items") or []),
         "regional_profiles": len(regions),
         "geo_nodes": len(nodes),
         "regional_geo_contract": True,

@@ -53,8 +53,8 @@
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Inle — второй по величине внутренний пресноводный водоём страны и биосферный резерват UNESCO. Его ценность не отделима от человеческой адаптации: дома на сваях, внутреннее судоходство, рыболовство и плавучее земледелие существуют прямо внутри водной экосистемы.",
+        "type": "overview",
+        "text": "Inle — второй по величине внутренний пресноводный водоём страны и биосферный резерват UNESCO. Его ценность не отделима от человеческой адаптации: дома на сваях, внутреннее судоходство, рыболовство и плавучее земледелие существуют прямо внутри водной экосистемы.",
         "source_refs": [
           "src_000131",
           "src_000124",
@@ -69,8 +69,8 @@
         ]
       },
       {
-        "section_id": "culture",
-        "content": "Intha выращивают культуры на плавучих грядах Yechan и известны техникой гребли ногой; вокруг озера живут также Shan, Pa-O и Da-Nu. Храмы и пагоды, включая Phaung Taw Oo и Alodaw Pauk, остаются действующими религиозными узлами.",
+        "type": "culture",
+        "text": "Intha выращивают культуры на плавучих грядах Yechan и известны техникой гребли ногой; вокруг озера живут также Shan, Pa-O и Da-Nu. Храмы и пагоды, включая Phaung Taw Oo и Alodaw Pauk, остаются действующими религиозными узлами.",
         "source_refs": [
           "src_000131",
           "src_000124",
@@ -82,12 +82,11 @@
           "src_000043",
           "src_000293",
           "src_000063"
-        ],
-        "migration_note": "Legacy combined section retained under culture until country research splits it."
+        ]
       },
       {
-        "section_id": "geography",
-        "content": "Высокогорное озеро лежит в межгорной котловине Южного Shan State. Мелководность делает уровень воды практическим фактором: в сухой сезон отдельные каналы могут становиться труднопроходимыми.",
+        "type": "geography",
+        "text": "Высокогорное озеро лежит в межгорной котловине Южного Shan State. Мелководность делает уровень воды практическим фактором: в сухой сезон отдельные каналы могут становиться труднопроходимыми.",
         "source_refs": [
           "src_000131",
           "src_000124",
@@ -99,14 +98,11 @@
           "src_000043",
           "src_000293",
           "src_000063"
-        ],
-        "migration_note": "Legacy combined section retained under geography until country research splits it."
+        ]
       },
       {
-        "section_id": "myths_beliefs",
-        "content": [
-          "Ежегодный Phaung Daw Oo festival превращает озеро в паломнический водный маршрут: священные изображения перевозят по поселениям, а гребцы Intha участвуют в лодочных процессиях и соревнованиях."
-        ],
+        "type": "myths_beliefs",
+        "text": "Ежегодный Phaung Daw Oo festival превращает озеро в паломнический водный маршрут: священные изображения перевозят по поселениям, а гребцы Intha участвуют в лодочных процессиях и соревнованиях.",
         "source_refs": [
           "src_000131",
           "src_000124",
@@ -124,12 +120,43 @@
   },
   "visit": {
     "entry": {
-      "hours": "У озера нет общего графика. Рынки, монастыри, мастерские и лодочные причалы живут по собственному времени; водный маршрут зависит от уровня воды и текущей безопасности.",
-      "ticket": "Местные входные/зональные сборы и лодка оплачиваются отдельно; перед поездкой подтверждать действующий режим в Nyaungshwe.",
-      "closure_notes": "FCDO сейчас советует только необходимые поездки в Shan State South и East; боевые действия, блокпосты и минная опасность различаются по району.",
-      "status": null,
-      "official_url": "https://www.gov.uk/foreign-travel-advice/myanmar",
-      "notes": "Практичная база — Nyaungshwe; сухопутный доступ идёт через Taunggyi/Heho по фактически открытым дорогам. На самом озере основной транспорт — длинная моторная лодка с местным лодочником.",
+      "access_status": "unknown",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Местные входные/зональные сборы и лодка оплачиваются отдельно; перед поездкой подтверждать действующий режим в Nyaungshwe.",
+        "source_refs": [
+          "src_000131",
+          "src_000124",
+          "src_000066",
+          "src_000413",
+          "src_000355",
+          "src_000444",
+          "src_000418",
+          "src_000043",
+          "src_000293",
+          "src_000063"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "У озера нет общего графика. Рынки, монастыри, мастерские и лодочные причалы живут по собственному времени; водный маршрут зависит от уровня воды и текущей безопасности.",
+        "source_refs": [
+          "src_000131",
+          "src_000124",
+          "src_000066",
+          "src_000413",
+          "src_000355",
+          "src_000444",
+          "src_000418",
+          "src_000043",
+          "src_000293",
+          "src_000063"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_000131",
         "src_000124",
@@ -142,11 +169,15 @@
         "src_000293",
         "src_000063"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.gov.uk/foreign-travel-advice/myanmar",
+      "closure_notes": "FCDO сейчас советует только необходимые поездки в Shan State South и East; боевые действия, блокпосты и минная опасность различаются по району.",
+      "notes": "Практичная база — Nyaungshwe; сухопутный доступ идёт через Taunggyi/Heho по фактически открытым дорогам. На самом озере основной транспорт — длинная моторная лодка с местным лодочником."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "public_transport"
         ],
@@ -155,20 +186,13 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Наземный автобус/трансфер до Nyaungshwe только по текущему открытому маршруту."
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
         "modes": [
           "ride_hailing"
         ],
@@ -177,20 +201,18 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "Машина полезна для Heho/Taunggyi и сухопутных объектов вокруг озера."
+            "notes": "Машина полезна для Heho/Taunggyi и сухопутных объектов вокруг озера.",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
         "modes": [
           "moped"
         ],
@@ -199,20 +221,18 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "Вокруг Nyaungshwe и на доступных дорогах мопед может связать сухопутные точки; не заменяет лодку внутри озёрной системы."
+            "notes": "Вокруг Nyaungshwe и на доступных дорогах мопед может связать сухопутные точки; не заменяет лодку внутри озёрной системы.",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
         "modes": [
           "walking"
         ],
@@ -221,15 +241,16 @@
             "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
+            "notes": "Nyaungshwe и отдельные поселения проходятся пешком; озёрный маршрут — водный.",
             "elevation_gain_m": null,
             "elevation_loss_m": null,
             "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "Nyaungshwe и отдельные поселения проходятся пешком; озёрный маршрут — водный."
+            "trail": {
+              "type": null,
+              "condition": null,
+              "navigation": null,
+              "river_crossings": null
+            }
           }
         ]
       }
@@ -298,26 +319,32 @@
   },
   "traveler_reports": [
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "Моторные лодки на длинном маршруте шумные; беруши/защита слуха реально полезны.",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "В апреле путешественники отмечали жару и слишком низкий уровень воды для части каналов.",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "Жалобы на загрязнение воды и навязанные остановки в дорогих ремесленных магазинах — причина задавать лодочнику конкретный маршрут без «обязательной программы».",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "legacy_aggregate",
-      "data": {
-        "note": "Самостоятельный маршрут лучше формулировать по точкам и времени: «плавучие поля → конкретная деревня → рынок/монастырь», а не покупать стандартный круг."
-      },
-      "source_refs": []
+      "topic": "legacy_aggregate",
+      "summary": "",
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     }
   ],
   "visual_recon": {
@@ -329,7 +356,27 @@
     "seasonal_visuals": [],
     "video_activity": [],
     "useful_equipment": [],
-    "drone": "Не использовать дрон без проверки действующих национальных и локальных разрешений; в условиях конфликта съёмка с воздуха рядом с государственными и религиозными объектами создаёт дополнительный риск.",
+    "drone": {
+      "visual_value": null,
+      "legal_status": "unknown",
+      "permit_required": null,
+      "restrictions": [
+        "Не использовать дрон без проверки действующих национальных и локальных разрешений; в условиях конфликта съёмка с воздуха рядом с государственными и религиозными объектами создаёт дополнительный риск."
+      ],
+      "source_refs": [
+        "src_000131",
+        "src_000124",
+        "src_000066",
+        "src_000413",
+        "src_000355",
+        "src_000444",
+        "src_000418",
+        "src_000043",
+        "src_000293",
+        "src_000063"
+      ],
+      "checked_at": "2026-09-28"
+    },
     "filming_restrictions": "Не снимать полицию, военных, checkpoints, демонстрации и связанные с конфликтом объекты; риск задержания реален."
   },
   "media": {
@@ -372,10 +419,10 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": true,
-      "traveler_reports": true,
+      "overnight": false,
+      "traveler_reports": false,
       "visual_recon": false
     },
-    "last_reviewed_at": "2026-09-28"
+    "last_reviewed_at": "2026-09-30"
   }
 }

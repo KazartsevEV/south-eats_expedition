@@ -260,7 +260,6 @@ def main():
         if card_path.exists():
             card = load(card_path)
             card["preview_asset"] = preview_rel
-            card["preview_source_media_id"] = preview_source_by_object[object_id]
             dump(card_path, card)
 
     if PREVIEW_ROOT.exists():

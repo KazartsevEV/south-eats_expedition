@@ -1333,7 +1333,25 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Batanes"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "protected_area_boundary",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Republic Act No. 8991 — Batanes Protected Area statutory 50-point boundary"
+        ],
+        "source_refs": [
+          "src_904062",
+          "src_910012",
+          "src_910016"
+        ],
+        "source_vintage": "2001 statutory boundary",
+        "checked_at": "2026-09-30",
+        "note": "Approximate expedition mask uses the statutory geographic coordinates in RA 8991. The Act does not state the geodetic datum; coordinates are stored as approximate EPSG:4326 navigation geometry and are not represented as survey-grade. A 2023 WGS84 nautical-chart update is retained as an external positional cross-check for the charted southern Batanes protected-area sector."
+      }
     },
     {
       "id": "ph:geographic_area:central-luzon-pinatubo",
@@ -1384,7 +1402,28 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Occidental Mindoro / Apo Reef"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Sablayan municipality",
+          "Apo Reef Natural Park WGS84 boundary"
+        ],
+        "source_refs": [
+          "src_904066",
+          "src_904067",
+          "src_910005",
+          "src_910013",
+          "src_910014"
+        ],
+        "source_vintage": "1996 legal boundary + 2023 WGS84 chart + 2023 municipality boundary",
+        "checked_at": "2026-09-30",
+        "note": "Approximate expedition mask covers the documented Sablayan mainland gateway and Apo Reef Natural Park itself. It deliberately does not copy the full Occidental Mindoro province boundary."
+      }
     },
     {
       "id": "ph:geographic_area:batangas-taal",
@@ -1399,7 +1438,30 @@
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Batangas / Taal"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Taal Volcano Protected Landscape",
+          "Mabini / Anilao",
+          "Tingloy",
+          "Verde Island"
+        ],
+        "source_refs": [
+          "src_904068",
+          "src_904069",
+          "src_904070",
+          "src_910005",
+          "src_910015"
+        ],
+        "source_vintage": "1996 Taal technical description + 2023 municipality boundaries",
+        "checked_at": "2026-09-30",
+        "note": "Approximate expedition mask combines the Taal protected-landscape polygon reconstructed geodesically from Proclamation 923 with the Mabini/Anilao coast, Tingloy and the offshore Verde Island component of Batangas City. It excludes the unrelated remainder of Batangas province."
+      }
     },
     {
       "id": "ph:geographic_area:albay-bicol",

@@ -20,7 +20,8 @@
       "Regional research profiles restored from the existing Google Drive draft; attraction object payloads remain deferred.",
       "Regional QA pass 2026-09-30: deepened Ilocos/Vigan, Negros and Samar with UNESCO, PHIVOLCS and NCCA sources; added locally anchored ethnography, living heritage, volcanic geology and Waray cultural context without changing object payloads.",
       "Locality pass 2026-09-30: added 17 researched city/town base profiles with map anchors, source provenance and explicit separation between settlement coordinates and attraction/trailhead coordinates.",
-      "Geo-mask pass 2026-09-30: added sourced administrative boundary geometry for CAR → Ifugao/Mountain Province → Banaue/Sagada, with a separately marked approximate composite mask for Cordillera / Ifugao / Sagada."
+      "Geo-mask pass 2026-09-30: added sourced administrative boundary geometry for CAR → Ifugao/Mountain Province → Banaue/Sagada, with a separately marked approximate composite mask for Cordillera / Ifugao / Sagada.",
+      "Geo-mask expansion 2026-09-30: propagated the CAR mask contract to stable Philippine regions, all expedition-relevant provinces and city/town geo nodes; current NIR PSGC codes are separated from 2023 geometry correspondence codes, while post-2023 BARMM/SGA/Sulu regional boundaries remain deferred rather than guessed."
     ]
   },
   "overview": {
@@ -3449,10 +3450,14 @@
         "geo_boundary_masks",
         "car_boundary",
         "province_boundaries",
-        "municipality_boundaries"
+        "municipality_boundaries",
+        "regional_boundary_masks",
+        "province_boundary_masks",
+        "locality_boundary_masks",
+        "legacy_2019_huc_boundary_fallback"
       ],
       "accessed": "2026-09-30",
-      "notes": "Low-resolution web-map polygons derived from Philippine administrative boundary shapefiles. The repository documents PSGC source data as of 31 December 2023; current 2026 PSGC pages are used separately to verify administrative identity/codes. These polygons are navigation/display masks, not cadastral or survey-grade boundaries."
+      "notes": "Repository of Philippine administrative boundary maps. Main masks use low-resolution geometry derived from PSGC/NAMRIA source shapefiles updated to 31 December 2023. For HUCs omitted from the 2023 province-contained files, the repository's explicitly versioned 2019 low-resolution barangay geometry is used only as a visual boundary fallback; current 2026 PSGC identity/codes are stored separately. All masks are navigation/display geometry, not cadastral or survey-grade boundaries."
     },
     {
       "id": "PH_MOUNTAIN_PROVINCE_GETTING_HERE",

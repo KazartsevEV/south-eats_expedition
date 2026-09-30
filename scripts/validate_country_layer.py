@@ -117,7 +117,13 @@ def validate_node_geometry(code, node, known_source_ids):
         geometry_meta.get("coverage_basis") or geometry_meta.get("note")
     ):
         fail(f"{code}: approximate geo node {node.get('id')!r} lacks coverage_basis/note")
-    if geometry_meta.get("geometry_type") == "administrative_boundary" and not geometry_meta.get("psgc"):
+    # PSGC is the Philippines-specific administrative code system. Other countries
+    # must not invent a PSGC value merely to publish a sourced administrative mask.
+    if (
+        code == "PH"
+        and geometry_meta.get("geometry_type") == "administrative_boundary"
+        and not geometry_meta.get("psgc")
+    ):
         fail(f"{code}: administrative boundary {node.get('id')!r} lacks PSGC code")
     doc = load(path)
     if doc.get("type") != "FeatureCollection" or not (doc.get("features") or []):

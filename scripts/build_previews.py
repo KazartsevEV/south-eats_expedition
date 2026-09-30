@@ -18,7 +18,7 @@ CDN = ROOT / "public" / "cdn" / "v2"
 PREVIEW_ROOT = CDN / "previews"
 MAX_DOWNLOAD_BYTES = 40 * 1024 * 1024
 MAX_SIZE = (720, 480)
-USER_AGENT = "ExpeditionSoutheastAsiaPreviewBuilder/1.1 (+https://github.com/KazartsevEV/south-eats_expedition)"
+USER_AGENT = "ExpeditionSoutheastAsiaPreviewBuilder/1.2 (+https://github.com/KazartsevEV/south-eats_expedition)"
 WIKIMEDIA_DELAY_SECONDS = 1.25
 _last_wikimedia_request = 0.0
 
@@ -153,6 +153,24 @@ def patch_search_file(path: Path, preview_by_object: dict[str, str]):
         dump(path, doc)
 
 
+def media_candidates(release: Path, cc: str, object_doc: dict, cover_media_id: str) -> list[tuple[str, Path, dict]]:
+    media = object_doc.get("media") or {}
+    ids = [cover_media_id] + list(media.get("gallery_ids") or [])
+    seen = set()
+    out = []
+    for media_id in ids:
+        if not media_id or media_id in seen:
+            continue
+        seen.add(media_id)
+        media_path = release / "media" / cc / f"{media_id}.json"
+        if not media_path.exists():
+            continue
+        media_doc = load(media_path)
+        if media_doc.get("url"):
+            out.append((media_id, media_path, media_doc))
+    return out
+
+
 def main():
     latest = load(CDN / "latest.json")
     release_id = latest["release_id"]
@@ -165,54 +183,69 @@ def main():
 
     failures = []
     preview_by_object: dict[str, str] = {}
-    objects_by_media: dict[str, list[str]] = defaultdict(list)
+    preview_source_by_object: dict[str, str] = {}
     required_files: set[Path] = set()
 
     for row in rows:
         object_id = row.get("id")
-        media_id = row.get("cover_media_id")
-        if not object_id or not media_id:
+        cover_media_id = row.get("cover_media_id")
+        if not object_id or not cover_media_id:
             failures.append(f"{object_id or '<missing-id>'}: cover_media_id is required for local preview")
             continue
+
         cc = object_country(object_id)
-        media_path = release / "media" / cc / f"{media_id}.json"
-        if not media_path.exists():
-            failures.append(f"{object_id}: missing canonical media {media_path.relative_to(CDN)}")
-            continue
-        media_doc = load(media_path)
-        source_url = media_doc.get("url")
-        if not source_url:
-            failures.append(f"{object_id}: cover media {media_id} has no URL")
-            continue
-
-        preview_rel = f"previews/{cc}/{media_id}.webp"
-        preview_path = CDN / preview_rel
-        required_files.add(preview_path)
-        preview_by_object[object_id] = preview_rel
-        objects_by_media[media_id].append(object_id)
-
-        if not preview_path.exists() or preview_path.stat().st_size < 256:
-            try:
-                build_webp(source_url, preview_path, media_doc.get("source_page"))
-            except Exception as exc:
-                failures.append(f"{object_id}: {media_id}: {source_url}: {exc}")
-                continue
-
-        media_doc["preview_asset"] = preview_rel
-        media_doc["preview"] = {
-            "format": "webp",
-            "max_width": MAX_SIZE[0],
-            "max_height": MAX_SIZE[1],
-            "derived_from": source_url,
-        }
-        dump(media_path, media_doc)
-
         object_path = release / "objects" / cc / f"{object_id}.json"
         if not object_path.exists():
             failures.append(f"{object_id}: canonical object file missing")
             continue
         object_doc = load(object_path)
+
+        preview_rel = f"previews/{cc}/{object_id}.webp"
+        preview_path = CDN / preview_rel
+        required_files.add(preview_path)
+        preview_by_object[object_id] = preview_rel
+
+        candidates = media_candidates(release, cc, object_doc, cover_media_id)
+        if not candidates:
+            failures.append(f"{object_id}: no usable cover/gallery media URLs for local preview")
+            continue
+
+        chosen_media_id = None
+        chosen_media_path = None
+        chosen_media_doc = None
+
+        if preview_path.exists() and preview_path.stat().st_size >= 256:
+            chosen_media_id, chosen_media_path, chosen_media_doc = candidates[0]
+        else:
+            candidate_errors = []
+            for media_id, media_path, media_doc in candidates:
+                source_url = media_doc.get("url")
+                try:
+                    build_webp(source_url, preview_path, media_doc.get("source_page"))
+                    chosen_media_id = media_id
+                    chosen_media_path = media_path
+                    chosen_media_doc = media_doc
+                    break
+                except Exception as exc:
+                    candidate_errors.append(f"{media_id}: {source_url}: {exc}")
+            if chosen_media_id is None:
+                failures.append(f"{object_id}: all preview candidates failed: " + " | ".join(candidate_errors))
+                continue
+
+        preview_source_by_object[object_id] = chosen_media_id
+        source_url = chosen_media_doc.get("url")
+        chosen_media_doc["preview_asset"] = preview_rel
+        chosen_media_doc["preview"] = {
+            "format": "webp",
+            "max_width": MAX_SIZE[0],
+            "max_height": MAX_SIZE[1],
+            "derived_from": source_url,
+            "object_id": object_id,
+        }
+        dump(chosen_media_path, chosen_media_doc)
+
         object_doc.setdefault("media", {})["preview_asset"] = preview_rel
+        object_doc["media"]["preview_source_media_id"] = chosen_media_id
         dump(object_path, object_doc)
 
     if failures:
@@ -227,6 +260,7 @@ def main():
         if card_path.exists():
             card = load(card_path)
             card["preview_asset"] = preview_rel
+            card["preview_source_media_id"] = preview_source_by_object[object_id]
             dump(card_path, card)
 
     if PREVIEW_ROOT.exists():
@@ -246,11 +280,11 @@ def main():
         "max_size": {"width": MAX_SIZE[0], "height": MAX_SIZE[1]},
         "items": [
             {
-                "media_id": media_id,
-                "preview_asset": preview_by_object[object_ids[0]],
-                "object_ids": object_ids,
+                "object_id": object_id,
+                "source_media_id": preview_source_by_object[object_id],
+                "preview_asset": preview_by_object[object_id],
             }
-            for media_id, object_ids in sorted(objects_by_media.items())
+            for object_id in sorted(preview_by_object)
         ],
     }
     dump(PREVIEW_ROOT / "index.json", index)

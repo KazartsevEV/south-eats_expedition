@@ -34,7 +34,7 @@
     "primary_location": {
       "lat": 13.783056,
       "lon": 104.537222,
-      "elevation_m": 86.0,
+      "elevation_m": 86,
       "elevation_range_m": null,
       "coordinate_type": "archaeological_core",
       "accuracy": "high",
@@ -49,7 +49,7 @@
     },
     "geo_points": [],
     "object_elevation": {
-      "representative_m": 86.0,
+      "representative_m": 86,
       "min_m": null,
       "max_m": null,
       "reference_type": "site",
@@ -64,8 +64,8 @@
   "narrative": {
     "sections": [
       {
-        "section_id": "history",
-        "content": "Кох-Кер был столичным центром Кхмерской империи в X веке при Джаявармане IV. Город, известный как Лингапура или Чок-Гаргьяр, формировался быстро и выделяется крупной каменной скульптурой, монументальными лингамами и ступенчатой пирамидой Прасат-Пранг.",
+        "type": "history",
+        "text": "Кох-Кер был столичным центром Кхмерской империи в X веке при Джаявармане IV. Город, известный как Лингапура или Чок-Гаргьяр, формировался быстро и выделяется крупной каменной скульптурой, монументальными лингамами и ступенчатой пирамидой Прасат-Пранг.",
         "source_refs": [
           "src_000195",
           "src_000335",
@@ -78,8 +78,8 @@
         ]
       },
       {
-        "section_id": "culture",
-        "content": "Название Лингапура — «город лингамов». Для понимания места важны не только пирамида, но и сеть храмов, водоёмов и дорог внутри лесного культурного ландшафта.",
+        "type": "culture",
+        "text": "Название Лингапура — «город лингамов». Для понимания места важны не только пирамида, но и сеть храмов, водоёмов и дорог внутри лесного культурного ландшафта.",
         "source_refs": [
           "src_000195",
           "src_000335",
@@ -92,8 +92,8 @@
         ]
       },
       {
-        "section_id": "geography",
-        "content": "Комплекс разбросан по пологому лесному ландшафту между Дангрэкским хребтом и Пном-Куленом, поэтому это серия удалённых храмовых точек, а не компактный пеший центр.",
+        "type": "geography",
+        "text": "Комплекс разбросан по пологому лесному ландшафту между Дангрэкским хребтом и Пном-Куленом, поэтому это серия удалённых храмовых точек, а не компактный пеший центр.",
         "source_refs": [
           "src_000195",
           "src_000335",
@@ -106,13 +106,8 @@
         ]
       },
       {
-        "section_id": "myths_beliefs",
-        "content": [
-          {
-            "type": "documented_religious_tradition",
-            "text": "Космологическая планировка и культ крупных лингамов относятся к религиозной программе Лингапуры; ICOMOS также рассматривает символические и возможные астрономические аспекты ориентации комплекса."
-          }
-        ],
+        "type": "myths_beliefs",
+        "text": "Космологическая планировка и культ крупных лингамов относятся к религиозной программе Лингапуры; ICOMOS также рассматривает символические и возможные астрономические аспекты ориентации комплекса.",
         "source_refs": [
           "src_000195",
           "src_000335",
@@ -128,12 +123,39 @@
   },
   "visit": {
     "entry": {
-      "hours": "Билетный доступ в парк храмов Кох-Кер: 06:00–18:30; для отдельных храмов часто указывается 07:00–18:30.",
-      "ticket": "Официальный однодневный билет Angkor Enterprise в Кох-Кер — 15 USD.",
-      "closure_notes": "Отдельные сооружения могут временно закрываться для консервации; в сильные дожди состояние удалённых дорог ухудшается.",
-      "status": "открыт / вход по билету",
-      "official_url": "https://www.angkorenterprise.gov.kh/en/available-tickets",
-      "notes": "Удалённый археологический комплекс к северо-востоку от Сиемреапа; самостоятельно удобнее ехать на автомобиле или мотоцикле, заранее проверив состояние дороги.",
+      "access_status": "открыт / вход по билету",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Официальный однодневный билет Angkor Enterprise в Кох-Кер — 15 USD.",
+        "source_refs": [
+          "src_000195",
+          "src_000335",
+          "src_000476",
+          "src_000289",
+          "src_000387",
+          "src_000047",
+          "src_000394",
+          "src_000255"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Билетный доступ в парк храмов Кох-Кер: 06:00–18:30; для отдельных храмов часто указывается 07:00–18:30.",
+        "source_refs": [
+          "src_000195",
+          "src_000335",
+          "src_000476",
+          "src_000289",
+          "src_000387",
+          "src_000047",
+          "src_000394",
+          "src_000255"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_000195",
         "src_000335",
@@ -144,11 +166,15 @@
         "src_000394",
         "src_000255"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.angkorenterprise.gov.kh/en/available-tickets",
+      "closure_notes": "Отдельные сооружения могут временно закрываться для консервации; в сильные дожди состояние удалённых дорог ухудшается.",
+      "notes": "Удалённый археологический комплекс к северо-востоку от Сиемреапа; самостоятельно удобнее ехать на автомобиле или мотоцикле, заранее проверив состояние дороги."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "public_transport"
         ],
@@ -157,20 +183,13 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "прямого удобного общественного транспорта из Сиемреап к храмовым точкам нет; реальный самостоятельный путь — водитель/тур или ночёвка в Сраянге"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
         "modes": [
           "ride_hailing"
         ],
@@ -179,20 +198,18 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "частный автомобиль из Сиемреап либо трансфер из Сраянга; договариваться о полном круге храмов, а не только Прасат-Тхом"
+            "notes": "частный автомобиль из Сиемреап либо трансфер из Сраянга; договариваться о полном круге храмов, а не только Прасат-Тхом",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
         "modes": [
           "moped"
         ],
@@ -201,20 +218,18 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "дорога технически проезжаема, но это около 100 км до Сраянга / района в одну сторону; как дневной мопед-маршрут слишком длинный для большинства путешественников"
+            "notes": "дорога технически проезжаема, но это около 100 км до Сраянга / района в одну сторону; как дневной мопед-маршрут слишком длинный для большинства путешественников",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
         "modes": [
           "walking"
         ],
@@ -223,15 +238,16 @@
             "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
+            "notes": "внутри отдельных групп 0.5–2 км; полный разбросанный комплекс потребует транспорта и нескольких километров ходьбы",
             "elevation_gain_m": null,
             "elevation_loss_m": null,
             "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "внутри отдельных групп 0.5–2 км; полный разбросанный комплекс потребует транспорта и нескольких километров ходьбы"
+            "trail": {
+              "type": null,
+              "condition": null,
+              "navigation": null,
+              "river_crossings": null
+            }
           }
         ]
       }
@@ -292,19 +308,25 @@
   },
   "traveler_reports": [
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "Длинная однодневная поездка из Сиемреапа часто превращает осмотр в гонку; ночёвка в районе Сраяна позволяет спокойно работать утром и вечером.",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "в дождь грунтовые ответвления к второстепенным храмам хуже",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "в феврале 2026 в отзывах Кох-Кер отель упоминались мелкие бытовые проблемы вроде протечки кондиционера/мыши — полезно как реальное ожидание удалённой базы",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     }
   ],
   "visual_recon": {
@@ -338,7 +360,7 @@
             "why": "башни стоят близко и окружены лесом"
           },
           {
-            "type": "стандартный",
+            "type": "standard",
             "why": "удобен для отдельных башен и корневых систем"
           }
         ],
@@ -364,7 +386,25 @@
         "why": "скульптурные детали и отдельные башни через просветы леса"
       }
     ],
-    "drone": "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил.",
+    "drone": {
+      "visual_value": null,
+      "legal_status": "unknown",
+      "permit_required": null,
+      "restrictions": [
+        "Не считать запуск разрешённым по умолчанию: для храмов, мемориалов и охраняемых зон требуется отдельная проверка местного режима и авиационных правил."
+      ],
+      "source_refs": [
+        "src_000195",
+        "src_000335",
+        "src_000476",
+        "src_000289",
+        "src_000387",
+        "src_000047",
+        "src_000394",
+        "src_000255"
+      ],
+      "checked_at": "2026-09-28"
+    },
     "filming_restrictions": "Обычная съёмка с рук зависит от правил объекта; профессиональную/коммерческую съёмку и постановку согласовывать."
   },
   "media": {
@@ -395,7 +435,7 @@
     ]
   },
   "qa": {
-    "status": "passed",
+    "status": "incomplete",
     "checks": {
       "language": true,
       "classification": true,
@@ -406,10 +446,10 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": true,
-      "traveler_reports": true,
+      "overnight": false,
+      "traveler_reports": false,
       "visual_recon": true
     },
-    "last_reviewed_at": "2026-09-28"
+    "last_reviewed_at": "2026-09-30"
   }
 }

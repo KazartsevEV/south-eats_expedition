@@ -524,6 +524,26 @@ def gallery_from(obj):
 
 def story_from(obj):
     ann = ((obj.get("traveler_card") or {}).get("annotation") or {})
+    if isinstance(ann, dict) and ann.get("canonical_story_from_sections") and isinstance(ann.get("sections"), list):
+        parts = []
+        for row in ann.get("sections") or []:
+            if not isinstance(row, dict):
+                continue
+            content = row.get("content")
+            if isinstance(content, str) and content.strip():
+                parts.append(content.strip())
+            elif isinstance(content, list):
+                for item in content:
+                    if isinstance(item, dict) and isinstance(item.get("text"), str) and item.get("text").strip():
+                        parts.append(item.get("text").strip())
+                    elif isinstance(item, str) and item.strip():
+                        parts.append(item.strip())
+        return {
+            "narrative": "\n\n".join(parts) or compact_text(obj.get("why_go")),
+            "culture_ethnography": None,
+            "geography_geology": None,
+            "myths_legends_beliefs": None,
+        }
     narrative = ann.get("narrative") if isinstance(ann, dict) else None
     return {
         "narrative": compact_text(narrative) or compact_text(obj.get("why_go")),
@@ -929,6 +949,7 @@ def build():
                 "elevation": bool(geo.get("object_elevation")),
                 "coordinate_type": bool((geo.get("primary_location") or {}).get("type")),
                 "dynamic_checked_at": bool((card.get("operations") or {}).get("last_verified")),
+                "editorial_rebuild": code != "KH" or (((obj.get("qa") or {}).get("rebuild_v2") or {}).get("status") == "passed"),
             })
 
         places = []
@@ -1089,7 +1110,7 @@ def build():
         "countries": countries,
     })
 
-    blocking_required = ["story", "narrow", "logistics", "sources", "hero"]
+    blocking_required = ["story", "narrow", "logistics", "sources", "hero", "editorial_rebuild"]
     expedition_required = ["water", "overnight", "accommodation", "traveler_reports", "gallery_min_2", "photo_video", "visual_recon", "coordinates", "elevation", "coordinate_type", "dynamic_checked_at"]
     coverage = {k: sum(1 for x in qa_objects if x[k]) for k in blocking_required + expedition_required}
     qa = {

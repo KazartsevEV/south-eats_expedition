@@ -256,6 +256,9 @@ def narrative_sections(story, source_refs):
 
 def access_options(logistics):
     logistics = logistics or {}
+    structured = logistics.get("access_options")
+    if isinstance(structured, list) and structured:
+        return json.loads(json.dumps(structured, ensure_ascii=False))
     raw_modes = logistics.get("modes") or {}
     mode_aliases = {
         "public_transport": "public_transport",
@@ -1069,6 +1072,7 @@ def build():
         sections = narrative_sections(story_payload, source_refs)
         reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
         language_review = ((source_object or {}).get("qa") or {}).get("language_review") or {}
+        rebuild_review = ((source_object or {}).get("qa") or {}).get("rebuild_v2") or {}
 
         checks = {
             "language": bool((detail.get("identity") or {}).get("narrow") or sections) and (code != "KH" or language_review.get("status") == "reviewed"),
@@ -1090,6 +1094,7 @@ def build():
             "overnight": bool(logistics.get("overnight_and_camping")),
             "traveler_reports": bool(reports),
             "visual_recon": bool(visual_recon.get("best_time") or visual_recon.get("viewpoints")),
+            "editorial_rebuild": code != "KH" or rebuild_review.get("status") == "passed",
         }
         status = "passed" if all(checks.values()) else "incomplete"
 
@@ -1126,20 +1131,34 @@ def build():
                     "checked_at": operations.get("last_verified"),
                 },
                 "access_options": access_options(logistics),
-                "water": {
-                    "summary": logistics.get("water"),
-                    "quality": "unknown",
-                    "last_reliable_source": None,
-                    "distance_m": None,
-                    "natural_sources": [],
-                    "source_refs": source_refs,
-                },
-                "supplies": None,
-                "overnight": {
-                    "status": "unclear",
-                    "summary": logistics.get("overnight_and_camping"),
-                    "source_refs": source_refs,
-                },
+                "water": (
+                    {
+                        **json.loads(json.dumps(logistics.get("water_structured"), ensure_ascii=False)),
+                        "source_refs": list(dict.fromkeys((logistics.get("water_structured") or {}).get("source_refs", []) + source_refs)),
+                    }
+                    if isinstance(logistics.get("water_structured"), dict)
+                    else {
+                        "summary": logistics.get("water"),
+                        "quality": "unknown",
+                        "last_reliable_source": None,
+                        "distance_m": None,
+                        "natural_sources": [],
+                        "source_refs": source_refs,
+                    }
+                ),
+                "supplies": json.loads(json.dumps(logistics.get("supplies"), ensure_ascii=False)) if isinstance(logistics.get("supplies"), dict) else None,
+                "overnight": (
+                    {
+                        **json.loads(json.dumps(logistics.get("overnight"), ensure_ascii=False)),
+                        "source_refs": list(dict.fromkeys((logistics.get("overnight") or {}).get("source_refs", []) + source_refs)),
+                    }
+                    if isinstance(logistics.get("overnight"), dict)
+                    else {
+                        "status": "unclear",
+                        "summary": logistics.get("overnight_and_camping"),
+                        "source_refs": source_refs,
+                    }
+                ),
                 "lodging_ids": lodging_ids,
                 "rules": {
                     "permit_or_guide": logistics.get("permit_or_guide"),

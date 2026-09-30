@@ -678,7 +678,7 @@ def build():
                     climate_detail["best_period_general"] = region_profile.get("best_period_general")
                 if climate_detail:
                     entity["climate"] = climate_detail
-                for field in ("geography", "relief", "geology", "hydrology", "coast", "marine", "nature", "health", "safety", "history", "ethnography", "culture", "architecture", "transport"):
+                for field in ("geography", "relief", "geology", "hydrology", "coast", "marine", "nature", "health", "safety", "history", "ethnography", "culture", "myths_beliefs", "architecture", "transport"):
                     if region_profile.get(field) not in (None, "", [], {}):
                         entity[field] = region_profile.get(field)
                 local_prov = region_profile.get("local_reference_provenance") or {}

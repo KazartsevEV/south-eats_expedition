@@ -49,6 +49,7 @@ REQUIRED_QA_CHECKS = {
     "overnight",
     "traveler_reports",
     "visual_recon",
+    "gallery_min_5",
     "editorial_rebuild",
 }
 
@@ -362,7 +363,10 @@ def main():
         cover_id = media.get("cover_id")
         if cover_id is not None and cover_id not in media_ids:
             fail(f"{object_id}: unknown cover media {cover_id}")
-        for media_id in media.get("gallery_ids") or []:
+        gallery_ids = media.get("gallery_ids") or []
+        if len(gallery_ids) != len(set(gallery_ids)):
+            fail(f"{object_id}: duplicate media IDs in gallery")
+        for media_id in gallery_ids:
             if media_id not in media_ids:
                 fail(f"{object_id}: unknown gallery media {media_id}")
 
@@ -376,6 +380,8 @@ def main():
             fail(f"{object_id}: QA check set mismatch: {sorted(checks)}")
         if bool(checks.get("elevation")) != bool(has_object_elevation):
             fail(f"{object_id}: elevation QA must reflect geo.object_elevation, not GPS-point elevation")
+        if bool(checks.get("gallery_min_5")) != (len(gallery_ids) >= 5):
+            fail(f"{object_id}: gallery_min_5 QA must reflect at least five unique gallery media refs")
         qa_path = require_file(release, f"qa/objects/{code}/{object_id}.json")
         qa_doc = load(qa_path)
         if qa_doc.get("object_id") != object_id:

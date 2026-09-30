@@ -349,6 +349,49 @@
     "laws_source_ids": [
       "RUS_MFA",
       "NIPAS"
+    ],
+    "criminal_liability": {
+      "scope": "Не исчерпывающий перечень. Для Филиппин важно отличать действующую санкцию от исторического текста специальных законов: старые нормы могут содержать слово death, но Republic Act No. 9346 запрещает назначение смертной казни.",
+      "items": [
+        {
+          "topic": "dangerous_drugs",
+          "offence": "Незаконный ввоз, продажа, перевозка, хранение и употребление dangerous drugs регулируются Republic Act No. 9165 и образуют тяжёлые уголовные составы.",
+          "what_counts": "Даже хранение сравнительно небольшого количества может влечь многолетнее лишение свободы; закон отдельно регулирует paraphernalia и употребление.",
+          "penalty": "Санкции зависят от вещества, количества и состава и могут доходить до пожизненного лишения свободы. Смертная казнь в настоящее время не назначается в силу RA 9346.",
+          "nuance": "Не копировать из старого текста RA 9165 фразу «life imprisonment to death» как текущую санкцию без поправки RA 9346.",
+          "source_ids": [
+            "PH_DANGEROUS_DRUGS_ACT",
+            "PH_DEATH_PENALTY_ABOLITION"
+          ]
+        },
+        {
+          "topic": "national_flag",
+          "offence": "Flag and Heraldic Code запрещает ряд действий, выражающих неуважение или ненадлежащее использование государственного флага.",
+          "what_counts": "В частности, запрещены умышленное осквернение/поругание флага и ряд способов его использования: как одежду, скатерть, рекламный элемент и др.",
+          "penalty": "Ответственность определяется RA 8491; на странице показывать конкретный запрет и ссылку на закон, а не трактовать любую ошибку обращения с флагом как одинаковый состав.",
+          "nuance": "Норма шире, чем обычный «этикет флага».",
+          "source_ids": [
+            "PH_FLAG_CODE"
+          ]
+        },
+        {
+          "topic": "religious_worship",
+          "offence": "Статья 133 Revised Penal Code предусматривает ответственность за действия, заведомо оскорбительные для чувств верующих, совершённые в месте религиозного поклонения или во время религиозной церемонии.",
+          "what_counts": "Ключевы контекст места/церемонии и характер действия; это не общий запрет на любую критику религии.",
+          "penalty": "Уголовная санкция по статье 133; точная современная конверсия старых наименований наказаний требует отдельной юридической нормализации.",
+          "nuance": "Отображать формулировку узко, без расширения на обычную дискуссию о религии.",
+          "source_ids": [
+            "PH_PENAL_CODE"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "criminal_law_source_ids": [
+      "PH_DANGEROUS_DRUGS_ACT",
+      "PH_DEATH_PENALTY_ABOLITION",
+      "PH_FLAG_CODE",
+      "PH_PENAL_CODE"
     ]
   },
   "sources": [
@@ -545,6 +588,54 @@
       ],
       "accessed": "2026-09-30",
       "canonical_id": "src_000777"
+    },
+    {
+      "id": "PH_DANGEROUS_DRUGS_ACT",
+      "canonical_id": "src_000855",
+      "publisher": "LawPhil — Republic Act No. 9165 (Comprehensive Dangerous Drugs Act)",
+      "url": "https://lawphil.net/statutes/repacts/ra2002/ra_9165_2002.html",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "drug_law"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_DEATH_PENALTY_ABOLITION",
+      "canonical_id": "src_000856",
+      "publisher": "LawPhil — Republic Act No. 9346",
+      "url": "https://lawphil.net/statutes/repacts/ra2006/ra_9346_2006.html",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "death_penalty_status"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_FLAG_CODE",
+      "canonical_id": "src_000857",
+      "publisher": "LawPhil — Republic Act No. 8491 (Flag and Heraldic Code)",
+      "url": "https://lawphil.net/statutes/repacts/ra1998/ra_8491_1998.html",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "national_symbols"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_PENAL_CODE",
+      "canonical_id": "src_000858",
+      "publisher": "LawPhil — Revised Penal Code",
+      "url": "https://lawphil.net/statutes/acts/act1930/act_3815_1930b.html",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "religious_worship"
+      ],
+      "accessed": "2026-09-30"
     }
   ],
   "uncertainties": [

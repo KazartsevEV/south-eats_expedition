@@ -28,6 +28,8 @@ PROFILE_FIELDS = [
     "economy", "political_system", "culture", "summary", "narrow",
 ]
 NATURE_FIELDS = ["flora", "fauna", "dangerous_animals", "poisonous_plants"]
+SECOND_CHUNK = {"PH", "SG", "TH", "TL", "VN"}
+REGIONAL_BASE_FIELDS = ["name", "languages_spoken", "climate_summary", "best_period_general", "last_verified"]
 DYNAMIC_SOURCE_FIELDS = {
     "visa_for_russian_passport": lambda t, s: (t.get("visa_for_russian_passport") or {}).get("source_ids"),
     "land_borders": lambda t, s: (t.get("land_borders") or {}).get("source_ids"),
@@ -113,6 +115,35 @@ for code, slug in COUNTRIES.items():
         if missing:
             fail(f"{code}: dynamic field {field} references unknown source_ids {missing}")
 
+    if code in SECOND_CHUNK:
+        if not present(travel.get("criminal_liability")):
+            fail(f"{code}: missing traveller criminal_liability layer")
+        criminal_ids = travel.get("criminal_law_source_ids") or []
+        if not criminal_ids:
+            fail(f"{code}: criminal_liability lacks source_ids")
+        missing = [x for x in criminal_ids if x not in source_by_id]
+        if missing:
+            fail(f"{code}: criminal_liability references unknown source_ids {missing}")
+
+        regions = travel.get("regions") or []
+        if not regions:
+            fail(f"{code}: regional stage has no travel.regions")
+        hierarchy_path = HIER / f"{slug}.json"
+        if not hierarchy_path.exists():
+            fail(f"{code}: missing formal regional hierarchy {hierarchy_path}")
+        hierarchy = load(hierarchy_path)
+        legacy_region_names = {
+            name
+            for node in (hierarchy.get("nodes") or [])
+            for name in (node.get("legacy_region_names") or [])
+        }
+        for region in regions:
+            for field in REGIONAL_BASE_FIELDS:
+                if not present(region.get(field)):
+                    fail(f"{code}: region {region.get('name')!r} missing baseline field {field}")
+            if region.get("name") not in legacy_region_names:
+                fail(f"{code}: region {region.get('name')!r} has no canonical hierarchy node")
+
     # Country QA intentionally stops at the country layer. Regional hierarchy,
     # locality coverage and attraction linkage are validated in the later regional phase.
 
@@ -120,6 +151,8 @@ for code, slug in COUNTRIES.items():
         "profile_fields": len(PROFILE_FIELDS),
         "source_count": len(source_rows),
         "dynamic_fields_sourced": len(DYNAMIC_SOURCE_FIELDS),
+        "criminal_law_layer": code not in SECOND_CHUNK or bool(travel.get("criminal_liability")),
+        "regional_profiles": len(travel.get("regions") or []),
     }
 
 print(json.dumps({"status": "ok", "countries": report}, ensure_ascii=False, indent=2))

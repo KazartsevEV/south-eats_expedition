@@ -4,7 +4,7 @@
   "slug": "batu-caves",
   "status": "migration_draft",
   "names": {
-    "primary": "Batu Caves"
+    "primary": "Пещеры Бату"
   },
   "summary": {
     "narrow": "Batu Caves — индуистский храмовый комплекс в известняковом массиве у Куала-Лумпура: 272 ступени, 43-метровая статуя Муругана и огромная Cathedral Cave связывают геологию карста с действующей религиозной практикой."
@@ -45,14 +45,16 @@
     },
     "geo_points": [],
     "object_elevation": {
-      "representative_m": null,
+      "representative_m": 74,
       "min_m": null,
       "max_m": null,
-      "reference_type": null,
-      "accuracy": "unknown",
-      "source_refs": [],
-      "checked_at": null,
-      "notes": null
+      "reference_type": "site",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_my_0227"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Картографическая отметка комплекса Batu Caves; не высота верхней точки известнякового массива и не перепад лестницы."
     }
   },
   "narrative": {
@@ -146,7 +148,7 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Возможен, parking у комплекса."
+            "notes": "На мопеде подъезд простой; парковка находится у комплекса."
           }
         ]
       },
@@ -169,7 +171,7 @@
     ],
     "water": {
       "at_object": null,
-      "summary": "Киоски/магазины у подножия; наверх взять бутылку, но не кормить macaques.",
+      "summary": "У подножия есть магазины и киоски; на лестницу лучше брать воду с собой. Еду и пакеты нужно держать закрытыми из-за макак.",
       "quality": "unknown",
       "last_reliable_point": null,
       "natural_sources": [],
@@ -189,7 +191,9 @@
         "src_stage_my_0077"
       ]
     },
-    "lodging_ids": [],
+    "lodging_ids": [
+      "lod_my_0009"
+    ],
     "rules": {
       "permit_or_guide": null,
       "access_requirements": null,
@@ -208,42 +212,95 @@
   },
   "traveler_reports": [
     {
-      "topic": "general",
-      "summary": "макаки выхватывают еду/пакеты",
-      "source_refs": []
+      "topic": "wildlife",
+      "summary": "Макаки у лестницы могут выхватывать еду и пакеты; открытые продукты лучше не нести.",
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": "low"
     },
     {
-      "topic": "general",
-      "summary": "после 09:00 лестница быстро заполняется",
-      "source_refs": []
-    },
-    {
-      "topic": "general",
-      "summary": "во время Thaipusam логистика и толпа полностью меняются",
-      "source_refs": []
+      "topic": "crowding",
+      "summary": "В обычные дни лестница быстро заполняется после раннего утра; во время Тайпусама плотность людей и схема доступа меняются радикально.",
+      "observed_period": null,
+      "source_refs": [
+        "src_stage_my_0075",
+        "src_stage_my_0076",
+        "src_stage_my_0077"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_batu_caves_main",
+        "name": "Подножие лестницы и статуя Муругана",
+        "coordinates": {
+          "lat": 3.23774,
+          "lon": 101.6844,
+          "elevation_m": 74
+        },
+        "gps": {
+          "decimal": "3.237740, 101.684400"
+        },
+        "access": {
+          "walk_km": 0
+        },
+        "view": {
+          "description": "43-метровая статуя Муругана, цветная лестница и известняковая стена с входом в Temple Cave."
+        },
+        "best_time": "early_morning",
+        "best_weather_light": "Ранний свет и меньшая толпа позволяют читать и архитектуру, и карстовый массив; после ливня известняк темнее и контрастнее.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "статуя, лестница и скала находятся близко и образуют высокий вертикальный сюжет"
+          },
+          {
+            "type": "standard",
+            "why": "для ритуальных и архитектурных деталей без сильного расширения перспективы"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0227",
+          "src_stage_my_0075"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Во время Тайпусама визуальный характер объекта полностью меняется: вместо обычного храмового посещения пространство заполняют паломники и процессии."
+    ],
+    "video_activity": [
+      "поток паломников по лестнице",
+      "макаки и городская жизнь у подножия без кормления животных",
+      "ритуальная активность во время праздников при соблюдении правил храма"
+    ],
     "drone": {
-      "visual_value": null,
-      "legal_status": "unknown",
-      "permit_required": null,
+      "visual_value": "С воздуха читается известняковый массив и положение храма у городской застройки.",
+      "legal_status": "permission_required",
+      "permit_required": true,
       "restrictions": [
-        "Не запускать над храмовым комплексом/толпой без разрешения."
+        "Не запускать над храмом, толпой и лестницей без разрешения управляющей стороны и соблюдения авиационных правил."
       ],
       "source_refs": [
         "src_stage_my_0075",
         "src_stage_my_0076",
         "src_stage_my_0077"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-30"
     },
-    "useful_equipment": [],
-    "best_time": "06:00–08:00 в обычный день; Thaipusam — отдельный документальный режим с совершенно другой плотностью людей и ритуалов.",
-    "best_weather_light": null
+    "useful_equipment": [
+      {
+        "type": "wide",
+        "why": "для лестницы, статуи и пещерного входа"
+      },
+      {
+        "type": "telephoto",
+        "why": "для деталей фасадов, паломников и известняковой стены с дистанции"
+      }
+    ],
+    "best_time": "early_morning",
+    "best_weather_light": "Ранний боковой свет или мягкая облачность."
   },
   "media": {
     "cover_id": null,
@@ -268,16 +325,6 @@
       "public_transport",
       "moped_access",
       "taxi_ridehail"
-    ],
-    "unmigrated_accommodation": [
-      {
-        "name": "Hotel 99 Pudu",
-        "area": "central Kuala Lumpur",
-        "price_for_two": "примерно RM70–130 за простой double по рынку 2026",
-        "contact": "+60 3-2078 6666",
-        "social_or_web": "сервисы бронирования",
-        "source": "актуальная карточка объекта размещения"
-      }
     ],
     "illustration": {
       "static_url": "https://www.malaysia.travel/mt-flmngr/files/Batu-Caves/Batu-caves-1.jpg",
@@ -315,20 +362,20 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

@@ -27,7 +27,8 @@
       "2026-09-30 regional-layer correction: Laos regions upgraded toward Malaysia reference standard with geography, relief, climate, hydrology where applicable, geology/nature, health, safety, transport, ethnography and provenance; marine/tide fields omitted because Laos is landlocked; attraction cards unchanged.",
       "2026-09-30 second QA pass: normalized country-facing nature/safety Russian and added regional fauna, dangerous animals, poisonous plants and natural hazards for all Laos regional nodes. Marine-life field intentionally omitted because Laos is landlocked; aquatic fauna is used where river ecology is relevant. Attraction cards unchanged.",
       "Regional QA pass 2026-09-30: deepened Vang Vieng / Vientiane Province and Phongsaly highlands with official Tourism Laos sources; added locally sourced transport, community-management, ethnography and tea-landscape detail.",
-      "Regional QA pass 2026-09-30: deepened Xieng Khouang, Houaphanh/Viengxay/Nam Et–Phou Louey and Luang Namtha/Nam Ha with UNESCO, Tourism Laos and national-park sources; separated archaeology, UXO, cave history, protected-area access and village ethnography."
+      "Regional QA pass 2026-09-30: deepened Xieng Khouang, Houaphanh/Viengxay/Nam Et–Phou Louey and Luang Namtha/Nam Ha with UNESCO, Tourism Laos and national-park sources; separated archaeology, UXO, cave history, protected-area access and village ethnography.",
+      "Regional QA pass 2026-09-30: deepened Savannakhet with official Tourism Laos material; separated river/transborder geography, Route 9 logistics, archaeology, religious sites and ethnic/craft traditions."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -1201,13 +1202,16 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Саваннакхет",
         "geography": {
-          "summary": "Низменный город и провинциальный узел на левом берегу Меконга, связанный с восточно-западным сухопутным коридором в Таиланд и Вьетнам.",
+          "summary": "Саваннакхет — крупнейшая по площади провинция центрального Лаоса, вытянутая от Меконга у тайской границы до горных районов у Вьетнама. Город Kaysone Phomvihane работает как западный речной и трансграничный хаб, а Route 9 формирует отдельный восточно-западный коридор к Sepon и вьетнамской границе.",
           "source_refs": [
-            "src_902001"
+            "src_902012"
           ]
         },
         "relief": {
-          "summary": "Преимущественно плоская низменность Меконга."
+          "summary": "Запад провинции преимущественно равнинный и сельскохозяйственный, тогда как восточные районы становятся более холмистыми и лесистыми. Это делает городской Savannakhet, Route 9 corridor, protected areas и удалённые деревни разными логистическими зонами.",
+          "source_refs": [
+            "src_902012"
+          ]
         },
         "climate": {
           "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -1250,15 +1254,17 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Крупный автомобильный трансграничный узел; внутри старого города основные связки пешие и на местном транспорте.",
+          "summary": "Kaysone Phomvihane — главный городской узел у Lao–Thai Friendship Bridge, но объекты провинции распределены по Route 9, Route 13, сельским дорогам и восточным районам. Tourism Laos даёт отдельные road directions к That Ing Hang, Heuan Hin, Hortay Pidok и другим точкам; следовательно, регион требует нескольких access corridors, а не одной городской координаты.",
           "source_refs": [
-            "src_902001"
+            "src_902001",
+            "src_902012"
           ]
         },
         "ethnography": {
-          "summary": "Городское население включает лаосские, вьетнамские и другие торговые общины; культурный слой формировался вокруг речной и сухопутной торговли.",
+          "summary": "Провинция отличается высоким этнолингвистическим разнообразием; конкретные Phoutai, Katang и другие communities распределены неравномерно. Для базы важно не переносить ремесло или песенную традицию одной группы на весь Savannakhet.",
           "source_refs": [
-            "src_000732"
+            "src_000732",
+            "src_902012"
           ]
         },
         "local_reference_provenance": {
@@ -1269,7 +1275,8 @@
             "src_000498",
             "src_000732",
             "src_902003",
-            "src_000500"
+            "src_000500",
+            "src_902012"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -1302,6 +1309,30 @@
             "src_902001"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Регион несёт несколько разных исторических слоёв: древние и средневековые памятники, французско-колониальную торговую застройку Savannakhet town, Ho Chi Minh Trail и историю XX века. Tourism Laos отдельно упоминает Heuan Hin как памятник, связанный с дорожной сетью кхмерской эпохи, а восток провинции — как часть военного коридора у Route 9.",
+          "source_refs": [
+            "src_902012"
+          ]
+        },
+        "archaeology": {
+          "summary": "Провинция важна не только городским наследием: здесь документированы dinosaur remains/footprints, Heuan Hin и другие археологические/палеонтологические точки. Эти места нельзя собирать в один «музейный» слой — каждое требует отдельной object entity с собственными координатами и источниками.",
+          "source_refs": [
+            "src_902012"
+          ]
+        },
+        "culture": {
+          "summary": "Саваннакхет — многоэтничный культурный узел. Tourism Laos перечисляет Lowland Lao, Phoutai, Thai Dam, Katang, Mangkong, Vali, Lava, Soui, Kapo, Kaleung и Ta-Oi, а также вьетнамские и китайские общины. Отдельно выделяются ткачество Phoutai и песенная традиция Lam Tang Wai у Katang; их нужно привязывать к конкретным районам и деревням.",
+          "source_refs": [
+            "src_902012"
+          ]
+        },
+        "religion": {
+          "summary": "That Ing Hang и Hortay Pidok относятся к разным религиозно-культурным функциям: первая — действующий важный буддийский pilgrimage site, вторая — традиционное хранилище palm-leaf manuscripts. В региональной карточке они должны существовать как разные институциональные слои, а не как общий «буддийский памятник».",
+          "source_refs": [
+            "src_902012"
+          ]
         }
       },
       {
@@ -9520,6 +9551,23 @@
         "regional_culture",
         "regional_transport",
         "nam_ha"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_SAVANNAKHET_TOURISM",
+      "canonical_id": "src_902012",
+      "publisher": "Tourism Laos — Savannakhet Province",
+      "url": "https://www.tourismlaos.org/central-provinces/savannakhet-province/",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_history",
+        "regional_archaeology",
+        "regional_culture",
+        "regional_religion",
+        "regional_ethnography",
+        "regional_transport"
       ],
       "accessed": "2026-09-30"
     }

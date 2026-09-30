@@ -6,7 +6,13 @@
     "last_updated": "2026-09-30",
     "purpose": "Expedition South East",
     "data_model_version": "1.2",
-    "dynamic_fields": ["visa","visa_run","air_links","land_border_operation","currency"],
+    "dynamic_fields": [
+      "visa",
+      "visa_run",
+      "air_links",
+      "land_border_operation",
+      "currency"
+    ],
     "research_notes": [
       "Страновой слой мигрирован из существующей Google Drive-заготовки.",
       "Региональные профили и 23 объектные карточки сохранены в исходной Drive-заготовке и намеренно не мигрируются до региональной фазы.",
@@ -18,177 +24,640 @@
   "overview": {
     "summary": "Длинное прибрежное государство Индокитая от китайской границы до дельты Меконга с более чем 3000 км морского побережья.",
     "history": "Вьетнамская государственность развивалась после длительных периодов китайского владычества; династии Đại Việt постепенно продвинулись на юг. В XIX веке территория вошла во Французский Индокитай. Независимость провозглашена в 1945 году; последовали войны, разделение страны и объединение в 1975–1976 годах. Реформы Đổi Mới с 1986 года запустили рыночную трансформацию при сохранении однопартийной системы.",
-    "history_source_ids": ["GOV_CONSTITUTION"],
+    "history_source_ids": [
+      "GOV_CONSTITUTION"
+    ],
     "geography": {
       "region": "восточная часть материковой Юго-Восточной Азии",
-      "neighbors": ["Китай","Лаос","Камбоджа"],
-      "seas_and_oceans": ["Южно-Китайское море / Восточное море во вьетнамском употреблении","Тонкинский залив","Сиамский залив","Тихий океан"],
+      "neighbors": [
+        "Китай",
+        "Лаос",
+        "Камбоджа"
+      ],
+      "seas_and_oceans": [
+        "Южно-Китайское море / Восточное море во вьетнамском употреблении",
+        "Тонкинский залив",
+        "Сиамский залив",
+        "Тихий океан"
+      ],
       "coastline_km_approx": 3444,
-      "highest_point": {"name":"Фаншипан","elevation_m_approx":3147},
+      "highest_point": {
+        "name": "Фаншипан",
+        "elevation_m_approx": 3147
+      },
       "terrain": "Аннамские горы, дельта Красной реки, длинная узкая прибрежная равнина, Центральное нагорье и дельта Меконга.",
-      "source_ids": ["GOV_PROFILE"]
+      "source_ids": [
+        "GOV_PROFILE"
+      ]
     },
     "religion": {
       "profile": "Официальная статистика включает большую долю людей без зарегистрированной религии; при этом широко распространены культ предков, вьетнамская народная религия и буддизм. Есть значительное католическое меньшинство, а также общины каодай, хоахао и протестантов.",
-      "source_ids": ["GOV_PROFILE"]
+      "source_ids": [
+        "GOV_PROFILE"
+      ]
     },
     "political_system": "Социалистическая республика с однопартийной системой; руководящая политическая роль принадлежит Коммунистической партии Вьетнама.",
-    "political_system_source_ids": ["GOV_CONSTITUTION"],
+    "political_system_source_ids": [
+      "GOV_CONSTITUTION"
+    ],
     "economy": {
       "summary": "Экспортно-ориентированная производственная экономика: электроника, машиностроение, текстиль и обувь, мебель, сельское хозяйство и морепродукты, услуги и цепочки поставок с иностранными инвестициями.",
       "gdp_current_usd_billion": 514.7,
-      "gdp_per_capita_usd": 5066.0,
-      "gdp_growth_pct": 8.0,
+      "gdp_per_capita_usd": 5066,
+      "gdp_growth_pct": 8,
       "year": 2025,
-      "poverty": {"metric":"World Bank $3.00/day (2021 PPP)","value_pct":1.6,"year":2022,"notes":"Сохраняется с явно указанным годом; не трактовать как измерение 2026 года."},
-      "source_ids": ["WB"]
+      "poverty": {
+        "metric": "World Bank $3.00/day (2021 PPP)",
+        "value_pct": 1.6,
+        "year": 2022,
+        "notes": "Сохраняется с явно указанным годом; не трактовать как измерение 2026 года."
+      },
+      "source_ids": [
+        "WB"
+      ]
     },
     "languages": {
       "official": "Национальный язык — вьетнамский.",
       "practical": "Вьетнамский является общенациональным языком; английский распространён в крупных городах, туризме и части деловой среды, но вне туристических зон его знание неравномерно.",
       "diversity": "Конституция закрепляет право этнических групп пользоваться своими языками и письменностью; региональная языковая картина должна раскрываться на уровне конкретных провинций и общин.",
-      "source_ids": ["GOV_CONSTITUTION"]
+      "source_ids": [
+        "GOV_CONSTITUTION"
+      ]
     },
     "ethnography": {
       "summary": "Официальная статистическая классификация включает 54 этнические группы. Большинство населения составляют кинь; многочисленные меньшинства сосредоточены прежде всего в северных горах, Центральном нагорье, западных приграничных районах и дельте Меконга. Конкретные народы и их локальные традиции должны привязываться к соответствующим регионам.",
-      "source_ids": ["GSO_ETHNIC"]
+      "source_ids": [
+        "GSO_ETHNIC"
+      ]
     },
     "culture": {
       "summary": "Культурный слой Вьетнама сочетает вьетнамскую деревенскую и городскую традицию, буддийские, конфуцианские и народно-религиозные практики, культ предков, региональные кухни, музыку, ремёсла и культурные миры этнических меньшинств. Чамское, кхмерское, китайское и горное наследие должно раскрываться локально, а не смешиваться в единый общестрановой рассказ.",
-      "source_ids": ["UNESCO","GSO_ETHNIC","GOV_CONSTITUTION"]
+      "source_ids": [
+        "UNESCO",
+        "GSO_ETHNIC",
+        "GOV_CONSTITUTION"
+      ]
     },
     "narrow": "Вьетнам — вытянутое прибрежное государство Индокитая от китайской границы до дельты Меконга. Север, центральное побережье, Центральное нагорье и юг заметно различаются по климату, рельефу, этнографии и сезонным рискам. Исторический слой проходит от ранних вьетнамских государств и династий Đại Việt через Французский Индокитай, войны XX века и объединение страны к реформам Đổi Mới. Для самостоятельной экспедиции критичны горные дороги, тайфуны и паводки, сезонность пещер, режимы пограничных районов, охраняемых территорий и сложные правила БПЛА. На страновом уровне фиксируются только общие нормы; конкретный доступ, разрешения и риски должны спускаться на регион и объект."
   },
   "nature": {
-    "flora": ["вечнозелёные леса Аннамских гор","мангры","карстовая растительность","бамбук","диптерокарповые леса","горные хвойные леса"],
-    "fauna": ["саола","красноногий дук","азиатский слон","панголины","гиббоны","рифовая фауна"],
+    "flora": [
+      "вечнозелёные леса Аннамских гор",
+      "мангры",
+      "карстовая растительность",
+      "бамбук",
+      "диптерокарповые леса",
+      "горные хвойные леса"
+    ],
+    "fauna": [
+      "саола",
+      "красноногий дук",
+      "азиатский слон",
+      "панголины",
+      "гиббоны",
+      "рифовая фауна"
+    ],
     "dangerous_animals": [
-      {"name":"кобры, крайты и куфии","risk":"ядовитые змеи в сельской и лесной местности"},
-      {"name":"комары","risk":"денге и другие инфекции"},
-      {"name":"рыба-камень, морские змеи и медузы","risk":"локальные морские риски"},
-      {"name":"макаки","risk":"укусы при кормлении и близком контакте"}
+      {
+        "name": "кобры, крайты и куфии",
+        "risk": "ядовитые змеи в сельской и лесной местности"
+      },
+      {
+        "name": "комары",
+        "risk": "денге и другие инфекции"
+      },
+      {
+        "name": "рыба-камень, морские змеи и медузы",
+        "risk": "локальные морские риски"
+      },
+      {
+        "name": "макаки",
+        "risk": "укусы при кормлении и близком контакте"
+      }
     ],
     "poisonous_plants": [
-      {"name":"Cerbera manghas","risk":"токсичные семена"},
-      {"name":"Datura spp.","risk":"токсично"},
-      {"name":"Gloriosa superba","risk":"токсично"}
+      {
+        "name": "Cerbera manghas",
+        "risk": "токсичные семена"
+      },
+      {
+        "name": "Datura spp.",
+        "risk": "токсично"
+      },
+      {
+        "name": "Gloriosa superba",
+        "risk": "токсично"
+      }
     ]
   },
   "climate": {
     "reference_location": "Da Nang",
-    "air_temp_mean_c_by_month": {"Jan":21.6,"Feb":22.4,"Mar":24.4,"Apr":26.8,"May":28.5,"Jun":29.6,"Jul":29.4,"Aug":29.0,"Sep":27.6,"Oct":25.8,"Nov":24.4,"Dec":22.3},
-    "sea_temp_mean_c_by_month": {"Jan":23.4,"Feb":23.2,"Mar":23.8,"Apr":25.3,"May":27.5,"Jun":29.0,"Jul":29.4,"Aug":29.8,"Sep":29.5,"Oct":28.1,"Nov":26.7,"Dec":24.9},
+    "air_temp_mean_c_by_month": {
+      "Jan": 21.6,
+      "Feb": 22.4,
+      "Mar": 24.4,
+      "Apr": 26.8,
+      "May": 28.5,
+      "Jun": 29.6,
+      "Jul": 29.4,
+      "Aug": 29,
+      "Sep": 27.6,
+      "Oct": 25.8,
+      "Nov": 24.4,
+      "Dec": 22.3
+    },
+    "sea_temp_mean_c_by_month": {
+      "Jan": 23.4,
+      "Feb": 23.2,
+      "Mar": 23.8,
+      "Apr": 25.3,
+      "May": 27.5,
+      "Jun": 29,
+      "Jul": 29.4,
+      "Aug": 29.8,
+      "Sep": 29.5,
+      "Oct": 28.1,
+      "Nov": 26.7,
+      "Dec": 24.9
+    },
     "notes": "Дананг используется только как опорная точка центрального побережья. Ханой зимой заметно прохладнее; Хошимин и дельта Меконга остаются жаркими круглый год; сезон тайфунов и дождей на центральном побережье отличается от юга.",
     "source_quality": "secondary climatology"
   },
   "safety": {
-    "crime_level": {"qualitative":"низкий–умеренный","notes":"Тяжёлая уличная преступность против туристов сравнительно редка; распространены кражи телефонов и сумок, карманные кражи, туристическое мошенничество и дорожный риск."},
-    "common_traveler_risks": ["кражи телефонов и сумок","карманные кражи","мототранспорт","мошенничество","тайфуны и паводки","денге"],
-    "sensitive_areas": ["военные и пограничные объекты","политические демонстрации","ограниченные приграничные зоны"],
-    "source_ids": ["RUS_MFA"]
+    "crime_level": {
+      "qualitative": "низкий–умеренный",
+      "notes": "Тяжёлая уличная преступность против туристов сравнительно редка; распространены кражи телефонов и сумок, карманные кражи, туристическое мошенничество и дорожный риск."
+    },
+    "common_traveler_risks": [
+      "кражи телефонов и сумок",
+      "карманные кражи",
+      "мототранспорт",
+      "мошенничество",
+      "тайфуны и паводки",
+      "денге"
+    ],
+    "sensitive_areas": [
+      "военные и пограничные объекты",
+      "политические демонстрации",
+      "ограниченные приграничные зоны"
+    ],
+    "source_ids": [
+      "RUS_MFA"
+    ]
   },
   "travel": {
-    "major_attractions": ["Ha Long Bay–Cat Ba","Trang An","Hanoi Old Quarter","Hue monuments","Hoi An","My Son","Phong Nha-Ke Bang","Ho Chi Minh City","Mekong Delta"],
+    "major_attractions": [
+      "Ha Long Bay–Cat Ba",
+      "Trang An",
+      "Hanoi Old Quarter",
+      "Hue monuments",
+      "Hoi An",
+      "My Son",
+      "Phong Nha-Ke Bang",
+      "Ho Chi Minh City",
+      "Mekong Delta"
+    ],
     "non_touristy_interests": [
-      {"name":"Cao Bang / Non Nuoc Cao Bang geopark routes","type":"nature/culture","why":"карст, водопады и этнические деревни за пределами стандартной северной петли"},
-      {"name":"Quy Nhon and Cham towers","type":"architecture","why":"сильное чамское наследие и меньший международный поток, чем в Хойане"},
-      {"name":"Kon Tum communal houses","type":"culture/architecture","why":"этническая архитектура Центрального нагорья"},
-      {"name":"Nam Dinh church landscapes","type":"architecture/culture","why":"необычная концентрация католической архитектуры в сельской дельте Красной реки"},
-      {"name":"Con Dao","type":"history/nature","why":"островная тюремная история и морская природа"}
+      {
+        "name": "Cao Bang / Non Nuoc Cao Bang geopark routes",
+        "type": "nature/culture",
+        "why": "карст, водопады и этнические деревни за пределами стандартной северной петли"
+      },
+      {
+        "name": "Quy Nhon and Cham towers",
+        "type": "architecture",
+        "why": "сильное чамское наследие и меньший международный поток, чем в Хойане"
+      },
+      {
+        "name": "Kon Tum communal houses",
+        "type": "culture/architecture",
+        "why": "этническая архитектура Центрального нагорья"
+      },
+      {
+        "name": "Nam Dinh church landscapes",
+        "type": "architecture/culture",
+        "why": "необычная концентрация католической архитектуры в сельской дельте Красной реки"
+      },
+      {
+        "name": "Con Dao",
+        "type": "history/nature",
+        "why": "островная тюремная история и морская природа"
+      }
     ],
     "festivals": [
-      {"name":"Tet Nguyen Dan","typical_month":"Jan/Feb"},
-      {"name":"Hung Kings Festival","typical_month":"April, lunar-based"},
-      {"name":"Mid-Autumn Festival","typical_month":"Sep/Oct"},
-      {"name":"Hue Festival","typical_month":"schedule varies"}
+      {
+        "name": "Tet Nguyen Dan",
+        "typical_month": "Jan/Feb"
+      },
+      {
+        "name": "Hung Kings Festival",
+        "typical_month": "April, lunar-based"
+      },
+      {
+        "name": "Mid-Autumn Festival",
+        "typical_month": "Sep/Oct"
+      },
+      {
+        "name": "Hue Festival",
+        "typical_month": "schedule varies"
+      }
     ],
     "food": {
       "budget_food_summary": "Очень доступная и разнообразная уличная еда; базовые местные заведения обычно заметно дешевле туристических ресторанов.",
-      "street_food": ["pho","bun cha","banh mi","com tam","bun bo Hue","banh xeo","goi cuon"],
-      "typical_simple_meal_usd_range": [1.0,4.0]
+      "street_food": [
+        "pho",
+        "bun cha",
+        "banh mi",
+        "com tam",
+        "bun bo Hue",
+        "banh xeo",
+        "goi cuon"
+      ],
+      "typical_simple_meal_usd_range": [
+        1,
+        4
+      ]
     },
     "laws_and_prohibitions": [
-      {"topic":"drugs","rule":"Строгие наказания за наркотики, включая крайне суровые санкции за сбыт."},
-      {"topic":"politics/security photography","rule":"Не фотографировать военные объекты и пограничную инфраструктуру без разрешения; политическая активность иностранцев может быть чувствительной."},
-      {"topic":"wildlife/antiquities","rule":"Вывоз антиквариата, культурных ценностей и охраняемой дикой природы требует разрешений."}
+      {
+        "topic": "drugs",
+        "rule": "Строгие наказания за наркотики, включая крайне суровые санкции за сбыт."
+      },
+      {
+        "topic": "politics/security photography",
+        "rule": "Не фотографировать военные объекты и пограничную инфраструктуру без разрешения; политическая активность иностранцев может быть чувствительной."
+      },
+      {
+        "topic": "wildlife/antiquities",
+        "rule": "Вывоз антиквариата, культурных ценностей и охраняемой дикой природы требует разрешений."
+      }
     ],
     "visa_for_russian_passport": {
-      "status":"visa-free",
-      "stay_days":45,
-      "validity_window":"Односторонний безвизовый режим для граждан России действует с 15 марта 2025 года по 14 марта 2028 года.",
-      "passport_validity":"не менее 6 месяцев на дату въезда",
-      "evisa":"Электронная виза доступна на срок до 90 дней, однократная или многократная.",
-      "visa_run":{"possible":"После выезда можно просить новый безвизовый въезд или использовать новую визу.","limits":"Специального гарантированного права на неограниченные visa-run нет; каждый новый въезд зависит от решения пограничных органов."},
-      "source_ids":["VN_MFA_VISA","EVISA"],
-      "checked_at":"2026-09-30"
+      "status": "visa-free",
+      "stay_days": 45,
+      "validity_window": "Односторонний безвизовый режим для граждан России действует с 15 марта 2025 года по 14 марта 2028 года.",
+      "passport_validity": "не менее 6 месяцев на дату въезда",
+      "evisa": "Электронная виза доступна на срок до 90 дней, однократная или многократная.",
+      "visa_run": {
+        "possible": "После выезда можно просить новый безвизовый въезд или использовать новую визу.",
+        "limits": "Специального гарантированного права на неограниченные visa-run нет; каждый новый въезд зависит от решения пограничных органов."
+      },
+      "source_ids": [
+        "VN_MFA_VISA",
+        "EVISA"
+      ],
+      "checked_at": "2026-09-30"
     },
     "airports": [
-      {"iata":"HAN","name":"Noi Bai International Airport"},
-      {"iata":"SGN","name":"Tan Son Nhat International Airport"},
-      {"iata":"DAD","name":"Da Nang International Airport"},
-      {"iata":"CXR","name":"Cam Ranh International Airport"},
-      {"iata":"PQC","name":"Phu Quoc International Airport"}
+      {
+        "iata": "HAN",
+        "name": "Noi Bai International Airport"
+      },
+      {
+        "iata": "SGN",
+        "name": "Tan Son Nhat International Airport"
+      },
+      {
+        "iata": "DAD",
+        "name": "Da Nang International Airport"
+      },
+      {
+        "iata": "CXR",
+        "name": "Cam Ranh International Airport"
+      },
+      {
+        "iata": "PQC",
+        "name": "Phu Quoc International Airport"
+      }
     ],
-    "airports_source_ids":["GOV_PROFILE"],
-    "international_air_links":"Широкие связи со странами ASEAN, Восточной Азией, государствами Залива, Европой и региональными авиаузлами; внутри страны ключевую роль играет ось север–юг.",
-    "international_air_links_source_ids":["GOV_PROFILE"],
+    "airports_source_ids": [
+      "GOV_PROFILE"
+    ],
+    "international_air_links": "Широкие связи со странами ASEAN, Восточной Азией, государствами Залива, Европой и региональными авиаузлами; внутри страны ключевую роль играет ось север–юг.",
+    "international_air_links_source_ids": [
+      "GOV_PROFILE"
+    ],
     "land_borders": {
-      "countries":["Китай","Лаос","Камбоджа"],
-      "transport":"Международные железнодорожные и автомобильные коридоры в Китай, а также дорожные и автобусные переходы в Лаос и Камбоджу; пригодность конкретного пункта для eVisa/въезда проверяется по официальному списку.",
-      "source_ids":["RUS_MFA"]
+      "countries": [
+        "Китай",
+        "Лаос",
+        "Камбоджа"
+      ],
+      "transport": "Международные железнодорожные и автомобильные коридоры в Китай, а также дорожные и автобусные переходы в Лаос и Камбоджу; пригодность конкретного пункта для eVisa/въезда проверяется по официальному списку.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
     },
     "currency": {
-      "code":"VND",
-      "name":"Vietnamese dong",
-      "local_currency_per_1_usd":25976.0,
-      "as_of":"2026-09-27",
-      "rate_type":"market/reference snapshot",
-      "source_ids":["FX_SNAPSHOT"],
-      "notes":"Справочный снимок курса из исходной заготовки; банковский и наличный курс отличается."
+      "code": "VND",
+      "name": "Vietnamese dong",
+      "local_currency_per_1_usd": 25976,
+      "as_of": "2026-09-27",
+      "rate_type": "market/reference snapshot",
+      "source_ids": [
+        "FX_SNAPSHOT"
+      ],
+      "notes": "Справочный снимок курса из исходной заготовки; банковский и наличный курс отличается."
     },
     "transport_rules": {
-      "road_side":"right",
-      "foreign_licence":"Для самостоятельного вождения следует использовать международное водительское удостоверение по применимой международной конвенции вместе с национальным удостоверением; конкретную категорию и признание документов нужно проверять перед арендой.",
-      "source_ids":["RUS_MFA"],
-      "checked_at":"2026-09-30"
+      "road_side": "right",
+      "foreign_licence": "Для самостоятельного вождения следует использовать международное водительское удостоверение по применимой международной конвенции вместе с национальным удостоверением; конкретную категорию и признание документов нужно проверять перед арендой.",
+      "source_ids": [
+        "RUS_MFA"
+      ],
+      "checked_at": "2026-09-30"
     },
     "camping_rules": {
-      "status":"site_specific",
-      "summary":"Общестранового права на свободный кемпинг не зафиксировано. В национальных парках, заповедниках, пограничных и лесных территориях действуют отдельные режимы; вне их требуется учитывать право собственности и местные ограничения.",
-      "source_ids":["RUS_MFA"],
-      "checked_at":"2026-09-30"
+      "status": "site_specific",
+      "summary": "Общестранового права на свободный кемпинг не зафиксировано. В национальных парках, заповедниках, пограничных и лесных территориях действуют отдельные режимы; вне их требуется учитывать право собственности и местные ограничения.",
+      "source_ids": [
+        "RUS_MFA"
+      ],
+      "checked_at": "2026-09-30"
     },
     "drone_rules": {
-      "legal_status":"regulated",
-      "permit_required":true,
-      "summary":"С 2026 года для БПЛА действуют обновлённые правила регистрации и разрешения полётов. Регистрация аппарата не заменяет разрешение на конкретный полёт; использовать БПЛА можно только в разрешённых зоне, времени и высоте.",
-      "source_ids":["CAAV_UAV_REG","CAAV_UAV_FLIGHT"],
-      "checked_at":"2026-09-30"
+      "legal_status": "regulated",
+      "permit_required": true,
+      "summary": "С 2026 года для БПЛА действуют обновлённые правила регистрации и разрешения полётов. Регистрация аппарата не заменяет разрешение на конкретный полёт; использовать БПЛА можно только в разрешённых зоне, времени и высоте.",
+      "source_ids": [
+        "CAAV_UAV_REG",
+        "CAAV_UAV_FLIGHT"
+      ],
+      "checked_at": "2026-09-30"
     },
     "tourist_permits": {
-      "status":"site_specific",
-      "summary":"Единого туристического разрешения для обычного передвижения по стране нет. Пограничные, военные, природоохранные, пещерные и некоторые этнографические зоны могут иметь отдельный режим допуска.",
-      "source_ids":["RUS_MFA"],
-      "checked_at":"2026-09-30"
+      "status": "site_specific",
+      "summary": "Единого туристического разрешения для обычного передвижения по стране нет. Пограничные, военные, природоохранные, пещерные и некоторые этнографические зоны могут иметь отдельный режим допуска.",
+      "source_ids": [
+        "RUS_MFA"
+      ],
+      "checked_at": "2026-09-30"
     },
-    "laws_source_ids":["RUS_MFA"]
+    "laws_source_ids": [
+      "RUS_MFA"
+    ],
+    "criminal_liability": {
+      "scope": "Не исчерпывающий перечень. Используется действующая после изменений 2025 года рамка; старые версии Criminal Code нельзя автоматически считать актуальными для максимальных санкций.",
+      "items": [
+        {
+          "topic": "drug_offences",
+          "offence": "Незаконное производство, торговля, перевозка и хранение наркотических веществ образуют отдельные тяжкие составы Criminal Code.",
+          "what_counts": "Санкции зависят от действия, вещества и количества; перевозка и торговля — разные составы.",
+          "penalty": "Для тяжких составов возможны длительные сроки и пожизненное лишение свободы. С 1 июля 2025 года смертная казнь отменена для незаконной перевозки наркотиков (ст. 250), но сохранена для отдельных наиболее тяжких составов незаконной торговли/производства.",
+          "nuance": "Не писать «во Вьетнаме смертная казнь за любые наркотики»: это юридически неверно после реформы 2025 года.",
+          "source_ids": [
+            "VN_CRIMINAL_CODE",
+            "VN_CRIMINAL_AMEND_2025"
+          ]
+        },
+        {
+          "topic": "national_symbols",
+          "offence": "Умышленное оскорбление государственного флага, герба или гимна является уголовным преступлением по статье 351.",
+          "what_counts": "Официальное разъяснение приводит как примеры разрывание, топтание, сжигание, издевательское использование, нанесение оскорбительных изображений/надписей и публичное высмеивание флага.",
+          "penalty": "Предупреждение, исправительное наказание без лишения свободы до 3 лет либо лишение свободы от 6 месяцев до 3 лет.",
+          "nuance": "Требуется умышленный характер; не превращать это в расплывчатый запрет на любое неправильное обращение.",
+          "source_ids": [
+            "VN_FLAG_OFFENCE"
+          ]
+        },
+        {
+          "topic": "territorial_application",
+          "offence": "Уголовный кодекс применяется к преступлениям, совершённым на территории Вьетнама, в том числе иностранцами за исключением лиц с соответствующими иммунитетами.",
+          "what_counts": "Иностранное гражданство само по себе не выводит туриста из-под действия уголовного закона.",
+          "penalty": "Зависит от конкретного состава.",
+          "nuance": "Полезно как рамка для всех специальных пунктов ниже.",
+          "source_ids": [
+            "VN_CRIMINAL_CODE"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "criminal_law_source_ids": [
+      "VN_CRIMINAL_CODE",
+      "VN_CRIMINAL_AMEND_2025",
+      "VN_FLAG_OFFENCE"
+    ]
   },
   "sources": [
-    {"id":"WB","publisher":"World Bank","url":"https://data.worldbank.org/country/viet-nam?gt=&locations=VN","kind":"international_organization","used_for":["economy","poverty"],"accessed":"2026-09-27","canonical_id":"src_000841"},
-    {"id":"RUS_MFA","publisher":"Consular Department, MFA Russia","url":"https://www.kdmid.ru/docs/vietnam/information-about-the-country/","kind":"government","used_for":["visa","safety"],"accessed":"2026-09-27","canonical_id":"src_000842"},
-    {"id":"EVISA","publisher":"Vietnam Immigration eVisa","url":"https://evisa.gov.vn/","kind":"government","used_for":["visa","evisa"],"accessed":"2026-09-30","canonical_id":"src_000843"},
-    {"id":"UNESCO","publisher":"UNESCO World Heritage Centre","url":"https://whc.unesco.org/en/statesparties/vn","kind":"international_organization","used_for":["heritage"],"accessed":"2026-09-27","canonical_id":"src_000844"},
-    {"id":"CLIMATE_AIR","publisher":"Climate-Data.org","url":"https://en.climate-data.org/asia/vietnam/da-nang/da-nang-4236/","kind":"secondary_climatology","used_for":["air_temperature"],"accessed":"2026-09-27","canonical_id":"src_000845"},
-    {"id":"CLIMATE_SEA","publisher":"Climate-Data.org","url":"https://en.climate-data.org/asia/vietnam/da-nang/da-nang-4236/","kind":"secondary_climatology","used_for":["sea_temperature"],"accessed":"2026-09-27","canonical_id":"src_000846"},
-    {"id":"WHO_SNAKEBITE","publisher":"World Health Organization","url":"https://www.who.int/news-room/fact-sheets/detail/snakebite-envenoming","kind":"international_organization","used_for":["venomous_snake_risk"],"accessed":"2026-09-27","notes":"Региональный фон; не заменяет локальные данные.","canonical_id":"src_000847"},
-    {"id":"IUCN_RED_LIST","publisher":"IUCN","url":"https://www.iucnredlist.org/","kind":"scientific_database","used_for":["fauna_conservation_status"],"accessed":"2026-09-27","canonical_id":"src_000848"},
-    {"id":"GOV_CONSTITUTION","publisher":"Government of Viet Nam / Constitution portal","url":"https://xaydungchinhsach.chinhphu.vn/toan-van-hien-phap-nuoc-cong-hoa-xa-hoi-chu-nghia-viet-nam-119231225213002261.htm","kind":"government","used_for":["history","political_system","official_language","culture"],"accessed":"2026-09-30","canonical_id":"src_000834"},
-    {"id":"GSO_ETHNIC","publisher":"General Statistics Office of Vietnam","url":"https://www.gso.gov.vn/phuong-phap-luan-thong-ke/danh-muc/cac-dan-toc-viet-nam/","kind":"government","used_for":["ethnography","languages","culture"],"accessed":"2026-09-30","canonical_id":"src_000835"},
-    {"id":"VN_MFA_VISA","publisher":"Ministry of Foreign Affairs of Viet Nam","url":"https://mofa.gov.vn/tin-chi-tiet/chi-tiet/danh-muc-mien-thi-thuc-cua-viet-nam-voi-cac-nuoc-57162-172.html","kind":"government","used_for":["visa","entry"],"accessed":"2026-09-30","canonical_id":"src_000836"},
-    {"id":"CAAV_UAV_REG","publisher":"Civil Aviation Authority of Vietnam","url":"https://caa.gov.vn/pho-bien-phap-luat/dieu-kien-dang-ky-phuong-tien-bay-tu-ngay-20-7-2026-20260622082236379.htm","kind":"government","used_for":["drone_rules","registration"],"accessed":"2026-09-30","canonical_id":"src_000837"},
-    {"id":"CAAV_UAV_FLIGHT","publisher":"Civil Aviation Authority of Vietnam","url":"https://caa.gov.vn/hoat-dong-nganh/chung-tay-bao-ve-bau-troi-an-toan-bao-dam-hoat-dong-hang-khong-thong-suot-20260814111747363.htm","kind":"government","used_for":["drone_rules","flight_permission"],"accessed":"2026-09-30","canonical_id":"src_000838"},
-    {"id":"GOV_PROFILE","publisher":"Government / official national sources","url":"https://vietnam.gov.vn/","kind":"government","used_for":["geography","religion","airports","air_connectivity"],"accessed":"2026-09-30","canonical_id":"src_000839"},
-    {"id":"FX_SNAPSHOT","publisher":"Existing 2026-09-28 expedition draft","url":"https://drive.google.com/file/d/1wrC88s1nvDLCSTJsq-ccgQmITVHoUhh9/view","kind":"project_material","used_for":["currency"],"accessed":"2026-09-30","canonical_id":"src_000840"}
+    {
+      "id": "WB",
+      "publisher": "World Bank",
+      "url": "https://data.worldbank.org/country/viet-nam?gt=&locations=VN",
+      "kind": "international_organization",
+      "used_for": [
+        "economy",
+        "poverty"
+      ],
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000841"
+    },
+    {
+      "id": "RUS_MFA",
+      "publisher": "Consular Department, MFA Russia",
+      "url": "https://www.kdmid.ru/docs/vietnam/information-about-the-country/",
+      "kind": "government",
+      "used_for": [
+        "visa",
+        "safety"
+      ],
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000842"
+    },
+    {
+      "id": "EVISA",
+      "publisher": "Vietnam Immigration eVisa",
+      "url": "https://evisa.gov.vn/",
+      "kind": "government",
+      "used_for": [
+        "visa",
+        "evisa"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000843"
+    },
+    {
+      "id": "UNESCO",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/statesparties/vn",
+      "kind": "international_organization",
+      "used_for": [
+        "heritage"
+      ],
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000844"
+    },
+    {
+      "id": "CLIMATE_AIR",
+      "publisher": "Climate-Data.org",
+      "url": "https://en.climate-data.org/asia/vietnam/da-nang/da-nang-4236/",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "air_temperature"
+      ],
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000845"
+    },
+    {
+      "id": "CLIMATE_SEA",
+      "publisher": "Climate-Data.org",
+      "url": "https://en.climate-data.org/asia/vietnam/da-nang/da-nang-4236/",
+      "kind": "secondary_climatology",
+      "used_for": [
+        "sea_temperature"
+      ],
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000846"
+    },
+    {
+      "id": "WHO_SNAKEBITE",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/snakebite-envenoming",
+      "kind": "international_organization",
+      "used_for": [
+        "venomous_snake_risk"
+      ],
+      "accessed": "2026-09-27",
+      "notes": "Региональный фон; не заменяет локальные данные.",
+      "canonical_id": "src_000847"
+    },
+    {
+      "id": "IUCN_RED_LIST",
+      "publisher": "IUCN",
+      "url": "https://www.iucnredlist.org/",
+      "kind": "scientific_database",
+      "used_for": [
+        "fauna_conservation_status"
+      ],
+      "accessed": "2026-09-27",
+      "canonical_id": "src_000848"
+    },
+    {
+      "id": "GOV_CONSTITUTION",
+      "publisher": "Government of Viet Nam / Constitution portal",
+      "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-hien-phap-nuoc-cong-hoa-xa-hoi-chu-nghia-viet-nam-119231225213002261.htm",
+      "kind": "government",
+      "used_for": [
+        "history",
+        "political_system",
+        "official_language",
+        "culture"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000834"
+    },
+    {
+      "id": "GSO_ETHNIC",
+      "publisher": "General Statistics Office of Vietnam",
+      "url": "https://www.gso.gov.vn/phuong-phap-luan-thong-ke/danh-muc/cac-dan-toc-viet-nam/",
+      "kind": "government",
+      "used_for": [
+        "ethnography",
+        "languages",
+        "culture"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000835"
+    },
+    {
+      "id": "VN_MFA_VISA",
+      "publisher": "Ministry of Foreign Affairs of Viet Nam",
+      "url": "https://mofa.gov.vn/tin-chi-tiet/chi-tiet/danh-muc-mien-thi-thuc-cua-viet-nam-voi-cac-nuoc-57162-172.html",
+      "kind": "government",
+      "used_for": [
+        "visa",
+        "entry"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000836"
+    },
+    {
+      "id": "CAAV_UAV_REG",
+      "publisher": "Civil Aviation Authority of Vietnam",
+      "url": "https://caa.gov.vn/pho-bien-phap-luat/dieu-kien-dang-ky-phuong-tien-bay-tu-ngay-20-7-2026-20260622082236379.htm",
+      "kind": "government",
+      "used_for": [
+        "drone_rules",
+        "registration"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000837"
+    },
+    {
+      "id": "CAAV_UAV_FLIGHT",
+      "publisher": "Civil Aviation Authority of Vietnam",
+      "url": "https://caa.gov.vn/hoat-dong-nganh/chung-tay-bao-ve-bau-troi-an-toan-bao-dam-hoat-dong-hang-khong-thong-suot-20260814111747363.htm",
+      "kind": "government",
+      "used_for": [
+        "drone_rules",
+        "flight_permission"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000838"
+    },
+    {
+      "id": "GOV_PROFILE",
+      "publisher": "Government / official national sources",
+      "url": "https://vietnam.gov.vn/",
+      "kind": "government",
+      "used_for": [
+        "geography",
+        "religion",
+        "airports",
+        "air_connectivity"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000839"
+    },
+    {
+      "id": "FX_SNAPSHOT",
+      "publisher": "Existing 2026-09-28 expedition draft",
+      "url": "https://drive.google.com/file/d/1wrC88s1nvDLCSTJsq-ccgQmITVHoUhh9/view",
+      "kind": "project_material",
+      "used_for": [
+        "currency"
+      ],
+      "accessed": "2026-09-30",
+      "canonical_id": "src_000840"
+    },
+    {
+      "id": "VN_CRIMINAL_CODE",
+      "canonical_id": "src_000860",
+      "publisher": "Vietnam Ministry of Justice legal database — Criminal Code No. 100/2015/QH13",
+      "url": "https://vbpl.moj.gov.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=96122",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "drug_law",
+        "national_symbols"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "VN_CRIMINAL_AMEND_2025",
+      "canonical_id": "src_000861",
+      "publisher": "Government of Viet Nam — 2025 Criminal Code amendments",
+      "url": "https://xaydungchinhsach.chinhphu.vn/luat-sua-doi-bo-sung-mot-so-dieu-cua-bo-luat-hinh-su-bo-hinh-phat-tu-hinh-o-8-toi-danh-119250728091659578.htm",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "death_penalty_status",
+        "drug_law"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "VN_FLAG_OFFENCE",
+      "canonical_id": "src_000862",
+      "publisher": "Government of Viet Nam / Ministry of Public Security explanation of Article 351",
+      "url": "https://xaydungchinhsach.chinhphu.vn/nhung-hanh-vi-duoc-coi-la-xuc-pham-quoc-ky-119241218125046871.htm",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "national_symbols"
+      ],
+      "accessed": "2026-09-30"
+    }
   ],
   "uncertainties": [
     "Официальный список пунктов въезда для eVisa и фактический статус сухопутных переходов могут меняться.",

@@ -41,6 +41,7 @@ Facts belonging to geo, lodging, POI, routes, media or sources must ultimately l
 
 - BN: 18/18 structurally rebuilt.
 - KH: 19/19 structurally rebuilt; factual QA: 0 passed, 19 incomplete (overnight evidence, traveler-report provenance).
+- ID: 21/21 structurally rebuilt; factual QA: 0 passed, 21 incomplete (overnight/traveler provenance; 15 visual-recon gaps; 1 elevation gap).
 - LA: 31/31 structurally rebuilt; 26 passed factual QA, 5 remain incomplete for real missing evidence.
 - MY: 46/46 structurally rebuilt; factual QA remains intentionally incomplete where evidence for elevation/visual recon is absent.
 - Other countries: inventory preserved; full contract rebuild still pending.

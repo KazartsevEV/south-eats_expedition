@@ -47,7 +47,7 @@
     },
     "geo_points": [],
     "object_elevation": {
-      "representative_m": 2443.0,
+      "representative_m": 2443,
       "min_m": null,
       "max_m": null,
       "reference_type": "site",
@@ -62,8 +62,8 @@
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Ijen — действующий вулканический комплекс с крайне кислым кратерным озером. Знаменитая «голубая лава» — не лава, а пламя горящих сернистых газов; это важная поправка к туристическому клише.",
+        "type": "overview",
+        "text": "Ijen — действующий вулканический комплекс с крайне кислым кратерным озером. Знаменитая «голубая лава» — не лава, а пламя горящих сернистых газов; это важная поправка к туристическому клише.",
         "source_refs": [
           "src_000350",
           "src_000207",
@@ -75,8 +75,8 @@
         ]
       },
       {
-        "section_id": "culture",
-        "content": "Главный человеческий сюжет — традиционная добыча серы: рабочие собирают затвердевшую серу у фумарол и выносят тяжёлые грузы по крутому склону. Их труд не стоит превращать в постановочную экзотику.",
+        "type": "culture",
+        "text": "Главный человеческий сюжет — традиционная добыча серы: рабочие собирают затвердевшую серу у фумарол и выносят тяжёлые грузы по крутому склону. Их труд не стоит превращать в постановочную экзотику.",
         "source_refs": [
           "src_000350",
           "src_000207",
@@ -85,12 +85,11 @@
           "src_000363",
           "src_000471",
           "src_000245"
-        ],
-        "migration_note": "Legacy combined section retained under culture until country research splits it."
+        ]
       },
       {
-        "section_id": "geography",
-        "content": "Бирюзовый цвет связан с кислой водой и вулканическими компонентами; активные фумаролы выбрасывают сернистые газы. Ветер способен за минуты сделать участок непригодным для съёмки.",
+        "type": "geography",
+        "text": "Бирюзовый цвет связан с кислой водой и вулканическими компонентами; активные фумаролы выбрасывают сернистые газы. Ветер способен за минуты сделать участок непригодным для съёмки.",
         "source_refs": [
           "src_000350",
           "src_000207",
@@ -99,14 +98,11 @@
           "src_000363",
           "src_000471",
           "src_000245"
-        ],
-        "migration_note": "Legacy combined section retained under geography until country research splits it."
+        ]
       },
       {
-        "section_id": "myths_beliefs",
-        "content": [
-          "В проверенных источниках не найдено устойчивой локальной легенды, которую можно уверенно привязать именно к Ijen; декоративную мифологию не добавлять."
-        ],
+        "type": "myths_beliefs",
+        "text": "В проверенных источниках не найдено устойчивой локальной легенды, которую можно уверенно привязать именно к Ijen; декоративную мифологию не добавлять.",
         "source_refs": [
           "src_000350",
           "src_000207",
@@ -121,12 +117,37 @@
   },
   "visit": {
     "entry": {
-      "hours": "Official hiking gate: 02:00–12:00 WIB. STATUS SNAPSHOT: после лесного пожара объект был закрыт с 4 сентября и официально объявлен к повторному открытию с 28 сентября 2026.",
-      "ticket": "Бронировать через официальный conservation booking platform; опубликованные условия делают билет неотменяемым, непереносимым и невозвратным. Текущую цену читать в live booking непосредственно перед покупкой.",
-      "closure_notes": "Плановые Ijen Rijik conservation closures после текущей даты 2026 года: 2 октября, 6 ноября и 4 декабря. Дополнительное emergency closure возможно из-за погоды, вулканической активности, пожара или полевых условий.",
-      "status": "open/verify",
-      "official_url": "https://ayoketamannasional.kehutanan.go.id/en/taman-wisata-alam/kawah-ijen",
-      "notes": "Старт из Paltuding; official hiking gate. Обычно добираются road transfer из Banyuwangi/Bondowoso, далее пеший подъём ~3.8–4 км.",
+      "access_status": "open/verify",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Бронировать через официальный conservation booking platform; опубликованные условия делают билет неотменяемым, непереносимым и невозвратным. Текущую цену читать в live booking непосредственно перед покупкой.",
+        "source_refs": [
+          "src_000350",
+          "src_000207",
+          "src_000080",
+          "src_000442",
+          "src_000363",
+          "src_000471",
+          "src_000245"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Official hiking gate: 02:00–12:00 WIB. STATUS SNAPSHOT: после лесного пожара объект был закрыт с 4 сентября и официально объявлен к повторному открытию с 28 сентября 2026.",
+        "source_refs": [
+          "src_000350",
+          "src_000207",
+          "src_000080",
+          "src_000442",
+          "src_000363",
+          "src_000471",
+          "src_000245"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_000350",
         "src_000207",
@@ -136,11 +157,15 @@
         "src_000471",
         "src_000245"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://ayoketamannasional.kehutanan.go.id/en/taman-wisata-alam/kawah-ijen",
+      "closure_notes": "Плановые Ijen Rijik conservation closures после текущей даты 2026 года: 2 октября, 6 ноября и 4 декабря. Дополнительное emergency closure возможно из-за погоды, вулканической активности, пожара или полевых условий.",
+      "notes": "Старт из Paltuding; official hiking gate. Обычно добираются road transfer из Banyuwangi/Bondowoso, далее пеший подъём ~3.8–4 км."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "public_transport"
         ],
@@ -149,20 +174,13 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Регулярного общественного транспорта до Paltuding, пригодного для ночного старта, нет. До Banyuwangi/Ketapang — поезд/автобус, дальше заранее заказанный transfer."
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
         "modes": [
           "ride_hailing"
         ],
@@ -171,20 +189,18 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "Из Banyuwangi/Licin лучше договориться о машине туда-обратно до ночного выезда: обратный ride-hail на Paltuding утром не гарантирован."
+            "notes": "Из Banyuwangi/Licin лучше договориться о машине туда-обратно до ночного выезда: обратный ride-hail на Paltuding утром не гарантирован.",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
         "modes": [
           "moped"
         ],
@@ -193,20 +209,18 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "Дорога до Paltuding ночью холодная и местами мокрая; арендованный скутер приемлем только для уверенного водителя."
+            "notes": "Дорога до Paltuding ночью холодная и местами мокрая; арендованный скутер приемлем только для уверенного водителя.",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
         "modes": [
           "walking"
         ],
@@ -215,15 +229,16 @@
             "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
+            "notes": "От Paltuding до края кратера около 3 км с набором порядка 500 м; движение по гребню добавляет дистанцию.",
             "elevation_gain_m": null,
             "elevation_loss_m": null,
             "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "От Paltuding до края кратера около 3 км с набором порядка 500 м; движение по гребню добавляет дистанцию."
+            "trail": {
+              "type": null,
+              "condition": null,
+              "navigation": null,
+              "river_crossings": null
+            }
           }
         ]
       }
@@ -282,26 +297,32 @@
   },
   "traveler_reports": [
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "Blue flame сильно зависит от ветра и активности: иногда его почти не видно, а попытка приблизиться ведёт прямо в сернистый газ.",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "Подъём круче, чем выглядит по километражу; на маршруте предлагают платные тележки, что меняет и бюджет, и опыт.",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "Объект вновь открылся только 28 сентября 2026 после сентябрьского лесного пожара; более ранние сентябрьские отзывы не отражают текущий режим.",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "legacy_aggregate",
-      "data": {
-        "note": "Статус проверен на 2026-09-28: туризм/треккинг снова разрешён после пожарного закрытия."
-      },
-      "source_refs": []
+      "topic": "legacy_aggregate",
+      "summary": "",
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     }
   ],
   "visual_recon": {
@@ -321,9 +342,18 @@
         "best_time": "dawn / early morning",
         "best_weather_light": "После рассвета цвет озера и рельеф стенок читаются лучше; газовый шлейф может полностью закрывать обзор.",
         "useful_equipment": [
-          "wide",
-          "standard",
-          "telephoto"
+          {
+            "type": "wide",
+            "why": null
+          },
+          {
+            "type": "standard",
+            "why": null
+          },
+          {
+            "type": "telephoto",
+            "why": null
+          }
         ],
         "source_refs": [
           "src_903070"
@@ -344,7 +374,24 @@
       "telephoto",
       "phone"
     ],
-    "drone": "Только при отдельном разрешении соответствующего conservation/aviation authority; пожары и вулканические ограничения могут полностью исключать полёты.",
+    "drone": {
+      "visual_value": null,
+      "legal_status": "unknown",
+      "permit_required": null,
+      "restrictions": [
+        "Только при отдельном разрешении соответствующего conservation/aviation authority; пожары и вулканические ограничения могут полностью исключать полёты."
+      ],
+      "source_refs": [
+        "src_000350",
+        "src_000207",
+        "src_000080",
+        "src_000442",
+        "src_000363",
+        "src_000471",
+        "src_000245"
+      ],
+      "checked_at": "2026-09-28"
+    },
     "filming_restrictions": "Не выходить в газоопасные/закрытые зоны ради кадра; следовать ranger instructions. Для коммерческого production заранее согласовывать."
   },
   "media": {
@@ -374,7 +421,7 @@
     ]
   },
   "qa": {
-    "status": "passed",
+    "status": "incomplete",
     "checks": {
       "language": true,
       "classification": true,
@@ -385,10 +432,10 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": true,
-      "traveler_reports": true,
-      "visual_recon": true
+      "overnight": false,
+      "traveler_reports": false,
+      "visual_recon": false
     },
-    "last_reviewed_at": "2026-09-28"
+    "last_reviewed_at": "2026-09-30"
   }
 }

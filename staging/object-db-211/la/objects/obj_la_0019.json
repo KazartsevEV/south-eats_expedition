@@ -2,12 +2,12 @@
   "id": "obj_la_0019",
   "kind": "attraction",
   "slug": "pak-ou-caves",
-  "status": "published",
+  "status": "migration_draft",
   "names": {
     "primary": "Pak Ou Caves"
   },
   "summary": {
-    "narrow": "Пак-У — две пещеры в известняковой стене над Меконг у устья Нам-У, заполненные тысячами буддийских изображений разных размеров и периодов. Сюжет — одновременно паломничество, накопление вотивных образов и речная география."
+    "narrow": "Пак-У — две пещеры в известняковой стене над Меконг у устья Нам-У, заполненные тысячами буддийских изображений разных размеров и периодов. Сюжет — одновременно паломничество, накопление вотивных образов и речная география. Пещеры традиционно посещаются верующими, особенно в праздничные периоды. Нижняя пещера открыта к Меконг и получает боковой дневной свет; верхняя глубже и темнее, требует фонаря. Подход по реке показывает, насколько объект встроен в скальную стену. Мифы и поверья: Пещеры связаны с давней местной сакральностью и буддийским паломничеством; конкретные истории о духах/происхождении коллекции различаются, поэтому лучше не сводить их к одной легенде без местного источника. Сезон: Ноябрь–февраль для города и треков. Уровень Меконг влияет на причал; для интерьеров важнее направление света у входа, чем сезон в целом."
   },
   "classification": {
     "class_id": "nature.cave",
@@ -27,48 +27,45 @@
   "geo": {
     "country_id": "geo_la",
     "region_ids": [
-      "geo_la_0024"
+      "geo_la_0001"
     ],
     "nearest_place_id": null,
     "nearest_place_name_raw": "Luang Prabang",
+    "region_name_raw": "Луангпхабанг / север долины Нам-У",
     "primary_location": {
       "lat": 20.04931,
       "lon": 102.21077,
       "elevation_m": null,
-      "elevation_range_m": null,
       "coordinate_type": "cave_entrance",
       "accuracy": "high",
-      "elevation_accuracy": "unknown",
       "source_refs": [
-        "src_000136"
+        "src_stage_la_0098"
       ],
-      "elevation_source_refs": [],
       "checked_at": "2026-09-29"
     },
     "geo_points": [
       {
+        "id": "gp_01",
+        "type": "viewpoint",
+        "name": "Нижняя пещера — внутренняя геопривязанная точка",
         "lat": 20.049444,
         "lon": 102.210556,
         "elevation_m": null,
-        "elevation_range_m": null,
-        "coordinate_type": "viewpoint",
         "accuracy": "high",
-        "elevation_accuracy": "unknown",
         "source_refs": [
-          "src_000279"
+          "src_stage_la_0100"
         ],
-        "elevation_source_refs": [],
         "checked_at": "2026-09-28"
       }
     ],
     "object_elevation": {
-      "representative_m": 298.0,
+      "representative_m": 298,
       "min_m": null,
       "max_m": null,
       "reference_type": "site",
       "accuracy": "approximate",
       "source_refs": [
-        "src_000507"
+        "src_stage_la_0099"
       ],
       "checked_at": "2026-09-29",
       "notes": "Приближённая DEM-высота у нижней пещеры."
@@ -77,71 +74,100 @@
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Пак-У — две пещеры в известняковой стене над Меконг у устья Нам-У, заполненные тысячами буддийских изображений разных размеров и периодов. Сюжет — одновременно паломничество, накопление вотивных образов и речная география.",
+        "type": "overview",
+        "text": "Пак-У — две пещеры в известняковой стене над Меконг у устья Нам-У, заполненные тысячами буддийских изображений разных размеров и периодов. Сюжет — одновременно паломничество, накопление вотивных образов и речная география.",
         "source_refs": [
-          "src_000039",
-          "src_000094",
-          "src_000377",
-          "src_000436"
+          "src_stage_la_0095",
+          "src_stage_la_0096",
+          "src_stage_la_0003",
+          "src_stage_la_0097"
         ]
       },
       {
-        "section_id": "culture",
-        "content": "Пещеры традиционно посещаются верующими, особенно в праздничные периоды.",
+        "type": "culture",
+        "text": "Пещеры традиционно посещаются верующими, особенно в праздничные периоды.",
         "source_refs": [
-          "src_000039",
-          "src_000094",
-          "src_000377",
-          "src_000436"
+          "src_stage_la_0095",
+          "src_stage_la_0096",
+          "src_stage_la_0003",
+          "src_stage_la_0097"
         ]
       },
       {
-        "section_id": "geology",
-        "content": "Нижняя пещера открыта к Меконг и получает боковой дневной свет; верхняя глубже и темнее, требует фонаря. Подход по реке показывает, насколько объект встроен в скальную стену.",
+        "type": "geology",
+        "text": "Нижняя пещера открыта к Меконг и получает боковой дневной свет; верхняя глубже и темнее, требует фонаря. Подход по реке показывает, насколько объект встроен в скальную стену.",
         "source_refs": [
-          "src_000039",
-          "src_000094",
-          "src_000377",
-          "src_000436"
+          "src_stage_la_0095",
+          "src_stage_la_0096",
+          "src_stage_la_0003",
+          "src_stage_la_0097"
         ]
       },
       {
-        "section_id": "myths_beliefs",
-        "content": [
-          {
-            "type": "legend",
-            "text": "Пещеры связаны с давней местной сакральностью и буддийским паломничеством; конкретные истории о духах/происхождении коллекции различаются, поэтому лучше не сводить их к одной легенде без местного источника."
-          }
+        "type": "myths_beliefs",
+        "text": "Пещеры связаны с давней местной сакральностью и буддийским паломничеством; конкретные истории о духах/происхождении коллекции различаются, поэтому лучше не сводить их к одной легенде без местного источника.",
+        "source_refs": [
+          "src_stage_la_0095",
+          "src_stage_la_0096",
+          "src_stage_la_0003",
+          "src_stage_la_0097"
         ],
-        "source_refs": [
-          "src_000039",
-          "src_000094",
-          "src_000377",
-          "src_000436"
+        "tradition_items": [
+          {
+            "tradition_type": "legend",
+            "text": "Пещеры связаны с давней местной сакральностью и буддийским паломничеством; конкретные истории о духах/происхождении коллекции различаются, поэтому лучше не сводить их к одной легенде без местного источника.",
+            "source_refs": [
+              "src_stage_la_0095",
+              "src_stage_la_0096",
+              "src_stage_la_0003",
+              "src_stage_la_0097"
+            ]
+          }
         ]
       }
     ]
   },
   "visit": {
     "entry": {
-      "hours": "Ежедневно 08:00–17:00 по туризм Луангпхабанг.",
-      "ticket": "Иностранный вход 30 000 LAK; официальный утренний лодка туда и обратно из Ват-Нонг указан 08:00, 80 000 LAK с человека — тариф динамический.",
-      "closure_notes": null,
-      "status": "open/verify",
-      "official_url": "https://tourismluangprabang.org/things-to-do/nature/pak-ou-cave-tham-ting/",
-      "notes": "Официальный туризм объект: лодка вверх по Меконг около 1.5 ч; альтернатива — дорога до Пак-У деревня и короткая переправа.",
+      "access_status": "open/verify",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Иностранный вход 30 000 LAK; официальный утренний лодка туда и обратно из Ват-Нонг указан 08:00, 80 000 LAK с человека — тариф динамический.",
+        "source_refs": [
+          "src_stage_la_0095",
+          "src_stage_la_0096",
+          "src_stage_la_0003",
+          "src_stage_la_0097"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Ежедневно 08:00–17:00 по туризм Луангпхабанг.",
+        "source_refs": [
+          "src_stage_la_0095",
+          "src_stage_la_0096",
+          "src_stage_la_0003",
+          "src_stage_la_0097"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
-        "src_000039",
-        "src_000094",
-        "src_000377",
-        "src_000436"
+        "src_stage_la_0095",
+        "src_stage_la_0096",
+        "src_stage_la_0003",
+        "src_stage_la_0097"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://tourismluangprabang.org/things-to-do/nature/pak-ou-cave-tham-ting/"
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
+        "origin_name_raw": null,
         "modes": [
           "public_transport"
         ],
@@ -150,20 +176,14 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Классический вариант — общая медленная лодка от Луангпхабанг; также можно по дороге до деревни Пак-У + короткая переправа."
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
+        "origin_name_raw": null,
         "modes": [
           "ride_hailing"
         ],
@@ -172,20 +192,14 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "водитель или тук-тук до противоположного берега сокращает лодочную часть."
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
+        "origin_name_raw": null,
         "modes": [
           "moped"
         ],
@@ -194,52 +208,38 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "До деревни Пак-У по дороге, затем лодка через Меконг."
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
+        "origin_name_raw": null,
         "modes": [
-          "walking"
+          "walk"
         ],
         "legs": [
           {
-            "mode": "walking",
+            "mode": "walk",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "От нижнего высадка — лестницы к Tham Ting и выше к Tham Theung; суммарно около 1–2 км, но много ступеней."
           }
         ]
       }
     ],
     "water": {
+      "at_object": null,
       "summary": "В деревне/у высадка купить воду; в верхней пещере сервиса нет.",
       "quality": "unknown",
-      "last_reliable_source": null,
-      "distance_m": null,
+      "last_reliable_point": null,
       "natural_sources": [],
       "source_refs": [
-        "src_000039",
-        "src_000094",
-        "src_000377",
-        "src_000436"
+        "src_stage_la_0095",
+        "src_stage_la_0096",
+        "src_stage_la_0003",
+        "src_stage_la_0097"
       ]
     },
     "supplies": null,
@@ -247,23 +247,21 @@
       "status": "unclear",
       "summary": "В пещерах/на ступенях не ночевать. Луангпхабанг или проживание в семье в деревне только по договорённости.",
       "source_refs": [
-        "src_000039",
-        "src_000094",
-        "src_000377",
-        "src_000436"
+        "src_stage_la_0095",
+        "src_stage_la_0096",
+        "src_stage_la_0003",
+        "src_stage_la_0097"
       ]
     },
-    "lodging_ids": [
-      "lod_la_0005"
-    ],
+    "lodging_ids": [],
     "rules": {
       "permit_or_guide": null,
       "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
       "source_refs": [
-        "src_000039",
-        "src_000094",
-        "src_000377",
-        "src_000436"
+        "src_stage_la_0095",
+        "src_stage_la_0096",
+        "src_stage_la_0003",
+        "src_stage_la_0097"
       ],
       "checked_at": "2026-09-28"
     },
@@ -275,34 +273,25 @@
   },
   "traveler_reports": [
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "general",
       "summary": "лодка тур часто включает дополнительные коммерческие остановки, которые не всем интересны; заранее уточнить маршрут и длительность",
       "source_refs": []
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "general",
       "summary": "верхняя пещера тёмная — без фонаря визуально почти бесполезна, телефонный свет слаб",
       "source_refs": []
     }
   ],
   "visual_recon": {
-    "photo_suitability_5": 5,
-    "video_suitability_5": 5,
-    "best_time": "Утро: нижняя пещера получает боковой свет со стороны Меконга; верхняя пещера остаётся тёмной независимо от часа.",
-    "best_weather_light": "В ясное утро свет от реки глубже входит в нижнюю пещеру; высокий уровень воды меняет масштаб лестницы и причала, но не геометрию входа.",
     "viewpoints": [
       {
         "id": "mekong_approach",
         "name": "Подход по Меконгу к нижней пещере",
-        "description": "С лодки видно, как вход в пещеру буквально прорезан в известняковой стене над рекой; это лучший ракурс для связи сакрального объекта с ландшафтом.",
         "coordinates": {
           "lat": 20.049197,
           "lon": 102.211142,
           "elevation_m": null
-        },
-        "gps": {
-          "decimal": "20.049197, 102.211142",
-          "dms": "20°02′57.1″N 102°12′40.1″E"
         },
         "access": null,
         "view": {
@@ -321,21 +310,16 @@
           }
         ],
         "source_refs": [
-          "src_000206"
+          "src_stage_la_0101"
         ]
       },
       {
         "id": "lower_cave_interior",
         "name": "Нижняя пещера среди статуй",
-        "description": "Геопривязанная точка внутри Tham Ting показывает плотное размещение буддийских изображений и естественный свет от речного входа.",
         "coordinates": {
           "lat": 20.049444,
           "lon": 102.210556,
           "elevation_m": null
-        },
-        "gps": {
-          "decimal": "20.049444, 102.210556",
-          "dms": "20°02′58.0″N 102°12′38.0″E"
         },
         "access": null,
         "view": {
@@ -354,7 +338,7 @@
           }
         ],
         "source_refs": [
-          "src_000279"
+          "src_stage_la_0100"
         ]
       }
     ],
@@ -366,6 +350,23 @@
       "движение между нижней и верхней пещерами по лестницам",
       "паломники и подношения при ненавязчивой съёмке"
     ],
+    "drone": {
+      "visual_value": null,
+      "legal_status": "regulated",
+      "permit_required": null,
+      "restrictions": [
+        "не выше 120 м над землёй",
+        "не над городами, посёлками и деревнями без одобрения Lao DCA",
+        "не в контролируемом/военном воздушном пространстве без согласования",
+        "не в ограниченных зонах без согласования",
+        "только в прямой видимости",
+        "взлёт и посадка на частной территории — с разрешения владельца"
+      ],
+      "source_refs": [
+        "src_stage_la_0007"
+      ],
+      "checked_at": "2026-09-29"
+    },
     "useful_equipment": [
       {
         "type": "wide",
@@ -376,45 +377,68 @@
         "why": "статуи и лодочная дистанция"
       }
     ],
-    "drone": {
-      "legal_status": "regulated",
-      "permit_required": "Для полётов над населёнными пунктами, в контролируемом или ограниченном воздушном пространстве требуется согласование соответствующего органа; у конкретного объекта могут действовать дополнительные ограничения.",
-      "restrictions": [
-        "не выше 120 м над землёй",
-        "не над городами, посёлками и деревнями без одобрения Lao DCA",
-        "не в контролируемом/военном воздушном пространстве без согласования",
-        "не в ограниченных зонах без согласования",
-        "только в прямой видимости",
-        "взлёт и посадка на частной территории — с разрешения владельца"
-      ],
-      "checked_at": "2026-09-29",
-      "source_refs": [
-        "src_000504"
-      ]
-    },
-    "filming_restrictions": "Не использовать вспышку/сильный свет там, где это запрещено; не трогать Будда images и не мешать поклонению."
+    "best_time": "Утро: нижняя пещера получает боковой свет со стороны Меконга; верхняя пещера остаётся тёмной независимо от часа.",
+    "best_weather_light": "В ясное утро свет от реки глубже входит в нижнюю пещеру; высокий уровень воды меняет масштаб лестницы и причала, но не геометрию входа."
   },
   "media": {
-    "cover_id": "med_la_890cd1c6aaa6",
-    "gallery_ids": [
-      "med_la_890cd1c6aaa6",
-      "med_la_5584debb48f3"
-    ]
+    "cover_id": null,
+    "gallery_ids": []
   },
   "relations": {
     "legacy_ids": [
       "la:pak-ou-caves"
     ],
-    "legacy_detail_path": "countries/laos/objects/pak-ou-caves.json"
+    "migration_source": "data/source/laos.json",
+    "recovered_from_branch": "draft/laos-canonical-r41",
+    "source_object_index": 19,
+    "legacy_tags": [
+      "culture",
+      "religion",
+      "cave",
+      "mekong",
+      "architecture",
+      "history",
+      "nature",
+      "water",
+      "boat_access",
+      "class_expanded"
+    ],
+    "unmigrated_accommodation": [
+      {
+        "name": "Luang Prabang Mountain View Hostel",
+        "area": "Луангпхабанг",
+        "price_for_two": "снимок Booking на сентябрь 2026: двухместный номер около 33 USD/ночь без 10% налога; цена динамическая",
+        "contact": "through Booking.com/property reception",
+        "social_or_web": "https://www.booking.com/hotel/la/luang-prabang-mountain-view-hostel-amp-bar.html",
+        "source": "Booking.com, 2026 snapshot"
+      }
+    ],
+    "illustration": {
+      "static_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Mekong-River_Laos_jetty-at-Pak-Ou-Caves-01.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Mekong-River_Laos_jetty-at-Pak-Ou-Caves-01.jpg",
+      "provider": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "artist": "CEphoto, Uwe Aranas",
+      "last_checked": "2026-09-28",
+      "gallery": [
+        {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pak-Ou-Caves-2017.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Pak-Ou-Caves-2017.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Bjørn Christian Tørrissen",
+          "last_checked": "2026-09-28"
+        }
+      ]
+    }
   },
   "freshness": {
     "checked_at": "2026-09-28",
-    "source_file": "laos.json",
     "source_refs": [
-      "src_000039",
-      "src_000094",
-      "src_000377",
-      "src_000436"
+      "src_stage_la_0095",
+      "src_stage_la_0096",
+      "src_stage_la_0003",
+      "src_stage_la_0097"
     ]
   },
   "qa": {
@@ -433,6 +457,6 @@
       "traveler_reports": true,
       "visual_recon": true
     },
-    "last_reviewed_at": "2026-09-28"
+    "last_reviewed_at": "2026-09-30"
   }
 }

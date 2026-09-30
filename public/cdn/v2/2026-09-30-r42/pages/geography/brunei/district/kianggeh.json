@@ -38,7 +38,7 @@
       "geo_bn_0016"
     ],
     "description": {
-      "narrow": "Tasek Lama и Kampung Kianggeh перечислены внутри Mukim Kianggeh в актуальной государственной зональной схеме; Tamu Kianggeh официально описывается как объект Mukim Kianggeh.",
+      "narrow": "Кианггех — центральный mukim Бруней-Муара, связанный с городским ядром Bandar Seri Begawan, Kianggeh и Tasek Lama; это административный уровень, а не синоним всей столицы.",
       "body": null
     },
     "cover_media_id": null,
@@ -49,11 +49,12 @@
     "migration": {
       "source_kind": "formal_hierarchy",
       "axis": "administrative",
-      "status": "formalized"
+      "status": "formalized",
+      "hierarchy_profile_status": "researched_profile"
     },
-    "coverage_role": "structural",
+    "coverage_role": "regional_profile",
     "provenance": {
-      "checked_at": "2026-09-30",
+      "checked_at": "2026-10-01",
       "sources": [
         {
           "url": "https://www.moha.gov.bn/perkhidmatan-hal-ehwal-daerah/",
@@ -175,10 +176,58 @@
       "structural_source_refs": [
         "src_906001"
       ],
-      "research_source_refs": [],
+      "research_source_refs": [
+        "src_910031",
+        "src_910035",
+        "src_910034",
+        "src_000746"
+      ],
       "source_refs": [
-        "src_906001"
+        "src_906001",
+        "src_910031",
+        "src_910035",
+        "src_910034",
+        "src_000746",
+        "src_910032"
+      ],
+      "research_checked_at": "2026-10-01"
+    },
+    "geometry_path": "geo/geometries/geo_bn_0016.geojson",
+    "geometry": {
+      "status": "available",
+      "geometry_type": "administrative_boundary",
+      "accuracy": "simplified_sourced_boundary",
+      "simplified": true,
+      "intended_use": "map_mask_navigation_not_cadastral",
+      "source_refs": [
+        "src_910031",
+        "src_910032"
+      ],
+      "source_vintage": "OSM relation checked 2026-10-01; official Survey Geoportal layer cross-check current",
+      "checked_at": "2026-10-01"
+    },
+    "geography": {
+      "summary": "Mukim Kianggeh подтверждён государственной зональной схемой; внутри него находятся локальные городские территории, которые в справочнике не должны расширяться до границ всего Bandar Seri Begawan.",
+      "source_refs": [
+        "src_910031",
+        "src_910035"
       ]
+    },
+    "transport": {
+      "summary": "Mukim расположен внутри столичного транспортного контура; конкретные маршруты к Tasek Lama, Tamu Kianggeh и другим точкам описываются на уровне объекта, без фиктивного единого времени доступа для всего mukim.",
+      "source_refs": [
+        "src_910034",
+        "src_910035"
+      ]
+    },
+    "climate": {
+      "summary": "Климат экваториальный, жаркий и влажный круглый год; интенсивные ливни имеют практическое значение для пеших городских и лесопарковых участков.",
+      "source_refs": [
+        "src_000746"
+      ]
+    },
+    "freshness": {
+      "checked_at": "2026-10-01"
     }
   },
   "notes_ru": "Tasek Lama и Kampung Kianggeh перечислены внутри Mukim Kianggeh в актуальной государственной зональной схеме; Tamu Kianggeh официально описывается как объект Mukim Kianggeh.",
@@ -363,6 +412,6 @@
         "note": "Used only for stable place/address relationship, not current business status."
       }
     ],
-    "checked_at": "2026-09-30"
+    "checked_at": "2026-10-01"
   }
 }

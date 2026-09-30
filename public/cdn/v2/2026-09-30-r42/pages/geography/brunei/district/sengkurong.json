@@ -46,7 +46,7 @@
       "geo_bn_0017"
     ],
     "description": {
-      "narrow": "Административный узел введён для подтверждённой дочерней деревни Jerudong и связанных объектов.",
+      "narrow": "Сенгкуронг — mukim западной части Бруней-Муара, включающий Jerudong; в экспедиционной иерархии он нужен как административный parent, а не как отдельная достопримечательность.",
       "body": null
     },
     "cover_media_id": null,
@@ -57,11 +57,12 @@
     "migration": {
       "source_kind": "formal_hierarchy",
       "axis": "administrative",
-      "status": "formalized"
+      "status": "formalized",
+      "hierarchy_profile_status": "researched_profile"
     },
-    "coverage_role": "structural",
+    "coverage_role": "regional_profile",
     "provenance": {
-      "checked_at": "2026-09-30",
+      "checked_at": "2026-10-01",
       "sources": [
         {
           "url": "https://www.moha.gov.bn/perkhidmatan-hal-ehwal-daerah/",
@@ -183,10 +184,56 @@
       "structural_source_refs": [
         "src_906001"
       ],
-      "research_source_refs": [],
+      "research_source_refs": [
+        "src_910031",
+        "src_910036",
+        "src_000746"
+      ],
       "source_refs": [
-        "src_906001"
+        "src_906001",
+        "src_910031",
+        "src_910036",
+        "src_000746",
+        "src_910032"
+      ],
+      "research_checked_at": "2026-10-01"
+    },
+    "geometry_path": "geo/geometries/geo_bn_0017.geojson",
+    "geometry": {
+      "status": "available",
+      "geometry_type": "administrative_boundary",
+      "accuracy": "simplified_sourced_boundary",
+      "simplified": true,
+      "intended_use": "map_mask_navigation_not_cadastral",
+      "source_refs": [
+        "src_910031",
+        "src_910032"
+      ],
+      "source_vintage": "OSM relation checked 2026-10-01; official Survey Geoportal layer cross-check current",
+      "checked_at": "2026-10-01"
+    },
+    "geography": {
+      "summary": "Государственный справочник Министерства внутренних дел помещает Kampong Jerudong в Mukim Sengkurong; официальный Survey Geoportal ведёт Sengkurong на уровне mukim.",
+      "source_refs": [
+        "src_910031",
+        "src_910036"
       ]
+    },
+    "transport": {
+      "summary": "Основной доступ наземный из столичного района; точные плечи к Jerudong и природным объектам должны считаться от конкретной точки назначения.",
+      "source_refs": [
+        "src_910031",
+        "src_910036"
+      ]
+    },
+    "climate": {
+      "summary": "Экваториальный климат жаркий и влажный; сезонные ливни учитываются при наземных и лесопарковых выездах.",
+      "source_refs": [
+        "src_000746"
+      ]
+    },
+    "freshness": {
+      "checked_at": "2026-10-01"
     }
   },
   "notes_ru": "Административный узел введён для подтверждённой дочерней деревни Jerudong и связанных объектов.",
@@ -343,6 +390,6 @@
         "note": "Used only for stable place/address relationship, not current business status."
       }
     ],
-    "checked_at": "2026-09-30"
+    "checked_at": "2026-10-01"
   }
 }

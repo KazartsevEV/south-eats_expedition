@@ -13,11 +13,22 @@
     "geo_bn_0005"
   ],
   "description": {
-    "narrow": "Городской узел используется для объектов, чья принадлежность к Bandar Seri Begawan подтверждается официальными муниципальными, государственными или туристическими источниками. Mukim-границы не подменяются границами муниципалитета.",
+    "narrow": "Бандар-Сери-Бегаван — столичный городской узел Брунея у реки Бруней. В справочнике он служит базой для городских кластеров и речной логистики, но не подменяет округ Бруней-Муара или отдельные mukim.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 4.89035,
+    "lon": 114.94006,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910033"
+    ],
+    "source_url": "https://www.geonames.org/search.html?country=BN&q=Bandar+Seri+Begawan",
+    "checked_at": "2026-10-01",
+    "note": "Опорная точка населённого пункта; не координата достопримечательности."
+  },
   "legacy_ids": [
     "bn:city:bandar-seri-begawan"
   ],
@@ -25,11 +36,11 @@
     "source_kind": "formal_hierarchy",
     "axis": "municipal",
     "status": "formalized",
-    "local_reference_status": "migrated_locality_profile_requires_source_normalization"
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "sources": [
       {
         "url": "https://www.moha.gov.bn/perkhidmatan-hal-ehwal-daerah/",
@@ -151,10 +162,36 @@
     "structural_source_refs": [
       "src_906001"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910033",
+      "src_910034",
+      "src_904106",
+      "src_904107",
+      "src_000746",
+      "src_000747"
+    ],
     "source_refs": [
-      "src_906001"
-    ]
+      "src_906001",
+      "src_910033",
+      "src_910034",
+      "src_904106",
+      "src_904107",
+      "src_000746",
+      "src_000747"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910033",
+        "src_910034",
+        "src_904106",
+        "src_904107",
+        "src_000746",
+        "src_000747"
+      ],
+      "checked_at": "2026-10-01",
+      "source_refs_complete": true,
+      "note": "Координата — GeoNames; городской контекст — муниципальные и официальные туристические источники."
+    }
   },
   "relations": {
     "source_region_names": [
@@ -168,5 +205,23 @@
       "Malay Technology Museum",
       "Tamu Kianggeh"
     ]
+  },
+  "culture": "Исторический водный слой Kampong Ayer, государственная и религиозная архитектура и современный столичный центр сосуществуют в одном городском пространстве, но раскрываются отдельными geo- и object-узлами.",
+  "geography": "Город расположен в Brunei-Muara у реки Бруней и включает муниципальную городскую среду, которая не совпадает с административными границами всех окружающих mukim.",
+  "climate": {
+    "summary": "Экваториальный жаркий и влажный климат; сильные ливни и речные условия могут менять время городских и лодочных перемещений.",
+    "source_refs": [
+      "src_000746"
+    ]
+  },
+  "transport": {
+    "summary": "Город является главным наземным и речным узлом страны; конкретные времена поездок и лодочные плечи хранятся на уровне маршрута или объекта.",
+    "source_refs": [
+      "src_910034",
+      "src_000747"
+    ]
+  },
+  "freshness": {
+    "checked_at": "2026-10-01"
   }
 }

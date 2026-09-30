@@ -14,22 +14,34 @@
     "geo_bn_0018"
   ],
   "description": {
-    "narrow": "Государственные материалы помещают Kampong Jerudong в Mukim Sengkurong; отдельные официальные документы указывают Bukit Shahbandar в Kampong Jerudong.",
+    "narrow": "Джерудонг — населённый пункт в Mukim Sengkurong к западу от столичного ядра; в экспедиционной иерархии используется как локальный географический узел, а не как координата расположенных рядом объектов.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 4.92946636,
+    "lon": 114.83476169,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910033"
+    ],
+    "source_url": "https://www.geonames.org/search.html?country=BN&q=Jerudong",
+    "checked_at": "2026-10-01",
+    "note": "Опорная точка населённого пункта; не координата достопримечательности."
+  },
   "legacy_ids": [
     "bn:village:jerudong"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "administrative",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "sources": [
       {
         "url": "https://www.moha.gov.bn/perkhidmatan-hal-ehwal-daerah/",
@@ -151,9 +163,51 @@
     "structural_source_refs": [
       "src_906001"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910033",
+      "src_910036",
+      "src_000746",
+      "src_000749"
+    ],
     "source_refs": [
-      "src_906001"
+      "src_906001",
+      "src_910033",
+      "src_910036",
+      "src_000746",
+      "src_000749"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910033",
+        "src_910036",
+        "src_000746",
+        "src_000749"
+      ],
+      "checked_at": "2026-10-01",
+      "source_refs_complete": true,
+      "note": "Поселенческий центр — GeoNames; административная принадлежность — MOHA."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Бандар-Сери-Бегаван / Бруней-Муара"
+    ],
+    "source_object_names": []
+  },
+  "geography": "Министерство внутренних дел относит Kampong Jerudong к Mukim Sengkurong в округе Бруней-Муара.",
+  "climate": {
+    "summary": "Экваториальный жаркий и влажный климат; ливни учитываются при наземных и лесопарковых выездах.",
+    "source_refs": [
+      "src_000746"
     ]
+  },
+  "transport": {
+    "summary": "Доступ наземный из столичного района; конкретные подъезды к природным и инфраструктурным объектам должны иметь собственные координаты и плечи.",
+    "source_refs": [
+      "src_910036"
+    ]
+  },
+  "freshness": {
+    "checked_at": "2026-10-01"
   }
 }

@@ -304,11 +304,16 @@ def access_options(logistics, origin=None):
     return options
 
 
-def traveler_reports_list(value):
+def traveler_reports_list(value, registry=None):
     if value in (None, "", [], {}):
         return []
     if isinstance(value, list):
-        return value
+        rows = json.loads(json.dumps(value, ensure_ascii=False))
+        if registry is not None:
+            for row in rows:
+                if isinstance(row, dict):
+                    row["source_refs"] = remap_source_refs(row.get("source_refs"), registry)
+        return rows
     if isinstance(value, dict):
         recurring = value.get("recurring_issues")
         if isinstance(recurring, list):
@@ -1156,7 +1161,7 @@ def build():
         if isinstance(source_sections, list) and source_sections:
             story_payload["sections"] = source_sections
         sections = narrative_sections(story_payload, source_refs)
-        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
+        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"), registry)
         language_review = ((source_object or {}).get("qa") or {}).get("language_review") or {}
         rebuild_review = ((source_object or {}).get("qa") or {}).get("rebuild_v2") or {}
 

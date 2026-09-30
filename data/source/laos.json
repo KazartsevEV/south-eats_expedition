@@ -26,7 +26,8 @@
       "2026-09-30 country-layer pass: completed language, ethnography and culture with census/UNESCO provenance; attraction-card payloads were not edited.",
       "2026-09-30 regional-layer correction: Laos regions upgraded toward Malaysia reference standard with geography, relief, climate, hydrology where applicable, geology/nature, health, safety, transport, ethnography and provenance; marine/tide fields omitted because Laos is landlocked; attraction cards unchanged.",
       "2026-09-30 second QA pass: normalized country-facing nature/safety Russian and added regional fauna, dangerous animals, poisonous plants and natural hazards for all Laos regional nodes. Marine-life field intentionally omitted because Laos is landlocked; aquatic fauna is used where river ecology is relevant. Attraction cards unchanged.",
-      "Regional QA pass 2026-09-30: deepened Vang Vieng / Vientiane Province and Phongsaly highlands with official Tourism Laos sources; added locally sourced transport, community-management, ethnography and tea-landscape detail."
+      "Regional QA pass 2026-09-30: deepened Vang Vieng / Vientiane Province and Phongsaly highlands with official Tourism Laos sources; added locally sourced transport, community-management, ethnography and tea-landscape detail.",
+      "Regional QA pass 2026-09-30: deepened Xieng Khouang, Houaphanh/Viengxay/Nam Et–Phou Louey and Luang Namtha/Nam Ha with UNESCO, Tourism Laos and national-park sources; separated archaeology, UXO, cave history, protected-area access and village ethnography."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -524,18 +525,21 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Сиангкхуанг",
         "geography": {
-          "summary": "Высокое плато северо-восточного Лаоса с открытыми травянистыми пространствами, археологическими площадками и отдельными карстовыми массивами.",
+          "summary": "Сиангкхуанг — высокое плато северо-восточного Лаоса, где археологические группы Долины кувшинов распределены по холмам, отрогам и долинам вокруг центрального плато. UNESCO рассматривает объект как серию из 15 компонентов, а не как одну площадку; отдельные sites, quarries и access routes должны храниться раздельно.",
           "source_refs": [
-            "src_000497"
+            "src_902007"
           ]
         },
         "relief": {
-          "summary": "Плато заметно выше долины Меконга; открытый рельеф чередуется с холмами и локальными карстовыми участками."
+          "summary": "Кувшины и связанные элементы расположены на склонах и отрогах вокруг центрального плато. Поэтому «Долина кувшинов» — не плоская единая равнина, а сеть разнесённых площадок с различными подъездами и локальным рельефом.",
+          "source_refs": [
+            "src_902007"
+          ]
         },
         "geology": {
-          "summary": "Археологические кувшины изготовлены из разных пород; подробный геологический состав по каждой площадке должен храниться только при наличии профильного источника.",
+          "summary": "UNESCO подтверждает наличие carved stone jars, quarries и manufacturing sites, но не даёт основания сводить все сосуды к одной породе. Геологию конкретных карьеров и групп нужно хранить объектно и только при профильном источнике.",
           "source_refs": [
-            "src_000497"
+            "src_902007"
           ]
         },
         "climate": {
@@ -580,15 +584,20 @@
               "src_000498"
             ]
           },
-          "operational_context": "Сиангкхуанг — один из ключевых регионов работы UXO Lao. Вне очищенных и размеченных зон риск неразорвавшихся боеприпасов нельзя считать снятым.",
+          "operational_context": "UXO остаётся принципиальным региональным ограничением: за пределами очищенных и размеченных дорожек нельзя считать местность безопасной. Это не общий «совет осторожности», а прямое ограничение маршрута по конкретным археологическим площадкам.",
           "source_refs": [
-            "src_000498"
+            "src_000498",
+            "src_902007",
+            "src_902008"
           ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Основные археологические площадки связаны дорогами; состояние грунтовых участков ухудшается в сезон дождей.",
-          "source_refs": []
+          "summary": "Площадки serial property распределены по разным районам и не имеют единого entrance. UNESCO maps показывают отдельные компоненты, а Tourism Laos подчёркивает необходимость пользоваться очищенными и размеченными путями. В canonical access_options нужны отдельные road legs и trailheads по каждому site.",
+          "source_refs": [
+            "src_902007",
+            "src_902008"
+          ]
         },
         "ethnography": {
           "summary": "В провинции представлены лао, хмонг, кхму и другие группы; языковой и культурный состав различается по районам.",
@@ -604,7 +613,9 @@
             "src_000498",
             "src_000732",
             "src_902003",
-            "src_000500"
+            "src_000500",
+            "src_902007",
+            "src_902008"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -623,6 +634,19 @@
             "src_902001"
           ],
           "checked_at": "2026-09-30"
+        },
+        "archaeology": {
+          "summary": "Объект включает более 2 100 мегалитических каменных сосудов и связанные с ними каменные диски, вторичные погребения, маркеры могил, карьеры, производственные площадки и погребальный инвентарь. Основная датировка UNESCO — примерно 500 год до н.э. – 500 год н.э.; функция комплекса связана с погребальными практиками железного века.",
+          "source_refs": [
+            "src_902007"
+          ]
+        },
+        "history": {
+          "summary": "Современный ландшафт Долины кувшинов несёт два разных исторических слоя: археологию железного века и интенсивное бомбардировочное наследие XX века. Tourism Laos отдельно предупреждает о UXO и безопасном посещении только по расчищенным и размеченным маршрутам; эти два слоя нельзя смешивать в один narrative.",
+          "source_refs": [
+            "src_902007",
+            "src_902008"
+          ]
         }
       },
       {
@@ -907,13 +931,24 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Хуапхан / Вьенгсай / Нам-Эт",
         "geography": {
-          "summary": "Горный северо-восток у вьетнамской границы с карстовыми долинами, лесными хребтами и удалёнными речными бассейнами."
+          "summary": "Хуапхан — горный северо-восток Лаоса у границы с Вьетнамом. Viengxay расположен в известняковой пещерной зоне, а Nam Et–Phou Louey охватывает значительно более крупный лесной массив на стыке нескольких провинций; это два самостоятельных экспедиционных контура внутри одной региональной карточки.",
+          "source_refs": [
+            "src_902009",
+            "src_902010"
+          ]
         },
         "relief": {
-          "summary": "Сильно расчленённый горный рельеф; между долинами дороги длинные и медленные даже при небольшом расстоянии по прямой."
+          "summary": "Регион сильно расчленён: дороги проходят через горные перевалы и долины, а Nam Et–Phou Louey занимает крупный горный массив. Время движения определяется не километрами по прямой, а серпантинами, состоянием дорог и удалённостью park access points.",
+          "source_refs": [
+            "src_902009",
+            "src_902010"
+          ]
         },
         "geology": {
-          "summary": "Вьенгсай расположен в карстовой области с крупными пещерными системами."
+          "summary": "Viengxay находится в известняковой карстовой области с сетью из более чем 100 пещер; несколько из них имеют отдельную историческую функцию. Геологическое описание конкретных cave systems нужно отделять от их военного использования.",
+          "source_refs": [
+            "src_902009"
+          ]
         },
         "climate": {
           "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -924,9 +959,9 @@
           ]
         },
         "nature": {
-          "summary": "Нам-Эт — Пху-Луэй относится к крупнейшим охраняемым лесным массивам страны.",
+          "summary": "Nam Et–Phou Louey — один из крупнейших национальных парков Лаоса площадью около 5 070 км². Парк охватывает 10 районов в трёх провинциях, более 100 деревень вокруг территории и свыше 300 видов птиц; региональная карточка должна отражать масштаб protected area, а не только один wildlife tour.",
           "source_refs": [
-            "src_000505"
+            "src_902010"
           ],
           "dangerous_animals": {
             "status": "Ядовитые змеи и комары являются общестрановыми рисками, но точную локальную встречаемость видов необходимо подтверждать отдельно.",
@@ -963,22 +998,25 @@
               "src_000498"
             ]
           },
-          "operational_context": "Хуапхан входит в перечень наиболее затронутых UXO провинций. За пределами очищенных и используемых маршрутов нельзя уходить в лес или на старые поля без локального подтверждения.",
+          "operational_context": "Для Nam Et–Phou Louey вход в wildlife experiences идёт через park-managed tours с национальным парковым гидом и community team. Это реальное ограничение доступа; вне него нельзя обещать самостоятельный свободный проход по тем же маршрутам.",
           "source_refs": [
-            "src_000498"
+            "src_000498",
+            "src_902010"
           ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Регион дорожный, но медленный; для охраняемых лесных маршрутов проводник оправдан правилами доступа, навигацией и удалённостью.",
+          "summary": "Viengxay и Nam Et–Phou Louey требуют разных схем доступа. Парк прямо указывает headquarters в Muang Hiam и допускает вход в wildlife areas через свои организованные park experiences; здесь гид оправдан не как пакетный тур, а как фактическое правило доступа и часть conservation model.",
           "source_refs": [
-            "src_000505"
+            "src_902009",
+            "src_902010"
           ]
         },
         "ethnography": {
-          "summary": "Регион многоэтничен: лао, хмонг, кхму и другие группы распределены по горным районам и долинам.",
+          "summary": "Вокруг Nam Et–Phou Louey живут более 100 деревень и восемь этнических групп; сам парк называет Khmu, Hmong и Lao крупнейшими группами. Для базы это означает необходимость привязывать конкретную общину к конкретной деревне, а не размазывать этнографию по всей территории парка.",
           "source_refs": [
-            "src_000732"
+            "src_000732",
+            "src_902010"
           ]
         },
         "local_reference_provenance": {
@@ -989,7 +1027,9 @@
             "src_000498",
             "src_000732",
             "src_902003",
-            "src_000500"
+            "src_000500",
+            "src_902009",
+            "src_902010"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -1008,6 +1048,12 @@
             "src_902001"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Viengxay Cave City использовался Pathet Lao как скрытый штаб в период Индокитайской войны; Tourism Laos указывает, что пещеры служили не только убежищами лидеров, но и помещениями для больниц, школ, рынков, фабрик и других функций. Это документированная политико-военная история, а не туристическая легенда.",
+          "source_refs": [
+            "src_902009"
+          ]
         }
       },
       {
@@ -1279,10 +1325,16 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Луангнамтха / Нам-Ха",
         "geography": {
-          "summary": "Горный северо-запад с межгорными котловинами, лесными хребтами и речными долинами у китайской и мьянманской границ."
+          "summary": "Луангнамтха — горный северо-запад Лаоса у китайской и мьянманской границ. Nam Ha National Protected Area окружает важные trekking/biking corridors, а город Luang Namtha остаётся главным сервисным узлом; Muang Sing, Muang Long, Nalae и Viengphoukha — отдельные районные направления.",
+          "source_refs": [
+            "src_902011"
+          ]
         },
         "relief": {
-          "summary": "Крутые лесные склоны и длинные подъёмы; реальный дневной километраж сильно зависит от грязи и состояния троп."
+          "summary": "Tourism Laos прямо характеризует провинцию как mountainous terrain. Треки проходят через evergreen forest, холмы и деревни; дневной километраж сильно зависит от уклонов и дождей, поэтому расстояние по карте здесь особенно плохо отражает фактическое время.",
+          "source_refs": [
+            "src_902011"
+          ]
         },
         "climate": {
           "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -1293,7 +1345,10 @@
           ]
         },
         "hydrology": {
-          "summary": "Малые горные реки и ручьи быстро реагируют на ливни; броды требуют локальной проверки."
+          "summary": "Для Nam Ha важны горные ручьи и river/kayak segments, но конкретные броды и водные точки должны храниться на уровне маршрутов. Региональный слой фиксирует только то, что river-based и trekking routes сосуществуют в одной protected-area системе.",
+          "source_refs": [
+            "src_902011"
+          ]
         },
         "nature": {
           "summary": "Нам-Ха — крупная охраняемая территория северного Лаоса с лесами и многоэтничными деревнями.",
@@ -1328,22 +1383,24 @@
           "checked_at": "2026-09-30"
         },
         "safety": {
-          "operational_context": "Главные полевые риски — мокрые тропы, броды, удалённость и ограниченная связь; следовать используемым тропам и указаниям общин/администрации.",
+          "operational_context": "Основные ограничения — мокрые тропы, броды, удалённость, ограниченная связь и необходимость согласовывать посещение некоторых деревень/маршрутов через local tourism structures. Перед многодневным выходом нужно проверять текущие условия у Tourism Information Center или местной администрации.",
           "source_refs": [
-            "src_000505"
+            "src_000505",
+            "src_902011"
           ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Луангнамтха — базовый дорожный узел; дальше маршрут часто переходит в грунтовые дороги и пешие треки.",
+          "summary": "Luang Namtha town — основной базовый узел. Tourism Laos отдельно указывает bicycle/motorbike routes к Muang Sing, Muang Long, Nalae и Viengphoukha, а к Ban Nam Dee и отдельным falls/caves — короткие локальные legs. Для сложных jungle routes местный guide рационален из-за навигации, community access и правил protected area, а не потому что самостоятельный путешественник «не справится».",
           "source_refs": [
-            "src_000505"
+            "src_902011"
           ]
         },
         "ethnography": {
-          "summary": "Один из наиболее этнолингвистически разнообразных районов страны: кхму, акха, лантен, хмонг, тай-дам, тай-лы и другие группы; состав различается по конкретным деревням.",
+          "summary": "Провинция отличается высокой этнолингвистической плотностью. Tourism Laos описывает множество villages и ethnic communities вдоль trekking/biking routes; Ban Nam Dee отдельно связан с Lanten community. Поэтому homestay и cultural visits должны ссылаться на конкретные деревни, а не на абстрактный «hill tribe experience».",
           "source_refs": [
-            "src_000732"
+            "src_000732",
+            "src_902011"
           ]
         },
         "local_reference_provenance": {
@@ -1353,7 +1410,8 @@
             "src_902002",
             "src_000732",
             "src_902003",
-            "src_000500"
+            "src_000500",
+            "src_902011"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -1373,6 +1431,12 @@
             "src_902001"
           ],
           "checked_at": "2026-09-30"
+        },
+        "culture": {
+          "summary": "Живая культурная среда маршрутов Нам-Ха строится вокруг деревень, ремёсел и повседневного хозяйства, а не постановочных шоу. Tourism Laos прямо рекомендует договариваться о специальных танцевальных/музыкальных представлениях через local guide и отдельно отмечает, что реальные village festivals можно наблюдать как часть жизни общины.",
+          "source_refs": [
+            "src_902011"
+          ]
         }
       },
       {
@@ -9381,6 +9445,81 @@
         "phounoy",
         "agriculture",
         "regional_culture"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_PLAIN_OF_JARS_UNESCO",
+      "canonical_id": "src_902007",
+      "publisher": "UNESCO World Heritage Centre — Megalithic Jar Sites in Xiengkhuang – Plain of Jars",
+      "url": "https://whc.unesco.org/en/list/1587/",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_geography",
+        "regional_archaeology",
+        "regional_history",
+        "site_distribution",
+        "uxo_clearance"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_PLAIN_OF_JARS_TOURISM",
+      "canonical_id": "src_902008",
+      "publisher": "Tourism Laos — Plain of Jars",
+      "url": "https://www.tourismlaos.org/welcome/ancient-mysteries/plain-of-jars/",
+      "kind": "government",
+      "used_for": [
+        "regional_history",
+        "uxo",
+        "visitor_safety",
+        "regional_transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_HOUAPHAN_TOURISM",
+      "canonical_id": "src_902009",
+      "publisher": "Tourism Laos — Houaphanh Province",
+      "url": "https://www.tourismlaos.org/northern-provinces/houaphanh-province/",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_geology",
+        "viengxay",
+        "regional_history",
+        "regional_transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_NAM_ET_PHOU_LOUEY_OFFICIAL",
+      "canonical_id": "src_902010",
+      "publisher": "Nam Et–Phou Louey National Park — About the Park",
+      "url": "https://www.namet.org/about-the-park/",
+      "kind": "park_authority",
+      "used_for": [
+        "regional_nature",
+        "regional_ethnography",
+        "protected_area",
+        "access_rules",
+        "regional_transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "LA_LUANG_NAMTHA_TOURISM",
+      "canonical_id": "src_902011",
+      "publisher": "Tourism Laos — Luang Namtha Province",
+      "url": "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_ethnography",
+        "regional_culture",
+        "regional_transport",
+        "nam_ha"
       ],
       "accessed": "2026-09-30"
     }

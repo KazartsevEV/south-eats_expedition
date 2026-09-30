@@ -355,6 +355,47 @@
       "RUS_MFA",
       "DNP_BOOKING",
       "CAAT_DRONE"
+    ],
+    "criminal_liability": {
+      "scope": "Не исчерпывающий перечень. Здесь собраны уголовно-правовые риски, которые особенно легко недооценить иностранному путешественнику; точная квалификация зависит от фактов дела и действующей редакции закона.",
+      "items": [
+        {
+          "topic": "lese_majeste",
+          "offence": "Клевета, оскорбление или угроза в отношении короля, королевы, наследника престола или регента (статья 112 Уголовного кодекса).",
+          "what_counts": "Риск касается не только прямой речи: публичные и сетевые публикации/репосты могут рассматриваться властями в контексте этой нормы; практическая трактовка шире бытового понимания «оскорбления».",
+          "penalty": "Лишение свободы от 3 до 15 лет.",
+          "nuance": "Не сводить к правилу этикета. Это уголовный состав; нейтрально описывать норму без оценки её оправданности.",
+          "source_ids": [
+            "TH_CRIMINAL_CODE",
+            "TH_TRAVEL_LOCAL_LAWS"
+          ]
+        },
+        {
+          "topic": "criminal_defamation",
+          "offence": "Клевета в Таиланде может влечь уголовную, а не только гражданскую ответственность.",
+          "what_counts": "Публичные обвинения и публикации, включая отрицательные отзывы о человеке или бизнесе, могут создавать уголовно-правовой риск.",
+          "penalty": "Конкретная санкция зависит от состава и способа распространения; на страновой странице не сводить все случаи к одной цифре.",
+          "nuance": "Фиксировать как отдельный правовой риск, а не как «нежелательную грубость».",
+          "source_ids": [
+            "TH_TRAVEL_LOCAL_LAWS"
+          ]
+        },
+        {
+          "topic": "illegal_drugs",
+          "offence": "Незаконные наркотики: употребление, хранение, ввоз/вывоз и сбыт образуют разные составы с тяжёлыми санкциями.",
+          "what_counts": "Не считать туристическую доступность отдельных веществ доказательством их законности; отдельно проверять контролируемые лекарства и каннабис-продукты.",
+          "penalty": "Возможны длительные сроки лишения свободы, крупные штрафы; по отдельным наркотическим преступлениям законодательство предусматривает предельно строгие санкции.",
+          "nuance": "Точную санкцию хранить на уровне состава/вещества/количества, не писать универсальную цифру.",
+          "source_ids": [
+            "TH_TRAVEL_LOCAL_LAWS"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "criminal_law_source_ids": [
+      "TH_CRIMINAL_CODE",
+      "TH_TRAVEL_LOCAL_LAWS"
     ]
   },
   "sources": [
@@ -590,6 +631,34 @@
       ],
       "accessed": "2026-09-30",
       "canonical_id": "src_000817"
+    },
+    {
+      "id": "TH_CRIMINAL_CODE",
+      "canonical_id": "src_000849",
+      "publisher": "Department of Groundwater Resources Thailand — legal publication of the Penal Code",
+      "url": "https://www.dgr.go.th/law/th/newsAll/368/9305",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "lese_majeste",
+        "state_security"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "TH_TRAVEL_LOCAL_LAWS",
+      "canonical_id": "src_000850",
+      "publisher": "U.S. Department of State — Thailand Travel Advisory",
+      "url": "https://travel.state.gov/en/international-travel/travel-advisories/thailand.html",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "traveler_legal_risk",
+        "lese_majeste",
+        "criminal_defamation",
+        "drug_law"
+      ],
+      "accessed": "2026-09-30"
     }
   ],
   "uncertainties": [

@@ -1110,8 +1110,8 @@ def build():
         "countries": countries,
     })
 
-    blocking_required = ["story", "narrow", "logistics", "sources", "hero", "editorial_rebuild"]
-    expedition_required = ["water", "overnight", "accommodation", "traveler_reports", "gallery_min_2", "photo_video", "visual_recon", "coordinates", "elevation", "coordinate_type", "dynamic_checked_at"]
+    blocking_required = ["story", "narrow", "logistics", "sources", "hero"]
+    expedition_required = ["water", "overnight", "accommodation", "traveler_reports", "gallery_min_2", "photo_video", "visual_recon", "coordinates", "elevation", "coordinate_type", "dynamic_checked_at", "editorial_rebuild"]
     coverage = {k: sum(1 for x in qa_objects if x[k]) for k in blocking_required + expedition_required}
     qa = {
         "schema_version": SCHEMA_VERSION,

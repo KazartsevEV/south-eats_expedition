@@ -54,12 +54,14 @@
     "object_elevation": {
       "representative_m": null,
       "min_m": null,
-      "max_m": null,
-      "reference_type": null,
-      "accuracy": "unknown",
-      "source_refs": [],
-      "checked_at": null,
-      "notes": null
+      "max_m": 1036,
+      "reference_type": "maximum",
+      "accuracy": "high",
+      "source_refs": [
+        "src_stage_my_0250"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "1036 м — вершина Gunung Besar, высшая точка Endau-Rompin. Нижняя граница высот парка этим источником не задана, поэтому не выдумывается."
     }
   },
   "narrative": {
@@ -368,13 +370,13 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,

@@ -39,7 +39,8 @@
       "2026-10-01 object rebuild v2: Angkor Archaeological Park fully rewritten as a connected sourced narrative with substantive history, culture, geography, ethnography and a separated Ket Mealea legend; logistics now preserve honest unknowns; new editorial rebuild QA is required for Cambodia cards.",
       "PH-reference revalidation 2026-10-01: all 18 canonical Cambodia geo entities pass their generated coverage-role contracts; 14 sourced administrative masks are present, while Phnom Kulen, Northern Temple Belt, Cardamom Mountains and Tonle Sap remain without invented polygons. Existing object-card payloads were not edited.",
       "Cambodia geometry QA 2026-10-01: added country mask from the same Natural Earth 1:10m lineage used by the Philippines reference; added sourced Phnom Kulen National Park and Tonle Sap Biosphere Reserve masks; Cardamom Mountains uses a transparent derived operational core from Central + Southern Cardamom national-park polygons, explicitly not a full geomorphological range boundary.",
-      "2026-10-01 Angkor editorial rewrite: replaced abstract/AI-like exposition with denser factual prose; added PNAS LiDAR archaeology, Science Advances population model, PNAS climate evidence and 17th-century Japanese pilgrimage research; legend and local cult remain explicitly separated from documented history."
+      "2026-10-01 Angkor editorial rewrite: replaced abstract/AI-like exposition with denser factual prose; added PNAS LiDAR archaeology, Science Advances population model, PNAS climate evidence and 17th-century Japanese pilgrimage research; legend and local cult remain explicitly separated from documented history.",
+      "2026-10-01 media standard raised to 5 unique images per attraction; Angkor Archaeological Park upgraded first to five sourced Wikimedia Commons images."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -90,10 +91,11 @@
       "policy": "Каждое ненулевое elevation_m имеет отдельный elevation_source; соседние высоты не подставляются вместо высоты объекта."
     },
     "gallery_upgrade_progress": {
-      "updated": "2026-09-28",
-      "objects_with_gallery_min_2": 19,
+      "updated": "2026-10-01",
+      "objects_with_gallery_min_5": 1,
       "total_objects": 19,
-      "status": "complete"
+      "status": "in_progress",
+      "policy": "Каждая достопримечательность должна иметь минимум 5 уникальных изображений; cover входит в эти пять и не считается повторно, если тот же URL уже есть в gallery."
     },
     "elevation_upgrade_progress": {
       "updated": "2026-09-28",
@@ -122,7 +124,14 @@
         "annotation.myths_legends_beliefs"
       ]
     },
-    "country_source_id_policy": "Cambodia country-level canonical source IDs are stored on source entries; they are stable and intentionally outside the shared migration registry used by legacy object/source IDs."
+    "country_source_id_policy": "Cambodia country-level canonical source IDs are stored on source entries; they are stable and intentionally outside the shared migration registry used by legacy object/source IDs.",
+    "media_standard": {
+      "version": "media_gallery_v2",
+      "minimum_unique_images_per_attraction": 5,
+      "cover_counts_toward_minimum": true,
+      "duplicate_url_policy": "same image URL counts once",
+      "source_requirement": "каждое изображение должно иметь проверяемую страницу-источник, автора/правообладателя при наличии, лицензию или условия использования и checked_at"
+    }
   },
   "overview": {
     "summary": "Континентальное государство Нижнего Меконга с побережьем Сиамского залива и наследием Ангкорской империи.",
@@ -867,6 +876,33 @@
               "license": "CC BY-SA 2.5",
               "artist": "Jackerhack",
               "last_checked": "2026-09-28"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angkor%20Thom%20-%20Bayon%20-%20General.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Angkor_Thom_-_Bayon_-_General.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 4.0",
+              "artist": "Lohen11",
+              "last_checked": "2026-10-01",
+              "subject": "Байон, общий вид"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ta%20Prohm.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Ta_Prohm.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "artist": "Sasha Isachenko",
+              "last_checked": "2026-10-01",
+              "subject": "Та-Пром, храм среди деревьев"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Angkor%20Thom%20%286202448596%29.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Angkor_Thom_(6202448596).jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 2.0",
+              "artist": "Jorge Láscar",
+              "last_checked": "2026-10-01",
+              "subject": "Ангкор-Тхом"
             }
           ]
         },

@@ -504,10 +504,16 @@ def location_context(location):
 def gallery_from(obj):
     ill = obj.get("illustration") or {}
     gallery = []
+    seen_urls = set()
     if isinstance(ill.get("gallery"), list):
         for row in ill["gallery"]:
-            if isinstance(row, dict) and row.get("static_url"):
-                gallery.append(row)
+            if not isinstance(row, dict):
+                continue
+            url = row.get("static_url") or row.get("url")
+            if not url or url in seen_urls:
+                continue
+            seen_urls.add(url)
+            gallery.append(row)
     if ill.get("static_url"):
         candidate = {
             "url": ill.get("static_url"),
@@ -517,7 +523,7 @@ def gallery_from(obj):
             "artist": ill.get("artist"),
             "last_checked": ill.get("last_checked"),
         }
-        if not any(x.get("url") == candidate["url"] for x in gallery):
+        if candidate["url"] not in seen_urls:
             gallery.insert(0, candidate)
     return gallery
 
@@ -855,7 +861,7 @@ def build():
                 "visual_recon": visual_recon,
                 "media": {
                     "gallery": gallery,
-                    "gallery_status": "carousel_ready" if len(gallery) >= 2 else "single_image_source",
+                    "gallery_status": "standard_5_ready" if len(gallery) >= 5 else "below_standard_5",
                 },
                 "provenance": {
                     "source_refs": source_refs,
@@ -942,7 +948,7 @@ def build():
                 "traveler_reports": bool(card.get("traveler_reports")),
                 "sources": bool(obj.get("sources")),
                 "hero": bool(gallery),
-                "gallery_min_2": len(gallery) >= 2,
+                "gallery_min_5": len(gallery) >= 5,
                 "photo_video": bool(card.get("media")),
                 "visual_recon": bool(visual_recon.get("best_time") or visual_recon.get("viewpoints")),
                 "coordinates": bool(geo.get("primary_location")),
@@ -1111,7 +1117,7 @@ def build():
     })
 
     blocking_required = ["story", "narrow", "logistics", "sources", "hero"]
-    expedition_required = ["water", "overnight", "accommodation", "traveler_reports", "gallery_min_2", "photo_video", "visual_recon", "coordinates", "elevation", "coordinate_type", "dynamic_checked_at", "editorial_rebuild"]
+    expedition_required = ["water", "overnight", "accommodation", "traveler_reports", "gallery_min_5", "photo_video", "visual_recon", "coordinates", "elevation", "coordinate_type", "dynamic_checked_at", "editorial_rebuild"]
     coverage = {k: sum(1 for x in qa_objects if x[k]) for k in blocking_required + expedition_required}
     qa = {
         "schema_version": SCHEMA_VERSION,

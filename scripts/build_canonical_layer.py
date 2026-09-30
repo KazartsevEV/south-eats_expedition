@@ -1094,6 +1094,7 @@ def build():
             "overnight": bool(logistics.get("overnight_and_camping")),
             "traveler_reports": bool(reports),
             "visual_recon": bool(visual_recon.get("best_time") or visual_recon.get("viewpoints")),
+            "gallery_min_5": len(set(media_ids)) >= 5,
             "editorial_rebuild": code != "KH" or rebuild_review.get("status") == "passed",
         }
         status = "passed" if all(checks.values()) else "incomplete"

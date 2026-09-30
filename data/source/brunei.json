@@ -2897,7 +2897,7 @@
           },
           "logistics": {
             "access": "По шоссе из BSB/Сериа; в городе пешком или Dart.",
-            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
+            "public_transport": "Brunei Tourism рекомендует Dart; официальный листинг не обещает прямой регулярный автобус к рынку.",
             "last_mile": null,
             "typical_visit_hours": [
               1.5,
@@ -2915,7 +2915,21 @@
             "overnight_and_camping": "рынок и набережная не кемпинг; гостиница",
             "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "water_structured": {
+              "at_object": true,
+              "quality": "potable",
+              "last_reliable_source": {
+                "description": "рынок: напитки и готовая еда у продавцов",
+                "distance_m": 0
+              },
+              "natural_sources": [],
+              "notes": "Для питья использовать купленные напитки/воду; природных источников у объекта не учитывать."
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Рынок не является объектом размещения; подтверждённого разрешённого кемпинга у рынка не найдено."
+            }
           },
           "climate": {
             "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
@@ -2923,10 +2937,10 @@
             "site_specific_notes": null
           },
           "operations": {
-            "hours": "Pasarneka/Tamu Тутонг: четверг примерно 06:00–12:00 по Бруней туризм.",
-            "ticket": "Вход свободный; покупки отдельно.",
+            "hours": "Четверг 06:00–12:00; в остальные дни закрыто.",
+            "ticket": "Вход свободный; расчёт наличными.",
             "closure_notes": null,
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/street-food/tamu-tutong/"
           },
           "safety": {
@@ -2946,9 +2960,9 @@
             "visual_scouting": {
               "best_time": "07:00–10:00",
               "best_weather_light": "Крытые секции сохраняют мягкий свет и во время дождя.",
-              "viewpoints_for_photo_video": [
+              "viewpoints_for_photo_video": [],
+              "viewpoint_candidates_unverified": [
                 "проход между рядами на уровне глаз",
-                "край прохода у рыбного/овощного ряда на уровне прилавков",
                 "край рынка, где видна связь с улицей"
               ]
             },
@@ -2960,11 +2974,21 @@
             "culture_ethnography": "Лучший материал — разговор о происхождении продукта, сезонности и способе приготовления.",
             "geography_geology": "Тутонг лежит у одноимённой реки недалеко от моря; речная долина исторически определяла размещение поселений и торговых точек."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "поздно приезжать плохо: часть продавцов уже уходит"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "market_schedule",
+              "summary": "Единственный доступный подробный пользовательский отзыв (июль 2019) подтверждает именно четверговый утренний формат 06:00–12:00 и большой выбор сельской продукции. Расписание независимо подтверждено актуальной официальной страницей.",
+              "observed_period": "2019-07",
+              "confidence": "low",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Tamu Tutong Complex traveler report",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g3135192-d13545601-Reviews-Tamu_Tutong_Complex-Tutong_Tutong_District.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "The Lanes Hotel",
@@ -3164,7 +3188,7 @@
           },
           "logistics": {
             "access": "Лучше частный автомобиль/Dart; общественный транспорт ограничен.",
-            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
+            "public_transport": "Официальная страница рекомендует Dart; прямой удобный общественный транспорт к озеру не заявлен.",
             "last_mile": null,
             "typical_visit_hours": [
               2,
@@ -3182,7 +3206,27 @@
             "overnight_and_camping": "свободный кемпинг не предполагать; только после подтверждения администрации/частной площадки",
             "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "water_structured": {
+              "at_object": null,
+              "quality": "unknown",
+              "last_reliable_source": {
+                "description": "надёжную современную точку продажи питьевой воды внутри парка подтвердить не удалось; запас брать из Tutong/по дороге",
+                "distance_m": null
+              },
+              "natural_sources": [
+                {
+                  "type": "lake",
+                  "quality": "treatment_required",
+                  "notes": "озёрную воду не считать питьевой без обработки"
+                }
+              ],
+              "notes": "Старые отзывы прямо советуют привозить воду; актуальной торговли внутри парка в официальном источнике не подтверждено."
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Общего разрешения на самостоятельный кемпинг в доступных актуальных источниках не найдено."
+            }
           },
           "climate": {
             "best_period": "Утро в более сухие месяцы; после сильных дождей настилы и подъезды могут быть менее удобны.",
@@ -3190,10 +3234,10 @@
             "site_specific_notes": null
           },
           "operations": {
-            "hours": "Официальная страница Бруней туризм указывает ежедневное посещение 09:00–17:00; перед выездом сверять.",
+            "hours": "Ежедневно 09:00–17:00.",
             "ticket": "Если отдельная плата не указана — уточнять на месте.",
             "closure_notes": null,
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/tasek-merimbun-heritage-park/"
           },
           "safety": {
@@ -3215,7 +3259,33 @@
               "best_time": "06:30–09:00 и 16:30–18:00",
               "best_weather_light": "лёгкая дымка полезна; сильный ветер ломает отражения",
               "viewpoints_for_photo_video": [
-                "кромка тёмной воды у настила",
+                {
+                  "id": "vp_lakeshore_01",
+                  "name": "Берег Tasek Merimbun",
+                  "description": "Документированная Commons-точка на западном берегу озера с открытым видом на чёрную воду и прибрежную растительность.",
+                  "coordinates": {
+                    "lat": 4.59191,
+                    "lon": 114.673297,
+                    "elevation_m": null
+                  },
+                  "access": "Береговая зона парка; конкретное состояние настила/подхода проверять на месте.",
+                  "best_time": "early_morning",
+                  "best_weather_light": "Штиль важен для отражений; туман возможен утром.",
+                  "useful_equipment": [
+                    "wide",
+                    "standard",
+                    "telephoto"
+                  ],
+                  "source": {
+                    "type": "media_repository",
+                    "title": "Tasek Merimbun Heritage Park.Brunei. — documented camera location",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Tasek_Merimbun_Heritage_Park.Brunei._(9565514695).jpg",
+                    "accessed": "2026-10-01"
+                  }
+                }
+              ],
+              "viewpoint_candidates_unverified": [
                 "настил/мост как ведущая линия",
                 "просвет между береговой растительностью на открытую воду"
               ]
@@ -3228,11 +3298,34 @@
             "culture_ethnography": "Местная традиция связывает название озера с человеком по имени Imbun, которого называют ранним поселенцем. В фольклоре фигурирует Pulau Лаби-Лаби — 'остров черепахи' — и рассказы о хранителях озера; это следует маркировать как местный фольклор, а не исторический факт.",
             "geography_geology": "Мелководное пресноводное озеро в лесисто-болотной котловине; чайно-коричневый цвет воды лучше читается при боковом свете."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "удалённость, мало сервисов, инфраструктура тихая"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "supplies",
+              "summary": "В отзывах 2017–2018 посетители сообщали об отсутствии кафе/продавцов рядом и советовали привозить еду и воду. Это старые наблюдения; использовать их как консервативное планировочное допущение, а не как гарантированное состояние 2026 года.",
+              "observed_period": "2017-2018",
+              "confidence": "low",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Tasek Merimbun Heritage Park traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293937-d2408776-Reviews-Tasek_Merimbun_Heritage_Park-Brunei_Darussalam.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "infrastructure",
+              "summary": "Отзывы 2018–2019 описывали сломанные участки мостков и слабое обслуживание троп. Актуальная официальная страница 2026 снова рекламирует boardwalk paths, поэтому старую жалобу нельзя переносить как текущий факт без полевой проверки.",
+              "observed_period": "2018-2019",
+              "confidence": "low",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Tasek Merimbun Heritage Park traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293937-d2408776-Reviews-Tasek_Merimbun_Heritage_Park-Brunei_Darussalam.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "The Lanes Hotel",
@@ -3453,7 +3546,27 @@
             "terrain_and_movement": "Есть грунтовые/лесные участки и уклоны.",
             "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "water_structured": {
+              "at_object": null,
+              "quality": "unknown",
+              "last_reliable_source": {
+                "description": "Bandar Seri Begawan до входа в парк",
+                "distance_m": null
+              },
+              "natural_sources": [
+                {
+                  "type": "stream_or_waterfall",
+                  "quality": "treatment_required",
+                  "notes": "ручьи/водопад не считать питьевой водой"
+                }
+              ],
+              "notes": "Надёжная современная питьевая точка внутри парка не подтверждена."
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Парк используется для дневной рекреации; подтверждённого режима самостоятельного кемпинга в актуальных источниках не найдено."
+            }
           },
           "climate": {
             "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
@@ -3464,7 +3577,7 @@
             "hours": "Официальная туристическая страница описывает парк, но в извлечённом тексте не даёт однозначного отдельного графика; ориентироваться на локальные таблички и дневное время.",
             "ticket": "Обычно свободный городской парк.",
             "closure_notes": null,
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/tasek-lama-park/"
           },
           "safety": {
@@ -3484,8 +3597,9 @@
             "visual_scouting": {
               "best_time": "06:30–09:00",
               "best_weather_light": "после короткого дождя лес красивее, но дождаться схода воды со ступеней",
-              "viewpoints_for_photo_video": [
-                "входная дорожка для непрерывного перехода «город → лес»",
+              "viewpoints_for_photo_video": [],
+              "viewpoint_candidates_unverified": [
+                "входная дорожка для перехода «город → лес»",
                 "лестницы/корни на подъёме",
                 "резервуар или обзорная точка для широкого контекста"
               ]
@@ -3498,12 +3612,47 @@
             "culture_ethnography": "Парк живёт как место утренних тренировок и прогулок местных жителей; именно эта городская функция интереснее попытки выдать его за 'дикие джунгли'.",
             "geography_geology": "Холмистая лесная местность над BSB; после дождя корни, камень и бетонные ступени становятся значительно скользче."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "после дождя скользко",
-              "водопад сезонно небольшой"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "trail_condition",
+              "summary": "В январе 2026 посетитель описал короткий красный круг как 10–15 минут по асфальтированной дорожке, но более глубокий синий маршрут — с размытыми участками и верёвками; во влажную погоду он становится существенно сложнее.",
+              "observed_period": "2026-01",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Tasek Lama Recreational Park traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d3242907-Reviews-Tasek_Lama_Recreational_Park-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "maintenance",
+              "summary": "Два январских отзыва 2026 года независимо отмечают необходимость ремонта части оборудования и площадок; один отдельно предупреждает о подгнивших перилах на смотровых у водопада.",
+              "observed_period": "2026-01",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Tasek Lama Recreational Park traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d3242907-Reviews-Tasek_Lama_Recreational_Park-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "trailhead_hint",
+              "summary": "Отзыв мая 2025 даёт практический ориентир начала более высокой тропы: от водопада пройти примерно 20 м мимо climbing wall, затем тропа уходит влево вверх и делает петлю к главному входу.",
+              "observed_period": "2025-05",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Tasek Lama Recreational Park traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d3242907-Reviews-Tasek_Lama_Recreational_Park-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",
@@ -5046,7 +5195,7 @@
           },
           "logistics": {
             "access": "Короткий автомобильный трансфер из Бандар-Сери-Бегаван в сторону Jerudong; проще всего Dart/такси, автобус — бюджетная альтернатива.",
-            "public_transport": "По данным Бруней туризм, городской автобус обычно работает примерно 06:00–20:00 и стоит около BND 1 за поездку; до начала тропы маршрут и остановку перепроверить перед выездом.",
+            "public_transport": "Официально доступны Dart и городской автобус; средний автобусный тариф около BND 1, сеть работает примерно 06:00–20:00. Для точного входа Dart предсказуемее.",
             "last_mile": "Тропа начинается непосредственно у инфраструктуры/парковки парка; отдельного длинного пешего подхода нет.",
             "typical_visit_hours": [
               2,
@@ -5064,7 +5213,21 @@
             "terrain_and_movement": "Маршруты холмистые, местами с крутыми ступенями; жара и мокрые корни/ступени важнее абсолютной высоты.",
             "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "water_structured": {
+              "at_object": null,
+              "quality": "unknown",
+              "last_reliable_source": {
+                "description": "Jerudong/городская застройка до входа",
+                "distance_m": null
+              },
+              "natural_sources": [],
+              "notes": "Официальная страница не подтверждает питьевые точки внутри парка; воду брать заранее."
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Подтверждённого режима самостоятельного кемпинга в актуальных источниках не найдено."
+            }
           },
           "climate": {
             "best_period": "Февраль–апрель обычно немного суше; для хайка лучше первые часы после открытия, пока ниже температура.",
@@ -5073,10 +5236,10 @@
           },
           "operations": {
             "status": "open/verify",
-            "hours": "Daily 07:30–18:00 per Бруней туризм.",
+            "hours": "Ежедневно 07:30–18:00.",
             "ticket": "Публичный рекреационный парк; отдельная плата за вход на официальной странице не указана — перед выездом проверить, не изменился ли режим.",
             "closure_notes": "После сильного дождя крутые участки становятся скользкими; закладывать время на выход до закрытия.",
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/"
           },
           "safety": {
@@ -5096,9 +5259,34 @@
               "best_time": "06:00–09:00",
               "best_weather_light": "сухое утро после ночного дождя",
               "viewpoints_for_photo_video": [
-                "нижние бетонные лестницы в лесу",
-                "верхний просвет/смотровой участок, откуда видны слои холмов",
-                "гребневой участок тропы, где читается набор высоты"
+                {
+                  "id": "vp_trail_01",
+                  "name": "Точка на лесной тропе Bukit Shahbandar",
+                  "description": "Документированная Commons-точка на маршруте внутри парка; полезна для фиксации характера лесной тропы и рельефа, а не как гарантированная панорама.",
+                  "coordinates": {
+                    "lat": 4.951239,
+                    "lon": 114.856544,
+                    "elevation_m": null
+                  },
+                  "access": "Внутренняя тропа парка; выбирать петлю по карте у входа.",
+                  "best_time": "early_morning",
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    "wide",
+                    "standard"
+                  ],
+                  "source": {
+                    "type": "media_repository",
+                    "title": "Bukit Shahbandar Forest Recreation Park hike 01 — documented camera location",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Bukit_Shahbandar_Forest_Recreation_Park_hike_01.jpg",
+                    "accessed": "2026-10-01"
+                  }
+                }
+              ],
+              "viewpoint_candidates_unverified": [
+                "верхний просвет/смотровой участок",
+                "гребневой участок тропы"
               ]
             },
             "drone": "Перед запуском проверить авиационные правила Брунея и разрешение администрации парка; не летать над посетителями.",
@@ -5109,12 +5297,34 @@
             "culture_ethnography": "Утренние и вечерние группы бегунов и хайкеров дают материал о городской культуре активного отдыха.",
             "geography_geology": "Рельеф заметно круче, чем кажется по карте; после ливня глинистые и корневые участки становятся скользкими."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "жара и набор высоты недооцениваются",
-              "после дождя скользко"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "route_choice",
+              "summary": "Отзыв августа 2024 отмечает множество коротких и длинных вариантов троп, что согласуется с официальным описанием парка и маршрута Nine Hills.",
+              "observed_period": "2024-08",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Bukit Shahbandar Forest Recreation Park traveler report",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d13167598-Reviews-Bukit_Shahbandar_Forest_Recreation_Park-Bandar_Seri_Begawan_Brunei_Muara_Distric.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "wildlife",
+              "summary": "Тот же отзыв 2024 года упоминает макак у внешней части парка, выпрашивающих еду; не кормить животных.",
+              "observed_period": "2024-08",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Bukit Shahbandar Forest Recreation Park traveler report",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d13167598-Reviews-Bukit_Shahbandar_Forest_Recreation_Park-Bandar_Seri_Begawan_Brunei_Muara_Distric.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",
@@ -5295,7 +5505,7 @@
             "public_transport": "До набережной — пешком из центра или Dart; участок с манграми и дикая природа доступен только на лодке.",
             "last_mile": "Точку посадки и конкретный речной маршрут определяет лодочник.",
             "typical_visit_hours": [
-              3,
+              1,
               3
             ],
             "permit_or_guide": "лодочник необходим для движения по протокам; отдельный экскурсионный гид не обязателен",
@@ -5310,7 +5520,27 @@
             "terrain_and_movement": "Посадка в небольшую лодку по ступеням; вечером в слабом свете тяжёлая съёмочная техника заметно усложняет посадку/выход.",
             "access_requirements": "лодочник необходим для движения по протокам; отдельный экскурсионный гид не обязателен",
             "self_guided_default": false,
-            "travel_model": "самостоятельно до причала; по реке нужен лодочник"
+            "travel_model": "самостоятельно до причала; по реке нужен лодочник",
+            "water_structured": {
+              "at_object": false,
+              "quality": "technical_only",
+              "last_reliable_source": {
+                "description": "набережная Bandar Seri Begawan до посадки в лодку",
+                "distance_m": 0
+              },
+              "natural_sources": [
+                {
+                  "type": "estuary",
+                  "quality": "technical_only",
+                  "notes": "солоноватую/речную воду не использовать для питья"
+                }
+              ],
+              "notes": "На лодочном участке покупать воду негде; запас брать до выхода."
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Мангровый маршрут рассматривается как дневной лодочный объект; подтверждённого режима самостоятельного кемпинга на берегах не найдено."
+            }
           },
           "climate": {
             "best_period": "Раннее утро — для носачей; поздний день до сумерек — для сочетания животных, золотого часа и светлячков.",
@@ -5320,9 +5550,9 @@
           "operations": {
             "status": "operator_based",
             "hours": "Единого расписания нет: это речной маршрут на частной лодке. Время выхода согласовывается непосредственно с лодочником; для мангров и животных практичны раннее утро и поздний день.",
-            "ticket": "Стоимость лодки и маршрута договорная; единого публичного тарифа нет.",
+            "ticket": "По свежим независимым отчётам 2025–2026 частный лодочник с набережной часто просит около BND 30 за лодку/час; это не официальный фиксированный тариф и цену нужно согласовать до посадки.",
             "closure_notes": "Гроза, уровень/состояние воды и положение животных могут изменить или сократить маршрут.",
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/activities-tour/mangrove-safari-firefly-cruise/"
           },
           "safety": {
@@ -5342,10 +5572,11 @@
             "visual_scouting": {
               "best_time": "раннее утро или поздний день; для светлячков — до темноты",
               "best_weather_light": "спокойный сухой вечер; гроза — стоп",
-              "viewpoints_for_photo_video": [
-                "нос лодки на переходе из городской части реки в мангры",
-                "протока с нависающими манграми, особенно с уровня воды",
-                "борт лодки напротив кромки деревьев, где гид обычно ищет носачей"
+              "viewpoints_for_photo_video": [],
+              "viewpoint_candidates_unverified": [
+                "нос лодки при переходе из городской части реки в мангры",
+                "протока с нависающими манграми",
+                "борт лодки напротив кромки деревьев"
               ]
             },
             "drone": "Не запускать с движущейся лодки; отдельно нужны действующие авиационные разрешения и согласие оператора/владельца точки запуска.",
@@ -5356,13 +5587,47 @@
             "culture_ethnography": "Лодочник — ключевой персонаж, читающий реку и прилив.",
             "geography_geology": "Мангры зависят от прилива; уровень воды меняет доступ в боковые протоки, а рассвет и закат дают лучшие условия для животных и света."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "дикая природа не гарантирован",
-              "лодка вибрирует",
-              "светлячки сложны для телефона"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "boat_price_and_timing",
+              "summary": "В январе 2026 путешественник заплатил BND 30 за часовую лодку с набережной и советовал выходить до 08:30 или после 16:00; видел крокодилов и носачей, но отдельно подчёркивал, что животные не гарантированы.",
+              "observed_period": "2026-01",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Brunei River traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d13328651-Reviews-Brunei_River-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "river_transit",
+              "summary": "Отчёт сентября 2025 описывает примерно 20 минут хода от центра до мангровой зоны и около 10–15 минут наблюдения за носачами в рамках часовой лодки за BND 30.",
+              "observed_period": "2025-09",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Brunei River traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d13328651-Reviews-Brunei_River-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "mobility",
+              "summary": "В отчёте февраля 2025 отдельно отмечены крутые ступени между набережной и небольшой лодкой; это существенный фактор при тяжёлой технике и ограниченной мобильности.",
+              "observed_period": "2025-02",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Brunei River traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d13328651-Reviews-Brunei_River-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",
@@ -5551,7 +5816,7 @@
           },
           "logistics": {
             "access": "В центре BSB у Kianggeh река; пешком из центральной части, Dart или городской автобус.",
-            "public_transport": null,
+            "public_transport": "Официально: Dart либо городской автобус; ориентир для автобуса — около BND 1 за поездку, сеть работает примерно 06:00–20:00. Конкретную остановку сверять перед выездом.",
             "last_mile": null,
             "typical_visit_hours": [
               1.5,
@@ -5569,7 +5834,21 @@
             "terrain_and_movement": "Бруней туризм отмечает wheelchair-friendly доступ и disabled parking.",
             "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "water_structured": {
+              "at_object": true,
+              "quality": "potable",
+              "last_reliable_source": {
+                "description": "продавцы напитков и готовой еды на рынке",
+                "distance_m": 0
+              },
+              "natural_sources": [],
+              "notes": "Для питья использовать коммерческие напитки/воду; вода канала не рассматривается как источник."
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Рынок не является объектом размещения; подтверждённого режима кемпинга у него не найдено."
+            }
           },
           "climate": {
             "best_period": "Февраль–апрель обычно дают более удобные окна по осадкам.",
@@ -5578,10 +5857,10 @@
           },
           "operations": {
             "status": "open/verify",
-            "hours": "Mon–Thu, Sat–Sun 08:00–17:30; Fri 08:00–12:00 и 14:00–17:30.",
-            "ticket": "Вход свободный; рынок принимает cash, покупки отдельно.",
+            "hours": "Пн–Чт, Сб–Вс 08:00–17:30; Пт 08:00–12:00 и 14:00–17:30.",
+            "ticket": "Вход свободный; официальный сайт прямо указывает оплату наличными.",
             "closure_notes": null,
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/street-food/tamu-kianggeh/"
           },
           "safety": {
@@ -5601,9 +5880,34 @@
               "best_time": "06:30–09:30",
               "best_weather_light": "навесы позволяют короткий дождь",
               "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_market_edge_01",
+                  "name": "Внешний край Tamu Kianggeh",
+                  "description": "Документированная Commons-точка рядом с рынком показывает локальную торговую среду и прилавки.",
+                  "coordinates": {
+                    "lat": 4.888424,
+                    "lon": 114.944994,
+                    "elevation_m": null
+                  },
+                  "access": "Пешая зона центра Bandar Seri Begawan у Sungai Kianggeh.",
+                  "best_time": "early_morning",
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    "wide",
+                    "standard"
+                  ],
+                  "source": {
+                    "type": "media_repository",
+                    "title": "Local produce. Tamu Kianggeh Brunei. — documented camera location",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Local_produce._Tamu_Kianggeh_Brunei._(11194506414).jpg",
+                    "accessed": "2026-10-01"
+                  }
+                }
+              ],
+              "viewpoint_candidates_unverified": [
                 "широкий проход под навесами",
-                "уровень прилавка с продуктом на переднем плане и продавцом в глубине",
-                "наружный край рынка у Kianggeh река"
+                "уровень прилавка с продуктом и продавцом в глубине"
               ]
             },
             "drone": "Дрон над рынком/людьми неуместен без разрешения.",
@@ -5614,11 +5918,34 @@
             "culture_ethnography": "",
             "geography_geology": "Расположен у небольшой реки в пешей зоне центра BSB; утром мягче свет и выше торговая активность."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "после позднего утра активность падает"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "timing_and_cash",
+              "summary": "Отзыв января 2025 советует приходить рано утром, когда рынок наиболее активен, и иметь мелкие купюры: у продавцов может не быть сдачи с крупных номиналов.",
+              "observed_period": "2025-01",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Tamu Kianggeh traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d1640442-Reviews-Tamu_Kianggeh-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "canal_logistics",
+              "summary": "Отчёт января 2026 о канале Kianggeh фиксирует, что часть товаров к рынку по-прежнему подвозят лодками к небольшим причалам; после сильного дождя вода в канале быстро поднимается и мутнеет.",
+              "observed_period": "2026-01",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "The Kianggeh Canal traveler report",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d13948034-Reviews-The_Kianggeh_Canal-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",
@@ -5810,7 +6137,7 @@
           },
           "logistics": {
             "access": "Короткая поездка из BSB; Бруней туризм рекомендует Dart, возможен автобус.",
-            "public_transport": null,
+            "public_transport": "Официально: Dart либо городской автобус; ориентир средней цены автобуса BND 1, сеть работает примерно 06:00–20:00.",
             "last_mile": null,
             "typical_visit_hours": [
               2,
@@ -5828,7 +6155,21 @@
             "overnight_and_camping": "ставить палатку только при явном разрешении; пляж/лес не считать свободным кемпингом",
             "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "water_structured": {
+              "at_object": true,
+              "quality": "technical_only",
+              "last_reliable_source": {
+                "description": "санитарная зона/души у пляжной рекреационной части по пользовательским отзывам",
+                "distance_m": null
+              },
+              "natural_sources": [],
+              "notes": "Подтверждена только техническая вода для душа/мытья; питьевую воду брать заранее."
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Официальная страница описывает дневной рекреационный парк и пикниковые зоны, но не публикует общего разрешения на самостоятельный кемпинг."
+            }
           },
           "climate": {
             "best_period": "Февраль–апрель обычно дают более удобные окна по осадкам.",
@@ -5837,10 +6178,10 @@
           },
           "operations": {
             "status": "open/verify",
-            "hours": "Ежедневно 06:00–18:00 по Бруней туризм.",
+            "hours": "Ежедневно 06:00–18:00.",
             "ticket": "Обычно свободный recreational парк; платные частные услуги/пикник-зоны уточнять на месте.",
             "closure_notes": null,
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/berakas-forest-recreational-park/"
           },
           "safety": {
@@ -5860,10 +6201,11 @@
             "visual_scouting": {
               "best_time": "буднее утро для пустого пейзажа; выходной после 16:00 для бытовой сцены",
               "best_weather_light": "после дождя лес насыщеннее; сильный ветер портит звук на берегу",
-              "viewpoints_for_photo_video": [
+              "viewpoints_for_photo_video": [],
+              "viewpoint_candidates_unverified": [
                 "тёмная лесная тропа перед выходом к пляжу",
                 "линия берега с лесом в одном кадре",
-                "открытая точка на море для закатного силуэта"
+                "океанская смотровая"
               ]
             },
             "drone": "Проверять авиационные правила; не летать над отдыхающими без разрешения.",
@@ -5874,12 +6216,47 @@
             "culture_ethnography": "Парк используется для пикников и семейного отдыха; в выходные особенно хорошо видна местная рекреационная культура.",
             "geography_geology": ""
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "ветер и морской мусор после штормов",
-              "выходные шумнее"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "short_trail",
+              "summary": "AllTrails описывает Berakas Forest Beach Trail как круг около 1,9 км с набором примерно 37 м и средней оценкой времени около 28 минут; это пользовательская маршрутная платформа, поэтому параметры считать ориентировочными.",
+              "observed_period": "2025",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Berakas Forest Beach Trail",
+                "publisher": "AllTrails",
+                "url": "https://www.alltrails.com/en-gb/trail/brunei/brunei-and-muara/berakas-forest-beach-trail",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "facilities",
+              "summary": "Пользовательские отзывы по Pantai Berakas сообщают о парковке, BBQ-зонах, туалетах и воде для душа/мытья; питьевое качество этой воды не подтверждено.",
+              "observed_period": null,
+              "confidence": "low",
+              "source": {
+                "type": "review_aggregator",
+                "title": "Pantai Berakas reviews",
+                "publisher": "Wanderlog",
+                "url": "https://wanderlog.com/place/details/578939/pantai-berakas",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "sea_condition",
+              "summary": "В тех же отзывах есть повторяющееся предупреждение о сильном течении у пляжа; без отдельной проверки условий море не использовать как безопасное место для купания.",
+              "observed_period": null,
+              "confidence": "low",
+              "source": {
+                "type": "review_aggregator",
+                "title": "Pantai Berakas reviews",
+                "publisher": "Wanderlog",
+                "url": "https://wanderlog.com/place/details/578939/pantai-berakas",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",

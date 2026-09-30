@@ -54,7 +54,8 @@
       "Language QA 2026-09-30: normalized the new Niah/Mulu narrative text to natural Russian.",
       "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Malaysia; technical schema keys and official proper names remain unchanged.",
       "Regional QA pass 2026-09-30: deepened Sabah highlands / Kinabalu and Perak / Royal Belum with Sabah Parks and Tourism Malaysia sources; separated geopark, park-HQ, summit, city and forest-water access layers.",
-      "Regional QA pass 2026-09-30: normalized Perhentian and Semporna geography/transport source_refs using existing Department of Fisheries, Sabah Parks and Sabah Tourism sources; no object payloads changed."
+      "Regional QA pass 2026-09-30: normalized Perhentian and Semporna geography/transport source_refs using existing Department of Fisheries, Sabah Parks and Sabah Tourism sources; no object payloads changed.",
+      "Malaysia pre-object geometry QA 2026-10-01: sourced approximate masks added for Penang, Melaka and Perak from official DOSM state boundaries. Eleven narrower/composite expedition regions remain intentionally without polygons because using entire Selangor/Sabah/Sarawak/Kedah/Terengganu or other parent states would overstate coverage. Regional profiles and 18 hierarchy locality profiles already satisfy the role contract; object cards unchanged."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -12566,6 +12567,19 @@
         "crafts"
       ],
       "accessed": "2026-09-30"
+    },
+    {
+      "id": "MY_DOSM_STATE_BOUNDARIES",
+      "canonical_id": "src_910103",
+      "publisher": "Department of Statistics Malaysia (DOSM) — OpenDOSM",
+      "url": "https://github.com/dosm-malaysia/data-open/blob/main/datasets/geodata/administrative_1_state.geojson",
+      "kind": "government",
+      "used_for": [
+        "malaysia_state_boundary_components",
+        "expedition_region_masks"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official DOSM state GeoJSON. Used only where an expedition geographic_area can be represented by the named state without overstating its footprint. Other composite regions remain without polygons."
     }
   ],
   "uncertainties": [

@@ -5,7 +5,7 @@
     "country_slug": "philippines",
     "status": "regional_geography_standardized",
     "checked_at": "2026-09-30",
-    "next_level": "regional_qa_before_object_cards",
+    "next_level": "regional_geo_mask_qa",
     "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes.",
     "canonical_source_id": "src_906007",
     "qa_contract": "geo_profile_roles_v1"
@@ -62,7 +62,48 @@
       "slug": "car",
       "parent_id": "country:ph",
       "axis": "administrative",
-      "object_ids": []
+      "object_ids": [],
+      "notes_ru": "Кордильерский административный регион — высокогорный внутренний регион северного Лусона, объединяющий шесть провинций. Для экспедиции это верхний административный контекст: рельеф, дорожная доступность и культурная среда заметно меняются между провинциями, поэтому CAR нельзя сводить к одному маршруту Банауэ—Сагада.",
+      "profile": {
+        "geography": {
+          "summary": "CAR занимает горную внутреннюю часть северного Лусона. В действующем PSGC регион включает шесть провинций: Abra, Apayao, Benguet, Ifugao, Kalinga и Mountain Province.",
+          "source_refs": [
+            "src_910002"
+          ]
+        },
+        "transport": {
+          "summary": "Основные самостоятельные перемещения внутри CAR идут по горным автодорогам. Для экспедиционного планирования время в пути определяется не только расстоянием, но и серпантинами, туманом, ливнями и состоянием конкретного участка; маршруты к Sagada и Ifugao требуют отдельной проверки по направлению.",
+          "source_refs": [
+            "src_000886",
+            "src_910006"
+          ]
+        },
+        "source_refs": [
+          "src_910002",
+          "src_000886",
+          "src_910006",
+          "src_910007"
+        ],
+        "checked_at": "2026-09-30",
+        "climate": {
+          "summary": "Высота заметно меняет температурный режим северного Лусона: PAGASA прямо отмечает контраст температур с высотой и приводит Baguio как высокогорный пример; сезон дождей в общенациональном климатическом цикле приходится главным образом на июнь—ноябрь. Внутри CAR локальные осадки и облачность сильно зависят от высоты и экспозиции склонов.",
+          "source_refs": [
+            "src_910007"
+          ]
+        }
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "official_unit_from_sourced_map_geometry",
+        "psgc": "1400000000",
+        "source_refs": [
+          "src_910002",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30"
+      }
     },
     {
       "id": "ph:region:ilocos-region",
@@ -260,7 +301,56 @@
       "slug": "ifugao",
       "parent_id": "ph:region:car",
       "axis": "administrative",
-      "object_ids": []
+      "object_ids": [],
+      "notes_ru": "Ифугао — горная провинция CAR из 11 муниципалитетов. Экспедиционно наиболее известен пояс Банауэ и соседних рисовых террас, но административная провинция значительно шире этого туристического кластера и включает разные долины, водосборы и поселения.",
+      "profile": {
+        "geography": {
+          "summary": "По действующему PSGC Ифугао включает 11 муниципалитетов. Банауэ — один из них; его нельзя использовать как координатный или содержательный заменитель всей провинции.",
+          "source_refs": [
+            "src_910003"
+          ]
+        },
+        "culture": {
+          "summary": "Рисовые террасы Ифугао представляют живой культурный ландшафт: UNESCO связывает их с традиционным земледелием, ирригацией, поселениями и продолжающимися практиками местных общин. Эти характеристики относятся к конкретным террасным ландшафтам и не должны автоматически переноситься на каждый населённый пункт провинции.",
+          "source_refs": [
+            "src_000885"
+          ]
+        },
+        "transport": {
+          "summary": "Доступ к основным экспедиционным узлам Ифугао дорожный, с дальнейшими пешими подходами к отдельным террасным и сельским участкам. Горные дороги требуют отдельного расчёта времени; связь с Sagada проходит через высокогорную дорожную сеть CAR.",
+          "source_refs": [
+            "src_000886",
+            "src_910006"
+          ]
+        },
+        "source_refs": [
+          "src_910003",
+          "src_000885",
+          "src_000886",
+          "src_910006",
+          "src_910007"
+        ],
+        "checked_at": "2026-09-30",
+        "climate": {
+          "summary": "Ифугао лежит в высокогорной части Лусона, поэтому температурный режим прохладнее низменностей, а дождь, облачность и туман существенно влияют на дороги и пешие подходы. Общую сезонность нельзя применять к конкретной долине без локальной проверки погоды.",
+          "source_refs": [
+            "src_910007",
+            "src_000886"
+          ]
+        }
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "official_unit_from_sourced_map_geometry",
+        "psgc": "1402700000",
+        "source_refs": [
+          "src_910003",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30"
+      }
     },
     {
       "id": "ph:province:mountain-province",
@@ -271,7 +361,49 @@
       "slug": "mountain-province",
       "parent_id": "ph:region:car",
       "axis": "administrative",
-      "object_ids": []
+      "object_ids": [],
+      "notes_ru": "Горная провинция — внутренняя высокогорная провинция CAR с десятью муниципалитетами. Её рельеф образован хребтами, глубокими долинами и речными системами Кордильер; для самостоятельной экспедиции Bontoc и Sagada служат важными опорными узлами, но не исчерпывают географию провинции.",
+      "profile": {
+        "geography": {
+          "summary": "Провинция лежит в центральной части Кордильер и не имеет выхода к морю. Официальная провинциальная справка описывает резко пересечённый горный рельеф; административно Mountain Province состоит из десяти муниципалитетов.",
+          "source_refs": [
+            "src_910004"
+          ]
+        },
+        "transport": {
+          "summary": "Наземный доступ строится по горным дорогам через Baguio, Ifugao и соседние провинции. Официальная провинциальная справка по подъезду подчёркивает дорожные маршруты; для Sagada дополнительно действуют локальные правила регистрации и доступа к регулируемым маршрутам.",
+          "source_refs": [
+            "src_910006",
+            "src_000886"
+          ]
+        },
+        "source_refs": [
+          "src_910004",
+          "src_910006",
+          "src_000886",
+          "src_910007"
+        ],
+        "checked_at": "2026-09-30",
+        "climate": {
+          "summary": "Высокогорный рельеф Mountain Province даёт более прохладные условия по сравнению с низменным Лусоном; туман и осадки имеют практическое значение для горных дорог. Для Sagada локальные условия перед выездом проверяются отдельно.",
+          "source_refs": [
+            "src_910007",
+            "src_000886"
+          ]
+        }
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "official_unit_from_sourced_map_geometry",
+        "psgc": "1404400000",
+        "source_refs": [
+          "src_910004",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30"
+      }
     },
     {
       "id": "ph:province:bohol",
@@ -468,6 +600,21 @@
         "source_url": "https://whc.unesco.org/en/tentativelists/6721/",
         "checked_at": "2026-09-30",
         "note": "Central Banaue rice-terrace cluster used as a reference anchor for the composite Cordillera / Ifugao / Sagada expedition area; not a centroid of the whole region."
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "coverage_basis": [
+          "geo_ph_0020",
+          "geo_ph_0021"
+        ],
+        "source_refs": [
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30",
+        "note": "Приблизительная экспедиционная маска, собранная из границ Ifugao и Mountain Province для визуального охвата маршрута; не является официальной административной границей CAR и не утверждает, что весь регион ограничен этими двумя провинциями."
       }
     },
     {
@@ -738,7 +885,19 @@
       "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
       "legacy_locality_names": [
         "Banaue"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "municipality_boundary_from_sourced_map_geometry",
+        "psgc": "1402701000",
+        "source_refs": [
+          "src_910003",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30"
+      }
     },
     {
       "id": "ph:town:sagada",
@@ -753,7 +912,19 @@
       "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
       "legacy_locality_names": [
         "Sagada"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "administrative_boundary",
+        "accuracy": "municipality_boundary_from_sourced_map_geometry",
+        "psgc": "1404409000",
+        "source_refs": [
+          "src_910004",
+          "src_910005"
+        ],
+        "source_vintage": "2023-12-31",
+        "checked_at": "2026-09-30"
+      }
     },
     {
       "id": "ph:city:tagbilaran",

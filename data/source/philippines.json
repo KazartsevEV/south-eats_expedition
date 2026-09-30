@@ -19,7 +19,8 @@
       "Country-first migration from the existing Google Drive draft. Regional and object payloads remain queued and are intentionally not migrated in this phase.",
       "Regional research profiles restored from the existing Google Drive draft; attraction object payloads remain deferred.",
       "Regional QA pass 2026-09-30: deepened Ilocos/Vigan, Negros and Samar with UNESCO, PHIVOLCS and NCCA sources; added locally anchored ethnography, living heritage, volcanic geology and Waray cultural context without changing object payloads.",
-      "Locality pass 2026-09-30: added 17 researched city/town base profiles with map anchors, source provenance and explicit separation between settlement coordinates and attraction/trailhead coordinates."
+      "Locality pass 2026-09-30: added 17 researched city/town base profiles with map anchors, source provenance and explicit separation between settlement coordinates and attraction/trailhead coordinates.",
+      "Geo-mask pass 2026-09-30: added sourced administrative boundary geometry for CAR → Ifugao/Mountain Province → Banaue/Sagada, with a separately marked approximate composite mask for Cordillera / Ifugao / Sagada."
     ]
   },
   "overview": {
@@ -3396,6 +3397,86 @@
       "used_for": [
         "locality_coordinates",
         "locality_map_anchors"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_PSGC_CAR_2026",
+      "canonical_id": "src_910002",
+      "publisher": "Philippine Statistics Authority — Philippine Standard Geographic Code",
+      "url": "https://psa.gov.ph/classification/psgc/provinces/1400000000",
+      "kind": "government",
+      "used_for": [
+        "car_administrative_structure",
+        "car_provinces",
+        "regional_geography"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_PSGC_IFUGAO_2026",
+      "canonical_id": "src_910003",
+      "publisher": "Philippine Statistics Authority — Philippine Standard Geographic Code",
+      "url": "https://psa.gov.ph/classification/psgc/citimuni/1402700000",
+      "kind": "government",
+      "used_for": [
+        "ifugao_administrative_structure",
+        "banaue_psgc",
+        "regional_geography"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_MOUNTAIN_PROVINCE_GOV_GEOGRAPHY",
+      "canonical_id": "src_910004",
+      "publisher": "Provincial Government of Mountain Province",
+      "url": "https://mountainprovince.gov.ph/geography/",
+      "kind": "government",
+      "used_for": [
+        "mountain_province_geography",
+        "regional_relief",
+        "regional_context"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_ADMIN_BOUNDARIES_FAELDON_2023",
+      "canonical_id": "src_910005",
+      "publisher": "faeldon/philippines-json-maps; source shapefiles from NAMRIA/PSGC",
+      "url": "https://github.com/faeldon/philippines-json-maps",
+      "kind": "map",
+      "used_for": [
+        "geo_boundary_masks",
+        "car_boundary",
+        "province_boundaries",
+        "municipality_boundaries"
+      ],
+      "accessed": "2026-09-30",
+      "notes": "Low-resolution web map polygons derived from Philippine administrative boundary shapefiles; 2023 PSGC geometry is used only where the corresponding CAR/Ifugao/Mountain Province boundary has not changed in the current hierarchy."
+    },
+    {
+      "id": "PH_MOUNTAIN_PROVINCE_GETTING_HERE",
+      "canonical_id": "src_910006",
+      "publisher": "Provincial Government of Mountain Province",
+      "url": "https://mountainprovince.gov.ph/the-province/getting-here/",
+      "kind": "government",
+      "used_for": [
+        "mountain_province_transport",
+        "regional_access",
+        "sagada_gateway"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "PH_PAGASA_CLIMATE",
+      "canonical_id": "src_910007",
+      "publisher": "DOST-PAGASA — Climate of the Philippines",
+      "url": "https://www.pagasa.dost.gov.ph/information/climate-philippines",
+      "kind": "government",
+      "used_for": [
+        "regional_climate",
+        "altitude_temperature_effect",
+        "rainfall_seasonality"
       ],
       "accessed": "2026-09-30"
     }

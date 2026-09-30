@@ -14,6 +14,7 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 HIERARCHY = ROOT / "data" / "hierarchy" / "countries"
 GEO_COUNTRIES = ROOT / "data" / "geo" / "countries"
+GEO_NODES = ROOT / "data" / "geo" / "nodes"
 FORMAL_CANONICAL_GEO_CODES = {"BN", "KH", "LA", "ID", "MY", "MM", "PH", "SG", "TH", "TL", "VN"}
 COUNTRY_SOURCE_CANONICAL_CODES = {"BN", "KH", "LA", "ID", "MY", "MM", "PH", "SG", "TH", "TL", "VN"}
 
@@ -703,6 +704,36 @@ def build():
                     if (doc.get("meta") or {}).get("canonical_source_id") else [],
                 },
             }
+
+            geometry_source = GEO_NODES / f"{geo_id}.geojson"
+            if geometry_source.exists():
+                geometry_path = f"geo/geometries/{geo_id}.geojson"
+                dump(release / geometry_path, load(geometry_source))
+                entity["geometry_path"] = geometry_path
+            if node.get("geometry") not in (None, "", [], {}):
+                entity["geometry"] = node.get("geometry")
+
+            hierarchy_profile = node.get("profile") or {}
+            if hierarchy_profile:
+                if hierarchy_profile.get("narrow"):
+                    entity["description"]["narrow"] = hierarchy_profile.get("narrow")
+                for field in ("geography", "relief", "geology", "hydrology", "coast", "marine", "nature", "health", "safety", "history", "ethnography", "culture", "myths_beliefs", "architecture", "transport", "climate", "languages"):
+                    if hierarchy_profile.get(field) not in (None, "", [], {}):
+                        entity[field] = hierarchy_profile.get(field)
+                hierarchy_profile_refs = list(dict.fromkeys(
+                    (hierarchy_profile.get("source_refs") or []) + collect_source_refs(hierarchy_profile)
+                ))
+                structural_refs = entity["provenance"].get("structural_source_refs") or []
+                entity["provenance"]["research_source_refs"] = hierarchy_profile_refs
+                entity["provenance"]["source_refs"] = list(dict.fromkeys(structural_refs + hierarchy_profile_refs))
+                if hierarchy_profile.get("checked_at"):
+                    entity["provenance"]["research_checked_at"] = hierarchy_profile.get("checked_at")
+                    entity["freshness"] = {"checked_at": hierarchy_profile.get("checked_at")}
+                entity["migration"]["hierarchy_profile_status"] = (
+                    "researched_profile" if hierarchy_profile_refs else "profile_requires_source_normalization"
+                )
+                if hierarchy_profile_refs:
+                    entity["coverage_role"] = "regional_profile"
 
             # A formal hierarchy must not discard already researched regional/locality content.
             # Hierarchy nodes carry stable identity/parentage; descriptive facts remain sourced

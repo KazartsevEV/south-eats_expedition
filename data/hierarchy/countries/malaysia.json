@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "MY",
     "country_slug": "malaysia",
-    "status": "regional_geography_standardized",
-    "checked_at": "2026-09-30",
-    "next_level": "country_profile_and_regional_qa_before_object_cards",
+    "status": "geo_profile_qa_complete_before_object_cards",
+    "checked_at": "2026-10-01",
+    "next_level": "country_and_regional_layer_complete_object_cards_frozen",
     "canonical_id_policy": "Stable geo IDs reuse the existing registry. Composite researched regions are geographic_area unless an administrative status is independently established.",
     "canonical_source_id": "src_906005",
     "qa_contract": "geo_profile_roles_v1"
@@ -61,7 +61,23 @@
       "object_ids": [
         "my:george-town"
       ],
-      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Pulau Pinang state"
+        ],
+        "source_refs": [
+          "src_910103"
+        ],
+        "source_vintage": "current DOSM open geodata snapshot",
+        "checked_at": "2026-10-01",
+        "note": "Approximate expedition coverage follows the official Pulau Pinang state boundary; George Town is an internal urban focus."
+      }
     },
     {
       "id": "my:region:melaka",
@@ -78,7 +94,23 @@
       "object_ids": [
         "my:melaka"
       ],
-      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Melaka state"
+        ],
+        "source_refs": [
+          "src_910103"
+        ],
+        "source_vintage": "current DOSM open geodata snapshot",
+        "checked_at": "2026-10-01",
+        "note": "Approximate expedition coverage follows the official Melaka state boundary; the node remains a geographic_area rather than an administrative state entity."
+      }
     },
     {
       "id": "my:region:sabah-highlands-kinabalu",
@@ -204,7 +236,23 @@
         "Perak / Taiping / Kuala Kangsar / Belum"
       ],
       "object_ids": [],
-      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения."
+      "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "expedition_coverage",
+        "accuracy": "approximate",
+        "simplified": true,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "coverage_basis": [
+          "Perak state"
+        ],
+        "source_refs": [
+          "src_910103"
+        ],
+        "source_vintage": "current DOSM open geodata snapshot",
+        "checked_at": "2026-10-01",
+        "note": "Approximate expedition coverage follows the Perak state boundary because the researched node explicitly spans Perak, with Taiping, Kuala Kangsar and Belum as internal focuses."
+      }
     },
     {
       "id": "my:region:semporna-sipadan-east-sabah",

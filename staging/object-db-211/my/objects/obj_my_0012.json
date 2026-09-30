@@ -46,13 +46,15 @@
     "geo_points": [],
     "object_elevation": {
       "representative_m": null,
-      "min_m": null,
-      "max_m": null,
-      "reference_type": null,
-      "accuracy": "unknown",
-      "source_refs": [],
-      "checked_at": null,
-      "notes": null
+      "min_m": 150,
+      "max_m": 1000,
+      "reference_type": "range",
+      "accuracy": "high",
+      "source_refs": [
+        "src_stage_my_0216"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Официальный диапазон Danum Valley Conservation Area; отдельные вершины внутри/по границе могут быть выше, но диапазон 150–1000 м используется как управленческая характеристика территории."
     }
   },
   "narrative": {
@@ -218,25 +220,73 @@
     }
   ],
   "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_danum_brl",
+        "name": "Borneo Rainforest Lodge Viewpoint",
+        "coordinates": {
+          "lat": 5.01713,
+          "lon": 117.74394,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "5.017130, 117.743940"
+        },
+        "access": {
+          "walk_km": null
+        },
+        "view": {
+          "description": "Кроны первичного леса и долина Danum с открытой точки рядом с Borneo Rainforest Lodge."
+        },
+        "best_time": "sunrise / early_morning",
+        "best_weather_light": "Утренний туман и низкий свет дают разделение ярусов леса; позже контраст становится жёстче.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для многослойного лесного ландшафта"
+          },
+          {
+            "type": "long_telephoto",
+            "why": "для птиц и приматов в кронах"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0248"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "После дождя над лесом часто держится пар и низкие облака; интенсивные осадки ухудшают доступ по грунтовым дорогам."
+    ],
+    "video_activity": [
+      "утреннее движение птиц и приматов в кронах",
+      "туман над первичным лесом",
+      "ночная активность животных на разрешённых маршрутах"
+    ],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска."
+        "заповедную территорию не считать зоной свободного запуска; необходимы отдельные разрешения управляющей структуры и соблюдение CAAM"
       ],
       "source_refs": [
-        "src_stage_my_0047",
-        "src_stage_my_0002"
+        "src_stage_my_0216"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-30"
     },
-    "useful_equipment": [],
-    "best_time": "Рассвет в верхнем ярусе леса, поздний день на тропах, ночь — для ночной фауны.",
-    "best_weather_light": null
+    "useful_equipment": [
+      {
+        "type": "long_telephoto",
+        "why": "для фауны высоко в кронах"
+      },
+      {
+        "type": "wide",
+        "why": "для общего масштаба первичного леса"
+      }
+    ],
+    "best_time": "sunrise / early_morning",
+    "best_weather_light": "Утренний туман и мягкий свет."
   },
   "media": {
     "cover_id": null,
@@ -313,14 +363,14 @@
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

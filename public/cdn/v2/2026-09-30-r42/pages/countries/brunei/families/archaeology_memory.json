@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-30-r42",
+    "page_type": "class_family",
+    "id": "country-family:bn:archaeology_memory"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "family_id": "archaeology_memory",
+    "label_ru": "Археология, древность и историческая память"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:bn",
+    "page_path": "pages/countries/brunei.json"
+  },
+  "global_family_page": "pages/families/archaeology_memory.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "count": 2,
+  "classes": [
+    {
+      "object_type": "museum",
+      "label_ru": "Музеи",
+      "count": 2,
+      "global_page_path": "pages/classes/museum.json",
+      "country_page_path": "pages/countries/brunei/classes/museum.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:royal-regalia-museum",
+      "name": "Royal Regalia Museum",
+      "object_type": "museum",
+      "geography_ids": [
+        "bn:city:bandar-seri-begawan",
+        "bn:district:brunei-muara",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "narrow": "Музей придворной символики и официальной памяти о монархии: коронационные регалии, колесницы, подарки и юбилейные материалы показывают, как власть оформляется в церемонию и визуальный ритуал.",
+      "detail_path": "countries/brunei/objects/royal-regalia-museum.json"
+    },
+    {
+      "id": "bn:malay-technology-museum",
+      "name": "Malay Technology Museum",
+      "object_type": "museum",
+      "geography_ids": [
+        "bn:district:brunei-muara",
+        "bn:mukim:kota-batu",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "narrow": "Музей традиционных технологий и материальной культуры: водные поселения, ремёсла, строительство, обработка материалов и хозяйственные практики. Удобен как объясняющий объект перед Кампонг-Айер и внутренними районами.",
+      "detail_path": "countries/brunei/objects/malay-technology-museum.json"
+    }
+  ]
+}

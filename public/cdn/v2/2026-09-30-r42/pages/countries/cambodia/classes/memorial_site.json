@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-30-r42",
+    "page_type": "country_class",
+    "id": "country-class:kh:memorial_site"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "memorial_site",
+    "label_ru": "Мемориальные места",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:archaeology_memory",
+    "page_path": "pages/countries/cambodia/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/memorial_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:city:phnom-penh",
+      "canonical_geo_id": "geo_kh_0027",
+      "name": "Пномпень",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/city/phnom-penh.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:choeung-ek",
+      "name": "Choeung Ek",
+      "geography_ids": [
+        "country:kh",
+        "kh:city:phnom-penh"
+      ],
+      "region_legacy": "Пномпень",
+      "nearest_hub": "Пномпень",
+      "narrow": "Чоенг-Эк — мемориальный комплекс на месте массовых захоронений, куда заключённых S-21 вывозили из Пномпеня. Сегодня пространство организовано вокруг памятной ступы, дорожек по территории бывших захоронений и документальной интерпретации преступлений красных кхмеров.",
+      "detail_path": "countries/cambodia/objects/choeung-ek.json"
+    }
+  ]
+}

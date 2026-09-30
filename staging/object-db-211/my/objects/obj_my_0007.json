@@ -46,13 +46,15 @@
     "geo_points": [],
     "object_elevation": {
       "representative_m": null,
-      "min_m": null,
-      "max_m": null,
-      "reference_type": null,
-      "accuracy": "unknown",
-      "source_refs": [],
-      "checked_at": null,
-      "notes": null
+      "min_m": 0,
+      "max_m": 332,
+      "reference_type": "range",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_my_0232"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Операционный диапазон архипелага: уровень моря — 0 м; 332 м — картографическая отметка Pulau Perhentian Kecil. Это не единая высота всего архипелага."
     }
   },
   "narrative": {
@@ -239,28 +241,70 @@
     }
   ],
   "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_perhentian_windmill_point",
+        "name": "Windmill Point, Perhentian Kecil",
+        "coordinates": {
+          "lat": 5.9265,
+          "lon": 102.72,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "5.926500, 102.720000"
+        },
+        "access": {
+          "walk_km": null
+        },
+        "view": {
+          "description": "Открытый морской обзор побережья Perhentian Kecil и соседних акваторий."
+        },
+        "best_time": "early_morning / late_afternoon",
+        "best_weather_light": "Чистый горизонт важнее направления света; морская дымка быстро съедает дальние планы.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для береговой линии и моря"
+          },
+          {
+            "type": "telephoto",
+            "why": "для лодок и соседних островов"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0211"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Муссон и состояние моря определяют прозрачность воды, доступ лодок и характер горизонта."
+    ],
+    "video_activity": [
+      "лодочное движение между пляжами и островами",
+      "движение волн на открытых участках берега"
+    ],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска."
+        "морской парк и островные зоны не считать свободными для запуска без проверки локальных правил и CAAM"
       ],
-      "source_refs": [
-        "src_stage_my_0001",
-        "src_stage_my_0028",
-        "src_stage_my_0002",
-        "src_stage_my_0029",
-        "src_stage_my_0030"
-      ],
-      "checked_at": "2026-09-28"
+      "source_refs": [],
+      "checked_at": "2026-09-30"
     },
-    "useful_equipment": [],
-    "best_time": "Рассвет и закат — берег; позднее утро при высоком солнце — мелководный риф и подводная съёмка.",
-    "best_weather_light": null
+    "useful_equipment": [
+      {
+        "type": "wide",
+        "why": "береговые и морские панорамы"
+      },
+      {
+        "type": "underwater_camera",
+        "why": "рифы и прозрачная вода — ключевой визуальный слой архипелага"
+      }
+    ],
+    "best_time": "early_morning / late_afternoon",
+    "best_weather_light": "Спокойное море и низкая дымка."
   },
   "media": {
     "cover_id": null,
@@ -341,14 +385,14 @@
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

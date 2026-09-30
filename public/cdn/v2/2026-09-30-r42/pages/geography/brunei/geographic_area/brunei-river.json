@@ -3,15 +3,15 @@
     "schema_version": "2.10.10",
     "release_id": "2026-09-30-r42",
     "page_type": "geography",
-    "id": "bn:mukim:sengkurong"
+    "id": "bn:river:brunei"
   },
   "identity": {
-    "name": "Сенгкуронг",
-    "name_local": "Mukim Sengkurong",
-    "kind": "mukim",
-    "slug": "sengkurong",
+    "name": "Река Бруней",
+    "name_local": "Sungai Brunei / Brunei River",
+    "kind": "geographic_area",
+    "slug": "brunei-river",
     "country_code": "BN",
-    "axis": "administrative"
+    "axis": "physical_geography"
   },
   "layout": "geography",
   "parent": {
@@ -19,46 +19,39 @@
     "page_path": "pages/geography/brunei/district/brunei-muara.json"
   },
   "hierarchy_status": "formalized",
-  "children": [
-    {
-      "id": "bn:village:jerudong",
-      "kind": "village",
-      "name": "Джерудонг",
-      "page_path": "pages/geography/brunei/village/jerudong.json",
-      "object_count": 1
-    }
-  ],
+  "children": [],
   "legacy_region_names": [],
   "legacy_locality_names": [],
-  "canonical_geo_id": "geo_bn_0017",
+  "canonical_geo_id": "geo_bn_0015",
   "geo_profile": {
-    "id": "geo_bn_0017",
+    "id": "geo_bn_0015",
     "kind": "geographic_area",
     "names": {
-      "primary": "Сенгкуронг",
-      "local": "Mukim Sengkurong"
+      "primary": "Река Бруней",
+      "local": "Sungai Brunei / Brunei River"
     },
-    "slug": "sengkurong",
+    "slug": "brunei-river",
     "parent_id": "geo_bn_0001",
     "geo_path": [
       "geo_bn",
       "geo_bn_0001",
-      "geo_bn_0017"
+      "geo_bn_0015"
     ],
     "description": {
-      "narrow": "Административный узел введён для подтверждённой дочерней деревни Jerudong и связанных объектов.",
+      "narrow": "Природная географическая сущность для речных и мангровых объектов; не является административным уровнем.",
       "body": null
     },
     "cover_media_id": null,
     "primary_location": null,
     "legacy_ids": [
-      "bn:mukim:sengkurong"
+      "bn:river:brunei"
     ],
     "migration": {
       "source_kind": "formal_hierarchy",
-      "axis": "administrative",
+      "axis": "physical_geography",
       "status": "formalized"
     },
+    "coverage_role": "structural",
     "provenance": {
       "checked_at": "2026-09-30",
       "sources": [
@@ -178,14 +171,21 @@
           "checked_at": "2026-09-28",
           "note": "Used only for stable place/address relationship, not current business status."
         }
+      ],
+      "structural_source_refs": [
+        "src_906001"
+      ],
+      "research_source_refs": [],
+      "source_refs": [
+        "src_906001"
       ]
     }
   },
-  "notes_ru": "Административный узел введён для подтверждённой дочерней деревни Jerudong и связанных объектов.",
+  "notes_ru": "Природная географическая сущность для речных и мангровых объектов; не является административным уровнем.",
   "class_counts": [
     {
-      "object_type": "forest",
-      "label_ru": "Леса и джунгли",
+      "object_type": "mangrove",
+      "label_ru": "Мангровые леса",
       "count": 1
     }
   ],
@@ -196,12 +196,12 @@
       "count": 1,
       "classes": [
         {
-          "object_type": "forest",
-          "label_ru": "Леса и джунгли",
+          "object_type": "mangrove",
+          "label_ru": "Мангровые леса",
           "count": 1,
-          "country_class_page": "pages/countries/brunei/classes/forest.json",
+          "country_class_page": "pages/countries/brunei/classes/mangrove.json",
           "filter": {
-            "geography_id": "bn:mukim:sengkurong"
+            "geography_id": "bn:river:brunei"
           }
         }
       ]
@@ -209,11 +209,11 @@
   ],
   "objects": [
     {
-      "id": "bn:bukit-shahbandar-recreational-park",
-      "name": "Bukit Shahbandar Recreational Park",
-      "object_type": "forest",
-      "narrow": "Тренировочный лесной парк с серией крутых подъёмов и спусков, популярный у местных. Характер места создаёт ритм холмов, лестниц и леса, а не одна панорамная точка.",
-      "detail_path": "countries/brunei/objects/bukit-shahbandar-recreational-park.json"
+      "id": "bn:brunei-river-mangrove-safari",
+      "name": "Brunei River Mangrove Safari",
+      "object_type": "mangrove",
+      "narrow": "Речной маршрут соединяет центр столицы, Кампонг-Айер и мангровые рукава, где ищут носачей, крокодилов, птиц и вечером светлячков. Это один из сильнейших способов связать городской и природный Бруней в одной сцене.",
+      "detail_path": "countries/brunei/objects/brunei-river-mangrove-safari.json"
     }
   ],
   "provenance": {

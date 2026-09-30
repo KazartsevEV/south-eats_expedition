@@ -3,15 +3,15 @@
     "schema_version": "2.10.10",
     "release_id": "2026-09-30-r42",
     "page_type": "geography",
-    "id": "bn:river:brunei"
+    "id": "bn:mukim:kota-batu"
   },
   "identity": {
-    "name": "Река Бруней",
-    "name_local": "Sungai Brunei / Brunei River",
-    "kind": "river",
-    "slug": "brunei-river",
+    "name": "Кота-Бату",
+    "name_local": "Mukim Kota Batu",
+    "kind": "district",
+    "slug": "kota-batu",
     "country_code": "BN",
-    "axis": "physical_geography"
+    "axis": "administrative"
   },
   "layout": "geography",
   "parent": {
@@ -22,35 +22,36 @@
   "children": [],
   "legacy_region_names": [],
   "legacy_locality_names": [],
-  "canonical_geo_id": "geo_bn_0015",
+  "canonical_geo_id": "geo_bn_0014",
   "geo_profile": {
-    "id": "geo_bn_0015",
-    "kind": "geographic_area",
+    "id": "geo_bn_0014",
+    "kind": "district",
     "names": {
-      "primary": "Река Бруней",
-      "local": "Sungai Brunei / Brunei River"
+      "primary": "Кота-Бату",
+      "local": "Mukim Kota Batu"
     },
-    "slug": "brunei-river",
+    "slug": "kota-batu",
     "parent_id": "geo_bn_0001",
     "geo_path": [
       "geo_bn",
       "geo_bn_0001",
-      "geo_bn_0015"
+      "geo_bn_0014"
     ],
     "description": {
-      "narrow": "Природная географическая сущность для речных и мангровых объектов; не является административным уровнем.",
+      "narrow": "Malay Technology Museum расположен в Kota Batu; Mukim Kota Batu подтверждён официальной судебной зональной схемой. Точная kampung-привязка музея пока не зафиксирована.",
       "body": null
     },
     "cover_media_id": null,
     "primary_location": null,
     "legacy_ids": [
-      "bn:river:brunei"
+      "bn:mukim:kota-batu"
     ],
     "migration": {
       "source_kind": "formal_hierarchy",
-      "axis": "physical_geography",
+      "axis": "administrative",
       "status": "formalized"
     },
+    "coverage_role": "structural",
     "provenance": {
       "checked_at": "2026-09-30",
       "sources": [
@@ -170,30 +171,37 @@
           "checked_at": "2026-09-28",
           "note": "Used only for stable place/address relationship, not current business status."
         }
+      ],
+      "structural_source_refs": [
+        "src_906001"
+      ],
+      "research_source_refs": [],
+      "source_refs": [
+        "src_906001"
       ]
     }
   },
-  "notes_ru": "Природная географическая сущность для речных и мангровых объектов; не является административным уровнем.",
+  "notes_ru": "Malay Technology Museum расположен в Kota Batu; Mukim Kota Batu подтверждён официальной судебной зональной схемой. Точная kampung-привязка музея пока не зафиксирована.",
   "class_counts": [
     {
-      "object_type": "mangrove",
-      "label_ru": "Мангровые леса",
+      "object_type": "museum",
+      "label_ru": "Музеи",
       "count": 1
     }
   ],
   "class_families": [
     {
-      "family_id": "protected_ecosystems",
-      "label_ru": "Охраняемая природа и экосистемы",
+      "family_id": "archaeology_memory",
+      "label_ru": "Археология, древность и историческая память",
       "count": 1,
       "classes": [
         {
-          "object_type": "mangrove",
-          "label_ru": "Мангровые леса",
+          "object_type": "museum",
+          "label_ru": "Музеи",
           "count": 1,
-          "country_class_page": "pages/countries/brunei/classes/mangrove.json",
+          "country_class_page": "pages/countries/brunei/classes/museum.json",
           "filter": {
-            "geography_id": "bn:river:brunei"
+            "geography_id": "bn:mukim:kota-batu"
           }
         }
       ]
@@ -201,11 +209,11 @@
   ],
   "objects": [
     {
-      "id": "bn:brunei-river-mangrove-safari",
-      "name": "Brunei River Mangrove Safari",
-      "object_type": "mangrove",
-      "narrow": "Речной маршрут соединяет центр столицы, Кампонг-Айер и мангровые рукава, где ищут носачей, крокодилов, птиц и вечером светлячков. Это один из сильнейших способов связать городской и природный Бруней в одной сцене.",
-      "detail_path": "countries/brunei/objects/brunei-river-mangrove-safari.json"
+      "id": "bn:malay-technology-museum",
+      "name": "Malay Technology Museum",
+      "object_type": "museum",
+      "narrow": "Музей традиционных технологий и материальной культуры: водные поселения, ремёсла, строительство, обработка материалов и хозяйственные практики. Удобен как объясняющий объект перед Кампонг-Айер и внутренними районами.",
+      "detail_path": "countries/brunei/objects/malay-technology-museum.json"
     }
   ],
   "provenance": {

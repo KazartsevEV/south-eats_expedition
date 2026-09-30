@@ -3,13 +3,13 @@
     "schema_version": "2.10.10",
     "release_id": "2026-09-30-r42",
     "page_type": "geography",
-    "id": "bn:mukim:kota-batu"
+    "id": "bn:mukim:sengkurong"
   },
   "identity": {
-    "name": "Кота-Бату",
-    "name_local": "Mukim Kota Batu",
-    "kind": "mukim",
-    "slug": "kota-batu",
+    "name": "Сенгкуронг",
+    "name_local": "Mukim Sengkurong",
+    "kind": "district",
+    "slug": "sengkurong",
     "country_code": "BN",
     "axis": "administrative"
   },
@@ -19,38 +19,47 @@
     "page_path": "pages/geography/brunei/district/brunei-muara.json"
   },
   "hierarchy_status": "formalized",
-  "children": [],
+  "children": [
+    {
+      "id": "bn:village:jerudong",
+      "kind": "village",
+      "name": "Джерудонг",
+      "page_path": "pages/geography/brunei/village/jerudong.json",
+      "object_count": 1
+    }
+  ],
   "legacy_region_names": [],
   "legacy_locality_names": [],
-  "canonical_geo_id": "geo_bn_0014",
+  "canonical_geo_id": "geo_bn_0017",
   "geo_profile": {
-    "id": "geo_bn_0014",
-    "kind": "geographic_area",
+    "id": "geo_bn_0017",
+    "kind": "district",
     "names": {
-      "primary": "Кота-Бату",
-      "local": "Mukim Kota Batu"
+      "primary": "Сенгкуронг",
+      "local": "Mukim Sengkurong"
     },
-    "slug": "kota-batu",
+    "slug": "sengkurong",
     "parent_id": "geo_bn_0001",
     "geo_path": [
       "geo_bn",
       "geo_bn_0001",
-      "geo_bn_0014"
+      "geo_bn_0017"
     ],
     "description": {
-      "narrow": "Malay Technology Museum расположен в Kota Batu; Mukim Kota Batu подтверждён официальной судебной зональной схемой. Точная kampung-привязка музея пока не зафиксирована.",
+      "narrow": "Административный узел введён для подтверждённой дочерней деревни Jerudong и связанных объектов.",
       "body": null
     },
     "cover_media_id": null,
     "primary_location": null,
     "legacy_ids": [
-      "bn:mukim:kota-batu"
+      "bn:mukim:sengkurong"
     ],
     "migration": {
       "source_kind": "formal_hierarchy",
       "axis": "administrative",
       "status": "formalized"
     },
+    "coverage_role": "structural",
     "provenance": {
       "checked_at": "2026-09-30",
       "sources": [
@@ -170,30 +179,37 @@
           "checked_at": "2026-09-28",
           "note": "Used only for stable place/address relationship, not current business status."
         }
+      ],
+      "structural_source_refs": [
+        "src_906001"
+      ],
+      "research_source_refs": [],
+      "source_refs": [
+        "src_906001"
       ]
     }
   },
-  "notes_ru": "Malay Technology Museum расположен в Kota Batu; Mukim Kota Batu подтверждён официальной судебной зональной схемой. Точная kampung-привязка музея пока не зафиксирована.",
+  "notes_ru": "Административный узел введён для подтверждённой дочерней деревни Jerudong и связанных объектов.",
   "class_counts": [
     {
-      "object_type": "museum",
-      "label_ru": "Музеи",
+      "object_type": "forest",
+      "label_ru": "Леса и джунгли",
       "count": 1
     }
   ],
   "class_families": [
     {
-      "family_id": "archaeology_memory",
-      "label_ru": "Археология, древность и историческая память",
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
       "count": 1,
       "classes": [
         {
-          "object_type": "museum",
-          "label_ru": "Музеи",
+          "object_type": "forest",
+          "label_ru": "Леса и джунгли",
           "count": 1,
-          "country_class_page": "pages/countries/brunei/classes/museum.json",
+          "country_class_page": "pages/countries/brunei/classes/forest.json",
           "filter": {
-            "geography_id": "bn:mukim:kota-batu"
+            "geography_id": "bn:mukim:sengkurong"
           }
         }
       ]
@@ -201,11 +217,11 @@
   ],
   "objects": [
     {
-      "id": "bn:malay-technology-museum",
-      "name": "Malay Technology Museum",
-      "object_type": "museum",
-      "narrow": "Музей традиционных технологий и материальной культуры: водные поселения, ремёсла, строительство, обработка материалов и хозяйственные практики. Удобен как объясняющий объект перед Кампонг-Айер и внутренними районами.",
-      "detail_path": "countries/brunei/objects/malay-technology-museum.json"
+      "id": "bn:bukit-shahbandar-recreational-park",
+      "name": "Bukit Shahbandar Recreational Park",
+      "object_type": "forest",
+      "narrow": "Тренировочный лесной парк с серией крутых подъёмов и спусков, популярный у местных. Характер места создаёт ритм холмов, лестниц и леса, а не одна панорамная точка.",
+      "detail_path": "countries/brunei/objects/bukit-shahbandar-recreational-park.json"
     }
   ],
   "provenance": {

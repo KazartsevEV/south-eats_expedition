@@ -7,7 +7,7 @@
     "primary": "Samar cave systems"
   },
   "summary": {
-    "narrow": "Samar cave systems — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео."
+    "narrow": "Пещерный Самар — это не одна туристическая пещера, а несколько карстовых систем в крупном охраняемом лесном массиве. Для экспедиционной карточки важны два разных узла: Langun–Gobingob в Calbiga — длинная технически сложная система, и Sohoton у Basey — речной карст с лодочным доступом, естественным мостом и пещерами."
   },
   "classification": {
     "class_id": "nature.cave",
@@ -20,40 +20,71 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
+    "region_ids": [
+      "geo_ph_0012",
+      "geo_ph_0026",
+      "geo_ph_0043"
+    ],
     "nearest_place_id": null,
-    "nearest_place_name_raw": "Tacloban / Catbalogan",
+    "nearest_place_name_raw": "Calbiga / Basey",
     "primary_location": {
-      "lat": null,
-      "lon": null,
+      "lat": 11.63651,
+      "lon": 125.05036,
       "elevation_m": null,
-      "elevation_range_m": null,
-      "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "coordinate_type": "cave_entrance",
+      "accuracy": "high",
+      "source_refs": [
+        "src_stage_ph_0099"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Gobingob entrance / Langun-Gobingob system reference from OSM."
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 11.36481,
+        "lon": 125.16334,
+        "elevation_m": null,
+        "coordinate_type": "viewpoint",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0100"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Sohoton Natural Bridge — отдельный южный узел пещерного Самара."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Samar cave systems — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+        "text": "Пещерный Самар — это не одна туристическая пещера, а несколько карстовых систем в крупном охраняемом лесном массиве. Для экспедиционной карточки важны два разных узла: Langun–Gobingob в Calbiga — длинная технически сложная система, и Sohoton у Basey — речной карст с лодочным доступом, естественным мостом и пещерами.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0024",
-          "src_stage_ph_0003",
-          "src_stage_ph_0025"
+          "src_stage_ph_0025",
+          "src_stage_ph_0098"
+        ]
+      },
+      {
+        "type": "geology",
+        "text": "Samar Island Natural Park включает одну из крупнейших известняковых областей страны. DOT описывает Calbiga karst и пятикилометровую систему Langun–Gobingob; растворение известняка создало пещерные камеры, скальные обрывы, подземные водотоки и естественные мосты.",
+        "source_refs": [
+          "src_stage_ph_0025",
+          "src_stage_ph_0098"
+        ]
+      },
+      {
+        "type": "geography",
+        "text": "Langun–Gobingob и Sohoton находятся в разных частях Самара и не должны планироваться как один короткий объект. Первый требует сухопутного подхода через Calbiga/Panayuran и продолжительного спелеомаршрута, второй — лодки/каяка по речному карсту из Basey.",
+        "source_refs": [
+          "src_stage_ph_0098",
+          "src_stage_ph_0101"
         ]
       }
     ]
   },
   "visit": {
     "entry": {
-      "access_status": "open_protected_area_reservation_based",
+      "access_status": "permit_or_reservation_required_for_major_cave_routes",
       "fee": {
         "amount": null,
         "currency": null,
@@ -77,7 +108,7 @@
         ],
         "checked_at": "2026-09-28"
       },
-      "permit_required": null,
+      "permit_required": true,
       "source_refs": [
         "src_stage_ph_0006",
         "src_stage_ph_0024",
@@ -91,34 +122,105 @@
     },
     "access_options": [
       {
-        "id": "access_01",
-        "origin_place_id": null,
+        "id": "access_langun_from_catbalogan",
+        "origin_place_id": "geo_ph_0060",
         "modes": [
-          "other"
+          "public_transport",
+          "motorcycle",
+          "walking"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Базироваться удобнее в Tacloban / Catbalogan; далее дорога до входной зоны и, где требуется, локальный гид/лодка/пеший участок. После сильных дождей доступ перепроверять. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+            "notes": "Практическая схема Trexplore: Catbalogan → Calbiga автобусом."
+          },
+          {
+            "mode": "motorcycle",
+            "distance_km": null,
+            "duration_min": null,
+            "road": {
+              "surface": null,
+              "condition": "сельская дорога",
+              "seasonality": "проверять после сильных дождей"
+            },
+            "notes": "Calbiga → Brgy. Panayuran на habal-habal."
+          },
+          {
+            "mode": "walking",
+            "distance_km": null,
+            "duration_min": 60,
+            "elevation_gain_m": null,
+            "elevation_loss_m": null,
+            "trailhead": null,
+            "trail": {
+              "type": "jungle_cave_approach",
+              "condition": "тропа к входу; далее мокрый/грязный карст",
+              "navigation": "с местным cave guide",
+              "river_crossings": null
+            },
+            "notes": "Операторский маршрут закладывает около часа от Panayuran до входа Gobingob."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0101",
+          "src_stage_ph_0025"
+        ]
+      },
+      {
+        "id": "access_sohoton_basey",
+        "origin_place_id": null,
+        "origin_raw": "Basey / Sohoton visitor access",
+        "modes": [
+          "boat",
+          "walking"
+        ],
+        "legs": [
+          {
+            "mode": "boat",
+            "distance_km": null,
+            "duration_min": null,
+            "notes": "Sohoton Natural Bridge и пещеры исследуются с местным гидом на лодке/каяке; LGU Basey оценивает типичный тур в 3–4 часа."
+          },
+          {
+            "mode": "walking",
+            "distance_km": null,
+            "duration_min": null,
+            "elevation_gain_m": null,
+            "elevation_loss_m": null,
+            "trailhead": null,
+            "trail": {
+              "type": "cave_rocks",
+              "condition": "неровный карст",
+              "navigation": "guide required",
+              "river_crossings": null
+            },
+            "notes": "Часть пещер включает движение по камням и неровному рельефу."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0098"
         ]
       }
     ],
     "water": {
-      "summary": null,
+      "summary": "Для Langun–Gobingob операторская схема требует взять собственную питьевую воду из населённого пункта; подтверждённого potable natural source внутри пещеры нет. Подземные водотоки не считать питьевыми без обработки.",
       "quality": "unknown",
       "last_reliable_source": null,
       "distance_m": null,
       "natural_sources": [],
-      "source_refs": []
+      "source_refs": [
+        "src_stage_ph_0101"
+      ]
     },
     "supplies": null,
     "overnight": {
-      "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "status": "permission_required",
+      "summary": "Для длинного Langun–Gobingob маршрута текущий специализированный оператор описывает 3-дневный формат с лагерем внутри Gobingob и включёнными permits/camping equipment. Это не означает свободный кемпинг: ночёвка привязана к согласованному caving route.",
+      "source_refs": [
+        "src_stage_ph_0101"
+      ]
     },
     "lodging_ids": [],
     "rules": {
@@ -144,9 +246,81 @@
     "video_suitability_5": 5,
     "best_time": "рассвет и последние часы дня; в rainforest мягкий свет после дождя часто лучше жёсткого полудня",
     "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_langun_entrance",
+        "name": "Langun–Gobingob cave entrance",
+        "description": "Большой карстовый вход и масштаб камеры; координата относится к cave entrance.",
+        "coordinates": {
+          "lat": 11.63651,
+          "lon": 125.05036,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "11.636510, 125.050360"
+        },
+        "access": null,
+        "view": {
+          "description": "Большой карстовый вход и масштаб камеры; координата относится к cave entrance."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "масштаб входа и внутренней камеры"
+          },
+          {
+            "type": "action_camera",
+            "why": "движение по мокрому карсту и узким участкам"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0099",
+          "src_stage_ph_0024"
+        ]
+      },
+      {
+        "id": "vp_sohoton_bridge",
+        "name": "Sohoton Natural Bridge",
+        "description": "Речной карст и естественный мост, доступный с воды.",
+        "coordinates": {
+          "lat": 11.36481,
+          "lon": 125.16334,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "11.364810, 125.163340"
+        },
+        "access": null,
+        "view": {
+          "description": "Речной карст и естественный мост, доступный с воды."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "мост, скальные стены и река в одном плане"
+          },
+          {
+            "type": "action_camera",
+            "why": "лодка/каяк и вода"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0100"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "После сильных дождей уровень воды и состояние подземных/речных участков меняются; доступ должен подтверждаться в день маршрута."
+    ],
+    "video_activity": [
+      "движение по огромным камерам Langun–Gobingob",
+      "выход летучих мышей у входов, если наблюдение разрешено",
+      "лодка и каяк под Sohoton Natural Bridge"
+    ],
     "useful_equipment": [],
     "drone": {
       "visual_value": null,
@@ -177,13 +351,17 @@
     "legacy_order": 9
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
       "src_stage_ph_0006",
       "src_stage_ph_0024",
       "src_stage_ph_0003",
-      "src_stage_ph_0025"
+      "src_stage_ph_0025",
+      "src_stage_ph_0098",
+      "src_stage_ph_0099",
+      "src_stage_ph_0100",
+      "src_stage_ph_0101"
     ]
   },
   "qa": {
@@ -191,16 +369,16 @@
     "checks": {
       "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
+      "geo": true,
+      "coordinates": true,
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": false,
-      "water": false,
-      "overnight": false,
+      "access": true,
+      "water": true,
+      "overnight": true,
       "traveler_reports": false,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

@@ -7,7 +7,7 @@
     "primary": "Tubbataha Reefs"
   },
   "summary": {
-    "narrow": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео."
+    "narrow": "Туббатаха — удалённый морской заповедник в центре моря Сулу: три атолла/рифовых комплекса, почти 100 тысяч гектаров охраняемой акватории и один из наиболее строгих режимов доступа в базе. Здесь нет береговой туристической инфраструктуры: посещение строится вокруг разрешённого судна, entry permit и многодневного liveaboard."
   },
   "classification": {
     "class_id": "nature.reef",
@@ -21,70 +21,89 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
-    "nearest_place_id": null,
+    "region_ids": [
+      "geo_ph_0007",
+      "geo_ph_0019",
+      "geo_ph_0041"
+    ],
+    "nearest_place_id": "geo_ph_0053",
     "nearest_place_name_raw": "Puerto Princesa",
     "primary_location": {
-      "lat": null,
-      "lon": null,
+      "lat": 8.953333,
+      "lon": 119.8675,
       "elevation_m": null,
-      "elevation_range_m": null,
       "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "accuracy": "high",
+      "source_refs": [
+        "src_stage_ph_0086"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Координата центра объекта Всемирного наследия UNESCO; не причал и не конкретная точка погружения."
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 8.92724,
+        "lon": 120.01358,
+        "elevation_m": null,
+        "coordinate_type": "viewpoint",
+        "accuracy": "medium",
+        "source_refs": [
+          "src_stage_ph_0087"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Jessie Beazley Reef — отдельный компонент парка; точка не означает конкретный mooring/dive site."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+        "text": "Туббатаха — удалённый морской заповедник в центре моря Сулу: три атолла/рифовых комплекса, почти 100 тысяч гектаров охраняемой акватории и один из наиболее строгих режимов доступа в базе. Здесь нет береговой туристической инфраструктуры: посещение строится вокруг разрешённого судна, entry permit и многодневного liveaboard.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0018",
-          "src_stage_ph_0003",
+          "src_stage_ph_0085",
           "src_stage_ph_0019",
-          "src_stage_ph_0020",
-          "src_stage_ph_0021"
+          "src_stage_ph_0020"
+        ]
+      },
+      {
+        "type": "geography",
+        "text": "UNESCO включает в объект North и South Atolls и Jessie Beazley Reef. Большая часть территории находится под водой; характерный рельеф — лагуны, мелководные рифовые платформы и почти отвесные внешние стенки, уходящие на десятки метров.",
+        "source_refs": [
+          "src_stage_ph_0085"
+        ]
+      },
+      {
+        "type": "geography",
+        "text": "Объект поддерживает сотни видов кораллов и рыб, а также акул, черепах, китообразных и морских птиц. Полный no-take режим и удалённость — ключевые причины сохранности экосистемы.",
+        "source_refs": [
+          "src_stage_ph_0085"
         ]
       }
     ]
   },
   "visit": {
     "entry": {
-      "access_status": "permit-controlled marine protected area",
+      "access_status": "permit_required_marine_park",
       "fee": {
-        "amount": null,
-        "currency": null,
-        "pricing_basis": null,
-        "description": "Visitor Entry Permit / Conservation Fee: PHP 5,000 на человека; divemaster PHP 500; дети 12 и младше освобождены. Vessel fee отдельно.",
+        "amount": 5000,
+        "currency": "PHP",
+        "pricing_basis": "person",
+        "description": "Visitor Entry Permit / Conservation Fee; divemaster и vessel fees считаются отдельно.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0018",
-          "src_stage_ph_0003",
-          "src_stage_ph_0019",
-          "src_stage_ph_0020",
-          "src_stage_ph_0021"
+          "src_stage_ph_0020"
         ],
-        "checked_at": "2026-09-28"
+        "checked_at": "2026-09-30"
       },
       "hours": {
-        "value": "Не объект с дневным графиком; вход осуществляется по permit и маршруту approved vessel/liveaboard.",
+        "value": "Нет дневного графика входа: доступ идёт по entry permit и маршруту разрешённого судна.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0018",
-          "src_stage_ph_0003",
           "src_stage_ph_0019",
-          "src_stage_ph_0020",
-          "src_stage_ph_0021"
+          "src_stage_ph_0020"
         ],
-        "checked_at": "2026-09-28"
+        "checked_at": "2026-09-30"
       },
-      "permit_required": null,
+      "permit_required": true,
       "source_refs": [
         "src_stage_ph_0006",
         "src_stage_ph_0018",
@@ -100,34 +119,43 @@
     },
     "access_options": [
       {
-        "id": "access_01",
-        "origin_place_id": null,
+        "id": "access_puerto_princesa_liveaboard",
+        "origin_place_id": "geo_ph_0053",
         "modes": [
-          "other"
+          "boat"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "boat",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Puerto Princesa — основной jump-off; дальше 10–12 часов по морю на permitted liveaboard. Самостоятельного регулярного пассажирского транспорта нет; поездку организуют dive operators с Permit to Operate. Все туристические поездки — liveaboard; наземной туристической инфраструктуры/гостиниц в парке нет."
+            "notes": "TMO указывает Puerto Princesa как jump-off и 10–12 часов морского перехода до парка; коммерческие поездки выполняют операторы с Permit to Operate."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0019",
+          "src_stage_ph_0021"
         ]
       }
     ],
     "water": {
-      "summary": null,
+      "summary": "На рифах нет береговых туристических facilities; вода и снабжение должны находиться на liveaboard/частном судне. Наземного питьевого источника в парке нет в туристической схеме.",
       "quality": "unknown",
       "last_reliable_source": null,
       "distance_m": null,
       "natural_sources": [],
-      "source_refs": []
+      "source_refs": [
+        "src_stage_ph_0019"
+      ]
     },
     "supplies": null,
     "overnight": {
-      "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "status": "official",
+      "summary": "Все туристические ночёвки проходят на яхте/liveaboard: TMO прямо указывает, что береговых facilities нет. Коммерческие туры обычно 5–7 дней или дольше, если это прописано в permit; частные некоммерческие поездки ограничены семью днями.",
+      "source_refs": [
+        "src_stage_ph_0019",
+        "src_stage_ph_0020"
+      ]
     },
     "lodging_ids": [],
     "rules": {
@@ -149,32 +177,85 @@
       "site_specific_notes": "Перед выездом смотреть фактический прогноз; для моря, гор, рек, пещер и вулканов оперативная погода важнее климатической нормы."
     }
   },
-  "traveler_reports": [],
+  "traveler_reports": [
+    {
+      "topic": "booking",
+      "summary": "В июне 2026 дайвер описывал бронирование более чем за год и отмечал, что парк обслуживает ограниченное число операторов в короткое сезонное окно.",
+      "observed_period": "2026-06",
+      "source_refs": [
+        "src_stage_ph_0088"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "sea_conditions",
+      "summary": "В марте 2025 участники liveaboard столкнулись с сильным волнением, из-за которого возвращение задержалось примерно на 12 часов.",
+      "observed_period": "2025-03",
+      "source_refs": [
+        "src_stage_ph_0089"
+      ],
+      "confidence": "medium"
+    }
+  ],
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
     "best_time": "рассвет/раннее утро и поздний день; для подводной съёмки важнее прозрачность воды/солнце",
     "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_jessie_beazley",
+        "name": "Jessie Beazley Reef",
+        "description": "Один из отдельных рифовых компонентов Туббатахи; полезная координатная опора для подводной и морской разведки, но не гарантированный dive-site/mooring.",
+        "coordinates": {
+          "lat": 8.92724,
+          "lon": 120.01358,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "8.927240, 120.013580"
+        },
+        "access": null,
+        "view": {
+          "description": "Один из отдельных рифовых компонентов Туббатахи; полезная координатная опора для подводной и морской разведки, но не гарантированный dive-site/mooring."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "underwater_camera",
+            "why": "основной визуальный материал находится под водой"
+          },
+          {
+            "type": "action_camera",
+            "why": "лодочные переходы и вода"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0087"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Прозрачность и течение меняются внутри короткого туристического сезона; фактическое состояние моря важнее календарной нормы."
+    ],
+    "video_activity": [
+      "пелагические рыбы и акулы на внешних стенках",
+      "рифовый ландшафт и движение течения",
+      "морские птицы у островков там, где правила допускают наблюдение"
+    ],
     "useful_equipment": [],
     "drone": {
-      "visual_value": null,
-      "legal_status": "unknown",
-      "permit_required": null,
+      "visual_value": "Атоллы и границы рифовых платформ хорошо читаются сверху, но запуск регулируется парком.",
+      "legal_status": "permit_required",
+      "permit_required": true,
       "restrictions": [
-        "Drone permit required from Tubbataha Management Office."
+        "Visitor drone permit required from Tubbataha Management Office."
       ],
       "source_refs": [
-        "src_stage_ph_0006",
-        "src_stage_ph_0018",
-        "src_stage_ph_0003",
-        "src_stage_ph_0019",
-        "src_stage_ph_0020",
-        "src_stage_ph_0021"
+        "src_stage_ph_0020"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-30"
     },
     "filming_restrictions": "Commercial filming agreement/permit required. TMO also bans camera/video use by divemasters while on duty so they can focus on safety."
   },
@@ -190,7 +271,7 @@
     "legacy_order": 7
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
       "src_stage_ph_0006",
@@ -198,24 +279,29 @@
       "src_stage_ph_0003",
       "src_stage_ph_0019",
       "src_stage_ph_0020",
-      "src_stage_ph_0021"
+      "src_stage_ph_0021",
+      "src_stage_ph_0085",
+      "src_stage_ph_0086",
+      "src_stage_ph_0087",
+      "src_stage_ph_0088",
+      "src_stage_ph_0089"
     ]
   },
   "qa": {
     "status": "incomplete",
     "checks": {
-      "language": false,
+      "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
+      "geo": true,
+      "coordinates": true,
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": false,
-      "water": false,
-      "overnight": false,
-      "traveler_reports": false,
-      "visual_recon": false
+      "access": true,
+      "water": true,
+      "overnight": true,
+      "traveler_reports": true,
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

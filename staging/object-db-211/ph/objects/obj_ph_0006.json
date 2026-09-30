@@ -7,7 +7,7 @@
     "primary": "Boracay"
   },
   "summary": {
-    "narrow": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео."
+    "narrow": "Боракай — небольшой курортный остров у северо-западного берега Паная, где самостоятельная логистика строится вокруг порта Caticlan и короткого морского перехода. Главная природная ось — четырёхкилометровый White Beach на западном берегу; восточный Bulabog сильнее связан с ветровыми видами спорта."
   },
   "classification": {
     "class_id": "nature.reserve",
@@ -19,33 +19,78 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
+    "region_ids": [
+      "geo_ph_0009",
+      "geo_ph_0024",
+      "geo_ph_0040"
+    ],
     "nearest_place_id": null,
-    "nearest_place_name_raw": "Caticlan / Kalibo",
+    "nearest_place_name_raw": "Caticlan / Malay",
     "primary_location": {
-      "lat": null,
-      "lon": null,
+      "lat": 11.95823,
+      "lon": 121.92325,
       "elevation_m": null,
-      "elevation_range_m": null,
-      "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "coordinate_type": "viewpoint",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_ph_0080"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Операционная точка White Beach; это не геометрический центр всего острова."
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 11.92783,
+        "lon": 121.94928,
+        "elevation_m": null,
+        "coordinate_type": "pier",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0081"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Caticlan Jetty — материковый порт входа на Боракай."
+      },
+      {
+        "lat": 11.9674,
+        "lon": 121.9248,
+        "elevation_m": null,
+        "coordinate_type": "viewpoint",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0082"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Геопривязанная точка съёмки White Beach."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+        "text": "Боракай — небольшой курортный остров у северо-западного берега Паная, где самостоятельная логистика строится вокруг порта Caticlan и короткого морского перехода. Главная природная ось — четырёхкилометровый White Beach на западном берегу; восточный Bulabog сильнее связан с ветровыми видами спорта.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0016",
-          "src_stage_ph_0003",
-          "src_stage_ph_0017"
+          "src_stage_ph_0017",
+          "src_stage_ph_0078",
+          "src_stage_ph_0080"
+        ]
+      },
+      {
+        "type": "geography",
+        "text": "White Beach тянется вдоль западного берега острова и разбит на Stations 1–3. Остров лежит менее чем в километре от северо-западного побережья Паная, поэтому финальная часть любого сухопутного маршрута через Caticlan всё равно требует лодки.",
+        "source_refs": [
+          "src_stage_ph_0017",
+          "src_stage_ph_0080",
+          "src_stage_ph_0081"
+        ]
+      },
+      {
+        "type": "history",
+        "text": "В 2018 году Боракай был закрыт на шесть месяцев для экологической реабилитации после проблем с канализацией, застройкой береговой полосы и качеством воды. Современный режим въезда и портовых платежей — прямое продолжение более жёсткого управления туристической нагрузкой.",
+        "source_refs": [
+          "src_stage_ph_0078",
+          "src_stage_ph_0079"
         ]
       }
     ]
@@ -76,48 +121,106 @@
         ],
         "checked_at": "2026-09-28"
       },
-      "permit_required": null,
+      "permit_required": false,
       "source_refs": [
         "src_stage_ph_0006",
         "src_stage_ph_0016",
         "src_stage_ph_0003",
-        "src_stage_ph_0017"
+        "src_stage_ph_0017",
+        "src_stage_ph_0078",
+        "src_stage_ph_0079"
       ],
       "checked_at": "2026-09-28",
       "official_url": "https://www.tourism.gov.ph/destination/western-visayas/boracay/",
       "closure_notes": "Water activities и лодки зависят от муссона, предупреждений Coast Guard и локальных правил; White Beach остаётся городской пляжной средой, а не объектом с часами входа.",
-      "notes": "Основной подход через Caticlan / Kalibo; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки."
+      "notes": "Для самостоятельного въезда официальный Aklan iPass/LezzGo объединяет регистрацию, terminal/environmental fees и boat fare; QR предъявляется в Jetty Port."
     },
     "access_options": [
       {
-        "id": "access_01",
+        "id": "access_caticlan_walk",
         "origin_place_id": null,
+        "origin_raw": "Caticlan Airport",
         "modes": [
-          "other"
+          "walking"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "walking",
+            "distance_km": 0.5,
+            "duration_min": null,
+            "elevation_gain_m": 0,
+            "elevation_loss_m": 0,
+            "trailhead": null,
+            "trail": {
+              "type": "urban_roadside",
+              "condition": "короткий городской участок между аэропортом и портом",
+              "navigation": "простая",
+              "river_crossings": 0
+            },
+            "notes": "Mapcarta показывает Caticlan Jetty примерно в 470 м от зоны терминала аэропорта; фактический пешеходный путь зависит от выхода/дорожной схемы."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0081"
+        ]
+      },
+      {
+        "id": "access_caticlan_boat",
+        "origin_place_id": null,
+        "origin_raw": "Caticlan Jetty",
+        "modes": [
+          "boat"
+        ],
+        "legs": [
+          {
+            "mode": "boat",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Основной подход через Caticlan / Kalibo; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+            "notes": "Обязательный короткий морской переход на остров после портовой регистрации и оплаты сборов."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0078",
+          "src_stage_ph_0079"
+        ]
+      },
+      {
+        "id": "access_island_local",
+        "origin_place_id": null,
+        "origin_raw": "Boracay arrival jetty",
+        "modes": [
+          "public_transport"
+        ],
+        "legs": [
+          {
+            "mode": "public_transport",
+            "distance_km": null,
+            "duration_min": null,
+            "notes": "Внутри острова основной локальный наземный транспорт — e-trike/tricycle; цена зависит от формата поездки и участка."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0084"
         ]
       }
     ],
     "water": {
-      "summary": null,
+      "summary": "White Beach — плотная курортная полоса с ресторанами и заведениями прямо у берега; для экспедиционного планирования это коммерческая точка пополнения питьевой воды, не природный источник.",
       "quality": "unknown",
       "last_reliable_source": null,
       "distance_m": null,
       "natural_sources": [],
-      "source_refs": []
+      "source_refs": [
+        "src_stage_ph_0017"
+      ]
     },
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "summary": "Жильё на острове развито; отдельного подтверждения законной палатки на White Beach или других общественных пляжах в собранных официальных источниках нет.",
+      "source_refs": [
+        "src_stage_ph_0079"
+      ]
     },
     "lodging_ids": [],
     "rules": {
@@ -137,15 +240,73 @@
       "site_specific_notes": "Для морских съёмок состояние воды/ветра важнее календарного месяца; перед boat/drone day проверять Coast Guard/LGU и фактическую погоду."
     }
   },
-  "traveler_reports": [],
+  "traveler_reports": [
+    {
+      "topic": "port",
+      "summary": "В феврале 2026 самостоятельные путешественники жаловались на навязчивых посредников у Caticlan Jetty и путаницу вокруг сборов; официальный iPass/LezzGo позволяет идти напрямую к официальным окнам/QR.",
+      "observed_period": "2026-02",
+      "source_refs": [
+        "src_stage_ph_0084"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "crowding",
+      "summary": "В марте 2026 White Beach заметно пустел около полудня из-за сильной жары, тогда как Station 2 и популярные активности оставались более людными.",
+      "observed_period": "2026-03",
+      "source_refs": [
+        "src_stage_ph_0083"
+      ],
+      "confidence": "medium"
+    }
+  ],
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
     "best_time": "рассвет/раннее утро и поздний день; для подводной съёмки важнее прозрачность воды/солнце",
     "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_white_beach",
+        "name": "White Beach",
+        "description": "Западный берег White Beach с открытым морским горизонтом; геопривязанная точка находится непосредственно на пляжной полосе.",
+        "coordinates": {
+          "lat": 11.9674,
+          "lon": 121.9248,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "11.967400, 121.924800"
+        },
+        "access": null,
+        "view": {
+          "description": "Западный берег White Beach с открытым морским горизонтом; геопривязанная точка находится непосредственно на пляжной полосе."
+        },
+        "best_time": "sunset",
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для длинной линии пляжа и горизонта"
+          },
+          {
+            "type": "standard",
+            "why": "для людей, paraw и береговой жизни"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0082"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Западный берег ориентирован на закат; состояние воды и ветра меняется между Amihan и Habagat, поэтому для лодочных и водных сюжетов важна фактическая погода."
+    ],
+    "video_activity": [
+      "paraw и другие лодки на закате",
+      "пешеходное движение вдоль Stations 1–3",
+      "водные активности в разрешённых зонах"
+    ],
     "useful_equipment": [],
     "drone": {
       "visual_value": null,
@@ -176,30 +337,37 @@
     "legacy_order": 6
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
       "src_stage_ph_0006",
       "src_stage_ph_0016",
       "src_stage_ph_0003",
-      "src_stage_ph_0017"
+      "src_stage_ph_0017",
+      "src_stage_ph_0078",
+      "src_stage_ph_0079",
+      "src_stage_ph_0080",
+      "src_stage_ph_0081",
+      "src_stage_ph_0082",
+      "src_stage_ph_0083",
+      "src_stage_ph_0084"
     ]
   },
   "qa": {
     "status": "incomplete",
     "checks": {
-      "language": false,
+      "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
+      "geo": true,
+      "coordinates": true,
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": false,
-      "water": false,
+      "access": true,
+      "water": true,
       "overnight": false,
-      "traveler_reports": false,
-      "visual_recon": false
+      "traveler_reports": true,
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

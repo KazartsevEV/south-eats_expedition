@@ -7,7 +7,7 @@
     "primary": "Iloilo heritage districts"
   },
   "summary": {
-    "narrow": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео."
+    "narrow": "Наследие Илоило распределено по нескольким городским узлам, а не сводится к одной Calle Real: старый Central Business District, Plaza Libertad, Molo и Jaro образуют связанную систему испано-филиппинской архитектуры, торговой истории и действующих религиозных центров."
   },
   "classification": {
     "class_id": "settlement.historic_city",
@@ -18,33 +18,83 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
-    "nearest_place_id": null,
+    "region_ids": [
+      "geo_ph_0009",
+      "geo_ph_0025",
+      "geo_ph_0042"
+    ],
+    "nearest_place_id": "geo_ph_0059",
     "nearest_place_name_raw": "Iloilo City",
     "primary_location": {
-      "lat": null,
-      "lon": null,
-      "elevation_m": null,
-      "elevation_range_m": null,
+      "lat": 10.6933,
+      "lon": 122.5733,
+      "elevation_m": 8,
       "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_ph_0094"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Городская опорная точка для составной карточки нескольких heritage districts."
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 10.69743,
+        "lon": 122.54479,
+        "elevation_m": null,
+        "coordinate_type": "viewpoint",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0095"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Molo Church / Molo Plaza cluster."
+      },
+      {
+        "lat": 10.7235,
+        "lon": 122.55622,
+        "elevation_m": null,
+        "coordinate_type": "viewpoint",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0096"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Jaro Cathedral / Jaro Plaza cluster."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "text": "Наследие Илоило распределено по нескольким городским узлам, а не сводится к одной Calle Real: старый Central Business District, Plaza Libertad, Molo и Jaro образуют связанную систему испано-филиппинской архитектуры, торговой истории и действующих религиозных центров.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0022",
-          "src_stage_ph_0003",
+          "src_stage_ph_0090",
           "src_stage_ph_0023"
+        ]
+      },
+      {
+        "type": "history",
+        "text": "Илоило вырос как крупный порт и торговый центр Западных Висайев. Государственный закон RA 10555 отдельно выделяет Jaro Cathedral, Molo Church, Central Business District, Fort San Pedro, Jaro Plaza, Molo Plaza и Plaza Libertad как Cultural Heritage Tourism Zone.",
+        "source_refs": [
+          "src_stage_ph_0090",
+          "src_stage_ph_0091"
+        ]
+      },
+      {
+        "type": "culture",
+        "text": "Современный город сохраняет не только архитектуру: Илоило получил статус UNESCO Creative City of Gastronomy в 2023 году. Кулинарная традиция, fiesta и рынок еды здесь являются частью живого городского контекста, а не отдельным туристическим дополнением.",
+        "source_refs": [
+          "src_stage_ph_0093",
+          "src_stage_ph_0023"
+        ]
+      },
+      {
+        "type": "culture",
+        "text": "В 2026 году городское правительство и University of the Philippines Visayas заключили соглашение о сохранении исторических зданий Calle Real — это подтверждает, что район остаётся живой зоной консервации, а не законсервированным музейным кварталом.",
+        "source_refs": [
+          "src_stage_ph_0097"
         ]
       }
     ]
@@ -89,34 +139,58 @@
     },
     "access_options": [
       {
-        "id": "access_01",
-        "origin_place_id": null,
+        "id": "access_city_clusters",
+        "origin_place_id": "geo_ph_0059",
         "modes": [
-          "other"
+          "public_transport",
+          "walking"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Практичная база — Iloilo City; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+            "notes": "Heritage zone распределена между City Proper, Molo и Jaro; городской транспорт нужен для переходов между удалёнными кластерами."
+          },
+          {
+            "mode": "walking",
+            "distance_km": null,
+            "duration_min": null,
+            "elevation_gain_m": 0,
+            "elevation_loss_m": 0,
+            "trailhead": null,
+            "trail": {
+              "type": "urban_streets",
+              "condition": "плоская городская сеть",
+              "navigation": "простая внутри каждого кластера",
+              "river_crossings": 0
+            },
+            "notes": "Calle Real/City Proper, Molo Plaza и Jaro Plaza разумно исследовать пешком внутри каждого отдельного узла."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0094",
+          "src_stage_ph_0092"
         ]
       }
     ],
     "water": {
-      "summary": null,
+      "summary": "Городской слой насыщен кафе, ресторанами и магазинами; Iloilo City Government публикует visitor guide с food/coffee инфраструктурой, поэтому пополнение питьевой воды не является экспедиционным дефицитом.",
       "quality": "unknown",
       "last_reliable_source": null,
       "distance_m": null,
       "natural_sources": [],
-      "source_refs": []
+      "source_refs": [
+        "src_stage_ph_0092"
+      ]
     },
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "summary": "Ночёвка — обычное городское жильё. Правовой режим палатки в heritage plazas/церковных участках не подтверждён.",
+      "source_refs": [
+        "src_stage_ph_0090"
+      ]
     },
     "lodging_ids": [],
     "rules": {
@@ -142,9 +216,78 @@
     "video_suitability_5": 4,
     "best_time": "раннее утро, golden hour и blue hour; интерьер — по режиму естественного света",
     "best_weather_light": null,
-    "viewpoints": [],
+    "viewpoints": [
+      {
+        "id": "vp_molo_church",
+        "name": "Molo Church",
+        "description": "Неоготический фасад церкви и Molo Plaza; точка привязана к самому зданию.",
+        "coordinates": {
+          "lat": 10.69743,
+          "lon": 122.54479,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "10.697430, 122.544790"
+        },
+        "access": null,
+        "view": {
+          "description": "Неоготический фасад церкви и Molo Plaza; точка привязана к самому зданию."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "фасад и площадь"
+          },
+          {
+            "type": "standard",
+            "why": "архитектурные детали"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0095"
+        ]
+      },
+      {
+        "id": "vp_jaro_cathedral",
+        "name": "Jaro Cathedral",
+        "description": "Кафедральный собор и Jaro Plaza; отдельный колокольный узел находится напротив.",
+        "coordinates": {
+          "lat": 10.7235,
+          "lon": 122.55622,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "10.723500, 122.556220"
+        },
+        "access": null,
+        "view": {
+          "description": "Кафедральный собор и Jaro Plaza; отдельный колокольный узел находится напротив."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "собор и площадь"
+          },
+          {
+            "type": "telephoto",
+            "why": "детали фасада и колокольни через площадь"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0096"
+        ]
+      }
+    ],
     "seasonal_visuals": [],
-    "video_activity": [],
+    "video_activity": [
+      "повседневная жизнь Calle Real и городских площадей",
+      "религиозная активность у Molo/Jaro вне служб и ограниченных зон",
+      "еда и рынки как часть UNESCO gastronomic context"
+    ],
     "useful_equipment": [],
     "drone": {
       "visual_value": null,
@@ -175,13 +318,21 @@
     "legacy_order": 8
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
       "src_stage_ph_0006",
       "src_stage_ph_0022",
       "src_stage_ph_0003",
-      "src_stage_ph_0023"
+      "src_stage_ph_0023",
+      "src_stage_ph_0090",
+      "src_stage_ph_0091",
+      "src_stage_ph_0092",
+      "src_stage_ph_0093",
+      "src_stage_ph_0094",
+      "src_stage_ph_0095",
+      "src_stage_ph_0096",
+      "src_stage_ph_0097"
     ]
   },
   "qa": {
@@ -189,16 +340,16 @@
     "checks": {
       "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
-      "elevation": false,
+      "geo": true,
+      "coordinates": true,
+      "elevation": true,
       "narrative": true,
       "sources": true,
-      "access": false,
-      "water": false,
+      "access": true,
+      "water": true,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

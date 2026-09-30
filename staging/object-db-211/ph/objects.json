@@ -1760,7 +1760,7 @@
         "primary": "Boracay"
       },
       "summary": {
-        "narrow": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео."
+        "narrow": "Боракай — небольшой курортный остров у северо-западного берега Паная, где самостоятельная логистика строится вокруг порта Caticlan и короткого морского перехода. Главная природная ось — четырёхкилометровый White Beach на западном берегу; восточный Bulabog сильнее связан с ветровыми видами спорта."
       },
       "classification": {
         "class_id": "nature.reserve",
@@ -1772,33 +1772,78 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
+        "region_ids": [
+          "geo_ph_0009",
+          "geo_ph_0024",
+          "geo_ph_0040"
+        ],
         "nearest_place_id": null,
-        "nearest_place_name_raw": "Caticlan / Kalibo",
+        "nearest_place_name_raw": "Caticlan / Malay",
         "primary_location": {
-          "lat": null,
-          "lon": null,
+          "lat": 11.95823,
+          "lon": 121.92325,
           "elevation_m": null,
-          "elevation_range_m": null,
-          "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "coordinate_type": "viewpoint",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_stage_ph_0080"
+          ],
+          "checked_at": "2026-09-30",
+          "notes": "Операционная точка White Beach; это не геометрический центр всего острова."
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 11.92783,
+            "lon": 121.94928,
+            "elevation_m": null,
+            "coordinate_type": "pier",
+            "accuracy": "high",
+            "source_refs": [
+              "src_stage_ph_0081"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Caticlan Jetty — материковый порт входа на Боракай."
+          },
+          {
+            "lat": 11.9674,
+            "lon": 121.9248,
+            "elevation_m": null,
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "source_refs": [
+              "src_stage_ph_0082"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Геопривязанная точка съёмки White Beach."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+            "text": "Боракай — небольшой курортный остров у северо-западного берега Паная, где самостоятельная логистика строится вокруг порта Caticlan и короткого морского перехода. Главная природная ось — четырёхкилометровый White Beach на западном берегу; восточный Bulabog сильнее связан с ветровыми видами спорта.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0016",
-              "src_stage_ph_0003",
-              "src_stage_ph_0017"
+              "src_stage_ph_0017",
+              "src_stage_ph_0078",
+              "src_stage_ph_0080"
+            ]
+          },
+          {
+            "type": "geography",
+            "text": "White Beach тянется вдоль западного берега острова и разбит на Stations 1–3. Остров лежит менее чем в километре от северо-западного побережья Паная, поэтому финальная часть любого сухопутного маршрута через Caticlan всё равно требует лодки.",
+            "source_refs": [
+              "src_stage_ph_0017",
+              "src_stage_ph_0080",
+              "src_stage_ph_0081"
+            ]
+          },
+          {
+            "type": "history",
+            "text": "В 2018 году Боракай был закрыт на шесть месяцев для экологической реабилитации после проблем с канализацией, застройкой береговой полосы и качеством воды. Современный режим въезда и портовых платежей — прямое продолжение более жёсткого управления туристической нагрузкой.",
+            "source_refs": [
+              "src_stage_ph_0078",
+              "src_stage_ph_0079"
             ]
           }
         ]
@@ -1829,48 +1874,106 @@
             ],
             "checked_at": "2026-09-28"
           },
-          "permit_required": null,
+          "permit_required": false,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0016",
             "src_stage_ph_0003",
-            "src_stage_ph_0017"
+            "src_stage_ph_0017",
+            "src_stage_ph_0078",
+            "src_stage_ph_0079"
           ],
           "checked_at": "2026-09-28",
           "official_url": "https://www.tourism.gov.ph/destination/western-visayas/boracay/",
           "closure_notes": "Water activities и лодки зависят от муссона, предупреждений Coast Guard и локальных правил; White Beach остаётся городской пляжной средой, а не объектом с часами входа.",
-          "notes": "Основной подход через Caticlan / Kalibo; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки."
+          "notes": "Для самостоятельного въезда официальный Aklan iPass/LezzGo объединяет регистрацию, terminal/environmental fees и boat fare; QR предъявляется в Jetty Port."
         },
         "access_options": [
           {
-            "id": "access_01",
+            "id": "access_caticlan_walk",
             "origin_place_id": null,
+            "origin_raw": "Caticlan Airport",
             "modes": [
-              "other"
+              "walking"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "walking",
+                "distance_km": 0.5,
+                "duration_min": null,
+                "elevation_gain_m": 0,
+                "elevation_loss_m": 0,
+                "trailhead": null,
+                "trail": {
+                  "type": "urban_roadside",
+                  "condition": "короткий городской участок между аэропортом и портом",
+                  "navigation": "простая",
+                  "river_crossings": 0
+                },
+                "notes": "Mapcarta показывает Caticlan Jetty примерно в 470 м от зоны терминала аэропорта; фактический пешеходный путь зависит от выхода/дорожной схемы."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0081"
+            ]
+          },
+          {
+            "id": "access_caticlan_boat",
+            "origin_place_id": null,
+            "origin_raw": "Caticlan Jetty",
+            "modes": [
+              "boat"
+            ],
+            "legs": [
+              {
+                "mode": "boat",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "Основной подход через Caticlan / Kalibo; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+                "notes": "Обязательный короткий морской переход на остров после портовой регистрации и оплаты сборов."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0078",
+              "src_stage_ph_0079"
+            ]
+          },
+          {
+            "id": "access_island_local",
+            "origin_place_id": null,
+            "origin_raw": "Boracay arrival jetty",
+            "modes": [
+              "public_transport"
+            ],
+            "legs": [
+              {
+                "mode": "public_transport",
+                "distance_km": null,
+                "duration_min": null,
+                "notes": "Внутри острова основной локальный наземный транспорт — e-trike/tricycle; цена зависит от формата поездки и участка."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0084"
             ]
           }
         ],
         "water": {
-          "summary": null,
+          "summary": "White Beach — плотная курортная полоса с ресторанами и заведениями прямо у берега; для экспедиционного планирования это коммерческая точка пополнения питьевой воды, не природный источник.",
           "quality": "unknown",
           "last_reliable_source": null,
           "distance_m": null,
           "natural_sources": [],
-          "source_refs": []
+          "source_refs": [
+            "src_stage_ph_0017"
+          ]
         },
         "supplies": null,
         "overnight": {
           "status": "unclear",
-          "summary": null,
-          "source_refs": []
+          "summary": "Жильё на острове развито; отдельного подтверждения законной палатки на White Beach или других общественных пляжах в собранных официальных источниках нет.",
+          "source_refs": [
+            "src_stage_ph_0079"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -1890,15 +1993,73 @@
           "site_specific_notes": "Для морских съёмок состояние воды/ветра важнее календарного месяца; перед boat/drone day проверять Coast Guard/LGU и фактическую погоду."
         }
       },
-      "traveler_reports": [],
+      "traveler_reports": [
+        {
+          "topic": "port",
+          "summary": "В феврале 2026 самостоятельные путешественники жаловались на навязчивых посредников у Caticlan Jetty и путаницу вокруг сборов; официальный iPass/LezzGo позволяет идти напрямую к официальным окнам/QR.",
+          "observed_period": "2026-02",
+          "source_refs": [
+            "src_stage_ph_0084"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "topic": "crowding",
+          "summary": "В марте 2026 White Beach заметно пустел около полудня из-за сильной жары, тогда как Station 2 и популярные активности оставались более людными.",
+          "observed_period": "2026-03",
+          "source_refs": [
+            "src_stage_ph_0083"
+          ],
+          "confidence": "medium"
+        }
+      ],
       "visual_recon": {
         "photo_suitability_5": 5,
         "video_suitability_5": 5,
         "best_time": "рассвет/раннее утро и поздний день; для подводной съёмки важнее прозрачность воды/солнце",
         "best_weather_light": null,
-        "viewpoints": [],
-        "seasonal_visuals": [],
-        "video_activity": [],
+        "viewpoints": [
+          {
+            "id": "vp_white_beach",
+            "name": "White Beach",
+            "description": "Западный берег White Beach с открытым морским горизонтом; геопривязанная точка находится непосредственно на пляжной полосе.",
+            "coordinates": {
+              "lat": 11.9674,
+              "lon": 121.9248,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "11.967400, 121.924800"
+            },
+            "access": null,
+            "view": {
+              "description": "Западный берег White Beach с открытым морским горизонтом; геопривязанная точка находится непосредственно на пляжной полосе."
+            },
+            "best_time": "sunset",
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "для длинной линии пляжа и горизонта"
+              },
+              {
+                "type": "standard",
+                "why": "для людей, paraw и береговой жизни"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0082"
+            ]
+          }
+        ],
+        "seasonal_visuals": [
+          "Западный берег ориентирован на закат; состояние воды и ветра меняется между Amihan и Habagat, поэтому для лодочных и водных сюжетов важна фактическая погода."
+        ],
+        "video_activity": [
+          "paraw и другие лодки на закате",
+          "пешеходное движение вдоль Stations 1–3",
+          "водные активности в разрешённых зонах"
+        ],
         "useful_equipment": [],
         "drone": {
           "visual_value": null,
@@ -1929,13 +2090,20 @@
         "legacy_order": 6
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0006",
           "src_stage_ph_0016",
           "src_stage_ph_0003",
-          "src_stage_ph_0017"
+          "src_stage_ph_0017",
+          "src_stage_ph_0078",
+          "src_stage_ph_0079",
+          "src_stage_ph_0080",
+          "src_stage_ph_0081",
+          "src_stage_ph_0082",
+          "src_stage_ph_0083",
+          "src_stage_ph_0084"
         ]
       },
       "qa": {
@@ -1943,16 +2111,16 @@
         "checks": {
           "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
+          "geo": true,
+          "coordinates": true,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": false,
-          "water": false,
+          "access": true,
+          "water": true,
           "overnight": false,
-          "traveler_reports": false,
-          "visual_recon": false
+          "traveler_reports": true,
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -1966,7 +2134,7 @@
         "primary": "Tubbataha Reefs"
       },
       "summary": {
-        "narrow": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео."
+        "narrow": "Туббатаха — удалённый морской заповедник в центре моря Сулу: три атолла/рифовых комплекса, почти 100 тысяч гектаров охраняемой акватории и один из наиболее строгих режимов доступа в базе. Здесь нет береговой туристической инфраструктуры: посещение строится вокруг разрешённого судна, entry permit и многодневного liveaboard."
       },
       "classification": {
         "class_id": "nature.reef",
@@ -1980,70 +2148,89 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
-        "nearest_place_id": null,
+        "region_ids": [
+          "geo_ph_0007",
+          "geo_ph_0019",
+          "geo_ph_0041"
+        ],
+        "nearest_place_id": "geo_ph_0053",
         "nearest_place_name_raw": "Puerto Princesa",
         "primary_location": {
-          "lat": null,
-          "lon": null,
+          "lat": 8.953333,
+          "lon": 119.8675,
           "elevation_m": null,
-          "elevation_range_m": null,
           "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "accuracy": "high",
+          "source_refs": [
+            "src_stage_ph_0086"
+          ],
+          "checked_at": "2026-09-30",
+          "notes": "Координата центра объекта Всемирного наследия UNESCO; не причал и не конкретная точка погружения."
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 8.92724,
+            "lon": 120.01358,
+            "elevation_m": null,
+            "coordinate_type": "viewpoint",
+            "accuracy": "medium",
+            "source_refs": [
+              "src_stage_ph_0087"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Jessie Beazley Reef — отдельный компонент парка; точка не означает конкретный mooring/dive site."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+            "text": "Туббатаха — удалённый морской заповедник в центре моря Сулу: три атолла/рифовых комплекса, почти 100 тысяч гектаров охраняемой акватории и один из наиболее строгих режимов доступа в базе. Здесь нет береговой туристической инфраструктуры: посещение строится вокруг разрешённого судна, entry permit и многодневного liveaboard.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0018",
-              "src_stage_ph_0003",
+              "src_stage_ph_0085",
               "src_stage_ph_0019",
-              "src_stage_ph_0020",
-              "src_stage_ph_0021"
+              "src_stage_ph_0020"
+            ]
+          },
+          {
+            "type": "geography",
+            "text": "UNESCO включает в объект North и South Atolls и Jessie Beazley Reef. Большая часть территории находится под водой; характерный рельеф — лагуны, мелководные рифовые платформы и почти отвесные внешние стенки, уходящие на десятки метров.",
+            "source_refs": [
+              "src_stage_ph_0085"
+            ]
+          },
+          {
+            "type": "geography",
+            "text": "Объект поддерживает сотни видов кораллов и рыб, а также акул, черепах, китообразных и морских птиц. Полный no-take режим и удалённость — ключевые причины сохранности экосистемы.",
+            "source_refs": [
+              "src_stage_ph_0085"
             ]
           }
         ]
       },
       "visit": {
         "entry": {
-          "access_status": "permit-controlled marine protected area",
+          "access_status": "permit_required_marine_park",
           "fee": {
-            "amount": null,
-            "currency": null,
-            "pricing_basis": null,
-            "description": "Visitor Entry Permit / Conservation Fee: PHP 5,000 на человека; divemaster PHP 500; дети 12 и младше освобождены. Vessel fee отдельно.",
+            "amount": 5000,
+            "currency": "PHP",
+            "pricing_basis": "person",
+            "description": "Visitor Entry Permit / Conservation Fee; divemaster и vessel fees считаются отдельно.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0018",
-              "src_stage_ph_0003",
-              "src_stage_ph_0019",
-              "src_stage_ph_0020",
-              "src_stage_ph_0021"
+              "src_stage_ph_0020"
             ],
-            "checked_at": "2026-09-28"
+            "checked_at": "2026-09-30"
           },
           "hours": {
-            "value": "Не объект с дневным графиком; вход осуществляется по permit и маршруту approved vessel/liveaboard.",
+            "value": "Нет дневного графика входа: доступ идёт по entry permit и маршруту разрешённого судна.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0018",
-              "src_stage_ph_0003",
               "src_stage_ph_0019",
-              "src_stage_ph_0020",
-              "src_stage_ph_0021"
+              "src_stage_ph_0020"
             ],
-            "checked_at": "2026-09-28"
+            "checked_at": "2026-09-30"
           },
-          "permit_required": null,
+          "permit_required": true,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0018",
@@ -2059,34 +2246,43 @@
         },
         "access_options": [
           {
-            "id": "access_01",
-            "origin_place_id": null,
+            "id": "access_puerto_princesa_liveaboard",
+            "origin_place_id": "geo_ph_0053",
             "modes": [
-              "other"
+              "boat"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "boat",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "Puerto Princesa — основной jump-off; дальше 10–12 часов по морю на permitted liveaboard. Самостоятельного регулярного пассажирского транспорта нет; поездку организуют dive operators с Permit to Operate. Все туристические поездки — liveaboard; наземной туристической инфраструктуры/гостиниц в парке нет."
+                "notes": "TMO указывает Puerto Princesa как jump-off и 10–12 часов морского перехода до парка; коммерческие поездки выполняют операторы с Permit to Operate."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0019",
+              "src_stage_ph_0021"
             ]
           }
         ],
         "water": {
-          "summary": null,
+          "summary": "На рифах нет береговых туристических facilities; вода и снабжение должны находиться на liveaboard/частном судне. Наземного питьевого источника в парке нет в туристической схеме.",
           "quality": "unknown",
           "last_reliable_source": null,
           "distance_m": null,
           "natural_sources": [],
-          "source_refs": []
+          "source_refs": [
+            "src_stage_ph_0019"
+          ]
         },
         "supplies": null,
         "overnight": {
-          "status": "unclear",
-          "summary": null,
-          "source_refs": []
+          "status": "official",
+          "summary": "Все туристические ночёвки проходят на яхте/liveaboard: TMO прямо указывает, что береговых facilities нет. Коммерческие туры обычно 5–7 дней или дольше, если это прописано в permit; частные некоммерческие поездки ограничены семью днями.",
+          "source_refs": [
+            "src_stage_ph_0019",
+            "src_stage_ph_0020"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -2108,32 +2304,85 @@
           "site_specific_notes": "Перед выездом смотреть фактический прогноз; для моря, гор, рек, пещер и вулканов оперативная погода важнее климатической нормы."
         }
       },
-      "traveler_reports": [],
+      "traveler_reports": [
+        {
+          "topic": "booking",
+          "summary": "В июне 2026 дайвер описывал бронирование более чем за год и отмечал, что парк обслуживает ограниченное число операторов в короткое сезонное окно.",
+          "observed_period": "2026-06",
+          "source_refs": [
+            "src_stage_ph_0088"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "topic": "sea_conditions",
+          "summary": "В марте 2025 участники liveaboard столкнулись с сильным волнением, из-за которого возвращение задержалось примерно на 12 часов.",
+          "observed_period": "2025-03",
+          "source_refs": [
+            "src_stage_ph_0089"
+          ],
+          "confidence": "medium"
+        }
+      ],
       "visual_recon": {
         "photo_suitability_5": 5,
         "video_suitability_5": 5,
         "best_time": "рассвет/раннее утро и поздний день; для подводной съёмки важнее прозрачность воды/солнце",
         "best_weather_light": null,
-        "viewpoints": [],
-        "seasonal_visuals": [],
-        "video_activity": [],
+        "viewpoints": [
+          {
+            "id": "vp_jessie_beazley",
+            "name": "Jessie Beazley Reef",
+            "description": "Один из отдельных рифовых компонентов Туббатахи; полезная координатная опора для подводной и морской разведки, но не гарантированный dive-site/mooring.",
+            "coordinates": {
+              "lat": 8.92724,
+              "lon": 120.01358,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "8.927240, 120.013580"
+            },
+            "access": null,
+            "view": {
+              "description": "Один из отдельных рифовых компонентов Туббатахи; полезная координатная опора для подводной и морской разведки, но не гарантированный dive-site/mooring."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "underwater_camera",
+                "why": "основной визуальный материал находится под водой"
+              },
+              {
+                "type": "action_camera",
+                "why": "лодочные переходы и вода"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0087"
+            ]
+          }
+        ],
+        "seasonal_visuals": [
+          "Прозрачность и течение меняются внутри короткого туристического сезона; фактическое состояние моря важнее календарной нормы."
+        ],
+        "video_activity": [
+          "пелагические рыбы и акулы на внешних стенках",
+          "рифовый ландшафт и движение течения",
+          "морские птицы у островков там, где правила допускают наблюдение"
+        ],
         "useful_equipment": [],
         "drone": {
-          "visual_value": null,
-          "legal_status": "unknown",
-          "permit_required": null,
+          "visual_value": "Атоллы и границы рифовых платформ хорошо читаются сверху, но запуск регулируется парком.",
+          "legal_status": "permit_required",
+          "permit_required": true,
           "restrictions": [
-            "Drone permit required from Tubbataha Management Office."
+            "Visitor drone permit required from Tubbataha Management Office."
           ],
           "source_refs": [
-            "src_stage_ph_0006",
-            "src_stage_ph_0018",
-            "src_stage_ph_0003",
-            "src_stage_ph_0019",
-            "src_stage_ph_0020",
-            "src_stage_ph_0021"
+            "src_stage_ph_0020"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-30"
         },
         "filming_restrictions": "Commercial filming agreement/permit required. TMO also bans camera/video use by divemasters while on duty so they can focus on safety."
       },
@@ -2149,7 +2398,7 @@
         "legacy_order": 7
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0006",
@@ -2157,7 +2406,12 @@
           "src_stage_ph_0003",
           "src_stage_ph_0019",
           "src_stage_ph_0020",
-          "src_stage_ph_0021"
+          "src_stage_ph_0021",
+          "src_stage_ph_0085",
+          "src_stage_ph_0086",
+          "src_stage_ph_0087",
+          "src_stage_ph_0088",
+          "src_stage_ph_0089"
         ]
       },
       "qa": {
@@ -2165,16 +2419,16 @@
         "checks": {
           "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
+          "geo": true,
+          "coordinates": true,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": false,
-          "water": false,
-          "overnight": false,
-          "traveler_reports": false,
-          "visual_recon": false
+          "access": true,
+          "water": true,
+          "overnight": true,
+          "traveler_reports": true,
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -2188,7 +2442,7 @@
         "primary": "Iloilo heritage districts"
       },
       "summary": {
-        "narrow": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео."
+        "narrow": "Наследие Илоило распределено по нескольким городским узлам, а не сводится к одной Calle Real: старый Central Business District, Plaza Libertad, Molo и Jaro образуют связанную систему испано-филиппинской архитектуры, торговой истории и действующих религиозных центров."
       },
       "classification": {
         "class_id": "settlement.historic_city",
@@ -2199,33 +2453,83 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
-        "nearest_place_id": null,
+        "region_ids": [
+          "geo_ph_0009",
+          "geo_ph_0025",
+          "geo_ph_0042"
+        ],
+        "nearest_place_id": "geo_ph_0059",
         "nearest_place_name_raw": "Iloilo City",
         "primary_location": {
-          "lat": null,
-          "lon": null,
-          "elevation_m": null,
-          "elevation_range_m": null,
+          "lat": 10.6933,
+          "lon": 122.5733,
+          "elevation_m": 8,
           "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "accuracy": "medium",
+          "source_refs": [
+            "src_stage_ph_0094"
+          ],
+          "checked_at": "2026-09-30",
+          "notes": "Городская опорная точка для составной карточки нескольких heritage districts."
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 10.69743,
+            "lon": 122.54479,
+            "elevation_m": null,
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "source_refs": [
+              "src_stage_ph_0095"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Molo Church / Molo Plaza cluster."
+          },
+          {
+            "lat": 10.7235,
+            "lon": 122.55622,
+            "elevation_m": null,
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "source_refs": [
+              "src_stage_ph_0096"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Jaro Cathedral / Jaro Plaza cluster."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+            "text": "Наследие Илоило распределено по нескольким городским узлам, а не сводится к одной Calle Real: старый Central Business District, Plaza Libertad, Molo и Jaro образуют связанную систему испано-филиппинской архитектуры, торговой истории и действующих религиозных центров.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0022",
-              "src_stage_ph_0003",
+              "src_stage_ph_0090",
               "src_stage_ph_0023"
+            ]
+          },
+          {
+            "type": "history",
+            "text": "Илоило вырос как крупный порт и торговый центр Западных Висайев. Государственный закон RA 10555 отдельно выделяет Jaro Cathedral, Molo Church, Central Business District, Fort San Pedro, Jaro Plaza, Molo Plaza и Plaza Libertad как Cultural Heritage Tourism Zone.",
+            "source_refs": [
+              "src_stage_ph_0090",
+              "src_stage_ph_0091"
+            ]
+          },
+          {
+            "type": "culture",
+            "text": "Современный город сохраняет не только архитектуру: Илоило получил статус UNESCO Creative City of Gastronomy в 2023 году. Кулинарная традиция, fiesta и рынок еды здесь являются частью живого городского контекста, а не отдельным туристическим дополнением.",
+            "source_refs": [
+              "src_stage_ph_0093",
+              "src_stage_ph_0023"
+            ]
+          },
+          {
+            "type": "culture",
+            "text": "В 2026 году городское правительство и University of the Philippines Visayas заключили соглашение о сохранении исторических зданий Calle Real — это подтверждает, что район остаётся живой зоной консервации, а не законсервированным музейным кварталом.",
+            "source_refs": [
+              "src_stage_ph_0097"
             ]
           }
         ]
@@ -2270,34 +2574,58 @@
         },
         "access_options": [
           {
-            "id": "access_01",
-            "origin_place_id": null,
+            "id": "access_city_clusters",
+            "origin_place_id": "geo_ph_0059",
             "modes": [
-              "other"
+              "public_transport",
+              "walking"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "public_transport",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "Практичная база — Iloilo City; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+                "notes": "Heritage zone распределена между City Proper, Molo и Jaro; городской транспорт нужен для переходов между удалёнными кластерами."
+              },
+              {
+                "mode": "walking",
+                "distance_km": null,
+                "duration_min": null,
+                "elevation_gain_m": 0,
+                "elevation_loss_m": 0,
+                "trailhead": null,
+                "trail": {
+                  "type": "urban_streets",
+                  "condition": "плоская городская сеть",
+                  "navigation": "простая внутри каждого кластера",
+                  "river_crossings": 0
+                },
+                "notes": "Calle Real/City Proper, Molo Plaza и Jaro Plaza разумно исследовать пешком внутри каждого отдельного узла."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0094",
+              "src_stage_ph_0092"
             ]
           }
         ],
         "water": {
-          "summary": null,
+          "summary": "Городской слой насыщен кафе, ресторанами и магазинами; Iloilo City Government публикует visitor guide с food/coffee инфраструктурой, поэтому пополнение питьевой воды не является экспедиционным дефицитом.",
           "quality": "unknown",
           "last_reliable_source": null,
           "distance_m": null,
           "natural_sources": [],
-          "source_refs": []
+          "source_refs": [
+            "src_stage_ph_0092"
+          ]
         },
         "supplies": null,
         "overnight": {
           "status": "unclear",
-          "summary": null,
-          "source_refs": []
+          "summary": "Ночёвка — обычное городское жильё. Правовой режим палатки в heritage plazas/церковных участках не подтверждён.",
+          "source_refs": [
+            "src_stage_ph_0090"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -2323,9 +2651,78 @@
         "video_suitability_5": 4,
         "best_time": "раннее утро, golden hour и blue hour; интерьер — по режиму естественного света",
         "best_weather_light": null,
-        "viewpoints": [],
+        "viewpoints": [
+          {
+            "id": "vp_molo_church",
+            "name": "Molo Church",
+            "description": "Неоготический фасад церкви и Molo Plaza; точка привязана к самому зданию.",
+            "coordinates": {
+              "lat": 10.69743,
+              "lon": 122.54479,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "10.697430, 122.544790"
+            },
+            "access": null,
+            "view": {
+              "description": "Неоготический фасад церкви и Molo Plaza; точка привязана к самому зданию."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "фасад и площадь"
+              },
+              {
+                "type": "standard",
+                "why": "архитектурные детали"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0095"
+            ]
+          },
+          {
+            "id": "vp_jaro_cathedral",
+            "name": "Jaro Cathedral",
+            "description": "Кафедральный собор и Jaro Plaza; отдельный колокольный узел находится напротив.",
+            "coordinates": {
+              "lat": 10.7235,
+              "lon": 122.55622,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "10.723500, 122.556220"
+            },
+            "access": null,
+            "view": {
+              "description": "Кафедральный собор и Jaro Plaza; отдельный колокольный узел находится напротив."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "собор и площадь"
+              },
+              {
+                "type": "telephoto",
+                "why": "детали фасада и колокольни через площадь"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0096"
+            ]
+          }
+        ],
         "seasonal_visuals": [],
-        "video_activity": [],
+        "video_activity": [
+          "повседневная жизнь Calle Real и городских площадей",
+          "религиозная активность у Molo/Jaro вне служб и ограниченных зон",
+          "еда и рынки как часть UNESCO gastronomic context"
+        ],
         "useful_equipment": [],
         "drone": {
           "visual_value": null,
@@ -2356,13 +2753,21 @@
         "legacy_order": 8
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0006",
           "src_stage_ph_0022",
           "src_stage_ph_0003",
-          "src_stage_ph_0023"
+          "src_stage_ph_0023",
+          "src_stage_ph_0090",
+          "src_stage_ph_0091",
+          "src_stage_ph_0092",
+          "src_stage_ph_0093",
+          "src_stage_ph_0094",
+          "src_stage_ph_0095",
+          "src_stage_ph_0096",
+          "src_stage_ph_0097"
         ]
       },
       "qa": {
@@ -2370,16 +2775,16 @@
         "checks": {
           "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
-          "elevation": false,
+          "geo": true,
+          "coordinates": true,
+          "elevation": true,
           "narrative": true,
           "sources": true,
-          "access": false,
-          "water": false,
+          "access": true,
+          "water": true,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": false
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -2393,7 +2798,7 @@
         "primary": "Samar cave systems"
       },
       "summary": {
-        "narrow": "Samar cave systems — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео."
+        "narrow": "Пещерный Самар — это не одна туристическая пещера, а несколько карстовых систем в крупном охраняемом лесном массиве. Для экспедиционной карточки важны два разных узла: Langun–Gobingob в Calbiga — длинная технически сложная система, и Sohoton у Basey — речной карст с лодочным доступом, естественным мостом и пещерами."
       },
       "classification": {
         "class_id": "nature.cave",
@@ -2406,40 +2811,71 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
+        "region_ids": [
+          "geo_ph_0012",
+          "geo_ph_0026",
+          "geo_ph_0043"
+        ],
         "nearest_place_id": null,
-        "nearest_place_name_raw": "Tacloban / Catbalogan",
+        "nearest_place_name_raw": "Calbiga / Basey",
         "primary_location": {
-          "lat": null,
-          "lon": null,
+          "lat": 11.63651,
+          "lon": 125.05036,
           "elevation_m": null,
-          "elevation_range_m": null,
-          "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "coordinate_type": "cave_entrance",
+          "accuracy": "high",
+          "source_refs": [
+            "src_stage_ph_0099"
+          ],
+          "checked_at": "2026-09-30",
+          "notes": "Gobingob entrance / Langun-Gobingob system reference from OSM."
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 11.36481,
+            "lon": 125.16334,
+            "elevation_m": null,
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "source_refs": [
+              "src_stage_ph_0100"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Sohoton Natural Bridge — отдельный южный узел пещерного Самара."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Samar cave systems — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+            "text": "Пещерный Самар — это не одна туристическая пещера, а несколько карстовых систем в крупном охраняемом лесном массиве. Для экспедиционной карточки важны два разных узла: Langun–Gobingob в Calbiga — длинная технически сложная система, и Sohoton у Basey — речной карст с лодочным доступом, естественным мостом и пещерами.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0024",
-              "src_stage_ph_0003",
-              "src_stage_ph_0025"
+              "src_stage_ph_0025",
+              "src_stage_ph_0098"
+            ]
+          },
+          {
+            "type": "geology",
+            "text": "Samar Island Natural Park включает одну из крупнейших известняковых областей страны. DOT описывает Calbiga karst и пятикилометровую систему Langun–Gobingob; растворение известняка создало пещерные камеры, скальные обрывы, подземные водотоки и естественные мосты.",
+            "source_refs": [
+              "src_stage_ph_0025",
+              "src_stage_ph_0098"
+            ]
+          },
+          {
+            "type": "geography",
+            "text": "Langun–Gobingob и Sohoton находятся в разных частях Самара и не должны планироваться как один короткий объект. Первый требует сухопутного подхода через Calbiga/Panayuran и продолжительного спелеомаршрута, второй — лодки/каяка по речному карсту из Basey.",
+            "source_refs": [
+              "src_stage_ph_0098",
+              "src_stage_ph_0101"
             ]
           }
         ]
       },
       "visit": {
         "entry": {
-          "access_status": "open_protected_area_reservation_based",
+          "access_status": "permit_or_reservation_required_for_major_cave_routes",
           "fee": {
             "amount": null,
             "currency": null,
@@ -2463,7 +2899,7 @@
             ],
             "checked_at": "2026-09-28"
           },
-          "permit_required": null,
+          "permit_required": true,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0024",
@@ -2477,34 +2913,105 @@
         },
         "access_options": [
           {
-            "id": "access_01",
-            "origin_place_id": null,
+            "id": "access_langun_from_catbalogan",
+            "origin_place_id": "geo_ph_0060",
             "modes": [
-              "other"
+              "public_transport",
+              "motorcycle",
+              "walking"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "public_transport",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "Базироваться удобнее в Tacloban / Catbalogan; далее дорога до входной зоны и, где требуется, локальный гид/лодка/пеший участок. После сильных дождей доступ перепроверять. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+                "notes": "Практическая схема Trexplore: Catbalogan → Calbiga автобусом."
+              },
+              {
+                "mode": "motorcycle",
+                "distance_km": null,
+                "duration_min": null,
+                "road": {
+                  "surface": null,
+                  "condition": "сельская дорога",
+                  "seasonality": "проверять после сильных дождей"
+                },
+                "notes": "Calbiga → Brgy. Panayuran на habal-habal."
+              },
+              {
+                "mode": "walking",
+                "distance_km": null,
+                "duration_min": 60,
+                "elevation_gain_m": null,
+                "elevation_loss_m": null,
+                "trailhead": null,
+                "trail": {
+                  "type": "jungle_cave_approach",
+                  "condition": "тропа к входу; далее мокрый/грязный карст",
+                  "navigation": "с местным cave guide",
+                  "river_crossings": null
+                },
+                "notes": "Операторский маршрут закладывает около часа от Panayuran до входа Gobingob."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0101",
+              "src_stage_ph_0025"
+            ]
+          },
+          {
+            "id": "access_sohoton_basey",
+            "origin_place_id": null,
+            "origin_raw": "Basey / Sohoton visitor access",
+            "modes": [
+              "boat",
+              "walking"
+            ],
+            "legs": [
+              {
+                "mode": "boat",
+                "distance_km": null,
+                "duration_min": null,
+                "notes": "Sohoton Natural Bridge и пещеры исследуются с местным гидом на лодке/каяке; LGU Basey оценивает типичный тур в 3–4 часа."
+              },
+              {
+                "mode": "walking",
+                "distance_km": null,
+                "duration_min": null,
+                "elevation_gain_m": null,
+                "elevation_loss_m": null,
+                "trailhead": null,
+                "trail": {
+                  "type": "cave_rocks",
+                  "condition": "неровный карст",
+                  "navigation": "guide required",
+                  "river_crossings": null
+                },
+                "notes": "Часть пещер включает движение по камням и неровному рельефу."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0098"
             ]
           }
         ],
         "water": {
-          "summary": null,
+          "summary": "Для Langun–Gobingob операторская схема требует взять собственную питьевую воду из населённого пункта; подтверждённого potable natural source внутри пещеры нет. Подземные водотоки не считать питьевыми без обработки.",
           "quality": "unknown",
           "last_reliable_source": null,
           "distance_m": null,
           "natural_sources": [],
-          "source_refs": []
+          "source_refs": [
+            "src_stage_ph_0101"
+          ]
         },
         "supplies": null,
         "overnight": {
-          "status": "unclear",
-          "summary": null,
-          "source_refs": []
+          "status": "permission_required",
+          "summary": "Для длинного Langun–Gobingob маршрута текущий специализированный оператор описывает 3-дневный формат с лагерем внутри Gobingob и включёнными permits/camping equipment. Это не означает свободный кемпинг: ночёвка привязана к согласованному caving route.",
+          "source_refs": [
+            "src_stage_ph_0101"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -2530,9 +3037,81 @@
         "video_suitability_5": 5,
         "best_time": "рассвет и последние часы дня; в rainforest мягкий свет после дождя часто лучше жёсткого полудня",
         "best_weather_light": null,
-        "viewpoints": [],
-        "seasonal_visuals": [],
-        "video_activity": [],
+        "viewpoints": [
+          {
+            "id": "vp_langun_entrance",
+            "name": "Langun–Gobingob cave entrance",
+            "description": "Большой карстовый вход и масштаб камеры; координата относится к cave entrance.",
+            "coordinates": {
+              "lat": 11.63651,
+              "lon": 125.05036,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "11.636510, 125.050360"
+            },
+            "access": null,
+            "view": {
+              "description": "Большой карстовый вход и масштаб камеры; координата относится к cave entrance."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "масштаб входа и внутренней камеры"
+              },
+              {
+                "type": "action_camera",
+                "why": "движение по мокрому карсту и узким участкам"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0099",
+              "src_stage_ph_0024"
+            ]
+          },
+          {
+            "id": "vp_sohoton_bridge",
+            "name": "Sohoton Natural Bridge",
+            "description": "Речной карст и естественный мост, доступный с воды.",
+            "coordinates": {
+              "lat": 11.36481,
+              "lon": 125.16334,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "11.364810, 125.163340"
+            },
+            "access": null,
+            "view": {
+              "description": "Речной карст и естественный мост, доступный с воды."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "мост, скальные стены и река в одном плане"
+              },
+              {
+                "type": "action_camera",
+                "why": "лодка/каяк и вода"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0100"
+            ]
+          }
+        ],
+        "seasonal_visuals": [
+          "После сильных дождей уровень воды и состояние подземных/речных участков меняются; доступ должен подтверждаться в день маршрута."
+        ],
+        "video_activity": [
+          "движение по огромным камерам Langun–Gobingob",
+          "выход летучих мышей у входов, если наблюдение разрешено",
+          "лодка и каяк под Sohoton Natural Bridge"
+        ],
         "useful_equipment": [],
         "drone": {
           "visual_value": null,
@@ -2563,30 +3142,34 @@
         "legacy_order": 9
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0006",
           "src_stage_ph_0024",
           "src_stage_ph_0003",
-          "src_stage_ph_0025"
+          "src_stage_ph_0025",
+          "src_stage_ph_0098",
+          "src_stage_ph_0099",
+          "src_stage_ph_0100",
+          "src_stage_ph_0101"
         ]
       },
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": false,
+          "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
+          "geo": true,
+          "coordinates": true,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": false,
-          "water": false,
-          "overnight": false,
+          "access": true,
+          "water": true,
+          "overnight": true,
           "traveler_reports": false,
-          "visual_recon": false
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -2600,7 +3183,7 @@
         "primary": "Siquijor interior"
       },
       "summary": {
-        "narrow": "Siquijor interior — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста."
+        "narrow": "Внутренний Сикихор — связка лесистого массива Mount Bandilaan, пещер, водопадов и живой традиции народного целительства. Здесь важно не смешивать физические объекты с фольклором: Bandilaan и Cantabon — конкретные горные/карстовые точки, а репутация «Healing Island» поддерживается ежегодным Healing Festival и практиками местных healers."
       },
       "classification": {
         "class_id": "nature.waterfall",
@@ -2614,32 +3197,96 @@
       },
       "geo": {
         "country_id": "geo_ph",
-        "region_ids": [],
+        "region_ids": [
+          "geo_ph_0010",
+          "geo_ph_0027",
+          "geo_ph_0044"
+        ],
         "nearest_place_id": null,
-        "nearest_place_name_raw": "Siquijor / Dumaguete",
+        "nearest_place_name_raw": "Siquijor / Lazi",
         "primary_location": {
-          "lat": null,
-          "lon": null,
-          "elevation_m": null,
-          "elevation_range_m": null,
-          "coordinate_type": "center",
-          "accuracy": "unknown",
-          "elevation_accuracy": "unknown",
-          "source_refs": [],
-          "elevation_source_refs": [],
-          "checked_at": "2026-09-28"
+          "lat": 9.18778,
+          "lon": 123.58278,
+          "elevation_m": 628,
+          "coordinate_type": "summit",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_stage_ph_0103"
+          ],
+          "checked_at": "2026-09-30",
+          "notes": "Mount Malabahoc / Mount Bandilaan — высшая точка центрального массива, а не центр всей составной карточки."
         },
-        "geo_points": []
+        "geo_points": [
+          {
+            "lat": 9.18774,
+            "lon": 123.56399,
+            "elevation_m": null,
+            "coordinate_type": "cave_entrance",
+            "accuracy": "high",
+            "source_refs": [
+              "src_stage_ph_0105"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Cantabon Cave entrance."
+          },
+          {
+            "lat": 9.14008,
+            "lon": 123.62675,
+            "elevation_m": null,
+            "coordinate_type": "waterfall_base",
+            "accuracy": "high",
+            "source_refs": [
+              "src_stage_ph_0106"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Cambugahay Falls."
+          },
+          {
+            "lat": 9.12094,
+            "lon": 123.57549,
+            "elevation_m": null,
+            "coordinate_type": "viewpoint",
+            "accuracy": "high",
+            "source_refs": [
+              "src_stage_ph_0107"
+            ],
+            "checked_at": "2026-09-30",
+            "notes": "Old Enchanted Balete Tree."
+          }
+        ]
       },
       "narrative": {
         "sections": [
           {
             "type": "overview",
-            "text": "Siquijor interior — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+            "text": "Внутренний Сикихор — связка лесистого массива Mount Bandilaan, пещер, водопадов и живой традиции народного целительства. Здесь важно не смешивать физические объекты с фольклором: Bandilaan и Cantabon — конкретные горные/карстовые точки, а репутация «Healing Island» поддерживается ежегодным Healing Festival и практиками местных healers.",
             "source_refs": [
-              "src_stage_ph_0006",
-              "src_stage_ph_0026",
-              "src_stage_ph_0003",
+              "src_stage_ph_0027",
+              "src_stage_ph_0102",
+              "src_stage_ph_0103"
+            ]
+          },
+          {
+            "type": "geography",
+            "text": "Mount Bandilaan/Malabahoc поднимается примерно до 628 м и формирует центральный высокий массив острова. В нескольких километрах находятся Cantabon Cave, Cambugahay Falls и другие карстово-водные объекты; это удобнее планировать как сеть отдельных точек, а не одну «достопримечательность».",
+            "source_refs": [
+              "src_stage_ph_0103",
+              "src_stage_ph_0105",
+              "src_stage_ph_0106"
+            ]
+          },
+          {
+            "type": "culture",
+            "text": "DOT и Philippine Information Agency описывают Healing Festival на Mount Bandilaan во время Holy Week как живую традицию: местные целители готовят травяные смеси и демонстрируют практики, связанные с лечением и духовным наследием острова.",
+            "source_refs": [
+              "src_stage_ph_0027",
+              "src_stage_ph_0102"
+            ]
+          },
+          {
+            "type": "myths_beliefs",
+            "text": "Старый balete tree официальная туристическая страница связывает с местными рассказами о феях и духах; это фольклорный слой, а не проверяемое объяснение природного объекта. Balay Pahiuli и bolo-bolo healing описываются как местные лечебно-ритуальные практики; их утверждения о воздействии на болезни не трактуются как медицинский факт.",
+            "source_refs": [
               "src_stage_ph_0027"
             ]
           }
@@ -2685,34 +3332,111 @@
         },
         "access_options": [
           {
-            "id": "access_01",
+            "id": "access_self_drive_interior",
             "origin_place_id": null,
+            "origin_raw": "Siquijor / San Juan",
             "modes": [
-              "other"
+              "moped"
             ],
             "legs": [
               {
-                "mode": "other",
+                "mode": "moped",
                 "distance_km": null,
                 "duration_min": null,
-                "notes": "Практичная база — Siquijor / Dumaguete; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+                "road": {
+                  "surface": "paved_and_local_roads",
+                  "condition": "проверять локально",
+                  "seasonality": "ливни могут менять состояние второстепенных подъездов"
+                },
+                "notes": "Самостоятельные путешественники регулярно используют арендованный скутер для связки внутренних точек; точные расстояния зависят от базы."
               }
+            ],
+            "source_refs": [
+              "src_stage_ph_0109"
+            ]
+          },
+          {
+            "id": "access_local_ride",
+            "origin_place_id": null,
+            "origin_raw": "Siquijor island",
+            "modes": [
+              "ride_hailing"
+            ],
+            "legs": [
+              {
+                "mode": "ride_hailing",
+                "distance_km": null,
+                "duration_min": null,
+                "road": {
+                  "surface": null,
+                  "condition": null,
+                  "seasonality": null
+                },
+                "notes": "В сентябре 2026 локальный Siquijor Go использовался для заказа scooter+tuktuk rides и предварительного бронирования поездок; это traveler-reported operational layer, не официальный транспортный реестр."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0110"
+            ]
+          },
+          {
+            "id": "access_cantabon",
+            "origin_place_id": null,
+            "origin_raw": "Cantabon Cave Tourism Office",
+            "modes": [
+              "walking"
+            ],
+            "legs": [
+              {
+                "mode": "walking",
+                "distance_km": 0.4,
+                "duration_min": null,
+                "elevation_gain_m": null,
+                "elevation_loss_m": null,
+                "trailhead": {
+                  "lat": 9.18571,
+                  "lon": 123.5613
+                },
+                "trail": {
+                  "type": "cave_approach",
+                  "condition": null,
+                  "navigation": "от tourism office/Barangay Hall к cave entrance",
+                  "river_crossings": null
+                },
+                "notes": "OSM даёт около 370 м между Barangay Hall/Tourism Office cluster и входом Cantabon Cave."
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0105"
             ]
           }
         ],
         "water": {
-          "summary": null,
+          "summary": "Внутренние водопады и источники не считаются питьевой водой. Для Cantabon/Bandilaan надёжную бутылочную воду следует считать снабжением из населённых пунктов; отдельный канонический water-POI пока не нормализован.",
           "quality": "unknown",
           "last_reliable_source": null,
           "distance_m": null,
-          "natural_sources": [],
-          "source_refs": []
+          "natural_sources": [
+            {
+              "type": "waterfall",
+              "name": "Cambugahay Falls",
+              "potability": "unknown",
+              "source_refs": [
+                "src_stage_ph_0106"
+              ]
+            }
+          ],
+          "source_refs": [
+            "src_stage_ph_0106"
+          ]
         },
         "supplies": null,
         "overnight": {
           "status": "unclear",
-          "summary": null,
-          "source_refs": []
+          "summary": "На острове развито жильё, но право на свободную палатку в Mount Bandilaan/Cantabon/Cambugahay в собранных источниках не подтверждено.",
+          "source_refs": [
+            "src_stage_ph_0027"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -2732,15 +3456,105 @@
           "site_specific_notes": "Перед выездом смотреть фактический прогноз; для моря, гор, рек, пещер и вулканов оперативная погода важнее климатической нормы."
         }
       },
-      "traveler_reports": [],
+      "traveler_reports": [
+        {
+          "topic": "transport",
+          "summary": "В июне 2026 самостоятельный путешественник арендовал скутер для исследования острова; формат подтверждает практичность self-drive, но его конкретные цены не переносим как норматив.",
+          "observed_period": "2026-06",
+          "source_refs": [
+            "src_stage_ph_0109"
+          ],
+          "confidence": "medium"
+        },
+        {
+          "topic": "transport",
+          "summary": "В сентябре 2026 пользователи сообщали, что локальный Siquijor Go позволяет заказывать rides, scooter rental и предварительное бронирование, хотя число водителей ещё ограничено.",
+          "observed_period": "2026-09",
+          "source_refs": [
+            "src_stage_ph_0110"
+          ],
+          "confidence": "medium"
+        }
+      ],
       "visual_recon": {
         "photo_suitability_5": 4,
         "video_suitability_5": 4,
         "best_time": "утро и поздний день",
         "best_weather_light": null,
-        "viewpoints": [],
-        "seasonal_visuals": [],
-        "video_activity": [],
+        "viewpoints": [
+          {
+            "id": "vp_bandilaan_tower",
+            "name": "Bandilaan Viewing Tower",
+            "description": "Высокая обзорная точка в центральном массиве рядом с Mount Bandilaan.",
+            "coordinates": {
+              "lat": 9.18798,
+              "lon": 123.58272,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "9.187980, 123.582720"
+            },
+            "access": null,
+            "view": {
+              "description": "Высокая обзорная точка в центральном массиве рядом с Mount Bandilaan."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "панорама внутренней части острова"
+              },
+              {
+                "type": "telephoto",
+                "why": "отдельные гряды и удалённые участки побережья"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0104"
+            ]
+          },
+          {
+            "id": "vp_cambugahay",
+            "name": "Cambugahay Falls",
+            "description": "Геопривязанная точка у каскадов Cambugahay; координата относится к месту съёмки, а не к точке входа.",
+            "coordinates": {
+              "lat": 9.1999,
+              "lon": 123.5952,
+              "elevation_m": null
+            },
+            "gps": {
+              "decimal": "9.199900, 123.595200"
+            },
+            "access": null,
+            "view": {
+              "description": "Геопривязанная точка у каскадов Cambugahay; координата относится к месту съёмки, а не к точке входа."
+            },
+            "best_time": null,
+            "best_weather_light": null,
+            "useful_equipment": [
+              {
+                "type": "wide",
+                "why": "несколько уровней каскада и бассейны"
+              },
+              {
+                "type": "action_camera",
+                "why": "вода и купание там, где разрешено"
+              }
+            ],
+            "source_refs": [
+              "src_stage_ph_0108"
+            ]
+          }
+        ],
+        "seasonal_visuals": [
+          "После дождей водопады полноводнее, но тропы и камни скользче; Healing Festival проходит в Holy Week и меняет культурную активность Mount Bandilaan."
+        ],
+        "video_activity": [
+          "приготовление травяных смесей и Healing Festival только с согласия участников",
+          "движение воды в Cambugahay",
+          "пещерный маршрут Cantabon при разрешённой съёмке"
+        ],
         "useful_equipment": [],
         "drone": {
           "visual_value": null,
@@ -2771,13 +3585,22 @@
         "legacy_order": 10
       },
       "freshness": {
-        "checked_at": "2026-09-28",
+        "checked_at": "2026-09-30",
         "source_file": "Philippines",
         "source_refs": [
           "src_stage_ph_0006",
           "src_stage_ph_0026",
           "src_stage_ph_0003",
-          "src_stage_ph_0027"
+          "src_stage_ph_0027",
+          "src_stage_ph_0102",
+          "src_stage_ph_0103",
+          "src_stage_ph_0104",
+          "src_stage_ph_0105",
+          "src_stage_ph_0106",
+          "src_stage_ph_0107",
+          "src_stage_ph_0108",
+          "src_stage_ph_0109",
+          "src_stage_ph_0110"
         ]
       },
       "qa": {
@@ -2785,16 +3608,16 @@
         "checks": {
           "language": true,
           "classification": true,
-          "geo": false,
-          "coordinates": false,
-          "elevation": false,
+          "geo": true,
+          "coordinates": true,
+          "elevation": true,
           "narrative": true,
           "sources": true,
-          "access": false,
-          "water": false,
+          "access": true,
+          "water": true,
           "overnight": false,
-          "traveler_reports": false,
-          "visual_recon": false
+          "traveler_reports": true,
+          "visual_recon": true
         },
         "last_reviewed_at": "2026-09-30"
       }

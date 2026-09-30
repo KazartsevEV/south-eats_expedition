@@ -7,7 +7,7 @@
     "primary": "Siquijor interior"
   },
   "summary": {
-    "narrow": "Siquijor interior — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста."
+    "narrow": "Внутренний Сикихор — связка лесистого массива Mount Bandilaan, пещер, водопадов и живой традиции народного целительства. Здесь важно не смешивать физические объекты с фольклором: Bandilaan и Cantabon — конкретные горные/карстовые точки, а репутация «Healing Island» поддерживается ежегодным Healing Festival и практиками местных healers."
   },
   "classification": {
     "class_id": "nature.waterfall",
@@ -21,32 +21,96 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
+    "region_ids": [
+      "geo_ph_0010",
+      "geo_ph_0027",
+      "geo_ph_0044"
+    ],
     "nearest_place_id": null,
-    "nearest_place_name_raw": "Siquijor / Dumaguete",
+    "nearest_place_name_raw": "Siquijor / Lazi",
     "primary_location": {
-      "lat": null,
-      "lon": null,
-      "elevation_m": null,
-      "elevation_range_m": null,
-      "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "lat": 9.18778,
+      "lon": 123.58278,
+      "elevation_m": 628,
+      "coordinate_type": "summit",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_ph_0103"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Mount Malabahoc / Mount Bandilaan — высшая точка центрального массива, а не центр всей составной карточки."
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 9.18774,
+        "lon": 123.56399,
+        "elevation_m": null,
+        "coordinate_type": "cave_entrance",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0105"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Cantabon Cave entrance."
+      },
+      {
+        "lat": 9.14008,
+        "lon": 123.62675,
+        "elevation_m": null,
+        "coordinate_type": "waterfall_base",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0106"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Cambugahay Falls."
+      },
+      {
+        "lat": 9.12094,
+        "lon": 123.57549,
+        "elevation_m": null,
+        "coordinate_type": "viewpoint",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0107"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Old Enchanted Balete Tree."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Siquijor interior — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+        "text": "Внутренний Сикихор — связка лесистого массива Mount Bandilaan, пещер, водопадов и живой традиции народного целительства. Здесь важно не смешивать физические объекты с фольклором: Bandilaan и Cantabon — конкретные горные/карстовые точки, а репутация «Healing Island» поддерживается ежегодным Healing Festival и практиками местных healers.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0026",
-          "src_stage_ph_0003",
+          "src_stage_ph_0027",
+          "src_stage_ph_0102",
+          "src_stage_ph_0103"
+        ]
+      },
+      {
+        "type": "geography",
+        "text": "Mount Bandilaan/Malabahoc поднимается примерно до 628 м и формирует центральный высокий массив острова. В нескольких километрах находятся Cantabon Cave, Cambugahay Falls и другие карстово-водные объекты; это удобнее планировать как сеть отдельных точек, а не одну «достопримечательность».",
+        "source_refs": [
+          "src_stage_ph_0103",
+          "src_stage_ph_0105",
+          "src_stage_ph_0106"
+        ]
+      },
+      {
+        "type": "culture",
+        "text": "DOT и Philippine Information Agency описывают Healing Festival на Mount Bandilaan во время Holy Week как живую традицию: местные целители готовят травяные смеси и демонстрируют практики, связанные с лечением и духовным наследием острова.",
+        "source_refs": [
+          "src_stage_ph_0027",
+          "src_stage_ph_0102"
+        ]
+      },
+      {
+        "type": "myths_beliefs",
+        "text": "Старый balete tree официальная туристическая страница связывает с местными рассказами о феях и духах; это фольклорный слой, а не проверяемое объяснение природного объекта. Balay Pahiuli и bolo-bolo healing описываются как местные лечебно-ритуальные практики; их утверждения о воздействии на болезни не трактуются как медицинский факт.",
+        "source_refs": [
           "src_stage_ph_0027"
         ]
       }
@@ -92,34 +156,111 @@
     },
     "access_options": [
       {
-        "id": "access_01",
+        "id": "access_self_drive_interior",
         "origin_place_id": null,
+        "origin_raw": "Siquijor / San Juan",
         "modes": [
-          "other"
+          "moped"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Практичная база — Siquijor / Dumaguete; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
+            "road": {
+              "surface": "paved_and_local_roads",
+              "condition": "проверять локально",
+              "seasonality": "ливни могут менять состояние второстепенных подъездов"
+            },
+            "notes": "Самостоятельные путешественники регулярно используют арендованный скутер для связки внутренних точек; точные расстояния зависят от базы."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0109"
+        ]
+      },
+      {
+        "id": "access_local_ride",
+        "origin_place_id": null,
+        "origin_raw": "Siquijor island",
+        "modes": [
+          "ride_hailing"
+        ],
+        "legs": [
+          {
+            "mode": "ride_hailing",
+            "distance_km": null,
+            "duration_min": null,
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            },
+            "notes": "В сентябре 2026 локальный Siquijor Go использовался для заказа scooter+tuktuk rides и предварительного бронирования поездок; это traveler-reported operational layer, не официальный транспортный реестр."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0110"
+        ]
+      },
+      {
+        "id": "access_cantabon",
+        "origin_place_id": null,
+        "origin_raw": "Cantabon Cave Tourism Office",
+        "modes": [
+          "walking"
+        ],
+        "legs": [
+          {
+            "mode": "walking",
+            "distance_km": 0.4,
+            "duration_min": null,
+            "elevation_gain_m": null,
+            "elevation_loss_m": null,
+            "trailhead": {
+              "lat": 9.18571,
+              "lon": 123.5613
+            },
+            "trail": {
+              "type": "cave_approach",
+              "condition": null,
+              "navigation": "от tourism office/Barangay Hall к cave entrance",
+              "river_crossings": null
+            },
+            "notes": "OSM даёт около 370 м между Barangay Hall/Tourism Office cluster и входом Cantabon Cave."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0105"
         ]
       }
     ],
     "water": {
-      "summary": null,
+      "summary": "Внутренние водопады и источники не считаются питьевой водой. Для Cantabon/Bandilaan надёжную бутылочную воду следует считать снабжением из населённых пунктов; отдельный канонический water-POI пока не нормализован.",
       "quality": "unknown",
       "last_reliable_source": null,
       "distance_m": null,
-      "natural_sources": [],
-      "source_refs": []
+      "natural_sources": [
+        {
+          "type": "waterfall",
+          "name": "Cambugahay Falls",
+          "potability": "unknown",
+          "source_refs": [
+            "src_stage_ph_0106"
+          ]
+        }
+      ],
+      "source_refs": [
+        "src_stage_ph_0106"
+      ]
     },
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "summary": "На острове развито жильё, но право на свободную палатку в Mount Bandilaan/Cantabon/Cambugahay в собранных источниках не подтверждено.",
+      "source_refs": [
+        "src_stage_ph_0027"
+      ]
     },
     "lodging_ids": [],
     "rules": {
@@ -139,15 +280,105 @@
       "site_specific_notes": "Перед выездом смотреть фактический прогноз; для моря, гор, рек, пещер и вулканов оперативная погода важнее климатической нормы."
     }
   },
-  "traveler_reports": [],
+  "traveler_reports": [
+    {
+      "topic": "transport",
+      "summary": "В июне 2026 самостоятельный путешественник арендовал скутер для исследования острова; формат подтверждает практичность self-drive, но его конкретные цены не переносим как норматив.",
+      "observed_period": "2026-06",
+      "source_refs": [
+        "src_stage_ph_0109"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "transport",
+      "summary": "В сентябре 2026 пользователи сообщали, что локальный Siquijor Go позволяет заказывать rides, scooter rental и предварительное бронирование, хотя число водителей ещё ограничено.",
+      "observed_period": "2026-09",
+      "source_refs": [
+        "src_stage_ph_0110"
+      ],
+      "confidence": "medium"
+    }
+  ],
   "visual_recon": {
     "photo_suitability_5": 4,
     "video_suitability_5": 4,
     "best_time": "утро и поздний день",
     "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_bandilaan_tower",
+        "name": "Bandilaan Viewing Tower",
+        "description": "Высокая обзорная точка в центральном массиве рядом с Mount Bandilaan.",
+        "coordinates": {
+          "lat": 9.18798,
+          "lon": 123.58272,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "9.187980, 123.582720"
+        },
+        "access": null,
+        "view": {
+          "description": "Высокая обзорная точка в центральном массиве рядом с Mount Bandilaan."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "панорама внутренней части острова"
+          },
+          {
+            "type": "telephoto",
+            "why": "отдельные гряды и удалённые участки побережья"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0104"
+        ]
+      },
+      {
+        "id": "vp_cambugahay",
+        "name": "Cambugahay Falls",
+        "description": "Геопривязанная точка у каскадов Cambugahay; координата относится к месту съёмки, а не к точке входа.",
+        "coordinates": {
+          "lat": 9.1999,
+          "lon": 123.5952,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "9.199900, 123.595200"
+        },
+        "access": null,
+        "view": {
+          "description": "Геопривязанная точка у каскадов Cambugahay; координата относится к месту съёмки, а не к точке входа."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "несколько уровней каскада и бассейны"
+          },
+          {
+            "type": "action_camera",
+            "why": "вода и купание там, где разрешено"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0108"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "После дождей водопады полноводнее, но тропы и камни скользче; Healing Festival проходит в Holy Week и меняет культурную активность Mount Bandilaan."
+    ],
+    "video_activity": [
+      "приготовление травяных смесей и Healing Festival только с согласия участников",
+      "движение воды в Cambugahay",
+      "пещерный маршрут Cantabon при разрешённой съёмке"
+    ],
     "useful_equipment": [],
     "drone": {
       "visual_value": null,
@@ -178,13 +409,22 @@
     "legacy_order": 10
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
       "src_stage_ph_0006",
       "src_stage_ph_0026",
       "src_stage_ph_0003",
-      "src_stage_ph_0027"
+      "src_stage_ph_0027",
+      "src_stage_ph_0102",
+      "src_stage_ph_0103",
+      "src_stage_ph_0104",
+      "src_stage_ph_0105",
+      "src_stage_ph_0106",
+      "src_stage_ph_0107",
+      "src_stage_ph_0108",
+      "src_stage_ph_0109",
+      "src_stage_ph_0110"
     ]
   },
   "qa": {
@@ -192,16 +432,16 @@
     "checks": {
       "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
-      "elevation": false,
+      "geo": true,
+      "coordinates": true,
+      "elevation": true,
       "narrative": true,
       "sources": true,
-      "access": false,
-      "water": false,
+      "access": true,
+      "water": true,
       "overnight": false,
-      "traveler_reports": false,
-      "visual_recon": false
+      "traveler_reports": true,
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

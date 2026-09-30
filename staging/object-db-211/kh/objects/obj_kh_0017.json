@@ -292,7 +292,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "не ночевать в храмовых пещерах/на Пном-Да; палатка возможна только на частной/общинной земле с явным разрешением. Практичнее гостевой дом в Doun Kaev",
+      "summary": "Свободная палатка у археологических объектов и храмов источниками не подтверждена. Практическая база — Такео/Даункео или размещение на частной земле с прямым разрешением владельца.",
       "source_refs": [
         "src_000219",
         "src_000399",
@@ -323,25 +323,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "лодочный маршрут зависит от уровня воды: в сухой сезон некоторые каналы мелкие",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "старые гостевой дом-тарифы Takeo часто гуляют по блогам как “текущие”; в карточке они помечены как исторический ориентир",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "без музея/карты древние земляные валы и каналы трудно считываются на местности",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "seasonal_access",
+      "summary": "Путешественнические отчёты по Ангкор-Борею фиксируют, что низкий уровень воды может сделать лодочный доступ к Пном-Да невозможным. Это старый, но физически релевантный сезонный риск; текущую судоходность нужно проверять на месте.",
+      "observed_period": "historical",
+      "source_refs": [
+        "src_stage_kh_0017"
+      ],
+      "confidence": "low"
     }
   ],
   "visual_recon": {
@@ -470,11 +458,12 @@
       "src_000399",
       "src_000476",
       "src_000003",
-      "src_000070"
+      "src_000070",
+      "src_stage_kh_0017"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -485,8 +474,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

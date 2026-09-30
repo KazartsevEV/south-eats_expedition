@@ -262,7 +262,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "Не планировать ночёвку на природоохранной пристани или речных островах без прямого согласования с местным сообществом; бюджетная база — Кратьэх.",
+      "summary": "Ночёвку планировать в Кратьэхе или другом обычном жилье. Палатку на природоохранной пристани или речных островах без согласования с местным сообществом не считать разрешённой.",
       "source_refs": [
         "src_000391",
         "src_000038",
@@ -294,25 +294,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "дельфин не гарантирован; “пустая” поездка не является нарушением услуги",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "на лодке вибрация/двигатель мешают длинному фокусу и чистому звуку",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "полуденное солнце на воде жёсткое и жара заметная; лодка trip лучше ранним утром/поздним днём",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "dolphin_visit",
+      "summary": "В феврале 2026 посетитель описывал поездку в район Кампи как часть более широкого знакомства с сельским Меконгом и наблюдением за дельфинами. Наблюдение остаётся вероятностным, а не гарантированной услугой.",
+      "observed_period": "2026-02",
+      "source_refs": [
+        "src_stage_kh_0018"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -420,11 +408,12 @@
       "src_000038",
       "src_000100",
       "src_000406",
-      "src_000077"
+      "src_000077",
+      "src_stage_kh_0018"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -435,8 +424,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

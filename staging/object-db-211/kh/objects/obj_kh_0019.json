@@ -276,7 +276,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "дикий кемпинг в национальный парк/на colonial ruins не считать автоматически допустимым; использовать разрешённый кемпинг/частный участок или жильё в Кампот",
+      "summary": "Надёжного общего разрешения на свободный кемпинг в национальном парке и у исторических руин не найдено. Использовать только явно разрешённую площадку, частную землю либо жильё в Кампоте.",
       "source_refs": [
         "src_000359",
         "src_000320",
@@ -308,25 +308,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "путешественники в 2026 отмечают атмосферу туман/церковь, но одновременно жалуются на новую застройку и потерю ощущения “заброшенности”",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "Туман может полностью закрыть вид на побережье; в такую погоду лучше работать с лесом и архитектурой, а не рассчитывать на дальнюю панораму.",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "на мокрой дороге проблема не сезон как таковой, а конкретно видимость и тормозной путь на серпантине",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "landscape_change",
+      "summary": "Отзыв июня 2026 подчёркивает одновременно туманную атмосферу старой горной станции и заметную новую застройку; в дождливый период туман может закрывать дальние виды, тогда как водопад и растительность становятся выразительнее.",
+      "observed_period": "2026-06",
+      "source_refs": [
+        "src_stage_kh_0019"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -427,11 +415,12 @@
       "src_000320",
       "src_000106",
       "src_000024",
-      "src_000113"
+      "src_000113",
+      "src_stage_kh_0019"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -442,8 +431,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

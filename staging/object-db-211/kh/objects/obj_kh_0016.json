@@ -258,7 +258,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "ночёвка на ступах/в пагоде без приглашения недопустима; использовать Пномпень или согласованное монастырское/местное размещение только по прямому разрешению",
+      "summary": "Ночёвка у ступ или в монастырских помещениях возможна только по прямому приглашению или разрешению. Иначе использовать жильё в Пномпене или ближайших населённых пунктах.",
       "source_refs": [
         "src_000247",
         "src_000352",
@@ -286,25 +286,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "главная физическая сложность — длинные лестницы в жару",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "выходные и религиозные даты дают больше паломников",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "часть нижних исторических городских следов не выглядит “монументально”, поэтому без исторического контекста поездка легко превращается только в панораму со ступами",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "navigation_and_heat",
+      "summary": "В апреле 2026 самостоятельный посетитель потерял правильную тропу между несколькими лестницами и потратил почти два часа на жаре до подъёма к главным ступам; другой отзыв подтверждает порядка 500 ступеней на основном подъёме.",
+      "observed_period": "2026-04",
+      "source_refs": [
+        "src_stage_kh_0016"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -402,11 +390,12 @@
       "src_000247",
       "src_000352",
       "src_000476",
-      "src_000376"
+      "src_000376",
+      "src_stage_kh_0016"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -417,8 +406,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

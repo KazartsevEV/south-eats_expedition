@@ -278,7 +278,7 @@
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "не ставить палатку на сваях/берегу/у пагоды без явного приглашения местное сообщество. Для удалённых bird/wetland маршрутов ночёвку организовывать через официальную местное сообщество/оператора",
+      "summary": "Для удалённых озёрных и орнитологических маршрутов ночёвку нужно согласовывать с конкретным сообществом или оператором. Палатку на сваях, берегу или при пагоде без разрешения не считать законным вариантом.",
       "source_refs": [
         "src_000102",
         "src_000210",
@@ -309,25 +309,13 @@
   },
   "traveler_reports": [
     {
-      "topic": "aggregated_recurring_issue",
-      "summary": "частая жалоба — “туристическая ловушка” и навязанные покупки/остановки на самых коммерческих маршрутах; это особенно обсуждалось вокруг Chong Khneas",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "цена лодки должна быть оговорена до посадки и привязана к конкретной деревне/продолжительности",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
-    },
-    {
-      "topic": "aggregated_recurring_issue",
-      "summary": "в сухой сезон часть “плавучего” визуального эффекта исчезает: дома высоко над грунтом, каналы мелкие — это не плохая поездка, а другая гидрологическая фаза",
-      "observed_period": null,
-      "source_refs": [],
-      "confidence": null
+      "topic": "pricing_pressure",
+      "summary": "Отзывы 2026 по маршруту через Chong Kneas продолжают описывать непрозрачные цены, дополнительные платежи после посадки и навязанные остановки. Перед выходом нужно фиксировать конкретную деревню, полную стоимость и включённые этапы.",
+      "observed_period": "2026-02",
+      "source_refs": [
+        "src_stage_kh_0015"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
@@ -432,11 +420,12 @@
       "src_000210",
       "src_000476",
       "src_000368",
-      "src_000081"
+      "src_000081",
+      "src_stage_kh_0015"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -447,8 +436,8 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": false,
-      "traveler_reports": false,
+      "overnight": true,
+      "traveler_reports": true,
       "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"

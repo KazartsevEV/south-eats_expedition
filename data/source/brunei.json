@@ -513,8 +513,33 @@
               "best_time": "рассвет + последние 40 минут до заката и синий час",
               "best_weather_light": "сухой вечер после дневного ливня: чище воздух и сильнее отражения",
               "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_taman_mahkota_01",
+                  "name": "Taman Mahkota Jubli Emas",
+                  "description": "Документированная точка в речном парке: с этой позиции на Commons-фотографии мечеть Omar Ali Saifuddien видна в фоне за парком.",
+                  "coordinates": {
+                    "lat": 4.888368,
+                    "lon": 114.937105,
+                    "elevation_m": null
+                  },
+                  "access": "Общественный парк на набережной к юго-западу от мечети; точный проход внутри парка сверять на месте.",
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    "wide",
+                    "standard"
+                  ],
+                  "source": {
+                    "type": "media_repository",
+                    "title": "Taman Mahkota Jubli Emas — camera location with Omar Ali Saifuddien Mosque in background",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Taman_Mahkota_Jubli_Emas.jpg",
+                    "accessed": "2026-10-01"
+                  }
+                }
+              ],
+              "viewpoint_candidates_unverified": [
                 "низкая точка у лагуны с баржей и куполом",
-                "набережная напротив мечети для связи здания с городом",
                 "садовая ось и мост через лагуну"
               ]
             },
@@ -526,12 +551,34 @@
             "culture_ethnography": "Лучше объяснять вместе с Кампонг-Айер: государственная монументальная столица на суше стоит напротив многовекового водного города.",
             "geography_geology": "Стоит на низменной речной равнине у Бруней река; искусственная лагуна создаёт чистые отражения и отделяет фасад от дорожного фона."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "молитвенные окна могут закрыть интерьер",
-              "полдень даёт пересвет мрамора"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "access",
+              "summary": "Посетитель в апреле 2026 года отметил, что для немусульман интерьер закрывается на время молитв и у входа размещён отдельный актуальный график посещения.",
+              "observed_period": "2026-04",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Omar Ali Saifuddien Mosque traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d317479-Reviews-Omar_Ali_Saifuddien_Mosque-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "visual_state",
+              "summary": "В отчёте за апрель 2026 года королевская баржа и сады отмечены как находившиеся на ремонте, а лагуна — частично осушенной. Это датированное наблюдение, а не утверждение о состоянии в октябре 2026 года.",
+              "observed_period": "2026-04",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Omar Ali Saifuddien Mosque traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d317479-Reviews-Omar_Ali_Saifuddien_Mosque-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",
@@ -766,7 +813,41 @@
             "terrain_and_movement": "Большие открытые площадки и лестницы; соблюдать дресс-код.",
             "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "access_options": [
+              {
+                "id": "bus_1_from_bsb",
+                "origin": "Bandar Seri Begawan city centre",
+                "modes": [
+                  "public_transport"
+                ],
+                "legs": [
+                  {
+                    "mode": "public_transport",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "duration_min_range": [
+                      10,
+                      15
+                    ],
+                    "surface": null,
+                    "condition": null,
+                    "seasonality": null,
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Кольцевой автобус №1; актуальную остановку и направление проверять перед выездом.",
+                    "fords": null,
+                    "fare": {
+                      "amount": 1,
+                      "currency": "BND",
+                      "basis": "traveler_report_2025-09"
+                    },
+                    "notes": "Фактический отчёт: 10–15 минут из центра, BND 1. Brunei Tourism отдельно указывает среднюю городскую автобусную цену BND 1 и работу сети примерно 06:00–20:00."
+                  }
+                ]
+              }
+            ]
           },
           "climate": {
             "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
@@ -774,10 +855,10 @@
             "site_specific_notes": null
           },
           "operations": {
-            "hours": "Официальная страница: Mon–Wed 08:00–11:30 и 14:00–15:00; Thu 08:00–11:30. Доступ для посетителей вне молитв; праздничный режим сверять.",
+            "hours": "Пн–Чт, Сб–Вс: 08:00–11:30 и 14:00–15:00. Пятница: закрыто для туристического посещения. Время молитв и религиозные мероприятия имеют приоритет.",
             "ticket": "Бесплатно, если на месте не объявлено иное.",
             "closure_notes": null,
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/jame-asr-hassanil-bolkiah-mosque/"
           },
           "safety": {
@@ -797,8 +878,33 @@
               "best_time": "первое утреннее время доступа посетителей или поздний день",
               "best_weather_light": "после дождя камень и зелень насыщеннее",
               "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_northwest_01",
+                  "name": "Северо-западная точка обзора",
+                  "description": "Документированная Commons-фотография сделана отсюда и показывает комплекс мечети целиком с внешней стороны.",
+                  "coordinates": {
+                    "lat": 4.901444,
+                    "lon": 114.919084,
+                    "elevation_m": null
+                  },
+                  "access": "Внешняя городская точка к северо-западу от комплекса; режим прохода по конкретному участку проверять на месте.",
+                  "best_time": null,
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    "standard",
+                    "telephoto"
+                  ],
+                  "source": {
+                    "type": "media_repository",
+                    "title": "Jame' Asr Hassanil Bolkiah Mosque — documented camera location",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Jame%27_Asr_Hassanil_Bolkiah_Mosque_%2819042022%29.jpg",
+                    "accessed": "2026-10-01"
+                  }
+                }
+              ],
+              "viewpoint_candidates_unverified": [
                 "центральная садовая ось",
-                "боковой ракурс, собирающий несколько минаретов и куполов",
                 "край сада/водоёма для повторяющейся геометрии"
               ]
             },
@@ -810,12 +916,34 @@
             "culture_ethnography": "Это действующая соборная мечеть и пространство пятничной молитвы.",
             "geography_geology": "Находится в Kiarong вне старого пешего ядра BSB; вокруг больше дорог и открытых площадей, поэтому выбор ракурса особенно важен."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "короткие время доступа посетителей",
-              "большая территория и жёсткий полуденный свет"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "public_transport",
+              "summary": "Путешественник в сентябре 2025 года проехал из центра на кольцевом автобусе №1 за BND 1; фактическое время поездки он указал как 10–15 минут.",
+              "observed_period": "2025-09",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Jame'Asr Hassanil Bolkiah Mosque traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d455628-Reviews-Jame_Asr_Hassanil_Bolkiah_Mosque-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "access",
+              "summary": "Тот же отчёт отмечает регистрацию у стойки охраны и выдачу бесплатной закрывающей одежды посетителям; туристическое посещение не допускается во время молитвы.",
+              "observed_period": "2025-09",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Jame'Asr Hassanil Bolkiah Mosque traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com/Attraction_Review-g293938-d455628-Reviews-Jame_Asr_Hassanil_Bolkiah_Mosque-Bandar_Seri_Begawan_Brunei_Muara_District.html",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",

@@ -4,10 +4,11 @@
   "slug": "apo-reef-natural-park",
   "status": "migration_draft",
   "names": {
-    "primary": "Apo Reef Natural Park"
+    "primary": "Природный парк «Риф Апо»",
+    "en": "Apo Reef Natural Park"
   },
   "summary": {
-    "narrow": "Apo Reef Natural Park — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео."
+    "narrow": "Риф Апо — крупный удалённый рифовый комплекс у западного Миндоро с лагуной, мангровыми островами и охраняемой морской акваторией. Самостоятельность здесь означает самому собрать наземную логистику до Sablayan, но морской выход, регистрация и ночёвка работают по правилам protected area."
   },
   "classification": {
     "class_id": "nature.reef",
@@ -21,150 +22,290 @@
   },
   "geo": {
     "country_id": "geo_ph",
-    "region_ids": [],
+    "region_ids": [
+      "geo_ph_0007",
+      "geo_ph_0031",
+      "geo_ph_0048"
+    ],
     "nearest_place_id": null,
     "nearest_place_name_raw": "Sablayan",
     "primary_location": {
-      "lat": null,
-      "lon": null,
+      "lat": 12.746389,
+      "lon": 120.396111,
       "elevation_m": null,
-      "elevation_range_m": null,
       "coordinate_type": "center",
-      "accuracy": "unknown",
-      "elevation_accuracy": "unknown",
-      "source_refs": [],
-      "elevation_source_refs": [],
-      "checked_at": "2026-09-28"
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_ph_0134"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Координата объекта из UNESCO Tentative List; это референс охраняемой территории, а не пирс, лагерь или точка погружения."
     },
-    "geo_points": []
+    "geo_points": [
+      {
+        "lat": 12.6601,
+        "lon": 120.4144,
+        "elevation_m": 6,
+        "coordinate_type": "center",
+        "accuracy": "medium",
+        "source_refs": [
+          "src_stage_ph_0136"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "Apo Island — островной компонент парка; высота относится к этой точке суши, не к рифу целиком."
+      },
+      {
+        "lat": 12.6714,
+        "lon": 120.4792,
+        "elevation_m": null,
+        "coordinate_type": "center",
+        "accuracy": "high",
+        "source_refs": [
+          "src_stage_ph_0137"
+        ],
+        "checked_at": "2026-09-30",
+        "notes": "OSM reference for Apo Reef Natural Park; не точка посадки."
+      }
+    ]
   },
   "narrative": {
     "sections": [
       {
         "type": "overview",
-        "text": "Apo Reef Natural Park — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+        "text": "Риф Апо — крупный удалённый рифовый комплекс у западного Миндоро с лагуной, мангровыми островами и охраняемой морской акваторией. Самостоятельность здесь означает самому собрать наземную логистику до Sablayan, но морской выход, регистрация и ночёвка работают по правилам protected area.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0038",
-          "src_stage_ph_0003",
-          "src_stage_ph_0039"
+          "src_stage_ph_0039",
+          "src_stage_ph_0134",
+          "src_stage_ph_0135"
+        ]
+      },
+      {
+        "type": "geography",
+        "text": "UNESCO описывает рифовый комплекс площадью около 34 км² с лагуной глубиной примерно 2–10 м и тремя островами. Морская охраняемая территория значительно больше собственно рифа, поэтому одна пара координат не заменяет навигацию к конкретному острову, mooring или dive site.",
+        "source_refs": [
+          "src_stage_ph_0134"
+        ]
+      },
+      {
+        "type": "history",
+        "text": "Apo Reef получил статус Natural Park по Presidential Proclamation No. 868 в 1996 году. Современный режим доступа строится вокруг регистрации, природоохранных сборов и правил Sablayan/парка.",
+        "source_refs": [
+          "src_stage_ph_0134",
+          "src_stage_ph_0135"
         ]
       }
     ]
   },
   "visit": {
     "entry": {
-      "access_status": "advance booking required",
+      "access_status": "advance_booking_protected_area",
       "fee": {
         "amount": null,
-        "currency": null,
+        "currency": "PHP",
         "pricing_basis": null,
-        "description": "Fees/boat/package подтверждать у Sablayan Tourism Office при обязательном booking за 3–7 дней.",
+        "description": "Sablayan публикует базовые сборы: local picnic/snorkeler PHP 470, foreign PHP 940; local diver PHP 2,860, foreign diver PHP 3,530; guide PHP 1,320 в день на группу. Итоговая лодка и пакет зависят от группы и требуют подтверждения.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0038",
-          "src_stage_ph_0003",
-          "src_stage_ph_0039"
+          "src_stage_ph_0135"
         ],
-        "checked_at": "2026-09-28"
+        "checked_at": "2026-09-30"
       },
       "hours": {
-        "value": "Не дневной городской объект: режим определяется предварительным booking, boat transfer и protected-area rules.",
+        "value": "Это морская protected area без городского графика входа; визит привязан к предварительному booking, регистрации, лодке и погодному окну.",
         "source_refs": [
-          "src_stage_ph_0006",
-          "src_stage_ph_0038",
-          "src_stage_ph_0003",
-          "src_stage_ph_0039"
+          "src_stage_ph_0039",
+          "src_stage_ph_0135"
         ],
-        "checked_at": "2026-09-28"
+        "checked_at": "2026-09-30"
       },
-      "permit_required": null,
+      "permit_required": true,
       "source_refs": [
-        "src_stage_ph_0006",
-        "src_stage_ph_0038",
-        "src_stage_ph_0003",
-        "src_stage_ph_0039"
+        "src_stage_ph_0039",
+        "src_stage_ph_0135"
       ],
-      "checked_at": "2026-09-28",
-      "official_url": "https://www.tourism.gov.ph/article/visiting-apo-reef-natural-park/",
-      "closure_notes": "Sea/weather can cancel crossings; protected-area regulations apply.",
-      "notes": "Основной gateway — Sablayan, Occidental Mindoro; Apo Reef примерно 33 km offshore. Из San Jose airport — van до Sablayan, затем boat."
+      "checked_at": "2026-09-30",
+      "official_url": "https://sablayan.gov.ph/aporeef.html",
+      "closure_notes": "Морское волнение и погодные ограничения могут отменить переход; protected-area rules действуют независимо от оплаченного бронирования.",
+      "notes": "DOT требует бронировать визит через Sablayan Tourism Office за 3–7 дней."
     },
     "access_options": [
       {
-        "id": "access_01",
+        "id": "access_sablayan_boat",
         "origin_place_id": null,
+        "origin_raw": "Sablayan, Occidental Mindoro",
         "modes": [
-          "other"
+          "boat"
         ],
         "legs": [
           {
-            "mode": "other",
+            "mode": "boat",
+            "distance_km": 33,
+            "duration_min": null,
+            "notes": "Основной морской переход из Sablayan; точное время зависит от лодки и состояния моря."
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0039",
+          "src_stage_ph_0135"
+        ]
+      },
+      {
+        "id": "access_land_to_sablayan_recent",
+        "origin_place_id": "geo_ph_0065",
+        "origin_raw": "San Jose, Occidental Mindoro / overland to Sablayan",
+        "modes": [
+          "public_transport"
+        ],
+        "legs": [
+          {
+            "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "notes": "Основной gateway — Sablayan, Occidental Mindoro; Apo Reef примерно 33 km offshore. Из San Jose airport — van до Sablayan, затем boat. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Морской трансфер из Sablayan; также возможен confirmed private boat/yacht после booking."
+            "notes": "В обсуждении февраля 2026 путешественники описывали наземный автобусный маршрут через Occidental Mindoro к Sablayan; использовать только как ориентир и перепроверять перевозчика."
           }
+        ],
+        "source_refs": [
+          "src_stage_ph_0138"
         ]
       }
     ],
     "water": {
-      "summary": null,
-      "quality": "unknown",
+      "summary": "DOT прямо рекомендует туристам привозить питьевую воду с собой; при необходимости свежей воды советует заранее предупредить boatmen. Природную воду на рифе не считать питьевой.",
+      "quality": "potable",
       "last_reliable_source": null,
       "distance_m": null,
       "natural_sources": [],
-      "source_refs": []
+      "source_refs": [
+        "src_stage_ph_0039"
+      ]
     },
     "supplies": null,
     "overnight": {
-      "status": "unclear",
-      "summary": null,
-      "source_refs": []
+      "status": "official",
+      "summary": "Муниципалитет Sablayan прямо перечисляет camping at Apo Island и stargazing среди разрешённых активностей. Это организованная ночёвка внутри protected-area режима, а не свободный дикий кемпинг в любой точке рифа.",
+      "source_refs": [
+        "src_stage_ph_0135"
+      ]
     },
     "lodging_ids": [],
     "rules": {
-      "permit_or_guide": "Любой визит нужно бронировать через Sablayan Tourism Office за 3–7 дней.",
-      "access_requirements": "Проверить ступени, грунт, лодочные посадки и доступность на официальной странице; природные и археологические объекты часто не безбарьерны.",
+      "permit_or_guide": "Визит бронируется через Sablayan Tourism Office; действуют регистрация, park fees и local protected-area rules.",
+      "access_requirements": "Не забирать природные объекты, не трогать кораллы; DOT также требует минимизировать одноразовый пластик и уносить мусор.",
       "source_refs": [
-        "src_stage_ph_0006",
-        "src_stage_ph_0038",
-        "src_stage_ph_0003",
-        "src_stage_ph_0039"
+        "src_stage_ph_0039",
+        "src_stage_ph_0135"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-30"
     },
     "seasonality": {
-      "best_period": "DOT: February–mid-June и last week of September–early November.",
-      "heat_rain_notes": "Offshore marine site; sea state dominates access and underwater visibility.",
-      "site_specific_notes": "Погодное окно важнее температуры воздуха; лодка может зависеть от волнения."
+      "best_period": "DOT указывает February–mid-June и last week of September–early November.",
+      "heat_rain_notes": "Для offshore site доступ определяет прежде всего состояние моря.",
+      "site_specific_notes": "Перед выходом подтверждать погоду и разрешение лодочного рейса у Sablayan Tourism Office."
     }
   },
-  "traveler_reports": [],
+  "traveler_reports": [
+    {
+      "topic": "land_access",
+      "summary": "В феврале 2026 в обсуждении самостоятельного маршрута к Apo Reef путешественники указывали на наземный автобусный вариант через Occidental Mindoro к Sablayan. Это низкоавторитетный маршрутный сигнал; расписание и точки посадки нужно перепроверять.",
+      "observed_period": "2026-02",
+      "source_refs": [
+        "src_stage_ph_0138"
+      ],
+      "confidence": "low"
+    }
+  ],
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
-    "best_time": "рассвет/раннее утро и поздний день; для подводной съёмки важнее прозрачность воды/солнце",
-    "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "best_time": null,
+    "best_weather_light": "Для рифа и подводной съёмки прозрачность воды и состояние моря важнее фиксированного часа; на Apo Island открытый горизонт даёт сильный рассветный/закатный контекст.",
+    "viewpoints": [
+      {
+        "id": "vp_apo_island",
+        "name": "Apo Island",
+        "description": "Низкий мангровый остров внутри рифового комплекса; точка показывает островной компонент, но не заменяет координаты конкретного причала.",
+        "coordinates": {
+          "lat": 12.6601,
+          "lon": 120.4144,
+          "elevation_m": 6
+        },
+        "gps": {
+          "decimal": "12.660100, 120.414400"
+        },
+        "access": null,
+        "view": {
+          "description": "Низкий мангровый остров внутри рифового комплекса; точка показывает островной компонент, но не заменяет координаты конкретного причала."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для острова, мангров и открытого морского горизонта"
+          },
+          {
+            "type": "underwater_camera",
+            "why": "для подводной части рифового комплекса только в разрешённых зонах"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0136",
+          "src_stage_ph_0135"
+        ]
+      },
+      {
+        "id": "vp_apo_reef_reference",
+        "name": "Apo Reef Natural Park reference",
+        "description": "Картографическая опорная точка охраняемой морской территории; полезна для общей пространственной привязки.",
+        "coordinates": {
+          "lat": 12.6714,
+          "lon": 120.4792,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "12.671400, 120.479200"
+        },
+        "access": null,
+        "view": {
+          "description": "Картографическая опорная точка охраняемой морской территории; полезна для общей пространственной привязки."
+        },
+        "best_time": null,
+        "best_weather_light": null,
+        "useful_equipment": [
+          {
+            "type": "underwater_camera",
+            "why": "основная визуальная ценность объекта находится под водой"
+          },
+          {
+            "type": "wide",
+            "why": "для лодки, лагуны и низких островов"
+          }
+        ],
+        "source_refs": [
+          "src_stage_ph_0137"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "DOT выделяет два более благоприятных сезонных окна; фактическая прозрачность воды и волнение должны проверяться перед выходом."
+    ],
+    "video_activity": [
+      "лодочный переход через открытое море",
+      "подводная жизнь рифа в разрешённых местах",
+      "мангровая и островная среда Apo Island",
+      "лагерь на официально разрешённом camping site без вмешательства в природную среду"
+    ],
     "useful_equipment": [],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска."
+        "Разрешение на обычное посещение объекта не означает разрешения на полёт; перед запуском отдельно проверять действующие авиационные и локальные правила."
       ],
-      "source_refs": [
-        "src_stage_ph_0006",
-        "src_stage_ph_0038",
-        "src_stage_ph_0003",
-        "src_stage_ph_0039"
-      ],
-      "checked_at": "2026-09-28"
+      "source_refs": [],
+      "checked_at": "2026-09-30"
     },
-    "filming_restrictions": "Protected area: no taking natural souvenirs, no touching coral; follow Green Fins practices. Drone/commercial filming require separate current permission check."
+    "filming_restrictions": "Protected-area rules обязательны; коммерческая и дрон-съёмка требуют отдельной текущей проверки разрешений."
   },
   "media": {
     "cover_id": null,
@@ -178,13 +319,15 @@
     "legacy_order": 15
   },
   "freshness": {
-    "checked_at": "2026-09-28",
+    "checked_at": "2026-09-30",
     "source_file": "Philippines",
     "source_refs": [
-      "src_stage_ph_0006",
-      "src_stage_ph_0038",
-      "src_stage_ph_0003",
-      "src_stage_ph_0039"
+      "src_stage_ph_0039",
+      "src_stage_ph_0134",
+      "src_stage_ph_0135",
+      "src_stage_ph_0136",
+      "src_stage_ph_0137",
+      "src_stage_ph_0138"
     ]
   },
   "qa": {
@@ -192,16 +335,16 @@
     "checks": {
       "language": true,
       "classification": true,
-      "geo": false,
-      "coordinates": false,
+      "geo": true,
+      "coordinates": true,
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": false,
-      "water": false,
-      "overnight": false,
-      "traveler_reports": false,
-      "visual_recon": false
+      "access": true,
+      "water": true,
+      "overnight": true,
+      "traveler_reports": true,
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

@@ -106,18 +106,17 @@
       "objects": 19,
       "structural": "passed",
       "factual_qa": {
-        "passed": 0,
-        "incomplete": 19,
+        "passed": 1,
+        "incomplete": 18,
         "missing": {
-          "geo": 19,
-          "coordinates": 19,
-          "elevation": 19,
-          "access": 19,
-          "water": 19,
-          "overnight": 19,
-          "traveler_reports": 19,
-          "visual_recon": 19,
-          "language": 9
+          "geo": 4,
+          "coordinates": 4,
+          "elevation": 11,
+          "access": 4,
+          "water": 9,
+          "overnight": 15,
+          "traveler_reports": 8,
+          "visual_recon": 4
         }
       }
     },
@@ -199,5 +198,5 @@
     }
   },
   "pending_full_rebuild": [],
-  "note": "Do not import until every hard guard required for structural safety is true. Factual unknowns may remain only where the contract explicitly permits null/unknown and QA records the gap."
+  "note": "Do not import until every hard guard required for structural safety is true. PH factual enrichment is complete through obj_ph_0015; full build/validate guards remain false until staging is integrated and the repository validation pipeline is run."
 }

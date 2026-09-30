@@ -444,8 +444,6 @@ var GEO_FIELDS=[
 function geoReferenceHTML(g){
   if(!g)return '';
   var blocks=[];
-  var description=g.description&&(g.description.narrow||g.description.body);
-  if(description)blocks.push(factCard('Описание',description));
   GEO_FIELDS.forEach(function(x){if(g[x[1]]!=null)blocks.push(factCard(x[0],g[x[1]]))});
   if(!blocks.filter(Boolean).length)return '';
   return '<section class="section"><div class="section-head"><div><div class="eyebrow">'+esc(geoKindLabel(g.kind))+'</div><h2>Справка</h2></div></div><div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
@@ -527,6 +525,9 @@ function geoKindLabel(kind){
     settlement:'поселение',protected_area:'охраняемая территория',geographic_area:'местность'
   };
   return labels[kind]||'территория';
+}
+function geoMapLabel(g){
+  return (g&&g.names&&(g.names.local||g.names.en||g.names.primary||g.names.ru))||(g&&g.id)||'';
 }
 function compactTransport(t){
   if(!t)return '';
@@ -655,6 +656,34 @@ function addCountryMask(map,geojson){
     style:{color:'#d7ff69',weight:2,opacity:.92,fillOpacity:.03}
   }).addTo(map);
 }
+function addGeoMask(map,geojson,label){
+  if(!map||!geojson)return null;
+  if(!map.getPane('geoMask')){
+    map.createPane('geoMask');
+    map.getPane('geoMask').style.zIndex=260;
+    map.getPane('geoMask').style.pointerEvents='none';
+  }
+  var holes=polygonOuterRings(geojson).map(function(ring){return ring.map(function(p){return[p[1],p[0]]})});
+  if(!holes.length)return null;
+  var world=[[-85,-180],[-85,180],[85,180],[85,-180],[-85,-180]];
+  L.polygon([world].concat(holes),{
+    pane:'geoMask',stroke:false,fill:true,fillColor:'#06100b',fillOpacity:.66,fillRule:'evenodd',interactive:false
+  }).addTo(map);
+  var layer=L.geoJSON(geojson,{
+    pane:'geoMask',interactive:false,
+    style:{color:'#d7ff69',weight:2.4,opacity:.98,fillOpacity:.06}
+  }).addTo(map);
+  try{
+    var bounds=layer.getBounds();
+    if(label&&bounds&&bounds.isValid()){
+      L.marker(bounds.getCenter(),{
+        interactive:false,
+        icon:L.divIcon({className:'country-label-marker',html:esc(label),iconSize:null})
+      }).addTo(map);
+    }
+    return bounds;
+  }catch(e){return null;}
+}
 function addBaseMap(id,objects,opts){
   opts=opts||{};
   var el=document.getElementById(id);if(!el||!window.L)return null;
@@ -708,7 +737,7 @@ function addRegionMap(id,objects,cc,full,childDetails,opts){
   (childDetails||[]).forEach(function(ch){
     if(ch&&validCoord(ch.primary_location)){
       var p=[Number(ch.primary_location.lat),Number(ch.primary_location.lon)];pts.push(p);
-      var nm=(ch.names&&(ch.names.ru||ch.names.primary))||ch.id;
+      var nm=geoMapLabel(ch);
       L.circleMarker(p,{radius:5,weight:1,fillOpacity:.55}).addTo(map)
         .bindTooltip(esc(nm),{direction:'top',offset:[0,-4],opacity:.9});
     }
@@ -716,8 +745,8 @@ function addRegionMap(id,objects,cc,full,childDetails,opts){
   Promise.all([geoGeometry(full),countryBoundary(cc)]).then(function(res){
     var geom=res[0],boundary=res[1];
     if(geom){
-      L.geoJSON(geom,{style:{color:'#d7ff69',weight:2,opacity:.95,fillOpacity:.05}}).addTo(map);
-      try{var gb=L.geoJSON(geom).getBounds();if(gb&&gb.isValid())map.fitBounds(gb.pad(opts.pad==null?.08:opts.pad),{maxZoom:opts.maxZoom||10});return;}catch(e){}
+      var gb=addGeoMask(map,geom,geoMapLabel(full));
+      if(gb&&gb.isValid()){map.fitBounds(gb.pad(opts.pad==null?.08:opts.pad),{maxZoom:opts.maxZoom||10});return;}
     }
     if(full&&validCoord(full.primary_location)){
       var p=[Number(full.primary_location.lat),Number(full.primary_location.lon)];

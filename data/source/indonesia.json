@@ -40,7 +40,8 @@
       "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Indonesia; schema keys and official proper names remain unchanged.",
       "Regional QA pass 2026-09-30: deepened North Sumatra / Lake Toba / Samosir with official Indonesia Travel support; added gateway/ferry structure, Batak cultural landscape and missing transport/safety source_refs.",
       "Regional QA pass 2026-09-30: deepened Bali and Flores/Komodo with UNESCO and Indonesia Travel sources; separated subak hydrology/culture, Bali transport, Flores road corridor, Labuan Bajo gateway and Komodo protected-area geography.",
-      "Regional QA pass 2026-09-30: deepened West Sumatra / Sawahlunto with UNESCO Ombilin material; separated mining-city history, mountain railway, social/labour history and current regional transport."
+      "Regional QA pass 2026-09-30: deepened West Sumatra / Sawahlunto with UNESCO Ombilin material; separated mining-city history, mountain railway, social/labour history and current regional transport.",
+      "Regional QA pass 2026-09-30: deepened Raja Ampat access and island-community context with current Indonesia Travel material; separated Sorong→Waisai gateway logistics from onward island boat legs and added locally anchored Matbat/Wala cultural context."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -7905,7 +7906,10 @@
         "climate": {
           "summary": "Экваториальный морской климат с дождями круглый год.",
           "field_context": "Для экспедиции важнее конкретное окно ветра и волны, чем условный единый «сухой сезон».",
-          "source_refs": []
+          "source_refs": [
+            "src_903001",
+            "src_903033"
+          ]
         },
         "marine": {
           "forecast": "BMKG публикует оперативные прогнозы ветра, погоды и высоты волн по морским районам и портам.",
@@ -7959,13 +7963,17 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Вход обычно через Соронг/Вайсай; дальнейшее перемещение почти полностью лодочное, а внутри крупных островов — локальные дороги и тропы."
+          "summary": "Практическая схема доступа строится как отдельная цепочка: внешний перелёт до Sorong → морской переход до Waisai на Waigeo → далее отдельная лодка к конкретному острову, kampung или homestay. Waisai — основной gateway, но не универсальная конечная точка для Misool, Kofiau, Arborek, Sauwandarek и других секторов архипелага.",
+          "source_refs": [
+            "src_903033"
+          ]
         },
         "ethnography": {
-          "summary": "Морские и островные общины имеют разнообразные папуасские языки и практики традиционного управления ресурсами; UNESCO отдельно отмечает традицию саси.",
+          "summary": "Морские и островные общины имеют разнообразные папуасские языки и практики традиционного управления ресурсами. UNESCO отдельно отмечает саси, а официальный туристический источник — локальные традиции Matbat на Misool; эти практики нельзя переносить на весь архипелаг без географической привязки.",
           "source_refs": [
             "src_903004",
-            "src_000725"
+            "src_000725",
+            "src_903033"
           ]
         },
         "local_reference_provenance": {
@@ -7974,7 +7982,8 @@
             "src_903001",
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903033"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -7991,7 +8000,13 @@
           ],
           "checked_at": "2026-09-30"
         },
-        "narrow": "Раджа-Ампат — архипелаг у западной оконечности Новой Гвинеи, где древние породы, карстовые острова и рифы образуют единый геологический и морской комплекс. Местные папуасские островные сообщества сохраняют собственные языки и практики управления ресурсами, включая традицию саси."
+        "narrow": "Раджа-Ампат — архипелаг у западной оконечности Новой Гвинеи, где древние породы, карстовые острова и рифы образуют единый геологический и морской комплекс. Местные папуасские островные сообщества сохраняют собственные языки и практики управления ресурсами, включая традицию саси.",
+        "culture": {
+          "summary": "Официальный Indonesia Travel фиксирует локальные культурные практики не как единый «папуасский фольклор», а как конкретные островные традиции. В частности, для Matbat на Misool отмечена Wala — устная песенно-танцевальная традиция; такие практики нужно хранить с точной привязкой к сообществу и острову.",
+          "source_refs": [
+            "src_903033"
+          ]
+        }
       },
       {
         "name": "Maluku / Banda",
@@ -10074,6 +10089,23 @@
         "regional_transport",
         "sawahlunto",
         "ombilin"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_RAJA_AMPAT_TOURISM_OFFICIAL",
+      "canonical_id": "src_903033",
+      "publisher": "Indonesia Travel — Raja Ampat",
+      "url": "https://www.indonesia.travel/id/id/destination/maluku-papua/southwest-papua/raja-ampat",
+      "kind": "government",
+      "used_for": [
+        "regional_transport",
+        "regional_culture",
+        "regional_ethnography",
+        "sorong",
+        "waisai",
+        "misool",
+        "matbat"
       ],
       "accessed": "2026-09-30"
     }

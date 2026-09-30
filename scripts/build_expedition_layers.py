@@ -7,6 +7,8 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
+from release_context import get_release_context
+
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -49,8 +51,8 @@ def file_entry(path: Path, release: Path):
 
 
 def build(root: Path):
-    latest = load(root / "latest.json")
-    release = root / latest["release_id"]
+    latest = get_release_context(root)
+    release = latest["release"]
     manifest_path = release / "manifest.json"
     manifest = load(manifest_path)
 

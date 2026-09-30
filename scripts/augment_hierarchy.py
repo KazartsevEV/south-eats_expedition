@@ -7,6 +7,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from build_cdn import TYPE_LABELS as CLASS_LABELS
+from release_context import get_release_context
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public" / "cdn" / "v2"
@@ -90,8 +91,8 @@ def refresh_manifest(release: Path, extra_totals: dict):
     dump(manifest_path, manifest)
 
 def main():
-    latest = load(PUBLIC / "latest.json")
-    release = PUBLIC / latest["release_id"]
+    latest = get_release_context(PUBLIC)
+    release = latest["release"]
     countries_data = load(release / "countries.json")["countries"]
     type_rows = load(release / "object-types.json")["object_types"]
     objects_doc = load(release / "search" / "objects.json")

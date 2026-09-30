@@ -6,6 +6,8 @@ import re
 import sys
 from pathlib import Path
 
+from release_context import get_release_context
+
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = Path(sys.argv[1] if len(sys.argv) > 1 else ROOT / "public" / "cdn" / "v2")
 ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
@@ -147,11 +149,9 @@ def validate_object_elevation(value, context):
 
 
 def main():
-    latest = load(PUBLIC / "latest.json")
-    release_id = latest.get("release_id")
-    if not release_id:
-        fail("latest.json missing release_id")
-    release = PUBLIC / release_id
+    context = get_release_context(PUBLIC)
+    release_id = context["release_id"]
+    release = context["release"]
     manifest = load(require_file(release, "manifest.json"))
     registry = load(ID_REGISTRY_PATH)
 

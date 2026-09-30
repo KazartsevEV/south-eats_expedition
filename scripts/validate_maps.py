@@ -5,6 +5,8 @@ import json
 import sys
 from pathlib import Path
 
+from release_context import get_release_context
+
 
 def load(path: Path):
     if not path.is_file():
@@ -27,8 +29,8 @@ def valid_point(value):
 
 
 root = Path(sys.argv[1] if len(sys.argv) > 1 else "public/cdn/v2")
-latest = load(root / "latest.json")
-release = root / latest["release_id"]
+latest = get_release_context(root)
+release = latest["release"]
 manifest = load(release / "manifest.json")
 index = load(release / "maps" / "index.json")
 geo_rows = load(release / "geo" / "index.json").get("entities", [])

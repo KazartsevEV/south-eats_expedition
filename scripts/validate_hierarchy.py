@@ -5,6 +5,8 @@ import json
 import sys
 from pathlib import Path
 
+from release_context import get_release_context
+
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = Path(sys.argv[1] if len(sys.argv) > 1 else ROOT / "public" / "cdn" / "v2")
 
@@ -16,8 +18,8 @@ def fail(message: str):
     print(f"ERROR: {message}", file=sys.stderr)
     raise SystemExit(1)
 
-latest = load(PUBLIC / "latest.json")
-release = PUBLIC / latest["release_id"]
+latest = get_release_context(PUBLIC)
+release = latest["release"]
 
 required = [
     "project.json",

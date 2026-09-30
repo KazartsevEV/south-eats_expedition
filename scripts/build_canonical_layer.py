@@ -6,6 +6,8 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from release_context import get_release_context
+
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
@@ -344,8 +346,8 @@ def wrap_dynamic(value, checked_at, source_refs=None, note=None):
 
 
 def build():
-    latest = load(PUBLIC / "latest.json")
-    release = PUBLIC / latest["release_id"]
+    latest = get_release_context(PUBLIC)
+    release = latest["release"]
     if not release.exists():
         raise RuntimeError(f"release does not exist: {release}")
 

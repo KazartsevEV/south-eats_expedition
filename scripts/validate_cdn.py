@@ -4,6 +4,8 @@ import json
 import sys
 from pathlib import Path
 
+from release_context import get_release_context, validate_latest_pointer
+
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 CDN = Path(sys.argv[1] if len(sys.argv) > 1 else ROOT / "public" / "cdn" / "v2")
@@ -84,23 +86,16 @@ for path in sources:
     if migration_stage == "country_and_regional" and not isinstance(travel.get("regions"), list):
         fail(f"country_and_regional source missing travel.regions: {path}")
 
-latest_path = CDN / "latest.json"
-if not latest_path.exists():
-    fail(f"missing {latest_path}")
-latest = load(latest_path)
-release_id = latest.get("release_id")
-if not release_id:
-    fail("latest.json missing release_id")
-release = CDN / release_id
-manifest_path = release / "manifest.json"
-if not manifest_path.exists():
-    fail(f"missing {manifest_path}")
-manifest = load(manifest_path)
-
-if manifest.get("release_id") != release_id:
-    fail("latest/manifest release_id mismatch")
-if manifest.get("schema_version") != latest.get("schema_version"):
-    fail("latest/manifest schema_version mismatch")
+# The promoted reference and the release under test are deliberately separate.
+# Candidate builds must be fully validated before latest.json is moved.
+try:
+    validate_latest_pointer(CDN)
+    context = get_release_context(CDN)
+except RuntimeError as exc:
+    fail(str(exc))
+release_id = context["release_id"]
+release = context["release"]
+manifest = context["manifest"]
 
 # Every generated JSON must parse.
 for path in sorted(release.rglob("*.json")):

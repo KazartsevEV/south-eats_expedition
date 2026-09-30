@@ -428,11 +428,11 @@ function countryReferenceHTML(data){
     blocks.push(factCard('Валюта',t.currency&&t.currency.value));
   }
   var climateNote='';
-  if(cl&&cl.data){
-    climateNote='<div class="locality-note"><b>Климат:</b> '+esc(cl.data.summary||cl.data.notes||'Локальные климатические профили отображаются на соответствующем geo-уровне.')+
+  if(cl&&cl.data&&(cl.data.summary||cl.data.notes)){
+    climateNote='<div class="locality-note"><b>Климат:</b> '+esc(cl.data.summary||cl.data.notes)+
       (cl.data.spatial_variation?' '+esc(cl.data.spatial_variation):'')+'</div>';
   }
-  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Страна</div><h2>Справка страны</h2></div><p>На этом уровне показываются макрофакты и общегосударственные правила. Локальные климат, риски, фауна и приливы относятся к geo.</p></div>'+
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Страна</div><h2>Справка страны</h2></div></div>'+
     climateNote+'<div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
 }
 var GEO_FIELDS=[
@@ -446,7 +446,7 @@ function geoReferenceHTML(g){
   var blocks=[];
   if(g.description)blocks.push(factCard('Описание',g.description));
   GEO_FIELDS.forEach(function(x){if(g[x[1]]!=null)blocks.push(factCard(x[0],g[x[1]]))});
-  if(!blocks.filter(Boolean).length)return '<div class="locality-note">Для этого geo-узла локальная справка ещё не мигрирована. Объекты и связи уже доступны, факты будут добавляться без изменения структуры страницы.</div>';
+  if(!blocks.filter(Boolean).length)return '';
   return '<section class="section"><div class="section-head"><div><div class="eyebrow">Регион</div><h2>Локальная справка</h2></div></div><div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
 }
 function inheritedGeoContextHTML(child,parent){
@@ -459,7 +459,7 @@ function inheritedGeoContextHTML(child,parent){
   blocks=blocks.filter(Boolean);
   if(!blocks.length)return '';
   var pname=parent.names&&(parent.names.ru||parent.names.primary)||parent.id;
-  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Контекст родительского региона</div><h2>Контекст родительского региона</h2></div><p>Это не локальные факты этой точки. Показаны только те сведения из <b>'+esc(pname)+'</b>, которые допустимо наследовать: здоровье, безопасность и языки. Климат, море, геология, рельеф и природа не наследуются автоматически.</p></div><div class="fact-grid">'+blocks.join('')+'</div></section>';
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Контекст региона</div><h2>'+esc(pname)+'</h2></div></div><div class="fact-grid">'+blocks.join('')+'</div></section>';
 }
 function resetMaps(){
   state.mapInstances.forEach(function(m){try{m.remove()}catch(e){}});
@@ -586,7 +586,7 @@ function mapCoverageHTML(objects,label){
 function geoMapCoverageHTML(full,objects){
   var hasAnchor=!!(full&&validCoord(full.primary_location));
   var total=(objects||[]).length,mapped=mappedObjects(objects).length;
-  return '<div class="map-coverage"><span class="pill">geo anchor <b>'+(hasAnchor?'есть':'нет')+'</b></span>'+
+  return '<div class="map-coverage"><span class="pill">координата территории <b>'+(hasAnchor?'есть':'нет')+'</b></span>'+
     '<span class="pill">объекты <b>'+mapped+'/'+total+'</b> с GPS</span></div>';
 }
 function forceEnglishMapLabels(glmap){
@@ -770,7 +770,7 @@ function renderHome(){
     return '<article class="country-card"'+(available?' data-country="'+cc+'"':'')+'>'+
       '<div class="country-top"><div><div class="country-code">'+esc((row.country_code||cc).toUpperCase())+'</div><div class="country-name">'+esc(row.flag||x.flag)+' '+esc(row.name_ru||x.name)+'</div></div><span>'+(available?'→':'pending')+'</span></div>'+
       '<p class="popup-meta">'+esc(row.summary||'Страна ожидает миграции в текущий release.')+'</p>'+
-      '<div class="country-stats"><span><b>'+(counts[cc]||0)+'</b> объектов</span><span><b>'+countryRegionCount(cc)+'</b> geo узлов</span></div></article>';
+      '<div class="country-stats"><span><b>'+(counts[cc]||0)+'</b> объектов</span><span><b>'+countryRegionCount(cc)+'</b> регионов и местностей</span></div></article>';
   }).join('');
   view.innerHTML=
     '<section class="hero"><div class="eyebrow">Expedition Southeast Asia</div>'+
@@ -808,8 +808,8 @@ function renderCountries(){
   resetMaps();
   var counts=countryCounts();
   view.innerHTML=breadcrumb([{label:'Главная',hash:'#/'},{label:'Страны'}])+
-    '<div class="page-head"><div class="eyebrow">Countries</div><h1>Страны Юго‑Восточной Азии</h1><p>Страновой уровень — профиль, карта, административная и физическая география, классы объектов и дальнейший переход в регионы.</p></div>'+
-    '<div class="country-grid">'+Object.keys(counts).sort().map(function(cc){var c=cname(cc);return '<article class="country-card" data-country="'+cc+'"><div class="country-top"><div><div class="country-code">'+cc.toUpperCase()+'</div><div class="country-name">'+c.flag+' '+esc(c.name)+'</div></div><span>→</span></div><div class="country-stats"><span><b>'+counts[cc]+'</b> объектов</span><span><b>'+countryRegionCount(cc)+'</b> geo узлов</span></div></article>'}).join('')+'</div>';
+    '<div class="page-head"><div class="eyebrow">Страны</div><h1>Страны Юго‑Восточной Азии</h1></div>'+
+    '<div class="country-grid">'+Object.keys(counts).sort().map(function(cc){var c=cname(cc);return '<article class="country-card" data-country="'+cc+'"><div class="country-top"><div><div class="country-code">'+cc.toUpperCase()+'</div><div class="country-name">'+c.flag+' '+esc(c.name)+'</div></div><span>→</span></div><div class="country-stats"><span><b>'+counts[cc]+'</b> объектов</span><span><b>'+countryRegionCount(cc)+'</b> регионов и местностей</span></div></article>'}).join('')+'</div>';
   bindGo();document.querySelectorAll('[data-country]').forEach(function(x){x.onclick=function(){routeTo('#/country/'+x.getAttribute('data-country'))}});
 }
 async function renderCountry(cc){
@@ -817,13 +817,13 @@ async function renderCountry(cc){
   var ctry=cname(cc),objs=objectsForCountry(cc),geos=geoForCountry(cc),regions=geos.filter(function(g){return g.parent_id==='geo_'+cc}),classes={},data=await countryData(cc);
   objs.forEach(function(o){classes[o.class_id]=(classes[o.class_id]||0)+1});
   view.innerHTML=breadcrumb([{label:'Главная',hash:'#/'},{label:'Страны',hash:'#/countries'},{label:ctry.name}])+
-    '<div class="page-head"><div class="eyebrow">'+esc(cc.toUpperCase())+' / country</div><h1>'+ctry.flag+' '+esc(ctry.name)+'</h1>'+
-    '<p>'+esc(data&&data.profile&&(data.profile.summary||data.profile.narrow)||'Страновой справочный слой CDN.')+'</p>'+
-    '<div class="hero-meta"><span class="pill">объектов <b>'+objs.length+'</b></span><span class="pill">geo узлов <b>'+regions.length+'</b></span><span class="pill">классов <b>'+Object.keys(classes).length+'</b></span></div></div>'+
+    '<div class="page-head"><div class="eyebrow">Страна · '+esc(cc.toUpperCase())+'</div><h1>'+ctry.flag+' '+esc(ctry.name)+'</h1>'+
+    ((data&&data.profile&&(data.profile.summary||data.profile.narrow))?'<p>'+esc(data.profile.summary||data.profile.narrow)+'</p>':'')+
+    '<div class="hero-meta"><span class="pill">объектов <b>'+objs.length+'</b></span><span class="pill">регионов и местностей <b>'+regions.length+'</b></span><span class="pill">классов <b>'+Object.keys(classes).length+'</b></span></div></div>'+
     countryReferenceHTML(data)+
     mapCoverageHTML(objs,'Карта страны')+
     '<div class="country-map" id="countryMap"></div>'+
-    '<section class="section"><div class="section-head"><div><div class="eyebrow">Geography</div><h2>Провинции, регионы, города и местности</h2></div><p>Geo-иерархия отделена от банка объектов. Локальные климат и риски должны жить именно здесь.</p></div>'+
+    '<section class="section"><div class="section-head"><div><div class="eyebrow">География</div><h2>Провинции, регионы, города и местности</h2></div></div>'+
     '<div class="region-grid">'+regions.map(function(g){return '<article class="region-card" data-region="'+esc(g.id)+'"><h3>'+esc(g.name)+'</h3><p>'+esc(g.kind)+' · '+regionObjectCount(g.id)+' объектов</p></article>'}).join('')+'</div></section>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Банк достопримечательностей страны</h2></div></div>'+
     '<div class="toolbar"><input class="control" id="countrySearch" placeholder="Поиск внутри страны…"><select class="control" id="countryClass"><option value="">Все классы</option>'+Object.keys(classes).sort().map(function(id){return '<option value="'+esc(id)+'">'+esc(className(id))+' · '+classes[id]+'</option>'}).join('')+'</select><div></div><button class="btn" id="countryReset">Сбросить</button></div>'+
@@ -856,20 +856,20 @@ async function renderRegion(id){
       id:id,title:title,class_id:'geo',
       coordinates:{lat:full.primary_location.lat,lon:full.primary_location.lon},
       map_href:'#/region/'+id,
-      map_meta:((full.kind||g.kind)+' / geo anchor')
+      map_meta:(full.kind||g.kind||'Территория')
     });
   }
   view.innerHTML=breadcrumb(crumbs)+
-    '<div class="page-head"><div class="eyebrow">'+esc((full&&full.kind)||g.kind)+' / geo</div><h1>'+esc(title)+'</h1>'+
-    '<p>'+esc(full&&full.description&&(full.description.narrow||full.description.body)||'Локальный географический уровень справочника.')+'</p>'+
-    '<div class="hero-meta"><span class="pill">geo id <b>'+esc(id)+'</b></span><span class="pill">объектов <b>'+objs.length+'</b></span><span class="pill">дочерних geo <b>'+children.length+'</b></span></div></div>'+
+    '<div class="page-head"><div class="eyebrow">Территория</div><h1>'+esc(title)+'</h1>'+
+    ((full&&full.description&&(full.description.narrow||full.description.body))?'<p>'+esc(full.description.narrow||full.description.body)+'</p>':'')+
+    '<div class="hero-meta"><span class="pill">объектов <b>'+objs.length+'</b></span><span class="pill">подразделов <b>'+children.length+'</b></span></div></div>'+
     geoReferenceHTML(full)+
     inheritedGeoContextHTML(full,parentFull)+
-    (children.length?'<section class="section"><div class="section-head"><div><div class="eyebrow">Geo tree</div><h2>Ниже по дереву</h2></div><p>Города и локальные узлы. Краткая логистика берётся из дочерних canonical сущностей и здесь не дублируется.</p></div><div class="region-grid">'+children.map(function(x,i){return childGeoCard(x,childDetails[i])}).join('')+'</div></section>':'')+
+    (children.length?'<section class="section"><div class="section-head"><div><div class="eyebrow">Территории</div><h2>Города, районы и местности</h2></div></div><div class="region-grid">'+children.map(function(x,i){return childGeoCard(x,childDetails[i])}).join('')+'</div></section>':'')+
     geoMapCoverageHTML(full,objs)+
     '<div class="country-map" id="regionMap"></div>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Достопримечательности этой территории</h2></div></div>'+
-    '<div class="object-grid">'+(objs.length?objs.map(objectCard).join(''):'<div class="empty">К этому geo-узлу пока нет привязанных объектов.</div>')+'</div></section>';
+    '<div class="object-grid">'+(objs.length?objs.map(objectCard).join(''):'<div class="empty">Для этой территории пока нет привязанных объектов.</div>')+'</div></section>';
   addRegionMap('regionMap',mapRows,cc,full,childDetails,{maxZoom:10,pad:.18,singleZoom:11,countryFallbackZoom:6});
   bindGo();bindObjectGrid();
   document.querySelectorAll('[data-region]').forEach(function(x){x.onclick=function(){routeTo('#/region/'+x.getAttribute('data-region'))}});

@@ -34,7 +34,8 @@
       "2026-09-30 object QA started by class: archaeology.megalith and archaeology.site receive sourced object elevations plus normalized visual_recon; legacy shot lists/camera-setting guidance is not migrated.",
       "2026-09-30 object QA: ethnography.living_settlement / Wae Rebo receives official site elevation and normalized visual reconnaissance without camera-setting or shot-list instructions.",
       "Regional QA pass 2026-09-30: deepened Toraja / South Sulawesi and Central Kalimantan / Tanjung Puting with UNESCO, KSDAE and Indonesia Travel sources; replaced unsupported generic regional claims with locally sourced structure, access and ethnography.",
-      "Regional QA pass 2026-09-30: deepened East Java and Wakatobi with official Indonesia Travel material; separated Bromo–Tengger–Semeru cultural/ritual geography and Wakatobi gateway/island/community structure."
+      "Regional QA pass 2026-09-30: deepened East Java and Wakatobi with official Indonesia Travel material; separated Bromo–Tengger–Semeru cultural/ritual geography and Wakatobi gateway/island/community structure.",
+      "Regional QA pass 2026-09-30: deepened Togean Islands and Sumba with Indonesia Travel, KSDAE and cultural-heritage sources; separated gateway/boat logistics, park ecosystems, Marapu, megalithic settlement structure and island transport."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -8618,15 +8619,25 @@
         "last_verified": "2026-09-28",
         "name_ru": "Тогеанские острова / Центральный Сулавеси",
         "geography": {
-          "summary": "Изолированный архипелаг в заливе Томини, отделённый от основных транспортных коридоров Сулавеси."
+          "summary": "Тогеанские острова лежат в заливе Томини и представляют не одну островную точку, а архипелаг из нескольких крупных и десятков малых островов. Официальный Indonesia Travel отдельно указывает Wakai как основной внутренний узел, а доступ строится либо через Ampana, либо через Gorontalo; эти два коридора нельзя смешивать в одну «дорогу на Тогеаны».",
+          "source_refs": [
+            "src_903016",
+            "src_903017"
+          ]
         },
         "relief": {
-          "summary": "Лесистые острова и коралловые побережья; внутренние холмы сочетаются с небольшими прибрежными поселениями."
+          "summary": "Суша островов волнистая, холмистая и местами гористая, тогда как морская часть включает fringing, barrier, patch и atoll reef formations. Для экспедиционной базы это два разных слоя рельефа: островные пешие маршруты и подводные/морские объекты.",
+          "source_refs": [
+            "src_903017"
+          ]
         },
         "climate": {
           "summary": "Морской тропический климат.",
           "field_context": "Фактическая доступность определяется морем и расписанием лодок.",
-          "source_refs": []
+          "source_refs": [
+            "src_903017",
+            "src_903001"
+          ]
         },
         "marine": {
           "forecast": "BMKG публикует оперативные прогнозы ветра, погоды и высоты волн по морским районам и портам.",
@@ -8636,14 +8647,15 @@
             "src_903001"
           ],
           "marine_life": {
-            "summary": "Тогеанские острова имеют рифовые и лагунные экосистемы; локальные списки видов должны привязываться к отдельным островам.",
+            "summary": "Тогеанский национальный парк охраняет крупную связку рифовых, мангровых и островных экосистем. Официальные источники подтверждают четыре основных типа рифов и высокое биоразнообразие; конкретные списки кораллов и рыб не следует копировать как универсальные характеристики каждого dive site.",
             "source_refs": [
-              "src_903001"
+              "src_903016",
+              "src_903017"
             ]
           }
         },
         "nature": {
-          "summary": "Коралловые рифы, мангры, морские озёра и лесистые острова формируют основной природный профиль.",
+          "summary": "Природный профиль не ограничивается рифами: KSDAE описывает наземные леса, мангры и островную фауну, включая endemic/rare species. Поэтому terrestrial forest, mangrove, marine lake и reef zones должны храниться отдельно, а не как одна «морская природа Тогеанов».",
           "fauna": {
             "summary": "Коралловые рифы, мангры и морские озёра поддерживают богатую островную и морскую фауну."
           },
@@ -8652,7 +8664,10 @@
           },
           "poisonous_plants": {
             "status": "Надёжная локальная привязка токсичных растений к этому узлу пока не подтверждена отдельным источником; общестрановой список не переносится автоматически."
-          }
+          },
+          "source_refs": [
+            "src_903017"
+          ]
         },
         "health": {
           "malaria": {
@@ -8665,19 +8680,24 @@
           "checked_at": "2026-09-30"
         },
         "safety": {
-          "operational_context": "Главный операционный риск — срыв лодочной логистики из-за погоды; планировать резервные дни.",
+          "operational_context": "Главные ограничения — морская погода, длинная зависимая от лодок логистика, изолированность отдельных островов и ограниченная медицина. Для reef/boat routes проверять BMKG и локальную доступность судов непосредственно перед переходом.",
           "source_refs": [
-            "src_903001"
+            "src_903001",
+            "src_903017"
           ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Основная логистика — длинные автомобильные/паромные связки до портов Центрального Сулавеси и далее пассажирские/местные лодки."
+          "summary": "Есть два основных входа: через Ampana с дальнейшей лодкой к Wakai/Malenge и через Gorontalo с морским переходом к Wakai. Частота и время рейсов меняются, поэтому в canonical layer фиксируется структура legs, а не вечное расписание. После Wakai отдельные острова требуют ещё одного boat leg.",
+          "source_refs": [
+            "src_903016"
+          ]
         },
         "ethnography": {
-          "summary": "Тогеанские и баджо сообщества имеют разные языки и морские традиции; конкретный профиль нужно привязывать к острову/деревне.",
+          "summary": "Тогеанские и Bajo communities различаются по языку, типу поселения и морской экономике. Indonesia Travel отдельно упоминает traditional fishermen villages of Bajau/Bajo; это конкретные прибрежные/свайные сообщества, которые нужно привязывать к острову и деревне.",
           "source_refs": [
-            "src_000725"
+            "src_000725",
+            "src_903016"
           ]
         },
         "local_reference_provenance": {
@@ -8685,7 +8705,9 @@
             "src_903001",
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903016",
+            "src_903017"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8831,18 +8853,29 @@
         "last_verified": "2026-09-28",
         "name_ru": "Сумба / Восточная Нуса-Тенгара",
         "geography": {
-          "summary": "Сумба — сравнительно сухой остров к югу от основной вулканической дуги Малых Зондских островов, с саваннами, известняковыми плато и открытым Индийскому океану южным побережьем."
+          "summary": "Сумба — сравнительно сухой остров Восточной Нуса-Тенгары с волнистыми саваннами, невысокими известняковыми холмами, сельскохозяйственными долинами и открытым Индийскому океану южным и западным побережьем. Запад и восток острова культурно и маршрутно различаются, поэтому Waingapu и Waikabubak/Tambolaka нужно рассматривать как разные базовые хабы.",
+          "source_refs": [
+            "src_903018"
+          ]
         },
         "relief": {
-          "summary": "Внутренние холмистые плато и долины переходят к высоким морским обрывам и пляжам; дороги между районами медленные."
+          "summary": "Внутренний ландшафт состоит из холмов, плато и долин, а побережье местами образует высокие скалы и открытые океанские пляжи. Дорожные времена между западной и восточной Сумбой велики относительно линейного расстояния; конкретные beach access roads нужно хранить на уровне объектов.",
+          "source_refs": [
+            "src_903018"
+          ]
         },
         "geology": {
-          "summary": "В отличие от соседних вулканических островов, значительная часть Сумбы связана с поднятыми известняковыми и осадочными комплексами."
+          "summary": "Для региональной карточки надёжно подтверждается известняковый холмистый ландшафт, но происхождение и стратиграфию конкретных uplifted limestone complexes без отдельного геологического источника не фиксируем.",
+          "source_refs": [
+            "src_903018"
+          ]
         },
         "climate": {
           "summary": "Один из наиболее сезонно сухих крупных островов Индонезии.",
           "field_context": "В конце сухого сезона саванна выгорает; дождливый сезон резко меняет дороги и реки.",
-          "source_refs": []
+          "source_refs": [
+            "src_903018"
+          ]
         },
         "marine": {
           "forecast": "BMKG публикует оперативные прогнозы ветра, погоды и высоты волн по морским районам и портам.",
@@ -8881,19 +8914,24 @@
           "checked_at": "2026-09-30"
         },
         "safety": {
-          "operational_context": "На открытом южном побережье учитывать прибой и обратные течения; в сельских районах — состояние дорог после дождей.",
+          "operational_context": "Главные полевые ограничения — длинные дорожные переходы, резкое ухудшение грунтовых дорог после дождей и сильный океанский прибой на южном/западном побережье. Даты Pasola определяются локальным ритуальным календарём и не должны храниться как постоянные ежегодные числа.",
           "source_refs": [
-            "src_903001"
+            "src_903001",
+            "src_903018"
           ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Основная схема — перелёт на остров, далее автомобиль/мотоцикл; общественный транспорт между удалёнными деревнями ограничен."
+          "summary": "Остров имеет два основных авиационных gateway: Tambolaka на западе и Umbu Mehang Kunda/Waingapu на востоке. После прилёта большинство экспедиционных маршрутов требуют автомобиля или мотоцикла; деревни, megalithic sites и южные пляжи должны иметь отдельные road legs, потому что «прилететь на Сумбу» не определяет последний участок.",
+          "source_refs": [
+            "src_903018"
+          ]
         },
         "ethnography": {
-          "summary": "Остров сохраняет разнообразные сумбанские языки, традиционные дома, мегалитические погребения и живые ритуальные системы; конкретные практики различаются между западом и востоком.",
+          "summary": "Ключевой культурный каркас Сумбы — традиционные kampung, clan houses, megalithic stone tombs и kinship structure. Государственная служба охраны наследия подчёркивает связь поселения, kabihu/родства и Marapu; эта система остаётся живой и заметно различается по районам острова.",
           "source_refs": [
-            "src_000725"
+            "src_000725",
+            "src_903019"
           ]
         },
         "local_reference_provenance": {
@@ -8901,7 +8939,9 @@
             "src_903001",
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903018",
+            "src_903019"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8919,7 +8959,21 @@
           ],
           "checked_at": "2026-09-30"
         },
-        "narrow": "Сумба — сравнительно сухой остров вне основной вулканической оси Малых Зондских островов, с саваннами, известняковыми плато и открытым океанским побережьем. Традиционные дома, мегалитические погребения и ритуальные системы остаются живыми, но заметно различаются между западом и востоком острова."
+        "narrow": "Сумба — сравнительно сухой остров вне основной вулканической оси Малых Зондских островов, с саваннами, известняковыми плато и открытым океанским побережьем. Традиционные дома, мегалитические погребения и ритуальные системы остаются живыми, но заметно различаются между западом и востоком острова.",
+        "culture": {
+          "summary": "Marapu — живая религиозно-ритуальная традиция, связанная с почитанием предков, устройством деревни, домом и мегалитическим погребением. Tenun ikat, Sumba horses и Pasola относятся к другим культурным слоям и должны храниться отдельно, а не как единый туристический «набор традиций».",
+          "source_refs": [
+            "src_903018",
+            "src_903019"
+          ]
+        },
+        "myths_beliefs": {
+          "summary": "Представления Marapu о предках и духовном устройстве мира документированы как действующая традиция. Indonesia Travel описывает связь домов и могил предков, а heritage authority — продолжающуюся мегалитическую погребальную практику; это documented living belief, не историческая хроника.",
+          "source_refs": [
+            "src_903018",
+            "src_903019"
+          ]
+        }
       }
     ],
     "region_model_note": "Регионы используются как канонические географические и фильтрационные сущности; локальные узлы — как практические пункты маршрута, связанные с объектами через ближайшие населённые пункты.",
@@ -9577,6 +9631,67 @@
         "regional_transport",
         "kaledupa",
         "wangi_wangi"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_TOGEAN_TOURISM",
+      "canonical_id": "src_903016",
+      "publisher": "Indonesia Travel — Togean Island",
+      "url": "https://www.indonesia.travel/uk/en/destination/sulawesi/north-sulawesi/gorontalo---togean-island",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_transport",
+        "regional_ethnography",
+        "bajo",
+        "regional_marine"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_TOGEAN_KSDAE",
+      "canonical_id": "src_903017",
+      "publisher": "Direktorat Jenderal KSDAE — Informasi Kawasan Konservasi, Taman Nasional Laut Kepulauan Togean",
+      "url": "https://ksdae.menlhk.go.id/assets/publikasi/Buku_Informasi_521_KK_Region_Kalimantan_dan_Sulawe.pdf",
+      "kind": "government",
+      "used_for": [
+        "regional_relief",
+        "regional_climate",
+        "regional_nature",
+        "regional_marine",
+        "national_park"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_SUMBA_TOURISM",
+      "canonical_id": "src_903018",
+      "publisher": "Indonesia Travel — Sumba",
+      "url": "https://www.indonesia.travel/id/id/destination/bali-nusa-tenggara/west-nusa-tenggara/lombok---sumba",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_culture",
+        "marapu",
+        "pasola",
+        "regional_transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_SUMBA_HERITAGE_PASUNGA",
+      "canonical_id": "src_903019",
+      "publisher": "Balai Pelestarian Cagar Budaya — Kampung Adat Pasunga, Sumba",
+      "url": "https://kebudayaan.kemdikbud.go.id/bpcbbali/kajian-zonasi-kampung-adat-pasunga-desa-anakalang-kecamatan-katikutana-kabupaten-sumba-tengah-provinsi-nusa-tenggara-timur/",
+      "kind": "government",
+      "used_for": [
+        "regional_ethnography",
+        "megalithic_tradition",
+        "marapu",
+        "traditional_village",
+        "kinship"
       ],
       "accessed": "2026-09-30"
     }

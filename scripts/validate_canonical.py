@@ -49,6 +49,7 @@ REQUIRED_QA_CHECKS = {
     "overnight",
     "traveler_reports",
     "visual_recon",
+    "editorial_rebuild",
 }
 
 

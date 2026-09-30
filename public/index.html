@@ -129,9 +129,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .legal-risk-list{display:grid;gap:0}
 .legal-risk-item{padding:10px 0;border-top:1px solid var(--line)}
 .legal-risk-item:first-child{border-top:0;padding-top:2px}
-.legal-risk-title{font-weight:800;color:var(--text);margin-bottom:4px}
-.legal-risk-item p{margin:4px 0;color:#cbd3ce}
-.legal-risk-consequence{color:var(--muted)!important}
+.legal-risk-item p{margin:0;color:#cbd3ce;line-height:1.55}
+.legal-risk-item b{color:var(--text)}
 .country-label-marker{background:transparent;border:0;color:#eef4ef;font-weight:800;font-size:12px;text-shadow:0 1px 4px #000,0 0 8px #000;white-space:nowrap}
 .map-gap{height:100%;min-height:220px;display:grid;place-items:center;text-align:center;padding:28px;color:var(--muted);background:linear-gradient(145deg,#121814,#0b0f0d);border:1px dashed var(--line);border-radius:inherit}
 .map-gap b{display:block;color:var(--text);margin-bottom:4px}
@@ -377,12 +376,10 @@ function factCard(title,value){
 function legalRisksCard(value){
   var items=value&&Array.isArray(value.items)?value.items:[];
   if(!items.length)return '';
-  return '<article class="fact-card legal-risks-card"><h3>Уголовно наказуемые и чувствительные правовые риски</h3><div class="legal-risk-list">'+
-    items.map(function(item){
-      return '<div class="legal-risk-item"><div class="legal-risk-title">'+esc(item.title||'Правовой риск')+'</div>'+
-        '<p>'+esc(item.rule||'')+'</p>'+
-        (item.consequence?'<p class="legal-risk-consequence"><b>Последствия:</b> '+esc(item.consequence)+'</p>':'')+
-        '</div>';
+  return '<article class="fact-card legal-risks-card"><h3>Уголовно наказуемые и чувствительные правовые риски</h3>'+
+    '<div class="legal-risk-list">'+items.map(function(item){
+      var statement=[item.rule,item.consequence].filter(Boolean).join(' ');
+      return '<div class="legal-risk-item"><p><b>'+esc(item.title||'Правовой риск')+':</b> '+esc(statement)+'</p></div>';
     }).join('')+'</div></article>';
 }
 function seaReferenceHTML(){

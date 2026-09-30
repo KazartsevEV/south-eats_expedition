@@ -189,12 +189,46 @@
     }
   },
   "criminal_liability": {
-    "value": null,
-    "source_refs": [],
+    "value": {
+      "items": [
+        {
+          "title": "Военные объекты, силовики и блокпосты",
+          "rule": "Фотографирование военных объектов, силовиков и блокпостов может привести к задержанию.",
+          "source_ids": [
+            "RUS_MFA"
+          ]
+        },
+        {
+          "title": "Политическая активность",
+          "rule": "Политическая активность иностранца может привести к задержанию и другим правовым последствиям.",
+          "source_ids": [
+            "RUS_MFA"
+          ]
+        },
+        {
+          "title": "Дроны и съёмочное оборудование",
+          "rule": "Использование дронов и съёмочного оборудования в чувствительных районах связано с высоким юридическим риском.",
+          "source_ids": [
+            "RUS_MFA"
+          ]
+        },
+        {
+          "title": "Наркотики",
+          "rule": "Наркопреступления наказываются строго.",
+          "source_ids": [
+            "RUS_MFA"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000664"
+    ],
     "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country criminal-law layer not yet normalized."
+      "source_refs_complete": true,
+      "note": "Traveller-facing criminal-law summary; not an exhaustive legal code."
     }
   },
   "permits": {

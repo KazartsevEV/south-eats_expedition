@@ -180,12 +180,40 @@
     }
   },
   "criminal_liability": {
-    "value": null,
-    "source_refs": [],
+    "value": {
+      "items": [
+        {
+          "title": "Алкоголь",
+          "rule": "Продажа алкоголя внутри страны запрещена. Немусульманам 17+ разрешён только ограниченный ввоз для личного употребления с декларацией; употребление — в частном месте.",
+          "source_ids": [
+            "CUSTOMS_BN"
+          ]
+        },
+        {
+          "title": "Наркотики",
+          "rule": "Незаконные наркотики относятся к тяжким уголовным преступлениям; отдельные составы предусматривают смертную казнь.",
+          "source_ids": [
+            "RUS_MFA"
+          ]
+        },
+        {
+          "title": "Религиозные нормы публичного поведения",
+          "rule": "Наряду с гражданским правом действуют нормы шариата; в религиозных местах и во время Рамадана правила публичного поведения строже обычного туристического этикета.",
+          "source_ids": [
+            "RUS_MFA"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000700",
+      "src_000701"
+    ],
     "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country criminal-law layer not yet normalized."
+      "source_refs_complete": true,
+      "note": "Traveller-facing criminal-law summary; not an exhaustive legal code."
     }
   },
   "permits": {

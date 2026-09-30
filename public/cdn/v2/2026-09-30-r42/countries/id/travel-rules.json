@@ -190,12 +190,41 @@
     }
   },
   "criminal_liability": {
-    "value": null,
-    "source_refs": [],
+    "value": {
+      "items": [
+        {
+          "title": "Наркотики",
+          "rule": "За тяжкие наркотические преступления предусмотрены крайне строгие наказания; отдельные составы допускают смертную казнь.",
+          "source_ids": [
+            "RUS_MFA"
+          ]
+        },
+        {
+          "title": "Секс вне брака и сожительство",
+          "rule": "С 2 января 2026 года новый Уголовный кодекс предусматривает ответственность за секс вне брака и сожительство в предусмотренных законом случаях; производство зависит от жалобы близкого родственника.",
+          "source_ids": [
+            "REUTERS_CODE"
+          ]
+        },
+        {
+          "title": "Религия и государственные институты",
+          "rule": "Действуют уголовные нормы о богохульстве и об оскорблении государственных институтов; публичные высказывания и действия в этих темах могут иметь правовые последствия.",
+          "source_ids": [
+            "REUTERS_CODE",
+            "RUS_MFA"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "source_refs": [
+      "src_000718",
+      "src_000719"
+    ],
     "checked_at": "2026-09-30",
     "qa": {
-      "source_refs_complete": false,
-      "note": "Country criminal-law layer not yet normalized."
+      "source_refs_complete": true,
+      "note": "Traveller-facing criminal-law summary; not an exhaustive legal code."
     }
   },
   "permits": {

@@ -12,7 +12,7 @@
     "geo_kh_0039"
   ],
   "description": {
-    "narrow": "Исправляет старую маршрутную привязку Удонга к Пномпеню: исторический Удонг административно находится в провинции Кандаль.",
+    "narrow": "Кандаль — центральная низменная провинция, окружающая Phnom Penh и включающая исторический Oudong и островно-речные участки Меконга; столичная логистика не делает её частью Phnom Penh.",
     "body": null
   },
   "cover_media_id": null,
@@ -23,11 +23,12 @@
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "administrative",
-    "status": "formalized"
+    "status": "formalized",
+    "hierarchy_profile_status": "researched_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "regional_profile",
   "provenance": {
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "sources": [
       {
         "url": "https://whc.unesco.org/en/list/668/",
@@ -169,9 +170,66 @@
     "structural_source_refs": [
       "src_906002"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910044",
+      "src_910037",
+      "src_910046",
+      "src_901008",
+      "src_900013"
+    ],
     "source_refs": [
-      "src_906002"
+      "src_906002",
+      "src_910044",
+      "src_910037",
+      "src_910046",
+      "src_901008",
+      "src_900013",
+      "src_910038"
+    ],
+    "research_checked_at": "2026-10-01"
+  },
+  "geometry_path": "geo/geometries/geo_kh_0039.geojson",
+  "geometry": {
+    "status": "available",
+    "geometry_type": "administrative_boundary",
+    "accuracy": "simplified_sourced_boundary",
+    "simplified": true,
+    "intended_use": "map_mask_navigation_not_cadastral",
+    "source_refs": [
+      "src_910037",
+      "src_910038"
+    ],
+    "source_vintage": "NCDD administrative identity checked 2026-10-01; OSM relation checked 2026-10-01",
+    "checked_at": "2026-10-01"
+  },
+  "geography": {
+    "summary": "Официальный Gazetteer и Ministry of Tourism показывают Kandal как отдельную провинцию вокруг столицы; Oudong расположен в Kandal, а не в Phnom Penh.",
+    "source_refs": [
+      "src_910044",
+      "src_910037"
     ]
+  },
+  "history": {
+    "summary": "Oudong был бывшей столицей Камбоджи; его исторический сюжет относится к конкретному узлу внутри Kandal и не подменяет историю всей провинции.",
+    "source_refs": [
+      "src_910044"
+    ]
+  },
+  "transport": {
+    "summary": "Провинция связана с Phnom Penh несколькими национальными дорожными направлениями; Ministry of Tourism отдельно указывает Oudong по National Route 5. Конкретные переправы и подъезды к речным островам должны храниться ниже.",
+    "source_refs": [
+      "src_910044",
+      "src_900013"
+    ]
+  },
+  "climate": {
+    "summary": "Тропический муссонный режим: сильные дожди и сезонные паводки могут менять состояние дорог и грунтовых подходов; перед полевым выходом требуется актуальная проверка погоды.",
+    "source_refs": [
+      "src_910046",
+      "src_901008"
+    ]
+  },
+  "freshness": {
+    "checked_at": "2026-10-01"
   }
 }

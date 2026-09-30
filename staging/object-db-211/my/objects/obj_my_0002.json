@@ -239,28 +239,71 @@
     }
   ],
   "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_georgetown_esplanade",
+        "name": "Эспланада George Town",
+        "coordinates": {
+          "lat": 5.42108,
+          "lon": 100.34214,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "5.421080, 100.342140"
+        },
+        "access": {
+          "walk_km": 0
+        },
+        "view": {
+          "description": "Морской фронт, колониальные общественные здания и открытое пространство Padang Kota Lama."
+        },
+        "best_time": "early_morning / late_afternoon",
+        "best_weather_light": "Низкий боковой свет лучше показывает светлые фасады и объём колониальной застройки.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для связки площади, фасадов и морского фронта"
+          },
+          {
+            "type": "standard",
+            "why": "для отдельных зданий без сильной перспективной деформации"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0206",
+          "src_stage_my_0246"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Влажный сезон чаще даёт тяжёлое небо и мокрые поверхности; в сухие ясные дни сильнее контраст между белыми фасадами и небом."
+    ],
+    "video_activity": [
+      "движение по набережной и Padang Kota Lama",
+      "уличная жизнь исторического ядра"
+    ],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска."
+        "историческое ядро и городская среда не считаются зоной свободного запуска; проверять CAAM и местные ограничения"
       ],
-      "source_refs": [
-        "src_stage_my_0005",
-        "src_stage_my_0006",
-        "src_stage_my_0002",
-        "src_stage_my_0007",
-        "src_stage_my_0008"
-      ],
-      "checked_at": "2026-09-28"
+      "source_refs": [],
+      "checked_at": "2026-09-30"
     },
-    "useful_equipment": [],
-    "best_time": "07:00–10:00 и 16:30–19:30; в полдень открытые улицы дают жёсткий свет и сильную жару.",
-    "best_weather_light": null
+    "useful_equipment": [
+      {
+        "type": "wide",
+        "why": "плотная историческая застройка и узкие улицы"
+      },
+      {
+        "type": "standard",
+        "why": "архитектурные фасады и уличные сцены"
+      }
+    ],
+    "best_time": "early_morning / late_afternoon",
+    "best_weather_light": "Мягкий боковой свет; после дождя фактура улиц становится выразительнее."
   },
   "media": {
     "cover_id": null,
@@ -346,7 +389,7 @@
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

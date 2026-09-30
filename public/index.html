@@ -419,7 +419,6 @@ function countryReferenceHTML(data){
   }
   if(t){
     blocks.push(factCard('Въезд и виза для граждан РФ',t.visa&&t.visa.value));
-    blocks.push(factCard('Визаран',t.visa_run&&t.visa_run.value));
     blocks.push(factCard('Сухопутные границы и соседи',t.borders&&t.borders.value));
     blocks.push(factCard('Международные аэропорты',t.airports&&t.airports.value));
     blocks.push(factCard('Международные авиасвязи',t.international_air_links&&t.international_air_links.value));

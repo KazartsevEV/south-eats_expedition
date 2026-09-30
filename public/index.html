@@ -303,7 +303,7 @@ var FIELD_LABELS={
   hydrologic_context:'Гидрологический контекст',operational_context:'Практические риски',operational_rule:'Как использовать данные',
   river:'Река',rivers:'Реки',wetlands:'Водно-болотные угодья',coastline:'Береговая линия',mangroves:'Мангры',
   road:'Автомобильные дороги',river_transport:'Речной транспорт',water_transport:'Водный транспорт',field_note:'Полевое примечание',
-  crime_level:'Уровень преступности',qualitative:'Качественная оценка',risk:'Риск',where:'Где встречается',rule:'Правило',
+  crime_level:'Уровень преступности',qualitative:'Качественная оценка',risk:'Риск',where:'Где встречается',rule:'Правило',offence:'Что наказуемо',what_counts:'Что может подпадать под норму',penalty:'Возможное наказание',nuance:'Неоднозначность и границы нормы',items:'Составы и риски',checked_at:'Проверено',
   geography:'География',economy:'Экономика',religions:'Религии',languages:'Языки',ethnography:'Этнография',culture:'Культура',history:'История',nature:'Природа',
   cuisine:'Кухня',natural_risks:'Природные риски',safety_snapshot:'Безопасность',transport:'Транспорт',transport_rules:'Транспортные правила',
   visa:'Виза',visa_run:'Визаран',borders:'Сухопутные границы',airports:'Аэропорты',international_air_links:'Международное авиасообщение',
@@ -409,7 +409,7 @@ function countryReferenceHTML(data){
     blocks.push(factCard('Сухопутные границы и соседи',t.borders&&t.borders.value));
     blocks.push(factCard('Международные аэропорты',t.airports&&t.airports.value));
     blocks.push(factCard('Международные авиасвязи',t.international_air_links&&t.international_air_links.value));
-    blocks.push(factCard('Преступления и уголовная ответственность',t.criminal_liability&&t.criminal_liability.value));
+    blocks.push(factCard('Уголовно наказуемые и чувствительные правовые риски',t.criminal_liability&&t.criminal_liability.value));
     blocks.push(factCard('Запреты и правовые ограничения',t.laws_and_prohibitions&&t.laws_and_prohibitions.value));
     blocks.push(factCard('Преступность и безопасность',t.safety_snapshot&&t.safety_snapshot.value));
     blocks.push(factCard('Валюта',t.currency&&t.currency.value));

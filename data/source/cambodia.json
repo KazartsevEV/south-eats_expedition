@@ -31,7 +31,8 @@
       "2026-09-30 second QA pass: restored regional fauna/dangerous animals/poisonous plants/natural hazards for all Cambodia regional nodes and marine-life fields for coastal nodes; where local species evidence is not yet normalized the field explicitly records that limitation. Attraction cards unchanged.",
       "Regional QA pass 2026-09-30: deepened Takeo / Angkor Borei–Phnom Da, Battambang and Koh Rong with UNESCO and Ministry of Tourism sources; added archaeology, hydraulic landscape, gastronomy and current island-infrastructure context.",
       "Regional QA pass 2026-09-30: deepened Kampot / Bokor and Kratie / middle Mekong with Ministry of Tourism and WWF sources; separated city, mountain, estuary, dolphin-corridor and community-based tourism facts.",
-      "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Cambodia; technical schema keys and official proper names remain unchanged."
+      "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Cambodia; technical schema keys and official proper names remain unchanged.",
+      "Regional QA pass 2026-09-30: deepened Phnom Penh and Preah Vihear northern temple belt with Ministry of Tourism and UNESCO sources; separated river-city structure, capital history, plateau relief, temple architecture and local legend."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -7534,13 +7535,17 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Пномпень",
         "geography": {
-          "summary": "Столица расположена в низкой аллювиальной равнине в узле Меконга, Тонлесапа и Бассака; гидрологический режим этих рек влияет на набережные, причалы и низкие участки города.",
+          "summary": "Пномпень расположен в Чактомоке — речном узле, где сходятся Меконг и Тонлесап, а южнее продолжается Бассак. Эта гидрографическая позиция объясняет происхождение городской набережной, причалов и исторического ядра; низкая пойменная равнина также делает часть городской территории чувствительной к высокому уровню воды.",
           "source_refs": [
-            "src_901001"
+            "src_901001",
+            "src_901018"
           ]
         },
         "relief": {
-          "summary": "Преимущественно плоская пойменная равнина; локальные искусственные насыпи и городская застройка важнее естественного перепада высот."
+          "summary": "Город преимущественно плоский и пойменный; выраженные естественные возвышенности почти отсутствуют, а Wat Phnom — локальный искусственно повышенный холм внутри городской ткани. Для полевого планирования рельеф здесь менее важен, чем расстояния, жара, трафик и состояние набережных.",
+          "source_refs": [
+            "src_901018"
+          ]
         },
         "climate": {
           "summary": "Жаркий низменный муссонный климат.",
@@ -7580,10 +7585,12 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "public_transport": "Основной самостоятельный городской транспорт — автобусы, тук-туки, такси/сервисы заказа машины и пешие связки.",
+          "public_transport": "Основные самостоятельные варианты внутри города — городской автобус, тук-тук, такси/ride-hailing и пешие связки. Для дальних выездов действуют отдельные автобусные, железнодорожные и речные направления; центральный riverfront не является универсальной точкой отправления.",
           "water_transport": "Речные причалы используются для пассажирских и экскурсионных лодок; расписание и фактический уровень воды проверяются на дату поездки.",
           "source_refs": [
-            "src_901001"
+            "src_901001",
+            "src_901018",
+            "src_901007"
           ]
         },
         "ethnography": {
@@ -7598,7 +7605,8 @@
             "src_901004",
             "src_900010",
             "src_901008",
-            "src_900014"
+            "src_900014",
+            "src_901018"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -7628,6 +7636,24 @@
             "src_901008"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Современная столица оформилась после переноса королевского центра из Удонга при короле Нородоме в 1866 году. Дальнейшая городская история включает королевско-административный центр, французский протекторат и тяжёлый слой XX века; эти периоды должны раскрываться через отдельные объекты, а не смешиваться в один городской рассказ.",
+          "source_refs": [
+            "src_901018"
+          ]
+        },
+        "culture": {
+          "summary": "Речной центр Пномпеня остаётся действующим городским культурным ядром: Royal Palace, Wat Ounalom, National Museum, рынки и набережная образуют разные институциональные и повседневные слои. Туристический центр не следует сводить к дворцу или memorial sites — это живой столичный городской узел.",
+          "source_refs": [
+            "src_901018"
+          ]
+        },
+        "religion": {
+          "summary": "Wat Ounalom и другие городские монастыри относятся к действующей буддийской инфраструктуре столицы; Royal Palace и Silver Pagoda имеют отдельный церемониальный статус. Эти функции нужно хранить отдельно от музейного и мемориального слоя города.",
+          "source_refs": [
+            "src_901018"
+          ]
         }
       },
       {
@@ -7766,15 +7792,17 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Преахвихеа / северный храмовый пояс",
         "geography": {
-          "summary": "Маршрутный пояс соединяет удалённые археологические районы северной Камбоджи. Преахвихеа расположен на уступе Дангрэка у тайской границы; Кох-Кер и другие комплексы лежат в более низком лесном интерьере.",
+          "summary": "Северный храмовый пояс — маршрутная, а не административная сущность. Его наиболее выраженный рельефный контраст создаёт Preah Vihear: храм стоит на краю плато Дангрэк над камбоджийской равниной, тогда как Koh Ker и другие комплексы лежат ниже в лесном интерьере.",
           "source_refs": [
-            "src_900005"
+            "src_900005",
+            "src_901019"
           ]
         },
         "relief": {
-          "summary": "Рельеф контрастный: от равнинного лесного интерьера до крутого южного уступа Дангрэка у Преахвихеа.",
+          "summary": "Preah Vihear встроен в крутой уступ плато и вытянут вдоль примерно 800-метровой оси с лестницами и мощёными проходами. Этот рельеф напрямую определяет архитектуру, обзор и способ доступа; его нельзя переносить на другие храмы северного пояса.",
           "source_refs": [
-            "src_900005"
+            "src_900005",
+            "src_901019"
           ]
         },
         "climate": {
@@ -7849,7 +7877,8 @@
             "src_901003",
             "src_900013",
             "src_900010",
-            "src_901008"
+            "src_901008",
+            "src_901019"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -7866,6 +7895,30 @@
             "src_901008"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "История Preah Vihear прослеживается как минимум с IX века, а основной храмовый комплекс сформировался главным образом в первой половине XI века. Для региональной карточки это один из ключевых хронологических слоёв северного кхмерского храмового ландшафта, но Koh Ker, Preah Khan Kompong Svay и другие центры требуют собственных исторических секций.",
+          "source_refs": [
+            "src_901019"
+          ]
+        },
+        "architecture": {
+          "summary": "UNESCO подчёркивает исключительную связь архитектуры Preah Vihear с рельефом: последовательность sanctuaries, stairways и pavements организована по длинной оси и адаптирована к краю плато. Это не универсальная модель северных храмов, а специфическая планировочная система конкретного комплекса.",
+          "source_refs": [
+            "src_901019"
+          ]
+        },
+        "religion": {
+          "summary": "Preah Vihear посвящён Шиве и развивался как сакральный горный комплекс. Религиозную функцию конкретного храма нужно отделять от общего ярлыка «индуистский север Камбоджи» и не переносить автоматически на другие археологические комплексы маршрута.",
+          "source_refs": [
+            "src_901019"
+          ]
+        },
+        "myths_beliefs": {
+          "summary": "UNESCO в материалах по объекту фиксирует местную легендарную интерпретацию тумана вокруг храма как признака его близости к раю. В базе это должно быть marked as local_tradition / legend, а не как исторический или религиоведческий факт.",
+          "source_refs": [
+            "src_901019"
+          ]
         }
       },
       {
@@ -9504,6 +9557,39 @@
         "homestay",
         "mekong",
         "koh_pdao"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_PHNOM_PENH_TOURISM_OFFICIAL",
+      "canonical_id": "src_901018",
+      "publisher": "Ministry of Tourism Cambodia — Phnom Penh Capital City",
+      "url": "https://www.tourismcambodia.org/provinces/44/phnom-penh-capital-city",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_history",
+        "regional_culture",
+        "regional_religion",
+        "regional_transport",
+        "phnom_penh"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_PREAH_VIHEAR_UNESCO",
+      "canonical_id": "src_901019",
+      "publisher": "UNESCO World Heritage Centre — Temple of Preah Vihear",
+      "url": "https://whc.unesco.org/en/list/1224",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_history",
+        "regional_architecture",
+        "regional_religion",
+        "myths_beliefs",
+        "preah_vihear"
       ],
       "accessed": "2026-09-30"
     }

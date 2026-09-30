@@ -38,7 +38,9 @@
       "Regional QA pass 2026-09-30: deepened Togean Islands and Sumba with Indonesia Travel, KSDAE and cultural-heritage sources; separated gateway/boat logistics, park ecosystems, Marapu, megalithic settlement structure and island transport.",
       "Regional QA pass 2026-09-30: deepened Gunung Leuser, Yogyakarta/Central Java and Banda with specific UNESCO and Indonesia Travel sources; replaced generic country-level heritage references with regional sources and separated forest gateways, cosmological/temple landscapes and spice-island logistics.",
       "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Indonesia; schema keys and official proper names remain unchanged.",
-      "Regional QA pass 2026-09-30: deepened North Sumatra / Lake Toba / Samosir with official Indonesia Travel support; added gateway/ferry structure, Batak cultural landscape and missing transport/safety source_refs."
+      "Regional QA pass 2026-09-30: deepened North Sumatra / Lake Toba / Samosir with official Indonesia Travel support; added gateway/ferry structure, Batak cultural landscape and missing transport/safety source_refs.",
+      "Regional QA pass 2026-09-30: deepened Bali and Flores/Komodo with UNESCO and Indonesia Travel sources; separated subak hydrology/culture, Bali transport, Flores road corridor, Labuan Bajo gateway and Komodo protected-area geography.",
+      "Regional QA pass 2026-09-30: deepened West Sumatra / Sawahlunto with UNESCO Ombilin material; separated mining-city history, mountain railway, social/labour history and current regional transport."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -7453,7 +7455,10 @@
           ]
         },
         "relief": {
-          "summary": "Центральные и восточные вулканические массивы резко поднимаются над южной равниной; северное и восточное побережья уже и круче."
+          "summary": "Рельеф Бали задаётся центральной вулканической осью и системой водосборов, которые спускаются к более широким южным равнинам и более крутым северным/восточным побережьям. UNESCO прямо связывает вулканические массивы, плодородные почвы, реки и террасные поля в единую культурно-экологическую систему.",
+          "source_refs": [
+            "src_903028"
+          ]
         },
         "geology": {
           "summary": "Остров сформирован активной вулканической дугой; Агунг и Батур требуют отдельной проверки текущего статуса.",
@@ -7464,7 +7469,9 @@
         "climate": {
           "summary": "Тропический климат с выраженным сухим сезоном на большей части юга.",
           "field_context": "Горные районы прохладнее и влажнее; погода на вулканах может резко отличаться от побережья.",
-          "source_refs": []
+          "source_refs": [
+            "src_000721"
+          ]
         },
         "marine": {
           "forecast": "BMKG публикует оперативные прогнозы ветра, погоды и высоты волн по морским районам и портам.",
@@ -7507,7 +7514,10 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Остров имеет плотную дорожную сеть, но время в пути определяется трафиком и горным рельефом; общественный транспорт вне основных коридоров ограничен."
+          "summary": "Южная агломерация имеет наиболее плотную дорожную и автобусную сеть, включая Trans Metro Dewata, но горные районы, восточное побережье и многие temples/terraces требуют отдельных road legs. Время в пути определяется трафиком и рельефом; расстояния по карте плохо предсказывают фактическую длительность.",
+          "source_refs": [
+            "src_903029"
+          ]
         },
         "ethnography": {
           "summary": "Балийский индуизм, система субак, храмовые общины и календарь церемоний являются живой основой культурного ландшафта, а не только туристическими объектами.",
@@ -7521,7 +7531,9 @@
             "src_903002",
             "src_903001",
             "src_903003",
-            "src_903006"
+            "src_903006",
+            "src_903028",
+            "src_903029"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -7535,7 +7547,11 @@
           },
           "poisonous_plants": {
             "status": "Надёжная локальная привязка токсичных растений к этому узлу пока не подтверждена отдельным источником; общестрановой список не переносится автоматически."
-          }
+          },
+          "summary": "Региональный природный каркас Бали — это вулканические водосборы, горные леса, агроландшафты subak и разные по экспозиции побережья. Не следует собирать единую «фауну Бали» для всех сред; природные характеристики нужно привязывать к protected areas и конкретным экосистемам.",
+          "source_refs": [
+            "src_903028"
+          ]
         },
         "natural_hazards": {
           "hazards": [
@@ -7550,7 +7566,26 @@
           ],
           "checked_at": "2026-09-30"
         },
-        "narrow": "Бали — вулканический остров, где горная ось, храмовые общины, система субак и календарь церемоний образуют живой культурный ландшафт. Для маршрутов важно различать высокогорные районы Агунга и Батура, внутренние равнины и сильно отличающиеся друг от друга побережья."
+        "narrow": "Бали — вулканический остров, где горная ось, храмовые общины, система субак и календарь церемоний образуют живой культурный ландшафт. Для маршрутов важно различать высокогорные районы Агунга и Батура, внутренние равнины и сильно отличающиеся друг от друга побережья.",
+        "hydrology": {
+          "summary": "Водная система острова не сводится к отдельным рекам: сеть subak распределяет воду от горных источников, рек и каналов через weirs и water temples к рисовым полям. В региональной модели это отдельный hydrology+culture layer, а конкретные каналы и irrigation points должны храниться объектно.",
+          "source_refs": [
+            "src_903028"
+          ]
+        },
+        "culture": {
+          "summary": "Subak — действующая система коллективного управления водой, земледелием и ритуалом, связанная с философией Tri Hita Karana. UNESCO подчёркивает, что water temples, фермерские объединения, рисовые поля и водосборы образуют одну культурную систему, а не набор разрозненных храмов и террас.",
+          "source_refs": [
+            "src_903028",
+            "src_903029"
+          ]
+        },
+        "religion": {
+          "summary": "Балийский религиозный ландшафт тесно связан с water temples и сельскохозяйственным календарём. В системе subak ритуалы и распределение воды институционально связаны; конкретный temple complex должен описываться отдельно, но региональный слой должен фиксировать эту связку религии и хозяйства.",
+          "source_refs": [
+            "src_903028"
+          ]
+        }
       },
       {
         "name": "Flores / Komodo",
@@ -7568,13 +7603,17 @@
         "last_verified": "2026-09-28",
         "name_ru": "Флорес / Комодо",
         "geography": {
-          "summary": "Цепь вулканических островов Малых Зондских островов; западный Флорес и архипелаг Комодо разделены узкими проливами с сильными течениями.",
+          "summary": "Региональная система состоит из двух связанных, но разных частей: материкового Flores с дорожным коридором Labuan Bajo–Ruteng–Bajawa–Ende–Maumere и морского Komodo National Park между Flores и Sumbawa. Labuan Bajo — gateway, а не синоним всего региона.",
           "source_refs": [
-            "src_000720"
+            "src_903030",
+            "src_903031"
           ]
         },
         "relief": {
-          "summary": "Горный вулканический Флорес контрастирует с сухими холмистыми островами Комодо и Ринча."
+          "summary": "Западный Флорес — горный и вулканический, тогда как Komodo, Rinca и Padar образуют сухой холмистый островной ландшафт с резко пересечёнными берегами. UNESCO отдельно описывает rugged hillsides и сухую саванну Komodo National Park; эти формы рельефа не следует переносить на весь Flores.",
+          "source_refs": [
+            "src_903030"
+          ]
         },
         "geology": {
           "summary": "Флорес относится к активной вулканической дуге; Келимуту и другие вулканы требуют проверки MAGMA/PVMBG.",
@@ -7585,7 +7624,9 @@
         "climate": {
           "summary": "Климат суше, чем на Яве и Суматре, с выраженным сухим сезоном.",
           "field_context": "В сухой сезон растительность Комодо становится саванной; на Флоресе горные районы сохраняют более влажные микроклиматы.",
-          "source_refs": []
+          "source_refs": [
+            "src_903001"
+          ]
         },
         "marine": {
           "forecast": "BMKG публикует оперативные прогнозы ветра, погоды и высоты волн по морским районам и портам.",
@@ -7603,9 +7644,9 @@
           }
         },
         "nature": {
-          "summary": "Комодо — природный объект ЮНЕСКО с сухими саваннами, манграми, коралловыми рифами и популяцией комодского варана.",
+          "summary": "UNESCO описывает Komodo National Park как сочетание сухих саванн, колючей растительности, пляжей и морских экосистем, где комодский варан является ключевым эндемичным видом. Природный слой Flores шире и включает более влажные горные и вулканические среды, поэтому их нужно хранить отдельно.",
           "source_refs": [
-            "src_000720"
+            "src_903030"
           ],
           "fauna": [
             "комодский варан",
@@ -7652,12 +7693,16 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Основная логистика — авиация и дорога по Флоресу плюс лодки между Лабуан-Баджо, Комодо и Ринча."
+          "summary": "Labuan Bajo — основной воздушный и морской gateway к Komodo National Park. До парковых островов идут отдельные boat legs, а наземный Flores связан дорогами через Ruteng, Bajawa, Ende и Maumere. Конкретные рейсы и лодочные расписания динамичны и должны проверяться перед поездкой.",
+          "source_refs": [
+            "src_903031"
+          ]
         },
         "ethnography": {
-          "summary": "На Флоресе языковая и культурная картина меняется по районам; запад связан с манггарайскими общинами, центральные и восточные районы имеют другие языки и традиции.",
+          "summary": "Западный Flores связан прежде всего с Manggarai communities; внутри острова языки и культурные практики быстро меняются по районам. Indonesia Travel отдельно связывает Labuan Bajo и surrounding villages с Manggarai songke weaving, caci и сельскими общинами; эти практики нельзя автоматически переносить на Komodo/Rinca.",
           "source_refs": [
-            "src_000725"
+            "src_000725",
+            "src_903031"
           ]
         },
         "local_reference_provenance": {
@@ -7667,7 +7712,9 @@
             "src_903001",
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903030",
+            "src_903031"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -7685,7 +7732,13 @@
           ],
           "checked_at": "2026-09-30"
         },
-        "narrow": "Флорес / Комодо — вулканическая островная цепь с сильными межостровными течениями, сухими саваннами, манграми и коралловыми рифами. Западный Флорес связан с манггарайскими общинами, а природный слой архипелага Комодо определяется в том числе популяцией комодского варана."
+        "narrow": "Флорес / Комодо — вулканическая островная цепь с сильными межостровными течениями, сухими саваннами, манграми и коралловыми рифами. Западный Флорес связан с манггарайскими общинами, а природный слой архипелага Комодо определяется в том числе популяцией комодского варана.",
+        "culture": {
+          "summary": "Manggarai cultural layer включает songke weaving, caci и деревенские ceremonial practices, но он относится к западному Flores, а не к парковой части архипелага Komodo. Региональная карточка должна явно сохранять это различие между cultural gateway и natural protected area.",
+          "source_refs": [
+            "src_903031"
+          ]
+        }
       },
       {
         "name": "East Java",
@@ -8105,7 +8158,10 @@
           ]
         },
         "relief": {
-          "summary": "Горный рельеф с крутыми дорогами, долинами и вулканическими массивами; Савахлунто окружён холмами."
+          "summary": "Западная Суматра пересечена хребтом Букит-Барисан; Савахлунто расположен в изолированной горной котловине, а историческая железная дорога Омбилина пересекает примерно 155 км сложного горного рельефа до побережья. Для региональной логистики это важнее абстрактного тезиса о «гористой местности».",
+          "source_refs": [
+            "src_903032"
+          ]
         },
         "geology": {
           "summary": "Регион связан с вулканической дугой Суматры и угленосными бассейнами, на которых сформировался Омбилинский горнопромышленный ландшафт.",
@@ -8117,7 +8173,9 @@
         "climate": {
           "summary": "Очень влажный экваториальный климат с осадками круглый год.",
           "field_context": "Горные дороги чувствительны к оползням после продолжительных ливней.",
-          "source_refs": []
+          "source_refs": [
+            "src_000721"
+          ]
         },
         "marine": {
           "forecast": "BMKG публикует оперативные прогнозы ветра, погоды и высоты волн по морским районам и портам.",
@@ -8159,7 +8217,10 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Паданг — главный транспортный вход; Савахлунто и горные районы требуют автомобильных маршрутов по серпантинам."
+          "summary": "Региональная транспортная история связана с железнодорожной системой Омбилин, построенной для вывоза угля через горный рельеф к побережью. Для современной поездки Padang, Bukittinggi и Sawahlunto требуют самостоятельных road/rail legs; историческую 155-км промышленную железную дорогу нельзя выдавать за текущий пассажирский маршрут.",
+          "source_refs": [
+            "src_903032"
+          ]
         },
         "ethnography": {
           "summary": "Западная Суматра — ядро культуры минангкабау с матрилинейными традициями и характерной архитектурой; городской промышленный Савахлунто имеет отдельную многоэтничную историю.",
@@ -8175,7 +8236,8 @@
             "src_903001",
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903032"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8189,7 +8251,11 @@
           },
           "poisonous_plants": {
             "status": "Надёжная локальная привязка токсичных растений к этому узлу пока не подтверждена отдельным источником; общестрановой список не переносится автоматически."
-          }
+          },
+          "summary": "Природный слой региона определяется горными лесами, вулканическими массивами и прибрежными экосистемами, но Савахлунто прежде всего индустриально-исторический узел. Локальную фауну и природные риски нужно привязывать к конкретным protected areas и маршрутам, а не к mining landscape целиком.",
+          "source_refs": [
+            "src_903006"
+          ]
         },
         "natural_hazards": {
           "hazards": [
@@ -8204,7 +8270,25 @@
           ],
           "checked_at": "2026-09-30"
         },
-        "narrow": "Западная Суматра соединяет вулканический хребет Букит-Барисан, культуру минангкабау и промышленный ландшафт Савахлунто во внутренней горной котловине. Угленосный бассейн Омбилин и горная география здесь так же важны, как матрилинейные традиции и характерная архитектура."
+        "narrow": "Западная Суматра соединяет вулканический хребет Букит-Барисан, культуру минангкабау и промышленный ландшафт Савахлунто во внутренней горной котловине. Угленосный бассейн Омбилин и горная география здесь так же важны, как матрилинейные традиции и характерная архитектура.",
+        "history": {
+          "summary": "Савахлунто развивался с конца XIX века как специализированный угледобывающий город в составе интегрированной колониальной системы Омбилин. UNESCO описывает её как связку шахт, обогатительных объектов, planned company town, горной железной дороги и порта Emmahaven, а не как один промышленный памятник.",
+          "source_refs": [
+            "src_903032"
+          ]
+        },
+        "architecture": {
+          "summary": "Городская среда Савахлунто формировалась как purpose-built mining town с производственными, административными, жилыми, образовательными и социальными объектами. Конкретные здания должны храниться как отдельные object entities, но региональная карточка фиксирует их принадлежность к единой промышленной системе.",
+          "source_refs": [
+            "src_903032"
+          ]
+        },
+        "culture": {
+          "summary": "Промышленный ландшафт Омбилина отражает взаимодействие европейской инженерии, местных практик и многоэтничной рабочей среды: Minangkabau, Javanese, Chinese contract workers и convict labourers orang rantai. Это социальная история индустриализации, а не декоративный «колониальный стиль».",
+          "source_refs": [
+            "src_903032"
+          ]
+        }
       },
       {
         "name": "Toraja / South Sulawesi",
@@ -9912,6 +9996,84 @@
         "regional_culture",
         "regional_ethnography",
         "regional_safety"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_BALI_SUBAK_UNESCO",
+      "canonical_id": "src_903028",
+      "publisher": "UNESCO World Heritage Centre — Cultural Landscape of Bali Province: the Subak System",
+      "url": "https://whc.unesco.org/en/list/1194/",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_relief",
+        "regional_hydrology",
+        "regional_culture",
+        "regional_religion",
+        "subak",
+        "bali"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_BALI_TOURISM_OFFICIAL",
+      "canonical_id": "src_903029",
+      "publisher": "Indonesia Travel — Bali / Subak and regional transport",
+      "url": "https://www.indonesia.travel/id/id/destination/bali-nusa-tenggara/bali/bali",
+      "kind": "government",
+      "used_for": [
+        "regional_transport",
+        "regional_culture",
+        "bali",
+        "subak"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_KOMODO_UNESCO",
+      "canonical_id": "src_903030",
+      "publisher": "UNESCO World Heritage Centre — Komodo National Park",
+      "url": "https://whc.unesco.org/en/list/609",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "regional_nature",
+        "komodo",
+        "rinca",
+        "padar"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_LABUAN_BAJO_TOURISM",
+      "canonical_id": "src_903031",
+      "publisher": "Indonesia Travel — Labuan Bajo and Komodo National Park",
+      "url": "https://www.indonesia.travel/id/id/destination/bali-nusa-tenggara/east-nusa-tenggara/labuan-bajo---komodo-national-park",
+      "kind": "government",
+      "used_for": [
+        "regional_transport",
+        "labuan_bajo",
+        "regional_ethnography",
+        "regional_culture",
+        "komodo"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_OMBILIN_SAWAHLUNTO_UNESCO",
+      "canonical_id": "src_903032",
+      "publisher": "UNESCO World Heritage Centre — Ombilin Coal Mining Heritage of Sawahlunto",
+      "url": "https://whc.unesco.org/en/list/1610/",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_relief",
+        "regional_history",
+        "regional_architecture",
+        "regional_culture",
+        "regional_transport",
+        "sawahlunto",
+        "ombilin"
       ],
       "accessed": "2026-09-30"
     }

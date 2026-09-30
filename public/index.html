@@ -261,7 +261,7 @@ async function countryBoundary(cc){
   return state.boundary.get(cc);
 }
 var FIELD_LABELS={
-  summary:'Кратко',scope_note:'Границы применимости',rainfall_pattern:'Распределение осадков',floods:'Наводнения и подтопления',
+  summary:'Кратко',scope:'Область',scope_note:'Границы применимости',items:'Составы и правовые риски',offence:'Состав / запрещённое действие',what_counts:'Что может подпадать под норму',penalty:'Наказание',nuance:'Важное уточнение',rainfall_pattern:'Распределение осадков',floods:'Наводнения и подтопления',
   risk_context:'Что учитывать',live_monitoring:'Оперативный мониторинг',dengue_reference_2022:'Денге: справочный фон 2022 года',
   incidence_per_100k:'Случаев на 100 тыс.',interpretation:'Как понимать данные',crime:'Преступность',dataset_scope:'Территориальная основа',
   public_transport:'Общественный транспорт',dynamic_status:'Текущий статус',water_context:'Морские условия',tides:'Приливы и отливы',
@@ -294,7 +294,7 @@ var FIELD_LABELS={
   annual_precipitation_uncertainty_mm:'Неопределённость осадков, мм',period:'Период',
   region:'Регион',neighbors:'Соседи',coastline_km_approx:'Протяжённость береговой линии, км',seas_and_oceans:'Моря и океанические бассейны',
   highest_point:'Высшая точка',name:'Название',elevation_m:'Высота, м',elevation_m_approx:'Примерная высота, м',terrain:'Рельеф и ландшафт',
-  official:'Официальная религия',profile:'Описание',primary:'Основной язык',practical:'Практическое использование',diversity:'Языковое разнообразие',
+  official:'Официальный статус',profile:'Описание',primary:'Основной язык',practical:'Практическое использование',diversity:'Языковое разнообразие',
   gdp_current_usd_billion:'ВВП, млрд долл. США',gdp_per_capita_usd:'ВВП на душу населения, долл. США',gdp_growth_pct:'Рост ВВП, %',year:'Год',
   poverty:'Бедность',metric:'Показатель',value_pct:'Значение, %',notes:'Примечания',overview:'Обзор',street_food:'Уличная еда',festivals:'Праздники и фестивали',
   fauna:'Фауна',common_traveler_risks:'Основные риски для путешественника',sensitive_areas:'Чувствительные и ограниченные зоны',
@@ -426,7 +426,7 @@ var GEO_FIELDS=[
   ['География','geography'],['Рельеф','relief'],['Геология','geology'],['Климат','climate'],['Языки','languages'],
   ['Гидрология','hydrology'],['Побережье','coast'],['Морская среда','marine'],['Природа','nature'],
   ['Здоровье и болезни','health'],['Безопасность и криминал','safety'],['История','history'],
-  ['Этнография','ethnography'],['Культура','culture'],['Архитектура','architecture'],['Транспорт','transport']
+  ['Этнография','ethnography'],['Культура','culture'],['Мифы и поверья','myths_beliefs'],['Архитектура','architecture'],['Транспорт','transport']
 ];
 function geoReferenceHTML(g){
   if(!g)return '';

@@ -346,6 +346,58 @@
     "laws_source_ids": [
       "HSA",
       "NPARKS_PERMIT"
+    ],
+    "criminal_liability": {
+      "scope": "Не исчерпывающий перечень. Сингапурский слой специально показывает нормы, где привычное для туриста поведение может иметь значительно более серьёзные правовые последствия, чем ожидается.",
+      "items": [
+        {
+          "topic": "controlled_drugs",
+          "offence": "Незаконное хранение, употребление, ввоз/вывоз, производство и сбыт контролируемых наркотиков и психоактивных веществ являются уголовными правонарушениями.",
+          "what_counts": "Закон различает хранение, употребление, оборот и импорт/экспорт; действуют доказательственные презумпции и специальные полномочия CNB.",
+          "penalty": "Санкции зависят от вещества, количества и состава: от штрафов и лишения свободы до крайне тяжёлых наказаний; отдельные формы наркотрафика могут подпадать под смертную казнь.",
+          "nuance": "Не писать «за наркотики смертная казнь» без уточнения состава: это неверно для всех случаев.",
+          "source_ids": [
+            "SG_MDA_2026"
+          ]
+        },
+        {
+          "topic": "vaping",
+          "offence": "Вейпы и связанные запрещённые vaporiser products подпадают под специальный запрет и усиленный режим правоприменения.",
+          "what_counts": "Для иностранцев использование/владение может повлечь изъятие и штраф; повторные нарушения могут иметь иммиграционные последствия, а etomidate-vapes — более жёсткий режим.",
+          "penalty": "Штрафы и иные меры по Tobacco and Vaporisers Control Act; для иностранцев возможны аннулирование пропуска, депортация и запрет на повторный въезд в предусмотренных случаях.",
+          "nuance": "Отдельно от обычных табачных правил.",
+          "source_ids": [
+            "SG_VAPE_2026"
+          ]
+        },
+        {
+          "topic": "vandalism",
+          "offence": "Акты вандализма в отношении публичной или частной собственности образуют самостоятельное уголовное правонарушение.",
+          "what_counts": "В том числе определённые надписи, рисунки, маркировка, повреждение или изменение имущества без разрешения.",
+          "penalty": "Штраф до S$2,000 или лишение свободы до 3 лет; закон также предусматривает телесное наказание палками в установленных случаях, с исключениями.",
+          "nuance": "Не сводить к «штрафу за граффити»: состав шире, а санкция необычна.",
+          "source_ids": [
+            "SG_VANDALISM_ACT"
+          ]
+        },
+        {
+          "topic": "public_assemblies",
+          "offence": "Публичные собрания и шествия регулируются Public Order Act; во многих случаях требуется уведомление и permit.",
+          "what_counts": "Политически направленное собрание с участием иностранца может быть основанием для отказа в permit; участие и организация регулируются отдельно.",
+          "penalty": "Нарушение permit regime образует правонарушение; конкретная санкция зависит от применимой нормы.",
+          "nuance": "Для иностранца это важнее, чем обычная туристическая рекомендация «не участвовать в митингах».",
+          "source_ids": [
+            "SG_PUBLIC_ORDER_ACT"
+          ]
+        }
+      ],
+      "checked_at": "2026-09-30"
+    },
+    "criminal_law_source_ids": [
+      "SG_MDA_2026",
+      "SG_VAPE_2026",
+      "SG_VANDALISM_ACT",
+      "SG_PUBLIC_ORDER_ACT"
     ]
   },
   "sources": [
@@ -599,6 +651,56 @@
       ],
       "accessed": "2026-09-30",
       "canonical_id": "src_000798"
+    },
+    {
+      "id": "SG_MDA_2026",
+      "canonical_id": "src_000851",
+      "publisher": "Central Narcotics Bureau Singapore / Misuse of Drugs Act",
+      "url": "https://www.cnb.gov.sg/singapore-drug-situation/misuse-of-drugs-act/",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "drug_law"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "SG_VAPE_2026",
+      "canonical_id": "src_000852",
+      "publisher": "Government of Singapore — Stop Vaping",
+      "url": "https://www.gov.sg/stopvaping/",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "vaping_law",
+        "foreigners"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "SG_VANDALISM_ACT",
+      "canonical_id": "src_000853",
+      "publisher": "Singapore Statutes Online — Vandalism Act 1966",
+      "url": "https://sso.agc.gov.sg/Act/VA1966",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "vandalism"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "SG_PUBLIC_ORDER_ACT",
+      "canonical_id": "src_000854",
+      "publisher": "Singapore Statutes Online — Public Order Act 2009",
+      "url": "https://sso.agc.gov.sg/Act/POA2009",
+      "kind": "government",
+      "used_for": [
+        "criminal_law",
+        "public_assembly",
+        "foreigners"
+      ],
+      "accessed": "2026-09-30"
     }
   ],
   "uncertainties": [

@@ -1,0 +1,79 @@
+{
+  "project_id": "expedition_sea",
+  "schema_contract": "expedition-sea",
+  "branch_purpose": "object database consolidation before live migration",
+  "generated_at": "2026-09-30",
+  "release_pointer_changed": false,
+  "pr_created": false,
+  "merge_to_main": false,
+  "inventory": {
+    "drive_objects_total": 211,
+    "main_canonical_objects_before_work": 113,
+    "recovered_missing_objects": 98,
+    "expected_objects_after_source_recovery": 211
+  },
+  "countries": [
+    {
+      "code": "bn",
+      "objects": 18,
+      "state": "already_canonical_in_main"
+    },
+    {
+      "code": "kh",
+      "objects": 19,
+      "state": "already_canonical_in_main"
+    },
+    {
+      "code": "id",
+      "objects": 21,
+      "state": "already_canonical_in_main"
+    },
+    {
+      "code": "la",
+      "objects": 19,
+      "state": "already_canonical_in_main"
+    },
+    {
+      "code": "my",
+      "objects": 21,
+      "state": "already_canonical_in_main"
+    },
+    {
+      "code": "mm",
+      "objects": 15,
+      "state": "already_canonical_in_main"
+    },
+    {
+      "code": "ph",
+      "objects": 19,
+      "state": "source_restored_and_staged"
+    },
+    {
+      "code": "sg",
+      "objects": 18,
+      "state": "source_restored_and_staged"
+    },
+    {
+      "code": "th",
+      "objects": 21,
+      "state": "source_restored_and_staged"
+    },
+    {
+      "code": "tl",
+      "objects": 17,
+      "state": "source_restored_and_staged"
+    },
+    {
+      "code": "vn",
+      "objects": 23,
+      "state": "source_restored_and_staged"
+    }
+  ],
+  "staging_root": "staging/object-db-211",
+  "notes": [
+    "Staging object cards use the approved top-level object structure.",
+    "Unknown GPS/elevation/water/overnight values remain null/unknown and fail QA rather than being invented.",
+    "Source IDs in staging are temporary migration IDs and must be deduplicated/remapped against data/id-registry.json before live canonical generation.",
+    "Regional branches were audited separately; they are not merged wholesale into this object DB because they mainly alter country/region prose rather than object inventory."
+  ]
+}

@@ -41,7 +41,8 @@
       "Cambodia geometry QA 2026-10-01: added country mask from the same Natural Earth 1:10m lineage used by the Philippines reference; added sourced Phnom Kulen National Park and Tonle Sap Biosphere Reserve masks; Cardamom Mountains uses a transparent derived operational core from Central + Southern Cardamom national-park polygons, explicitly not a full geomorphological range boundary.",
       "2026-10-01 Angkor editorial rewrite: replaced abstract/AI-like exposition with denser factual prose; added PNAS LiDAR archaeology, Science Advances population model, PNAS climate evidence and 17th-century Japanese pilgrimage research; legend and local cult remain explicitly separated from documented history.",
       "2026-10-01 media standard raised to 5 unique images per attraction; Angkor Archaeological Park upgraded first to five sourced Wikimedia Commons images.",
-      "2026-10-01 preview repair: replaced two dead Cyrillic Wikimedia cover URLs for Oudong and Bokor with verified existing Commons gallery assets so the global local-preview build can complete."
+      "2026-10-01 preview repair: replaced two dead Cyrillic Wikimedia cover URLs for Oudong and Bokor with verified existing Commons gallery assets so the global local-preview build can complete.",
+      "2026-10-01 upper-level acceptance pass: country climate, entry/border rules and driving-license guidance revalidated; attraction/object payloads remain frozen and unchanged."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -132,6 +133,13 @@
       "cover_counts_toward_minimum": true,
       "duplicate_url_policy": "same image URL counts once",
       "source_requirement": "каждое изображение должно иметь проверяемую страницу-источник, автора/правообладателя при наличии, лицензию или условия использования и checked_at"
+    },
+    "upper_level_acceptance": {
+      "phase": "pre_object",
+      "reference_country": "PH",
+      "status": "active",
+      "object_payloads_frozen": true,
+      "checked_at": "2026-10-01"
     }
   },
   "overview": {
@@ -297,7 +305,18 @@
       "Dec": 28.7
     },
     "notes": "Побережье выбрано как экспедиционная климатическая точка; внутренний Сиемреап/Пномпень имеют большую жару и суточные амплитуды.",
-    "source_quality": "secondary climatology"
+    "source_quality": "Среднемесячные температура воздуха и моря для Sihanoukville сохранены как вторичная локальная климатология; сезонность и региональные различия страны дополнены 1991–2020 climatology World Bank Climate Change Knowledge Portal.",
+    "country_seasonality": {
+      "climatology_period": "1991-2020",
+      "dry_season": "Обычно декабрь–апрель; точные границы отличаются по провинциям.",
+      "wet_season": "Обычно май–октябрь/ноябрь; на юго-западе и побережье сезон дождей выражен сильнее.",
+      "warmest_period": "Во многих провинциях максимум средней температуры приходится на апрель, перед устойчивым началом дождей.",
+      "regional_pattern": "Юго-западные возвышенности и побережье получают существенно больше осадков, чем центральные равнины; восточные возвышенности также имеют собственный режим. Для маршрутов использовать региональные профили, а не один средний показатель страны.",
+      "source_ids": [
+        "WB_CLIMATE_PROFILE_2023"
+      ]
+    },
+    "checked_at": "2026-10-01"
   },
   "safety": {
     "crime_level": {
@@ -316,12 +335,14 @@
       "мины и неразорвавшиеся боеприпасы в отдельных удалённых и приграничных районах"
     ],
     "sensitive_areas": [
-      "удалённые приграничные районы",
+      "приграничный коридор Камбоджа–Таиланд: сухопутные переходы закрыты по состоянию на 1 октября 2026 года",
       "военные объекты",
       "обозначенные зоны минной и UXO-опасности"
     ],
     "source_ids": [
-      "RUS_MFA"
+      "RUS_MFA",
+      "KH_TH_BORDER_SUSPENSION_2025",
+      "REUTERS_KH_TH_BORDER_STATUS_2026"
     ]
   },
   "travel": {
@@ -404,25 +425,42 @@
     ],
     "visa_for_russian_passport": {
       "status": "виза требуется для обычного российского паспорта",
-      "tourist_visa": "Туристическая виза T: электронная виза либо иной доступный на конкретном пункте въезда визовый режим. Официальная eVisa T — однократная, сбор USD 30, срок действия 3 месяца с даты выдачи, разрешённое пребывание 1 месяц.",
+      "tourist_visa": "Официальная туристическая eVisa T: однократный въезд, сбор USD 30, срок действия визы 3 месяца с даты выдачи, разрешённое пребывание — 1 месяц; паспорт должен действовать более 6 месяцев на момент подачи/въезда.",
       "stay_days": 30,
       "extension": "Туристическую визу обычно можно продлить один раз ещё примерно на 30 дней.",
       "visa_run": {
-        "possible": "После выезда можно обращаться за новой визой и въезжать заново.",
-        "limits": "Это не гарантированное право; электронная виза принимается только в перечисленных пунктах, а работа конкретных сухопутных границ меняется.",
-        "notes": "Перед наземным визаран проверять, открыт ли нужный пограничный пункт для иностранцев и электронная виза."
+        "possible": "После выезда можно обращаться за новой визой и въезжать заново, но новый въезд не является автоматическим правом.",
+        "limits": "Сухопутная граница с Таиландом остаётся закрытой по состоянию на 1 октября 2026 года. Для eVisa официальный портал сейчас перечисляет Bavet на границе с Вьетнамом и Tropaeng Kreal на границе с Лаосом; пригодность конкретного перехода для визарана и фактический режим въезда проверять перед поездкой.",
+        "notes": "Не строить визаран через Poipet или Cham Yeam, пока официально не подтверждено возобновление сухопутного движения и приёма eVisa."
       },
       "fee_usd_typical": 30,
-      "passport_validity": "обычно минимум 6 месяцев",
-      "entry_form": "Cambodia e-Arrival объединяет электронную форму прибытия, иммиграционную форму, медицинскую декларацию и таможенную декларацию; требования проверять непосредственно перед въездом.",
+      "passport_validity": "более 6 месяцев",
+      "entry_form": "Cambodia e-Arrival — отдельная бесплатная форма прибытия, не заменяющая визу. General Department of Immigration указывает, что все путешественники могут подать её в течение 7 дней до прибытия либо по прибытии.",
       "official_source": "официальная система электронной визы Камбоджи / МИД России",
       "visa_exemption_note": "По официальной таблице визовых соглашений на 25 сентября 2026 года для России указано освобождение для дипломатической категории на срок миссии; обычный паспорт отмечен как не освобождённый.",
       "source_ids": [
         "EVISA",
         "MFA_VISA_EXEMPT",
-        "EARRIVAL",
+        "GDI_EARRIVAL_2026",
         "RUS_MFA"
-      ]
+      ],
+      "evisa_entry_points": {
+        "airports": [
+          "Techo International Airport (KTI)",
+          "Siem Reap–Angkor International Airport (SAI)",
+          "Sihanouk International Airport (KOS)"
+        ],
+        "land_currently_listed": [
+          "Bavet (Svay Rieng)",
+          "Tropaeng Kreal (Stung Treng)"
+        ],
+        "land_temporarily_closed_for_evisa": [
+          "Cham Yeam (Koh Kong)",
+          "Poipet (Banteay Meanchey)"
+        ],
+        "note": "Список и статус пунктов въезда — динамические; проверять официальный eVisa portal непосредственно перед пересечением."
+      },
+      "checked_at": "2026-10-01"
     },
     "airports": [
       {
@@ -458,11 +496,30 @@
         "Лаос",
         "Вьетнам"
       ],
-      "transport": "На основных направлениях работают автобусы, микроавтобусы и частные трансферы. Конкретный пограничный пункт, допуск иностранцев, принятие eVisa и текущую обстановку необходимо перепроверять перед наземным переходом.",
+      "thailand": {
+        "status": "closed",
+        "summary": "Сухопутное пересечение границы Камбоджа–Таиланд остаётся закрытым по состоянию на 1 октября 2026 года. Камбоджа объявила полную приостановку движения через наземные пункты 13 декабря 2025 года; Reuters 23 сентября 2026 года отдельно сообщал, что погранпереходы остаются закрыты.",
+        "checked_at": "2026-10-01"
+      },
+      "laos_vietnam": {
+        "status": "verify_before_travel",
+        "evisa_land_entry_points": [
+          "Tropaeng Kreal (Laos)",
+          "Bavet (Vietnam)"
+        ],
+        "summary": "Официальный eVisa portal перечисляет эти два сухопутных пункта для въезда с eVisa; фактические часы, транспорт и текущие локальные ограничения перепроверять непосредственно перед маршрутом."
+      },
+      "temporarily_closed_evisa_points": [
+        "Cham Yeam (Koh Kong)",
+        "Poipet (Banteay Meanchey)"
+      ],
+      "transport": "На открытых направлениях используются автобусы, микроавтобусы и частные трансферы; статус конкретного погранпункта имеет приоритет над расписанием перевозчика.",
       "source_ids": [
-        "RUS_MFA",
-        "EVISA"
-      ]
+        "EVISA",
+        "KH_TH_BORDER_SUSPENSION_2025",
+        "REUTERS_KH_TH_BORDER_STATUS_2026"
+      ],
+      "checked_at": "2026-10-01"
     },
     "currency": {
       "code": "KHR",
@@ -10235,7 +10292,8 @@
       }
     ],
     "operational_notes": [
-      "28 сентября 2026: храм Преахвихеа сохраняется в базе как исследовательский объект, но полевой маршрут к нему нельзя считать открытым без повторной проверки официальной приграничной обстановки и фактического доступа."
+      "1 октября 2026: сухопутные переходы Камбоджа–Таиланд остаются закрыты; северо-западные и северные приграничные маршруты нельзя планировать как транзит в Таиланд без нового официального подтверждения открытия.",
+      "1 октября 2026: режим доступа к Преахвихеа и другим приграничным объектам проверяется отдельно от общего статуса страны; наличие объекта в базе не означает открытый полевой доступ."
     ],
     "region_model_note": "Маршрутные регионы в исходном исследовательском файле используются только для логистики и климата. Каноническая административная и физическая география хранится отдельно в data/hierarchy/countries/cambodia.json и не выводится из названия маршрутного кластера.",
     "localities": [
@@ -10445,11 +10503,13 @@
       "SSCA"
     ],
     "transport_rules": {
-      "summary": "Самостоятельное управление автомобилем или мотоциклом регулируется Законом о дорожном движении Камбоджи. В справочнике не предполагается автоматически, что иностранные права или конкретная категория мотоцикла принимаются: категорию прав, международное удостоверение и условия проката нужно проверять для выбранного транспорта.",
+      "summary": "MPWT требует действительное водительское удостоверение. Иностранец, который хочет получить камбоджийские права или обменять действующие национальные права, должен предоставить паспорт, действующую визу, подтверждение места проживания, медсправку и фотографии; для обмена национальные права, если они не на английском или французском, требуется перевести на английский или кхмерский через посольство. В базе не предполагается автоматически, что выдача машины/мотоцикла прокатчиком сама по себе подтверждает законность управления.",
+      "exchange_fee_khr": 120000,
+      "exchange_note": "Официальная страница MPWT указывает 120 000 KHR за обмен иностранного водительского удостоверения; актуальную категорию и процедуру проверять перед оформлением.",
       "source_ids": [
         "MPWT_ROAD"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-10-01"
     },
     "camping_rules": {
       "status": "site_specific",
@@ -10457,7 +10517,7 @@
       "source_ids": [
         "MOE_CODE"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-10-01"
     },
     "drone_rules": {
       "status": "official_notice_exists_site_specific_verification_required",
@@ -10466,7 +10526,7 @@
         "SSCA_DRONE",
         "APSARA_FILMING"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-10-01"
     },
     "laws_source_ids": [
       "CONSTITUTION",
@@ -10479,7 +10539,7 @@
         "MOE_CODE",
         "APSARA_FILMING"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-10-01"
     },
     "criminal_law_source_ids": [
       "RUS_MFA",
@@ -10518,7 +10578,7 @@
           ]
         }
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     }
   },
   "sources": [
@@ -10542,7 +10602,7 @@
       "used_for": [
         "visa"
       ],
-      "accessed": "2026-09-27",
+      "accessed": "2026-10-01",
       "canonical_id": "src_900002"
     },
     {
@@ -10555,7 +10615,7 @@
         "safety",
         "country_profile"
       ],
-      "accessed": "2026-09-27",
+      "accessed": "2026-10-01",
       "canonical_id": "src_900003"
     },
     {
@@ -10655,7 +10715,7 @@
         "entry",
         "e_arrival"
       ],
-      "accessed": "2026-09-28",
+      "accessed": "2026-10-01",
       "canonical_id": "src_900011"
     },
     {
@@ -10680,7 +10740,7 @@
         "transport_rules",
         "road_traffic_law"
       ],
-      "accessed": "2026-09-28",
+      "accessed": "2026-10-01",
       "canonical_id": "src_900013"
     },
     {
@@ -10694,7 +10754,7 @@
         "environmental_rules",
         "permits"
       ],
-      "accessed": "2026-09-28",
+      "accessed": "2026-10-01",
       "canonical_id": "src_900014"
     },
     {
@@ -10731,7 +10791,7 @@
         "visa_exemption",
         "ordinary_passport"
       ],
-      "accessed": "2026-09-28",
+      "accessed": "2026-10-01",
       "notes": "Table dated 25 September 2026; Russia ordinary passport is marked not exempt.",
       "canonical_id": "src_900017"
     },
@@ -10745,7 +10805,7 @@
         "air_connectivity",
         "aviation"
       ],
-      "accessed": "2026-09-28",
+      "accessed": "2026-10-01",
       "canonical_id": "src_900018"
     },
     {
@@ -10759,7 +10819,7 @@
         "drone_rules",
         "aviation_security"
       ],
-      "accessed": "2026-09-28",
+      "accessed": "2026-10-01",
       "notes": "Official SSCA drone notice page under Security Regulation. The current public page does not expose enough operative text to encode numeric flight limits safely; use the notice itself for current requirements."
     },
     {
@@ -11316,10 +11376,65 @@
       ],
       "accessed": "2026-10-01",
       "canonical_id": "src_910051"
+    },
+    {
+      "id": "GDI_EARRIVAL_2026",
+      "canonical_id": "src_911004",
+      "publisher": "General Department of Immigration, Cambodia",
+      "url": "https://immigration.gov.kh/",
+      "kind": "government",
+      "used_for": [
+        "entry",
+        "e_arrival"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official immigration portal states that all travelers can submit Cambodia e-Arrival within 7 days before or on arrival and that submission is free."
+    },
+    {
+      "id": "KH_TH_BORDER_SUSPENSION_2025",
+      "canonical_id": "src_911005",
+      "publisher": "Agence Kampuchea Presse / Cambodia Ministry of Interior statement",
+      "url": "https://akp.gov.kh/post/detail/356038",
+      "kind": "government",
+      "used_for": [
+        "land_border",
+        "border_operation",
+        "security"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Used only for the administrative fact that Cambodia suspended entry and exit at Cambodia–Thailand land border crossings from 13 December 2025 until further notice; contested descriptions of the underlying conflict are not adopted as project facts."
+    },
+    {
+      "id": "REUTERS_KH_TH_BORDER_STATUS_2026",
+      "canonical_id": "src_911006",
+      "publisher": "Reuters",
+      "url": "https://www.reuters.com/world/asia-pacific/cambodias-waiting-village-tattooist-mourns-trade-lost-war-2026-09-23/",
+      "kind": "news",
+      "used_for": [
+        "land_border",
+        "border_operation",
+        "security"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Independent dated confirmation on 23 September 2026 that Cambodia–Thailand border crossings remained closed."
+    },
+    {
+      "id": "WB_CLIMATE_PROFILE_2023",
+      "canonical_id": "src_911007",
+      "publisher": "World Bank Climate Change Knowledge Portal",
+      "url": "https://climateknowledgeportal.worldbank.org/sites/default/files/country-profiles/16814-WB_Cambodia%20Country%20Profile-WEB.pdf",
+      "kind": "international_organization",
+      "used_for": [
+        "climate",
+        "seasonality",
+        "regional_climate"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "1991–2020 climatology used for wet/dry season and broad regional rainfall/temperature context; not a weather forecast."
     }
   ],
   "uncertainties": [
-    "Сухопутные переходы с Таиландом и режим приграничных районов следует перепроверять непосредственно перед маршрутом.",
+    "Закрытие сухопутной границы Камбоджа–Таиланд подтверждено на 1 октября 2026 года; дата будущего открытия неизвестна и требует новой проверки перед маршрутом.",
     "Сопоставимый показатель крайней бедности World Bank на текущей country page отсутствует."
   ]
 }

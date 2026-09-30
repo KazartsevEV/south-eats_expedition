@@ -13,8 +13,8 @@ Object-card work is frozen globally until the ten remaining countries pass upper
 | # | Country | Status |
 |---:|---|---|
 | — | PH — Philippines | reference / accepted |
-| 1 | BN — Brunei | active |
-| 2 | KH — Cambodia | queued |
+| 1 | BN — Brunei | complete |
+| 2 | KH — Cambodia | active |
 | 3 | LA — Laos | queued |
 | 4 | ID — Indonesia | queued |
 | 5 | MY — Malaysia | queued |
@@ -28,7 +28,8 @@ Previous geo/profile PRs for BN/KH/LA/ID/MY and other countries are retained as 
 
 ## Acceptance execution
 
-- BN is the active acceptance pass.
+- BN passed the upper-level acceptance gate and post-merge publish.
+- KH is the active acceptance pass.
 - PR #189 carries only upper-level QA docs and Brunei country-level source changes; object payloads are frozen.
 
 ## Scope

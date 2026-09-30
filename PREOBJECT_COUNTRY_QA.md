@@ -263,8 +263,8 @@ build CDN
 ## Текущий статус
 
 - PH — reference / accepted.
-- BN — active.
-- KH — queued.
+- BN — complete (upper-level gate + post-merge publish green).
+- KH — active.
 - LA — queued.
 - ID — queued.
 - MY — queued.

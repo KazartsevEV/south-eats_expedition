@@ -13,20 +13,32 @@
     "geo_ph_0052"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Манила — городское ядро Национального столичного региона и отдельный историко-портовый узел внутри более крупной агломерации Metro Manila. Для экспедиционного справочника её разумно использовать как базу для Intramuros, Binondo, набережной Manila Bay и нижнего течения Pasig, не смешивая город с NCR целиком.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 14.6042,
+    "lon": 120.9822,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=Manila",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:city:manila"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -57,9 +69,44 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_904048",
+      "src_904049"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_904048",
+      "src_904049"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_904048",
+        "src_904049"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на региональный материал NCR и материалы Intramuros Administration; координата — GeoNames."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Metro Manila"
+    ],
+    "source_object_names": []
+  },
+  "history": "Ключевой исторический слой — Intramuros, испанский укреплённый город; его наследие и доступ управляются отдельной Intramuros Administration.",
+  "culture": "В пределах Манилы сосуществуют испано-филиппинское наследие Intramuros, китайско-филиппинский Binondo, религиозные центры Quiapo и современная портовая среда.",
+  "geography": "Город расположен у Манильского залива и нижнего течения реки Pasig; окружающая непрерывная застройка относится уже к нескольким самостоятельным городам NCR.",
+  "climate": {
+    "summary": "Жарко и влажно; сильные ливни и городской сток могут резко замедлять перемещение."
+  },
+  "transport": {
+    "summary": "Для самостоятельной логистики используются LRT, автобусы, jeepney, taxi/ride-hailing и пешие связки по отдельным кластерам; время между районами сильнее зависит от трафика, чем от расстояния."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

@@ -14,20 +14,32 @@
     "geo_ph_0066"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Батангас-Сити — портовый и дорожный узел южной части провинции Батангас. Для экспедиционного планирования его полезно отделять от кальдеры Taal: доступ к вулканическому району строится через другие населённые пункты и зависит от текущего режима PHIVOLCS.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 13.7567,
+    "lon": 121.0584,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=Batangas",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:city:batangas-city"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -58,9 +70,46 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_904070",
+      "src_904068",
+      "src_904069"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_904070",
+      "src_904068",
+      "src_904069"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_904070",
+        "src_904068",
+        "src_904069"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на DOT Batangas/Taal и PHIVOLCS; координата — GeoNames."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Batangas / Taal"
+    ],
+    "source_object_names": []
+  },
+  "culture": "Город относится к более широкому культурному ландшафту Батангаса с католическим наследием, старым городским поясом и сильной морской экономикой.",
+  "geography": "Город расположен на побережье Batangas Bay. Вулканическая система Taal находится севернее во внутренней части провинции, а морские маршруты Anilao/Verde Island используют отдельные базы.",
+  "climate": {
+    "summary": "Жаркий прибрежный климат; морская погода влияет на портовые и островные плечи."
+  },
+  "transport": {
+    "summary": "Батангас-Сити важен как портовый и междугородний узел. Для Taal, Anilao и Verde Island нужны отдельные наземные маршруты и точки отправления; их нельзя описывать городской координатой Батангаса."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

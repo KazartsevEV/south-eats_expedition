@@ -14,20 +14,32 @@
     "geo_ph_0056"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Тагбиларан — городской и морской узел юго-западного Бохоля, удобный для снабжения и разветвления наземных маршрутов по острову. Геосайты Бохоля, Панглао и внутренние карстовые районы должны иметь собственные координаты и точки доступа.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 9.655563,
+    "lon": 123.852187,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=Tagbilaran",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:city:tagbilaran"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -58,9 +70,42 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_904001",
+      "src_904002"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_904001",
+      "src_904002"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_904001",
+        "src_904002"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на UNESCO Global Geopark и Bohol Provincial Tourism Office; координата — GeoNames."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Bohol"
+    ],
+    "source_object_names": []
+  },
+  "geography": "Город расположен на юго-западном побережье Бохоля рядом с морскими проливами и дорожной связью с Панглао; внутренний карстовый рельеф острова начинается за городской зоной.",
+  "climate": {
+    "summary": "Тропический островной климат; сильные ливни могут влиять на низкие прибрежные участки и грунтовые подъезды к внутренним геосайтам."
+  },
+  "transport": {
+    "summary": "Тагбиларан остаётся важным морским и дорожным узлом; воздушный вход на Бохоль теперь связан с аэропортом Bohol-Panglao. По острову используются автобусы, vans, трициклы, мотоциклы и частный транспорт."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

@@ -14,20 +14,32 @@
     "geo_ph_0061"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Сан-Хуан — прибрежный узел на острове Сикихор и удобная база для самостоятельного обхода юго-западной части острова. В экспедиционном слое он нужен как населённый пункт-база, а пляжи, пещеры, водопады и сакральные места должны оставаться отдельными объектами.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 9.1584,
+    "lon": 123.4934,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=San+Juan+Siquijor",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:town:san-juan-siquijor"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -58,9 +70,40 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_904059"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_904059"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_904059"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на DOT Siquijor; координата сверена по GeoNames-картографическому слою."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Siquijor"
+    ],
+    "source_object_names": []
+  },
+  "culture": "Сикихор известен устойчивым пластом местных историй о целительстве, ритуалах и сверхъестественном; такие сюжеты следует маркировать как локальную традицию, а не как подтверждённую историю.",
+  "geography": "Муниципалитет расположен на юго-западном побережье Сикихора; внутренний рельеф острова поднимается от узкой прибрежной полосы к холмам и карстовым участкам.",
+  "climate": {
+    "summary": "Тропический островной климат; состояние моря и ливни влияют на прибрежные дороги и лодочные активности."
+  },
+  "transport": {
+    "summary": "Основная островная логистика строится по кольцевой прибрежной дороге с локальными подъездами во внутренние районы. Для Сан-Хуана характерны короткие наземные плечи, но удалённые объекты требуют собственных точек доступа."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

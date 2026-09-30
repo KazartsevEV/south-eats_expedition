@@ -14,20 +14,32 @@
     "geo_ph_0068"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Думагете — главный городской и снабженческий узел восточного Негроса, откуда удобно строить отдельные наземные плечи к Dauin и лодочную логистику к Apo Island. Сам город не подменяет ни дайв-сайты Dauin, ни островную морскую охраняемую территорию.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 9.30646,
+    "lon": 123.30769,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=Dumaguete",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:city:dumaguete"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -58,9 +70,50 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_904073",
+      "src_905113",
+      "src_905114",
+      "src_905115"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_904073",
+      "src_905113",
+      "src_905114",
+      "src_905115"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_904073",
+        "src_905113",
+        "src_905114",
+        "src_905115"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на DOT Negros Oriental и материалы Silliman/DENR по Apo Island; координата — GeoNames."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Negros Oriental / Dauin / Apo Island"
+    ],
+    "source_object_names": []
+  },
+  "history": "Региональная научная и природоохранная история связана с Silliman University и развитием community-based marine conservation на Apo Island.",
+  "culture": "Для маршрута важна связь городского университетского узла Думагете с прибрежными рыбацкими сообществами и морскими природоохранными инициативами южнее.",
+  "geography": "Город расположен на восточном побережье Negros Oriental; к югу вдоль берега лежит Dauin, а Apo Island находится отдельно в море.",
+  "climate": {
+    "summary": "Тропический морской климат; ветер и sea state определяют надёжность лодочных переходов и подводную видимость."
+  },
+  "transport": {
+    "summary": "Думагете обслуживает основную дорожную и снабженческую логистику восточного Негроса. К Dauin едут по прибрежной дороге, а к Apo Island требуется отдельный трансфер к месту посадки и лодка."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

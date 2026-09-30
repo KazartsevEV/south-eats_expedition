@@ -14,20 +14,32 @@
     "geo_ph_0062"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Баколод — главный городской узел западного Негроса и база для маршрутов по сахарному культурному ландшафту Negros Occidental. Городской профиль следует отделять от вулканического и горного внутреннего Негроса.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 10.6666667,
+    "lon": 122.95,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=Bacolod",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:city:bacolod"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -58,9 +70,44 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_904060",
+      "src_904061"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_904060",
+      "src_904061"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_904060",
+        "src_904061"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на DOT Negros Island Region и Negros Occidental; координата — GeoNames."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Negros"
+    ],
+    "source_object_names": []
+  },
+  "history": "Региональная история западного Негроса тесно связана с сахарной экономикой, hacienda-ландшафтом и архитектурным наследием обеспеченных семей.",
+  "culture": "Баколод и окружающая провинция формируют отдельный городской и сахарно-аграрный культурный слой, отличный от восточного Негроса и морского маршрута Dauin–Apo.",
+  "geography": "Город расположен на западной прибрежной равнине Негроса; к востоку рельеф поднимается к горной и вулканической оси острова.",
+  "climate": {
+    "summary": "Тропический климат; сезонные ливни влияют на сельские дороги и горные направления."
+  },
+  "transport": {
+    "summary": "Баколод служит узлом дорог, портовых и авиационных связей западного Негроса. Для внутренних горных объектов и Kanlaon требуются отдельные базы и проверка вулканических ограничений."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

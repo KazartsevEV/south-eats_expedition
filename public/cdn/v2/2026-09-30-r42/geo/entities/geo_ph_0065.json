@@ -14,20 +14,32 @@
     "geo_ph_0065"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Сан-Хосе — крупный юго-западный транспортный узел Occidental Mindoro и база для наземных маршрутов по южной части провинции. Для Apo Reef он не должен автоматически считаться точкой отправления: официальный морской доступ к рифу организуется через Sablayan.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 12.352748,
+    "lon": 121.067613,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=San+Jose+Occidental+Mindoro",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:town:san-jose-occidental-mindoro"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -58,9 +70,43 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_904067",
+      "src_904066"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_904067",
+      "src_904066"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_904067",
+        "src_904066"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на DOT Occidental Mindoro и официальную справку Apo Reef; координата — GeoNames."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Occidental Mindoro / Apo Reef"
+    ],
+    "source_object_names": []
+  },
+  "geography": "Город расположен на юго-западной прибрежной равнине Миндоро; внутренние районы острова поднимаются к горному хребту и территориям Mangyan communities.",
+  "ethnography": "В Occidental Mindoro живут разные Mangyan communities; конкретные поселения и культурные практики нужно привязывать к подтверждённым локальным узлам, а не к Сан-Хосе в целом.",
+  "climate": {
+    "summary": "Тропический климат; наземная и морская логистика зависит от ливней, ветра и состояния моря."
+  },
+  "transport": {
+    "summary": "Сан-Хосе служит дорожным и авиационным узлом южного Occidental Mindoro. Для Apo Reef нужно отдельно двигаться к Sablayan и бронировать морской доступ по правилам парка; координата Сан-Хосе не заменяет пирс."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

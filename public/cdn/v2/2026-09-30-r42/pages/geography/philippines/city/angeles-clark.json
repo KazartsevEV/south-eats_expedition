@@ -40,20 +40,32 @@
       "geo_ph_0064"
     ],
     "description": {
-      "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+      "narrow": "Анджелес / Кларк — составной городской и транспортный узел Центрального Лусона, используемый как база перед маршрутами к Пинатубо и западным районам региона. Это не одна административная единица: точка на карте служит опорой по Анджелесу, а аэропорт и отдельные jump-off points должны иметь собственные координаты.",
       "body": null
     },
     "cover_media_id": null,
-    "primary_location": null,
+    "primary_location": {
+      "lat": 15.15,
+      "lon": 120.5833,
+      "coordinate_type": "center",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src_910001"
+      ],
+      "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=Angeles",
+      "checked_at": "2026-09-30",
+      "note": "Опорная точка Angeles для составного узла Angeles / Clark; это не координата Clark International Airport и не trailhead Пинатубо."
+    },
     "legacy_ids": [
       "ph:city:angeles-clark"
     ],
     "migration": {
       "source_kind": "formal_hierarchy",
       "axis": "settlement_geography",
-      "status": "formalized"
+      "status": "formalized",
+      "local_reference_status": "migrated_existing_locality_profile"
     },
-    "coverage_role": "structural",
+    "coverage_role": "locality_profile",
     "provenance": {
       "checked_at": "2026-09-30",
       "sources": [
@@ -84,10 +96,54 @@
       "structural_source_refs": [
         "src_906007"
       ],
-      "research_source_refs": [],
+      "research_source_refs": [
+        "src_910001",
+        "src_904063",
+        "src_904064",
+        "src_905106",
+        "src_905108",
+        "src_905109"
+      ],
       "source_refs": [
-        "src_906007"
-      ]
+        "src_906007",
+        "src_910001",
+        "src_904063",
+        "src_904064",
+        "src_905106",
+        "src_905108",
+        "src_905109"
+      ],
+      "locality_profile": {
+        "source_refs": [
+          "src_910001",
+          "src_904063",
+          "src_904064",
+          "src_905106",
+          "src_905108",
+          "src_905109"
+        ],
+        "checked_at": "2026-09-30",
+        "source_refs_complete": true,
+        "note": "Локальный профиль опирается на DOT Central Luzon/Clark и PHIVOLCS; координата — опорный центр Angeles по GeoNames."
+      }
+    },
+    "relations": {
+      "source_region_names": [
+        "Central Luzon / Pinatubo"
+      ],
+      "source_object_names": []
+    },
+    "history": "Современная история территории связана с Clark и последствиями извержения Pinatubo 1991 года, которое радикально изменило ландшафт и инфраструктуру окружающих районов.",
+    "geography": "Узел лежит на равнинной части Central Luzon восточнее вулканической зоны Pinatubo; лахарные долины и горные подходы начинаются дальше к западу.",
+    "ethnography": "Маршруты к Пинатубо проходят через территории, исторически связанные с Aeta/Pinatubo Negrito communities; этот контекст нельзя сводить к туристическому 4x4-подъезду.",
+    "climate": {
+      "summary": "Сухой сезон обычно упрощает наземные подходы; сильные ливни увеличивают риск паводков и лахаров."
+    },
+    "transport": {
+      "summary": "Clark/Angeles удобен как крупная транспортная база, но непосредственные маршруты к Пинатубо начинаются в других jump-off points и зависят от текущих русел, 4x4-доступа и местных правил."
+    },
+    "freshness": {
+      "checked_at": "2026-09-30"
     }
   },
   "notes_ru": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",

@@ -14,20 +14,32 @@
     "geo_ph_0060"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Катбалоган — городской узел западного Самара и практическая база для снабжения перед уходом в более удалённые карстовые и лесные районы острова. Он не подменяет входы в Samar Island Natural Park и пещерные системы.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 11.7752778,
+    "lon": 124.8861111,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=Catbalogan",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:city:catbalogan"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -58,9 +70,46 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_904057",
+      "src_904058",
+      "src_905118"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_904057",
+      "src_904058",
+      "src_905118"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_904057",
+        "src_904058",
+        "src_905118"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на DOT Samar, Samar Island Natural Park и NCCA Waray; координата — GeoNames."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Samar"
+    ],
+    "source_object_names": []
+  },
+  "geography": "Город расположен на западном побережье острова Самар; внутренняя часть острова значительно более расчленена, лесиста и карстова.",
+  "ethnography": "Региональный культурный контекст связан с Waray communities; конкретные локальные практики нужно фиксировать на уровне поселений, а не распространять автоматически на весь остров.",
+  "climate": {
+    "summary": "Очень влажный тропический климат; ливни быстро меняют состояние дорог, рек и карстовых троп."
+  },
+  "transport": {
+    "summary": "Катбалоган связан с основным дорожным коридором Самара; экспедиционные объекты внутри острова требуют отдельных местных дорог, лодок или пеших подходов и собственных trailhead-координат."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

@@ -14,20 +14,32 @@
     "geo_ph_0055"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Сагада — горный поселенческий и маршрутный узел Mountain Province с пещерами, известняковыми ущельями, захоронениями и тропами. Здесь особенно важно отделять сам город от конкретных входов в пещеры и регулируемых маршрутов.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 17.0864,
+    "lon": 120.9067,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=Sagada",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:town:sagada"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -58,9 +70,43 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_000886",
+      "src_000885"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_000886",
+      "src_000885"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_000886",
+        "src_000885"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на Sagada Tourism Office и региональный кордильерский материал; координата — GeoNames."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Cordillera / Ifugao / Sagada"
+    ],
+    "source_object_names": []
+  },
+  "geography": "Сагада расположена в Кордильерах на расчленённом высокогорном рельефе с известняком, пещерами, крутыми склонами и узкими долинами.",
+  "ethnography": "Культурную среду Сагады нельзя автоматически описывать как Ifugao: в районе значимы Kankanaey и другие кордильерские общины.",
+  "climate": {
+    "summary": "Высокогорный климат прохладнее равнин; туман, дождь и мокрый известняк непосредственно влияют на дороги и пещерные маршруты."
+  },
+  "transport": {
+    "summary": "Основной доступ — по извилистым горным дорогам. Для регулируемых пещер и ряда маршрутов действует местная система регистрации и аккредитованных гидов; это требование относится к конкретным активностям, а не ко всему пребыванию в городе."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

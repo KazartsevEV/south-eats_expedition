@@ -14,20 +14,32 @@
     "geo_ph_0054"
   ],
   "description": {
-    "narrow": "Населённый пункт или транспортный хаб; используется как географический узел, а не как объект-достопримечательность.",
+    "narrow": "Банауэ — дорожный и пеший узел Ифугао, от которого расходятся маршруты к нескольким террасным ландшафтам и деревням. Это не синоним всех Rice Terraces of the Philippine Cordilleras: разные кластеры расположены в разных муниципалитетах и требуют отдельных точек доступа.",
     "body": null
   },
   "cover_media_id": null,
-  "primary_location": null,
+  "primary_location": {
+    "lat": 16.9186,
+    "lon": 121.0592,
+    "coordinate_type": "center",
+    "accuracy": "medium",
+    "source_refs": [
+      "src_910001"
+    ],
+    "source_url": "https://www.geonames.org/advanced-search.html?country=PH&q=Banaue",
+    "checked_at": "2026-09-30",
+    "note": "Опорная точка населённого пункта для карты и региональной логистики; не координата достопримечательности."
+  },
   "legacy_ids": [
     "ph:town:banaue"
   ],
   "migration": {
     "source_kind": "formal_hierarchy",
     "axis": "settlement_geography",
-    "status": "formalized"
+    "status": "formalized",
+    "local_reference_status": "migrated_existing_locality_profile"
   },
-  "coverage_role": "structural",
+  "coverage_role": "locality_profile",
   "provenance": {
     "checked_at": "2026-09-30",
     "sources": [
@@ -58,9 +70,40 @@
     "structural_source_refs": [
       "src_906007"
     ],
-    "research_source_refs": [],
+    "research_source_refs": [
+      "src_910001",
+      "src_000885"
+    ],
     "source_refs": [
-      "src_906007"
-    ]
+      "src_906007",
+      "src_910001",
+      "src_000885"
+    ],
+    "locality_profile": {
+      "source_refs": [
+        "src_910001",
+        "src_000885"
+      ],
+      "checked_at": "2026-09-30",
+      "source_refs_complete": true,
+      "note": "Локальный профиль опирается на материалы UNESCO по террасам Кордильер; координата — GeoNames."
+    }
+  },
+  "relations": {
+    "source_region_names": [
+      "Cordillera / Ifugao / Sagada"
+    ],
+    "source_object_names": []
+  },
+  "culture": "Террасы вокруг узла являются частью живого сельскохозяйственного ландшафта, где ирригация, земледелие, ритуальные практики и коллективный уход за полями взаимосвязаны.",
+  "geography": "Поселение находится в горной части Ifugao среди крутых долин и террасированных склонов; дорожные и пешие маршруты быстро набирают и теряют высоту.",
+  "climate": {
+    "summary": "Высокогорье прохладнее низменностей Лусона; туман и дожди ухудшают видимость и состояние троп."
+  },
+  "transport": {
+    "summary": "Банауэ достигается по горным дорогам; дальше к отдельным террасным кластерам используются локальные дороги, трициклы/джипни и пешие маршруты. Конкретный trailhead должен храниться на уровне маршрута или объекта."
+  },
+  "freshness": {
+    "checked_at": "2026-09-30"
   }
 }

@@ -29,42 +29,24 @@
       "geo_bn_0003"
     ],
     "nearest_place_id": null,
-    "nearest_place_name_raw": "Seria",
     "primary_location": {
       "lat": 4.61675,
       "lon": 114.31716,
-      "elevation_m": 4.0,
-      "elevation_range_m": null,
+      "elevation_m": 4,
       "coordinate_type": "entrance",
       "accuracy": "high",
-      "elevation_accuracy": "approximate",
       "source_refs": [
         "src_000421"
       ],
-      "elevation_source_refs": [
-        "src_000488"
-      ],
       "checked_at": "2026-09-28"
     },
-    "geo_points": [],
-    "object_elevation": {
-      "representative_m": 4.0,
-      "min_m": null,
-      "max_m": null,
-      "reference_type": "site",
-      "accuracy": "approximate",
-      "source_refs": [
-        "src_000488"
-      ],
-      "checked_at": "2026-09-28",
-      "notes": "Для точечного памятника высота площадки объекта используется как object_elevation."
-    }
+    "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Монумент отмечает добычу миллиардного барреля нефти на месторождении Сериа в 1991 году. Он работает лучше не как отдельная скульптура, а как финальная точка рассказа о нефтяном городе.",
+        "type": "overview",
+        "text": "Монумент отмечает добычу миллиардного барреля нефти на месторождении Сериа в 1991 году. Он работает лучше не как отдельная скульптура, а как финальная точка рассказа о нефтяном городе.",
         "source_refs": [
           "src_000153",
           "src_000435",
@@ -73,8 +55,8 @@
         ]
       },
       {
-        "section_id": "culture",
-        "content": "Это памятник экономической биографии страны: нефтяная рента изменила инфраструктуру, государственные услуги и международное положение Брунея.",
+        "type": "culture",
+        "text": "Это памятник экономической биографии страны: нефтяная рента изменила инфраструктуру, государственные услуги и международное положение Брунея.",
         "source_refs": [
           "src_000153",
           "src_000435",
@@ -84,8 +66,8 @@
         "migration_note": "Legacy combined section retained under culture until country research splits it."
       },
       {
-        "section_id": "geography",
-        "content": "Стоит почти на берегу Южно-Китайского моря; открытый горизонт даёт сильный закат, но морской ветер ухудшает звук.",
+        "type": "geography",
+        "text": "Стоит почти на берегу Южно-Китайского моря; открытый горизонт даёт сильный закат, но морской ветер ухудшает звук.",
         "source_refs": [
           "src_000153",
           "src_000435",
@@ -98,23 +80,45 @@
   },
   "visit": {
     "entry": {
-      "hours": "Открытая площадка; единый кассовый график не нужен, но местные ограничения/работы проверять.",
-      "ticket": "Свободный доступ к публичной зоне.",
-      "closure_notes": null,
-      "status": null,
-      "official_url": "https://www.bruneitourism.com/places/billionth-barrel-monument/",
-      "notes": "Автомобиль/Dart; объект у побережья, совмещается с oil наследие маршрут.",
+      "access_status": "unknown",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Свободный доступ к публичной зоне.",
+        "source_refs": [
+          "src_000153",
+          "src_000435",
+          "src_000209",
+          "src_000246"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Открытая площадка; единый кассовый график не нужен, но местные ограничения/работы проверять.",
+        "source_refs": [
+          "src_000153",
+          "src_000435",
+          "src_000209",
+          "src_000246"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_000153",
         "src_000435",
         "src_000209",
         "src_000246"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.bruneitourism.com/places/billionth-barrel-monument/",
+      "notes": "Автомобиль/Dart; объект у побережья, совмещается с oil наследие маршрут."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "public_transport"
         ],
@@ -123,20 +127,13 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "проще автомобиль/Dart в Сериа"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
         "modes": [
           "ride_hailing"
         ],
@@ -145,20 +142,13 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Dart из центра Сериа/Kuala Белайт"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
         "modes": [
           "moped"
         ],
@@ -167,20 +157,13 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "удобен по городским дорогам"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
         "modes": [
           "walking"
         ],
@@ -189,14 +172,6 @@
             "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "из центра Сериа примерно 2–4 км"
           }
         ]
@@ -260,10 +235,6 @@
     }
   ],
   "visual_recon": {
-    "photo_suitability_5": 5,
-    "video_suitability_5": 5,
-    "best_time": "последний час до заката + синий час",
-    "best_weather_light": "умеренный ветер; после дождя полезны отражения",
     "viewpoints": [
       {
         "id": "vp_01",
@@ -307,9 +278,10 @@
     ],
     "seasonal_visuals": [],
     "video_activity": [],
-    "useful_equipment": [],
     "drone": "Не запускать над нефтяной инфраструктурой без разрешения.",
-    "filming_restrictions": "Публичную зону снимать можно; производственные объекты — только с разрешения."
+    "useful_equipment": [],
+    "best_time": "последний час до заката + синий час",
+    "best_weather_light": "умеренный ветер; после дождя полезны отражения"
   },
   "media": {
     "cover_id": "med_bn_0c3000d68e7f",

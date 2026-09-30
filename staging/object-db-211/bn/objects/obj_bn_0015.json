@@ -30,50 +30,32 @@
       "geo_bn_0018"
     ],
     "nearest_place_id": "geo_bn_0018",
-    "nearest_place_name_raw": "Бандар-Сери-Бегаван / Джерудонг",
     "primary_location": {
       "lat": 4.9517,
       "lon": 114.8535,
-      "elevation_m": 64.0,
-      "elevation_range_m": null,
+      "elevation_m": 64,
       "coordinate_type": "center",
       "accuracy": "high",
-      "elevation_accuracy": "approximate",
       "source_refs": [
         "src_000138"
       ],
-      "elevation_source_refs": [
-        "src_000486"
-      ],
       "checked_at": "2026-09-28"
     },
-    "geo_points": [],
-    "object_elevation": {
-      "representative_m": null,
-      "min_m": 119.0,
-      "max_m": 143.0,
-      "reference_type": "range",
-      "accuracy": "medium",
-      "source_refs": [
-        "src_000490"
-      ],
-      "checked_at": "2026-09-28",
-      "notes": "Диапазон относится к основному гребню и его высоким точкам и используется как object-level характеристика рельефа; 64 м у primary_location остаётся только point_elevation."
-    }
+    "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Тренировочный лесной парк с серией крутых подъёмов и спусков, популярный у местных. Характер места создаёт ритм холмов, лестниц и леса, а не одна панорамная точка.",
+        "type": "overview",
+        "text": "Тренировочный лесной парк с серией крутых подъёмов и спусков, популярный у местных. Характер места создаёт ритм холмов, лестниц и леса, а не одна панорамная точка.",
         "source_refs": [
           "src_000180",
           "src_000460"
         ]
       },
       {
-        "section_id": "culture",
-        "content": "Утренние и вечерние группы бегунов и хайкеров дают материал о городской культуре активного отдыха.",
+        "type": "culture",
+        "text": "Утренние и вечерние группы бегунов и хайкеров дают материал о городской культуре активного отдыха.",
         "source_refs": [
           "src_000180",
           "src_000460"
@@ -81,8 +63,8 @@
         "migration_note": "Legacy combined section retained under culture until country research splits it."
       },
       {
-        "section_id": "geography",
-        "content": "Рельеф заметно круче, чем кажется по карте; после ливня глинистые и корневые участки становятся скользкими.",
+        "type": "geography",
+        "text": "Рельеф заметно круче, чем кажется по карте; после ливня глинистые и корневые участки становятся скользкими.",
         "source_refs": [
           "src_000180",
           "src_000460"
@@ -93,21 +75,40 @@
   },
   "visit": {
     "entry": {
-      "hours": "Daily 07:30–18:00 per Бруней туризм.",
-      "ticket": "Публичный рекреационный парк; отдельная плата за вход на официальной странице не указана — перед выездом проверить, не изменился ли режим.",
-      "closure_notes": "После сильного дождя крутые участки становятся скользкими; закладывать время на выход до закрытия.",
-      "status": "open/verify",
-      "official_url": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/",
-      "notes": "Короткий автомобильный трансфер из Бандар-Сери-Бегаван в сторону Jerudong; проще всего Dart/такси, автобус — бюджетная альтернатива.",
+      "access_status": "open/verify",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Публичный рекреационный парк; отдельная плата за вход на официальной странице не указана — перед выездом проверить, не изменился ли режим.",
+        "source_refs": [
+          "src_000180",
+          "src_000460"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Daily 07:30–18:00 per Бруней туризм.",
+        "source_refs": [
+          "src_000180",
+          "src_000460"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_000180",
         "src_000460"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/",
+      "closure_notes": "После сильного дождя крутые участки становятся скользкими; закладывать время на выход до закрытия.",
+      "notes": "Короткий автомобильный трансфер из Бандар-Сери-Бегаван в сторону Jerudong; проще всего Dart/такси, автобус — бюджетная альтернатива."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "public_transport"
         ],
@@ -116,20 +117,13 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "для точного старта общественный транспорт неудобен"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
         "modes": [
           "ride_hailing"
         ],
@@ -138,20 +132,13 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Dart до входа; обратный вызов планировать"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
         "modes": [
           "moped"
         ],
@@ -160,20 +147,13 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "оставить на официальной парковке"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
         "modes": [
           "walking"
         ],
@@ -182,14 +162,6 @@
             "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "внутри несколько км с большим набором высоты"
           }
         ]
@@ -247,10 +219,6 @@
     }
   ],
   "visual_recon": {
-    "photo_suitability_5": 5,
-    "video_suitability_5": 4,
-    "best_time": "06:00–09:00",
-    "best_weather_light": "сухое утро после ночного дождя",
     "viewpoints": [
       {
         "id": "vp_01",
@@ -294,9 +262,10 @@
     ],
     "seasonal_visuals": [],
     "video_activity": [],
-    "useful_equipment": [],
     "drone": "Перед запуском проверить авиационные правила Брунея и разрешение администрации парка; не летать над посетителями.",
-    "filming_restrictions": "Обычная ручная съёмка на тропах подходит для личного проекта; организованную/коммерческую съёмку заранее согласовать с администрацией."
+    "useful_equipment": [],
+    "best_time": "06:00–09:00",
+    "best_weather_light": "сухое утро после ночного дождя"
   },
   "media": {
     "cover_id": "med_bn_f8ee0e3ae7ee",

@@ -53,7 +53,8 @@
       "Regional QA pass 2026-09-30: deepened Niah and Mulu using UNESCO World Heritage sources; added Niah 50,000-year archaeological/rainforest interaction record and molong tradition, plus Mulu stratigraphy, karst evolution and protected-area biodiversity.",
       "Language QA 2026-09-30: normalized the new Niah/Mulu narrative text to natural Russian.",
       "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Malaysia; technical schema keys and official proper names remain unchanged.",
-      "Regional QA pass 2026-09-30: deepened Sabah highlands / Kinabalu and Perak / Royal Belum with Sabah Parks and Tourism Malaysia sources; separated geopark, park-HQ, summit, city and forest-water access layers."
+      "Regional QA pass 2026-09-30: deepened Sabah highlands / Kinabalu and Perak / Royal Belum with Sabah Parks and Tourism Malaysia sources; separated geopark, park-HQ, summit, city and forest-water access layers.",
+      "Regional QA pass 2026-09-30: deepened Perhentian / east coast with Tourism Malaysia and Fisheries support; separated Kuala Besut gateway, Besar/Kecil island structure, marine-park ecology and dynamic boat logistics."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -1781,8 +1782,12 @@
         ],
         "last_verified": "2026-09-28",
         "geography": {
-          "summary": "Перхентианские острова лежат у побережья района Бесут в Тренгану; вся самостоятельная логистика завязана на Куала-Бесут и морской переход.",
-          "coast": "Открытое восточное побережье полуострова обращено к Южно-Китайскому морю и значительно сильнее зависит от северо-восточного муссона, чем западное побережье."
+          "summary": "Перхентиан — два основных острова, Perhentian Besar и Perhentian Kecil, примерно в 21 км от побережья Тренгану. Для экспедиционной схемы это отдельный островной узел внутри более широкого east-coast corridor: материковый gateway находится в Kuala Besut, а между бухтами и островами действуют отдельные boat/walk legs.",
+          "coast": "Открытое восточное побережье полуострова обращено к Южно-Китайскому морю и значительно сильнее зависит от северо-восточного муссона, чем западное побережье.",
+          "source_refs": [
+            "src_904114",
+            "src_000601"
+          ]
         },
         "climate": {
           "summary": "На восточном побережье полуострова максимум осадков обычно приходится на ноябрь–январь, а более сухой период — примерно на июнь–июль.",
@@ -1804,8 +1809,11 @@
             "official_source": "официальные таблицы приливов Национального гидрографического центра Малайзии за 2026 год"
           },
           "marine_life": {
-            "summary": "Перхентианские острова связаны с коралловыми рифами, морскими черепахами и другой рифовой фауной; видовой список зависит от острова и участка.",
-            "source_refs": []
+            "summary": "Marine Park охраняет коралловые рифы и рифовую фауну; Tourism Malaysia отдельно отмечает reef fish, black-tip sharks, giant clams и hawksbill turtles. Эти наблюдения относятся к морскому парку в целом и не должны автоматически приписываться каждому beach/snorkel site.",
+            "source_refs": [
+              "src_904114",
+              "src_000601"
+            ]
           },
           "source_refs": [
             "src_000601",
@@ -1835,11 +1843,13 @@
           ]
         },
         "transport": {
-          "gateway": "Куала-Бесут — материковый узел для островов. Департамент рыболовства указывает районное управление в зоне район причала и центр морского парка непосредственно на Перхентианских островах.",
+          "gateway": "Kuala Besut — основной материковый gateway. Tourism Malaysia указывает примерно 20–30 минут лодкой до Perhentian Besar/Kecil из Kuala Besut; это ориентир структуры маршрута, а не гарантированное текущее расписание.",
           "note": "Расписание коммерческих лодок меняется; в этом справочном проходе оно ещё не нормализовано.",
           "source_refs": [
-            "src_000601"
-          ]
+            "src_000601",
+            "src_904114"
+          ],
+          "boat_structure": "После прибытия дальнейший access зависит от конкретной бухты/джетти: часть размещения принимает лодку прямо у пляжа, между отдельными бухтами используются water taxi или пешие тропы. Расписание и стоимость коммерческих лодок должны храниться только с checked_at."
         },
         "local_reference_provenance": {
           "source_ids": [
@@ -1858,16 +1868,18 @@
             "src_000600",
             "src_000606",
             "src_000595",
-            "src_000594"
+            "src_000594",
+            "src_904114"
           ],
           "checked_at": "2026-09-29"
         },
         "name_ru": "Перхентианские острова / восточное побережье",
         "nature": {
-          "marine_habitats": "Перхентианские острова входят в систему морских парков Тренгану; ключевые природные местообитания — коралловые рифы, мелководные прибрежные акватории и островная растительность.",
+          "marine_habitats": "Перхентианские острова входят в систему морских парков Тренгану; ключевой природный слой — коралловые рифы и прибрежные мелководья вокруг двух основных островов. Наземный лесной слой должен описываться отдельно от reef system.",
           "coral_note": "Департамент рыболовства ведёт мониторинг состояния кораллов; в 2024 году Перхентианы входили в число районов, затронутых массовым обесцвечиванием рифов.",
           "source_refs": [
-            "src_000601"
+            "src_000601",
+            "src_904114"
           ],
           "fauna": {
             "status": "Для этого узла отдельный локальный список характерной фауны пока не нормализован; общестрановой список не копируется автоматически."
@@ -12209,6 +12221,22 @@
         "regional_transport",
         "permit_context",
         "belum_temengor"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "MY_PERHENTIAN_TOURISM_OFFICIAL",
+      "canonical_id": "src_904114",
+      "publisher": "Tourism Malaysia — Pulau Perhentian / Islands of Terengganu",
+      "url": "https://ebrochures.malaysia.travel/en/islands-and-beaches/islands-of-terengganu/",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_transport",
+        "regional_marine",
+        "perhentian_besar",
+        "perhentian_kecil",
+        "kuala_besut"
       ],
       "accessed": "2026-09-30"
     }

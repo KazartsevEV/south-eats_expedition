@@ -409,7 +409,9 @@ function countryReferenceHTML(data){
     blocks.push(factCard('Сухопутные границы и соседи',t.borders&&t.borders.value));
     blocks.push(factCard('Международные аэропорты',t.airports&&t.airports.value));
     blocks.push(factCard('Международные авиасвязи',t.international_air_links&&t.international_air_links.value));
-    blocks.push(factCard('Законы и ограничения',t.laws_and_prohibitions&&t.laws_and_prohibitions.value));
+    blocks.push(factCard('Преступления и уголовная ответственность',t.criminal_liability&&t.criminal_liability.value));
+    blocks.push(factCard('Запреты и правовые ограничения',t.laws_and_prohibitions&&t.laws_and_prohibitions.value));
+    blocks.push(factCard('Преступность и безопасность',t.safety_snapshot&&t.safety_snapshot.value));
     blocks.push(factCard('Валюта',t.currency&&t.currency.value));
   }
   var climateNote='';
@@ -649,6 +651,62 @@ function addBaseMap(id,objects,opts){
   return map;
 }
 
+
+async function geoGeometry(full){
+  if(!full||!full.geometry_path)return null;
+  return maybe(CDN+state.release+'/'+String(full.geometry_path).replace(/^\/+/, ''));
+}
+function addRegionMap(id,objects,cc,full,childDetails,opts){
+  opts=opts||{};
+  var el=document.getElementById(id);if(!el||!window.L)return null;
+  var rows=mappedObjects(objects);
+  var map=L.map(el,{zoomControl:true,minZoom:1,worldCopyJump:true});
+  state.mapInstances.push(map);
+  addEnglishVectorBase(map);
+  var pts=[];
+  rows.forEach(function(o){
+    var lat=Number(o.coordinates.lat),lon=Number(o.coordinates.lon);pts.push([lat,lon]);
+    var m=L.circleMarker([lat,lon],{radius:6,weight:2,fillOpacity:.82}).addTo(map);
+    var title=esc(o.title||o.id),cls=esc(o.map_meta||className(o.class_id));
+    var href=o.map_href||('#/object/'+encodeURIComponent(o.id));
+    m.bindTooltip(title,{direction:'top',offset:[0,-5],opacity:.94});
+    m.bindPopup('<div class="popup-title">'+title+'</div><div class="popup-meta">'+cls+'</div><a class="map-link" href="'+esc(href)+'">Открыть →</a>');
+  });
+  (childDetails||[]).forEach(function(ch){
+    if(ch&&validCoord(ch.primary_location)){
+      var p=[Number(ch.primary_location.lat),Number(ch.primary_location.lon)];pts.push(p);
+      var nm=(ch.names&&(ch.names.ru||ch.names.primary))||ch.id;
+      L.circleMarker(p,{radius:5,weight:1,fillOpacity:.55}).addTo(map)
+        .bindTooltip(esc(nm),{direction:'top',offset:[0,-4],opacity:.9});
+    }
+  });
+  Promise.all([geoGeometry(full),countryBoundary(cc)]).then(function(res){
+    var geom=res[0],boundary=res[1];
+    if(geom){
+      L.geoJSON(geom,{style:{color:'#d7ff69',weight:2,opacity:.95,fillOpacity:.05}}).addTo(map);
+      try{var gb=L.geoJSON(geom).getBounds();if(gb&&gb.isValid())map.fitBounds(gb.pad(opts.pad==null?.08:opts.pad),{maxZoom:opts.maxZoom||10});return;}catch(e){}
+    }
+    if(full&&validCoord(full.primary_location)){
+      var p=[Number(full.primary_location.lat),Number(full.primary_location.lon)];
+      L.circleMarker(p,{radius:7,weight:2,fillOpacity:.8}).addTo(map);
+      map.setView(p,opts.singleZoom||9);return;
+    }
+    if(pts.length){
+      if(pts.length===1)map.setView(pts[0],opts.singleZoom||9);
+      else map.fitBounds(L.latLngBounds(pts).pad(opts.pad==null?.18:opts.pad),{maxZoom:opts.maxZoom||10});
+      return;
+    }
+    if(boundary){
+      try{
+        L.geoJSON(boundary,{style:{color:'#647168',weight:1,opacity:.7,fillOpacity:.015},interactive:false}).addTo(map);
+        var b=L.geoJSON(boundary).getBounds();
+        if(b&&b.isValid())map.fitBounds(b.pad(.06),{maxZoom:opts.countryFallbackZoom||6});
+      }catch(e){}
+    }else map.setView([8,110],3);
+  });
+  return map;
+}
+
 function addCountryMap(id,objects,cc,opts){
   opts=opts||{};
   var el=document.getElementById(id);if(!el||!window.L)return null;
@@ -790,7 +848,7 @@ async function renderRegion(id){
     '<div class="country-map" id="regionMap"></div>'+
     '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Достопримечательности этой территории</h2></div></div>'+
     '<div class="object-grid">'+(objs.length?objs.map(objectCard).join(''):'<div class="empty">К этому geo-узлу пока нет привязанных объектов.</div>')+'</div></section>';
-  addBaseMap('regionMap',mapRows,{maxZoom:10,pad:.18,singleZoom:11,emptyMessage:'Для этой территории нет собственного geo anchor и ни одной связанной точки с canonical GPS. Карта не подменяется общим видом ЮВА.'});
+  addRegionMap('regionMap',mapRows,cc,full,childDetails,{maxZoom:10,pad:.18,singleZoom:11,countryFallbackZoom:6});
   bindGo();bindObjectGrid();
   document.querySelectorAll('[data-region]').forEach(function(x){x.onclick=function(){routeTo('#/region/'+x.getAttribute('data-region'))}});
 }

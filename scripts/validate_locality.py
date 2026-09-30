@@ -15,12 +15,12 @@ LOCAL_PROFILE_KEYS = {
     "diseases",
 }
 LOCAL_CLIMATE_KEYS = {
-    "sea_temp_mean_c_by_month",
     "tides",
     "marine",
 }
-REGION_REQUIRED_KEYS = ("geography", "climate", "health", "safety", "transport")
-LOCALITY_REQUIRED_KEYS = ("geography", "climate", "transport", "primary_location")
+REGION_REQUIRED_KEYS = ("geography", "climate", "transport")
+LOCALITY_REQUIRED_KEYS = ()
+VALID_COVERAGE_ROLES = {"structural", "regional_profile", "locality_profile"}
 
 
 def load(path: Path):
@@ -80,6 +80,15 @@ for path in climate_paths:
                 "field": ".".join(key_path),
             })
 
+    data = value.get("data") or {}
+    sea_series = data.get("sea_temp_mean_c_by_month")
+    if has_value(sea_series) and not has_value(data.get("reference_location")):
+        findings.append({
+            "file": path.relative_to(release).as_posix(),
+            "field": "data.sea_temp_mean_c_by_month",
+            "reason": "country-level monthly sea series must be explicitly scoped by data.reference_location",
+        })
+
 geo_gaps = []
 geo_index = load(release / "geo" / "index.json")
 for row in geo_index.get("entities", []):
@@ -94,19 +103,44 @@ for row in geo_index.get("entities", []):
         continue
 
     entity = load(release / row["path"])
-    country_id = f"geo_{code}"
-    is_region = entity.get("parent_id") == country_id
-    required = REGION_REQUIRED_KEYS if is_region else LOCALITY_REQUIRED_KEYS
-    missing = [key for key in required if not has_value(entity.get(key))]
+    role = entity.get("coverage_role") or "structural"
+    missing = []
 
-    refs = ((entity.get("provenance") or {}).get("source_refs") or [])
+    if role not in VALID_COVERAGE_ROLES:
+        missing.append("coverage_role")
+        required = ()
+    elif role == "regional_profile":
+        required = REGION_REQUIRED_KEYS
+    elif role == "locality_profile":
+        required = LOCALITY_REQUIRED_KEYS
+    else:
+        required = ()
+
+    missing.extend(key for key in required if not has_value(entity.get(key)))
+
+    provenance = entity.get("provenance") or {}
+    refs = provenance.get("source_refs") or []
+    research_refs = provenance.get("research_source_refs") or []
     if not refs:
         missing.append("provenance.source_refs")
+    if not has_value(provenance.get("checked_at")):
+        missing.append("provenance.checked_at")
 
-    if not is_region:
-        climate = entity.get("climate") or {}
-        if not has_value(climate.get("annual_reference")) and not has_value(climate.get("annual_reference_status")):
-            missing.append("climate.annual_reference_or_status")
+    description = entity.get("description") or {}
+    if role in {"regional_profile", "locality_profile"}:
+        if not research_refs:
+            missing.append("provenance.research_source_refs")
+        if not has_value(description.get("narrow")):
+            missing.append("description.narrow")
+        if not has_value((entity.get("freshness") or {}).get("checked_at")):
+            missing.append("freshness.checked_at")
+
+    if role == "locality_profile":
+        primary = entity.get("primary_location")
+        location_status = entity.get("primary_location_status") or {}
+        if not has_value(primary):
+            if location_status.get("status") not in {"unresolved", "not_applicable"} or not has_value(location_status.get("reason")):
+                missing.append("primary_location_or_explicit_status")
 
     if missing:
         geo_gaps.append({
@@ -114,7 +148,7 @@ for row in geo_index.get("entities", []):
             "name": (entity.get("names") or {}).get("primary"),
             "kind": entity.get("kind"),
             "parent_id": entity.get("parent_id"),
-            "level": "region" if is_region else "locality",
+            "coverage_role": role,
             "missing": missing,
         })
 
@@ -133,12 +167,25 @@ result = {
     "geo_coverage_gaps": len(geo_gaps),
     "geo_gaps": geo_gaps,
     "rules": {
-        "ownership": "country=macro context and non-localized country hazard inventories; geo=local climate/nature/safety occurrence and route-level relevance",
-        "region_required": list(REGION_REQUIRED_KEYS) + ["provenance.source_refs"],
-        "locality_required": list(LOCALITY_REQUIRED_KEYS) + [
-            "provenance.source_refs",
-            "climate.annual_reference_or_status",
-        ],
+        "ownership": "country=macro climate context plus explicitly scoped reference-location series; geo=regional/local climate, nature, safety occurrence and route-level relevance",
+        "coverage_roles": {
+            "structural": ["provenance.source_refs", "provenance.checked_at"],
+            "regional_profile": list(REGION_REQUIRED_KEYS) + [
+                "description.narrow",
+                "provenance.source_refs",
+                "provenance.research_source_refs",
+                "provenance.checked_at",
+                "freshness.checked_at",
+            ],
+            "locality_profile": [
+                "description.narrow",
+                "primary_location_or_explicit_status",
+                "provenance.source_refs",
+                "provenance.research_source_refs",
+                "provenance.checked_at",
+                "freshness.checked_at",
+            ],
+        },
     },
 }
 print(json.dumps(result, ensure_ascii=False, indent=2))

@@ -6,7 +6,9 @@
     "status": "regional_geography_standardized",
     "checked_at": "2026-09-30",
     "next_level": "country_profile_and_regional_qa_before_object_cards",
-    "canonical_id_policy": "Stable geo IDs reuse legacy regional IDs where identity is equivalent; newly distinguished physical/admin nodes receive new permanent IDs."
+    "canonical_id_policy": "Stable geo IDs reuse legacy regional IDs where identity is equivalent; newly distinguished physical/admin nodes receive new permanent IDs.",
+    "canonical_source_id": "src_906001",
+    "qa_contract": "geo_profile_roles_v1"
   },
   "rules": {
     "parentage": "Only documented administrative containment is encoded as hierarchy.",
@@ -124,7 +126,7 @@
     },
     {
       "id": "bn:mukim:kota-batu",
-      "kind": "mukim",
+      "kind": "district",
       "name_ru": "Кота-Бату",
       "name_local": "Mukim Kota Batu",
       "slug": "kota-batu",
@@ -134,11 +136,12 @@
       ],
       "notes_ru": "Malay Technology Museum расположен в Kota Batu; Mukim Kota Batu подтверждён официальной судебной зональной схемой. Точная kampung-привязка музея пока не зафиксирована.",
       "axis": "administrative",
-      "canonical_id": "geo_bn_0014"
+      "canonical_id": "geo_bn_0014",
+      "local_admin_type": "mukim"
     },
     {
       "id": "bn:river:brunei",
-      "kind": "river",
+      "kind": "geographic_area",
       "name_ru": "Река Бруней",
       "name_local": "Sungai Brunei / Brunei River",
       "slug": "brunei-river",
@@ -148,11 +151,12 @@
       ],
       "notes_ru": "Природная географическая сущность для речных и мангровых объектов; не является административным уровнем.",
       "axis": "physical_geography",
-      "canonical_id": "geo_bn_0015"
+      "canonical_id": "geo_bn_0015",
+      "physical_feature_type": "river"
     },
     {
       "id": "bn:mukim:kianggeh",
-      "kind": "mukim",
+      "kind": "district",
       "axis": "administrative",
       "name_ru": "Кианггех",
       "name_local": "Mukim Kianggeh",
@@ -163,11 +167,12 @@
         "bn:tamu-kianggeh"
       ],
       "notes_ru": "Tasek Lama и Kampung Kianggeh перечислены внутри Mukim Kianggeh в актуальной государственной зональной схеме; Tamu Kianggeh официально описывается как объект Mukim Kianggeh.",
-      "canonical_id": "geo_bn_0016"
+      "canonical_id": "geo_bn_0016",
+      "local_admin_type": "mukim"
     },
     {
       "id": "bn:mukim:sengkurong",
-      "kind": "mukim",
+      "kind": "district",
       "axis": "administrative",
       "name_ru": "Сенгкуронг",
       "name_local": "Mukim Sengkurong",
@@ -175,7 +180,8 @@
       "parent_id": "bn:district:brunei-muara",
       "object_ids": [],
       "notes_ru": "Административный узел введён для подтверждённой дочерней деревни Jerudong и связанных объектов.",
-      "canonical_id": "geo_bn_0017"
+      "canonical_id": "geo_bn_0017",
+      "local_admin_type": "mukim"
     },
     {
       "id": "bn:village:jerudong",

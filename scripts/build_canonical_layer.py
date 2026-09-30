@@ -127,6 +127,23 @@ def dump(path: Path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def collect_source_refs(value):
+    refs = []
+
+    def walk(node):
+        if isinstance(node, dict):
+            for key, child in node.items():
+                if key == "source_refs" and isinstance(child, list):
+                    refs.extend(item for item in child if isinstance(item, str) and item)
+                walk(child)
+        elif isinstance(node, list):
+            for child in node:
+                walk(child)
+
+    walk(value)
+    return list(dict.fromkeys(refs))
+
+
 def file_entry(path: Path, release: Path):
     payload = path.read_bytes()
     return {
@@ -512,6 +529,22 @@ def build():
                 entity["migration"]["local_reference_status"] = "migrated_existing_locality_profile"
             else:
                 entity["migration"]["local_reference_status"] = "locality_linkage_migrated"
+        local_profile_payload = (locality_profile or {}).get("profile") or {}
+        if locality_profile and (local_profile_payload or locality_profile.get("primary_location")):
+            entity["coverage_role"] = "locality_profile"
+        elif region_profile:
+            entity["coverage_role"] = "regional_profile"
+        else:
+            entity["coverage_role"] = "structural"
+        if entity["coverage_role"] == "locality_profile" and not entity.get("primary_location"):
+            entity["primary_location_status"] = {
+                "status": "unresolved",
+                "reason": "No reliable locality coordinate is stored in the canonical research layer; parent or object coordinates must not be substituted.",
+            }
+        entity.setdefault("provenance", {})
+        entity["provenance"]["source_refs"] = list(dict.fromkeys(
+            (entity["provenance"].get("source_refs") or []) + collect_source_refs(entity)
+        ))
         geo_entities[geo_id] = entity
         canonical_geo_ids_by_country[code].append(geo_id)
         place_id_by_country_name_kind[(code, place.get("name"), place.get("kind"))] = geo_id
@@ -569,6 +602,18 @@ def build():
             if profile.get("provenance"):
                 entity["provenance"] = profile.get("provenance")
                 entity["freshness"] = {"checked_at": (profile.get("provenance") or {}).get("checked_at")}
+            entity["coverage_role"] = "locality_profile" if (profile or locality.get("primary_location")) else "structural"
+            if entity["coverage_role"] == "locality_profile" and not entity.get("primary_location"):
+                entity["primary_location_status"] = {
+                    "status": "unresolved",
+                    "reason": "No reliable locality coordinate is stored in the canonical research layer; parent or object coordinates must not be substituted.",
+                }
+            entity.setdefault("provenance", {})
+            entity["provenance"]["source_refs"] = list(dict.fromkeys(
+                (entity["provenance"].get("structural_source_refs") or [])
+                + (entity["provenance"].get("research_source_refs") or [])
+                + (entity["provenance"].get("source_refs") or [])
+            ))
             geo_entities[geo_id] = entity
             canonical_geo_ids_by_country[code].append(geo_id)
             place_id_by_country_name_kind[(code, name, "city_or_route_hub")] = geo_id
@@ -647,7 +692,16 @@ def build():
                 "primary_location": node.get("primary_location"),
                 "legacy_ids": [node_id],
                 "migration": {"source_kind": "formal_hierarchy", "axis": node.get("axis"), "status": "formalized"},
-                "provenance": {"checked_at": (doc.get("meta") or {}).get("checked_at"), "sources": doc.get("sources") or []},
+                "coverage_role": "structural",
+                "provenance": {
+                    "checked_at": (doc.get("meta") or {}).get("checked_at"),
+                    "sources": doc.get("sources") or [],
+                    "structural_source_refs": [((doc.get("meta") or {}).get("canonical_source_id"))]
+                    if (doc.get("meta") or {}).get("canonical_source_id") else [],
+                    "research_source_refs": [],
+                    "source_refs": [((doc.get("meta") or {}).get("canonical_source_id"))]
+                    if (doc.get("meta") or {}).get("canonical_source_id") else [],
+                },
             }
 
             # A formal hierarchy must not discard already researched regional/locality content.
@@ -684,14 +738,24 @@ def build():
                     if region_profile.get(field) not in (None, "", [], {}):
                         entity[field] = region_profile.get(field)
                 local_prov = region_profile.get("local_reference_provenance") or {}
-                region_source_refs = list(dict.fromkeys((local_prov.get("source_refs") or []) + (region_profile.get("source_refs") or [])))
+                region_source_refs = list(dict.fromkeys(
+                    (local_prov.get("source_refs") or [])
+                    + (region_profile.get("source_refs") or [])
+                    + collect_source_refs(region_profile)
+                ))
+                structural_refs = entity["provenance"].get("structural_source_refs") or []
                 entity["provenance"].update({
                     "source_urls": region_profile.get("language_source_urls") or [],
-                    "source_refs": region_source_refs,
+                    "research_source_refs": region_source_refs,
+                    "source_refs": list(dict.fromkeys(structural_refs + region_source_refs)),
                     "research_checked_at": local_prov.get("checked_at") or region_profile.get("last_verified"),
                 })
                 entity["freshness"] = {"checked_at": local_prov.get("checked_at") or region_profile.get("last_verified")}
-                entity["migration"]["regional_content_status"] = "migrated_existing_region_profile"
+                entity["migration"]["regional_content_status"] = (
+                    "migrated_existing_region_profile"
+                    if region_source_refs else "migrated_region_profile_requires_source_normalization"
+                )
+                entity["coverage_role"] = "regional_profile" if region_source_refs else "structural"
 
             if locality_profile:
                 entity["primary_location"] = locality_profile.get("primary_location")
@@ -706,14 +770,39 @@ def build():
                     if profile.get(field) not in (None, "", [], {}):
                         entity[field] = profile.get(field)
                 profile_prov = profile.get("provenance") or {}
+                locality_source_refs = list(dict.fromkeys(
+                    (profile_prov.get("source_refs") or []) + collect_source_refs(profile)
+                ))
                 if profile_prov:
                     entity["provenance"]["locality_profile"] = profile_prov
-                    if profile_prov.get("source_refs"):
-                        entity["provenance"]["source_refs"] = list(profile_prov.get("source_refs") or [])
                     if profile_prov.get("checked_at"):
                         entity["freshness"] = {"checked_at": profile_prov.get("checked_at")}
-                entity["migration"]["local_reference_status"] = "migrated_existing_locality_profile"
+                existing_research_refs = entity["provenance"].get("research_source_refs") or []
+                entity["provenance"]["research_source_refs"] = list(dict.fromkeys(
+                    existing_research_refs + locality_source_refs
+                ))
+                entity["provenance"]["source_refs"] = list(dict.fromkeys(
+                    (entity["provenance"].get("structural_source_refs") or [])
+                    + entity["provenance"]["research_source_refs"]
+                ))
+                entity["migration"]["local_reference_status"] = (
+                    "migrated_existing_locality_profile"
+                    if locality_source_refs else "migrated_locality_profile_requires_source_normalization"
+                )
+                if (profile or locality_profile.get("primary_location")) and locality_source_refs:
+                    entity["coverage_role"] = "locality_profile"
+                elif profile or locality_profile.get("primary_location"):
+                    entity["coverage_role"] = "structural"
 
+            if entity.get("coverage_role") == "locality_profile" and not entity.get("primary_location"):
+                entity["primary_location_status"] = node.get("primary_location_status") or {
+                    "status": "unresolved",
+                    "reason": "No reliable locality coordinate is stored in the canonical research layer; parent or object coordinates must not be substituted.",
+                }
+            entity.setdefault("provenance", {})
+            entity["provenance"]["source_refs"] = list(dict.fromkeys(
+                (entity["provenance"].get("source_refs") or []) + collect_source_refs(entity)
+            ))
             geo_entities[geo_id] = entity
             canonical_geo_ids_by_country[code].append(geo_id)
             for old_object_id in node.get("object_ids") or []:
@@ -797,6 +886,35 @@ def build():
                 })
                 canonical_source_ids.add(source_id)
             country_source_ids_by_code[code][short_id] = source_id
+
+    for code, doc in sorted(formal_hierarchy.items()):
+        meta = doc.get("meta") or {}
+        source_id = meta.get("canonical_source_id")
+        if not source_id:
+            raise RuntimeError(f"{code}: formal hierarchy missing meta.canonical_source_id")
+        if source_id in canonical_source_ids:
+            raise RuntimeError(f"{code}: duplicate formal hierarchy canonical source ID {source_id}")
+        dump(release / "sources" / f"{source_id}.json", {
+            "id": source_id,
+            "type": "project_material",
+            "title": f"Formal geography hierarchy — {meta.get('country_slug') or code.lower()}",
+            "publisher": "Expedition South East",
+            "url": None,
+            "language": "ru",
+            "published_at": None,
+            "accessed_at": meta.get("checked_at"),
+            "authority": "high",
+            "used_for": [
+                "canonical geo identity",
+                "parentage and geo_path",
+                "formal administrative and physical-geography node normalization",
+            ],
+            "notes": "Project research source compiled from the official and specialist references embedded in the country hierarchy document.",
+            "references": doc.get("sources") or [],
+            "referenced_by": [],
+            "legacy_ids": [f"hierarchy:{code.lower()}"],
+        })
+        canonical_source_ids.add(source_id)
 
     # Canonical lodging copies use persistent IDs and country-code paths.
     canonical_lodging_ids = set()

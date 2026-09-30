@@ -71,7 +71,9 @@ jobs:
           cp -a public/cdn/v2 /tmp/expedition-cdn-v2
           python scripts/build_expedition_layers.py /tmp/expedition-cdn-v2
           python scripts/validate_maps.py /tmp/expedition-cdn-v2
-          python scripts/validate_locality.py public/cdn/v2 --country my --strict --strict-geo
+          for cc in bn kh la id my mm ph sg th tl vn; do
+            python scripts/validate_locality.py public/cdn/v2 --country "$cc" --strict --strict-geo
+          done
 
       - name: Publish generated CDN from latest main
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

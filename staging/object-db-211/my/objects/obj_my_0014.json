@@ -44,14 +44,16 @@
     },
     "geo_points": [],
     "object_elevation": {
-      "representative_m": null,
+      "representative_m": 152,
       "min_m": null,
       "max_m": null,
-      "reference_type": null,
-      "accuracy": "unknown",
-      "source_refs": [],
-      "checked_at": null,
-      "notes": null
+      "reference_type": "site",
+      "accuracy": "medium",
+      "source_refs": [
+        "src_stage_my_0219"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Картографическая отметка археологической/пещерной точки Niah; не высота всего массива Gunung Subis."
     }
   },
   "narrative": {
@@ -259,31 +261,70 @@
     }
   ],
   "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_niah_entrance",
+        "name": "Вход в комплекс Niah Caves",
+        "coordinates": {
+          "lat": 3.81673,
+          "lon": 113.78144,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "3.816730, 113.781440"
+        },
+        "access": {
+          "walk_km": null
+        },
+        "view": {
+          "description": "Карстовая стенка и масштаб входной части пещерного комплекса перед переходом внутрь Great Cave."
+        },
+        "best_time": "morning / afternoon",
+        "best_weather_light": "Яркий внешний свет лучше отделяет глубину тёмного входа и фактуру известняка.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для масштаба пещерного входа и лесной кромки"
+          },
+          {
+            "type": "standard",
+            "why": "для археологических и карстовых деталей"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0218"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Во влажный период лес и известняк насыщеннее, но настилы и тропы могут быть мокрыми; внутри пещеры внешняя погода влияет прежде всего на контраст у входов."
+    ],
+    "video_activity": [
+      "переход по настилам через лес к пещерам",
+      "птицы и летучие мыши у пещерных входов при разрешённых условиях"
+    ],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска."
+        "археологический национальный парк не считать зоной свободного запуска; требуется отдельная проверка правил Sarawak Forestry и авиационных норм"
       ],
-      "source_refs": [
-        "src_stage_my_0052",
-        "src_stage_my_0053",
-        "src_stage_my_0002",
-        "src_stage_my_0054",
-        "src_stage_my_0023",
-        "src_stage_my_0055",
-        "src_stage_my_0056",
-        "src_stage_my_0057"
-      ],
-      "checked_at": "2026-09-28"
+      "source_refs": [],
+      "checked_at": "2026-09-30"
     },
-    "useful_equipment": [],
-    "best_time": "Вход Great Cave — когда яркий внешний свет формирует масштабный контраст; лес — утром или после дождя.",
-    "best_weather_light": null
+    "useful_equipment": [
+      {
+        "type": "ultra_wide",
+        "why": "для крупных пещерных объёмов"
+      },
+      {
+        "type": "standard",
+        "why": "для археологических деталей и человеческого масштаба"
+      }
+    ],
+    "best_time": "morning / afternoon",
+    "best_weather_light": "Сильный внешний свет у входов, равномерное освещение леса после дождя."
   },
   "media": {
     "cover_id": null,
@@ -366,14 +407,14 @@
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

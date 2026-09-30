@@ -52,7 +52,8 @@
       "Regional QA pass 2026-09-30: normalized Bario/Kelabit Highlands, Kudat/Rungus north Sabah and Sandakan/Sepilok using existing Sarawak/Sabah tourism and park sources; separated highland village, coastal, forest, river and island gateway logistics.",
       "Regional QA pass 2026-09-30: deepened Niah and Mulu using UNESCO World Heritage sources; added Niah 50,000-year archaeological/rainforest interaction record and molong tradition, plus Mulu stratigraphy, karst evolution and protected-area biodiversity.",
       "Language QA 2026-09-30: normalized the new Niah/Mulu narrative text to natural Russian.",
-      "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Malaysia; technical schema keys and official proper names remain unchanged."
+      "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Malaysia; technical schema keys and official proper names remain unchanged.",
+      "Regional QA pass 2026-09-30: deepened Sabah highlands / Kinabalu and Perak / Royal Belum with Sabah Parks and Tourism Malaysia sources; separated geopark, park-HQ, summit, city and forest-water access layers."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -860,22 +861,24 @@
         ],
         "last_verified": "2026-09-28",
         "geography": {
-          "summary": "Горный район северо-западного Сабаха вокруг Ранау, Кундасанга и массива Кинабалу. Высота здесь меняет температуру, облачность и условия доступа намного сильнее, чем на низменном побережье.",
+          "summary": "Высокогорный северо-запад Сабаха образует связанную систему вокруг массива Кинабалу, северной части хребта Крокер и долин Ranau/Kota Belud. Официальный Kinabalu UNESCO Global Geopark охватывает около 4 750 км² в Kota Belud, Kota Marudu и части Ranau; Kinabalu Park составляет его природоохранное ядро, но не весь геопарк.",
           "source_refs": [
-            "src_000608"
+            "src_904106"
           ]
         },
         "relief": {
           "summit_m": 4095.2,
-          "summary": "Гора Кинабалу достигает 4095,2 м. В пределах одного района сменяются предгорные леса, высокогорные склоны и вершина с условиями, резко отличающимися от прибрежного Сабаха.",
+          "summary": "Mount Kinabalu поднимается до 4 095 м, а парк охватывает резкий высотный градиент от тропических низменностей к montane и sub-alpine belts. Sabah Parks отдельно указывает Park Headquarters примерно на 1 520 м, поэтому park HQ, summit trail и внешние highland communities нельзя смешивать в одну координату.",
           "source_refs": [
-            "src_000608"
+            "src_904106",
+            "src_904107"
           ]
         },
         "geology": {
-          "summary": "Геопарк Кинабалу включает ультраосновные породы, гранитные интрузии и складчато-разломанные осадочные толщи района Ранау–Тамбунан; горячие источники Поринг входят в тот же геологический контекст.",
+          "summary": "Геология региона включает древнюю океаническую кору возрастом около 130 млн лет, молодой гранитоидный массив Кинабалу возрастом примерно 7–8 млн лет и следы позднеплейстоценового оледенения у вершины. Геопарк фиксирует 46 geosites; конкретные обнажения должны существовать как отдельные объекты.",
           "source_refs": [
-            "src_000609"
+            "src_904106",
+            "src_904107"
           ]
         },
         "climate": {
@@ -893,7 +896,7 @@
             "note": "Из-за сильной высотной зональности нельзя переносить сюда единый общестрановой список опасных животных без локальной и высотной привязки."
           },
           "source_refs": [
-            "src_000608"
+            "src_904107"
           ],
           "flora": {
             "summary": "В парке отмечены 711 видов орхидей, 621 вид папоротников, 27 видов рододендронов, 9 видов непентовых (Nepenthaceae), 2 вида раффлезии и множество других высокогорных растений.",
@@ -916,7 +919,8 @@
           },
           "poisonous_plants": {
             "status": "Надёжная локальная привязка токсичных растений к этому узлу пока не подтверждена отдельным источником; общестрановой список не переносится автоматически."
-          }
+          },
+          "summary": "Kinabalu Park — один из ключевых центров растительного эндемизма Борнео. Sabah Parks описывает тысячи сосудистых растений, сотни орхидей и папоротников и более 100 видов млекопитающих; для региональной карточки важнее высотная смена habitat zones, чем перенос длинного species-list на каждый маршрут."
         },
         "health": {
           "dengue_reference_2022": {
@@ -943,8 +947,11 @@
         "transport": {
           "mount_kinabalu": "Для восхождения на Кинабалу в 2026 году Управление парков Сабаха требует предварительного онлайн-бронирования; выйти на вершину без оформления нельзя.",
           "source_refs": [
-            "src_000608"
-          ]
+            "src_000608",
+            "src_904106",
+            "src_904107"
+          ],
+          "summary": "Главный наземный коридор идёт из Kota Kinabalu через Kundasang/Ranau к Park Headquarters, но geopark и highland villages распределены по трём районам. Park HQ — только один access node; Poring, Mesilau, Kota Belud-side geosites и отдельные villages требуют самостоятельных road legs."
         },
         "local_reference_provenance": {
           "source_ids": [
@@ -963,7 +970,9 @@
             "src_000609",
             "src_000595",
             "src_000617",
-            "src_000594"
+            "src_000594",
+            "src_904106",
+            "src_904107"
           ],
           "checked_at": "2026-09-29"
         },
@@ -1907,8 +1916,11 @@
         ],
         "last_verified": "2026-09-28",
         "geography": {
-          "summary": "Регион тянется от очень влажной западной части Перака через долины и города к горному Хулу-Пераку и Белум–Теменгору у границы с Таиландом. Климат, рельеф и доступ внутри него заметно различаются.",
-          "hydrography": "Ройал-Белум связан с крупным водохранилищем Теменгор; доступ ко многим внутренним точкам идёт по воде."
+          "summary": "Регион объединяет западную равнину Perak с Taiping/Kuala Kangsar и крупный лесной массив Belum–Temengor у тайской границы. Это два разных экспедиционных контура: историко-городской запад и удалённый лесо-озёрный северо-восток вокруг Tasik Temengor.",
+          "hydrography": "Ройал-Белум связан с крупным водохранилищем Теменгор; доступ ко многим внутренним точкам идёт по воде.",
+          "source_refs": [
+            "src_904108"
+          ]
         },
         "climate": {
           "summary": "Западная часть Перака имеет типичный для западного побережья полуострова режим осадков, тогда как внутренние горные районы сильно зависят от рельефа. Для Тайпинга и Белума нельзя использовать один помесячный климатический ряд.",
@@ -1937,7 +1949,8 @@
           "flora": "Материалы Ройал-Белум отмечают раффлезии и очень высокое биоразнообразие дождевого леса.",
           "source_refs": [
             "src_000605",
-            "src_000604"
+            "src_000604",
+            "src_904108"
           ],
           "dangerous_animals": {
             "summary": "В Ройал-Белум присутствует крупная дикая фауна, включая азиатского слона, малайского тигра и медведя; риск требует соблюдения правил парка и местной навигации.",
@@ -1955,7 +1968,8 @@
             "малайский медведь",
             "белорукий гиббон",
             "калао"
-          ]
+          ],
+          "summary": "Royal Belum State Park занимает около 117 500 га внутри Belum–Temengor Forest Complex и сохраняет крупный низкогорный тропический лес с редкой мегафауной и богатой орнитофауной. Для базы Royal Belum должен быть отделён от городской части Perak и от более широкого Belum–Temengor landscape."
         },
         "health": {
           "dengue_reference_2022": {
@@ -1975,15 +1989,19 @@
           "wilderness": "В Белуме практический профиль риска отличается от городов Тайпинг и Куала-Кангсар: связь, лодочная логистика, погода и правила парка важнее городской статистики преступности.",
           "source_refs": [
             "src_000594",
-            "src_000604"
-          ]
+            "src_000604",
+            "src_904108"
+          ],
+          "operational_context": "Royal Belum — удалённая лесо-водная система, где маршрут зависит от boat access и разрешений. Для конкретного trail/jetty нельзя подменять фактические access rules общим описанием штата; разрешение и доступность должны проверяться перед выездом."
         },
         "transport": {
           "royal_belum": "Управление парков штата Перак указывает Герик как основной сухопутный узел, а общественный причал Пулау-Бандинг — как точку входа; дальше перемещение по Ройал-Белум идёт в основном по воде.",
           "fuel": "Официальная страница парка отдельно предупреждает, что Герик — последняя надёжная точка заправки перед дорогой Восток—Запад в сторону Бандинга.",
           "source_refs": [
-            "src_000604"
-          ]
+            "src_000604",
+            "src_904108"
+          ],
+          "summary": "Практический доступ к Royal Belum строится через Gerik/Banding и далее через jetty/houseboat or speedboat legs. Официальные tourism materials включают travel permit для Royal Belum, что важно как реальное правило доступа: permit должен храниться в dynamic visit/rules layer, а не как вечное текстовое свойство региона."
         },
         "local_reference_provenance": {
           "source_ids": [
@@ -2000,7 +2018,8 @@
             "src_000605",
             "src_000604",
             "src_000595",
-            "src_000594"
+            "src_000594",
+            "src_904108"
           ],
           "checked_at": "2026-09-29"
         },
@@ -12146,6 +12165,50 @@
         "regional_hydrology",
         "regional_nature",
         "karst"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "MY_KINABALU_GEOPARK_OFFICIAL",
+      "canonical_id": "src_904106",
+      "publisher": "Sabah Parks — Kinabalu UNESCO Global Geopark",
+      "url": "https://kinabalugeopark.sabahparks.org.my/",
+      "kind": "park_authority",
+      "used_for": [
+        "regional_geography",
+        "regional_geology",
+        "regional_relief",
+        "geosites",
+        "regional_transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "MY_KINABALU_PARK_OFFICIAL",
+      "canonical_id": "src_904107",
+      "publisher": "Sabah Parks — Kinabalu Park",
+      "url": "https://www.sabahparks.org.my/kinabalu-park",
+      "kind": "park_authority",
+      "used_for": [
+        "regional_relief",
+        "regional_nature",
+        "park_headquarters",
+        "regional_transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "MY_ROYAL_BELUM_TOURISM",
+      "canonical_id": "src_904108",
+      "publisher": "Tourism Malaysia — Royal Belum State Park",
+      "url": "https://www.malaysia.travel/explore/royal-belum-state-park",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_nature",
+        "regional_transport",
+        "permit_context",
+        "belum_temengor"
       ],
       "accessed": "2026-09-30"
     }

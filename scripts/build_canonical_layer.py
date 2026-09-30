@@ -1308,7 +1308,6 @@ def build():
         dump(release / "countries" / code.lower() / "travel-rules.json", {
             "country_id": f"geo_{code.lower()}",
             "visa": wrap_dynamic(travel.get("visa_for_russian_passport"), checked_at, visa_refs),
-            "visa_run": wrap_dynamic(((travel.get("visa_for_russian_passport") or {}).get("visa_run")), checked_at, visa_refs),
             "borders": wrap_dynamic(travel.get("land_borders"), checked_at, border_refs),
             "airports": wrap_dynamic(travel.get("airports"), checked_at, airport_refs),
             "international_air_links": wrap_dynamic(travel.get("international_air_links"), checked_at, air_link_refs),

@@ -30,20 +30,20 @@
       "lon": null,
       "elevation_m": null,
       "elevation_range_m": null,
-      "coordinate_type": null,
+      "coordinate_type": "center",
       "accuracy": "unknown",
       "elevation_accuracy": "unknown",
       "source_refs": [],
       "elevation_source_refs": [],
-      "checked_at": null
+      "checked_at": "2026-09-28"
     },
     "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Один из наиболее сильных архитектурных объектов Филиппин: массивные контрфорсы и местная адаптация барокко к сейсмике делают фасад и силуэт легко читаемыми в кадре.",
+        "type": "overview",
+        "text": "Один из наиболее сильных архитектурных объектов Филиппин: массивные контрфорсы и местная адаптация барокко к сейсмике делают фасад и силуэт легко читаемыми в кадре.",
         "source_refs": [
           "src_stage_ph_0042",
           "src_stage_ph_0043",
@@ -54,22 +54,43 @@
   },
   "visit": {
     "entry": {
-      "hours": "Это действующая приходская церковь, а не музей с единым туристическим графиком; внешний осмотр доступен как public heritage landmark, внутренний доступ подчинён мессе и приходским мероприятиям.",
-      "ticket": "Обычный внешний осмотр — без единого UNESCO-билета; пожертвования/частные туры и отдельные услуги — по месту.",
-      "closure_notes": "Во время мессы, свадеб и церемоний туристическая съёмка внутри должна уступать богослужению.",
-      "status": "active_church_public_heritage_site",
-      "official_url": "https://www.tourism.gov.ph/destination/ilocos-region/ilocos-norte/",
-      "notes": "Paoay находится в Ilocos Norte рядом с Laoag; удобен road-trip по Ilocos. Из Laoag — local jeepney/tricycle/taxi/private transfer в зависимости от маршрута.",
+      "access_status": "active_church_public_heritage_site",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Обычный внешний осмотр — без единого UNESCO-билета; пожертвования/частные туры и отдельные услуги — по месту.",
+        "source_refs": [
+          "src_stage_ph_0042",
+          "src_stage_ph_0043",
+          "src_stage_ph_0044"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Это действующая приходская церковь, а не музей с единым туристическим графиком; внешний осмотр доступен как public heritage landmark, внутренний доступ подчинён мессе и приходским мероприятиям.",
+        "source_refs": [
+          "src_stage_ph_0042",
+          "src_stage_ph_0043",
+          "src_stage_ph_0044"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_stage_ph_0042",
         "src_stage_ph_0043",
         "src_stage_ph_0044"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.tourism.gov.ph/destination/ilocos-region/ilocos-norte/",
+      "closure_notes": "Во время мессы, свадеб и церемоний туристическая съёмка внутри должна уступать богослужению.",
+      "notes": "Paoay находится в Ilocos Norte рядом с Laoag; удобен road-trip по Ilocos. Из Laoag — local jeepney/tricycle/taxi/private transfer в зависимости от маршрута."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "other"
         ],
@@ -78,14 +99,6 @@
             "mode": "other",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Paoay находится в Ilocos Norte рядом с Laoag; удобен road-trip по Ilocos. Из Laoag — local jeepney/tricycle/taxi/private transfer в зависимости от маршрута. Региональный bus до Laoag, далее локальный road transport. Для фото на рассвете/закате удобнее частный трансфер. Церковь в центре Paoay; внешний осмотр простой, внутренний доступ зависит от богослужений и приходского режима."
           }
         ]
@@ -178,11 +191,11 @@
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": true,
+      "access": false,
       "water": false,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": true
+      "visual_recon": false
     },
     "last_reviewed_at": "2026-09-30"
   }

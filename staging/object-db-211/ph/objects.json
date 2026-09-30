@@ -31,20 +31,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+            "type": "overview",
+            "text": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
             "source_refs": [
               "src_stage_ph_0001",
               "src_stage_ph_0002",
@@ -57,12 +57,33 @@
       },
       "visit": {
         "entry": {
-          "hours": "Palawan/El Nido/Coron — открытые островные и городские районы без единого графика. Island-hopping, lagoons, lakes, wreck-diving и protected-area sites посещаются по дневным слотам конкретных лодочных операторов/управляющих общин.",
-          "ticket": "Нет единого билета: island-hopping, environmental/user fees, community/ancestral-domain entrance и diving оплачиваются по конкретному маршруту. Использовать DOT-accredited operator и подтверждать сборы при бронировании.",
-          "closure_notes": "Лодки и доступ к лагунам/рифам зависят от ветра, волнения, тайфунов и распоряжений береговой охраны/LGU; расписание может меняться в день выхода.",
-          "status": "open_multi_destination_operator_based",
-          "official_url": "https://www.tourism.gov.ph/destination/mimaropa/palawan/",
-          "notes": "El Nido и Coron используются как отдельные island-hopping hubs; между объектами требуется лодка. Для Coron основной авиационный вход — Busuanga; El Nido доступен авиацией/дорогой из Puerto Princesa. Для съёмочного дня закладывать полный дневной boat itinerary.",
+          "access_status": "open_multi_destination_operator_based",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Нет единого билета: island-hopping, environmental/user fees, community/ancestral-domain entrance и diving оплачиваются по конкретному маршруту. Использовать DOT-accredited operator и подтверждать сборы при бронировании.",
+            "source_refs": [
+              "src_stage_ph_0001",
+              "src_stage_ph_0002",
+              "src_stage_ph_0003",
+              "src_stage_ph_0004",
+              "src_stage_ph_0005"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Palawan/El Nido/Coron — открытые островные и городские районы без единого графика. Island-hopping, lagoons, lakes, wreck-diving и protected-area sites посещаются по дневным слотам конкретных лодочных операторов/управляющих общин.",
+            "source_refs": [
+              "src_stage_ph_0001",
+              "src_stage_ph_0002",
+              "src_stage_ph_0003",
+              "src_stage_ph_0004",
+              "src_stage_ph_0005"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0001",
             "src_stage_ph_0002",
@@ -70,11 +91,15 @@
             "src_stage_ph_0004",
             "src_stage_ph_0005"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/destination/mimaropa/palawan/",
+          "closure_notes": "Лодки и доступ к лагунам/рифам зависят от ветра, волнения, тайфунов и распоряжений береговой охраны/LGU; расписание может меняться в день выхода.",
+          "notes": "El Nido и Coron используются как отдельные island-hopping hubs; между объектами требуется лодка. Для Coron основной авиационный вход — Busuanga; El Nido доступен авиацией/дорогой из Puerto Princesa. Для съёмочного дня закладывать полный дневной boat itinerary."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -83,14 +108,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "El Nido и Coron используются как отдельные island-hopping hubs; между объектами требуется лодка. Для Coron основной авиационный вход — Busuanga; El Nido доступен авиацией/дорогой из Puerto Princesa. Для съёмочного дня закладывать полный дневной boat itinerary. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -189,11 +206,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -231,20 +248,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Banaue and Batad rice terraces — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+            "type": "overview",
+            "text": "Banaue and Batad rice terraces — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0007",
@@ -257,12 +274,33 @@
       },
       "visit": {
         "entry": {
-          "hours": "Batad и Bangaan — живые сельскохозяйственные ландшафты, а не закрываемый музей: единого gate schedule нет. Осмотр вести в светлое время, учитывая жизнь деревни и сельхозработы.",
-          "ticket": "Возможны муниципальные/environmental/community fees и оплата local guide; единого UNESCO-билета нет.",
-          "closure_notes": "Оползни, сильные дожди и ремонт горных дорог могут затруднить подъезд/тропы. Это действующие поля и деревни: не сходить на рисовые чеки и не мешать работам.",
-          "status": "open_living_cultural_landscape",
-          "official_url": "https://www.tourism.gov.ph/destination/cordillera-administrative-region/ifugao/",
-          "notes": "Banaue — дорожный hub. Batad расположен в горной местности: последний участок обычно требует local road/tricycle/jeep transfer и пешего спуска/подъёма; для фото на рассвете разумна ночёвка в Batad.",
+          "access_status": "open_living_cultural_landscape",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Возможны муниципальные/environmental/community fees и оплата local guide; единого UNESCO-билета нет.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0007",
+              "src_stage_ph_0003",
+              "src_stage_ph_0008",
+              "src_stage_ph_0009"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Batad и Bangaan — живые сельскохозяйственные ландшафты, а не закрываемый музей: единого gate schedule нет. Осмотр вести в светлое время, учитывая жизнь деревни и сельхозработы.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0007",
+              "src_stage_ph_0003",
+              "src_stage_ph_0008",
+              "src_stage_ph_0009"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0007",
@@ -270,11 +308,15 @@
             "src_stage_ph_0008",
             "src_stage_ph_0009"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/destination/cordillera-administrative-region/ifugao/",
+          "closure_notes": "Оползни, сильные дожди и ремонт горных дорог могут затруднить подъезд/тропы. Это действующие поля и деревни: не сходить на рисовые чеки и не мешать работам.",
+          "notes": "Banaue — дорожный hub. Batad расположен в горной местности: последний участок обычно требует local road/tricycle/jeep transfer и пешего спуска/подъёма; для фото на рассвете разумна ночёвка в Batad."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -283,14 +325,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Banaue — дорожный hub. Batad расположен в горной местности: последний участок обычно требует local road/tricycle/jeep transfer и пешего спуска/подъёма; для фото на рассвете разумна ночёвка в Batad. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -382,18 +416,18 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -428,20 +462,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Chocolate Hills — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+            "type": "overview",
+            "text": "Chocolate Hills — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0010",
@@ -453,23 +487,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Monday–Sunday 08:30–17:30 по Department of Tourism.",
-          "ticket": "Текущий entrance fee на использованной DOT-странице не опубликован; проверить у Chocolate Hills Complex/Carmen перед визитом.",
-          "closure_notes": "Погода или локальные мероприятия могут менять доступ к view deck.",
-          "status": null,
-          "official_url": "https://www.tourism.gov.ph/explore/chocolate-hills/",
-          "notes": "Carmen, Bohol; официальный DOT ориентир — около 1.5 часа на motorcycle из Panglao либо group tour.",
+          "access_status": "unknown",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Текущий entrance fee на использованной DOT-странице не опубликован; проверить у Chocolate Hills Complex/Carmen перед визитом.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0010",
+              "src_stage_ph_0003",
+              "src_stage_ph_0011"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Monday–Sunday 08:30–17:30 по Department of Tourism.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0010",
+              "src_stage_ph_0003",
+              "src_stage_ph_0011"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0010",
             "src_stage_ph_0003",
             "src_stage_ph_0011"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/explore/chocolate-hills/",
+          "closure_notes": "Погода или локальные мероприятия могут менять доступ к view deck.",
+          "notes": "Carmen, Bohol; официальный DOT ориентир — около 1.5 часа на motorcycle из Panglao либо group tour."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -478,14 +535,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Carmen, Bohol; официальный DOT ориентир — около 1.5 часа на motorcycle из Panglao либо group tour. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Около 200 ступеней до viewing deck."
               }
             ]
@@ -574,18 +623,18 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -618,20 +667,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+            "type": "overview",
+            "text": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0012",
@@ -643,23 +692,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Сам Intramuros — городской исторический район без общего gate schedule. Fort Santiago: Mon–Fri 08:00–22:00 (last entry 20:00), Sat–Sun 06:00–22:00 (last entry 20:30). Baluarte de San Diego daily 08:00–17:00 (last entry 16:00). Casa Manila Tue–Sun 09:00–18:00, Mon closed.",
-          "ticket": "Fort Santiago PHP 75 regular / PHP 50 student-senior-PWD. Другие музеи и sites имеют отдельные тарифы.",
-          "closure_notes": "Вечерний доступ Fort Santiago после обычного last-entry окна может быть доступен только отдельным booking channels; музеи закрываются по разным дням.",
-          "status": null,
-          "official_url": "https://intramuros.gov.ph/hours/",
-          "notes": "Удобнее всего из Manila; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски.",
+          "access_status": "unknown",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Fort Santiago PHP 75 regular / PHP 50 student-senior-PWD. Другие музеи и sites имеют отдельные тарифы.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0012",
+              "src_stage_ph_0003",
+              "src_stage_ph_0013"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Сам Intramuros — городской исторический район без общего gate schedule. Fort Santiago: Mon–Fri 08:00–22:00 (last entry 20:00), Sat–Sun 06:00–22:00 (last entry 20:30). Baluarte de San Diego daily 08:00–17:00 (last entry 16:00). Casa Manila Tue–Sun 09:00–18:00, Mon closed.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0012",
+              "src_stage_ph_0003",
+              "src_stage_ph_0013"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0012",
             "src_stage_ph_0003",
             "src_stage_ph_0013"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://intramuros.gov.ph/hours/",
+          "closure_notes": "Вечерний доступ Fort Santiago после обычного last-entry окна может быть доступен только отдельным booking channels; музеи закрываются по разным дням.",
+          "notes": "Удобнее всего из Manila; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -668,14 +740,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Удобнее всего из Manila; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -764,18 +828,18 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -808,20 +872,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Vigan — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+            "type": "overview",
+            "text": "Vigan — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
             "source_refs": [
               "src_stage_ph_0014",
               "src_stage_ph_0015",
@@ -832,22 +896,43 @@
       },
       "visit": {
         "entry": {
-          "hours": "Calle Crisologo и исторические улицы — публичная городская среда без единого графика; музеи, ancestral houses и Bantay Watch Tower имеют собственные часы.",
-          "ticket": "Прогулка по heritage core бесплатна; музеи, дома и отдельные объекты оплачиваются отдельно.",
-          "closure_notes": "Лучший фото/видео-период — раннее утро до туристического потока и вечер; дорожные/фестивальные перекрытия могут менять транспорт.",
-          "status": "open_public_heritage_city",
-          "official_url": "https://www.tourism.gov.ph/destination/ilocos-region/city-of-vigan/",
-          "notes": "Удобнее всего из Vigan / Laoag; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски.",
+          "access_status": "open_public_heritage_city",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Прогулка по heritage core бесплатна; музеи, дома и отдельные объекты оплачиваются отдельно.",
+            "source_refs": [
+              "src_stage_ph_0014",
+              "src_stage_ph_0015",
+              "src_stage_ph_0003"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Calle Crisologo и исторические улицы — публичная городская среда без единого графика; музеи, ancestral houses и Bantay Watch Tower имеют собственные часы.",
+            "source_refs": [
+              "src_stage_ph_0014",
+              "src_stage_ph_0015",
+              "src_stage_ph_0003"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0014",
             "src_stage_ph_0015",
             "src_stage_ph_0003"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/destination/ilocos-region/city-of-vigan/",
+          "closure_notes": "Лучший фото/видео-период — раннее утро до туристического потока и вечер; дорожные/фестивальные перекрытия могут менять транспорт.",
+          "notes": "Удобнее всего из Vigan / Laoag; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -856,14 +941,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Удобнее всего из Vigan / Laoag; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -956,11 +1033,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -994,20 +1071,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+            "type": "overview",
+            "text": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0016",
@@ -1019,23 +1096,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Boracay — жилой/курортный остров без единого графика. Пляжи доступны как публичная среда; водные активности, dive centres и attractions работают по отдельным слотам.",
-          "ticket": "Нет единого island ticket; оплачиваются транспорт, terminal/environmental fees и конкретные активности/операторы.",
-          "closure_notes": "Water activities и лодки зависят от муссона, предупреждений Coast Guard и локальных правил; White Beach остаётся городской пляжной средой, а не объектом с часами входа.",
-          "status": "open_resort_island",
-          "official_url": "https://www.tourism.gov.ph/destination/western-visayas/boracay/",
-          "notes": "Основной подход через Caticlan / Kalibo; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки.",
+          "access_status": "open_resort_island",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Нет единого island ticket; оплачиваются транспорт, terminal/environmental fees и конкретные активности/операторы.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0016",
+              "src_stage_ph_0003",
+              "src_stage_ph_0017"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Boracay — жилой/курортный остров без единого графика. Пляжи доступны как публичная среда; водные активности, dive centres и attractions работают по отдельным слотам.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0016",
+              "src_stage_ph_0003",
+              "src_stage_ph_0017"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0016",
             "src_stage_ph_0003",
             "src_stage_ph_0017"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/destination/western-visayas/boracay/",
+          "closure_notes": "Water activities и лодки зависят от муссона, предупреждений Coast Guard и локальных правил; White Beach остаётся городской пляжной средой, а не объектом с часами входа.",
+          "notes": "Основной подход через Caticlan / Kalibo; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -1044,14 +1144,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Основной подход через Caticlan / Kalibo; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -1140,18 +1232,18 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -1187,20 +1279,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+            "type": "overview",
+            "text": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0018",
@@ -1214,12 +1306,35 @@
       },
       "visit": {
         "entry": {
-          "hours": "Не объект с дневным графиком; вход осуществляется по permit и маршруту approved vessel/liveaboard.",
-          "ticket": "Visitor Entry Permit / Conservation Fee: PHP 5,000 на человека; divemaster PHP 500; дети 12 и младше освобождены. Vessel fee отдельно.",
-          "closure_notes": "Доступ морской и сезонно/погодно чувствительный; TMO выдаёт permits. Перед booking проверять текущий список permitted operators и marine conditions.",
-          "status": "permit-controlled marine protected area",
-          "official_url": "https://tubbatahareefs.org/permits-and-fees",
-          "notes": "Puerto Princesa — основной jump-off; дальше 10–12 часов по морю на permitted liveaboard.",
+          "access_status": "permit-controlled marine protected area",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Visitor Entry Permit / Conservation Fee: PHP 5,000 на человека; divemaster PHP 500; дети 12 и младше освобождены. Vessel fee отдельно.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0018",
+              "src_stage_ph_0003",
+              "src_stage_ph_0019",
+              "src_stage_ph_0020",
+              "src_stage_ph_0021"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Не объект с дневным графиком; вход осуществляется по permit и маршруту approved vessel/liveaboard.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0018",
+              "src_stage_ph_0003",
+              "src_stage_ph_0019",
+              "src_stage_ph_0020",
+              "src_stage_ph_0021"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0018",
@@ -1228,11 +1343,15 @@
             "src_stage_ph_0020",
             "src_stage_ph_0021"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://tubbatahareefs.org/permits-and-fees",
+          "closure_notes": "Доступ морской и сезонно/погодно чувствительный; TMO выдаёт permits. Перед booking проверять текущий список permitted operators и marine conditions.",
+          "notes": "Puerto Princesa — основной jump-off; дальше 10–12 часов по морю на permitted liveaboard."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -1241,14 +1360,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Puerto Princesa — основной jump-off; дальше 10–12 часов по морю на permitted liveaboard. Самостоятельного регулярного пассажирского транспорта нет; поездку организуют dive operators с Permit to Operate. Все туристические поездки — liveaboard; наземной туристической инфраструктуры/гостиниц в парке нет."
               }
             ]
@@ -1343,18 +1454,18 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -1387,20 +1498,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+            "type": "overview",
+            "text": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0022",
@@ -1412,23 +1523,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Calle Real, Molo/Jaro heritage streets и waterfront — публичная городская среда; церкви, музеи и heritage houses имеют собственные часы.",
-          "ticket": "Улицы и public realm бесплатны; входные сборы возможны у музеев/частных домов.",
-          "closure_notes": "Dinagyang и другие крупные события дают перекрытия, большие толпы и одновременно высокий видеопотенциал; религиозные службы имеют приоритет в церквях.",
-          "status": "open_public_heritage_city",
-          "official_url": "https://www.tourism.gov.ph/destination/western-visayas/city-of-iloilo/",
-          "notes": "Практичная база — Iloilo City; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
+          "access_status": "open_public_heritage_city",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Улицы и public realm бесплатны; входные сборы возможны у музеев/частных домов.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0022",
+              "src_stage_ph_0003",
+              "src_stage_ph_0023"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Calle Real, Molo/Jaro heritage streets и waterfront — публичная городская среда; церкви, музеи и heritage houses имеют собственные часы.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0022",
+              "src_stage_ph_0003",
+              "src_stage_ph_0023"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0022",
             "src_stage_ph_0003",
             "src_stage_ph_0023"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/destination/western-visayas/city-of-iloilo/",
+          "closure_notes": "Dinagyang и другие крупные события дают перекрытия, большие толпы и одновременно высокий видеопотенциал; религиозные службы имеют приоритет в церквях.",
+          "notes": "Практичная база — Iloilo City; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -1437,14 +1571,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Практичная база — Iloilo City; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -1540,11 +1666,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -1579,20 +1705,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Samar cave systems — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+            "type": "overview",
+            "text": "Samar cave systems — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0024",
@@ -1604,23 +1730,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Samar Island Natural Park / Calbiga-Sohoton activities работают как guided protected-area excursions, а не как свободно открытая пещера с единым графиком.",
-          "ticket": "DOT указывает, что посещение требует reservation, особенно для больших групп; в Sohoton activity package может стоить до PHP 3,600 на посетителя. Текущую цену подтверждать у local protected-area/tourism operator.",
-          "closure_notes": "Пещеры, river/torpedo boat и trekking зависят от дождя и уровня воды; в карсте обязательна локальная operational проверка перед входом.",
-          "status": "open_protected_area_reservation_based",
-          "official_url": "https://www.tourism.gov.ph/article/visiting-samar-island-natural-park/",
-          "notes": "Базироваться удобнее в Tacloban / Catbalogan; далее дорога до входной зоны и, где требуется, локальный гид/лодка/пеший участок. После сильных дождей доступ перепроверять.",
+          "access_status": "open_protected_area_reservation_based",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "DOT указывает, что посещение требует reservation, особенно для больших групп; в Sohoton activity package может стоить до PHP 3,600 на посетителя. Текущую цену подтверждать у local protected-area/tourism operator.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0024",
+              "src_stage_ph_0003",
+              "src_stage_ph_0025"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Samar Island Natural Park / Calbiga-Sohoton activities работают как guided protected-area excursions, а не как свободно открытая пещера с единым графиком.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0024",
+              "src_stage_ph_0003",
+              "src_stage_ph_0025"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0024",
             "src_stage_ph_0003",
             "src_stage_ph_0025"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/article/visiting-samar-island-natural-park/",
+          "closure_notes": "Пещеры, river/torpedo boat и trekking зависят от дождя и уровня воды; в карсте обязательна локальная operational проверка перед входом.",
+          "notes": "Базироваться удобнее в Tacloban / Catbalogan; далее дорога до входной зоны и, где требуется, локальный гид/лодка/пеший участок. После сильных дождей доступ перепроверять."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -1629,14 +1778,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Базироваться удобнее в Tacloban / Catbalogan; далее дорога до входной зоны и, где требуется, локальный гид/лодка/пеший участок. После сильных дождей доступ перепроверять. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -1732,11 +1873,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -1772,20 +1913,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Siquijor interior — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+            "type": "overview",
+            "text": "Siquijor interior — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0026",
@@ -1797,23 +1938,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Siquijor interior — набор природных, сакральных и community sites без единого графика. Cambugahay Falls, Balete Tree, caves, churches и healing sites имеют отдельный local regime.",
-          "ticket": "Небольшие local/community entrance/activity fees оплачиваются на конкретных объектах; единого island pass нет.",
-          "closure_notes": "После ливней waterfall/cave conditions меняются; в sacred/healing context съёмку людей и ритуалов согласовывать заранее.",
-          "status": "open_multi_site_island",
-          "official_url": "https://www.tourism.gov.ph/destination/nir/siquijor/",
-          "notes": "Практичная база — Siquijor / Dumaguete; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
+          "access_status": "open_multi_site_island",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Небольшие local/community entrance/activity fees оплачиваются на конкретных объектах; единого island pass нет.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0026",
+              "src_stage_ph_0003",
+              "src_stage_ph_0027"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Siquijor interior — набор природных, сакральных и community sites без единого графика. Cambugahay Falls, Balete Tree, caves, churches и healing sites имеют отдельный local regime.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0026",
+              "src_stage_ph_0003",
+              "src_stage_ph_0027"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0026",
             "src_stage_ph_0003",
             "src_stage_ph_0027"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/destination/nir/siquijor/",
+          "closure_notes": "После ливней waterfall/cave conditions меняются; в sacred/healing context съёмку людей и ритуалов согласовывать заранее.",
+          "notes": "Практичная база — Siquijor / Dumaguete; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -1822,14 +1986,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Практичная база — Siquijor / Dumaguete; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -1925,11 +2081,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -1965,20 +2121,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Negros sugar-era hacienda architecture — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+            "type": "overview",
+            "text": "Negros sugar-era hacienda architecture — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0028",
@@ -1991,12 +2147,33 @@
       },
       "visit": {
         "entry": {
-          "hours": "Sugar-era heritage — распределённый культурный ландшафт вокруг Bacolod/Talisay/Silay; public streets не имеют часов, музеи, mansions и private estates работают отдельно.",
-          "ticket": "Нет единого билета. Музеи/частные heritage properties и guided tours имеют собственные тарифы.",
-          "closure_notes": "Часть hacienda architecture находится в частной собственности: въезд, интерьерная съёмка и коммерческое видео требуют разрешения владельца.",
-          "status": "open_multi_site_heritage_landscape",
-          "official_url": "https://www.tourism.gov.ph/destination/nir/bacolod-city/",
-          "notes": "Практичная база — Bacolod / Dumaguete; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
+          "access_status": "open_multi_site_heritage_landscape",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Нет единого билета. Музеи/частные heritage properties и guided tours имеют собственные тарифы.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0028",
+              "src_stage_ph_0003",
+              "src_stage_ph_0029",
+              "src_stage_ph_0030"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Sugar-era heritage — распределённый культурный ландшафт вокруг Bacolod/Talisay/Silay; public streets не имеют часов, музеи, mansions и private estates работают отдельно.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0028",
+              "src_stage_ph_0003",
+              "src_stage_ph_0029",
+              "src_stage_ph_0030"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0028",
@@ -2004,11 +2181,15 @@
             "src_stage_ph_0029",
             "src_stage_ph_0030"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/destination/nir/bacolod-city/",
+          "closure_notes": "Часть hacienda architecture находится в частной собственности: въезд, интерьерная съёмка и коммерческое видео требуют разрешения владельца.",
+          "notes": "Практичная база — Bacolod / Dumaguete; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -2017,14 +2198,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Практичная база — Bacolod / Dumaguete; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -2123,11 +2296,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -2165,20 +2338,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Batanes — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+            "type": "overview",
+            "text": "Batanes — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0031",
@@ -2190,23 +2363,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Batanes — населённый архипелаг без единого графика; viewpoints, villages и roads доступны по местным условиям, а churches/museums/lighthouses имеют отдельный режим.",
-          "ticket": "Нет единого island ticket; inter-island boats, local tours и отдельные community/heritage stops оплачиваются отдельно.",
-          "closure_notes": "Самая существенная переменная — погода: сильный ветер/тайфуны могут отменять самолёты и лодки между Batan, Sabtang и Itbayat. Маршрут строить с резервом.",
-          "status": "open_archipelago_weather_dependent",
-          "official_url": "https://www.tourism.gov.ph/destination/cagayan-valley/batanes/",
-          "notes": "Практичная база — Basco; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
+          "access_status": "open_archipelago_weather_dependent",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Нет единого island ticket; inter-island boats, local tours и отдельные community/heritage stops оплачиваются отдельно.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0031",
+              "src_stage_ph_0003",
+              "src_stage_ph_0032"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Batanes — населённый архипелаг без единого графика; viewpoints, villages и roads доступны по местным условиям, а churches/museums/lighthouses имеют отдельный режим.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0031",
+              "src_stage_ph_0003",
+              "src_stage_ph_0032"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0031",
             "src_stage_ph_0003",
             "src_stage_ph_0032"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/destination/cagayan-valley/batanes/",
+          "closure_notes": "Самая существенная переменная — погода: сильный ветер/тайфуны могут отменять самолёты и лодки между Batan, Sabtang и Itbayat. Маршрут строить с резервом.",
+          "notes": "Практичная база — Basco; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -2215,14 +2411,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Практичная база — Basco; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -2311,18 +2499,18 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -2359,20 +2547,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Sagada — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+            "type": "overview",
+            "text": "Sagada — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0033",
@@ -2384,23 +2572,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Sagada town itself has no single gate schedule. Tourist registration is required; caves, waterfalls and trekking routes have route-specific guide/schedule rules.",
-          "ticket": "Registration, environmental/tour fees and guide fees depend on selected activity; book/acquire through Sagada Tourism and accredited partners.",
-          "closure_notes": "Road/route closures may follow heavy rain, landslides or local cultural restrictions.",
-          "status": "registration required; guided access for regulated activities",
-          "official_url": "https://tourism.sagada.gov.ph/",
-          "notes": "Mountain road approach; Sagada Tourism Office explicitly advises daylight driving due fog, narrow winding roads and steep grades.",
+          "access_status": "registration required; guided access for regulated activities",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Registration, environmental/tour fees and guide fees depend on selected activity; book/acquire through Sagada Tourism and accredited partners.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0033",
+              "src_stage_ph_0003",
+              "src_stage_ph_0034"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Sagada town itself has no single gate schedule. Tourist registration is required; caves, waterfalls and trekking routes have route-specific guide/schedule rules.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0033",
+              "src_stage_ph_0003",
+              "src_stage_ph_0034"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0033",
             "src_stage_ph_0003",
             "src_stage_ph_0034"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://tourism.sagada.gov.ph/",
+          "closure_notes": "Road/route closures may follow heavy rain, landslides or local cultural restrictions.",
+          "notes": "Mountain road approach; Sagada Tourism Office explicitly advises daylight driving due fog, narrow winding roads and steep grades."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -2409,14 +2620,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Mountain road approach; Sagada Tourism Office explicitly advises daylight driving due fog, narrow winding roads and steep grades. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Visitors are required to register at the Tourism Office; caves/treks use accredited local guide organisations."
               }
             ]
@@ -2505,18 +2708,18 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -2551,20 +2754,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Mount Pinatubo — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+            "type": "overview",
+            "text": "Mount Pinatubo — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0035",
@@ -2577,12 +2780,33 @@
       },
       "visit": {
         "entry": {
-          "hours": "Registration cut-off / last standard departure 07:00 on the current Capas rate sheet; arrive earlier for processing.",
-          "ticket": "Current municipal rate sheet: 4×4 PHP 3,000/vehicle (max 5), local guide PHP 500/vehicle, tourism fee PHP 300/person, Botolan fee PHP 400/person; package total varies by group size.",
-          "closure_notes": "Trail can close or change after heavy rain/lahar conditions, military restrictions or maintenance. Overnight camping requires approval of Municipal Mayor and PAF.",
-          "status": "regulated trek via Sta. Juliana",
-          "official_url": "https://www.capastarlac.gov.ph/wp-content/uploads/TOUR-RATES-_-PACKAGES.pdf",
-          "notes": "Official Capas route via Sta. Juliana: municipal tourism processing → assigned local guide + 4×4 → roughly 1.5 h 4×4 → trek about 1–2+ h depending on drop-off/pace.",
+          "access_status": "regulated trek via Sta. Juliana",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Current municipal rate sheet: 4×4 PHP 3,000/vehicle (max 5), local guide PHP 500/vehicle, tourism fee PHP 300/person, Botolan fee PHP 400/person; package total varies by group size.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0035",
+              "src_stage_ph_0003",
+              "src_stage_ph_0036",
+              "src_stage_ph_0037"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Registration cut-off / last standard departure 07:00 on the current Capas rate sheet; arrive earlier for processing.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0035",
+              "src_stage_ph_0003",
+              "src_stage_ph_0036",
+              "src_stage_ph_0037"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0035",
@@ -2590,11 +2814,15 @@
             "src_stage_ph_0036",
             "src_stage_ph_0037"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.capastarlac.gov.ph/wp-content/uploads/TOUR-RATES-_-PACKAGES.pdf",
+          "closure_notes": "Trail can close or change after heavy rain/lahar conditions, military restrictions or maintenance. Overnight camping requires approval of Municipal Mayor and PAF.",
+          "notes": "Official Capas route via Sta. Juliana: municipal tourism processing → assigned local guide + 4×4 → roughly 1.5 h 4×4 → trek about 1–2+ h depending on drop-off/pace."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -2603,14 +2831,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Official Capas route via Sta. Juliana: municipal tourism processing → assigned local guide + 4×4 → roughly 1.5 h 4×4 → trek about 1–2+ h depending on drop-off/pace. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. 4×4 vehicle mandatory in standard municipal package; final crater approach on foot."
               }
             ]
@@ -2702,18 +2922,18 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -2749,20 +2969,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Apo Reef Natural Park — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+            "type": "overview",
+            "text": "Apo Reef Natural Park — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0038",
@@ -2774,23 +2994,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Не дневной городской объект: режим определяется предварительным booking, boat transfer и protected-area rules.",
-          "ticket": "Fees/boat/package подтверждать у Sablayan Tourism Office при обязательном booking за 3–7 дней.",
-          "closure_notes": "Sea/weather can cancel crossings; protected-area regulations apply.",
-          "status": "advance booking required",
-          "official_url": "https://www.tourism.gov.ph/article/visiting-apo-reef-natural-park/",
-          "notes": "Основной gateway — Sablayan, Occidental Mindoro; Apo Reef примерно 33 km offshore. Из San Jose airport — van до Sablayan, затем boat.",
+          "access_status": "advance booking required",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Fees/boat/package подтверждать у Sablayan Tourism Office при обязательном booking за 3–7 дней.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0038",
+              "src_stage_ph_0003",
+              "src_stage_ph_0039"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Не дневной городской объект: режим определяется предварительным booking, boat transfer и protected-area rules.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0038",
+              "src_stage_ph_0003",
+              "src_stage_ph_0039"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0038",
             "src_stage_ph_0003",
             "src_stage_ph_0039"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/article/visiting-apo-reef-natural-park/",
+          "closure_notes": "Sea/weather can cancel crossings; protected-area regulations apply.",
+          "notes": "Основной gateway — Sablayan, Occidental Mindoro; Apo Reef примерно 33 km offshore. Из San Jose airport — van до Sablayan, затем boat."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -2799,14 +3042,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Основной gateway — Sablayan, Occidental Mindoro; Apo Reef примерно 33 km offshore. Из San Jose airport — van до Sablayan, затем boat. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Морской трансфер из Sablayan; также возможен confirmed private boat/yacht после booking."
               }
             ]
@@ -2902,11 +3137,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -2939,20 +3174,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Taal Volcano and heritage towns — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+            "type": "overview",
+            "text": "Taal Volcano and heritage towns — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
             "source_refs": [
               "src_stage_ph_0006",
               "src_stage_ph_0040",
@@ -2964,23 +3199,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Heritage towns/viewpoints around Taal Lake have site-specific hours. Taal Volcano Island itself is NOT open for tourist entry under the current PHIVOLCS recommendation.",
-          "ticket": "Heritage museums/churches and viewpoints have separate fees; there is no legitimate tourist ticket to enter Taal Volcano Island while PDZ access is prohibited.",
-          "closure_notes": "As of 26 Sep 2026 Taal is Alert Level 1 (low-level unrest). PHIVOLCS says entry into Taal Volcano Island/Permanent Danger Zone, occupancy/boating on Taal Lake and aircraft close to volcano should not be allowed.",
-          "status": "Taal Volcano Island/PDZ closed to entry; lakeshore heritage towns remain separate destinations",
-          "official_url": "https://wovodat.phivolcs.dost.gov.ph/bulletin/activity-tvo?bid=16811&lang=en",
-          "notes": "Практичная база — Tagaytay / Batangas; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом.",
+          "access_status": "Taal Volcano Island/PDZ closed to entry; lakeshore heritage towns remain separate destinations",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Heritage museums/churches and viewpoints have separate fees; there is no legitimate tourist ticket to enter Taal Volcano Island while PDZ access is prohibited.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0040",
+              "src_stage_ph_0003",
+              "src_stage_ph_0041"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Heritage towns/viewpoints around Taal Lake have site-specific hours. Taal Volcano Island itself is NOT open for tourist entry under the current PHIVOLCS recommendation.",
+            "source_refs": [
+              "src_stage_ph_0006",
+              "src_stage_ph_0040",
+              "src_stage_ph_0003",
+              "src_stage_ph_0041"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0006",
             "src_stage_ph_0040",
             "src_stage_ph_0003",
             "src_stage_ph_0041"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://wovodat.phivolcs.dost.gov.ph/bulletin/activity-tvo?bid=16811&lang=en",
+          "closure_notes": "As of 26 Sep 2026 Taal is Alert Level 1 (low-level unrest). PHIVOLCS says entry into Taal Volcano Island/Permanent Danger Zone, occupancy/boating on Taal Lake and aircraft close to volcano should not be allowed.",
+          "notes": "Практичная база — Tagaytay / Batangas; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -2989,14 +3247,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Практичная база — Tagaytay / Batangas; последний участок обычно по дороге/пешком. Точный транспорт и состояние подъезда проверять перед выездом. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
               }
             ]
@@ -3085,18 +3335,18 @@
       "qa": {
         "status": "incomplete",
         "checks": {
-          "language": true,
+          "language": false,
           "classification": true,
           "geo": false,
           "coordinates": false,
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -3133,20 +3383,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Один из наиболее сильных архитектурных объектов Филиппин: массивные контрфорсы и местная адаптация барокко к сейсмике делают фасад и силуэт легко читаемыми в кадре.",
+            "type": "overview",
+            "text": "Один из наиболее сильных архитектурных объектов Филиппин: массивные контрфорсы и местная адаптация барокко к сейсмике делают фасад и силуэт легко читаемыми в кадре.",
             "source_refs": [
               "src_stage_ph_0042",
               "src_stage_ph_0043",
@@ -3157,22 +3407,43 @@
       },
       "visit": {
         "entry": {
-          "hours": "Это действующая приходская церковь, а не музей с единым туристическим графиком; внешний осмотр доступен как public heritage landmark, внутренний доступ подчинён мессе и приходским мероприятиям.",
-          "ticket": "Обычный внешний осмотр — без единого UNESCO-билета; пожертвования/частные туры и отдельные услуги — по месту.",
-          "closure_notes": "Во время мессы, свадеб и церемоний туристическая съёмка внутри должна уступать богослужению.",
-          "status": "active_church_public_heritage_site",
-          "official_url": "https://www.tourism.gov.ph/destination/ilocos-region/ilocos-norte/",
-          "notes": "Paoay находится в Ilocos Norte рядом с Laoag; удобен road-trip по Ilocos. Из Laoag — local jeepney/tricycle/taxi/private transfer в зависимости от маршрута.",
+          "access_status": "active_church_public_heritage_site",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Обычный внешний осмотр — без единого UNESCO-билета; пожертвования/частные туры и отдельные услуги — по месту.",
+            "source_refs": [
+              "src_stage_ph_0042",
+              "src_stage_ph_0043",
+              "src_stage_ph_0044"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Это действующая приходская церковь, а не музей с единым туристическим графиком; внешний осмотр доступен как public heritage landmark, внутренний доступ подчинён мессе и приходским мероприятиям.",
+            "source_refs": [
+              "src_stage_ph_0042",
+              "src_stage_ph_0043",
+              "src_stage_ph_0044"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0042",
             "src_stage_ph_0043",
             "src_stage_ph_0044"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://www.tourism.gov.ph/destination/ilocos-region/ilocos-norte/",
+          "closure_notes": "Во время мессы, свадеб и церемоний туристическая съёмка внутри должна уступать богослужению.",
+          "notes": "Paoay находится в Ilocos Norte рядом с Laoag; удобен road-trip по Ilocos. Из Laoag — local jeepney/tricycle/taxi/private transfer в зависимости от маршрута."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -3181,14 +3452,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Paoay находится в Ilocos Norte рядом с Laoag; удобен road-trip по Ilocos. Из Laoag — local jeepney/tricycle/taxi/private transfer в зависимости от маршрута. Региональный bus до Laoag, далее локальный road transport. Для фото на рассвете/закате удобнее частный трансфер. Церковь в центре Paoay; внешний осмотр простой, внутренний доступ зависит от богослужений и приходского режима."
               }
             ]
@@ -3281,11 +3544,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -3321,20 +3584,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Идеальный вулканический конус Mayon плюс Cagsawa ruins дают один из самых сильных вулканико-культурных кадров страны — но только из разрешённых внешних точек обзора.",
+            "type": "overview",
+            "text": "Идеальный вулканический конус Mayon плюс Cagsawa ruins дают один из самых сильных вулканико-культурных кадров страны — но только из разрешённых внешних точек обзора.",
             "source_refs": [
               "src_stage_ph_0045",
               "src_stage_ph_0046",
@@ -3346,23 +3609,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Внешние viewpoints имеют собственные часы; вулканическая зона регулируется alert level, не обычным графиком.",
-          "ticket": "Viewpoint/park fees зависят от конкретной точки; PHIVOLCS safety restriction бесплатна и обязательна.",
-          "closure_notes": "25 Sep 2026: Alert Level 2; вход в 6-km Permanent Danger Zone не допускается.",
-          "status": "restricted_volcanic_hazard",
-          "official_url": "https://volcano.phivolcs.dost.gov.ph/bulletin/activity-mvo?bid=16810&lang=en",
-          "notes": "Просмотр из Legazpi/Daraga, Cagsawa и других разрешённых внешних точек; вход в PDZ не является туристическим маршрутом.",
+          "access_status": "restricted_volcanic_hazard",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Viewpoint/park fees зависят от конкретной точки; PHIVOLCS safety restriction бесплатна и обязательна.",
+            "source_refs": [
+              "src_stage_ph_0045",
+              "src_stage_ph_0046",
+              "src_stage_ph_0003",
+              "src_stage_ph_0047"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Внешние viewpoints имеют собственные часы; вулканическая зона регулируется alert level, не обычным графиком.",
+            "source_refs": [
+              "src_stage_ph_0045",
+              "src_stage_ph_0046",
+              "src_stage_ph_0003",
+              "src_stage_ph_0047"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0045",
             "src_stage_ph_0046",
             "src_stage_ph_0003",
             "src_stage_ph_0047"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://volcano.phivolcs.dost.gov.ph/bulletin/activity-mvo?bid=16810&lang=en",
+          "closure_notes": "25 Sep 2026: Alert Level 2; вход в 6-km Permanent Danger Zone не допускается.",
+          "notes": "Просмотр из Legazpi/Daraga, Cagsawa и других разрешённых внешних точек; вход в PDZ не является туристическим маршрутом."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -3371,14 +3657,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Просмотр из Legazpi/Daraga, Cagsawa и других разрешённых внешних точек; вход в PDZ не является туристическим маршрутом."
               }
             ]
@@ -3474,11 +3752,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }
@@ -3514,20 +3792,20 @@
           "lon": null,
           "elevation_m": null,
           "elevation_range_m": null,
-          "coordinate_type": null,
+          "coordinate_type": "center",
           "accuracy": "unknown",
           "elevation_accuracy": "unknown",
           "source_refs": [],
           "elevation_source_refs": [],
-          "checked_at": null
+          "checked_at": "2026-09-28"
         },
         "geo_points": []
       },
       "narrative": {
         "sections": [
           {
-            "section_id": "overview",
-            "content": "Классический community-based marine sanctuary у Negros Oriental: кораллы, green sea turtles и сильный сюжет об охране рифов.",
+            "type": "overview",
+            "text": "Классический community-based marine sanctuary у Negros Oriental: кораллы, green sea turtles и сильный сюжет об охране рифов.",
             "source_refs": [
               "src_stage_ph_0048",
               "src_stage_ph_0049",
@@ -3539,23 +3817,46 @@
       },
       "visit": {
         "entry": {
-          "hours": "Остров/санкчуари работают как protected community seascape, а не объект с единым универсальным графиком; дневная лодочная активность зависит от моря.",
-          "ticket": "Marine/guide/camera/community fees могут меняться; подтверждать у муниципального/локального оператора.",
-          "closure_notes": null,
-          "status": "open/verify",
-          "official_url": "https://su.edu.ph/protecting-the-marine-biodiversity-capital-implications-of-the-apo-island-jetty-port-project-on-the-apo-island-protected-landscape-and-seascape/",
-          "notes": "Морской доступ небольшой лодкой с Negros Oriental; точка отправления/расписание и море подтверждаются локально перед выездом.",
+          "access_status": "open/verify",
+          "fee": {
+            "amount": null,
+            "currency": null,
+            "pricing_basis": null,
+            "description": "Marine/guide/camera/community fees могут меняться; подтверждать у муниципального/локального оператора.",
+            "source_refs": [
+              "src_stage_ph_0048",
+              "src_stage_ph_0049",
+              "src_stage_ph_0003",
+              "src_stage_ph_0050"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "hours": {
+            "value": "Остров/санкчуари работают как protected community seascape, а не объект с единым универсальным графиком; дневная лодочная активность зависит от моря.",
+            "source_refs": [
+              "src_stage_ph_0048",
+              "src_stage_ph_0049",
+              "src_stage_ph_0003",
+              "src_stage_ph_0050"
+            ],
+            "checked_at": "2026-09-28"
+          },
+          "permit_required": null,
           "source_refs": [
             "src_stage_ph_0048",
             "src_stage_ph_0049",
             "src_stage_ph_0003",
             "src_stage_ph_0050"
           ],
-          "checked_at": "2026-09-28"
+          "checked_at": "2026-09-28",
+          "official_url": "https://su.edu.ph/protecting-the-marine-biodiversity-capital-implications-of-the-apo-island-jetty-port-project-on-the-apo-island-protected-landscape-and-seascape/",
+          "closure_notes": null,
+          "notes": "Морской доступ небольшой лодкой с Negros Oriental; точка отправления/расписание и море подтверждаются локально перед выездом."
         },
         "access_options": [
           {
-            "origin": null,
+            "id": "access_01",
+            "origin_place_id": null,
             "modes": [
               "other"
             ],
@@ -3564,14 +3865,6 @@
                 "mode": "other",
                 "distance_km": null,
                 "duration_min": null,
-                "surface": null,
-                "condition": null,
-                "seasonality": null,
-                "elevation_gain_m": null,
-                "elevation_loss_m": null,
-                "trailhead": null,
-                "navigation": null,
-                "fords": null,
                 "notes": "Морской доступ небольшой лодкой с Negros Oriental; точка отправления/расписание и море подтверждаются локально перед выездом."
               }
             ]
@@ -3667,11 +3960,11 @@
           "elevation": false,
           "narrative": true,
           "sources": true,
-          "access": true,
+          "access": false,
           "water": false,
           "overnight": false,
           "traveler_reports": false,
-          "visual_recon": true
+          "visual_recon": false
         },
         "last_reviewed_at": "2026-09-30"
       }

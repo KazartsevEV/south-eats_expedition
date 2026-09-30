@@ -26,20 +26,20 @@
       "lon": null,
       "elevation_m": null,
       "elevation_range_m": null,
-      "coordinate_type": null,
+      "coordinate_type": "center",
       "accuracy": "unknown",
       "elevation_accuracy": "unknown",
       "source_refs": [],
       "elevation_source_refs": [],
-      "checked_at": null
+      "checked_at": "2026-09-28"
     },
     "geo_points": []
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+        "type": "overview",
+        "text": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
         "source_refs": [
           "src_stage_ph_0006",
           "src_stage_ph_0012",
@@ -51,23 +51,46 @@
   },
   "visit": {
     "entry": {
-      "hours": "Сам Intramuros — городской исторический район без общего gate schedule. Fort Santiago: Mon–Fri 08:00–22:00 (last entry 20:00), Sat–Sun 06:00–22:00 (last entry 20:30). Baluarte de San Diego daily 08:00–17:00 (last entry 16:00). Casa Manila Tue–Sun 09:00–18:00, Mon closed.",
-      "ticket": "Fort Santiago PHP 75 regular / PHP 50 student-senior-PWD. Другие музеи и sites имеют отдельные тарифы.",
-      "closure_notes": "Вечерний доступ Fort Santiago после обычного last-entry окна может быть доступен только отдельным booking channels; музеи закрываются по разным дням.",
-      "status": null,
-      "official_url": "https://intramuros.gov.ph/hours/",
-      "notes": "Удобнее всего из Manila; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски.",
+      "access_status": "unknown",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Fort Santiago PHP 75 regular / PHP 50 student-senior-PWD. Другие музеи и sites имеют отдельные тарифы.",
+        "source_refs": [
+          "src_stage_ph_0006",
+          "src_stage_ph_0012",
+          "src_stage_ph_0003",
+          "src_stage_ph_0013"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Сам Intramuros — городской исторический район без общего gate schedule. Fort Santiago: Mon–Fri 08:00–22:00 (last entry 20:00), Sat–Sun 06:00–22:00 (last entry 20:30). Baluarte de San Diego daily 08:00–17:00 (last entry 16:00). Casa Manila Tue–Sun 09:00–18:00, Mon closed.",
+        "source_refs": [
+          "src_stage_ph_0006",
+          "src_stage_ph_0012",
+          "src_stage_ph_0003",
+          "src_stage_ph_0013"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_stage_ph_0006",
         "src_stage_ph_0012",
         "src_stage_ph_0003",
         "src_stage_ph_0013"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://intramuros.gov.ph/hours/",
+      "closure_notes": "Вечерний доступ Fort Santiago после обычного last-entry окна может быть доступен только отдельным booking channels; музеи закрываются по разным дням.",
+      "notes": "Удобнее всего из Manila; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "other"
         ],
@@ -76,14 +99,6 @@
             "mode": "other",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Удобнее всего из Manila; объект/район исследуется пешком с локальным общественным транспортом или ride-hailing для подброски. В городах — местный общественный транспорт/ride-hailing; в удалённых районах чаще практичнее частный трансфер, арендованный транспорт или оператор. Проверять по текущему состоянию дорог/лодок; не считать прошлогодние расписания гарантированными."
           }
         ]
@@ -172,18 +187,18 @@
   "qa": {
     "status": "incomplete",
     "checks": {
-      "language": true,
+      "language": false,
       "classification": true,
       "geo": false,
       "coordinates": false,
       "elevation": false,
       "narrative": true,
       "sources": true,
-      "access": true,
+      "access": false,
       "water": false,
       "overnight": false,
       "traveler_reports": false,
-      "visual_recon": true
+      "visual_recon": false
     },
     "last_reviewed_at": "2026-09-30"
   }

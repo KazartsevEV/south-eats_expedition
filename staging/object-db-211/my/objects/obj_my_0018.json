@@ -4,7 +4,7 @@
   "slug": "sipadan-island",
   "status": "migration_draft",
   "names": {
-    "primary": "Sipadan Island"
+    "primary": "Остров Сипадан"
   },
   "summary": {
     "narrow": "Сипадан — океанический остров на вершине подводного вулканического конуса с почти вертикальными рифовыми стенами, черепахами и пелагическими стаями; доступ строго ограничен разрешениями."
@@ -205,7 +205,9 @@
         "src_stage_my_0071"
       ]
     },
-    "lodging_ids": [],
+    "lodging_ids": [
+      "lod_my_0018"
+    ],
     "rules": {
       "permit_or_guide": "Разрешение Sabah Parks и зарегистрированный дайв-оператор обязательны. Это юридический режим доступа; остальную логистику до Semporna/Mabul можно собирать самостоятельно.",
       "access_requirements": null,
@@ -226,44 +228,97 @@
   },
   "traveler_reports": [
     {
-      "topic": "general",
-      "summary": "permit может быть главным bottleneck всей поездки",
-      "source_refs": []
+      "topic": "permit",
+      "summary": "Разрешение на посещение может быть главным ограничением поездки; его наличие нужно подтверждать до фиксации остальной морской логистики.",
+      "observed_period": null,
+      "source_refs": [
+        "src_stage_my_0068",
+        "src_stage_my_0069"
+      ],
+      "confidence": "medium"
     },
     {
-      "topic": "general",
-      "summary": "дорогой dive day и отсутствие гарантии конкретного site/current",
-      "source_refs": []
-    },
-    {
-      "topic": "general",
-      "summary": "подводная толпа на популярных точках зависит от распределения операторов",
-      "source_refs": []
+      "topic": "diving_conditions",
+      "summary": "Конкретные точки погружения и порядок выхода определяются оператором, разрешением, течением и состоянием моря; заранее гарантировать выбранный дайв-сайт нельзя.",
+      "observed_period": null,
+      "source_refs": [
+        "src_stage_my_0068",
+        "src_stage_my_0069"
+      ],
+      "confidence": "medium"
     }
   ],
   "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_sipadan_island_reference",
+        "name": "Сипадан — островная и рифовая зона",
+        "coordinates": {
+          "lat": 4.1148,
+          "lon": 118.6289,
+          "elevation_m": 22
+        },
+        "gps": {
+          "decimal": "4.114800, 118.628900"
+        },
+        "access": {
+          "walk_km": null,
+          "notes": "Это опорная точка острова, а не конкретный дайв-сайт; точку входа в воду определяет зарегистрированный оператор."
+        },
+        "view": {
+          "description": "Низкий океанический остров, окружённый рифом и резким подводным свалом; главный визуальный слой находится под водой."
+        },
+        "best_time": "morning / midday",
+        "best_weather_light": "Для подводного слоя важнее прозрачность воды, волнение и положение солнца, чем наземное освещение.",
+        "useful_equipment": [
+          {
+            "type": "underwater_camera",
+            "why": "главные объекты — рифовая стенка, черепахи и пелагическая фауна"
+          },
+          {
+            "type": "action_camera",
+            "why": "для лодочного перехода и входа в воду при разрешённых условиях"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0224",
+          "src_stage_my_0068",
+          "src_stage_my_0069"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Прозрачность воды, течение и волнение меняют видимость рифовой стены и плотность морской жизни; фактические условия проверяются в день выхода."
+    ],
+    "video_activity": [
+      "подводное движение черепах и стай рыбы без преследования животных",
+      "лодочная посадка и выход к острову по разрешённому маршруту"
+    ],
     "drone": {
-      "visual_value": null,
+      "visual_value": "Воздушный ракурс показывает малый размер острова и рифовую кайму, но не является основанием для запуска.",
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "Дрон не является основной съёмкой; любые полёты/профессиональную съёмку согласовывать с Sabah Parks и авиационными правилами."
+        "Любой запуск у Сипадана отдельно согласовывать с Sabah Parks и авиационными властями; туристическое разрешение на дайвинг не равно разрешению на дрон."
       ],
       "source_refs": [
         "src_stage_my_0068",
-        "src_stage_my_0069",
-        "src_stage_my_0002",
-        "src_stage_my_0070",
-        "src_stage_my_0071"
+        "src_stage_my_0069"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-30"
     },
-    "useful_equipment": [],
-    "best_time": "Под водой обычно 09:00–13:00 для максимума солнечного света; над водой — рассвет и ранний выход.",
-    "best_weather_light": null
+    "useful_equipment": [
+      {
+        "type": "underwater_camera",
+        "why": "основной визуальный слой объекта находится под водой"
+      },
+      {
+        "type": "telephoto",
+        "why": "для лодок и островной кромки с разрешённой дистанции"
+      }
+    ],
+    "best_time": "morning / midday",
+    "best_weather_light": "Спокойное море и хорошая подводная видимость."
   },
   "media": {
     "cover_id": null,
@@ -289,16 +344,6 @@
       "moped_access",
       "taxi_ridehail",
       "guide_or_permit"
-    ],
-    "unmigrated_accommodation": [
-      {
-        "name": "Sipadan Inn 2",
-        "area": "Semporna Seafront",
-        "price_for_two": "бюджетный Semporna ориентир RM80–150; dive package/permit отдельно",
-        "contact": "+60 89-784 868",
-        "social_or_web": "сервисы бронирования",
-        "source": "актуальная карточка объекта размещения"
-      }
     ],
     "illustration": {
       "static_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sipadan_Island%2C_Sabah%2C_Malaysia.jpg",
@@ -338,7 +383,7 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
@@ -351,7 +396,7 @@
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

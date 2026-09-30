@@ -308,7 +308,7 @@ def main():
         preview_asset = row.get("preview_asset")
         if not preview_asset:
             fail(f"search object {object_id} is missing local preview_asset")
-        preview_path = root / preview_asset
+        preview_path = PUBLIC / preview_asset
         if not preview_path.is_file():
             fail(f"search object {object_id} preview binary is missing: {preview_asset}")
         if preview_path.suffix.lower() != ".webp" or preview_path.stat().st_size < 256:

@@ -79,7 +79,18 @@
       "checked_at": "2026-09-29"
     },
     "points": [],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": null,
+      "min_m": 0.0,
+      "max_m": 920.0,
+      "reference_type": "range",
+      "accuracy": "high",
+      "source_refs": [
+        "src:6f9fff52862ee8"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "0–920 м — высотный диапазон основных островов Raja Ampat UNESCO Global Geopark; 920 м относится к самым высоким вершинам Waigeo. Это не высота Piaynemo и не отметка морской части архипелага."
+    }
   },
   "story": {
     "narrative": "Raja Ampat лежит у западной оконечности Новой Гвинеи и состоит из множества известняковых островов, лагун и охраняемых акваторий с исключительно богатой рифовой системой. Для самостоятельной экспедиции это сеть баз и лодочных переходов, а не одна достопримечательность.",
@@ -149,12 +160,75 @@
   "visual_recon": {
     "photo_suitability_5": 5,
     "video_suitability_5": 5,
-    "best_time": null,
-    "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "useful_equipment": [],
+    "best_time": "Раннее утро и поздний день для объёма карстовых островов; более высокое солнце полезно для чтения цвета мелководных лагун и рифов.",
+    "best_weather_light": "Для Piaynemo и Wayag важны открытый горизонт и умеренная дымка; полностью серое небо снижает разделение островов, а сильный ветер важнее света из-за лодочного доступа.",
+    "viewpoints": [
+      {
+        "id": "vp_piaynemo_geosite",
+        "name": "Piaynemo geosite viewdeck",
+        "description": "Официальная смотровая на вершине известнякового холма над звездообразной лагуной Piaynemo.",
+        "coordinates": {
+          "lat": -0.563889,
+          "lon": 130.27125,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "-0.563889, 130.271250",
+          "dms": "00°33′50.0″S 130°16′16.5″E"
+        },
+        "access": "От причала вверх по построенной лестнице/тропе к viewdeck; геопарк прямо описывает подъём к вершине холма.",
+        "view": "Карстовые острова, лагуна и система трещин, формирующая характерный рисунок Piaynemo.",
+        "best_time": "early_morning / late_afternoon",
+        "best_weather_light": "Боковой свет сильнее моделирует известняковые башни; при более высоком солнце лучше читается цвет мелководья.",
+        "useful_equipment": [
+          "wide",
+          "standard",
+          "telephoto",
+          "phone"
+        ],
+        "source_refs": [
+          "src:fc2c7f8437658e"
+        ]
+      },
+      {
+        "id": "vp_karst_boat_corridor",
+        "name": "Лодочный коридор между карстовыми островами",
+        "description": "Движущаяся обзорная линия между Waigeo, Kabui, Piaynemo/Wayag и другими участками геопарка; показывает масштаб архипелага с уровня воды.",
+        "coordinates": null,
+        "gps": null,
+        "access": "Только лодкой; конкретный коридор зависит от выбранной базы, состояния моря и локального режима акватории.",
+        "view": "Известняковые sea-stacks, узкие проливы, лагуны, береговой лес и переход к открытому морю.",
+        "best_time": "morning / late_afternoon",
+        "best_weather_light": "Низкий боковой свет подчёркивает объём карста; в полдень сильнее проявляется цвет воды.",
+        "useful_equipment": [
+          "wide",
+          "standard",
+          "telephoto",
+          "phone"
+        ],
+        "source_refs": [
+          "src:38e8172ae22273"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "При спокойном море границы лагун, рифовых мелководий и глубоких проливов читаются заметно лучше; сильный ветер может полностью изменить лодочный план.",
+      "После дождя островная растительность становится насыщеннее, но низкая облачность может закрыть высокие части Waigeo и снизить дальнюю видимость."
+    ],
+    "video_activity": [
+      "лодочный проход между карстовыми островами и смена масштаба от открытого моря к узким проливам",
+      "движение воды и лодок у причалов",
+      "рифовая среда на разрешённых дайв-/снорклинг-сайтах",
+      "повседневная жизнь островных общин только с согласия людей и без постановки"
+    ],
+    "useful_equipment": [
+      "wide",
+      "standard",
+      "telephoto",
+      "underwater_camera",
+      "action_camera",
+      "phone"
+    ],
     "drone": "Только по действующим авиационным и локальным правилам; в нацпарках/храмах/аэропортовых зонах обычно требуется отдельное разрешение.",
     "filming_restrictions": "Обычная любительская съёмка зависит от правил объекта; коммерческую/постановочную съёмку согласовывать."
   },
@@ -167,9 +241,17 @@
         "license": "CC BY-SA 4.0",
         "artist": "Rizalubun",
         "last_checked": "2026-09-28"
+      },
+      {
+        "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Piaynemo_Raja_Ampat.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Piaynemo_Raja_Ampat.jpg",
+        "provider": "Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "artist": "Rolandandika",
+        "last_checked": "2026-09-30"
       }
     ],
-    "gallery_status": "single_image_source"
+    "gallery_status": "carousel_ready"
   },
   "provenance": {
     "source_refs": [

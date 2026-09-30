@@ -29,7 +29,8 @@
       "2026-09-29 regional language normalization: all regional reference profiles use natural Russian prose; legacy linkage names remain unchanged where required for stable IDs and hierarchy matching.",
       "2026-09-30 regional-layer correction: Cambodia regions upgraded toward Malaysia reference standard with geography, relief, climate, hydrology/marine where applicable, nature, health, safety, transport, ethnography/culture and fact-level provenance; attraction cards unchanged.",
       "2026-09-30 second QA pass: restored regional fauna/dangerous animals/poisonous plants/natural hazards for all Cambodia regional nodes and marine-life fields for coastal nodes; where local species evidence is not yet normalized the field explicitly records that limitation. Attraction cards unchanged.",
-      "Regional QA pass 2026-09-30: deepened Takeo / Angkor Borei–Phnom Da, Battambang and Koh Rong with UNESCO and Ministry of Tourism sources; added archaeology, hydraulic landscape, gastronomy and current island-infrastructure context."
+      "Regional QA pass 2026-09-30: deepened Takeo / Angkor Borei–Phnom Da, Battambang and Koh Rong with UNESCO and Ministry of Tourism sources; added archaeology, hydraulic landscape, gastronomy and current island-infrastructure context.",
+      "Regional QA pass 2026-09-30: deepened Kampot / Bokor and Kratie / middle Mekong with Ministry of Tourism and WWF sources; separated city, mountain, estuary, dolphin-corridor and community-based tourism facts."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -8529,9 +8530,10 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Кратьэх / средний Меконг",
         "geography": {
-          "summary": "Речной узел среднего Меконга; город Кратьэх и район Кампи связаны с руслом, островами, песчаными отмелями и глубокими плёсами.",
+          "summary": "Кратьэх — речной узел среднего Меконга, где город, Koh Trong, Kampi и более удалённые островные/сельские сообщества образуют разные связанные зоны. Главный природоохранный коридор тянется по руслу вверх к Stung Treng; одна точка Kratie town не представляет весь dolphin habitat.",
           "source_refs": [
-            "src_901001"
+            "src_901015",
+            "src_901016"
           ]
         },
         "relief": {
@@ -8549,11 +8551,14 @@
           "river": "Меконг",
           "monitoring": "MRC ведёт действующую гидрологическую станцию Кратьэх; текущие уровни воды являются динамическими.",
           "source_refs": [
-            "src_901001"
-          ]
+            "src_901001",
+            "src_901015",
+            "src_901016"
+          ],
+          "summary": "Меконг определяет и транспорт, и сезонную географию региона. В сухой сезон обнажаются песчаные отмели и river beaches, а глубокие pools остаются ключевыми участками для речной фауны; текущий уровень воды должен браться из MRC как динамическая величина."
         },
         "nature": {
-          "summary": "Глубокие участки Меконга у Кампи имеют особое значение для речной фауны, включая ирравадийских дельфинов; конкретные правила наблюдения должны браться у действующего местного/природоохранного оператора.",
+          "summary": "Ключевой природоохранный факт — ограниченный участок обитания ирравадийского дельфина между Kratie и Stung Treng. WWF рассматривает этот речной коридор как единый объект охраны; Kampi — лишь одна из точек наблюдения, а не вся область присутствия вида.",
           "fauna": [
             "ирравадийский дельфин на отдельных глубоких участках Меконга"
           ],
@@ -8571,7 +8576,11 @@
           },
           "poisonous_plants": {
             "status": "Отдельной надёжной локальной привязки токсичных растений к этому узлу в текущем наборе источников нет; общестрановой список не переносится автоматически."
-          }
+          },
+          "source_refs": [
+            "src_901015",
+            "src_901016"
+          ]
         },
         "health": {
           "malaria": {
@@ -8585,17 +8594,21 @@
           "checked_at": "2026-09-30"
         },
         "safety": {
-          "operational_context": "На лодке учитывать течение, уровень воды, грозы и спасательное оснащение; не приближаться к животным вне правил местного наблюдения.",
+          "operational_context": "На реке учитывать течение, грозы, уровень воды и правила наблюдения за дельфинами; на островных маршрутах — зависимость от лодки и ограниченную инфраструктуру. Присутствие охраняемой фауны не означает свободный подход к животным.",
           "source_refs": [
-            "src_901001"
+            "src_901001",
+            "src_901015",
+            "src_901016"
           ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "road": "Кратьэх служит наземной базой для радиальных выездов вдоль Меконга.",
-          "water_transport": "Для наблюдения на реке используется местная лодка; фактическая точка выхода зависит от сезона.",
+          "road": "Kratie town — наземный сервисный хаб. Ministry of Tourism указывает Kampi примерно в 15 км севернее города; Koh Pdao требует дополнительного road leg и затем boat leg. Такие маршруты нужно хранить отдельными access_options, а не одним «лодочным выездом из Kratie».",
+          "water_transport": "Для Kampi и островных сообществ используются локальные лодки; место посадки, длительность и возможность перехода зависят от конкретного участка и уровня воды.",
           "source_refs": [
-            "src_901001"
+            "src_901001",
+            "src_901015",
+            "src_901017"
           ]
         },
         "ethnography": {
@@ -8610,7 +8623,10 @@
             "src_901004",
             "src_900010",
             "src_901008",
-            "src_900014"
+            "src_900014",
+            "src_901015",
+            "src_901016",
+            "src_901017"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8627,6 +8643,13 @@
             "src_901008"
           ],
           "checked_at": "2026-09-30"
+        },
+        "culture": {
+          "summary": "Речной культурный слой связан с повседневной жизнью поселений вдоль Меконга, островными общинами и локальными продуктами вроде kralan. Koh Pdao Ministry of Tourism описывает как community-based tourism site с homestay, сельскими занятиями и локальными гидами; это конкретная община, а не модель для всей провинции.",
+          "source_refs": [
+            "src_901015",
+            "src_901017"
+          ]
         }
       },
       {
@@ -8646,10 +8669,16 @@
         "profile_kind": "province_or_route_region",
         "name_ru": "Кампот / Бокор",
         "geography": {
-          "summary": "Прибрежная низменность у реки Кампот резко переходит к Слоновым горам и плато Бокор; это один из самых контрастных по высоте региональных узлов страны."
+          "summary": "Кампот лежит в прибрежной низменности у реки, а всего в нескольких десятках километров начинается резкий подъём к Бокору. Министерство туризма отдельно выделяет этот контраст: городской и эстуарный Kampot, известняковые cave zones и прохладное облачное плато Bokor — разные полевые среды внутри одного регионального узла.",
+          "source_refs": [
+            "src_901013"
+          ]
         },
         "relief": {
-          "summary": "Кампот лежит низко у побережья; дорога на Бокор быстро набирает высоту к горному плато, где облачность и температура заметно отличаются от равнины."
+          "summary": "Bokor Hill находится примерно в 42 км от Kampot town и быстро поднимается над прибрежной равниной. Практически это означает существенную смену температуры, облачности и видимости на коротком автомобильном переходе; отдельные caves и lowland sites лежат уже вне этой высотной логики.",
+          "source_refs": [
+            "src_901013"
+          ]
         },
         "climate": {
           "summary": "Побережье жаркое и влажное; Бокор прохладнее, значительно влажнее и часто находится в облаках.",
@@ -8682,9 +8711,10 @@
           }
         },
         "nature": {
-          "summary": "Переход от прибрежной низменности к влажному горному лесу Бокора создаёт выраженную смену экосистем на коротком расстоянии.",
+          "summary": "Регион соединяет эстуарную низменность, мангровые участки, известняковые caves и более влажные горные леса Bokor National Park. Prek Thnout CBET подтверждает локальное сочетание mangrove boardwalk, waterfalls и использования лесных продуктов внутри/на периферии парка.",
           "source_refs": [
-            "src_900014"
+            "src_901013",
+            "src_901014"
           ],
           "fauna": {
             "summary": "Переход от прибрежных и эстуарных местообитаний к горным лесам Бокора создаёт высокое разнообразие экосистем; локальный видовой список ещё не нормализован.",
@@ -8721,14 +8751,19 @@
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "road": "Кампот связан с Пномпенем и Сиануквилем автодорогой и железной дорогой.",
+          "road": "Kampot служит основным дорожным хабом. Bokor связан с городом асфальтированной горной дорогой; Prek Thnout и cave districts требуют отдельных боковых маршрутов. Железнодорожный и автомобильный доступ к Kampot нельзя использовать как описание последнего участка к горным объектам.",
           "rail": "MPWT публикует пассажирское сообщение через Такео и Кампот; расписание динамическое.",
           "source_refs": [
-            "src_901007"
+            "src_901007",
+            "src_901013",
+            "src_901014"
           ]
         },
         "culture": {
-          "summary": "Регион сочетает колониальное наследие Кампота и Бокора с современной буддийской и местной религиозной практикой. Культ Йей Мао следует описывать как живую местную традицию, а не как подтверждённую историческую биографию."
+          "summary": "Культурный слой региона состоит из нескольких разных пластов: историческая городская среда Kampot, французская hill-station история Bokor и современные местные религиозные практики. Эти уровни нельзя смешивать в один «колониальный Бокор»; конкретные храмы и традиции должны раскрываться объектно.",
+          "source_refs": [
+            "src_901013"
+          ]
         },
         "local_reference_provenance": {
           "source_refs": [
@@ -8736,7 +8771,9 @@
             "src_901006",
             "src_901004",
             "src_901007",
-            "src_901008"
+            "src_901008",
+            "src_901013",
+            "src_901014"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8754,6 +8791,12 @@
             "src_901008"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Официальный Ministry of Tourism связывает создание Bokor Hill Station с французским колониальным периодом и датирует её началом 1920-х годов. Этот исторический слой относится к конкретному горному комплексу и не должен распространяться на весь Kampot region.",
+          "source_refs": [
+            "src_901013"
+          ]
         }
       }
     ],
@@ -9385,6 +9428,81 @@
         "roads",
         "infrastructure",
         "koh_rong"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_KAMPOT_TOURISM_OFFICIAL",
+      "canonical_id": "src_901013",
+      "publisher": "Ministry of Tourism Cambodia — Kampot Province",
+      "url": "https://www.tourismcambodia.org/public/index.php/provinces/52/kampot",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_relief",
+        "bokor",
+        "regional_history",
+        "regional_transport",
+        "regional_nature"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_PREK_THNOUT_CBET",
+      "canonical_id": "src_901014",
+      "publisher": "Ministry of Tourism Cambodia — Prek Thnout Community-Based Ecotourism Site",
+      "url": "https://www.tourismcambodia.org/public/index.php/mot/cbet-destination/529/prek-thnout-community-based-ecotourism-site",
+      "kind": "government",
+      "used_for": [
+        "regional_nature",
+        "community_based_tourism",
+        "mangrove",
+        "waterfalls",
+        "regional_transport"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_KRATIE_TOURISM_OFFICIAL",
+      "canonical_id": "src_901015",
+      "publisher": "Ministry of Tourism Cambodia — Kratie Province",
+      "url": "https://tourismcambodia.org/public/provinces/50/kratie",
+      "kind": "government",
+      "used_for": [
+        "regional_geography",
+        "regional_transport",
+        "kampi",
+        "regional_culture",
+        "mekong"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_ME KONG_DOLPHIN_WWF",
+      "canonical_id": "src_901016",
+      "publisher": "WWF-Cambodia — Mekong Irrawaddy river dolphins",
+      "url": "https://www.wwf.org.kh/our_work/diving_into_the_mekong_irrawaddy_river_dolphins/",
+      "kind": "ngo_conservation",
+      "used_for": [
+        "regional_nature",
+        "irrawaddy_dolphin",
+        "mekong",
+        "conservation"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_KOH_PDAO_CBET",
+      "canonical_id": "src_901017",
+      "publisher": "Ministry of Tourism Cambodia — Koh Pdao Community Development Tour",
+      "url": "https://www.tourismcambodia.org/mot/cbet-destination/531/koh-pdao-community-development-tour",
+      "kind": "government",
+      "used_for": [
+        "regional_transport",
+        "community_based_tourism",
+        "homestay",
+        "mekong",
+        "koh_pdao"
       ],
       "accessed": "2026-09-30"
     }

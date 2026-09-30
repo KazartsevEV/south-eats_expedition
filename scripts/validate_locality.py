@@ -118,15 +118,22 @@ for row in geo_index.get("entities", []):
 
     missing.extend(key for key in required if not has_value(entity.get(key)))
 
-    refs = ((entity.get("provenance") or {}).get("source_refs") or [])
+    provenance = entity.get("provenance") or {}
+    refs = provenance.get("source_refs") or []
+    research_refs = provenance.get("research_source_refs") or []
     if not refs:
         missing.append("provenance.source_refs")
-    if not has_value((entity.get("provenance") or {}).get("checked_at")):
+    if not has_value(provenance.get("checked_at")):
         missing.append("provenance.checked_at")
 
     description = entity.get("description") or {}
-    if role in {"regional_profile", "locality_profile"} and not has_value(description.get("narrow")):
-        missing.append("description.narrow")
+    if role in {"regional_profile", "locality_profile"}:
+        if not research_refs:
+            missing.append("provenance.research_source_refs")
+        if not has_value(description.get("narrow")):
+            missing.append("description.narrow")
+        if not has_value((entity.get("freshness") or {}).get("checked_at")):
+            missing.append("freshness.checked_at")
 
     if role == "locality_profile":
         primary = entity.get("primary_location")
@@ -134,9 +141,6 @@ for row in geo_index.get("entities", []):
         if not has_value(primary):
             if location_status.get("status") not in {"unresolved", "not_applicable"} or not has_value(location_status.get("reason")):
                 missing.append("primary_location_or_explicit_status")
-        climate = entity.get("climate") or {}
-        if climate and not has_value(climate.get("annual_reference")) and not has_value(climate.get("annual_reference_status")):
-            missing.append("climate.annual_reference_or_status")
 
     if missing:
         geo_gaps.append({
@@ -169,14 +173,17 @@ result = {
             "regional_profile": list(REGION_REQUIRED_KEYS) + [
                 "description.narrow",
                 "provenance.source_refs",
+                "provenance.research_source_refs",
                 "provenance.checked_at",
+                "freshness.checked_at",
             ],
             "locality_profile": [
                 "description.narrow",
                 "primary_location_or_explicit_status",
                 "provenance.source_refs",
+                "provenance.research_source_refs",
                 "provenance.checked_at",
-                "climate.annual_reference_or_status_when_climate_present",
+                "freshness.checked_at",
             ],
         },
     },

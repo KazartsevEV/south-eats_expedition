@@ -45,6 +45,38 @@
     "approximate",
     "unknown"
   ],
+  "boundary_geometry": {
+    "format": "GeoJSON FeatureCollection",
+    "allowed_geometry_types": [
+      "Polygon",
+      "MultiPolygon"
+    ],
+    "coordinate_order": [
+      "lon",
+      "lat"
+    ],
+    "crs": "WGS84",
+    "epsg": 4326,
+    "entity_field": "geometry_path",
+    "metadata_required_when_available": [
+      "geometry_type",
+      "accuracy",
+      "source_refs",
+      "checked_at"
+    ],
+    "accuracy_values": [
+      "simplified_sourced_boundary",
+      "approximate"
+    ],
+    "rules": {
+      "feature_geo_id_must_match_entity": true,
+      "administrative_psgc_must_match_metadata": true,
+      "polygon_rings_must_be_closed": true,
+      "simplified_boundaries_must_be_marked": true,
+      "approximate_composites_must_explain_coverage_basis": true,
+      "navigation_mask_not_cadastral": true
+    }
+  },
   "rules": {
     "lat_range": [
       -90,

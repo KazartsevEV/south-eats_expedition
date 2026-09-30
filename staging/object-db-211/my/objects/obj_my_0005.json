@@ -46,13 +46,15 @@
     "geo_points": [],
     "object_elevation": {
       "representative_m": null,
-      "min_m": null,
-      "max_m": null,
-      "reference_type": null,
-      "accuracy": "unknown",
-      "source_refs": [],
-      "checked_at": null,
-      "notes": null
+      "min_m": 28,
+      "max_m": 2376,
+      "reference_type": "range",
+      "accuracy": "high",
+      "source_refs": [
+        "src_stage_my_0231"
+      ],
+      "checked_at": "2026-09-30",
+      "notes": "Диапазон высот всего Gunung Mulu National Park по UNESCO; 2376 м — вершина Gunung Mulu, а не отметка туристического входа или пещер."
     }
   },
   "narrative": {
@@ -253,30 +255,72 @@
     }
   ],
   "visual_recon": {
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
+    "viewpoints": [
+      {
+        "id": "vp_mulu_bat_observatory",
+        "name": "Bat Observatory у Deer Cave",
+        "coordinates": {
+          "lat": 4.0235,
+          "lon": 114.82159,
+          "elevation_m": null
+        },
+        "gps": {
+          "decimal": "4.023500, 114.821590"
+        },
+        "access": {
+          "walk_km": null
+        },
+        "view": {
+          "description": "Выход из пещерного массива и вечерний вылет летучих мышей на фоне карстовых стен и леса."
+        },
+        "best_time": "late_afternoon / sunset",
+        "best_weather_light": "Сумеречное небо отделяет поток летучих мышей от тёмного леса; сильный дождь может ухудшить наблюдение.",
+        "useful_equipment": [
+          {
+            "type": "telephoto",
+            "why": "для плотных фрагментов потока летучих мышей и карстовых стен"
+          },
+          {
+            "type": "wide",
+            "why": "для масштаба выхода из пещеры и лесного окружения"
+          }
+        ],
+        "source_refs": [
+          "src_stage_my_0209"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "После дождей лес и известняк становятся насыщеннее; облачность и осадки сильнее всего влияют на видимость вечернего вылета."
+    ],
+    "video_activity": [
+      "массовый вечерний вылет летучих мышей из Deer Cave",
+      "движение воды и людей на настилах пещерного маршрута"
+    ],
     "drone": {
       "visual_value": null,
       "legal_status": "unknown",
       "permit_required": null,
       "restrictions": [
-        "Проверять национальные авиационные правила и отдельное разрешение владельца/парка; в охраняемых, религиозных, археологических и приграничных зонах не запускать без явного допуска."
+        "на территории национального парка запуск не считать разрешённым без отдельного разрешения администрации и соблюдения авиационных правил"
       ],
       "source_refs": [
-        "src_stage_my_0018",
-        "src_stage_my_0019",
-        "src_stage_my_0002",
-        "src_stage_my_0020",
-        "src_stage_my_0021",
-        "src_stage_my_0022",
-        "src_stage_my_0023"
+        "src_stage_my_0231"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-30"
     },
-    "useful_equipment": [],
-    "best_time": "Пещеры — по лучу естественного света у входов; лес — после дождя и в тумане; Pinnacles — раннее утро при чистом окне.",
-    "best_weather_light": null
+    "useful_equipment": [
+      {
+        "type": "wide",
+        "why": "карстовые полости и лесной масштаб"
+      },
+      {
+        "type": "telephoto",
+        "why": "летучие мыши и удалённые детали стен"
+      }
+    ],
+    "best_time": "late_afternoon / sunset",
+    "best_weather_light": "Сухое окно без сильного дождя."
   },
   "media": {
     "cover_id": null,
@@ -358,14 +402,14 @@
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
       "water": true,
       "overnight": true,
       "traveler_reports": true,
-      "visual_recon": false
+      "visual_recon": true
     },
     "last_reviewed_at": "2026-09-30"
   }

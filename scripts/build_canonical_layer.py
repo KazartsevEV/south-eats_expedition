@@ -163,8 +163,9 @@ def require_id(registry: dict, section: str, legacy_id: str) -> str:
 
 def remap_source_refs(values, registry):
     out = []
+    canonical_values = set((registry.get("sources") or {}).values())
     for value in values or []:
-        canonical = require_id(registry, "sources", value)
+        canonical = value if value in canonical_values else require_id(registry, "sources", value)
         if canonical not in out:
             out.append(canonical)
     return out

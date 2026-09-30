@@ -476,7 +476,7 @@ def build():
             if region_profile.get("best_period_general") and not climate_detail.get("best_period_general"):
                 climate_detail["best_period_general"] = region_profile.get("best_period_general")
             entity["climate"] = climate_detail
-            for field in ("geography", "relief", "geology", "hydrology", "coast", "marine", "nature", "health", "safety", "history", "ethnography", "culture", "architecture", "transport"):
+            for field in ("geography", "relief", "geology", "hydrology", "coast", "marine", "nature", "health", "safety", "history", "ethnography", "culture", "myths_beliefs", "architecture", "transport"):
                 if region_profile.get(field) not in (None, "", [], {}):
                     entity[field] = region_profile.get(field)
             entity["freshness"] = {"checked_at": ((region_profile.get("local_reference_provenance") or {}).get("checked_at")) or region_profile.get("last_verified")}
@@ -642,6 +642,7 @@ def build():
                 "geo_path": formal_geo_path(node_id),
                 "description": {"narrow": node.get("notes_ru"), "body": None},
                 "cover_media_id": None,
+                "primary_location": node.get("primary_location"),
                 "legacy_ids": [node_id],
                 "migration": {"source_kind": "formal_hierarchy", "axis": node.get("axis"), "status": "formalized"},
                 "provenance": {"checked_at": (doc.get("meta") or {}).get("checked_at"), "sources": doc.get("sources") or []},

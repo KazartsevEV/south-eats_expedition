@@ -32,7 +32,8 @@
       "2026-09-30 regional-layer correction: Indonesia regions upgraded toward Malaysia reference standard with geography, relief, climate, geology/hydrology/marine where applicable, nature, health, safety, transport, ethnography and provenance; dynamic marine and volcanic conditions point to BMKG/PVMBG rather than frozen values; attraction cards unchanged.",
       "2026-09-30 second QA pass: normalized country nature/safety Russian and added regional fauna, dangerous animals, poisonous plants, marine life where applicable, and natural hazards across all 14 Indonesia nodes. Attraction cards unchanged.",
       "2026-09-30 object QA started by class: archaeology.megalith and archaeology.site receive sourced object elevations plus normalized visual_recon; legacy shot lists/camera-setting guidance is not migrated.",
-      "2026-09-30 object QA: ethnography.living_settlement / Wae Rebo receives official site elevation and normalized visual reconnaissance without camera-setting or shot-list instructions."
+      "2026-09-30 object QA: ethnography.living_settlement / Wae Rebo receives official site elevation and normalized visual reconnaissance without camera-setting or shot-list instructions.",
+      "Regional QA pass 2026-09-30: deepened Toraja / South Sulawesi and Central Kalimantan / Tanjung Puting with UNESCO, KSDAE and Indonesia Travel sources; replaced unsupported generic regional claims with locally sourced structure, access and ethnography."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -8130,18 +8131,29 @@
         "last_verified": "2026-09-28",
         "name_ru": "Тораджа / Южный Сулавеси",
         "geography": {
-          "summary": "Высокогорный внутренний район Южного Сулавеси с глубокими долинами, известняковыми массивами и сельскохозяйственными террасами."
+          "summary": "Тораджа занимает горный внутренний пояс Южного Сулавеси. UNESCO указывает для традиционного культурного ландшафта холмистый рельеф с плато примерно от 300 до 2 800 м; поселения, рисовые поля, пастбища и известняковые скалы образуют связанную, а не точечную систему.",
+          "source_refs": [
+            "src_903007"
+          ]
         },
         "relief": {
-          "summary": "Горные дороги и крутые склоны сильно увеличивают время между поселениями."
+          "summary": "Культурный ландшафт распределён по горным долинам и плато, поэтому расстояния между Makale, Rantepao и деревнями обманчиво короткие по карте, но фактически зависят от серпантинов и крутых подъездов. Высотный диапазон региона велик, и отдельные поселения лежат на совершенно разных уровнях.",
+          "source_refs": [
+            "src_903007"
+          ]
         },
         "geology": {
-          "summary": "В ряде районов выражен известняковый карст; детальную геологию отдельных погребальных скал фиксировать только по профильным источникам."
+          "summary": "Известняковые скалы являются постоянной частью традиционного ландшафта и во многих местах связаны с погребальными участками, но конкретную литологию и геоморфологию отдельных cliffs без профильного геологического источника не фиксируем.",
+          "source_refs": [
+            "src_903007"
+          ]
         },
         "climate": {
           "summary": "Высокогорье прохладнее побережья, ливни возможны круглый год.",
           "field_context": "После сильных дождей скальные и сельские тропы становятся скользкими.",
-          "source_refs": []
+          "source_refs": [
+            "src_903008"
+          ]
         },
         "health": {
           "malaria": {
@@ -8154,24 +8166,34 @@
           "checked_at": "2026-09-30"
         },
         "safety": {
-          "operational_context": "Крутые дороги, ливни и скальные тропы — основные физические факторы.",
-          "source_refs": [],
+          "operational_context": "Главные полевые ограничения — серпантины, ливни, скользкие сельские и скальные подходы и большие фактические времена между деревнями. Ритуальные церемонии являются живыми событиями общины, поэтому доступ и поведение нужно проверять локально, а не считать их гарантированной туристической программой.",
+          "source_refs": [
+            "src_903007",
+            "src_903008",
+            "src_903006"
+          ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Основной доступ наземный из Макассара через горные дороги; внутри региона — автомобиль/мотоцикл и пешие связки."
+          "summary": "Основной наземный коридор идёт из Makassar в Makale/Rantepao; официальный Indonesia Travel указывает автобусный путь примерно 8–10 часов. Сейчас также используется Toraja Airport в Mengkendek, откуда до Makale/Rantepao остаётся отдельный автомобильный segment. Внутри региона bemo, оjek, мотоцикл и машина работают как локальные варианты, а деревни и погребальные комплексы требуют самостоятельных legs.",
+          "source_refs": [
+            "src_903008"
+          ]
         },
         "ethnography": {
-          "summary": "Тораджа — живой культурный регион с архитектурой тонгконан, ритуалами и сложной системой родственных и погребальных практик; церемонии не следует описывать как гарантированное туристическое представление.",
+          "summary": "UNESCO описывает традиционное поселение Toraja как связку tongkonan, амбаров alang, погребений liang, церемониальных площадок rante с менгирами, рисовых полей, бамбуковых рощ и пастбищ. Это живая социально-ритуальная система, а не набор «этнических декораций»; разные деревни должны храниться отдельными geo/object сущностями.",
           "source_refs": [
-            "src_000725"
+            "src_000725",
+            "src_903007"
           ]
         },
         "local_reference_provenance": {
           "source_refs": [
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903007",
+            "src_903008"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -8199,7 +8221,19 @@
           ],
           "checked_at": "2026-09-30"
         },
-        "narrow": "Тораджа — высокогорный культурный регион Южного Сулавеси с глубокими долинами, известняковыми массивами и сельскохозяйственными террасами. Тонгконаны, родственные структуры и погребальные ритуалы остаются частью живой местной системы и не должны подаваться как гарантированное туристическое представление."
+        "narrow": "Тораджа — высокогорный культурный регион Южного Сулавеси с глубокими долинами, известняковыми массивами и сельскохозяйственными террасами. Тонгконаны, родственные структуры и погребальные ритуалы остаются частью живой местной системы и не должны подаваться как гарантированное туристическое представление.",
+        "culture": {
+          "summary": "Aluk To Dolo / Aluk Todolo задаёт ритуальную и космологическую рамку традиционного Toraja settlement. UNESCO прямо связывает её с планировкой поселения, церемониями, домами, декором и ролью буйвола. Современный религиозный состав региона сложнее, поэтому эту традицию нужно хранить как documented living tradition, а не как универсальное описание всех жителей.",
+          "source_refs": [
+            "src_903007"
+          ]
+        },
+        "myths_beliefs": {
+          "summary": "Официальный Indonesia Travel фиксирует живое представление о небесном происхождении предков и связи ритуалов жизни и смерти с благополучием земли и общины. Для базы это local_tradition / documented living belief; его нельзя выдавать за исторический факт.",
+          "source_refs": [
+            "src_903008"
+          ]
+        }
       },
       {
         "name": "North Sumatra / Gunung Leuser",
@@ -8317,21 +8351,34 @@
         "last_verified": "2026-09-28",
         "name_ru": "Центральный Калимантан / Танджунг-Путинг",
         "geography": {
-          "summary": "Низменный южный Калимантан с торфяными болотами, реками и лесами; Танджунг-Путинг доступен преимущественно по реке."
+          "summary": "Tanjung Puting расположен на полуострове юга Борнео между Kumai Bay и Seruyan River. UNESCO описывает это как крупную низменную болотисто-аллювиальную систему, а не просто «парк орангутанов»; сервисный вход находится через Pangkalan Bun и Kumai.",
+          "source_refs": [
+            "src_903009",
+            "src_903010"
+          ]
         },
         "relief": {
-          "summary": "Почти плоская низменность; гидрология и состояние торфяников важнее перепадов высоты."
+          "summary": "Рельеф преимущественно плоский и слабоволнистый, примерно от уровня моря до около 100 м. Для маршрутов здесь важнее тип леса, гидрология, состояние торфа и проходимость речных каналов, чем набор высот.",
+          "source_refs": [
+            "src_903010"
+          ]
         },
         "climate": {
           "summary": "Жарко и влажно круглый год.",
           "field_context": "В сухие годы возрастает риск торфяных и лесных пожаров и дыма.",
-          "source_refs": []
+          "source_refs": [
+            "src_903010"
+          ]
         },
         "hydrology": {
-          "summary": "Реки являются главными транспортными коридорами; уровень воды влияет на доступ к отдельным участкам."
+          "summary": "Речная сеть определяет и экосистему, и доступ. Основной туристический вход строится через Kumai и далее по Sekonyer River на klotok; уровни воды и состояние каналов влияют на фактическую доступность отдельных участков и причалов.",
+          "source_refs": [
+            "src_903010",
+            "src_903011"
+          ]
         },
         "nature": {
-          "summary": "Низменные дождевые и торфяно-болотные леса являются ключевой средой обитания орангутанов и другой борнейской фауны.",
+          "summary": "UNESCO перечисляет здесь низинный диптерокарповый лес, freshwater swamp, peat swamp, kerangas, mangrove, coastal и secondary forests. Такой набор экосистем поддерживает борнейского орангутана, proboscis monkey и другую редкую фауну; отдельные feeding/research sites не следует подменять описанием всей природной территории.",
           "fauna": [
             "орангутаны",
             "другая фауна низменных и торфяно-болотных лесов Борнео"
@@ -8341,7 +8388,11 @@
           },
           "poisonous_plants": {
             "status": "Надёжная локальная привязка токсичных растений к этому узлу пока не подтверждена отдельным источником; общестрановой список не переносится автоматически."
-          }
+          },
+          "source_refs": [
+            "src_903009",
+            "src_903010"
+          ]
         },
         "health": {
           "malaria": {
@@ -8354,15 +8405,23 @@
           "checked_at": "2026-09-30"
         },
         "safety": {
-          "operational_context": "При пожарах проверять дым/качество воздуха; на реке — уровень воды, грозы и состояние лодки.",
-          "source_refs": [],
+          "operational_context": "Основные динамические риски — торфяные и лесные пожары с дымом в сухие годы, грозы, высокий/низкий уровень воды и изолированность речного маршрута. Видимость животных и состояние маршрутов зависят от текущей обстановки; это не постоянная характеристика конкретной стоянки.",
+          "source_refs": [
+            "src_903006",
+            "src_903009",
+            "src_903010"
+          ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "summary": "Основной вход — Пангкалан-Бун/Кумай; дальше типичная логистика — речная лодка-клоток и пешие участки."
+          "summary": "Практическая схема доступа: перелёт или наземный путь до Pangkalan Bun, затем около 15 км до Kumai и пересадка на речную лодку; внутри park corridor klotok работает как основной транспорт, а к observation/research sites идут отдельные пешие участки. Camp Leakey, Pondok Tanggui и другие точки должны иметь собственные waypoints/landing points.",
+          "source_refs": [
+            "src_903010",
+            "src_903011"
+          ]
         },
         "ethnography": {
-          "summary": "В регионе представлены даякские и банжарские сообщества; конкретные культурные особенности привязывать к населённым пунктам, а не ко всему Калимантану.",
+          "summary": "Региональный культурный фон Центрального Калимантана действительно включает даякские и банжарские общины, но Tanjung Puting прежде всего природоохранная и речная система. Конкретную этнографию нельзя автоматически переносить на каждый park sector; её надо привязывать к конкретным поселениям вне или на периферии резервата.",
           "source_refs": [
             "src_000725"
           ]
@@ -8371,7 +8430,10 @@
           "source_refs": [
             "src_903003",
             "src_000725",
-            "src_903006"
+            "src_903006",
+            "src_903009",
+            "src_903010",
+            "src_903011"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -9335,6 +9397,81 @@
       ],
       "accessed": "2026-09-30",
       "notes": "Country and regional hazard context; operational warnings remain dynamic."
+    },
+    {
+      "id": "ID_TORAJA_UNESCO_TENTATIVE",
+      "canonical_id": "src_903007",
+      "publisher": "UNESCO World Heritage Centre — Tana Toraja Traditional Settlement",
+      "url": "https://whc.unesco.org/en/tentativelists/5462/",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_geography",
+        "relief",
+        "settlement_structure",
+        "ethnography",
+        "aluk_todolo",
+        "burial_landscape"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_TORAJA_OFFICIAL_TOURISM",
+      "canonical_id": "src_903008",
+      "publisher": "Indonesia Travel — Tana Toraja",
+      "url": "https://www.indonesia.travel/id/en/travel-ideas/adventure/tana-toraja",
+      "kind": "government",
+      "used_for": [
+        "regional_transport",
+        "regional_culture",
+        "myths_beliefs",
+        "regional_geography"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_TANJUNG_PUTING_UNESCO_MAB",
+      "canonical_id": "src_903009",
+      "publisher": "UNESCO Man and the Biosphere Programme — Tanjung Puting",
+      "url": "https://www.unesco.org/en/mab/tanjung-puting",
+      "kind": "international_organization",
+      "used_for": [
+        "regional_geography",
+        "regional_nature",
+        "ecosystems",
+        "orangutan",
+        "biosphere_reserve"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_TANJUNG_PUTING_KSDAE",
+      "canonical_id": "src_903010",
+      "publisher": "Direktorat Jenderal KSDAE — Informasi Kawasan Konservasi, Tanjung Puting",
+      "url": "https://ksdae.menlhk.go.id/assets/publikasi/Buku_Informasi_521_KK_Region_Kalimantan_dan_Sulawe.pdf",
+      "kind": "government",
+      "used_for": [
+        "regional_relief",
+        "regional_climate",
+        "regional_nature",
+        "regional_transport",
+        "fauna",
+        "park_status"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "ID_TANJUNG_PUTING_TOURISM",
+      "canonical_id": "src_903011",
+      "publisher": "Indonesia Travel — Tanjung Puting / Kumai access",
+      "url": "https://www.indonesia.travel/id/id/travel-ideas/adventure/10-destinasi-ekowisata-terbaik-di-indonesia-yang-wajib-kamu-kunjungi",
+      "kind": "government",
+      "used_for": [
+        "regional_transport",
+        "kumai",
+        "klotok",
+        "sekonyer"
+      ],
+      "accessed": "2026-09-30"
     }
   ],
   "uncertainties": [

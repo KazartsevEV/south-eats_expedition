@@ -53,7 +53,8 @@
       "Regional QA pass 2026-09-30: deepened Niah and Mulu using UNESCO World Heritage sources; added Niah 50,000-year archaeological/rainforest interaction record and molong tradition, plus Mulu stratigraphy, karst evolution and protected-area biodiversity.",
       "Language QA 2026-09-30: normalized the new Niah/Mulu narrative text to natural Russian.",
       "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Malaysia; technical schema keys and official proper names remain unchanged.",
-      "Regional QA pass 2026-09-30: deepened Sabah highlands / Kinabalu and Perak / Royal Belum with Sabah Parks and Tourism Malaysia sources; separated geopark, park-HQ, summit, city and forest-water access layers."
+      "Regional QA pass 2026-09-30: deepened Sabah highlands / Kinabalu and Perak / Royal Belum with Sabah Parks and Tourism Malaysia sources; separated geopark, park-HQ, summit, city and forest-water access layers.",
+      "Regional QA pass 2026-09-30: normalized Perhentian and Semporna geography/transport source_refs using existing Department of Fisheries, Sabah Parks and Sabah Tourism sources; no object payloads changed."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -1782,7 +1783,11 @@
         "last_verified": "2026-09-28",
         "geography": {
           "summary": "Перхентианские острова лежат у побережья района Бесут в Тренгану; вся самостоятельная логистика завязана на Куала-Бесут и морской переход.",
-          "coast": "Открытое восточное побережье полуострова обращено к Южно-Китайскому морю и значительно сильнее зависит от северо-восточного муссона, чем западное побережье."
+          "coast": "Открытое восточное побережье полуострова обращено к Южно-Китайскому морю и значительно сильнее зависит от северо-восточного муссона, чем западное побережье.",
+          "source_refs": [
+            "src_000601",
+            "src_000593"
+          ]
         },
         "climate": {
           "summary": "На восточном побережье полуострова максимум осадков обычно приходится на ноябрь–январь, а более сухой период — примерно на июнь–июль.",
@@ -1805,7 +1810,9 @@
           },
           "marine_life": {
             "summary": "Перхентианские острова связаны с коралловыми рифами, морскими черепахами и другой рифовой фауной; видовой список зависит от острова и участка.",
-            "source_refs": []
+            "source_refs": [
+              "src_000601"
+            ]
           },
           "source_refs": [
             "src_000601",
@@ -1835,7 +1842,7 @@
           ]
         },
         "transport": {
-          "gateway": "Куала-Бесут — материковый узел для островов. Департамент рыболовства указывает районное управление в зоне район причала и центр морского парка непосредственно на Перхентианских островах.",
+          "gateway": "Куала-Бесут — материковый узел доступа к Перхентианским островам; дальше начинается отдельный морской leg. Архипелаг не имеет единой дорожной сети, поэтому каждая бухта и островная база требуют собственной точки высадки и локального пешего/лодочного участка.",
           "note": "Расписание коммерческих лодок меняется; в этом справочном проходе оно ещё не нормализовано.",
           "source_refs": [
             "src_000601"
@@ -2068,7 +2075,12 @@
         ],
         "last_verified": "2026-09-28",
         "geography": {
-          "summary": "Морской район вокруг Семпорны и моря Сулавеси включает океанический Сипадан, коралловые рифы и вулканические острова морского парка Тун-Сакаран; его нужно рассматривать отдельно от материкового Сабаха."
+          "summary": "Морской район вокруг Семпорны и моря Сулавеси включает океанический Сипадан, коралловые рифы и вулканические острова морского парка Тун-Сакаран; его нужно рассматривать отдельно от материкового Сабаха.",
+          "source_refs": [
+            "src_000610",
+            "src_000611",
+            "src_000661"
+          ]
         },
         "geology": {
           "sipadan": "Сипадан — океанический остров, сформированный живым коралловым массивом на вершине вулканического конуса, который поднимается примерно на 600 м от морского дна.",
@@ -2165,10 +2177,11 @@
           "caveat": "Границы полицейского округа не обязательно совпадают с административными. В набор не входят незаявленные преступления. Это абсолютные числа, а не показатель на душу населения и не оценка безопасности."
         },
         "transport": {
-          "gateway": "Семпорна — материковый транспортный узел. По данным Управления парков Сабаха, при спокойном море путь до Сипадана на скоростной лодке занимает около 45 минут; до островов Тун-Сакарана также добираются лодкой из Семпорны.",
+          "gateway": "Семпорна — материковый gateway для Сипадана, Тун-Сакарана и соседних островов. После города маршруты расходятся на разные boat legs с отдельными permit/access conditions; нельзя использовать одну лодочную точку как универсальный вход во весь морской район.",
           "source_refs": [
             "src_000610",
-            "src_000611"
+            "src_000611",
+            "src_000661"
           ]
         },
         "local_reference_provenance": {
@@ -2191,7 +2204,8 @@
             "src_000595",
             "src_000617",
             "src_000594",
-            "src_000588"
+            "src_000588",
+            "src_000661"
           ],
           "checked_at": "2026-09-29"
         },

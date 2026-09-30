@@ -1,0 +1,113 @@
+{
+  "schema_version": "2.0-object-rebuild",
+  "required_top_level": [
+    "id",
+    "kind",
+    "slug",
+    "status",
+    "names",
+    "summary",
+    "classification",
+    "geo",
+    "narrative",
+    "visit",
+    "traveler_reports",
+    "visual_recon",
+    "media",
+    "relations",
+    "freshness",
+    "qa"
+  ],
+  "narrative_section": {
+    "required": [
+      "type",
+      "text",
+      "source_refs"
+    ],
+    "allowed_types": [
+      "overview",
+      "history",
+      "culture",
+      "geography",
+      "geology",
+      "ethnography",
+      "myths_beliefs"
+    ]
+  },
+  "geo_primary_location": {
+    "required": [
+      "lat",
+      "lon",
+      "elevation_m",
+      "coordinate_type",
+      "accuracy",
+      "source_refs",
+      "checked_at"
+    ]
+  },
+  "visit": {
+    "required": [
+      "entry",
+      "access_options",
+      "water",
+      "supplies",
+      "overnight",
+      "lodging_ids",
+      "rules",
+      "seasonality"
+    ]
+  },
+  "entry": {
+    "required": [
+      "access_status",
+      "fee",
+      "hours",
+      "permit_required",
+      "source_refs",
+      "checked_at"
+    ]
+  },
+  "access_option": {
+    "required": [
+      "id",
+      "origin_place_id",
+      "modes",
+      "legs"
+    ]
+  },
+  "leg": {
+    "required": [
+      "mode",
+      "distance_km",
+      "duration_min"
+    ]
+  },
+  "visual_recon": {
+    "required": [
+      "viewpoints",
+      "seasonal_visuals",
+      "video_activity",
+      "drone"
+    ]
+  },
+  "qa_checks": [
+    "language",
+    "classification",
+    "geo",
+    "coordinates",
+    "elevation",
+    "narrative",
+    "sources",
+    "access",
+    "water",
+    "overnight",
+    "traveler_reports",
+    "visual_recon"
+  ],
+  "null_policy": "Unknown factual values must be null/unknown; do not infer or invent.",
+  "source_policy": "Changing or factual claims must retain source_refs at fact level where available.",
+  "notes": [
+    "Existing live card shape is not authoritative.",
+    "This contract governs staging/object-db-211 rebuilt cards before full object-layer replacement."
+  ]
+}

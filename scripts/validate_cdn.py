@@ -73,13 +73,16 @@ for path in sources:
     if not (doc.get("meta") or {}).get("country"):
         fail(f"source missing meta.country: {path}")
     migration_stage = (doc.get("meta") or {}).get("migration_stage")
-    if migration_stage != "country_only" and not isinstance((doc.get("travel") or {}).get("objects"), list):
+    travel = doc.get("travel") or {}
+    if migration_stage not in {"country_only", "country_and_regional"} and not isinstance(travel.get("objects"), list):
         fail(f"source missing travel.objects: {path}")
-    if migration_stage == "country_only":
+    if migration_stage in {"country_only", "country_and_regional"}:
         required_country_sections = ("overview", "nature", "climate", "safety", "travel", "sources")
         missing_sections = [key for key in required_country_sections if doc.get(key) in (None, "", [], {})]
         if missing_sections:
-            fail(f"country-only source missing sections {missing_sections}: {path}")
+            fail(f"{migration_stage} source missing sections {missing_sections}: {path}")
+    if migration_stage == "country_and_regional" and not isinstance(travel.get("regions"), list):
+        fail(f"country_and_regional source missing travel.regions: {path}")
 
 latest_path = CDN / "latest.json"
 if not latest_path.exists():

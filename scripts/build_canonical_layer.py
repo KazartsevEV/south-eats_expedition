@@ -254,11 +254,15 @@ def narrative_sections(story, source_refs):
     return rows
 
 
-def access_options(logistics):
+def access_options(logistics, origin=None):
     logistics = logistics or {}
     structured = logistics.get("access_options")
     if isinstance(structured, list) and structured:
-        return json.loads(json.dumps(structured, ensure_ascii=False))
+        rows = json.loads(json.dumps(structured, ensure_ascii=False))
+        for row in rows:
+            if isinstance(row, dict) and row.get("origin") in (None, "") and origin not in (None, ""):
+                row["origin"] = origin
+        return rows
     raw_modes = logistics.get("modes") or {}
     mode_aliases = {
         "public_transport": "public_transport",
@@ -280,7 +284,7 @@ def access_options(logistics):
                 continue
             mode = mode_aliases.get(raw_mode, "other")
             options.append({
-                "origin": None,
+                "origin": origin,
                 "modes": [mode],
                 "legs": [{
                     "mode": mode,
@@ -328,6 +332,80 @@ def traveler_reports_list(value):
         return [{"kind": "legacy_aggregate", "data": value, "source_refs": []}]
     return [{"kind": "legacy_note", "summary": str(value), "source_refs": []}]
 
+
+
+def traveler_reports_complete(reports):
+    if not reports:
+        return False
+    return all(
+        isinstance(row, dict)
+        and bool(row.get("source_refs"))
+        for row in reports
+    )
+
+
+def visual_recon_complete(visual):
+    if not isinstance(visual, dict) or not visual:
+        return False
+    viewpoints = visual.get("viewpoints") or []
+    for row in viewpoints:
+        if not isinstance(row, dict):
+            return False
+        coordinates = row.get("coordinates")
+        if not isinstance(coordinates, dict):
+            return False
+        if coordinates.get("lat") is None or coordinates.get("lon") is None:
+            return False
+        if not row.get("source_refs"):
+            return False
+    drone = visual.get("drone")
+    if not isinstance(drone, dict):
+        return False
+    for key in ("legal_status", "permit_required", "restrictions", "source_refs", "checked_at"):
+        if key not in drone:
+            return False
+    return bool(
+        visual.get("viewpoints")
+        or visual.get("seasonal_visuals")
+        or visual.get("video_activity")
+        or visual.get("best_time")
+    )
+
+
+def normalize_drone(visual, country_drone_rules, source_map, default_checked_at=None):
+    visual = json.loads(json.dumps(visual or {}, ensure_ascii=False))
+    country_drone_rules = country_drone_rules or {}
+    legacy = visual.get("drone")
+    if isinstance(legacy, dict):
+        drone = legacy
+    else:
+        drone = {
+            "visual_value": None,
+            "legal_status": country_drone_rules.get("legal_status") or "unknown",
+            "permit_required": country_drone_rules.get("permit_required"),
+            "restrictions": [],
+            "source_refs": [],
+            "checked_at": country_drone_rules.get("checked_at") or default_checked_at,
+        }
+        if legacy not in (None, "", [], {}):
+            drone["restrictions"].append(str(legacy))
+    for short_id in country_drone_rules.get("source_ids") or []:
+        canonical_id = source_map.get(short_id)
+        if canonical_id and canonical_id not in drone.setdefault("source_refs", []):
+            drone["source_refs"].append(canonical_id)
+    if country_drone_rules.get("summary"):
+        summary = country_drone_rules.get("summary")
+        if summary not in drone.setdefault("restrictions", []):
+            drone["restrictions"].append(summary)
+    drone.setdefault("legal_status", country_drone_rules.get("legal_status") or "unknown")
+    drone.setdefault("permit_required", country_drone_rules.get("permit_required"))
+    drone.setdefault("restrictions", [])
+    drone.setdefault("source_refs", [])
+    drone.setdefault("checked_at", country_drone_rules.get("checked_at") or default_checked_at)
+    visual["drone"] = drone
+    visual.pop("photo_suitability_5", None)
+    visual.pop("video_suitability_5", None)
+    return visual
 
 def media_id_for(country_code: str, row: dict) -> str:
     identity = row.get("url") or row.get("static_url") or row.get("source_page")
@@ -1064,6 +1142,14 @@ def build():
         logistics = (detail.get("visit") or {}).get("logistics") or {}
         operations = (detail.get("visit") or {}).get("operations") or {}
         visual_recon = remap_visual_sources(detail.get("visual_recon"), registry)
+        source_doc = sources_by_code[code][1]
+        source_map = country_source_ids_by_code.get(code) or {}
+        visual_recon = normalize_drone(
+            visual_recon,
+            (source_doc.get("travel") or {}).get("drone_rules"),
+            source_map,
+            (source_doc.get("meta") or {}).get("last_updated"),
+        )
         source_object = source_object_by_country_name.get((code, (detail.get("identity") or {}).get("name")))
         story_payload = dict(detail.get("story") or {})
         source_sections = ((((source_object or {}).get("traveler_card") or {}).get("annotation") or {}).get("sections"))
@@ -1089,11 +1175,11 @@ def build():
             ),
             "narrative": bool(sections),
             "sources": bool(source_refs),
-            "access": bool(access_options(logistics) or logistics.get("access")),
+            "access": bool(access_options(logistics, location.get("nearest_hub")) or logistics.get("access")),
             "water": bool(logistics.get("water")),
             "overnight": bool(logistics.get("overnight_and_camping")),
-            "traveler_reports": bool(reports),
-            "visual_recon": bool(visual_recon.get("best_time") or visual_recon.get("viewpoints")),
+            "traveler_reports": traveler_reports_complete(reports),
+            "visual_recon": visual_recon_complete(visual_recon),
             "editorial_rebuild": code != "KH" or rebuild_review.get("status") == "passed",
         }
         status = "passed" if all(checks.values()) else "incomplete"
@@ -1130,7 +1216,7 @@ def build():
                     "source_refs": source_refs,
                     "checked_at": operations.get("last_verified"),
                 },
-                "access_options": access_options(logistics),
+                "access_options": access_options(logistics, location.get("nearest_hub")),
                 "water": (
                     {
                         **json.loads(json.dumps(logistics.get("water_structured"), ensure_ascii=False)),

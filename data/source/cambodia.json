@@ -33,7 +33,8 @@
       "Regional QA pass 2026-09-30: deepened Kampot / Bokor and Kratie / middle Mekong with Ministry of Tourism and WWF sources; separated city, mountain, estuary, dolphin-corridor and community-based tourism facts.",
       "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Cambodia; technical schema keys and official proper names remain unchanged.",
       "Regional QA pass 2026-09-30: deepened Phnom Penh and Preah Vihear northern temple belt with Ministry of Tourism and UNESCO sources; separated river-city structure, capital history, plateau relief, temple architecture and local legend.",
-      "Regional QA pass 2026-09-30: deepened Siem Reap/Angkor with APSARA living-landscape and hydraulic-management sources; deepened Cardamom Mountains with watershed, biodiversity, indigenous-community and community-access sources while explicitly leaving unsupported lithology unresolved."
+      "Regional QA pass 2026-09-30: deepened Siem Reap/Angkor with APSARA living-landscape and hydraulic-management sources; deepened Cardamom Mountains with watershed, biodiversity, indigenous-community and community-access sources while explicitly leaving unsupported lithology unresolved.",
+      "Cambodia pre-object geo QA 2026-10-01: corrected composite-region ownership, added scoped admin/district/physical profiles, Phnom Penh locality ownership and 14 sourced administrative navigation masks; object payloads unchanged."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -9192,7 +9193,7 @@
       },
       {
         "name": "Пномпень",
-        "kind": "city_or_route_hub",
+        "kind": "city",
         "regions": [
           "Пномпень"
         ],
@@ -9202,7 +9203,53 @@
           "Tuol Sleng Genocide Museum",
           "Choeung Ek",
           "Удонг"
-        ]
+        ],
+        "primary_location": {
+          "lat": 11.56245,
+          "lon": 104.916006,
+          "coordinate_type": "center",
+          "accuracy": "medium",
+          "source_refs": [
+            "src_910045"
+          ],
+          "source_url": "https://www.geonames.org/1821306/phnom-penh.html",
+          "checked_at": "2026-10-01",
+          "note": "Опорная точка столицы для карты и логистики; не координата достопримечательности."
+        },
+        "profile": {
+          "summary": "Пномпень — столица и главный городской транспортный узел Камбоджи у системы Mekong–Tonle Sap–Bassac. В справочнике город служит базой для отдельных исторических, музейных и речных кластеров и не подменяет соседнюю провинцию Kandal.",
+          "geography": "Город расположен у слияния крупных речных систем и имеет отдельный статус capital-level administration; Kandal окружает столицу, но остаётся самостоятельной провинцией.",
+          "history": "Исторические и мемориальные слои города включают Королевский дворец, колониальную и постколониальную городскую ткань и места памяти XX века; каждый комплекс раскрывается отдельно.",
+          "climate": {
+            "summary": "Жаркий тропический муссонный климат; сильные ливни и городской сток могут менять время наземных перемещений.",
+            "source_refs": [
+              "src_910046",
+              "src_901008"
+            ]
+          },
+          "transport": {
+            "summary": "Пномпень — главный узел межгородских дорог и части железнодорожных направлений; внутри города время сильнее зависит от трафика и конкретного берега/района, чем от прямого расстояния.",
+            "source_refs": [
+              "src_901018",
+              "src_901007",
+              "src_900013"
+            ]
+          },
+          "provenance": {
+            "source_refs": [
+              "src_910045",
+              "src_901018",
+              "src_901007",
+              "src_900013",
+              "src_910046",
+              "src_901008",
+              "src_910037"
+            ],
+            "checked_at": "2026-10-01",
+            "source_refs_complete": true,
+            "note": "Поселенческий центр — GeoNames; административный статус — NCDD; городской контекст — Ministry of Tourism/MPWT."
+          }
+        }
       },
       {
         "name": "город Преахвихеа",
@@ -10010,6 +10057,178 @@
         "homestay"
       ],
       "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_NCDD_GAZETTEER",
+      "canonical_id": "src_910037",
+      "publisher": "National Committee for Sub-National Democratic Development — Cambodia Gazetteer",
+      "url": "https://db.ncdd.gov.kh/gazetteer/view/index.castle",
+      "kind": "government",
+      "used_for": [
+        "current_administrative_hierarchy",
+        "province_identity",
+        "district_identity",
+        "administrative_boundary_crosscheck"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official online gazetteer listing provinces, districts, communes and villages; used for administrative identity and level cross-checks."
+    },
+    {
+      "id": "KH_OSM_NOMINATIM_BOUNDARIES",
+      "canonical_id": "src_910038",
+      "publisher": "OpenStreetMap contributors / Nominatim",
+      "url": "https://nominatim.openstreetmap.org/",
+      "kind": "map",
+      "used_for": [
+        "province_wgs84_polygons",
+        "district_wgs84_polygons",
+        "phnom_penh_wgs84_polygon"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Technical WGS84 polygon source for simplified navigation masks after administrative identity cross-check against the official NCDD Gazetteer."
+    },
+    {
+      "id": "KH_UNESCO_BENG_MEALEA",
+      "canonical_id": "src_910039",
+      "publisher": "UNESCO World Heritage Centre — Beng Malea Temple",
+      "url": "https://whc.unesco.org/en/tentativelists/6457/",
+      "kind": "unesco",
+      "used_for": [
+        "svay_leu_geography",
+        "beng_mealea_parentage",
+        "siem_reap_outer_archaeology"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "KH_TOURISM_PHNOM_KULEN",
+      "canonical_id": "src_910040",
+      "publisher": "Ministry of Tourism Cambodia — Kulen Mountain National Park",
+      "url": "https://www.tourismcambodia.org/provinces/search/detail/388/kulen-mountain-national-park-1550808107",
+      "kind": "government",
+      "used_for": [
+        "phnom_kulen_geography",
+        "phnom_kulen_history",
+        "phnom_kulen_culture",
+        "svay_leu_context"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "KH_UNESCO_BANTEAY_CHHMAR",
+      "canonical_id": "src_910041",
+      "publisher": "UNESCO World Heritage Centre — The Archeological complex of Banteay Chhmar",
+      "url": "https://whc.unesco.org/en/tentativelists/6456/",
+      "kind": "unesco",
+      "used_for": [
+        "thma_puok_geography",
+        "banteay_chhmar_parentage",
+        "banteay_meanchey_archaeology"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "KH_TOURISM_KAMPONG_THOM",
+      "canonical_id": "src_910042",
+      "publisher": "Ministry of Tourism Cambodia — Kampong Thom Province",
+      "url": "https://www.tourismcambodia.org/provinces/55/kampong-thom",
+      "kind": "government",
+      "used_for": [
+        "kampong_thom_profile",
+        "kampong_thom_transport",
+        "sambor_prei_kuk_context"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "KH_TOURISM_BANTEAY_MEANCHEY",
+      "canonical_id": "src_910043",
+      "publisher": "Ministry of Tourism Cambodia — Banteay Meanchey",
+      "url": "https://tourismcambodia.org/public/index.php/provinces/67/banteay-meanchey",
+      "kind": "government",
+      "used_for": [
+        "banteay_meanchey_profile",
+        "thma_puok_road_context"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "KH_TOURISM_KANDAL",
+      "canonical_id": "src_910044",
+      "publisher": "Ministry of Tourism Cambodia — Kandal",
+      "url": "https://tourismcambodia.org/public/provinces/56/kandal",
+      "kind": "government",
+      "used_for": [
+        "kandal_profile",
+        "oudong_parentage",
+        "kandal_transport"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "KH_GEONAMES_PHNOM_PENH",
+      "canonical_id": "src_910045",
+      "publisher": "GeoNames — Phnom Penh",
+      "url": "https://www.geonames.org/1821306/phnom-penh.html",
+      "kind": "map",
+      "used_for": [
+        "phnom_penh_settlement_center"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Settlement centre point only; not an attraction coordinate."
+    },
+    {
+      "id": "KH_MOWRAM_2026",
+      "canonical_id": "src_910046",
+      "publisher": "Ministry of Water Resources and Meteorology, Cambodia",
+      "url": "https://mowram.gov.kh/",
+      "kind": "government",
+      "used_for": [
+        "regional_weather_context",
+        "rainy_season_field_risk",
+        "hydrometeorology"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official ministry source used for current hydrometeorological context; not a substitute for point forecasts."
+    },
+    {
+      "id": "KH_TOURISM_BANTEAY_CHHMAR_CBET",
+      "canonical_id": "src_910047",
+      "publisher": "Ministry of Tourism Cambodia — Banteay Chhmar Community-Based Tourism Site",
+      "url": "https://www.tourismcambodia.org/public/index.php/mot/cbet-destination/533/banteay-chhmar-community-based-tourism-site",
+      "kind": "government",
+      "used_for": [
+        "thma_puok_transport",
+        "banteay_chhmar_access",
+        "banteay_meanchey_transport"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "KH_TOURISM_KOH_KONG",
+      "canonical_id": "src_910048",
+      "publisher": "Ministry of Tourism Cambodia — Koh Kong",
+      "url": "https://www.tourismcambodia.org/provinces/54/koh-kong",
+      "kind": "government",
+      "used_for": [
+        "koh_kong_profile",
+        "koh_kong_geography",
+        "koh_kong_transport"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "KH_TOURISM_PREAH_VIHEAR",
+      "canonical_id": "src_910049",
+      "publisher": "Ministry of Tourism Cambodia — Preah Vihear",
+      "url": "https://tourismcambodia.org/public/index.php/provinces/51/preah-vihear",
+      "kind": "government",
+      "used_for": [
+        "preah_vihear_province_profile",
+        "preah_vihear_geography",
+        "preah_vihear_transport"
+      ],
+      "accessed": "2026-10-01"
     }
   ],
   "uncertainties": [

@@ -1542,7 +1542,7 @@
               6,
               10
             ],
-            "permit_or_guide": "местный лодочник/проводник нужен для фактического речного входа и маршрутов парка",
+            "permit_or_guide": "Обязателен регулируемый доступ: GOV.BN отдельно публикует Entry Pass Application to Ulu Temburong National Park и Permit Application for Travel Agent; внутри фактический маршрут выполняется с оператором/проводником.",
             "modes": {
               "public_transport": "удобного прямого общественного транспорта нет",
               "taxi_ridehail": "трансфер BSB→Bangar/Batang Duri, дальше оператор",
@@ -1552,9 +1552,9 @@
             "water": "воду брать у оператора/лодж; речную не считать питьевой",
             "overnight_and_camping": "самовольный кемпинг в нацпарке не закладывать; только лодж/согласованная площадка",
             "terrain_and_movement": "маршрут над пологом леса и лесные лестницы маршрут с выраженной нагрузкой.",
-            "access_requirements": "местный лодочник/проводник нужен для фактического речного входа и маршрутов парка",
-            "self_guided_default": true,
-            "travel_model": "самостоятельно до Bangar/Batang Duri; для речного входа и участков парка нужен местный лодочник и доступ по правилам парка"
+            "access_requirements": "Для входа в национальный парк действует пропускной режим Forestry Department; практический туристический доступ по реке организуется через лицензированного оператора/его персонал и лодку.",
+            "self_guided_default": false,
+            "travel_model": "Самостоятельно можно добраться до Temburong/Batang Duri, но вход в парк и речной участок требуют оформленного доступа и местного оператора/проводника."
           },
           "climate": {
             "best_period": "Февраль–апрель предпочтительнее; после сильных дождей речные и троповые условия могут ухудшаться.",
@@ -1565,9 +1565,9 @@
             "hours": "Mon–Thu 08:00–18:00; Fri 08:00–12:00 и 14:00–18:00; Sat–Sun 08:00–18:00 по Бруней туризм.",
             "ticket": "Единого самостоятельного входного тарифа в источниках не зафиксировано; оплачиваются местный речной доступ, разрешённые активности и услуги лодочника/проводника по действующим правилам.",
             "closure_notes": null,
-            "last_verified": "2026-09-28",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/ulu-temburong-national-park/",
-            "current_alert": "На 28.09.2026 Freme сообщает, что туры в Ulu Тембуронг национальный парк, посещение водопадов и водные активности временно недоступны до дальнейшего уведомления из-за низкого уровня воды.",
+            "current_alert": "На 01.10.2026 Freme по-прежнему публикует уведомление: поездки в Ulu Temburong National Park, посещение водопадов и все водные активности временно недоступны до дальнейшего уведомления из-за низкого уровня воды.",
             "status": "temporarily_disrupted_by_low_water"
           },
           "safety": {
@@ -1590,9 +1590,35 @@
               "best_time": "максимально ранний старт, полог леса вскоре после рассвета",
               "best_weather_light": "нужна видимость над пологом; после ливня металл/ступени скользкие",
               "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_canopy_tower_01",
+                  "name": "Canopy Viewing Tower",
+                  "description": "Каноническая точка обзора над пологом леса; OSM/Mapcarta отдельно обозначает её как scenic viewpoint рядом с hiking trail.",
+                  "coordinates": {
+                    "lat": 4.55209,
+                    "lon": 115.15976,
+                    "elevation_m": null
+                  },
+                  "access": "От National Park Registration Jetty по внутренней тропе и лестницам; доступ только в рамках действующего режима парка.",
+                  "best_time": "early_morning",
+                  "best_weather_light": "Видимость зависит от низкой облачности и дождя; после ливня металлические ступени мокрые.",
+                  "useful_equipment": [
+                    "wide",
+                    "standard",
+                    "telephoto"
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Canopy Viewing Tower",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N4817868122",
+                    "accessed": "2026-10-01"
+                  }
+                }
+              ],
+              "viewpoint_candidates_unverified": [
                 "нос длинной лодки на реке",
-                "лестница башня над пологом леса снизу вверх",
-                "верхняя площадка tower над пологом леса"
+                "лестница башни над пологом леса снизу вверх"
               ]
             },
             "drone": "Требует проверки правил национального парка и авиационных ограничений.",
@@ -1603,12 +1629,47 @@
             "culture_ethnography": "Проводники и лодочники — не обслуживающий фон, а носители практического знания о реке, лесных маршрутах и животных. В соседних районах живут малайские, ибанские и другие борнейские общины.",
             "geography_geology": "Тембуронг заметно более холмистый и расчленённый, чем побережье BSB. Уровень воды быстро реагирует на осадки и засуху и напрямую определяет, насколько далеко проходят длинные лодки."
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "связь/медицина ограничены",
-              "доступ зависит от уровня воды"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "physical_route",
+              "summary": "В апреле 2026 путешественник описал подъём к canopy tower как более 800 ступеней и подтвердил обзор над кронами; это параметр нагрузки, а не основание исключать маршрут.",
+              "observed_period": "2026-04",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Ulu Temburong National Park traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com.sg/Attraction_Review-g4505735-d12268204-Reviews-Ulu_Temburong_National_Park-Ulu_Temburong_National_Park_Temburong_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "independent_access",
+              "summary": "Отчёт января 2024 описывает самостоятельный подъезд до района лоджей по асфальту, но отмечает, что дальше нужен подъём по реке и при входе в нацпарк к группе присоединяется park ranger. Это согласуется с текущим государственным пропускным режимом.",
+              "observed_period": "2024-01",
+              "confidence": "medium",
+              "source": {
+                "type": "traveler_platform",
+                "title": "Ulu Temburong National Park traveler reports",
+                "publisher": "Tripadvisor",
+                "url": "https://www.tripadvisor.com.sg/Attraction_Review-g4505735-d12268204-Reviews-Ulu_Temburong_National_Park-Ulu_Temburong_National_Park_Temburong_District.html",
+                "accessed": "2026-10-01"
+              }
+            },
+            {
+              "topic": "current_low_water",
+              "summary": "На 01.10.2026 Freme продолжает публиковать временную остановку туров непосредственно в парк, водопадов и водных активностей из-за низкого уровня воды.",
+              "observed_period": "2026-10-01",
+              "confidence": "high",
+              "source": {
+                "type": "operator",
+                "title": "FRL16-1 Explore Temburong + Canopy Tower Visit",
+                "publisher": "Freme Travel Services",
+                "url": "https://freme.com/product/explore-temburong-canopy-tower-visit-non-residents/",
+                "accessed": "2026-10-01"
+              }
+            }
+          ],
           "accommodation": [
             {
               "name": "StoneVille Hotel",
@@ -1695,6 +1756,24 @@
               "canopy tour price"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.gov.bn/services/entity.aspx/",
+            "publisher": "Government of Brunei Darussalam",
+            "used_for": [
+              "entry pass requirement",
+              "travel-agent permit"
+            ],
+            "accessed": "2026-10-01"
+          },
+          {
+            "url": "https://www.forestry.gov.bn/parks-of-interest/",
+            "publisher": "Forestry Department, Brunei",
+            "used_for": [
+              "park area",
+              "protected-area status"
+            ],
+            "accessed": "2026-10-01"
           }
         ],
         "verification": {

@@ -35,7 +35,7 @@ REGIONAL_REQUIRED_FIELDS = [
 ]
 GEO_NODE_REQUIRED_KEYS = {
     "id", "canonical_id", "kind", "name_ru", "name_local", "slug",
-    "parent_id", "axis", "object_ids", "notes_ru",
+    "parent_id", "axis", "object_ids",
 }
 DYNAMIC_SOURCE_FIELDS = {
     "visa_for_russian_passport": lambda t, s: (t.get("visa_for_russian_passport") or {}).get("source_ids"),

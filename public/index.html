@@ -444,10 +444,11 @@ var GEO_FIELDS=[
 function geoReferenceHTML(g){
   if(!g)return '';
   var blocks=[];
-  if(g.description)blocks.push(factCard('Описание',g.description));
+  var description=g.description&&(g.description.narrow||g.description.body);
+  if(description)blocks.push(factCard('Описание',description));
   GEO_FIELDS.forEach(function(x){if(g[x[1]]!=null)blocks.push(factCard(x[0],g[x[1]]))});
   if(!blocks.filter(Boolean).length)return '';
-  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Регион</div><h2>Локальная справка</h2></div></div><div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">'+esc(geoKindLabel(g.kind))+'</div><h2>Справка</h2></div></div><div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
 }
 function inheritedGeoContextHTML(child,parent){
   if(!child||!parent)return '';
@@ -459,7 +460,7 @@ function inheritedGeoContextHTML(child,parent){
   blocks=blocks.filter(Boolean);
   if(!blocks.length)return '';
   var pname=parent.names&&(parent.names.ru||parent.names.primary)||parent.id;
-  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Контекст региона</div><h2>'+esc(pname)+'</h2></div></div><div class="fact-grid">'+blocks.join('')+'</div></section>';
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">Контекст территории</div><h2>'+esc(pname)+'</h2></div></div><div class="fact-grid">'+blocks.join('')+'</div></section>';
 }
 function resetMaps(){
   state.mapInstances.forEach(function(m){try{m.remove()}catch(e){}});
@@ -519,6 +520,14 @@ function geoTrail(id){
   }
   return out;
 }
+function geoKindLabel(kind){
+  var labels={
+    country:'страна',region:'регион',province:'провинция',state:'штат',district:'район',
+    island:'остров',archipelago:'архипелаг',city:'город',town:'город',village:'деревня',
+    settlement:'поселение',protected_area:'охраняемая территория',geographic_area:'местность'
+  };
+  return labels[kind]||'территория';
+}
 function compactTransport(t){
   if(!t)return '';
   var keys=['summary','access','gateway','role','public_transport','road','rail','air','water'];
@@ -529,8 +538,10 @@ function childGeoCard(g,d){
   var title=(d&&d.names&&(d.names.ru||d.names.primary))||g.name||g.id;
   var narrow=d&&d.description&&(d.description.narrow||d.description.body)||'';
   var tr=compactTransport(d&&d.transport);
+  var objectCount=regionObjectCount(g.id);
+  var meta=geoKindLabel(g.kind)+(objectCount?' · объектов: '+objectCount:'');
   return '<article class="region-card" data-region="'+esc(g.id)+'"><h3>'+esc(title)+'</h3>'+
-    '<p>'+esc(g.kind)+' · '+regionObjectCount(g.id)+' объектов</p>'+
+    '<p>'+esc(meta)+'</p>'+
     (narrow?'<p class="popup-meta">'+esc(narrow)+'</p>':'')+
     (tr?'<p class="popup-meta"><b>Транспорт:</b> '+esc(tr)+'</p>':'')+
     '</article>';
@@ -862,14 +873,13 @@ async function renderRegion(id){
   view.innerHTML=breadcrumb(crumbs)+
     '<div class="page-head"><div class="eyebrow">Территория</div><h1>'+esc(title)+'</h1>'+
     ((full&&full.description&&(full.description.narrow||full.description.body))?'<p>'+esc(full.description.narrow||full.description.body)+'</p>':'')+
-    '<div class="hero-meta"><span class="pill">объектов <b>'+objs.length+'</b></span><span class="pill">подразделов <b>'+children.length+'</b></span></div></div>'+
+    '<div class="hero-meta">'+(objs.length?'<span class="pill">объектов <b>'+objs.length+'</b></span>':'')+(children.length?'<span class="pill">подразделов <b>'+children.length+'</b></span>':'')+'</div></div>'+
     geoReferenceHTML(full)+
     inheritedGeoContextHTML(full,parentFull)+
     (children.length?'<section class="section"><div class="section-head"><div><div class="eyebrow">Территории</div><h2>Города, районы и местности</h2></div></div><div class="region-grid">'+children.map(function(x,i){return childGeoCard(x,childDetails[i])}).join('')+'</div></section>':'')+
-    geoMapCoverageHTML(full,objs)+
     '<div class="country-map" id="regionMap"></div>'+
-    '<section class="section"><div class="section-head"><div><div class="eyebrow">Objects</div><h2>Достопримечательности этой территории</h2></div></div>'+
-    '<div class="object-grid">'+(objs.length?objs.map(objectCard).join(''):'<div class="empty">Для этой территории пока нет привязанных объектов.</div>')+'</div></section>';
+    (objs.length?'<section class="section"><div class="section-head"><div><div class="eyebrow">Достопримечательности</div><h2>Объекты этой территории</h2></div></div>'+
+    '<div class="object-grid">'+objs.map(objectCard).join('')+'</div></section>':'');
   addRegionMap('regionMap',mapRows,cc,full,childDetails,{maxZoom:10,pad:.18,singleZoom:11,countryFallbackZoom:6});
   bindGo();bindObjectGrid();
   document.querySelectorAll('[data-region]').forEach(function(x){x.onclick=function(){routeTo('#/region/'+x.getAttribute('data-region'))}});

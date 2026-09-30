@@ -32,7 +32,8 @@
       "Regional QA pass 2026-09-30: deepened Takeo / Angkor Borei–Phnom Da, Battambang and Koh Rong with UNESCO and Ministry of Tourism sources; added archaeology, hydraulic landscape, gastronomy and current island-infrastructure context.",
       "Regional QA pass 2026-09-30: deepened Kampot / Bokor and Kratie / middle Mekong with Ministry of Tourism and WWF sources; separated city, mountain, estuary, dolphin-corridor and community-based tourism facts.",
       "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Cambodia; technical schema keys and official proper names remain unchanged.",
-      "Regional QA pass 2026-09-30: deepened Phnom Penh and Preah Vihear northern temple belt with Ministry of Tourism and UNESCO sources; separated river-city structure, capital history, plateau relief, temple architecture and local legend."
+      "Regional QA pass 2026-09-30: deepened Phnom Penh and Preah Vihear northern temple belt with Ministry of Tourism and UNESCO sources; separated river-city structure, capital history, plateau relief, temple architecture and local legend.",
+      "Regional QA pass 2026-09-30: deepened Siem Reap/Angkor with APSARA living-landscape and hydraulic-management sources; deepened Cardamom Mountains with watershed, biodiversity, indigenous-community and community-access sources while explicitly leaving unsupported lithology unresolved."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -7693,15 +7694,18 @@
           ]
         },
         "hydrology": {
-          "summary": "Гидравлическая инфраструктура — один из ключевых элементов культурного ландшафта Ангкора; современные условия воды сезонны.",
+          "summary": "Историческая гидравлическая сеть — baray, reservoirs, basins, dams и canals — охватывает весь культурный ландшафт и остаётся функционально важной. APSARA в 2024–2026 годах продолжала восстанавливать древние каналы и дамбы для регулирования стока, снижения паводкового риска и снабжения сельскохозяйственных общин.",
           "source_refs": [
-            "src_900005"
+            "src_900005",
+            "src_901021"
           ]
         },
         "nature": {
-          "summary": "Археологический ландшафт сочетает вторичные леса, сельскохозяйственные земли, водоёмы и священные рощи; это не изолированный парк руин.",
+          "summary": "Леса, рисовые поля, водоёмы и деревни являются частью охраняемого культурного ландшафта, а не «пустым пространством между храмами». APSARA отдельно управляет forest/landscape layer и восстанавливает растительность и водные элементы как часть Outstanding Universal Value Ангкора.",
           "source_refs": [
-            "src_900005"
+            "src_900005",
+            "src_901020",
+            "src_901021"
           ],
           "fauna": {
             "status": "Для этого регионального узла отдельный подтверждённый перечень характерной фауны в текущем наборе источников ещё не нормализован; общестрановой список не копируется автоматически."
@@ -7757,7 +7761,9 @@
             "src_901004",
             "src_900010",
             "src_901008",
-            "src_900014"
+            "src_900014",
+            "src_901020",
+            "src_901021"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -7773,6 +7779,31 @@
             "src_901008"
           ],
           "checked_at": "2026-09-30"
+        },
+        "history": {
+          "summary": "Ангкор — не отдельный храм, а многовековой столичный и сельскохозяйственный ландшафт кхмерской цивилизации. APSARA указывает более 150 значимых памятников на территории около 401 км²; современное управление охватывает не только руины, но и водную сеть, леса, деревни и действующие монастыри.",
+          "source_refs": [
+            "src_901020",
+            "src_900005"
+          ]
+        },
+        "archaeology": {
+          "summary": "Археологический слой включает храмовые комплексы, городские структуры, древние дороги, дамбы, каналы, baray, производственные и поселковые участки. APSARA прямо называет Ангкор одним из крупнейших действующих международных археологических полей; конкретные monuments и excavation sites должны оставаться отдельными object entities.",
+          "source_refs": [
+            "src_901020"
+          ]
+        },
+        "culture": {
+          "summary": "Ангкор остаётся живым культурным ландшафтом: APSARA оценивает население охраняемой территории примерно в 140 тысяч человек в 113 деревнях, а буддийские монастыри и паломнические практики продолжают действовать внутри археологической зоны. Это не «мертвый город руин» и не единый музей под открытым небом.",
+          "source_refs": [
+            "src_901020"
+          ]
+        },
+        "religion": {
+          "summary": "Священная функция ландшафта продолжается после ангкорского периода: буддийские монахи живут в пагодах, а верующие совершают паломничества и церемонии у Ангкор-Вата, Байона, Баконга, Лолей и других мест. Конкретную историческую религию каждого храма следует описывать на object-level.",
+          "source_refs": [
+            "src_901020"
+          ]
         }
       },
       {
@@ -8070,7 +8101,8 @@
           ]
         },
         "geology": {
-          "summary": "Горный массив формирует самостоятельную физико-географическую область юго-запада; подробную геологическую литологию не фиксировать без отдельного профильного источника."
+          "summary": "Для регионального уровня надёжной профильной литологической модели в текущем наборе источников нет. Кардамоны фиксируются как самостоятельный горный водосбор и высокорельефный лесной массив; детальную геологию пород и отдельных массивов оставляем `unknown` до профильного геологического источника.",
+          "source_refs": []
         },
         "climate": {
           "summary": "Один из наиболее влажных районов страны.",
@@ -8081,15 +8113,17 @@
           ]
         },
         "hydrology": {
-          "summary": "Густая сеть коротких горных рек и притоков быстро реагирует на ливни; броды и мосты требуют проверки на месте.",
+          "summary": "Центральные Кардамоны — критический водосбор: горные реки обеспечивают водой более 30 тысяч жителей низменностей и поддерживают рисоводство, рыбное хозяйство и гидрологическую связь с бассейном Тонлесапа. Поэтому речные crossing points и уровни воды должны храниться на route-level и перепроверяться перед выходом.",
           "source_refs": [
-            "src_900014"
+            "src_900014",
+            "src_901022"
           ]
         },
         "nature": {
-          "summary": "Регион содержит крупные массивы влажного тропического леса и охраняемых территорий; режим конкретного маршрута определяется администрацией соответствующей территории.",
+          "summary": "Central Cardamom Mountains сохраняют один из наиболее целостных массивов тропического леса Камбоджи. Conservation International указывает более 95% сохранившегося лесного покрова и свыше 500 видов животных; camera-trap survey 2024 года подтвердил азиатского слона, дымчатого леопарда, красного волка, медведей и другие редкие виды.",
           "source_refs": [
-            "src_900014"
+            "src_900014",
+            "src_901022"
           ],
           "fauna": {
             "summary": "Кардамоновы горы сохраняют крупные массивы тропического леса и местообитания редких млекопитающих, птиц и пресмыкающихся; конкретный список видов должен привязываться к выбранной охраняемой территории.",
@@ -8119,25 +8153,29 @@
           "checked_at": "2026-09-30"
         },
         "safety": {
-          "operational_context": "Полевые риски — паводки, размытые дороги, броды, скользкие тропы, удалённость и потенциальные старые боеприпасы вне используемых путей. Конкретный трек проверять у местной администрации/общины.",
+          "operational_context": "В дополнение к паводкам и размывам учитывать удалённость, речные переправы и слабую связь. Для community-managed routes Chi Phat/Steung Areng правила, маршрут и доступ следует проверять у конкретного CBET/оператора непосредственно перед выходом.",
           "source_refs": [
             "src_900014",
-            "src_901003"
+            "src_901003",
+            "src_901022",
+            "src_901023"
           ],
           "checked_at": "2026-09-30"
         },
         "transport": {
-          "road": "Подъезды к общинным и охраняемым территориям часто грунтовые.",
+          "road": "Кардамоны нельзя описывать одним типом доступа. Chi Phat и Steung Areng работают как разные community gateways; дальше используются грунтовые дороги, лодки, мотоциклы, велосипеды и пешие маршруты. На многодневных forest routes местный проводник часто является частью community access model и реальной навигационной логистики.",
           "river": "На отдельных маршрутах лодка является нормальной частью самостоятельной логистики.",
           "field_note": "Местный проводник оправдан там, где это требуется режимом охраняемой территории или сложной лесной навигацией.",
           "source_refs": [
-            "src_900014"
+            "src_900014",
+            "src_901023"
           ]
         },
         "ethnography": {
-          "summary": "В юго-западных лесных районах сохраняются небольшие сообщества пеарской языковой группы; нельзя переносить их присутствие на весь массив Кардамонов.",
+          "summary": "В Центральных Кардамонах живут сообщества Chourng и Por; Conservation International оценивает их численность примерно в 4 тысячи человек. Эти данные относятся к конкретному landscape/program area и не должны автоматически переноситься на весь юго-запад Камбоджи.",
           "source_refs": [
-            "src_900010"
+            "src_900010",
+            "src_901022"
           ]
         },
         "local_reference_provenance": {
@@ -8146,7 +8184,9 @@
             "src_901004",
             "src_901003",
             "src_900010",
-            "src_901008"
+            "src_901008",
+            "src_901022",
+            "src_901023"
           ],
           "checked_at": "2026-09-30",
           "source_refs_complete": true
@@ -9590,6 +9630,69 @@
         "regional_religion",
         "myths_beliefs",
         "preah_vihear"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_ANGKOR_APSARA_LIVING_LANDSCAPE",
+      "canonical_id": "src_901020",
+      "publisher": "APSARA National Authority — Vision & Missions / Angkor living cultural landscape",
+      "url": "https://apsaraauthority.gov.kh/apsara-authority-main/vision-mission/",
+      "kind": "government",
+      "used_for": [
+        "angkor",
+        "regional_history",
+        "regional_archaeology",
+        "regional_culture",
+        "regional_religion",
+        "living_landscape"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_ANGKOR_APSARA_WATER_FOREST",
+      "canonical_id": "src_901021",
+      "publisher": "APSARA National Authority — Environment, Water & Forestry Management",
+      "url": "https://apsaraauthority.gov.kh/our-work/environment-water-forestry-management/",
+      "kind": "government",
+      "used_for": [
+        "angkor",
+        "regional_hydrology",
+        "regional_nature",
+        "hydraulic_network",
+        "flood_management"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_CARDAMOM_CI_LANDSCAPE",
+      "canonical_id": "src_901022",
+      "publisher": "Conservation International Cambodia — Central Cardamom Mountains Landscape",
+      "url": "https://cambodia.conservation.org/projects/central-cardamom-mountains-landscape",
+      "kind": "ngo_conservation",
+      "used_for": [
+        "cardamom_mountains",
+        "regional_nature",
+        "regional_hydrology",
+        "regional_ethnography",
+        "watershed",
+        "biodiversity"
+      ],
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": "KH_CARDAMOM_CBET_WILDLIFE_ALLIANCE",
+      "canonical_id": "src_901023",
+      "publisher": "Wildlife Alliance — Chi Phat and Steung Areng community ecotourism",
+      "url": "https://www.wildlifealliance.org/steung-areng/",
+      "kind": "ngo_conservation",
+      "used_for": [
+        "cardamom_mountains",
+        "regional_transport",
+        "community_access",
+        "trekking",
+        "motorcycle",
+        "homestay"
       ],
       "accessed": "2026-09-30"
     }

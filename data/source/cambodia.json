@@ -37,7 +37,8 @@
       "Cambodia pre-object geo QA 2026-10-01: corrected composite-region ownership, added scoped admin/district/physical profiles, Phnom Penh locality ownership and 14 sourced administrative navigation masks; object payloads unchanged.",
       "Cambodia pre-object geo QA complete 2026-10-01: canonical ownership corrected for composite research areas, all included hierarchy nodes now resolve to regional/locality/physical profiles, Phnom Penh has a locality anchor, and 14 administrative masks are sourced; object payloads remain frozen.",
       "2026-10-01 object rebuild v2: Angkor Archaeological Park fully rewritten as a connected sourced narrative with substantive history, culture, geography, ethnography and a separated Ket Mealea legend; logistics now preserve honest unknowns; new editorial rebuild QA is required for Cambodia cards.",
-      "PH-reference revalidation 2026-10-01: all 18 canonical Cambodia geo entities pass their generated coverage-role contracts; 14 sourced administrative masks are present, while Phnom Kulen, Northern Temple Belt, Cardamom Mountains and Tonle Sap remain without invented polygons. Existing object-card payloads were not edited."
+      "PH-reference revalidation 2026-10-01: all 18 canonical Cambodia geo entities pass their generated coverage-role contracts; 14 sourced administrative masks are present, while Phnom Kulen, Northern Temple Belt, Cardamom Mountains and Tonle Sap remain without invented polygons. Existing object-card payloads were not edited.",
+      "Cambodia geometry QA 2026-10-01: added country mask from the same Natural Earth 1:10m lineage used by the Philippines reference; added sourced Phnom Kulen National Park and Tonle Sap Biosphere Reserve masks; Cardamom Mountains uses a transparent derived operational core from Central + Southern Cardamom national-park polygons, explicitly not a full geomorphological range boundary."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -11194,6 +11195,30 @@
         "preah_vihear_transport"
       ],
       "accessed": "2026-10-01"
+    },
+    {
+      "id": "NATURAL_EARTH_KH",
+      "publisher": "Natural Earth via LonnyGomes/CountryGeoJSONCollection",
+      "url": "https://github.com/LonnyGomes/CountryGeoJSONCollection/blob/master/geojson/KHM.geojson",
+      "kind": "map",
+      "used_for": [
+        "Cambodia country boundary mask"
+      ],
+      "accessed": "2026-10-01",
+      "canonical_id": "src_910050"
+    },
+    {
+      "id": "ODC_PROTECTED_AREAS",
+      "publisher": "Open Development Cambodia",
+      "url": "https://opendevelopmentcambodia.net/dataset/?id=protectedareas",
+      "kind": "map",
+      "used_for": [
+        "Phnom Kulen National Park boundary",
+        "Tonle Sap Biosphere Reserve boundary",
+        "Central and Southern Cardamom national park boundaries"
+      ],
+      "accessed": "2026-10-01",
+      "canonical_id": "src_910051"
     }
   ],
   "uncertainties": [

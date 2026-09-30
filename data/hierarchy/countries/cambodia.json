@@ -162,6 +162,19 @@
           "src_901008"
         ],
         "checked_at": "2026-10-01"
+      },
+      "geometry": {
+        "status": "available",
+        "geometry_type": "protected_area_boundary",
+        "accuracy": "sourced_boundary",
+        "simplified": false,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "scope_note": "Полигон соответствует Phnom Kulen National Park (37 500 га) и используется как операционная маска охраняемого ядра; он не объявляется полной физико-географической границей массива Пном-Кулен.",
+        "source_refs": [
+          "src_910051"
+        ],
+        "source_vintage": "ODC protected areas dataset, government source lineage; checked 2026-10-01",
+        "checked_at": "2026-10-01"
       }
     },
     {
@@ -627,7 +640,20 @@
       "canonical_id": "geo_kh_0035",
       "legacy_region_names": [
         "Кардамоновы горы / юго-запад"
-      ]
+      ],
+      "geometry": {
+        "status": "available",
+        "geometry_type": "derived_protected_area_composite",
+        "accuracy": "approximate",
+        "simplified": false,
+        "intended_use": "map_mask_expedition_context_not_geomorphological_boundary",
+        "scope_note": "Операционная маска объединяет Central Cardamom Mountains National Park и Southern Cardamom Mountains National Park. Это подтверждённое охраняемое ядро Кардамонов, а не заявленная граница всей горной системы.",
+        "source_refs": [
+          "src_910051"
+        ],
+        "source_vintage": "ODC protected areas dataset; fa_pf_15 + pa_np_89; checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     },
     {
       "id": "kh:province:takeo",
@@ -800,7 +826,19 @@
         "Тонлесап"
       ],
       "notes_ru": "Озеро и биосферный резерват охватывают несколько провинций; объект не следует искусственно подчинять одному провинциальному родительскому узлу.",
-      "canonical_id": "geo_kh_0040"
+      "canonical_id": "geo_kh_0040",
+      "geometry": {
+        "status": "available",
+        "geometry_type": "biosphere_reserve_boundary",
+        "accuracy": "sourced_boundary",
+        "simplified": false,
+        "intended_use": "map_mask_navigation_not_cadastral",
+        "source_refs": [
+          "src_910051"
+        ],
+        "source_vintage": "ODC protected areas dataset; Tonle Sap Biosphere Reserve map_id pa_mu_29; checked 2026-10-01",
+        "checked_at": "2026-10-01"
+      }
     }
   ],
   "sources": [
@@ -939,6 +977,22 @@
         "Tonle Sap Biosphere Reserve as a distinct biosphere/physical-geography system"
       ],
       "checked_at": "2026-09-28"
+    },
+    {
+      "url": "https://github.com/LonnyGomes/CountryGeoJSONCollection/blob/master/geojson/KHM.geojson",
+      "publisher": "Natural Earth 1:10m via LonnyGomes/CountryGeoJSONCollection",
+      "used_for": [
+        "Cambodia country map mask"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    {
+      "url": "https://opendevelopmentcambodia.net/dataset/?id=protectedareas",
+      "publisher": "Open Development Cambodia",
+      "used_for": [
+        "Phnom Kulen, Tonle Sap and Cardamom protected-area geometries"
+      ],
+      "checked_at": "2026-10-01"
     }
   ]
 }

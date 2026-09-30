@@ -7,8 +7,14 @@
   "pr_created": false,
   "merge_to_main": false,
   "inventory": {
-    "source_objects_total": 211,
-    "target_object_cards_total": 211,
+    "previous_assumed_total": 211,
+    "recovered_later_branch_objects": {
+      "laos": 12,
+      "malaysia": 25,
+      "total": 37
+    },
+    "source_objects_total": 248,
+    "target_object_cards_total": 248,
     "replacement_scope": "entire canonical objects layer",
     "main_object_cards_are_source_material_not_target_format": true
   },
@@ -16,67 +22,68 @@
     {
       "code": "bn",
       "objects": 18,
-      "state": "already_canonical_in_main"
+      "state": "rebuilt_contract_structural_pass"
     },
     {
       "code": "kh",
       "objects": 19,
-      "state": "already_canonical_in_main"
+      "state": "pending_full_rebuild"
     },
     {
       "code": "id",
       "objects": 21,
-      "state": "already_canonical_in_main"
+      "state": "pending_full_rebuild"
     },
     {
       "code": "la",
-      "objects": 19,
-      "state": "already_canonical_in_main"
+      "objects": 31,
+      "state": "rebuilt_expanded_31_structural_pass"
     },
     {
       "code": "my",
-      "objects": 21,
-      "state": "already_canonical_in_main"
+      "objects": 46,
+      "state": "rebuilt_merged_46_structural_pass"
     },
     {
       "code": "mm",
       "objects": 15,
-      "state": "already_canonical_in_main"
+      "state": "pending_full_rebuild"
     },
     {
       "code": "ph",
       "objects": 19,
-      "state": "source_restored_and_staged"
+      "state": "recovered_source_pending_full_rebuild"
     },
     {
       "code": "sg",
       "objects": 18,
-      "state": "source_restored_and_staged"
+      "state": "recovered_source_pending_full_rebuild"
     },
     {
       "code": "th",
       "objects": 21,
-      "state": "source_restored_and_staged"
+      "state": "recovered_source_pending_full_rebuild"
     },
     {
       "code": "tl",
       "objects": 17,
-      "state": "source_restored_and_staged"
+      "state": "recovered_source_pending_full_rebuild"
     },
     {
       "code": "vn",
       "objects": 23,
-      "state": "source_restored_and_staged"
+      "state": "recovered_source_pending_full_rebuild"
     }
   ],
   "staging_root": "staging/object-db-211",
   "notes": [
-    "All 211 object cards must be rebuilt into the approved canonical contract before import.",
-    "Existing main object cards are treated only as source material; their current shape is not accepted as the target contract.",
-    "The future import is intended to replace the entire canonical objects layer atomically, not append 98 cards to 113 legacy-format cards.",
-    "Unknown GPS/elevation/water/overnight/permits/prices/routes remain null/unknown and fail QA rather than being invented.",
-    "All source, geo, lodging, media and route refs must be reconciled before import.",
-    "Do not create PR, merge to main, or promote latest/current until structural validation passes."
+    "Authoritative object inventory is now 248, not the initial 211.",
+    "All 248 permanent object IDs are locked in data/id-registry.json.",
+    "All 211 original objects remain preserved; 37 additional unique objects were recovered from later Laos/Malaysia draft branches.",
+    "Existing main cards are source material only; their current shape is not accepted as the target contract.",
+    "Unknown factual values remain null/unknown and must fail factual QA rather than being invented.",
+    "Source, geo, lodging, media and route refs must be reconciled before import.",
+    "Do not create PR, merge to main, or promote latest/current until full structural validation passes."
   ],
   "import_strategy": {
     "mode": "full_replace_objects_layer",
@@ -86,5 +93,23 @@
     "merge_into_main_now": false,
     "pr_created": false,
     "release_pointer_changed": false
+  },
+  "staging_root_note": "Directory name is historical from the initial 211-object inventory. Authoritative inventory is manifest.inventory.target_object_cards_total and index.json; current target is 248.",
+  "audit": {
+    "laos": {
+      "branches_checked": "all branches with laos in name",
+      "max_single_branch_objects": 31,
+      "accepted_unique_objects": 31
+    },
+    "malaysia": {
+      "branches_checked": "all branches with malaysia in name",
+      "max_single_branch_objects": 40,
+      "parallel_branch_objects": 37,
+      "accepted_union_unique_objects": 46,
+      "dedup_notes": [
+        "Renamed Taman Negara, Endau-Rompin, Crocker Range, Gua Tambun and other same-entity variants are not duplicated.",
+        "Older combined Sungai Batu / Bujang Valley record is superseded by two distinct later cards: Sungai Batu and Bujang Valley."
+      ]
+    }
   }
 }

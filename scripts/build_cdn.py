@@ -613,6 +613,40 @@ def merge_source_entity(registry, source, object_id):
                     entity[key] = value
     return sid
 
+def traveler_reports_from(card, source_registry=None, object_id=None):
+    value = card.get("traveler_reports")
+    if not isinstance(value, list):
+        return value
+    rows = []
+    for raw in value:
+        if isinstance(raw, str):
+            raw = {"summary": raw}
+        if not isinstance(raw, dict):
+            continue
+        row = dict(raw)
+        refs = list(row.get("source_refs") or [])
+        sources = []
+        source = row.pop("source", None)
+        if isinstance(source, dict):
+            sources.append(source)
+        for source in row.pop("sources", []) or []:
+            if isinstance(source, dict):
+                sources.append(source)
+        if source_registry is not None and object_id is not None:
+            for source in sources:
+                source = dict(source)
+                used_for = list(source.get("used_for") or [])
+                if "traveler report" not in used_for:
+                    used_for.append("traveler report")
+                source["used_for"] = used_for
+                sid = merge_source_entity(source_registry, source, object_id)
+                if sid and sid not in refs:
+                    refs.append(sid)
+        row["source_refs"] = refs
+        rows.append(row)
+    return rows
+
+
 def visual_recon_from(card, source_registry=None, object_id=None):
     media = card.get("media") or {}
     scout = media.get("visual_scouting") or {}
@@ -788,6 +822,7 @@ def build():
             tags = canonical_tags((obj.get("tags") or []) + interests)
             logistics = merged_logistics(card, route)
             visual_recon = visual_recon_from(card, source_registry, object_id)
+            traveler_reports = traveler_reports_from(card, source_registry, object_id)
             source_refs = []
             for source_row in obj.get("sources") or []:
                 sid = merge_source_entity(source_registry, source_row, object_id)
@@ -850,7 +885,7 @@ def build():
                     "operations": card.get("operations"),
                     "safety": card.get("safety"),
                     "lodging_ids": lodging_ids,
-                    "traveler_reports": card.get("traveler_reports"),
+                    "traveler_reports": traveler_reports,
                 },
                 "visual_recon": visual_recon,
                 "media": {
@@ -939,7 +974,7 @@ def build():
                 "water": bool(logistics.get("water")),
                 "overnight": bool(logistics.get("overnight_and_camping")),
                 "accommodation": bool(lodging_ids),
-                "traveler_reports": bool(card.get("traveler_reports")),
+                "traveler_reports": bool(traveler_reports),
                 "sources": bool(obj.get("sources")),
                 "hero": bool(gallery),
                 "gallery_min_2": len(gallery) >= 2,

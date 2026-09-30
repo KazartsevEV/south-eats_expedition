@@ -39,7 +39,7 @@
         "src_stage_ph_0134"
       ],
       "checked_at": "2026-09-30",
-      "notes": "Координата объекта из UNESCO Tentative List; это референс охраняемой территории, а не пирс, лагерь или точка погружения."
+      "notes": "Координата объекта из UNESCO Tentative List; это референс охраняемой морской территории, а не пирс, лагерь или точка погружения. elevation_m намеренно оставлен null: для центра акватории единая высота суши неприменима; отдельная островная точка Apo Island в geo_points имеет подтверждённые 6 м."
     },
     "geo_points": [
       {
@@ -331,13 +331,13 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,

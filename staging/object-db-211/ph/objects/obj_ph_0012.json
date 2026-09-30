@@ -34,14 +34,18 @@
     "primary_location": {
       "lat": 20.45154,
       "lon": 121.96416,
-      "elevation_m": null,
+      "elevation_m": 58,
       "coordinate_type": "viewpoint",
       "accuracy": "high",
       "source_refs": [
         "src_stage_ph_0118"
       ],
       "checked_at": "2026-09-30",
-      "notes": "Basco Lighthouse — операционная обзорная точка на Batan Island, а не геометрический центр архипелага."
+      "notes": "Basco Lighthouse — операционная обзорная точка на Batan Island, а не геометрический центр архипелага. Высота 58 м — приблизительная высота Naidi Hills, на которых расположен маяк; это не геодезическая отметка основания башни.",
+      "elevation_accuracy": "approximate",
+      "elevation_source_refs": [
+        "src_stage_ph_0169"
+      ]
     },
     "geo_points": [
       {
@@ -175,18 +179,22 @@
       }
     ],
     "water": {
-      "summary": null,
-      "quality": "unknown",
+      "summary": "В Basco есть подтверждённая коммерческая точка питьевой воды: Baletin Hometel в San Antonio указывает бесплатную горячую/холодную drinking water. Это надёжная городская точка пополнения перед выездом по Batan; наличие воды на удалённых смотровых точках и лодочных участках этим не подтверждается.",
+      "quality": "potable",
       "last_reliable_source": null,
       "distance_m": null,
       "natural_sources": [],
-      "source_refs": []
+      "source_refs": [
+        "src_stage_ph_0168"
+      ]
     },
     "supplies": null,
     "overnight": {
       "status": "unclear",
-      "summary": "Надёжного подтверждения свободного палаточного кемпинга на Batan/Sabtang/Itbayat в собранных официальных источниках нет.",
-      "source_refs": []
+      "summary": "Формальная ночёвка подтверждена: провинциальный туристический офис публикует список DOT-accredited жилья в Basco и на Sabtang. Правовой режим свободной палатки на Batan, Sabtang или Itbayat в найденных официальных материалах не установлен, поэтому дикий кемпинг остаётся unclear.",
+      "source_refs": [
+        "src_stage_ph_0167"
+      ]
     },
     "lodging_ids": [],
     "rules": {
@@ -362,22 +370,25 @@
       "src_stage_ph_0119",
       "src_stage_ph_0120",
       "src_stage_ph_0121",
-      "src_stage_ph_0122"
+      "src_stage_ph_0122",
+      "src_stage_ph_0167",
+      "src_stage_ph_0168",
+      "src_stage_ph_0169"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
-      "water": false,
-      "overnight": false,
+      "water": true,
+      "overnight": true,
       "traveler_reports": true,
       "visual_recon": true
     },

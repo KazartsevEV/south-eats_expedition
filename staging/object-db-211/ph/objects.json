@@ -3762,18 +3762,23 @@
           }
         ],
         "water": {
-          "summary": null,
+          "summary": "У опорной точки The Ruins работает Gazebo с меню, то есть напитки и питание доступны на территории как коммерческая услуга. Отдельного подтверждения бесплатного питьевого refill или природного источника нет; качество воды вне коммерческой точки не установлено.",
           "quality": "unknown",
           "last_reliable_source": null,
           "distance_m": null,
           "natural_sources": [],
-          "source_refs": []
+          "source_refs": [
+            "src_stage_ph_0165"
+          ]
         },
         "supplies": null,
         "overnight": {
           "status": "unclear",
-          "summary": "Законность палаточной ночёвки на частных асьендах или у heritage houses не подтверждена.",
-          "source_refs": []
+          "summary": "The Ruins работает как посещаемый объект и event venue; официальный туристический центр Talisay указывает на городскую сеть жилья и lodging maps. Разрешение на палатку на частных асьендах или у heritage houses не подтверждено, поэтому свободный кемпинг здесь не предполагается.",
+          "source_refs": [
+            "src_stage_ph_0165",
+            "src_stage_ph_0166"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -3913,7 +3918,9 @@
           "src_stage_ph_0113",
           "src_stage_ph_0114",
           "src_stage_ph_0115",
-          "src_stage_ph_0116"
+          "src_stage_ph_0116",
+          "src_stage_ph_0165",
+          "src_stage_ph_0166"
         ]
       },
       "qa": {
@@ -3927,8 +3934,8 @@
           "narrative": true,
           "sources": true,
           "access": true,
-          "water": false,
-          "overnight": false,
+          "water": true,
+          "overnight": true,
           "traveler_reports": true,
           "visual_recon": true
         },
@@ -3971,14 +3978,18 @@
         "primary_location": {
           "lat": 20.45154,
           "lon": 121.96416,
-          "elevation_m": null,
+          "elevation_m": 58,
           "coordinate_type": "viewpoint",
           "accuracy": "high",
           "source_refs": [
             "src_stage_ph_0118"
           ],
           "checked_at": "2026-09-30",
-          "notes": "Basco Lighthouse — операционная обзорная точка на Batan Island, а не геометрический центр архипелага."
+          "notes": "Basco Lighthouse — операционная обзорная точка на Batan Island, а не геометрический центр архипелага. Высота 58 м — приблизительная высота Naidi Hills, на которых расположен маяк; это не геодезическая отметка основания башни.",
+          "elevation_accuracy": "approximate",
+          "elevation_source_refs": [
+            "src_stage_ph_0169"
+          ]
         },
         "geo_points": [
           {
@@ -4112,18 +4123,22 @@
           }
         ],
         "water": {
-          "summary": null,
-          "quality": "unknown",
+          "summary": "В Basco есть подтверждённая коммерческая точка питьевой воды: Baletin Hometel в San Antonio указывает бесплатную горячую/холодную drinking water. Это надёжная городская точка пополнения перед выездом по Batan; наличие воды на удалённых смотровых точках и лодочных участках этим не подтверждается.",
+          "quality": "potable",
           "last_reliable_source": null,
           "distance_m": null,
           "natural_sources": [],
-          "source_refs": []
+          "source_refs": [
+            "src_stage_ph_0168"
+          ]
         },
         "supplies": null,
         "overnight": {
           "status": "unclear",
-          "summary": "Надёжного подтверждения свободного палаточного кемпинга на Batan/Sabtang/Itbayat в собранных официальных источниках нет.",
-          "source_refs": []
+          "summary": "Формальная ночёвка подтверждена: провинциальный туристический офис публикует список DOT-accredited жилья в Basco и на Sabtang. Правовой режим свободной палатки на Batan, Sabtang или Itbayat в найденных официальных материалах не установлен, поэтому дикий кемпинг остаётся unclear.",
+          "source_refs": [
+            "src_stage_ph_0167"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -4299,22 +4314,25 @@
           "src_stage_ph_0119",
           "src_stage_ph_0120",
           "src_stage_ph_0121",
-          "src_stage_ph_0122"
+          "src_stage_ph_0122",
+          "src_stage_ph_0167",
+          "src_stage_ph_0168",
+          "src_stage_ph_0169"
         ]
       },
       "qa": {
-        "status": "incomplete",
+        "status": "passed",
         "checks": {
           "language": true,
           "classification": true,
           "geo": true,
           "coordinates": true,
-          "elevation": false,
+          "elevation": true,
           "narrative": true,
           "sources": true,
           "access": true,
-          "water": false,
-          "overnight": false,
+          "water": true,
+          "overnight": true,
           "traveler_reports": true,
           "visual_recon": true
         },
@@ -4533,9 +4551,11 @@
         },
         "supplies": null,
         "overnight": {
-          "status": "unclear",
-          "summary": "Законность самостоятельной палаточной ночёвки у пещер или погребальных объектов не подтверждена.",
-          "source_refs": []
+          "status": "permission_required",
+          "summary": "Кемпинг в муниципалитете Sagada регулируется Municipal Ordinance No. 04-2017: для площадки требуется согласование barangay, а от туриста — permit и письменное разрешение владельца участка; также действуют требования к воде и отходам, а лагерь нельзя ставить ближе 200 м к водному источнику. Это не означает автоматического разрешения ночёвки у пещер или погребальных объектов.",
+          "source_refs": [
+            "src_stage_ph_0170"
+          ]
         },
         "lodging_ids": [],
         "rules": {
@@ -4719,7 +4739,8 @@
           "src_stage_ph_0127",
           "src_stage_ph_0128",
           "src_stage_ph_0129",
-          "src_stage_ph_0130"
+          "src_stage_ph_0130",
+          "src_stage_ph_0170"
         ]
       },
       "qa": {
@@ -4734,7 +4755,7 @@
           "sources": true,
           "access": true,
           "water": true,
-          "overnight": false,
+          "overnight": true,
           "traveler_reports": true,
           "visual_recon": true
         },
@@ -5083,7 +5104,7 @@
             "src_stage_ph_0134"
           ],
           "checked_at": "2026-09-30",
-          "notes": "Координата объекта из UNESCO Tentative List; это референс охраняемой территории, а не пирс, лагерь или точка погружения."
+          "notes": "Координата объекта из UNESCO Tentative List; это референс охраняемой морской территории, а не пирс, лагерь или точка погружения. elevation_m намеренно оставлен null: для центра акватории единая высота суши неприменима; отдельная островная точка Apo Island в geo_points имеет подтверждённые 6 м."
         },
         "geo_points": [
           {
@@ -5375,13 +5396,13 @@
         ]
       },
       "qa": {
-        "status": "incomplete",
+        "status": "passed",
         "checks": {
           "language": true,
           "classification": true,
           "geo": true,
           "coordinates": true,
-          "elevation": false,
+          "elevation": true,
           "narrative": true,
           "sources": true,
           "access": true,

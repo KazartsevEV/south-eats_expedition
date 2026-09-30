@@ -3,7 +3,7 @@
     "country": "Brunei Darussalam",
     "country_code": "BN",
     "language": "ru",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-01",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -34,7 +34,8 @@
       "Regional language pass 2026-09-30: removed avoidable English-Russian mixing in Temburong, Belait and Tutong summaries while preserving proper names and source-backed meaning.",
       "Pre-object geo QA 2026-10-01: added sourced profiles for included mukim/physical areas, locality profiles for Bandar Seri Begawan and Kampong Jerudong, and sourced district/mukim WGS84 navigation masks; object payloads unchanged.",
       "Brunei pre-object geo QA complete 2026-10-01: district/regional research profiles, included mukim and physical-area profiles, settlement profiles, and 7 sourced administrative navigation masks pass the canonical country/hierarchy contract; object payloads remain frozen.",
-      "PH-reference revalidation 2026-10-01: all 11 canonical Brunei geo entities pass their generated coverage-role contracts (9 regional-profile roles and 2 locality-profile roles); 7 sourced administrative masks are present, while Bandar Seri Begawan, Kampong Jerudong, Kampong Ayer and Brunei River remain without invented polygons. Existing 18 object cards were not edited."
+      "PH-reference revalidation 2026-10-01: all 11 canonical Brunei geo entities pass their generated coverage-role contracts (9 regional-profile roles and 2 locality-profile roles); 7 sourced administrative masks are present, while Bandar Seri Begawan, Kampong Jerudong, Kampong Ayer and Brunei River remain without invented polygons. Existing 18 object cards were not edited.",
+      "2026-10-01 upper-level acceptance pass: country profile/climate/travel rules and official country-level sources revalidated against PH reference; attraction/object payloads remain frozen and unchanged."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -72,6 +73,12 @@
     "elevation_provenance_upgrade": {
       "updated": "2026-09-28",
       "policy": "Каждое ненулевое elevation_m имеет отдельный elevation_source."
+    },
+    "upper_level_acceptance": {
+      "phase": "pre_object",
+      "reference_country": "PH",
+      "object_payloads_frozen": true,
+      "checked_at": "2026-10-01"
     }
   },
   "overview": {
@@ -250,8 +257,35 @@
       "Nov": 29.4,
       "Dec": 29.1
     },
-    "notes": "Экваториальный жаркий влажный климат; температуры меняются мало, сезонность сильнее выражена осадками.",
-    "source_quality": "climatology secondary sources; use as planning normals, not forecast"
+    "notes": "Экваториальный жаркий влажный климат; температуры меняются мало, а практическая сезонность сильнее выражена осадками, муссонами, грозами, уровнем рек и состоянием грунтовых дорог/троп.",
+    "source_quality": "Официальная сезонность и нормы осадков: Brunei Darussalam Meteorological Department; среднемесячные температуры воздуха и моря сохранены как вторичные планировочные климатические нормы, не как прогноз.",
+    "rainfall_mm_by_month": {
+      "Jan": 320.6,
+      "Feb": 162.9,
+      "Mar": 143.4,
+      "Apr": 241.8,
+      "May": 260.3,
+      "Jun": 237.7,
+      "Jul": 241.8,
+      "Aug": 231.5,
+      "Sep": 235.1,
+      "Oct": 313.6,
+      "Nov": 322.9,
+      "Dec": 358.9
+    },
+    "rainfall_normals": {
+      "period": "1991-2020",
+      "station": "Brunei International Airport (BIA)",
+      "source_id": "BDMD_CLIMATE"
+    },
+    "seasonality": {
+      "northeast_monsoon": "December-March",
+      "first_intermonsoon": "April-May",
+      "southwest_monsoon": "June-September",
+      "second_intermonsoon": "October-November",
+      "rainfall_pattern": "Основной максимум осадков приходится на октябрь-январь, с самым влажным декабрём; меньший максимум — май-июль. Наиболее выраженный минимум обычно приходится на февраль-март.",
+      "enso": "Эль-Ниньо обычно связан с более длительными сухими периодами, Ла-Нинья — с более влажными условиями."
+    }
   },
   "safety": {
     "crime_level": {
@@ -343,18 +377,19 @@
     "visa_for_russian_passport": {
       "status": "visa-free",
       "stay_days": 14,
-      "extension": "Для более долгого пребывания требуется соответствующая виза/разрешение.",
+      "extension": "Для пребывания свыше 14 дней требуется соответствующая виза/разрешение; безвизовый режим не предназначен для работы, учёбы или иной оплачиваемой деятельности.",
       "visa_run": {
         "possible": "Технически новый въезд после выезда возможен только при новом допуске пограничной службы.",
         "limits": "Опубликованного права на неограниченные visa-runs не найдено.",
         "notes": "Не считать гарантированным способом долгосрочного проживания."
       },
-      "passport_validity": "проверять минимум 6 месяцев перед поездкой",
-      "official_source": "Brunei MFA / Russian MFA",
+      "passport_validity": "Не менее 6 месяцев на момент въезда.",
+      "official_source": "Консульский департамент МИД России; соглашение РФ—Бруней от 8 ноября 2017 года",
       "source_ids": [
-        "MFA_BN",
         "RUS_MFA"
-      ]
+      ],
+      "checked_at": "2026-10-01",
+      "notes": "Актуальная справка Консульского департамента МИД России подтверждает до 14 дней без визы по обычному паспорту. На части зарубежных страниц МИД Брунея всё ещё встречается более старая таблица, где для граждан России указаны только дипломатические/служебные паспорта; для канонического правила используется действующее двустороннее соглашение 2017 года и актуальная российская консульская справка."
     },
     "airports": [
       {
@@ -363,7 +398,7 @@
         "role": "main international gateway"
       }
     ],
-    "international_air_links": "Региональные и дальнемагистральные рейсы через BWN; сеть меняется, перед маршрутом проверять расписание авиакомпаний.",
+    "international_air_links": "Brunei International Airport (BWN) — основной международный узел. Официальное табло DCA в сентябре 2026 показывало регулярные прямые вылеты, в частности, в Кота-Кинабалу, Куала-Лумпур, Сингапур, Гонконг, Бангкок, Джакарту, Манилу, Кучинг, Сурабаю и Мельбурн; Royal Brunei публикует более широкую сеть. Направления и частоты считать динамическими и проверять на дату поездки.",
     "land_borders": {
       "countries": [
         "Malaysia"
@@ -376,8 +411,10 @@
       ],
       "transport": "Автомобиль/такси/автобусные и частные трансферы; Temburong Bridge связывает восточный анклав с основной частью страны без транзита через Малайзию.",
       "source_ids": [
-        "RUS_MFA"
-      ]
+        "IMM_CONTROL_POSTS_2026"
+      ],
+      "checked_at": "2026-10-01",
+      "operation_notes": "Официальный Immigration Department перечисляет наземные пункты Kuala Lurah, Sungai Tujoh, Ujung Jalan и Labu. Эта запись подтверждает сами контрольные посты, но не гарантирует часы работы на конкретную дату; режим пересечения проверять перед выездом."
     },
     "currency": {
       "code": "BND",
@@ -6191,19 +6228,20 @@
       }
     ],
     "airports_source_ids": [
-      "RUS_MFA"
+      "DCA_FLIGHT_INFO_2026"
     ],
     "international_air_links_source_ids": [
-      "RUS_MFA"
+      "DCA_FLIGHT_INFO_2026",
+      "RBA_ROUTE_MAP_2026"
     ],
     "transport_rules": {
       "road_side": "left",
-      "foreign_licence": "Для краткой поездки не следует считать факт выдачи машины прокатчиком подтверждением законности управления. Перед поездкой нужно проверить у Департамента наземного транспорта признание конкретного национального удостоверения и международного водительского удостоверения для нужной категории транспорта.",
-      "note": "Принятие удостоверения прокатной компанией само по себе не подтверждает его юридическую действительность.",
+      "foreign_licence": "JPD указывает, что иностранцу с иностранным водительским удостоверением для управления в Брунее нужен международный водительский документ (IDP), выданный компетентным органом страны происхождения. На той же официальной странице отдельно описано краткосрочное признание частных иностранных удостоверений стран — участниц Женевской конвенции 1949 года; если применимость исключения к конкретному российскому удостоверению не подтверждена JPD, рабочее правило для поездки — иметь IDP вместе с национальными правами.",
+      "note": "Не считать выдачу автомобиля прокатчиком юридическим подтверждением права управления; категория национального удостоверения и IDP должна соответствовать транспортному средству.",
       "source_ids": [
         "JPD_LICENSE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "camping_rules": {
       "status": "site_specific",
@@ -6212,16 +6250,16 @@
         "JASTRE_CAMP",
         "GOVBN_FOREST"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "drone_rules": {
       "legal_status": "regulated",
       "permit_required": true,
-      "summary": "Беспилотные воздушные суда регулируются Департаментом гражданской авиации Брунея. Ведомство публикует порядок регистрации и эксплуатационные требования; перед каждым полётом нужно отдельно проверять регистрацию, разрешение и ограничения конкретного воздушного пространства.",
+      "summary": "DCA Brunei сохраняет отдельный действующий раздел Unmanned Aircraft и формы регистрации. Для экспедиционного планирования считать дрон регулируемым: регистрация обязательна по опубликованной процедуре, а разрешения/ограничения конкретного воздушного пространства проверяются до каждого запуска.",
       "source_ids": [
         "DCA_DRONE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "tourist_permits": {
       "status": "site_specific",
@@ -6229,7 +6267,7 @@
       "source_ids": [
         "GOVBN_FOREST"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "laws_source_ids": [
       "CUSTOMS_BN",
@@ -6312,7 +6350,7 @@
         "safety",
         "country_profile"
       ],
-      "accessed": "2026-09-27",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000701"
     },
     {
@@ -6419,7 +6457,7 @@
         "transport_rules",
         "road_traffic_law"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000710"
     },
     {
@@ -6431,7 +6469,7 @@
         "camping_rules",
         "protected_areas"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000711"
     },
     {
@@ -6443,7 +6481,7 @@
         "drone_rules",
         "aviation_rules"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000712"
     },
     {
@@ -6457,7 +6495,7 @@
         "protected_areas",
         "camping_rules"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000713"
     },
     {
@@ -6481,9 +6519,12 @@
       "used_for": [
         "regional climate",
         "monsoon",
-        "rainfall seasonality"
+        "rainfall seasonality",
+        "climate",
+        "country_climate",
+        "rainfall_normals"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000746",
       "kind": "government",
       "notes": "Official Brunei climate description and monsoon/rainfall seasonality; use for regional planning, not point forecast."
@@ -6807,6 +6848,46 @@
         "kampong_jerudong_parentage"
       ],
       "accessed": "2026-10-01"
+    },
+    {
+      "id": "IMM_CONTROL_POSTS_2026",
+      "canonical_id": "src_911001",
+      "publisher": "Immigration Department, Brunei Darussalam",
+      "url": "https://www.immigration.gov.bn/pos-pos-kawalan-dan-perangkaan/?lang=ms",
+      "kind": "government",
+      "used_for": [
+        "entry",
+        "land_border",
+        "border_operation",
+        "control_posts"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official control-post directory listing Brunei immigration checkpoints including Kuala Lurah, Sungai Tujoh, Ujung Jalan and Labu; does not by itself guarantee same-day operating hours."
+    },
+    {
+      "id": "DCA_FLIGHT_INFO_2026",
+      "canonical_id": "src_911002",
+      "publisher": "Department of Civil Aviation, Brunei Darussalam",
+      "url": "https://www.dca.gov.bn/flight-information/",
+      "kind": "government",
+      "used_for": [
+        "airport",
+        "air_connectivity"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official live/scheduled departure information for Brunei International Airport; route mix is a dated operational snapshot and schedules remain dynamic."
+    },
+    {
+      "id": "RBA_ROUTE_MAP_2026",
+      "canonical_id": "src_911003",
+      "publisher": "Royal Brunei Airlines",
+      "url": "https://www.flyroyalbrunei.com/brunei/en/destination/route-map/",
+      "kind": "airport_official",
+      "used_for": [
+        "air_connectivity"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Carrier route-map source used only for current network context; exact frequencies and operating dates require re-check."
     }
   ],
   "uncertainties": [

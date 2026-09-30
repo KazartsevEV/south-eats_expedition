@@ -1,117 +1,87 @@
-# SEA country geo-QA rollout
+# SEA upper-level country QA rollout
 
 Updated: 2026-10-01
 
-## Reference state
+## Reference
 
-Philippines is the reference implementation for the pre-object phase.
+PH — Philippines is the only accepted reference implementation for the current pre-object phase.
 
-Exit criteria before object-card work:
-- canonical country layer remains valid;
-- formal hierarchy is verified and uses stable IDs;
-- every administrative/regional node required by the project has a sourced `regional_profile`;
-- every included city/town/village settlement has a sourced `locality_profile` with a settlement coordinate that is not reused as an attraction coordinate;
-- geometry is added for administrative/physical nodes only where a sourced or honestly approximate boundary can be defended;
-- composite expedition areas never inherit a parent polygon merely to avoid a null;
-- `source_refs`, `checked_at` and freshness are preserved;
-- search/views/maps are generated from canonical data, never edited by hand;
-- build CDN -> validate country/CDN -> validate canonical -> validate hierarchy -> validate derived maps must all pass;
-- object cards remain frozen until all countries in this queue have passed the pre-object geo layer.
+Object-card work is frozen globally until the ten remaining countries pass upper-level QA.
 
-## Canonical role contract
-
-### regional_profile
-Required:
-- description/narrow;
-- geography;
-- climate;
-- transport;
-- provenance.source_refs;
-- provenance.research_source_refs;
-- provenance.checked_at;
-- freshness.checked_at.
-
-Additional sections are added only when supported: history, culture, geology, hydrology, nature, ethnography, religion, architecture, myths_beliefs, marine.
-
-### locality_profile
-Required:
-- description/narrow;
-- primary_location or an explicit sourced reason why it is unavailable;
-- geography;
-- climate;
-- transport;
-- provenance.source_refs;
-- provenance.research_source_refs;
-- provenance.checked_at;
-- freshness.checked_at.
-
-Settlement coordinates are map/logistics anchors only. They must not substitute for attraction entrances, trailheads, piers, summits or other object coordinates.
-
-### geometry
-- WGS84 / EPSG:4326 for published geometry;
-- administrative boundary: `simplified_sourced_boundary` when provenance is sufficient;
-- expedition/physical composite: `approximate` unless an independent legal/physical boundary exists;
-- no parent-boundary cloning for a composite node;
-- no cadastral/survey precision claims for simplified navigation masks.
-
-## Country order
-
-1. BN — Brunei
-2. KH — Cambodia
-3. LA — Laos
-4. ID — Indonesia
-5. MY — Malaysia
-6. MM — Myanmar
-7. SG — Singapore
-8. TH — Thailand
-9. TL — Timor-Leste
-10. VN — Vietnam
-
-PH — Philippines: reference geo layer complete before object cards.
-
-## Per-country work order
-
-For each country, without skipping levels:
-
-1. Audit country source, hierarchy and generated QA.
-2. Normalize/repair hierarchy and stable IDs; never delete existing nodes except a proven duplicate/error.
-3. Fill top administrative/regional profiles.
-4. Fill included child administrative or physical regional profiles.
-5. Fill settlement/locality profiles and settlement GPS anchors.
-6. Add sourced geometry and honest approximate expedition masks.
-7. Verify current administrative changes separately from boundary-data vintage.
-8. Build canonical CDN.
-9. Validate country/source/CDN.
-10. Validate canonical contract.
-11. Validate recursive hierarchy.
-12. Build and validate derived maps.
-13. Merge only after green CI.
-14. Run post-merge audit and publish.
-15. Mark the country pre-object geo layer complete; move to the next country.
-
-## Queue status
+## Fixed queue
 
 | # | Country | Status |
-|---|---|---|
-| 1 | BN Brunei | complete |
-| 2 | KH Cambodia | complete |
-| 3 | LA Laos | regional/locality content complete; geometry subchunk pending |
-| 4 | ID Indonesia | active |
-| 5 | MY Malaysia | queued |
-| 6 | MM Myanmar | queued |
-| 7 | SG Singapore | queued |
-| 8 | TH Thailand | queued |
-| 9 | TL Timor-Leste | queued |
-| 10 | VN Vietnam | queued |
-| — | PH Philippines | reference complete |
+|---:|---|---|
+| — | PH — Philippines | reference / accepted |
+| 1 | BN — Brunei | active |
+| 2 | KH — Cambodia | queued |
+| 3 | LA — Laos | queued |
+| 4 | ID — Indonesia | queued |
+| 5 | MY — Malaysia | queued |
+| 6 | MM — Myanmar | queued |
+| 7 | SG — Singapore | queued |
+| 8 | TH — Thailand | queued |
+| 9 | TL — Timor-Leste | queued |
+| 10 | VN — Vietnam | queued |
 
+Previous geo/profile PRs for BN/KH/LA/ID/MY and other countries are retained as prior work, not discarded. Their old `complete` markers do **not** waive the new upper-level acceptance pass.
 
-## Live execution notes — 2026-10-01
+## Acceptance execution
 
-- BN and KH are already at the pre-object geo-complete marker and are verify-only.
-- PH remains the reference implementation and is not part of the remaining queue.
-- LA regional ownership and real locality profiles have passed full CI and are merged; sourced administrative/physical geometry remains the open Laos subchunk.
-- ID regional ownership is the active country; legacy composite route hubs must remain for compatibility while real settlement nodes receive separate stable IDs.
-- MY → MM → SG → TH → TL → VN follow strictly after ID, one country at a time.
-- A country is not marked complete merely because regional prose exists. It must pass role QA, geometry QA, canonical build, recursive hierarchy validation and derived-map validation.
-- Object-card migration/rewrite stays frozen globally until all ten countries are complete or explicitly marked verify-only.
+- BN is the active acceptance pass.
+- PR #189 carries only upper-level QA docs and Brunei country-level source changes; object payloads are frozen.
+
+## Scope
+
+Per country, complete and verify only:
+
+1. country profile;
+2. climate;
+3. current travel rules;
+4. formal geo hierarchy;
+5. regional/provincial profiles;
+6. locality profiles;
+7. locality GPS anchors;
+8. administrative/physical geometry;
+9. provenance, source refs and freshness;
+10. generated upper-level views/search/maps;
+11. full structural validation and post-merge publish verification.
+
+## Frozen scope
+
+Do not create, rewrite, delete, reclassify or enrich attraction/object payloads.
+
+Do not work on:
+- object narratives;
+- object access/logistics;
+- water/overnight;
+- traveler reports;
+- object visual reconnaissance;
+- object media;
+- routes tied to object completion;
+- lodging/POI migration for object cards.
+
+Exception: minimal reference-integrity repair only when a broken object ref blocks the upper-level validation pipeline.
+
+## Exit gate
+
+A country advances to `complete` only after:
+
+- country profile QA passes;
+- climate QA passes;
+- current travel-rule QA passes;
+- hierarchy QA passes;
+- regional-profile QA passes;
+- locality-profile QA passes;
+- geometry QA passes;
+- source/freshness QA passes;
+- normalized CDN build passes;
+- canonical CDN build passes;
+- recursive hierarchy build passes;
+- country/CDN/canonical/hierarchy validators pass;
+- derived maps pass;
+- strict locality/geo validation passes;
+- merge succeeds;
+- published read-model is checked.
+
+Then and only then move to the next country.

@@ -5,6 +5,8 @@ import argparse
 import json
 from pathlib import Path
 
+from release_context import get_release_context
+
 
 LOCAL_PROFILE_KEYS = {
     "tides",
@@ -48,8 +50,8 @@ args = parser.parse_args()
 
 country_filter = args.country.lower() if args.country else None
 root = Path(args.root)
-latest = load(root / "latest.json")
-release = root / latest["release_id"]
+latest = get_release_context(root)
+release = latest["release"]
 findings = []
 
 country_paths = sorted((release / "countries").glob("*/profile.json"))

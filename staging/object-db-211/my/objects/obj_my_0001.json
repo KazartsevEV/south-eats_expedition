@@ -2,7 +2,7 @@
   "id": "obj_my_0001",
   "kind": "attraction",
   "slug": "kuala-lumpur",
-  "status": "published",
+  "status": "migration_draft",
   "names": {
     "primary": "Kuala Lumpur"
   },
@@ -30,74 +30,82 @@
     ],
     "nearest_place_id": null,
     "nearest_place_name_raw": "Kuala Lumpur",
+    "region_name_raw": "Kuala Lumpur / Klang Valley",
     "primary_location": {
-      "lat": 3.147778,
-      "lon": 101.695278,
+      "lat": 3.1517,
+      "lon": 101.6942,
       "elevation_m": null,
-      "elevation_range_m": null,
       "coordinate_type": "center",
       "accuracy": "medium",
-      "elevation_accuracy": "unknown",
       "source_refs": [
-        "src_000529"
+        "src_stage_my_0004"
       ],
-      "elevation_source_refs": [],
       "checked_at": "2026-09-29"
     },
     "geo_points": [],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": null,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": null,
+      "accuracy": "unknown",
+      "source_refs": [],
+      "checked_at": null,
+      "notes": null
+    }
   },
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Куала-Лумпур вырос из оловодобывающего узла у слияния Klang и Gombak в колониальный административно-торговый центр, а затем в столичный мегаполис. Для экспедиционного рассказа интересен не один skyline: Masjid Jamek и старое колониальное ядро, Chinatown, индийские кварталы, Kampung Baru и башни конца XX–XXI века показывают несколько исторических слоёв в пределах одного дня пешком и на рельсовом транспорте.",
+        "type": "overview",
+        "text": "Куала-Лумпур вырос из оловодобывающего узла у слияния Klang и Gombak в колониальный административно-торговый центр, а затем в столичный мегаполис. Для экспедиционного рассказа интересен не один skyline: Masjid Jamek и старое колониальное ядро, Chinatown, индийские кварталы, Kampung Baru и башни конца XX–XXI века показывают несколько исторических слоёв в пределах одного дня пешком и на рельсовом транспорте.",
         "source_refs": [
-          "src_000018",
-          "src_000197",
-          "src_000242"
+          "src_stage_my_0001",
+          "src_stage_my_0002",
+          "src_stage_my_0003"
         ]
-      },
-      {
-        "section_id": "culture",
-        "content": "Городская среда многоязычна и многоконфессиональна: малайские, китайские и индийские общины читаются не как музейные анклавы, а через рынки, храмы, мечети, еду и жилые кварталы. Kampung Baru особенно полезен как контраст малоэтажной малайской ткани с KLCC.",
-        "source_refs": [
-          "src_000018",
-          "src_000197",
-          "src_000242"
-        ],
-        "migration_note": "Legacy combined section retained under culture until country research splits it."
-      },
-      {
-        "section_id": "geography",
-        "content": "Город лежит в долине Klang; жара и ливни усиливаются плотной застройкой, а расстояния между визуально близкими районами часто режутся эстакадами и скоростными дорогами.",
-        "source_refs": [
-          "src_000018",
-          "src_000197",
-          "src_000242"
-        ],
-        "migration_note": "Legacy combined section retained under geography until country research splits it."
       }
     ]
   },
   "visit": {
     "entry": {
-      "hours": "Открытая городская/жилая среда без единого входного графика; отдельные здания, музеи, рынки и религиозные объекты имеют собственные часы.",
-      "ticket": "Сам район обычно без входного билета; отдельные объекты оплачиваются отдельно.",
-      "closure_notes": "Фестивали, религиозные события, ремонт и частные мероприятия могут менять доступ.",
-      "status": null,
-      "official_url": "https://www.malaysia.travel/",
-      "notes": "Самостоятельная база — Куала-Лумпур; историческое ядро удобно проходить пешком, между удалёнными районами использовать MRT/LRT/Monorail, KTM или Grab.",
+      "access_status": "unknown",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Сам район обычно без входного билета; отдельные объекты оплачиваются отдельно.",
+        "source_refs": [
+          "src_stage_my_0001",
+          "src_stage_my_0002",
+          "src_stage_my_0003"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Открытая городская/жилая среда без единого входного графика; отдельные здания, музеи, рынки и религиозные объекты имеют собственные часы.",
+        "source_refs": [
+          "src_stage_my_0001",
+          "src_stage_my_0002",
+          "src_stage_my_0003"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
-        "src_000018",
-        "src_000197",
-        "src_000242"
+        "src_stage_my_0001",
+        "src_stage_my_0002",
+        "src_stage_my_0003"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.malaysia.travel/",
+      "closure_notes": "Фестивали, религиозные события, ремонт и частные мероприятия могут менять доступ."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
+        "origin_name_raw": null,
         "modes": [
           "public_transport"
         ],
@@ -106,20 +114,14 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "MRT/LRT/Monorail и KTM закрывают основные туристические оси; для Merdeka Square–Pasar Seni–Chinatown удобнее пешком, для KLCC/Bukit Bintang — MRT/LRT/Monorail."
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
+        "origin_name_raw": null,
         "modes": [
           "ride_hailing"
         ],
@@ -128,20 +130,14 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Grab удобен между несвязанными рельсом районами, но в 17:00–20:00 может проигрывать MRT по времени."
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
+        "origin_name_raw": null,
         "modes": [
           "moped"
         ],
@@ -150,51 +146,37 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Технически возможен, но для центра хуже общественного транспорта: сложная развязочная сеть, парковка и ливни."
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
+        "origin_name_raw": null,
         "modes": [
-          "walking"
+          "walk"
         ],
         "legs": [
           {
-            "mode": "walking",
+            "mode": "walk",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "Историческое ядро Merdeka Square–Central Market–Petaling Street — примерно 2–4 км; KLCC добавляет ещё несколько километров."
           }
         ]
       }
     ],
     "water": {
+      "at_object": null,
       "summary": "В центре магазины/кафе каждые несколько сотен метров; на уличную съёмку всё равно носить воду из-за жары.",
       "quality": "unknown",
-      "last_reliable_source": null,
-      "distance_m": null,
+      "last_reliable_point": null,
       "natural_sources": [],
       "source_refs": [
-        "src_000018",
-        "src_000197",
-        "src_000242"
+        "src_stage_my_0001",
+        "src_stage_my_0002",
+        "src_stage_my_0003"
       ]
     },
     "supplies": null,
@@ -202,21 +184,19 @@
       "status": "unclear",
       "summary": "Палатку в центральных парках/под эстакадами не планировать; дешёвые комнаты и капсулы многочисленны.",
       "source_refs": [
-        "src_000018",
-        "src_000197",
-        "src_000242"
+        "src_stage_my_0001",
+        "src_stage_my_0002",
+        "src_stage_my_0003"
       ]
     },
-    "lodging_ids": [
-      "lod_my_0009"
-    ],
+    "lodging_ids": [],
     "rules": {
       "permit_or_guide": null,
       "access_requirements": null,
       "source_refs": [
-        "src_000018",
-        "src_000197",
-        "src_000242"
+        "src_stage_my_0001",
+        "src_stage_my_0002",
+        "src_stage_my_0003"
       ],
       "checked_at": "2026-09-28"
     },
@@ -228,59 +208,110 @@
   },
   "traveler_reports": [
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "general",
       "summary": "жара и внезапные ливни ломают длинные пешие связки",
       "source_refs": []
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "general",
       "summary": "на карте районы выглядят ближе, чем на земле из-за магистралей и эстакад",
       "source_refs": []
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "general",
       "summary": "Grab в часы пик может долго стоять в трафике",
-      "source_refs": []
-    },
-    {
-      "kind": "legacy_aggregate",
-      "data": {
-        "note": "Практические повторяющиеся проблемы из текущих operational данных, отзывов/полевых описаний и свойств объекта; это не рейтинг."
-      },
       "source_refs": []
     }
   ],
   "visual_recon": {
-    "photo_suitability_5": 5,
-    "video_suitability_5": 5,
-    "best_time": null,
-    "best_weather_light": null,
     "viewpoints": [],
     "seasonal_visuals": [],
     "video_activity": [],
+    "drone": {
+      "visual_value": null,
+      "legal_status": "unknown",
+      "permit_required": null,
+      "restrictions": [
+        "Городская зона с авиационными ограничениями: не запускать без проверки airspace и необходимых разрешений."
+      ],
+      "source_refs": [
+        "src_stage_my_0001",
+        "src_stage_my_0002",
+        "src_stage_my_0003"
+      ],
+      "checked_at": "2026-09-28"
+    },
     "useful_equipment": [],
-    "drone": "Городская зона с авиационными ограничениями: не запускать без проверки airspace и необходимых разрешений.",
-    "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие."
+    "best_time": "06:30–09:00 для рынков и старого центра; 18:30–20:00 для высотной панорамы и неона.",
+    "best_weather_light": null
   },
   "media": {
-    "cover_id": "med_my_b87e7bf30b2a",
-    "gallery_ids": [
-      "med_my_b87e7bf30b2a"
-    ]
+    "cover_id": null,
+    "gallery_ids": []
   },
   "relations": {
     "legacy_ids": [
       "my:kuala-lumpur"
     ],
-    "legacy_detail_path": "countries/malaysia/objects/kuala-lumpur.json"
+    "migration_source": "data/source/malaysia.json",
+    "recovered_from_branch": "draft/malaysia-cdn-after-laos",
+    "source_object_index": 1,
+    "legacy_branch_id": null,
+    "legacy_tags": [
+      "urban",
+      "architecture",
+      "cityscape",
+      "culture",
+      "class_major",
+      "walking",
+      "public_transport",
+      "moped_access",
+      "taxi_ridehail"
+    ],
+    "unmigrated_accommodation": [
+      {
+        "name": "Hotel 99 Pudu",
+        "area": "Pudu/Chinatown, Kuala Lumpur",
+        "price_for_two": "ориентир бюджетного KL в 2026: примерно RM70–130 за простой double; конкретную дату проверять",
+        "contact": "+60 3-2078 6666",
+        "social_or_web": "Google Maps / сервисы бронирования жилья",
+        "source": "актуальная карточка объекта размещения + бюджетный диапазон Куала-Лумпура на 2026 год"
+      }
+    ],
+    "illustration": {
+      "static_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Kuala_Lumpur_skyline_with_the_Petronas_Towers_on_the_left_and_the_Menara_KL_on_the_right_%2818357017963%29.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur_skyline_with_the_Petronas_Towers_on_the_left_and_the_Menara_KL_on_the_right_(18357017963).jpg",
+      "provider": "Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "artist": "Jorge Láscar",
+      "illustration_scope": "object-specific",
+      "last_checked": "2026-09-28",
+      "gallery": [
+        {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Kuala_Lumpur_skyline_with_the_Petronas_Towers_on_the_left_and_the_Menara_KL_on_the_right_%2818357017963%29.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur_skyline_with_the_Petronas_Towers_on_the_left_and_the_Menara_KL_on_the_right_(18357017963).jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY 2.0",
+          "artist": "Jorge Láscar",
+          "last_checked": "2026-09-28"
+        },
+        {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala%20Lumpur%20skyline%20seen%20from%20the%20National%20Mosque%20of%20Malaysia.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur_skyline_seen_from_the_National_Mosque_of_Malaysia.jpg",
+          "provider": "Wikimedia Commons",
+          "license": null,
+          "artist": null,
+          "last_checked": "2026-09-29"
+        }
+      ]
+    }
   },
   "freshness": {
     "checked_at": "2026-09-28",
-    "source_file": "malaysia.json",
     "source_refs": [
-      "src_000018",
-      "src_000197",
-      "src_000242"
+      "src_stage_my_0001",
+      "src_stage_my_0002",
+      "src_stage_my_0003"
     ]
   },
   "qa": {
@@ -299,6 +330,6 @@
       "traveler_reports": true,
       "visual_recon": false
     },
-    "last_reviewed_at": "2026-09-28"
+    "last_reviewed_at": "2026-09-30"
   }
 }

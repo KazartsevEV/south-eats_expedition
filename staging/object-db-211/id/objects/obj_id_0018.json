@@ -32,7 +32,7 @@
     "nearest_place_name_raw": "Ampana / Gorontalo",
     "primary_location": {
       "lat": -0.333333,
-      "lon": 122.0,
+      "lon": 122,
       "elevation_m": null,
       "elevation_range_m": null,
       "coordinate_type": "center",
@@ -46,7 +46,7 @@
     },
     "geo_points": [],
     "object_elevation": {
-      "representative_m": 508.0,
+      "representative_m": 508,
       "min_m": null,
       "max_m": null,
       "reference_type": "characteristic",
@@ -61,8 +61,8 @@
   "narrative": {
     "sections": [
       {
-        "section_id": "overview",
-        "content": "Togean Islands лежат внутри залива Tomini и дают редкое сочетание спокойных лагун, кораллов, лесных островов и медленной лодочной логистики. Здесь сам путь — паром, трансфер, ожидание — является частью экспедиции.",
+        "type": "overview",
+        "text": "Togean Islands лежат внутри залива Tomini и дают редкое сочетание спокойных лагун, кораллов, лесных островов и медленной лодочной логистики. Здесь сам путь — паром, трансфер, ожидание — является частью экспедиции.",
         "source_refs": [
           "src_000044",
           "src_000338",
@@ -72,39 +72,58 @@
         ]
       },
       {
-        "section_id": "culture",
-        "content": "В архипелаге живут Bajo/Bajau и другие группы Центрального Сулавеси. Свайные поселения и лодочная жизнь — прежде всего дома и рабочая среда людей; для съёмки нужна договорённость, особенно с детьми и внутри жилищ.",
+        "type": "culture",
+        "text": "В архипелаге живут Bajo/Bajau и другие группы Центрального Сулавеси. Свайные поселения и лодочная жизнь — прежде всего дома и рабочая среда людей; для съёмки нужна договорённость, особенно с детьми и внутри жилищ.",
         "source_refs": [
           "src_000044",
           "src_000338",
           "src_000080",
           "src_000112",
           "src_000134"
-        ],
-        "migration_note": "Legacy combined section retained under culture until country research splits it."
+        ]
       },
       {
-        "section_id": "geography",
-        "content": "Острова разбросаны внутри большого защищённого залива: море часто спокойнее открытого побережья, но длинные переходы всё равно зависят от ветра и конкретного маршрута. Рифовые мелководья дают резкий переход от светлой бирюзовой воды к глубокому синему.",
+        "type": "geography",
+        "text": "Острова разбросаны внутри большого защищённого залива: море часто спокойнее открытого побережья, но длинные переходы всё равно зависят от ветра и конкретного маршрута. Рифовые мелководья дают резкий переход от светлой бирюзовой воды к глубокому синему.",
         "source_refs": [
           "src_000044",
           "src_000338",
           "src_000080",
           "src_000112",
           "src_000134"
-        ],
-        "migration_note": "Legacy combined section retained under geography until country research splits it."
+        ]
       }
     ]
   },
   "visit": {
     "entry": {
-      "hours": "Общего графика нет; практический день строится вокруг расписания парома и времени местной лодки до выбранного острова.",
-      "ticket": "Единого билета нет; отдельно оплачиваются лодки, проживание и местные/парковые сборы там, где они действуют.",
-      "closure_notes": null,
-      "status": "open/verify",
-      "official_url": "https://www.indonesia.travel/id/en/destination/sulawesi/central-sulawesi/togean-islands",
-      "notes": "Самостоятельно через Ampana или Gorontalo по конкретному расписанию парома/лодки; после прибытия на нужный остров часто требуется отдельная местная лодка до жилья.",
+      "access_status": "open/verify",
+      "fee": {
+        "amount": null,
+        "currency": null,
+        "pricing_basis": null,
+        "description": "Единого билета нет; отдельно оплачиваются лодки, проживание и местные/парковые сборы там, где они действуют.",
+        "source_refs": [
+          "src_000044",
+          "src_000338",
+          "src_000080",
+          "src_000112",
+          "src_000134"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "hours": {
+        "value": "Общего графика нет; практический день строится вокруг расписания парома и времени местной лодки до выбранного острова.",
+        "source_refs": [
+          "src_000044",
+          "src_000338",
+          "src_000080",
+          "src_000112",
+          "src_000134"
+        ],
+        "checked_at": "2026-09-28"
+      },
+      "permit_required": null,
       "source_refs": [
         "src_000044",
         "src_000338",
@@ -112,11 +131,15 @@
         "src_000112",
         "src_000134"
       ],
-      "checked_at": "2026-09-28"
+      "checked_at": "2026-09-28",
+      "official_url": "https://www.indonesia.travel/id/en/destination/sulawesi/central-sulawesi/togean-islands",
+      "closure_notes": null,
+      "notes": "Самостоятельно через Ampana или Gorontalo по конкретному расписанию парома/лодки; после прибытия на нужный остров часто требуется отдельная местная лодка до жилья."
     },
     "access_options": [
       {
-        "origin": null,
+        "id": "access_01",
+        "origin_place_id": null,
         "modes": [
           "public_transport"
         ],
@@ -125,20 +148,13 @@
             "mode": "public_transport",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
             "notes": "паром/скоростная лодка Ampana↔Togean и отдельные рейсы со стороны Gorontalo; расписание сезонное/дневное, проверять у порта/жилья"
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_02",
+        "origin_place_id": null,
         "modes": [
           "ride_hailing"
         ],
@@ -147,20 +163,18 @@
             "mode": "ride_hailing",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "только до порта на материке; на островах функции taxi выполняют лодочные трансфер"
+            "notes": "только до порта на материке; на островах функции taxi выполняют лодочные трансфер",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_03",
+        "origin_place_id": null,
         "modes": [
           "moped"
         ],
@@ -169,20 +183,18 @@
             "mode": "moped",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
-            "elevation_gain_m": null,
-            "elevation_loss_m": null,
-            "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "возможен на отдельных крупных островах, но не является общим транспортом архипелага"
+            "notes": "возможен на отдельных крупных островах, но не является общим транспортом архипелага",
+            "road": {
+              "surface": null,
+              "condition": null,
+              "seasonality": null
+            }
           }
         ]
       },
       {
-        "origin": null,
+        "id": "access_04",
+        "origin_place_id": null,
         "modes": [
           "walking"
         ],
@@ -191,15 +203,16 @@
             "mode": "walking",
             "distance_km": null,
             "duration_min": null,
-            "surface": null,
-            "condition": null,
-            "seasonality": null,
+            "notes": "в деревнях/от гостевой комплекс до риф/пляжа обычно 0.5–5 км; между islands — лодка",
             "elevation_gain_m": null,
             "elevation_loss_m": null,
             "trailhead": null,
-            "navigation": null,
-            "fords": null,
-            "notes": "в деревнях/от гостевой комплекс до риф/пляжа обычно 0.5–5 км; между islands — лодка"
+            "trail": {
+              "type": null,
+              "condition": null,
+              "navigation": null,
+              "river_crossings": null
+            }
           }
         ]
       }
@@ -253,31 +266,39 @@
   },
   "traveler_reports": [
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "Главная повторяющаяся проблема — зависимость от расписания паромов: пропуск или отмена рейса легко добавляет к маршруту целые сутки.",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "на островах мало ATM/card acceptance; наличные нужны до посадки на лодка",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "интернет и электричество в бюджетных местах могут быть ограничены по часам",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "aggregated_recurring_issue",
+      "topic": "aggregated_recurring_issue",
       "summary": "цена жилья часто указана “за человека полный пансион”, поэтому нельзя сравнивать её с обычным room-only hotel tariff",
-      "source_refs": []
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     },
     {
-      "kind": "legacy_aggregate",
-      "data": {
-        "note": "Повторяющиеся практические проблемы из актуальных/доступных отзывов и полевых источников; где свежих отзывов мало, это прямо отмечено."
-      },
-      "source_refs": []
+      "topic": "legacy_aggregate",
+      "summary": "",
+      "observed_period": null,
+      "source_refs": [],
+      "confidence": null
     }
   ],
   "visual_recon": {
@@ -297,11 +318,26 @@
         "best_time": "early_morning / late_afternoon",
         "best_weather_light": "Утром чаще спокойнее поверхность; вечером низкий свет лучше отделяет лодки и береговой лес.",
         "useful_equipment": [
-          "wide",
-          "standard",
-          "telephoto",
-          "phone",
-          "action_camera"
+          {
+            "type": "wide",
+            "why": null
+          },
+          {
+            "type": "standard",
+            "why": null
+          },
+          {
+            "type": "telephoto",
+            "why": null
+          },
+          {
+            "type": "phone",
+            "why": null
+          },
+          {
+            "type": "action_camera",
+            "why": null
+          }
         ],
         "source_refs": [
           "src_903039"
@@ -325,10 +361,22 @@
         "best_time": "late_morning / midday",
         "best_weather_light": "Высокое солнце лучше проходит в воду; фактическая видимость и течение важнее часов.",
         "useful_equipment": [
-          "underwater_camera",
-          "action_camera",
-          "wide",
-          "macro"
+          {
+            "type": "underwater_camera",
+            "why": null
+          },
+          {
+            "type": "action_camera",
+            "why": null
+          },
+          {
+            "type": "wide",
+            "why": null
+          },
+          {
+            "type": "macro",
+            "why": null
+          }
         ],
         "source_refs": [
           "src_903057"
@@ -341,7 +389,7 @@
         "coordinates": {
           "lat": -0.166667,
           "lon": 121.608333,
-          "elevation_m": 508.0
+          "elevation_m": 508
         },
         "gps": {
           "decimal": "-0.166667, 121.608333",
@@ -352,10 +400,22 @@
         "best_time": "morning",
         "best_weather_light": "Чистое утро до накопления облачности над островом.",
         "useful_equipment": [
-          "wide",
-          "standard",
-          "telephoto",
-          "phone"
+          {
+            "type": "wide",
+            "why": null
+          },
+          {
+            "type": "standard",
+            "why": null
+          },
+          {
+            "type": "telephoto",
+            "why": null
+          },
+          {
+            "type": "phone",
+            "why": null
+          }
         ],
         "source_refs": [
           "src_903037"
@@ -381,7 +441,22 @@
       "macro",
       "phone"
     ],
-    "drone": "Только по действующим авиационным и локальным правилам; в нацпарках/храмах/аэропортовых зонах обычно требуется отдельное разрешение.",
+    "drone": {
+      "visual_value": null,
+      "legal_status": "unknown",
+      "permit_required": null,
+      "restrictions": [
+        "Только по действующим авиационным и локальным правилам; в нацпарках/храмах/аэропортовых зонах обычно требуется отдельное разрешение."
+      ],
+      "source_refs": [
+        "src_000044",
+        "src_000338",
+        "src_000080",
+        "src_000112",
+        "src_000134"
+      ],
+      "checked_at": "2026-09-28"
+    },
     "filming_restrictions": "Обычная любительская съёмка зависит от правил объекта; коммерческую/постановочную съёмку согласовывать."
   },
   "media": {
@@ -409,7 +484,7 @@
     ]
   },
   "qa": {
-    "status": "passed",
+    "status": "incomplete",
     "checks": {
       "language": true,
       "classification": true,
@@ -420,10 +495,10 @@
       "sources": true,
       "access": true,
       "water": true,
-      "overnight": true,
-      "traveler_reports": true,
+      "overnight": false,
+      "traveler_reports": false,
       "visual_recon": true
     },
-    "last_reviewed_at": "2026-09-28"
+    "last_reviewed_at": "2026-09-30"
   }
 }

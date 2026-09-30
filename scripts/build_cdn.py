@@ -941,7 +941,6 @@ def build():
                 "name": name,
                 "slug": slugify(name),
                 "languages_spoken": region.get("languages_spoken") or [],
-                "currency": region.get("currency"),
                 "climate_summary": region.get("climate_summary"),
                 "best_period_general": region.get("best_period_general"),
                 "object_ids": region_to_ids.get(name, []),

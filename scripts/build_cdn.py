@@ -25,9 +25,9 @@ PUBLISH = [
     ("indonesia.json", "ID", "indonesia"),
     ("malaysia.json", "MY", "malaysia"),
     ("myanmar.json", "MM", "myanmar"),
+    ("philippines.json", "PH", "philippines"),
 ]
 COUNTRY_ONLY = [
-    ("philippines.json", "PH", "philippines"),
     ("singapore.json", "SG", "singapore"),
     ("thailand.json", "TH", "thailand"),
     ("timor-leste.json", "TL", "timor-leste"),

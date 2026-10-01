@@ -1076,12 +1076,12 @@ def build():
         source_sections = ((((source_object or {}).get("traveler_card") or {}).get("annotation") or {}).get("sections"))
         if isinstance(source_sections, list) and source_sections:
             story_payload["sections"] = source_sections
-        sections = narrative_sections(story_payload, source_refs, strict_source_scope=strict_source_scope)
-        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
         language_review = ((source_object or {}).get("qa") or {}).get("language_review") or {}
         rebuild_review = ((source_object or {}).get("qa") or {}).get("rebuild_v2") or {}
         fact_source_review = ((source_object or {}).get("qa") or {}).get("fact_source_review") or {}
         strict_source_scope = fact_source_review.get("status") == "passed"
+        sections = narrative_sections(story_payload, source_refs, strict_source_scope=strict_source_scope)
+        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
 
         checks = {
             "language": bool((detail.get("identity") or {}).get("narrow") or sections) and (code != "KH" or language_review.get("status") == "reviewed"),

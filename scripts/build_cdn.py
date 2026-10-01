@@ -13,9 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.10.10"
-RELEASE_ID = "2026-09-30-r42"
-LATEST_RELEASE_ID = "2026-09-30-r42"
+SCHEMA_VERSION = "2.10.11"
+RELEASE_ID = "2026-10-02-r43"
+LATEST_RELEASE_ID = "2026-10-02-r43"
 RELEASE_STATUS = "reference_release"
 SUPPORTED_SOURCE_MODELS = {"1.2", "1.5", "1.6"}
 PUBLISH = [
@@ -818,7 +818,7 @@ def visual_recon_from(card, source_registry=None, object_id=None):
     return {
         "photo_suitability_5": media.get("photo_suitability_5"),
         "video_suitability_5": media.get("video_suitability_5"),
-        "best_time": scout.get("best_time"),
+        "best_time": scout.get("best_time") or media.get("best_light"),
         "best_weather_light": scout.get("best_weather_light"),
         "viewpoints": viewpoints,
         "seasonal_visuals": scout.get("seasonal_visuals") or [],

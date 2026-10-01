@@ -377,6 +377,54 @@ def main():
         for key in ["entry", "access_options", "water", "supplies", "overnight", "lodging_ids", "rules", "seasonality"]:
             if key not in visit:
                 fail(f"{object_id}: visit missing {key}")
+
+        entry = visit.get("entry") or {}
+        for key in [
+            "typical_visit_hours",
+            "public_transport",
+            "last_mile",
+            "mobility_notes",
+            "terrain_and_movement",
+            "operational_status",
+        ]:
+            if key not in entry:
+                fail(f"{object_id}: visit.entry missing migration field {key}")
+        typical_visit_hours = entry.get("typical_visit_hours")
+        if typical_visit_hours is not None and not isinstance(typical_visit_hours, list):
+            fail(f"{object_id}: typical_visit_hours must be array or null")
+        operational_status = entry.get("operational_status")
+        if not isinstance(operational_status, dict):
+            fail(f"{object_id}: operational_status must be object")
+        for key in [
+            "access_mode",
+            "access_status",
+            "current_alert",
+            "security_access_status",
+            "security_region",
+            "security_snapshot_as_of",
+            "status_snapshot",
+            "source_refs",
+            "checked_at",
+        ]:
+            if key not in operational_status:
+                fail(f"{object_id}: operational_status missing {key}")
+        if not isinstance(operational_status.get("source_refs"), list):
+            fail(f"{object_id}: operational_status.source_refs must be array")
+
+        rules = visit.get("rules") or {}
+        safety = rules.get("safety")
+        if not isinstance(safety, dict):
+            fail(f"{object_id}: visit.rules.safety must be object")
+        for key in ["crime_context", "main_risks", "sensitive_areas", "confidence", "source_refs", "checked_at"]:
+            if key not in safety:
+                fail(f"{object_id}: visit.rules.safety missing {key}")
+        if not isinstance(safety.get("main_risks"), list):
+            fail(f"{object_id}: visit.rules.safety.main_risks must be array")
+        if not isinstance(safety.get("sensitive_areas"), list):
+            fail(f"{object_id}: visit.rules.safety.sensitive_areas must be array")
+        if not isinstance(safety.get("source_refs"), list):
+            fail(f"{object_id}: visit.rules.safety.source_refs must be array")
+
         for lodging_id in visit.get("lodging_ids") or []:
             if lodging_id not in lodging_ids:
                 fail(f"{object_id}: unknown lodging ref {lodging_id}")
@@ -399,6 +447,13 @@ def main():
                 fail(f"{object_id}: unknown canonical source ref {source_id}")
 
         qa = obj.get("qa") or {}
+        verification = qa.get("verification")
+        if not isinstance(verification, dict):
+            fail(f"{object_id}: qa.verification must be object")
+        if not isinstance(verification.get("dynamic_fields"), list):
+            fail(f"{object_id}: qa.verification.dynamic_fields must be array")
+        if "verify_before_departure" not in verification:
+            fail(f"{object_id}: qa.verification.verify_before_departure missing")
         checks = qa.get("checks") or {}
         if set(checks) != REQUIRED_QA_CHECKS:
             fail(f"{object_id}: QA check set mismatch: {sorted(checks)}")

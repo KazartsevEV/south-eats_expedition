@@ -284,7 +284,7 @@ def main():
             fail(f"{media_id}: canonical media lacks local mirror_asset")
         if not str(mirror_asset).startswith("media-mirror/") or not str(mirror_asset).endswith(".webp"):
             fail(f"{media_id}: mirror_asset must be a local media-mirror/*.webp path")
-        mirror_path = PUBLIC / "cdn" / "v2" / mirror_asset
+        mirror_path = PUBLIC / mirror_asset
         if not mirror_path.is_file() or mirror_path.stat().st_size < 256:
             fail(f"{media_id}: mirrored image binary is missing or invalid: {mirror_asset}")
         media_ids.add(media_id)
@@ -501,6 +501,20 @@ def main():
     global_qa = load(release / "qa" / "global.json")
     if global_qa.get("objects_total") != len(object_ids):
         fail("qa/global object count mismatch")
+
+    # UI contract: photographs must open local mirrors, never upstream image/page URLs.
+    ui_path = ROOT / "public" / "index.html"
+    ui_text = ui_path.read_text(encoding="utf-8")
+    if "function mirroredMediaURL" not in ui_text:
+        fail("public/index.html lacks mirroredMediaURL helper")
+    forbidden_ui_patterns = [
+        'data-lightbox-url="'+esc(m.url',
+        "data-lightbox-url=\"'+esc(m.url",
+        "heroFull=(cover&&cover.url)",
+    ]
+    for pattern in forbidden_ui_patterns:
+        if pattern in ui_text:
+            fail(f"public/index.html uses upstream media URL as interactive image target: {pattern}")
 
     print(json.dumps({
         "status": "ok",

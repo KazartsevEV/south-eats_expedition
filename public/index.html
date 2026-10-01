@@ -122,9 +122,12 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .culture-body h3{margin:0 0 7px;font-size:18px}
 .culture-body p{margin:7px 0;color:#cbd3ce;font-size:13px;line-height:1.5}
 .culture-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-.price-chip,.date-chip,.status-chip{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 7px;font-size:10px;font-weight:750}
-.price-chip{color:#dff3a1}.date-chip{color:#c9dbff}.status-chip{color:#ffd0b8}
-.culture-summary{color:var(--muted);max-width:920px;margin:0 0 12px;line-height:1.55}
+.price-chip,.date-chip,.status-chip,.where-chip{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 7px;font-size:10px;font-weight:750}
+.price-chip{color:#dff3a1}.date-chip{color:#c9dbff}.status-chip{color:#ffd0b8}.where-chip{color:#bfe7d3}
+.culture-summary{color:var(--muted);max-width:980px;margin:0 0 14px;line-height:1.6}
+.culture-where{margin-top:10px!important;padding-top:9px;border-top:1px solid var(--line);font-size:12px!important}
+.culture-where b{color:var(--text)}
+.culture-format{font-size:11px!important;color:var(--muted)!important}
 .image-lightbox{position:fixed;inset:0;z-index:9999;display:none;background:rgba(2,4,3,.94)}
 .image-lightbox.open{display:grid;grid-template-rows:auto minmax(0,1fr) auto}
 .lightbox-tools{display:flex;justify-content:flex-end;gap:8px;padding:12px 16px;background:rgba(9,12,10,.9);border-bottom:1px solid var(--line)}
@@ -489,14 +492,18 @@ async function countryCultureHTML(p){
     var foodCards=await Promise.all(foods.map(async function(x){
       var photo=await cultureImageHTML(x),price=usdRange(x.price_usd_range);
       return '<article class="culture-card">'+photo+'<div class="culture-body"><h3>'+esc(x.name_ru||x.name||'Блюдо')+'</h3>'+
+        (x.name&&x.name_ru&&x.name!==x.name_ru?'<p class="popup-meta">'+esc(x.name)+'</p>':'')+
         (x.description?'<p>'+esc(x.description)+'</p>':'')+
-        '<div class="culture-meta">'+(price?'<span class="price-chip">рынок / стритфуд ≈ '+esc(price)+'</span>':'')+'</div>'+
-        (x.price_context?'<p class="popup-meta">'+esc(x.price_context)+(x.checked_at?' · '+esc(x.checked_at):'')+'</p>':'')+
+        (x.where_common?'<p class="culture-where"><b>Где искать:</b> '+esc(x.where_common)+'</p>':'')+
+        (x.format?'<p class="culture-format">'+esc(x.format)+'</p>':'')+
+        '<div class="culture-meta">'+(price?'<span class="price-chip">≈ '+esc(price)+'</span>':'')+
+        (x.format?'<span class="where-chip">'+esc(x.format)+'</span>':'')+'</div>'+
+        (x.price_context?'<p class="popup-meta"><b>Цена:</b> '+esc(x.price_context)+(x.checked_at?' · проверено '+esc(x.checked_at):'')+'</p>':'')+
         '</div></article>';
     }));
     var market=p.food_market||{},marketRange=usdRange(market.typical_simple_meal_usd_range);
-    out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Еда</div><h2>Рынки и уличная еда</h2></div></div>'+
-      '<p class="culture-summary">'+esc(p.cuisine||'')+(marketRange?' Обычный простой приём пищи по текущим рыночным срезам: примерно '+esc(marketRange)+'.':'')+'</p>'+
+    out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Еда · '+foods.length+' карточек</div><h2>Что искать на рынках и в локальных кафе</h2></div></div>'+
+      '<p class="culture-summary">'+esc(p.cuisine||'')+(marketRange?' Базовый дешёвый завтрак или простое блюдо обычно попадает примерно в '+esc(marketRange)+', но сложные блюда вроде amok стоят дороже.':'')+'</p>'+
       '<div class="culture-grid">'+foodCards.join('')+'</div></section>';
   }else if(hasValue(p.cuisine)||hasValue(p.street_food)){
     out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Еда</div><h2>Кухня и уличная еда</h2></div></div><div class="fact-grid">'+factCard('Еда',{overview:p.cuisine,street_food:p.street_food})+'</div></section>';
@@ -507,10 +514,15 @@ async function countryCultureHTML(p){
       return '<article class="culture-card">'+photo+'<div class="culture-body"><h3>'+esc(x.name||'Праздник')+'</h3>'+
         (x.local_name&&x.local_name!==x.name?'<p class="popup-meta">'+esc(x.local_name)+'</p>':'')+
         (x.description?'<p>'+esc(x.description)+'</p>':'')+
-        '<div class="culture-meta">'+(x.dates_2026?'<span class="date-chip">'+esc(x.dates_2026)+'</span>':'')+(x.status_2026?'<span class="status-chip">'+esc(x.status_2026)+'</span>':'')+'</div>'+
+        (x.where_common?'<p class="culture-where"><b>Где наблюдать:</b> '+esc(x.where_common)+'</p>':'')+
+        (x.access_cost?'<p class="culture-format"><b>Доступ:</b> '+esc(x.access_cost)+'</p>':'')+
+        '<div class="culture-meta">'+(x.dates_2026?'<span class="date-chip">'+esc(x.dates_2026)+'</span>':'')+
+        (x.status_2026?'<span class="status-chip">'+esc(x.status_2026)+'</span>':'')+'</div>'+
         '</div></article>';
     }));
-    out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Календарь</div><h2>Праздники и фестивали</h2></div></div><div class="culture-grid">'+festivalCards.join('')+'</div></section>';
+    out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Календарь · '+festivals.length+' карточки</div><h2>Главные праздники и где их смотреть</h2></div></div>'+
+      '<p class="culture-summary">Не просто список выходных: здесь указано, что происходит, где праздник реально виден путешественнику и что изменилось в текущем году.</p>'+
+      '<div class="culture-grid">'+festivalCards.join('')+'</div></section>';
   }else if(hasValue(p.festivals)){
     out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Календарь</div><h2>Праздники и фестивали</h2></div></div><div class="fact-grid">'+factCard('Праздники',p.festivals)+'</div></section>';
   }

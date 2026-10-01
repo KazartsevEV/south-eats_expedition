@@ -39,7 +39,8 @@
       "2026-10-01 Brunei food/festival visual layer upgraded to Cambodia standard: 6 food cards and 5 festival cards with licensed media, where-to-find/observe fields, format/access context and dated BND price evidence.",
       "2026-10-01 country/food/festival editorial rewrite: страновая справка, кухня и календарь переписаны естественным русским языком; убраны лишние англицизмы из пользовательских полей, сохранены только официальные названия и локальные термины с пояснениями; цены, даты, источники и объектный слой не изменены.",
       "2026-10-01 Brunei regional/geo language pass: regional and locality user-facing prose rewritten into natural Russian; district profiles sharpened for self-guided expedition planning; no stable linkage names or object IDs changed.",
-      "2026-10-01 object QA: obj_bn_0001 Omar Ali Saifuddien Mosque rebuilt to Cambodia reference standard; structured access/water/overnight, sourced traveler reports, georeferenced visual recon and 5-image licensed gallery."
+      "2026-10-01 object QA: obj_bn_0001 Omar Ali Saifuddien Mosque rebuilt to Cambodia reference standard; structured access/water/overnight, sourced traveler reports, georeferenced visual recon and 5-image licensed gallery.",
+      "2026-10-01 object QA: obj_bn_0002 Jame' Asr Hassanil Bolkiah Mosque rebuilt to Cambodia reference standard; current official access, structured multimodal logistics/water/overnight, sourced traveler reports, 3 georeferenced visual viewpoints and 5-image licensed gallery."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -1525,42 +1526,42 @@
         "interest": [
           "architecture",
           "culture",
-          "religion"
+          "religion",
+          "living heritage"
         ],
-        "why_go": "Открытая в 1994 году государственная мечеть эпохи султана Хассанала Болкиаха. 29 золотых куполов отсылают к нынешнему султану как 29-му правителю династии; архитектура работает масштабом, симметрией и повтором.",
+        "why_go": "Крупнейшая мечеть Брунея и главный государственный религиозный комплекс эпохи султана Хассанала Болкиаха: 29 золотых куполов отсылают к его месту в династии, а огромные сады и водные элементы делают объект одновременно действующей мечетью и монументальной частью современной столицы.",
         "traveler_card": {
           "location": {
-            "region": "Бандар-Сери-Бегаван / Бруней-Муара",
-            "nearest_hub": "Bandar Seri Begawan",
+            "region": "Бруней-Муара",
+            "nearest_hub": "Бандар-Сери-Бегаван",
             "languages_spoken": [
-              "Malay / Brunei Malay",
-              "English",
-              "мандаринский и хоккиен в части китайской общины"
+              "брунейский малайский и стандартный малайский",
+              "английский — широко используется в городской и туристической среде",
+              "мандаринский и хоккиен — в части китайской общины"
             ],
             "currency": {
               "code": "BND",
-              "name": "Brunei dollar",
+              "name": "брунейский доллар",
               "local_currency_per_1_usd": 1.2769,
               "as_of": "2026-09-27",
-              "rate_type": "market/reference snapshot",
-              "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
-              "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
+              "rate_type": "справочный рыночный снимок",
+              "notes": "BND и SGD взаимозаменяемы по номиналу в рамках Соглашения о взаимозаменяемости валют; наличный курс обменника может отличаться.",
+              "practical_notes": "Основная валюта — BND; SGD обычно принимается по номиналу."
             },
             "coordinates": {
               "lat": 4.898056,
               "lon": 114.921944,
               "elevation_m": 10
             },
-            "coordinate_type": "temple_entrance",
+            "coordinate_type": "center",
             "accuracy": "high",
             "elevation_accuracy": "medium",
             "coordinate_source": {
-              "provider": "Wikidata + Komoot",
+              "provider": "Wikidata",
               "url": "https://www.wikidata.org/wiki/Q20410627",
-              "elevation_url": "https://www.komoot.com/highlight/795038",
-              "basis": "mapped mosque coordinate; terrain elevation from mapped highlight"
+              "basis": "картографическая точка комплекса; источник не подтверждает конкретную дверь или ворота"
             },
-            "coordinates_checked_at": "2026-09-28",
+            "coordinates_checked_at": "2026-10-01",
             "elevation_source": {
               "type": "map",
               "title": "Jame' Asr Hassanil Bolkiah Mosque elevation",
@@ -1585,80 +1586,369 @@
                 "accessed": "2026-09-28",
                 "notes": "Используется только для высоты рельефа у мечети; координаты подтверждаются отдельным картографическим источником."
               },
-              "checked_at": "2026-09-28",
-              "notes": "Высота площадки самого объекта над средним уровнем моря; для точечного культурного объекта используется как object_elevation."
+              "checked_at": "2026-10-01",
+              "notes": "Ориентировочная высота площадки комплекса над средним уровнем моря; это не высота здания и не геодезическая отметка входа."
             }
           },
           "logistics": {
-            "access": "Dart/автомобиль; находится вне компактного пешего ядра BSB.",
-            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
-            "last_mile": null,
+            "access": "Городской объект в Кампонг-Киаронге, между центральной частью Бандар-Сери-Бегавана и коммерческими районами Гадонг/Киулап. Самостоятельный доступ без гида.",
+            "public_transport": "Официальный туристический портал указывает городской автобус как бюджетный вариант: средняя стоимость около BND 1 за поездку, общий режим сервиса ориентировочно 06:00–20:00. Конкретную линию, остановку и интервал проверять перед выездом.",
+            "last_mile": "От места высадки пройти к действующему посетительскому входу по указателям; отдельная подтверждённая координата конкретных ворот пока не нормализована.",
             "typical_visit_hours": [
               1,
               2
             ],
-            "permit_or_guide": null,
+            "permit_or_guide": "гид не требуется",
             "modes": {
-              "public_transport": "автобусы есть, но для съёмочного графика неудобны",
-              "taxi_ridehail": "Dart из центра",
-              "moped": "прямой городской подъезд",
-              "walking": "из центра BSB ~4–5 км"
+              "public_transport": "городской автобус; конкретный маршрут и остановку проверять по актуальному гиду",
+              "taxi_ridehail": "Dart до Simpang 127, Kampong Kiarong",
+              "moped": "обычный городской асфальтовый подъезд; парковаться только в разрешённом месте",
+              "walking": "пеший подход рациональнее из Киаронга, Киулапа или Гадонга; единый километраж от «центра» не фиксируется без конкретной исходной точки"
             },
-            "water": "воду купить в Kiarong/Gadong до входа",
-            "overnight_and_camping": "ночёвка на территории комплекса не рассматривается",
-            "terrain_and_movement": "Большие открытые площадки и лестницы; соблюдать дресс-код.",
-            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "terrain_and_movement": "Большой благоустроенный комплекс с твёрдыми покрытиями, лестницами, садами и открытыми участками; после сильного дождя гладкие поверхности могут быть скользкими.",
+            "access_requirements": "Это действующая мечеть. Туристический доступ подчинён молитвам, религиозным событиям и текущим указаниям персонала; для обычного самостоятельного визита проводник не нужен.",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "access_options": [
+              {
+                "id": "dart_to_kiarong",
+                "origin": "Бандар-Сери-Бегаван, Гадонг, Киулап или аэропорт",
+                "modes": [
+                  "ride_hailing",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "ride_hailing",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Городской асфальтовый подъезд к Simpang 127, Kampong Kiarong.",
+                    "seasonality": "Сильный ливень может увеличить время поездки.",
+                    "notes": "Dart прямо рекомендован официальным туристическим порталом как наиболее удобный вариант без собственной машины."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved",
+                      "stairs"
+                    ],
+                    "condition": "Короткий проход от высадки по территории комплекса.",
+                    "navigation": "Ориентироваться на действующий посетительский вход и указания персонала.",
+                    "notes": "Координату конкретной двери не подменять центральной точкой комплекса."
+                  }
+                ]
+              },
+              {
+                "id": "city_bus_to_kiarong",
+                "origin": "Бандар-Сери-Бегаван",
+                "modes": [
+                  "public_transport",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "public_transport",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Городской автобус; линия и интервал динамичны.",
+                    "seasonality": null,
+                    "notes": "Официальный портал указывает среднюю стоимость около BND 1 и общий режим сервиса примерно 06:00–20:00; это не расписание конкретной линии."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Пеший участок от подходящей остановки до комплекса.",
+                    "navigation": "Следовать к Simpang 127 и посетительскому входу.",
+                    "notes": "Точная остановка не записывается без проверки актуальной маршрутной схемы."
+                  }
+                ]
+              },
+              {
+                "id": "moped_or_car",
+                "origin": "Бандар-Сери-Бегаван / Гадонг / Киулап",
+                "modes": [
+                  "moped",
+                  "car",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "moped",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Обычные городские дороги; внедорожный участок отсутствует.",
+                    "seasonality": "Во время тропического ливня видимость и сцепление ухудшаются.",
+                    "notes": "Парковаться только там, где это разрешено режимом комплекса."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved",
+                      "stairs"
+                    ],
+                    "condition": "Проход от парковки к посетительской зоне.",
+                    "navigation": "По текущим указателям.",
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "water": "Проверенная публичная точка питьевой воды у входа не установлена; не рассчитывать на декоративные фонтаны или служебные помещения.",
+            "water_structured": {
+              "at_object": null,
+              "quality": "unknown",
+              "last_reliable_point": null,
+              "natural_sources": [],
+              "notes": "Объект находится в городской зоне, но конкретный магазин или питьевой фонтан должен быть отдельным POI. Воду разумно пополнить до входа; декоративные водные элементы не являются питьевым источником."
+            },
+            "supplies": {
+              "status": "partially_mapped",
+              "summary": "Киаронг, Киулап и Гадонг — городские районы с магазинами и общепитом, но случайный магазин не закрепляется в карточке без отдельной инфраструктурной сущности.",
+              "poi_ids": []
+            },
+            "overnight_and_camping": "Надёжного источника, разрешающего ночёвку или установку палатки на территории мечети, нет.",
+            "overnight": {
+              "status": "unclear",
+              "summary": "Не считать сады, парковку или территорию действующей мечети местом свободного кемпинга. Для ночёвки использовать городское жильё либо отдельное разрешение, если оно когда-либо требуется для специальной работы.",
+              "source_refs": []
+            }
           },
           "climate": {
-            "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
-            "heat_rain_notes": "Экваториальный климат: высокая влажность и жара круглый год; сильный ливень возможен в любой месяц.",
-            "site_specific_notes": null
+            "best_period": "Февраль–март обычно дают наиболее выраженный относительный минимум осадков; для городского объекта текущий прогноз важнее календарной «сухой» даты.",
+            "heat_rain_notes": "Жара и высокая влажность сохраняются круглый год; короткий сильный ливень возможен в любой сезон.",
+            "site_specific_notes": "Большая часть внешних подходов открыта солнцу; после дождя гладкое мощение и ступени могут быть скользкими."
           },
           "operations": {
-            "hours": "Официальная страница: Mon–Wed 08:00–11:30 и 14:00–15:00; Thu 08:00–11:30. Доступ для посетителей вне молитв; праздничный режим сверять.",
-            "ticket": "Бесплатно, если на месте не объявлено иное.",
-            "closure_notes": null,
-            "last_verified": "2026-09-28",
-            "official_url": "https://www.bruneitourism.com/places/jame-asr-hassanil-bolkiah-mosque/"
+            "hours": "Официальный туристический портал на 2026-10-01 указывает: понедельник–четверг, суббота и воскресенье 08:00–11:30 и 14:00–15:00; пятница закрыта для туристического посещения.",
+            "ticket": "Отдельная плата за туристический вход на официальной странице не указана; фактический режим определяется действующей мечетью.",
+            "closure_notes": "Молитвы, религиозные церемонии и Рамадан могут менять фактический доступ к интерьеру даже внутри обычного окна. В день визита сверять текущие указания у входа.",
+            "last_verified": "2026-10-01",
+            "official_url": "https://www.bruneitourism.com/places/jame-asr-hassanil-bolkiah-mosque/",
+            "status": "open_active_mosque"
           },
           "safety": {
-            "crime_context": "Сопоставимой официальной статистики преступности именно по объекту нет; вместо фиктивного объект преступность оценка приведены реальные операционные и природные риски.",
+            "crime_context": "Отдельная сопоставимая статистика преступности по объекту не используется; для планирования важнее реальные режимные и погодные ограничения.",
             "main_risks": [
-              "жара",
-              "религиозный этикет",
-              "закрытие во время молитв"
+              "жара и высокая влажность на открытых площадках",
+              "скользкие покрытия после сильного дождя",
+              "временное закрытие посетительской зоны из-за молитвы или церемонии"
             ],
-            "sensitive_areas": [],
-            "confidence": "отдельная официальная статистика преступности по объекту отсутствует"
+            "sensitive_areas": [
+              "молельные пространства во время молитвы",
+              "люди, совершающие религиозные действия: не считать их автоматически доступным объектом съёмки"
+            ],
+            "confidence": "Операционные ограничения подтверждаются статусом действующей мечети и официальным режимом посещения; объектная криминальная оценка не выдумывается."
           },
           "media": {
             "photo_suitability_5": 5,
             "video_suitability_5": 5,
             "visual_scouting": {
-              "best_time": "первое утреннее время доступа посетителей или поздний день",
-              "best_weather_light": "после дождя камень и зелень насыщеннее",
+              "best_time": "Внешний комплекс хорошо работает в раннее утро и поздний день; интерьер можно планировать только внутри официального посетительского окна. Закат сам по себе не означает доступ внутрь.",
+              "best_weather_light": "После дождя зелень и мозаичные поверхности становятся визуально насыщеннее; для отражений в фонтанах полезнее спокойная вода, чем формально ясное небо.",
               "viewpoints_for_photo_video": [
-                "центральная садовая ось",
-                "боковой ракурс, собирающий несколько минаретов и куполов",
-                "край сада/водоёма для повторяющейся геометрии"
+                {
+                  "id": "south_complex_view",
+                  "name": "Южная сторона комплекса — широкий внешний вид",
+                  "description": "Геопривязанная точка фотографии 2009 года почти у южной стороны основного комплекса. Отсюда читаются главный объём, золотые купола и минареты без необходимости входить в молельный зал.",
+                  "coordinates": {
+                    "lat": 4.898045,
+                    "lon": 114.921905,
+                    "elevation_m": null
+                  },
+                  "access": "Внешняя зона комплекса; фактический проход зависит от текущего режима территории.",
+                  "view": {
+                    "description": "главный фасад, золотые купола и минареты"
+                  },
+                  "best_time": "утро или поздний день",
+                  "best_weather_light": "мягкий боковой свет; после дождя насыщеннее зелень и мощение",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "позволяет собрать крупный объём мечети вместе с садами"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "удобен для более плотного вида куполов и минаретов без сильного растяжения перспективы"
+                    }
+                  ],
+                  "source_refs": [
+                    "src_904522"
+                  ]
+                },
+                {
+                  "id": "east_garden_view",
+                  "name": "Восточная садовая сторона",
+                  "description": "Геопривязанная точка фотографии 2014 года на восточной стороне комплекса. Она полезна для вида через благоустроенную территорию, где архитектура читается вместе с садами и повтором минаретов.",
+                  "coordinates": {
+                    "lat": 4.898936,
+                    "lon": 114.922522,
+                    "elevation_m": null
+                  },
+                  "access": "Садовая/внешняя территория комплекса; проход подчинён текущему режиму мечети.",
+                  "view": {
+                    "description": "мечеть через садовую часть, несколько куполов и минаретов"
+                  },
+                  "best_time": "утро или поздний день",
+                  "best_weather_light": "лучше при мягком свете; жёсткое полуденное солнце усиливает контраст белых и золотых поверхностей",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает масштаб сада и архитектуры в одном поле"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "собирает ритм куполов и минаретов плотнее"
+                    }
+                  ],
+                  "source_refs": [
+                    "src_904523"
+                  ]
+                },
+                {
+                  "id": "northwest_context_view",
+                  "name": "Северо-западная внешняя точка — комплекс в окружении",
+                  "description": "Геопривязанная фотография 2022 года сделана северо-западнее центральной точки мечети. Ракурс полезен не для деталей, а чтобы показать весь массив комплекса в городском зелёном окружении.",
+                  "coordinates": {
+                    "lat": 4.901444,
+                    "lon": 114.919084,
+                    "elevation_m": null
+                  },
+                  "access": "Внешняя городская точка; проверять фактическую доступность места съёмки и не заходить на частную территорию.",
+                  "view": {
+                    "description": "общий силуэт комплекса и его масштаб относительно окружающей городской среды"
+                  },
+                  "best_time": "поздний день",
+                  "best_weather_light": "при чистом воздухе лучше отделяются золотые купола от фона",
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "сохраняет городской контекст без чрезмерно широкого поля"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "с внешней дистанции позволяет плотнее собрать купола и минареты"
+                    }
+                  ],
+                  "source_refs": [
+                    "src_904521"
+                  ]
+                }
+              ],
+              "seasonal_visuals": [
+                "После тропического ливня мокрое мощение и зелень дают более насыщенный внешний вид, но поверхности становятся скользкими.",
+                "В Рамадан визуально интересная вечерняя активность вокруг мечети не означает свободный туристический доступ внутрь; режим посещения проверять отдельно."
+              ],
+              "video_activity": [
+                "переход дневного света к вечерней подсветке внешнего комплекса",
+                "движение воды в фонтанах и работа сада как части архитектурного пространства",
+                "обычное городское движение посетителей по внешним зонам вне молитвы"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "комплекс крупный, а сады и фонтаны являются частью его визуальной структуры"
+                },
+                {
+                  "type": "standard",
+                  "why": "подходит для повторяющихся куполов, аркад и минаретов без избыточного окружения"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "с внешних точек позволяет отделить золотые купола и верхние части минаретов"
+                }
               ]
             },
-            "drone": "Только с отдельным разрешением.",
-            "filming_restrictions": "Внутри возможны ограничения фото/видео; соблюдать дресс-код и указания персонала."
+            "drone": {
+              "visual_value": "С воздуха хорошо читаются симметрия большого комплекса, 29 куполов и связь мечети с садами, но визуальная ценность не заменяет разрешение.",
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "беспилотные воздушные суда в Брунее подпадают под регулирование Департамента гражданской авиации",
+                "до запуска необходимо выполнить действующие регистрационные и разрешительные требования",
+                "для конкретной точки в городской застройке дополнительно проверять ограничения воздушного пространства и допустимость места запуска"
+              ],
+              "checked_at": "2026-10-01",
+              "source_refs": [
+                "src_000712"
+              ]
+            },
+            "filming_restrictions": "Для внешней архитектуры ориентироваться на текущие указания персонала. Внутри действующей мечети и во время молитвы не считать фото/видео автоматически разрешёнными; религиозная практика и частная жизнь людей важнее туристического кадра."
           },
           "annotation": {
-            "narrative": "Открытая в 1994 году государственная мечеть эпохи султана Хассанала Болкиаха. 29 золотых куполов отсылают к нынешнему султану как 29-му правителю династии; архитектура работает масштабом, симметрией и повтором.",
-            "culture_ethnography": "Это действующая соборная мечеть и пространство пятничной молитвы.",
-            "geography_geology": "Находится в Kiarong вне старого пешего ядра BSB; вокруг больше дорог и открытых площадей, поэтому выбор ракурса особенно важен."
-          },
-          "traveler_reports": {
-            "recurring_issues": [
-              "короткие время доступа посетителей",
-              "большая территория и жёсткий полуденный свет"
+            "canonical_story_from_sections": true,
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Джаме-Аср-Хассанил-Болкиах — крупнейшая мечеть Брунея и один из главных государственных религиозных комплексов Бандар-Сери-Бегавана. Она стоит в Кампонг-Киаронге между столичным центром и коммерческими районами Гадонг и Киулап. Масштаб здесь задают не только молитвенные залы: комплекс окружён садами, фонтанами и большим открытым пространством, поэтому мечеть воспринимается как целый церемониальный ансамбль.",
+                "source_refs": [
+                  "src_000229",
+                  "src_904519"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": "Комплекс связан с серебряным юбилеем правления султана Хассанала Болкиаха: 25-летие его восшествия на престол приходилось на 1992 год. Официальное открытие мечети состоялось 14 июля 1994 года, накануне 48-летия султана; государственный справочник отмечает его участие в вечерних молитвах в день открытия. Поэтому датировать объект просто «1994 годом» недостаточно: замысел относится к юбилейной государственной программе начала 1990-х, а открытие завершило её через два года.",
+                "source_refs": [
+                  "src_904519",
+                  "src_000229"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "Двадцать девять золотых куполов отсылают к Хассаналу Болкиаху как к 29-му султану Брунея. Это не музейный памятник: мечеть остаётся действующим крупным молитвенным пространством, и туристический доступ вторичен по отношению к богослужению. Именно поэтому часы для немусульман короткие, пятница на официальной туристической странице закрыта, а религиозные события и Рамадан могут менять обычный режим.",
+                "source_refs": [
+                  "src_000229",
+                  "src_904519"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Мечеть находится не в компактном пешем ядре старого центра, а в Киаронге, в городской полосе между центром Бандар-Сери-Бегавана, Гадонгом и Киулапом. Большая территория комплекса занята твёрдыми покрытиями, садами и водными элементами. Для самостоятельного маршрута это отдельная городская остановка: Dart или собственный транспорт обычно проще, а пеший вариант имеет смысл считать от конкретного района, а не от условного «центра города».",
+                "source_refs": [
+                  "src_000229"
+                ]
+              }
             ]
           },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "ramadan_and_friday_access_confusion",
+              "summary": "В марте 2026 в местном обсуждении два участника дали взаимоисключающие советы о пятничном посещении мечети во время Рамадана: один допускал вход после пятничной молитвы, другой писал о полном закрытии для немусульман. Для карточки это не основание менять официальный график, а практический сигнал: в Рамадан и по пятницам не полагаться на устные советы и сверять режим у мечети в день визита.",
+              "observed_period": "2026-03",
+              "source_refs": [
+                "src_904524"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "sunset_vs_interior_access",
+              "summary": "В обсуждении маршрута в июле 2025 местные участники отдельно предупреждали, что красивый внешний свет к закату не совпадает с доступом внутрь: туристическое окно заканчивается раньше молитвенного вечернего времени. Это полезно для планирования — внешний осмотр и интерьер нужно считать двумя разными временными задачами.",
+              "observed_period": "2025-07",
+              "source_refs": [
+                "src_904502"
+              ],
+              "confidence": "medium"
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",
@@ -1684,38 +1974,77 @@
           "provider": "Wikimedia Commons",
           "license": "CC BY-SA 4.0",
           "artist": "Calistemon",
-          "last_checked": "2026-09-28",
+          "last_checked": "2026-10-01",
           "gallery": [
             {
-              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Jame_Asr_Hassanil_Bolkiah_Mosque.jpg",
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jame%20Asr%20Hassanil%20Bolkiah%20Mosque.jpg",
               "source_page": "https://commons.wikimedia.org/wiki/File:Jame_Asr_Hassanil_Bolkiah_Mosque.jpg",
               "provider": "Wikimedia Commons",
               "license": "CC BY-SA 4.0",
               "artist": "Ravi Dwivedi",
-              "last_checked": "2026-09-30"
+              "last_checked": "2026-10-01",
+              "subject": "Общий внешний вид комплекса"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jame%27%20Asr%20Hassanil%20Bolkiah%20Mosque%20%2819042022%29.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Jame%27_Asr_Hassanil_Bolkiah_Mosque_%2819042022%29.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0",
+              "artist": "Chin Yu Chu",
+              "last_checked": "2026-10-01",
+              "subject": "Внешний вид комплекса из северо-западного окружения"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jame%27%20Asr%20Hassanil%20Bolkiah%20Mosque%20Brunei%3B%202009.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Jame%27_Asr_Hassanil_Bolkiah_Mosque_Brunei%3B_2009.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC0 1.0",
+              "artist": "Bernard Spragg. NZ",
+              "last_checked": "2026-10-01",
+              "subject": "Фасад, купола и минареты"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jame%27Asr%20Hassanil%20Bolkiah%20Mosque%20%2818404307540%29.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Jame%27Asr_Hassanil_Bolkiah_Mosque_%2818404307540%29.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 2.0",
+              "artist": "Jorge Láscar",
+              "last_checked": "2026-10-01",
+              "subject": "Вид через садовую часть комплекса"
             }
           ]
         },
         "sources": [
           {
             "url": "https://www.bruneitourism.com/places/jame-asr-hassanil-bolkiah-mosque/",
+            "type": "government_tourism",
+            "title": "Jame’ ‘Asr Hassanil Bolkiah Mosque",
             "publisher": "Brunei Tourism / Tourism Development Department",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
             "used_for": [
               "description",
+              "current opening hours",
               "access",
-              "hours",
+              "public transport",
               "visitor logistics"
-            ],
-            "accessed": "2026-09-28"
+            ]
           },
           {
-            "url": "https://commons.wikimedia.org/wiki/File:Jame%27_Asr_Hassanil_Bolkiah_Mosque,_Brunei,_April_2025_06.jpg",
-            "publisher": "Wikimedia Commons",
+            "url": "https://www.information.gov.bn/Publication%20listsPDF/MEDIA%20HANDBOOK/MEDIA%20HANDBOOK_ROYAL%20WEDDING%202024.pdf",
+            "type": "government_official",
+            "title": "Jame’ Asr Hassanil Bolkiah — Media Handbook",
+            "publisher": "Information Department, Brunei Darussalam",
+            "language": "en",
+            "published_at": "2024",
+            "accessed": "2026-10-01",
+            "authority": "high",
             "used_for": [
-              "illustration",
-              "license provenance"
-            ],
-            "accessed": "2026-09-28"
+              "largest mosque",
+              "official opening 14 July 1994",
+              "48th birthday context"
+            ]
           },
           {
             "url": "https://deps.mofe.gov.bn/",
@@ -1734,57 +2063,233 @@
               "guest review context"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Jame%27_Asr_Hassanil_Bolkiah_Mosque,_Brunei,_April_2025_06.jpg",
+            "type": "wikimedia_commons",
+            "title": "Jame' Asr Hassanil Bolkiah Mosque, Brunei, April 2025 06.jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2025-04-09",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "cover image",
+              "license provenance"
+            ]
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Jame_Asr_Hassanil_Bolkiah_Mosque.jpg",
+            "type": "wikimedia_commons",
+            "title": "Jame Asr Hassanil Bolkiah Mosque.jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2024-12-11",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery image",
+              "license provenance"
+            ]
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Jame%27_Asr_Hassanil_Bolkiah_Mosque_%2819042022%29.jpg",
+            "type": "wikimedia_commons",
+            "title": "Jame' Asr Hassanil Bolkiah Mosque (19042022).jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2022-04-19",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery image",
+              "license provenance",
+              "visual viewpoint",
+              "camera coordinates"
+            ]
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Jame%27_Asr_Hassanil_Bolkiah_Mosque_Brunei%3B_2009.jpg",
+            "type": "wikimedia_commons",
+            "title": "Jame' Asr Hassanil Bolkiah Mosque Brunei; 2009.jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2009-03-25",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery image",
+              "license provenance",
+              "visual viewpoint",
+              "camera coordinates"
+            ]
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Jame%27Asr_Hassanil_Bolkiah_Mosque_%2818404307540%29.jpg",
+            "type": "wikimedia_commons",
+            "title": "Jame'Asr Hassanil Bolkiah Mosque (18404307540).jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2014-04-28",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery image",
+              "license provenance",
+              "visual viewpoint",
+              "camera coordinates"
+            ]
+          },
+          {
+            "url": "https://www.reddit.com/r/nasikatok/comments/1rm31zg/jame_asr_hassanil_bolkiah_mosque_visitation_hours/",
+            "type": "reddit",
+            "title": "Jame' Asr Hassanil Bolkiah Mosque Visitation hours",
+            "publisher": "Reddit / r/nasikatok",
+            "language": "en",
+            "published_at": "2026-03-06",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "Ramadan access uncertainty",
+              "Friday access confusion"
+            ]
+          },
+          {
+            "url": "https://www.dca.gov.bn/dca-form-category/unmanned-aircraft/",
+            "type": "government_official",
+            "title": "Unmanned Aircraft",
+            "publisher": "Department of Civil Aviation, Brunei Darussalam",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "drone rules",
+              "registration and permit context"
+            ]
           }
         ],
         "verification": {
           "dynamic_fields": [
             "hours",
-            "tickets",
-            "permits",
-            "access",
+            "prayer access",
+            "Ramadan access",
+            "public transport",
             "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Открытая в 1994 году государственная мечеть эпохи султана Хассанала Болкиаха. 29 золотых куполов отсылают к нынешнему султану как 29-му правителю династии; архитектура работает масштабом, симметрией и повтором. Это действующая соборная мечеть и пространство пятничной молитвы. Находится в Kiarong вне старого пешего ядра BSB; вокруг больше дорог и открытых площадей, поэтому выбор ракурса особенно важен. Сезон: Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год. Лучшее время: первое утреннее время доступа посетителей или поздний день Свет и погода: после дождя камень и зелень насыщеннее Сильные точки обзора: центральная садовая ось; боковой ракурс, собирающий несколько минаретов и куполов; край сада/водоёма для повторяющейся геометрии.",
+        "narrow": "Крупнейшая мечеть Брунея, открытая 14 июля 1994 года в честь эпохи правления султана Хассанала Болкиаха. Двадцать девять золотых куполов, сады и фонтаны образуют огромный действующий религиозный комплекс в Киаронге; туристический доступ короткий и подчинён молитвам.",
         "tags": [
           "architecture",
           "culture",
           "religion",
-          "weather_sensitive",
+          "history",
+          "monarchy",
+          "urban",
+          "garden",
+          "living_religion",
+          "public_transport",
+          "taxi_ridehail",
+          "moped",
+          "walking",
+          "sunrise_good",
+          "sunset_good",
           "class_major"
         ],
         "route_meta": {
-          "region_ref": "Бандар-Сери-Бегаван / Бруней-Muara",
+          "region_ref": "Бруней-Муара",
           "locality_ref": "Бандар-Сери-Бегаван",
           "typical_visit_hours": [
             1,
             2
           ],
           "transport_modes": {
-            "public_transport": "автобусы есть, но для съёмочного графика неудобны",
-            "taxi_ridehail": "Dart из центра",
-            "moped": "прямой городской подъезд",
-            "walking": "из центра BSB ~4–5 км"
+            "public_transport": "городской автобус; официальный портал указывает среднюю стоимость около BND 1 и общий режим сервиса 06:00–20:00, но маршрут и интервал нужно проверять",
+            "taxi_ridehail": "Dart до Simpang 127, Kampong Kiarong",
+            "moped": "городской асфальтовый подъезд; парковка только в разрешённых местах",
+            "walking": "считать от конкретного района Киаронг/Киулап/Гадонг; неподтверждённый универсальный километраж удалён"
           },
-          "walking": "из центра BSB ~4–5 км",
-          "water": "воду купить в Kiarong/Gadong до входа",
-          "overnight_and_camping": "ночёвка на территории комплекса не рассматривается",
-          "permit_or_guide": null,
-          "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
-          "current_status": null,
+          "walking": "Твёрдые городские покрытия и лестницы; точное расстояние зависит от исходной точки.",
+          "water": "Публичная питьевая точка у входа не подтверждена; воду иметь с собой.",
+          "overnight_and_camping": "Разрешение на свободный кемпинг на территории мечети не подтверждено; использовать городское жильё.",
+          "permit_or_guide": "гид не требуется",
+          "best_period": "Февраль–март обычно суше; текущий прогноз важнее календаря.",
+          "current_status": "open_active_mosque",
           "main_risks": [
-            "жара",
-            "религиозный этикет",
-            "закрытие во время молитв"
+            "жара и высокая влажность",
+            "скользкие покрытия после сильного дождя",
+            "изменение доступа из-за молитвы или церемонии"
           ],
           "expedition_profile": {
             "default_mode": "самостоятельно",
-            "route_scale": "несколько часов",
-            "terrain_and_movement": "Большие открытые площадки и лестницы; соблюдать дресс-код.",
-            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
-            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
-            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+            "route_scale": "1–2 часа; отдельная городская остановка между центром и Гадонгом/Киулапом",
+            "terrain_and_movement": "благоустроенная территория с твёрдыми покрытиями, садами и лестницами",
+            "physical_difficulty_policy": "ступени и длительность фиксируются как параметры маршрута, а не как самостоятельные ограничения",
+            "camping_assumption": "палатка не означает права ночевать на религиозной территории без разрешения",
+            "local_support": "для обычного визита гид не нужен; специалист полезен только для углублённого архитектурного или религиоведческого контекста"
+          }
+        },
+        "lead": "Крупнейшая мечеть Брунея, открытая 14 июля 1994 года в честь эпохи правления султана Хассанала Болкиаха. Двадцать девять золотых куполов, сады и фонтаны образуют огромный действующий религиозный комплекс в Киаронге; туристический доступ короткий и подчинён молитвам.",
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-01",
+            "notes": "Пользовательский слой переписан на естественный русский; английский оставлен только в собственных названиях сервисов и источников."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "повторный объектный QA Jame' Asr Hassanil Bolkiah Mosque по камбоджийскому эталону",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true
+            },
+            "notes": [
+              "Ложная точность исправлена: картографическая точка больше не называется temple_entrance без доказательства конкретного входа.",
+              "История, культурная функция и географический контекст разделены на самостоятельные секции с источниками.",
+              "Старое расписание заменено на текущий официальный режим, проверенный 2026-10-01.",
+              "Удалены неподтверждённые 4–5 км пешком и фиктивная точка воды; неизвестные значения оставлены null/unknown.",
+              "Traveler reports стали датированными и привязанными к конкретным источникам.",
+              "Visual recon получил три реальные WGS84-точки из геопривязанных Commons-файлов.",
+              "Галерея доведена до пяти уникальных лицензированных изображений с учётом обложки."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "редакционная приёмка obj_bn_0002",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest_unknowns": true,
+              "overnight_honest_unknowns": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "gallery_min_5": true
+            },
+            "notes": [
+              "Карточка описывает действующую мечеть как религиозный и государственный комплекс, а не набор рекламных эпитетов.",
+              "Динамические часы и пятничное закрытие привязаны к официальному источнику и дате проверки.",
+              "Рамаданская неопределённость вынесена в traveler report и не подменяет официальный режим.",
+              "Дрон вынесен в регулируемый режим с источником DCA; локальное разрешение на конкретный запуск не выдумывается."
+            ]
           }
         }
       },

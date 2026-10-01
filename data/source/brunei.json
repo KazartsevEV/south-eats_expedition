@@ -55,7 +55,8 @@
       "2026-10-01 repeat QA obj_bn_0003: current Tourism Development Department gallery hours override inconsistent secondary rendering; official Mini Guide anchors water-taxi access; water source scoped to Brunei River study; tidal 0 m clarified; blanket drone permit corrected.",
       "2026-10-01 obj_bn_0003 evidence patch: Pelita Brunei corroborates Setia A walkway repair; current Brunei Tourism transport page adds BND 2–5 general water-taxi range without inventing a fixed crossing fare.",
       "2026-10-01 repeat QA obj_bn_0004 final: strict fact-source scoping; Freme alert kept operator-specific; OSM feature coordinates downgraded to medium; ForestGEO geology added; canopy dimensions re-verified against official brochure; blanket drone permit removed.",
-      "2026-10-01 repeat QA obj_bn_0005: fact-level source scoping added; primary coordinate corrected from false entrance precision to mapped museum center; geotagged photo points downgraded from survey-like precision; traveler-report provenance corrected; blanket drone permit claim replaced with DCA conditional rules."
+      "2026-10-01 repeat QA obj_bn_0005: fact-level source scoping added; primary coordinate corrected from false entrance precision to mapped museum center; geotagged photo points downgraded from survey-like precision; traveler-report provenance corrected; blanket drone permit claim replaced with DCA conditional rules.",
+      "2026-10-01 repeat QA obj_bn_0006: canonical elevation gap closed with exact-anchor SRTM30m sample; fact-level source scoping added; public-transport wording strengthened with official Brunei mini guide; unsupported facilities/seasonality claims removed; blanket drone permit corrected."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -5831,11 +5832,11 @@
             "coordinates": {
               "lat": 4.61675,
               "lon": 114.31716,
-              "elevation_m": null
+              "elevation_m": 4
             },
             "coordinate_type": "viewpoint",
-            "accuracy": "high",
-            "elevation_accuracy": "unknown",
+            "accuracy": "medium",
+            "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "OpenStreetMap via Mapcarta",
               "url": "https://mapcarta.com/N4367704793",
@@ -5843,14 +5844,22 @@
             },
             "coordinates_checked_at": "2026-10-01",
             "object_elevation": {
-              "representative_m": null,
+              "representative_m": 4,
               "min_m": null,
               "max_m": null,
-              "reference_type": "unknown",
-              "accuracy": "unknown",
-              "source": null,
+              "reference_type": "primary_public_anchor",
+              "accuracy": "approximate",
+              "source": {
+                "type": "map",
+                "title": "Billionth Barrel Monument SRTM30m elevation",
+                "publisher": "OpenTopoData / SRTM",
+                "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.61675%2C114.31716",
+                "authority": "medium",
+                "accessed": "2026-10-01",
+                "notes": "SRTM30m sample at the Billionth Barrel Monument anchor. It represents the public reference point, not the elevation of the entire oilfield."
+              },
               "checked_at": "2026-10-01",
-              "notes": "Не подменять высоту нефтяного ландшафта высотой центра Seria; надёжная объектная отметка для всего протяжённого поля не найдена."
+              "notes": "For this extended industrial landscape, the canonical representative elevation is explicitly the public anchor at Billionth Barrel Monument; no single elevation is claimed for the whole field."
             },
             "geo_points": [
               {
@@ -5859,16 +5868,25 @@
                 "coordinates": {
                   "lat": 4.61675,
                   "lon": 114.31716,
-                  "elevation_m": null
+                  "elevation_m": 4
                 },
-                "accuracy": "high",
-                "elevation_accuracy": "unknown",
+                "accuracy": "medium",
+                "elevation_accuracy": "approximate",
                 "source": {
                   "provider": "OpenStreetMap via Mapcarta",
                   "url": "https://mapcarta.com/N4367704793"
                 },
                 "coordinates_checked_at": "2026-10-01",
-                "notes": "Главная публичная точка: монумент, берег и работающие pumpjacks поблизости."
+                "notes": "Главная публичная точка: монумент, берег и работающие pumpjacks поблизости.",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Billionth Barrel Monument SRTM30m elevation",
+                  "publisher": "OpenTopoData / SRTM",
+                  "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.61675%2C114.31716",
+                  "authority": "medium",
+                  "accessed": "2026-10-01",
+                  "notes": "SRTM30m sample at the exact primary public-anchor coordinate; approximate terrain elevation, not a surveyed benchmark and not an elevation model for the whole Seria field."
+                }
               },
               {
                 "name": "Точка съёмки монумента с западной/юго-западной стороны",
@@ -5878,7 +5896,7 @@
                   "lon": 114.3172,
                   "elevation_m": null
                 },
-                "accuracy": "high",
+                "accuracy": "medium",
                 "elevation_accuracy": "unknown",
                 "source": {
                   "provider": "Wikimedia Commons",
@@ -5888,36 +5906,61 @@
                 "coordinates_checked_at": "2026-10-01",
                 "notes": "Геопривязанная камера декабрь 2024; пригодна как проверенная обзорная точка, не как отдельный вход."
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "map",
+              "title": "Billionth Barrel Monument SRTM30m elevation",
+              "publisher": "OpenTopoData / SRTM",
+              "url": "https://api.opentopodata.org/v1/srtm30m?locations=4.61675%2C114.31716",
+              "authority": "medium",
+              "accessed": "2026-10-01",
+              "notes": "SRTM30m sample at the exact primary public-anchor coordinate; approximate terrain elevation, not a surveyed benchmark and not an elevation model for the whole Seria field."
+            }
           },
           "logistics": {
-            "access": "Самостоятельный базовый маршрут строится через Billionth Barrel Monument: к нему ведёт обычная городская дорога, официальный Brunei Tourism рекомендует Dart тем, у кого нет машины. От монумента часть действующих pumpjacks и нефтяной инфраструктуры видна с публичных дорог; на ограждённые и служебные участки не заходить.",
-            "public_transport": "Проверенного регулярного автобусного маршрута непосредственно к нефтяному ландшафту в официальных источниках не найдено. Не фиксировать номер автобуса или расписание без новой проверки; для последней мили официальный туристический сайт рекомендует Dart.",
-            "last_mile": "От Seria маршрут разумнее проходить машиной/мопедом с остановками на публичных площадках. Поле протяжённое, поэтому старую формулу «между точками 1–4 км» удаляем как неподтверждённую.",
+            "access": "Самостоятельный маршрут удобно строить через Billionth Barrel Monument. Официальный туристический мини-гид указывает автобус/такси/автомобиль до Seria town; официальный сайт самого монумента рекомендует Dart тем, у кого нет машины. От монумента нефтяной ландшафт смотреть только с публичных дорог и площадок: карточка не считает служебные дороги и производственные участки BSP свободным туристическим доступом.",
+            "public_transport": "Официальный Brunei Tourism Mini Guide указывает автобус/такси/автомобиль до Seria town, но не даёт номер линии, остановку у монумента или расписание. Поэтому фиксируем только подтверждённый первый этап до Seria; последнюю милю — Dart либо собственный транспорт.",
+            "last_mile": "От Seria до Billionth Barrel Monument — Dart или собственный автомобиль/мопед. После монумента нефтяной ландшафт протяжённый: остановки делать только на обычных публичных участках, не превращая служебные дороги BSP в маршрут.",
             "typical_visit_hours": [
               2,
               4
             ],
             "permit_or_guide": null,
             "modes": {
-              "public_transport": "без подтверждённого прямого маршрута; последняя миля — Dart",
-              "taxi_ridehail": "Dart к Billionth Barrel Monument и обратно в Seria",
+              "public_transport": "автобус подтверждён официальным туристическим мини-гидом только до Seria town; номер линии и расписание не фиксируются",
+              "taxi_ridehail": "Dart до Billionth Barrel Monument; официальный туристический сайт рекомендует его при отсутствии машины",
               "moped": "подходит по публичным асфальтированным улицам; не использовать технологические дороги BSP",
               "walking": "локально у монумента и по городским участкам; весь нефтяной ландшафт пешком нерационален"
             },
             "terrain_and_movement": "Плоская прибрежная городская среда; главные ограничения — жара, отсутствие тени у монумента и границы действующей промышленной инфраструктуры, а не рельеф.",
-            "access_requirements": "Гид не нужен. Доступ ограничен публичными дорогами, монументом и обычными городскими пространствами; промышленная территория BSP не считается частью свободного маршрута.",
+            "access_requirements": "Для публичного монумента отдельный гид в официальной туристической карточке не указан. Маршрут этой карточки ограничен монументом и публичными дорогами; доступ внутрь действующих объектов BSP без отдельного основания не предполагается.",
             "self_guided_default": true,
             "travel_model": "самостоятельно",
             "access_options": [
               {
-                "id": "dart_to_billionth_barrel",
-                "origin": "Seria",
+                "id": "bus_to_seria_then_dart",
+                "origin": "междугородний этап до Seria town",
                 "modes": [
+                  "public_transport",
                   "ride_hailing",
                   "walk"
                 ],
                 "legs": [
+                  {
+                    "mode": "public_transport",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "автобус до Seria town указан официальным Brunei Tourism Mini Guide",
+                    "seasonality": null,
+                    "navigation": "Seria town; номер маршрута и конкретная остановка в официальном мини-гиде не указаны",
+                    "notes": "Не придумывать номер линии или расписание: официальный источник подтверждает сам способ добраться до Seria, но не операционные детали.",
+                    "source_refs": [
+                      "src_904689"
+                    ]
+                  },
                   {
                     "mode": "ride_hailing",
                     "distance_km": null,
@@ -5925,10 +5968,13 @@
                     "surface": [
                       "paved"
                     ],
-                    "condition": "городская дорога",
-                    "seasonality": "круглый год; ливни снижают видимость",
+                    "condition": "последняя миля по городской дороге",
+                    "seasonality": null,
                     "navigation": "Billionth Barrel Monument, J888+PV3",
-                    "notes": "Официальный Brunei Tourism рекомендует Dart как вариант без личного автомобиля."
+                    "notes": "Официальная страница монумента рекомендует Dart при отсутствии личного автомобиля.",
+                    "source_refs": [
+                      "src_000153"
+                    ]
                   },
                   {
                     "mode": "walk",
@@ -5939,9 +5985,13 @@
                       "grass"
                     ],
                     "condition": "открытая площадка монумента и береговой край",
-                    "seasonality": "жарко и почти без тени днём",
-                    "navigation": "оставаться на публичной территории",
-                    "notes": "Не переходить ограждения и не заходить на технологические площадки."
+                    "seasonality": null,
+                    "navigation": "публичная территория монумента",
+                    "notes": "Пешком осматривается локальный узел; весь протяжённый нефтяной ландшафт так проходить нерационально.",
+                    "source_refs": [
+                      "src_000153",
+                      "src_904684"
+                    ]
                   }
                 ]
               },
@@ -5961,35 +6011,47 @@
                     "surface": [
                       "paved"
                     ],
-                    "condition": "городские публичные дороги",
-                    "seasonality": "круглый год",
-                    "navigation": "монумент как базовый якорь; дальнейшие остановки только там, где разрешена обычная дорожная остановка/парковка",
-                    "notes": "Не строить маршрут через служебные дороги нефтепромысла."
+                    "condition": "обычные городские дороги",
+                    "seasonality": null,
+                    "navigation": "Billionth Barrel Monument как публичный якорь; дальнейшие остановки только на публичных дорогах/площадках",
+                    "notes": "Не строить маршрут по служебным дорогам действующего нефтепромысла.",
+                    "source_refs": [
+                      "src_000153",
+                      "src_904679"
+                    ]
                   }
                 ]
               }
             ],
-            "water": "На самой площадке Billionth Barrel Monument надёжная питьевая точка не подтверждена; свежие отзывы также отмечают отсутствие туалета/укрытия. Воду покупать в Seria до выезда или совмещать маршрут с Seria Energy Lab/центром города.",
+            "water": "На площадке Billionth Barrel Monument подтверждённой публичной точки питьевой воды не найдено. Не считать море или техническую воду источником снабжения; воду брать в Seria до выезда.",
             "water_structured": {
-              "at_object": false,
+              "at_object": null,
               "quality": "unknown",
               "last_reliable_point": null,
               "natural_sources": [],
-              "notes": "Пляж и техническая вода не являются источниками питьевой воды; конкретный магазин как канонический POI пока не привязан."
+              "notes": "Публичный питьевой кран/фонтан у монумента не подтверждён. Конкретный магазин как канонический POI пока не привязан.",
+              "source_refs": []
             },
             "supplies": {
-              "status": "urban_nearby",
-              "summary": "Seria — полноценный город; еду, воду и топливо покупать в городской части. На самом монументе по отзывам нет устойчивой инфраструктуры.",
-              "poi_ids": []
+              "status": "urban_available_not_pinned",
+              "summary": "Seria — городской узел, но к карточке пока не привязан конкретный проверенный магазин/кафе/АЗС как канонический POI.",
+              "poi_ids": [],
+              "source_refs": []
             },
-            "overnight_and_camping": "Палатку у pumpjacks, ограждений и на технологических обочинах не рассматривать. Отдельного официального кемпинга у объекта не найдено; правовой статус пляжной ночёвки не подтверждён.",
+            "overnight_and_camping": "Публичного разрешения на кемпинг у монумента, на пляже или рядом с действующей нефтяной инфраструктурой в проверенных материалах не найдено.",
             "overnight": {
               "status": "unclear",
-              "summary": "Для ночёвки использовать городское жильё. Надёжного источника, разрешающего кемпинг у монумента или на берегу нефтепромыслового района, нет.",
-              "source_refs": [
-                "src_000153"
-              ]
-            }
+              "summary": "Не считать площадку монумента, пляж или технологические обочины разрешённым кемпингом без отдельного подтверждения. Для плановой ночёвки использовать городское жильё.",
+              "source_refs": []
+            },
+            "access_source_refs": [
+              "src_000153",
+              "src_904689"
+            ],
+            "rules_source_refs": [
+              "src_000153",
+              "src_904679"
+            ]
           },
           "climate": {
             "best_period": "Для этого открытого прибрежного объекта важнее время суток, чем сезон: утро и последние 1–1,5 часа перед закатом дают меньше тепловой нагрузки. В сезон сильных дождей берег и незащищённые площадки менее удобны.",
@@ -5997,14 +6059,13 @@
             "site_specific_notes": "Сильная морская дымка и облачность могут скрывать дальние offshore structures; для дальних планов нужен прозрачный день."
           },
           "operations": {
-            "hours": "Billionth Barrel Monument — открытая наружная площадка без кассы; официальный Brunei Tourism не публикует отдельные часы ворот. Сторонние листинги указывают круглосуточный доступ, но это не использовать как официальную гарантию.",
-            "ticket": "Платы за вход на монумент официальный туристический источник не указывает.",
-            "closure_notes": "Промышленные площадки и служебные дороги имеют отдельный режим и не входят в свободный маршрут.",
+            "hours": "Billionth Barrel Monument — открытая наружная площадка; официальный Brunei Tourism не публикует часы ворот. Tripadvisor показывает 24/7 как пользовательский листинг, но это не переносится в карточку как официальная гарантия.",
+            "ticket": "Официальная страница Brunei Tourism не указывает плату за посещение монумента.",
+            "closure_notes": "Официальная карточка монумента не публикует регулярных закрытий. Временные дорожные/промышленные работы возможны отдельно от режима самого памятника и требуют актуальной проверки при появлении уведомлений.",
             "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/billionth-barrel-monument/",
             "source_refs": [
-              "src_000153",
-              "src_904679"
+              "src_000153"
             ]
           },
           "safety": {
@@ -6026,12 +6087,12 @@
             "photo_suitability_5": 5,
             "video_suitability_5": 5,
             "visual_scouting": {
-              "best_time": "Раннее утро или последние 60–90 минут до заката; для монумента особенно полезен низкий боковой свет, а после заката остаётся силуэт на фоне моря.",
-              "best_weather_light": "Сухой прозрачный вечер полезнее пасмурного дня: тогда читаются дальние offshore structures и ритм pumpjacks. После ливня берег может быть замусорен сильнее.",
+              "best_time": "Поздний день и закат: официальный Brunei Tourism прямо выделяет закаты у монумента, а геопривязанный Commons-снимок 15 декабря 2024 года в 17:49 подтверждает рабочую точку в низком вечернем свете.",
+              "best_weather_light": "Для дальнего морского плана полезен прозрачный горизонт: официальный туристический текст указывает, что отсюда видны нефтяные сооружения вдали. Для самого монумента важнее направление и высота вечернего света, чем сезон.",
               "viewpoints_for_photo_video": [
                 {
                   "id": "billionth_barrel_public_anchor",
-                  "name": "Billionth Barrel Monument — публичная площадка",
+                  "name": "Billionth Barrel Monument — публичный якорь нефтяного ландшафта",
                   "coordinates": {
                     "lat": 4.61675,
                     "lon": 114.31716,
@@ -6044,8 +6105,8 @@
                   "view": {
                     "description": "монумент, берег, часть нефтепромыслового оборудования и морской горизонт"
                   },
-                  "best_time": "golden_hour / sunset",
-                  "best_weather_light": "боковой свет с моря и прозрачный горизонт",
+                  "best_time": "late_afternoon / sunset",
+                  "best_weather_light": "прозрачный морской горизонт полезен для дальних нефтяных сооружений",
                   "useful_equipment": [
                     {
                       "type": "wide",
@@ -6060,7 +6121,9 @@
                     "provider": "OpenStreetMap via Mapcarta",
                     "url": "https://mapcarta.com/N4367704793",
                     "basis": "monument coordinate"
-                  }
+                  },
+                  "description": "Картографическая точка самого монумента; использовать её как публичный опорный пункт широкого объекта, а не как геометрический центр Seria Field.",
+                  "accuracy": "medium"
                 },
                 {
                   "id": "monument_2024_geotag",
@@ -6077,8 +6140,8 @@
                   "view": {
                     "description": "монумент в низком вечернем свете; геотег фото сделан в 17:49"
                   },
-                  "best_time": "late_afternoon / golden_hour",
-                  "best_weather_light": "низкий вечерний свет",
+                  "best_time": "late_afternoon / sunset",
+                  "best_weather_light": "низкий вечерний свет; фактический пример зафиксирован в 17:49",
                   "useful_equipment": [
                     {
                       "type": "standard",
@@ -6093,28 +6156,33 @@
                     "provider": "Wikimedia Commons",
                     "url": "https://commons.wikimedia.org/wiki/File:Billionth_Barrel_Monument_03.jpg",
                     "basis": "EXIF camera location"
-                  }
+                  },
+                  "description": "EXIF-точка снимка от 15 декабря 2024 года, 17:49:58; подтверждает конкретную вечернюю позицию камеры на публичной площадке.",
+                  "accuracy": "medium"
                 }
               ],
               "seasonal_visuals": [
-                "Сезонность слабее суточного света: промышленный сюжет сохраняется круглый год.",
-                "Состояние пляжа меняется после штормов и ливней; свежий отзыв апреля 2026 отмечает много мусора, поэтому берег нельзя считать стабильно «открыточным»."
+                "Подтверждённого сезонного визуального цикла для монумента не найдено. Состояние пляжа может меняться независимо от сезона; свежий отзыв апреля 2026 фиксирует мусор и поэтому не должен превращаться в круглогодичное утверждение."
               ],
               "video_activity": [
-                "реальный цикл работающих станков-качалок, видимых с публичных участков",
-                "ветер и волна на побережье на фоне промышленной инфраструктуры",
-                "движение по обычной городской улице, где нефтяное оборудование появляется внутри жилого ландшафта"
+                "станки-качалки и другие работающие элементы нефтяного ландшафта, видимые с публичных участков",
+                "прибой и морской горизонт с нефтяными сооружениями вдали",
+                "соседство памятника, городской ткани и действующей нефтяной инфраструктуры"
               ]
             },
             "drone": {
-              "visual_value": "С воздуха структура нефтяного поля читается особенно хорошо, но действующая нефтегазовая инфраструктура — плохое место для самовольного запуска.",
+              "visual_value": "С воздуха протяжённость нефтяного ландшафта читается лучше, но наличие аэрофото в Commons не означает автоматического права повторить такой полёт.",
               "legal_status": "regulated",
-              "permit_required": true,
+              "permit_required": null,
               "restrictions": [
-                "действуют правила Department of Civil Aviation Brunei",
-                "не планировать полёт над BSP facilities, промплощадками и offshore infrastructure без отдельного согласования"
+                "регистрация беспилотного воздушного судна в Department of Civil Aviation Brunei Darussalam обязательна до эксплуатации",
+                "полёты разрешены только днём; ночная эксплуатация запрещена",
+                "нельзя летать в пределах 5 км от аэропорта или военной базы",
+                "нельзя летать в ограниченных зонах",
+                "для полёта на публичном мероприятии требуется flying permit",
+                "для полёта выше 200 футов над уровнем моря требуется flying permit",
+                "отдельного официального подтверждения режима полёта именно над Seria oil field/BSP facilities в проверенном источнике нет; до запуска проверять актуальное воздушное пространство и право использовать конкретную точку запуска"
               ],
-              "source_refs": [],
               "checked_at": "2026-10-01",
               "source": {
                 "url": "https://www.dca.gov.bn/dca-form-category/unmanned-aircraft/",
@@ -6125,22 +6193,27 @@
                 "accessed": "2026-10-01",
                 "authority": "high",
                 "used_for": [
-                  "drone rules",
-                  "permit context"
+                  "registration",
+                  "operating-guidelines document",
+                  "conditional flying-permit triggers"
                 ]
               }
             },
-            "filming_restrictions": "Съёмка с публичных дорог и монумента не означает права заходить на производственную территорию. Не использовать забор как приглашение к «более выгодной точке»; для съёмки внутри BSP facilities нужно отдельное разрешение."
+            "filming_restrictions": "Для публичной площадки монумента отдельный запрет обычной фото/видеосъёмки в найденной официальной туристической информации не опубликован. Это не даёт права входить на производственные участки BSP: карточка строит визуальную разведку только с публичных точек.",
+            "filming_source_refs": [
+              "src_000153",
+              "src_904679"
+            ]
           },
           "annotation": {
             "canonical_story_from_sections": true,
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Seria Oil Field — не музей под открытым небом, а действующий нефтепромысловый и городской ландшафт. Его удобнее читать от публичного узла у Billionth Barrel Monument: монумент, берег, станки-качалки и городская застройка оказываются почти в одном поле зрения. Petroleum Authority в 2025 году отдельно описывала Seria как один из старейших продолжающих работать промыслов Юго-Восточной Азии; поэтому исторический слой здесь нельзя отделять от современной добычи.",
+                "content": "Seria Oil Field — не музей под открытым небом, а действующий нефтепромысловый и городской ландшафт. Удобная публичная точка чтения этого ландшафта — Billionth Barrel Monument: рядом оказываются памятник нефтяной истории, берег, станки-качалки и городская застройка. BSP описывает свою текущую работу как добычу из наземных и морских месторождений и прямо связывает историю компании с открытием Seria field в 1929 году; поэтому здесь исторический слой существует рядом с современной промышленностью.",
                 "source_refs": [
                   "src_000153",
-                  "src_904679"
+                  "src_904680"
                 ]
               },
               {
@@ -6172,8 +6245,8 @@
           "traveler_reports": [
             {
               "kind": "traveler_report",
-              "topic": "current_condition",
-              "summary": "В апреле 2026 посетитель отдельно жаловался на мусор вокруг монумента и на пляже. Это не означает закрытие, но предупреждает, что состояние берега может заметно отличаться от промо-фотографий.",
+              "topic": "current_beach_condition",
+              "summary": "Отзыв, опубликованный 2 апреля 2026 года, сообщает о большом количестве мусора по сторонам монумента и на пляже. Это единичный свежий сигнал о состоянии берега, а не характеристика, которую нужно переносить на весь год.",
               "observed_period": "2026-04",
               "source_refs": [
                 "src_904682"
@@ -6182,21 +6255,12 @@
             },
             {
               "kind": "traveler_report",
-              "topic": "facilities_and_heat",
-              "summary": "Отзывы 2025–2026 отмечают отсутствие тени и трудности с поиском туалета у монумента; посетители обычно воспринимают его как короткую остановку и совмещают с другими точками Seria.",
-              "observed_period": "2025-10..2026-03",
-              "source_refs": [
-                "src_904682"
-              ],
-              "confidence": "medium"
-            },
-            {
-              "kind": "traveler_report",
               "topic": "working_landscape",
-              "summary": "Свежие посетители продолжают видеть работающие pumpjacks рядом с монументом и на городских дорогах. Это подтверждает, что ценность объекта — именно действующая промышленная среда, а не только памятник.",
-              "observed_period": "2025-12..2026-03",
+              "summary": "Отзыв января 2024 года отмечает многочисленные станки-качалки вокруг Seria и видимые в море нефтяные сооружения. Это более старое наблюдение, но оно согласуется с официальными данными BSP о продолжающейся добыче и используется только как визуально-полевое подтверждение.",
+              "observed_period": "2024-01",
               "source_refs": [
-                "src_904682"
+                "src_904682",
+                "src_904680"
               ],
               "confidence": "medium"
             }
@@ -6503,13 +6567,49 @@
               "traveler_reports": true,
               "visual_recon": true,
               "sources": true,
-              "gallery_min_5": true
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "elevation_anchor_verified": true,
+              "drone_rule_precision": true
             },
             "notes": [
               "Оптика карточки — действующий промышленный ландшафт, а не аттракцион и не каталог нефтяных памятников.",
               "Billionth Barrel Monument используется как безопасный публичный якорь; отдельная карточка монумента остаётся самостоятельной и не считается дублем.",
               "Геология оставлена только в той глубине, которая объясняет объект и не превращает карточку в учебник нефтяной геологии.",
-              "Дрон остаётся regulated/permit_required; право на полёт над BSP facilities не предполагается."
+              "Дрон остаётся regulated/permit_required; право на полёт над BSP facilities не предполагается.",
+              "Повторный QA заменил ложный passed при пустой высоте на точный SRTM30m sample публичного anchor, включил strict fact-source scoping и снял blanket drone permit."
+            ]
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "повторный QA obj_bn_0006: историко-промышленный нарратив, multimodal access, GPS/elevation, вода/ночёвка, traveler reports, visual recon и дрон",
+            "checks": {
+              "narrative_section_sources": true,
+              "operations_sources": true,
+              "access_sources": true,
+              "public_transport_claim_scoped": true,
+              "coordinate_type_precision": true,
+              "coordinate_accuracy_not_overstated": true,
+              "elevation_exact_anchor_sample": true,
+              "water_unknown_not_falsely_sourced": true,
+              "supplies_unknown_not_falsely_sourced": true,
+              "overnight_unknown_not_falsely_sourced": true,
+              "traveler_report_sources": true,
+              "traveler_report_dates_match_sources": true,
+              "visual_viewpoint_sources": true,
+              "seasonal_visual_claims_not_overstated": true,
+              "drone_rule_precision": true
+            },
+            "notes": [
+              "Широкий объект не получает выдуманную единую высоту: 4 м относится только к primary public anchor Billionth Barrel Monument и получено SRTM30m по точным координатам.",
+              "OSM/Mapcarta feature coordinate и EXIF viewpoint сохранены, но accuracy снижена до medium: это не геодезические GPS-замеры.",
+              "Официальный Brunei Tourism Mini Guide подтверждает автобус/такси/автомобиль до Seria town; номер линии и расписание не выдумываются. Последняя миля Dart подтверждена официальной страницей монумента.",
+              "water/supplies/overnight остаются честными unknown/unclear и не наследуют общую библиографию объекта.",
+              "Удалён неподтверждённый свежими cited reviews тезис про 2025–2026 отсутствие тени/туалета; сохранён проверяемый апрельский отчёт 2026 о мусоре и более старое визуальное наблюдение о pumpjacks.",
+              "Из overview удалено упоминание Petroleum Authority без соответствующего source_ref; актуальность действующей добычи сформулирована по BSP.",
+              "Visual recon опирается на официальный sunset context и EXIF 17:49; причинная фраза про мусор 'после ливня' удалена.",
+              "drone.permit_required=true снят как слишком широкий: DCA требует регистрацию, а flying permit опубликован для public events и полётов выше 200 ft ASL."
             ]
           }
         }

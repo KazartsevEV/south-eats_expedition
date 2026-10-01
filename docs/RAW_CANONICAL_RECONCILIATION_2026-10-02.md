@@ -4,7 +4,7 @@
 
 - Raw Drive snapshot: **211 objects / 11 countries**.
 - Strict canonical release: **211 objects**, schema **2.10.10**, release **2026-09-30-r42**.
-- Exact country+name identity reconciliation: **MISMATCH**.
+- Object identity reconciliation: **211/211** — 210 exact country+name matches + 1 proven rename (`Tutong and Tamu markets` → `Pasarneka Tutong / Tamu Tutong`, legacy ID `bn:tutong-and-tamu-markets`).
 - Raw leaf-key inventory: **137 distinct paths**.
 - Canonical source registry: **1169 entities**.
 - Raw source URL rows checked: **944**; present in canonical: **935**; missing: **9**.
@@ -39,7 +39,7 @@ The old production-oriented fields are not canonical content: `capture_sequence`
 ## Files
 
 The companion JSON audit contains:
-- all 140 raw leaf paths with classification and counts;
+- all 137 non-empty raw leaf paths with classification and counts;
 - all 211 raw objects with migration-gap payloads;
 - the exact 9 raw source URLs missing from canonical;
 - per-object visual-recon seed flags;

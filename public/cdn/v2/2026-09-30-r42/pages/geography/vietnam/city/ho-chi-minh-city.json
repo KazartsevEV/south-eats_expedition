@@ -32,14 +32,14 @@
       "kind": "geographic_area",
       "name": "Кондао",
       "page_path": "pages/geography/vietnam/geographic_area/con-dao.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "vn:geographic_area:ho-chi-minh-city-expedition",
       "kind": "geographic_area",
       "name": "Хошимин",
       "page_path": "pages/geography/vietnam/geographic_area/ho-chi-minh-city-expedition.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "vn:town:con-son",
@@ -117,9 +117,68 @@
     }
   },
   "notes_ru": "Город центрального подчинения в действующей структуре 34 единиц провинциального уровня.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "city",
+      "label_ru": "Города",
+      "count": 1
+    },
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "city",
+          "label_ru": "Города",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/city.json",
+          "filter": {
+            "geography_id": "vn:city:ho-chi-minh-city"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "island",
+          "label_ru": "Острова и архипелаги",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/island.json",
+          "filter": {
+            "geography_id": "vn:city:ho-chi-minh-city"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:ho-chi-minh-city",
+      "name": "Ho Chi Minh City",
+      "object_type": "city",
+      "narrow": "Ho Chi Minh City — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/ho-chi-minh-city.json"
+    },
+    {
+      "id": "vn:con-dao",
+      "name": "Con Dao",
+      "object_type": "island",
+      "narrow": "Con Dao — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/vietnam/objects/con-dao.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

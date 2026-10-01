@@ -25,7 +25,7 @@
       "kind": "geographic_area",
       "name": "Хойан / бывшая провинция Куангнам",
       "page_path": "pages/geography/vietnam/geographic_area/hoi-an-quang-nam.json",
-      "object_count": 0
+      "object_count": 2
     },
     {
       "id": "vn:town:hoi-an",
@@ -103,9 +103,68 @@
     }
   },
   "notes_ru": "Город центрального подчинения в действующей структуре 34 единиц провинциального уровня.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "archaeological_site",
+      "label_ru": "Археологические объекты",
+      "count": 1
+    },
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/historic_city.json",
+          "filter": {
+            "geography_id": "vn:city:da-nang"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "archaeology_memory",
+      "label_ru": "Археология, древность и историческая память",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "archaeological_site",
+          "label_ru": "Археологические объекты",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/archaeological_site.json",
+          "filter": {
+            "geography_id": "vn:city:da-nang"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:hoi-an",
+      "name": "Hoi An",
+      "object_type": "historic_city",
+      "narrow": "Hoi An — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/hoi-an.json"
+    },
+    {
+      "id": "vn:my-son",
+      "name": "My Son",
+      "object_type": "archaeological_site",
+      "narrow": "My Son — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/my-son.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

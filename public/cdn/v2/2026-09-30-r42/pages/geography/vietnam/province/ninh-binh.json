@@ -25,21 +25,21 @@
       "kind": "geographic_area",
       "name": "Намдинь",
       "page_path": "pages/geography/vietnam/geographic_area/nam-dinh-legacy.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "vn:geographic_area:ninh-binh-cuc-phuong",
       "kind": "geographic_area",
       "name": "Ниньбинь / Кукфыонг",
       "page_path": "pages/geography/vietnam/geographic_area/ninh-binh-cuc-phuong.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "vn:geographic_area:ninh-binh-trang-an",
       "kind": "geographic_area",
       "name": "Ниньбинь / Чанган",
       "page_path": "pages/geography/vietnam/geographic_area/ninh-binh-trang-an.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "vn:town:ninh-binh-hub",
@@ -117,9 +117,75 @@
     }
   },
   "notes_ru": "Действующая провинция после реформы административного деления 2025 года.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "cultural_landscape",
+      "label_ru": "Культурные ландшафты",
+      "count": 2
+    },
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "religion_ethnography",
+      "label_ru": "Религия, этнография и живая культура",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "cultural_landscape",
+          "label_ru": "Культурные ландшафты",
+          "count": 2,
+          "country_class_page": "pages/countries/vietnam/classes/cultural_landscape.json",
+          "filter": {
+            "geography_id": "vn:province:ninh-binh"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "national_park",
+          "label_ru": "Национальные парки",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/national_park.json",
+          "filter": {
+            "geography_id": "vn:province:ninh-binh"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:trang-an",
+      "name": "Trang An",
+      "object_type": "cultural_landscape",
+      "narrow": "Trang An — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/trang-an.json"
+    },
+    {
+      "id": "vn:nam-dinh-church-landscapes",
+      "name": "Nam Dinh church landscapes",
+      "object_type": "cultural_landscape",
+      "narrow": "Nam Dinh church landscapes — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/nam-dinh-church-landscapes.json"
+    },
+    {
+      "id": "vn:cuc-phuong-national-park",
+      "name": "Cuc Phuong National Park",
+      "object_type": "national_park",
+      "narrow": "Cuc Phuong National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/cuc-phuong-national-park.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

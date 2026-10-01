@@ -25,7 +25,7 @@
       "kind": "geographic_area",
       "name": "Донгнай / Каттьен",
       "page_path": "pages/geography/vietnam/geographic_area/dong-nai-cat-tien.json",
-      "object_count": 0
+      "object_count": 1
     }
   ],
   "legacy_region_names": [],
@@ -96,9 +96,40 @@
     }
   },
   "notes_ru": "Действующая провинция после реформы административного деления 2025 года.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "national_park",
+          "label_ru": "Национальные парки",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/national_park.json",
+          "filter": {
+            "geography_id": "vn:province:dong-nai"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:cat-tien-national-park",
+      "name": "Cat Tien National Park",
+      "object_type": "national_park",
+      "narrow": "Один из крупнейших низинных тропических лесов Vietnam: wildlife, giant trees, Dong Nai River и Bau Sau wetland/Ramsar дают полноценный экспедиционный контент.",
+      "detail_path": "countries/vietnam/objects/cat-tien-national-park.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

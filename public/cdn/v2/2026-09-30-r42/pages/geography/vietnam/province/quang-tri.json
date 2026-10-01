@@ -32,7 +32,7 @@
       "kind": "geographic_area",
       "name": "Куангбинь / Фонгня",
       "page_path": "pages/geography/vietnam/geographic_area/quang-binh-phong-nha.json",
-      "object_count": 0
+      "object_count": 2
     },
     {
       "id": "vn:town:phong-nha",
@@ -110,9 +110,68 @@
     }
   },
   "notes_ru": "Действующая провинция после реформы административного деления 2025 года.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "cave",
+      "label_ru": "Пещеры",
+      "count": 1
+    },
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "national_park",
+          "label_ru": "Национальные парки",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/national_park.json",
+          "filter": {
+            "geography_id": "vn:province:quang-tri"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "relief_geology",
+      "label_ru": "Рельеф и геология",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "cave",
+          "label_ru": "Пещеры",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/cave.json",
+          "filter": {
+            "geography_id": "vn:province:quang-tri"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:phong-nha-ke-bang",
+      "name": "Phong Nha-Ke Bang",
+      "object_type": "national_park",
+      "narrow": "Phong Nha-Ke Bang — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/phong-nha-ke-bang.json"
+    },
+    {
+      "id": "vn:son-doong-cave",
+      "name": "Son Doong Cave",
+      "object_type": "cave",
+      "narrow": "Son Doong Cave — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/son-doong-cave.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

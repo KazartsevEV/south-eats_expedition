@@ -191,9 +191,89 @@
     }
   },
   "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    },
+    {
+      "object_type": "industrial_heritage",
+      "label_ru": "Индустриальное наследие",
+      "count": 1
+    },
+    {
+      "object_type": "living_settlement",
+      "label_ru": "Живые традиционные поселения",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/historic_city.json",
+          "filter": {
+            "geography_id": "vn:geographic_area:hanoi-red-river-delta"
+          }
+        },
+        {
+          "object_type": "industrial_heritage",
+          "label_ru": "Индустриальное наследие",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/industrial_heritage.json",
+          "filter": {
+            "geography_id": "vn:geographic_area:hanoi-red-river-delta"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "religion_ethnography",
+      "label_ru": "Религия, этнография и живая культура",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "living_settlement",
+          "label_ru": "Живые традиционные поселения",
+          "count": 1,
+          "country_class_page": "pages/countries/vietnam/classes/living_settlement.json",
+          "filter": {
+            "geography_id": "vn:geographic_area:hanoi-red-river-delta"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:hanoi-old-quarter",
+      "name": "Hanoi Old Quarter",
+      "object_type": "historic_city",
+      "narrow": "Hanoi Old Quarter — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/hanoi-old-quarter.json"
+    },
+    {
+      "id": "vn:duong-lam-ancient-village",
+      "name": "Duong Lam Ancient Village",
+      "object_type": "living_settlement",
+      "narrow": "Duong Lam Ancient Village — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/duong-lam-ancient-village.json"
+    },
+    {
+      "id": "vn:long-bien-bridge",
+      "name": "Long Bien Bridge",
+      "object_type": "industrial_heritage",
+      "narrow": "Long Bien Bridge — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/long-bien-bridge.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

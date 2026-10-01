@@ -457,8 +457,10 @@ def main():
                 fail(f"{code}: rich street-food row {index} lacks name/description")
             if not row.get("where_common") or not row.get("format"):
                 fail(f"{code}: rich street-food row {index} lacks where_common/format")
-            if not row.get("price_usd_range"):
-                fail(f"{code}: rich street-food row {index} lacks approximate market/street-food price")
+            if not row.get("price_usd_range") and not row.get("price_local_range"):
+                fail(f"{code}: rich street-food row {index} lacks approximate price")
+            if row.get("price_local_range") and not row.get("price_currency"):
+                fail(f"{code}: rich street-food row {index} has local price without price_currency")
             media_id = row.get("media_id")
             if not media_id or media_id not in media_ids:
                 fail(f"{code}: rich street-food row {index} lacks valid canonical media ref")

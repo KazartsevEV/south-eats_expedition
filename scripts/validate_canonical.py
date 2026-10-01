@@ -275,10 +275,18 @@ def main():
             fail(f"duplicate canonical media ID: {media_id}")
         media_url = entity.get("url")
         if not media_url:
-            fail(f"{media_id}: canonical media lacks direct image url")
+            fail(f"{media_id}: canonical media lacks source image url")
         lowered_media_url = str(media_url).lower()
         if "/wiki/file:" in lowered_media_url or "/wiki/file%3a" in lowered_media_url:
             fail(f"{media_id}: media.url points to a Wikimedia description page instead of image media")
+        mirror_asset = entity.get("mirror_asset")
+        if not mirror_asset:
+            fail(f"{media_id}: canonical media lacks local mirror_asset")
+        if not str(mirror_asset).startswith("media-mirror/") or not str(mirror_asset).endswith(".webp"):
+            fail(f"{media_id}: mirror_asset must be a local media-mirror/*.webp path")
+        mirror_path = PUBLIC / "cdn" / "v2" / mirror_asset
+        if not mirror_path.is_file() or mirror_path.stat().st_size < 256:
+            fail(f"{media_id}: mirrored image binary is missing or invalid: {mirror_asset}")
         media_ids.add(media_id)
     if len(media_ids) != (manifest.get("totals") or {}).get("canonical_media"):
         fail("canonical media count differs from manifest")

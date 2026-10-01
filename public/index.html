@@ -722,15 +722,22 @@ function previewURL(path){
 function mirroredMediaURL(m){
   return m&&m.mirror_asset?previewURL(m.mirror_asset):null;
 }
-async function hydratePreview(card,o){
+async async function hydratePreview(card,o){
   var box=card.querySelector('.preview');
   if(!box)return;
   var local=previewPath(o);
   if(!local)return;
+  var imageURL=previewURL(local);
+  var m=o&&o.cover_media_id?await media(o.cover_media_id):null;
+  var fullURL=mirroredMediaURL(m)||imageURL;
   var im=document.createElement('img');
   im.loading='lazy';
   im.alt=o.title||'';
-  im.src=previewURL(local);
+  im.src=imageURL;
+  im.setAttribute('data-lightbox-url',fullURL);
+  im.setAttribute('data-lightbox-source',m&&m.source_page||'');
+  im.setAttribute('data-lightbox-caption',o.title||'');
+  im.style.cursor='zoom-in';
   im.onerror=function(){im.remove()};
   box.prepend(im);
 }
@@ -752,7 +759,10 @@ function bindObjectGrid(){
     entries.forEach(function(e){if(e.isIntersecting){var id=e.target.getAttribute('data-object');var o=state.objects.find(function(x){return x.id===id});if(o)hydratePreview(e.target,o);obs.unobserve(e.target)}});
   },{rootMargin:'300px'}):null;
   cards.forEach(function(card){
-    card.onclick=function(){routeTo('#/object/'+card.getAttribute('data-object'))};
+    card.onclick=function(e){
+      if(e&&e.target&&e.target.closest&&e.target.closest('[data-lightbox-url]'))return;
+      routeTo('#/object/'+card.getAttribute('data-object'));
+    };
     var o=state.objects.find(function(x){return x.id===card.getAttribute('data-object')});
     if(obs)obs.observe(card);else if(o)hydratePreview(card,o);
   });

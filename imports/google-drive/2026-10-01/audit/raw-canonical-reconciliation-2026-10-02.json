@@ -152,9 +152,49 @@
   "source_reconciliation": {
     "raw_source_url_rows": 944,
     "canonical_source_entities": 1169,
-    "raw_urls_present_in_canonical": 935,
-    "raw_urls_missing_from_canonical": 9,
-    "missing_source_urls": [
+    "exact_url_present": 935,
+    "exact_url_missing": 9,
+    "normalized_url_present": 937,
+    "normalized_url_unresolved": 7,
+    "normalized_aliases": [
+      {
+        "country_code": "LA",
+        "object": "Plain of Jars",
+        "url": "https://whc.unesco.org/en/list/1587",
+        "publisher": "UNESCO World Heritage Centre",
+        "used_for": [
+          "heritage status",
+          "management",
+          "UXO clearance context"
+        ],
+        "canonical_matches": [
+          {
+            "id": "src:e6ecf91314395c",
+            "url": "https://whc.unesco.org/en/list/1587/",
+            "publisher": "UNESCO World Heritage Centre",
+            "title": "Megalithic Jar Sites in Xiengkhuang – Plain of Jars"
+          }
+        ]
+      },
+      {
+        "country_code": "LA",
+        "object": "Wat Phou",
+        "url": "https://whc.unesco.org/en/list/481",
+        "publisher": "UNESCO World Heritage Centre",
+        "used_for": [
+          "cultural landscape / sacred axis"
+        ],
+        "canonical_matches": [
+          {
+            "id": "src:442bbfd0488941",
+            "url": "https://whc.unesco.org/en/list/481/",
+            "publisher": "UNESCO World Heritage Centre",
+            "title": "Vat Phou and Associated Ancient Settlements within the Champasak Cultural Landscape"
+          }
+        ]
+      }
+    ],
+    "unresolved_source_urls": [
       {
         "country_code": "BN",
         "object": "Seria oil heritage landscape",
@@ -185,26 +225,6 @@
         "used_for": [
           "illustration",
           "license provenance"
-        ]
-      },
-      {
-        "country_code": "LA",
-        "object": "Plain of Jars",
-        "url": "https://whc.unesco.org/en/list/1587",
-        "publisher": "UNESCO World Heritage Centre",
-        "used_for": [
-          "heritage status",
-          "management",
-          "UXO clearance context"
-        ]
-      },
-      {
-        "country_code": "LA",
-        "object": "Wat Phou",
-        "url": "https://whc.unesco.org/en/list/481",
-        "publisher": "UNESCO World Heritage Centre",
-        "used_for": [
-          "cultural landscape / sacred axis"
         ]
       },
       {
@@ -249,7 +269,8 @@
           "image provenance"
         ]
       }
-    ]
+    ],
+    "note": "URL normalization strips query/fragment, trailing slash, and normalizes http→https for comparison only. Unresolved does not automatically mean the source fact is absent; equivalent/replacement sources and media provenance still require review."
   },
   "high_priority_findings": {
     "strict_object_safety_block_omitted": {
@@ -289,7 +310,10 @@
       "raw_field_planning_review_seeds": 135,
       "action": "Use best_light and compliant where/when/weather facts as seeds. Do not restore capture_sequence or camera-instruction blocks."
     },
-    "raw_source_urls_missing_from_canonical": 9
+    "raw_source_urls_unresolved_after_url_normalization": {
+      "count": 7,
+      "action": "Review for equivalent/replacement canonical source or media provenance before re-adding. Do not assume unresolved URL equals lost fact."
+    }
   },
   "field_inventory": [
     {

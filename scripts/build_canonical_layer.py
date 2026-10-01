@@ -391,6 +391,8 @@ def build():
         for row in travel.get("objects") or []:
             if row.get("name"):
                 source_object_by_country_name[(code, row.get("name"))] = row
+            if row.get("display_name"):
+                source_object_by_country_name[(code, row.get("display_name"))] = row
         for row in travel.get("regions") or []:
             if row.get("name"):
                 region_profile_by_country_name[(code, row.get("name"))] = row

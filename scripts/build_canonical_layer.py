@@ -1215,6 +1215,39 @@ def build():
         canonical_search.append(search_row)
         object_rows_by_country[code].append(search_row)
 
+    # Country food/festival images are canonical media too. Source rows keep
+    # the research metadata; generated country profiles reference media IDs.
+    for code in sorted(published_codes):
+        country_source = sources_by_code[code][1]
+        travel = country_source.get("travel") or {}
+        feature_rows = list(((travel.get("food") or {}).get("items") or [])) + list(travel.get("festivals") or [])
+        for feature in feature_rows:
+            if not isinstance(feature, dict):
+                continue
+            image = feature.get("image")
+            if not isinstance(image, dict):
+                continue
+            media_id = media_id_for(code, image)
+            existing = media_registry.get(media_id)
+            if existing is None:
+                media_registry[media_id] = {
+                    "id": media_id,
+                    "kind": "image",
+                    "country_id": f"geo_{code.lower()}",
+                    "url": image.get("url") or image.get("static_url"),
+                    "source_page": image.get("source_page"),
+                    "provider": image.get("provider"),
+                    "license": image.get("license"),
+                    "artist": image.get("artist"),
+                    "checked_at": image.get("last_checked") or image.get("checked_at"),
+                    "source_refs": [],
+                    "referenced_by": [f"geo_{code.lower()}"],
+                }
+            elif f"geo_{code.lower()}" not in (existing.get("referenced_by") or []):
+                existing.setdefault("referenced_by", []).append(f"geo_{code.lower()}")
+            if media_id not in canonical_media_ids_by_country[code]:
+                canonical_media_ids_by_country[code].append(media_id)
+
     # Media entities and indexes.
     for media_id, entity in sorted(media_registry.items()):
         code = entity["country_id"].split("_", 1)[1].upper()
@@ -1293,6 +1326,26 @@ def build():
         def refs_from_ids(ids):
             return [source_map[source_id] for source_id in (ids or []) if source_id in source_map]
 
+        food = travel.get("food") or {}
+
+        def country_feature_row(row):
+            if not isinstance(row, dict):
+                return row
+            out = {key: value for key, value in row.items() if key not in {"image", "source_ids"}}
+            image = row.get("image")
+            if isinstance(image, dict):
+                out["media_id"] = media_id_for(code, image)
+            out["source_refs"] = refs_from_ids(row.get("source_ids"))
+            return out
+
+        rich_food_items = food.get("items") or []
+        street_food_profile = (
+            [country_feature_row(row) for row in rich_food_items]
+            if rich_food_items
+            else food.get("street_food")
+        )
+        festival_profile = [country_feature_row(row) for row in (travel.get("festivals") or [])]
+
         profile = {
             "id": f"geo_{code.lower()}",
             "code": code.lower(),
@@ -1305,9 +1358,15 @@ def build():
             "economy": overview.get("economy"),
             "political_system": overview.get("political_system"),
             "culture": overview.get("culture"),
-            "cuisine": (travel.get("food") or {}).get("budget_food_summary"),
-            "street_food": (travel.get("food") or {}).get("street_food"),
-            "festivals": travel.get("festivals"),
+            "cuisine": food.get("budget_food_summary"),
+            "street_food": street_food_profile,
+            "food_market": {
+                "typical_simple_meal_usd_range": food.get("typical_simple_meal_usd_range"),
+                "price_note": food.get("price_note"),
+                "checked_at": food.get("checked_at") or checked_at,
+                "source_refs": refs_from_ids(food.get("source_ids")),
+            },
+            "festivals": festival_profile,
             "nature": (
                 {
                     **((source.get("nature") or {}).get("country_macro") or {}),

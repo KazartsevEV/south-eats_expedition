@@ -1,0 +1,953 @@
+{
+  "project": "Expedition South East",
+  "schema_version": "2.1.0",
+  "release_id": "2026-09-28-r3",
+  "generated_at": "2026-09-28T18:20:00+04:00",
+  "base_path": "/cdn/v2/2026-09-28-r3/",
+  "scope": {
+    "reference_countries": [
+      "BN",
+      "KH",
+      "LA",
+      "ID",
+      "MY"
+    ],
+    "target_countries_total": 11
+  },
+  "totals": {
+    "countries": 5,
+    "objects": 98,
+    "places": 122,
+    "object_types": 22,
+    "files": 153
+  },
+  "entrypoints": {
+    "home": "home.json",
+    "countries": "countries.json",
+    "object_types": "object-types.json",
+    "places": "places.json",
+    "taxonomy": "taxonomy.json",
+    "object_search": "search/objects.json",
+    "place_search": "search/places.json",
+    "migration_status": "migration-status.json"
+  },
+  "cache_policy": {
+    "release-index": "public, max-age=300, stale-while-revalidate=86400",
+    "immutable-detail": "public, max-age=31536000, immutable",
+    "immutable-static": "public, max-age=31536000, immutable"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1908,
+      "sha256": "ac1fe77719f91365bd1cafcea3f27d687d401be16f52fc2af7774259358c2bff",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "collections/archaeological_site.json",
+      "bytes": 9080,
+      "sha256": "856150a19827aa3385601346cefdce66274c47f1b7ad6578ebceb2ef4a043e0f",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/cave.json",
+      "bytes": 3663,
+      "sha256": "87efc2546a5fcf2d7405bd9649ecad84631995e13d0018588a2dc29c94cbca9f",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/city.json",
+      "bytes": 1740,
+      "sha256": "e655a54ae37e333d29c9e733b60bbd3d2b0428f40d23d3686a270b5d2eeed860",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/cultural_landscape.json",
+      "bytes": 6454,
+      "sha256": "fae6733e418cecc7523b4b7561a9eaf0c36210794c8c0594dd38e7345f643731",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/historic_building.json",
+      "bytes": 952,
+      "sha256": "529195a150cf5811cfd893975c7e50d5aefe56fdfa12babcd7341f0e32ca3073",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/historic_city.json",
+      "bytes": 8259,
+      "sha256": "207c6f8cc90eaefa92bd823e7178d9cd5664651d7b813d1765f8d7c993d4a77b",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/industrial_heritage.json",
+      "bytes": 1676,
+      "sha256": "85f8d087266e90acb3bb38e8ab46c4cdd27c8e786c7866d10602154026c707f3",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/island_or_coast.json",
+      "bytes": 4519,
+      "sha256": "2c47365e609e364a87eab02cf1520e2fc793955ab015fe40d383175a48eea729",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/living_settlement.json",
+      "bytes": 3947,
+      "sha256": "2872e1d938584f0a27b7d2874f08d3f55b0a7ca70d032175bae100b78911f8b6",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/market.json",
+      "bytes": 1664,
+      "sha256": "9dd6e863089e9ca060fe62448df79ec60309aa23bcf0518aacd4f8085d985865",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/megalithic_site.json",
+      "bytes": 1696,
+      "sha256": "8266efc3c55aa40ce70df875b2012d1fab5ff60ea9d5fd48b2c61b32bdccd7b2",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/memorial_site.json",
+      "bytes": 924,
+      "sha256": "e38452b6a65d3b7a8c8ced77b4d81ff9f00337de98427cb803a98232673d004f",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/monument.json",
+      "bytes": 987,
+      "sha256": "8553dfdfddf2a99fbfedfd310b8734eca88dcc3749047adec9c0bbda5a45e8af",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/museum.json",
+      "bytes": 2467,
+      "sha256": "3b2fef5514e14cf2dc18481dc97f799fcb327a3b9b065923ad0c3d189bb359cb",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/national_park.json",
+      "bytes": 7954,
+      "sha256": "769ac4665ec36daf1f93a10f9d1a84484736e8fb70e6b9b48af007cbb5008ad5",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/natural_landscape.json",
+      "bytes": 7079,
+      "sha256": "2ebe9f2b051ecdff0a223747bf41985f9dc69ab3ce76691ca334f780f9dd6f51",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/palace.json",
+      "bytes": 1017,
+      "sha256": "70df413a45c47eac57a90f648e50f5e86c860b564d87b8db4c64675c55241ed8",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/protected_area.json",
+      "bytes": 5611,
+      "sha256": "4976b9c4756aa61c2f7b89987e6c67c20e9090d0e5b211b5510e7381317d0892",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/religious_site.json",
+      "bytes": 3307,
+      "sha256": "8617932e6724342a476f9965450471e3724796a929707a91cfcfb7d4f80c17f8",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/river_or_wetland.json",
+      "bytes": 2547,
+      "sha256": "e0c1e162e5375bd9d63e763ce1923cbfcbb5556d9532ec48149380441152b96d",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/waterfall.json",
+      "bytes": 979,
+      "sha256": "a89348a8e69035e1a281d361b256a19d11d83fd7582f78d90dfca6489271d84d",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "collections/wildlife_site.json",
+      "bytes": 1855,
+      "sha256": "198ab140dde23e4a8c0f44e99e364d10c4bf35d31d58c1113e1487fc4f530c66",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "countries/bn/collections.json",
+      "bytes": 2697,
+      "sha256": "68f96bda48e5840757914c808cf97a60705784cc07c0edfeea5cdc0d458b04b4",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/bn/country.json",
+      "bytes": 19737,
+      "sha256": "8efaa401bd24f69a1d2e7a1dd5cf58125e79de2545e31afc2c487021a0607f54",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/bn/objects/berakas-forest-recreational-park.json",
+      "bytes": 12163,
+      "sha256": "598c0a9d5005ce6cbb7226ec1d41b79f83369137d3264bb6f9788e1d4f99ee73",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/billionth-barrel-monument.json",
+      "bytes": 14763,
+      "sha256": "d0bf98375566092c35710449849ebf3de776b80e0e9e1ffe2f2a484e82e7ce98",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/brunei-river-mangrove-safari.json",
+      "bytes": 13475,
+      "sha256": "89bc530d16dba8bc9c5ff98ff90cbaa6d1ec9fa35ea3a506c350fa42c5f85aa1",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/bukit-shahbandar-recreational-park.json",
+      "bytes": 13072,
+      "sha256": "dd64e9bf16db88d1e1723deee7a167132b8687fb761c13e525a1b6e95eb59316",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/jame-asr-hassanil-bolkiah-mosque.json",
+      "bytes": 15125,
+      "sha256": "95d7f44354c27c916252f94e035ec5e3115b7b753739294add569237c96b6cf7",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/kampong-ayer.json",
+      "bytes": 15525,
+      "sha256": "c26cf0ad0403ed2691353143edbe9aed3e37a222e56360cf10cd1fffb8b4124d",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/labi-interior.json",
+      "bytes": 14833,
+      "sha256": "5fcc06b4ea033ac142a0589fad30f97c870dd9e7207a66e89c8cfc719f3aeb5c",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/malay-technology-museum.json",
+      "bytes": 14142,
+      "sha256": "8712d0eab57610daa5a48ce7d6e98e3eaae91c051c16d977566f247100b70df7",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/mendaram-besar-longhouse.json",
+      "bytes": 13026,
+      "sha256": "4bda5a59f6e95655b45c7e5fc42af3e885273cb458c9936daa286c74f1203093",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/omar-ali-saifuddien-mosque.json",
+      "bytes": 17020,
+      "sha256": "5883bff4883c500c4ace86b8d3d1530d19a273fe3973270bb8a6714eb35090df",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/royal-regalia-museum.json",
+      "bytes": 12647,
+      "sha256": "f8d4a402821392a4e1e5137848c2f6155efb43a755aee9bccf065312c8c99b39",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/seria-oil-heritage-landscape.json",
+      "bytes": 13369,
+      "sha256": "de72675b8b4eafd574dde99be4e91db559cb4e11109a7bffee864df2e11b91bb",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/tamu-kianggeh.json",
+      "bytes": 11466,
+      "sha256": "41428a04c019d016ab9b8637bc21afee8ade81bde97d5eabdc25e0994d83cf22",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/tasek-lama-park.json",
+      "bytes": 12486,
+      "sha256": "21e23d6454205e9fceac2ecc7ce622b1e02771d44543abaef50d6107c32e1ed6",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/tasek-merimbun-heritage-park.json",
+      "bytes": 14551,
+      "sha256": "dea868f12068920eb3cf81444318a5f92698cc0a655f39feb30cffb46b672777",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/teraja-longhouse.json",
+      "bytes": 13571,
+      "sha256": "ae2f10ae851e006ffe79bbe821c300b41392ce967ac449f807c086623567d489",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/tutong-and-tamu-markets.json",
+      "bytes": 11711,
+      "sha256": "847f8ad7db0c5933d7d6cee93ec937f6f6729c61847b2017c6e1b8dcf7c50200",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects/ulu-temburong-national-park.json",
+      "bytes": 17693,
+      "sha256": "3da2151379db9482783fd22f6ef8ba75b193b67039f557c398183f5536ad1159",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/bn/objects.json",
+      "bytes": 35681,
+      "sha256": "dfc35f51e1aeccbb8b73d1ec4a025c94d894c91c7f0b30458709a17c41f186ae",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/bn/places.json",
+      "bytes": 12219,
+      "sha256": "871c4b3987c228ebe386d39979f5faef3ea096f741ea75881cec09256cb1d964",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/id/collections.json",
+      "bytes": 2506,
+      "sha256": "cbf0cf249f4c95c63d50e032c271a4d83c72634b1f693a4442a457910c82ca03",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/id/country.json",
+      "bytes": 16823,
+      "sha256": "2cb0969cb18e615c8d8273a93a4fcc4ab2351ec5bdca5909ccbf308d22146c85",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/id/objects/bali-temple-landscapes.json",
+      "bytes": 12404,
+      "sha256": "0728e0818e776ca015b268f7c38e657c235da148b70d9365dadf2db91013c1c8",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/banda-neira.json",
+      "bytes": 11850,
+      "sha256": "b5d13e01aee1842efd70311b0e27b6df5c5cc35bf44e4c728f04dfea23ae0036",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/borobudur.json",
+      "bytes": 11842,
+      "sha256": "0cbe7df5d2302197a08e0dbd4204c4dd0351eb13bb33eb7f3741b4304c1cae86",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/bromo-tengger-semeru.json",
+      "bytes": 14454,
+      "sha256": "b1c0de78c32822f2854310318c1aa3413ce5a2bac0270f2dba5ac233cb96e59b",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/dieng-plateau.json",
+      "bytes": 11354,
+      "sha256": "197e49dba916afdba4e70cbfcfcb759b72fdc1ab1f4be7bf46f4470a5afb6756",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/gunung-leuser-national-park-bukit-lawang.json",
+      "bytes": 12968,
+      "sha256": "3b01a6ae9a26be52297b0c53537eae24a7de31c07341fdd4c60b6bd4e6ecbfa1",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/ijen.json",
+      "bytes": 13481,
+      "sha256": "a41fadb07386c6785527e8f5e8db22e1998336ece5260173ebd79c600428ea3a",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/kelimutu-national-park.json",
+      "bytes": 13271,
+      "sha256": "139652f3be786bba49a84df33e27bddcc4a164cbb34bffb197fd0df637c6bc85",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/komodo-national-park.json",
+      "bytes": 13535,
+      "sha256": "a33ac49bd1e07b625dff5f1225cbe9d54e2af09edf8b654e1992983025101eaf",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/lake-toba-samosir-batak-cultural-landscape.json",
+      "bytes": 13491,
+      "sha256": "2558eb26789378e6a71d68f47fa6fc7748786fa62055d16695c6c4a02e240a68",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/lasem.json",
+      "bytes": 10792,
+      "sha256": "1bbeb18d66dd754f71f1af5884068c4bddf4d09bdc42175865f390740ee0e3ad",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/prambanan.json",
+      "bytes": 11867,
+      "sha256": "39f01ee723063192ab6b415ef841e253214b814e8ce016f663a8e7a0b760f481",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/raja-ampat.json",
+      "bytes": 11399,
+      "sha256": "43566013eb88d514c7bc385306c52595b818371df6d644d67e768f667eb872b8",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/sawahlunto.json",
+      "bytes": 11489,
+      "sha256": "ad371c1a2038e7d4902d50165a97cc13aa8f07791ecd69d16a0873db8861a496",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/sumba-megalithic-villages.json",
+      "bytes": 12981,
+      "sha256": "d10d101e4949dfc938e7971a01dd80bfcf2aca2aecc9d93f6f651f709384944b",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/tana-toraja-hinterland.json",
+      "bytes": 12097,
+      "sha256": "8da8c21aa0fb5180df5839f7c93f22250248f1524cc8d90d0b26fafe2aaecaf6",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/tanjung-puting-national-park.json",
+      "bytes": 13491,
+      "sha256": "61638ae5a943ae24cbc390ace38438aa665bf44e7739afa76b1053d2d9ae93db",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/togean-islands.json",
+      "bytes": 10962,
+      "sha256": "22430c0fdf5a8fc2fea1a952d37cc95504b879805dacfb9487a9a9ca7134c90f",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/wae-rebo.json",
+      "bytes": 13708,
+      "sha256": "8a4a4d86a2d28ea10a8bc1ef8d1f7d4ce89f1945c3d84628c0903acbe05d8959",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/wakatobi-national-park.json",
+      "bytes": 10872,
+      "sha256": "55ae51a99d9d2e782bf00cc1ca22e1a4585d9778491402346d04e908cf4cc921",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects/yogyakarta.json",
+      "bytes": 11229,
+      "sha256": "18c97e1a73a06bcbb8870a54bdc6368a28cfc53b7722ce345c577d9bc8111121",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/id/objects.json",
+      "bytes": 41246,
+      "sha256": "c7ae9fa9e8ec5c47227edeb473f4820a1a753c4eb745566d70c1468c87e53de6",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/id/places.json",
+      "bytes": 31536,
+      "sha256": "fc08c7c756232eaa7d161a563e6df8d58c93a7a39a83c7e7fda4ab99cab0a67f",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/kh/collections.json",
+      "bytes": 2489,
+      "sha256": "39bd23982902ffe7bc6b97dea664ab4557a2c97fb8bdcb8e933ce2fcadcb0bb9",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/kh/country.json",
+      "bytes": 18863,
+      "sha256": "c7b7e7d5da06b7dd89ac2287f1003dd966c090c58b6e5bdad745387b6fb0b119",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/kh/objects/angkor-archaeological-park.json",
+      "bytes": 20648,
+      "sha256": "55802930510bfcf0d239fe956c965fd590f75bad2c62496a1778c367592ec095",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/angkor-borei-and-phnom-da.json",
+      "bytes": 17467,
+      "sha256": "dd9556c7c16ea24dc4a0e54799cdd539eb3c9f46b1057f13b0988b69b28d4b5d",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/banteay-chhmar.json",
+      "bytes": 19287,
+      "sha256": "9ac6870ad0d0c96b433e8b120cc2f95c45b9853b136c9fc705c0a9d9332d4dcc",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/battambang-historic-shophouses.json",
+      "bytes": 15117,
+      "sha256": "91a8164246fb0f16b25d57bb4e9635d3449d8fa27c91b8810c01ac53ad027e40",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/beng-mealea.json",
+      "bytes": 16552,
+      "sha256": "b25eedd31569715e182cb278952ba3d98213be7134a88b0f5ca5d52e5d6cb1f0",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/bokor-national-park-and-hill-station.json",
+      "bytes": 17225,
+      "sha256": "4e233a5ab3112c6ac982865be26aa7bb52ddb360e59bc4ebd12937a480b3fb0a",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/cardamom-mountains-community-routes.json",
+      "bytes": 19336,
+      "sha256": "a4258e7b68285f9e2529897d7bd3c286acf2ef56ffdb3066b398d70a7c14c2a2",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/choeung-ek.json",
+      "bytes": 14479,
+      "sha256": "705f18c9da30959517bafa9e81d22c4acaee0d0022954ca1c51cadd4c1c89e63",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/koh-ker.json",
+      "bytes": 18799,
+      "sha256": "73841db19d02512e5f9515793e7e901440bc183fd28837938f78fa9f84eda34e",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/koh-rong-islands.json",
+      "bytes": 18736,
+      "sha256": "c4e7706f618e4b9d017400ecc2709a398aeef394d5ebc2ec6e677fb3e4bb8901",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/kratie-kampi-irrawaddy-dolphins.json",
+      "bytes": 15277,
+      "sha256": "3ceeaca738bc0f7b430556fb62256df65138bdfe2393f7e2c68e44a2ad2a3678",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/oudong.json",
+      "bytes": 17153,
+      "sha256": "6d9102d8775403efd63c53989b3c955bb8ac62f319a1227abfceaa228ad2d4c7",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/phnom-kulen-national-park.json",
+      "bytes": 17927,
+      "sha256": "5c7ffe56f5e1241924479406e43b65ed6815cf7a9d543db76d0605ebbddc2af2",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/preah-khan-kompong-svay.json",
+      "bytes": 16977,
+      "sha256": "2fa989b23f346527c3d251c87daebce96c76b64b10957287a8f3ffc0ba8aeb62",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/preah-vihear.json",
+      "bytes": 17301,
+      "sha256": "e69daf6a57601f31a99becf5cfc3d0be6ff0f790731aa644b16fb41199580aa7",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/royal-palace-phnom-penh.json",
+      "bytes": 17237,
+      "sha256": "5b41612b99f9f6797909cee3c56046276d61a61fe7bbce647d871f62399521db",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/sambor-prei-kuk.json",
+      "bytes": 18652,
+      "sha256": "7c44299ba171072d3c4eec0d661bd868af7ca4d390d4ad84a0537426ad328b13",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/tonle-sap-biosphere-reserve.json",
+      "bytes": 19790,
+      "sha256": "286d8ade02e16e8ff9cf12aa099d8122dda6b6826fa79534a47e7d9381f71ddb",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects/tuol-sleng-genocide-museum.json",
+      "bytes": 15719,
+      "sha256": "221c39af050abe8740b324c0b51d4a3395ac5913130ed40c78b6e0a92e52403a",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/kh/objects.json",
+      "bytes": 40837,
+      "sha256": "43ace3474a1995acfcb3db2d5f5076afe9b591967ba1fea5c7ec025d50e30c4f",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/kh/places.json",
+      "bytes": 23627,
+      "sha256": "76a92d1e9102c1aa7a34899d441f7bf93d4c52d9f4b315ef042468d482c8f041",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/la/collections.json",
+      "bytes": 2522,
+      "sha256": "995eb3759bd89101cddb48d07aa91deb3dc221a8ed76439f25b450da3a6f0ccf",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/la/country.json",
+      "bytes": 16782,
+      "sha256": "bd2d97ff7dca94c918a645ea6696d9be8d30e276509cce6208c1a4a021f40978",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/la/objects/bolaven-plateau.json",
+      "bytes": 17315,
+      "sha256": "b9a86fc0ef320e39fd14c0ccb893fb7f8ccad2a97734109a5a6d965a4aea775c",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/kong-lor-cave.json",
+      "bytes": 18916,
+      "sha256": "5499629cdeeb607d8924994c0ba37ef80b1146b2816a63a93b3cbbe769a1790b",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/kuang-si-falls.json",
+      "bytes": 14063,
+      "sha256": "c8c7bff4ed5dd57005287d66e3b61da669382393672f7462960fb4ee56738b44",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/luang-prabang.json",
+      "bytes": 19708,
+      "sha256": "5794b932dd57cefed44e8800358c3a32b1ea5f6e80c9d55c52ae8fe0c8923585",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/muang-sing-market-and-tai-lue-cultural-landscape.json",
+      "bytes": 15247,
+      "sha256": "05b437cec183e0add6f84b612dd9d9206e5996bf4485839e31b9f7e6b48e54cc",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/nam-et-phou-louey-area.json",
+      "bytes": 17447,
+      "sha256": "7c8c1b402edb101dfc6f612ed02fed0664bf2f1cfe8dba5ba86ee119b8418f7c",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/nam-ha-national-protected-area.json",
+      "bytes": 18163,
+      "sha256": "47fe15da921a702dcdb5b6b91afb2f9ea69fcb4cfdc321e63a90b5ca8cf11e5a",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/nong-khiaw-and-muang-ngoi.json",
+      "bytes": 15398,
+      "sha256": "401bb8c9e24e1aa7d7c4767698baa858d801dc149eabc4421d5a8db57134960b",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/old-thakhek-town.json",
+      "bytes": 12397,
+      "sha256": "8ea478294b85068fa95d789fd08560e86c618f121709e592b256066dca37cf18",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/pak-ou-caves.json",
+      "bytes": 14034,
+      "sha256": "48e46dfcb8297a7508ecb59b58335a75c1fd2fe119207b177445265de5e9c7b8",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/phongsaly-old-town-and-ancient-tea-highlands.json",
+      "bytes": 16097,
+      "sha256": "7df1bb058eba6bb7b668e5bdb7946e8946afcbfc2404ac757bfaf99425af3dc9",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/plain-of-jars.json",
+      "bytes": 18659,
+      "sha256": "069ce7f5c668c189b7b94cdab17405a366dac04aa3bb98ca697702f2ff1e16f8",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/savannakhet-old-quarter.json",
+      "bytes": 13171,
+      "sha256": "dcf1d7a9dd6a1058b569e9f5d93f4757bab893ba3dc1487019e30acbc140419e",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/si-phan-don-4000-islands.json",
+      "bytes": 16392,
+      "sha256": "4a5486db0c28989b9f38c484c6af915d3a59897b7343ab090247afec4543252a",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/tham-piu-cave.json",
+      "bytes": 14830,
+      "sha256": "a26e765a34f9ecdef16a391cba1278889b88feb5caafbe0d36bd9ff05d943f1a",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/vang-vieng-karst.json",
+      "bytes": 20228,
+      "sha256": "e2cce572839e94c2d464d4981e4e1c23c48df2f5e05208220b1681fe6014f4c2",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/vieng-xai-caves.json",
+      "bytes": 17647,
+      "sha256": "0a64566b18e5c8bc813eb76be31ba177824a1bdca22f5b354cc3184516d6530c",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/vientiane-sacred-architecture.json",
+      "bytes": 13595,
+      "sha256": "a9afd4543e97c11af40fe7889d83bba5d8bc945ffcb3fbf18953ec09e5a2b67b",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects/wat-phou.json",
+      "bytes": 19424,
+      "sha256": "35e0f9b55c04b782e49768a92c917870d6bbde84df0ee7f504b65dc237425d0a",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/la/objects.json",
+      "bytes": 40308,
+      "sha256": "504a823201e3e938dfa5b91a2d83442360e8c1cf68812f6661858059e3a4ede9",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/la/places.json",
+      "bytes": 24141,
+      "sha256": "1fc8e1a60ea744fb3314c561fd868226288ff6b58c72120203e524556c7a17c2",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/my/collections.json",
+      "bytes": 3080,
+      "sha256": "2c78bec90e908f035065d3db03cd7951900a159fd0d7515f2afa7eea9afa2219",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/my/country.json",
+      "bytes": 14424,
+      "sha256": "b42367638b865569ea24285b331a697645fe9dbbb6d3112f81ca5d351ce59882",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/my/objects/bario-kelabit-highlands.json",
+      "bytes": 11873,
+      "sha256": "61e77c73e4d3c1c9642a68e4239f51a7fcd2a2995769679bd77b3e00c6e7573c",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/batu-caves.json",
+      "bytes": 8959,
+      "sha256": "fcd75fa7fcd833d1305bc4f8c22d4b9aa8a42c1db7f46b6a0e96f29c5d179c88",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/belum-temengor.json",
+      "bytes": 10258,
+      "sha256": "8c837a189f20e3f925f206a0cff8bd8d029ea5a19870399ac7d7377af30bf43b",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/danum-valley-conservation-area.json",
+      "bytes": 9795,
+      "sha256": "13a6bb82fa3667cf6bc89f4716180027a73ead8857f02aa3778f4bddc2567a4d",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/george-town.json",
+      "bytes": 11408,
+      "sha256": "9d405ee957dff7c72d462dd9552d53c828633f9f58ddad3ea384cde7b05de892",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/gunung-mulu-national-park.json",
+      "bytes": 11852,
+      "sha256": "4be132aa9298e2846c606f7d612e3f6a492dafce8680a6cb06f65c290de01f26",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/kampung-bavanggazo-rungus-longhouse.json",
+      "bytes": 10034,
+      "sha256": "25f5f6ff3a12c932034bf8cb5cbe1a1f1cd548f6dbc9a213a54a4cf5c1c97d26",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/kellie-s-castle.json",
+      "bytes": 9893,
+      "sha256": "3b9fd1d67b194fcc20fa01422a645240a939305d83116336e793fac8c1b84b85",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/kinabatangan-river.json",
+      "bytes": 9797,
+      "sha256": "2694748fbc8333a11313f09d9ee4f3481f5b6d8636aed7a33ba0108e5af00b87",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/kuala-kangsar.json",
+      "bytes": 9242,
+      "sha256": "1f7139f3d39ca8aab0226112c63d3a3b3e6305d2687e73209af5c32942b9814d",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/kuala-lumpur.json",
+      "bytes": 11111,
+      "sha256": "4e58c7f15499c6baa09b21de486e1d748f8edb67294cefe8762c52b28cdf5c8d",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/kuching-old-town-and-waterfront.json",
+      "bytes": 9726,
+      "sha256": "61372f55c0ff8941bdcf16656bc56b4831da32c46734961603d519340f2079b7",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/langkawi.json",
+      "bytes": 10833,
+      "sha256": "df7ee0fe826903261e3026fd91c0b13daeb2b325e5176a30b175d0329e18ca55",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/lenggong-valley-archaeological-landscape.json",
+      "bytes": 10509,
+      "sha256": "2fb44a2367c2876747b5d9e6494b8ccbfa6cbe2b33ffc443f9c70972629e40e1",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/melaka.json",
+      "bytes": 10225,
+      "sha256": "f3ff176a53d89b41b46ccce30adc3aa7e77f4f21260a2d4e019b38693a24ae33",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/mount-kinabalu.json",
+      "bytes": 12701,
+      "sha256": "907dbd61514d8d6ad6039670a3d5d8c631ee039a3c35c4820a03bdb971c02165",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/niah-national-park.json",
+      "bytes": 12966,
+      "sha256": "28b9c33b75f629a22ba0ffe4dab4e6c4a1172a5a41d88d7e1f19515d23075273",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/perhentian-islands.json",
+      "bytes": 10765,
+      "sha256": "f6c3648718605cdc927db1c38d1948452c89dfda4d04affe6253c54b227f1dcf",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/sepilok-orangutan-rehabilitation-centre.json",
+      "bytes": 9050,
+      "sha256": "338b55d2ea71689acf3e17f856769b72f3e4b64423b313cb9a420fd9a3bfc0d9",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/sipadan-island.json",
+      "bytes": 10027,
+      "sha256": "9b1341d2bd4924f9c68be3d8bfef1c1ca88f328dd15ff1b1a655595180ed3858",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects/taiping.json",
+      "bytes": 9605,
+      "sha256": "a026264754c75a252c04da55d50da508bf66485ce3dffc960233894bb0e4da27",
+      "cache_class": "immutable-detail"
+    },
+    {
+      "path": "countries/my/objects.json",
+      "bytes": 41230,
+      "sha256": "8e69f285be085e2fa8ab1aa816a49be9555d510909605c88921d82431bfb6adc",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries/my/places.json",
+      "bytes": 31000,
+      "sha256": "66eea8ec0c7a75bde95be6b688f45ccf45b35fc79aada54ccfa267891a530a8e",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "countries.json",
+      "bytes": 5980,
+      "sha256": "aa76b107a1dd8ca405d1607dfe72992ca8e4fc9f3baef484e60fa2ef89ba89c4",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "home.json",
+      "bytes": 27059,
+      "sha256": "906bc8fc3be68f57d76eaa082f1addae7db83853c0ce534ab8705a0041dec224",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "migration-status.json",
+      "bytes": 977,
+      "sha256": "9ec76afff6e43bf18d93f312aaea27e8ac031de944b2ab0a5ea8ccf07df38011",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "object-types.json",
+      "bytes": 4040,
+      "sha256": "7ebf7724d2780535b47ce7720edf1863256d2d236a266a3ddcb2ca3e1bdd4b60",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "places.json",
+      "bytes": 128420,
+      "sha256": "586134e7d1700ea7c98ccf2b2d9ba37df17131e598408250057e30a846e32e1b",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "qa.json",
+      "bytes": 835,
+      "sha256": "1c23c26486a849b6b0a1328c9fdb4dc1526ab7223735a0b864f221d51c7743a8",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "schema/country.schema.json",
+      "bytes": 352,
+      "sha256": "3abbfbe1549cfc56f56a9753f756cf1f159b3702af6249a9832ff36bcdf66531",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "schema/object.schema.json",
+      "bytes": 1273,
+      "sha256": "7d96b0333afcb0182dabab151939eb118a1b6b9fe56fdf2afc144b694414825a",
+      "cache_class": "immutable-static"
+    },
+    {
+      "path": "search/objects.json",
+      "bytes": 126445,
+      "sha256": "28db889507abcb1783d4090c618c5b5d3f452103872f7a549ae7e0c70cc8997c",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "search/places.json",
+      "bytes": 97020,
+      "sha256": "ee18744f17cc7c74a549addb4adff23d2d5ce4cbfb41731bd03ed9a1a72bf1d4",
+      "cache_class": "release-index"
+    },
+    {
+      "path": "taxonomy.json",
+      "bytes": 29802,
+      "sha256": "cc0655d57967e44c4e989a7c0a748ff4df247c3dc5ee207b59c6bf8d7c62afa2",
+      "cache_class": "release-index"
+    }
+  ]
+}

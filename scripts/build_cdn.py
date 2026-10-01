@@ -235,6 +235,29 @@ TYPE_BY_NAME.update({
     "Nat Ma Taung / Mount Victoria": "mountain",
 })
 
+# Recovered Philippines object layer: preliminary primary classes for canonical build.
+TYPE_BY_NAME.update({
+    "Palawan / El Nido / Coron": "island",
+    "Banaue and Batad rice terraces": "cultural_landscape",
+    "Chocolate Hills": "natural_landscape",
+    "Intramuros": "historic_city",
+    "Vigan": "historic_city",
+    "Boracay": "island",
+    "Tubbataha Reefs": "protected_area",
+    "Iloilo heritage districts": "historic_city",
+    "Samar cave systems": "cave",
+    "Siquijor interior": "cultural_landscape",
+    "Negros sugar-era hacienda architecture": "industrial_heritage",
+    "Batanes": "cultural_landscape",
+    "Sagada": "cultural_landscape",
+    "Mount Pinatubo": "volcano",
+    "Apo Reef Natural Park": "protected_area",
+    "Taal Volcano and heritage towns": "volcano",
+    "Paoay Church (St. Augustine Church)": "religious_site",
+    "Mayon Volcano": "volcano",
+    "Apo Island Marine Sanctuary": "protected_area",
+})
+
 # Recovered Singapore object layer: preliminary primary classes for canonical build.
 TYPE_BY_NAME.update({
     "Marina Bay": "cultural_landscape",

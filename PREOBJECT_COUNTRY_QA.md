@@ -272,6 +272,10 @@ build CDN
 - SG — complete (upper-level acceptance recorded; full gate required on this PR).
 - TH — complete (upper-level acceptance recorded; full gate required on this PR).
 - TL — complete (upper-level acceptance recorded; full gate required on this PR).
-- VN — active.
+- VN — complete (upper-level acceptance recorded; full gate required on this PR).
 
 Ранее выполненные верхнеуровневые изменения в этих странах переиспользуются как заготовка, но каждая из десяти стран должна пройти новый полный приёмочный цикл по этому ТЗ.
+
+## Upper-level completion state
+
+All 11 target countries have completed the country/regional/locality pre-object pass. Object cards remain frozen. A final cross-country structural QA is required after the Vietnam merge before this phase is closed.

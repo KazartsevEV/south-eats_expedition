@@ -37,7 +37,7 @@
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
-      "completed_objects": 12,
+      "completed_objects": 13,
       "total_objects": 19,
       "status": "object_rebuild_v2_in_progress",
       "updated": "2026-10-01",
@@ -46,7 +46,8 @@
         "2026-10-01 Nam Et-Phou Louey rebuild: replaced the generic package-tour prose with a regulated national-park access model; added official park history, 5,070 km² / 336–2,257 m topography, Muang Hiam and Ban Son Khoua access anchors, current bus caveats, tour-provided water, designated overnight model, Khmu animist tradition only where explicitly documented, dated 2025–2026 traveler reports, corrected lodging geography, and a five-image licensed media set with contextual images explicitly labelled.",
         "2026-10-01 Nong Khiaw and Muang Ngoi rebuild: separated the two settlements and their river piers, added georeferenced Pha Daeng and Phanoi viewpoints, replaced invented generic walking ranges with source-backed access legs, expanded Nam Ou karst geology and wartime cave history, documented hydropower-driven transport change, normalized water/camping unknowns, added 2025–2026 traveler reports and a five-image Commons gallery.",
         "2026-10-01 Bolaven Plateau rebuild: reframed the object as a trans-provincial volcanic and coffee cultural landscape; added recent volcanic-field geology, Paksong/Tad Fane/Tad Lo anchors, self-guided road-loop semantics, Jru/Laven spirit-religion ethnography, honest water/camping unknowns, dated 2025–2026 traveler reports and a five-image Commons gallery.",
-        "2026-10-01 Nam Ha rebuild: separated regulated trekking access from independent road-access sites; added Ban Nalan and Pha Yueang geospatial anchors, current Lao Parks/ASEAN status, protected-area and community-ecotourism history, 2026 wildlife-route and watershed research, group-specific Lanten ritual context, honest water/camping rules, dated traveler reports, removed placeholder lodging, and expanded media to five licensed/contextual images."
+        "2026-10-01 Nam Ha rebuild: separated regulated trekking access from independent road-access sites; added Ban Nalan and Pha Yueang geospatial anchors, current Lao Parks/ASEAN status, protected-area and community-ecotourism history, 2026 wildlife-route and watershed research, group-specific Lanten ritual context, honest water/camping rules, dated traveler reports, removed placeholder lodging, and expanded media to five licensed/contextual images.",
+        "2026-10-01 Tham Piu rebuild: replaced the misplaced photo-geotag anchor with a cave-entrance coordinate plus museum/memorial points; replaced the remote DEM estimate with a published 700 m site elevation; separated local 24 November 1968 / 374-victim commemoration from unresolved archival attribution; expanded war-damaged karst geoheritage, memory culture and regional ethnography; removed invented walking/time precision and generic risks; added dated 2023–2025 traveler reports and a five-image licensed/contextual gallery."
       ]
     },
     "human_readable_layer": {
@@ -11987,18 +11988,21 @@
           "history",
           "memorial",
           "cave",
-          "culture"
+          "karst",
+          "geoheritage",
+          "culture",
+          "war_memory"
         ],
-        "why_go": "Тхам-Пиу — пещера и мемориал в Сиангкхуанг, связанный с гибелью мирных жителей во время войны в Индокитае. Для маршрута это не 'ещё одна пещера', а место памяти, которое объясняет, почему UXO и бомбардировки остаются частью современной географии провинции.",
+        "why_go": "Тхам-Пиу — карстовая пещера и мемориальный комплекс к северу от Муанг-Кхама, где местная память связывает 24 ноября 1968 года с гибелью 374 человек, укрывавшихся от войны. Ценность объекта двойная: это место памяти и редкий геологический архив боевого воздействия — исследователи фиксируют разрушенную входную камеру, обвалы, металлические фрагменты и человеческие останки. При этом точная архивная атрибуция удара остаётся предметом исследования, поэтому мемориальная версия и независимо подтверждённые факты здесь разделены.",
         "traveler_card": {
           "location": {
-            "region": "Xieng Khouang",
-            "nearest_hub": "Пхонсаван",
+            "region": "Сиангкхуанг / округ Кхам",
+            "nearest_hub": "Муанг-Кхам",
             "languages_spoken": [
-              "Lao",
-              "Hmong",
-              "Khmu",
-              "English limited"
+              "лаосский",
+              "пхуан и другие тайские языки региона",
+              "хмонг и кхму в отдельных общинах провинции",
+              "английский ограниченно в туристических сервисах"
             ],
             "currency": {
               "code": "LAK",
@@ -12010,95 +12014,150 @@
               "practical_notes": "LAK основная валюта; THB и USD встречаются в туризме/приграничье, но рассчитывать на них повсеместно не стоит."
             },
             "coordinates": {
-              "lat": 19.648327,
-              "lon": 103.561592,
+              "lat": 19.67549,
+              "lon": 103.56885,
               "elevation_m": null
             },
-            "coordinate_type": "center",
-            "accuracy": "approximate",
-            "elevation_accuracy": "approximate",
+            "coordinate_type": "cave_entrance",
+            "accuracy": "high",
+            "elevation_accuracy": "unknown",
             "coordinate_source": {
-              "type": "other",
-              "title": "Tham Piu geotagged photograph",
-              "publisher": "Wikimedia Commons / Gonzo Gooner",
-              "url": "https://commons.wikimedia.org/wiki/File:Tham_Piu_-_panoramio.jpg",
+              "type": "map",
+              "title": "Tham Piew Cave",
+              "publisher": "OpenStreetMap via Mapcarta",
+              "url": "https://mapcarta.com/N1391094366",
+              "language": "en",
+              "accessed": "2026-10-01",
               "authority": "medium",
-              "accessed": "2026-09-29",
-              "notes": "GPS камеры на фотографии, подписанной Tham Piu; используется как приближённый объектный якорь, не как доказанный вход."
+              "used_for": [
+                "cave entrance coordinates",
+                "Muang Kham relative location"
+              ]
             },
             "object_elevation": {
-              "representative_m": 631,
+              "representative_m": 700,
               "min_m": null,
               "max_m": null,
-              "reference_type": "characteristic",
-              "accuracy": "approximate",
+              "reference_type": "site",
+              "accuracy": "medium",
               "source": {
-                "type": "map",
-                "title": "DEM elevation at Tham Piu geotag",
-                "publisher": "Open-Elevation",
-                "url": "https://api.open-elevation.com/api/v1/lookup?locations=19.648327%2C103.561592",
-                "authority": "medium",
-                "accessed": "2026-09-29",
-                "notes": "DEM-оценка по координате геопривязанной фотографии; не геодезическая отметка входа."
+                "type": "academic",
+                "title": "Seven new species and seven new records of Begonia in the flora of Laos",
+                "publisher": "Turczaninowia",
+                "url": "https://turczaninowia.asu.ru/article/download/9830/8062/",
+                "language": "en",
+                "published_at": "2021",
+                "accessed": "2026-10-01",
+                "authority": "high",
+                "used_for": [
+                  "Tham Piu Cave Area elevation",
+                  "site-scale coordinate cross-check"
+                ]
               },
-              "checked_at": "2026-09-29",
-              "notes": "Приближённая DEM-высота в зоне мемориальной пещеры."
+              "checked_at": "2026-10-01",
+              "notes": "Полевой ботанический сбор указан для Tham Piu Cave Area на высоте 700 м; это репрезентативная высота участка, а не геодезическая отметка порога пещеры."
             },
-            "coordinates_checked_at": "2026-09-29"
+            "coordinates_checked_at": "2026-10-01",
+            "geo_points": [
+              {
+                "name": "Tham Piew Cave Museum",
+                "type": "center",
+                "coordinates": {
+                  "lat": 19.67378,
+                  "lon": 103.56784,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Tham Piew Cave Museum",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/N1391094116",
+                  "language": "en",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "museum coordinates",
+                    "access anchor"
+                  ]
+                },
+                "checked_at": "2026-10-01"
+              },
+              {
+                "name": "Tham Piew Memorial",
+                "type": "center",
+                "coordinates": {
+                  "lat": 19.67468,
+                  "lon": 103.5679,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Tham Piew Memorial",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/N1391094165",
+                  "language": "en",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "memorial coordinates",
+                    "visual recon"
+                  ]
+                },
+                "checked_at": "2026-10-01"
+              }
+            ]
           },
           "logistics": {
-            "access": "Включается в северный маршрут наследия вокруг Muang Kham; дорога однодневный выезд из Пхонсаван с остановками у исторических/этнографических точек. Никакой лодки для Тхам-Пиу не требуется.",
-            "public_transport": "База Пхонсаван/Muang Kham; местный автобус до Muang Kham, дальше тук-тук/водитель.",
-            "last_mile": "От парковки/мемориала короткий подъём к пещере; ориентировочно до 1–2 км суммарно.",
-            "typical_visit_hours": [
-              4,
-              8
-            ],
-            "permit_or_guide": "гид не обязателен; местный проводник полезен только для исторического контекста или дополнительных маршрутов",
+            "access": "Тхам-Пиу расположен примерно в 4,5 км к северу от Муанг-Кхама. Самостоятельный доступ по дороге возможен; актуального обязательного гида или отдельного разрешения для мемориального комплекса в найденных источниках нет.",
+            "public_transport": "Надёжного актуального расписания общественного транспорта непосредственно к Тхам-Пиу не найдено. Маршрут общественным транспортом имеет смысл строить до Муанг-Кхама, а последнее плечо планировать отдельно.",
+            "last_mile": "От музейно-мемориальной зоны к входу ведёт лестничный подъём. OpenStreetMap/Mapcarta помещает музей примерно в 220 м по прямой к юго-западу от входа; фактический путь по лестнице длиннее. Точную длину тропы авторитетные источники не публикуют.",
+            "typical_visit_hours": null,
+            "permit_or_guide": "Подтверждения обязательного гида не найдено. Сам объект посещается самостоятельно; местный гид имеет смысл только для исторического контекста и перевода экспозиции.",
             "modes": {
-              "public_transport": "База Пхонсаван/Muang Kham; местный автобус до Muang Kham, дальше тук-тук/водитель.",
-              "taxi_ridehail": "Частный автомобиль из Пхонсаван проще объединить с горячими источниками/Muang Kham.",
-              "moped": "Возможен по основной дороге для опытного водителя; не сходить на неизвестные сельские тропы из-за UXO.",
-              "walking": "От парковки/мемориала короткий подъём к пещере; ориентировочно до 1–2 км суммарно."
+              "public_transport": "до Муанг-Кхама; актуальное расписание и точку высадки проверять перед выездом",
+              "taxi_ridehail": "ride-hailing не считать гарантированным; практичнее заранее договориться о машине/водителе из Муанг-Кхама или Пхонсавана",
+              "moped": "самостоятельный подъезд возможен; отзывы 2023–2025 описывают извилистую горную дорогу и местами неровное покрытие",
+              "walking": "от музейно-мемориальной зоны — лестничный подъём; недавние отзывы стабильно отмечают множество крутых ступеней, точный километраж не опубликован"
             },
-            "water": "Воду взять до подъёма; в мемориальной зоне сервис ограничен.",
-            "overnight_and_camping": "Не ночевать в пещере/мемориале; Пхонсаван или Muang Kham.",
-            "access_requirements": "гид не обязателен; местный проводник полезен только для исторического контекста или дополнительных маршрутов",
-            "self_guided_default": false,
-            "travel_model": "самостоятельно"
+            "water": "В отзыве 2023 года у входной зоны упомянуты небольшие кафе и киоски, но их наличие нельзя считать гарантированным. Надёжную питьевую воду лучше купить в Муанг-Кхаме до выезда.",
+            "overnight_and_camping": "Надёжного источника, разрешающего кемпинг на мемориальной территории, не найдено; статус свободной ночёвки считать неясным. Для ночёвки использовать Муанг-Кхам или Пхонсаван.",
+            "access_requirements": "Специальное разрешение для обычного посещения в найденных источниках не указано; не выходить на неизвестные боковые тропы и поля в Сиангкхуанг из-за UXO.",
+            "self_guided_default": true,
+            "travel_model": "самостоятельное посещение"
           },
           "climate": {
-            "best_period": "Ноябрь–февраль; UXO — не сходить с проверенных маршрутов.",
-            "heat_rain_notes": "Высокое плато: прохладнее зимой, влажные дороги в муссон.",
-            "site_specific_notes": "Высокое плато даёт прохладное утро; на мемориальном маршруте погода важнее для дороги, чем для самой пещеры."
+            "best_period": "Специального официального сезона для Тхам-Пиу не опубликовано. Для внешней лестницы и дороги сухая погода проще, но сама мемориальная пещера не является сезонным маршрутом.",
+            "heat_rain_notes": "Высокое плато Сиангкхуанг прохладнее лаосских низменностей; после дождя лестницы и камни у входа становятся скользкими.",
+            "site_specific_notes": "Погода влияет прежде всего на подъезд и внешний лестничный участок; в неосвещённой части пещеры время суток почти не меняет условия."
           },
           "operations": {
-            "hours": "Тхам-Пиу — историческая мемориальная пещера на северном маршруте наследия; это не речная пещерная экспедиция. Текущий официальный ежедневный график в доступных авторитетных источниках не опубликован, поэтому посещать в светлое время и подтверждать локально в Сиангкхуанг.",
-            "ticket": "Небольшой местный/объект сбор возможен; актуальная сумма не подтверждена авторитетным текущим источником.",
-            "closure_notes": "Главный контекст региона — UXO: не сходить с используемых дорог/троп и не исследовать неизвестные пещеры/поля самостоятельно. Тхам-Пиу имеет мемориальный характер и требует уважительной съёмки.",
-            "last_verified": "2026-09-28",
-            "official_url": "https://whc.unesco.org/document/168605",
-            "status": "open_historical_memorial_cave"
+            "hours": "Актуальный официальный ежедневный график на 2026 год найти не удалось. Текущие картографические и пользовательские сервисы показывают утреннее открытие, но закрытие и кассовый режим требуют проверки на месте.",
+            "ticket": "Актуальная официальная цена не подтверждена. В отзыве ноября 2025 года упомянут сбор 30 000 LAK с человека; хранить это только как датированный полевой отчёт, не как действующий тариф.",
+            "closure_notes": "Главное ограничение за пределами благоустроенного комплекса — UXO. Не использовать неизвестные поля и боковые тропы как сокращение.",
+            "last_verified": "2026-10-01",
+            "official_url": "https://www.tourismlaos.org/northern-provinces/xiangkhouang-province/",
+            "status": "open_memorial_cave_current_hours_unverified"
           },
           "safety": {
             "main_risks": [
-              "погодные изменения",
-              "скользкие/неровные тропы",
-              "тепловая нагрузка или обезвоживание",
-              "ограниченная быстрая медицинская помощь в удалённых зонах",
-              "паводок/подъём воды",
-              "темнота и скользкие поверхности",
-              "обычная осторожность с ценностями и транспортом"
+              "крутая лестница и скользкие ступени после дождя",
+              "неосвещённый интерьер пещеры",
+              "рыхлый каменный материал и следы обрушения в повреждённой входной камере",
+              "UXO вне благоустроенных дорог, площадок и проверенных троп региона"
             ],
             "sensitive_areas": [
-              "в районах бывших боевых действий не сходить с проверенных троп из-за UXO",
-              "some border zones"
+              "мемориал и места захоронений требуют уважительного поведения",
+              "не сходить на неизвестные поля и боковые тропы из-за UXO"
             ]
           },
           "media": {
-            "photo_suitability_5": 5,
-            "video_suitability_5": 5,
-            "best_light": "рассвет и последние часы дня; в дождевой лес мягкий свет после дождя часто лучше жёсткого полудня",
+            "photo_suitability_5": 4,
+            "video_suitability_5": 4,
+            "best_light": "Для внешней мемориальной площадки и склона полезен мягкий утренний или облачный свет; внутри пещеры естественного света быстро становится мало.",
             "drone": {
               "legal_status": "regulated",
               "permit_required": "Для полётов над населёнными пунктами, в контролируемом или ограниченном воздушном пространстве требуется согласование соответствующего органа; у конкретного объекта могут действовать дополнительные ограничения.",
@@ -12120,88 +12179,184 @@
                 "accessed": "2026-09-29"
               }
             },
-            "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие.",
+            "filming_restrictions": "Специальный запрет на обычную фотосъёмку в найденных источниках не подтверждён. Мемориал, могилы и возможные ритуалы снимать уважительно; людей — с их согласием. Для дрона действуют общенациональные авиационные ограничения.",
             "visual_scouting": {
-              "best_time": "Утро или мягкая облачность для внешнего мемориального пространства; внутри пещеры время суток вторично.",
-              "best_weather_light": "Рассеянный свет уменьшает перепад между тёмным входом и внешней площадкой.",
+              "best_time": "Утро или облачный день для мемориальной зоны; для документирования интерьера время суток вторично.",
+              "best_weather_light": "После дождя зелень склона выразительнее, но лестница скользкая. Облачность уменьшает перепад яркости между входом и внешней площадкой.",
               "viewpoints_for_photo_video": [
                 {
-                  "id": "tham_piu_geotag",
-                  "name": "Мемориальная зона Tham Piu",
-                  "description": "Геопривязанная фотография фиксирует пещеру и мемориальную зону на склоне; точка используется как приближённый визуальный якорь.",
+                  "id": "tham_piu_memorial",
+                  "name": "Мемориальная площадка",
+                  "description": "Точка у мемориала связывает статую, музей, лестницу и лесистый склон; отсюда читается мемориальный комплекс как единое место, а не только вход в пещеру.",
                   "coordinates": {
-                    "lat": 19.648327,
-                    "lon": 103.561592,
+                    "lat": 19.67468,
+                    "lon": 103.5679,
                     "elevation_m": null
                   },
-                  "best_time": "morning или overcast_day",
                   "view": {
-                    "description": "склон, вход в пещеру и мемориальное пространство"
+                    "description": "мемориал, подход к лестнице и склон с входом в пещеру"
                   },
+                  "best_time": "morning или overcast_day",
                   "useful_equipment": [
                     {
                       "type": "wide",
-                      "why": "связь пещеры со склоном"
+                      "why": "мемориал вместе со склоном и подходом"
                     },
                     {
                       "type": "standard",
-                      "why": "мемориальные детали"
+                      "why": "статуя, таблички и детали мемориального пространства"
                     }
                   ],
                   "source": {
-                    "type": "other",
-                    "title": "Tham Piu - panoramio.jpg",
-                    "publisher": "Wikimedia Commons / Gonzo Gooner",
-                    "url": "https://commons.wikimedia.org/wiki/File:Tham_Piu_-_panoramio.jpg",
-                    "authority": "medium",
-                    "accessed": "2026-09-29"
+                    "type": "map",
+                    "title": "Tham Piew Memorial",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N1391094165",
+                    "language": "en",
+                    "accessed": "2026-10-01",
+                    "authority": "medium"
+                  }
+                },
+                {
+                  "id": "tham_piu_cave_entrance",
+                  "name": "Вход в Tham Piu",
+                  "description": "Входная камера важна как геологический и исторический объект: исследование Geoheritage описывает разрушенные плиты, обвалы и материальные следы боевого воздействия.",
+                  "coordinates": {
+                    "lat": 19.67549,
+                    "lon": 103.56885,
+                    "elevation_m": null
+                  },
+                  "view": {
+                    "description": "входная камера, разрушенный известняк и переход от внешнего склона в тёмный интерьер"
+                  },
+                  "best_time": "daylight",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "масштаб входной камеры и разрушенного известняка"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "мемориальные и геологические детали без искажения масштаба"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Tham Piew Cave",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N1391094366",
+                    "language": "en",
+                    "accessed": "2026-10-01",
+                    "authority": "medium"
                   }
                 }
               ],
               "seasonal_visuals": [
-                "После дождей склон зеленее и скользче; в сухой сезон доступ проще."
+                "В сезон дождей склон зеленее, но лестница и камни заметно скользче.",
+                "В сухую погоду проще читать внешний рельеф и мемориальную планировку."
               ],
               "video_activity": [
-                "подход от мемориала к пещере",
-                "переход от внешнего ландшафта к тёмному интерьеру"
+                "движение посетителей между музеем, мемориалом и лестницей",
+                "переход от открытого мемориального пространства к повреждённой входной камере",
+                "современные практики поминовения — только когда они реально происходят и с уважением к участникам"
               ],
               "useful_equipment": [
                 {
                   "type": "wide",
-                  "why": "вход и склон"
+                  "why": "связь мемориала, лестницы, склона и входа"
                 },
                 {
                   "type": "standard",
-                  "why": "мемориальный контекст"
+                  "why": "экспозиция, мемориальные элементы и структура повреждённой камеры"
+                },
+                {
+                  "type": "phone",
+                  "why": "компактная документальная съёмка в тесных участках без отдельного комплекта"
                 }
               ]
             }
           },
           "annotation": {
-            "narrative": "Тхам-Пиу — пещера и мемориал в Сиангкхуанг, связанный с гибелью мирных жителей во время войны в Индокитае. Для маршрута это не 'ещё одна пещера', а место памяти, которое объясняет, почему UXO и бомбардировки остаются частью современной географии провинции.",
-            "culture_ethnography": "",
-            "geography_geology": "Пещера находится в известняковой зоне Muang Kham; окружающий сельский ландшафт контрастирует с военной историей места.",
-            "myths_legends_beliefs": [],
+            "narrative": "Тхам-Пиу — не просто военный мемориал, помещённый в пещеру. Карстовая полость сама стала вещественным документом войны: исследователи описывают разрушение входной камеры, крупные отслоившиеся известняковые плиты, металлические фрагменты и небольшие человеческие останки среди обломков. Местная мемориальная традиция связывает катастрофу с 24 ноября 1968 года и гибелью 374 укрывавшихся людей. При этом академические авторы отдельно отмечают отсутствие однозначно совпадающей записи в опубликованных американских военных журналах, поэтому карточка не превращает локальную атрибуцию удара в неоспоренный архивный факт.",
+            "culture_ethnography": "Тхам-Пиу действует как место памяти для жителей Сиангкхуанг и как часть северного маршрута наследия вокруг Муанг-Кхама. Мемориал, музей, статуя, могильные маркеры и каменные мемориальные кучки внутри пещеры формируют современную практику поминовения. Регион многоэтничен — здесь живут пхуан, хмонг, кхму и другие группы, — но надёжного источника, позволяющего приписать жертв Тхам-Пиу одной этнической группе, нет, поэтому карточка этого не делает.",
+            "geography_geology": "Пещера находится в карстовом ландшафте округа Кхам. Ботанический полевой сбор 2019 года фиксирует район Tham Piu Cave примерно на 700 м над уровнем моря; OSM помещает вход в 4,5 км к северу от Муанг-Кхама. Геологическая ценность необычна: война стала частью геоморфологии объекта, поскольку высокоэнергетическое воздействие разрушило известняковую входную камеру и оставило устойчивый слой обломочного материала.",
+            "myths_legends_beliefs": [
+              {
+                "type": "local_tradition",
+                "text": "Современная традиция памяти связана не с отдельной легендой, а с поминовением погибших: внутри пещеры посетители складывают небольшие каменные мемориальные кучки, а 24 ноября в локальном нарративе закреплено как день памяти. Это современная мемориальная практика, а не доказательство деталей самого удара."
+              }
+            ],
             "sections": [
+              {
+                "section_id": "overview",
+                "content": "Тхам-Пиу объединяет три слоя: естественную карстовую пещеру, физически повреждённый войной геологический объект и современный мемориальный комплекс. Посещение имеет смысл строить через музей и мемориал, а затем подниматься к самой пещере."
+              },
               {
                 "section_id": "history",
                 "content": [
                   {
                     "type": "documented_history",
-                    "text": "Тхам-Пиу — пещера и мемориал в Сиангкхуанг, связанный с гибелью мирных жителей во время войны в Индокитае. Для маршрута это не 'ещё одна пещера', а место памяти, которое объясняет, почему UXO и бомбардировки остаются частью современной географии провинции."
+                    "text": "Во время войны пещеры Сиангкхуанг использовались как укрытия, склады и медицинские пространства. В Тхам-Пиу исследователи зафиксировали крупномасштабное разрушение входной камеры, металлические фрагменты и человеческие останки среди известнякового щебня, что подтверждает смертельное высокоэнергетическое воздействие на пещеру."
+                  },
+                  {
+                    "type": "local_tradition",
+                    "text": "Лаосский мемориальный нарратив датирует катастрофу 24 ноября 1968 года и говорит о 374 погибших мужчинах, женщинах и детях, укрывавшихся в пещере; удар традиционно приписывается американскому самолёту."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "Исследование Kevin Kiernan и последующая работа Katherine O’Brien отмечают, что в доступной рассекреченной истории ВВС США не найдено однозначной записи, совпадающей одновременно по месту и дате с мемориальной версией Тхам-Пиу. Это не отменяет физически подтверждённой катастрофы, но оставляет точную военную атрибуцию открытым вопросом."
                   }
                 ]
               },
               {
                 "section_id": "geography",
-                "content": "Пещера находится в известняковой зоне Muang Kham; окружающий сельский ландшафт контрастирует с военной историей места."
+                "content": "Вход Тхам-Пиу находится на лесистом карстовом склоне примерно в 4,5 км севернее Муанг-Кхама. Музей и мемориал расположены ниже входа и образуют отдельную нижнюю точку доступа."
+              },
+              {
+                "section_id": "geology",
+                "content": "Известняковая пещера представляет редкий пример военного воздействия на геонаследие. Исследователи описывают сорванные со свода и стен плиты, массивный обвальный материал и следы взрывного воздействия; сама разрушенная камера является частью исторического свидетельства."
+              },
+              {
+                "section_id": "culture",
+                "content": "Современное значение Тхам-Пиу — мемориальное. Oliver Tappe рассматривает подобные памятники Сиангкхуанг как места, где личная и локальная память о потерях соединяется с государственной культурой памяти. На месте это выражено музеем, статуей, могильными маркерами и практиками поминовения внутри пещеры."
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Сиангкхуанг — многоэтничный регион с сильным пхуанским историческим слоем и крупными хмонгскими и кхму общинами. Однако доступные источники не позволяют надёжно определить этнический состав погибших в Тхам-Пиу, поэтому объект не описывается как мемориал одной этнической группы."
+              },
+              {
+                "section_id": "myths_beliefs",
+                "content": [
+                  {
+                    "type": "local_tradition",
+                    "text": "Каменные мемориальные кучки внутри пещеры и ежегодное поминовение 24 ноября относятся к современной практике памяти. Их следует описывать как локальную традицию поминовения, а не как древний культ или легенду."
+                  }
+                ]
               }
             ]
           },
           "traveler_reports": {
             "recurring_issues": [
-              "на объект иногда приезжают без достаточного исторического контекста; сначала прочитать экспозицию/описания, затем снимать",
-              "сельские боковые тропы в Сиангкхуанг нельзя использовать как сокращённый путь из-за UXO"
+              "Ноябрь 2025: посетитель сообщил о большом количестве крутых ступеней, отсутствии освещения внутри, необходимости собственного фонаря и заметном мусоре снаружи и в пещере.",
+              "Ноябрь 2024: посетитель также описал крутой подъём и отсутствие освещения; без собственного света глубже примерно первых десятков метров ориентироваться трудно.",
+              "Июнь 2023: сообщалось о небольших кафе/киосках у входной зоны, парковке и самостоятельном доступе на мотоцикле; дорога из крупных центров извилистая, местами с неровным покрытием."
+            ],
+            "reports": [
+              {
+                "date": "2025-11-04",
+                "source": "Google review via Wanderlog",
+                "summary": "Много ступеней к входу; внутри темно, собственный фонарь полезен. Автор указал 30 000 LAK с человека как фактически уплаченный сбор и пожаловался на мусор; это не официальный тариф."
+              },
+              {
+                "date": "2024-11-13",
+                "source": "Google review via Wanderlog",
+                "summary": "Крутой лестничный подъём и неосвещённая пещера; без собственного света дальнейшее исследование ограничено."
+              },
+              {
+                "date": "2023-06-06",
+                "source": "Google review via Wanderlog",
+                "summary": "Небольшие рестораны/киоски у входа, парковка, лестничная петля к пещере и самостоятельный подъезд на мотоцикле; сообщение использовать как датированное наблюдение."
+              }
             ]
           },
           "accommodation": [
@@ -12216,121 +12371,396 @@
           ]
         },
         "illustration": {
-          "static_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Tham_Piu_-_panoramio.jpg",
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tham_Piu_-_panoramio.jpg",
           "source_page": "https://commons.wikimedia.org/wiki/File:Tham_Piu_-_panoramio.jpg",
           "provider": "Wikimedia Commons",
           "license": "CC BY 3.0",
           "artist": "Gonzo Gooner",
           "illustration_scope": "object-specific",
-          "last_checked": "2026-09-28"
+          "last_checked": "2026-10-01",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crater_Valley_-_panoramio.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Crater_Valley_-_panoramio.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 3.0",
+              "artist": "Gonzo Gooner",
+              "last_checked": "2026-10-01",
+              "subject": "Contextual: bomb-crater landscape near Phonsavan, not the Tham Piu cave site"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phonsavan_Hills.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Phonsavan_Hills.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 3.0",
+              "artist": "PTD Phonsavan",
+              "last_checked": "2026-10-01",
+              "subject": "Contextual: Xiangkhouang highland landscape near Phonsavan, not the cave itself"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phuan_Girls.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Phuan_Girls.JPG",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 3.0",
+              "artist": "PTD Phonsavan",
+              "last_checked": "2026-10-01",
+              "subject": "Contextual: Phuan traditional clothing in Xiangkhouang; not identified as Tham Piu victims or residents"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/UXO_Architecture_1.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:UXO_Architecture_1.JPG",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY 3.0",
+              "artist": "PTD Phonsavan",
+              "last_checked": "2026-10-01",
+              "subject": "Contextual: reuse of UXO material in Xiangkhouang province, not the Tham Piu memorial"
+            }
+          ]
         },
         "sources": [
           {
-            "url": "https://whc.unesco.org/document/222086",
-            "publisher": "UNESCO World Heritage Centre",
+            "type": "government_official",
+            "title": "Xieng Khouang Province",
+            "publisher": "Tourism Laos / Ministry of Culture and Tourism",
+            "url": "https://www.tourismlaos.org/northern-provinces/xiangkhouang-province/",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
             "used_for": [
-              "object context",
-              "access/operations where published"
-            ],
-            "accessed": "2026-09-28"
+              "regional geography",
+              "regional ethnography",
+              "UXO context",
+              "Muang Kham context"
+            ]
           },
           {
-            "url": "https://commons.wikimedia.org/wiki/File:Tham_Piu_-_panoramio.jpg",
-            "publisher": "Wikimedia Commons",
-            "used_for": [
-              "illustration",
-              "image provenance"
-            ],
-            "accessed": "2026-09-28"
-          },
-          {
-            "url": "https://www.lsb.gov.la/",
-            "publisher": "national statistics / official source",
-            "used_for": [
-              "regional language context"
-            ],
-            "accessed": "2026-09-28",
-            "notes": "Practical region language profile is a field synthesis rather than exhaustive census enumeration."
-          },
-          {
+            "type": "international_organization",
+            "title": "Heritage Interpretation and Tourism Management Plan for the Plain of Jars",
+            "publisher": "UNESCO / Xieng Khouang",
             "url": "https://whc.unesco.org/document/168605",
-            "publisher": "UNESCO / Xieng Khouang visitor-management material",
+            "language": "en",
+            "published_at": "2017",
+            "accessed": "2026-10-01",
+            "authority": "high",
             "used_for": [
               "Northern Heritage Route",
-              "Tham Piu context"
-            ],
-            "accessed": "2026-09-28"
+              "historic Tham Piu visitor-management context",
+              "2015 visitor estimate"
+            ]
+          },
+          {
+            "type": "academic",
+            "title": "Impacts of War on Geodiversity and Geoheritage: Case Studies of Karst Caves from Northern Laos",
+            "publisher": "Geoheritage / Springer",
+            "url": "https://www.researchgate.net/publication/236736956_Impacts_of_War_on_Geodiversity_and_Geoheritage_Case_Studies_of_Karst_Caves_from_Northern_Laos",
+            "language": "en",
+            "published_at": "2012",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "karst geology",
+              "blast damage",
+              "physical remains",
+              "archival attribution uncertainty"
+            ]
+          },
+          {
+            "type": "academic",
+            "title": "Seven new species and seven new records of Begonia in the flora of Laos",
+            "publisher": "Turczaninowia",
+            "url": "https://turczaninowia.asu.ru/article/download/9830/8062/",
+            "language": "en",
+            "published_at": "2021",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "Tham Piu Cave Area coordinate cross-check",
+              "700 m site elevation"
+            ]
+          },
+          {
+            "type": "map",
+            "title": "Tham Piew Cave",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N1391094366",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "cave entrance coordinates",
+              "Muang Kham distance"
+            ]
+          },
+          {
+            "type": "map",
+            "title": "Tham Piew Cave Museum",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N1391094116",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "museum coordinates",
+              "museum-to-cave spatial relation"
+            ]
+          },
+          {
+            "type": "map",
+            "title": "Tham Piew Memorial",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N1391094165",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "memorial coordinates",
+              "visual recon"
+            ]
+          },
+          {
+            "type": "academic",
+            "title": "Tragedy at Tham Piu: Causality and Wartime Memory",
+            "publisher": "Pax et Bellum",
+            "url": "https://www.paxetbellum.org/wp-content/uploads/2021/06/Journal-with-cover.pdf",
+            "language": "en",
+            "published_at": "2021",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "1968 local account",
+              "374-victim memorial narrative",
+              "archival uncertainty"
+            ]
+          },
+          {
+            "type": "academic",
+            "title": "Faces and Facets of the Kantosou: Remembering War in Laos",
+            "publisher": "Asian Studies Review / Taylor & Francis",
+            "url": "https://www.tandfonline.com/doi/abs/10.1080/10357823.2013.770448",
+            "language": "en",
+            "published_at": "2013",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "memory culture",
+              "Tham Piu memorial interpretation"
+            ]
+          },
+          {
+            "type": "government_official",
+            "title": "Caves of Xieng Khouang and wartime heritage",
+            "publisher": "Lao News Agency (KPL)",
+            "url": "https://kpl.gov.la/EN/detail.aspx?id=20339",
+            "language": "en",
+            "published_at": "2017",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "wartime cave use",
+              "public memorial context"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Tham Piu - panoramio.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Tham_Piu_-_panoramio.jpg",
+            "language": "en",
+            "published_at": "2011-01-21",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "object-specific cover media"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Crater Valley - panoramio.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Crater_Valley_-_panoramio.jpg",
+            "language": "en",
+            "published_at": "2011-01-21",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "contextual gallery",
+              "regional bombing landscape"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Phonsavan Hills.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Phonsavan_Hills.jpg",
+            "language": "en",
+            "published_at": "2006-10-20",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "contextual gallery",
+              "Xiangkhouang highland landscape"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Phuan Girls.JPG",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Phuan_Girls.JPG",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "contextual gallery",
+              "Phuan cultural context"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "UXO Architecture 1.JPG",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:UXO_Architecture_1.JPG",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "contextual gallery",
+              "Xiangkhouang UXO legacy"
+            ]
+          },
+          {
+            "type": "traveler_review",
+            "title": "Tham Piew Cave — recent visitor reports",
+            "publisher": "Wanderlog aggregation of Google reviews",
+            "url": "https://wanderlog.com/place/details/4220738/tham-piew-cave",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "2023-2025 stairs and lighting reports",
+              "visitor fee snapshot",
+              "snack stands",
+              "motorbike access",
+              "trash complaint"
+            ]
           }
         ],
         "verification": {
           "dynamic_fields": [
             "hours",
             "tickets",
-            "permits",
             "access",
+            "public_transport",
             "weather/season",
             "filming/drone",
             "security"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Тхам-Пиу — пещера и мемориал в Сиангкхуанг, связанный с гибелью мирных жителей во время войны в Индокитае. Для маршрута это не 'ещё одна пещера', а место памяти, которое объясняет, почему UXO и бомбардировки остаются частью современной географии провинции. Пещера находится в известняковой зоне Muang Kham; окружающий сельский ландшафт контрастирует с военной историей места. Сезон: Ноябрь–февраль; UXO — не сходить с проверенных маршрутов. Высокое плато даёт прохладное утро; на мемориальном маршруте погода важнее для дороги, чем для самой пещеры.",
+        "narrow": "Тхам-Пиу — карстовая пещера и мемориальный комплекс к северу от Муанг-Кхама, где местная память связывает 24 ноября 1968 года с гибелью 374 человек, укрывавшихся от войны. Ценность объекта двойная: это место памяти и редкий геологический архив боевого воздействия — исследователи фиксируют разрушенную входную камеру, обвалы, металлические фрагменты и человеческие останки. При этом точная архивная атрибуция удара остаётся предметом исследования, поэтому мемориальная версия и независимо подтверждённые факты здесь разделены.",
         "tags": [
           "history",
           "memorial",
           "cave",
+          "karst",
           "culture",
-          "nature",
-          "wildlife",
           "rural",
-          "guide_or_permit",
+          "self_guided",
           "weather_sensitive",
           "class_history_culture"
         ],
         "route_meta": {
-          "region_ref": "Сиангкхуанг",
-          "locality_ref": "Пхонсаван",
-          "typical_visit_hours": [
-            4,
-            8
-          ],
+          "region_ref": "Сиангкхуанг / округ Кхам",
+          "locality_ref": "Муанг-Кхам",
+          "typical_visit_hours": null,
           "transport_modes": {
-            "public_transport": "База Пхонсаван/Muang Kham; местный автобус до Muang Kham, дальше тук-тук/водитель.",
-            "taxi_ridehail": "Частный автомобиль из Пхонсаван проще объединить с горячими источниками/Muang Kham.",
-            "moped": "Возможен по основной дороге для опытного водителя; не сходить на неизвестные сельские тропы из-за UXO.",
-            "walking": "От парковки/мемориала короткий подъём к пещере; ориентировочно до 1–2 км суммарно."
+            "public_transport": "до Муанг-Кхама; актуальное расписание последнего плеча к Тхам-Пиу не подтверждено",
+            "taxi_ridehail": "договорной автомобиль/водитель; ride-hailing не считать гарантированным",
+            "moped": "самостоятельный подъезд возможен; недавние отзывы отмечают извилистую горную дорогу и местами неровное покрытие",
+            "walking": "лестничный подъём от музейно-мемориальной зоны; музей находится примерно в 220 м по прямой от входа, реальный путь длиннее"
           },
-          "walking": "От парковки/мемориала короткий подъём к пещере; ориентировочно до 1–2 км суммарно.",
-          "water": "Воду взять до подъёма; в мемориальной зоне сервис ограничен.",
-          "overnight_and_camping": "Не ночевать в пещере/мемориале; Пхонсаван или Muang Kham.",
-          "permit_or_guide": "гид не обязателен; местный проводник полезен только для исторического контекста или дополнительных маршрутов",
-          "best_period": "Ноябрь–февраль; UXO — не сходить с проверенных маршрутов.",
-          "current_status": "open_historical_memorial_cave",
+          "walking": "Крутой лестничный подъём; точная длина тропы и набор высоты не опубликованы надёжным источником.",
+          "water": "Малые кафе/киоски у входа отмечены путешественником в 2023 году, но не считать их гарантированным источником; воду брать в Муанг-Кхаме.",
+          "overnight_and_camping": "Разрешение на лагерь у мемориала не подтверждено; статус свободного кемпинга неясен.",
+          "permit_or_guide": "Обязательный гид для обычного посещения не подтверждён; посещение по умолчанию самостоятельное.",
+          "best_period": "специального сезона нет; сухая погода удобнее для лестницы и дороги",
+          "current_status": "open_memorial_cave_current_hours_unverified",
           "main_risks": [
-            "погодные изменения",
-            "скользкие/неровные тропы",
-            "тепловая нагрузка или обезвоживание",
-            "ограниченная быстрая медицинская помощь в удалённых зонах",
-            "паводок/подъём воды",
-            "темнота и скользкие поверхности",
-            "обычная осторожность с ценностями и транспортом"
+            "крутая лестница и скользкие ступени",
+            "неосвещённая пещера",
+            "рыхлый обломочный материал в повреждённой камере",
+            "UXO вне проверенных дорог и троп"
           ],
           "expedition_profile": {
-            "default_mode": "самостоятельно",
-            "route_scale": "полный день или больше",
-            "terrain_and_movement": "От парковки/мемориала короткий подъём к пещере; ориентировочно до 1–2 км суммарно.",
-            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
-            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
-            "local_support": "гид не обязателен; местный проводник полезен только для исторического контекста или дополнительных маршрутов"
+            "default_mode": "самостоятельно через Муанг-Кхам",
+            "route_scale": "локальный мемориальный объект; полноценный день нужен только при объединении с другими точками Northern Heritage Circuit",
+            "terrain_and_movement": "дорога до мемориала, затем лестничный подъём по карстовому склону",
+            "physical_difficulty_policy": "ступени и уклон фиксируются как параметры доступа, а не причина исключать объект",
+            "camping_assumption": "наличие палатки не означает разрешение ночевать на мемориальной территории",
+            "local_support": "гид не обязателен; полезен только для исторического контекста и перевода"
           }
         },
         "qa": {
           "language_review": {
             "status": "reviewed",
-            "checked_at": "2026-09-29",
-            "notes": "Пользовательский narrative/logistics слой проверен на естественный русский; собственные имена и официальные названия сохранены."
+            "checked_at": "2026-10-01",
+            "notes": "Убрана англо-русская смесь и шаблонные туристические формулировки; собственные имена сохранены."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "объектный QA Tham Piu Cave по текущему экспедиционному стандарту",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true
+            },
+            "notes": [
+              "Первичная координата заменена с точки геотегированной фотографии на OSM cave_entrance; музей и мемориал добавлены отдельными geo_points.",
+              "Старая DEM-высота 631 м по удалённой фототочке заменена полевым академическим указанием 700 м для Tham Piu Cave Area.",
+              "Локальная версия о 24 ноября 1968 года и 374 погибших отделена от архивно подтверждаемой части; спорная атрибуция удара не выдается за закрытый факт.",
+              "Удалены неподтверждённые 1–2 км пешком и универсальные 4–8 часов посещения.",
+              "Шаблонные риски заменены объектными: лестница, темнота, разрушенный известняк и UXO вне проверенных маршрутов.",
+              "Галерея доведена до пяти лицензированных изображений; четыре региональных кадра явно маркированы как контекстуальные."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "редакционная приёмка Tham Piu Cave",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "ethnography_substantive": true,
+              "legend_or_beliefs_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest_unknowns": true,
+              "overnight_honest_unknowns": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true
+            },
+            "notes": [
+              "Физические следы удара и карстовая геология основаны на исследовании Geoheritage; высота — на полевой ботанической публикации.",
+              "Мемориальная версия события хранится как local_tradition/commemorative narrative, а не как бесспорная архивная атрибуция.",
+              "Актуальные часы, цена и общественный транспорт оставлены неполными там, где нет надёжного текущего официального источника.",
+              "Недавние отзывы используются только как датированные наблюдения о ступенях, освещении, мусоре, киосках и фактически уплаченном сборе."
+            ]
           }
-        }
+        },
+        "lead": "Тхам-Пиу — карстовая пещера и мемориальный комплекс к северу от Муанг-Кхама, где местная память связывает 24 ноября 1968 года с гибелью 374 человек, укрывавшихся от войны. Ценность объекта двойная: это место памяти и редкий геологический архив боевого воздействия — исследователи фиксируют разрушенную входную камеру, обвалы, металлические фрагменты и человеческие останки. При этом точная архивная атрибуция удара остаётся предметом исследования, поэтому мемориальная версия и независимо подтверждённые факты здесь разделены."
       },
       {
         "name": "Vientiane sacred architecture",

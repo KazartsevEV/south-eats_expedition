@@ -157,9 +157,68 @@
     }
   },
   "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "historic_building",
+      "label_ru": "Исторические здания и руины",
+      "count": 1
+    },
+    {
+      "object_type": "natural_landscape",
+      "label_ru": "Природные ландшафты и треккинг",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_building",
+          "label_ru": "Исторические здания и руины",
+          "count": 1,
+          "country_class_page": "pages/countries/singapore/classes/historic_building.json",
+          "filter": {
+            "geography_id": "sg:geographic_area:southern-ridges-gillman"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "natural_landscape",
+          "label_ru": "Природные ландшафты и треккинг",
+          "count": 1,
+          "country_class_page": "pages/countries/singapore/classes/natural_landscape.json",
+          "filter": {
+            "geography_id": "sg:geographic_area:southern-ridges-gillman"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:southern-ridges-and-henderson-waves",
+      "name": "Southern Ridges and Henderson Waves",
+      "object_type": "natural_landscape",
+      "narrow": "Southern Ridges and Henderson Waves — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/southern-ridges-and-henderson-waves.json"
+    },
+    {
+      "id": "sg:gillman-barracks",
+      "name": "Gillman Barracks",
+      "object_type": "historic_building",
+      "narrow": "Gillman Barracks — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/gillman-barracks.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

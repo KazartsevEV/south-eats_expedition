@@ -158,9 +158,68 @@
     }
   },
   "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "cultural_landscape",
+      "label_ru": "Культурные ландшафты",
+      "count": 1
+    },
+    {
+      "object_type": "wetland",
+      "label_ru": "Болота и водно-болотные угодья",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "religion_ethnography",
+      "label_ru": "Религия, этнография и живая культура",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "cultural_landscape",
+          "label_ru": "Культурные ландшафты",
+          "count": 1,
+          "country_class_page": "pages/countries/singapore/classes/cultural_landscape.json",
+          "filter": {
+            "geography_id": "sg:geographic_area:north-kranji-sungei-buloh"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "wetland",
+          "label_ru": "Болота и водно-болотные угодья",
+          "count": 1,
+          "country_class_page": "pages/countries/singapore/classes/wetland.json",
+          "filter": {
+            "geography_id": "sg:geographic_area:north-kranji-sungei-buloh"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:sungei-buloh-wetland-reserve",
+      "name": "Sungei Buloh Wetland Reserve",
+      "object_type": "wetland",
+      "narrow": "Sungei Buloh Wetland Reserve — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/sungei-buloh-wetland-reserve.json"
+    },
+    {
+      "id": "sg:kranji-countryside",
+      "name": "Kranji countryside",
+      "object_type": "cultural_landscape",
+      "narrow": "Kranji countryside — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/kranji-countryside.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

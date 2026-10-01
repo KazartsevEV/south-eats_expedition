@@ -267,8 +267,8 @@ build CDN
 - KH — complete (upper-level acceptance recorded; full gate required on this PR).
 - LA — complete (upper-level acceptance recorded; full gate required on this PR).
 - ID — complete (upper-level acceptance recorded; full gate required on this PR).
-- MY — active.
-- MM — queued.
+- MY — complete (upper-level acceptance recorded; full gate required on this PR).
+- MM — active.
 - SG — queued.
 - TH — queued.
 - TL — queued.

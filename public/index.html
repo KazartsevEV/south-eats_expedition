@@ -510,7 +510,7 @@ async function countryCultureHTML(p){
     }));
     var market=p.food_market||{},marketRange=Array.isArray(market.typical_simple_meal_local_range)&&market.typical_simple_meal_local_range.length?moneyRange(market.typical_simple_meal_local_range,market.price_currency||''):moneyRange(market.typical_simple_meal_usd_range,'USD');
     out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Еда · '+foods.length+' карточек</div><h2>Что искать на рынках и в локальных кафе</h2></div></div>'+
-      '<p class="culture-summary">'+esc(p.cuisine||'')+(marketRange?' Базовый дешёвый завтрак или простое блюдо обычно попадает примерно в '+esc(marketRange)+', но сложные блюда вроде amok стоят дороже.':'')+'</p>'+
+      '<p class="culture-summary">'+esc(p.cuisine||'')+(marketRange?' Ориентир для простой недорогой еды: примерно '+esc(marketRange)+'. Полноценные ресторанные блюда и наборы могут стоить заметно дороже.':'')+'</p>'+
       '<div class="culture-grid">'+foodCards.join('')+'</div></section>';
   }else if(hasValue(p.cuisine)||hasValue(p.street_food)){
     out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Еда</div><h2>Кухня и уличная еда</h2></div></div><div class="fact-grid">'+factCard('Еда',{overview:p.cuisine,street_food:p.street_food})+'</div></section>';
@@ -527,7 +527,7 @@ async function countryCultureHTML(p){
         (x.status_2026?'<span class="status-chip">'+esc(x.status_2026)+'</span>':'')+'</div>'+
         '</div></article>';
     }));
-    out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Календарь · '+festivals.length+' карточки</div><h2>Главные праздники и где их смотреть</h2></div></div>'+
+    out+='<section class="section culture-section"><div class="section-head"><div><div class="eyebrow">Календарь · '+festivals.length+' карточек</div><h2>Главные праздники и где их наблюдать</h2></div></div>'+
       '<p class="culture-summary">Не просто список выходных: здесь указано, что происходит, где праздник реально виден путешественнику и что изменилось в текущем году.</p>'+
       '<div class="culture-grid">'+festivalCards.join('')+'</div></section>';
   }else if(hasValue(p.festivals)){

@@ -2,6 +2,12 @@
 
 Updated: 2026-10-01
 
+> **Phase closed.** The upper-level pass is complete. Object-level work has resumed.
+>
+> Current editorial state: **KH — baseline frozen**; existing Cambodia cards are no longer expanded in this phase. Future Cambodia growth is limited to new objects, new routes, and proven-error/reference fixes. **BN — active object-level country** from 2026-10-01.
+>
+> The historical queue below is retained as the audit record of the completed pre-object phase and is no longer the active work queue.
+
 ## Reference
 
 PH — Philippines is the only accepted reference implementation for the current pre-object phase.

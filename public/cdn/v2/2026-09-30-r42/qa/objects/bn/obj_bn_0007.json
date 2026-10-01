@@ -18,5 +18,36 @@
     "editorial_rebuild": true
   },
   "last_reviewed_at": "2026-10-01",
-  "fact_source_review": null
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-01",
+    "scope": "повторный QA obj_bn_0007: коридорная семантика, нарратив, доступ, GPS/высота, вода/ночёвка, traveler reports, visual recon и дрон",
+    "checks": {
+      "narrative_section_sources": true,
+      "operations_sources": true,
+      "access_sources": true,
+      "route_time_claims_scoped": true,
+      "coordinate_accuracy_not_overstated": true,
+      "elevation_anchor_not_generalized": true,
+      "water_unknown_not_falsely_sourced": true,
+      "supplies_source_scoped": true,
+      "overnight_unknown_not_falsely_sourced": true,
+      "traveler_report_sources": true,
+      "traveler_report_dates_match_sources": true,
+      "visual_viewpoint_sources": true,
+      "seasonal_visual_claims_not_overstated": true,
+      "drone_rule_precision": true,
+      "legacy_route_meta_synchronized": true
+    },
+    "notes": [
+      "Общая библиография больше не приклеивается к каждой секции: история/миф локализованы на Explore Labi, Luagan — на объектный официальный источник, Teraja — на текущую страницу водопада.",
+      "103 м сохранены только как приблизительная высота картографической опорной точки Mukim Labi с reference_type=site; значение не называется средней или характерной высотой всего протяжённого коридора.",
+      "Дорожные оценки 45/90 минут привязаны только к официальной карте Labi; произвольная длительность визита 6–10 часов удалена.",
+      "Текущая страница Teraja Waterfall даёт около 40 минут подъёма от longhouse; старое 45–60 минут заменено текущим объектным значением.",
+      "Water и overnight остаются unknown/unclear без искусственного доказательства общей библиографией.",
+      "Оба traveler report 2025 года теперь прямо ссылаются на тот источник, из которого взяты.",
+      "Luagan viewpoint привязан к официальной Get Directions точке и официальному объектному источнику; формулировка больше не притворяется GPS конкретной доски настила.",
+      "Безусловный drone.permit_required=true удалён: DCA требует регистрацию, а flying permit опубликован как условный для public events и полётов выше 200 ft ASL."
+    ]
+  }
 }

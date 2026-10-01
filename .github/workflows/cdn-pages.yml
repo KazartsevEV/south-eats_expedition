@@ -52,6 +52,9 @@ jobs:
       - name: Build canonical CDN layer
         run: python scripts/build_canonical_layer.py
 
+      - name: Build local media mirrors
+        run: python scripts/build_media_mirrors.py
+
       - name: Build local preview binaries
         run: python scripts/build_previews.py
 
@@ -97,6 +100,7 @@ jobs:
 
             python scripts/build_cdn.py
             python scripts/build_canonical_layer.py
+            python scripts/build_media_mirrors.py
             python scripts/build_previews.py
             python scripts/augment_hierarchy.py
             python scripts/validate_country_layer.py

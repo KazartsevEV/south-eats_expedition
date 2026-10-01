@@ -53,7 +53,8 @@
       "2026-10-01 repeat QA from obj_bn_0001: fact-level source scoping added; current/non-current mosque access evidence separated; blanket drone permit claim corrected against DCA operating guidance.",
       "2026-10-01 repeat QA obj_bn_0002: fact-level source scoping enabled; current mosque hours retained over conflicting older brochures; bus routes 01C/20/22 surfaced; elevation downgraded to approximate; blanket drone permit corrected.",
       "2026-10-01 repeat QA obj_bn_0003: current Tourism Development Department gallery hours override inconsistent secondary rendering; official Mini Guide anchors water-taxi access; water source scoped to Brunei River study; tidal 0 m clarified; blanket drone permit corrected.",
-      "2026-10-01 obj_bn_0003 evidence patch: Pelita Brunei corroborates Setia A walkway repair; current Brunei Tourism transport page adds BND 2–5 general water-taxi range without inventing a fixed crossing fare."
+      "2026-10-01 obj_bn_0003 evidence patch: Pelita Brunei corroborates Setia A walkway repair; current Brunei Tourism transport page adds BND 2–5 general water-taxi range without inventing a fixed crossing fare.",
+      "2026-10-01 repeat QA obj_bn_0004 final: strict fact-source scoping; Freme alert kept operator-specific; OSM feature coordinates downgraded to medium; ForestGEO geology added; canopy dimensions re-verified against official brochure; blanket drone permit removed."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -3748,12 +3749,12 @@
               "elevation_m": 72
             },
             "coordinate_type": "pier",
-            "accuracy": "high",
+            "accuracy": "medium",
             "elevation_accuracy": "approximate",
             "coordinate_source": {
-              "provider": "Mapcarta / OpenStreetMap",
+              "provider": "OpenStreetMap node via Mapcarta",
               "url": "https://mapcarta.com/N4817868121",
-              "basis": "National Park Registration Jetty; operational river entry point"
+              "basis": "Named OSM feature National Park Registration Jetty, node 4817868121; exact mapped feature, not a survey-grade GPS fix."
             },
             "coordinates_checked_at": "2026-10-01",
             "elevation_source": {
@@ -3792,11 +3793,12 @@
                   "lon": 115.15673,
                   "elevation_m": null
                 },
-                "accuracy": "high",
+                "accuracy": "medium",
                 "elevation_accuracy": "unknown",
                 "source": {
-                  "provider": "Mapcarta / OpenStreetMap",
-                  "url": "https://mapcarta.com/N4817868221"
+                  "provider": "OpenStreetMap node via Mapcarta",
+                  "url": "https://mapcarta.com/N4817868221",
+                  "basis": "Named OSM feature, node 4817868221; mapped feature, not survey-grade."
                 },
                 "coordinates_checked_at": "2026-10-01"
               },
@@ -3808,11 +3810,12 @@
                   "lon": 115.15976,
                   "elevation_m": null
                 },
-                "accuracy": "high",
+                "accuracy": "medium",
                 "elevation_accuracy": "unknown",
                 "source": {
-                  "provider": "Mapcarta / OpenStreetMap",
-                  "url": "https://mapcarta.com/N4817868122"
+                  "provider": "OpenStreetMap node via Mapcarta",
+                  "url": "https://mapcarta.com/N4817868122",
+                  "basis": "Named OSM viewpoint, node 4817868122; mapped feature, not survey-grade."
                 },
                 "coordinates_checked_at": "2026-10-01"
               },
@@ -3824,10 +3827,10 @@
                   "lon": 115.15312,
                   "elevation_m": null
                 },
-                "accuracy": "high",
+                "accuracy": "medium",
                 "elevation_accuracy": "unknown",
                 "source": {
-                  "provider": "Mapcarta / OpenStreetMap",
+                  "provider": "OpenStreetMap node via Mapcarta",
                   "url": "https://mapcarta.com/N5320149923"
                 },
                 "coordinates_checked_at": "2026-10-01"
@@ -3842,7 +3845,7 @@
               6,
               10
             ],
-            "permit_or_guide": "Доступ управляемый: GOV.BN перечисляет entry-pass service для Ulu Temburong и отдельный permit для travel agents. Из открытой страницы нельзя честно вывести, что индивидуальный иностранец оформляет пропуск напрямую; практический вариант — заранее согласованный оператор/лодочник, имеющий право вести посетителей.",
+            "permit_or_guide": "GOV.BN публикует отдельные сервисы Entry Pass Application to Ulu Temburong National Park и Permit Application for Travel Agent to Ulu Temburong National Park. Открытый каталог не доказывает ни обязательность гида для каждого посетителя, ни возможность индивидуальному иностранцу оформить пропуск в режиме walk-in. Поэтому самостоятельный наземный подход допустимо планировать отдельно, а сам вход, речную лодку и применимый пропуск надо подтвердить заранее через действующий разрешённый механизм.",
             "modes": {
               "public_transport": "прямого проверенного маршрута к парку нет",
               "taxi_ridehail": "Dart/частный трансфер до Тембуронга или согласованной точки встречи",
@@ -3850,10 +3853,10 @@
               "boat": "длинная лодка — ключевой сегмент фактического доступа к основной туристической зоне",
               "walking": "внутри — лесная тропа, лестницы и металлическая canopy walkway; точная текущая дистанция маршрута не подтверждена"
             },
-            "terrain_and_movement": "Речной подход сменяется влажной лесной тропой, длинным лестничным подъёмом и металлической башенной конструкцией. Официальная брошюра указывает высоту каждой железной башни canopy walkway 42 м и длину соединяющих мостов 10 м; сооружение стоит на холме примерно 300 м.",
-            "access_requirements": "До выезда подтверждать входной пропуск, работающий маршрут лодки и текущую доступность canopy walkway. Не путать возможность доехать по мосту в Тембуронг с возможностью самостоятельно войти в парковую зону.",
+            "terrain_and_movement": "Речной подход сменяется влажной лесной тропой, лестничным подъёмом и металлической башенной конструкцией. Официальная брошюра Tourism Development Department указывает: каждая железная башня Canopy Walkway — 42 м, соединительные мосты — по 10 м, а сама конструкция стоит на холме высотой примерно 300 м.",
+            "access_requirements": "До выезда подтвердить применимый входной пропуск, работающий речной маршрут и текущую доступность canopy walkway. Наличие автомобильной дороги и моста в Тембуронг не означает свободный walk-in в национальный парк.",
             "self_guided_default": false,
-            "travel_model": "самостоятельно до наземной точки встречи; речной вход и доступ внутрь — через согласованный с правилами парка механизм",
+            "travel_model": "самостоятельно до согласованной наземной точки; речной вход и парковый маршрут — после подтверждения действующего допуска и лодочного доступа",
             "access_options": [
               {
                 "id": "road_to_batang_duri_then_longboat",
@@ -3875,7 +3878,10 @@
                     "condition": "Асфальтовый маршрут через Sultan Haji Omar 'Ali Saifuddien Bridge в Тембуронг.",
                     "seasonality": "Сильный ливень ухудшает видимость, но основной дорожный участок не является грунтовым.",
                     "navigation": "До согласованной точки встречи в Бангаре/Батанг-Дури.",
-                    "notes": "Наземная часть может быть выполнена самостоятельно на машине; это не отменяет управляемый речной вход."
+                    "notes": "Наземная часть может быть выполнена самостоятельно на машине; это не отменяет управляемый речной вход.",
+                    "source_refs": [
+                      "src_904640"
+                    ]
                   },
                   {
                     "mode": "boat",
@@ -3887,7 +3893,12 @@
                     "condition": "Длинная узкая моторная лодка по мелководной тропической реке.",
                     "seasonality": "Проходимость зависит от уровня воды. На 2026-10-01 Freme сохраняет остановку Ulu/водопадов/водных активностей из-за низкой воды.",
                     "navigation": "Сегмент выполняется местным лодочником в рамках согласованного доступа.",
-                    "notes": "Не фиксировать время и километраж без актуальной схемы конкретного оператора."
+                    "notes": "Речной сегмент требует заранее подтверждённого допуска и работающего лодочного маршрута. Freme на 2026-10-01 приостановил свои Ulu/водопад/водные активности из-за низкой воды; не переносить этот статус автоматически на всех возможных операторов.",
+                    "source_refs": [
+                      "src_000422",
+                      "src_000264",
+                      "src_904638"
+                    ]
                   },
                   {
                     "mode": "walking",
@@ -3904,7 +3915,11 @@
                     "elevation_loss_m": null,
                     "navigation": "От зарегистрированной точки по действующему парковому маршруту.",
                     "fords": null,
-                    "notes": "Исторический государственный материал 2008 года упоминал 1 226 ступеней, но текущая официальная брошюра этот счёт не повторяет; не использовать его как гарантированную современную метрику."
+                    "notes": "Исторический государственный материал 2008 года упоминал 1 226 ступеней, но текущая официальная брошюра этот счёт не повторяет; не использовать его как гарантированную современную метрику.",
+                    "source_refs": [
+                      "src_904640",
+                      "src_904638"
+                    ]
                   }
                 ]
               },
@@ -3927,7 +3942,10 @@
                     "condition": "Дорожный подъезд до согласованной речной точки; внедорожный мотоцикл для основной схемы не требуется.",
                     "seasonality": "Ливень ухудшает видимость и сцепление.",
                     "navigation": "Не ехать по карте к геометрическому центру парка; целевая точка — согласованный причал/регистрация.",
-                    "notes": "Мопед остаётся на суше."
+                    "notes": "Мопед остаётся на суше.",
+                    "source_refs": [
+                      "src_904640"
+                    ]
                   },
                   {
                     "mode": "boat",
@@ -3939,7 +3957,12 @@
                     "condition": "Дальнейший доступ на длинной лодке.",
                     "seasonality": "Низкая вода способна полностью остановить маршрут.",
                     "navigation": "С местным лодочником/оператором.",
-                    "notes": "На 2026-10-01 действует опубликованное оператором ограничение из-за низкой воды."
+                    "notes": "Речной сегмент требует заранее подтверждённого допуска и работающего лодочного маршрута. Freme на 2026-10-01 приостановил свои Ulu/водопад/водные активности из-за низкой воды; не переносить этот статус автоматически на всех возможных операторов.",
+                    "source_refs": [
+                      "src_000422",
+                      "src_000264",
+                      "src_904638"
+                    ]
                   },
                   {
                     "mode": "walking",
@@ -3956,7 +3979,11 @@
                     "elevation_loss_m": null,
                     "navigation": "По действующему парковому маршруту.",
                     "fords": null,
-                    "notes": null
+                    "notes": null,
+                    "source_refs": [
+                      "src_904640",
+                      "src_904638"
+                    ]
                   }
                 ]
               }
@@ -3973,33 +4000,61 @@
                   "notes": "В парке есть реки и ручьи, но надёжного источника, подтверждающего их питьевую безопасность без обработки, не найдено."
                 }
               ],
-              "notes": "Основной запас питьевой воды планировать до входа/через лодж или оператора. Конкретный кран или refill point должен быть отдельным проверенным POI."
+              "notes": "Основной запас питьевой воды планировать до входа/через лодж или оператора. Конкретный кран или refill point должен быть отдельным проверенным POI.",
+              "source_refs": []
             },
             "supplies": {
               "status": "partially_mapped",
               "summary": "Последнее полноценное городское снабжение — Бангар. Официальная карта Brunei Tourism показывает в Бангаре магазины, рынок, еду, банкомат и клинику; внутри лесной части на это не рассчитывать.",
-              "poi_ids": []
+              "poi_ids": [],
+              "source_refs": [
+                "src_904640"
+              ]
             },
             "overnight_and_camping": "Надёжного открытого источника, разрешающего самостоятельную установку палатки в национальном парке, не найдено. Не считать наличие леса разрешением на лагерь.",
             "overnight": {
               "status": "unclear",
               "summary": "Использовать оформленное размещение или заранее согласованную площадку. Законность самостоятельного дикого кемпинга в Ulu Temburong по найденным источникам не подтверждена.",
               "source_refs": []
-            }
+            },
+            "access_source_refs": [
+              "src_000303",
+              "src_904638",
+              "src_904640",
+              "src_000422",
+              "src_000264"
+            ],
+            "rules_source_refs": [
+              "src_904638"
+            ],
+            "terrain_source_refs": [
+              "src_904640"
+            ]
           },
           "climate": {
             "best_period": "Жёсткого «сухого сезона» нет. Для доступа важнее текущий уровень воды, чем календарный месяц: в 2026 году именно низкая вода остановила опубликованные маршруты Freme.",
             "heat_rain_notes": "Официальная брошюра Тембуронга указывает круглогодичные средние дневные температуры около 22–33 °C и высокий годовой объём осадков без чётко выраженного сухого сезона.",
-            "site_specific_notes": "Слишком много воды делает лесные и речные участки сложнее; слишком мало воды может вообще остановить длинные лодки. Поэтому перед выездом проверять не только прогноз дождя, но и фактическую работу речного доступа."
+            "site_specific_notes": "Слишком много воды делает лесные и речные участки сложнее; слишком мало воды может вообще остановить длинные лодки. Поэтому перед выездом проверять не только прогноз дождя, но и фактическую работу речного доступа.",
+            "source_refs": [
+              "src_904640",
+              "src_000422",
+              "src_000264"
+            ]
           },
           "operations": {
             "hours": "Brunei Tourism на 2026-10-01 указывает: пн–чт 08:00–18:00; пт 08:00–12:00 и 14:00–18:00; сб–вс 08:00–18:00.",
             "ticket": "Единого актуального публичного тарифа «самостоятельного входа» не найдено. GOV.BN подтверждает отдельные процедуры входного пропуска и разрешения travel agent; коммерческая цена оператора не равна государственному входному билету.",
-            "closure_notes": "На 2026-10-01 Freme сохраняет уведомление: Ulu Temburong National Park, посещение водопадов и все водные активности временно недоступны до дальнейшего уведомления из-за низкого уровня воды.",
-            "current_alert": "Низкий уровень воды: опубликованные Freme Ulu/водопад/водные активности временно недоступны до дальнейшего уведомления.",
+            "closure_notes": "Официальный Brunei Tourism продолжает публиковать часы парка: пн–чт и сб–вс 08:00–18:00; пт 08:00–12:00 и 14:00–18:00. Одновременно Freme сообщает о временной недоступности своих Ulu/водопад/водных маршрутов из-за низкой воды. Перед выездом отдельно подтверждать работу выбранной лодочной схемы и фактический доступ.",
+            "current_alert": "Freme на 2026-10-01 временно не выполняет свои маршруты в Ulu Temburong National Park, к водопадам и водные активности из-за низкого уровня воды. Это подтверждённое ограничение конкретного опубликованного оператора, а не доказательство официального закрытия всего национального парка.",
             "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/ulu-temburong-national-park/",
-            "status": "temporarily_disrupted_by_low_water"
+            "status": "open_official_hours_with_operator_route_disruption",
+            "source_refs": [
+              "src_000303",
+              "src_904638",
+              "src_000422",
+              "src_000264"
+            ]
           },
           "safety": {
             "crime_context": "Для удалённого парка отдельная криминальная оценка не добавляет пользы; ключевые риски — речной доступ, лестницы, влажный лес и удалённость.",
@@ -4088,7 +4143,7 @@
                 {
                   "id": "canopy_tower_upper_view",
                   "name": "Canopy Viewing Tower",
-                  "description": "Главная обзорная точка парка над верхним ярусом леса. Официальная брошюра указывает железные башни высотой 42 м, соединённые 10-метровыми мостами; сверху видна непрерывность лесного полога и рельеф Тембуронга.",
+                  "description": "Главная обзорная точка над верхним ярусом леса. Официальная брошюра Tourism Development Department указывает железные башни высотой 42 м, соединённые 10-метровыми мостами; сверху читаются непрерывность полога и холмистый рельеф Тембуронга.",
                   "coordinates": {
                     "lat": 4.55209,
                     "lon": 115.15976,
@@ -4117,7 +4172,10 @@
                   "source": {
                     "provider": "Mapcarta / OpenStreetMap",
                     "url": "https://mapcarta.com/N4817868122"
-                  }
+                  },
+                  "source_refs": [
+                    "src_904640"
+                  ]
                 },
                 {
                   "id": "waterfall_stream_point",
@@ -4184,11 +4242,15 @@
             "drone": {
               "visual_value": "С воздуха хорошо читаются непрерывность полога, речные долины и рельеф, но объект находится в национальном парке и доступ управляемый.",
               "legal_status": "regulated",
-              "permit_required": true,
+              "permit_required": null,
               "restrictions": [
-                "действуют требования Department of Civil Aviation Brunei к беспилотным воздушным судам",
-                "авиационное разрешение не заменяет согласование запуска с администрацией/режимом национального парка",
-                "не использовать дрон для преследования или вспугивания птиц и других животных"
+                "регистрация беспилотного воздушного судна в Department of Civil Aviation Brunei Darussalam обязательна до эксплуатации",
+                "полёты разрешены только днём; ночная эксплуатация запрещена",
+                "нельзя летать в пределах 5 км от аэропорта или военной базы",
+                "нельзя летать в ограниченных зонах",
+                "для полёта на публичном мероприятии требуется flying permit",
+                "для полёта выше 200 футов над уровнем моря требуется flying permit",
+                "отдельный опубликованный режим запуска дрона именно в Ulu Temburong National Park в проверенных источниках не установлен; не считать соблюдение общих правил DCA автоматическим разрешением конкретной точки запуска"
               ],
               "checked_at": "2026-10-01",
               "source": {
@@ -4200,8 +4262,9 @@
                 "accessed": "2026-10-01",
                 "authority": "high",
                 "used_for": [
-                  "drone rules",
-                  "registration and permit context"
+                  "registration",
+                  "operating-guidelines document",
+                  "conditional flying-permit triggers"
                 ]
               }
             },
@@ -4214,7 +4277,7 @@
                 "section_id": "overview",
                 "content": "Улу-Тембуронг — крупнейший охраняемый лесной парк Брунея: Forestry Department указывает площадь 46 210 га. Его туристическая зона находится глубоко в Тембуронге и принципиально зависит от реки: дорога доводит лишь до района подхода, затем маршрут продолжается на длинной лодке и пешком. Поэтому фактическая доступность парка определяется не только часами работы, но и уровнем воды.",
                 "source_refs": [
-                  "src_904647",
+                  "src_904639",
                   "src_000303",
                   "src_000422"
                 ]
@@ -4233,6 +4296,13 @@
                 "source_refs": [
                   "src_904644",
                   "src_000422"
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "В районе Batu Apoi, где находится исследовательская зона Kuala Belalong, основание сложено осадочными породами: ForestGEO описывает преимущественно сланцы формации Setap, а на гребнях и вершинах — перекрывающую их формацию Meligan. Почвы здесь илисто-глинистые, с кварцем и каолинитом, богаты оксидами железа и алюминия, но крайне бедны азотом, фосфором, кальцием и магнием. Тот же профиль подчёркивает резко расчленённый рельеф — глубокие V-образные долины и узкие острые гребни — с перепадом примерно от 30 м у Kuala Belalong до 1850 м на Gunung Pagon в южной части заповедного массива.",
+                "source_refs": [
+                  "src_904693"
                 ]
               },
               {
@@ -4557,6 +4627,23 @@
               "drone rules",
               "registration and permit context"
             ]
+          },
+          {
+            "url": "https://forestgeo.si.edu/node/10440",
+            "type": "academic",
+            "title": "Kuala Belalong",
+            "publisher": "Smithsonian ForestGEO",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "geology",
+              "Setap Formation",
+              "Meligan Formation",
+              "soils",
+              "topography",
+              "elevation range of Batu Apoi Forest Reserve"
+            ]
           }
         ],
         "verification": {
@@ -4571,7 +4658,7 @@
           ],
           "verify_before_departure": true
         },
-        "narrow": "Крупнейший охраняемый лесной парк Брунея: 46 210 га первичного тропического леса, куда основной туристический маршрут входит по реке и далее поднимается к 42-метровым башням canopy walkway. На 1 октября 2026 года опубликованный оператором речной доступ к Ulu, водопадам и водным активностям временно остановлен из-за низкого уровня воды.",
+        "narrow": "Крупнейший охраняемый лесной парк Брунея: 46 210 га леса, куда основной туристический маршрут входит по реке и далее поднимается к canopy walkway. На 1 октября 2026 года Freme публикует временную приостановку своих поездок в Ulu Temburong National Park, к водопадам и водных активностей из-за низкого уровня воды; это статус конкретного оператора, а не подтверждённое Forestry закрытие всего парка.",
         "tags": [
           "nature",
           "rainforest",
@@ -4623,7 +4710,7 @@
             "local_support": "лодочник/оператор здесь не «тур ради тура», а практическая часть речного и административно управляемого доступа"
           }
         },
-        "lead": "Крупнейший охраняемый лесной парк Брунея: 46 210 га первичного тропического леса, куда основной туристический маршрут входит по реке и далее поднимается к 42-метровым башням canopy walkway. На 1 октября 2026 года опубликованный оператором речной доступ к Ulu, водопадам и водным активностям временно остановлен из-за низкого уровня воды.",
+        "lead": "Крупнейший охраняемый лесной парк Брунея: 46 210 га леса, куда основной туристический маршрут входит по реке и далее поднимается к canopy walkway. На 1 октября 2026 года Freme публикует временную приостановку своих поездок в Ulu Temburong National Park, к водопадам и водных активностей из-за низкого уровня воды; это статус конкретного оператора, а не подтверждённое Forestry закрытие всего парка.",
         "qa": {
           "language_review": {
             "status": "reviewed",
@@ -4674,14 +4761,61 @@
               "traveler_reports": true,
               "visual_recon": true,
               "sources": true,
-              "gallery_min_5": true
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "park_area_source_correct": true,
+              "operator_status_not_generalized": true,
+              "entry_pass_claim_precision": true,
+              "drone_rule_precision": true,
+              "geology_substantive": true,
+              "canopy_dimensions_officially_verified": true,
+              "coordinate_accuracy_not_overstated": true
             },
             "notes": [
               "Карточка построена вокруг реальной логики парка: река, управляемый вход, лесная тропа, canopy walkway и научная территория.",
               "Научный контекст подтверждён UBD и Scientia Bruneiana, а не общими фразами о «богатом биоразнообразии».",
               "Официальная брошюра дала проверяемые размеры canopy walkway: башни 42 м, мосты 10 м, холм около 300 м.",
               "Traveler report отделён от официального статуса и используется только для физической нагрузки.",
-              "Удалён нерелевантный тег industrial_heritage."
+              "Удалён нерелевантный тег industrial_heritage.",
+              "Повторный QA исправил неверный Forestry source_ref, отделил официальный статус парка от Freme low-water alert и убрал blanket drone permit.",
+              "Геологическая секция добавлена только после появления содержательного научного источника, а не ради формального заполнения.",
+              "OSM/Mapcarta координаты конкретных объектов сохранены, но их точность понижена до medium."
+            ]
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "повторный QA obj_bn_0004: официальный статус парка, operator alert, Forestry area source, entry-pass model, river access and drone precision",
+            "checks": {
+              "narrative_section_sources": true,
+              "park_area_source_correct": true,
+              "operations_sources": true,
+              "official_status_separated_from_operator_status": true,
+              "access_sources": true,
+              "entry_pass_claim_precision": true,
+              "coordinates_precision": true,
+              "elevation_precision": true,
+              "water_unknown_not_falsely_sourced": true,
+              "supplies_source_specific": true,
+              "overnight_unknown_not_falsely_sourced": true,
+              "traveler_report_sources": true,
+              "visual_recon": true,
+              "drone_rule_precision": true,
+              "geology_source": true,
+              "canopy_dimensions_officially_verified": true,
+              "osm_coordinate_identity_verified": true,
+              "coordinate_accuracy_not_overstated": true
+            },
+            "notes": [
+              "Исправлена ошибочная ссылка overview: площадь 46 210 га теперь ссылается на Forestry Department src_904639, а не на Wikimedia Commons src_904647.",
+              "Официальный Brunei Tourism продолжает публиковать часы парка; уведомление Freme о низкой воде хранится как operator-specific disruption, а не как доказанное официальное закрытие всего парка.",
+              "GOV.BN подтверждает наличие Entry Pass Application и отдельного Travel Agent Permit, но публичная страница не доказывает конкретную процедуру для индивидуального иностранца; формулировка оставлена нейтральной.",
+              "Питьевая пригодность рек/ручьёв неизвестна; отсутствие надёжного источника не прикрывается общей библиографией.",
+              "Дрон приведён к точным общим правилам DCA; park-specific launch permission не выдумывается.",
+              "Координаты регистрационного причала, trailhead и canopy viewpoint соответствуют конкретным именованным OSM-узлам; accuracy снижена с high до medium, потому что это картографические POI, а не полевой или официальный геодезический GPS-замер.",
+              "Добавлена геология Batu Apoi по Smithsonian ForestGEO: Setap Formation, Meligan Formation, почвы и расчленённый рельеф.",
+              "Размеры Canopy Walkway перепроверены по официальной брошюре Tourism Development Department: башни 42 м, мосты 10 м, холм около 300 м.",
+              "Freme low-water alert сохранён как operator-specific disruption; официальный Forestry-wide closure из него не выводится."
             ]
           }
         }

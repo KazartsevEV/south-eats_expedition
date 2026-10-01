@@ -5138,10 +5138,7 @@
                       "gallery image"
                     ]
                   },
-                  "accuracy": "medium",
-                  "source_refs": [
-                    "src_904673"
-                  ]
+                  "accuracy": "medium"
                 },
                 {
                   "id": "central_atrium_chariot",
@@ -5183,10 +5180,7 @@
                       "historic camera coordinates"
                     ]
                   },
-                  "accuracy": "approximate",
-                  "source_refs": [
-                    "src_904676"
-                  ]
+                  "accuracy": "approximate"
                 },
                 {
                   "id": "standards_gallery_reference",
@@ -5223,10 +5217,7 @@
                       "camera coordinates"
                     ]
                   },
-                  "accuracy": "approximate",
-                  "source_refs": [
-                    "src_904678"
-                  ]
+                  "accuracy": "approximate"
                 }
               ],
               "seasonal_visuals": [
@@ -5803,7 +5794,8 @@
               "Операционные часы и официальный тариф привязаны к Brunei Tourism; сентябрьский отчёт BND 10 хранится как противоречащий traveler report.",
               "Исправлен неверный source_ref отчёта о протечках: февральский сигнал теперь ссылается на соответствующий Reddit-источник, а не на Tripadvisor.",
               "Фото/видео не объявлены официально разрешёнными или запрещёнными: официальный сайт правила не публикует, а пользовательский отчёт используется только как временный практический сигнал.",
-              "drone.permit_required=true признан слишком широким; DCA требует регистрацию, а flying permit в опубликованном руководстве привязан к public events и полётам выше 200 ft ASL."
+              "drone.permit_required=true признан слишком широким; DCA требует регистрацию, а flying permit в опубликованном руководстве привязан к public events и полётам выше 200 ft ASL.",
+              "CI fix: visual viewpoint source_refs are derived from each viewpoint source URL by build_cdn; canonical src_* IDs must not be injected into the legacy remap input."
             ]
           }
         }

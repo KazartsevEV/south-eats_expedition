@@ -3,7 +3,7 @@
     "country": "Lao People's Democratic Republic",
     "country_code": "LA",
     "language": "ru",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-01",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -32,7 +32,8 @@
       "Regional QA pass 2026-09-30: deepened Vientiane Capital, Khammouane/Kong Lor, Luang Prabang/Nam Ou and Champasak/Si Phan Don/Bolaven with specific Tourism Laos and UNESCO sources; added locally supported relief, karst/hydrology, urban/cultural landscape and highland logistics.",
       "Language QA 2026-09-30: normalized regional narrative text to natural Russian; technical schema keys and official proper names remain unchanged.",
       "Regional QA pass 2026-09-30: closed the remaining unsourced nature summaries in Vang Vieng, Phongsaly and Xieng Khouang using already registered local official/UNESCO sources.",
-      "Laos pre-object geo QA 2026-10-01: formal hierarchy linked to existing researched regional profiles; scoped profiles added for composite physical/protected nodes; eight real city/town locality profiles added with independent settlement map anchors. Object payloads unchanged."
+      "Laos pre-object geo QA 2026-10-01: formal hierarchy linked to existing researched regional profiles; scoped profiles added for composite physical/protected nodes; eight real city/town locality profiles added with independent settlement map anchors. Object payloads unchanged.",
+      "2026-10-01 upper-level acceptance pass: revalidated 30-day visa-free entry for Russian ordinary passports, LDIF requirement at the four pilot checkpoints, current international-checkpoint directory, road/driver rules and country seasonality; attraction/object payloads remain frozen."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -74,6 +75,15 @@
       "current_chunk": "complete",
       "status": "complete_19_of_19",
       "policy": "откуда + когда + что видно + класс техники по геометрии; без операторского ТЗ"
+    },
+    "upper_level_acceptance": {
+      "phase": "pre_object",
+      "reference_country": "PH",
+      "status": "complete",
+      "object_payloads_frozen": true,
+      "checked_at": "2026-10-01",
+      "accepted_at": "2026-10-01",
+      "acceptance_basis": "PH-reference upper-level revalidation: country profile, climate/seasonality, current entry rules including LDIF, border checkpoints, transport rules, geo hierarchy, regional/locality profiles and geometry provenance; object payloads unchanged."
     }
   },
   "overview": {
@@ -221,7 +231,17 @@
     "source_quality": "monthly climate normals/ERA5 secondary aggregation",
     "source_ids": [
       "CLIMATE"
-    ]
+    ],
+    "checked_at": "2026-10-01",
+    "country_seasonality": {
+      "wet_hot": "Май–октябрь: влажный и жаркий сезон.",
+      "cool_dry": "Ноябрь–февраль: более прохладный и сухой сезон.",
+      "hot_dry": "Февраль–апрель: сухой и жаркий сезон перед устойчивыми муссонными дождями.",
+      "regional_pattern": "Северные и высокогорные районы заметно прохладнее низменного Вьентьяна; состояние горных дорог и рек в сезон дождей проверяется на региональном уровне.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
+    }
   },
   "safety": {
     "crime_level": {
@@ -325,45 +345,86 @@
     "visa_for_russian_passport": {
       "status": "visa-free",
       "stay_days": 30,
-      "extension": "Продление возможно через иммиграционные органы при соблюдении текущих правил.",
+      "extension": "При необходимости более длительного пребывания российскому гражданину следует обращаться в Иммиграционный департамент ЛНДР; консульский портал МИД РФ указывает плату 20 000 LAK за день продления.",
       "visa_run": {
         "possible": "Новый въезд после выезда возможен при допуске на границе.",
         "limits": "Опубликованного специального годового лимита visa-run для россиян в найденном официальном источнике нет.",
         "notes": "Не все переходы являются международными для иностранцев."
       },
-      "passport_validity": "проверять минимум 6 месяцев",
+      "passport_validity": "Для въезда использовать действующий заграничный паспорт; конкретный остаточный срок действия перепроверять перед поездкой по требованиям перевозчика и иммиграции.",
       "official_source": "Russian MFA / Lao authorities",
       "source_ids": [
-        "RUS_MFA"
-      ]
+        "RUS_MFA",
+        "LAO_IMMIGRATION"
+      ],
+      "entry_form": {
+        "name": "Lao Digital Immigration Form (LDIF)",
+        "required": true,
+        "scope": "С 1 сентября 2025 года обязательна для иностранных граждан, использующих паспорт, при въезде и выезде через Wattay International Airport, Luang Prabang International Airport, Pakse International Airport и Lao–Thai Friendship Bridge I.",
+        "timing": "Онлайн-форму заполнять за 3 дня до въезда и отдельно перед выездом.",
+        "official_portal": "https://www.immigration.gov.la/",
+        "source_ids": [
+          "RUS_MFA",
+          "LAO_IMMIGRATION"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "checked_at": "2026-10-01"
     },
     "airports": [
       {
         "iata": "VTE",
-        "name": "Wattay International Airport"
+        "name": "Wattay International Airport",
+        "role": "международный аэропорт Вьентьяна"
       },
       {
         "iata": "LPQ",
-        "name": "Luang Prabang International Airport"
+        "name": "Luang Prabang International Airport",
+        "role": "международный аэропорт Луангпхабанга"
+      },
+      {
+        "iata": null,
+        "name": "Savannakhet International Airport",
+        "role": "официальный международный пункт пропуска; фактические международные рейсы проверять по текущему расписанию"
       },
       {
         "iata": "PKZ",
-        "name": "Pakse International Airport"
+        "name": "Pakse International Airport",
+        "role": "международный аэропорт Паксе"
       }
     ],
-    "international_air_links": "Региональные связи с Bangkok, Hanoi/Ho Chi Minh City, China и соседними хабами меняются по сезону.",
+    "international_air_links": "Вьентьян, Луангпхабанг, Саваннакхет и Паксе перечисляются официальными источниками как международные аэропортовые пункты. Фактические маршруты и частоты меняются; перед поездкой использовать текущее расписание аэропортов/авиакомпаний.",
     "land_borders": {
       "countries": [
-        "China",
-        "Vietnam",
-        "Cambodia",
-        "Thailand",
-        "Myanmar"
+        "Китай",
+        "Вьетнам",
+        "Камбоджа",
+        "Таиланд",
+        "Мьянма"
       ],
-      "transport": "China–Laos Railway связывает Vientiane/Luang Prabang с Китаем; железнодорожная связь с Таиландом дошла до Vientiane, также много международных автобусов. Конкретный checkpoint надо проверять на допуск иностранцев.",
+      "international_checkpoints": {
+        "published_total": 31,
+        "breakdown": {
+          "vietnam": 10,
+          "thailand": 14,
+          "cambodia": 1,
+          "myanmar": 1,
+          "china": 3,
+          "international_airports": 4
+        },
+        "note": "Иммиграционный департамент ЛНДР публикует актуальный каталог международных пунктов пропуска с режимом работы и статусом visa on arrival/eVisa для каждого пункта. При планировании пересечения использовать этот каталог, а не статическое расписание перевозчика."
+      },
+      "rail": {
+        "china": "Железная дорога Китай—Лаос пересекает границу в районе Ботен—Бохань; лаосская иммиграционная служба указывает этот узел как международный пункт пропуска.",
+        "thailand": "Трансграничное железнодорожное сообщение в коридоре Вьентьян/Тханаленг—Нонгкхай действует отдельно от автомобильных мостовых пунктов; перед поездкой проверять конкретный пассажирский пункт пропуска."
+      },
+      "transport": "На открытых направлениях используются международные автобусы, поезда, микроавтобусы и частные трансферы. Статус и режим конкретного пункта пропуска имеют приоритет над расписанием перевозчика.",
       "source_ids": [
+        "LAO_IMMIGRATION",
+        "TOURISM_LAOS",
         "RUS_MFA"
-      ]
+      ],
+      "checked_at": "2026-10-01"
     },
     "currency": {
       "code": "LAK",
@@ -9582,10 +9643,12 @@
       }
     ],
     "airports_source_ids": [
-      "RUS_MFA"
+      "RUS_MFA",
+      "LAO_IMMIGRATION"
     ],
     "international_air_links_source_ids": [
-      "RUS_MFA"
+      "RUS_MFA",
+      "LAO_IMMIGRATION"
     ],
     "drone_rules": {
       "legal_status": "regulated",
@@ -9601,7 +9664,7 @@
       "source_ids": [
         "LAO_DCA_DRONE"
       ],
-      "checked_at": "2026-09-29"
+      "checked_at": "2026-10-01"
     },
     "camping_rules": {
       "general_status": "unclear_outside_designated_or_managed_areas",
@@ -9609,7 +9672,7 @@
       "source_ids": [
         "LAO_PARKS"
       ],
-      "checked_at": "2026-09-29"
+      "checked_at": "2026-10-01"
     },
     "laws_source_ids": [
       "RUS_MFA"
@@ -9624,7 +9687,7 @@
         "LAO_LAND_TRANSPORT",
         "RUS_MFA"
       ],
-      "checked_at": "2026-09-29"
+      "checked_at": "2026-10-01"
     },
     "tourist_permits": {
       "general_status": "site_specific",
@@ -9635,7 +9698,7 @@
         "LAO_PARKS",
         "RUS_MFA"
       ],
-      "checked_at": "2026-09-29"
+      "checked_at": "2026-10-01"
     },
     "criminal_law_source_ids": [
       "RUS_MFA"
@@ -9694,7 +9757,7 @@
         "transport_rules",
         "permits"
       ],
-      "accessed": "2026-09-27",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000496",
       "language": "en"
     },
@@ -9775,7 +9838,7 @@
         "air_connectivity",
         "border_operation"
       ],
-      "accessed": "2026-09-29"
+      "accessed": "2026-10-01"
     },
     {
       "id": "BOL",
@@ -9804,7 +9867,7 @@
         "drone_rules",
         "aviation_rules"
       ],
-      "accessed": "2026-09-29"
+      "accessed": "2026-10-01"
     },
     {
       "id": "LAO_PARKS",
@@ -9820,7 +9883,7 @@
         "permit",
         "permits"
       ],
-      "accessed": "2026-09-29",
+      "accessed": "2026-10-01",
       "notes": "Подтверждает наличие кемпинга как регулируемой активности в отдельных охраняемых территориях; не является общим разрешением на свободный кемпинг по стране."
     },
     {
@@ -9836,7 +9899,7 @@
         "road_traffic_law",
         "vehicle_temporary_import"
       ],
-      "accessed": "2026-09-29",
+      "accessed": "2026-10-01",
       "notes": "Articles 6–7 apply the law to foreign users; Articles 18–19 cover temporary vehicle import for tourism/visits and technical conditions."
     },
     {
@@ -10154,6 +10217,26 @@
       ],
       "accessed": "2026-10-01",
       "notes": "Settlement centre cross-check for Vieng Xai; navigation anchor only."
+    },
+    {
+      "id": "LAO_IMMIGRATION",
+      "canonical_id": "src_900022",
+      "title": "Laos Entry and Exit Control Point directory",
+      "publisher": "Department of Immigration of Lao PDR",
+      "url": "https://immigration.gov.la/en/checkpoint/",
+      "kind": "government",
+      "language": "en",
+      "used_for": [
+        "entry",
+        "border_operation",
+        "checkpoint_status",
+        "visa_on_arrival",
+        "evisa",
+        "digital_immigration_form",
+        "airport_entry"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official live directory states 31 international checkpoints and lists visa/eVisa status and operating hours for individual points."
     }
   ],
   "uncertainties": [

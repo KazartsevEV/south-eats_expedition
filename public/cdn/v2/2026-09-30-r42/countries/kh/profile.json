@@ -73,10 +73,74 @@
   },
   "cuisine": "Для дешёвой повседневной еды ориентируйся на рынки, утренние noodle stalls и небольшие семейные точки. Ниже — не ресторанные «средние чеки», а свежие ценовые срезы по локальным рыночным меню; на месте без доставки цена может отличаться.",
   "street_food": [
-    "kuy teav",
-    "num banh chok",
-    "num pang"
+    {
+      "id": "kuy_teav",
+      "name": "Kuy teav",
+      "name_ru": "Куй тяв",
+      "description": "Рисовая лапша в прозрачном мясном или костном бульоне; сверху — свинина или говядина, зелень, иногда субпродукты. Типичный завтрак в Пномпене и на городских рынках.",
+      "price_usd_range": [
+        2.4,
+        3.25
+      ],
+      "price_context": "свежий срез меню Angkeah Market; у простых уличных точек цена может быть ниже",
+      "checked_at": "2026-10-01",
+      "media_id": "med_kh_c56339b3ffb1",
+      "source_refs": [
+        "src_911009",
+        "src_911008"
+      ]
+    },
+    {
+      "id": "num_banh_chok",
+      "name": "Num banh chok",
+      "name_ru": "Нум бань чок",
+      "description": "Слегка ферментированная рисовая лапша, чаще с рыбным соусом или карри, свежей зеленью и сырыми овощами. Традиционно её едят утром; на рынках блюдо собирают из лапши, соуса и большой горсти трав.",
+      "price_usd_range": [
+        1.25,
+        2.25
+      ],
+      "price_context": "свежие меню Samaki Market и Chhouk Meas Market; без учёта доставки и скидок",
+      "checked_at": "2026-10-01",
+      "media_id": "med_kh_5937d595dcb6",
+      "source_refs": [
+        "src_911010",
+        "src_911017",
+        "src_911008"
+      ]
+    },
+    {
+      "id": "num_pang",
+      "name": "Num pang",
+      "name_ru": "Нум панг",
+      "description": "Хрустящий багет с паштетом или мясом, маринованными овощами, огурцом, зеленью и соусом. Формат французского хлеба давно стал самостоятельной камбоджийской уличной едой.",
+      "price_usd_range": [
+        1.62,
+        3.05
+      ],
+      "price_context": "свежие меню Russey Keo и Phsar Tapang; простой вариант с паштетом дешевле мясных начинок",
+      "checked_at": "2026-10-01",
+      "media_id": "med_kh_b1474fe7792f",
+      "source_refs": [
+        "src_911018",
+        "src_911011",
+        "src_911008"
+      ]
+    }
   ],
+  "food_market": {
+    "typical_simple_meal_usd_range": [
+      1.25,
+      3.25
+    ],
+    "price_note": "Ориентир по локальным рынкам/стритфуду на 2026-10-01; доставка, туристические зоны и дополнительные ингредиенты могут заметно менять цену.",
+    "checked_at": "2026-10-01",
+    "source_refs": [
+      "src_911008",
+      "src_911009",
+      "src_911010",
+      "src_911011"
+    ]
+  },
   "festivals": [
     {
       "id": "khmer_new_year",
@@ -86,19 +150,11 @@
       "typical_month": "апрель",
       "description": "Трёхдневный Новый год завершает сухой земледельческий цикл перед сезоном дождей. В пагодах и городских программах — подношения, песчаные ступы, омовение статуй Будды, традиционные игры, музыка и танцы.",
       "checked_at": "2026-10-01",
-      "source_ids": [
-        "KH_MEF_HOLIDAYS_2026",
-        "KH_TOURISM_KHMER_NEW_YEAR"
-      ],
-      "image": {
-        "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cambodian%20Cultural%20Village%20%285633773562%29.jpg",
-        "source_page": "https://commons.wikimedia.org/wiki/File:Cambodian_Cultural_Village_(5633773562).jpg",
-        "provider": "Wikimedia Commons",
-        "license": "CC BY 2.0",
-        "artist": "Narin BI",
-        "last_checked": "2026-10-01",
-        "subject": "празднование Khmer New Year в Сиемреапе"
-      }
+      "media_id": "med_kh_e08eafc8fb5d",
+      "source_refs": [
+        "src_911012",
+        "src_911016"
+      ]
     },
     {
       "id": "pchum_ben",
@@ -108,19 +164,11 @@
       "typical_month": "сентябрь–октябрь",
       "description": "Главный период поминовения предков. Семьи идут в пагоды, делают подношения сангхе и посвящают заслуги умершим родственникам; полный цикл Kan Ben/Pchum Ben длится пятнадцать лунных дней.",
       "checked_at": "2026-10-01",
-      "source_ids": [
-        "KH_MEF_HOLIDAYS_2026",
-        "KH_MRD_PCHUM_BEN_2026"
-      ],
-      "image": {
-        "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/WatMohaMontreyAtPchumBen.JPG",
-        "source_page": "https://commons.wikimedia.org/wiki/File:WatMohaMontreyAtPchumBen.JPG",
-        "provider": "Wikimedia Commons",
-        "license": "Public domain",
-        "artist": "Sundgauvien38",
-        "last_checked": "2026-10-01",
-        "subject": "Wat Moha Montrey в Пномпене во время Pchum Ben"
-      }
+      "media_id": "med_kh_4f9823080e7d",
+      "source_refs": [
+        "src_911012",
+        "src_911014"
+      ]
     },
     {
       "id": "water_festival",
@@ -131,20 +179,12 @@
       "description": "Праздник воды и окончания сезонного разворота течения Тонлесапа: длинные лодочные гонки, вечерние огни и связанные с луной обряды. В 2026 году центральные гонки и торжества перед Королевским дворцом в Пномпене отменены; трёхдневные выходные сохранены, провинциальные празднования допускаются.",
       "status_2026": "главные торжества в Пномпене приостановлены; провинциальные мероприятия могут проходить",
       "checked_at": "2026-10-01",
-      "source_ids": [
-        "KH_MEF_HOLIDAYS_2026",
-        "KH_AKP_WATER_FESTIVAL_2026",
-        "KH_TOURISM_FESTIVITIES"
-      ],
-      "image": {
-        "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Water%20festival%20in%20Phnom%20Penh%2021.jpg",
-        "source_page": "https://commons.wikimedia.org/wiki/File:Water_festival_in_Phnom_Penh_21.jpg",
-        "provider": "Wikimedia Commons",
-        "license": "CC BY-SA 4.0",
-        "artist": "Codas",
-        "last_checked": "2026-10-01",
-        "subject": "Water Festival в Пномпене, 2023"
-      }
+      "media_id": "med_kh_ccb521c9b8f9",
+      "source_refs": [
+        "src_911012",
+        "src_911013",
+        "src_911015"
+      ]
     }
   ],
   "nature": {

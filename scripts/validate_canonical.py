@@ -273,6 +273,12 @@ def main():
             fail(f"invalid canonical media ID in {path.relative_to(release)}")
         if media_id in media_ids:
             fail(f"duplicate canonical media ID: {media_id}")
+        media_url = entity.get("url")
+        if not media_url:
+            fail(f"{media_id}: canonical media lacks direct image url")
+        lowered_media_url = str(media_url).lower()
+        if "/wiki/file:" in lowered_media_url or "/wiki/file%3a" in lowered_media_url:
+            fail(f"{media_id}: media.url points to a Wikimedia description page instead of image media")
         media_ids.add(media_id)
     if len(media_ids) != (manifest.get("totals") or {}).get("canonical_media"):
         fail("canonical media count differs from manifest")
@@ -428,6 +434,41 @@ def main():
         for media_id in indexes.get("media_ids") or []:
             if media_id not in media_ids:
                 fail(f"{code}: unknown media index ref {media_id}")
+
+        profile = load(release / country_row["profile"])
+        rich_food_rows = [
+            row for row in (profile.get("street_food") or [])
+            if isinstance(row, dict)
+        ]
+        rich_festival_rows = [
+            row for row in (profile.get("festivals") or [])
+            if isinstance(row, dict)
+        ]
+        for index, row in enumerate(rich_food_rows, start=1):
+            if not row.get("name") or not row.get("description"):
+                fail(f"{code}: rich street-food row {index} lacks name/description")
+            if not row.get("price_usd_range"):
+                fail(f"{code}: rich street-food row {index} lacks approximate market/street-food price")
+            media_id = row.get("media_id")
+            if not media_id or media_id not in media_ids:
+                fail(f"{code}: rich street-food row {index} lacks valid canonical media ref")
+            if not row.get("checked_at") or not row.get("source_refs"):
+                fail(f"{code}: rich street-food row {index} lacks checked_at/source_refs")
+            unknown_refs = set(row.get("source_refs") or []) - source_ids
+            if unknown_refs:
+                fail(f"{code}: rich street-food row {index} uses unknown source refs {sorted(unknown_refs)}")
+
+        for index, row in enumerate(rich_festival_rows, start=1):
+            if not row.get("name") or not row.get("description"):
+                fail(f"{code}: rich festival row {index} lacks name/description")
+            media_id = row.get("media_id")
+            if not media_id or media_id not in media_ids:
+                fail(f"{code}: rich festival row {index} lacks valid canonical media ref")
+            if not row.get("checked_at") or not row.get("source_refs"):
+                fail(f"{code}: rich festival row {index} lacks checked_at/source_refs")
+            unknown_refs = set(row.get("source_refs") or []) - source_ids
+            if unknown_refs:
+                fail(f"{code}: rich festival row {index} uses unknown source refs {sorted(unknown_refs)}")
 
         travel_rules = load(release / country_row["travel_rules"])
         for key, value in travel_rules.items():

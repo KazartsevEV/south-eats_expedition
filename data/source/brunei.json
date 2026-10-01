@@ -3,7 +3,7 @@
     "country": "Brunei Darussalam",
     "country_code": "BN",
     "language": "ru",
-    "last_updated": "2026-10-01",
+    "last_updated": "2026-10-02",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -57,7 +57,8 @@
       "2026-10-01 repeat QA obj_bn_0004 final: strict fact-source scoping; Freme alert kept operator-specific; OSM feature coordinates downgraded to medium; ForestGEO geology added; canopy dimensions re-verified against official brochure; blanket drone permit removed.",
       "2026-10-01 repeat QA obj_bn_0005: fact-level source scoping added; primary coordinate corrected from false entrance precision to mapped museum center; geotagged photo points downgraded from survey-like precision; traveler-report provenance corrected; blanket drone permit claim replaced with DCA conditional rules.",
       "2026-10-01 repeat QA obj_bn_0006: canonical elevation gap closed with exact-anchor SRTM30m sample; fact-level source scoping added; public-transport wording strengthened with official Brunei mini guide; unsupported facilities/seasonality claims removed; blanket drone permit corrected.",
-      "2026-10-01 repeat QA obj_bn_0007: fact-level source scoping enabled; broad-corridor elevation semantics corrected; Teraja approach/current Luagan access re-scoped; traveler and viewpoint provenance restored; unsupported visit-duration/water/camping legacy claims removed; blanket drone permit corrected."
+      "2026-10-01 repeat QA obj_bn_0007: fact-level source scoping enabled; broad-corridor elevation semantics corrected; Teraja approach/current Luagan access re-scoped; traveler and viewpoint provenance restored; unsupported visit-duration/water/camping legacy claims removed; blanket drone permit corrected.",
+      "2026-10-02 repeat QA obj_bn_0008: Pasarneka Tutong revalidated against current Brunei Tourism and official Pelita Brunei history; mapped-market coordinate downgraded from false entrance precision to site center/medium, unsupported visit duration and drinking-water certainty removed, fact-level source scoping added, DCA drone rules corrected, traveler-report provenance restored and gallery expanded to five licensed/context media items."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -7410,7 +7411,7 @@
           "food",
           "daily life"
         ],
-        "why_go": "Рынок даёт концентрированный срез продовольственной и ремесленной повседневности Тутонга за несколько часов: местные овощи и фрукты, готовая еда, корзины и другие изделия продаются в одном крытом комплексе. Для экспедиционного справочника его ценность не в «колорите рынка», а в возможности увидеть, какие продукты реально сходятся из сельского района в районный центр.",
+        "why_go": "Pasarneka Tutong — еженедельный рынок у Pekan Tutong, где в четверг утром сходятся продукты, готовая еда, растения и ремесленные изделия из Тутонга и других районов. Это не набор разных «рынков Тутонга», а один комплекс с недельным ритмом: его смысл — увидеть, как районный центр собирает сельскую продукцию и мелкую торговлю в одну точку.",
         "traveler_card": {
           "location": {
             "region": "Tutong",
@@ -7435,15 +7436,15 @@
               "lon": 114.65642,
               "elevation_m": 7
             },
-            "coordinate_type": "entrance",
-            "accuracy": "high",
+            "coordinate_type": "center",
+            "accuracy": "medium",
             "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Mapcarta / OpenStreetMap",
               "url": "https://mapcarta.com/W518214658",
-              "basis": "Pasar Malam Pekan Tutong marketplace"
+              "basis": "mapped marketplace feature; coordinate is retained as the site/complex center, not as a verified entrance"
             },
-            "coordinates_checked_at": "2026-09-28",
+            "coordinates_checked_at": "2026-10-02",
             "elevation_source": {
               "type": "map",
               "title": "SRTM30m elevation samples for Brunei market entrances",
@@ -7473,176 +7474,294 @@
             }
           },
           "logistics": {
-            "access": "Рынок находится у Pekan Tutong в Kampong Serambangun. На собственной машине или мопеде подъезд обычный дорожный; без транспорта Brunei Tourism рекомендует Dart.",
-            "public_transport": "Надёжный актуальный автобусный маршрут с расписанием до рынка не подтверждён; не подменять это общими сведениями о автобусах Бандар-Сери-Бегавана.",
-            "last_mile": "Координата карточки относится к входу в Kompleks Pasarneka dan Tamu Tutong; отдельного пешего трейла нет.",
-            "typical_visit_hours": [
-              1,
-              2.5
-            ],
-            "permit_or_guide": "Гид не требуется.",
+            "access": "Комплекс находится у Pekan Tutong и доступен по обычной дорожной сети. Brunei Tourism для посетителей без собственной машины прямо рекомендует Dart; надёжная актуальная регулярная автобусная линия именно к рынку не подтверждена.",
+            "public_transport": null,
+            "last_mile": "Последнее плечо — подъезд по асфальтированной городской/пригородной дороге к рыночному комплексу; внутри рынка перемещение пешком. Отдельного пешего трейла нет.",
+            "typical_visit_hours": null,
+            "permit_or_guide": "Гид и разрешение для обычного посещения не требуются.",
             "modes": {
-              "public_transport": "актуальная регулярная линия до рынка не подтверждена",
-              "taxi_ridehail": "Dart — официальный рекомендованный вариант без собственной машины",
+              "public_transport": null,
+              "taxi_ridehail": "Dart — рекомендованный Brunei Tourism вариант без собственной машины; цена зависит от точки подачи.",
+              "car": "обычный дорожный подъезд к рыночному комплексу",
               "moped": "обычный дорожный подъезд к рыночному комплексу",
-              "walking": "по самому комплексу; отдельного подхода нет"
+              "walking": "пешком по торговым рядам; отдельный дальний подход не требуется"
             },
             "access_options": [
               {
-                "id": "road_access",
-                "origin": "Pekan Tutong",
+                "id": "dart_access",
+                "origin": "Pekan Tutong / район Тутонга",
                 "modes": [
-                  "car",
-                  "moped",
-                  "taxi_ridehail"
+                  "ride_hailing"
                 ],
                 "legs": [
                   {
-                    "mode": "road",
+                    "mode": "ride_hailing",
                     "distance_km": null,
                     "duration_min": null,
-                    "surface": [
-                      "paved"
-                    ],
-                    "condition": "городской/пригородный дорожный подъезд",
-                    "seasonality": "круглогодично",
-                    "navigation": "к Kompleks Pasarneka dan Tamu Tutong в Kampong Serambangun"
+                    "surface": "paved",
+                    "condition": "Обычный дорожный подъезд к комплексу.",
+                    "seasonality": null,
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Kompleks Pasarneka dan Tamu Tutong / Pasarneka Tutong",
+                    "fords": null,
+                    "notes": "Brunei Tourism рекомендует Dart тем, у кого нет собственной машины; фиксированную цену и время поездки не задаём.",
+                    "source_refs": [
+                      "src_000191"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "self_drive_access",
+                "origin": "Pekan Tutong / дорожная сеть Tutong District",
+                "modes": [
+                  "car",
+                  "moped"
+                ],
+                "legs": [
+                  {
+                    "mode": "car",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "paved",
+                    "condition": "Обычный дорожный подъезд.",
+                    "seasonality": null,
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "к рыночному комплексу",
+                    "fords": null,
+                    "notes": null,
+                    "source_refs": []
+                  }
+                ]
+              },
+              {
+                "id": "market_walk",
+                "origin": "рыночный комплекс",
+                "modes": [
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "paved",
+                    "condition": "Пешее перемещение между торговыми рядами.",
+                    "seasonality": null,
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": null,
+                    "fords": null,
+                    "notes": null,
+                    "source_refs": []
                   }
                 ]
               }
             ],
-            "water": "Покупные напитки доступны во время торгового дня, но рынок не используется как гарантированный круглосуточный пункт воды.",
+            "water": "Проверенный отдельный источник питьевой воды или постоянно доступная точка пополнения у рынка не подтверждены; воду лучше иметь с собой. Наличие напитков у продавцов не считать гарантированным водоснабжением.",
             "water_structured": {
-              "at_object": true,
-              "quality": "commercial_packaged",
+              "at_object": null,
+              "quality": "unknown",
               "last_reliable_point": null,
+              "distance_m": null,
               "natural_sources": [],
-              "notes": "Наличие относится к работающим торговым рядам в четверг утром; вне торгового времени не считать рынок точкой снабжения."
+              "notes": "Отдельная подтверждённая питьевая точка не нормализована. Продажа еды и напитков зависит от работающих торговых рядов и не заменяет надёжный источник воды.",
+              "source_refs": []
             },
             "supplies": {
               "status": "available_during_market",
-              "summary": "Продукты и готовая еда продаются внутри рынка по четвергам утром.",
-              "poi_ids": []
+              "summary": "По четвергам рынок продаёт свежие продукты, готовую еду, растения и другие товары; текущая туристическая страница отдельно указывает оплату наличными.",
+              "poi_ids": [],
+              "source_refs": [
+                "src_000191",
+                "src_990250"
+              ]
             },
-            "overnight_and_camping": "Рынок не является местом ночёвки.",
+            "overnight_and_camping": "Рынок — дневной торговый объект. Источника, разрешающего свободную ночёвку или палаточный лагерь на территории комплекса, не найдено.",
             "overnight": {
-              "status": "prohibited_or_not_applicable",
-              "summary": "Торговый комплекс не рассматривается как кемпинг или ночёвка; жильё хранится отдельными lodging-сущностями.",
+              "status": "unclear",
+              "summary": "Не считать территорию рынка разрешённым местом для палатки или ночёвки без отдельного подтверждения. Для ночи использовать отдельное жильё в Tutong.",
               "source_refs": []
             },
-            "access_requirements": "Обычный публичный рынок; специальных разрешений на посещение не требуется.",
+            "access_requirements": "Обычный публичный рынок; текущая туристическая страница не указывает специального разрешения или обязательного гида.",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "mobility_notes": null,
+            "terrain_and_movement": null,
+            "access_source_refs": [
+              "src_000191",
+              "src_990251"
+            ],
+            "rules_source_refs": [
+              "src_000191"
+            ]
           },
           "climate": {
-            "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
-            "heat_rain_notes": "Экваториальный климат: высокая влажность и жара круглый год; сильный ливень возможен в любой месяц.",
+            "best_period": null,
+            "heat_rain_notes": "Рынок крытый, но подходы и внешняя часть остаются под экваториальной жарой и ливнями; отдельной объектной сезонности в источниках нет.",
             "site_specific_notes": null
           },
           "operations": {
-            "hours": "Четверг 06:00–12:00; в остальные дни Brunei Tourism указывает рынок закрытым.",
-            "ticket": "Вход свободный; покупки оплачиваются отдельно. Официальная страница указывает cash-only.",
-            "closure_notes": "Главное ограничение — недельный цикл: приехать не в четверг означает фактически пропустить объект. Даже в четверг поздний приезд уменьшает выбор.",
-            "last_verified": "2026-10-01",
+            "hours": "Четверг 06:00–12:00 по текущей странице Brunei Tourism.",
+            "ticket": "Отдельного входного билета не указано; покупки оплачиваются отдельно. Brunei Tourism отмечает оплату наличными.",
+            "closure_notes": "Brunei Tourism показывает рынок закрытым с пятницы по среду. Материал Pelita Brunei 2024 пишет, что отдельные продавцы начинают работу уже около 05:00; это не заменяет официальное посетительское окно 06:00–12:00.",
+            "last_verified": "2026-10-02",
             "official_url": "https://www.bruneitourism.com/street-food/tamu-tutong/",
-            "status": "weekly_market"
+            "status": "weekly_market",
+            "source_refs": [
+              "src_000191",
+              "src_990250"
+            ]
           },
           "safety": {
-            "crime_context": "Сопоставимой официальной статистики преступности именно по объекту нет; вместо фиктивного объект преступность оценка приведены реальные операционные и природные риски.",
-            "main_risks": [
-              "обычная осторожность с вещами",
-              "жара",
-              "скользкий пол после дождя",
-              "согласие на близкие портреты"
-            ],
+            "crime_context": null,
+            "main_risks": [],
             "sensitive_areas": [],
-            "confidence": "отдельная официальная статистика преступности по объекту отсутствует"
+            "confidence": null,
+            "source_refs": [],
+            "checked_at": "2026-10-02"
           },
           "media": {
             "photo_suitability_5": 5,
             "video_suitability_5": 4,
             "visual_scouting": {
-              "best_time": "06:30–09:30 в четверг: рынок уже работает, но торговля ещё не идёт к завершению.",
-              "best_weather_light": "Комплекс крытый и открыт по сторонам; дождь меньше мешает внутри рядов, чем на внешних подходах.",
+              "best_time": "Четверг утром, в пределах официального окна 06:00–12:00; для наибольшего числа работающих рядов практичнее первая половина торгового утра.",
+              "best_weather_light": "Большая часть торговли идёт под крышей, поэтому резкая смена солнца и дождя меньше влияет на внутренние ряды, чем на внешние подходы.",
               "viewpoints_for_photo_video": [
                 {
-                  "id": "main_aisle",
-                  "name": "Главный проход внутри комплекса",
-                  "coordinates": {
-                    "lat": 4.80379,
-                    "lon": 114.65642,
-                    "elevation_m": 7
-                  },
-                  "access": {
-                    "walk_km": 0,
-                    "notes": "координата входа/комплекса; не выдаётся за точный GPS конкретного места съёмки внутри здания"
-                  },
+                  "id": "market_hall",
+                  "name": "Торговые ряды внутри комплекса",
+                  "description": "Основная визуальная точка — пространство самих рядов, где одновременно читаются продукты, ремесленные изделия и поток покупателей.",
+                  "coordinates": null,
+                  "access": "Внутри публичной торговой зоны в часы работы рынка.",
                   "view": {
-                    "description": "ряды продавцов, продукты и глубина крытого павильона"
+                    "description": "торговые ряды, продукты, ремесленные изделия и повседневное движение рынка"
                   },
-                  "best_time": "early_morning",
+                  "best_time": "четверг утром",
+                  "best_weather_light": "крытое пространство; внешний свет меняется с облачностью",
                   "useful_equipment": [
                     {
                       "type": "wide",
-                      "why": "показывает одновременно торговые ряды и устройство крытого комплекса"
+                      "why": "показывает структуру рядов и плотность рынка"
                     },
                     {
                       "type": "standard",
-                      "why": "удобен для предметов и взаимодействия без искажения перспективы"
+                      "why": "подходит для предметов и общей среды без сильного искажения перспективы"
+                    }
+                  ],
+                  "source_refs": [
+                    "src_000191",
+                    "src_990250"
+                  ]
+                },
+                {
+                  "id": "serambangun_context",
+                  "name": "Окружение комплекса в зоне Serambangun / Pekan Tutong",
+                  "description": "Контекстный вид полезен для понимания, что рынок включён в дорожную и жилую ткань районного центра, а не стоит отдельно в сельской местности.",
+                  "coordinates": null,
+                  "access": "Публичная дорожная среда вокруг комплекса.",
+                  "view": {
+                    "description": "городско-пригородная среда вокруг рыночного комплекса"
+                  },
+                  "best_time": "дневное время",
+                  "best_weather_light": null,
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает взаимное положение комплекса и окружающей застройки"
                     }
                   ],
                   "source_refs": []
                 }
               ],
               "seasonal_visuals": [
-                "Главный визуальный ритм здесь недельный, а не сезонный: полный рынок существует в четверг утром; в другие дни тот же комплекс визуально и функционально другой."
+                "Главный визуальный цикл здесь недельный: полноценная торговая среда возникает в четверг утром; в остальные дни тот же комплекс не представляет тот же объект по содержанию."
               ],
               "video_activity": [
-                "разгрузка и раскладка товара в начале торгового утра",
-                "движение покупателей и продавцов по крытым рядам",
-                "приготовление и продажа готовой еды там, где это происходит публично"
+                "утренняя торговля в рядах",
+                "поток покупателей между продовольственными и ремесленными секциями",
+                "выкладка и продажа районной продукции"
               ],
               "useful_equipment": [
                 {
                   "type": "wide",
-                  "why": "для пространства крытого рынка и плотных рядов"
+                  "why": "для пространства крытого рынка и нескольких рядов одновременно"
                 },
                 {
                   "type": "standard",
-                  "why": "для товара, рук и повседневных взаимодействий с нормальной дистанции"
+                  "why": "для товара и деталей повседневной торговли"
                 }
               ]
             },
             "drone": {
-              "visual_value": "Низкая практическая ценность: с воздуха теряется главное содержание рынка — торговые ряды и взаимодействие людей.",
+              "visual_value": "Для содержания этой карточки воздушный вид вторичен: главная информация находится внутри торговых рядов и в движении людей.",
               "legal_status": "regulated",
-              "permit_required": true,
+              "permit_required": null,
               "restrictions": [
-                "не запускать над скоплением людей без выполнения авиационных и локальных требований"
+                "регистрация беспилотного воздушного судна в Department of Civil Aviation Brunei Darussalam обязательна до эксплуатации",
+                "полёты разрешены только днём; ночная эксплуатация запрещена",
+                "нельзя летать в пределах 5 км от аэропорта или военной базы",
+                "нельзя летать в ограниченных зонах",
+                "для полёта на публичном мероприятии требуется flying permit",
+                "для полёта выше 200 футов над уровнем моря требуется flying permit",
+                "для конкретного рыночного комплекса отдельно проверить допустимость места запуска и воздушное пространство; карточка не утверждает, что flying permit нужен для любого полёта"
               ],
-              "checked_at": "2026-10-01",
-              "source_refs": []
+              "checked_at": "2026-10-02",
+              "source": {
+                "type": "government_official",
+                "title": "Unmanned Aircraft",
+                "publisher": "Department of Civil Aviation, Brunei Darussalam",
+                "url": "https://www.dca.gov.bn/dca-form-category/unmanned-aircraft/",
+                "language": "en",
+                "accessed": "2026-10-02",
+                "authority": "high",
+                "used_for": [
+                  "registration",
+                  "operating-guidelines document",
+                  "conditional flying-permit triggers"
+                ]
+              }
             },
-            "filming_restrictions": "Общий вид публичных рядов отделять от съёмки конкретного человека: для крупного портрета или длительной съёмки продавца спрашивать согласие и не перекрывать проход."
+            "filming_restrictions": null
           },
           "annotation": {
             "canonical_story_from_sections": true,
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Pasarneka Tutong, также называемый Tamu Tutong, — крытый рыночный комплекс в Kampong Serambangun рядом с Pekan Tutong. Официальный туристический сайт указывает единственный основной торговый день — четверг, 06:00–12:00. Поэтому карточка относится к одному объекту; прежнее множественное «Tutong and Tamu markets» создавало ложное впечатление каталога нескольких рынков."
+                "content": "Pasarneka Tutong, также известный как Tamu Tutong, — один конкретный еженедельный рыночный комплекс у Pekan Tutong. Текущая страница Brunei Tourism указывает торговлю по четвергам с 06:00 до 12:00, наличную оплату и ассортимент от плетёных корзин до cucur pisang. Поэтому прежнее название карточки во множественном числе было вводящим в заблуждение: здесь описывается не группа рынков, а Kompleks Pasarneka dan Tamu Tutong.",
+                "source_refs": [
+                  "src_000191"
+                ]
               },
               {
                 "section_id": "history",
-                "content": "Tamu — традиционная форма периодического рынка, где продавцы из разных поселений собираются в определённый день, а не постоянный городской базар. Для комплекса в Serambangun официальный районный справочник подчёркивает именно четверг: в этот день сюда приезжают торговцы из разных частей страны. Исторические рынки и современные постоянные магазины Тутонга не объединяются с этим объектом без отдельного основания."
+                "content": "Современный комплекс появился в рамках Восьмого национального плана развития. По материалу Pelita Brunei, строительство началось в 2005 году, завершилось в марте 2007-го, а официальное открытие состоялось 31 августа 2007 года. На создание инфраструктуры государство затратило около 9 млн BND; изначально комплекс включал порядка 200 мест для еженедельной торговли, отдельные рыбные и овощные места, пищевые киоски и мини-маркеты. Это объясняет нынешний масштаб рынка: он задумывался как районная торговая инфраструктура, а не как туристическая декорация.",
+                "source_refs": [
+                  "src_990249"
+                ]
               },
               {
                 "section_id": "culture",
-                "content": "Ассортимент соединяет повседневную еду и ремесло: свежие овощи и фрукты, готовые блюда и напитки, цветы, птица, одежда, корзины и другие изделия. Brunei Tourism отдельно упоминает hand-woven baskets и cucur pisang. Для наблюдения за локальной пищевой культурой полезнее фиксировать происхождение продукта и местное название, чем приписывать каждому товару «традиционность» без источника."
+                "content": "Недельный рынок остаётся местом обмена не только товарами, но и районными социальными связями. Государственный материал 2024 года описывает более двухсот продавцов, продукты из Тутонга, Бруней-Муары и Белайта, овощи, фрукты, цветы, свежую рыбу, птицу, мясо, лесные побеги и редкие плоды, а также старые предметы и изделия. Здесь же действует площадка программы Satu Kampung Satu Produk — «Один посёлок — один продукт», запущенная на рынке в 2020 году. Поэтому этнографическая ценность объекта — в реальном составе продукции и продавцов, а не в абстрактном «местном колорите».",
+                "source_refs": [
+                  "src_990250"
+                ]
               },
               {
                 "section_id": "geography",
-                "content": "Рынок расположен в Kampong Serambangun у Pekan Tutong, то есть на дорожном узле районного центра, а не в удалённой сельской глубинке. Его функция как точки сбора продукции читается именно через эту позицию: сельские товары сходятся к месту, доступному с основной дорожной сети Тутонга."
+                "content": "Рынок работает в городской зоне Тутонга, связанной с основной дорожной сетью района. Старые и новые официальные материалы расходятся в локальном топониме: Pelita Brunei помещает комплекс в Kampung Serambangun, а текущий профиль Mukim Pekan Tutong на сайте районной администрации перечисляет Kompleks Pasarneka dan Tamu Tutong под Sengkarai. Поэтому карточка сохраняет надёжную привязку к Tutong и GPS самого рыночного объекта, но не создаёт ложную точность отдельного village-level nearest_place.",
+                "source_refs": [
+                  "src_990249",
+                  "src_990250",
+                  "src_990251",
+                  "src_000184"
+                ]
               }
             ]
           },
@@ -7650,9 +7769,11 @@
             {
               "kind": "traveler_report",
               "topic": "timing",
-              "summary": "Wikivoyage отмечает, что часть продавцов может закончить торговлю до формального закрытия, поэтому для полного ассортимента разумнее приезжать в ранние часы работы.",
+              "summary": "Wikivoyage отмечает, что часть продавцов может закончить торговлю раньше формального закрытия; это согласуется с недельным характером рынка, но источник низкой надёжности и не заменяет текущие официальные часы.",
               "observed_period": "2018-03",
-              "source_refs": [],
+              "source_refs": [
+                "src_990021"
+              ],
               "confidence": "low"
             }
           ],
@@ -7681,7 +7802,35 @@
               "provider": "Wikimedia Commons",
               "license": "CC BY-SA 4.0",
               "artist": "Pangalau",
-              "last_checked": "2026-09-30"
+              "last_checked": "2026-10-02",
+              "scope": "market/town context"
+            },
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Tutong_Town_21_December_2024_07.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tutong_Town_21_December_2024_07.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Pangalau",
+              "last_checked": "2026-10-02",
+              "scope": "market context"
+            },
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Kampong_Serambangun_2023.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Kampong_Serambangun_2023.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Pangalau",
+              "last_checked": "2026-10-02",
+              "scope": "surrounding locality context"
+            },
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Aerial_of_Brunei_2023_03.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Aerial_of_Brunei_2023_03.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Pangalau",
+              "last_checked": "2026-10-02",
+              "scope": "Tutong/Serambangun aerial context"
             }
           ]
         },
@@ -7690,12 +7839,16 @@
             "url": "https://www.bruneitourism.com/street-food/tamu-tutong/",
             "publisher": "Brunei Tourism / Tourism Development Department",
             "used_for": [
-              "description",
-              "access",
-              "hours",
-              "visitor logistics"
+              "current opening hours",
+              "cash-only note",
+              "market description",
+              "Dart access"
             ],
-            "accessed": "2026-09-28"
+            "accessed": "2026-10-02",
+            "type": "government_tourism",
+            "title": "Pasarneka Tutong",
+            "language": "en",
+            "authority": "high"
           },
           {
             "url": "https://commons.wikimedia.org/wiki/File:Tutong_town_24_December_2024_07.jpg",
@@ -7731,24 +7884,85 @@
             "title": "Tutong – Travel guide",
             "publisher": "Wikivoyage",
             "language": "en",
-            "accessed": "2026-10-01",
+            "accessed": "2026-10-02",
             "authority": "low",
             "used_for": [
               "traveler timing report"
+            ]
+          },
+          {
+            "url": "https://www.pelitabrunei.gov.bn/Arkib%20Dokumen/2013/Disember/pelitabrunei_181213.pdf",
+            "type": "government_official",
+            "title": "Tamu Tutong berkonsepkan ‘Mesra Pelanggan’",
+            "publisher": "Pelita Brunei / Information Department, Brunei Darussalam",
+            "language": "ms",
+            "published_at": "2013-12-18",
+            "accessed": "2026-10-02",
+            "authority": "high",
+            "used_for": [
+              "construction 2005–2007",
+              "official opening 31 August 2007",
+              "BND 9 million infrastructure",
+              "original stall structure",
+              "market history"
+            ]
+          },
+          {
+            "url": "https://www.pelitabrunei.gov.bn/Arkib%20Dokumen/2024/PELITA%20BRUNEI%2021082024.pdf",
+            "type": "government_official",
+            "title": "Keunikan Tamu Tutong berupaya menjadi daya tarikan pelancongan",
+            "publisher": "Pelita Brunei / Information Department, Brunei Darussalam",
+            "language": "ms",
+            "published_at": "2024-08-21",
+            "accessed": "2026-10-02",
+            "authority": "high",
+            "used_for": [
+              "vendor count context",
+              "products",
+              "1K1P market",
+              "early vendor activity",
+              "social role of weekly market"
+            ]
+          },
+          {
+            "url": "https://www.tutong.gov.bn/mukim-pekan-tutong-4/",
+            "type": "government_official",
+            "title": "Profail Mukim Pekan Tutong",
+            "publisher": "Tutong District Office",
+            "language": "ms",
+            "accessed": "2026-10-02",
+            "authority": "high",
+            "used_for": [
+              "official locality listing",
+              "market complex placement"
+            ]
+          },
+          {
+            "url": "https://www.dca.gov.bn/dca-form-category/unmanned-aircraft/",
+            "type": "government_official",
+            "title": "Unmanned Aircraft",
+            "publisher": "Department of Civil Aviation, Brunei Darussalam",
+            "language": "en",
+            "accessed": "2026-10-02",
+            "authority": "high",
+            "used_for": [
+              "drone registration",
+              "operating rules",
+              "conditional flying permit"
             ]
           }
         ],
         "verification": {
           "dynamic_fields": [
             "hours",
-            "tickets",
-            "permits",
-            "access",
-            "filming/drone"
+            "cash payment",
+            "Dart availability",
+            "local access",
+            "drone rules"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Pasarneka Tutong — еженедельный четверговый рынок в Kampong Serambangun у Тутонга: с 06:00 до полудня сюда съезжаются продавцы местных продуктов, готовой еды и ремесленных изделий. Это не «несколько рынков Тутонга» в одной карточке, а конкретный Kompleks Pasarneka dan Tamu Tutong с одной входной точкой и собственным ритмом: приезжать имеет смысл утром, пока торговля в полном объёме.",
+        "narrow": "Pasarneka Tutong — еженедельный четверговый рынок у Pekan Tutong. Текущая страница Brunei Tourism указывает работу 06:00–12:00 и оплату наличными; государственные материалы дают более широкий контекст — комплекс открыт в 2007 году и служит крупной площадкой для районной продукции, ремёсел и программы «Один посёлок — один продукт».",
         "tags": [
           "culture",
           "food",
@@ -7798,13 +8012,13 @@
         "qa": {
           "language_review": {
             "status": "reviewed",
-            "checked_at": "2026-10-01",
-            "notes": "Удалены рекламные штампы, англо-русская каша и псевдосъёмочные инструкции."
+            "checked_at": "2026-10-02",
+            "notes": "Русский пользовательский слой перечитан; англоязычные слова оставлены только для официальных названий сервисов и местных терминов."
           },
           "card_review": {
             "status": "passed",
-            "checked_at": "2026-10-01",
-            "scope": "объектный QA Pasarneka Tutong / Tamu Tutong по камбоджийскому эталону",
+            "checked_at": "2026-10-02",
+            "scope": "повторный объектный QA Pasarneka Tutong / Tamu Tutong по камбоджийскому эталону",
             "checks": {
               "language": true,
               "classification": true,
@@ -7817,20 +8031,26 @@
               "water": true,
               "overnight": true,
               "traveler_reports": true,
-              "visual_recon": true
+              "visual_recon": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "drone_rule_precision": true
             },
             "notes": [
-              "Исправлена сущность: карточка описывает один Kompleks Pasarneka dan Tamu Tutong, а не неопределённое множество рынков.",
-              "Часы привязаны к актуальной официальной странице: четверг 06:00–12:00; cash-only отмечен как изменчивый операционный факт.",
-              "Убрана ложная логистика про городской автобус Бандар-Сери-Бегавана; оставлены собственный транспорт и официальный Dart.",
-              "Вода описана как коммерческое снабжение только во время рынка, не как постоянный POI.",
-              "Ночёвка не заполняется формальным «гостиница»: рынок помечен как не относящийся к camping/overnight.",
-              "Traveler report используется только для наблюдения о раннем окончании торговли и имеет низкую уверенность."
+              "Координата исправлена с неподтверждённого entrance/high на center/medium: картографический источник подтверждает рыночный объект, но не конкретную дверь.",
+              "История дополнена официальной хронологией строительства 2005–2007, открытием 31 августа 2007 года и инфраструктурой комплекса.",
+              "Культурный слой дополнен официальными данными 2024 года о продавцах, ассортименте и программе «Один посёлок — один продукт».",
+              "Неподтверждённая продолжительность посещения удалена; регулярный общественный транспорт оставлен null.",
+              "Вода возвращена в honest unknown: продажа еды/напитков не выдаётся за надёжную питьевую точку.",
+              "Ночёвка помечена unclear без заявления о запрете, которого источники не подтверждают.",
+              "Traveler report получил явный source_ref и остаётся low-confidence.",
+              "Blanket drone permit удалён; сохранены только официальные правила DCA и условные триггеры flying permit.",
+              "Галерея доведена до пяти лицензированных изображений: три рыночных/городских вида и два контекстных вида Serambangun/Tutong."
             ]
           },
           "rebuild_v2": {
             "status": "passed",
-            "checked_at": "2026-10-01",
+            "checked_at": "2026-10-02",
             "scope": "редакционная приёмка obj_bn_0008",
             "checks": {
               "connected_story": true,
@@ -7845,12 +8065,35 @@
               "traveler_reports": true,
               "visual_recon": true,
               "sources": true,
-              "entity_scope_corrected": true
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "drone_rule_precision": true
             },
             "notes": [
-              "Главная редакционная правка — нормализация объекта из размытого 'markets' в конкретный недельный рынок.",
-              "Продукты описаны только настолько конкретно, насколько подтверждают официальные источники; происхождение отдельных товаров не выдумывается.",
-              "Visual recon строится вокруг недельного ритма и публичного пространства, а не вокруг настроек камеры."
+              "Карточка остаётся одним конкретным недельным рынком, а не набором разных объектов Тутонга.",
+              "Расхождение официальных локальных топонимов Serambangun/Sengkarai сохранено явно вместо выдуманного nearest_place.",
+              "Visual recon описывает точки и условия наблюдения, не содержит ТЗ фотографу, параметров экспозиции, shot list или сценария."
+            ]
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-02",
+            "scope": "obj_bn_0008: привязка источников к конкретным фактам и динамическим полям",
+            "checks": {
+              "narrative_section_sources": true,
+              "operations_sources": true,
+              "access_sources": true,
+              "water_unknown_not_falsely_sourced": true,
+              "overnight_unknown_not_falsely_sourced": true,
+              "traveler_report_sources": true,
+              "visual_viewpoint_sources": true,
+              "drone_rule_precision": true
+            },
+            "notes": [
+              "Текущие часы и Dart привязаны к Brunei Tourism.",
+              "Исторические цифры и даты привязаны к Pelita Brunei 2013; ассортимент и 1K1P — к Pelita Brunei 2024.",
+              "Unknown по воде и ночёвке не наследует общий bibliography source_refs.",
+              "Дрон привязан к официальной DCA, permit_required оставлен null."
             ]
           }
         },

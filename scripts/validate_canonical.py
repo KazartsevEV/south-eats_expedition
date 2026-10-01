@@ -508,8 +508,8 @@ def main():
     if "function mirroredMediaURL" not in ui_text:
         fail("public/index.html lacks mirroredMediaURL helper")
     forbidden_ui_patterns = [
-        'data-lightbox-url="'+esc(m.url',
-        "data-lightbox-url=\"'+esc(m.url",
+        "esc(m.url)",
+        "esc(m.url||",
         "heroFull=(cover&&cover.url)",
     ]
     for pattern in forbidden_ui_patterns:

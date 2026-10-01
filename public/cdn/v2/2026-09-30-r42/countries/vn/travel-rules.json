@@ -2,26 +2,27 @@
   "country_id": "geo_vn",
   "visa": {
     "value": {
-      "status": "visa-free",
+      "status": "без визы до 45 дней",
       "stay_days": 45,
       "validity_window": "Односторонний безвизовый режим для граждан России действует с 15 марта 2025 года по 14 марта 2028 года.",
       "passport_validity": "не менее 6 месяцев на дату въезда",
       "evisa": "Электронная виза доступна на срок до 90 дней, однократная или многократная.",
       "visa_run": {
-        "possible": "После выезда можно просить новый безвизовый въезд или использовать новую визу.",
-        "limits": "Специального гарантированного права на неограниченные visa-run нет; каждый новый въезд зависит от решения пограничных органов."
+        "possible": "После выезда можно просить новый въезд по действующему безвизовому режиму либо использовать новую/действующую визу.",
+        "limits": "Официальные источники не дают гарантии автоматического неограниченного «сброса» 45-дневного срока; каждый последующий въезд остаётся отдельным решением пограничных органов.",
+        "notes": "Для многократных поездок с заранее известными датами разумно рассматривать 90-дневную multiple-entry eVisa вместо последовательных безвизовых въездов."
       },
       "source_ids": [
         "VN_MFA_VISA",
         "EVISA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000836",
       "src_000843"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -34,15 +35,18 @@
         "Лаос",
         "Камбоджа"
       ],
-      "transport": "Международные железнодорожные и автомобильные коридоры в Китай, а также дорожные и автобусные переходы в Лаос и Камбоджу; пригодность конкретного пункта для eVisa/въезда проверяется по официальному списку.",
+      "transport": "Международные железнодорожные и автомобильные коридоры связывают Вьетнам с Китаем, а дорожные переходы — с Лаосом и Камбоджей. Перед поездкой проверять, допускает ли конкретный пункт въезд/выезд по выбранному основанию (безвизовый режим или eVisa) и открыт ли он для иностранцев.",
       "source_ids": [
-        "RUS_MFA"
-      ]
+        "RUS_MFA",
+        "EVISA"
+      ],
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
-      "src_000842"
+      "src_000842",
+      "src_000843"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -74,7 +78,7 @@
     "source_refs": [
       "src_000839"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -85,7 +89,7 @@
     "source_refs": [
       "src_000839"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -94,16 +98,18 @@
   "transport_rules": {
     "value": {
       "road_side": "right",
-      "foreign_licence": "Для самостоятельного вождения следует использовать международное водительское удостоверение по применимой международной конвенции вместе с национальным удостоверением; конкретную категорию и признание документов нужно проверять перед арендой.",
+      "foreign_licence": "Для самостоятельного вождения иностранцу действительны IDP, выданный государством — участником Венской конвенции 1968 года, и соответствующее национальное водительское удостоверение; оба документа должны соответствовать категории транспортного средства.",
       "source_ids": [
-        "RUS_MFA"
+        "RUS_MFA",
+        "VN_DRIVER_1968"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
-      "src_000842"
+      "src_000842",
+      "src_900037"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -116,12 +122,12 @@
       "source_ids": [
         "RUS_MFA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000842"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -131,18 +137,20 @@
     "value": {
       "legal_status": "regulated",
       "permit_required": true,
-      "summary": "С 2026 года для БПЛА действуют обновлённые правила регистрации и разрешения полётов. Регистрация аппарата не заменяет разрешение на конкретный полёт; использовать БПЛА можно только в разрешённых зоне, времени и высоте.",
+      "registration_required": true,
+      "summary": "В 2026 году для беспилотных воздушных судов действует обновлённая система регистрации и разрешений. Регистрация аппарата сама по себе не разрешает полёт: перед эксплуатацией требуется получить разрешение и соблюдать утверждённые район, время, высоту и иные условия.",
+      "foreign_operator_note": "Для иностранного физического лица право на регистрацию связано со статусом постоянного/временного проживания во Вьетнаме либо отдельным разрешением компетентного органа; туристу нельзя считать регистрацию автоматически доступной.",
       "source_ids": [
         "CAAV_UAV_REG",
         "CAAV_UAV_FLIGHT"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000837",
       "src_000838"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -166,7 +174,7 @@
     "source_refs": [
       "src_000842"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -216,7 +224,7 @@
       "src_000862",
       "src_000842"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Traveller-facing criminal-law summary; not an exhaustive legal code."
@@ -229,12 +237,12 @@
       "source_ids": [
         "RUS_MFA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000842"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -255,7 +263,7 @@
     "source_refs": [
       "src_000840"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -287,7 +295,7 @@
     "source_refs": [
       "src_000842"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."

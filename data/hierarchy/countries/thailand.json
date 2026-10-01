@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "TH",
     "country_slug": "thailand",
-    "status": "geo_profile_qa_complete_before_object_cards",
+    "status": "geo_profile_with_preliminary_object_coverage",
     "checked_at": "2026-10-01",
-    "next_level": "country_and_regional_layer_complete_object_cards_frozen",
+    "next_level": "object_recovery_preliminary_qa",
     "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes.",
     "canonical_source_id": "src_906009",
     "qa_contract": "geo_profile_roles_v1"
@@ -30,8 +30,8 @@
   "rules": {
     "parentage": "Administrative units use verified current parentage. Composite expedition regions remain geographic_area when they span several administrative units or preserve legacy research geography.",
     "route_hubs": "Cities and towns are geo entities only; they are not attraction cards.",
-    "object_visibility": "Object cards remain deferred for the second-chunk countries during this phase.",
-    "cards": "Object card payloads are not edited in this stage."
+    "object_visibility": "Recovered Thailand object cards are attached to verified formal expedition geography; no coordinates are inferred from city, province, park centre, or regional nodes.",
+    "cards": "Recovered object cards are preliminary QA; missing GPS/elevation/access/water/overnight/visual facts remain null or incomplete rather than inferred."
   },
   "nodes": [
     {
@@ -343,7 +343,9 @@
       "slug": "bangkok-expedition",
       "parent_id": "th:city:bangkok",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:bangkok-grand-palace-and-temples"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Bangkok"
@@ -370,7 +372,9 @@
       "slug": "central-plains-ayutthaya",
       "parent_id": "th:province:phra-nakhon-si-ayutthaya",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:ayutthaya"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Central plains / Ayutthaya"
@@ -397,7 +401,9 @@
       "slug": "lower-north-sukhothai",
       "parent_id": "th:province:sukhothai",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:sukhothai"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Lower North / Sukhothai"
@@ -412,7 +418,10 @@
       "slug": "northern-thailand-chiang-mai",
       "parent_id": "th:province:chiang-mai",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:chiang-mai",
+        "th:doi-inthanon-national-park"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Northern Thailand / Chiang Mai"
@@ -427,7 +436,10 @@
       "slug": "nan-phrae",
       "parent_id": "th:geographic_area:north",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:nan-old-town-and-mountains",
+        "th:phrae"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Nan / Phrae"
@@ -442,7 +454,10 @@
       "slug": "andaman-phuket-krabi",
       "parent_id": "th:geographic_area:south",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:phuket-krabi-andaman-islands",
+        "th:similan-islands-national-park"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Andaman / Phuket / Krabi"
@@ -457,7 +472,9 @@
       "slug": "khao-sok-surat-thani",
       "parent_id": "th:province:surat-thani",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:khao-sok-national-park"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Khao Sok / Surat Thani"
@@ -472,7 +489,9 @@
       "slug": "songkhla-expedition",
       "parent_id": "th:province:songkhla",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:songkhla-old-town"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Songkhla"
@@ -487,7 +506,9 @@
       "slug": "lower-isan-buriram-korat",
       "parent_id": "th:geographic_area:northeast",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:phimai-and-phanom-rung"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Lower Isan / Buriram / Nakhon Ratchasima"
@@ -502,7 +523,9 @@
       "slug": "khao-yai-korat-edge",
       "parent_id": "th:province:nakhon-ratchasima",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:khao-yai-national-park"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Khao Yai / Korat edge"
@@ -517,7 +540,9 @@
       "slug": "kanchanaburi-erawan",
       "parent_id": "th:province:kanchanaburi",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:erawan-national-park"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Kanchanaburi / Erawan"
@@ -532,7 +557,9 @@
       "slug": "loei-phu-kradueng",
       "parent_id": "th:province:loei",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:phu-kradueng-national-park"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Loei / Phu Kradueng"
@@ -547,7 +574,10 @@
       "slug": "ubon-mekong-pha-taem",
       "parent_id": "th:province:ubon-ratchathani",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:pha-taem-national-park",
+        "th:sam-phan-bok"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Ubon / Mekong / Pha Taem"
@@ -562,7 +592,9 @@
       "slug": "satun-ko-tarutao",
       "parent_id": "th:province:satun",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:ko-tarutao-national-park"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Satun / Ko Tarutao"
@@ -577,7 +609,9 @@
       "slug": "mae-hong-son-pang-mapha",
       "parent_id": "th:province:mae-hong-son",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:tham-lod-cave-pang-mapha"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Mae Hong Son / Pang Mapha"
@@ -592,7 +626,9 @@
       "slug": "chiang-rai-far-north",
       "parent_id": "th:province:chiang-rai",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:wat-rong-khun-white-temple"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Chiang Rai / far north"
@@ -607,7 +643,9 @@
       "slug": "prachuap-upper-gulf",
       "parent_id": "th:province:prachuap-khiri-khan",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "th:khao-sam-roi-yot-national-park-phraya-nakhon-cave"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Prachuap Khiri Khan / upper Gulf"

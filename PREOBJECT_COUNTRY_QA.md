@@ -278,4 +278,15 @@ build CDN
 
 ## Upper-level completion state
 
-All 11 target countries have completed the country/regional/locality pre-object pass. Object cards remain frozen. A final cross-country structural QA is required after the Vietnam merge before this phase is closed.
+All 11 target countries have completed the country/regional/locality pre-object pass. Object cards remain frozen.
+
+Final cross-country structural QA: **complete on 2026-10-01**, subject to the merge/post-merge gate of this closure PR. Verified before opening the PR:
+
+- PH remains the accepted reference country;
+- BN–VN all resolve to the pre-object country/regional/locality layer;
+- all ten non-reference countries have hierarchy status `geo_profile_qa_complete_before_object_cards`, `qa_contract=geo_profile_roles_v1` and `checked_at=2026-10-01`;
+- all ten non-reference source files carry `upper_level_acceptance.status=complete` after the Brunei metadata normalization in this PR;
+- the post-Vietnam global workflow completed the normalized build, canonical build, recursive hierarchy, country/regional validation, CDN validation, canonical-contract validation, recursive-hierarchy validation, derived-map validation and publish successfully;
+- this closure change does not modify attraction/object payloads.
+
+The next project phase may start only after this PR is green, merged, and its post-merge publish succeeds.

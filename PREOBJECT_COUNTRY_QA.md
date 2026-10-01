@@ -268,8 +268,8 @@ build CDN
 - LA — complete (upper-level acceptance recorded; full gate required on this PR).
 - ID — complete (upper-level acceptance recorded; full gate required on this PR).
 - MY — complete (upper-level acceptance recorded; full gate required on this PR).
-- MM — active.
-- SG — queued.
+- MM — complete (upper-level acceptance recorded; full gate required on this PR).
+- SG — active.
 - TH — queued.
 - TL — queued.
 - VN — queued.

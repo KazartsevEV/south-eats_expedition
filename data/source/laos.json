@@ -37,7 +37,7 @@
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
-      "completed_objects": 11,
+      "completed_objects": 12,
       "total_objects": 19,
       "status": "object_rebuild_v2_in_progress",
       "updated": "2026-10-01",
@@ -45,7 +45,8 @@
       "notes": [
         "2026-10-01 Nam Et-Phou Louey rebuild: replaced the generic package-tour prose with a regulated national-park access model; added official park history, 5,070 km² / 336–2,257 m topography, Muang Hiam and Ban Son Khoua access anchors, current bus caveats, tour-provided water, designated overnight model, Khmu animist tradition only where explicitly documented, dated 2025–2026 traveler reports, corrected lodging geography, and a five-image licensed media set with contextual images explicitly labelled.",
         "2026-10-01 Nong Khiaw and Muang Ngoi rebuild: separated the two settlements and their river piers, added georeferenced Pha Daeng and Phanoi viewpoints, replaced invented generic walking ranges with source-backed access legs, expanded Nam Ou karst geology and wartime cave history, documented hydropower-driven transport change, normalized water/camping unknowns, added 2025–2026 traveler reports and a five-image Commons gallery.",
-        "2026-10-01 Bolaven Plateau rebuild: reframed the object as a trans-provincial volcanic and coffee cultural landscape; added recent volcanic-field geology, Paksong/Tad Fane/Tad Lo anchors, self-guided road-loop semantics, Jru/Laven spirit-religion ethnography, honest water/camping unknowns, dated 2025–2026 traveler reports and a five-image Commons gallery."
+        "2026-10-01 Bolaven Plateau rebuild: reframed the object as a trans-provincial volcanic and coffee cultural landscape; added recent volcanic-field geology, Paksong/Tad Fane/Tad Lo anchors, self-guided road-loop semantics, Jru/Laven spirit-religion ethnography, honest water/camping unknowns, dated 2025–2026 traveler reports and a five-image Commons gallery.",
+        "2026-10-01 Nam Ha rebuild: separated regulated trekking access from independent road-access sites; added Ban Nalan and Pha Yueang geospatial anchors, current Lao Parks/ASEAN status, protected-area and community-ecotourism history, 2026 wildlife-route and watershed research, group-specific Lanten ritual context, honest water/camping rules, dated traveler reports, removed placeholder lodging, and expanded media to five licensed/contextual images."
       ]
     },
     "human_readable_layer": {
@@ -11142,23 +11143,21 @@
         "interest": [
           "nature",
           "rainforest",
-          "wildlife",
+          "biodiversity",
           "trekking",
-          "ethnic culture"
+          "kayaking",
+          "ethnography",
+          "community_tourism"
         ],
-        "why_go": "Нам-Ха — охраняемая горно-лесная зона вокруг Луангнамтха, где треккинг-схема строится вокруг леса и деревень Khmu, Akha, Lanten, Hmong, Tai Dam/Tai Lue и других групп. Важная часть модели — обязательный/организованный местный гид и местное сообщество ночёвки.",
+        "why_go": "Нам-Ха — 222 400 га горных лесов и водосборов Луангнамтха, где охрана природы с конца 1990-х связана с общинным экотуризмом. Для экспедиции это не «пакетный трек», а сочетание регулируемых многодневных маршрутов, рек, леса и деревень с отдельными самостоятельно доступными дорожными точками; режим конкретного трека нужно проверять до выхода.",
         "traveler_card": {
           "location": {
             "region": "Луангнамтха / Нам-Ха",
-            "nearest_hub": "Luang Namtha",
+            "nearest_hub": "Луангнамтха",
             "languages_spoken": [
-              "Lao",
-              "Khmu",
-              "Akha",
-              "Lanten",
-              "Hmong",
-              "Tai Dam/Tai Lue",
-              "английский в основном через местных проводников и организаторов доступа"
+              "лаосский",
+              "кхму, акха, лантен/мун и другие языки общин провинции",
+              "английский у части гидов и туристических сервисов"
             ],
             "currency": {
               "code": "LAK",
@@ -11176,14 +11175,18 @@
             },
             "coordinate_type": "center",
             "accuracy": "high",
-            "elevation_accuracy": "high",
+            "elevation_accuracy": "unknown",
             "coordinate_source": {
               "type": "other",
               "title": "Nam Ha KBA central coordinates",
               "publisher": "Key Biodiversity Areas",
               "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16628",
               "authority": "high",
-              "accessed": "2026-09-29"
+              "language": "en",
+              "accessed": "2026-10-01",
+              "used_for": [
+                "protected-area center"
+              ]
             },
             "object_elevation": {
               "representative_m": null,
@@ -11197,53 +11200,119 @@
                 "publisher": "Key Biodiversity Areas",
                 "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16628",
                 "authority": "high",
-                "accessed": "2026-09-29"
+                "language": "en",
+                "accessed": "2026-10-01"
               },
-              "checked_at": "2026-09-29",
-              "notes": "Диапазон относится к KBA Nam Ha; значительная часть охраняемой территории горная."
+              "checked_at": "2026-10-01",
+              "notes": "Диапазон относится к KBA Nam Ha; для конкретных треков высоты и набор нужно хранить отдельно."
             },
-            "coordinates_checked_at": "2026-09-29"
+            "coordinates_checked_at": "2026-10-01",
+            "geo_points": [
+              {
+                "name": "Ban Nalan — Khmu village on Nalan Trail",
+                "type": "center",
+                "coordinates": {
+                  "lat": 20.84915,
+                  "lon": 101.36884,
+                  "elevation_m": 620
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Ban Nalan",
+                  "publisher": "GeoNames / OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/16260064",
+                  "language": "en",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "Ban Nalan village center"
+                  ]
+                },
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Ban Nalan elevation",
+                  "publisher": "GeoNames via Mapcarta",
+                  "url": "https://mapcarta.com/16260064",
+                  "language": "en",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "Ban Nalan elevation"
+                  ]
+                },
+                "checked_at": "2026-10-01"
+              },
+              {
+                "name": "Pha Yueang Waterfall",
+                "type": "waterfall_base",
+                "coordinates": {
+                  "lat": 21.1193,
+                  "lon": 101.2423,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "coordinate_source": {
+                  "type": "wikimedia_commons",
+                  "title": "MuangSing TadPhaYeung tango7174.jpg",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:MuangSing_TadPhaYeung_tango7174.jpg",
+                  "language": "en",
+                  "published_at": "2013-11-18",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "Pha Yueang coordinates",
+                    "gallery"
+                  ]
+                },
+                "checked_at": "2026-10-01"
+              }
+            ]
           },
           "logistics": {
-            "access": "Луангнамтха — основная база и точка старта. По дорогам и населённым пунктам можно двигаться самостоятельно; регулируемые дневные и многодневные треки внутри Нам-Ха оформляются через уполномоченных местных проводников.",
-            "public_transport": "До Луангнамтха — автобус/микроавтобус или поезд + автобус через Натэй. Старт трека организует оператор.",
-            "last_mile": "Типичный 2–3-дневный трек; фактический дневной километраж заранее спрашивать у оператора — некоторые туры дают только 8–10 км ходьбы в день.",
-            "typical_visit_hours": [
-              6,
-              72
-            ],
-            "permit_or_guide": "на регулируемых треках местный уполномоченный проводник обязателен; вне регулируемых треков действует обычный самостоятельный доступ по открытым дорогам и населённым пунктам",
+            "access": "Луангнамтха — главный самостоятельный базовый узел. До города можно добраться самолётом, автобусом или через Laos–China Railway с дальнейшим дорожным плечом. Внутри региона необходимо различать свободно доступные дороги/отдельные достопримечательности и регулируемые многодневные треккинговые маршруты.",
+            "public_transport": "До Луангнамтха доступен автобусный транспорт; железнодорожный доступ идёт через станцию в провинции с дальнейшим дорожным трансфером. Точные рейсы и место пересадки проверять перед поездкой.",
+            "last_mile": "Для Nalan Trail и сходных маршрутов старт, трансфер к началу тропы и деревенская ночёвка согласуются с местным организатором. Для Pha Yueang Waterfall Tourism Laos указывает самостоятельный дорожный доступ примерно в 38 км от Луангнамтха.",
+            "typical_visit_hours": null,
+            "permit_or_guide": "Для регулируемых треков действующая официальная схема направляет путешественника к местным туркомпаниям и гидам; исторические правила Nam Ha требовали trekking permit и аккредитованного проводника, а отчёты путешественников 2025 года подтверждают, что самостоятельный выход на такие треки на месте не разрешали. Правило перепроверять перед конкретным маршрутом.",
             "modes": {
-              "public_transport": "До Луангнамтха — автобус/микроавтобус или поезд + автобус через Натэй. Старт трека организует оператор.",
-              "taxi_ridehail": "Трансфер до начальная точка тропы обычно включён/организован оператором.",
-              "moped": "Для самостоятельного входа в охраняемая природная территория не подходит; трек по парку без гида по сообщениям 2025 не разрешается.",
-              "walking": "Типичный 2–3-дневный трек; фактический дневной километраж заранее спрашивать у оператора — некоторые туры дают только 8–10 км ходьбы в день."
+              "public_transport": "автобус/минивэн до Луангнамтха; железная дорога — через станцию в провинции и далее наземным трансфером",
+              "taxi_ridehail": "локальный тук-тук/частный трансфер используется до старта конкретного маршрута; ride-hailing не считать гарантированным",
+              "moped": "подходит для открытых дорог и самостоятельно доступных объектов вроде Pha Yueang Waterfall; не заменяет разрешение на регулируемый лесной трек",
+              "walking": "дневной километраж зависит от выбранного трека; универсальные 8–10 км не фиксируются как характеристика Нам-Ха",
+              "kayak": "каякинг по Нам-Ха существует в составе организованных маршрутов; уровень воды и конкретный участок проверяются на дату выхода"
             },
-            "water": "Оператор должен обеспечивать/указывать место пополнения воды; персональный фильтр/бутылка полезны, но воду из ручья без обработки не считать питьевой.",
-            "overnight_and_camping": "Самостоятельный дикий кемпинг не планировать. Ночёвка — деревня проживание в семье или организованный лесной лагерь в составе разрешённого тура.",
-            "access_requirements": "на регулируемых треках местный уполномоченный проводник обязателен; вне регулируемых треков действует обычный самостоятельный доступ по открытым дорогам и населённым пунктам",
+            "water": "Надёжный запас питьевой воды формируется в Луангнамтха и у организатора трека. Вода из рек и ручьёв не считается питьевой без фильтрации/обработки; актуальные точки пополнения зависят от конкретного маршрута.",
+            "overnight_and_camping": "Официальная туристическая схема включает деревенские homestay, eco-lodge и организованные jungle camps. Свободный самостоятельный лагерь внутри NPA не считать разрешённым без отдельного согласования.",
+            "access_requirements": "Для регулируемых треков действующая официальная схема направляет путешественника к местным туркомпаниям и гидам; исторические правила Nam Ha требовали trekking permit и аккредитованного проводника, а отчёты путешественников 2025 года подтверждают, что самостоятельный выход на такие треки на месте не разрешали. Правило перепроверять перед конкретным маршрутом.",
             "self_guided_default": false,
-            "travel_model": "самостоятельно по дорогам и населённым пунктам; треки внутри охраняемой территории — по действующим правилам охраняемой территории"
+            "travel_model": "самостоятельно до базы и открытых объектов; регулируемые лесные треки — через действующий местный механизм доступа"
           },
           "climate": {
-            "best_period": "Ноябрь–февраль/март.",
-            "heat_rain_notes": "Горный влажный север; тропы резко сложнее в сезон дождей.",
-            "site_specific_notes": "В сентябре–октябре тропы могут быть очень грязными; декабрь–январь обычно легче для треккинг."
+            "best_period": "Ноябрь–февраль обычно удобнее для многодневной ходьбы; сезон дождей даёт более насыщенный лес, но повышает грязь, скользкость и уровень воды.",
+            "heat_rain_notes": "Горный влажный север; на высоте прохладнее, после затяжного дождя мокрая одежда и охлаждение становятся реальной проблемой.",
+            "site_specific_notes": "Состояние троп и рек важнее календарного месяца: перед выходом проверять фактический прогноз и условия выбранного маршрута."
           },
           "operations": {
-            "hours": "Это большая охраняемая территория без единого входа и общего расписания. Дневные и многодневные треки оформляются из Луангнамтха; время старта и маршрут зависят от местного организатора доступа и общины.",
-            "ticket": "Единого входного билета нет: стоимость складывается из услуг проводника или местного организатора доступа, услуг деревни и применимых сборов охраняемой территории/разрешений. Подтверждать у туристической службы Луангнамтха или уполномоченного местного организатора.",
-            "closure_notes": "Муссон резко ухудшает тропы/реки; правила общины и лесной зоны могут ограничивать выходы. Нельзя самостоятельно уходить на неутверждённые маршруты.",
-            "last_verified": "2026-09-28",
-            "official_url": "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/"
+            "hours": "У Нам-Ха нет единого входа и общих часов. Отдельные водопады, пещеры, треки и деревенские маршруты имеют собственный режим.",
+            "ticket": "Единого билета на всю территорию нет. Для регулируемых треков исторически применялся trekking/NPA permit, а текущая стоимость входит в конкретную программу и должна подтверждаться на месте.",
+            "closure_notes": "Сильные дожди ухудшают тропы, видимость и речные условия. В 2025 путешественники описывали ноябрьский трек с непрерывным дождём, холодом и отсутствием видов.",
+            "last_verified": "2026-10-01",
+            "official_url": "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/",
+            "access_mode": "mixed_open_road_sites_and_regulated_guided_treks",
+            "status": "open_with_route_specific_access"
           },
           "safety": {
             "main_risks": [
-              "скользкие и крутые jungle тропы",
-              "сильные ливни и подъём рек",
-              "пиявки/насекомые",
+              "скользкие крутые лесные тропы",
+              "ливни и подъём воды",
               "удалённость от медицины и связи",
-              "ошибка маршрута без местный проводник"
+              "пиявки и насекомые",
+              "ошибка маршрута вне согласованной тропы",
+              "UXO вне используемых дорог и проверенных маршрутов"
             ],
             "sensitive_areas": [
               "в районах бывших боевых действий не сходить с проверенных троп из-за UXO",
@@ -11253,7 +11322,7 @@
           "media": {
             "photo_suitability_5": 5,
             "video_suitability_5": 5,
-            "best_light": "лес — мягкий утренний свет/после дождя; деревня documentary — по согласованию с hosts.",
+            "best_light": "В лесу полезен рассеянный утренний свет и погода после дождя; на открытых гребнях и у деревень лучше читается рельеф при низком боковом свете.",
             "drone": {
               "legal_status": "regulated",
               "permit_required": "Для полётов над населёнными пунктами, в контролируемом или ограниченном воздушном пространстве требуется согласование соответствующего органа; у конкретного объекта могут действовать дополнительные ограничения.",
@@ -11275,89 +11344,157 @@
                 "accessed": "2026-09-29"
               }
             },
-            "filming_restrictions": "В этнических деревни спрашивать согласие на людей, homes, ceremonies and священный places; следовать местный проводник/местное сообщество rules.",
+            "filming_restrictions": "В деревнях и при ритуалах требуется согласие людей и принимающей общины; сакральные объекты не трогать и не снимать вопреки просьбе хозяев/проводника.",
             "visual_scouting": {
-              "best_time": "Прохладный сухой сезон ноябрь–февраль/март; в сезон дождей тропы заметно грязнее и медленнее.",
-              "best_weather_light": "В горном лесу рассеянный свет удобнее прямого полуденного; на открытых гребнях утро даёт более глубокие планы.",
+              "best_time": "Сухой прохладный сезон для длинных треков; раннее утро для тумана, лесных слоёв и деревенского ландшафта.",
+              "best_weather_light": "Облачный рассеянный свет удобен в лесу и у водопада; после ливня зелень насыщеннее, но тропы и реки сложнее.",
               "viewpoints_for_photo_video": [
                 {
-                  "id": "nam_ha_kba",
-                  "name": "Горный массив Nam Ha",
-                  "description": "Охраняемая территория включает горные гряды, лес, участки традиционного землепользования и деревни разных этнических групп.",
+                  "id": "nam_ha_pha_yueang",
+                  "name": "Pha Yueang Waterfall",
+                  "description": "Самостоятельно доступная дорожная точка внутри ландшафта Nam Ha; водопад и лесной склон дают понятный визуальный контекст влажного горного рельефа.",
                   "coordinates": {
-                    "lat": 21,
-                    "lon": 101.2333,
+                    "lat": 21.1193,
+                    "lon": 101.2423,
                     "elevation_m": null
                   },
-                  "best_time": "early_morning",
                   "view": {
-                    "description": "горный лес, гряды и культурный ландшафт"
+                    "description": "водопад, лесная стена и влажный горный склон"
                   },
+                  "best_time": "morning или overcast_day",
+                  "best_weather_light": "После дождя поток сильнее; при облачности меньше контраст между водой и лесом.",
                   "useful_equipment": [
                     {
                       "type": "wide",
-                      "why": "лесной рельеф и деревни"
+                      "why": "водопад вместе с лесным окружением"
                     },
                     {
-                      "type": "telephoto",
-                      "why": "дальние гряды и наблюдение фауны"
+                      "type": "standard",
+                      "why": "детали уступов, воды и растительности"
                     }
                   ],
                   "source": {
-                    "type": "other",
-                    "title": "Nam Ha KBA",
-                    "publisher": "Key Biodiversity Areas",
-                    "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16628",
-                    "authority": "high",
-                    "accessed": "2026-09-29"
+                    "type": "wikimedia_commons",
+                    "title": "MuangSing TadPhaYeung tango7174.jpg",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:MuangSing_TadPhaYeung_tango7174.jpg",
+                    "language": "en",
+                    "published_at": "2013-11-18",
+                    "accessed": "2026-10-01",
+                    "authority": "medium"
+                  }
+                },
+                {
+                  "id": "nam_ha_ban_nalan",
+                  "name": "Ban Nalan",
+                  "description": "Кхму-деревня на одном из классических маршрутов Nam Ha; здесь виден переход от лесной тропы к жилому и речному культурному ландшафту.",
+                  "coordinates": {
+                    "lat": 20.84915,
+                    "lon": 101.36884,
+                    "elevation_m": 620
+                  },
+                  "view": {
+                    "description": "деревня, окружающий лес и сельский рельеф"
+                  },
+                  "best_time": "early_morning или late_afternoon",
+                  "best_weather_light": "Низкий свет подчёркивает слои леса и фактуру построек; туман может закрывать дальний рельеф.",
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "деревенский и человеческий масштаб"
+                    },
+                    {
+                      "type": "wide",
+                      "why": "связь деревни с лесным ландшафтом"
+                    }
+                  ],
+                  "source": {
+                    "type": "map",
+                    "title": "Ban Nalan",
+                    "publisher": "GeoNames / OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/16260064",
+                    "language": "en",
+                    "accessed": "2026-10-01",
+                    "authority": "medium"
                   }
                 }
               ],
               "seasonal_visuals": [
-                "Влажный сезон делает лес насыщеннее, но сильно замедляет треки; сухой сезон проще для многодневного движения."
+                "Влажный сезон даёт более плотную зелень, туман и высокий уровень воды, но ухудшает проходимость.",
+                "В сухой сезон тропы стабильнее, а дальние горные планы чаще открыты."
               ],
               "video_activity": [
-                "многодневные пешие маршруты с разрешённым проводником",
-                "переходы между лесом и деревнями"
+                "переходы между вторичным и более зрелым лесом",
+                "организованный многодневный трек по согласованной тропе",
+                "каякинг на разрешённом участке при подходящем уровне воды",
+                "повседневная жизнь деревни только с согласия жителей"
               ],
               "useful_equipment": [
                 {
                   "type": "wide",
-                  "why": "лес и рельеф"
+                  "why": "лесные долины и рельеф"
+                },
+                {
+                  "type": "standard",
+                  "why": "тропа, деревня и повседневная жизнь"
                 },
                 {
                   "type": "telephoto",
-                  "why": "удалённые склоны и фауна"
+                  "why": "дальние гряды и осторожное наблюдение фауны"
+                },
+                {
+                  "type": "macro",
+                  "why": "лесная растительность и детали без вмешательства"
                 }
               ]
             }
           },
           "annotation": {
-            "narrative": "Нам-Ха — охраняемая горно-лесная зона вокруг Луангнамтха, где треккинг-схема строится вокруг леса и деревень Khmu, Akha, Lanten, Hmong, Tai Dam/Tai Lue и других групп. Важная часть модели — обязательный/организованный местный гид и местное сообщество ночёвки.",
-            "culture_ethnography": "проживание в семье — реальное проживание в деревне, а не 'этно-шоу'.",
-            "geography_geology": "Крутые влажные лесные склоны, реки и грязные тропы. В сезон дождей дневной километраж сильно переоценивается по карте.",
+            "narrative": "Нам-Ха был включён в национальную систему охраняемых территорий в 1993 году и расширен в 1999-м до нынешнего масштаба; с 2003 года это ASEAN Heritage Park. Здесь охрана леса, водосборов и биоразнообразия исторически переплетена с общинным экотуризмом: проект Nam Ha Ecotourism с 1999 года создавал маршруты, обучал местных проводников и привязывал часть доходов к деревням и управлению территорией. Эта модель важна, но её нельзя романтизировать: исследование 2026 года по фотоловушкам показало меньшую доступность средних и крупных млекопитающих рядом с часто используемыми туристическими маршрутами.",
+            "culture_ethnography": "Луангнамтха — одна из наиболее этнически разнообразных провинций Лаоса; в и вокруг Нам-Ха живут кхму, акха, лантен/мун, хмонг, тайские группы и другие общины. Ночёвка в деревне и работа местных проводников — часть системы распределения доходов и управления маршрутом, а не декорация. Конкретные обычаи нельзя переносить между группами: например, у лантен/мун Луангнамтха хорошо документирована собственная даосская ритуальная традиция, рукописные тексты, специалисты по обрядам и культ предков.",
+            "geography_geology": "Охраняемая территория занимает горный водосбор на северо-западе Лаоса. Её дренируют Нам-Тха, Нам-Фа, Нам-Лонг и густая сеть притоков; высоты KBA достигают 2 094 м. Ландшафт включает вечнозелёные и полу-вечнозелёные леса, субгорные леса, луга, вторичные заросли, ручьи, пещеры и участки известнякового карста. В июле 2026 года региональный водохозяйственный проект отдельно отмечал продолжающиеся проблемы выжигания/расчистки в верховьях критических водосборов Нам-Ха.",
             "myths_legends_beliefs": [
-              "У разных общин Нам-Ха существуют собственные системы духов/предков и ритуальных запретов; они не взаимозаменяемы. Любую историю записывать с названием группы и конкретного рассказчика."
+              {
+                "type": "local_tradition",
+                "text": "У лантен/мун Луангнамтха религиозная система включает сложную даосскую ритуальную традицию, письменные ритуальные тексты и отношения с предками. Это традиция конкретной группы и её нельзя обобщать на кхму, акха или другие общины Нам-Ха."
+              }
             ],
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Нам-Ха — охраняемая горно-лесная зона вокруг Луангнамтха, где треккинг-схема строится вокруг леса и деревень Khmu, Akha, Lanten, Hmong, Tai Dam/Tai Lue и других групп. Важная часть модели — обязательный/организованный местный гид и местное сообщество ночёвки."
+                "content": "Нам-Ха — крупная охраняемая горно-лесная территория Луангнамтха, где лес, водосборы, деревни и регулируемые маршруты образуют единую экспедиционную систему. Самостоятельное путешествие возможно по дорогам и к отдельным объектам, но многодневные треки внутри охраняемой территории действуют по отдельной схеме доступа."
               },
               {
-                "section_id": "ethnography",
-                "content": "проживание в семье — реальное проживание в деревне, а не 'этно-шоу'."
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "В 1993 году Нам-Ха вошёл в новую национальную систему охраняемых территорий Лаоса; в 1999 году границы были существенно расширены до 222 400 га."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "С 1999 года Nam Ha Ecotourism Project при поддержке UNESCO и властей Лаоса развивал общинные треккинговые и речные маршруты, подготовку местных проводников, деревенские ночёвки и механизм разрешений/сборов. В 2003 году территория получила статус ASEAN Heritage Park."
+                  }
+                ]
               },
               {
                 "section_id": "geography",
-                "content": "Крутые влажные лесные склоны, реки и грязные тропы. В сезон дождей дневной километраж сильно переоценивается по карте."
+                "content": "Нам-Ха лежит в горном северо-западе Лаоса и является важным водосбором. Нам-Тха, Нам-Фа и Нам-Лонг уходят к Меконгу; лесная мозаика включает вечнозелёные, полу-вечнозелёные и субгорные леса, вторичные участки, травянистые зоны, ручьи, пещеры и известняковые карстовые фрагменты."
+              },
+              {
+                "section_id": "culture",
+                "content": "Экспедиционная специфика Нам-Ха — общинная модель доступа. Маршруты исторически строились так, чтобы в экономике трека участвовали провинциальные гиды, деревенские проводники, принимающие семьи и фонды развития. Это не означает, что туризм экологически нейтрален: опубликованное в 2026 году исследование фотоловушек выявило более низкое видовое богатство доступных средних и крупных млекопитающих возле часто используемых треккинговых и каякинговых маршрутов."
+              },
+              {
+                "section_id": "ethnography",
+                "content": "В провинции живёт более двадцати этнических групп. Для Нам-Ха корректнее говорить о конкретных деревнях и группах — кхму, акха, лантен/мун, хмонг, тайских сообществах — а не о единой «культуре горцев». Исследования общинного туризма показывают, что участие деревень в принятии решений и распределении доходов было центральной частью модели проекта, хотя выгоды распределялись неравномерно."
               },
               {
                 "section_id": "myths_beliefs",
                 "content": [
                   {
                     "type": "local_tradition",
-                    "text": "У разных общин Нам-Ха существуют собственные системы духов/предков и ритуальных запретов; они не взаимозаменяемы. Любую историю записывать с названием группы и конкретного рассказчика."
+                    "text": "У лантен/мун Луангнамтха документирована сложная система Yao Daoism: ритуальные специалисты, рукописи, обряды и сакральная память о предках. Эта традиция относится к лантенским общинам и не используется как универсальное описание всех деревень Нам-Ха."
                   }
                 ]
               }
@@ -11365,95 +11502,354 @@
           },
           "traveler_reports": {
             "recurring_issues": [
-              "в 2025 путешественники сообщали, что самостоятельный вход без гида не разрешён и инфраструктуры для независимого кемпинга нет",
-              "частая претензия к пакетные треккинговые программы — слишком мало реальной ходьбы; до оплаты уточнять часы/километры, набор деревень и долю трансферов",
-              "в сентябре тропы бывают очень грязными и дождливыми"
+              "Ноябрь 2025: несколько путешественников сообщали, что самостоятельный вход на трек внутри NPA им не разрешили; также отмечали отсутствие нормальных карт и инфраструктуры для независимого кемпинга.",
+              "Сентябрь 2025: опытные ходоки предупреждали, что часть продаваемых многодневных программ содержит лишь несколько часов ходьбы и менее 8–10 км в день; при экспедиционной цели нужно заранее выяснять реальный километраж и время движения.",
+              "Август 2026: в обсуждении независимых многодневных походов отмечали возможность согласовать более природный маршрут с местными проводниками в районе Vieng Phoukha вместо стандартной деревенской программы; это полевой совет, а не официальный режим доступа."
+            ],
+            "reports": [
+              {
+                "date": "2025-11",
+                "source": "Reddit / r/laos",
+                "summary": "Участники сообщали, что гид на маршрутах Nam Ha требовался на практике; один двухдневный trek+kayak прошёл под непрерывным дождём, с сильным охлаждением и без видимости."
+              },
+              {
+                "date": "2025-09",
+                "source": "Reddit / r/laos",
+                "summary": "Путешественник советовал проверять фактическую длительность ходьбы: некоторые коммерческие программы дают значительно меньше пешей нагрузки, чем ожидают треккеры."
+              },
+              {
+                "date": "2026-08",
+                "source": "Reddit / r/laos",
+                "summary": "Обсуждение подтверждает актуальный интерес к более длинным природным маршрутам из Luang Namtha/Vieng Phoukha и наземную связку от железной дороги через провинцию; детали маршрута зависят от локального проводника."
+              }
             ]
           },
-          "accommodation": [
-            {
-              "name": "Luang Namtha town guesthouse/hostel",
-              "area": "Luang Namtha",
-              "price_for_two": "бюджетные комнаты обычно доступны; точную цену и контакт на 2026 год уточнять после выбора официальной точки старта маршрута",
-              "contact": "book through selected trekking operator or current Booking/Agoda listing",
-              "social_or_web": "Tourism Laos / operator booking",
-              "source": "operational note; exact property not fixed"
-            }
-          ]
+          "accommodation": []
         },
         "illustration": {
-          "static_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Village_Nam_Ha_NPA_Laos.jpg",
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Village_Nam_Ha_NPA_Laos.jpg",
           "source_page": "https://commons.wikimedia.org/wiki/File:Village_Nam_Ha_NPA_Laos.jpg",
           "provider": "Wikimedia Commons",
           "license": "CC BY-SA 4.0",
           "artist": "Rds26",
           "illustration_scope": "object-specific",
-          "last_checked": "2026-09-28"
+          "last_checked": "2026-10-01",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Forest_Nam_Ha_NPA_Laos.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Forest_Nam_Ha_NPA_Laos.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Rds26",
+              "last_checked": "2026-10-01",
+              "subject": "Forest landscape inside Nam Ha NPA"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/MuangSing_TadPhaYeung_tango7174.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:MuangSing_TadPhaYeung_tango7174.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Tango7174",
+              "last_checked": "2026-10-01",
+              "subject": "Pha Yueang Waterfall in Nam Ha NPA"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luang_Namtha-Lanten-Dorf_Nham_Dy-06-gje.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Luang_Namtha-Lanten-Dorf_Nham_Dy-06-gje.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Gerd Eichmann",
+              "last_checked": "2026-10-01",
+              "subject": "Contextual: Lanten village in Luang Namtha district, not asserted as inside the NPA"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muang_Sing-Akha-Dorf_A-02-Geistertor-gje.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Muang_Sing-Akha-Dorf_A-02-Geistertor-gje.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Gerd Eichmann",
+              "last_checked": "2026-10-01",
+              "subject": "Contextual: Akha village spirit gate in Muang Sing district, not asserted as inside the NPA"
+            }
+          ]
         },
         "sources": [
           {
-            "url": "https://www.visitlaos.org/about-laos/national-parks/",
-            "publisher": "Laos tourism source",
-            "used_for": [
-              "object context",
-              "access/operations where published"
-            ],
-            "accessed": "2026-09-28"
-          },
-          {
-            "url": "https://commons.wikimedia.org/wiki/File:Village_Nam_Ha_NPA_Laos.jpg",
-            "publisher": "Wikimedia Commons",
-            "used_for": [
-              "illustration",
-              "image provenance"
-            ],
-            "accessed": "2026-09-28"
-          },
-          {
-            "url": "https://www.lsb.gov.la/",
-            "publisher": "national statistics / official source",
-            "used_for": [
-              "regional language context"
-            ],
-            "accessed": "2026-09-28",
-            "notes": "Practical region language profile is a field synthesis rather than exhaustive census enumeration."
-          },
-          {
-            "url": "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/",
-            "publisher": "Tourism Laos",
-            "used_for": [
-              "activities",
-              "trailhead/base",
-              "day/overnight trips"
-            ],
-            "accessed": "2026-09-28"
-          },
-          {
-            "url": "https://www.aseanbiodiversity.org/asean-heritage-parks/nam-ha-national-protected-area/",
-            "publisher": "ASEAN Centre for Biodiversity",
-            "used_for": [
-              "protected-area status",
-              "biodiversity"
-            ],
-            "accessed": "2026-09-28"
-          },
-          {
-            "url": "https://files.acquia.undp.org/public/migration/la/Nam-Ha-ecotourism-project.pdf",
-            "publisher": "UNDP",
-            "used_for": [
-              "operational model",
-              "guide/permit/community rules"
-            ],
-            "accessed": "2026-09-28",
-            "notes": "Historical operational model; use for management framework, not current price."
-          },
-          {
+            "type": "government_official",
+            "title": "Parks — Nam Ha",
+            "publisher": "Protected Area Management Division, Lao PDR",
             "url": "https://laoparks.la/parks/",
-            "publisher": "Lao Parks / Protected Area Management Division",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
             "used_for": [
-              "current protected-area listing"
-            ],
-            "accessed": "2026-09-28"
+              "current designation",
+              "222,400 ha area",
+              "local-guide/community access model"
+            ]
+          },
+          {
+            "type": "government_official",
+            "title": "Luang Namtha Province",
+            "publisher": "Tourism Laos / Ministry of Culture and Tourism",
+            "url": "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "current trekking",
+              "Nalan Trail",
+              "independent Pha Yueang access",
+              "provincial ethnography",
+              "transport"
+            ]
+          },
+          {
+            "type": "regional_official",
+            "title": "Nam Ha National Protected Area",
+            "publisher": "ASEAN Centre for Biodiversity",
+            "url": "https://www.aseanbiodiversity.org/asean-heritage-parks/nam-ha-national-protected-area/",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "ASEAN Heritage Park status",
+              "habitats",
+              "biodiversity",
+              "watershed"
+            ]
+          },
+          {
+            "type": "international_organization",
+            "title": "Nam Ha Ecotourism Project — Equator Initiative case study",
+            "publisher": "UNDP",
+            "url": "https://files.acquia.undp.org/public/migration/la/Nam-Ha-ecotourism-project.pdf",
+            "language": "en",
+            "published_at": "2013",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "protected-area history",
+              "community ecotourism model",
+              "guides",
+              "village lodges",
+              "permit system",
+              "rivers"
+            ]
+          },
+          {
+            "type": "scientific_database",
+            "title": "Nam Ha KBA factsheet",
+            "publisher": "Key Biodiversity Areas",
+            "url": "https://www.keybiodiversityareas.org/en/site/factsheet/16628",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "central coordinates",
+              "elevation range",
+              "habitat",
+              "threats"
+            ]
+          },
+          {
+            "type": "academic",
+            "title": "Wildlife-friendly tourism is associated with lower wildlife availability in the Nam Ha National Protected Area",
+            "publisher": "Global Ecology and Conservation",
+            "url": "https://www.sciencedirect.com/science/article/pii/S2351989426003094",
+            "language": "en",
+            "published_at": "2026-10",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "2026 wildlife monitoring",
+              "tourism-route effects",
+              "camera-trap evidence"
+            ]
+          },
+          {
+            "type": "intergovernmental",
+            "title": "GEF/UNDP/ASEAN IRBM site visits in Nam Tha River Basin",
+            "publisher": "PEMSEA",
+            "url": "https://pemsea.org/resources/news/gefundpasean-irbm-project-conducts-site-visits-bokeo-luang-namtha-and-oudomxay",
+            "language": "en",
+            "published_at": "2026-07-31",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "2026 watershed threats",
+              "encroachment",
+              "slash-and-burn"
+            ]
+          },
+          {
+            "type": "academic",
+            "title": "Ritual, war, and opium: Infrastructural sedimentations in the ethnohistory of the Mun (Lanten Yao) of Laos",
+            "publisher": "Modern Asian Studies / Cambridge University Press",
+            "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/ritual-war-and-opium-infrastructural-sedimentations-in-the-ethnohistory-of-the-mun-lanten-yao-of-laos/427FA87AD24C2327E37558A65A54622B",
+            "language": "en",
+            "published_at": "2025-06-09",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "Lanten ethnography",
+              "ritual tradition",
+              "ancestors and sacred memory"
+            ]
+          },
+          {
+            "type": "historical_management_report",
+            "title": "Develop Education / Awareness Campaign for Visitors",
+            "publisher": "Nam Ha Community-Based Ecotourism review",
+            "url": "https://namhaecotourism2014.wordpress.com/6-2-develop-an-education-awareness-campaign-for-visitors/",
+            "language": "en",
+            "published_at": "2014",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "historical permit and accredited-guide rules",
+              "group-management model"
+            ]
+          },
+          {
+            "type": "map",
+            "title": "Ban Nalan",
+            "publisher": "GeoNames / OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/16260064",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "Ban Nalan coordinates",
+              "elevation"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Village Nam Ha NPA Laos.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Village_Nam_Ha_NPA_Laos.jpg",
+            "language": "en",
+            "published_at": "2010-08-15",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "cover media"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Forest Nam Ha NPA Laos.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Forest_Nam_Ha_NPA_Laos.jpg",
+            "language": "en",
+            "published_at": "2010-08-14",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "MuangSing TadPhaYeung tango7174.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:MuangSing_TadPhaYeung_tango7174.jpg",
+            "language": "en",
+            "published_at": "2013-11-18",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery",
+              "Pha Yueang coordinates"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Luang Namtha-Lanten-Dorf Nham Dy-06-gje.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Luang_Namtha-Lanten-Dorf_Nham_Dy-06-gje.jpg",
+            "language": "en",
+            "published_at": "2007-01-17",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "contextual gallery",
+              "Lanten regional context"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Muang Sing-Akha-Dorf A-02-Geistertor-gje.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Muang_Sing-Akha-Dorf_A-02-Geistertor-gje.jpg",
+            "language": "en",
+            "published_at": "2007-01-16",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "contextual gallery",
+              "Akha regional context"
+            ]
+          },
+          {
+            "type": "reddit",
+            "title": "Luang Namta and Nam Ha National Park advices?",
+            "publisher": "Reddit / r/laos",
+            "url": "https://www.reddit.com/r/laos/comments/1p6ap8r/luang_namta_and_nam_ha_national_park_advices/",
+            "language": "en",
+            "published_at": "2025-11-25",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "guide practice",
+              "weather",
+              "camping infrastructure"
+            ]
+          },
+          {
+            "type": "reddit",
+            "title": "Luang Prabang or Nong Khiaw or Luang Namtha for Trekking",
+            "publisher": "Reddit / r/laos",
+            "url": "https://www.reddit.com/r/laos/comments/1nqeyqu",
+            "language": "en",
+            "published_at": "2025-09-25",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "walking-time expectations"
+            ]
+          },
+          {
+            "type": "reddit",
+            "title": "Where to go for multi-day hikes in northern Laos?",
+            "publisher": "Reddit / r/laos",
+            "url": "https://www.reddit.com/r/laos/comments/1vfmtfv/where_to_go_for_multiday_hikes_in_northern_laos/",
+            "language": "en",
+            "published_at": "2026-08-04",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "custom nature-focused trekking",
+              "current access discussion"
+            ]
+          },
+          {
+            "type": "government_official",
+            "title": "Luang Namtha welcomes nearly 1.3 million tourists in 2025",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/2026/01/01/luang-namtha-welcomes-nearly-1-3-million-tourists-in-2025-surpassing-expectations/",
+            "language": "en",
+            "published_at": "2026-01-01",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "2025 Nam Ha trekking and boat festival",
+              "current tourism management context"
+            ]
           }
         ],
         "verification": {
@@ -11461,71 +11857,128 @@
             "hours",
             "tickets",
             "permits",
-            "access",
-            "weather/season",
-            "filming/drone",
-            "security"
+            "guide_rules",
+            "trail_access",
+            "public_transport",
+            "river_level",
+            "weather",
+            "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Нам-Ха — охраняемая горно-лесная зона вокруг Луангнамтха, где треккинг-схема строится вокруг леса и деревень Khmu, Akha, Lanten, Hmong, Tai Dam/Tai Lue и других групп. Важная часть модели — обязательный/организованный местный гид и местное сообщество ночёвки. проживание в семье — реальное проживание в деревне, а не 'этно-шоу'. Крутые влажные лесные склоны, реки и грязные тропы. В сезон дождей дневной километраж сильно переоценивается по карте. Мифы и поверья: У разных общин Нам-Ха существуют собственные системы духов/предков и ритуальных запретов; они не взаимозаменяемы. Любую историю записывать с названием группы и конкретного рассказчика. Сезон: Ноябрь–февраль/март. В сентябре–октябре тропы могут быть очень грязными; декабрь–январь обычно легче для треккинг.",
+        "narrow": "Нам-Ха — ASEAN Heritage Park и национальная охраняемая территория площадью 222 400 га в Луангнамтха. Лесной массив охватывает водосборы Нам-Тха и притоков, карстовые участки, деревни и старые маршруты общинного экотуризма. Регулируемые треки оформляются через местных организаторов и проводников, но отдельные дорожные объекты, включая Pha Yueang Waterfall, доступны самостоятельно.",
         "tags": [
           "nature",
           "rainforest",
-          "wildlife",
+          "biodiversity",
+          "watershed",
           "trekking",
-          "ethnic_culture",
-          "history",
-          "ethnography",
-          "rural",
           "hiking",
-          "water",
+          "kayaking",
+          "ethnography",
+          "ethnic_culture",
+          "community_tourism",
           "guide_or_permit",
+          "weather_sensitive",
           "remote",
           "class_nature_culture"
         ],
         "route_meta": {
-          "region_ref": "Luang Namtha / Нам-Ха",
-          "locality_ref": "Luang Namtha",
-          "typical_visit_hours": [
-            6,
-            72
-          ],
+          "region_ref": "Луангнамтха / Нам-Ха",
+          "locality_ref": "Луангнамтха",
+          "typical_visit_hours": null,
           "transport_modes": {
-            "public_transport": "До Luang Namtha — автобус/микроавтобус или поезд + автобус через Натэй. Старт трека организует оператор.",
-            "taxi_ridehail": "Трансфер до trailhead обычно включён/организован оператором.",
-            "moped": "Для самостоятельного входа в охраняемая природная территория не подходит; парк trek без гида по сообщениям 2025 не разрешается.",
-            "walking": "Типичный 2–3 day trek; фактический дневной километраж заранее спрашивать у оператора — некоторые туры дают только 8–10 км ходьбы в день."
+            "public_transport": "до Луангнамтха автобусом/минивэном; железная дорога через станцию в провинции и далее наземный трансфер",
+            "taxi_ridehail": "локальный тук-тук или частный трансфер до старта маршрута",
+            "moped": "самостоятельно по открытым дорогам и к отдельным объектам вроде Pha Yueang; не замена разрешению на регулируемый trek",
+            "walking": "маршрут зависит от конкретной программы; дневной километраж не обобщать на всю NPA",
+            "kayak": "организованные маршруты по Нам-Ха при подходящем уровне воды"
           },
-          "walking": "Типичный 2–3 day trek; фактический дневной километраж заранее спрашивать у оператора — некоторые туры дают только 8–10 км ходьбы в день.",
-          "water": "Оператор должен обеспечивать/указывать место пополнения воды; персональный фильтр/бутылка полезны, но воду из ручья без обработки не считать питьевой.",
-          "overnight_and_camping": "Самостоятельный дикий кемпинг не планировать. Ночёвка — деревня проживание в семье или организованный лесной лагерь в составе разрешённого тура.",
-          "permit_or_guide": "на регулируемых треках местный уполномоченный проводник обязателен; вне регулируемых треков действует обычный самостоятельный доступ по открытым дорогам и населённым пунктам",
-          "best_period": "Ноябрь–февраль/март.",
-          "current_status": null,
+          "walking": "Для Nalan и других многодневных треков хранить дистанции по конкретному маршруту. Старое универсальное «8–10 км в день» удалено как коммерчески-зависимое и нехарактерное для всей территории.",
+          "water": "Надёжную питьевую воду брать в Луангнамтха/у организатора; природные источники требуют обработки.",
+          "overnight_and_camping": "Ночёвка — согласованный homestay, eco-lodge или организованный лесной лагерь; самостоятельный дикий кемпинг внутри NPA не считать разрешённым.",
+          "permit_or_guide": "Для регулируемых треков действующая официальная схема направляет путешественника к местным туркомпаниям и гидам; исторические правила Nam Ha требовали trekking permit и аккредитованного проводника, а отчёты путешественников 2025 года подтверждают, что самостоятельный выход на такие треки на месте не разрешали. Правило перепроверять перед конкретным маршрутом.",
+          "best_period": "ноябрь–февраль для более стабильных троп; влажный сезон визуально сильнее, но физически и логистически сложнее",
+          "current_status": "open_with_route_specific_access",
           "main_risks": [
-            "скользкие и крутые jungle тропы",
-            "сильные ливни и подъём рек",
-            "пиявки/насекомые",
+            "скользкие крутые лесные тропы",
+            "ливни и подъём воды",
             "удалённость от медицины и связи",
-            "ошибка маршрута без местный проводник"
+            "пиявки и насекомые",
+            "ошибка маршрута вне согласованной тропы",
+            "UXO вне используемых дорог и проверенных маршрутов"
           ],
           "expedition_profile": {
-            "default_mode": "самостоятельно по дорогам и населённым пунктам; треки внутри охраняемой территории — по действующим правилам охраняемой территории",
-            "route_scale": "полный день или больше; при расширении маршрута возможен многодневный формат",
-            "terrain_and_movement": "Типичный 2–3 day trek; фактический дневной километраж заранее спрашивать у оператора — некоторые туры дают только 8–10 км ходьбы в день.",
-            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
-            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
-            "local_support": "на регулируемых треках местный уполномоченный проводник обязателен; вне регулируемых треков действует обычный самостоятельный доступ по открытым дорогам и населённым пунктам"
+            "default_mode": "самостоятельно до Луангнамтха и открытых дорожных объектов; регулируемые лесные треки — через местный механизм доступа",
+            "route_scale": "от самостоятельной дневной дорожной разведки до 2–3+ дневных треков",
+            "terrain_and_movement": "горные лесные тропы, реки, деревенские дороги и локальные карстовые участки",
+            "physical_difficulty_policy": "длинная ходьба, грязь и перепады высоты — параметры маршрута, а не причина исключать объект",
+            "camping_assumption": "палатка не создаёт права на свободный лагерь в охраняемой территории",
+            "local_support": "гид используется там, где этого требует режим конкретного трека; для открытых дорог и самостоятельных объектов не навязывается"
           }
         },
         "qa": {
           "language_review": {
             "status": "reviewed",
-            "checked_at": "2026-09-29",
-            "notes": "Пользовательский narrative/logistics слой проверен на естественный русский; собственные имена и официальные названия сохранены."
+            "checked_at": "2026-10-01",
+            "notes": "Убрана англо-русская смесь; иностранные названия оставлены только как собственные имена и официальные термины."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "объектный QA Nam Ha National Protected Area по текущему экспедиционному стандарту",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true
+            },
+            "notes": [
+              "Разделены регулируемые лесные треки и самостоятельно доступные дорожные объекты.",
+              "Добавлены реальные GPS Ban Nalan и Pha Yueang; центр NPA не используется как вход.",
+              "Удалено фиктивное жильё без конкретной сущности и источников.",
+              "История общинного экотуризма дополнена свежим исследованием 2026 года о реакции млекопитающих на туристические маршруты.",
+              "Лантенская религиозная традиция дана как группоспецифичная и не обобщена на остальные общины.",
+              "Галерея доведена до пяти изображений; два региональных культурных кадра явно помечены как контекстуальные."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "редакционная приёмка Nam Ha National Protected Area",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "ethnography_substantive": true,
+              "legend_or_beliefs_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest_unknowns": true,
+              "overnight_honest_unknowns": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true
+            },
+            "notes": [
+              "Современный официальный статус и площадь взяты у Lao Parks; историческое развитие — у UNDP и ASEAN.",
+              "Не утверждается универсальный запрет самостоятельного доступа ко всей территории: официальный Tourism Laos прямо описывает отдельные самостоятельные road-access sites.",
+              "Guide/permit requirement относится к регулируемым треккинговым программам и помечен как требующий актуальной перепроверки.",
+              "Полевые жалобы 2025–2026 используются только как датированные наблюдения о погоде, фактической нагрузке и текущей практике доступа."
+            ]
           }
-        }
+        },
+        "lead": "Нам-Ха — 222 400 га горных лесов и водосборов Луангнамтха, где охрана природы с конца 1990-х связана с общинным экотуризмом. Для экспедиции это не «пакетный трек», а сочетание регулируемых многодневных маршрутов, рек, леса и деревень с отдельными самостоятельно доступными дорожными точками; режим конкретного трека нужно проверять до выхода."
       },
       {
         "name": "Tham Piu Cave",

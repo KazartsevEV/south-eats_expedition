@@ -1075,6 +1075,25 @@ def build():
         operations = (detail.get("visit") or {}).get("operations") or {}
         visual_recon = remap_visual_sources(detail.get("visual_recon"), registry)
         source_object = source_object_by_country_name.get((code, (detail.get("identity") or {}).get("name")))
+        source_card = (source_object or {}).get("traveler_card") or {}
+        source_location = source_card.get("location") or {}
+        source_verification = (source_object or {}).get("verification") or {}
+        raw_safety = (detail.get("visit") or {}).get("safety") or {}
+
+        # Object-level language profiles belong to geo, not the attraction card.
+        # Preserve the legacy practical language list on the most specific known
+        # canonical place/region instead of duplicating it in every object.
+        legacy_languages = source_location.get("languages_spoken") or []
+        language_geo_id = nearest_place_id or (region_ids[-1] if region_ids else None)
+        if legacy_languages and language_geo_id and language_geo_id in geo_entities:
+            language_entity = geo_entities[language_geo_id]
+            language_block = language_entity.setdefault("languages", {"spoken": [], "notes": None})
+            language_block["spoken"] = list(dict.fromkeys(
+                (language_block.get("spoken") or []) + list(legacy_languages)
+            ))
+            if not language_block.get("notes"):
+                language_block["notes"] = "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
+
         story_payload = dict(detail.get("story") or {})
         source_sections = ((((source_object or {}).get("traveler_card") or {}).get("annotation") or {}).get("sections"))
         if isinstance(source_sections, list) and source_sections:
@@ -1085,6 +1104,27 @@ def build():
         strict_source_scope = fact_source_review.get("status") == "passed"
         sections = narrative_sections(story_payload, source_refs, strict_source_scope=strict_source_scope)
         reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
+
+        canonical_access_options = access_options(logistics)
+        access_serialized = json.dumps(canonical_access_options, ensure_ascii=False)
+
+        def legacy_access_note(key):
+            value = logistics.get(key)
+            if value in (None, "", [], {}):
+                return None
+            if isinstance(value, str) and value in access_serialized:
+                return None
+            return value
+
+        operations_source_refs = list(dict.fromkeys(operations.get("source_refs") or []))
+        safety_source_refs = list(dict.fromkeys(raw_safety.get("source_refs") or []))
+        status_snapshot = operations.get("status_snapshot")
+        status_snapshot_checked_at = (
+            (status_snapshot.get("checked_at") if isinstance(status_snapshot, dict) else None)
+            or (status_snapshot.get("as_of") if isinstance(status_snapshot, dict) else None)
+            or operations.get("security_snapshot_as_of")
+            or operations.get("last_verified")
+        )
 
         checks = {
             "language": bool((detail.get("identity") or {}).get("narrow") or sections) and (code != "KH" or language_review.get("status") == "reviewed"),
@@ -1101,7 +1141,7 @@ def build():
             ),
             "narrative": bool(sections),
             "sources": bool(source_refs),
-            "access": bool(access_options(logistics) or logistics.get("access")),
+            "access": bool(canonical_access_options or logistics.get("access")),
             "water": bool(logistics.get("water")),
             "overnight": bool(logistics.get("overnight_and_camping")),
             "traveler_reports": bool(reports),
@@ -1146,8 +1186,24 @@ def build():
                         else source_refs
                     ),
                     "checked_at": operations.get("last_verified"),
+                    "typical_visit_hours": logistics.get("typical_visit_hours"),
+                    "public_transport": legacy_access_note("public_transport"),
+                    "last_mile": legacy_access_note("last_mile"),
+                    "mobility_notes": legacy_access_note("mobility_notes"),
+                    "terrain_and_movement": legacy_access_note("terrain_and_movement"),
+                    "operational_status": {
+                        "access_mode": operations.get("access_mode"),
+                        "access_status": operations.get("access_status"),
+                        "current_alert": operations.get("current_alert"),
+                        "security_access_status": operations.get("security_access_status"),
+                        "security_region": operations.get("security_region"),
+                        "security_snapshot_as_of": operations.get("security_snapshot_as_of"),
+                        "status_snapshot": status_snapshot,
+                        "source_refs": operations_source_refs,
+                        "checked_at": status_snapshot_checked_at,
+                    },
                 },
-                "access_options": access_options(logistics),
+                "access_options": canonical_access_options,
                 "water": (
                     {
                         **json.loads(json.dumps(logistics.get("water_structured"), ensure_ascii=False)),
@@ -1194,6 +1250,14 @@ def build():
                         else source_refs
                     ),
                     "checked_at": operations.get("last_verified"),
+                    "safety": {
+                        "crime_context": raw_safety.get("crime_context"),
+                        "main_risks": raw_safety.get("main_risks") or [],
+                        "sensitive_areas": raw_safety.get("sensitive_areas") or [],
+                        "confidence": raw_safety.get("confidence"),
+                        "source_refs": safety_source_refs,
+                        "checked_at": raw_safety.get("checked_at") or operations.get("last_verified"),
+                    },
                 },
                 "seasonality": (detail.get("visit") or {}).get("climate"),
             },
@@ -1217,6 +1281,10 @@ def build():
                 "checks": checks,
                 "last_reviewed_at": operations.get("last_verified"),
                 "fact_source_review": fact_source_review or None,
+                "verification": {
+                    "dynamic_fields": source_verification.get("dynamic_fields") or [],
+                    "verify_before_departure": source_verification.get("verify_before_departure"),
+                },
             },
         }
         dump(release / "objects" / code.lower() / f"{object_id}.json", canonical)

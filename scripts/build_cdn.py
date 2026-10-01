@@ -28,9 +28,9 @@ PUBLISH = [
     ("philippines.json", "PH", "philippines"),
     ("singapore.json", "SG", "singapore"),
     ("thailand.json", "TH", "thailand"),
+    ("timor-leste.json", "TL", "timor-leste"),
 ]
 COUNTRY_ONLY = [
-    ("timor-leste.json", "TL", "timor-leste"),
     ("vietnam.json", "VN", "vietnam"),
 ]
 
@@ -303,6 +303,28 @@ TYPE_BY_NAME.update({
     "Similan Islands National Park": "national_park",
     "Wat Rong Khun (White Temple)": "religious_site",
     "Khao Sam Roi Yot National Park / Phraya Nakhon Cave": "national_park",
+})
+
+
+# Recovered Timor-Leste object layer: preliminary primary classes for canonical build.
+TYPE_BY_NAME.update({
+    "Cristo Rei of Dili": "monument",
+    "Atauro Island": "island",
+    "Jaco Island / Tutuala": "island",
+    "Mount Ramelau": "mountain",
+    "Baucau old town": "historic_city",
+    "Timorese Resistance Archive & Museum": "museum",
+    "Oecusse historic enclave": "cultural_landscape",
+    "Maubisse–Ainaro highlands": "cultural_landscape",
+    "Lospalos / Fataluku region": "cultural_landscape",
+    "Tutuala rock art": "archaeological_site",
+    "Nino Konis Santana National Park": "national_park",
+    "Balibo Fort and Balibo House": "fortification",
+    "Lake Ira Lalaro": "lake",
+    "Maubisse Pousada and highlands": "historic_building",
+    "Dare Memorial Museum and overlook": "museum",
+    "Mount Matebian / Matebian Feto": "mountain",
+    "Maubara–Liquiçá coastal heritage": "cultural_landscape",
 })
 
 TAG_ALIASES = {

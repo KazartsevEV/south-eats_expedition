@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "imports/**"
       - "data/source/**"
       - "data/hierarchy/**"
       - "data/geo/**"
@@ -14,6 +15,7 @@ on:
   pull_request:
     branches: [main]
     paths:
+      - "imports/**"
       - "data/source/**"
       - "data/hierarchy/**"
       - "data/geo/**"

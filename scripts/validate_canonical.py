@@ -438,11 +438,11 @@ def main():
         profile = load(release / country_row["profile"])
         rich_food_rows = [
             row for row in (profile.get("street_food") or [])
-            if isinstance(row, dict)
+            if isinstance(row, dict) and row.get("media_id")
         ]
         rich_festival_rows = [
             row for row in (profile.get("festivals") or [])
-            if isinstance(row, dict)
+            if isinstance(row, dict) and row.get("media_id")
         ]
         for index, row in enumerate(rich_food_rows, start=1):
             if not row.get("name") or not row.get("description"):

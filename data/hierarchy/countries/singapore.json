@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "SG",
     "country_slug": "singapore",
-    "status": "geo_profile_qa_complete_before_object_cards",
+    "status": "geo_profile_with_preliminary_object_coverage",
     "checked_at": "2026-10-01",
-    "next_level": "country_and_regional_layer_complete_object_cards_frozen",
+    "next_level": "object_recovery_preliminary_qa",
     "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes.",
     "canonical_source_id": "src_906008",
     "qa_contract": "geo_profile_roles_v1"
@@ -30,8 +30,8 @@
   "rules": {
     "parentage": "Administrative units use verified current parentage. Composite expedition regions remain geographic_area when they span several administrative units or preserve legacy research geography.",
     "route_hubs": "Cities and towns are geo entities only; they are not attraction cards.",
-    "object_visibility": "Object cards remain deferred for the second-chunk countries during this phase.",
-    "cards": "Object card payloads are not edited in this stage."
+    "object_visibility": "Recovered Singapore object cards are attached to verified formal geography; distributed hawker-centre coverage is represented at regional level rather than by a fabricated single coordinate.",
+    "cards": "Recovered object cards are preliminary QA; missing geo/GPS/elevation/access facts remain null or incomplete rather than inferred."
   },
   "nodes": [
     {
@@ -43,7 +43,12 @@
       "slug": "central-region",
       "parent_id": "country:sg",
       "axis": "planning_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:singapore-botanic-gardens",
+        "sg:bukit-brown",
+        "sg:macritchie-reservoir-treetop-walk",
+        "sg:hawker-centres"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
     },
     {
@@ -55,7 +60,9 @@
       "slug": "east-region",
       "parent_id": "country:sg",
       "axis": "planning_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:hawker-centres"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
     },
     {
@@ -67,7 +74,9 @@
       "slug": "north-region",
       "parent_id": "country:sg",
       "axis": "planning_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:hawker-centres"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
     },
     {
@@ -79,7 +88,9 @@
       "slug": "north-east-region",
       "parent_id": "country:sg",
       "axis": "planning_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:hawker-centres"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
     },
     {
@@ -91,7 +102,9 @@
       "slug": "west-region",
       "parent_id": "country:sg",
       "axis": "planning_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:hawker-centres"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление."
     },
     {
@@ -103,7 +116,11 @@
       "slug": "central-marina-civic",
       "parent_id": "sg:region:central-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:marina-bay",
+        "sg:gardens-by-the-bay",
+        "sg:fort-canning-park"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Central / Marina / Civic District"
@@ -130,7 +147,9 @@
       "slug": "chinatown-central-heritage",
       "parent_id": "sg:region:central-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:chinatown"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Chinatown / central heritage"
@@ -157,7 +176,9 @@
       "slug": "little-india",
       "parent_id": "sg:region:central-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:little-india"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Little India"
@@ -172,7 +193,9 @@
       "slug": "kampong-glam",
       "parent_id": "sg:region:central-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:kampong-glam"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Kampong Glam"
@@ -187,7 +210,10 @@
       "slug": "north-kranji-sungei-buloh",
       "parent_id": "sg:region:north-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:sungei-buloh-wetland-reserve",
+        "sg:kranji-countryside"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "North / Kranji / Sungei Buloh"
@@ -202,7 +228,9 @@
       "slug": "pulau-ubin",
       "parent_id": "sg:region:north-east-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:pulau-ubin"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Pulau Ubin"
@@ -217,7 +245,9 @@
       "slug": "katong-joo-chiat",
       "parent_id": "sg:region:east-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:joo-chiat-katong"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Katong / Joo Chiat"
@@ -232,7 +262,10 @@
       "slug": "southern-ridges-gillman",
       "parent_id": "sg:region:central-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:southern-ridges-and-henderson-waves",
+        "sg:gillman-barracks"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Southern Ridges / Gillman"
@@ -247,7 +280,10 @@
       "slug": "southern-coast-labrador-pasir-panjang",
       "parent_id": "sg:region:central-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "sg:haw-par-villa",
+        "sg:labrador-nature-reserve-and-wwii-coastal-landscape"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Southern coast / Labrador / Pasir Panjang"

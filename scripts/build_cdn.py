@@ -189,6 +189,29 @@ TYPE_BY_NAME.update({
 
 
 TYPE_BY_NAME.update({
+    "Palawan / El Nido / Coron": "island",
+    "Banaue and Batad rice terraces": "cultural_landscape",
+    "Chocolate Hills": "geological_site",
+    "Intramuros": "fortification",
+    "Vigan": "historic_city",
+    "Boracay": "island",
+    "Tubbataha Reefs": "reef",
+    "Iloilo heritage districts": "historic_city",
+    "Samar cave systems": "cave",
+    "Siquijor interior": "cultural_landscape",
+    "Negros sugar-era hacienda architecture": "industrial_heritage",
+    "Batanes": "cultural_landscape",
+    "Sagada": "cultural_landscape",
+    "Mount Pinatubo": "volcano",
+    "Apo Reef Natural Park": "reef",
+    "Taal Volcano and heritage towns": "cultural_landscape",
+    "Paoay Church (St. Augustine Church)": "religious_site",
+    "Mayon Volcano": "volcano",
+    "Apo Island Marine Sanctuary": "reef",
+})
+
+
+TYPE_BY_NAME.update({
     "Bagan": "archaeological_site",
     "Shwedagon Pagoda": "religious_site",
     "Inle Lake": "river_or_wetland",

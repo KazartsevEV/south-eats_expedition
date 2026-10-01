@@ -266,8 +266,8 @@ build CDN
 - BN — complete (upper-level gate + post-merge publish green).
 - KH — complete (upper-level acceptance recorded; full gate required on this PR).
 - LA — complete (upper-level acceptance recorded; full gate required on this PR).
-- ID — active.
-- MY — queued.
+- ID — complete (upper-level acceptance recorded; full gate required on this PR).
+- MY — active.
 - MM — queued.
 - SG — queued.
 - TH — queued.

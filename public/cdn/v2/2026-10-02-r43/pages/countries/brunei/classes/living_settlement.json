@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:bn:living_settlement"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "object_type": "living_settlement",
+    "label_ru": "Живые традиционные поселения",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:bn:religion_ethnography",
+    "page_path": "pages/countries/brunei/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/living_settlement.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": {
+    "status": "transitional_overlap",
+    "target_split": [
+      "traditional_settlement"
+    ],
+    "note_ru": "Старый класс сохраняется до проверки: в новой схеме поселение должно описываться как traditional_settlement, а живая культура — тегами и этнографическим блоком."
+  },
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "bn:district:belait",
+      "canonical_geo_id": "geo_bn_0003",
+      "name": "Белайт",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/belait.json"
+    },
+    {
+      "id": "bn:district:brunei-muara",
+      "canonical_geo_id": "geo_bn_0001",
+      "name": "Бруней-Муара",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/brunei-muara.json"
+    },
+    {
+      "id": "bn:geographic-area:kampong-ayer",
+      "canonical_geo_id": "geo_bn_0013",
+      "name": "Кампонг-Айер",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "page_path": "pages/geography/brunei/geographic_area/kampong-ayer.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:kampong-ayer",
+      "name": "Kampong Ayer",
+      "geography_ids": [
+        "bn:district:brunei-muara",
+        "bn:geographic-area:kampong-ayer",
+        "country:bn"
+      ],
+      "region_legacy": "Бруней-Муара / Бандар-Сери-Бегаван",
+      "nearest_hub": "набережная Бандар-Сери-Бегавана",
+      "narrow": "Кампонг-Айер — живая сеть свайных деревень Бандар-Сери-Бегавана, где река остаётся транспортной улицей, а мостки связывают жилые кварталы и общественные службы. Исторический центр Брунея на воде сегодня особенно интересен контрастом старой пространственной логики, современной перестройки и реальной речной повседневности.",
+      "detail_path": "countries/brunei/objects/kampong-ayer.json"
+    },
+    {
+      "id": "bn:teraja-longhouse",
+      "name": "Teraja Longhouse",
+      "geography_ids": [
+        "bn:district:belait",
+        "country:bn"
+      ],
+      "region_legacy": "Белайт / Сериа / Лаби",
+      "nearest_hub": "Kuala Belait / Seria",
+      "narrow": "Ибанская длинный дом-община в районе Лаби, где общая галерея ruai соединяет семейные секции и служит общественным пространством.",
+      "detail_path": "countries/brunei/objects/teraja-longhouse.json"
+    },
+    {
+      "id": "bn:mendaram-besar-longhouse",
+      "name": "Mendaram Besar Longhouse",
+      "geography_ids": [
+        "bn:district:belait",
+        "country:bn"
+      ],
+      "region_legacy": "Белайт / Сериа / Лаби",
+      "nearest_hub": "Kuala Belait / Seria",
+      "narrow": "длинный дом-община внутреннего Белайт, где съёмочный акцент лучше делать на материальной культуре: плетении, тканях, приготовлении пищи, семейной секции и общей галерее.",
+      "detail_path": "countries/brunei/objects/mendaram-besar-longhouse.json"
+    }
+  ]
+}

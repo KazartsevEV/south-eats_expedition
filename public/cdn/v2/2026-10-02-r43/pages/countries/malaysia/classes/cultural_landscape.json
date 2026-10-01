@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:my:cultural_landscape"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "cultural_landscape",
+    "label_ru": "Культурные ландшафты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:religion_ethnography",
+    "page_path": "pages/countries/malaysia/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/cultural_landscape.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:locality:bario",
+      "canonical_geo_id": "geo_my_0031",
+      "name": "Барио",
+      "kind": "village",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/village/bario.json"
+    },
+    {
+      "id": "my:region:bario-kelabit-highlands",
+      "canonical_geo_id": "geo_my_0008",
+      "name": "Барио / Келабитское нагорье",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/bario-kelabit-highlands.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:bario-kelabit-highlands",
+      "name": "Bario / Kelabit Highlands",
+      "geography_ids": [
+        "country:my",
+        "my:locality:bario",
+        "my:region:bario-kelabit-highlands"
+      ],
+      "region_legacy": "Bario / Kelabit Highlands",
+      "nearest_hub": "Bario",
+      "narrow": "Барио и Kelabit Highlands — высокогорная сеть поселений, рисовых полей и троп у границы Калимантана; ценность места раскрывается в переходах между деревнями и в жизни келабитов, а не в коротком визите в одну точку.",
+      "detail_path": "countries/malaysia/objects/bario-kelabit-highlands.json"
+    }
+  ]
+}

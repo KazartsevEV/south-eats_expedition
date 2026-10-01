@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:th:religious_site"
+  },
+  "identity": {
+    "country_code": "TH",
+    "country_slug": "thailand",
+    "object_type": "religious_site",
+    "label_ru": "Храмы и религиозные объекты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:th:religion_ethnography",
+    "page_path": "pages/countries/thailand/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/religious_site.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:th",
+      "name": "Таиланд",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/thailand.json"
+    },
+    {
+      "id": "th:city:bangkok",
+      "canonical_geo_id": "geo_th_0007",
+      "name": "Бангкок",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/thailand/city/bangkok.json"
+    },
+    {
+      "id": "th:geographic_area:bangkok-expedition",
+      "canonical_geo_id": "geo_th_0026",
+      "name": "Бангкок",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/bangkok-expedition.json"
+    },
+    {
+      "id": "th:geographic_area:chiang-rai-far-north",
+      "canonical_geo_id": "geo_th_0041",
+      "name": "Чианграй / дальний север",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/chiang-rai-far-north.json"
+    },
+    {
+      "id": "th:geographic_area:north",
+      "canonical_geo_id": "geo_th_0001",
+      "name": "Северный Таиланд",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/north.json"
+    },
+    {
+      "id": "th:province:chiang-rai",
+      "canonical_geo_id": "geo_th_0024",
+      "name": "Чианграй",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/thailand/province/chiang-rai.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:bangkok-grand-palace-and-temples",
+      "name": "Bangkok Grand Palace and temples",
+      "geography_ids": [
+        "country:th",
+        "th:city:bangkok",
+        "th:geographic_area:bangkok-expedition"
+      ],
+      "region_legacy": "Bangkok",
+      "nearest_hub": "Bangkok",
+      "narrow": "Bangkok Grand Palace and temples — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/thailand/objects/bangkok-grand-palace-and-temples.json"
+    },
+    {
+      "id": "th:wat-rong-khun-white-temple",
+      "name": "Wat Rong Khun (White Temple)",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:chiang-rai-far-north",
+        "th:geographic_area:north",
+        "th:province:chiang-rai"
+      ],
+      "region_legacy": "Chiang Rai / far north",
+      "nearest_hub": "Chiang Rai",
+      "narrow": "Редкий пример современной тайской сакральной архитектуры и авторского искусства Chalermchai Kositpipat: белый mirror-clad комплекс с очень высокой визуальной плотностью.",
+      "detail_path": "countries/thailand/objects/wat-rong-khun-white-temple.json"
+    }
+  ]
+}

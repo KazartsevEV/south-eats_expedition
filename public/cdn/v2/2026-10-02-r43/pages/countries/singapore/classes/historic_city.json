@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:sg:historic_city"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:sg:built_heritage",
+    "page_path": "pages/countries/singapore/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 4,
+  "geography_filters": [
+    {
+      "id": "country:sg",
+      "name": "Сингапур",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/singapore.json"
+    },
+    {
+      "id": "sg:geographic_area:chinatown-central-heritage",
+      "canonical_geo_id": "geo_sg_0007",
+      "name": "Чайна-таун / центральное наследие",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/singapore/geographic_area/chinatown-central-heritage.json"
+    },
+    {
+      "id": "sg:geographic_area:kampong-glam",
+      "canonical_geo_id": "geo_sg_0009",
+      "name": "Кампонг-Глам",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/singapore/geographic_area/kampong-glam.json"
+    },
+    {
+      "id": "sg:geographic_area:katong-joo-chiat",
+      "canonical_geo_id": "geo_sg_0012",
+      "name": "Катонг / Джу-Чиат",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/singapore/geographic_area/katong-joo-chiat.json"
+    },
+    {
+      "id": "sg:geographic_area:little-india",
+      "canonical_geo_id": "geo_sg_0008",
+      "name": "Литл-Индия",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/singapore/geographic_area/little-india.json"
+    },
+    {
+      "id": "sg:region:central-region",
+      "canonical_geo_id": "geo_sg_0001",
+      "name": "Центральный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/central-region.json"
+    },
+    {
+      "id": "sg:region:east-region",
+      "canonical_geo_id": "geo_sg_0002",
+      "name": "Восточный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/east-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:chinatown",
+      "name": "Chinatown",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:chinatown-central-heritage",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Chinatown / central heritage",
+      "nearest_hub": "Chinatown MRT",
+      "narrow": "Chinatown — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/singapore/objects/chinatown.json"
+    },
+    {
+      "id": "sg:little-india",
+      "name": "Little India",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:little-india",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Little India",
+      "nearest_hub": "Little India MRT",
+      "narrow": "Little India — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/singapore/objects/little-india.json"
+    },
+    {
+      "id": "sg:kampong-glam",
+      "name": "Kampong Glam",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:kampong-glam",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Kampong Glam",
+      "nearest_hub": "Bugis / Kampong Glam",
+      "narrow": "Kampong Glam — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/singapore/objects/kampong-glam.json"
+    },
+    {
+      "id": "sg:joo-chiat-katong",
+      "name": "Joo Chiat / Katong",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:katong-joo-chiat",
+        "sg:region:east-region"
+      ],
+      "region_legacy": "Katong / Joo Chiat",
+      "nearest_hub": "Paya Lebar / Marine Parade",
+      "narrow": "Joo Chiat / Katong — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/singapore/objects/joo-chiat-katong.json"
+    }
+  ]
+}

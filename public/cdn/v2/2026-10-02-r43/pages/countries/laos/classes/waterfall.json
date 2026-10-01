@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:la:waterfall"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "waterfall",
+    "label_ru": "Водопады",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:water_coast_marine",
+    "page_path": "pages/countries/laos/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/waterfall.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:province:luang-prabang",
+      "canonical_geo_id": "geo_la_0024",
+      "name": "Луангпхабанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/luang-prabang.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:kuang-si-falls",
+      "name": "Kuang Si Falls",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-prabang"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "nearest_hub": "Luang Prabang",
+      "narrow": "Куанг-Си — каскад по известняковым/травертиновым уступам южнее Луангпхабанг. Бирюзовый цвет создаётся рассеянием света в минеральной воде; визуальный интерес — последовательность малых чаш, леса и главного вертикального водопада, а не один бассейн.",
+      "detail_path": "countries/laos/objects/kuang-si-falls.json"
+    }
+  ]
+}

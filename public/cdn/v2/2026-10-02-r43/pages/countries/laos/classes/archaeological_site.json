@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:la:archaeological_site"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "archaeological_site",
+    "label_ru": "Археологические объекты",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:archaeology_memory",
+    "page_path": "pages/countries/laos/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/archaeological_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:district:champasak",
+      "canonical_geo_id": "geo_la_0032",
+      "name": "Район Чампасак",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/district/champasak-district.json"
+    },
+    {
+      "id": "la:province:champasak",
+      "canonical_geo_id": "geo_la_0031",
+      "name": "Чампасак",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/champasak.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:wat-phou",
+      "name": "Wat Phou",
+      "geography_ids": [
+        "country:la",
+        "la:district:champasak",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
+      "nearest_hub": "Pakse",
+      "narrow": "Ват-Пху — не отдельный храм у подножия горы, а осевая сакральная система культурного ландшафта Чампасак: от равнины Меконга и древних городов через бараи, процессуальную дорогу и террасы маршрут поднимается к священной горе Пху-Као и постоянному источнику. Первоначальная шиваитская логика комплекса сохранилась в рельефе и гидравлике, а верхнее святилище сегодня остаётся местом живой буддийской практики.",
+      "detail_path": "countries/laos/objects/wat-phou.json"
+    }
+  ]
+}

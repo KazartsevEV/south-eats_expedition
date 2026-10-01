@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "class_family",
+    "id": "country-family:la:archaeology_memory"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "family_id": "archaeology_memory",
+    "label_ru": "Археология, древность и историческая память"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:la",
+    "page_path": "pages/countries/laos.json"
+  },
+  "global_family_page": "pages/families/archaeology_memory.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "count": 2,
+  "classes": [
+    {
+      "object_type": "archaeological_site",
+      "label_ru": "Археологические объекты",
+      "count": 1,
+      "global_page_path": "pages/classes/archaeological_site.json",
+      "country_page_path": "pages/countries/laos/classes/archaeological_site.json"
+    },
+    {
+      "object_type": "megalithic_site",
+      "label_ru": "Мегалиты",
+      "count": 1,
+      "global_page_path": "pages/classes/megalithic_site.json",
+      "country_page_path": "pages/countries/laos/classes/megalithic_site.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:wat-phou",
+      "name": "Wat Phou",
+      "object_type": "archaeological_site",
+      "geography_ids": [
+        "country:la",
+        "la:district:champasak",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
+      "narrow": "Ват-Пху — не отдельный храм у подножия горы, а осевая сакральная система культурного ландшафта Чампасак: от равнины Меконга и древних городов через бараи, процессуальную дорогу и террасы маршрут поднимается к священной горе Пху-Као и постоянному источнику. Первоначальная шиваитская логика комплекса сохранилась в рельефе и гидравлике, а верхнее святилище сегодня остаётся местом живой буддийской практики.",
+      "detail_path": "countries/laos/objects/wat-phou.json"
+    },
+    {
+      "id": "la:plain-of-jars",
+      "name": "Plain of Jars",
+      "object_type": "megalithic_site",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:plain-of-jars",
+        "la:province:xiangkhouang"
+      ],
+      "region_legacy": "Xieng Khouang",
+      "narrow": "Долина кувшинов — не одно поле, а серийный археологический ландшафт Сиангкхуанга: 15 компонентов ЮНЕСКО объединяют мегалитические кувшины, каменные диски, погребения, карьеры и следы изготовления. Главный смысл объекта сегодня — сочетание железновековой мегалитической традиции с более поздними фазами погребального использования, доказанными раскопками, и с живым послевоенным ландшафтом, где безопасное перемещение всё ещё привязано к известным маршрутам.",
+      "detail_path": "countries/laos/objects/plain-of-jars.json"
+    }
+  ]
+}

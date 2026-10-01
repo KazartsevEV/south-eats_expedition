@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:ph:industrial_heritage"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "object_type": "industrial_heritage",
+    "label_ru": "Индустриальное наследие",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:ph:built_heritage",
+    "page_path": "pages/countries/philippines/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/industrial_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:ph",
+      "name": "Филиппины",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/philippines.json"
+    },
+    {
+      "id": "ph:geographic_area:negros-expedition",
+      "canonical_geo_id": "geo_ph_0045",
+      "name": "Негрос",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/negros-expedition.json"
+    },
+    {
+      "id": "ph:region:negros-island-region",
+      "canonical_geo_id": "geo_ph_0010",
+      "name": "Регион острова Негрос",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/negros-island-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:negros-sugar-era-hacienda-architecture",
+      "name": "Negros sugar-era hacienda architecture",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:negros-expedition",
+        "ph:region:negros-island-region"
+      ],
+      "region_legacy": "Negros",
+      "nearest_hub": "Bacolod / Dumaguete",
+      "narrow": "Negros sugar-era hacienda architecture — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/philippines/objects/negros-sugar-era-hacienda-architecture.json"
+    }
+  ]
+}

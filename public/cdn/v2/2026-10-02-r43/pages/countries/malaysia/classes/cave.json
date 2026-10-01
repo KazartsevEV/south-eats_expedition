@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:my:cave"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "cave",
+    "label_ru": "Пещеры",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:relief_geology",
+    "page_path": "pages/countries/malaysia/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/cave.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:locality:batu-caves",
+      "canonical_geo_id": "geo_my_0040",
+      "name": "Пещеры Бату",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/town/batu-caves.json"
+    },
+    {
+      "id": "my:region:kuala-lumpur-klang-valley",
+      "canonical_geo_id": "geo_my_0001",
+      "name": "Куала-Лумпур / долина Кланг",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/kuala-lumpur-klang-valley.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:batu-caves",
+      "name": "Batu Caves",
+      "geography_ids": [
+        "country:my",
+        "my:locality:batu-caves",
+        "my:region:kuala-lumpur-klang-valley"
+      ],
+      "region_legacy": "Kuala Lumpur / Klang Valley",
+      "nearest_hub": "Batu Caves",
+      "narrow": "Batu Caves — индуистский храмовый комплекс в известняковом массиве у Куала-Лумпура: 272 ступени, 43-метровая статуя Муругана и огромная Cathedral Cave связывают геологию карста с действующей религиозной практикой.",
+      "detail_path": "countries/malaysia/objects/batu-caves.json"
+    }
+  ]
+}

@@ -23,9 +23,12 @@ DEFAULT_LANGUAGE = "ru"
 
 CLASS_ID_MAP = {
     "archaeological_site": "archaeology.site",
+    "geological_site": "geology.site",
     "historic_city": "settlement.historic_city",
+    "fortification": "architecture.fortification",
     "national_park": "nature.national_park",
     "island": "nature.island",
+    "reef": "nature.reef",
     "religious_site": "religion.sacred_site",
     "cultural_landscape": "heritage.cultural_landscape",
     "cave": "nature.cave",

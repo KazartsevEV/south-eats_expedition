@@ -214,7 +214,7 @@ def canonical_point(point):
     }
 
 
-def narrative_sections(story, source_refs):
+def narrative_sections(story, source_refs, strict_source_scope=False):
     story = story or {}
     allowed = {"overview", "history", "culture", "geography", "geology", "ethnography", "myths_beliefs"}
     structured = story.get("sections")
@@ -229,10 +229,12 @@ def narrative_sections(story, source_refs):
                 raise RuntimeError(f"unknown canonical narrative section: {section_id}")
             if content in (None, "", [], {}):
                 continue
+            explicit_refs = raw.get("source_refs") or []
+            section_refs = explicit_refs if strict_source_scope and "source_refs" in raw else list(dict.fromkeys(explicit_refs + list(source_refs)))
             rows.append({
                 "section_id": section_id,
                 "content": content,
-                "source_refs": list(dict.fromkeys((raw.get("source_refs") or []) + list(source_refs))),
+                "source_refs": list(dict.fromkeys(section_refs)),
             })
         if rows:
             return rows
@@ -1074,10 +1076,12 @@ def build():
         source_sections = ((((source_object or {}).get("traveler_card") or {}).get("annotation") or {}).get("sections"))
         if isinstance(source_sections, list) and source_sections:
             story_payload["sections"] = source_sections
-        sections = narrative_sections(story_payload, source_refs)
-        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
         language_review = ((source_object or {}).get("qa") or {}).get("language_review") or {}
         rebuild_review = ((source_object or {}).get("qa") or {}).get("rebuild_v2") or {}
+        fact_source_review = ((source_object or {}).get("qa") or {}).get("fact_source_review") or {}
+        strict_source_scope = fact_source_review.get("status") == "passed"
+        sections = narrative_sections(story_payload, source_refs, strict_source_scope=strict_source_scope)
+        reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
 
         checks = {
             "language": bool((detail.get("identity") or {}).get("narrow") or sections) and (code != "KH" or language_review.get("status") == "reviewed"),
@@ -1133,14 +1137,22 @@ def build():
                     "status": operations.get("status"),
                     "official_url": operations.get("official_url"),
                     "notes": logistics.get("access"),
-                    "source_refs": source_refs,
+                    "source_refs": (
+                        list(dict.fromkeys((operations.get("source_refs") or []) + (logistics.get("access_source_refs") or [])))
+                        if strict_source_scope
+                        else source_refs
+                    ),
                     "checked_at": operations.get("last_verified"),
                 },
                 "access_options": access_options(logistics),
                 "water": (
                     {
                         **json.loads(json.dumps(logistics.get("water_structured"), ensure_ascii=False)),
-                        "source_refs": list(dict.fromkeys((logistics.get("water_structured") or {}).get("source_refs", []) + source_refs)),
+                        "source_refs": (
+                            list(dict.fromkeys((logistics.get("water_structured") or {}).get("source_refs", [])))
+                            if strict_source_scope
+                            else list(dict.fromkeys((logistics.get("water_structured") or {}).get("source_refs", []) + source_refs))
+                        ),
                     }
                     if isinstance(logistics.get("water_structured"), dict)
                     else {
@@ -1156,7 +1168,11 @@ def build():
                 "overnight": (
                     {
                         **json.loads(json.dumps(logistics.get("overnight"), ensure_ascii=False)),
-                        "source_refs": list(dict.fromkeys((logistics.get("overnight") or {}).get("source_refs", []) + source_refs)),
+                        "source_refs": (
+                            list(dict.fromkeys((logistics.get("overnight") or {}).get("source_refs", [])))
+                            if strict_source_scope
+                            else list(dict.fromkeys((logistics.get("overnight") or {}).get("source_refs", []) + source_refs))
+                        ),
                     }
                     if isinstance(logistics.get("overnight"), dict)
                     else {
@@ -1169,7 +1185,11 @@ def build():
                 "rules": {
                     "permit_or_guide": logistics.get("permit_or_guide"),
                     "access_requirements": logistics.get("access_requirements"),
-                    "source_refs": source_refs,
+                    "source_refs": (
+                        list(dict.fromkeys(logistics.get("rules_source_refs") or []))
+                        if strict_source_scope
+                        else source_refs
+                    ),
                     "checked_at": operations.get("last_verified"),
                 },
                 "seasonality": (detail.get("visit") or {}).get("climate"),
@@ -1193,6 +1213,7 @@ def build():
                 "status": status,
                 "checks": checks,
                 "last_reviewed_at": operations.get("last_verified"),
+                "fact_source_review": fact_source_review or None,
             },
         }
         dump(release / "objects" / code.lower() / f"{object_id}.json", canonical)

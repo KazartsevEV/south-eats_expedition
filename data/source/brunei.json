@@ -35,7 +35,8 @@
       "Pre-object geo QA 2026-10-01: added sourced profiles for included mukim/physical areas, locality profiles for Bandar Seri Begawan and Kampong Jerudong, and sourced district/mukim WGS84 navigation masks; object payloads unchanged.",
       "Brunei pre-object geo QA complete 2026-10-01: district/regional research profiles, included mukim and physical-area profiles, settlement profiles, and 7 sourced administrative navigation masks pass the canonical country/hierarchy contract; object payloads remain frozen.",
       "PH-reference revalidation 2026-10-01: all 11 canonical Brunei geo entities pass their generated coverage-role contracts (9 regional-profile roles and 2 locality-profile roles); 7 sourced administrative masks are present, while Bandar Seri Begawan, Kampong Jerudong, Kampong Ayer and Brunei River remain without invented polygons. Existing 18 object cards were not edited.",
-      "2026-10-01 upper-level acceptance pass: country profile/climate/travel rules and official country-level sources revalidated against PH reference; attraction/object payloads remain frozen and unchanged."
+      "2026-10-01 upper-level acceptance pass: country profile/climate/travel rules and official country-level sources revalidated against PH reference; attraction/object payloads remain frozen and unchanged.",
+      "2026-10-01 Brunei food/festival visual layer upgraded to Cambodia standard: 6 food cards and 5 festival cards with licensed media, where-to-find/observe fields, format/access context and dated BND price evidence."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -82,6 +83,13 @@
       "checked_at": "2026-10-01",
       "accepted_at": "2026-10-01",
       "acceptance_basis": "PH-reference upper-level acceptance already completed earlier on 2026-10-01; final cross-country QA normalized the acceptance metadata to the same contract used by KH–VN. Object payloads unchanged."
+    },
+    "country_culture_upgrade": {
+      "status": "food_festivals_rich_cards_complete",
+      "checked_at": "2026-10-01",
+      "food_cards": 6,
+      "festival_cards": 5,
+      "standard": "Cambodia rich-card visual standard with local mirrored media, distribution and price/access context"
     }
   },
   "overview": {
@@ -336,32 +344,333 @@
     ],
     "festivals": [
       {
+        "id": "hari_raya_aidilfitri",
         "name": "Hari Raya Aidilfitri",
-        "typical_month": "varies (Islamic calendar)"
+        "local_name": "Hari Raya ‘Idil Fitri",
+        "dates_2026": "21–24 марта 2026; государственные выходные 21, 23 и 24 марта",
+        "typical_month": "по исламскому календарю",
+        "description": "Главный праздник после Рамадана. Утро начинается с праздничной молитвы, затем семьи посещают старших родственников и устраивают open house. В Брунее к этому добавляется особый государственный слой: в первые дни праздника проводится Junjung Ziarah в Istana Nurul Iman, когда дворец по отдельной программе принимает посетителей.",
+        "where_common": "По всей стране — мечети, дома и семейные open house. Для путешественника наиболее необычная точка — Istana Nurul Iman в Bandar Seri Begawan, но дни и режим публичного доступа надо перепроверять по объявлению конкретного года.",
+        "access_cost": "Обычные религиозные и семейные празднования не билетные; посещение дворца регулируется отдельной ежегодной программой.",
+        "checked_at": "2026-10-01",
+        "source_ids": [
+          "BN_PMO_PUBLIC_HOLIDAYS_2026",
+          "BN_PMO_HARI_RAYA_2026",
+          "BN_METI_HARI_RAYA_VISITS_2026"
+        ],
+        "image": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20Istana%20Nurul%20Iman%20Aidilfitri%20gifts%2001.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:2025_Istana_Nurul_Iman_Aidilfitri_gifts_01.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Taufik",
+          "last_checked": "2026-10-01",
+          "subject": "Aidilfitri open house в Istana Nurul Iman, 2025"
+        }
       },
       {
-        "name": "National Day",
-        "typical_month": "February 23"
+        "id": "national_day",
+        "name": "Национальный день Брунея",
+        "local_name": "Hari Kebangsaan Negara Brunei Darussalam",
+        "dates_2026": "23 февраля 2026",
+        "typical_month": "февраль",
+        "description": "Годовщина независимости Брунея. Обычно это один из главных массовых государственных праздников с флагами, построениями и публичной программой, но 2026 год был исключением: дата пришлась на Рамадан, поэтому официальная программа была заметно сдержаннее и сделала акцент на коллективной молитве, чтении Yasin и doa kesyukuran.",
+        "where_common": "В 2026 году главный религиозный центр программы — Jame’ ‘Asr Hassanil Bolkiah в Kiarong; параллельные церемонии прошли в мечетях всех четырёх районов. В другие годы формат и главная площадка могут быть значительно более массовыми.",
+        "access_cost": "Государственные церемонии и уличные элементы обычно не имеют общего билета; доступ зависит от конкретной площадки и режима безопасности.",
+        "status_2026": "необычно религиозный и более сдержанный формат из-за Рамадана; не переносить визуальный масштаб парадов прошлых лет на 2026",
+        "checked_at": "2026-10-01",
+        "source_ids": [
+          "BN_PMO_PUBLIC_HOLIDAYS_2026",
+          "BN_PELITA_NATIONAL_DAY_2026"
+        ],
+        "image": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brunei%20National%20Day%202024%2024.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Brunei_National_Day_2024_24.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Pangalau",
+          "last_checked": "2026-10-01",
+          "subject": "Национальный день 2024; иллюстрирует обычный массовый формат, а не специальную программу 2026"
+        }
       },
       {
-        "name": "Sultan's Birthday",
-        "typical_month": "July 15"
+        "id": "sultan_birthday",
+        "name": "День рождения султана",
+        "local_name": "Hari Keputeraan KDYMM",
+        "dates_2026": "15 июля 2026 — 80-летие султана",
+        "typical_month": "июль",
+        "description": "Не один парад, а длинный государственный цикл. В 2026 году он включал поднятие большого государственного флага, молитвенные церемонии, guard of honour 15 июля, встречи Ramah Mesra с населением в районах и другие мероприятия; спуск большого флага 8 августа завершил официальный период.",
+        "where_common": "Главная церемония 15 июля — Taman Haji Sir Muda Omar ‘Ali Saifuddien в Bandar Seri Begawan; встречи с населением проходят также по районам Brunei-Muara, Tutong, Belait и Temburong.",
+        "access_cost": "Публичные городские и районные мероприятия обычно без единого билета; отдельные официальные зоны имеют контроль доступа.",
+        "checked_at": "2026-10-01",
+        "source_ids": [
+          "BN_PMO_PUBLIC_HOLIDAYS_2026",
+          "BN_MOHA_SULTAN_BIRTHDAY_2026"
+        ],
+        "image": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Land%20Rover%20Defender%20%28ceremonial%29%20of%20the%20Royal%20Brunei%20Armed%20Forces.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_(ceremonial)_of_the_Royal_Brunei_Armed_Forces.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Yu Chu Chin",
+          "last_checked": "2026-10-01",
+          "subject": "церемония ко дню рождения султана, 15 июля 2024"
+        }
+      },
+      {
+        "id": "chinese_new_year",
+        "name": "Китайский Новый год",
+        "local_name": "Tahun Baru Cina",
+        "dates_2026": "17 февраля 2026",
+        "typical_month": "январь–февраль",
+        "description": "Государственный выходной и главный календарный праздник китайской общины Брунея. Для путешественника это не общенациональный фестиваль масштаба Hari Raya: наиболее конкретная публичная точка, которую указывает Brunei Tourism на 2026 год, — Teng Yun Temple в центре Bandar Seri Begawan.",
+        "where_common": "Teng Yun Temple, Bandar Seri Begawan; также семейные и общинные празднования китайской общины в Brunei-Muara и других городских центрах.",
+        "access_cost": "Храмовая площадка не имеет общего фестивального билета; соблюдать действующий режим храма и конкретных мероприятий.",
+        "checked_at": "2026-10-01",
+        "source_ids": [
+          "BN_PMO_PUBLIC_HOLIDAYS_2026",
+          "BN_TOURISM_CNY_2026"
+        ],
+        "image": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pailou%20of%20Teng%20Yun%20Temple%2C%20Brunei.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Pailou_of_Teng_Yun_Temple,_Brunei.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Pangalau",
+          "last_checked": "2026-10-01",
+          "subject": "Teng Yun Temple в Bandar Seri Begawan"
+        }
+      },
+      {
+        "id": "brunei_december_festival",
+        "name": "Brunei December Festival",
+        "local_name": "Brunei December Festival",
+        "dates_2026": "весь декабрь 2026",
+        "typical_month": "декабрь",
+        "description": "Месячная программа, собранная Tourism Development Department: еда, культурные события, семейные развлечения, ярмарки и специальные программы распределены по разным площадкам, а не сведены к одному параду или одной сцене.",
+        "where_common": "Все четыре района Брунея. Конкретные события надо выбирать по ежегодному guide; Bandar Seri Begawan и Gadong дают наиболее плотную городскую часть, но фестиваль официально позиционируется как общенациональный.",
+        "access_cost": "Единого билета нет: часть событий бесплатна, часть — коммерческие мероприятия и специальные предложения.",
+        "checked_at": "2026-10-01",
+        "source_ids": [
+          "BN_TOURISM_BDF_2026"
+        ],
+        "image": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gadong%20Night%20Market.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Gadong_Night_Market.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Pangalau",
+          "last_checked": "2026-10-01",
+          "subject": "Gadong Night Market; визуальный контекст городской food-программы, не конкретное событие BDF"
+        }
       }
     ],
     "food": {
-      "budget_food_summary": "Недорогая еда доступна в kopitiam, фуд-кортах и ночных рынках; Gadong Night Market — удобная точка для дегустации.",
+      "budget_food_summary": "В Брунее дешёвая повседневная еда сосредоточена не в туристических ресторанах, а в nasi-katok stalls, tamu, фуд-кортах и вечерних рынках. Nasi katok остаётся главным бюджетным ориентиром; ambuyat — уже не уличный перекус, а совместная традиционная трапеза с несколькими гарнирами. Для каждого блюда ниже цена привязана к конкретному формату и источнику, а не выдана за единую цену по стране.",
+      "typical_simple_meal_local_range": [
+        1,
+        6
+      ],
+      "price_currency": "BND",
+      "price_note": "Ориентир для nasi katok, рынков и простых фуд-кортов; ambuyat и полноценные ресторанные наборы стоят дороже. Проверено 2026-10-01.",
+      "checked_at": "2026-10-01",
+      "source_ids": [
+        "BN_TOURISM_LOCAL_DELICACIES",
+        "BN_TOURISM_GADONG_NIGHT_MARKET",
+        "BN_BBYB_LIFESTYLE_2026",
+        "BN_ALAFIAH_AMBUYAT_MENU_2026",
+        "BN_MORA_CANTEEN_PRICES_2026",
+        "BN_SOUSVIDE_KELUPIS_2026",
+        "BN_TRAVELWITHHELLO_FOOD_2026"
+      ],
       "street_food": [
         "nasi katok",
-        "satay",
-        "grilled fish",
-        "kuih",
-        "ambuyat (обычно не street-food в узком смысле)"
+        "kelupis",
+        "pulut panggang",
+        "penyaram",
+        "kuih cincin",
+        "ambuyat"
       ],
-      "typical_simple_meal_usd_range": [
-        1.5,
-        5
-      ],
-      "price_note": "ориентир, не официальный тариф"
+      "items": [
+        {
+          "id": "nasi_katok",
+          "name": "Nasi katok",
+          "name_ru": "Наси каток",
+          "description": "Белый рис, кусок жареной курицы и sambal — предельно простая упаковка, которая в Брунее работает как круглосуточная дешёвая еда. Само название связывают со старой практикой стучать в дверь продавца, чтобы сделать заказ.",
+          "where_common": "По всей стране; особенно много отдельных nasi-katok stalls в Brunei-Muara. На Gadong Night Market и вокруг Bandar Seri Begawan его легко найти вечером, но блюдо не привязано к одному рынку.",
+          "format": "уличная точка / takeaway / ночной рынок",
+          "price_local_range": [
+            1.5,
+            1.5
+          ],
+          "price_currency": "BND",
+          "price_unit": "обычная порция",
+          "price_context": "Borneo Bulletin Yearbook 2026 указывает BND1.50 как типичную цену «at most places»; официальный Brunei Tourism ранее фиксировал классическую цену BND1, поэтому BND1.50 используем как более свежий ориентир, а не гарантированный тариф.",
+          "checked_at": "2026-10-01",
+          "source_ids": [
+            "BN_BBYB_LIFESTYLE_2026",
+            "BN_TOURISM_LOCAL_DELICACIES",
+            "BN_TOURISM_GADONG_NIGHT_MARKET"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20Katok.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Nasi_Katok.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC0 1.0",
+            "artist": "The Bangsawan",
+            "last_checked": "2026-10-01",
+            "subject": "nasi katok"
+          }
+        },
+        {
+          "id": "ambuyat",
+          "name": "Ambuyat",
+          "name_ru": "Амбуят",
+          "description": "Крахмал из сердцевины саговой пальмы заваривают до прозрачной вязкой массы. Его наматывают на двузубые бамбуковые палочки candas и едят с кислым или острым cacah; смысл блюда раскрывается вместе с рыбой, мясом, овощами и соусами, а не в самом нейтральном саго.",
+          "where_common": "Традиционные рестораны Brunei-Muara и семейные трапезы; самый известный городской формат — специализированные наборы в Bandar Seri Begawan и окрестностях. Это не типичный одиночный street-food.",
+          "format": "традиционный ресторан / совместный набор",
+          "price_local_range": [
+            19,
+            19
+          ],
+          "price_currency": "BND",
+          "price_unit": "набор на двоих",
+          "price_context": "Al-Afiah Hotel публикует актуальный Ambuyat Set for 2 за BND19; это конкретный ресторанный ориентир, а не фиксированная цена по стране.",
+          "checked_at": "2026-10-01",
+          "source_ids": [
+            "BN_TOURISM_LOCAL_DELICACIES",
+            "BN_ALAFIAH_AMBUYAT_MENU_2026",
+            "BN_BBYB_LIFESTYLE_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambuyat%20in%20Bandar%20Seri%20Begawan%20Brunei.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Ambuyat_in_Bandar_Seri_Begawan_Brunei.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY 2.0",
+            "artist": "e_chaya",
+            "last_checked": "2026-10-01",
+            "subject": "ambuyat в Bandar Seri Begawan"
+          }
+        },
+        {
+          "id": "kelupis",
+          "name": "Kelupis",
+          "name_ru": "Келупис",
+          "description": "Клейкий рис, обычно приготовленный с кокосом и плотно завёрнутый в лист nyirik. У Brunei Tourism келупис прямо связан с праздничной и свадебной едой культуры Bisaya; встречаются варианты с сушёной креветкой или анчоусом, а простой вариант едят с арахисовым или curry dip.",
+          "where_common": "Tamu, традиционные kueh-точки и праздничные столы; встречается в Brunei-Muara и Tutong, а культурная связь с Bisaya особенно важна для внутреннего Брунея.",
+          "format": "рынок / традиционные сладости и закуски / праздничная еда",
+          "price_local_range": [
+            1,
+            1
+          ],
+          "price_currency": "BND",
+          "price_unit": "4 небольших упаковки в текущем коммерческом примере",
+          "price_context": "Sousvide BN в текущем каталоге продаёт 4 creamy kelupis за BND1. Это реальная ценовая точка, но размер и рецепт у разных продавцов различаются.",
+          "checked_at": "2026-10-01",
+          "source_ids": [
+            "BN_TOURISM_LOCAL_DELICACIES",
+            "BN_SOUSVIDE_KELUPIS_2026",
+            "BN_TRAVELWITHHELLO_FOOD_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kelupis.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Kelupis.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0 / GFDL",
+            "artist": "Night Lantern",
+            "last_checked": "2026-10-01",
+            "subject": "kelupis"
+          }
+        },
+        {
+          "id": "pulut_panggang",
+          "name": "Pulut panggang",
+          "name_ru": "Пулут пангганг",
+          "description": "Клейкий рис с начинкой — часто сушёной креветкой или мясом — заворачивают в лист и уже не просто пропаривают, как kelupis, а поджаривают. Лист даёт рису дымный аромат и подпаленную поверхность.",
+          "where_common": "Особенно связан с Tutong: Borneo Bulletin Yearbook 2026 называет pulut panggang местной специализацией, а Brunei Tourism отдельно рекомендует искать его там утром. Встречается также на рынках и в наборах kueh по стране.",
+          "format": "утренний рынок / kueh stall / фуд-корт",
+          "price_local_range": [
+            1,
+            1
+          ],
+          "price_currency": "BND",
+          "price_unit": "3 штуки в контрольной цене 2026",
+          "price_context": "В государственном тендере столовой 2026 Pulut Panggang (3 biji) указан по BND1. Это контрольный ценовой ориентир, не обязательная цена любого рынка.",
+          "checked_at": "2026-10-01",
+          "source_ids": [
+            "BN_TOURISM_LOCAL_DELICACIES",
+            "BN_BBYB_LIFESTYLE_2026",
+            "BN_MORA_CANTEEN_PRICES_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pulut%20Panggang.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Pulut_Panggang.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0",
+            "artist": "Mdsheth1986",
+            "last_checked": "2026-10-01",
+            "subject": "pulut panggang"
+          }
+        },
+        {
+          "id": "penyaram",
+          "name": "Penyaram",
+          "name_ru": "Пеньярам",
+          "description": "Тёмная жареная рисовая лепёшка с толстой мягкой серединой и тонким хрустящим краем; из-за формы её часто называют kuih UFO. Это не ресторанный десерт, а обычный традиционный kueh для рынка и чаепития.",
+          "where_common": "Pasar Pelbagai Barangan Gadong, Sumbangsih Mulia и Tamu Kianggeh — официально документированные точки; подобные kueh продаются и на других tamu.",
+          "format": "рынок / kueh stall",
+          "price_local_range": [
+            1,
+            2
+          ],
+          "price_currency": "BND",
+          "price_unit": "небольшая порция/упаковка",
+          "price_context": "Pelita Brunei в официальном материале фиксировал BND1 за пять штук у конкретной продавщицы; современный деревенский product listing даёт BND2 за penyaram. Диапазон используется только как ориентир, размеры упаковки различаются.",
+          "checked_at": "2026-10-01",
+          "source_ids": [
+            "BN_PELITA_PENYARAM_2020",
+            "BN_TOURISM_GADONG_NIGHT_MARKET"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuih%20Penyaram.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Kuih_Penyaram.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0",
+            "artist": "Miss Izzah",
+            "last_checked": "2026-10-01",
+            "subject": "penyaram"
+          }
+        },
+        {
+          "id": "kuih_cincin",
+          "name": "Kuih cincin",
+          "name_ru": "Куих чинчин",
+          "description": "Хрустящее кольцевое печенье из рисовой муки и тёмного пальмового сахара. В отличие от мягких kuih, оно сухое и долго хранится, поэтому удобно как дорожная сладость и как часть праздничного набора.",
+          "where_common": "Традиционные рынки, kueh shops и праздничные продажи по Brunei-Muara и другим районам; Brunei Tourism относит его к местным традиционным сладостям.",
+          "format": "рынок / kueh stall / праздничная упаковка",
+          "price_local_range": [
+            0.5,
+            1
+          ],
+          "price_currency": "BND",
+          "price_unit": "штука или небольшая рыночная порция",
+          "price_context": "Актуальный туристический ценовой ориентир для kelupis/kuih — около BND0.50–1 за единицу; используем его только как порядок цены, поскольку размер и упаковка kuih cincin заметно различаются.",
+          "checked_at": "2026-10-01",
+          "source_ids": [
+            "BN_TOURISM_LOCAL_DELICACIES",
+            "BN_TRAVELWITHHELLO_FOOD_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuih%20cincin.JPG",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Kuih_cincin.JPG",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY-SA 3.0",
+            "artist": "Ranking Update",
+            "last_checked": "2026-10-01",
+            "subject": "kuih cincin"
+          }
+        }
+      ]
     },
     "laws_and_prohibitions": [
       {
@@ -6891,6 +7200,219 @@
       ],
       "accessed": "2026-10-01",
       "notes": "Carrier route-map source used only for current network context; exact frequencies and operating dates require re-check."
+    },
+    {
+      "id": "BN_TOURISM_LOCAL_DELICACIES",
+      "canonical_id": "src_903244",
+      "publisher": "Brunei Tourism — Local Delicacies",
+      "url": "https://www.bruneitourism.com/local-delicacies/",
+      "kind": "government",
+      "used_for": [
+        "food",
+        "cuisine",
+        "nasi_katok",
+        "ambuyat",
+        "kelupis",
+        "pulut_panggang",
+        "kuih_cincin",
+        "penyaram"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_TOURISM_GADONG_NIGHT_MARKET",
+      "canonical_id": "src_903245",
+      "publisher": "Brunei Tourism — Gadong Night Market",
+      "url": "https://www.bruneitourism.com/street-food/gadong-night-market/",
+      "kind": "government",
+      "used_for": [
+        "food",
+        "street_food",
+        "markets",
+        "gadong",
+        "market_price_floor"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_BBYB_LIFESTYLE_2026",
+      "canonical_id": "src_903246",
+      "publisher": "Borneo Bulletin Yearbook 2026 — Lifestyle / Foodies",
+      "url": "https://borneobulletinyearbook.com.bn/files/assets/basic-html/page-16.html",
+      "kind": "local_media",
+      "used_for": [
+        "food",
+        "nasi_katok",
+        "nasi_katok_price_2026",
+        "ambuyat",
+        "pulut_panggang",
+        "tutong_food"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_ALAFIAH_AMBUYAT_MENU_2026",
+      "canonical_id": "src_903247",
+      "publisher": "Al-Afiah Hotel — Lunch Set Menu",
+      "url": "https://www.alafiahhotel.com/menus?menu=lunch-set-menu",
+      "kind": "commercial_listing",
+      "used_for": [
+        "food_price",
+        "ambuyat",
+        "ambuyat_price_2026"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_MORA_CANTEEN_PRICES_2026",
+      "canonical_id": "src_903248",
+      "publisher": "Ministry of Religious Affairs — school canteen quotation KHEU/JPI/KANTIN/12/06",
+      "url": "https://www.mora.gov.bn/Tender%20dan%20Sebutharga%20Library/JABATAN%20PENGAJIAN%20ISLAM/NONI/12-SU%20PELAMBAYAN%2C%20BR%20I.pdf",
+      "kind": "government",
+      "used_for": [
+        "food_price",
+        "pulut_panggang",
+        "kuih_melayu",
+        "price_2026"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Government 2026 canteen quotation gives a controlled-price reference, not a universal market tariff."
+    },
+    {
+      "id": "BN_SOUSVIDE_KELUPIS_2026",
+      "canonical_id": "src_903249",
+      "publisher": "Sousvide BN — current product catalogue",
+      "url": "https://sousvidebn.catalog.kyte.site/",
+      "kind": "commercial_listing",
+      "used_for": [
+        "food_price",
+        "kelupis",
+        "price_2026"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Current commercial catalogue snapshot; pack size is stated in the listing and is not generalized as a universal market price."
+    },
+    {
+      "id": "BN_PELITA_PENYARAM_2020",
+      "canonical_id": "src_903250",
+      "publisher": "Pelita Brunei — traditional penyaram vendors",
+      "url": "https://www.pelitabrunei.gov.bn/Arkib%20Dokumen/2020/Pelita%20Brunei%20240820.pdf",
+      "kind": "government_media",
+      "used_for": [
+        "penyaram",
+        "market_distribution",
+        "historic_price_baseline"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Used as an official historical market-price baseline only; not treated as a current fixed tariff."
+    },
+    {
+      "id": "BN_TRAVELWITHHELLO_FOOD_2026",
+      "canonical_id": "src_903251",
+      "publisher": "TravelWithHello — Brunei Food Guide 2026",
+      "url": "https://www.travelwithhello.com/blog/brunei-food-dining-guide",
+      "kind": "traveler_guide",
+      "used_for": [
+        "food_price",
+        "kelupis",
+        "kuih",
+        "current_price_orientation"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Lower-priority 2026 traveler price guide used only for approximate current snack-price orientation."
+    },
+    {
+      "id": "BN_PMO_PUBLIC_HOLIDAYS_2026",
+      "canonical_id": "src_903252",
+      "publisher": "Prime Minister's Office — Public Holidays 2026, Circular 4/2025",
+      "url": "https://www.pmo.gov.bn/Circulars%20PDF%20Library/jpmsk04-2025.pdf",
+      "kind": "government",
+      "used_for": [
+        "festivals",
+        "holiday_dates_2026",
+        "hari_raya_aidilfitri",
+        "national_day",
+        "chinese_new_year",
+        "sultan_birthday"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_PELITA_NATIONAL_DAY_2026",
+      "canonical_id": "src_903253",
+      "publisher": "Pelita Brunei — National Day 2026 programme during Ramadan",
+      "url": "https://www.pelitabrunei.gov.bn/Arkib%20Dokumen/2026/PELITA%20BRUNEI%2021022026.pdf",
+      "kind": "government_media",
+      "used_for": [
+        "national_day",
+        "festival_status_2026",
+        "where_to_observe"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_MOHA_SULTAN_BIRTHDAY_2026",
+      "canonical_id": "src_903254",
+      "publisher": "Ministry of Home Affairs — 80th Sultan's Birthday 2026 programme",
+      "url": "https://www.moha.gov.bn/mesyuarat-pertama-jawatankuasa-kebangsaan-sambutan-perayaan-ulang-tahun-hari-keputeraan-kebawah-duli-yang-maha-mulia-paduka-seri-baginda-sultan-dan-yang-di-pertuan-negara-brunei-darussalam-ke-80-bag-2/",
+      "kind": "government",
+      "used_for": [
+        "sultan_birthday",
+        "festival_programme_2026",
+        "where_to_observe"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_TOURISM_CNY_2026",
+      "canonical_id": "src_903255",
+      "publisher": "Brunei Tourism — Chinese New Year 2026",
+      "url": "https://www.bruneitourism.com/event/chinese-new-year-2026/",
+      "kind": "government",
+      "used_for": [
+        "chinese_new_year",
+        "festival_calendar_2026",
+        "teng_yun_temple"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_TOURISM_BDF_2026",
+      "canonical_id": "src_903256",
+      "publisher": "Brunei Tourism — Brunei December Festival",
+      "url": "https://www.bruneitourism.com/bdf/",
+      "kind": "government",
+      "used_for": [
+        "brunei_december_festival",
+        "festival_calendar_2026",
+        "all_districts"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_PMO_HARI_RAYA_2026",
+      "canonical_id": "src_903257",
+      "publisher": "Prime Minister's Office — Hari Raya Aidilfitri 1447H/2026",
+      "url": "https://www.pmo.gov.bn/titah-kdymm-hari-raya-idil-fitri-tahun-1447h-2026m/",
+      "kind": "government",
+      "used_for": [
+        "hari_raya_aidilfitri",
+        "religious_context_2026"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "BN_METI_HARI_RAYA_VISITS_2026",
+      "canonical_id": "src_903258",
+      "publisher": "Ministry of Economy, Trade and Industry — Upcoming Events 2026",
+      "url": "https://www.meti.gov.bn/upcoming-events/",
+      "kind": "government",
+      "used_for": [
+        "hari_raya_aidilfitri",
+        "istana_nurul_iman",
+        "junjung_ziarah_2026"
+      ],
+      "accessed": "2026-10-01"
     }
   ],
   "uncertainties": [

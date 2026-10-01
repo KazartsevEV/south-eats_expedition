@@ -708,6 +708,10 @@ def build():
                 },
             }
 
+            for marker in ("local_admin_type", "physical_feature_type"):
+                if node.get(marker):
+                    entity[marker] = node.get(marker)
+
             geometry_source = GEO_NODES / f"{geo_id}.geojson"
             if geometry_source.exists():
                 geometry_path = f"geo/geometries/{geo_id}.geojson"
@@ -1289,6 +1293,9 @@ def build():
                 "name": ((entity.get("names") or {}).get("ru") or (entity.get("names") or {}).get("primary")),
                 "parent_id": entity.get("parent_id"),
                 "status": ((entity.get("migration") or {}).get("status") or "active"),
+                "axis": ((entity.get("migration") or {}).get("axis")),
+                "local_admin_type": entity.get("local_admin_type"),
+                "physical_feature_type": entity.get("physical_feature_type"),
                 "coordinates": (
                     {
                         "lat": (entity.get("primary_location") or {}).get("lat"),

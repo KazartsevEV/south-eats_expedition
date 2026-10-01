@@ -2,28 +2,30 @@
   "country_id": "geo_sg",
   "visa": {
     "value": {
-      "status": "visa required",
+      "status": "виза требуется для обычного российского паспорта",
       "application": "Электронная подача через местный контакт/стратегического партнёра либо через зарубежное представительство и уполномоченного визового агента.",
       "fee_sgd": 30,
-      "processing_time": "обычно 3 рабочих дня без учёта дня подачи; отдельные заявления рассматриваются дольше",
+      "processing_time": "обычно 3 рабочих дня без учёта дня подачи; отдельные заявления могут рассматриваться дольше",
       "passport_validity": "не менее 6 месяцев со дня въезда",
       "stay_days": "Срок пребывания определяется электронным Visit Pass на границе, а не сроком действия визы.",
-      "entry_form": "SG Arrival Card подаётся перед въездом по действующим правилам ICA.",
+      "entry_form": "SG Arrival Card подаётся отдельно от визы в пределах трёх дней до прибытия.",
       "visa_run": {
         "possible": "Повторный въезд возможен только при новом решении ICA и наличии необходимых документов/визы.",
         "limits": "Виза сама по себе не гарантирует въезд и не создаёт права на автоматический сброс срока пребывания."
       },
       "source_ids": [
         "ICA_RU",
-        "ICA_GENERAL"
+        "ICA_GENERAL",
+        "SGAC"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000779",
-      "src_000780"
+      "src_000780",
+      "src_900028"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -41,12 +43,13 @@
       "transport": "Автобусы, автомобили и приграничные транспортные связки через Джохорский пролив; фактическое время сильно зависит от очередей на границе.",
       "source_ids": [
         "ICA_LAND"
-      ]
+      ],
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000797"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -68,7 +71,7 @@
     "source_refs": [
       "src_000794"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -79,7 +82,7 @@
     "source_refs": [
       "src_000794"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -92,12 +95,12 @@
       "source_ids": [
         "SPF_LICENSE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000792"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -106,16 +109,17 @@
   "camping": {
     "value": {
       "status": "designated_sites_only",
-      "summary": "В парках NParks кемпинг разрешён только на обозначенных площадках и с требуемым разрешением. Некоторые схемы бронирования требуют сингапурский адрес и идентификатор, поэтому иностранный путешественник не должен считать палаточную ночёвку общедоступной.",
+      "summary": "Кемпинг в парках NParks разрешён только на специально обозначенных площадках и при наличии действующего разрешения. Заявитель должен быть не моложе 16 лет и иметь действующий адрес проживания в Сингапуре; поэтому иностранный путешественник без такого адреса не должен считать палаточную ночёвку доступной по умолчанию.",
+      "permit_window": "Заявка подаётся не менее чем за 2 недели; бронирование возможно максимум за 2 месяца.",
       "source_ids": [
         "NPARKS_CAMP"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000795"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -124,17 +128,19 @@
   "drones": {
     "value": {
       "legal_status": "regulated",
-      "permit_required": "depends_on_weight_purpose_and_location",
-      "summary": "CAAS требует регистрацию аппаратов тяжелее 250 г; дополнительные operator/activity permits зависят от цели, массы и места. Полёты вблизи аэродромов, в restricted/danger/protected areas и при ряде иных условий требуют разрешений; актуальную карту зон следует проверять перед каждым запуском.",
+      "registration": "Регистрация обязательна для беспилотного воздушного судна массой более 250 г. Иностранцы без Singpass могут использовать UAPass; CAAS указывает до 5 рабочих дней на его оформление.",
+      "remote_id": "Для наружных полётов аппарата массой более 250 г требуется Broadcast Remote Identification, если не применяется предусмотренное правилами исключение/waiver.",
+      "permit_required": "зависит от массы, цели, высоты и места полёта",
+      "summary": "Для рекреационного наружного полёта могут потребоваться Class 2 Activity Permit, Operator Permit/Class 1 Activity Permit и/или разрешение полиции в зависимости от массы, высоты, близости к аэродромам, типа воздушного пространства и защищённых зон. Перед каждым запуском проверять актуальную карту зон CAAS.",
       "source_ids": [
         "CAAS_UA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000793"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -159,7 +165,7 @@
       "src_000781",
       "src_000796"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -218,7 +224,7 @@
       "src_000854",
       "src_000883"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Traveller-facing criminal-law summary; not an exhaustive legal code."
@@ -231,12 +237,12 @@
       "source_ids": [
         "NPARKS_PERMIT"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000796"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -257,7 +263,7 @@
     "source_refs": [
       "src_000798"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -286,7 +292,7 @@
     "source_refs": [
       "src_000789"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."

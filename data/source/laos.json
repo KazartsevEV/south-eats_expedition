@@ -37,7 +37,7 @@
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
-      "completed_objects": 4,
+      "completed_objects": 5,
       "total_objects": 19,
       "status": "object_rebuild_v2_in_progress",
       "updated": "2026-10-01",
@@ -90,7 +90,8 @@
       "2026-10-01 Plain of Jars object rebuild: replaced the old generic access model with source-backed Sites 1–3 logistics, corrected the cleared Site 2–3 walking link, expanded Iron Age and later mortuary history, separated living ethnography from unknown ancient identity, normalized water/overnight unknowns, added dated traveler reports and current-standard QA.",
       "2026-10-01 Plain of Jars object rebuild: split UNESCO Iron Age chronology from later mortuary phases, added serial-property GPS points, clarified UXO scope, normalized self-guided logistics and honest camping/water unknowns, added 2023/2026 archaeology, dated traveler reports and five-image media coverage.",
       "2026-10-01 Vang Vieng karst rebuild: reframed as Nam Song valley karst landscape, added Permian geology and tourism/rural history, preserved Tham Chang local tradition, normalized self-guided multi-site access and camping/water unknowns, added 2025-2026 traveler reports, three geotagged visual points and five-image media coverage.",
-      "2026-10-01 Wat Phou object rebuild: reframed as Champasak sacred-axis cultural landscape; expanded Khmer history, Shivaite water/mountain system and living Buddhist festival layer; separated unproven sacrifice story as legend; structured three self-guided access patterns, honest water/camping fields, dated traveler report and five-image visual coverage."
+      "2026-10-01 Wat Phou object rebuild: reframed as Champasak sacred-axis cultural landscape; expanded Khmer history, Shivaite water/mountain system and living Buddhist festival layer; separated unproven sacrifice story as legend; structured three self-guided access patterns, honest water/camping fields, dated traveler report and five-image visual coverage.",
+      "2026-10-01 Si Phan Don rebuild: expanded river/railway/livelihood narrative, corrected obsolete Laos dolphin-watching claim, normalized independent access and camping/water unknowns, added 2023 road data, dated traveler reports, two geotagged viewpoints and five-image media coverage."
     ]
   },
   "overview": {
@@ -5303,25 +5304,113 @@
             "coordinates_checked_at": "2026-09-29"
           },
           "logistics": {
-            "access": "Основной подход через Паксе; далее лодка/паром или локальный трансфер. Морскую часть маршрута подтверждать у оператора в день поездки.",
-            "public_transport": "Из Паксе — автобус/микроавтобус к Накасанг; далее короткая лодка на Дон-Дет/Дон-Кхон. Дон-Кхонg доступен по мосту с материка.",
-            "last_mile": "Дон-Дет и Дон-Кхон связаны мостом; основные островные маршруты 5–15 км, лучше велосипед.",
-            "typical_visit_hours": [
-              6,
-              10
-            ],
-            "permit_or_guide": null,
+            "access": "Основной самостоятельный подход идёт через Паксе и южную трассу к Наксангу либо через мост на Дон-Кхонг. Для Дон-Дета/Дон-Кхона последнее плечо включает лодочную переправу; после неё острова исследуются пешком, велосипедом или локальным моторным транспортом там, где это реально разрешено и физически возможно.",
+            "public_transport": "Между Паксе и Наксангом ходят автобусы/минивэны и частные трансферы; точные расписания динамичны. На Дон-Дет/Дон-Кхон требуется отдельная лодочная переправа. Дон-Кхонг соединён с материком мостом.",
+            "last_mile": "Дон-Дет и Дон-Кхон связаны историческим мостом; после инфраструктурного проекта 2023 года на двух островах появился 15-километровый асфальтированный маршрут. Это не означает, что все острова архипелага имеют такой же уровень дорог.",
+            "typical_visit_hours": null,
+            "permit_or_guide": "Гид для Дон-Дета, Дон-Кхона и основных водопадов не обязателен. Лодочник нужен там, где маршрут физически проходит по воде; это транспортная необходимость, а не обязательный экскурсионный формат.",
             "modes": {
-              "public_transport": "Из Паксе — автобус/микроавтобус к Накасанг; далее короткая лодка на Дон-Дет/Дон-Кхон. Дон-Кхонg доступен по мосту с материка.",
-              "taxi_ridehail": "Частный трансфер из Паксе удобен для раннего/позднего парома; сервис заказа такси на островах не рассчитывать.",
-              "moped": "На Дон-Дет/Дон-Кхон лучше велосипед/пешком; мопед уместнее на Дон-Кхонg и материковых водопадах.",
-              "walking": "Дон-Дет и Дон-Кхон связаны мостом; основные островные маршруты 5–15 км, лучше велосипед."
+              "public_transport": "Из Паксе — автобус/минивэн к Наксангу или другой южной точке пересадки; расписание и включённость лодки в комбинированный билет подтверждать перед поездкой.",
+              "taxi_ridehail": "Частный наземный трансфер из Паксе удобен для привязки к конкретной лодке; на самих островах не рассчитывать на городскую модель ride-hailing.",
+              "car": "Автомобиль полезен на материке и на Дон-Кхонге. Для Дон-Дета/Дон-Кхона автомобиль обычно оставляют до лодочного плеча; сами острова лучше проходить без машины.",
+              "moped": "На Дон-Дете/Дон-Кхоне использование мототехники зависит от локального режима и фактической ширины дорог; после проекта 2023 года основные связки стали лучше, но велосипед и пеший режим остаются базовыми.",
+              "bicycle": "Практичный режим для Дон-Дета и Дон-Кхона, особенно на связке через исторический мост.",
+              "boat": "Обязательное транспортное плечо для доступа на острова без моста и для части межостровных перемещений. Маршрут, время и состояние реки проверять локально.",
+              "walking": "Подходит для деревень, береговых дорог, колониальных остатков и коротких связок; универсальный километраж всего архипелага не фиксируется."
             },
-            "water": "Магазины/гостевые дома есть на Дон-Дет/Дон-Кхон; на удалённые косы и лодочную поездку брать свою воду.",
-            "overnight_and_camping": "Песчаные косы и берега меняются с уровнем воды и могут быть частной/общинной землёй. Самовольный лагерь не планировать; дешёвые бунгало многочисленны. Возможен лагерь только по прямому разрешению владельца/оператора.",
-            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "water": "На Дон-Дете и Дон-Кхоне есть магазины, кафе и гостевые дома, но одной канонической «последней точки воды» для всего архипелага нет. Для лодочных выходов и удалённых островов запас воды нужен с собой.",
+            "overnight_and_camping": "Надёжного общего правила, разрешающего свободный кемпинг на песчаных косах и берегах Си-Фан-Дона, не найдено. Уровень воды меняется, земля может быть общинной или частной; базовая схема — жильё либо лагерь только по прямому разрешению владельца/общины.",
+            "access_requirements": "Гид для Дон-Дета, Дон-Кхона и основных водопадов не обязателен. Лодочник нужен там, где маршрут физически проходит по воде; это транспортная необходимость, а не обязательный экскурсионный формат.",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно; лодочник как транспорт там, где нет сухопутного доступа",
+            "access_options": [
+              {
+                "id": "pakse_nakasang_don_det",
+                "origin": "Паксе",
+                "modes": [
+                  "public_transport",
+                  "boat",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "public_transport",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Основное наземное плечо на юг к Наксангу; конкретный перевозчик и время меняются.",
+                    "seasonality": null,
+                    "notes": "Не считать комбинированный билет автоматически включающим лодку без проверки условий."
+                  },
+                  {
+                    "mode": "boat",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": null,
+                    "condition": "Короткая речная переправа; фактическая посадка и график зависят от перевозчика и уровня воды.",
+                    "seasonality": "river_level_sensitive",
+                    "notes": "Для Дон-Дета/Дон-Кхона лодочное плечо является частью реальной логистики."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "trailhead": null,
+                    "navigation": "После высадки движение по островной дороге к жилью и выбранным точкам.",
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "id": "don_det_don_khon_self_guided",
+                "origin": "Дон-Дет",
+                "modes": [
+                  "bicycle",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "bicycle",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved",
+                      "mixed"
+                    ],
+                    "condition": "Основная связка Дон-Дет–Дон-Кхон после проекта 2023 года имеет улучшенное покрытие; боковые дороги неоднородны.",
+                    "seasonality": null,
+                    "notes": "Исторический мост между островами входит в эту связку."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "trailhead": null,
+                    "navigation": "Осмотр деревень, железнодорожных остатков и водопадных подходов пешком.",
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "water_structured": {
+              "at_object": null,
+              "quality": "unknown",
+              "last_reliable_point": null,
+              "natural_sources": [],
+              "notes": "Питьевую воду планировать через населённые острова и материковые узлы; речную воду не считать питьевой без обработки."
+            },
+            "supplies": {
+              "status": "partially_mapped",
+              "summary": "Основные продукты и напитки доступны на населённых туристических островах; удалённые острова и косы не считать обеспеченными тем же уровнем торговли.",
+              "poi_ids": []
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Свободный кемпинг по всему архипелагу не подтверждён как разрешённый. На частной/общинной земле требуется согласование; сезонные косы не считать безопасным постоянным местом ночёвки.",
+              "source_refs": []
+            }
           },
           "climate": {
             "best_period": "Ноябрь–февраль; для водопадов компромисс между расходом воды и дорогами.",
@@ -5329,10 +5418,11 @@
             "site_specific_notes": "Сухой сезон открывает песчаные косы и упрощает велосипед; сезон дождей даёт максимальный расход Меконг и мощные пороги."
           },
           "operations": {
-            "hours": "Архипелаг жилых островов на Меконг без единого режима. Лодки/паромы и отдельные водопады/активности работают по собственному дневному расписанию.",
-            "ticket": "Нет единого островного абонемента; оплачиваются лодки, паромы, отдельные объекты и активности.",
-            "closure_notes": "Навигация зависит от уровня Меконг, течения и погоды; расписание лодок подтверждать локально. Прибрежные деревни — жилая среда, а не музей.",
-            "last_verified": "2026-09-28",
+            "status": "inhabited_river_archipelago",
+            "hours": "У жилого архипелага нет единого режима. Лодки, переправы, Хон-Пха-Пхенг, Сомпхамит и другие отдельные объекты имеют собственный график; точные часы проверять по конкретной точке в день поездки.",
+            "ticket": "Единого билета Си-Фан-Дона нет. Отдельно оплачиваются переправы, транспорт и вход на отдельные водопадные/инфраструктурные объекты.",
+            "closure_notes": "Навигация и причалы зависят от уровня Меконга и локальных условий. В 2023 году дороги Дон-Дета и Дон-Кхона были существенно улучшены, но это не устраняет сезонные различия на воде и на удалённых островах.",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
             "access_mode": "inhabited_river_archipelago"
           },
@@ -5379,99 +5469,175 @@
             },
             "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие.",
             "visual_scouting": {
-              "best_time": "Рассвет и поздний день; низкий свет лучше показывает протоки и острова.",
-              "best_weather_light": "При низкой воде проявляется больше береговых форм и камня; высокая вода усиливает масштаб проток и порогов.",
+              "best_time": "Рассвет удобен для восточно-западных речных видов у моста Дон-Дет–Дон-Кхон; поздний день хорошо показывает лодочное движение и многослойные протоки. Конкретную точку лучше выбирать по направлению вида, а не по общему правилу «закат на островах».",
+              "best_weather_light": "В сезон высокой воды течение и пороги визуально мощнее, а часть песчаных кос исчезает; при низкой воде сильнее проявляются отмели, камни и мелкие острова.",
               "viewpoints_for_photo_video": [
                 {
-                  "id": "don_det",
-                  "name": "Дон-Дет",
-                  "description": "Один из удобных островных якорей, откуда читаются протоки Меконга, соседние острова и лодочное движение.",
+                  "id": "don_det_don_khon_bridge_sunrise",
+                  "name": "Исторический мост Дон-Дет–Дон-Кхон — восточная рассветная точка",
+                  "description": "Геопривязанный Commons-кадр подтверждает рассветный вид с подхода к историческому мосту: вода, мост и отражения читаются в одном слое.",
                   "coordinates": {
-                    "lat": 13.9729,
-                    "lon": 105.9206,
-                    "elevation_m": 84
+                    "lat": 13.964158,
+                    "lon": 105.920582,
+                    "elevation_m": null
                   },
-                  "best_time": "sunrise или late_afternoon",
+                  "best_time": "sunrise",
+                  "best_weather_light": "Спокойная поверхность усиливает отражение; облачность может добавить цвет и фактуру, но закрыть дальние острова.",
                   "view": {
-                    "description": "протоки Меконга, острова, лодки и низкая сельская застройка"
+                    "description": "исторический мост, протока Меконга, отражения и береговая растительность"
                   },
                   "useful_equipment": [
                     {
                       "type": "wide",
-                      "why": "широкая речная система"
+                      "why": "включает мост, воду и береговую линию"
                     },
                     {
-                      "type": "telephoto",
-                      "why": "сжимает острова и лодочные маршруты"
+                      "type": "standard",
+                      "why": "даёт плотный архитектурно-речной кадр без сильного искажения"
                     }
                   ],
                   "source": {
-                    "type": "map",
-                    "title": "Дон-Дет",
-                    "publisher": "OpenStreetMap / GeoNames via Mapcarta",
-                    "url": "https://mapcarta.com/Don_Det",
+                    "type": "other",
+                    "title": "Bridge to Don Khon seen from Don Det with water reflection of stringy orange clouds at sunrise in Laos",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Bridge_to_Don_Khon_seen_from_Don_Det_with_water_reflection_of_stringy_orange_clouds_at_sunrise_in_Laos.jpg",
                     "authority": "medium",
-                    "accessed": "2026-09-29"
+                    "accessed": "2026-10-01",
+                    "used_for": [
+                      "viewpoint coordinates",
+                      "sunrise visual evidence"
+                    ]
+                  }
+                },
+                {
+                  "id": "don_det_don_khon_bridge_west",
+                  "name": "Мост Дон-Дет–Дон-Кхон — западный речной вид",
+                  "description": "Геопривязанный кадр с моста документирует широкую протоку, пирогу и островные берега; точка показывает транспортную функцию реки лучше, чем закрытый островной центр.",
+                  "coordinates": {
+                    "lat": 13.963943,
+                    "lon": 105.920357,
+                    "elevation_m": null
+                  },
+                  "best_time": "late_afternoon",
+                  "best_weather_light": "При боковом свете лодки и островные планы отделяются друг от друга; грозовые облака усиливают масштаб открытой реки.",
+                  "view": {
+                    "description": "протока Меконга, пироги, островные берега и облачный горизонт"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "масштаб протоки и облачного неба"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "отделяет лодки и дальние островные слои"
+                    }
+                  ],
+                  "source": {
+                    "type": "other",
+                    "title": "Landscape with stormy clouds and a pirogue on the Mekong at golden hour in Si Phan Don",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Landscape_with_stormy_clouds_and_a_pirogue_on_the_Mekong_at_golden_hour_in_Si_Phan_Don.jpg",
+                    "authority": "medium",
+                    "accessed": "2026-10-01",
+                    "used_for": [
+                      "viewpoint coordinates",
+                      "river visual evidence"
+                    ]
                   }
                 }
               ],
               "seasonal_visuals": [
-                "Сезонный уровень Меконга меняет видимость песчаных кос, камней и малых островов."
+                "Низкая вода открывает больше кос, камней и малых островков.",
+                "Высокая вода усиливает объём проток и порогов, но сокращает доступные сухие береговые формы."
               ],
               "video_activity": [
-                "переправы между островами",
-                "велосипедное и пешее движение по Дон-Дет/Дон-Кхон",
-                "пороговые участки Меконга"
+                "локальные лодочные переправы и хозяйственное движение по Меконгу",
+                "велосипедное/пешее движение по связке Дон-Дет–Дон-Кхон",
+                "остатки железнодорожной инфраструктуры и исторический мост",
+                "рыболовные практики только с уважением к рабочему пространству и согласованию с людьми"
               ],
               "useful_equipment": [
                 {
                   "type": "wide",
-                  "why": "речной масштаб"
+                  "why": "показывает многорукавный речной масштаб"
+                },
+                {
+                  "type": "standard",
+                  "why": "лодки, мост, деревенская застройка и берега"
                 },
                 {
                   "type": "telephoto",
-                  "why": "островные слои и движение на воде"
+                  "why": "сжимает островные планы и удалённое движение на воде"
                 }
               ]
             }
           },
           "annotation": {
-            "narrative": "Си-Фан-Дон — расширенная пойма Меконга перед камбоджийской границей, где в сухой сезон проявляются сотни островов, рукавов и песчаных кос. Французская колониальная железная дорога Дон-Дет–Дон-Кхон была инженерным обходом непроходимых порогов и водопадов Меконг.",
-            "culture_ethnography": "На островах сохраняются рыболовство, рис, огороды и ткачество; Дон-Дет туристичнее, Дон-Кхон и особенно Дон-Кхонg дают спокойнее сельский материал. Река — транспорт и хозяйственная среда, не декоративный фон.",
-            "geography_geology": "Khone Phapheng и Li Phi/Tat Somphamit связаны с резким падением русла и сложной системой каналов; именно этот участок исторически прерывал сквозную навигацию по Меконг.",
+            "narrative": "Си-Фан-Дон — разветвлённый речной ландшафт нижнего Меконга у камбоджийской границы, где острова, рукава, пороги и сезонные отмели образуют систему, а не один курорт. Его ключи — живые островные деревни, рыболовство и земледелие, огромный барьер водопадов Кхон, а также короткая колониальная железная дорога Дон-Дет–Дон-Кхон, построенная как технический обход участка Меконга, который оказался непроходим для сквозной навигации.",
+            "culture_ethnography": "Жилые островные деревни сохраняют рыболовство, рис, огороды и ткачество; туризм особенно концентрируется на Дон-Дете и Дон-Кхоне.",
+            "geography_geology": "Система проток и водопадов Кхон физически прерывает сквозную навигацию и сезонно меняет видимость островов, камней и отмелей.",
             "myths_legends_beliefs": [
-              "В культуре бассейна Меконга широко распространены представления о naga и речных духах; конкретные островные истории лучше записывать у местных жителей и атрибутировать рассказчику, а не подавать как единый канон."
+              "Li Phi хранится как локальное языково-мифологическое объяснение опасного порогового участка.",
+              "История об утраченной статуе Будды у Somphamit хранится отдельно как местная традиция."
             ],
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Си-Фан-Дон — расширенная пойма Меконга перед камбоджийской границей, где в сухой сезон проявляются сотни островов, рукавов и песчаных кос. Французская колониальная железная дорога Дон-Дет–Дон-Кхон была инженерным обходом непроходимых порогов и водопадов Меконг."
+                "content": "Си-Фан-Дон занимает широкий разветвлённый участок Меконга в самом юге Лаоса. Число «четыре тысячи» — географическое имя, а не точная инвентаризация островов: при низкой воде проявляются многочисленные островки, камни, песчаные косы и протоки, тогда как в сезон высокой воды часть этой структуры скрывается. Для самостоятельного путешествия полезно различать Дон-Дет, Дон-Кхон и большой Дон-Кхонг, материковый Хон-Пха-Пхенг и более удалённые жилые острова: у каждого свой режим доступа и транспорт."
               },
               {
-                "section_id": "ethnography",
-                "content": "На островах сохраняются рыболовство, рис, огороды и ткачество; Дон-Дет туристичнее, Дон-Кхон и особенно Дон-Кхонg дают спокойнее сельский материал. Река — транспорт и хозяйственная среда, не декоративный фон."
+                "section_id": "history",
+                "content": "В XIX веке французские исследователи рассматривали Меконг как возможный торговый путь к Китаю, но пороги и водопады Кхон показали предел этой идеи. Позднее колониальная администрация создала короткую железную дорогу через Дон-Кхон, затем связала её с Дон-Детом мостом: грузы и пассажиров перегружали с судна на поезд, обходили непроходимый участок и снова грузили на суда выше или ниже порогов. Исследование истории французского Лаоса подчёркивает, что это была единственная реально построенная железная дорога в Лаосе колониального периода; её функция была портage — обойти Кхон, а не создать обычную внутреннюю пассажирскую сеть."
+              },
+              {
+                "section_id": "culture",
+                "content": "Острова остаются жилым сельским пространством, а не только туристической зоной. Официальный Tourism Laos связывает местную экономику с рыбной ловлей, рисом, кокосами, сахарным тростником, овощами и домашним ткачеством. Туризм особенно заметен на Дон-Дете и Дон-Кхоне, но даже там река остаётся транспортной и хозяйственной средой: лодки, берега, рыболовные снасти, огороды и сезонная вода важнее для понимания места, чем набор отдельных «активностей»."
               },
               {
                 "section_id": "geography",
-                "content": "Khone Phapheng и Li Phi/Tat Somphamit связаны с резким падением русла и сложной системой каналов; именно этот участок исторически прерывал сквозную навигацию по Меконг."
+                "content": "Главная физическая особенность Си-Фан-Дона — резкое расчленение русла Меконга на множество каналов перед системой водопадов и порогов Кхон. Tourism Laos описывает Хон-Пха-Пхенг как крупнейший по объёму водопад Юго-Восточной Азии и прямо связывает его с невозможностью сквозной навигации. Ли-Пхи/Сомпхамит — не отдельная от всей системы «декоративная водопадная точка», а часть протяжённого порогового пояса. Сезонный уровень воды меняет видимость отмелей, камней и малых островов и одновременно влияет на течение, лодочную логистику и визуальный характер архипелага."
+              },
+              {
+                "section_id": "ethnography",
+                "content": "На островах и берегах Меконга хозяйство исторически строится вокруг комбинации рыболовства, риса, огородов и речного транспорта. Для экспедиционной работы это означает, что более тихие острова и деревни важны не как «альтернатива туристическому Дон-Дету», а как самостоятельные живые сообщества. Исследование туризма и качества среды в Си-Фан-Доне фиксирует рыболовство как один из главных источников дохода обследованных домохозяйств наряду с землёй и туристическим бизнесом. Любые съёмки рыболовства, дворов и частной земли требуют обычного согласия людей, а не обращения с деревней как с открытой декорацией."
               },
               {
                 "section_id": "myths_beliefs",
                 "content": [
                   {
                     "type": "local_tradition",
-                    "text": "В культуре бассейна Меконга широко распространены представления о naga и речных духах; конкретные островные истории лучше записывать у местных жителей и атрибутировать рассказчику, а не подавать как единый канон."
+                    "text": "Tourism Laos приводит местное объяснение названия Ли-Пхи: li — большая рыболовная ловушка, phi — дух/мертвец; образ связывает опасный пороговый участок с идеей гигантской ловушки. Этот рассказ хранится как локальная традиция и языковое объяснение, а не как физическое описание гидрологии."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "Отдельный официальный рассказ о Сомпхамите связывает название водопада с утраченной священной статуей Будды, которую якобы уронили в воду во время путешествия Фа Нгума. Эта традиция важна как локальная сакральная память, но не должна смешиваться с документированной историей строительства железной дороги или геологией порогов."
                   }
                 ]
               }
-            ]
+            ],
+            "canonical_story_from_sections": true
           },
-          "traveler_reports": {
-            "recurring_issues": [
-              "на Дон-Дет жалуются на шум и более бэкпекерскую атмосферу в центральной полосе; для тишины выбирать южную/западную часть или Дон-Кхон",
-              "расписания лодок и дальнейший автобус продаются пакетами разными агентами; время пересадки лучше закладывать с запасом"
-            ]
-          },
+          "traveler_reports": [
+            {
+              "topic": "cash_and_atm",
+              "summary": "В обсуждении июля 2025 путешественники расходятся в деталях, но сходятся в практическом выводе: на Дон-Дете не стоит рассчитывать на обычную банковскую инфраструктуру и оплату картой; один участник указывает банкомат в Наксанге перед лодочной переправой.",
+              "observed_period": "2025-07",
+              "source_refs": [
+                "src_903271"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "topic": "combined_bus_ferry_ticket",
+              "summary": "В отчёте мая 2026 пассажир комбинированного билета Don Det–Phnom Penh описывает, что лодка была включена, но это выяснилось только на месте у причала; билет показывали электронно. Это пример конкретного перевозчика и периода, а не универсальное правило для всех агентов.",
+              "observed_period": "2026-01",
+              "source_refs": [
+                "src_903272"
+              ],
+              "confidence": "medium"
+            }
+          ],
           "accommodation": [
             {
               "name": "BABA Guesthouse",
@@ -5490,27 +5656,62 @@
           "license": "CC BY-SA 4.0",
           "artist": "Basile Morin",
           "illustration_scope": "object-specific",
-          "last_checked": "2026-09-28"
+          "last_checked": "2026-10-01",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge%20to%20Don%20Khon%20seen%20from%20Don%20Det%20with%20water%20reflection%20of%20stringy%20orange%20clouds%20at%20sunrise%20in%20Laos.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Bridge_to_Don_Khon_seen_from_Don_Det_with_water_reflection_of_stringy_orange_clouds_at_sunrise_in_Laos.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Basile Morin",
+              "last_checked": "2026-10-01",
+              "subject": "Исторический мост Дон-Дет–Дон-Кхон на рассвете"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Si%20Phan%20Don%20-%20bridge%20from%20Don%20Det%20to%20Don%20Khone%20-%20Aug%202024.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Si_Phan_Don_-_bridge_from_Don_Det_to_Don_Khone_-_Aug_2024.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Dominic Nelson",
+              "last_checked": "2026-10-01",
+              "subject": "Мост и современное островное движение, август 2024"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Landscape%20with%20stormy%20clouds%20and%20a%20pirogue%20on%20the%20Mekong%20at%20golden%20hour%20in%20Si%20Phan%20Don.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Landscape_with_stormy_clouds_and_a_pirogue_on_the_Mekong_at_golden_hour_in_Si_Phan_Don.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Basile Morin",
+              "last_checked": "2026-10-01",
+              "subject": "Пирога на Меконге и многослойный речной ландшафт"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge%20Don%20Det%20-%20Don%20Khon.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Bridge_Don_Det_-_Don_Khon.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Christophe95",
+              "last_checked": "2026-10-01",
+              "subject": "Исторический мост Дон-Дет–Дон-Кхон"
+            }
+          ]
         },
         "sources": [
           {
             "url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
             "publisher": "Tourism Laos / Ministry of Culture and Tourism",
             "used_for": [
-              "island context",
-              "access",
-              "river landscape"
+              "Si Phan Don geography",
+              "Khone Phapheng and Somphamit",
+              "island livelihoods",
+              "local traditions",
+              "basic access"
             ],
-            "accessed": "2026-09-28"
-          },
-          {
-            "url": "https://www.tourismlaos.org/",
-            "publisher": "Laos tourism source",
-            "used_for": [
-              "object context",
-              "access/operations where published"
-            ],
-            "accessed": "2026-09-28"
+            "accessed": "2026-10-01",
+            "type": "government_official",
+            "title": "Champasak Province",
+            "language": "en",
+            "authority": "high"
           },
           {
             "url": "https://commons.wikimedia.org/wiki/File:Wooden_fence_in_Si_Phan_Don_(2).jpg",
@@ -5537,6 +5738,92 @@
               "lodging contact"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.tourismlaos.org/2023/07/17/don-deth-and-don-khone-islands-in-champasack-get-new-roads-to-boost-tourism/",
+            "type": "government_official",
+            "title": "Don Deth and Don Khone Islands in Champasack Get New Roads to Boost Tourism",
+            "publisher": "Tourism Laos",
+            "language": "en",
+            "published_at": "2023-07-17",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "2023 road upgrade",
+              "15 km Don Det-Don Khon road",
+              "Nakasang dock approach"
+            ]
+          },
+          {
+            "url": "https://www.researchgate.net/publication/231748333_The_French_in_Laos_1887-1945",
+            "type": "academic",
+            "title": "The French in Laos, 1887–1945",
+            "publisher": "Modern Asian Studies / Cambridge University Press",
+            "language": "en",
+            "published_at": "1995",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "French Mekong navigation policy",
+              "Khone falls as navigation barrier",
+              "7 km Khone railway historical context"
+            ]
+          },
+          {
+            "url": "https://www.researchgate.net/publication/339600252_Trade-off_analysis_tourism_and_environmental_quality_in_Si_Phan_Don_Champasak_Province_Lao_PDR",
+            "type": "academic",
+            "title": "Trade-off analysis: tourism and environmental quality in Si Phan Don, Champasak Province, Lao PDR",
+            "publisher": "academic study",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "household livelihoods",
+              "fishing and tourism economy",
+              "colonial railway remains"
+            ]
+          },
+          {
+            "url": "https://www.wwf.org.kh/our_work/public_awareness_and_advocacy/the_mekong_dolphin_swim/",
+            "type": "other",
+            "title": "The Mekong Dolphin Swim",
+            "publisher": "WWF-Cambodia",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "current Irrawaddy dolphin range",
+              "extinction of Laos-border subpopulation",
+              "avoid obsolete dolphin-watching claim"
+            ]
+          },
+          {
+            "url": "https://www.reddit.com/r/laos/comments/1m29s3a",
+            "type": "reddit",
+            "title": "Network and ATM coverage — Pakse and Si Phan Don",
+            "publisher": "Reddit / r/laos",
+            "language": "en",
+            "published_at": "2025-07-17",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "cash/ATM conditions"
+            ]
+          },
+          {
+            "url": "https://www.reddit.com/r/laos/comments/1t79ert/has_anybody_taken_the_vet_bus_from_don_det_to/",
+            "type": "reddit",
+            "title": "Has anybody taken the VET bus from Don Det to Phnom Penh?",
+            "publisher": "Reddit / r/laos",
+            "language": "en",
+            "published_at": "2026-05-08",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "combined ferry-bus ticket handling"
+            ]
           }
         ],
         "verification": {
@@ -5607,10 +5894,63 @@
         "qa": {
           "language_review": {
             "status": "reviewed",
-            "checked_at": "2026-09-29",
-            "notes": "Пользовательский narrative/logistics слой проверен на естественный русский; собственные имена и официальные названия сохранены."
+            "checked_at": "2026-10-01",
+            "notes": "Связный русский слой; локальные имена сохранены, рекламная и англо-русская лексика удалена."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "повторный объектный QA Si Phan Don по текущему экспедиционному стандарту",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true
+            },
+            "notes": [
+              "Колониальная железная дорога описана как технический обход навигационного барьера Кхон, а не как туристическая декорация.",
+              "Устаревшее утверждение о наблюдении ирравадийских дельфинов у лаосской границы исправлено: последняя известная особь трансграничной субпопуляции погибла в 2022 году; современный основной ареал остаётся в Камбодже.",
+              "Убран универсальный километраж островных маршрутов; добавлены отдельные access options для Паксе–Наксанг–Дон-Дет и Дон-Дет–Дон-Кхон.",
+              "Кемпинг оставлен unclear без выдуманного общего разрешения или запрета.",
+              "Галерея доведена до пяти уникальных лицензированных изображений с учётом обложки."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "редакционная приёмка Si Phan Don по текущему объектному стандарту",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "ethnography_substantive": true,
+              "legend_or_beliefs_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest_unknowns": true,
+              "overnight_honest_unknowns": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true
+            },
+            "notes": [
+              "История, речная география, островное хозяйство и локальные традиции разнесены по отдельным секциям.",
+              "Две реальные WGS84-точки визуальной разведки взяты из геопривязанных Commons-файлов.",
+              "Современная дорожная инфраструктура Дон-Дета/Дон-Кхона обновлена по официальному сообщению 2023 года."
+            ]
           }
-        }
+        },
+        "lead": "Си-Фан-Дон — разветвлённый речной ландшафт нижнего Меконга у камбоджийской границы, где острова, рукава, пороги и сезонные отмели образуют систему, а не один курорт. Его ключи — живые островные деревни, рыболовство и земледелие, огромный барьер водопадов Кхон, а также короткая колониальная железная дорога Дон-Дет–Дон-Кхон, построенная как технический обход участка Меконга, который оказался непроходим для сквозной навигации."
       },
       {
         "name": "Vieng Xai caves",

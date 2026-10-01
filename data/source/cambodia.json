@@ -180,7 +180,8 @@
       "2026-10-01 Kratie / Kampi Irrawaddy dolphins editorial rebuild: separated Kampi access point from the wider Mekong population, added dated 2026 population evidence, conservation history/threats and research boundaries; removed false timing precision and raised gallery to five licensed images.",
       "2026-10-01 Bokor editorial rebuild: separated protected-area, colonial hill-station and modern resort layers; added 1917–1993 history, sandstone/cloud-forest ecology, 2026 protected-area area, Yeay Mao tradition, four sourced field points and a five-image licensed gallery.",
       "2026-10-01 Cambodia food/festival cards: added sourced market-price snapshots, concise food/festival descriptions, licensed media metadata and current 2026 festival status.",
-      "2026-10-01 Cambodia cuisine/festivals visual rebuild v2: expanded to 7 food cards and 4 festival cards with photos, concise descriptions, distribution/where-to-find notes, differentiated street-vs-cafe formats and dated price snapshots."
+      "2026-10-01 Cambodia cuisine/festivals visual rebuild v2: expanded to 7 food cards and 4 festival cards with photos, concise descriptions, distribution/where-to-find notes, differentiated street-vs-cafe formats and dated price snapshots.",
+      "2026-10-01 Replaced unlicensed bai-sach-chrouk visual card with fully licensed Kralan roadside card; all food visuals now have reusable media licensing metadata."
     ]
   },
   "overview": {
@@ -536,15 +537,19 @@
         "KH_FOODPANDA_TEVYS_2026",
         "KH_FOODPANDA_SIMPLY_KHMER_2026",
         "KH_FOODPANDA_PTEAH_BOK_LAHONG_2026",
-        "KH_FOODPANDA_111_2026"
+        "KH_FOODPANDA_111_2026",
+        "KH_CAMBODIANESS_KRALAN_2026",
+        "KH_TRAVEL_KRALAN_PRICE_2026",
+        "KH_TOURISM_KRALAN_ROADSIDE"
       ],
       "street_food": [
         "kuy teav",
         "num banh chok",
         "num pang",
-        "bai sach chrouk",
+        "kralan",
         "fish amok",
-        "lok lak"
+        "lok lak",
+        "prahok ktis"
       ],
       "items": [
         {
@@ -631,30 +636,31 @@
           }
         },
         {
-          "id": "bai_sach_chrouk",
-          "name": "Bai sach chrouk",
-          "name_ru": "Бай сач чрук",
-          "description": "Тонко нарезанная свинина, жаренная на углях, на рисе; рядом обычно дают маринованные овощи и лёгкий бульон, часто можно добавить жареное яйцо. Это прежде всего завтрак.",
-          "where_common": "Утренние рынки и придорожные точки по всей стране; подтверждённые недорогие меню есть в Кампоте и Сиемреапе, в Пномпене блюдо также повсеместно встречается утром.",
-          "format": "рынок / уличный завтрак / простая столовая",
+          "id": "kralan",
+          "name": "Kralan",
+          "name_ru": "Кралан",
+          "description": "Клейкий рис с кокосовым молоком, сахаром и бобами набивают в зелёный бамбук и медленно жарят над углями. Трубку потом очищают снаружи, а внутреннюю плёнку бамбука снимают вместе с рисом — удобная дорожная еда без посуды.",
+          "where_common": "Особенно характерен для придорожных продавцов Сиемреапа и Кратьэх. В провинции Сиемреап известны точки в районе Bakong/Trapaing Thom; в Кратьэх есть собственная сильная традиция kralan.",
+          "format": "придорожный лоток / рынок",
           "price_usd_range": [
-            1.75,
-            2.75
+            0.5,
+            1.5
           ],
-          "price_context": "актуальные меню в Кампоте и Сиемреапе; туристические кафе могут просить заметно больше",
+          "price_context": "современный дорожный ориентир; цена зависит от длины и толщины бамбуковой трубки. Исторический официальный ориентир был около 2 000–3 000 риелей за небольшую/крупную трубку.",
           "checked_at": "2026-10-01",
           "source_ids": [
-            "KH_FOODPANDA_PTEAH_BOK_LAHONG_2026",
-            "KH_FOODPANDA_TEVYS_2026"
+            "KH_CAMBODIANESS_KRALAN_2026",
+            "KH_TRAVEL_KRALAN_PRICE_2026",
+            "KH_TOURISM_KRALAN_ROADSIDE"
           ],
           "image": {
-            "static_url": "https://obj.shine.cn/files/2025/09/22/f652ded0-1f7b-434e-a8af-b6bae3ea06c5_0.jpg",
-            "source_page": "https://www.citynewsservice.cn/articles/weekend-escape-48-hours-in-phnom-penh-what-to-see-do-eat-amyybr4m",
-            "provider": "City News Service",
-            "license": "external editorial image; attribution only",
-            "artist": null,
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roadside%20kralan%20vendor%2C%20Siem%20Reap%20Province%2C%202018%20%2801%29.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Roadside_kralan_vendor,_Siem_Reap_Province,_2018_(01).jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0",
+            "artist": "Bahnfrend",
             "last_checked": "2026-10-01",
-            "subject": "bai sach chrouk — свинина с рисом"
+            "subject": "придорожный продавец kralan в провинции Сиемреап"
           }
         },
         {
@@ -17312,6 +17318,48 @@
       ],
       "accessed": "2026-10-01",
       "notes": "Current Phnom Penh menu snapshot."
+    },
+    {
+      "id": "KH_CAMBODIANESS_KRALAN_2026",
+      "canonical_id": "src_911024",
+      "publisher": "Cambodianess — Kralan Snack Makes a Perfect Gift for Angkor Wat Visitors",
+      "url": "https://www.cambodianess.com/article/kralan-snack-makes-a-perfect-gift-for-angkor-wat-visitors",
+      "kind": "local_media",
+      "used_for": [
+        "kralan",
+        "siem_reap_distribution",
+        "roadside_food"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "January 2026 field report on Kralan sellers in Bakong district, Siem Reap."
+    },
+    {
+      "id": "KH_TRAVEL_KRALAN_PRICE_2026",
+      "canonical_id": "src_911025",
+      "publisher": "Nilo Pelo Mundo — Siem Reap food notes",
+      "url": "https://nilopelomundo.com/en/place/siemreap/",
+      "kind": "traveler_guide",
+      "used_for": [
+        "kralan",
+        "current_price_orientation"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Lower-priority traveler source used only for a current approximate roadside price range."
+    },
+    {
+      "id": "KH_TOURISM_KRALAN_ROADSIDE",
+      "canonical_id": "src_911026",
+      "publisher": "Tourism Cambodia — Hard work put into roadside snack favourite kralan",
+      "url": "https://www.tourismcambodia.com/news/localnews/24552/hard-work-put-into-roadside-snack-favourite-kralan.htm",
+      "kind": "tourism_media",
+      "used_for": [
+        "kralan",
+        "production",
+        "historic_price_baseline",
+        "roadside_distribution"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Older price is retained only as historical baseline; not presented as a current fixed price."
     }
   ],
   "uncertainties": [

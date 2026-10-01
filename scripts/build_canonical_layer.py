@@ -962,6 +962,7 @@ def build():
         if not detail_path:
             raise RuntimeError(f"legacy lodging missing detail_path: {old_id}")
         detail = load(release / detail_path)
+        lodging_source_refs = remap_source_refs(detail.get("source_refs"), registry)
         entity = {
             "id": lodging_id,
             "kind": "lodging",
@@ -975,7 +976,7 @@ def build():
             "website_or_social": detail.get("social_or_web"),
             "features": detail.get("features") or [],
             "traveler_reports": detail.get("traveler_reports") or [],
-            "source_refs": [],
+            "source_refs": lodging_source_refs,
             "legacy_source": detail.get("source"),
             "relations": {
                 "legacy_ids": [old_id],
@@ -985,8 +986,12 @@ def build():
                 ],
             },
             "qa": {
-                "source_refs_complete": False,
-                "note": "Legacy lodging source must be normalized into canonical source_refs in the country research pass.",
+                "source_refs_complete": bool(lodging_source_refs),
+                "note": (
+                    "Lodging has normalized canonical source refs."
+                    if lodging_source_refs
+                    else "Legacy lodging source must be normalized into canonical source_refs in the country research pass."
+                ),
             },
         }
         dump(release / "infrastructure" / "lodging" / code.lower() / f"{lodging_id}.json", entity)

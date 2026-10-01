@@ -3,7 +3,7 @@
     "country": "Singapore",
     "country_code": "SG",
     "language": "ru",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-01",
     "purpose": "Expedition South East",
     "data_model_version": "1.2",
     "migration_stage": "country_and_regional",
@@ -18,8 +18,18 @@
     "research_notes": [
       "Country-first migration from the existing Google Drive draft. Regional and attraction payloads remain preserved in the Drive draft and are intentionally not migrated before regional QA.",
       "Regional research profiles restored from the existing Google Drive draft; attraction object payloads remain deferred.",
-      "Regional depth pass 2026-09-30: Kampong Glam, Katong/Joo Chiat, Southern Ridges/Gillman and Labrador/Pasir Panjang were deepened from official URA, NHB/Roots and NParks material; no attraction object payloads were changed."
-    ]
+      "Regional depth pass 2026-09-30: Kampong Glam, Katong/Joo Chiat, Southern Ridges/Gillman and Labrador/Pasir Panjang were deepened from official URA, NHB/Roots and NParks material; no attraction object payloads were changed.",
+      "2026-10-01 upper-level acceptance pass: revalidated Russian visa requirement, SG Arrival Card, foreign driving, designated-site camping and 2026 CAAS unmanned-aircraft rules; added official climate/monsoon context; object payloads remain frozen."
+    ],
+    "upper_level_acceptance": {
+      "phase": "pre_object",
+      "reference_country": "PH",
+      "status": "complete",
+      "object_payloads_frozen": true,
+      "checked_at": "2026-10-01",
+      "accepted_at": "2026-10-01",
+      "acceptance_basis": "PH-reference upper-level revalidation: country profile, official climate/monsoon context, Russian visa requirement, SG Arrival Card, driving/camping/drone/permit rules, geo hierarchy and regional profiles; object payloads unchanged."
+    }
   },
   "overview": {
     "summary": "Высокоурбанизированный островной город-государство на южной оконечности Малаккского полуострова и одном из ключевых мировых морских путей.",
@@ -178,7 +188,17 @@
       "Dec": 28.6
     },
     "notes": "Экваториальный климат с малой годовой температурной амплитудой; дождь возможен круглый год.",
-    "source_quality": "secondary climatology"
+    "source_quality": "secondary climatology",
+    "checked_at": "2026-10-01",
+    "country_seasonality": {
+      "summary": "Экваториальный климат остаётся жарким, влажным и дождливым круглый год, но режим осадков меняется по муссонным сезонам.",
+      "northeast_monsoon": "Северо-восточный муссон обычно длится с декабря до начала марта; его муссонные всплески могут приносить продолжительные сильные дожди.",
+      "southwest_monsoon": "Юго-западный муссон обычно длится с июня по сентябрь; характерны утренние шквальные линии и грозы, в том числе Sumatra squalls.",
+      "inter_monsoon": "Межмуссонные периоды приходятся примерно на конец марта–май и октябрь–ноябрь; типичны локальные грозы при слабом ветре.",
+      "source_ids": [
+        "MSS_CLIMATE"
+      ]
+    }
   },
   "safety": {
     "crime_level": {
@@ -252,22 +272,23 @@
       }
     ],
     "visa_for_russian_passport": {
-      "status": "visa required",
+      "status": "виза требуется для обычного российского паспорта",
       "application": "Электронная подача через местный контакт/стратегического партнёра либо через зарубежное представительство и уполномоченного визового агента.",
       "fee_sgd": 30,
-      "processing_time": "обычно 3 рабочих дня без учёта дня подачи; отдельные заявления рассматриваются дольше",
+      "processing_time": "обычно 3 рабочих дня без учёта дня подачи; отдельные заявления могут рассматриваться дольше",
       "passport_validity": "не менее 6 месяцев со дня въезда",
       "stay_days": "Срок пребывания определяется электронным Visit Pass на границе, а не сроком действия визы.",
-      "entry_form": "SG Arrival Card подаётся перед въездом по действующим правилам ICA.",
+      "entry_form": "SG Arrival Card подаётся отдельно от визы в пределах трёх дней до прибытия.",
       "visa_run": {
         "possible": "Повторный въезд возможен только при новом решении ICA и наличии необходимых документов/визы.",
         "limits": "Виза сама по себе не гарантирует въезд и не создаёт права на автоматический сброс срока пребывания."
       },
       "source_ids": [
         "ICA_RU",
-        "ICA_GENERAL"
+        "ICA_GENERAL",
+        "SGAC"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "airports": [
       {
@@ -299,7 +320,8 @@
       "transport": "Автобусы, автомобили и приграничные транспортные связки через Джохорский пролив; фактическое время сильно зависит от очередей на границе.",
       "source_ids": [
         "ICA_LAND"
-      ]
+      ],
+      "checked_at": "2026-10-01"
     },
     "transport_rules": {
       "road_side": "left",
@@ -307,24 +329,27 @@
       "source_ids": [
         "SPF_LICENSE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "camping_rules": {
       "status": "designated_sites_only",
-      "summary": "В парках NParks кемпинг разрешён только на обозначенных площадках и с требуемым разрешением. Некоторые схемы бронирования требуют сингапурский адрес и идентификатор, поэтому иностранный путешественник не должен считать палаточную ночёвку общедоступной.",
+      "summary": "Кемпинг в парках NParks разрешён только на специально обозначенных площадках и при наличии действующего разрешения. Заявитель должен быть не моложе 16 лет и иметь действующий адрес проживания в Сингапуре; поэтому иностранный путешественник без такого адреса не должен считать палаточную ночёвку доступной по умолчанию.",
+      "permit_window": "Заявка подаётся не менее чем за 2 недели; бронирование возможно максимум за 2 месяца.",
       "source_ids": [
         "NPARKS_CAMP"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "drone_rules": {
       "legal_status": "regulated",
-      "permit_required": "depends_on_weight_purpose_and_location",
-      "summary": "CAAS требует регистрацию аппаратов тяжелее 250 г; дополнительные operator/activity permits зависят от цели, массы и места. Полёты вблизи аэродромов, в restricted/danger/protected areas и при ряде иных условий требуют разрешений; актуальную карту зон следует проверять перед каждым запуском.",
+      "registration": "Регистрация обязательна для беспилотного воздушного судна массой более 250 г. Иностранцы без Singpass могут использовать UAPass; CAAS указывает до 5 рабочих дней на его оформление.",
+      "remote_id": "Для наружных полётов аппарата массой более 250 г требуется Broadcast Remote Identification, если не применяется предусмотренное правилами исключение/waiver.",
+      "permit_required": "зависит от массы, цели, высоты и места полёта",
+      "summary": "Для рекреационного наружного полёта могут потребоваться Class 2 Activity Permit, Operator Permit/Class 1 Activity Permit и/или разрешение полиции в зависимости от массы, высоты, близости к аэродромам, типа воздушного пространства и защищённых зон. Перед каждым запуском проверять актуальную карту зон CAAS.",
       "source_ids": [
         "CAAS_UA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "tourist_permits": {
       "status": "site_specific",
@@ -332,7 +357,7 @@
       "source_ids": [
         "NPARKS_PERMIT"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "currency": {
       "code": "SGD",
@@ -1064,7 +1089,19 @@
           ]
         }
       }
-    ]
+    ],
+    "entry_form": {
+      "name": "SG Arrival Card (SGAC)",
+      "required_for": "все путешественники, кроме опубликованных ICA исключений",
+      "timing": "Подать электронно в пределах трёх дней до даты прибытия, включая день прибытия.",
+      "fee": "бесплатно",
+      "visa_relation": "SG Arrival Card не является визой и не заменяет её.",
+      "official_portal": "https://eservices.ica.gov.sg/sgarrivalcard/",
+      "source_ids": [
+        "SGAC"
+      ],
+      "checked_at": "2026-10-01"
+    }
   },
   "sources": [
     {
@@ -1088,7 +1125,7 @@
         "visa",
         "entry"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000779"
     },
     {
@@ -1100,7 +1137,7 @@
         "visit_pass",
         "entry"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000780"
     },
     {
@@ -1243,7 +1280,7 @@
         "transport_rules",
         "road_traffic_law"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000792"
     },
     {
@@ -1254,7 +1291,7 @@
       "used_for": [
         "drone_rules"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000793"
     },
     {
@@ -1266,7 +1303,7 @@
         "airport",
         "air_connectivity"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000794"
     },
     {
@@ -1278,7 +1315,7 @@
         "camping_rules",
         "protected_areas"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000795"
     },
     {
@@ -1291,7 +1328,7 @@
         "tourist_permits",
         "protected_areas"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000796"
     },
     {
@@ -1303,7 +1340,7 @@
         "entry",
         "land_borders"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000797"
     },
     {
@@ -1639,6 +1676,37 @@
         "wwii"
       ],
       "accessed": "2026-09-30"
+    },
+    {
+      "id": "SGAC",
+      "canonical_id": "src_900028",
+      "title": "SG Arrival Card with Electronic Health Declaration",
+      "publisher": "Immigration & Checkpoints Authority Singapore",
+      "url": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/sg-arrival-card",
+      "kind": "government",
+      "language": "en",
+      "used_for": [
+        "entry",
+        "arrival_declaration",
+        "health_declaration"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "ICA states that SGAC is free, is not a visa, and is submitted within three days before arrival subject to listed exemptions."
+    },
+    {
+      "id": "MSS_CLIMATE",
+      "canonical_id": "src_900029",
+      "title": "Climate of Singapore",
+      "publisher": "Meteorological Service Singapore",
+      "url": "https://www.weather.gov.sg/climate-climate-of-singapore/",
+      "kind": "government",
+      "language": "en",
+      "used_for": [
+        "country_climate",
+        "monsoon",
+        "rainfall"
+      ],
+      "accessed": "2026-10-01"
     }
   ],
   "uncertainties": [

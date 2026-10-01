@@ -3,7 +3,7 @@
     "country": "Malaysia",
     "country_code": "MY",
     "language": "ru",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-01",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -55,7 +55,8 @@
       "Language QA 2026-09-30: normalized mixed Russian/English regional narrative in Malaysia; technical schema keys and official proper names remain unchanged.",
       "Regional QA pass 2026-09-30: deepened Sabah highlands / Kinabalu and Perak / Royal Belum with Sabah Parks and Tourism Malaysia sources; separated geopark, park-HQ, summit, city and forest-water access layers.",
       "Regional QA pass 2026-09-30: normalized Perhentian and Semporna geography/transport source_refs using existing Department of Fisheries, Sabah Parks and Sabah Tourism sources; no object payloads changed.",
-      "Malaysia pre-object geometry QA 2026-10-01: sourced approximate masks added for Penang, Melaka and Perak from official DOSM state boundaries. Eleven narrower/composite expedition regions remain intentionally without polygons because using entire Selangor/Sabah/Sarawak/Kedah/Terengganu or other parent states would overstate coverage. Regional profiles and 18 hierarchy locality profiles already satisfy the role contract; object cards unchanged."
+      "Malaysia pre-object geometry QA 2026-10-01: sourced approximate masks added for Penang, Melaka and Perak from official DOSM state boundaries. Eleven narrower/composite expedition regions remain intentionally without polygons because using entire Selangor/Sabah/Sarawak/Kedah/Terengganu or other parent states would overstate coverage. Regional profiles and 18 hierarchy locality profiles already satisfy the role contract; object cards unchanged.",
+      "2026-10-01 upper-level acceptance pass: revalidated Russian short-visit entry, MDAC, country climate ownership and current transport/camping/drone/permit source freshness; object payloads remain frozen."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -70,6 +71,15 @@
       "guide_policy": "проводник или тур указываются как обязательные только при требовании администрации/разрешительного режима; как рекомендуемые — лишь когда это существенно улучшает доступ, навигацию или понимание объекта",
       "difficulty_policy": "расстояние, набор высоты, ступени и многодневность описываются как параметры маршрута, а не как недостатки сами по себе",
       "field_assumption": "путешественник имеет палатку и базовое походное снаряжение"
+    },
+    "upper_level_acceptance": {
+      "phase": "pre_object",
+      "reference_country": "PH",
+      "status": "complete",
+      "object_payloads_frozen": true,
+      "checked_at": "2026-10-01",
+      "accepted_at": "2026-10-01",
+      "acceptance_basis": "PH-reference upper-level revalidation: country profile, macro climate, Russian short-visit visa exemption, MDAC, transport/camping/drone/permit rules, geo hierarchy, regional/locality profiles and geometry provenance; object payloads unchanged."
     }
   },
   "overview": {
@@ -226,7 +236,7 @@
     "source_urls": [
       "https://www.met.gov.my/en/pendidikan/iklim-malaysia/"
     ],
-    "checked_at": "2026-09-29"
+    "checked_at": "2026-10-01"
   },
   "safety": {
     "crime_level": {
@@ -343,18 +353,20 @@
     "visa_for_russian_passport": {
       "status": "без визы для краткой туристической/социальной поездки",
       "stay_days": 30,
-      "entry_form": "Malaysia Digital Arrival Card (MDAC) обычно заполняется в течение 3 дней до въезда; действуют отдельные исключения.",
-      "extension": "Продление Short Term Social Visit Pass обычно возможно только по специальным основаниям.",
+      "entry_form": "Malaysia Digital Arrival Card (MDAC) заполняется в течение трёх дней до въезда; применяются опубликованные иммиграционной службой исключения.",
+      "extension": "Продление Short Term Social Visit Pass рассматривается только по специальным основаниям, например болезнь, несчастный случай или война в стране проживания; требуется подтверждение и билет на выезд.",
       "visa_run": {
         "possible": "Повторный въезд формально возможен, но решение о допуске и новом сроке принимает сотрудник иммиграционной службы.",
         "limits": "Официального права на бесконечные последовательные визараны нет; серия коротких повторных въездов может вызвать дополнительные вопросы."
       },
-      "passport_validity": "обычно требуется не менее 6 месяцев действия паспорта",
+      "passport_validity": "Для поездки использовать паспорт с остаточным сроком действия не менее 6 месяцев.",
       "official_source": "Malaysian Immigration / Russian MFA",
       "source_ids": [
         "IMM",
-        "RUS_MFA"
-      ]
+        "RUS_MFA",
+        "MDAC"
+      ],
+      "checked_at": "2026-10-01"
     },
     "airports": [
       {
@@ -389,7 +401,8 @@
       "transport": "Поезда и автобусы к границе Таиланда; автомобильные переходы и железнодорожный шаттл через Джохор—Сингапур; разветвлённые автодорожные переходы на Борнео с Брунеем и Индонезией.",
       "source_ids": [
         "RUS_MFA"
-      ]
+      ],
+      "checked_at": "2026-10-01"
     },
     "currency": {
       "code": "MYR",
@@ -11163,7 +11176,7 @@
       "source_ids": [
         "MOT_LICENSE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "camping_rules": {
       "status": "site_specific_and_state_specific",
@@ -11171,7 +11184,7 @@
       "source_ids": [
         "FORESTRY_MY"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "drone_rules": {
       "legal_status": "regulated",
@@ -11180,7 +11193,7 @@
       "source_ids": [
         "CAAM_UAS"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "tourist_permits": {
       "status": "site_specific_and_state_specific",
@@ -11188,7 +11201,7 @@
       "source_ids": [
         "FORESTRY_MY"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "laws_source_ids": [
       "RUS_MFA"
@@ -11221,6 +11234,16 @@
         }
       ],
       "checked_at": "2026-09-30"
+    },
+    "entry_form": {
+      "name": "Malaysia Digital Arrival Card (MDAC)",
+      "required_for": "иностранные посетители, кроме опубликованных исключений",
+      "timing": "Подать в течение трёх дней до прибытия в Малайзию.",
+      "official_portal": "https://imigresen-online.imi.gov.my/mdac/main",
+      "source_ids": [
+        "MDAC"
+      ],
+      "checked_at": "2026-10-01"
     }
   },
   "sources": [
@@ -11244,7 +11267,7 @@
       "used_for": [
         "visa"
       ],
-      "accessed": "2026-09-27",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000587"
     },
     {
@@ -11313,7 +11336,7 @@
       "used_for": [
         "climate"
       ],
-      "accessed": "2026-09-29",
+      "accessed": "2026-10-01",
       "notes": "Official macro description of Malaysia climate and regional monsoon/rainfall differences.",
       "canonical_id": "src_000593"
     },
@@ -12312,7 +12335,7 @@
         "drone_rules",
         "aviation_rules"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000738"
     },
     {
@@ -12326,7 +12349,7 @@
         "permit",
         "permits"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000739"
     },
     {
@@ -12338,7 +12361,7 @@
         "transport_rules",
         "road_traffic_law"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000740"
     },
     {
@@ -12580,6 +12603,22 @@
       ],
       "accessed": "2026-10-01",
       "notes": "Official DOSM state GeoJSON. Used only where an expedition geographic_area can be represented by the named state without overstating its footprint. Other composite regions remain without polygons."
+    },
+    {
+      "id": "MDAC",
+      "canonical_id": "src_900027",
+      "title": "Malaysia Digital Arrival Card (MDAC)",
+      "publisher": "Immigration Department of Malaysia",
+      "url": "https://imigresen-online.imi.gov.my/mdac/main",
+      "kind": "government",
+      "language": "en",
+      "used_for": [
+        "entry_form",
+        "arrival_declaration",
+        "entry"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official MDAC portal for foreign visitors; Immigration materials instruct eligible visitors to submit within three days before arrival."
     }
   ],
   "uncertainties": [

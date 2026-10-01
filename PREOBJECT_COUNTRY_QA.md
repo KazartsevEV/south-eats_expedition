@@ -270,8 +270,8 @@ build CDN
 - MY — complete (upper-level acceptance recorded; full gate required on this PR).
 - MM — complete (upper-level acceptance recorded; full gate required on this PR).
 - SG — complete (upper-level acceptance recorded; full gate required on this PR).
-- TH — active.
-- TL — queued.
+- TH — complete (upper-level acceptance recorded; full gate required on this PR).
+- TL — active.
 - VN — queued.
 
 Ранее выполненные верхнеуровневые изменения в этих странах переиспользуются как заготовка, но каждая из десяти стран должна пройти новый полный приёмочный цикл по этому ТЗ.

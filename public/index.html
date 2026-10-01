@@ -478,9 +478,10 @@ function usdRange(v){
 }
 async function cultureImageHTML(row){
   var m=row&&row.media_id?await media(row.media_id):null;
-  if(!m||!m.url)return '<div class="preview-placeholder">Фото ещё не привязано.</div>';
+  var imageURL=mirroredMediaURL(m);
+  if(!m||!imageURL)return '<div class="preview-placeholder">Зеркальная копия фото ещё не опубликована.</div>';
   var caption=row.name_ru||row.name||row.local_name||'';
-  return '<button class="image-button" type="button" data-lightbox-url="'+esc(m.url)+'" data-lightbox-source="'+esc(m.source_page||'')+'" data-lightbox-caption="'+esc(caption)+'"><img src="'+esc(m.url)+'" loading="lazy" referrerpolicy="no-referrer" alt="'+esc(caption)+'"></button>'+
+  return '<button class="image-button" type="button" data-lightbox-url="'+esc(imageURL)+'" data-lightbox-source="'+esc(m.source_page||'')+'" data-lightbox-caption="'+esc(caption)+'"><img src="'+esc(imageURL)+'" loading="lazy" alt="'+esc(caption)+'"></button>'+
     '<div class="media-credit"><span>'+esc([m.artist,m.license].filter(Boolean).join(' · '))+'</span>'+(m.source_page?'<a href="'+esc(m.source_page)+'" target="_blank" rel="noreferrer">Источник</a>':'')+'</div>';
 }
 async function countryCultureHTML(p){
@@ -709,8 +710,11 @@ function previewURL(path){
   if(!path)return null;
   if(/^https?:\/\//i.test(path))return path;
   if(path.charAt(0)==='/')return path;
-  if(path.indexOf('previews/')===0)return CDN+path;
+  if(path.indexOf('previews/')===0||path.indexOf('media-mirror/')===0)return CDN+path;
   return CDN+state.release+'/'+path.replace(/^\/+/, '');
+}
+function mirroredMediaURL(m){
+  return m&&m.mirror_asset?previewURL(m.mirror_asset):null;
 }
 async function hydratePreview(card,o){
   var box=card.querySelector('.preview');
@@ -1116,9 +1120,10 @@ async function sourceHTML(refs){
 async function galleryHTML(ids){
   var ms=(await Promise.all((ids||[]).slice(0,12).map(media))).filter(Boolean);
   if(!ms.length)return '';
-  return '<section class="copy-section"><h2>Галерея <span class="badge">'+ms.length+' media</span></h2><div class="gallery">'+ms.map(function(m){
-    var caption=[m.artist,m.license].filter(Boolean).join(' · ');
-    return '<div class="gallery-item"><button class="image-button" type="button" data-lightbox-url="'+esc(m.url||'')+'" data-lightbox-source="'+esc(m.source_page||'')+'" data-lightbox-caption="'+esc(caption)+'"><img src="'+esc(m.url||'')+'" loading="lazy" referrerpolicy="no-referrer" alt=""></button>'+
+  return '<section class="copy-section"><h2>Галерея <span class="badge">'+ms.length+' фото</span></h2><div class="gallery">'+ms.map(function(m){
+    var caption=[m.artist,m.license].filter(Boolean).join(' · '),imageURL=mirroredMediaURL(m);
+    if(!imageURL)return '';
+    return '<div class="gallery-item"><button class="image-button" type="button" data-lightbox-url="'+esc(imageURL)+'" data-lightbox-source="'+esc(m.source_page||'')+'" data-lightbox-caption="'+esc(caption)+'"><img src="'+esc(imageURL)+'" loading="lazy" alt=""></button>'+
       '<div class="media-credit"><span>'+esc(caption)+'</span>'+(m.source_page?'<a href="'+esc(m.source_page)+'" target="_blank" rel="noreferrer">Источник</a>':'')+'</div></div>';
   }).join('')+'</div></section>';
 }
@@ -1128,7 +1133,7 @@ async function renderObject(id){
   var d=await detail(id);
   if(!d){view.innerHTML='<div class="error">Объект не найден: '+esc(id)+'</div>';return}
   var o=state.objects.find(function(x){return x.id===id})||{},cc=ccOf(id),c=cname(cc),cover=await media(d.media&&d.media.cover_id),g=await galleryHTML(d.media&&d.media.gallery_ids),s=await sourceHTML(d.freshness&&d.freshness.source_refs),v=d.visit||{},geoCtx=objectGeoContext(d,o,cc);
-  var heroPreview=previewURL((d.media&&d.media.preview_asset)||previewPath(o)),heroFull=(cover&&cover.url)||heroPreview,heroSource=(cover&&cover.source_page)||'';
+  var heroPreview=previewURL((d.media&&d.media.preview_asset)||previewPath(o)),heroFull=mirroredMediaURL(cover)||heroPreview,heroSource=(cover&&cover.source_page)||'';
   var acc=(v.access_options||[]).map(function(a){
     var legs=(a.legs||[]).map(function(l){return l.notes||[l.mode,l.distance_km!=null?l.distance_km+' км':'',l.duration_min!=null?l.duration_min+' мин':''].filter(Boolean).join(' · ')}).filter(Boolean).join(' ');
     return '<p><b>'+esc((a.modes||[]).join(' + ')||a.id||'Маршрут')+'</b> — '+esc(legs||'детали уточняются')+'</p>';
@@ -1139,7 +1144,7 @@ async function renderObject(id){
   (geoCtx.trail||[]).forEach(function(g){objectCrumbs.push({label:g.name||g.id,hash:'#/region/'+g.id})});
   objectCrumbs.push({label:d.names&&d.names.primary||o.title||id});
   view.innerHTML=breadcrumb(objectCrumbs)+
-    '<div class="split"><div><div class="object-hero">'+(heroPreview?'<img src="'+esc(heroPreview)+'" data-lightbox-url="'+esc(heroFull||'')+'" data-lightbox-source="'+esc(heroSource)+'" data-lightbox-caption="'+esc(d.names&&d.names.primary||'')+'" alt="'+esc(d.names&&d.names.primary||'')+'">':(cover&&cover.url?'<img src="'+esc(cover.url)+'" data-lightbox-url="'+esc(cover.url)+'" data-lightbox-source="'+esc(cover.source_page||'')+'" data-lightbox-caption="'+esc(d.names&&d.names.primary||'')+'" referrerpolicy="no-referrer" alt="'+esc(d.names&&d.names.primary||'')+'">':'<div class="preview-placeholder">Локальный preview/cover ещё не опубликован в текущем CDN.</div>'))+'</div>'+
+    '<div class="split"><div><div class="object-hero">'+(heroPreview?'<img src="'+esc(heroPreview)+'" data-lightbox-url="'+esc(heroFull||'')+'" data-lightbox-source="'+esc(heroSource)+'" data-lightbox-caption="'+esc(d.names&&d.names.primary||'')+'" alt="'+esc(d.names&&d.names.primary||'')+'">':(mirroredMediaURL(cover)?'<img src="'+esc(mirroredMediaURL(cover))+'" data-lightbox-url="'+esc(mirroredMediaURL(cover))+'" data-lightbox-source="'+esc(cover.source_page||'')+'" data-lightbox-caption="'+esc(d.names&&d.names.primary||'')+'" alt="'+esc(d.names&&d.names.primary||'')+'">':'<div class="preview-placeholder">Локальный preview/cover ещё не опубликован в текущем CDN.</div>'))+'</div>'+
     '<div class="object-main"><div class="eyebrow">'+esc(className(d.classification&&d.classification.class_id))+'</div><h1>'+esc(d.names&&d.names.primary||o.title||id)+'</h1><p class="lead">'+esc(d.summary&&d.summary.narrow||'')+'</p>'+
     '<div class="kv"><div><small>GPS</small>'+esc(coords(d.geo&&d.geo.primary_location))+'</div><div><small>Высота</small>'+esc(elevation(d.geo&&d.geo.object_elevation))+'</div><div><small>Доступ</small>'+esc(access(v))+'</div><div><small>Ночёвка</small>'+esc(v.overnight&&v.overnight.status||'—')+'</div></div>'+
     narrativeHTML(d.narrative)+

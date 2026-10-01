@@ -54,7 +54,8 @@
       "2026-10-01 repeat QA obj_bn_0002: fact-level source scoping enabled; current mosque hours retained over conflicting older brochures; bus routes 01C/20/22 surfaced; elevation downgraded to approximate; blanket drone permit corrected.",
       "2026-10-01 repeat QA obj_bn_0003: current Tourism Development Department gallery hours override inconsistent secondary rendering; official Mini Guide anchors water-taxi access; water source scoped to Brunei River study; tidal 0 m clarified; blanket drone permit corrected.",
       "2026-10-01 obj_bn_0003 evidence patch: Pelita Brunei corroborates Setia A walkway repair; current Brunei Tourism transport page adds BND 2–5 general water-taxi range without inventing a fixed crossing fare.",
-      "2026-10-01 repeat QA obj_bn_0004 final: strict fact-source scoping; Freme alert kept operator-specific; OSM feature coordinates downgraded to medium; ForestGEO geology added; canopy dimensions re-verified against official brochure; blanket drone permit removed."
+      "2026-10-01 repeat QA obj_bn_0004 final: strict fact-source scoping; Freme alert kept operator-specific; OSM feature coordinates downgraded to medium; ForestGEO geology added; canopy dimensions re-verified against official brochure; blanket drone permit removed.",
+      "2026-10-01 repeat QA obj_bn_0005: fact-level source scoping added; primary coordinate corrected from false entrance precision to mapped museum center; geotagged photo points downgraded from survey-like precision; traveler-report provenance corrected; blanket drone permit claim replaced with DCA conditional rules."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -4854,13 +4855,13 @@
               "lon": 114.941562,
               "elevation_m": 11
             },
-            "coordinate_type": "entrance",
-            "accuracy": "high",
+            "coordinate_type": "center",
+            "accuracy": "medium",
             "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Wikidata",
               "url": "https://www.wikidata.org/wiki/Q21787576",
-              "basis": "museum feature coordinate"
+              "basis": "Wikidata museum feature coordinate imported from Wikivoyage; use as building/site center, not as a surveyed entrance point."
             },
             "coordinates_checked_at": "2026-10-01",
             "elevation_source": {
@@ -4892,14 +4893,14 @@
             },
             "geo_points": [
               {
-                "name": "Главный вход / фасад",
-                "type": "entrance",
+                "name": "Наружная точка съёмки перед главным входом",
+                "type": "viewpoint",
                 "coordinates": {
                   "lat": 4.893055,
                   "lon": 114.94125,
                   "elevation_m": null
                 },
-                "accuracy": "high",
+                "accuracy": "medium",
                 "elevation_accuracy": "unknown",
                 "source": {
                   "url": "https://commons.wikimedia.org/wiki/File:Entrance_to_the_Royal_Regalia_Museum_(18565077026).jpg",
@@ -4911,7 +4912,7 @@
                   "accessed": "2026-10-01",
                   "authority": "medium",
                   "used_for": [
-                    "entrance camera coordinates",
+                    "exterior camera coordinates",
                     "visual viewpoint",
                     "gallery image"
                   ]
@@ -4926,7 +4927,7 @@
                   "lon": 114.941214,
                   "elevation_m": null
                 },
-                "accuracy": "high",
+                "accuracy": "approximate",
                 "elevation_accuracy": "unknown",
                 "source": {
                   "url": "https://commons.wikimedia.org/wiki/File:Royal_standards_of_Brunei_at_the_Royal_Regalia_Museum_05.jpg",
@@ -4983,7 +4984,10 @@
                     ],
                     "condition": "Обычный городской подход по центру.",
                     "seasonality": "Сильный тропический ливень влияет на комфорт наружного участка, но не создаёт отдельной маршрутной проблемы.",
-                    "notes": "Точный километраж не фиксируется без выбранной стартовой точки."
+                    "notes": "Точный километраж не фиксируется без выбранной стартовой точки.",
+                    "source_refs": [
+                      "src_000150"
+                    ]
                   }
                 ]
               },
@@ -5005,7 +5009,10 @@
                     ],
                     "condition": "Dart до музея.",
                     "seasonality": null,
-                    "notes": "Официальная туристическая страница рекомендует Dart как наиболее удобный вариант без собственной машины."
+                    "notes": "Официальная туристическая страница рекомендует Dart как наиболее удобный вариант без собственной машины.",
+                    "source_refs": [
+                      "src_000150"
+                    ]
                   },
                   {
                     "mode": "public_transport",
@@ -5016,7 +5023,10 @@
                     ],
                     "condition": "Городской автобус до центральной зоны.",
                     "seasonality": null,
-                    "notes": "Официальный ориентир — BND 1 за поездку и сеть примерно 06:00–20:00; конкретный маршрут проверять отдельно."
+                    "notes": "Официальный ориентир — BND 1 за поездку и сеть примерно 06:00–20:00; конкретный маршрут проверять отдельно.",
+                    "source_refs": [
+                      "src_000150"
+                    ]
                   }
                 ]
               }
@@ -5027,19 +5037,29 @@
               "quality": "unknown",
               "last_reliable_point": null,
               "natural_sources": [],
-              "notes": "Конкретный POI питьевой воды к карточке не привязан; точка внутри музея не подтверждена."
+              "notes": "Конкретный POI питьевой воды к карточке не привязан; точка внутри музея не подтверждена.",
+              "source_refs": []
             },
             "supplies": {
               "status": "urban_available_not_pinned",
               "summary": "Музей находится в торгово-административном центре, но конкретный магазин/кафе не считается гарантированным без отдельного POI.",
-              "poi_ids": []
+              "poi_ids": [],
+              "source_refs": []
             },
             "overnight_and_camping": "Музей не является местом ночёвки. Публичная разрешённая палаточная площадка при объекте не подтверждена; для ночёвки использовать городское жильё из канонического lodging.",
             "overnight": {
               "status": "unclear",
               "summary": "Не считать территорию музея, входную площадь или соседние газоны свободной кемпинговой площадкой. Отдельного публичного разрешения на ночёвку в найденных официальных материалах нет.",
               "source_refs": []
-            }
+            },
+            "access_source_refs": [
+              "src_000150"
+            ],
+            "rules_source_refs": [
+              "src_000150",
+              "src_904667",
+              "src_904672"
+            ]
           },
           "climate": {
             "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
@@ -5048,11 +5068,15 @@
           },
           "operations": {
             "hours": "Понедельник–четверг 09:00–17:00; пятница закрыто; суббота 09:00–17:00; воскресенье 08:30–16:30.",
-            "ticket": "Официальная страница Brunei Tourism на 2026-10-01 указывает BND 5 для взрослого нерезидента; резиденты — бесплатно. Один свежий отзыв о визите в сентябре 2026 сообщает BND 10 и только наличную оплату, поэтому сумму у кассы нужно перепроверить перед визитом.",
+            "ticket": "Brunei Tourism на 2026-10-01 указывает BND 5 для взрослого нерезидента и бесплатный вход для резидентов. Отзыв о визите в сентябре 2026 сообщает BND 10 и наличную оплату; это сохраняется как traveler report и не заменяет официальный тариф.",
             "closure_notes": "Официальный недельный режим содержит полное закрытие в пятницу. Праздничные/специальные закрытия проверять непосредственно перед визитом.",
             "last_verified": "2026-10-01",
             "official_url": "https://www.bruneitourism.com/places/royal-regalia-museum/",
-            "status": "open"
+            "status": "open",
+            "source_refs": [
+              "src_000150",
+              "src_904672"
+            ]
           },
           "safety": {
             "crime_context": "Отдельная сопоставимая криминальная статистика по музею не используется: для этой карточки она не добавляет планировочной ценности.",
@@ -5071,13 +5095,13 @@
             "photo_suitability_5": 4,
             "video_suitability_5": 3,
             "visual_scouting": {
-              "best_time": "Для фасада — утро или поздний день; интерьер зависит прежде всего от режима музея и разрешения на съёмку, а не от солнечного света.",
-              "best_weather_light": "Фасад и купол лучше читаются при сухой погоде или после ливня с чистым воздухом. Внутри свет контролируемый; внешний дождь почти не влияет на экспозицию.",
+              "best_time": "Для фасада документирован поздний день: геопривязанный Commons-снимок 27 апреля 2014 года сделан в 17:44 и показывает читаемые купол и входную группу. Для интерьера важнее часы работы и действующее разрешение на съёмку, а не положение солнца.",
+              "best_weather_light": "Погода влияет прежде всего на наружный фасад и городской подход; интерьер освещён искусственно и визуально почти не зависит от сезона.",
               "viewpoints_for_photo_video": [
                 {
                   "id": "main_entrance_exterior",
-                  "name": "Главный вход и купол с Jalan Sultan Omar 'Ali Saifuddien",
-                  "description": "Геопривязанная наружная точка показывает купол, входную группу и масштаб здания в городской ткани.",
+                  "name": "Фасад и купол с точки перед входом",
+                  "description": "Координаты относятся к месту, откуда был сделан геопривязанный наружный снимок, а не к геодезически измеренной двери входа.",
                   "coordinates": {
                     "lat": 4.893055,
                     "lon": 114.94125,
@@ -5087,7 +5111,7 @@
                   "view": {
                     "description": "купол, главный вход и фасад музея"
                   },
-                  "best_time": "утро или поздний день",
+                  "best_time": "поздний день; подтверждённый пример — 17:44",
                   "best_weather_light": "сухой воздух или короткий период после дождя",
                   "useful_equipment": [
                     {
@@ -5113,12 +5137,13 @@
                       "camera coordinates",
                       "gallery image"
                     ]
-                  }
+                  },
+                  "accuracy": "medium"
                 },
                 {
                   "id": "central_atrium_chariot",
                   "name": "Центральный атриум с церемониальной колесницей",
-                  "description": "Главная внутренняя визуальная сцена — крупная церемониальная колесница и окружающие регалии. Исторические и свежие посетительские материалы сходятся в том, что режим съёмки здесь отличается от остальных галерей, но точное правило для телефона и отдельной камеры менялось/описывается противоречиво.",
+                  "description": "Главная внутренняя визуальная сцена — церемониальная колесница и окружающие регалии. Координаты взяты из EXIF снимка 2014 года и внутри здания считаются приблизительными, а не навигационным GPS.",
                   "coordinates": {
                     "lat": 4.893055,
                     "lon": 114.94125,
@@ -5154,12 +5179,13 @@
                       "visual subject",
                       "historic camera coordinates"
                     ]
-                  }
+                  },
+                  "accuracy": "approximate"
                 },
                 {
                   "id": "standards_gallery_reference",
                   "name": "Галерея королевских штандартов",
-                  "description": "Фото 2024 года геопривязывает один из внутренних залов со штандартами. Использовать точку как ориентир содержания, а не как обещание свободной съёмки.",
+                  "description": "Снимок 10 декабря 2024 года подтверждает внутренний зал со штандартами; его EXIF-координаты полезны только как приблизительная точка внутри здания.",
                   "coordinates": {
                     "lat": 4.892597,
                     "lon": 114.941214,
@@ -5190,16 +5216,16 @@
                       "visual viewpoint",
                       "camera coordinates"
                     ]
-                  }
+                  },
+                  "accuracy": "approximate"
                 }
               ],
               "seasonal_visuals": [
-                "Экспозиция почти не зависит от сезона; сезон влияет главным образом на наружный фасад и качество пешего городского подхода.",
-                "После тропического ливня наружные поверхности и зелень вокруг здания насыщеннее, но входная зона может быть мокрой."
+                "Постоянная экспозиция не имеет подтверждённого сезонного визуального режима; сезонность относится главным образом к наружному фасаду и погоде на коротком городском подходе."
               ],
               "video_activity": [
-                "движение посетителей вокруг центральной церемониальной колесницы — только в разрешённой зоне и без навязчивой съёмки людей",
-                "наружный городской поток у входа и контраст музея с компактным центром Бандар-Сери-Бегавана"
+                "центральный атриум: движение посетителей вокруг церемониальной колесницы, если текущий музейный режим разрешает видео",
+                "наружная площадка и прилегающая улица: городской поток на фоне купола и входной группы"
               ],
               "useful_equipment": [
                 {
@@ -5217,13 +5243,17 @@
               ]
             },
             "drone": {
-              "visual_value": "Сверху купол и компактный центр Бандар-Сери-Бегавана хорошо читаются вместе, но городской государственный объект не является местом для спонтанного запуска.",
+              "visual_value": "С воздуха купол и компактный центр Бандар-Сери-Бегавана потенциально читаются вместе, но визуальная ценность не означает автоматического разрешения на запуск.",
               "legal_status": "regulated",
-              "permit_required": true,
+              "permit_required": null,
               "restrictions": [
-                "соблюдать требования Department of Civil Aviation Brunei к беспилотным воздушным судам",
-                "авиационное разрешение не заменяет согласование запуска с владельцем/администрацией площадки",
-                "до запуска проверить ограничения воздушного пространства центрального Бандар-Сери-Бегавана"
+                "регистрация беспилотного воздушного судна в Department of Civil Aviation Brunei Darussalam обязательна до эксплуатации",
+                "полёты разрешены только днём; ночная эксплуатация запрещена",
+                "нельзя летать в пределах 5 км от аэропорта или военной базы",
+                "нельзя летать в ограниченных зонах",
+                "для полёта на публичном мероприятии требуется flying permit",
+                "для полёта выше 200 футов над уровнем моря требуется flying permit",
+                "для конкретной точки у музея отдельно проверить актуальное воздушное пространство и допустимость места запуска; карточка не утверждает, что flying permit нужен для любого полёта"
               ],
               "checked_at": "2026-10-01",
               "source": {
@@ -5235,12 +5265,17 @@
                 "accessed": "2026-10-01",
                 "authority": "high",
                 "used_for": [
-                  "drone rules",
-                  "permit context"
+                  "registration",
+                  "operating-guidelines document",
+                  "conditional flying-permit triggers"
                 ]
               }
             },
-            "filming_restrictions": "Консервативная рабочая модель: отдельную камеру не проносить в закрытые галереи без явного разрешения; свежие посетительские отчёты указывают на локеры и ограничение фото за пределами центрального атриума, но расходятся в отношении смартфона. Финальное правило подтверждать у персонала на входе."
+            "filming_restrictions": "Официальная страница Brunei Tourism отдельную политику фото/видео не публикует. Посетительский отчёт октября 2025 описывает запрет отдельной камеры за пределами центрального атриума при более мягком отношении к смартфону; считать это практическим отчётом, а не вечным правилом, и подтверждать режим у персонала на входе.",
+            "filming_source_refs": [
+              "src_000150",
+              "src_904667"
+            ]
           },
           "annotation": {
             "canonical_story_from_sections": true,
@@ -5257,8 +5292,9 @@
                 "section_id": "history",
                 "content": "Здание открылось 30 сентября 1992 года к серебряному юбилею восшествия султана Хассанала Болкиаха на престол. Государственный отчёт перечисляет четыре исходные галереи: регалии коронации 1968 года, Royal Exhibition Gallery, Silver Jubilee Gallery и Constitutional History Gallery. После золотого юбилея правления комплекс был переименован из Royal Regalia Building в Royal Regalia Museum с 1 декабря 2017 года.",
                 "source_refs": [
-                  "src_000150",
-                  "src_904666"
+                  "src_904666",
+                  "src_904668",
+                  "src_904669"
                 ]
               },
               {
@@ -5289,10 +5325,11 @@
             {
               "kind": "traveler_report",
               "topic": "photography_rules",
-              "summary": "Свежий отзыв октября 2025 описывает запрет отдельной камеры за пределами центрального атриума при более мягком отношении к телефону; другие актуальные руководства описывают более строгий режим хранения смартфонов и камер. Практический вывод один: не строить съёмочный план интерьера до подтверждения правила персоналом на входе.",
-              "observed_period": "2025-10—2026-04",
+              "summary": "Отзыв о визите в октябре 2025 описывает запрет отдельной камеры за пределами центрального атриума при более мягком режиме для смартфона. Официальная страница Brunei Tourism отдельную политику фото/видео не публикует, поэтому правило нужно подтверждать у персонала на входе.",
+              "observed_period": "2025-10",
               "source_refs": [
-                "src_904667"
+                "src_904667",
+                "src_000150"
               ],
               "confidence": "medium"
             },
@@ -5302,7 +5339,7 @@
               "summary": "В феврале 2025 местный посетитель сообщил о протечках потолка и вёдрах в нескольких частях музея. В июле 2026 отдельное местное обсуждение обращало внимание на потемнение и загрязнение купола. Эти сигналы полезны как состояние здания, но не доказывают закрытие музея: официальный туристический сайт продолжает публиковать обычные часы работы.",
               "observed_period": "2025-02—2026-07",
               "source_refs": [
-                "src_904667",
+                "src_904670",
                 "src_904671",
                 "src_000150"
               ],
@@ -5718,13 +5755,47 @@
               "traveler_reports": true,
               "visual_recon": true,
               "sources": true,
-              "gallery_min_5": true
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "coordinate_type_precision": true,
+              "drone_rule_precision": true
             },
             "notes": [
               "Музей описан как официальный комплекс церемониальной памяти, а не как абстрактная «роскошная достопримечательность».",
               "Убраны штампы «идеальный дождевой резерв», «обычная осторожность» и искусственный километраж от SOAS.",
               "Свежие жалобы на протечки/состояние купола отделены от официального статуса и не превращены в утверждение о закрытии.",
-              "Медиа и точки съёмки учитывают фактические ограничения интерьера вместо инструкций фотографу."
+              "Медиа и точки съёмки учитывают фактические ограничения интерьера вместо инструкций фотографу.",
+              "Повторный QA исправил source scoping, ложный entrance-type для feature coordinate, завышенную точность геотегов и blanket drone permit."
+            ]
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "повторный QA obj_bn_0005: операции музея, координатная семантика, traveler-report provenance, visual recon и точность правил дрона",
+            "checks": {
+              "narrative_section_sources": true,
+              "operations_sources": true,
+              "access_sources": true,
+              "water_unknown_not_falsely_sourced": true,
+              "supplies_not_falsely_sourced": true,
+              "overnight_unknown_not_falsely_sourced": true,
+              "traveler_report_sources": true,
+              "photography_policy_not_overstated": true,
+              "visual_viewpoint_sources": true,
+              "coordinate_type_precision": true,
+              "coordinate_accuracy_not_overstated": true,
+              "elevation_precision": true,
+              "drone_rule_precision": true
+            },
+            "notes": [
+              "Wikidata-координата музея больше не выдается за точный вход: coordinate_type изменён на center, accuracy снижена до medium.",
+              "Геотег наружного снимка хранится как viewpoint, а не entrance; внутримузейные EXIF-координаты помечены approximate.",
+              "water/overnight/supplies остаются честно непроверенными и при строгом source scope не наследуют общую библиографию.",
+              "Операционные часы и официальный тариф привязаны к Brunei Tourism; сентябрьский отчёт BND 10 хранится как противоречащий traveler report.",
+              "Исправлен неверный source_ref отчёта о протечках: февральский сигнал теперь ссылается на соответствующий Reddit-источник, а не на Tripadvisor.",
+              "Фото/видео не объявлены официально разрешёнными или запрещёнными: официальный сайт правила не публикует, а пользовательский отчёт используется только как временный практический сигнал.",
+              "drone.permit_required=true признан слишком широким; DCA требует регистрацию, а flying permit в опубликованном руководстве привязан к public events и полётам выше 200 ft ASL.",
+              "CI fix: visual viewpoint source_refs are derived from each viewpoint source URL by build_cdn; canonical src_* IDs must not be injected into the legacy remap input."
             ]
           }
         }

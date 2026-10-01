@@ -258,6 +258,22 @@ TYPE_BY_NAME.update({
     "Apo Island Marine Sanctuary": "protected_area",
 })
 
+# Recovered Laos object layer: preliminary primary classes for canonical build.
+TYPE_BY_NAME.update({
+    "Hin Nam No National Park": "national_park",
+    "Nakai Nam Theun National Park": "national_park",
+    "Tad Fane": "waterfall",
+    "Tad Yuang": "waterfall",
+    "Khone Phapheng Falls": "waterfall",
+    "Phou Khao Khouay National Park": "national_park",
+    "Li Phi / Somphamit Falls": "waterfall",
+    "Xe Pian National Park": "national_park",
+    "Tham Pa Fa": "cave",
+    "Tham Nang Aen": "cave",
+    "Dong Hua Sao National Park": "national_park",
+    "Nong Fa / Dong Ampham landscape": "natural_landscape",
+})
+
 # Recovered Singapore object layer: preliminary primary classes for canonical build.
 TYPE_BY_NAME.update({
     "Marina Bay": "cultural_landscape",

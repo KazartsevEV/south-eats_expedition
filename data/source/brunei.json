@@ -5847,7 +5847,7 @@
               "representative_m": 4,
               "min_m": null,
               "max_m": null,
-              "reference_type": "primary_public_anchor",
+              "reference_type": "site",
               "accuracy": "approximate",
               "source": {
                 "type": "map",
@@ -6609,7 +6609,8 @@
               "Удалён неподтверждённый свежими cited reviews тезис про 2025–2026 отсутствие тени/туалета; сохранён проверяемый апрельский отчёт 2026 о мусоре и более старое визуальное наблюдение о pumpjacks.",
               "Из overview удалено упоминание Petroleum Authority без соответствующего source_ref; актуальность действующей добычи сформулирована по BSP.",
               "Visual recon опирается на официальный sunset context и EXIF 17:49; причинная фраза про мусор 'после ливня' удалена.",
-              "drone.permit_required=true снят как слишком широкий: DCA требует регистрацию, а flying permit опубликован для public events и полётов выше 200 ft ASL."
+              "drone.permit_required=true снят как слишком широкий: DCA требует регистрацию, а flying permit опубликован для public events и полётов выше 200 ft ASL.",
+              "CI schema fix: object_elevation.reference_type uses canonical enum `site`; notes retain the narrower semantic that 4 m describes only the Billionth Barrel Monument public anchor, not the full Seria Field."
             ]
           }
         }

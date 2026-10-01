@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "PH",
     "country_slug": "philippines",
-    "status": "geo_profile_qa_complete_before_object_cards",
-    "checked_at": "2026-09-30",
-    "next_level": "country_and_regional_layer_complete_object_cards_frozen",
+    "status": "geo_profile_with_preliminary_object_coverage",
+    "checked_at": "2026-10-01",
+    "next_level": "object_recovery_preliminary_qa",
     "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes.",
     "canonical_source_id": "src_906007",
     "qa_contract": "geo_profile_roles_v1"
@@ -38,8 +38,8 @@
   "rules": {
     "parentage": "Administrative units use verified current parentage. Composite expedition regions remain geographic_area when they span several administrative units or preserve legacy research geography.",
     "route_hubs": "Cities and towns are geo entities only; they are not attraction cards.",
-    "object_visibility": "Object cards remain deferred for the second-chunk countries during this phase.",
-    "cards": "Object card payloads are not edited in this stage."
+    "object_visibility": "Recovered Philippines object cards are attached to the verified formal geography at the most specific supported node; broader placement is used where the current hierarchy lacks a narrower verified node.",
+    "cards": "Recovered object cards are preliminary QA; missing coordinates/elevation/access facts remain null or incomplete rather than inferred."
   },
   "nodes": [
     {
@@ -177,7 +177,9 @@
       "slug": "ilocos-region",
       "parent_id": "country:ph",
       "axis": "administrative",
-      "object_ids": [],
+      "object_ids": [
+        "ph:paoay-church-st-augustine-church"
+      ],
       "geometry": {
         "status": "available",
         "geometry_type": "administrative_boundary",
@@ -2402,7 +2404,9 @@
       "slug": "palawan-expedition",
       "parent_id": "ph:province:palawan",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:palawan-el-nido-coron"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Palawan"
@@ -2448,7 +2452,10 @@
       "slug": "cordillera-ifugao-sagada",
       "parent_id": "ph:region:car",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:banaue-and-batad-rice-terraces",
+        "ph:sagada"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Cordillera / Ifugao / Sagada"
@@ -2492,7 +2499,9 @@
       "slug": "bohol-expedition",
       "parent_id": "ph:province:bohol",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:chocolate-hills"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Bohol"
@@ -2524,7 +2533,9 @@
       "slug": "metro-manila",
       "parent_id": "ph:region:ncr",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:intramuros"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Metro Manila"
@@ -2539,7 +2550,9 @@
       "slug": "ilocos-vigan",
       "parent_id": "ph:province:ilocos-sur",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:vigan"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Ilocos / Vigan"
@@ -2554,7 +2567,9 @@
       "slug": "boracay-western-visayas",
       "parent_id": "ph:region:western-visayas",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:boracay"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Boracay / Western Visayas"
@@ -2569,7 +2584,9 @@
       "slug": "tubbataha-sulu-sea",
       "parent_id": "ph:province:palawan",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:tubbataha-reefs"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Tubbataha / Sulu Sea"
@@ -2603,7 +2620,9 @@
       "slug": "iloilo-expedition",
       "parent_id": "ph:province:iloilo",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:iloilo-heritage-districts"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Iloilo"
@@ -2637,7 +2656,9 @@
       "slug": "samar-expedition",
       "parent_id": "ph:province:samar",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:samar-cave-systems"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Samar"
@@ -2672,7 +2693,9 @@
       "slug": "siquijor-expedition",
       "parent_id": "ph:province:siquijor",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:siquijor-interior"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Siquijor"
@@ -2687,7 +2710,9 @@
       "slug": "negros-expedition",
       "parent_id": "ph:region:negros-island-region",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:negros-sugar-era-hacienda-architecture"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Negros"
@@ -2721,7 +2746,9 @@
       "slug": "batanes-expedition",
       "parent_id": "ph:province:batanes",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:batanes"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Batanes"
@@ -2754,7 +2781,9 @@
       "slug": "central-luzon-pinatubo",
       "parent_id": "ph:region:central-luzon",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:mount-pinatubo"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Central Luzon / Pinatubo"
@@ -2790,7 +2819,9 @@
       "slug": "occidental-mindoro-apo-reef",
       "parent_id": "ph:province:occidental-mindoro",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:apo-reef-natural-park"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Occidental Mindoro / Apo Reef"
@@ -2826,7 +2857,9 @@
       "slug": "batangas-taal",
       "parent_id": "ph:province:batangas",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:taal-volcano-and-heritage-towns"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Batangas / Taal"
@@ -2864,7 +2897,9 @@
       "slug": "albay-bicol",
       "parent_id": "ph:province:albay",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:mayon-volcano"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Albay / Bicol"
@@ -2879,7 +2914,9 @@
       "slug": "negros-oriental-dauin-apo-island",
       "parent_id": "ph:province:negros-oriental",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "ph:apo-island-marine-sanctuary"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Negros Oriental / Dauin / Apo Island"

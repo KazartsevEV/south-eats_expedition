@@ -2,25 +2,32 @@
   "country_id": "geo_tl",
   "visa": {
     "value": {
-      "status": "visa on arrival for air/sea arrival in Dili under general Class I regime",
+      "status": "visa on arrival при прибытии по воздуху или морю в Дили; для наземного въезда требуется предварительная авторизация",
       "stay_days": 30,
       "fee_usd": 30,
-      "extension": "Туристический Class I может продлеваться с одобрения иммиграции до совокупного пребывания не более 90 дней.",
-      "land_border": "Для сухопутного въезда, кроме специальных исключений для граждан Индонезии и Португалии, требуется предварительная Visa Application Authorization.",
+      "extension": "Туристическая виза Class I может продлеваться в Dili Immigration Service; суммарный разрешённый туристический срок не должен превышать 90 дней.",
+      "land_border": "Для российского паспорта при въезде через сухопутный пункт требуется заранее получить Visa Application Authorization. Актуальная официальная справка отдельно освобождает от этого требования граждан Индонезии, Португалии и США.",
       "visa_run": {
         "possible": "Новый въезд рассматривается как новое иммиграционное решение.",
         "limits": "Сухопутный возврат требует предварительной авторизации; автоматического права на «сброс» срока нет."
       },
-      "passport_validity": "не менее 6 месяцев",
+      "passport_validity": "не менее 6 месяцев с даты въезда; требуется как минимум одна свободная страница под визовую наклейку",
       "source_ids": [
-        "IMM"
+        "IMM",
+        "TL_CUSTOMS_VISA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01",
+      "entry_requirements": {
+        "onward_ticket": "обратный/дальнейший билет либо подтверждение возможности оплатить выезд",
+        "funds": "официальные иммиграционные материалы указывают эквивалент US$100 на въезд и US$50 на каждый предполагаемый день пребывания, если нет принятой гарантии принимающей стороны",
+        "accommodation": "при проверке могут потребовать подтверждение подходящего размещения"
+      }
     },
     "source_refs": [
-      "src_000819"
+      "src_000819",
+      "src_900033"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -37,13 +44,22 @@
       ],
       "transport": "Дорога, микроавтобусы и частный транспорт; правила предварительной визовой авторизации проверяются до сухопутного въезда.",
       "source_ids": [
-        "IMM"
+        "IMM",
+        "TL_CUSTOMS_VISA"
+      ],
+      "checked_at": "2026-10-01",
+      "entry_rule": "Российскому гражданину для въезда по земле из Индонезии требуется предварительная Visa Application Authorization; после предъявления авторизации и выполнения остальных условий виза оформляется на границе за US$30.",
+      "exemptions_from_prior_authorization": [
+        "Индонезия",
+        "Португалия",
+        "США"
       ]
     },
     "source_refs": [
-      "src_000819"
+      "src_000819",
+      "src_900033"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -61,7 +77,7 @@
       "src_000823",
       "src_000833"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -73,7 +89,7 @@
       "src_000824",
       "src_000833"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -86,12 +102,12 @@
       "source_ids": [
         "ROAD_CODE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000830"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -105,13 +121,13 @@
         "CAMPING_LAW",
         "PROTECTED_AREAS"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000832",
       "src_000831"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -125,12 +141,12 @@
       "source_ids": [
         "AACTL"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000833"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -151,7 +167,7 @@
       "src_000831",
       "src_000830"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -198,7 +214,7 @@
     "source_refs": [
       "src_000859"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Traveller-facing criminal-law summary; not an exhaustive legal code."
@@ -211,12 +227,12 @@
       "source_ids": [
         "PROTECTED_AREAS"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000831"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -237,7 +253,7 @@
     "source_refs": [
       "src_000820"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -267,7 +283,7 @@
     "source_refs": [
       "src_000825"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."

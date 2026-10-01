@@ -540,7 +540,7 @@ async function countryReferenceHTML(data){
   if(!p&&!t&&!cl)return '';
   var blocks=[];
   if(p){
-    blocks.push(factCard('Обзор',p.summary||p.narrow));
+    blocks.push(factCard('Обзор',p.narrow||p.summary));
     blocks.push(factCard('История',p.history));
     blocks.push(factCard('География',p.geography));
     blocks.push(factCard('Политический строй',p.political_system));

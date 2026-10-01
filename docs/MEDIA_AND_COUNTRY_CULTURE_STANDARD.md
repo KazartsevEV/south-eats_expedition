@@ -22,13 +22,13 @@ Required rich-row fields:
 - `description` — short, factual description of what the dish is
 - `where_common` — where it is actually common/easy to find; country-wide claims need evidence
 - `format` — market / street stall / roadside vendor / local cafe / restaurant, so restaurant pricing is not mislabeled as street food
-- `price_usd_range` — approximate price for the stated format, not a generic restaurant average
+- `price_local_range` + `price_currency` — preferred: approximate price in the country’s local currency for the stated format; `price_usd_range` remains supported for countries where the source layer already uses USD
 - `price_context` — what market/menu snapshot the range represents
 - `checked_at`
 - `source_refs`
 - `media_id`
 
-Prices are snapshots. Delivery fees, temporary discounts and tourist-zone restaurant prices must not be silently mixed into a “typical street-food price”. When delivery/menu platforms are used as evidence, the card states that this is a menu snapshot and walk-up prices may differ.
+Prices are snapshots. Prefer local currency and do not force conversion to USD when it would add a second dynamic fact. Delivery fees, temporary discounts and tourist-zone restaurant prices must not be silently mixed into a “typical street-food price”. When delivery/menu platforms are used as evidence, the card states that this is a menu snapshot and walk-up prices may differ.
 
 ## Country festival cards
 

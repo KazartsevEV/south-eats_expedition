@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "VN",
     "country_slug": "vietnam",
-    "status": "geo_profile_qa_complete_before_object_cards",
+    "status": "geo_profile_with_preliminary_object_coverage",
     "checked_at": "2026-10-01",
-    "next_level": "country_and_regional_layer_complete_object_cards_frozen",
+    "next_level": "object_recovery_preliminary_qa",
     "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes.",
     "canonical_source_id": "src_906011",
     "qa_contract": "geo_profile_roles_v1",
@@ -45,8 +45,8 @@
   "rules": {
     "parentage": "Administrative units use verified current parentage. Composite expedition regions remain geographic_area when they span several administrative units or preserve legacy research geography.",
     "route_hubs": "Cities and towns are geo entities only; they are not attraction cards.",
-    "object_visibility": "Object cards remain deferred for the second-chunk countries during this phase.",
-    "cards": "Object card payloads are not edited in this stage."
+    "object_visibility": "Recovered Vietnam object cards are attached to verified formal expedition geography; no coordinates are inferred from city, province, protected-area centre, or regional nodes.",
+    "cards": "Recovered object cards are preliminary QA; missing GPS/elevation/access/water/overnight/visual facts remain null or incomplete rather than inferred."
   },
   "nodes": [
     {
@@ -466,7 +466,11 @@
       "slug": "hanoi-red-river-delta",
       "parent_id": "country:vn",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:hanoi-old-quarter",
+        "vn:duong-lam-ancient-village",
+        "vn:long-bien-bridge"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Hanoi / Red River Delta"
@@ -493,7 +497,9 @@
       "slug": "ninh-binh-trang-an",
       "parent_id": "vn:province:ninh-binh",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:trang-an"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Ninh Binh / Trang An"
@@ -520,7 +526,9 @@
       "slug": "ha-long-cat-ba",
       "parent_id": "country:vn",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:ha-long-bay-cat-ba"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Ha Long / Cat Ba"
@@ -535,7 +543,9 @@
       "slug": "hue-central-coast",
       "parent_id": "vn:city:hue",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:hue-monuments"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Hue / central coast"
@@ -550,7 +560,10 @@
       "slug": "hoi-an-quang-nam",
       "parent_id": "vn:city:da-nang",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:hoi-an",
+        "vn:my-son"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Hoi An / Quang Nam"
@@ -565,7 +578,10 @@
       "slug": "quang-binh-phong-nha",
       "parent_id": "vn:province:quang-tri",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:phong-nha-ke-bang",
+        "vn:son-doong-cave"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Quang Binh / Phong Nha"
@@ -580,7 +596,9 @@
       "slug": "ho-chi-minh-city-expedition",
       "parent_id": "vn:city:ho-chi-minh-city",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:ho-chi-minh-city"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Ho Chi Minh City"
@@ -595,7 +613,9 @@
       "slug": "mekong-delta",
       "parent_id": "country:vn",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:mekong-delta"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Mekong Delta"
@@ -610,7 +630,9 @@
       "slug": "cao-bang-expedition",
       "parent_id": "vn:province:cao-bang",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:cao-bang-non-nuoc-cao-bang-geopark-routes"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Cao Bang"
@@ -625,7 +647,9 @@
       "slug": "binh-dinh-quy-nhon",
       "parent_id": "vn:province:gia-lai",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:quy-nhon-and-cham-towers"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Binh Dinh / Quy Nhon"
@@ -640,7 +664,9 @@
       "slug": "central-highlands-kon-tum",
       "parent_id": "country:vn",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:kon-tum-communal-houses"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Central Highlands / Kon Tum"
@@ -655,7 +681,9 @@
       "slug": "nam-dinh-legacy",
       "parent_id": "vn:province:ninh-binh",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:nam-dinh-church-landscapes"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Nam Dinh"
@@ -670,7 +698,9 @@
       "slug": "con-dao",
       "parent_id": "vn:city:ho-chi-minh-city",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:con-dao"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Con Dao"
@@ -685,7 +715,9 @@
       "slug": "ha-giang-dong-van",
       "parent_id": "vn:province:tuyen-quang",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:dong-van-karst-plateau-geopark-ha-giang-loop"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Ha Giang / Dong Van"
@@ -700,7 +732,9 @@
       "slug": "bac-kan-ba-be",
       "parent_id": "vn:province:thai-nguyen",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:ba-be-national-park"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Bac Kan / Ba Be"
@@ -715,7 +749,9 @@
       "slug": "ninh-binh-cuc-phuong",
       "parent_id": "vn:province:ninh-binh",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:cuc-phuong-national-park"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Ninh Binh / Cuc Phuong"
@@ -730,7 +766,9 @@
       "slug": "yen-bai-mu-cang-chai",
       "parent_id": "vn:province:lao-cai",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:mu-cang-chai-rice-terraces"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Yen Bai / Mu Cang Chai"
@@ -745,7 +783,9 @@
       "slug": "sa-pa-lao-cai-hoang-lien",
       "parent_id": "vn:province:lao-cai",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:sa-pa-fansipan"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Sa Pa / Lao Cai / Hoang Lien"
@@ -760,7 +800,9 @@
       "slug": "dong-nai-cat-tien",
       "parent_id": "vn:province:dong-nai",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "vn:cat-tien-national-park"
+      ],
       "notes_ru": "Экспедиционный регион из исследовательской заготовки. Если старое название относится к административной единице, изменённой реформой 2025 года, оно сохраняется как географический/исторический ориентир, а не как текущая провинция.",
       "legacy_region_names": [
         "Dong Nai / Cat Tien"

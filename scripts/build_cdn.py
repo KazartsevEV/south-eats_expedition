@@ -29,9 +29,9 @@ PUBLISH = [
     ("singapore.json", "SG", "singapore"),
     ("thailand.json", "TH", "thailand"),
     ("timor-leste.json", "TL", "timor-leste"),
+    ("vietnam.json", "VN", "vietnam"),
 ]
 COUNTRY_ONLY = [
-    ("vietnam.json", "VN", "vietnam"),
 ]
 
 TYPE_LABELS = {
@@ -325,6 +325,34 @@ TYPE_BY_NAME.update({
     "Dare Memorial Museum and overlook": "museum",
     "Mount Matebian / Matebian Feto": "mountain",
     "Maubara–Liquiçá coastal heritage": "cultural_landscape",
+})
+
+
+# Recovered Vietnam object layer: preliminary primary classes for canonical build.
+TYPE_BY_NAME.update({
+    "Ha Long Bay–Cat Ba": "natural_landscape",
+    "Trang An": "cultural_landscape",
+    "Hanoi Old Quarter": "historic_city",
+    "Hue monuments": "cultural_landscape",
+    "Hoi An": "historic_city",
+    "My Son": "archaeological_site",
+    "Phong Nha-Ke Bang": "national_park",
+    "Ho Chi Minh City": "city",
+    "Mekong Delta": "wetland",
+    "Cao Bang / Non Nuoc Cao Bang geopark routes": "karst",
+    "Quy Nhon and Cham towers": "archaeological_site",
+    "Kon Tum communal houses": "cultural_landscape",
+    "Nam Dinh church landscapes": "cultural_landscape",
+    "Con Dao": "island",
+    "Dong Van Karst Plateau Geopark / Ha Giang Loop": "karst",
+    "Ba Be National Park": "national_park",
+    "Cuc Phuong National Park": "national_park",
+    "Duong Lam Ancient Village": "living_settlement",
+    "Long Bien Bridge": "industrial_heritage",
+    "Son Doong Cave": "cave",
+    "Mu Cang Chai rice terraces": "cultural_landscape",
+    "Sa Pa / Fansipan": "cultural_landscape",
+    "Cat Tien National Park": "national_park",
 })
 
 TAG_ALIASES = {

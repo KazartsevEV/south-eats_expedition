@@ -153,7 +153,17 @@
     "source_quality": "monthly climate normals/ERA5 secondary aggregation",
     "source_ids": [
       "CLIMATE"
-    ]
+    ],
+    "checked_at": "2026-10-01",
+    "country_seasonality": {
+      "wet_hot": "Май–октябрь: влажный и жаркий сезон.",
+      "cool_dry": "Ноябрь–февраль: более прохладный и сухой сезон.",
+      "hot_dry": "Февраль–апрель: сухой и жаркий сезон перед устойчивыми муссонными дождями.",
+      "regional_pattern": "Северные и высокогорные районы заметно прохладнее низменного Вьентьяна; состояние горных дорог и рек в сезон дождей проверяется на региональном уровне.",
+      "source_ids": [
+        "RUS_MFA"
+      ]
+    }
   },
   "safety": {
     "crime_level": {
@@ -241,45 +251,86 @@
     "visa_for_russian_passport": {
       "status": "visa-free",
       "stay_days": 30,
-      "extension": "Продление возможно через иммиграционные органы при соблюдении текущих правил.",
+      "extension": "При необходимости более длительного пребывания российскому гражданину следует обращаться в Иммиграционный департамент ЛНДР; консульский портал МИД РФ указывает плату 20 000 LAK за день продления.",
       "visa_run": {
         "possible": "Новый въезд после выезда возможен при допуске на границе.",
         "limits": "Опубликованного специального годового лимита visa-run для россиян в найденном официальном источнике нет.",
         "notes": "Не все переходы являются международными для иностранцев."
       },
-      "passport_validity": "проверять минимум 6 месяцев",
+      "passport_validity": "Для въезда использовать действующий заграничный паспорт; конкретный остаточный срок действия перепроверять перед поездкой по требованиям перевозчика и иммиграции.",
       "official_source": "Russian MFA / Lao authorities",
       "source_ids": [
-        "RUS_MFA"
-      ]
+        "RUS_MFA",
+        "LAO_IMMIGRATION"
+      ],
+      "entry_form": {
+        "name": "Lao Digital Immigration Form (LDIF)",
+        "required": true,
+        "scope": "С 1 сентября 2025 года обязательна для иностранных граждан, использующих паспорт, при въезде и выезде через Wattay International Airport, Luang Prabang International Airport, Pakse International Airport и Lao–Thai Friendship Bridge I.",
+        "timing": "Онлайн-форму заполнять за 3 дня до въезда и отдельно перед выездом.",
+        "official_portal": "https://www.immigration.gov.la/",
+        "source_ids": [
+          "RUS_MFA",
+          "LAO_IMMIGRATION"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "checked_at": "2026-10-01"
     },
     "airports": [
       {
         "iata": "VTE",
-        "name": "Wattay International Airport"
+        "name": "Wattay International Airport",
+        "role": "международный аэропорт Вьентьяна"
       },
       {
         "iata": "LPQ",
-        "name": "Luang Prabang International Airport"
+        "name": "Luang Prabang International Airport",
+        "role": "международный аэропорт Луангпхабанга"
+      },
+      {
+        "iata": null,
+        "name": "Savannakhet International Airport",
+        "role": "официальный международный пункт пропуска; фактические международные рейсы проверять по текущему расписанию"
       },
       {
         "iata": "PKZ",
-        "name": "Pakse International Airport"
+        "name": "Pakse International Airport",
+        "role": "международный аэропорт Паксе"
       }
     ],
-    "international_air_links": "Региональные связи с Bangkok, Hanoi/Ho Chi Minh City, China и соседними хабами меняются по сезону.",
+    "international_air_links": "Вьентьян, Луангпхабанг, Саваннакхет и Паксе перечисляются официальными источниками как международные аэропортовые пункты. Фактические маршруты и частоты меняются; перед поездкой использовать текущее расписание аэропортов/авиакомпаний.",
     "land_borders": {
       "countries": [
-        "China",
-        "Vietnam",
-        "Cambodia",
-        "Thailand",
-        "Myanmar"
+        "Китай",
+        "Вьетнам",
+        "Камбоджа",
+        "Таиланд",
+        "Мьянма"
       ],
-      "transport": "China–Laos Railway связывает Vientiane/Luang Prabang с Китаем; железнодорожная связь с Таиландом дошла до Vientiane, также много международных автобусов. Конкретный checkpoint надо проверять на допуск иностранцев.",
+      "international_checkpoints": {
+        "published_total": 31,
+        "breakdown": {
+          "vietnam": 10,
+          "thailand": 14,
+          "cambodia": 1,
+          "myanmar": 1,
+          "china": 3,
+          "international_airports": 4
+        },
+        "note": "Иммиграционный департамент ЛНДР публикует актуальный каталог международных пунктов пропуска с режимом работы и статусом visa on arrival/eVisa для каждого пункта. При планировании пересечения использовать этот каталог, а не статическое расписание перевозчика."
+      },
+      "rail": {
+        "china": "Железная дорога Китай—Лаос пересекает границу в районе Ботен—Бохань; лаосская иммиграционная служба указывает этот узел как международный пункт пропуска.",
+        "thailand": "Трансграничное железнодорожное сообщение в коридоре Вьентьян/Тханаленг—Нонгкхай действует отдельно от автомобильных мостовых пунктов; перед поездкой проверять конкретный пассажирский пункт пропуска."
+      },
+      "transport": "На открытых направлениях используются международные автобусы, поезда, микроавтобусы и частные трансферы. Статус и режим конкретного пункта пропуска имеют приоритет над расписанием перевозчика.",
       "source_ids": [
+        "LAO_IMMIGRATION",
+        "TOURISM_LAOS",
         "RUS_MFA"
-      ]
+      ],
+      "checked_at": "2026-10-01"
     }
   }
 }

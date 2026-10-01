@@ -4,22 +4,37 @@
     "value": {
       "status": "visa-free",
       "stay_days": 30,
-      "extension": "Продление возможно через иммиграционные органы при соблюдении текущих правил.",
+      "extension": "При необходимости более длительного пребывания российскому гражданину следует обращаться в Иммиграционный департамент ЛНДР; консульский портал МИД РФ указывает плату 20 000 LAK за день продления.",
       "visa_run": {
         "possible": "Новый въезд после выезда возможен при допуске на границе.",
         "limits": "Опубликованного специального годового лимита visa-run для россиян в найденном официальном источнике нет.",
         "notes": "Не все переходы являются международными для иностранцев."
       },
-      "passport_validity": "проверять минимум 6 месяцев",
+      "passport_validity": "Для въезда использовать действующий заграничный паспорт; конкретный остаточный срок действия перепроверять перед поездкой по требованиям перевозчика и иммиграции.",
       "official_source": "Russian MFA / Lao authorities",
       "source_ids": [
-        "RUS_MFA"
-      ]
+        "RUS_MFA",
+        "LAO_IMMIGRATION"
+      ],
+      "entry_form": {
+        "name": "Lao Digital Immigration Form (LDIF)",
+        "required": true,
+        "scope": "С 1 сентября 2025 года обязательна для иностранных граждан, использующих паспорт, при въезде и выезде через Wattay International Airport, Luang Prabang International Airport, Pakse International Airport и Lao–Thai Friendship Bridge I.",
+        "timing": "Онлайн-форму заполнять за 3 дня до въезда и отдельно перед выездом.",
+        "official_portal": "https://www.immigration.gov.la/",
+        "source_ids": [
+          "RUS_MFA",
+          "LAO_IMMIGRATION"
+        ],
+        "checked_at": "2026-10-01"
+      },
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
-      "src_000496"
+      "src_000496",
+      "src_900022"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -28,21 +43,42 @@
   "borders": {
     "value": {
       "countries": [
-        "China",
-        "Vietnam",
-        "Cambodia",
-        "Thailand",
-        "Myanmar"
+        "Китай",
+        "Вьетнам",
+        "Камбоджа",
+        "Таиланд",
+        "Мьянма"
       ],
-      "transport": "China–Laos Railway связывает Vientiane/Luang Prabang с Китаем; железнодорожная связь с Таиландом дошла до Vientiane, также много международных автобусов. Конкретный checkpoint надо проверять на допуск иностранцев.",
+      "international_checkpoints": {
+        "published_total": 31,
+        "breakdown": {
+          "vietnam": 10,
+          "thailand": 14,
+          "cambodia": 1,
+          "myanmar": 1,
+          "china": 3,
+          "international_airports": 4
+        },
+        "note": "Иммиграционный департамент ЛНДР публикует актуальный каталог международных пунктов пропуска с режимом работы и статусом visa on arrival/eVisa для каждого пункта. При планировании пересечения использовать этот каталог, а не статическое расписание перевозчика."
+      },
+      "rail": {
+        "china": "Железная дорога Китай—Лаос пересекает границу в районе Ботен—Бохань; лаосская иммиграционная служба указывает этот узел как международный пункт пропуска.",
+        "thailand": "Трансграничное железнодорожное сообщение в коридоре Вьентьян/Тханаленг—Нонгкхай действует отдельно от автомобильных мостовых пунктов; перед поездкой проверять конкретный пассажирский пункт пропуска."
+      },
+      "transport": "На открытых направлениях используются международные автобусы, поезда, микроавтобусы и частные трансферы. Статус и режим конкретного пункта пропуска имеют приоритет над расписанием перевозчика.",
       "source_ids": [
+        "LAO_IMMIGRATION",
+        "TOURISM_LAOS",
         "RUS_MFA"
-      ]
+      ],
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
+      "src_900022",
+      "src_000502",
       "src_000496"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -52,32 +88,42 @@
     "value": [
       {
         "iata": "VTE",
-        "name": "Wattay International Airport"
+        "name": "Wattay International Airport",
+        "role": "международный аэропорт Вьентьяна"
       },
       {
         "iata": "LPQ",
-        "name": "Luang Prabang International Airport"
+        "name": "Luang Prabang International Airport",
+        "role": "международный аэропорт Луангпхабанга"
+      },
+      {
+        "iata": null,
+        "name": "Savannakhet International Airport",
+        "role": "официальный международный пункт пропуска; фактические международные рейсы проверять по текущему расписанию"
       },
       {
         "iata": "PKZ",
-        "name": "Pakse International Airport"
+        "name": "Pakse International Airport",
+        "role": "международный аэропорт Паксе"
       }
     ],
     "source_refs": [
-      "src_000496"
+      "src_000496",
+      "src_900022"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
     }
   },
   "international_air_links": {
-    "value": "Региональные связи с Bangkok, Hanoi/Ho Chi Minh City, China и соседними хабами меняются по сезону.",
+    "value": "Вьентьян, Луангпхабанг, Саваннакхет и Паксе перечисляются официальными источниками как международные аэропортовые пункты. Фактические маршруты и частоты меняются; перед поездкой использовать текущее расписание аэропортов/авиакомпаний.",
     "source_refs": [
-      "src_000496"
+      "src_000496",
+      "src_900022"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -94,13 +140,13 @@
         "LAO_LAND_TRANSPORT",
         "RUS_MFA"
       ],
-      "checked_at": "2026-09-29"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_900021",
       "src_000496"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -113,12 +159,12 @@
       "source_ids": [
         "LAO_PARKS"
       ],
-      "checked_at": "2026-09-29"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000505"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -139,12 +185,12 @@
       "source_ids": [
         "LAO_DCA_DRONE"
       ],
-      "checked_at": "2026-09-29"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000504"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -168,7 +214,7 @@
     "source_refs": [
       "src_000496"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -204,7 +250,7 @@
     "source_refs": [
       "src_000496"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Traveller-facing criminal-law summary; not an exhaustive legal code."
@@ -220,13 +266,13 @@
         "LAO_PARKS",
         "RUS_MFA"
       ],
-      "checked_at": "2026-09-29"
+      "checked_at": "2026-10-01"
     },
     "source_refs": [
       "src_000505",
       "src_000496"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -247,7 +293,7 @@
     "source_refs": [
       "src_000496"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."
@@ -281,7 +327,7 @@
       "src_000498",
       "src_000500"
     ],
-    "checked_at": "2026-09-30",
+    "checked_at": "2026-10-01",
     "qa": {
       "source_refs_complete": true,
       "note": "Country-level fact has normalized canonical source refs."

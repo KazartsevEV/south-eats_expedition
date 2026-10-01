@@ -447,6 +447,8 @@ def main():
         for index, row in enumerate(rich_food_rows, start=1):
             if not row.get("name") or not row.get("description"):
                 fail(f"{code}: rich street-food row {index} lacks name/description")
+            if not row.get("where_common") or not row.get("format"):
+                fail(f"{code}: rich street-food row {index} lacks where_common/format")
             if not row.get("price_usd_range"):
                 fail(f"{code}: rich street-food row {index} lacks approximate market/street-food price")
             media_id = row.get("media_id")
@@ -461,6 +463,8 @@ def main():
         for index, row in enumerate(rich_festival_rows, start=1):
             if not row.get("name") or not row.get("description"):
                 fail(f"{code}: rich festival row {index} lacks name/description")
+            if not row.get("where_common"):
+                fail(f"{code}: rich festival row {index} lacks where_common")
             media_id = row.get("media_id")
             if not media_id or media_id not in media_ids:
                 fail(f"{code}: rich festival row {index} lacks valid canonical media ref")

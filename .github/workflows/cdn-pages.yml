@@ -75,6 +75,9 @@ jobs:
       - name: Validate canonical CDN contract
         run: python scripts/validate_canonical.py public/cdn/v2
 
+      - name: Validate reconciled raw field migration
+        run: python scripts/validate_raw_field_migration.py public/cdn/v2
+
       - name: Validate recursive hierarchy
         run: python scripts/validate_hierarchy.py public/cdn/v2
 
@@ -111,6 +114,7 @@ jobs:
             python scripts/validate_country_layer.py
             python scripts/validate_cdn.py public/cdn/v2
             python scripts/validate_canonical.py public/cdn/v2
+            python scripts/validate_raw_field_migration.py public/cdn/v2
             python scripts/validate_hierarchy.py public/cdn/v2
 
             git add public/cdn/v2

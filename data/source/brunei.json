@@ -40,7 +40,8 @@
       "2026-10-01 country/food/festival editorial rewrite: страновая справка, кухня и календарь переписаны естественным русским языком; убраны лишние англицизмы из пользовательских полей, сохранены только официальные названия и локальные термины с пояснениями; цены, даты, источники и объектный слой не изменены.",
       "2026-10-01 Brunei regional/geo language pass: regional and locality user-facing prose rewritten into natural Russian; district profiles sharpened for self-guided expedition planning; no stable linkage names or object IDs changed.",
       "2026-10-01 object QA: obj_bn_0001 Omar Ali Saifuddien Mosque rebuilt to Cambodia reference standard; structured access/water/overnight, sourced traveler reports, georeferenced visual recon and 5-image licensed gallery.",
-      "2026-10-01 object QA: obj_bn_0002 Jame' Asr Hassanil Bolkiah Mosque rebuilt to Cambodia reference standard; current official access, structured multimodal logistics/water/overnight, sourced traveler reports, 3 georeferenced visual viewpoints and 5-image licensed gallery."
+      "2026-10-01 object QA: obj_bn_0002 Jame' Asr Hassanil Bolkiah Mosque rebuilt to Cambodia reference standard; current official access, structured multimodal logistics/water/overnight, sourced traveler reports, 3 georeferenced visual viewpoints and 5-image licensed gallery.",
+      "2026-10-01 object QA: obj_bn_0003 Kampong Ayer rebuilt to Cambodia reference standard; sourced history/ethnography, honest water and camping, structured boat/walk access, dated 2026 walkway reports, 3 georeferenced visual viewpoints and 5-image gallery."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -2348,41 +2349,43 @@
         "interest": [
           "culture",
           "architecture",
-          "living heritage"
+          "living heritage",
+          "ethnography",
+          "history",
+          "river settlement"
         ],
-        "why_go": "Кампонг-Айер — сеть водных деревень на сваях вдоль Бруней река. Европейские путешественники описывали огромный водный город здесь уже в XVI веке; сегодня это жилые кварталы со школами, мечетями, пожарной и полицейской инфраструктурой.",
+        "why_go": "Кампонг-Айер — не одна «деревня на воде», а живая группа свайных поселений Бандар-Сери-Бегавана, где река остаётся транспортной осью, а сеть мостков связывает дома, мечети, школы и общественные службы. Для экспедиционного справочника здесь важны сразу три слоя: столица султаната на воде до переноса административного центра на сушу, современная трансформация общины и сама приливная речная среда.",
         "traveler_card": {
           "location": {
-            "region": "Бандар-Сери-Бегаван / Бруней-Муара",
+            "region": "Бруней-Муара / Бандар-Сери-Бегаван",
             "nearest_hub": "набережная Бандар-Сери-Бегавана",
             "languages_spoken": [
-              "Malay / Brunei Malay",
-              "English",
-              "мандаринский и хоккиен в части китайской общины"
+              "брунейский малайский и стандартный малайский",
+              "английский широко используется в столичной среде"
             ],
             "currency": {
               "code": "BND",
-              "name": "Brunei dollar",
+              "name": "брунейский доллар",
               "local_currency_per_1_usd": 1.2769,
               "as_of": "2026-09-27",
-              "rate_type": "market/reference snapshot",
-              "notes": "BND взаимозаменяем с SGD по номиналу в рамках Соглашения о взаимозаменяемости валют; фактический наличный курс обменника отличается.",
-              "practical_notes": "BND основная валюта; SGD обычно принимается по номиналу благодаря Соглашения о взаимозаменяемости валют."
+              "rate_type": "справочный рыночный снимок",
+              "notes": "BND и SGD взаимозаменяемы по номиналу в рамках Соглашения о взаимозаменяемости валют; наличный курс обменника может отличаться.",
+              "practical_notes": "Основная валюта — BND; SGD обычно принимается по номиналу."
             },
             "coordinates": {
               "lat": 4.8825,
               "lon": 114.9425,
-              "elevation_m": 7
+              "elevation_m": null
             },
             "coordinate_type": "center",
             "accuracy": "medium",
-            "elevation_accuracy": "approximate",
+            "elevation_accuracy": "unknown",
             "coordinate_source": {
-              "provider": "Wikidata",
-              "url": "https://www.wikidata.org/wiki/Q1990199",
-              "basis": "settlement-area reference coordinate"
+              "provider": "Wikidata / Brunei Tourism media geotag",
+              "url": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer_Brunei_Darussalam.jpg",
+              "basis": "репрезентативная точка центральной части протяжённого водного поселения, а не конкретная пристань"
             },
-            "coordinates_checked_at": "2026-09-28",
+            "coordinates_checked_at": "2026-10-01",
             "elevation_source": {
               "type": "map",
               "title": "SRTM30m elevation samples for Brunei living settlements",
@@ -2399,89 +2402,599 @@
               "reference_type": "water_surface",
               "accuracy": "approximate",
               "source": {
-                "type": "research",
-                "title": "Impact of Seasonal Variation and Population Growth on Coliform Bacteria Concentrations in the Brunei River: A Temporal Analysis with Future Projection",
-                "publisher": "Water (MDPI)",
                 "url": "https://www.mdpi.com/2073-4441/17/7/1069",
+                "type": "academic",
+                "title": "Impact of Seasonal Variation and Population Growth on Coliform Bacteria Concentrations in the Brunei River: A Temporal Analysis with Future Projection",
+                "publisher": "Water / MDPI",
+                "language": "en",
+                "published_at": "2025-04-03",
+                "accessed": "2026-10-01",
                 "authority": "high",
-                "accessed": "2026-09-28",
-                "notes": "Исследование помещает традиционный свайный Kampong Ayer непосредственно в Sungai Brunei и описывает нижнее течение как эстуарную систему под сильным влиянием приливов."
+                "used_for": [
+                  "river hydrology",
+                  "tidal environment",
+                  "water quality",
+                  "rainy-season contamination"
+                ]
               },
-              "checked_at": "2026-09-28",
-              "notes": "Около 0 м MSL — характеристика водной поверхности среды объекта, а не отметка пола домов/настилов. Поселение стоит на сваях над приливной рекой; фактический уровень воды меняется с приливом."
-            }
+              "checked_at": "2026-10-01",
+              "notes": "Нулевая отметка используется только как приблизительная характеристика приливной водной поверхности. Это не отметка пола домов или мостков; фактический уровень реки меняется с приливом."
+            },
+            "geo_points": [
+              {
+                "type": "pier",
+                "name": "Городская набережная — исторически зафиксированная точка посадки на водное такси",
+                "coordinates": {
+                  "lat": 4.88668,
+                  "lon": 114.944,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "source": {
+                  "url": "https://commons.wikimedia.org/wiki/File:Pier_where_we_caught_the_water_taxi_to_Kampong_Ayer_(17968119034).jpg",
+                  "type": "wikimedia_commons",
+                  "title": "Pier where we caught the water taxi to Kampong Ayer (17968119034).jpg",
+                  "publisher": "Wikimedia Commons",
+                  "language": "en",
+                  "published_at": "2014-04-27",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "city-side water taxi pier",
+                    "access point",
+                    "camera coordinates"
+                  ]
+                },
+                "notes": "Координата камеры у причала из Commons; конкретное место посадки оператор может менять.",
+                "coordinates_checked_at": "2026-10-01"
+              },
+              {
+                "type": "viewpoint",
+                "name": "У Cultural and Tourism Gallery",
+                "coordinates": {
+                  "lat": 4.884535,
+                  "lon": 114.944509,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "source": {
+                  "url": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer_Cultural_%26_Tourism_Gallery.jpg",
+                  "type": "wikimedia_commons",
+                  "title": "Kampong Ayer Cultural & Tourism Gallery.jpg",
+                  "publisher": "Wikimedia Commons",
+                  "language": "en",
+                  "published_at": "2019-02-08",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "gallery image",
+                    "visual viewpoint",
+                    "camera coordinates",
+                    "license provenance"
+                  ]
+                },
+                "notes": "Геопривязанная камера у здания галереи; полезная опорная точка центрального пешего участка.",
+                "coordinates_checked_at": "2026-10-01"
+              }
+            ]
           },
           "logistics": {
-            "access": "С набережной BSB на вода такси, затем пешком по деревянным мосткам.",
-            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
-            "last_mile": null,
+            "access": "Самый прямой самостоятельный вход — короткая переправа на водном такси с городской набережной к одному из причалов Кампонг-Айера; для первого знакомства удобнее выйти у Kampong Ayer Cultural and Tourism Gallery и дальше идти по мосткам.",
+            "public_transport": "До центральной набережной можно добраться городским автобусом или Dart. Официальный туристический портал указывает средний автобусный тариф около BND 1 и общий режим сервиса примерно 06:00–20:00, но это не расписание конкретного маршрута.",
+            "last_mile": "Последний участок — водное такси и пешая сеть мостков. Единого «входа в Кампонг-Айер» нет: это протяжённый жилой район с несколькими причалами.",
             "typical_visit_hours": [
               2,
-              4
+              5
             ],
-            "permit_or_guide": null,
+            "permit_or_guide": "гид не требуется",
             "modes": {
-              "public_transport": "до набережная автобус/пешком, далее вода такси",
-              "taxi_ridehail": "Dart до набережная",
-              "moped": "оставить на суше",
-              "walking": "после лодки обычно 0.5–3 км по мосткам"
+              "public_transport": "автобус или Dart до центральной набережной, затем водное такси",
+              "taxi_ridehail": "Dart до Waterfront / Royal Wharf",
+              "moped": "оставить на суше; внутри поселения мопед не является средством перемещения",
+              "boat": "водное такси между городской набережной и причалами поселения; цену и пункт высадки согласовать до посадки",
+              "walking": "по мосткам; дистанция зависит от выбранных деревень и состояния связей между участками"
             },
-            "water": "магазины есть не везде и не всегда; воду брать с берега",
-            "overnight_and_camping": "палатка на мостках/под домами недопустима; ночёвка только по приглашению/в размещении",
-            "terrain_and_movement": "Узкие мостки и ступени к лодкам; часть района неудобна при ограниченной мобильности.",
-            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "terrain_and_movement": "Перемещение сочетает посадку в низкую скоростную лодку, ступени/пандусы к причалам и мостки над водой. Покрытие неоднородно: дерево, бетон и более новые участки; состояние конкретного пролёта может отличаться от соседнего.",
+            "access_requirements": "Жилые мостки в обычном режиме доступны без гида, но частные дома, дворы и хозяйственные помещения не являются публичными объектами. Закрытый или повреждённый проход не обходить через частную территорию без приглашения.",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "access_options": [
+              {
+                "id": "water_taxi_from_city_waterfront",
+                "origin": "центральная набережная Бандар-Сери-Бегавана",
+                "modes": [
+                  "walking",
+                  "boat",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Городская набережная.",
+                    "seasonality": "После сильного ливня возможны скользкие участки.",
+                    "navigation": "Идти к действующему месту посадки водных такси у Waterfront / Royal Wharf.",
+                    "notes": "Исторически геопривязанная точка причала сохранена как ориентир, но действующую посадку определять на месте."
+                  },
+                  {
+                    "mode": "boat",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "river"
+                    ],
+                    "condition": "Короткая переправа на местном водном такси.",
+                    "seasonality": "Сильный ливень и плохая видимость ухудшают условия на воде.",
+                    "navigation": "До посадки назвать нужный причал, например район Cultural and Tourism Gallery.",
+                    "notes": "Недавние наблюдения дают разные тарифы; цену подтверждать до посадки."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "wood_boardwalk",
+                      "concrete_boardwalk"
+                    ],
+                    "condition": "Мостки разного возраста и состояния.",
+                    "seasonality": "После дождя дерево и гладкие участки скользкие.",
+                    "navigation": "Строить маршрут от фактического причала; повреждённый пролёт считать закрытием конкретной связи.",
+                    "notes": "Универсального километража для всего Кампонг-Айера нет."
+                  }
+                ]
+              },
+              {
+                "id": "dart_to_waterfront_then_boat",
+                "origin": "аэропорт / районы Бандар-Сери-Бегавана",
+                "modes": [
+                  "ride_hailing",
+                  "walking",
+                  "boat",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "ride_hailing",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Dart до центральной набережной.",
+                    "seasonality": null,
+                    "navigation": null,
+                    "notes": "Официальный Brunei Tourism рекомендует Dart как наиболее удобный вариант без частной машины."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Короткий проход по набережной к действующей посадке.",
+                    "seasonality": null,
+                    "navigation": "Waterfront / Royal Wharf.",
+                    "notes": null
+                  },
+                  {
+                    "mode": "boat",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "river"
+                    ],
+                    "condition": "Короткая переправа на местном водном такси.",
+                    "seasonality": "Сильный ливень и плохая видимость ухудшают условия на воде.",
+                    "navigation": "До посадки назвать нужный причал, например район Cultural and Tourism Gallery.",
+                    "notes": "Недавние наблюдения дают разные тарифы; цену подтверждать до посадки."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "wood_boardwalk",
+                      "concrete_boardwalk"
+                    ],
+                    "condition": "Мостки разного возраста и состояния.",
+                    "seasonality": "После дождя дерево и гладкие участки скользкие.",
+                    "navigation": "Строить маршрут от фактического причала; повреждённый пролёт считать закрытием конкретной связи.",
+                    "notes": "Универсального километража для всего Кампонг-Айера нет."
+                  }
+                ]
+              },
+              {
+                "id": "city_bus_to_waterfront_then_boat",
+                "origin": "районы Бандар-Сери-Бегавана",
+                "modes": [
+                  "public_transport",
+                  "walking",
+                  "boat",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "public_transport",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Городской автобус до центральной части столицы.",
+                    "seasonality": null,
+                    "navigation": null,
+                    "notes": "Официальный туристический портал указывает средний тариф около BND 1 и общий режим примерно 06:00–20:00; линию и интервал проверять перед выездом."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "Переход от остановки к набережной.",
+                    "seasonality": null,
+                    "navigation": "К действующей посадке водных такси.",
+                    "notes": null
+                  },
+                  {
+                    "mode": "boat",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "river"
+                    ],
+                    "condition": "Короткая переправа на местном водном такси.",
+                    "seasonality": "Сильный ливень и плохая видимость ухудшают условия на воде.",
+                    "navigation": "До посадки назвать нужный причал, например район Cultural and Tourism Gallery.",
+                    "notes": "Недавние наблюдения дают разные тарифы; цену подтверждать до посадки."
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "wood_boardwalk",
+                      "concrete_boardwalk"
+                    ],
+                    "condition": "Мостки разного возраста и состояния.",
+                    "seasonality": "После дождя дерево и гладкие участки скользкие.",
+                    "navigation": "Строить маршрут от фактического причала; повреждённый пролёт считать закрытием конкретной связи.",
+                    "notes": "Универсального километража для всего Кампонг-Айера нет."
+                  }
+                ]
+              }
+            ],
+            "water": "Речную воду не рассматривать как источник питьевой воды. Проверенная публичная точка бесплатного питьевого наполнения на маршруте не закреплена.",
+            "water_structured": {
+              "at_object": null,
+              "quality": "unknown",
+              "last_reliable_point": null,
+              "natural_sources": [
+                {
+                  "type": "tidal_river",
+                  "potability": "technical_only",
+                  "notes": "Brunei River не является питьевым источником: исследование 2025 года выявило устойчивое микробное загрязнение и более высокие уровни колиформ в дождливый сезон."
+                }
+              ],
+              "notes": "В домах поселения есть коммунальная вода, но это не означает свободно доступный путешественнику питьевой кран. Для самостоятельной прогулки воду покупать/набирать на суше или в явно публичной торговой точке."
+            },
+            "supplies": {
+              "status": "partially_mapped",
+              "summary": "В Кампонг-Айере есть магазины и небольшие точки питания, но их режим и доступность неодинаковы. Для длинной петли воду и базовый запас еды разумно взять до переправы.",
+              "poi_ids": []
+            },
+            "overnight_and_camping": "Общее правило о палатке не подтверждено. Жилая инфраструктура не рассматривается как свободный кемпинг: ночёвка — в размещении или только с явным разрешением хозяина конкретного места.",
+            "overnight": {
+              "status": "unclear",
+              "summary": "Надёжного общего правила о туристической палатке внутри жилой сети найти не удалось. Не считать мостки, причалы, площадки под домами или служебные участки свободным местом кемпинга; для ночёвки использовать оформленное размещение либо явно полученное разрешение хозяина конкретного места.",
+              "source_refs": []
+            }
           },
           "climate": {
-            "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
-            "heat_rain_notes": "Экваториальный климат: высокая влажность и жара круглый год; сильный ливень возможен в любой месяц.",
-            "site_specific_notes": null
+            "best_period": "Конец января–март и часть июля–сентября обычно дают более сухие окна; для мостков и лодки важнее фактический прогноз и недавний дождь.",
+            "heat_rain_notes": "Жарко и влажно круглый год. Исследование Brunei River отмечает основной максимум дождей примерно с октября по январь и дополнительный максимум в мае–июле.",
+            "site_specific_notes": "Ливень одновременно ухудшает сцепление на мостках, снижает видимость на реке и повышает поверхностный сток; в исследовании 2025 года дождливый сезон связан с ростом колиформ."
           },
           "operations": {
-            "hours": "Жилой район не имеет единого графика; отдельные галереи/дома имеют собственные часы.",
-            "ticket": "Лодка и частные посещения оплачиваются отдельно; цену вода такси согласовывать до посадки.",
-            "closure_notes": null,
-            "last_verified": "2026-09-28",
-            "official_url": "https://www.bruneitourism.com/places/kampong-ayer/"
+            "hours": "Сам жилой район не имеет единого режима. Kampong Ayer Cultural and Tourism Gallery на 2026-10-01 указана официальным туристическим порталом: пн–ср, сб–вс 09:00–16:30; чт 09:00–12:00. Пятница на странице не указана как рабочий день.",
+            "ticket": "Единого входного билета в жилой район нет. Водное такси оплачивается отдельно; текущую цену короткой переправы подтверждать до посадки.",
+            "closure_notes": "Повреждение отдельного мостка может разорвать конкретную пешую связь между участками даже при обычной доступности остального поселения.",
+            "last_verified": "2026-10-01",
+            "official_url": "https://www.bruneitourism.com/places/kampong-ayer/",
+            "status": "open_living_settlement"
           },
           "safety": {
-            "crime_context": "Сопоставимой официальной статистики преступности именно по объекту нет; вместо фиктивного объект преступность оценка приведены реальные операционные и природные риски.",
+            "crime_context": "Объектная криминальная статистика для Кампонг-Айера не подменяется общими рейтингами страны.",
             "main_risks": [
-              "падение с мостков",
-              "скользкое дерево после дождя",
-              "лодочная безопасность",
-              "уважение частной жизни жителей"
+              "повреждённые или разреженные доски на старых мостках",
+              "скользкие покрытия после дождя",
+              "падение предметов или человека в реку на участках без ограждения",
+              "посадка и высадка из скоростного водного такси",
+              "небезопасное продолжение маршрута через закрытый или обрушившийся пролёт"
             ],
-            "sensitive_areas": [],
-            "confidence": "отдельная официальная статистика преступности по объекту отсутствует"
+            "sensitive_areas": [
+              "частные жилые дома и веранды",
+              "дети и бытовая жизнь жителей",
+              "религиозные помещения во время богослужения"
+            ],
+            "confidence": "Состояние конкретных проходов быстро меняется. Недавние сообщения 2026 года используются как датированные сигналы для проверки маршрута, а не как вечная характеристика всего Кампонг-Айера."
           },
           "media": {
             "photo_suitability_5": 5,
             "video_suitability_5": 5,
             "visual_scouting": {
-              "best_time": "06:30–09:00 и 16:30–18:15",
-              "best_weather_light": "пасмурно после дождя даёт мягкий свет; сильный ливень опасен на мостках",
+              "best_time": "Раннее утро даёт рабочую жизнь водных такси и более низкое солнце; поздний день полезен для силуэтов домов и отражений на реке. Для галереи ориентироваться на её официальные часы, а не на свет.",
+              "best_weather_light": "После дождя дерево и крыши становятся визуально насыщеннее, но мокрые мостки требуют больше внимания. На воде чистый низкий свет лучше отделяет слои свайных домов; тяжёлый ливень резко снижает видимость.",
               "viewpoints_for_photo_video": [
-                "лодка на средней дистанции вдоль свайных фасадов",
-                "длинная перспектива по мостку",
-                "пристань у Cultural and туризм Gallery"
+                {
+                  "id": "gallery_waterfront_point",
+                  "name": "У Kampong Ayer Cultural and Tourism Gallery",
+                  "description": "Геопривязанная точка фотографии у галереи. Она удобна как опорная точка, где видны общественная инфраструктура Кампонг-Айера, причал и переход от лодочного маршрута к мосткам.",
+                  "coordinates": {
+                    "lat": 4.884535,
+                    "lon": 114.944509,
+                    "elevation_m": null
+                  },
+                  "access": "Короткая переправа с городской набережной, затем пешком у галереи.",
+                  "view": {
+                    "description": "галерея, причальная зона, мостки и речной фронт"
+                  },
+                  "best_time": "утро или поздний день; посещение самой галереи — только в её рабочие часы",
+                  "best_weather_light": "мягкий боковой свет; после дождя покрытия отражают больше света",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "собирает причал, здания и сеть мостков в одном пространстве"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "удобен для общественной архитектуры и повседневных сцен без сильного искажения"
+                    }
+                  ],
+                  "source": {
+                    "url": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer_Cultural_%26_Tourism_Gallery.jpg",
+                    "type": "wikimedia_commons",
+                    "title": "Kampong Ayer Cultural & Tourism Gallery.jpg",
+                    "publisher": "Wikimedia Commons",
+                    "language": "en",
+                    "published_at": "2019-02-08",
+                    "accessed": "2026-10-01",
+                    "authority": "medium",
+                    "used_for": [
+                      "gallery image",
+                      "visual viewpoint",
+                      "camera coordinates",
+                      "license provenance"
+                    ]
+                  }
+                },
+                {
+                  "id": "central_boardwalk_point",
+                  "name": "Центральный участок мостков",
+                  "description": "Геопривязанная точка 2019 года внутри жилой сети. Ракурс показывает не панораму «водной деревни», а человеческий масштаб проходов между домами — то, как реально устроено движение внутри поселения.",
+                  "coordinates": {
+                    "lat": 4.88353,
+                    "lon": 114.943347,
+                    "elevation_m": null
+                  },
+                  "access": "Пешком по жилым мосткам от одного из центральных причалов; состояние прохода проверять на месте.",
+                  "view": {
+                    "description": "мостки, дома на сваях и повседневная пространственная структура поселения"
+                  },
+                  "best_time": "раннее утро или поздний день",
+                  "best_weather_light": "рассеянный свет хорошо работает в тесных проходах; после ливня настил скользкий",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "нужен для узких проходов, где дистанции до домов малы"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "передаёт масштаб жилой среды без чрезмерного расширения пространства"
+                    }
+                  ],
+                  "source": {
+                    "url": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer_(Water_Village)_7.jpg",
+                    "type": "wikimedia_commons",
+                    "title": "Kampong Ayer (Water Village) 7.jpg",
+                    "publisher": "Wikimedia Commons",
+                    "language": "en",
+                    "published_at": "2019-02-08",
+                    "accessed": "2026-10-01",
+                    "authority": "medium",
+                    "used_for": [
+                      "gallery image",
+                      "visual viewpoint",
+                      "camera coordinates",
+                      "license provenance"
+                    ]
+                  }
+                },
+                {
+                  "id": "boat_channel_point",
+                  "name": "Лодочный канал восточнее центральных причалов",
+                  "description": "Геопривязанная фотография 2022 года сделана с речного маршрута. Это сильная точка для чтения Кампонг-Айера как транспортной системы: дома, причалы и водные такси видны с воды, а не как фасад с берега.",
+                  "coordinates": {
+                    "lat": 4.885474,
+                    "lon": 114.945348,
+                    "elevation_m": null
+                  },
+                  "access": "Только с лодки; заранее сказать водителю, что нужен не просто кратчайший переход, а проход вдоль поселения.",
+                  "view": {
+                    "description": "свайные фасады, причалы, водные такси и связь жилых кварталов с рекой"
+                  },
+                  "best_time": "раннее утро или поздний день",
+                  "best_weather_light": "низкий свет даёт отражения и подчёркивает ряды свай; при сильном дожде точка теряет смысл из-за видимости",
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "на движущейся лодке позволяет работать с отдельными группами домов и причалами"
+                    },
+                    {
+                      "type": "wide",
+                      "why": "показывает целый канал и несколько слоёв поселения"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "полезен для архитектурных деталей с воды без приближения к частным домам"
+                    }
+                  ],
+                  "source": {
+                    "url": "https://commons.wikimedia.org/wiki/File:Kampung_Ayer_(19042022).jpg",
+                    "type": "wikimedia_commons",
+                    "title": "Kampung Ayer (19042022).jpg",
+                    "publisher": "Wikimedia Commons",
+                    "language": "en",
+                    "published_at": "2022-04-19",
+                    "accessed": "2026-10-01",
+                    "authority": "medium",
+                    "used_for": [
+                      "gallery image",
+                      "visual viewpoint",
+                      "camera coordinates",
+                      "license provenance"
+                    ]
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "При низкой воде сильнее видны сваи и нижняя зона берегов/илистого межприливного пространства; при высокой воде дома визуально теснее связаны с зеркалом реки.",
+                "После дождя мокрые настилы и крыши дают больше отражений, но состояние деревянных проходов становится более критичным.",
+                "Утренний и вечерний пассажирский трафик водных такси лучше показывает поселение как работающую транспортную систему, а не декорацию."
+              ],
+              "video_activity": [
+                "короткие переправы водных такси между городским берегом и деревнями",
+                "посадка и высадка у жилых причалов",
+                "повседневное движение жителей по мосткам",
+                "изменение пространства свай и береговой кромки вместе с приливом"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "нужен для тесных мостков и близкой жилой архитектуры"
+                },
+                {
+                  "type": "standard",
+                  "why": "подходит для повседневной среды и речных сцен"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "позволяет с лодки снимать архитектурные детали без вторжения к частным домам"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "полезна для документирования самой переправы и движения по узким проходам, когда основную камеру неудобно держать наготове"
+                }
               ]
             },
-            "drone": "Не запускать над жилыми домами без разрешения и проверки авиационных правил.",
-            "filming_restrictions": "Для портретов и интерьеров получать согласие; не снимать детей и частную жизнь навязчиво."
+            "drone": {
+              "visual_value": "Сверху хорошо читаются структура каналов, мостков и плотность свайной застройки, но это одновременно съёмка над жилой территорией.",
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "применяются действующие требования Department of Civil Aviation Brunei к беспилотным воздушным судам",
+                "не считать жилые кварталы автоматически допустимой зоной запуска даже после авиационного разрешения",
+                "частная жизнь жителей и близость городской инфраструктуры требуют отдельной проверки конкретного места и сценария полёта"
+              ],
+              "checked_at": "2026-10-01",
+              "source": {
+                "url": "https://www.dca.gov.bn/dca-form-category/unmanned-aircraft/",
+                "type": "government_official",
+                "title": "Unmanned Aircraft",
+                "publisher": "Department of Civil Aviation, Brunei Darussalam",
+                "language": "en",
+                "accessed": "2026-10-01",
+                "authority": "high",
+                "used_for": [
+                  "drone rules",
+                  "registration and permit context"
+                ]
+              }
+            },
+            "filming_restrictions": "Общий вид домов с публичного мостка или лодки не превращает частную жизнь в публичное мероприятие. Для портретов, интерьеров, веранд и явно частных бытовых сцен получать согласие; детей не выделять как «этнографический объект» без разрешения взрослых."
           },
           "annotation": {
-            "narrative": "Кампонг-Айер — сеть водных деревень на сваях вдоль Бруней река. Европейские путешественники описывали огромный водный город здесь уже в XVI веке; сегодня это жилые кварталы со школами, мечетями, пожарной и полицейской инфраструктурой.",
-            "culture_ethnography": "Ключ — повседневность, а не экзотика свай: лодка заменяет улицу, пристань — подъезд, мостки — тротуар. Частный дом не является музеем; интерьеры и портреты снимаются только по приглашению.",
-            "geography_geology": "Приливная среда Бруней река меняет уровень воды, свет и доступ в течение дня; утром и вечером вода становится сильным естественным отражателем."
-          },
-          "traveler_reports": {
-            "recurring_issues": [
-              "цену вода такси согласовать до посадки",
-              "мокрые мостки скользкие"
+            "canonical_story_from_sections": true,
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Кампонг-Айер — протяжённая группа свайных поселений на Брунейской реке напротив центральной части Бандар-Сери-Бегавана. Это не реконструкция и не туристическая деревня: здесь живут люди, действуют мечети, школы и общественные службы, а водные такси связывают жилые кварталы с городским берегом. Официальный Brunei Tourism рекомендует знакомиться с районом с воды и по мосткам, начиная с Cultural and Tourism Gallery.",
+                "source_refs": [
+                  "src_000360",
+                  "src_904610",
+                  "src_904620"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": "История Кампонг-Айера связана с историей самой столицы Брунея. До переноса административного центра на сушу политическая, торговая и образовательная жизнь султаната была тесно связана с рекой. В период британской резидентуры после 1906 года управление и городская инфраструктура всё сильнее переносились на сушу. Исследование Universiti Brunei Darussalam показывает, что эта перестройка не мгновенно уничтожила водный уклад: рыболовство, ремесло, торговля и религиозное обучение продолжались, а малайские школы с 1914 года стали одним из каналов модернизации.",
+                "source_refs": [
+                  "src_904611"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "Смысл Кампонг-Айера — не в «экзотических домиках», а в отдельной городской логике. Река выполняет функцию улицы, причал — входа в квартал, а мостки — пешеходной сети. Традиционные занятия включали рыболовство, лодочное дело, ремёсла и торговлю; при этом современная община пользуется электричеством, связью и наземным городом. Туристическая картинка «старого Брунея» поэтому неполна: это жилая среда, которая постоянно перестраивается и существует внутри современной столицы.",
+                "source_refs": [
+                  "src_904611",
+                  "src_904620"
+                ]
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Исследования UBD описывают Кампонг-Айер через устойчивость общинных связей и одновременно через переселение. Государственные программы переселения на сушу, пожары и миграция последних десятилетий меняли состав жителей и чувство принадлежности к месту. Для полевого наблюдения важнее смотреть не на «традиционный костюм», а на материальную организацию повседневности: лодочные маршруты, границу публичного мостка и частного дома, соседские связи и сосуществование старых деревянных построек с более новыми конструкциями.",
+                "source_refs": [
+                  "src_904612",
+                  "src_904611"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Поселения стоят в нижнем течении Брунейской реки в приливной эстуарной среде. Уровень воды и вид нижней части свай меняются в течение суток, а сеть каналов определяет реальную связность кварталов. Исследование воды 2025 года отмечает для участков у Кампонг-Айера устойчивое микробное загрязнение и усиление колиформ в дождливый сезон, поэтому речную воду нельзя считать природным питьевым источником.",
+                "source_refs": [
+                  "src_000492"
+                ]
+              }
             ]
           },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "walkway_condition_setia_a_tamoi_tengah",
+              "summary": "В июле 2026 в местном сообществе распространялось обращение жителей Setia A и Tamoi Tengah о срочном ремонте проходов с прямым упоминанием риска падения туристов в воду. Для маршрута это означает: состояние мостков надо оценивать поквартально и в день визита, а не переносить состояние благоустроенного участка у галереи на всю сеть.",
+              "observed_period": "2026-07",
+              "source_refs": [
+                "src_904613"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "walkway_collapse",
+              "summary": "В августе 2026 местное обсуждение сообщало об очередном обрушении прохода в Кампонг-Айере. Источник не даёт инженерной карты повреждений, поэтому карточка не объявляет закрытым весь район; сигнал используется для обязательной проверки фактической связности выбранной пешей петли.",
+              "observed_period": "2026-08",
+              "source_refs": [
+                "src_904614"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "water_taxi_access_and_negotiation",
+              "summary": "В марте 2026 местные участники советовали для Кампонг-Айера просто подходить к причалу и договариваться с водителями лодок; цену рекомендовали согласовывать на месте. Это подтверждает практическую модель «причал → ближайшая лодка», но не является фиксированным тарифом.",
+              "observed_period": "2026-03",
+              "source_refs": [
+                "src_904615"
+              ],
+              "confidence": "medium"
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",
@@ -2507,38 +3020,286 @@
           "provider": "Wikimedia Commons",
           "license": "CC BY-SA 4.0",
           "artist": "Yu Chu Chin",
-          "last_checked": "2026-09-28",
+          "last_checked": "2026-10-01",
           "gallery": [
             {
-              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kampong_Ayer,_Brunei_in_January_2026_(DSCF1422).jpg",
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kampong%20Ayer%2C%20Brunei%20in%20January%202026%20%28DSCF1422%29.jpg",
               "source_page": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer,_Brunei_in_January_2026_(DSCF1422).jpg",
               "provider": "Wikimedia Commons",
               "license": "CC BY-SA 4.0",
               "artist": "Yu Chu Chin",
-              "last_checked": "2026-09-30"
+              "last_checked": "2026-10-01",
+              "subject": "Современный вид Кампонг-Айера и водных такси"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kampong%20Ayer%20Cultural%20%26%20Tourism%20Gallery.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer_Cultural_%26_Tourism_Gallery.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC0 1.0",
+              "artist": "Mx. Granger",
+              "last_checked": "2026-10-01",
+              "subject": "Kampong Ayer Cultural and Tourism Gallery"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kampong%20Ayer%20%28Water%20Village%29%207.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer_(Water_Village)_7.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC0 1.0",
+              "artist": "Mx. Granger",
+              "last_checked": "2026-10-01",
+              "subject": "Жилые дома и мостки внутри водного поселения"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kampung%20Ayer%20%2819042022%29.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Kampung_Ayer_(19042022).jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 2.0",
+              "artist": "Chin Yu Chu",
+              "last_checked": "2026-10-01",
+              "subject": "Кампонг-Айер с водного маршрута"
             }
           ]
         },
         "sources": [
           {
             "url": "https://www.bruneitourism.com/places/kampong-ayer/",
+            "type": "government_tourism",
+            "title": "Kampong Ayer",
             "publisher": "Brunei Tourism / Tourism Development Department",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
             "used_for": [
-              "description",
-              "access",
-              "hours",
+              "official description",
+              "self-guided access",
+              "public bus context",
+              "Dart context"
+            ]
+          },
+          {
+            "url": "https://www.bruneitourism.com/places/kampong-ayer-cultural-and-tourism-gallery/",
+            "type": "government_tourism",
+            "title": "Kampong Ayer Cultural and Tourism Gallery",
+            "publisher": "Brunei Tourism / Tourism Development Department",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "gallery history",
+              "current opening hours",
+              "visitor starting point"
+            ]
+          },
+          {
+            "url": "https://expert.ubd.edu.bn/en/publications/to-live-on-water-lifestyle-of-the-kampong-ayer-community-during-t-3/",
+            "type": "academic",
+            "title": "To live on water: Lifestyle of the Kampong Ayer community during the British Residency period, 1906–1941",
+            "publisher": "Universiti Brunei Darussalam / Academy of Brunei Studies",
+            "language": "en",
+            "published_at": "2015-01-01",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "history",
+              "economy",
+              "education",
+              "resettlement",
+              "ethnography"
+            ]
+          },
+          {
+            "url": "https://repository.ubd.edu.bn/entities/publication/451f0c3b-ca52-4425-952b-57f337f86c85/full",
+            "type": "academic",
+            "title": "Space, Place, and Identity: How Migration have Transformed Kampong Ayer (Brunei)",
+            "publisher": "Institute of Asian Studies, Universiti Brunei Darussalam",
+            "language": "en",
+            "published_at": "2017",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "migration",
+              "fires",
+              "place identity",
+              "modern transformation"
+            ]
+          },
+          {
+            "url": "https://www.mdpi.com/2073-4441/17/7/1069",
+            "type": "academic",
+            "title": "Impact of Seasonal Variation and Population Growth on Coliform Bacteria Concentrations in the Brunei River: A Temporal Analysis with Future Projection",
+            "publisher": "Water / MDPI",
+            "language": "en",
+            "published_at": "2025-04-03",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "river hydrology",
+              "tidal environment",
+              "water quality",
+              "rainy-season contamination"
+            ]
+          },
+          {
+            "url": "https://www.visitsoutheastasia.travel/top-sights/kampong-ayer/",
+            "type": "official",
+            "title": "Kampong Ayer",
+            "publisher": "Visit Southeast Asia / ASEAN Tourism",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "self-guided walking",
+              "water taxi access",
+              "community utilities",
               "visitor logistics"
-            ],
-            "accessed": "2026-09-28"
+            ]
           },
           {
             "url": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer,_Brunei_in_January_2026_(DSCF1416).jpg",
+            "type": "wikimedia_commons",
+            "title": "Kampong Ayer, Brunei in January 2026 (DSCF1416).jpg",
             "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2026-01-18",
+            "accessed": "2026-10-01",
+            "authority": "medium",
             "used_for": [
-              "illustration",
+              "cover image",
               "license provenance"
-            ],
-            "accessed": "2026-09-28"
+            ]
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer,_Brunei_in_January_2026_(DSCF1422).jpg",
+            "type": "wikimedia_commons",
+            "title": "Kampong Ayer, Brunei in January 2026 (DSCF1422).jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2026-01-18",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery image",
+              "license provenance"
+            ]
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer_Cultural_%26_Tourism_Gallery.jpg",
+            "type": "wikimedia_commons",
+            "title": "Kampong Ayer Cultural & Tourism Gallery.jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2019-02-08",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery image",
+              "visual viewpoint",
+              "camera coordinates",
+              "license provenance"
+            ]
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Kampong_Ayer_(Water_Village)_7.jpg",
+            "type": "wikimedia_commons",
+            "title": "Kampong Ayer (Water Village) 7.jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2019-02-08",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery image",
+              "visual viewpoint",
+              "camera coordinates",
+              "license provenance"
+            ]
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Kampung_Ayer_(19042022).jpg",
+            "type": "wikimedia_commons",
+            "title": "Kampung Ayer (19042022).jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2022-04-19",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery image",
+              "visual viewpoint",
+              "camera coordinates",
+              "license provenance"
+            ]
+          },
+          {
+            "url": "https://commons.wikimedia.org/wiki/File:Pier_where_we_caught_the_water_taxi_to_Kampong_Ayer_(17968119034).jpg",
+            "type": "wikimedia_commons",
+            "title": "Pier where we caught the water taxi to Kampong Ayer (17968119034).jpg",
+            "publisher": "Wikimedia Commons",
+            "language": "en",
+            "published_at": "2014-04-27",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "city-side water taxi pier",
+              "access point",
+              "camera coordinates"
+            ]
+          },
+          {
+            "url": "https://www.reddit.com/r/nasikatok/comments/1uld5i1/people_of_kampong_ayer_setia_a_and_tamoi_tengah/",
+            "type": "reddit",
+            "title": "People of Kampong Ayer (Setia A and Tamoi Tengah) call for urgent repairs of their walkways",
+            "publisher": "Reddit / r/nasikatok",
+            "language": "en",
+            "published_at": "2026-07-02",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "walkway condition"
+            ]
+          },
+          {
+            "url": "https://www.reddit.com/r/nasikatok/comments/1vxji7u/kg_ayer_walkway_collapse_again_how_to_convince/",
+            "type": "reddit",
+            "title": "Kg Ayer walkway collapse again",
+            "publisher": "Reddit / r/nasikatok",
+            "language": "en",
+            "published_at": "2026-08-24",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "walkway collapse report"
+            ]
+          },
+          {
+            "url": "https://www.reddit.com/r/Brunei/comments/1s3tsyp/activities_for_a_7_hour_layover_in_brunei/",
+            "type": "reddit",
+            "title": "Activities for a 7 hour layover in Brunei",
+            "publisher": "Reddit / r/Brunei",
+            "language": "en",
+            "published_at": "2026-03-26",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "water taxi access",
+              "fare negotiation"
+            ]
+          },
+          {
+            "url": "https://www.dca.gov.bn/dca-form-category/unmanned-aircraft/",
+            "type": "government_official",
+            "title": "Unmanned Aircraft",
+            "publisher": "Department of Civil Aviation, Brunei Darussalam",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "drone rules",
+              "registration and permit context"
+            ]
           },
           {
             "url": "https://deps.mofe.gov.bn/",
@@ -2561,64 +3322,128 @@
         ],
         "verification": {
           "dynamic_fields": [
-            "hours",
-            "tickets",
-            "permits",
-            "access",
+            "gallery hours",
+            "water taxi fare",
+            "walkway condition",
+            "boat access",
             "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Кампонг-Айер — сеть водных деревень на сваях вдоль Бруней река. Европейские путешественники описывали огромный водный город здесь уже в XVI веке; сегодня это жилые кварталы со школами, мечетями, пожарной и полицейской инфраструктурой. Ключ — повседневность, а не экзотика свай: лодка заменяет улицу, пристань — подъезд, мостки — тротуар. Частный дом не является музеем; интерьеры и портреты снимаются только по приглашению. Приливная среда Бруней река меняет уровень воды, свет и доступ в течение дня; утром и вечером вода становится сильным естественным отражателем. Сезон: Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год. Лучшее время: 06:30–09:00 и 16:30–18:15 Свет и погода: пасмурно после дождя даёт мягкий свет; сильный ливень опасен на мостках Сильные точки обзора: лодка на средней дистанции вдоль свайных фасадов; длинная перспектива по мостку; пристань у Cultural and туризм Gallery.",
+        "narrow": "Кампонг-Айер — живая сеть свайных деревень Бандар-Сери-Бегавана, где река остаётся транспортной улицей, а мостки связывают жилые кварталы и общественные службы. Исторический центр Брунея на воде сегодня особенно интересен контрастом старой пространственной логики, современной перестройки и реальной речной повседневности.",
         "tags": [
           "culture",
           "architecture",
           "living_heritage",
           "history",
-          "religion",
-          "nature",
           "ethnography",
           "urban",
           "water",
-          "market_food",
           "boat_access",
+          "public_transport",
+          "taxi_ridehail",
+          "walking",
           "sunrise_good",
           "sunset_good",
           "weather_sensitive",
           "class_major"
         ],
         "route_meta": {
-          "region_ref": "Бандар-Сери-Бегаван / Бруней-Muara",
+          "region_ref": "Бруней-Муара / Бандар-Сери-Бегаван",
           "locality_ref": "набережная Бандар-Сери-Бегавана",
           "typical_visit_hours": [
             2,
-            4
+            5
           ],
           "transport_modes": {
-            "public_transport": "до набережная автобус/пешком, далее вода такси",
-            "taxi_ridehail": "Dart до набережная",
-            "moped": "оставить на суше",
-            "walking": "после лодки обычно 0.5–3 км по мосткам"
+            "public_transport": "автобус или Dart до центральной набережной, затем водное такси",
+            "taxi_ridehail": "Dart до Waterfront / Royal Wharf",
+            "moped": "оставить на суше; внутри поселения не используется",
+            "boat": "короткая переправа или более длинный маршрут вдоль деревень; цену и высадку согласовать до посадки",
+            "walking": "по мосткам; длина зависит от фактически открытой петли"
           },
-          "walking": "после лодки обычно 0.5–3 км по мосткам",
-          "water": "магазины есть не везде и не всегда; воду брать с берега",
-          "overnight_and_camping": "палатка на мостках/под домами недопустима; ночёвка только по приглашению/в размещении",
-          "permit_or_guide": null,
-          "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
-          "current_status": null,
+          "walking": "Не задавать универсальный километраж: сеть протяжённая, а состояние отдельных связей меняется. Строить маршрут от выбранного причала и проверять повреждённые пролёты.",
+          "water": "Речная вода непригодна как питьевой источник; публичную точку наполнения на маршруте не считать подтверждённой.",
+          "overnight_and_camping": "Надёжного общего правила о палатке не найдено; не считать жилые мостки и причалы свободным кемпингом. Ночёвка — в размещении или с явным разрешением.",
+          "permit_or_guide": "гид не требуется",
+          "best_period": "Более сухие окна обычно в конце января–марте и части июля–сентября; состояние мостков зависит от недавних осадков.",
+          "current_status": "open_living_settlement",
           "main_risks": [
-            "падение с мостков",
+            "локально повреждённые мостки",
             "скользкое дерево после дождя",
-            "лодочная безопасность",
-            "уважение частной жизни жителей"
+            "падение в реку на участках без ограждения",
+            "посадка и высадка из водного такси"
           ],
           "expedition_profile": {
             "default_mode": "самостоятельно",
-            "route_scale": "несколько часов",
-            "terrain_and_movement": "Узкие мостки и ступени к лодкам; часть района неудобна при ограниченной мобильности.",
-            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
-            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
-            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+            "route_scale": "2–5 часов; отдельные деревни можно связывать в более длинную петлю по фактически открытым мосткам",
+            "terrain_and_movement": "водное такси + ступени/пандусы + деревянные и бетонные мостки над приливной рекой",
+            "physical_difficulty_policy": "длительная ходьба и узкие мостки — параметры маршрута; ограничение создаёт не сама длина, а фактическое состояние прохода",
+            "camping_assumption": "наличие палатки не создаёт права на ночёвку в плотной жилой среде",
+            "local_support": "обычный осмотр самостоятельный; местный проводник полезен для заранее согласованного доступа к ремесленникам, частным домам или специальной речной программе"
+          }
+        },
+        "lead": "Кампонг-Айер — живая сеть свайных деревень Бандар-Сери-Бегавана, где река остаётся транспортной улицей, а мостки связывают жилые кварталы и общественные службы. Исторический центр Брунея на воде сегодня особенно интересен контрастом старой пространственной логики, современной перестройки и реальной речной повседневности.",
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-01",
+            "notes": "Исправлена англо-русская смесь: water taxi/BSB/туризм заменены нормальным русским текстом, собственные названия сохранены только там, где нужны."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "повторный объектный QA Kampong Ayer по камбоджийскому эталону",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true
+            },
+            "notes": [
+              "Убран фиктивный универсальный пеший диапазон 0,5–3 км: маршрут зависит от причала, деревень и состояния связей.",
+              "Переправа и длинная речная прогулка разделены; фиксированный текущий тариф не выдумывается.",
+              "Вода структурирована: речная вода явно не считается питьевой, публичная точка наполнения остаётся неподтверждённой.",
+              "История, культура, этнография и география разделены на самостоятельные секции с UBD/официальными/научными источниками.",
+              "Состояние мостков описано датированными сигналами июля–августа 2026, а не общим штампом «может быть скользко».",
+              "Visual recon получил три реальные WGS84-точки из геопривязанных Commons-файлов."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "редакционная приёмка obj_bn_0003",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "ethnography_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest_unknowns": true,
+              "overnight_honest_unknowns": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "gallery_min_5": true
+            },
+            "notes": [
+              "Карточка рассматривает Кампонг-Айер как живую городскую и речную систему, а не туристическую декорацию.",
+              "Современная трансформация через переселение, пожары и миграцию подтверждена исследованиями UBD.",
+              "Галерея используется как удобная стартовая точка, но не подменяет весь объект.",
+              "Галерея доведена до пяти уникальных лицензированных изображений с учётом обложки.",
+              "Динамические поля помечены для перепроверки перед выездом."
+            ]
           }
         }
       },

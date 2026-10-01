@@ -26,9 +26,9 @@ PUBLISH = [
     ("malaysia.json", "MY", "malaysia"),
     ("myanmar.json", "MM", "myanmar"),
     ("philippines.json", "PH", "philippines"),
+    ("singapore.json", "SG", "singapore"),
 ]
 COUNTRY_ONLY = [
-    ("singapore.json", "SG", "singapore"),
     ("thailand.json", "TH", "thailand"),
     ("timor-leste.json", "TL", "timor-leste"),
     ("vietnam.json", "VN", "vietnam"),
@@ -233,6 +233,28 @@ TYPE_BY_NAME.update({
     "Hpa-An karst and caves": "karst",
     "Indawgyi Lake": "lake",
     "Nat Ma Taung / Mount Victoria": "mountain",
+})
+
+# Recovered Singapore object layer: preliminary primary classes for canonical build.
+TYPE_BY_NAME.update({
+    "Marina Bay": "cultural_landscape",
+    "Gardens by the Bay": "cultural_landscape",
+    "Singapore Botanic Gardens": "cultural_landscape",
+    "Chinatown": "historic_city",
+    "Little India": "historic_city",
+    "Kampong Glam": "historic_city",
+    "hawker centres": "market",
+    "Pulau Ubin": "island",
+    "Sungei Buloh Wetland Reserve": "wetland",
+    "Bukit Brown": "cultural_landscape",
+    "Kranji countryside": "cultural_landscape",
+    "Haw Par Villa": "cultural_landscape",
+    "Southern Ridges and Henderson Waves": "natural_landscape",
+    "MacRitchie Reservoir TreeTop Walk": "forest",
+    "Joo Chiat / Katong": "historic_city",
+    "Fort Canning Park": "cultural_landscape",
+    "Gillman Barracks": "historic_building",
+    "Labrador Nature Reserve and WWII coastal landscape": "protected_area",
 })
 
 TAG_ALIASES = {

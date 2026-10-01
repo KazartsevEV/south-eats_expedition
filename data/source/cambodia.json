@@ -8958,7 +8958,24 @@
               "accessed": "2026-09-28",
               "notes": "Модельная высота 6 м для координат 11.328, 103.524 рядом с visitor center. Это оценка рельефа, а не геодезическая отметка."
             },
-            "object_elevation": null
+            "object_elevation": {
+              "representative_m": 6,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "approximate",
+              "source": {
+                "type": "map",
+                "title": "Terrain altitude near Chi Phat Visitor Center",
+                "publisher": "Ventusky / ICON terrain model",
+                "url": "https://www.ventusky.com/11.328%3B103.524",
+                "authority": "medium",
+                "accessed": "2026-09-28",
+                "notes": "Модельная высота 6 м для координат 11.328, 103.524 рядом с visitor center. Это оценка рельефа, а не геодезическая отметка."
+              },
+              "checked_at": "2026-10-01",
+              "notes": "6 м — модельная отметка операционного узла Chi Phat Visitor Center, а не средняя или максимальная высота всей маршрутной сети. Надёжный единый диапазон высот всех community routes не опубликован."
+            }
           },
           "logistics": {
             "access": "Базовая точка — Chi Phat Visitor Center. До Andoung Teuk добираются междугородним автобусом/минивэном по NR48; оттуда официальный сайт предлагает около 17 км наземного трансфера до Чи-Пата или примерно двухчасовой подход по Piphot River. В самой деревне и на самостоятельном village route проводник не обязателен. Дальние лесные маршруты бронируются через общину и включают проводника; многодневные — также лесные убежища, гамак/москитную сетку, воду, питание и обычно повара.",
@@ -9234,7 +9251,7 @@
                   "coordinates": {
                     "lat": 11.32868,
                     "lon": 103.52424,
-                    "elevation_m": 6
+                    "elevation_m": null
                   },
                   "access": "Деревня, без лесного проводника.",
                   "best_time": "раннее утро",
@@ -9302,7 +9319,7 @@
                   "coordinates": {
                     "lat": 11.34195,
                     "lon": 103.53848,
-                    "elevation_m": 16
+                    "elevation_m": null
                   },
                   "access": "Ближняя окрестность Чи-Пата; режим подхода сверять на месте.",
                   "best_time": "утро",
@@ -9458,6 +9475,33 @@
               "license": "CC BY-SA 3.0",
               "artist": "Graham Maclachlan",
               "last_checked": "2026-09-28"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stung%20Proat%20Cardamom%20Mountains.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Stung_Proat_Cardamom_Mountains.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Andyb3947",
+              "last_checked": "2026-10-01",
+              "subject": "влажный лес Южных Кардамонов"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ministry%20of%20Enviroment%20Ranger%20patrols%20the%20Cardamom%20Rainforest.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Ministry_of_Enviroment_Ranger_patrols_the_Cardamom_Rainforest.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Andyb3947",
+              "last_checked": "2026-10-01",
+              "subject": "рейнджерский патруль в лесах Кардамоновых гор"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Koh%20Kong%20logging.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Koh_Kong_logging.JPG",
+              "provider": "Wikimedia Commons / USAID Cambodia",
+              "license": "Public domain (U.S. federal government work)",
+              "artist": "Paul Mason, USAID/Cambodia/OGD",
+              "last_checked": "2026-10-01",
+              "subject": "историческая фиксация незаконной лесозаготовки в Кардамоновых горах, Koh Kong"
             }
           ]
         },
@@ -9785,7 +9829,10 @@
               "Самостоятельный доступ отделён от дальних лесных выходов, где официальный продукт реально включает guide/cook и forest shelters.",
               "Вода из рек и водопадов не объявлена питьевой; разрешение на произвольный лесной лагерь и дрон не выдумано.",
               "Добавлены реальные GPS для visitor center, Chhay Jrey и Chhay Chrei; неизвестные точки дальних маршрутов не получили придуманных координат.",
-              "Высоты у дополнительных geo_points сняты: картографическая отметка без отдельного elevation provenance не выдаётся за проверенную высоту; 6 м остаётся только у primary location с собственным elevation_source."
+              "Высоты у дополнительных geo_points сняты: картографическая отметка без отдельного elevation provenance не выдаётся за проверенную высоту; 6 м остаётся только у primary location с собственным elevation_source.",
+              "object_elevation восстановлен как отдельный факт только для операционного узла Chi Phat Visitor Center: 6 м approximate; он явно не трактуется как высота всей маршрутной сети.",
+              "Высоты внутри visual viewpoints удалены без отдельного elevation provenance.",
+              "Галерея доведена до канонического минимума 5 уникальных медиа с проверенными лицензиями Commons/USAID."
             ]
           },
           "rebuild_v2": {

@@ -18,7 +18,9 @@ For a country with researched food data, `profile.street_food[]` should use rich
 Required rich-row fields:
 - `name`
 - `description` — short, factual description of what the dish is
-- `price_usd_range` — approximate market/street-food price, not a restaurant average
+- `where_common` — where it is actually common/easy to find; country-wide claims need evidence
+- `format` — market / street stall / roadside vendor / local cafe / restaurant, so restaurant pricing is not mislabeled as street food
+- `price_usd_range` — approximate price for the stated format, not a generic restaurant average
 - `price_context` — what market/menu snapshot the range represents
 - `checked_at`
 - `source_refs`
@@ -33,9 +35,13 @@ For a country with researched festival data, `profile.festivals[]` should use ri
 Required rich-row fields:
 - `name`
 - `description` — what is actually observed or done
+- `where_common` — where a traveler can realistically observe it; distinguish nationwide observance from one ceremonial venue
 - `checked_at`
 - `source_refs`
 - `media_id`
+
+Recommended when relevant:
+- `access_cost` — whether ordinary observation is free, ticketed, or venue-dependent
 
 Use `dates_YYYY` for year-specific dates and `status_YYYY` for current cancellations, relocations or other material changes. A recurring traditional description and a current-year operational status are separate facts.
 

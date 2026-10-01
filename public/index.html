@@ -375,6 +375,8 @@ var FIELD_LABELS={
   fauna:'Фауна',common_traveler_risks:'Основные риски для путешественника',sensitive_areas:'Чувствительные и ограниченные зоны',
   natural_hazards:'Природные явления и риски',natural_phenomena:'Природные явления',marine_fauna:'Морские обитатели',
   vector_borne_diseases:'Инфекции, переносимые насекомыми',regional_note:'Региональная оговорка',field_context:'Практическое значение',
+  malaria_context:'Малярия',flora_context:'Растительные сообщества',estuarine_species:'Эстуарные виды',
+  operational_note:'Практическое примечание',hazards:'Основные природные риски',note:'Примечание',
   hydrologic_context:'Гидрологический контекст',operational_context:'Практические риски',operational_rule:'Как использовать данные',
   river:'Река',rivers:'Реки',wetlands:'Водно-болотные угодья',coastline:'Береговая линия',mangroves:'Мангры',
   road:'Автомобильные дороги',river_transport:'Речной транспорт',water_transport:'Водный транспорт',field_note:'Полевое примечание',
@@ -580,7 +582,7 @@ function geoReferenceHTML(g){
   var blocks=[];
   GEO_FIELDS.forEach(function(x){if(g[x[1]]!=null)blocks.push(factCard(x[0],g[x[1]]))});
   if(!blocks.filter(Boolean).length)return '';
-  return '<section class="section"><div class="section-head"><div><div class="eyebrow">'+esc(geoKindLabel(g.kind))+'</div><h2>Справка</h2></div></div><div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
+  return '<section class="section"><div class="section-head"><div><div class="eyebrow">'+esc(geoKindLabel(g.kind,g))+'</div><h2>Справка</h2></div></div><div class="fact-grid">'+blocks.filter(Boolean).join('')+'</div></section>';
 }
 function inheritedGeoContextHTML(child,parent){
   if(!child||!parent)return '';
@@ -675,14 +677,21 @@ function objectGeoLinks(ctx){
   var rows=(ctx.trail||[]).concat(ctx.extra||[]);
   if(!rows.length&&!ctx.nearestRaw)return '<p class="popup-meta">Географическая привязка пока не нормализована.</p>';
   var html=rows.map(function(g){
-    return '<p class="popup-meta"><button class="linklike" data-go="#/region/'+esc(g.id)+'">'+esc(geoKindLabel(g.kind))+': '+esc(g.name||g.id)+'</button></p>';
+    return '<p class="popup-meta"><button class="linklike" data-go="#/region/'+esc(g.id)+'">'+esc(geoKindLabel(g.kind,g))+': '+esc(g.name||g.id)+'</button></p>';
   }).join('');
   if(ctx.nearestRaw&&!rows.some(function(g){return String(g.name||'').toLowerCase()===String(ctx.nearestRaw).toLowerCase()})){
     html+='<p class="popup-meta">Ближайший узел: '+esc(ctx.nearestRaw)+'</p>';
   }
   return html;
 }
-function geoKindLabel(kind){
+function geoKindLabel(kind,g){
+  if(g){
+    if(g.local_admin_type==='mukim')return 'муким';
+    if(g.physical_feature_type==='river')return 'река';
+    var axis=g.axis||(g.migration&&g.migration.axis);
+    if(axis==='cultural_geography')return 'культурная территория';
+    if(axis==='physical_geography')return 'географический объект';
+  }
   var labels={
     country:'страна',region:'регион',province:'провинция',state:'штат',district:'район',
     island:'остров',archipelago:'архипелаг',city:'город',town:'город',village:'деревня',
@@ -704,7 +713,7 @@ function childGeoCard(g,d){
   var narrow=d&&d.description&&(d.description.narrow||d.description.body)||'';
   var tr=compactTransport(d&&d.transport);
   var objectCount=regionObjectCount(g.id);
-  var meta=geoKindLabel(g.kind)+(objectCount?' · объектов: '+objectCount:'');
+  var meta=geoKindLabel(g.kind,g)+(objectCount?' · объектов: '+objectCount:'');
   return '<article class="region-card" data-region="'+esc(g.id)+'"><h3>'+esc(title)+'</h3>'+
     '<p>'+esc(meta)+'</p>'+
     (narrow?'<p class="popup-meta">'+esc(narrow)+'</p>':'')+

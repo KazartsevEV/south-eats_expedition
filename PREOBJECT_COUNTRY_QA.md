@@ -269,8 +269,8 @@ build CDN
 - ID — complete (upper-level acceptance recorded; full gate required on this PR).
 - MY — complete (upper-level acceptance recorded; full gate required on this PR).
 - MM — complete (upper-level acceptance recorded; full gate required on this PR).
-- SG — active.
-- TH — queued.
+- SG — complete (upper-level acceptance recorded; full gate required on this PR).
+- TH — active.
 - TL — queued.
 - VN — queued.
 

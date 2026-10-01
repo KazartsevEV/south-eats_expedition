@@ -7,7 +7,7 @@
 - Object identity reconciliation: **211/211** — 210 exact country+name matches + 1 proven rename (`Tutong and Tamu markets` → `Pasarneka Tutong / Tamu Tutong`, legacy ID `bn:tutong-and-tamu-markets`).
 - Raw leaf-key inventory: **137 distinct paths**.
 - Canonical source registry: **1169 entities**.
-- Raw source URL rows checked: **944**; present in canonical: **935**; missing: **9**.
+- Raw source URL rows checked: **944**; exact URL matches: **935**; normalized URL matches: **937**; unresolved after normalization: **7**.
 
 ## What is actually missing from strict canonical
 
@@ -20,7 +20,7 @@ The object count is not the problem. The builder has field-level blind spots.
 5. **Mobility / terrain:** 129 mobility notes and 19 terrain/movement notes are not emitted by strict canonical.
 6. **Dynamic object status/security:** 45 objects carry old operational/security snapshot fields that are not emitted. These must be **reverified**, not blindly copied.
 7. **Visual recon:** canonical QA has **135** visual-recon gaps; raw has a `best_light` seed for **135/135** of them. 22 of those gaps also have old `shooting_recommendation` data and 135 have `field_planning` data that can only be mined for compliant factual scouting context.
-8. **Sources:** only **9** of 944 raw source URL rows are absent from the canonical source registry. They are listed verbatim in the JSON audit and require URL/content review before re-adding.
+8. **Sources:** exact string comparison leaves **9** unmatched URL rows, but **2** are only normalized aliases (the two UNESCO URLs differ by trailing slash). After normalization, **7** URL rows remain for review. “Unresolved URL” is not automatically a lost fact: an equivalent replacement source or media provenance may already exist.
 
 ## What is *not* a loss
 
@@ -41,7 +41,7 @@ The old production-oriented fields are not canonical content: `capture_sequence`
 The companion JSON audit contains:
 - all 137 non-empty raw leaf paths with classification and counts;
 - all 211 raw objects with migration-gap payloads;
-- the exact 9 raw source URLs missing from canonical;
+- the 7 source URLs unresolved after normalization plus the 2 normalized aliases;
 - per-object visual-recon seed flags;
 - current canonical QA coverage/gap counts.
 

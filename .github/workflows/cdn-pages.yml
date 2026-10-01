@@ -48,6 +48,9 @@ jobs:
       - name: Install image preview dependency
         run: python -m pip install --disable-pip-version-check Pillow==11.3.0
 
+      - name: Validate imported donor snapshots
+        run: python scripts/validate_import_snapshots.py
+
       - name: Build normalized CDN from source
         run: python scripts/build_cdn.py
 

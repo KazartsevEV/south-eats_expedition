@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.10",
+    "release_id": "2026-09-30-r42",
+    "page_type": "country_class",
+    "id": "country-class:tl:historic_city"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:tl:built_heritage",
+    "page_path": "pages/countries/timor-leste/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:tl",
+      "name": "Тимор-Лешти",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/timor-leste.json"
+    },
+    {
+      "id": "tl:geographic_area:baucau-expedition",
+      "canonical_geo_id": "geo_tl_0019",
+      "name": "Баукау",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/baucau-expedition.json"
+    },
+    {
+      "id": "tl:region:baucau",
+      "canonical_geo_id": "geo_tl_0003",
+      "name": "Баукау",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/baucau.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:baucau-old-town",
+      "name": "Baucau old town",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:baucau-expedition",
+        "tl:region:baucau"
+      ],
+      "region_legacy": "Baucau",
+      "nearest_hub": "Baucau",
+      "narrow": "Baucau old town — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/timor-leste/objects/baucau-old-town.json"
+    }
+  ]
+}

@@ -32,7 +32,7 @@
       "kind": "geographic_area",
       "name": "Дили",
       "page_path": "pages/geography/timor-leste/geographic_area/dili-expedition.json",
-      "object_count": 0
+      "object_count": 3
     }
   ],
   "legacy_region_names": [],
@@ -103,9 +103,75 @@
     }
   },
   "notes_ru": "Муниципальный административный уровень Тимор-Лешти; kind=region используется в каноническом перечислении типов geo.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "monument",
+      "label_ru": "Памятники и монументы",
+      "count": 1
+    },
+    {
+      "object_type": "museum",
+      "label_ru": "Музеи",
+      "count": 2
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "monument",
+          "label_ru": "Памятники и монументы",
+          "count": 1,
+          "country_class_page": "pages/countries/timor-leste/classes/monument.json",
+          "filter": {
+            "geography_id": "tl:region:dili"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "archaeology_memory",
+      "label_ru": "Археология, древность и историческая память",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "museum",
+          "label_ru": "Музеи",
+          "count": 2,
+          "country_class_page": "pages/countries/timor-leste/classes/museum.json",
+          "filter": {
+            "geography_id": "tl:region:dili"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:cristo-rei-of-dili",
+      "name": "Cristo Rei of Dili",
+      "object_type": "monument",
+      "narrow": "Cristo Rei of Dili — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/timor-leste/objects/cristo-rei-of-dili.json"
+    },
+    {
+      "id": "tl:timorese-resistance-archive-and-museum",
+      "name": "Timorese Resistance Archive & Museum",
+      "object_type": "museum",
+      "narrow": "Timorese Resistance Archive & Museum — важный исторический объект памяти; полезен для контекстного репортажа, но требует сдержанной съёмки и уважения к месту.",
+      "detail_path": "countries/timor-leste/objects/timorese-resistance-archive-and-museum.json"
+    },
+    {
+      "id": "tl:dare-memorial-museum-and-overlook",
+      "name": "Dare Memorial Museum and overlook",
+      "object_type": "museum",
+      "narrow": "Dare Memorial Museum and overlook — важный исторический объект памяти; полезен для контекстного репортажа, но требует сдержанной съёмки и уважения к месту.",
+      "detail_path": "countries/timor-leste/objects/dare-memorial-museum-and-overlook.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

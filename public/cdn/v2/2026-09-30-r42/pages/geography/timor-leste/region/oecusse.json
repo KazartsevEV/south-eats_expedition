@@ -25,7 +25,7 @@
       "kind": "geographic_area",
       "name": "Оэкуси",
       "page_path": "pages/geography/timor-leste/geographic_area/oecusse-expedition.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "tl:town:pante-macassar",
@@ -103,9 +103,40 @@
     }
   },
   "notes_ru": "Особая административная территория/эксклав; хранится как region, чтобы не выдумывать отсутствующий специальный enum.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "cultural_landscape",
+      "label_ru": "Культурные ландшафты",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "religion_ethnography",
+      "label_ru": "Религия, этнография и живая культура",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "cultural_landscape",
+          "label_ru": "Культурные ландшафты",
+          "count": 1,
+          "country_class_page": "pages/countries/timor-leste/classes/cultural_landscape.json",
+          "filter": {
+            "geography_id": "tl:region:oecusse"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:oecusse-historic-enclave",
+      "name": "Oecusse historic enclave",
+      "object_type": "cultural_landscape",
+      "narrow": "Oecusse historic enclave — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/timor-leste/objects/oecusse-historic-enclave.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {

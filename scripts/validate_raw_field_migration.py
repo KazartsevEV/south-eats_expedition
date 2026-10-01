@@ -38,6 +38,15 @@ for path in sorted(SRC.glob("*.json")):
             if url not in canonical_urls:
                 fail(f"canonical sources lost URL from {path.name} / {obj.get('name')}: {url}")
 
+source_object_by_country_name = {}
+for path in sorted(SRC.glob("*.json")):
+    doc = load(path)
+    code = ((doc.get("meta") or {}).get("country_code") or "").upper()
+    for source_obj in ((doc.get("travel") or {}).get("objects") or []):
+        for name in (source_obj.get("name"), source_obj.get("display_name")):
+            if name:
+                source_object_by_country_name[(code, name)] = source_obj
+
 objects_checked = 0
 language_values_checked = 0
 for object_path in sorted((release / "objects").glob("*/*.json")):
@@ -46,6 +55,8 @@ for object_path in sorted((release / "objects").glob("*/*.json")):
     if not rel:
         fail(f"{obj.get('id')}: missing legacy_detail_path")
     legacy = load(release / rel)
+    code = obj["id"].split("_")[1].upper()
+    source_obj = source_object_by_country_name.get((code, (obj.get("names") or {}).get("primary")))
     logistics = (legacy.get("visit") or {}).get("logistics") or {}
     operations = (legacy.get("visit") or {}).get("operations") or {}
     safety_old = (legacy.get("visit") or {}).get("safety") or {}
@@ -92,6 +103,25 @@ for object_path in sorted((release / "objects").glob("*/*.json")):
             expected = default
         if safety.get(key) != expected:
             fail(f"{obj['id']}: safety.{key} migration mismatch")
+
+    # Display-name migrations must retain the source object's QA/provenance
+    # rather than falling back to the broad legacy bibliography.
+    if source_obj and source_obj.get("display_name"):
+        expected_verification = source_obj.get("verification") or {}
+        if (obj.get("qa") or {}).get("verification") != expected_verification:
+            fail(f"{obj['id']}: display-name object lost verification metadata")
+        source_fact_review = ((source_obj.get("qa") or {}).get("fact_source_review") or {})
+        if source_fact_review.get("status") == "passed":
+            canonical_fact_review = ((obj.get("qa") or {}).get("fact_source_review") or {})
+            if canonical_fact_review.get("status") != "passed":
+                fail(f"{obj['id']}: display-name object lost passed fact_source_review")
+            raw_logistics = ((source_obj.get("traveler_card") or {}).get("logistics") or {})
+            expected_water_refs = ((raw_logistics.get("water_structured") or {}).get("source_refs") or [])
+            expected_overnight_refs = ((raw_logistics.get("overnight") or {}).get("source_refs") or [])
+            if ((visit.get("water") or {}).get("source_refs") or []) != expected_water_refs:
+                fail(f"{obj['id']}: strict water source scoping was not preserved")
+            if ((visit.get("overnight") or {}).get("source_refs") or []) != expected_overnight_refs:
+                fail(f"{obj['id']}: strict overnight source scoping was not preserved")
 
     # Legacy practical language lists must live on referenced geo entities,
     # never be duplicated back onto the attraction.

@@ -3,7 +3,7 @@
     "country": "Timor-Leste",
     "country_code": "TL",
     "language": "ru",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-01",
     "purpose": "Expedition South East",
     "data_model_version": "1.2",
     "migration_stage": "country_and_regional",
@@ -19,8 +19,18 @@
       "Country-first migration from the existing Google Drive draft. Nine regional profiles and 17 attraction drafts remain preserved for the later regional/object phases.",
       "Where public tourist-facing drone rules could not be verified, the country layer records verification-required rather than inventing a permit rule.",
       "Regional research profiles restored from the existing Google Drive draft; attraction object payloads remain deferred.",
-      "Regional QA pass 2026-09-30: deepened Baucau and Oecusse with separate municipal/government sources for history, water systems and current infrastructure; attraction object payloads unchanged."
-    ]
+      "Regional QA pass 2026-09-30: deepened Baucau and Oecusse with separate municipal/government sources for history, water systems and current infrastructure; attraction object payloads unchanged.",
+      "2026-10-01 upper-level acceptance pass: revalidated tourist visa-on-arrival and land-border authorization rules, corrected land-border exemption list, added national wet/dry climate structure and refreshed travel-rule provenance; object payloads remain frozen."
+    ],
+    "upper_level_acceptance": {
+      "phase": "pre_object",
+      "reference_country": "PH",
+      "status": "complete",
+      "object_payloads_frozen": true,
+      "checked_at": "2026-10-01",
+      "accepted_at": "2026-10-01",
+      "acceptance_basis": "PH-reference upper-level revalidation: country profile, official national climate seasonality, tourist visa/land-border authorization, driving/camping/protected-area/drone verification rules, geo hierarchy and regional profiles; object payloads unchanged."
+    }
   },
   "overview": {
     "summary": "Молодое государство на востоке острова Тимор, включающее эксклав Оэкуси-Амбено и острова Атауро и Жаку.",
@@ -175,7 +185,18 @@
       "Dec": 30.6
     },
     "notes": "Дили значительно жарче и суше горных внутренних районов; климатический ряд воздуха является явно обозначенным приближением.",
-    "source_quality": "secondary climatology; derived midpoint for air"
+    "source_quality": "secondary climatology; derived midpoint for air",
+    "checked_at": "2026-10-01",
+    "country_seasonality": {
+      "summary": "Тропический климат Тимор-Лешти определяется западно-тихоокеанским муссоном и сильной высотной расчленённостью острова; Дили не является репрезентативным для гор и южного побережья.",
+      "wet_season": "Обычно декабрь–май.",
+      "dry_season": "Обычно июнь–ноябрь.",
+      "south": "На юге сезон дождей может длиться около 7–9 месяцев.",
+      "spatial_variation": "Количество осадков резко возрастает от сухого северного побережья к центрально-западным горам и более влажному югу.",
+      "source_ids": [
+        "TL_CLIMATE_2026"
+      ]
+    }
   },
   "safety": {
     "crime_level": {
@@ -232,20 +253,26 @@
       }
     ],
     "visa_for_russian_passport": {
-      "status": "visa on arrival for air/sea arrival in Dili under general Class I regime",
+      "status": "visa on arrival при прибытии по воздуху или морю в Дили; для наземного въезда требуется предварительная авторизация",
       "stay_days": 30,
       "fee_usd": 30,
-      "extension": "Туристический Class I может продлеваться с одобрения иммиграции до совокупного пребывания не более 90 дней.",
-      "land_border": "Для сухопутного въезда, кроме специальных исключений для граждан Индонезии и Португалии, требуется предварительная Visa Application Authorization.",
+      "extension": "Туристическая виза Class I может продлеваться в Dili Immigration Service; суммарный разрешённый туристический срок не должен превышать 90 дней.",
+      "land_border": "Для российского паспорта при въезде через сухопутный пункт требуется заранее получить Visa Application Authorization. Актуальная официальная справка отдельно освобождает от этого требования граждан Индонезии, Португалии и США.",
       "visa_run": {
         "possible": "Новый въезд рассматривается как новое иммиграционное решение.",
         "limits": "Сухопутный возврат требует предварительной авторизации; автоматического права на «сброс» срока нет."
       },
-      "passport_validity": "не менее 6 месяцев",
+      "passport_validity": "не менее 6 месяцев с даты въезда; требуется как минимум одна свободная страница под визовую наклейку",
       "source_ids": [
-        "IMM"
+        "IMM",
+        "TL_CUSTOMS_VISA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01",
+      "entry_requirements": {
+        "onward_ticket": "обратный/дальнейший билет либо подтверждение возможности оплатить выезд",
+        "funds": "официальные иммиграционные материалы указывают эквивалент US$100 на въезд и US$50 на каждый предполагаемый день пребывания, если нет принятой гарантии принимающей стороны",
+        "accommodation": "при проверке могут потребовать подтверждение подходящего размещения"
+      }
     },
     "airports": [
       {
@@ -273,7 +300,15 @@
       ],
       "transport": "Дорога, микроавтобусы и частный транспорт; правила предварительной визовой авторизации проверяются до сухопутного въезда.",
       "source_ids": [
-        "IMM"
+        "IMM",
+        "TL_CUSTOMS_VISA"
+      ],
+      "checked_at": "2026-10-01",
+      "entry_rule": "Российскому гражданину для въезда по земле из Индонезии требуется предварительная Visa Application Authorization; после предъявления авторизации и выполнения остальных условий виза оформляется на границе за US$30.",
+      "exemptions_from_prior_authorization": [
+        "Индонезия",
+        "Португалия",
+        "США"
       ]
     },
     "transport_rules": {
@@ -282,7 +317,7 @@
       "source_ids": [
         "ROAD_CODE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "camping_rules": {
       "status": "site_specific",
@@ -291,7 +326,7 @@
         "CAMPING_LAW",
         "PROTECTED_AREAS"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "drone_rules": {
       "legal_status": "verification_required",
@@ -300,7 +335,7 @@
       "source_ids": [
         "AACTL"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "tourist_permits": {
       "status": "site_specific",
@@ -308,7 +343,7 @@
       "source_ids": [
         "PROTECTED_AREAS"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "currency": {
       "code": "USD",
@@ -1024,7 +1059,17 @@
           ]
         }
       }
-    ]
+    ],
+    "entry_form": {
+      "name": "arrival card",
+      "format": "бумажная карта прибытия, доступная в пункте пропуска",
+      "required": true,
+      "source_ids": [
+        "TL_CUSTOMS_VISA",
+        "IMM"
+      ],
+      "checked_at": "2026-10-01"
+    }
   },
   "sources": [
     {
@@ -1049,7 +1094,7 @@
         "land_border_entry",
         "entry"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000819"
     },
     {
@@ -1187,7 +1232,7 @@
         "transport_rules",
         "road_traffic_law"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000830"
     },
     {
@@ -1201,7 +1246,7 @@
         "tourist_permits",
         "environmental_rules"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000831"
     },
     {
@@ -1212,7 +1257,7 @@
       "used_for": [
         "camping_rules"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000832"
     },
     {
@@ -1225,7 +1270,7 @@
         "airport",
         "air_connectivity"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000833"
     },
     {
@@ -1615,6 +1660,41 @@
         "regional_infrastructure"
       ],
       "accessed": "2026-09-30"
+    },
+    {
+      "id": "TL_CUSTOMS_VISA",
+      "canonical_id": "src_900033",
+      "title": "Obtaining a Visa",
+      "publisher": "Timor-Leste Customs Authority",
+      "url": "https://customs.gov.tl/travelers/obtaining-a-visa/",
+      "kind": "government",
+      "language": "en",
+      "used_for": [
+        "visa",
+        "visa_on_arrival",
+        "land_border_entry",
+        "passport",
+        "entry_requirements"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Current official traveler guidance: most other-country nationals may obtain visa on arrival only at Dili airport or seaport; land arrival requires advance Visa Application Authorization except for listed exemptions."
+    },
+    {
+      "id": "TL_CLIMATE_2026",
+      "canonical_id": "src_900034",
+      "title": "Blue Economy Policy and Action Plan — national climate context",
+      "publisher": "Government of Timor-Leste",
+      "url": "https://economiaazul.gov.tl/wp-content/uploads/2026/05/Blue-Economy-Policy-and-Action-Plan_Unofficial-Translation-ENG.pdf",
+      "kind": "government",
+      "language": "en",
+      "used_for": [
+        "country_climate",
+        "wet_season",
+        "dry_season",
+        "regional_rainfall"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Government 2026 policy summarizes monsoon climate, December–May wet season, June–November dry season, longer southern rainy season and strong spatial rainfall gradient."
     }
   ],
   "uncertainties": [

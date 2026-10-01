@@ -37,14 +37,15 @@
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
-      "completed_objects": 10,
+      "completed_objects": 11,
       "total_objects": 19,
       "status": "object_rebuild_v2_in_progress",
       "updated": "2026-10-01",
       "qa_scope": "current object acceptance: rebuild_v2 + card_review; one object at a time, source-backed narrative/logistics/GPS/visual recon",
       "notes": [
         "2026-10-01 Nam Et-Phou Louey rebuild: replaced the generic package-tour prose with a regulated national-park access model; added official park history, 5,070 km² / 336–2,257 m topography, Muang Hiam and Ban Son Khoua access anchors, current bus caveats, tour-provided water, designated overnight model, Khmu animist tradition only where explicitly documented, dated 2025–2026 traveler reports, corrected lodging geography, and a five-image licensed media set with contextual images explicitly labelled.",
-        "2026-10-01 Nong Khiaw and Muang Ngoi rebuild: separated the two settlements and their river piers, added georeferenced Pha Daeng and Phanoi viewpoints, replaced invented generic walking ranges with source-backed access legs, expanded Nam Ou karst geology and wartime cave history, documented hydropower-driven transport change, normalized water/camping unknowns, added 2025–2026 traveler reports and a five-image Commons gallery."
+        "2026-10-01 Nong Khiaw and Muang Ngoi rebuild: separated the two settlements and their river piers, added georeferenced Pha Daeng and Phanoi viewpoints, replaced invented generic walking ranges with source-backed access legs, expanded Nam Ou karst geology and wartime cave history, documented hydropower-driven transport change, normalized water/camping unknowns, added 2025–2026 traveler reports and a five-image Commons gallery.",
+        "2026-10-01 Bolaven Plateau rebuild: reframed the object as a trans-provincial volcanic and coffee cultural landscape; added recent volcanic-field geology, Paksong/Tad Fane/Tad Lo anchors, self-guided road-loop semantics, Jru/Laven spirit-religion ethnography, honest water/camping unknowns, dated 2025–2026 traveler reports and a five-image Commons gallery."
       ]
     },
     "human_readable_layer": {
@@ -10232,19 +10233,21 @@
         "interest": [
           "nature",
           "plateau",
+          "volcanic_geology",
           "waterfalls",
           "coffee",
-          "culture"
+          "culture",
+          "ethnography"
         ],
-        "why_go": "плато Болавен — приподнятое вулканическое плато к востоку от Паксе, известное более прохладным влажным климатом, водопадами и кофейными плантациями. Французское коммерческое кофейное наследие наложилось на земли Mon-кхмерский народов, включая Laven, Katu и Alak.",
+        "why_go": "Плато Болавен — крупное вулканическое нагорье южного Лаоса с базальтовыми почвами, кофейными ландшафтами, глубокими речными врезами и серией водопадов по краям плато. Для экспедиции это не один объект, а связка геологии, сельского хозяйства, этнографии и самостоятельного дорожного маршрута вокруг Паксонга, Тад-Фана и Тад-Ло.",
         "traveler_card": {
           "location": {
-            "region": "Чампасак / Си-Фан-Дон / Болавен",
-            "nearest_hub": "Pakse",
+            "region": "Чампасак / Сараван / Секонг — плато Болавен",
+            "nearest_hub": "Паксонг / Паксе",
             "languages_spoken": [
-              "Lao",
-              "English in tourism",
-              "лавен, алак, кату и другие мон-кхмерские языки на плато"
+              "лаосский",
+              "джру (лавен) и другие австроазиатские языки в отдельных общинах",
+              "английский в туристических сервисах"
             ],
             "currency": {
               "code": "LAK",
@@ -10292,54 +10295,180 @@
                 "publisher": "OpenStreetMap / GeoNames via Mapcarta",
                 "url": "https://mapcarta.com/34746988",
                 "authority": "medium",
-                "accessed": "2026-09-29",
-                "notes": "Характерная высота выбранного высокого участка плато."
+                "accessed": "2026-10-01"
               },
-              "checked_at": "2026-09-29"
+              "checked_at": "2026-10-01",
+              "notes": "Характерная точка высокого плато; не выдаётся за среднюю высоту всего транс-провинциального объекта."
             },
-            "coordinates_checked_at": "2026-09-29"
+            "coordinates_checked_at": "2026-10-01",
+            "geo_points": [
+              {
+                "name": "Paksong",
+                "type": "center",
+                "coordinates": {
+                  "lat": 15.1799,
+                  "lon": 106.228,
+                  "elevation_m": 1286
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Paksong",
+                  "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+                  "url": "https://mapcarta.com/Paksong",
+                  "language": "en",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "Paksong center",
+                    "elevation"
+                  ]
+                },
+                "checked_at": "2026-10-01",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Paksong",
+                  "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+                  "url": "https://mapcarta.com/Paksong",
+                  "language": "en",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "elevation"
+                  ]
+                }
+              },
+              {
+                "name": "Tad Fane waterfall",
+                "type": "waterfall_base",
+                "coordinates": {
+                  "lat": 15.17443,
+                  "lon": 106.1087,
+                  "elevation_m": 919
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "medium",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Tad Fane",
+                  "publisher": "GeoNames via Mapcarta",
+                  "url": "https://mapcarta.com/34906412",
+                  "language": "en",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "Tad Fane coordinates",
+                    "elevation"
+                  ]
+                },
+                "checked_at": "2026-10-01",
+                "elevation_source": {
+                  "type": "map",
+                  "title": "Tad Fane",
+                  "publisher": "GeoNames via Mapcarta",
+                  "url": "https://mapcarta.com/34906412",
+                  "language": "en",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "elevation"
+                  ]
+                }
+              },
+              {
+                "name": "Tad Lo waterfall",
+                "type": "waterfall_base",
+                "coordinates": {
+                  "lat": 15.52769,
+                  "lon": 106.27264,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "coordinate_source": {
+                  "type": "map",
+                  "title": "Tad Lo Waterfall",
+                  "publisher": "OpenStreetMap via Mapcarta",
+                  "url": "https://mapcarta.com/N3408909177",
+                  "language": "en",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "Tad Lo coordinates"
+                  ]
+                },
+                "checked_at": "2026-10-01"
+              },
+              {
+                "name": "Tad Fane viewpoint",
+                "type": "viewpoint",
+                "coordinates": {
+                  "lat": 15.182612,
+                  "lon": 106.127113,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "coordinate_source": {
+                  "type": "wikimedia_commons",
+                  "title": "Tad Fane Waterfall 20251228 (II).jpg",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:Tad_Fane_Waterfall_20251228_(II).jpg",
+                  "language": "en",
+                  "published_at": "2025-12-28",
+                  "accessed": "2026-10-01",
+                  "authority": "medium",
+                  "used_for": [
+                    "viewpoint coordinates",
+                    "gallery"
+                  ]
+                },
+                "checked_at": "2026-10-01"
+              }
+            ]
           },
           "logistics": {
-            "access": "Ближайшая практичная база — Паксе; обычно нужен дорожный трансфер, затем пеший/лодочный участок в зависимости от маршрута. Для удалённых зон заранее подтверждать разрешение/проводник.",
-            "public_transport": "Из Паксе локальные автобусы/сонгтхэу идут по основным дорогам плато, но для нескольких водопадов неудобны.",
-            "last_mile": "У водопадов 0.5–3 км по тропам/лестницам; кофейные фермы — короткие прогулки по территории.",
+            "access": "Базовая самостоятельная схема: Паксе → Route 16E → Тад-Фан / Тад-Юанг → Паксонг; далее малый или длинный дорожный контур через Тхатенг, Тад-Ло и при необходимости Секонг. Единого «входа на плато» нет.",
+            "public_transport": "Общественный транспорт связывает Паксе с Паксонгом и районными центрами, но он плохо подходит для последовательного посещения удалённых водопадов. Текущие рейсы и места посадки проверять перед выездом.",
+            "last_mile": "У каждого водопада свой подъезд и пеший участок; универсальный диапазон километража удалён как недостоверный.",
             "typical_visit_hours": [
               4,
               8
             ],
             "permit_or_guide": null,
             "modes": {
-              "public_transport": "Из Паксе локальные автобусы/сонгтхэу идут по основным дорогам плато, но для нескольких водопадов неудобны.",
-              "taxi_ridehail": "Автомобиль с водителем на день — практичен для Tad Fane/Tad Yuang + кофейная ферма.",
-              "moped": "Классический Bolaven кольцевой маршрут; возможен только для уверенного водителя, особенно в дождь.",
-              "walking": "У водопадов 0.5–3 км по тропам/лестницам; кофейные фермы — короткие прогулки по территории."
+              "public_transport": "Паксе ↔ Паксонг и районные центры; расписание динамическое.",
+              "taxi_ridehail": "Частный автомобиль/водитель возможен на основных асфальтовых участках.",
+              "moped": "Самостоятельный loop — нормальная экспедиционная схема; основные дороги в значительной части асфальтированы, боковые ответвления могут оставаться грунтовыми.",
+              "walking": "Пешие участки считать отдельно для конкретного водопада или фермы; единого трека для всего плато нет."
             },
-            "water": "В Паксонге/деревнях купить воду; у крупных водопадов киоски обычно есть, на малых — нет.",
-            "overnight_and_camping": "Самовольный лагерь у края водопада/на земле плантаций не планировать. Использовать гостевой дом, фермерский гостевой дом или согласованный кемпинг.",
-            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "water": "В Паксе, Паксонге, Тхатенге и Тад-Ло питьевая вода продаётся. Воду из ручьёв и бассейнов водопадов считать непроверенной и требующей обработки.",
+            "overnight_and_camping": "Жильё есть в Паксонге, Тад-Ло и других населённых пунктах. Свободный кемпинг на земле кофейных хозяйств, у водопадов или в охраняемой территории не считать разрешённым без согласия владельца/управляющей стороны.",
+            "access_requirements": "Гид для обычного дорожного loop не нужен. Локальный проводник нужен только для конкретных деревенских, лесных или закрытых маршрутов, где этого требует режим доступа или навигация.",
             "self_guided_default": true,
             "travel_model": "самостоятельно"
           },
           "climate": {
-            "best_period": "Ноябрь–февраль; для водопадов компромисс между расходом воды и дорогами.",
+            "best_period": "Ноябрь–февраль удобнее для дорог и прохладнее; для максимального расхода водопадов интереснее влажный сезон, но логистика сложнее.",
             "heat_rain_notes": "Низменный Меконг жаркий; плато Болавен прохладнее и очень влажный в сезон дождей.",
-            "site_specific_notes": "Плато прохладнее Паксе и очень влажно; мощность водопадов и состояние грунтовок меняются одновременно."
+            "site_specific_notes": "Плато заметно прохладнее низменностей Паксе; на вершине облачность, туман и дождь могут резко менять видимость."
           },
           "operations": {
-            "hours": "плато Болавен — большой дорожный/сельский регион без единого графика. водопады, кофейные хозяйства, курортные комплексы и деревни имеют собственные режимы.",
-            "ticket": "Нет единого регионального абонемента; отдельные водопады, зиплайны, плантации и местное сообщество объекты берут собственную плату.",
-            "closure_notes": "В сезон дождей наземный транспорт, особенно к удалённым участкам Sekong/Attapeu, может быть трудным; ступени у водопадов скользкие, уровень воды резко выше.",
-            "last_verified": "2026-09-28",
+            "hours": "У плато нет общего режима. Водопады, кофейные хозяйства и охраняемые участки имеют отдельные часы и сборы.",
+            "ticket": "Единого билета нет; отдельные водопады и частные/общинные объекты взимают собственную плату.",
+            "closure_notes": "После сильных дождей грунтовые ответвления и лестницы у водопадов могут быть скользкими; текущий статус каждого удалённого ответвления проверять локально.",
+            "last_verified": "2026-10-01",
             "official_url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
-            "access_mode": "self_drive_multi_site_плато"
+            "access_mode": "self_drive_multi_site_plateau"
           },
           "safety": {
             "main_risks": [
-              "погодные изменения",
-              "скользкие/неровные тропы",
-              "тепловая нагрузка или обезвоживание",
-              "ограниченная быстрая медицинская помощь в удалённых зонах",
-              "обычная осторожность с ценностями и транспортом"
+              "скользкие тропы и ступени у водопадов",
+              "дождь и туман на высоком плато",
+              "неровные грунтовые ответвления",
+              "UXO вне используемых дорог и троп",
+              "удалённость от быстрой медицинской помощи"
             ],
             "sensitive_areas": [
               "в районах бывших боевых действий не сходить с проверенных троп из-за UXO",
@@ -10349,7 +10478,7 @@
           "media": {
             "photo_suitability_5": 5,
             "video_suitability_5": 5,
-            "best_light": "рассвет и последние часы дня; в дождевой лес мягкий свет после дождя часто лучше жёсткого полудня",
+            "best_light": "У водопадов мягкая облачность и раннее утро уменьшают контраст; на открытых кофейных участках полезны утренний и вечерний боковой свет.",
             "drone": {
               "legal_status": "regulated",
               "permit_required": "Для полётов над населёнными пунктами, в контролируемом или ограниченном воздушном пространстве требуется согласование соответствующего органа; у конкретного объекта могут действовать дополнительные ограничения.",
@@ -10373,81 +10502,213 @@
             },
             "filming_restrictions": "Для коммерческой съёмки, интерьеров, религиозных церемоний, частной собственности и портретов получать требуемое разрешение/согласие.",
             "visual_scouting": {
-              "best_time": "Раннее утро и облачная погода особенно полезны у водопадов и на кофейных участках; для дальних видов — окна после дождя.",
-              "best_weather_light": "Облачность снижает контраст у водопадов; после дождя расход воды выше, но дороги и тропы сложнее.",
+              "best_time": "Тад-Фан и Тад-Юанг — раннее утро или облачный день; кофейные поля — утро и поздний день; Тад-Ло — утро/закат.",
+              "best_weather_light": "После дождя водопады мощнее, но туман может скрыть дальние стены. В сухой сезон обзор стабильнее, но поток меньше.",
               "viewpoints_for_photo_video": [
                 {
-                  "id": "phouphiang_bolaven",
-                  "name": "Phouphiang Bolaven",
-                  "description": "Высокий репрезентативный участок показывает рельеф плато, более прохладный климат и связь водоразделов с водопадами.",
+                  "id": "tad_fane_view",
+                  "name": "Tad Fane viewpoint",
+                  "description": "Высокая точка напротив двойного 120-метрового водопада в лесном ущелье.",
                   "coordinates": {
-                    "lat": 15.2002,
-                    "lon": 106.25961,
-                    "elevation_m": 1310
+                    "lat": 15.182612,
+                    "lon": 106.127113,
+                    "elevation_m": null
                   },
                   "best_time": "morning или overcast_day",
                   "view": {
-                    "description": "высокое плато, лесные и сельскохозяйственные участки, дальний рельеф"
+                    "description": "двойной водопад, лесной каньон и базальтовый уступ"
                   },
                   "useful_equipment": [
                     {
                       "type": "wide",
-                      "why": "пространство плато"
+                      "why": "весь каньон и две струи"
                     },
                     {
+                      "type": "telephoto",
+                      "why": "детали падения воды и слои леса"
+                    }
+                  ],
+                  "source": {
+                    "type": "wikimedia_commons",
+                    "title": "Tad Fane Waterfall 20251228 (II).jpg",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Tad_Fane_Waterfall_20251228_(II).jpg",
+                    "accessed": "2026-10-01",
+                    "authority": "medium"
+                  }
+                },
+                {
+                  "id": "tad_lo",
+                  "name": "Tad Lo / Tad Hang",
+                  "description": "Нижний край плато с серией водопадов и деревней; хорошо читается связь воды, жилья и сельского ландшафта.",
+                  "coordinates": {
+                    "lat": 15.52769,
+                    "lon": 106.27264,
+                    "elevation_m": null
+                  },
+                  "best_time": "early_morning или late_afternoon",
+                  "view": {
+                    "description": "водопад, речная долина и деревенский контекст"
+                  },
+                  "useful_equipment": [
+                    {
                       "type": "standard",
-                      "why": "кофейные участки и поселения"
+                      "why": "баланс ландшафта и повседневной жизни"
+                    },
+                    {
+                      "type": "wide",
+                      "why": "каскад и окружение"
                     }
                   ],
                   "source": {
                     "type": "map",
-                    "title": "Phouphiang Bolaven",
-                    "publisher": "OpenStreetMap / GeoNames via Mapcarta",
-                    "url": "https://mapcarta.com/34746988",
-                    "authority": "medium",
-                    "accessed": "2026-09-29"
+                    "title": "Tad Lo Waterfall",
+                    "publisher": "OpenStreetMap via Mapcarta",
+                    "url": "https://mapcarta.com/N3408909177",
+                    "accessed": "2026-10-01",
+                    "authority": "medium"
+                  }
+                },
+                {
+                  "id": "coffee_landscape",
+                  "name": "Кофейные участки западнее Паксонга",
+                  "description": "Геопривязанная точка Commons у кофейных посадок показывает аграрный слой плато рядом с Тад-Фаном.",
+                  "coordinates": {
+                    "lat": 15.185906,
+                    "lon": 106.126306,
+                    "elevation_m": null
+                  },
+                  "best_time": "morning или late_afternoon",
+                  "view": {
+                    "description": "кофейные кусты, лесные полосы и хозяйственная структура плато"
+                  },
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "ряды кофе и работа людей"
+                    },
+                    {
+                      "type": "macro",
+                      "why": "ягоды, листья и обработка"
+                    }
+                  ],
+                  "source": {
+                    "type": "wikimedia_commons",
+                    "title": "Coffee plantations Bolaven Plateau 01.jpg",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Coffee_plantations_Bolaven_Plateau_01.jpg",
+                    "accessed": "2026-10-01",
+                    "authority": "medium"
                   }
                 }
               ],
               "seasonal_visuals": [
-                "В сезон дождей водопады мощнее и растительность зеленее; в сухой сезон дорожная логистика проще."
+                "В дождливый сезон вода и зелень сильнее, но облачность закрывает панорамы.",
+                "В период сбора кофе сельскохозяйственный слой визуально активнее; сроки зависят от сорта и высоты."
               ],
               "video_activity": [
-                "дорожный маршрут по плато",
-                "водопады, кофейные хозяйства и сельские поселения"
+                "дорожный переход Паксе—Паксонг",
+                "водопады и лесные уступы",
+                "сбор/сортировка/сушка кофе при согласованном доступе",
+                "рынки и сельские поселения на loop"
               ],
               "useful_equipment": [
                 {
                   "type": "wide",
-                  "why": "водопады и плато"
+                  "why": "ущелья и водопады"
                 },
                 {
                   "type": "standard",
-                  "why": "кофейный ландшафт и повседневная жизнь"
+                  "why": "кофейный и сельский ландшафт"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "детали дальних уступов"
+                },
+                {
+                  "type": "macro",
+                  "why": "кофейные ягоды и обработка"
                 }
               ]
             }
           },
           "annotation": {
-            "narrative": "плато Болавен — приподнятое вулканическое плато к востоку от Паксе, известное более прохладным влажным климатом, водопадами и кофейными плантациями. Французское коммерческое кофейное наследие наложилось на земли Mon-кхмерский народов, включая Laven, Katu и Alak.",
-            "culture_ethnography": "",
-            "geography_geology": "Базальтовое плато и высокий объём осадков питают множество водопадов; в сезон дождей поток мощнее, но грунтовки и обзор у Tad Fane/Tad Yuang хуже.",
-            "myths_legends_beliefs": [],
+            "narrative": "Болавен — не «кольцо водопадов», а большое вулканическое плато, на котором геология определяет и сельское хозяйство, и транспорт, и визуальный характер местности. Молодые базальтовые потоки перекрывают мезозойские осадочные породы; вершина плато в основном лежит около 1000–1350 м, а лавовые поля спускаются по склонам. На плодородных базальтовых почвах сформировалась главная кофейная зона Лаоса, а реки, сходя с уступов, образуют Тад-Фан, Тад-Юанг, Тад-Ло и другие водопады.",
+            "culture_ethnography": "Плато связано с джру/лавен, кату, алак и другими австроазиатскими группами. Для джру подробно описано сосуществование буддизма и местной «религии духов» (sadsana phi); переход от подсечно-огневого риса к кофе сопровождался изменением ритуальной и хозяйственной жизни. Этнографический слой не следует сводить к «этническим деревням для туристов»: это действующие сельские сообщества, где кофе, рис, лесные ресурсы и рыночная экономика пересекаются.",
+            "geography_geology": "Bolaven Volcanic Field занимает около 5000 км², содержит десятки шлаковых конусов и более сотни отдельных лавовых потоков. Вулканизм продолжался примерно последние 16 млн лет; многие потоки моложе 100 тыс. лет, а часть южного комплекса, по оценке исследователей, может быть моложе 40 тыс. лет. Под базальтами лежат мощные мезозойские песчаники и аргиллиты. Контраст плоской вершины и расчленённых краёв создаёт водопады и глубокие долины.",
+            "myths_legends_beliefs": [
+              {
+                "type": "local_tradition",
+                "text": "У джру/лавен на плато исследована традиция sadsana phi — отношения с духами и предками, сосуществующие с буддийскими практиками. Это документированная религиозная система, а не туристическая легенда."
+              }
+            ],
             "sections": [
               {
                 "section_id": "overview",
-                "content": "плато Болавен — приподнятое вулканическое плато к востоку от Паксе, известное более прохладным влажным климатом, водопадами и кофейными плантациями. Французское коммерческое кофейное наследие наложилось на земли Mon-кхмерский народов, включая Laven, Katu и Alak."
+                "content": "Плато Болавен — вулканическое нагорье южного Лаоса, где главные экспедиционные линии — геология, водопады, кофе, сельские общины и дорожный маршрут через Паксонг и прилегающие провинции."
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Коммерческие кофейные плантации появились на Болавене в колониальный период; французские хозяйства развивали арабику вдоль новых дорог, а исследовательская станция у Паксонга работала уже в 1930-х."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "Война 1950–1975 годов, болезни кофе и распад торговых сетей изменили сектор. После 1975 года производство прошло через государственный контроль, а с 1990-х вновь стало рыночным и кооперативным."
+                  }
+                ]
               },
               {
                 "section_id": "geology",
-                "content": "Базальтовое плато и высокий объём осадков питают множество водопадов; в сезон дождей поток мощнее, но грунтовки и обзор у Tad Fane/Tad Yuang хуже."
+                "content": "Bolaven Volcanic Field — одно из крупнейших молодых вулканических полей материковой Юго-Восточной Азии: около 5000 км² лав, почти сотня шлаковых конусов и более сотни потоков. Базальты лежат на мезозойских песчаниках и аргиллитах; самые молодые комплексы относятся к позднему плейстоцену и, возможно, раннему голоцену."
+              },
+              {
+                "section_id": "geography",
+                "content": "Вершина плато в основном лежит примерно на 1000–1350 м, края резко падают к низменностям. Реки, стекающие с плато, создают каскады и водопады; сезон дождей одновременно усиливает воду и ухудшает часть грунтовых дорог и троп."
+              },
+              {
+                "section_id": "culture",
+                "content": "Кофе стал ключевой культурной и хозяйственной чертой Болавена. Он не заменяет местную историю, а встроен в неё: семейные участки, кооперативы, переработка, придорожная торговля и туристические кофейни образуют современный сельский ландшафт."
+              },
+              {
+                "section_id": "ethnography",
+                "content": "На плато живут джру/лавен и другие австроазиатские группы. Исследования фиксируют изменения от подсечно-огневого хозяйства к кофе и сосуществование лаосского буддизма с местными ритуальными системами, включая культ духов и предков."
+              },
+              {
+                "section_id": "myths_beliefs",
+                "content": [
+                  {
+                    "type": "local_tradition",
+                    "text": "Для джру/лавен документирована sadsana phi — местная религия духов и предков, которая в ряде деревень сосуществует с буддизмом; её нельзя обобщать на всё население плато."
+                  }
+                ]
               }
             ]
           },
           "traveler_reports": {
             "recurring_issues": [
-              "в сезон дождей путешественники недооценивают холод/сырость плато и состояние дорог",
-              "часть 'кофейный туры' поверхностна; для фильма лучше заранее договориться о доступе к сбору и обработке, а не только дегустации"
+              "Январь–март 2026: самостоятельные путешественники подтверждают, что loop реально проходится на автомобиле и мотоцикле; качество боковых дорог отличается от основного асфальта.",
+              "Июнь 2026: полевые советы рекомендуют не сжимать маршрут до двух дней, если нужны пешие выходы и менее известные водопады.",
+              "Октябрь 2025: путешественники описывают основные дороги плато как преимущественно асфальтированные, при этом часть боковых кофейных и сельских дорог остаётся грунтовой и хуже во влажный сезон."
+            ],
+            "reports": [
+              {
+                "date": "2026-03",
+                "source": "Reddit / r/laos",
+                "summary": "Путешественник проехал loop на арендованном автомобиле и счёл его выполнимым самостоятельно; наблюдение не заменяет официальную оценку дорог."
+              },
+              {
+                "date": "2026-06",
+                "source": "Reddit / r/laos",
+                "summary": "Для маршрута с треккингом советовали 5–9 дней вместо быстрого чек-листа; это субъективный полевой опыт."
+              },
+              {
+                "date": "2025-10",
+                "source": "Reddit / r/laos",
+                "summary": "Основные трассы описаны как в основном асфальтированные, часть боковых дорог — грунт/каменистый хардпак; мокрый сезон ухудшает условия."
+              }
             ]
           },
           "accommodation": [
@@ -10462,132 +10723,418 @@
           ]
         },
         "illustration": {
-          "static_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Tad_Hang_waterfalls_at_sunset%2C_Tad_Lo_village%2C_Bolaven_Plateau%2C_Laos.jpg",
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tad_Hang_waterfalls_at_sunset,_Tad_Lo_village,_Bolaven_Plateau,_Laos.jpg",
           "source_page": "https://commons.wikimedia.org/wiki/File:Tad_Hang_waterfalls_at_sunset,_Tad_Lo_village,_Bolaven_Plateau,_Laos.jpg",
           "provider": "Wikimedia Commons",
           "license": "CC BY-SA 4.0",
           "artist": "Basile Morin",
           "illustration_scope": "object-specific",
-          "last_checked": "2026-09-28"
+          "last_checked": "2026-10-01",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tad_Fane_Waterfall_20251228_(II).jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tad_Fane_Waterfall_20251228_(II).jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Supanut Arunoprayote",
+              "last_checked": "2026-10-01",
+              "subject": "Tad Fane twin waterfall"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tad_Hang_waterfalls,_Tad_Lo_village,_Bolaven_Plateau,_Laos.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tad_Hang_waterfalls,_Tad_Lo_village,_Bolaven_Plateau,_Laos.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Basile Morin",
+              "last_checked": "2026-10-01",
+              "subject": "Tad Hang at Tad Lo village"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tad_Tayicsua_waterfall.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Tad_Tayicsua_waterfall.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Kris Martyn",
+              "last_checked": "2026-10-01",
+              "subject": "Tad Tayicsua waterfall"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coffee_plantations_Bolaven_Plateau_01.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Coffee_plantations_Bolaven_Plateau_01.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 4.0",
+              "artist": "Christophe95",
+              "last_checked": "2026-10-01",
+              "subject": "Coffee plantations on Bolaven Plateau"
+            }
+          ]
         },
         "sources": [
           {
+            "type": "government_official",
+            "title": "Champasak Province",
+            "publisher": "Tourism Laos / Ministry of Information, Culture and Tourism",
             "url": "https://www.tourismlaos.org/southern-provinces/champasak-province/",
-            "publisher": "Tourism Laos / Ministry of Culture and Tourism",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
             "used_for": [
-              "Pakse access",
-              "waterfalls",
               "Bolaven loop",
-              "coffee tourism"
-            ],
-            "accessed": "2026-09-28"
+              "Pakse access",
+              "waterfalls"
+            ]
           },
           {
+            "type": "government_official",
+            "title": "Sekong Province",
+            "publisher": "Tourism Laos / Ministry of Information, Culture and Tourism",
             "url": "https://www.tourismlaos.org/southern-provinces/xekong-province/",
-            "publisher": "Tourism Laos / Ministry of Culture and Tourism",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
             "used_for": [
+              "ethnography",
               "rainy-season road difficulty",
-              "ethnic villages",
-              "plateau conditions"
-            ],
-            "accessed": "2026-09-28"
+              "beliefs"
+            ]
           },
           {
-            "url": "https://www.tourismlaos.org/",
-            "publisher": "Laos tourism source",
+            "type": "academic",
+            "title": "Assessing volcanic hazard and exposure to lava flows at remote volcanic fields: Bolaven Volcanic Field",
+            "publisher": "Journal of Applied Volcanology / Springer",
+            "url": "https://link.springer.com/article/10.1186/s13617-022-00116-z",
+            "language": "en",
+            "published_at": "2022",
+            "accessed": "2026-10-01",
+            "authority": "high",
             "used_for": [
-              "object context",
-              "access/operations where published"
-            ],
-            "accessed": "2026-09-28"
+              "volcanic geology",
+              "plateau elevation",
+              "lava flows",
+              "scoria cones"
+            ]
           },
           {
-            "url": "https://commons.wikimedia.org/wiki/File:Tad_Hang_waterfalls_at_sunset,_Tad_Lo_village,_Bolaven_Plateau,_Laos.jpg",
+            "type": "international_organization",
+            "title": "Arabica coffee manual for Lao PDR",
+            "publisher": "FAO",
+            "url": "https://www.fao.org/4/ae939e/ae939e03.htm",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "coffee history",
+              "altitude",
+              "production concentration"
+            ]
+          },
+          {
+            "type": "government_official",
+            "title": "Tad Yeuang Waterfall",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/champasak-laos-safe-sustainable-star-tad-yeuang-waterfall/",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "road access",
+              "waterfall infrastructure",
+              "community market"
+            ]
+          },
+          {
+            "type": "government_official",
+            "title": "Waterfalls — Tad Fane",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/waterfalls/",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "Tad Fane",
+              "120 m drop",
+              "protected-area context"
+            ]
+          },
+          {
+            "type": "academic",
+            "title": "Re-connecting the Ancestors. Buddhism and Animism on the Boloven Plateau, Laos",
+            "publisher": "Springer / Heidelberg University",
+            "url": "https://www.researchgate.net/publication/319064636_Re-connecting_the_Ancestors_Buddhism_and_Animism_on_the_Boloven_Plateau_Laos",
+            "language": "en",
+            "published_at": "2017",
+            "accessed": "2026-10-01",
+            "authority": "high",
+            "used_for": [
+              "Jru/Laven ethnography",
+              "spirit religion",
+              "Buddhism",
+              "coffee transition"
+            ]
+          },
+          {
+            "type": "map",
+            "title": "Tad Fane",
+            "publisher": "GeoNames via Mapcarta",
+            "url": "https://mapcarta.com/34906412",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "coordinates",
+              "elevation"
+            ]
+          },
+          {
+            "type": "map",
+            "title": "Tad Lo Waterfall",
+            "publisher": "OpenStreetMap via Mapcarta",
+            "url": "https://mapcarta.com/N3408909177",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "coordinates"
+            ]
+          },
+          {
+            "type": "map",
+            "title": "Paksong",
+            "publisher": "OpenStreetMap / GeoNames via Mapcarta",
+            "url": "https://mapcarta.com/Paksong",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "Paksong coordinates",
+              "elevation"
+            ]
+          },
+          {
+            "type": "reddit",
+            "title": "Driving Pakse Bolaven Loop?",
+            "publisher": "Reddit / r/laos",
+            "url": "https://www.reddit.com/r/laos/comments/1qmgmc6/driving_pakse_bolaven_loop/",
+            "language": "en",
+            "published_at": "2026-01-25",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "self-drive"
+            ]
+          },
+          {
+            "type": "reddit",
+            "title": "Pakse loop itinerary?",
+            "publisher": "Reddit / r/laos",
+            "url": "https://www.reddit.com/r/laos/comments/1tyccpq/pakse_loop_itinerary/",
+            "language": "en",
+            "published_at": "2026-06-06",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "route pacing"
+            ]
+          },
+          {
+            "type": "reddit",
+            "title": "Bolaven Plateau Dirt Roads?",
+            "publisher": "Reddit / r/laos",
+            "url": "https://www.reddit.com/r/laos/comments/1ogjhzn",
+            "language": "en",
+            "published_at": "2025-10-26",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler report",
+              "road surface"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Tad Fane Waterfall 20251228 (II).jpg",
             "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Tad_Fane_Waterfall_20251228_(II).jpg",
+            "language": "en",
+            "published_at": "2025-12-28",
+            "accessed": "2026-10-01",
+            "authority": "medium",
             "used_for": [
-              "illustration",
-              "image provenance"
-            ],
-            "accessed": "2026-09-28"
+              "gallery",
+              "viewpoint coordinates"
+            ]
           },
           {
-            "url": "https://www.lsb.gov.la/",
-            "publisher": "national statistics / official source",
+            "type": "wikimedia_commons",
+            "title": "Tad Hang waterfalls, Tad Lo village, Bolaven Plateau, Laos.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Tad_Hang_waterfalls,_Tad_Lo_village,_Bolaven_Plateau,_Laos.jpg",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
             "used_for": [
-              "regional language context"
-            ],
-            "accessed": "2026-09-28",
-            "notes": "Practical region language profile is a field synthesis rather than exhaustive census enumeration."
+              "gallery"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Tad Tayicsua waterfall.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Tad_Tayicsua_waterfall.jpg",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Coffee plantations Bolaven Plateau 01.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Coffee_plantations_Bolaven_Plateau_01.jpg",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "gallery",
+              "coffee landscape coordinates"
+            ]
+          },
+          {
+            "type": "wikimedia_commons",
+            "title": "Tad Hang waterfalls at sunset, Tad Lo village, Bolaven Plateau, Laos.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Tad_Hang_waterfalls_at_sunset,_Tad_Lo_village,_Bolaven_Plateau,_Laos.jpg",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "medium",
+            "used_for": [
+              "cover media"
+            ]
           }
         ],
         "verification": {
           "dynamic_fields": [
             "hours",
             "tickets",
-            "permits",
-            "access",
-            "weather/season",
-            "filming/drone",
-            "security"
+            "road_condition",
+            "public_transport",
+            "waterfall_access",
+            "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "плато Болавен — приподнятое вулканическое плато к востоку от Паксе, известное более прохладным влажным климатом, водопадами и кофейными плантациями. Французское коммерческое кофейное наследие наложилось на земли Mon-кхмерский народов, включая Laven, Katu и Alak. Базальтовое плато и высокий объём осадков питают множество водопадов; в сезон дождей поток мощнее, но грунтовки и обзор у Tad Fane/Tad Yuang хуже. Сезон: Ноябрь–февраль; для водопадов компромисс между расходом воды и дорогами. Плато прохладнее Паксе и очень влажно; мощность водопадов и состояние грунтовок меняются одновременно.",
+        "narrow": "Плато Болавен — вулканическое нагорье примерно 1000–1350 м на вершине плато, сложенное молодыми базальтовыми потоками и конусами. Здесь сосредоточена основная кофейная зона Лаоса, а водопады прорезают края плато. Экспедиционная логика — самостоятельный дорожный маршрут через Паксонг, Тад-Фан, Тад-Юанг и Тад-Ло с отдельной проверкой грунтовых ответвлений после дождей.",
         "tags": [
           "nature",
           "plateau",
+          "volcanic",
+          "geology",
           "waterfalls",
           "coffee",
           "culture",
-          "wildlife",
+          "ethnography",
           "rural",
-          "water",
-          "market_food",
-          "remote",
+          "road_trip",
+          "weather_sensitive",
           "class_nature_culture"
         ],
         "route_meta": {
-          "region_ref": "Чампасак / Си-Фан-Дон / Болавен",
-          "locality_ref": "Паксе",
-          "typical_visit_hours": [
-            4,
-            8
-          ],
+          "region_ref": "Чампасак / Сараван / Секонг — плато Болавен",
+          "locality_ref": "Паксонг / Паксе",
+          "typical_visit_hours": null,
           "transport_modes": {
-            "public_transport": "Из Паксе локальные автобусы/сонгтхэу идут по основным дорогам плато, но для нескольких водопадов неудобны.",
-            "taxi_ridehail": "Автомобиль с водителем на день — практичен для Tad Fane/Tad Yuang + coffee farm.",
-            "moped": "Классический Bolaven кольцевой маршрут; возможен только для уверенного водителя, особенно в дождь.",
-            "walking": "У водопадов 0.5–3 км по тропам/лестницам; кофейные фермы — короткие прогулки по территории."
+            "public_transport": "до Паксонга и районных центров; не заменяет loop по объектам",
+            "taxi_ridehail": "частный автомобиль на основных дорогах",
+            "moped": "самостоятельный loop по асфальту и локальным грунтовкам",
+            "walking": "отдельные тропы у водопадов и ферм, без выдуманного общего километража"
           },
-          "walking": "У водопадов 0.5–3 км по тропам/лестницам; кофейные фермы — короткие прогулки по территории.",
-          "water": "В Паксонге/деревнях купить воду; у крупных водопадов киоски обычно есть, на малых — нет.",
-          "overnight_and_camping": "Самовольный лагерь у края водопада/на земле плантаций не планировать. Использовать гостевой дом, фермерский гостевой дом или согласованный campsite.",
-          "permit_or_guide": null,
-          "best_period": "Ноябрь–февраль; для водопадов компромисс между расходом воды и дорогами.",
-          "current_status": null,
+          "walking": "Пешую часть хранить по конкретным водопадам и тропам; универсальный километраж для плато некорректен.",
+          "water": "Покупная вода доступна в крупных населённых пунктах; природную воду считать требующей обработки.",
+          "overnight_and_camping": "Жильё доступно по loop. Свободный кемпинг на частной земле и у управляемых природных объектов не считать разрешённым без согласия.",
+          "permit_or_guide": "не нужен для обычного road-loop; нужен только для конкретного регулируемого/общинного/лесного маршрута",
+          "best_period": "ноябрь–февраль для дорог; влажный сезон для максимальной воды с более сложной логистикой",
+          "current_status": "open_multi_site_plateau_with_weather_sensitive_side_roads",
           "main_risks": [
-            "погодные изменения",
-            "скользкие/неровные тропы",
-            "тепловая нагрузка или обезвоживание",
-            "ограниченная быстрая медицинская помощь в удалённых зонах",
-            "обычная осторожность с ценностями и транспортом"
+            "скользкие тропы и ступени у водопадов",
+            "дождь и туман на высоком плато",
+            "неровные грунтовые ответвления",
+            "UXO вне используемых дорог и троп",
+            "удалённость от быстрой медицинской помощи"
           ],
           "expedition_profile": {
-            "default_mode": "самостоятельно",
-            "route_scale": "полный день или больше",
-            "terrain_and_movement": "У водопадов 0.5–3 км по тропам/лестницам; кофейные фермы — короткие прогулки по территории.",
-            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
-            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
-            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+            "default_mode": "самостоятельно по дороге с отдельными пешими радиалками",
+            "route_scale": "2–5+ дней в зависимости от числа водопадов, ферм и пеших выходов",
+            "terrain_and_movement": "высокое плато, асфальтовые магистрали, грунтовые ответвления, крутые лестницы и влажные тропы у водопадов",
+            "physical_difficulty_policy": "длинный километраж и ступени — параметры маршрута, не причина исключать объект",
+            "camping_assumption": "палатка не создаёт права на ночёвку на частной земле, у водопада или в охраняемой зоне",
+            "local_support": "по умолчанию не нужен; используется для конкретных деревенских, лесных и регулируемых участков"
           }
         },
         "qa": {
           "language_review": {
             "status": "reviewed",
-            "checked_at": "2026-09-29",
-            "notes": "Пользовательский narrative/logistics слой проверен на естественный русский; собственные имена и официальные названия сохранены."
+            "checked_at": "2026-10-01",
+            "notes": "Англо-русская смесь и рекламная лексика удалены; собственные названия сохранены."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "объектный QA Bolaven Plateau по текущему экспедиционному стандарту",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true
+            },
+            "notes": [
+              "Плато трактуется как транс-провинциальный ландшафт, а не одна точка.",
+              "Добавлены отдельные GPS для Паксонга, Тад-Фана, Тад-Ло и видовой точки.",
+              "Удалены универсальные выдуманные пешие расстояния и устаревающие цены.",
+              "История кофе отделена от этнографии и геологии.",
+              "Галерея доведена до пяти объектных Commons-изображений."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "редакционная приёмка Bolaven Plateau",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "ethnography_substantive": true,
+              "legend_or_beliefs_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest_unknowns": true,
+              "overnight_honest_unknowns": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true
+            },
+            "notes": [
+              "Вулканическая геология опирается на Journal of Applied Volcanology.",
+              "Кофейная история опирается на FAO и не смешивается с туристической дегустацией.",
+              "Sadsana phi у джру/лавен дана как документированная локальная религиозная традиция и не обобщена на всё население плато.",
+              "Дорожные отчёты 2025–2026 используются только как датированные наблюдения."
+            ]
           }
-        }
+        },
+        "lead": "Плато Болавен — крупное вулканическое нагорье южного Лаоса с базальтовыми почвами, кофейными ландшафтами, глубокими речными врезами и серией водопадов по краям плато. Для экспедиции это не один объект, а связка геологии, сельского хозяйства, этнографии и самостоятельного дорожного маршрута вокруг Паксонга, Тад-Фана и Тад-Ло."
       },
       {
         "name": "Nam Ha National Protected Area",

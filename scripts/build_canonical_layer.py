@@ -1362,6 +1362,8 @@ def build():
             "street_food": street_food_profile,
             "food_market": {
                 "typical_simple_meal_usd_range": food.get("typical_simple_meal_usd_range"),
+                "typical_simple_meal_local_range": food.get("typical_simple_meal_local_range"),
+                "price_currency": food.get("price_currency"),
                 "price_note": food.get("price_note"),
                 "checked_at": food.get("checked_at") or checked_at,
                 "source_refs": refs_from_ids(food.get("source_ids")),

@@ -722,7 +722,7 @@ function previewURL(path){
 function mirroredMediaURL(m){
   return m&&m.mirror_asset?previewURL(m.mirror_asset):null;
 }
-async async function hydratePreview(card,o){
+async function hydratePreview(card,o){
   var box=card.querySelector('.preview');
   if(!box)return;
   var local=previewPath(o);

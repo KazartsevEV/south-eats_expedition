@@ -3,7 +3,7 @@
     "country": "Myanmar",
     "country_code": "MM",
     "language": "ru",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-01",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -52,7 +52,8 @@
       "Regional QA pass 2026-09-30: normalized missing local source_refs for Bagan relief, Mrauk U geography and Indawgyi climate using existing UNESCO/biosphere sources; no new facts invented.",
       "Regional QA pass 2026-09-30: deepened Yangon, Pyu Ancient Cities and Kachin/Indawgyi using existing UNESCO and advisory sources; expanded only claims already supported by canonical sources and avoided importing object-level details or unsourced fauna.",
       "Regional QA pass 2026-09-30: prepared Mon/Kyaiktiyo/Mawlamyine and Kayin/Hpa-An depth pass; added UNESCO Mon Cities support and sharpened regional geography, ethnography and access segmentation. PR intentionally deferred until the previous Myanmar CI run completes.",
-      "Regional QA pass 2026-09-30: prepared Bagan and Chin/Nat Ma Taung depth pass using UNESCO and ASEAN biodiversity sources; expanded only regional landscape, living-culture and access context while keeping temples, villages and trail data object-level. PR deferred until prior CI completes."
+      "Regional QA pass 2026-09-30: prepared Bagan and Chin/Nat Ma Taung depth pass using UNESCO and ASEAN biodiversity sources; expanded only regional landscape, living-culture and access context while keeping temples, villages and trail data object-level. PR deferred until prior CI completes.",
+      "2026-10-01 upper-level acceptance pass: revalidated the 2026 bilateral visa-free regime, current foreign entry/exit airports, restricted-area and permit rules, and country monsoon ownership; object payloads remain frozen."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -67,6 +68,15 @@
       ],
       "status": "in_progress_expedition_pass_v1_6",
       "updated": "2026-09-28"
+    },
+    "upper_level_acceptance": {
+      "phase": "pre_object",
+      "reference_country": "PH",
+      "status": "complete",
+      "object_payloads_frozen": true,
+      "checked_at": "2026-10-01",
+      "accepted_at": "2026-10-01",
+      "acceptance_basis": "PH-reference upper-level revalidation: country profile, monsoon context, 2026 Russia–Myanmar visa-free agreement, current air-only foreign entry/exit rule, restricted-area/permit regime, geo hierarchy and regional/locality profiles; object payloads unchanged."
     }
   },
   "overview": {
@@ -236,7 +246,15 @@
       "Dec": 28.5
     },
     "notes": "Yangon climate is not representative of Shan/Kachin highlands; water data is broad delta/coastal proxy.",
-    "source_quality": "secondary climatology"
+    "source_quality": "secondary climatology",
+    "checked_at": "2026-10-01",
+    "country_seasonality": {
+      "source_ids": [
+        "DMH_MONSOON"
+      ],
+      "summary": "Климат страны муссонный, но годовой ход осадков резко различается между дельтой и побережьем, центральной сухой зоной и северными/восточными высокогорьями. Месячный ряд Янгона в этом файле — только опорный ряд для южной низменности.",
+      "operational_note": "Для конкретного региона использовать региональные профили и текущие бюллетени Department of Meteorology and Hydrology; историческую климатологию не подменять текущим прогнозом."
+    }
   },
   "safety": {
     "crime_level": {
@@ -333,7 +351,7 @@
       }
     ],
     "visa_for_russian_passport": {
-      "status": "visa-free under bilateral regime",
+      "status": "без визы по двустороннему соглашению",
       "stay_days": 30,
       "annual_cap_days": 90,
       "annual_cap_period": "calendar year",
@@ -346,7 +364,9 @@
       "source_ids": [
         "RUS_MFA",
         "MOHT_EVISA"
-      ]
+      ],
+      "passport_validity": "Для обычного паспорта применять текущие требования пограничных органов; при использовании eVisa официальный туристический портал требует не менее 6 месяцев.",
+      "checked_at": "2026-10-01"
     },
     "airports": [
       {
@@ -371,12 +391,13 @@
         "Laos",
         "Thailand"
       ],
-      "tourist_use": "Не рассчитывать на сухопутный транзит/въезд для текущего экспедиционного планирования без отдельного официального подтверждения.",
+      "tourist_use": "Для текущего экспедиционного планирования не считать сухопутный въезд, выезд или транзит доступным для иностранца без отдельного свежего официального подтверждения. Российский консульский портал указывает иностранный въезд и выезд только через международные аэропорты Янгона, Мандалая и Нейпьидо.",
       "transport": "Внутренние дороги/жд могут быть нарушены конфликтом.",
       "source_ids": [
         "RUS_MFA",
         "MOHT_EVISA"
-      ]
+      ],
+      "checked_at": "2026-10-01"
     },
     "currency": {
       "code": "MMK",
@@ -7434,7 +7455,7 @@
         "RUS_MFA",
         "SMARTTRAVELLER_MM"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "camping_rules": {
       "status": "not_assumed_permitted",
@@ -7442,7 +7463,7 @@
       "source_ids": [
         "MOHT_EVISA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "drone_rules": {
       "legal_status": "restricted_and_authorization_based",
@@ -7451,7 +7472,7 @@
       "source_ids": [
         "DCA_DRONE_MM"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "tourist_permits": {
       "status": "restricted_areas_and_activity_specific",
@@ -7462,7 +7483,7 @@
         "RUS_MFA",
         "SMARTTRAVELLER_MM"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "laws_source_ids": [
       "RUS_MFA"
@@ -7527,7 +7548,7 @@
         "entry_points",
         "safety"
       ],
-      "accessed": "2026-09-27",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000664"
     },
     {
@@ -7637,7 +7658,7 @@
         "monsoon",
         "climate"
       ],
-      "accessed": "2026-09-29",
+      "accessed": "2026-10-01",
       "notes": "Official monsoon forum material with region-wise rainfall climatology; historical baseline, not current forecast."
     },
     {
@@ -8044,7 +8065,7 @@
         "lodging_rules",
         "restricted_areas"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000743"
     },
     {
@@ -8058,7 +8079,7 @@
         "restricted_areas",
         "transport_rules"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000744"
     },
     {
@@ -8070,7 +8091,7 @@
         "drone_rules",
         "aviation_rules"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000745"
     },
     {

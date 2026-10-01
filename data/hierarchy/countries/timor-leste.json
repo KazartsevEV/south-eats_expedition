@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "TL",
     "country_slug": "timor-leste",
-    "status": "geo_profile_qa_complete_before_object_cards",
+    "status": "geo_profile_with_preliminary_object_coverage",
     "checked_at": "2026-10-01",
-    "next_level": "country_and_regional_layer_complete_object_cards_frozen",
+    "next_level": "object_recovery_preliminary_qa",
     "canonical_id_policy": "Stable geo IDs are registered in data/id-registry.json. Administrative nodes are separated from expedition geographic_area nodes.",
     "canonical_source_id": "src_906010",
     "qa_contract": "geo_profile_roles_v1"
@@ -38,8 +38,8 @@
   "rules": {
     "parentage": "Administrative units use verified current parentage. Composite expedition regions remain geographic_area when they span several administrative units or preserve legacy research geography.",
     "route_hubs": "Cities and towns are geo entities only; they are not attraction cards.",
-    "object_visibility": "Object cards remain deferred for the second-chunk countries during this phase.",
-    "cards": "Object card payloads are not edited in this stage."
+    "object_visibility": "Recovered Timor-Leste object cards are attached to verified formal expedition geography; no coordinates are inferred from city, municipality, park centre, or regional nodes.",
+    "cards": "Recovered object cards are preliminary QA; missing GPS/elevation/access/water/overnight/visual facts remain null or incomplete rather than inferred."
   },
   "nodes": [
     {
@@ -219,7 +219,11 @@
       "slug": "dili-expedition",
       "parent_id": "tl:region:dili",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "tl:cristo-rei-of-dili",
+        "tl:timorese-resistance-archive-and-museum",
+        "tl:dare-memorial-museum-and-overlook"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Dili"
@@ -246,7 +250,9 @@
       "slug": "atauro-expedition",
       "parent_id": "tl:island:atauro",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "tl:atauro-island"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Atauro"
@@ -273,7 +279,13 @@
       "slug": "lautem-tutuala-jaco",
       "parent_id": "tl:region:lautem",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "tl:jaco-island-tutuala",
+        "tl:lospalos-fataluku-region",
+        "tl:tutuala-rock-art",
+        "tl:nino-konis-santana-national-park",
+        "tl:lake-ira-lalaro"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Lautem / Tutuala / Jaco"
@@ -288,7 +300,11 @@
       "slug": "ainaro-maubisse-ramelau",
       "parent_id": "tl:region:ainaro",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "tl:mount-ramelau",
+        "tl:maubisse-ainaro-highlands",
+        "tl:maubisse-pousada-and-highlands"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Ainaro / Maubisse / Ramelau"
@@ -303,7 +319,9 @@
       "slug": "baucau-expedition",
       "parent_id": "tl:region:baucau",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "tl:baucau-old-town"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Baucau"
@@ -318,7 +336,9 @@
       "slug": "oecusse-expedition",
       "parent_id": "tl:region:oecusse",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "tl:oecusse-historic-enclave"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Oecusse"
@@ -333,7 +353,9 @@
       "slug": "bobonaro-balibo",
       "parent_id": "tl:region:bobonaro",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "tl:balibo-fort-and-balibo-house"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Bobonaro / Balibo"
@@ -348,7 +370,9 @@
       "slug": "liquica-maubara",
       "parent_id": "tl:region:liquica",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "tl:maubara-liquica-coastal-heritage"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Liquiçá / Maubara"
@@ -363,7 +387,9 @@
       "slug": "baucau-quelicai-matebian",
       "parent_id": "tl:region:baucau",
       "axis": "expedition_geography",
-      "object_ids": [],
+      "object_ids": [
+        "tl:mount-matebian-matebian-feto"
+      ],
       "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
       "legacy_region_names": [
         "Baucau / Quelicai / Matebian"

@@ -6,7 +6,8 @@
     "canonical_release": "public/cdn/v2/2026-09-30-r42",
     "canonical_schema_version": "2.10.10",
     "scope": "Drive raw inventory -> canonical 211 objects; identify old-only/migration-gap content without deleting or rewriting canonical data.",
-    "classification_note": "MIGRATION_GAP/REVIEW categories are queues, not automatic copy instructions. DEPRECATED categories must not be restored verbatim."
+    "classification_note": "MIGRATION_GAP/REVIEW categories are queues, not automatic copy instructions. DEPRECATED categories must not be restored verbatim.",
+    "identity_rule": "Exact country+name first; documented legacy_id rename accepted only when canonical relations preserve the legacy object identity."
   },
   "inventory": {
     "countries": [
@@ -131,15 +132,22 @@
     }
   },
   "identity_reconciliation": {
-    "exact_country_name_pairs_raw": 211,
-    "exact_country_name_pairs_canonical": 211,
-    "raw_missing_in_canonical": [
-      "BN\tTutong and Tamu markets"
+    "raw_objects": 211,
+    "canonical_objects": 211,
+    "exact_country_name_matches": 210,
+    "proven_renames": [
+      {
+        "country_code": "BN",
+        "raw_name": "Tutong and Tamu markets",
+        "canonical_name": "Pasarneka Tutong / Tamu Tutong",
+        "legacy_id": "bn:tutong-and-tamu-markets",
+        "canonical_id": "obj_bn_0008",
+        "evidence": "Canonical object retains legacy_id bn:tutong-and-tamu-markets; same legacy detail slug tutong-and-tamu-markets."
+      }
     ],
-    "canonical_extra_vs_raw": [
-      "BN\tPasarneka Tutong / Tamu Tutong"
-    ],
-    "result": "MISMATCH"
+    "unresolved_raw_objects": [],
+    "unexplained_canonical_objects": [],
+    "result": "211/211 OBJECTS RECONCILED (210 exact names + 1 proven rename)"
   },
   "source_reconciliation": {
     "raw_source_url_rows": 944,

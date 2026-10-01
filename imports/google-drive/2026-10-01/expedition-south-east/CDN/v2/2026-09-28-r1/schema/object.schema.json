@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "expedition-object-v2.schema.json",
+  "title": "Expedition South East CDN object",
+  "type": "object",
+  "required": [
+    "meta",
+    "identity",
+    "location",
+    "editorial",
+    "logistics",
+    "media",
+    "provenance"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "release_id",
+        "object_id",
+        "slug",
+        "country_code"
+      ]
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "name",
+        "class",
+        "interest",
+        "tags"
+      ]
+    },
+    "location": {
+      "type": "object"
+    },
+    "editorial": {
+      "type": "object"
+    },
+    "logistics": {
+      "type": "object"
+    },
+    "accommodation": {
+      "type": "array"
+    },
+    "operations": {
+      "type": "object"
+    },
+    "safety": {
+      "type": "object"
+    },
+    "traveler_reports": {
+      "type": "object"
+    },
+    "media": {
+      "type": "object",
+      "required": [
+        "gallery"
+      ]
+    },
+    "route": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "sources",
+        "verification",
+        "source_country_file"
+      ]
+    }
+  }
+}

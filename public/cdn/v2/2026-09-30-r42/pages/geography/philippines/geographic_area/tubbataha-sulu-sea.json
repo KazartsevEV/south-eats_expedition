@@ -57,7 +57,7 @@
     },
     "coverage_role": "regional_profile",
     "provenance": {
-      "checked_at": "2026-09-30",
+      "checked_at": "2026-10-01",
       "sources": [
         {
           "publisher": "Philippine Statistics Authority — PSGC",
@@ -191,9 +191,40 @@
     }
   },
   "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "reef",
+      "label_ru": "Рифы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "reef",
+          "label_ru": "Рифы",
+          "count": 1,
+          "country_class_page": "pages/countries/philippines/classes/reef.json",
+          "filter": {
+            "geography_id": "ph:geographic_area:tubbataha-sulu-sea"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:tubbataha-reefs",
+      "name": "Tubbataha Reefs",
+      "object_type": "reef",
+      "narrow": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/tubbataha-reefs.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {
@@ -220,6 +251,6 @@
         "checked_at": "2026-09-30"
       }
     ],
-    "checked_at": "2026-09-30"
+    "checked_at": "2026-10-01"
   }
 }

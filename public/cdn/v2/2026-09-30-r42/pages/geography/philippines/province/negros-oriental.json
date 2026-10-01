@@ -32,7 +32,7 @@
       "kind": "geographic_area",
       "name": "Восточный Негрос / Дауин / остров Апо",
       "page_path": "pages/geography/philippines/geographic_area/negros-oriental-dauin-apo-island.json",
-      "object_count": 0
+      "object_count": 1
     }
   ],
   "legacy_region_names": [],
@@ -69,7 +69,7 @@
     },
     "coverage_role": "regional_profile",
     "provenance": {
-      "checked_at": "2026-09-30",
+      "checked_at": "2026-10-01",
       "sources": [
         {
           "publisher": "Philippine Statistics Authority — PSGC",
@@ -188,9 +188,40 @@
     }
   },
   "notes_ru": "Негрос-Ориенталь — восточная часть острова Негрос с Dumaguete как главным городским узлом. Побережье Dauin и Apo Island образуют важный морской кластер, но провинция значительно шире этого дайв-направления.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "reef",
+      "label_ru": "Рифы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "reef",
+          "label_ru": "Рифы",
+          "count": 1,
+          "country_class_page": "pages/countries/philippines/classes/reef.json",
+          "filter": {
+            "geography_id": "ph:province:negros-oriental"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:apo-island-marine-sanctuary",
+      "name": "Apo Island Marine Sanctuary",
+      "object_type": "reef",
+      "narrow": "Классический community-based marine sanctuary у Negros Oriental: кораллы, green sea turtles и сильный сюжет об охране рифов.",
+      "detail_path": "countries/philippines/objects/apo-island-marine-sanctuary.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {
@@ -217,6 +248,6 @@
         "checked_at": "2026-09-30"
       }
     ],
-    "checked_at": "2026-09-30"
+    "checked_at": "2026-10-01"
   }
 }

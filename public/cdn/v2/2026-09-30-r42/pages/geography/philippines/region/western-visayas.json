@@ -25,21 +25,21 @@
       "kind": "geographic_area",
       "name": "Боракай / Западные Висайи",
       "page_path": "pages/geography/philippines/geographic_area/boracay-western-visayas.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "ph:province:aklan",
       "kind": "province",
       "name": "Аклан",
       "page_path": "pages/geography/philippines/province/aklan.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "ph:province:iloilo",
       "kind": "province",
       "name": "Илоило",
       "page_path": "pages/geography/philippines/province/iloilo.json",
-      "object_count": 0
+      "object_count": 1
     }
   ],
   "legacy_region_names": [],
@@ -75,7 +75,7 @@
     },
     "coverage_role": "regional_profile",
     "provenance": {
-      "checked_at": "2026-09-30",
+      "checked_at": "2026-10-01",
       "sources": [
         {
           "publisher": "Philippine Statistics Authority — PSGC",
@@ -165,9 +165,68 @@
     }
   },
   "notes_ru": "Западные Висайи после восстановления Negros Island Region — это Панай, Гимарас и связанные городские узлы, а не прежний регион с Negros Occidental. Для справочника особенно важно не использовать старую административную инерцию в маршрутах и подписях.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    },
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/philippines/classes/historic_city.json",
+          "filter": {
+            "geography_id": "ph:region:western-visayas"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "island",
+          "label_ru": "Острова и архипелаги",
+          "count": 1,
+          "country_class_page": "pages/countries/philippines/classes/island.json",
+          "filter": {
+            "geography_id": "ph:region:western-visayas"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:boracay",
+      "name": "Boracay",
+      "object_type": "island",
+      "narrow": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/boracay.json"
+    },
+    {
+      "id": "ph:iloilo-heritage-districts",
+      "name": "Iloilo heritage districts",
+      "object_type": "historic_city",
+      "narrow": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/philippines/objects/iloilo-heritage-districts.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {
@@ -194,6 +253,6 @@
         "checked_at": "2026-09-30"
       }
     ],
-    "checked_at": "2026-09-30"
+    "checked_at": "2026-10-01"
   }
 }

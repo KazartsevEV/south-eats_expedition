@@ -32,7 +32,7 @@
       "kind": "geographic_area",
       "name": "Самар",
       "page_path": "pages/geography/philippines/geographic_area/samar-expedition.json",
-      "object_count": 0
+      "object_count": 1
     }
   ],
   "legacy_region_names": [],
@@ -69,7 +69,7 @@
     },
     "coverage_role": "regional_profile",
     "provenance": {
-      "checked_at": "2026-09-30",
+      "checked_at": "2026-10-01",
       "sources": [
         {
           "publisher": "Philippine Statistics Authority — PSGC",
@@ -192,9 +192,40 @@
     }
   },
   "notes_ru": "Провинция Самар занимает западную часть одноимённого острова и не должна смешиваться со всем Samar Island, который административно разделён также между Eastern Samar и Northern Samar. Для экспедиции важны карст, реки, лесные массивы и Waray-культурный контекст.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "cave",
+      "label_ru": "Пещеры",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "relief_geology",
+      "label_ru": "Рельеф и геология",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "cave",
+          "label_ru": "Пещеры",
+          "count": 1,
+          "country_class_page": "pages/countries/philippines/classes/cave.json",
+          "filter": {
+            "geography_id": "ph:province:samar"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:samar-cave-systems",
+      "name": "Samar cave systems",
+      "object_type": "cave",
+      "narrow": "Samar cave systems — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/philippines/objects/samar-cave-systems.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {
@@ -221,6 +252,6 @@
         "checked_at": "2026-09-30"
       }
     ],
-    "checked_at": "2026-09-30"
+    "checked_at": "2026-10-01"
   }
 }

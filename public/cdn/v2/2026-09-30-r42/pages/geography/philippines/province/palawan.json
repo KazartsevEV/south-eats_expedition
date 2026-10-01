@@ -32,14 +32,14 @@
       "kind": "geographic_area",
       "name": "Палаван",
       "page_path": "pages/geography/philippines/geographic_area/palawan-expedition.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "ph:geographic_area:tubbataha-sulu-sea",
       "kind": "geographic_area",
       "name": "Туббатаха / море Сулу",
       "page_path": "pages/geography/philippines/geographic_area/tubbataha-sulu-sea.json",
-      "object_count": 0
+      "object_count": 1
     }
   ],
   "legacy_region_names": [],
@@ -76,7 +76,7 @@
     },
     "coverage_role": "regional_profile",
     "provenance": {
-      "checked_at": "2026-09-30",
+      "checked_at": "2026-10-01",
       "sources": [
         {
           "publisher": "Philippine Statistics Authority — PSGC",
@@ -181,9 +181,61 @@
     }
   },
   "notes_ru": "Палаван — вытянутая островная провинция на западной окраине Филиппин и крупнейшая по населению провинция MIMAROPA. Для экспедиционной логистики её нельзя воспринимать как один курорт: северные карстовые архипелаги, центральный коридор Пуэрто-Принсесы, южные горные и прибрежные районы и удалённые морские парки заметно различаются по доступу, погоде и режимам охраны.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 1
+    },
+    {
+      "object_type": "reef",
+      "label_ru": "Рифы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "island",
+          "label_ru": "Острова и архипелаги",
+          "count": 1,
+          "country_class_page": "pages/countries/philippines/classes/island.json",
+          "filter": {
+            "geography_id": "ph:province:palawan"
+          }
+        },
+        {
+          "object_type": "reef",
+          "label_ru": "Рифы",
+          "count": 1,
+          "country_class_page": "pages/countries/philippines/classes/reef.json",
+          "filter": {
+            "geography_id": "ph:province:palawan"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:palawan-el-nido-coron",
+      "name": "Palawan / El Nido / Coron",
+      "object_type": "island",
+      "narrow": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/palawan-el-nido-coron.json"
+    },
+    {
+      "id": "ph:tubbataha-reefs",
+      "name": "Tubbataha Reefs",
+      "object_type": "reef",
+      "narrow": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/tubbataha-reefs.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {
@@ -210,6 +262,6 @@
         "checked_at": "2026-09-30"
       }
     ],
-    "checked_at": "2026-09-30"
+    "checked_at": "2026-10-01"
   }
 }

@@ -25,21 +25,21 @@
       "kind": "geographic_area",
       "name": "Кордильеры / Ифугао / Сагада",
       "page_path": "pages/geography/philippines/geographic_area/cordillera-ifugao-sagada.json",
-      "object_count": 0
+      "object_count": 2
     },
     {
       "id": "ph:province:ifugao",
       "kind": "province",
       "name": "Ифугао",
       "page_path": "pages/geography/philippines/province/ifugao.json",
-      "object_count": 0
+      "object_count": 1
     },
     {
       "id": "ph:province:mountain-province",
       "kind": "province",
       "name": "Горная провинция",
       "page_path": "pages/geography/philippines/province/mountain-province.json",
-      "object_count": 0
+      "object_count": 1
     }
   ],
   "legacy_region_names": [],
@@ -75,7 +75,7 @@
     },
     "coverage_role": "regional_profile",
     "provenance": {
-      "checked_at": "2026-09-30",
+      "checked_at": "2026-10-01",
       "sources": [
         {
           "publisher": "Philippine Statistics Authority — PSGC",
@@ -173,9 +173,47 @@
     }
   },
   "notes_ru": "Кордильерский административный регион — высокогорный внутренний регион северного Лусона, объединяющий шесть провинций. Для экспедиции это верхний административный контекст: рельеф, дорожная доступность и культурная среда заметно меняются между провинциями, поэтому CAR нельзя сводить к одному маршруту Банауэ—Сагада.",
-  "class_counts": [],
-  "class_families": [],
-  "objects": [],
+  "class_counts": [
+    {
+      "object_type": "cultural_landscape",
+      "label_ru": "Культурные ландшафты",
+      "count": 2
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "religion_ethnography",
+      "label_ru": "Религия, этнография и живая культура",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "cultural_landscape",
+          "label_ru": "Культурные ландшафты",
+          "count": 2,
+          "country_class_page": "pages/countries/philippines/classes/cultural_landscape.json",
+          "filter": {
+            "geography_id": "ph:region:car"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:banaue-and-batad-rice-terraces",
+      "name": "Banaue and Batad rice terraces",
+      "object_type": "cultural_landscape",
+      "narrow": "Banaue and Batad rice terraces — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/philippines/objects/banaue-and-batad-rice-terraces.json"
+    },
+    {
+      "id": "ph:sagada",
+      "name": "Sagada",
+      "object_type": "cultural_landscape",
+      "narrow": "Sagada — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/philippines/objects/sagada.json"
+    }
+  ],
   "provenance": {
     "sources": [
       {
@@ -202,6 +240,6 @@
         "checked_at": "2026-09-30"
       }
     ],
-    "checked_at": "2026-09-30"
+    "checked_at": "2026-10-01"
   }
 }

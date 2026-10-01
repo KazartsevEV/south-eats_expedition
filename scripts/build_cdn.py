@@ -777,12 +777,14 @@ def build():
         hub_to_ids = defaultdict(list)
 
         for obj in source_objects:
-            name = obj.get("name")
-            if name not in TYPE_BY_NAME:
-                raise RuntimeError(f"untyped object in publish set: {code} / {name}")
-            object_type = TYPE_BY_NAME[name]
-            slug = slugify(name)
+            legacy_name = obj.get("name")
+            display_name = obj.get("display_name") or legacy_name
+            if legacy_name not in TYPE_BY_NAME:
+                raise RuntimeError(f"untyped object in publish set: {code} / {legacy_name}")
+            object_type = TYPE_BY_NAME[legacy_name]
+            slug = slugify(legacy_name)
             object_id = f"{code.lower()}:{slug}"
+            name = display_name
             card = obj.get("traveler_card") or {}
             location = card.get("location") or {}
             geo = normalize_geo(location, source_registry, object_id)

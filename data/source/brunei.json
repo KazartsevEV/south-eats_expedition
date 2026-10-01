@@ -46,7 +46,8 @@
       "2026-10-01 object QA: obj_bn_0005 Royal Regalia Museum rebuilt to Cambodia reference standard; canonical source refs reconciled on fresh main after concurrent registry changes.",
       "2026-10-01 object QA: obj_bn_0006 Seria oil heritage landscape rebuilt around a verified public anchor at Billionth Barrel Monument, with separate industrial-history, geology, access, traveler-report and visual-recon layers.",
       "2026-10-01 object QA: obj_bn_0006 Seria oil heritage landscape rebuilt to Cambodia reference standard; active-field framing, official history, self-guided public-road access, honest water/overnight unknowns and sourced visual recon.",
-      "2026-10-01 object QA: obj_bn_0007 Labi interior rebuilt as a corridor-level expedition card; separated child attractions, official access/history/culture, honest water/overnight unknowns, structured reports and visual recon."
+      "2026-10-01 object QA: obj_bn_0007 Labi interior rebuilt as a corridor-level expedition card; separated child attractions, official access/history/culture, honest water/overnight unknowns, structured reports and visual recon.",
+      "2026-10-01 object QA: obj_bn_0008 normalized from ambiguous Tutong markets wording to the single Pasarneka/Tamu Tutong weekly market; current Thursday hours, self-guided access, honest supply/overnight handling and structured visual recon."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -6746,7 +6747,7 @@
           "food",
           "daily life"
         ],
-        "why_go": "Рынки Тутонг показывают район через торговую повседневность: рыба, овощи, фрукты, выпечка, сушёные продукты и готовая еда связывают побережье, речную долину и сельскую глубинку.",
+        "why_go": "Рынок даёт концентрированный срез продовольственной и ремесленной повседневности Тутонга за несколько часов: местные овощи и фрукты, готовая еда, корзины и другие изделия продаются в одном крытом комплексе. Для экспедиционного справочника его ценность не в «колорите рынка», а в возможности увидеть, какие продукты реально сходятся из сельского района в районный центр.",
         "traveler_card": {
           "location": {
             "region": "Tutong",
@@ -6809,24 +6810,64 @@
             }
           },
           "logistics": {
-            "access": "По шоссе из BSB/Сериа; в городе пешком или Dart.",
-            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
-            "last_mile": null,
+            "access": "Рынок находится у Pekan Tutong в Kampong Serambangun. На собственной машине или мопеде подъезд обычный дорожный; без транспорта Brunei Tourism рекомендует Dart.",
+            "public_transport": "Надёжный актуальный автобусный маршрут с расписанием до рынка не подтверждён; не подменять это общими сведениями о автобусах Бандар-Сери-Бегавана.",
+            "last_mile": "Координата карточки относится к входу в Kompleks Pasarneka dan Tamu Tutong; отдельного пешего трейла нет.",
             "typical_visit_hours": [
-              1.5,
-              3
+              1,
+              2.5
             ],
-            "permit_or_guide": null,
-            "mobility_notes": null,
+            "permit_or_guide": "Гид не требуется.",
             "modes": {
-              "public_transport": "до Тутонг по дороге; внутри удобнее машина/Dart",
-              "taxi_ridehail": "Dart/водитель до центра",
-              "moped": "нормальный дорожный подъезд",
-              "walking": "рынок/набережная обычно в 0.5–2 км друг от друга"
+              "public_transport": "актуальная регулярная линия до рынка не подтверждена",
+              "taxi_ridehail": "Dart — официальный рекомендованный вариант без собственной машины",
+              "moped": "обычный дорожный подъезд к рыночному комплексу",
+              "walking": "по самому комплексу; отдельного подхода нет"
             },
-            "water": "еда и напитки на рынке",
-            "overnight_and_camping": "рынок и набережная не кемпинг; гостиница",
-            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "access_options": [
+              {
+                "id": "road_access",
+                "origin": "Pekan Tutong",
+                "modes": [
+                  "car",
+                  "moped",
+                  "taxi_ridehail"
+                ],
+                "legs": [
+                  {
+                    "mode": "road",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "городской/пригородный дорожный подъезд",
+                    "seasonality": "круглогодично",
+                    "navigation": "к Kompleks Pasarneka dan Tamu Tutong в Kampong Serambangun"
+                  }
+                ]
+              }
+            ],
+            "water": "Покупные напитки доступны во время торгового дня, но рынок не используется как гарантированный круглосуточный пункт воды.",
+            "water_structured": {
+              "at_object": true,
+              "quality": "commercial_packaged",
+              "last_reliable_point": null,
+              "natural_sources": [],
+              "notes": "Наличие относится к работающим торговым рядам в четверг утром; вне торгового времени не считать рынок точкой снабжения."
+            },
+            "supplies": {
+              "status": "available_during_market",
+              "summary": "Продукты и готовая еда продаются внутри рынка по четвергам утром.",
+              "poi_ids": []
+            },
+            "overnight_and_camping": "Рынок не является местом ночёвки.",
+            "overnight": {
+              "status": "prohibited_or_not_applicable",
+              "summary": "Торговый комплекс не рассматривается как кемпинг или ночёвка; жильё хранится отдельными lodging-сущностями.",
+              "source_refs": []
+            },
+            "access_requirements": "Обычный публичный рынок; специальных разрешений на посещение не требуется.",
             "self_guided_default": true,
             "travel_model": "самостоятельно"
           },
@@ -6836,11 +6877,12 @@
             "site_specific_notes": null
           },
           "operations": {
-            "hours": "Pasarneka/Tamu Тутонг: четверг примерно 06:00–12:00 по Бруней туризм.",
-            "ticket": "Вход свободный; покупки отдельно.",
-            "closure_notes": null,
-            "last_verified": "2026-09-28",
-            "official_url": "https://www.bruneitourism.com/street-food/tamu-tutong/"
+            "hours": "Четверг 06:00–12:00; в остальные дни Brunei Tourism указывает рынок закрытым.",
+            "ticket": "Вход свободный; покупки оплачиваются отдельно. Официальная страница указывает cash-only.",
+            "closure_notes": "Главное ограничение — недельный цикл: приехать не в четверг означает фактически пропустить объект. Даже в четверг поздний приезд уменьшает выбор.",
+            "last_verified": "2026-10-01",
+            "official_url": "https://www.bruneitourism.com/street-food/tamu-tutong/",
+            "status": "weekly_market"
           },
           "safety": {
             "crime_context": "Сопоставимой официальной статистики преступности именно по объекту нет; вместо фиктивного объект преступность оценка приведены реальные операционные и природные риски.",
@@ -6855,29 +6897,102 @@
           },
           "media": {
             "photo_suitability_5": 5,
-            "video_suitability_5": 5,
+            "video_suitability_5": 4,
             "visual_scouting": {
-              "best_time": "07:00–10:00",
-              "best_weather_light": "Крытые секции сохраняют мягкий свет и во время дождя.",
+              "best_time": "06:30–09:30 в четверг: рынок уже работает, но торговля ещё не идёт к завершению.",
+              "best_weather_light": "Комплекс крытый и открыт по сторонам; дождь меньше мешает внутри рядов, чем на внешних подходах.",
               "viewpoints_for_photo_video": [
-                "проход между рядами на уровне глаз",
-                "край прохода у рыбного/овощного ряда на уровне прилавков",
-                "край рынка, где видна связь с улицей"
+                {
+                  "id": "main_aisle",
+                  "name": "Главный проход внутри комплекса",
+                  "coordinates": {
+                    "lat": 4.80379,
+                    "lon": 114.65642,
+                    "elevation_m": 7
+                  },
+                  "access": {
+                    "walk_km": 0,
+                    "notes": "координата входа/комплекса; не выдаётся за точный GPS конкретного места съёмки внутри здания"
+                  },
+                  "view": {
+                    "description": "ряды продавцов, продукты и глубина крытого павильона"
+                  },
+                  "best_time": "early_morning",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает одновременно торговые ряды и устройство крытого комплекса"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "удобен для предметов и взаимодействия без искажения перспективы"
+                    }
+                  ],
+                  "source_refs": []
+                }
+              ],
+              "seasonal_visuals": [
+                "Главный визуальный ритм здесь недельный, а не сезонный: полный рынок существует в четверг утром; в другие дни тот же комплекс визуально и функционально другой."
+              ],
+              "video_activity": [
+                "разгрузка и раскладка товара в начале торгового утра",
+                "движение покупателей и продавцов по крытым рядам",
+                "приготовление и продажа готовой еды там, где это происходит публично"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "для пространства крытого рынка и плотных рядов"
+                },
+                {
+                  "type": "standard",
+                  "why": "для товара, рук и повседневных взаимодействий с нормальной дистанции"
+                }
               ]
             },
-            "drone": "Дрон над рынком неуместен без разрешения.",
-            "filming_restrictions": "Перед крупным планом продавца/покупателя спросить; не мешать торговле."
+            "drone": {
+              "visual_value": "Низкая практическая ценность: с воздуха теряется главное содержание рынка — торговые ряды и взаимодействие людей.",
+              "legal_status": "regulated",
+              "permit_required": true,
+              "restrictions": [
+                "не запускать над скоплением людей без выполнения авиационных и локальных требований"
+              ],
+              "checked_at": "2026-10-01",
+              "source_refs": []
+            },
+            "filming_restrictions": "Общий вид публичных рядов отделять от съёмки конкретного человека: для крупного портрета или длительной съёмки продавца спрашивать согласие и не перекрывать проход."
           },
           "annotation": {
-            "narrative": "Рынки Тутонг показывают район через торговую повседневность: рыба, овощи, фрукты, выпечка, сушёные продукты и готовая еда связывают побережье, речную долину и сельскую глубинку.",
-            "culture_ethnography": "Лучший материал — разговор о происхождении продукта, сезонности и способе приготовления.",
-            "geography_geology": "Тутонг лежит у одноимённой реки недалеко от моря; речная долина исторически определяла размещение поселений и торговых точек."
-          },
-          "traveler_reports": {
-            "recurring_issues": [
-              "поздно приезжать плохо: часть продавцов уже уходит"
+            "canonical_story_from_sections": true,
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Pasarneka Tutong, также называемый Tamu Tutong, — крытый рыночный комплекс в Kampong Serambangun рядом с Pekan Tutong. Официальный туристический сайт указывает единственный основной торговый день — четверг, 06:00–12:00. Поэтому карточка относится к одному объекту; прежнее множественное «Tutong and Tamu markets» создавало ложное впечатление каталога нескольких рынков."
+              },
+              {
+                "section_id": "history",
+                "content": "Tamu — традиционная форма периодического рынка, где продавцы из разных поселений собираются в определённый день, а не постоянный городской базар. Для комплекса в Serambangun официальный районный справочник подчёркивает именно четверг: в этот день сюда приезжают торговцы из разных частей страны. Исторические рынки и современные постоянные магазины Тутонга не объединяются с этим объектом без отдельного основания."
+              },
+              {
+                "section_id": "culture",
+                "content": "Ассортимент соединяет повседневную еду и ремесло: свежие овощи и фрукты, готовые блюда и напитки, цветы, птица, одежда, корзины и другие изделия. Brunei Tourism отдельно упоминает hand-woven baskets и cucur pisang. Для наблюдения за локальной пищевой культурой полезнее фиксировать происхождение продукта и местное название, чем приписывать каждому товару «традиционность» без источника."
+              },
+              {
+                "section_id": "geography",
+                "content": "Рынок расположен в Kampong Serambangun у Pekan Tutong, то есть на дорожном узле районного центра, а не в удалённой сельской глубинке. Его функция как точки сбора продукции читается именно через эту позицию: сельские товары сходятся к месту, доступному с основной дорожной сети Тутонга."
+              }
             ]
           },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "timing",
+              "summary": "Wikivoyage отмечает, что часть продавцов может закончить торговлю до формального закрытия, поэтому для полного ассортимента разумнее приезжать в ранние часы работы.",
+              "observed_period": "2018-03",
+              "source_refs": [],
+              "confidence": "low"
+            }
+          ],
           "accommodation": [
             {
               "name": "The Lanes Hotel",
@@ -6946,6 +7061,18 @@
               "lodging"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://en.wikivoyage.org/wiki/Tutong",
+            "type": "traveler_guide",
+            "title": "Tutong – Travel guide",
+            "publisher": "Wikivoyage",
+            "language": "en",
+            "accessed": "2026-10-01",
+            "authority": "low",
+            "used_for": [
+              "traveler timing report"
+            ]
           }
         ],
         "verification": {
@@ -6958,7 +7085,7 @@
           ],
           "verify_before_departure": true
         },
-        "narrow": "Рынки Тутонг показывают район через торговую повседневность: рыба, овощи, фрукты, выпечка, сушёные продукты и готовая еда связывают побережье, речную долину и сельскую глубинку. Лучший материал — разговор о происхождении продукта, сезонности и способе приготовления. Тутонг лежит у одноимённой реки недалеко от моря; речная долина исторически определяла размещение поселений и торговых точек. Сезон: Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год. Лучшее время: 07:00–10:00 Свет и погода: Крытые секции сохраняют мягкий свет и во время дождя. Сильные точки обзора: проход между рядами на уровне глаз; край прохода у рыбного/овощного ряда на уровне прилавков; край рынка, где видна связь с улицей.",
+        "narrow": "Pasarneka Tutong — еженедельный четверговый рынок в Kampong Serambangun у Тутонга: с 06:00 до полудня сюда съезжаются продавцы местных продуктов, готовой еды и ремесленных изделий. Это не «несколько рынков Тутонга» в одной карточке, а конкретный Kompleks Pasarneka dan Tamu Tutong с одной входной точкой и собственным ритмом: приезжать имеет смысл утром, пока торговля в полном объёме.",
         "tags": [
           "culture",
           "food",
@@ -7004,7 +7131,67 @@
             "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
             "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
           }
-        }
+        },
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-01",
+            "notes": "Удалены рекламные штампы, англо-русская каша и псевдосъёмочные инструкции."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "объектный QA Pasarneka Tutong / Tamu Tutong по камбоджийскому эталону",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true
+            },
+            "notes": [
+              "Исправлена сущность: карточка описывает один Kompleks Pasarneka dan Tamu Tutong, а не неопределённое множество рынков.",
+              "Часы привязаны к актуальной официальной странице: четверг 06:00–12:00; cash-only отмечен как изменчивый операционный факт.",
+              "Убрана ложная логистика про городской автобус Бандар-Сери-Бегавана; оставлены собственный транспорт и официальный Dart.",
+              "Вода описана как коммерческое снабжение только во время рынка, не как постоянный POI.",
+              "Ночёвка не заполняется формальным «гостиница»: рынок помечен как не относящийся к camping/overnight.",
+              "Traveler report используется только для наблюдения о раннем окончании торговли и имеет низкую уверенность."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-01",
+            "scope": "редакционная приёмка obj_bn_0008",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest_unknowns": true,
+              "overnight_honest_unknowns": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "entity_scope_corrected": true
+            },
+            "notes": [
+              "Главная редакционная правка — нормализация объекта из размытого 'markets' в конкретный недельный рынок.",
+              "Продукты описаны только настолько конкретно, насколько подтверждают официальные источники; происхождение отдельных товаров не выдумывается.",
+              "Visual recon строится вокруг недельного ритма и публичного пространства, а не вокруг настроек камеры."
+            ]
+          }
+        },
+        "display_name": "Pasarneka Tutong / Tamu Tutong"
       },
       {
         "name": "Tasek Merimbun Heritage Park",

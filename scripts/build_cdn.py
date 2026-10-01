@@ -27,9 +27,9 @@ PUBLISH = [
     ("myanmar.json", "MM", "myanmar"),
     ("philippines.json", "PH", "philippines"),
     ("singapore.json", "SG", "singapore"),
+    ("thailand.json", "TH", "thailand"),
 ]
 COUNTRY_ONLY = [
-    ("thailand.json", "TH", "thailand"),
     ("timor-leste.json", "TL", "timor-leste"),
     ("vietnam.json", "VN", "vietnam"),
 ]
@@ -278,6 +278,31 @@ TYPE_BY_NAME.update({
     "Fort Canning Park": "cultural_landscape",
     "Gillman Barracks": "historic_building",
     "Labrador Nature Reserve and WWII coastal landscape": "protected_area",
+})
+
+# Recovered Thailand object layer: preliminary primary classes for canonical build.
+TYPE_BY_NAME.update({
+    "Bangkok Grand Palace and temples": "religious_site",
+    "Ayutthaya": "archaeological_site",
+    "Sukhothai": "archaeological_site",
+    "Chiang Mai": "historic_city",
+    "Phuket/Krabi/Andaman islands": "island",
+    "Khao Sok National Park": "national_park",
+    "Nan old town and mountains": "cultural_landscape",
+    "Phrae": "historic_city",
+    "Songkhla old town": "historic_city",
+    "Phimai and Phanom Rung": "archaeological_site",
+    "Khao Yai National Park": "national_park",
+    "Erawan National Park": "national_park",
+    "Phu Kradueng National Park": "national_park",
+    "Pha Taem National Park": "national_park",
+    "Ko Tarutao National Park": "national_park",
+    "Sam Phan Bok": "geological_site",
+    "Tham Lod Cave / Pang Mapha": "cave",
+    "Doi Inthanon National Park": "national_park",
+    "Similan Islands National Park": "national_park",
+    "Wat Rong Khun (White Temple)": "religious_site",
+    "Khao Sam Roi Yot National Park / Phraya Nakhon Cave": "national_park",
 })
 
 TAG_ALIASES = {

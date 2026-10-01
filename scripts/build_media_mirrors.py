@@ -19,7 +19,7 @@ MAX_DOWNLOAD_BYTES = 50 * 1024 * 1024
 MIRROR_MAX_SIZE = (1920, 1920)
 WEBP_QUALITY = 84
 USER_AGENT = "ExpeditionSoutheastAsiaMediaMirror/1.0 (+https://github.com/KazartsevEV/south-eats_expedition)"
-WIKIMEDIA_DELAY_SECONDS = 1.25
+WIKIMEDIA_DELAY_SECONDS = 0.6
 _last_wikimedia_request = 0.0
 
 

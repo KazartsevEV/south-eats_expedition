@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0",
+  "audited_at": "2026-10-02",
+  "project": "Expedition South East",
+  "purpose": "Reconcile all recoverable Google Drive donor content against the current 211-object canonical dataset without treating derived UI payloads or forbidden shooting instructions as canonical facts.",
+  "result": {
+    "canonical_countries": 11,
+    "canonical_objects": 211,
+    "donor_objects": 211,
+    "object_identity_coverage": "211/211",
+    "missing_object_records": 0,
+    "current_qa": {
+      "objects_passed": 38,
+      "objects_incomplete": 173
+    },
+    "migration_loss_summary": "No country-monolith object record is missing. Recoverable residual content is primarily historical helper-gallery media; some historical derived files are no longer physically retrievable."
+  },
+  "object_identity": [
+    {
+      "country": "BN",
+      "donor": 18,
+      "canonical": 18,
+      "missing": 0,
+      "note": "One editorial rename only: donor 'Tutong and Tamu markets' -> canonical 'Pasarneka Tutong / Tamu Tutong'; same object/slug lineage."
+    },
+    {
+      "country": "KH",
+      "donor": 19,
+      "canonical": 19,
+      "missing": 0
+    },
+    {
+      "country": "ID",
+      "donor": 21,
+      "canonical": 21,
+      "missing": 0
+    },
+    {
+      "country": "LA",
+      "donor": 19,
+      "canonical": 19,
+      "missing": 0
+    },
+    {
+      "country": "MY",
+      "donor": 21,
+      "canonical": 21,
+      "missing": 0
+    },
+    {
+      "country": "MM",
+      "donor": 15,
+      "canonical": 15,
+      "missing": 0
+    },
+    {
+      "country": "PH",
+      "donor": 19,
+      "canonical": 19,
+      "missing": 0
+    },
+    {
+      "country": "SG",
+      "donor": 18,
+      "canonical": 18,
+      "missing": 0
+    },
+    {
+      "country": "TH",
+      "donor": 21,
+      "canonical": 21,
+      "missing": 0
+    },
+    {
+      "country": "TL",
+      "donor": 17,
+      "canonical": 17,
+      "missing": 0
+    },
+    {
+      "country": "VN",
+      "donor": 23,
+      "canonical": 23,
+      "missing": 0
+    }
+  ],
+  "donor_layers": {
+    "country_monoliths": {
+      "count": 11,
+      "objects_total": 211,
+      "role": "Primary preserved research/editorial donor.",
+      "findings": [
+        "BN/KH/ID/LA/MY contain the rich expedition fields water, overnight_and_camping, accommodation and traveler_reports for all 98 objects in those five countries.",
+        "Current canonical QA no longer reports water/overnight/traveler_reports gaps for BN/KH/ID/LA/MY, confirming those donor dimensions survived migration.",
+        "MM/PH/SG/TH/TL/VN monoliths are thinner: missing current GPS/elevation/water/overnight/traveler-report/visual-recon fields were not hidden in the old monoliths."
+      ]
+    },
+    "cdn_r1_2026_09_28": {
+      "manifest_entries": 73,
+      "exact_files_present": 55,
+      "declared_missing_files": 18,
+      "missing_scope": "Laos historical derived object-detail JSON files; Bolaven Plateau is the only LA standalone detail physically present.",
+      "integrity_audit": "imports/google-drive/2026-10-01/audit/2026-09-28-r1-integrity.json",
+      "rule": "Do not reconstruct the missing r1 bytes or retain their old SHA-256 using newer canonical content."
+    },
+    "cdn_v2_r3": {
+      "schema_version": "2.1.0",
+      "release_id": "2026-09-28-r3",
+      "manifest_files": 153,
+      "manifest_objects": 98,
+      "manifest_countries": [
+        "BN",
+        "KH",
+        "LA",
+        "ID",
+        "MY"
+      ],
+      "qa_total_image_refs": 188,
+      "qa_objects_with_2plus_images": 27,
+      "qa_objects_single_image_only": 71,
+      "physically_retrievable_from_drive": {
+        "metadata_files": [
+          "README.md",
+          "manifest.json",
+          "migration-status.json",
+          "qa.json"
+        ],
+        "countries_folder": "empty at reconciliation time",
+        "detail_payloads": false
+      },
+      "implication": "The manifest proves a richer historical derived read-model existed, but exact missing detail content, especially any ID/MY helper-gallery URLs, cannot be claimed recovered from the current Drive tree."
+    },
+    "cdn_v2_reference_zip": {
+      "file": "expedition_cdn_v2_reference.zip",
+      "role": "Separate earlier derivative reference snapshot; not byte-equivalent to r1 or r3.",
+      "recovered_scope": [
+        "BN",
+        "KH",
+        "LA"
+      ],
+      "note": "Useful as a provenance-distinct donor for helper-gallery media. It must not be presented as an exact reconstruction of the missing r1/r3 files."
+    }
+  },
+  "coordinates_and_elevation": {
+    "donor_country_monolith_numeric_lat_lon_pairs": 0,
+    "checked_available_r1_detail_files": 38,
+    "hidden_coordinates_in_checked_r1_details": false,
+    "conclusion": "The large GPS/elevation QA gaps in PH/SG/TH/TL/VN are research gaps, not migration loss. Coordinates must be researched and sourced under the canonical GPS contract, never inferred from region/city centers."
+  },
+  "historical_detail_delta": {
+    "available_r1_standalone_details": 38,
+    "unique_nonmechanical_categories_beyond_monolith_and_reference_media": [
+      {
+        "category": "media.gallery.description",
+        "scalar_values_observed": 67,
+        "disposition": "Potentially useful media metadata; preserve only when attached to the same verified media asset."
+      },
+      {
+        "category": "media.gallery.score",
+        "scalar_values_observed": 61,
+        "disposition": "Editorial ranking only; do not migrate as canonical fact."
+      }
+    ],
+    "mechanical_only_examples": [
+      "schema/release metadata",
+      "generated timestamps",
+      "derived object IDs",
+      "provenance/read-model paths"
+    ]
+  },
+  "helper_media_reconciliation": {
+    "dedupe_rule": "Normalize Wikimedia upload/Special:FilePath/Special:Redirect identity by underlying filename; normalize obvious Wordpress resize variants so alternate sizes are not counted as distinct images.",
+    "deduped_old_only_assets": {
+      "BN": 37,
+      "KH": 40,
+      "LA": 27,
+      "total": 104
+    },
+    "interpretation": {
+      "KH": "All 19 KH objects already pass gallery QA; 40 old-only assets are historical alternatives, not blockers.",
+      "BN": "37 old-only assets exist; four currently gallery-blocked BN objects can reach 5 distinct assets using preserved helper media.",
+      "LA": "27 old-only assets exist; one currently gallery-blocked LA object can reach 5 distinct assets. Tham Piu gains one distinct image but remains below 5."
+    },
+    "qa_closures_recoverable": [
+      {
+        "country": "BN",
+        "object": "Tutong and Tamu markets",
+        "canonical_display_name": "Pasarneka Tutong / Tamu Tutong",
+        "current_gallery_count": 2,
+        "expected_distinct_union": 5,
+        "recoverable_assets": [
+          "https://www.bruneitourism.com/wp-content/uploads/2024/10/pasarnekatutong-03.webp",
+          "https://www.bruneitourism.com/wp-content/uploads/2024/10/tutong-png.png",
+          "https://www.bruneitourism.com/wp-content/uploads/2024/10/pasarnekatutong-04.webp"
+        ]
+      },
+      {
+        "country": "BN",
+        "object": "Billionth Barrel Monument",
+        "current_gallery_count": 2,
+        "expected_distinct_union": 5,
+        "recoverable_assets": [
+          "https://upload.wikimedia.org/wikipedia/commons/c/c6/Aerial_photograph_of_Billionth_Barrel_Monument_08.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/b/ba/Aerial_photograph_of_Billionth_Barrel_Monument_06.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/b/b0/Aerial_photograph_of_Billionth_Barrel_Monument_10.jpg"
+        ]
+      },
+      {
+        "country": "BN",
+        "object": "Malay Technology Museum",
+        "current_gallery_count": 2,
+        "expected_distinct_union": 5,
+        "recoverable_assets": [
+          "https://upload.wikimedia.org/wikipedia/commons/e/e8/Malay_Technology_Museum%2C_Brunei_-_02.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/4/4a/Malay_Technology_Museum%2C_Brunei_-_01.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/7/75/Traditional_Malay_Craftsmanship_%26_Technology_in_Brunei_02.jpg"
+        ]
+      },
+      {
+        "country": "BN",
+        "object": "Tamu Kianggeh",
+        "current_gallery_count": 2,
+        "expected_distinct_union": 5,
+        "recoverable_assets": [
+          "https://www.bruneitourism.com/wp-content/uploads/2024/10/tamukianggeh-02.webp",
+          "https://www.bruneitourism.com/wp-content/uploads/2024/10/tamukianggeh-03.webp",
+          "https://www.bruneitourism.com/wp-content/uploads/2024/10/tamukianggeh-04.webp"
+        ]
+      },
+      {
+        "country": "LA",
+        "object": "Vientiane sacred architecture",
+        "current_gallery_count": 2,
+        "expected_distinct_union": 5,
+        "recoverable_assets": [
+          "https://upload.wikimedia.org/wikipedia/commons/2/22/Vientiane.-Temple_Pha_That_Luang_Laos_%284%29.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/d/d5/Vientiane_-_Pha_That_Luang_-_0001.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pha_That_Luang_Vientiane_Laos_2.jpg"
+        ]
+      }
+    ],
+    "partial_recovery_not_enough_for_qa": [
+      {
+        "country": "LA",
+        "object": "Tham Piu Cave",
+        "current_gallery_count": 1,
+        "expected_distinct_union": 2,
+        "recoverable_assets": [
+          "https://upload.wikimedia.org/wikipedia/commons/6/65/Laos_%284346166020%29_%282%29.jpg"
+        ]
+      }
+    ],
+    "expected_effect_if_assets_still_validate": "At most five existing gallery-only QA blockers can be closed directly from preserved historical helper media. Expected passed-object count would rise 38 -> 43 and gallery_min_5 missing count 173 -> 168, subject to media URL/license/mirror validation."
+  },
+  "intentional_nonmigration": [
+    {
+      "fields": [
+        "traveler_card.media.field_planning",
+        "capture_sequence",
+        "shot-list-like production guidance"
+      ],
+      "reason": "Current visual_recon contract explicitly forbids photographer instructions and stores only where/when/what equipment category is useful."
+    },
+    {
+      "fields": [
+        "historical media score/editorial ranking"
+      ],
+      "reason": "Editorial ranking is not a canonical fact and is not required for expedition use."
+    },
+    {
+      "layer": "search/views/collections/old CDN cards",
+      "reason": "Derived read-model data must be regenerated from canonical data, not copied as a second source of truth."
+    }
+  ],
+  "remaining_unrecoverable_historical_gaps": [
+    "18 exact r1 Laos standalone detail files are absent from Drive; their exact historical bytes and extra detail-only enrichment cannot be claimed reconstructed.",
+    "CDN_v2 r3 manifest lists 153 files / 98 objects, but its country/detail tree is absent from Drive. Exact r3-only helper media for ID/MY cannot be enumerated from the remaining metadata.",
+    "Any source facts not present in the 11 country monoliths or surviving BN/KH/LA donor details/reference ZIP must be researched anew rather than inferred."
+  ],
+  "next_actions": [
+    "Validate and migrate the five QA-closing helper-media sets with explicit provenance to the reference ZIP/underlying source pages.",
+    "Optionally attach recoverable gallery descriptions to matching media entities; do not restore editorial scores.",
+    "Keep declared r1/r3 historical gaps as provenance gaps; do not fabricate replacement bytes.",
+    "After reconciliation recovery, resume object QA using current canonical gaps rather than treating thin raw donor files as missing migrations."
+  ]
+}

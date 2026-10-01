@@ -3,7 +3,7 @@
     "country": "Indonesia",
     "country_code": "ID",
     "language": "ru",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-01",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -11,7 +11,9 @@
       "air_links",
       "currency",
       "laws",
-      "volcanic_activity"
+      "volcanic_activity",
+      "arrival_declaration",
+      "bali_tourist_levy"
     ],
     "research_notes": [
       "Fast-changing fields are a dated snapshot, not a guarantee of future entry or transport.",
@@ -44,7 +46,8 @@
       "Regional QA pass 2026-09-30: deepened Raja Ampat access and island-community context with current Indonesia Travel material; separated Sorong→Waisai gateway logistics from onward island boat legs and added locally anchored Matbat/Wala cultural context.",
       "Regional language pass 2026-09-30: replaced avoidable English logistics/editorial terms such as gateway, road/boat legs, communities and trailheads with natural Russian equivalents while preserving proper names and technical meaning.",
       "Indonesia locality normalization 2026-10-01: 34 real city/town/village geo nodes added with stable IDs geo_id_0035..0068 and independent settlement centre anchors. Legacy composite route-hub IDs geo_id_0015..0034 are preserved for compatibility and are not reclassified as cities. Object cards unchanged.",
-      "Indonesia geometry QA 2026-10-01: sourced approximate masks added only for Yogyakarta/Central Java, Bali, East Java and West Sumatra/Sawahlunto using verified BIG province geometry. Ten other composite expedition regions remain without polygons because the inspected Kabupaten mirror exposes village-level features rather than defensible dissolved ADM2 boundaries, and parent-province cloning would overstate coverage. Maluku/Banda also remains null rather than using all Maluku. Object cards unchanged."
+      "Indonesia geometry QA 2026-10-01: sourced approximate masks added only for Yogyakarta/Central Java, Bali, East Java and West Sumatra/Sawahlunto using verified BIG province geometry. Ten other composite expedition regions remain without polygons because the inspected Kabupaten mirror exposes village-level features rather than defensible dissolved ADM2 boundaries, and parent-province cloning would overstate coverage. Maluku/Banda also remains null rather than using all Maluku. Object cards unchanged.",
+      "2026-10-01 upper-level acceptance pass: revalidated B1 VOA/e-VOA against Indonesian immigration, added mandatory All Indonesia arrival declaration, current Bali foreign-tourist levy and BMKG climate-zone structure; object payloads remain frozen."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.6",
@@ -75,6 +78,15 @@
       ],
       "status": "complete_expedition_pass_v1_6",
       "updated": "2026-09-28"
+    },
+    "upper_level_acceptance": {
+      "phase": "pre_object",
+      "reference_country": "PH",
+      "status": "complete",
+      "object_payloads_frozen": true,
+      "checked_at": "2026-10-01",
+      "accepted_at": "2026-10-01",
+      "acceptance_basis": "PH-reference upper-level revalidation: country profile, BMKG climate zones, current B1 VOA/e-VOA rule, All Indonesia declaration, Bali foreign-tourist levy, geo hierarchy, regional/locality profiles and geometry provenance; object payloads unchanged."
     }
   },
   "overview": {
@@ -249,7 +261,18 @@
       "Dec": 28.4
     },
     "notes": "Индонезия слишком велика для единой климатической нормы. Bali выбран как типичная логистическая экспедиционная база; Papua, Sumatra, Sulawesi и высокогорья заметно отличаются.",
-    "source_quality": "secondary climatology"
+    "source_quality": "secondary climatology",
+    "checked_at": "2026-10-01",
+    "country_zones": {
+      "source_ids": [
+        "BMKG_CLIMATE_ZONES"
+      ],
+      "summary": "BMKG различает в Индонезии экваториальную, субэкваториальную, тропическую высокогорную, очень высокогорную, муссонную/субмуссонную и саванновую/субсаванновую климатические зоны. Поэтому балийские месячные нормы в этом файле являются только опорным рядом, а не климатом всей страны.",
+      "equatorial": "Крупные острова вблизи экватора — части Суматры, Калимантана, Сулавеси и Папуа — в целом тёплые и влажные круглый год.",
+      "tropical_highlands": "Высоты примерно 500–1500 м прохладнее и влажнее из-за орографии; очень высокие районы выше 1500 м имеют ещё более низкие температуры.",
+      "monsoonal": "На значительной части Явы, юге Калимантана и частях Сулавеси и Малуку сезон дождей и сухой сезон выражены отчётливее.",
+      "savanna": "Нуса-Тенгара отличается более длинным сухим сезоном, сильным ветром и высокой инсоляцией."
+    }
   },
   "safety": {
     "crime_level": {
@@ -358,7 +381,7 @@
       "status": "visa on arrival / e-VOA available",
       "category": "B1 / VOA",
       "stay_days": 30,
-      "extension": "Один раз ещё на 30 дней, максимум обычно 60 дней для этого въезда.",
+      "extension": "Одно продление ещё на 30 дней; суммарно до 60 дней для этого въезда.",
       "visa_run": {
         "possible": "После выезда можно получать новый VOA/e-VOA при соответствии условиям.",
         "limits": "Не является гарантированным бессрочным механизмом проживания; решение о допуске принимается на каждом въезде.",
@@ -370,7 +393,9 @@
       "source_ids": [
         "IMM",
         "IMM2"
-      ]
+      ],
+      "checked_at": "2026-10-01",
+      "source_conflict_note": "По состоянию на проверку 2026-10-01 официальный актуальный список иммиграционной службы Индонезии включает Россию в список VOA/e-VOA, но не в список безвизового въезда. Российский консульский справочник одновременно указывает 30-дневный безвизовый режим; в каноническом поле принят более конкретный текущий список страны въезда, а расхождение требует повторной проверки перед поездкой."
     },
     "airports": [
       {
@@ -403,8 +428,11 @@
       ],
       "transport": "Наземные международные переходы существуют на Borneo/Kalimantan, Timor и New Guinea, но далеко не все удобны для туриста и не все работают одинаково для конкретного визового режима.",
       "source_ids": [
-        "RUS_MFA"
-      ]
+        "RUS_MFA",
+        "IMM_ENTRY_POINTS"
+      ],
+      "checked_at": "2026-10-01",
+      "note": "Для въезда по e-VOA использовать только опубликованные иммиграционной службой пункты пропуска, принимающие e-VOA; список меняется и проверяется непосредственно перед пересечением."
     },
     "currency": {
       "code": "IDR",
@@ -9223,9 +9251,10 @@
             "src_903003",
             "src_903006",
             "src_903028",
-            "src_903029"
+            "src_903029",
+            "src_900024"
           ],
-          "checked_at": "2026-09-30",
+          "checked_at": "2026-10-01",
           "source_refs_complete": true
         },
         "nature": {
@@ -9275,6 +9304,16 @@
           "source_refs": [
             "src_903028"
           ]
+        },
+        "foreign_tourist_levy": {
+          "amount": 150000,
+          "currency": "IDR",
+          "rule": "Иностранный турист уплачивает сбор провинции Бали через систему Love Bali; официальный FAQ указывает оплату один раз за период путешествия на Бали до выезда из Индонезии. Для отдельных категорий предусмотрены исключения.",
+          "payment": "Безналично через Love Bali; рекомендуется оплатить до прибытия.",
+          "source_refs": [
+            "src_900024"
+          ],
+          "checked_at": "2026-10-01"
         }
       },
       {
@@ -12657,7 +12696,7 @@
       "source_ids": [
         "POLRI_SIM"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "camping_rules": {
       "status": "site_specific",
@@ -12665,7 +12704,7 @@
       "source_ids": [
         "KSDA_SIMAKSI"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "drone_rules": {
       "legal_status": "regulated",
@@ -12673,7 +12712,7 @@
       "source_ids": [
         "HUBUD_DRONE"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "tourist_permits": {
       "status": "site_specific",
@@ -12681,7 +12720,7 @@
       "source_ids": [
         "KSDA_SIMAKSI"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "laws_source_ids": [
       "REUTERS_CODE",
@@ -12717,6 +12756,17 @@
         }
       ],
       "checked_at": "2026-09-30"
+    },
+    "arrival_declaration": {
+      "name": "All Indonesia",
+      "required": true,
+      "rule": "С 1 октября 2025 года все международные пассажиры обязаны подавать единую электронную декларацию прибытия All Indonesia. Она объединяет иммиграционные, таможенные, медицинские и карантинные сведения.",
+      "timing": "Форму можно заполнить за 3 дня до прибытия.",
+      "official_portal": "https://allindonesia.imigrasi.go.id/",
+      "source_ids": [
+        "ALL_INDONESIA"
+      ],
+      "checked_at": "2026-10-01"
     }
   },
   "sources": [
@@ -12741,7 +12791,7 @@
         "visa",
         "entry"
       ],
-      "accessed": "2026-09-27",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000716"
     },
     {
@@ -12753,7 +12803,7 @@
         "visa_extension",
         "passport"
       ],
-      "accessed": "2026-09-27",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000717"
     },
     {
@@ -12897,7 +12947,7 @@
         "drone_rules",
         "aviation_rules"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000729"
     },
     {
@@ -12912,7 +12962,7 @@
         "camping_rules",
         "expedition_access"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000730"
     },
     {
@@ -12924,7 +12974,7 @@
         "transport_rules",
         "road_traffic_law"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000731"
     },
     {
@@ -12940,7 +12990,7 @@
         "ports",
         "inter-island transport"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "notes": "Operational marine forecast. Never store current wave height as a permanent regional fact."
     },
     {
@@ -13359,7 +13409,7 @@
         "bali",
         "subak"
       ],
-      "accessed": "2026-09-30"
+      "accessed": "2026-10-01"
     },
     {
       "id": "ID_KOMODO_UNESCO",
@@ -13465,6 +13515,70 @@
       ],
       "accessed": "2026-10-01",
       "notes": "Repository states that geometry is sourced from Indonesia's Badan Informasi Geospasial (BIG) and province coding follows current 38-province administrative structure. Only province-level files verified as province boundaries are used here. Kabupaten files in this mirror were not used after QA showed village-level feature content rather than dissolved regency boundaries."
+    },
+    {
+      "id": "ALL_INDONESIA",
+      "canonical_id": "src_900023",
+      "title": "All Indonesia — mandatory international passenger arrival declaration",
+      "publisher": "Directorate General of Immigration, Indonesia",
+      "url": "https://imigrasi.go.id/faq",
+      "kind": "government",
+      "language": "id",
+      "used_for": [
+        "arrival_declaration",
+        "entry",
+        "customs",
+        "health",
+        "quarantine"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Immigration states that from 1 October 2025 all international passengers must submit the All Indonesia arrival declaration."
+    },
+    {
+      "id": "BALI_LEVY",
+      "canonical_id": "src_900024",
+      "title": "Foreign Tourist Levy — FAQ",
+      "publisher": "Provincial Government of Bali / Love Bali",
+      "url": "https://lovebali.baliprov.go.id/faq",
+      "kind": "government",
+      "language": "en",
+      "used_for": [
+        "bali_tourist_levy",
+        "regional_travel_rule"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official FAQ: IDR 150,000 per foreign tourist, paid once during travel in Bali, subject to listed exemptions."
+    },
+    {
+      "id": "BMKG_CLIMATE_ZONES",
+      "canonical_id": "src_900025",
+      "title": "Indonesia climate zones — I-TMY",
+      "publisher": "Badan Meteorologi, Klimatologi, dan Geofisika (BMKG)",
+      "url": "https://iklim.bmkg.go.id/id/i-tmy/",
+      "kind": "government",
+      "language": "id",
+      "used_for": [
+        "climate_zones",
+        "country_climate"
+      ],
+      "accessed": "2026-10-01"
+    },
+    {
+      "id": "IMM_ENTRY_POINTS",
+      "canonical_id": "src_900026",
+      "title": "VoA/BVK subjects and e-VOA entry points",
+      "publisher": "Directorate General of Immigration, Indonesia",
+      "url": "https://bontang.imigrasi.go.id/layanan-publik/kategori/wna/sub/daftar-subjek-voa-bvk-calling-visa",
+      "kind": "government",
+      "language": "id",
+      "used_for": [
+        "visa",
+        "visa_subjects",
+        "evoa_entry_points",
+        "land_borders"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Current immigration page lists Russia among VoA subjects and not among visa-exemption subjects; also lists e-VOA entry checkpoints."
     }
   ],
   "uncertainties": [

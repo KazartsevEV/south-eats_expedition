@@ -3,7 +3,7 @@
     "country": "Vietnam",
     "country_code": "VN",
     "language": "ru",
-    "last_updated": "2026-09-30",
+    "last_updated": "2026-10-01",
     "purpose": "Expedition South East",
     "data_model_version": "1.2",
     "dynamic_fields": [
@@ -18,10 +18,20 @@
       "Региональные профили и 23 объектные карточки сохранены в исходной Drive-заготовке и намеренно не мигрируются до региональной фазы.",
       "Изменчивые поля проверены на 2026-09-30; перед поездкой требуют повторной проверки.",
       "Regional research profiles restored from the existing Google Drive draft; attraction object payloads remain deferred.",
-      "Regional QA pass 2026-09-30: deepened Hoi An / Quang Nam, Central Highlands / Kon Tum, Nam Dinh and Con Dao; corrected two mismatched UNESCO source URLs without changing canonical source IDs."
+      "Regional QA pass 2026-09-30: deepened Hoi An / Quang Nam, Central Highlands / Kon Tum, Nam Dinh and Con Dao; corrected two mismatched UNESCO source URLs without changing canonical source IDs.",
+      "2026-10-01 upper-level acceptance pass: confirmed the post-reform 34 provincial-level units, Russian 45-day unilateral visa exemption through 2028, 90-day single/multiple eVisa, Vienna-1968 IDP rule, national climate differentiation and 2026 UAV registration/flight-permit rules; object payloads remain frozen."
     ],
     "migration_stage": "country_and_regional",
-    "migration_source_drive_file_id": "1wrC88s1nvDLCSTJsq-ccgQmITVHoUhh9"
+    "migration_source_drive_file_id": "1wrC88s1nvDLCSTJsq-ccgQmITVHoUhh9",
+    "upper_level_acceptance": {
+      "phase": "pre_object",
+      "reference_country": "PH",
+      "status": "complete",
+      "object_payloads_frozen": true,
+      "checked_at": "2026-10-01",
+      "accepted_at": "2026-10-01",
+      "acceptance_basis": "PH-reference upper-level revalidation: post-2025 34-unit provincial hierarchy, Russian 45-day visa exemption, 90-day eVisa, road-document rules, official national climate differentiation and 2026 UAV registration/flight-permit rules; object payloads unchanged."
+    }
   },
   "overview": {
     "summary": "Длинное прибрежное государство Индокитая от китайской границы до дельты Меконга с более чем 3000 км морского побережья.",
@@ -183,7 +193,18 @@
       "Dec": 24.9
     },
     "notes": "Дананг используется только как опорная точка центрального побережья. Ханой зимой заметно прохладнее; Хошимин и дельта Меконга остаются жаркими круглый год; сезон тайфунов и дождей на центральном побережье отличается от юга.",
-    "source_quality": "secondary climatology"
+    "source_quality": "secondary climatology",
+    "checked_at": "2026-10-01",
+    "country_regions": {
+      "summary": "Вьетнам вытянут более чем на 1600 км с севера на юг, поэтому ряд Дананга отражает только центральное побережье и не может представлять климат всей страны.",
+      "north": "Север испытывает выраженный зимний северо-восточный муссон: примерно ноябрь–апрель здесь прохладнее и суше, а лето жаркое и дождливое.",
+      "central": "Центральное побережье имеет смещённый к осени и началу зимы максимум осадков; отдельные участки Южно-Центрального побережья заметно суше.",
+      "south": "Юг и значительная часть Центрального нагорья теплее круглый год и имеют более чёткое разделение на влажный сезон примерно май–ноябрь и сухой сезон примерно декабрь–апрель.",
+      "highlands": "Высота создаёт отдельные прохладные микроклиматы, особенно в северных горах и на высоких плато.",
+      "source_ids": [
+        "VN_CLIMATE_OFFICIAL"
+      ]
+    }
   },
   "safety": {
     "crime_level": {
@@ -295,20 +316,21 @@
       }
     ],
     "visa_for_russian_passport": {
-      "status": "visa-free",
+      "status": "без визы до 45 дней",
       "stay_days": 45,
       "validity_window": "Односторонний безвизовый режим для граждан России действует с 15 марта 2025 года по 14 марта 2028 года.",
       "passport_validity": "не менее 6 месяцев на дату въезда",
       "evisa": "Электронная виза доступна на срок до 90 дней, однократная или многократная.",
       "visa_run": {
-        "possible": "После выезда можно просить новый безвизовый въезд или использовать новую визу.",
-        "limits": "Специального гарантированного права на неограниченные visa-run нет; каждый новый въезд зависит от решения пограничных органов."
+        "possible": "После выезда можно просить новый въезд по действующему безвизовому режиму либо использовать новую/действующую визу.",
+        "limits": "Официальные источники не дают гарантии автоматического неограниченного «сброса» 45-дневного срока; каждый последующий въезд остаётся отдельным решением пограничных органов.",
+        "notes": "Для многократных поездок с заранее известными датами разумно рассматривать 90-дневную multiple-entry eVisa вместо последовательных безвизовых въездов."
       },
       "source_ids": [
         "VN_MFA_VISA",
         "EVISA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "airports": [
       {
@@ -345,10 +367,12 @@
         "Лаос",
         "Камбоджа"
       ],
-      "transport": "Международные железнодорожные и автомобильные коридоры в Китай, а также дорожные и автобусные переходы в Лаос и Камбоджу; пригодность конкретного пункта для eVisa/въезда проверяется по официальному списку.",
+      "transport": "Международные железнодорожные и автомобильные коридоры связывают Вьетнам с Китаем, а дорожные переходы — с Лаосом и Камбоджей. Перед поездкой проверять, допускает ли конкретный пункт въезд/выезд по выбранному основанию (безвизовый режим или eVisa) и открыт ли он для иностранцев.",
       "source_ids": [
-        "RUS_MFA"
-      ]
+        "RUS_MFA",
+        "EVISA"
+      ],
+      "checked_at": "2026-10-01"
     },
     "currency": {
       "code": "VND",
@@ -363,11 +387,12 @@
     },
     "transport_rules": {
       "road_side": "right",
-      "foreign_licence": "Для самостоятельного вождения следует использовать международное водительское удостоверение по применимой международной конвенции вместе с национальным удостоверением; конкретную категорию и признание документов нужно проверять перед арендой.",
+      "foreign_licence": "Для самостоятельного вождения иностранцу действительны IDP, выданный государством — участником Венской конвенции 1968 года, и соответствующее национальное водительское удостоверение; оба документа должны соответствовать категории транспортного средства.",
       "source_ids": [
-        "RUS_MFA"
+        "RUS_MFA",
+        "VN_DRIVER_1968"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "camping_rules": {
       "status": "site_specific",
@@ -375,17 +400,19 @@
       "source_ids": [
         "RUS_MFA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "drone_rules": {
       "legal_status": "regulated",
       "permit_required": true,
-      "summary": "С 2026 года для БПЛА действуют обновлённые правила регистрации и разрешения полётов. Регистрация аппарата не заменяет разрешение на конкретный полёт; использовать БПЛА можно только в разрешённых зоне, времени и высоте.",
+      "registration_required": true,
+      "summary": "В 2026 году для беспилотных воздушных судов действует обновлённая система регистрации и разрешений. Регистрация аппарата сама по себе не разрешает полёт: перед эксплуатацией требуется получить разрешение и соблюдать утверждённые район, время, высоту и иные условия.",
+      "foreign_operator_note": "Для иностранного физического лица право на регистрацию связано со статусом постоянного/временного проживания во Вьетнаме либо отдельным разрешением компетентного органа; туристу нельзя считать регистрацию автоматически доступной.",
       "source_ids": [
         "CAAV_UAV_REG",
         "CAAV_UAV_FLIGHT"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "tourist_permits": {
       "status": "site_specific",
@@ -393,7 +420,7 @@
       "source_ids": [
         "RUS_MFA"
       ],
-      "checked_at": "2026-09-30"
+      "checked_at": "2026-10-01"
     },
     "laws_source_ids": [
       "RUS_MFA"
@@ -1904,7 +1931,7 @@
         "visa",
         "safety"
       ],
-      "accessed": "2026-09-27",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000842"
     },
     {
@@ -1916,7 +1943,7 @@
         "visa",
         "evisa"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000843"
     },
     {
@@ -2011,7 +2038,7 @@
         "visa",
         "entry"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000836"
     },
     {
@@ -2023,7 +2050,7 @@
         "drone_rules",
         "registration"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000837"
     },
     {
@@ -2035,7 +2062,7 @@
         "drone_rules",
         "flight_permission"
       ],
-      "accessed": "2026-09-30",
+      "accessed": "2026-10-01",
       "canonical_id": "src_000838"
     },
     {
@@ -2736,6 +2763,54 @@
         "transport"
       ],
       "accessed": "2026-09-30"
+    },
+    {
+      "id": "VN_ADMIN_34",
+      "canonical_id": "src_900035",
+      "title": "National Assembly resolution on arrangement of provincial-level administrative units in 2025",
+      "publisher": "Government of Viet Nam portal",
+      "url": "https://xaydungchinhsach.chinhphu.vn/quoc-hoi-thong-qua-nghi-quyet-sap-xep-don-vi-hanh-chinh-cap-tinh-119250612101356465.htm",
+      "kind": "government",
+      "language": "vi",
+      "used_for": [
+        "administrative_hierarchy",
+        "province",
+        "centrally_governed_city"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Confirms 34 provincial-level units: 28 provinces and 6 centrally governed cities; newly formed local governments operate from 1 July 2025."
+    },
+    {
+      "id": "VN_CLIMATE_OFFICIAL",
+      "canonical_id": "src_900036",
+      "title": "Characteristics of Viet Nam's humid tropical monsoon climate",
+      "publisher": "Viet Nam Meteorological and Hydrological Administration",
+      "url": "https://vnmha.mae.gov.vn/khi-hau-nhiet-doi-am-gio-mua-co-nhung-dac-trung-gi-noi-bat-16096.htm",
+      "kind": "government",
+      "language": "vi",
+      "used_for": [
+        "country_climate",
+        "monsoon",
+        "regional_climate"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Official meteorological overview distinguishes the northern winter monsoon, southern wet/dry season and central-region seasonal offset."
+    },
+    {
+      "id": "VN_DRIVER_1968",
+      "canonical_id": "src_900037",
+      "title": "Driving licences valid in Viet Nam under the 1968 Vienna Convention",
+      "publisher": "Government of Viet Nam policy portal",
+      "url": "https://xaydungchinhsach.chinhphu.vn/quy-dinh-thoi-han-cua-giay-phep-lai-xe-119240812171308997.htm",
+      "kind": "government",
+      "language": "vi",
+      "used_for": [
+        "transport_rules",
+        "foreign_driving_licence",
+        "idp"
+      ],
+      "accessed": "2026-10-01",
+      "notes": "Government guidance recognizes a 1968 Vienna Convention IDP together with the corresponding national licence and vehicle category."
     }
   ],
   "uncertainties": [

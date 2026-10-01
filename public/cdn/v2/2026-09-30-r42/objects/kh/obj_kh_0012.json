@@ -95,7 +95,18 @@
         "checked_at": "2026-10-01"
       }
     ],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 6.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "site",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src_000373"
+      ],
+      "checked_at": "2026-10-01",
+      "notes": "6 м — модельная отметка операционного узла Chi Phat Visitor Center, а не средняя или максимальная высота всей маршрутной сети. Надёжный единый диапазон высот всех community routes не опубликован."
+    }
   },
   "narrative": {
     "sections": [
@@ -623,7 +634,7 @@
         "coordinates": {
           "lat": 11.32868,
           "lon": 103.52424,
-          "elevation_m": 6.0
+          "elevation_m": null
         },
         "gps": {
           "decimal": "11.328680, 103.524240",
@@ -689,7 +700,7 @@
         "coordinates": {
           "lat": 11.34195,
           "lon": 103.53848,
-          "elevation_m": 16.0
+          "elevation_m": null
         },
         "gps": {
           "decimal": "11.341950, 103.538480",
@@ -765,7 +776,10 @@
     "cover_id": "med_kh_2eefbd4f0807",
     "gallery_ids": [
       "med_kh_2eefbd4f0807",
-      "med_kh_1b7d4068bf4a"
+      "med_kh_1b7d4068bf4a",
+      "med_kh_bc0781203088",
+      "med_kh_7dd6238e7c70",
+      "med_kh_03b9a01ff9f4"
     ],
     "preview_asset": "previews/kh/obj_kh_0012.webp",
     "preview_source_media_id": "med_kh_2eefbd4f0807"
@@ -802,13 +816,13 @@
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
@@ -816,7 +830,7 @@
       "overnight": true,
       "traveler_reports": true,
       "visual_recon": true,
-      "gallery_min_5": false,
+      "gallery_min_5": true,
       "editorial_rebuild": true
     },
     "last_reviewed_at": "2026-10-01"

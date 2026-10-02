@@ -57,6 +57,24 @@ LA_REGIONAL_BANNED_SNIPPETS = (
     "object entity",
     "local tourism structures",
     "hill tribe experience",
+    "visitor center",
+    "wildlife-маршрут",
+    "имеет важный статус",
+    "играет важную роль",
+    "является важным",
+    "уникальное сочетание",
+    "богатое культурное наследие",
+    "идеальное место",
+    "сочетает в себе",
+    "предлагает посетителям",
+    "не оставит равнодуш",
+    "следует хранить",
+    "нужно хранить",
+    "должны хран",
+    "региональная карточка",
+    "региональной карточке",
+    "object entity",
+    "narrative",
 )
 
 DYNAMIC_SOURCE_FIELDS = {
@@ -407,6 +425,19 @@ for code, slug in COUNTRIES.items():
         fail(f"{code}: hierarchy has blank or duplicate node IDs")
     if any(not geo_id for geo_id in canonical_ids) or len(canonical_ids) != len(set(canonical_ids)):
         fail(f"{code}: hierarchy has blank or duplicate canonical geo IDs")
+
+    if code == "LA":
+        hierarchy_profile_qa = hierarchy_meta.get("regional_profile_qa") or {}
+        if hierarchy_profile_qa.get("status") != "concrete_field_content":
+            fail("LA: hierarchy regional profile QA is not marked complete")
+        if not hierarchy_profile_qa.get("checked_at"):
+            fail("LA: hierarchy regional profile QA lacks checked_at")
+        hierarchy_profiles = [node for node in nodes if node.get("profile")]
+        if len(hierarchy_profiles) != LA_REGIONAL_EXPECTED["hierarchy_profiles"]:
+            fail(
+                f"LA: expected {LA_REGIONAL_EXPECTED['hierarchy_profiles']} hierarchy profiles, "
+                f"got {len(hierarchy_profiles)}"
+            )
 
     node_id_set = set(node_ids)
     country_parent = f"country:{code.lower()}"

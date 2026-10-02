@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r46",
+    "page_type": "country_class",
+    "id": "country-class:vn:karst"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "karst",
+    "label_ru": "Карстовые районы",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:relief_geology",
+    "page_path": "pages/countries/vietnam/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/karst.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:geographic_area:cao-bang-expedition",
+      "canonical_geo_id": "geo_vn_0043",
+      "name": "Каобанг",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/cao-bang-expedition.json"
+    },
+    {
+      "id": "vn:geographic_area:ha-giang-dong-van",
+      "canonical_geo_id": "geo_vn_0048",
+      "name": "Хазянг / Донгван",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/ha-giang-dong-van.json"
+    },
+    {
+      "id": "vn:province:cao-bang",
+      "canonical_geo_id": "geo_vn_0002",
+      "name": "Каобанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/province/cao-bang.json"
+    },
+    {
+      "id": "vn:province:tuyen-quang",
+      "canonical_geo_id": "geo_vn_0003",
+      "name": "Туенкуанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/province/tuyen-quang.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:cao-bang-non-nuoc-cao-bang-geopark-routes",
+      "name": "Cao Bang / Non Nuoc Cao Bang geopark routes",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:cao-bang-expedition",
+        "vn:province:cao-bang"
+      ],
+      "region_legacy": "Cao Bang",
+      "nearest_hub": "Cao Bang City",
+      "narrow": "Cao Bang / Non Nuoc Cao Bang geopark routes — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/cao-bang-non-nuoc-cao-bang-geopark-routes.json"
+    },
+    {
+      "id": "vn:dong-van-karst-plateau-geopark-ha-giang-loop",
+      "name": "Dong Van Karst Plateau Geopark / Ha Giang Loop",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:ha-giang-dong-van",
+        "vn:province:tuyen-quang"
+      ],
+      "region_legacy": "Ha Giang / Dong Van",
+      "nearest_hub": "Ha Giang / Dong Van",
+      "narrow": "Dong Van Karst Plateau Geopark / Ha Giang Loop — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/dong-van-karst-plateau-geopark-ha-giang-loop.json"
+    }
+  ]
+}

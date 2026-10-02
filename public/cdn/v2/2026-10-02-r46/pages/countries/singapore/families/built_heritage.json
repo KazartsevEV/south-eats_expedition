@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r46",
+    "page_type": "class_family",
+    "id": "country-family:sg:built_heritage"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "family_id": "built_heritage",
+    "label_ru": "Поселения и архитектурное наследие"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:sg",
+    "page_path": "pages/countries/singapore.json"
+  },
+  "global_family_page": "pages/families/built_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "count": 5,
+  "classes": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 4,
+      "global_page_path": "pages/classes/historic_city.json",
+      "country_page_path": "pages/countries/singapore/classes/historic_city.json"
+    },
+    {
+      "object_type": "historic_building",
+      "label_ru": "Исторические здания и руины",
+      "count": 1,
+      "global_page_path": "pages/classes/historic_building.json",
+      "country_page_path": "pages/countries/singapore/classes/historic_building.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:chinatown",
+      "name": "Chinatown",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:chinatown-central-heritage",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Chinatown / central heritage",
+      "narrow": "Chinatown — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/singapore/objects/chinatown.json"
+    },
+    {
+      "id": "sg:little-india",
+      "name": "Little India",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:little-india",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Little India",
+      "narrow": "Little India — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/singapore/objects/little-india.json"
+    },
+    {
+      "id": "sg:kampong-glam",
+      "name": "Kampong Glam",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:kampong-glam",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Kampong Glam",
+      "narrow": "Kampong Glam — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/singapore/objects/kampong-glam.json"
+    },
+    {
+      "id": "sg:joo-chiat-katong",
+      "name": "Joo Chiat / Katong",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:katong-joo-chiat",
+        "sg:region:east-region"
+      ],
+      "region_legacy": "Katong / Joo Chiat",
+      "narrow": "Joo Chiat / Katong — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/singapore/objects/joo-chiat-katong.json"
+    },
+    {
+      "id": "sg:gillman-barracks",
+      "name": "Gillman Barracks",
+      "object_type": "historic_building",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:southern-ridges-gillman",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Southern Ridges / Gillman",
+      "narrow": "Gillman Barracks — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/gillman-barracks.json"
+    }
+  ]
+}

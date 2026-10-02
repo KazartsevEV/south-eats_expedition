@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r46",
+    "page_type": "country_class",
+    "id": "country-class:kh:museum"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "museum",
+    "label_ru": "Музеи",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:archaeology_memory",
+    "page_path": "pages/countries/cambodia/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/museum.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:city:phnom-penh",
+      "canonical_geo_id": "geo_kh_0027",
+      "name": "Пномпень",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/city/phnom-penh.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:tuol-sleng-genocide-museum",
+      "name": "Tuol Sleng Genocide Museum",
+      "geography_ids": [
+        "country:kh",
+        "kh:city:phnom-penh"
+      ],
+      "region_legacy": "Пномпень",
+      "nearest_hub": "Пномпень",
+      "narrow": "Бывший школьный комплекс, превращённый в S-21 — центральный узел тюремно-допросной системы Демократической Кампучии. Сегодня Туол-Сленг одновременно сохраняет сами камеры и дворы, огромный архив документов и фотографий и живую мемориальную практику; с 2025 года он входит в серийный объект Всемирного наследия UNESCO вместе с M-13 и Чоенг-Эком.",
+      "detail_path": "countries/cambodia/objects/tuol-sleng-genocide-museum.json"
+    }
+  ]
+}

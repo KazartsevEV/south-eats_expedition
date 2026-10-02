@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r46",
+    "page_type": "class_family",
+    "id": "country-family:ph:water_coast_marine"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "family_id": "water_coast_marine",
+    "label_ru": "Вода, побережья и морская среда"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:ph",
+    "page_path": "pages/countries/philippines.json"
+  },
+  "global_family_page": "pages/families/water_coast_marine.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "count": 5,
+  "classes": [
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 2,
+      "global_page_path": "pages/classes/island.json",
+      "country_page_path": "pages/countries/philippines/classes/island.json"
+    },
+    {
+      "object_type": "reef",
+      "label_ru": "Рифы",
+      "count": 3,
+      "global_page_path": "pages/classes/reef.json",
+      "country_page_path": "pages/countries/philippines/classes/reef.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:palawan-el-nido-coron",
+      "name": "Palawan / El Nido / Coron",
+      "object_type": "island",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:palawan-expedition",
+        "ph:province:palawan",
+        "ph:region:mimaropa"
+      ],
+      "region_legacy": "Palawan",
+      "narrow": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/palawan-el-nido-coron.json"
+    },
+    {
+      "id": "ph:boracay",
+      "name": "Boracay",
+      "object_type": "island",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:boracay-western-visayas",
+        "ph:province:aklan",
+        "ph:region:western-visayas"
+      ],
+      "region_legacy": "Boracay / Western Visayas",
+      "narrow": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/boracay.json"
+    },
+    {
+      "id": "ph:tubbataha-reefs",
+      "name": "Tubbataha Reefs",
+      "object_type": "reef",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:tubbataha-sulu-sea",
+        "ph:province:palawan",
+        "ph:region:mimaropa"
+      ],
+      "region_legacy": "Tubbataha / Sulu Sea",
+      "narrow": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/tubbataha-reefs.json"
+    },
+    {
+      "id": "ph:apo-reef-natural-park",
+      "name": "Apo Reef Natural Park",
+      "object_type": "reef",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:occidental-mindoro-apo-reef",
+        "ph:province:occidental-mindoro",
+        "ph:region:mimaropa"
+      ],
+      "region_legacy": "Occidental Mindoro / Apo Reef",
+      "narrow": "Apo Reef Natural Park — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/apo-reef-natural-park.json"
+    },
+    {
+      "id": "ph:apo-island-marine-sanctuary",
+      "name": "Apo Island Marine Sanctuary",
+      "object_type": "reef",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:negros-oriental-dauin-apo-island",
+        "ph:province:negros-oriental",
+        "ph:region:negros-island-region"
+      ],
+      "region_legacy": "Negros Oriental / Dauin / Apo Island",
+      "narrow": "Классический community-based marine sanctuary у Negros Oriental: кораллы, green sea turtles и сильный сюжет об охране рифов.",
+      "detail_path": "countries/philippines/objects/apo-island-marine-sanctuary.json"
+    }
+  ]
+}

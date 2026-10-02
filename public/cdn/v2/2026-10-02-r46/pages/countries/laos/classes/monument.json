@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r46",
+    "page_type": "country_class",
+    "id": "country-class:la:monument"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "monument",
+    "label_ru": "Памятники и монументы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:built_heritage",
+    "page_path": "pages/countries/laos/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/monument.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:city:vientiane",
+      "canonical_geo_id": "geo_la_0046",
+      "name": "Вьентьян",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/city/vientiane.json"
+    },
+    {
+      "id": "la:province:houaphanh",
+      "canonical_geo_id": "geo_la_0035",
+      "name": "Хуапхан",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/houaphanh.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:buddha-park-xieng-khuan",
+      "name": "Buddha Park / Xieng Khuan",
+      "geography_ids": [
+        "country:la",
+        "la:city:vientiane"
+      ],
+      "region_legacy": "Vientiane Capital",
+      "nearest_hub": "Vientiane",
+      "narrow": "Скульптурный парк Xieng Khuan на окраине Вьентьяна; отдельный физический объект, не дублирующий составную карточку исторических храмов центра.",
+      "detail_path": "countries/laos/objects/buddha-park-xieng-khuan.json"
+    },
+    {
+      "id": "la:patuxai",
+      "name": "Patuxai",
+      "geography_ids": [
+        "country:la",
+        "la:city:vientiane"
+      ],
+      "region_legacy": "Vientiane Capital",
+      "nearest_hub": "Vientiane",
+      "narrow": "Монумент Patuxai во Вьентьяне, отдельный светский городской объект и важный ориентир столицы.",
+      "detail_path": "countries/laos/objects/patuxai.json"
+    },
+    {
+      "id": "la:independence-monument-sam-neua",
+      "name": "Independence Monument Sam Neua",
+      "geography_ids": [
+        "country:la",
+        "la:province:houaphanh"
+      ],
+      "region_legacy": "Houaphanh Province",
+      "nearest_hub": "Sam Neua",
+      "narrow": "Городской исторический монумент Самныа; добавлен как отдельный светский объект Хуапхана.",
+      "detail_path": "countries/laos/objects/independence-monument-sam-neua.json"
+    }
+  ]
+}

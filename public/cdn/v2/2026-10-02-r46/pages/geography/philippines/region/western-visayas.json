@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r46",
+    "page_type": "geography",
+    "id": "ph:region:western-visayas"
+  },
+  "identity": {
+    "name": "Западные Висайи",
+    "name_local": "Western Visayas",
+    "kind": "region",
+    "slug": "western-visayas",
+    "country_code": "PH",
+    "axis": "administrative"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:ph",
+    "page_path": "pages/countries/philippines.json"
+  },
+  "hierarchy_status": "formalized",
+  "children": [
+    {
+      "id": "ph:geographic_area:boracay-western-visayas",
+      "kind": "geographic_area",
+      "name": "Боракай / Западные Висайи",
+      "page_path": "pages/geography/philippines/geographic_area/boracay-western-visayas.json",
+      "object_count": 1
+    },
+    {
+      "id": "ph:province:aklan",
+      "kind": "province",
+      "name": "Аклан",
+      "page_path": "pages/geography/philippines/province/aklan.json",
+      "object_count": 1
+    },
+    {
+      "id": "ph:province:iloilo",
+      "kind": "province",
+      "name": "Илоило",
+      "page_path": "pages/geography/philippines/province/iloilo.json",
+      "object_count": 1
+    }
+  ],
+  "legacy_region_names": [],
+  "legacy_locality_names": [],
+  "canonical_geo_id": "geo_ph_0009",
+  "geo_profile": {
+    "id": "geo_ph_0009",
+    "kind": "region",
+    "names": {
+      "primary": "Западные Висайи",
+      "local": "Western Visayas"
+    },
+    "slug": "western-visayas",
+    "parent_id": "geo_ph",
+    "geo_path": [
+      "geo_ph",
+      "geo_ph_0009"
+    ],
+    "description": {
+      "narrow": "Западные Висайи после восстановления Negros Island Region — это Панай, Гимарас и связанные городские узлы, а не прежний регион с Negros Occidental. Для справочника особенно важно не использовать старую административную инерцию в маршрутах и подписях.",
+      "body": null
+    },
+    "cover_media_id": null,
+    "primary_location": null,
+    "legacy_ids": [
+      "ph:region:western-visayas"
+    ],
+    "migration": {
+      "source_kind": "formal_hierarchy",
+      "axis": "administrative",
+      "status": "formalized",
+      "hierarchy_profile_status": "researched_profile"
+    },
+    "coverage_role": "regional_profile",
+    "provenance": {
+      "checked_at": "2026-10-01",
+      "sources": [
+        {
+          "publisher": "Philippine Statistics Authority — PSGC",
+          "url": "https://psa.gov.ph/classification/psgc/regions",
+          "used_for": [
+            "current regions"
+          ],
+          "checked_at": "2026-09-30"
+        },
+        {
+          "publisher": "Philippine Statistics Authority — PSGC",
+          "url": "https://psa.gov.ph/classification/psgc/provinces",
+          "used_for": [
+            "current provinces"
+          ],
+          "checked_at": "2026-09-30"
+        },
+        {
+          "publisher": "Expedition South East Drive draft",
+          "used_for": [
+            "expedition regional nodes"
+          ],
+          "checked_at": "2026-09-30"
+        }
+      ],
+      "structural_source_refs": [
+        "src_906007"
+      ],
+      "research_source_refs": [
+        "src_910021",
+        "src_910008",
+        "src_910007"
+      ],
+      "source_refs": [
+        "src_906007",
+        "src_910021",
+        "src_910008",
+        "src_910007",
+        "src_910005"
+      ],
+      "research_checked_at": "2026-09-30"
+    },
+    "geometry_path": "geo/geometries/geo_ph_0009.geojson",
+    "geometry": {
+      "status": "available",
+      "geometry_type": "administrative_boundary",
+      "accuracy": "simplified_sourced_boundary",
+      "simplified": true,
+      "intended_use": "map_mask_navigation_not_cadastral",
+      "psgc": "0600000000",
+      "source_refs": [
+        "src_906007",
+        "src_910005"
+      ],
+      "source_vintage": "2023-12-31",
+      "checked_at": "2026-09-30",
+      "note": "Current Western Visayas mask reconstructed from 2023 province boundaries with Negros Occidental removed after re-establishment of Negros Island Region."
+    },
+    "geography": {
+      "summary": "Текущий Western Visayas включает Aklan, Antique, Capiz, Guimaras и Iloilo, а также Iloilo City; Negros Occidental больше не относится к региону после восстановления NIR. Пространственный каркас задают Панай, Гимарас и небольшие соседние острова.",
+      "source_refs": [
+        "src_910021",
+        "src_910008"
+      ]
+    },
+    "culture": {
+      "summary": "Региональный профиль связывает Western Visayas с Iloilo как крупным культурно-гастрономическим центром, фестивальными традициями, наследием Miagao и разными островными культурами. Boracay — только один из узлов, а не культурный образ региона целиком.",
+      "source_refs": [
+        "src_910021"
+      ]
+    },
+    "transport": {
+      "summary": "Логистика строится вокруг Паная и Iloilo с отдельными морскими сегментами к Guimaras и другим островам; Boracay требует собственного входа через север Паная. Старые маршруты через Negros Occidental нужно считать уже межрегиональными.",
+      "source_refs": [
+        "src_910021",
+        "src_910008"
+      ]
+    },
+    "climate": {
+      "summary": "Тропический морской климат с выраженной сезонностью осадков; для Паная, Гимараса и малых островов практическое значение имеют ветер, состояние моря и сильные ливни. Конкретные окна следует проверять по острову.",
+      "source_refs": [
+        "src_910007"
+      ]
+    },
+    "freshness": {
+      "checked_at": "2026-09-30"
+    }
+  },
+  "notes_ru": "Западные Висайи после восстановления Negros Island Region — это Панай, Гимарас и связанные городские узлы, а не прежний регион с Negros Occidental. Для справочника особенно важно не использовать старую административную инерцию в маршрутах и подписях.",
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    },
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/philippines/classes/historic_city.json",
+          "filter": {
+            "geography_id": "ph:region:western-visayas"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "island",
+          "label_ru": "Острова и архипелаги",
+          "count": 1,
+          "country_class_page": "pages/countries/philippines/classes/island.json",
+          "filter": {
+            "geography_id": "ph:region:western-visayas"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:boracay",
+      "name": "Boracay",
+      "object_type": "island",
+      "narrow": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/boracay.json"
+    },
+    {
+      "id": "ph:iloilo-heritage-districts",
+      "name": "Iloilo heritage districts",
+      "object_type": "historic_city",
+      "narrow": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/philippines/objects/iloilo-heritage-districts.json"
+    }
+  ],
+  "provenance": {
+    "sources": [
+      {
+        "publisher": "Philippine Statistics Authority — PSGC",
+        "url": "https://psa.gov.ph/classification/psgc/regions",
+        "used_for": [
+          "current regions"
+        ],
+        "checked_at": "2026-09-30"
+      },
+      {
+        "publisher": "Philippine Statistics Authority — PSGC",
+        "url": "https://psa.gov.ph/classification/psgc/provinces",
+        "used_for": [
+          "current provinces"
+        ],
+        "checked_at": "2026-09-30"
+      },
+      {
+        "publisher": "Expedition South East Drive draft",
+        "used_for": [
+          "expedition regional nodes"
+        ],
+        "checked_at": "2026-09-30"
+      }
+    ],
+    "checked_at": "2026-10-01"
+  }
+}

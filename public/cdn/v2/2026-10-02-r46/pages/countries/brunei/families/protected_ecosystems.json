@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r46",
+    "page_type": "class_family",
+    "id": "country-family:bn:protected_ecosystems"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "family_id": "protected_ecosystems",
+    "label_ru": "Охраняемая природа и экосистемы"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:bn",
+    "page_path": "pages/countries/brunei.json"
+  },
+  "global_family_page": "pages/families/protected_ecosystems.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "count": 5,
+  "classes": [
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 1,
+      "global_page_path": "pages/classes/national_park.json",
+      "country_page_path": "pages/countries/brunei/classes/national_park.json"
+    },
+    {
+      "object_type": "forest",
+      "label_ru": "Леса и джунгли",
+      "count": 2,
+      "global_page_path": "pages/classes/forest.json",
+      "country_page_path": "pages/countries/brunei/classes/forest.json"
+    },
+    {
+      "object_type": "mangrove",
+      "label_ru": "Мангровые леса",
+      "count": 1,
+      "global_page_path": "pages/classes/mangrove.json",
+      "country_page_path": "pages/countries/brunei/classes/mangrove.json"
+    },
+    {
+      "object_type": "natural_landscape",
+      "label_ru": "Природные ландшафты и треккинг",
+      "count": 1,
+      "global_page_path": "pages/classes/natural_landscape.json",
+      "country_page_path": "pages/countries/brunei/classes/natural_landscape.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:ulu-temburong-national-park",
+      "name": "Ulu Temburong National Park",
+      "object_type": "national_park",
+      "geography_ids": [
+        "bn:district:temburong",
+        "country:bn"
+      ],
+      "region_legacy": "Тембуронг",
+      "narrow": "Крупнейший охраняемый лесной парк Брунея: 46 210 га леса, куда основной туристический маршрут входит по реке и далее поднимается к canopy walkway. На 1 октября 2026 года Freme публикует временную приостановку своих поездок в Ulu Temburong National Park, к водопадам и водных активностей из-за низкого уровня воды; это статус конкретного оператора, а не подтверждённое Forestry закрытие всего парка.",
+      "detail_path": "countries/brunei/objects/ulu-temburong-national-park.json"
+    },
+    {
+      "id": "bn:tasek-lama-park",
+      "name": "Tasek Lama Park",
+      "object_type": "forest",
+      "geography_ids": [
+        "bn:city:bandar-seri-begawan",
+        "bn:district:brunei-muara",
+        "bn:mukim:kianggeh",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "narrow": "Холмистый лесной парк у центра Бандар-Сери-Бегавана: водопад, действующий водосборный резервуар и сеть маршрутов от короткой петли до 8,7 км. Главная практическая оговорка на 2026 год — свежие отзывы отмечают изношенные настилы и размытые участки глубоких троп, поэтому состояние конкретного маршрута нужно оценивать на входе.",
+      "detail_path": "countries/brunei/objects/tasek-lama-park.json"
+    },
+    {
+      "id": "bn:bukit-shahbandar-recreational-park",
+      "name": "Bukit Shahbandar Recreational Park",
+      "object_type": "forest",
+      "geography_ids": [
+        "bn:district:brunei-muara",
+        "bn:mukim:sengkurong",
+        "bn:village:jerudong",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "narrow": "Лесной тренировочный парк у Джерудонга с системой коротких и длинных петель через серию крутых холмов. Его смысл — не одна смотровая точка, а многократный ритм подъёмов и спусков, бетонных ступеней, лесных гребней, навесов и обзорных просветов. Для самостоятельного путешественника это удобный объект рядом со столицей, где можно выбрать маршрут примерно от 2 км до 15+ км вместо фиксированного «двухчасового хайка».",
+      "detail_path": "countries/brunei/objects/bukit-shahbandar-recreational-park.json"
+    },
+    {
+      "id": "bn:brunei-river-mangrove-safari",
+      "name": "Brunei River Mangrove Safari",
+      "object_type": "mangrove",
+      "geography_ids": [
+        "bn:district:brunei-muara",
+        "bn:river:brunei",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "narrow": "Речной маршрут из центра Бандар-Сери-Бегавана через Кампонг-Айер к мангровым протокам Brunei River: на одном переходе соединяются живая водная столица, приливный эстуарий и наблюдение за дикой природой. Лодка нужна объективно, но пакетный тур не обязателен: на месте можно договариваться с водным такси/лодочником о конкретной задаче — мангры, носачи, птицы, крокодилы, закат или светлячки.",
+      "detail_path": "countries/brunei/objects/brunei-river-mangrove-safari.json"
+    },
+    {
+      "id": "bn:berakas-forest-recreational-park",
+      "name": "Berakas Forest Recreational Park",
+      "object_type": "natural_landscape",
+      "geography_ids": [
+        "bn:district:brunei-muara",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "narrow": "Berakas Forest Recreational Park — прибрежный лесной рекреационный парк в Brunei-Muara, где керангасовый и казуариновый лес выходит к Южно-Китайскому морю. В обычном режиме его ценность — именно переход от лесных дорожек и пикниковых площадок к открытому морскому берегу. Но на октябрь 2026 года парк нельзя описывать как доступный: он временно закрыт с 1 января 2026 года на реконструкцию экотуристической инфраструктуры.",
+      "detail_path": "countries/brunei/objects/berakas-forest-recreational-park.json"
+    }
+  ]
+}

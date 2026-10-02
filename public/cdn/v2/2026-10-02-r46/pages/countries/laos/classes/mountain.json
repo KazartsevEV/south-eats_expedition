@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r46",
+    "page_type": "country_class",
+    "id": "country-class:la:mountain"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "mountain",
+    "label_ru": "Горы",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:relief_geology",
+    "page_path": "pages/countries/laos/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/mountain.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:city:luang-prabang",
+      "canonical_geo_id": "geo_la_0025",
+      "name": "Луангпхабанг",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/city/luang-prabang-city.json"
+    },
+    {
+      "id": "la:province:luang-prabang",
+      "canonical_geo_id": "geo_la_0024",
+      "name": "Луангпхабанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/luang-prabang.json"
+    },
+    {
+      "id": "la:province:oudomxay",
+      "canonical_geo_id": "geo_la_0076",
+      "name": "Удомсай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/oudomxay.json"
+    },
+    {
+      "id": "la:province:phongsaly",
+      "canonical_geo_id": "geo_la_0047",
+      "name": "Пхонгсали",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/phongsaly.json"
+    },
+    {
+      "id": "la:town:phongsaly",
+      "canonical_geo_id": "geo_la_0048",
+      "name": "Пхонгсали",
+      "kind": "town",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/town/phongsaly-town.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:phu-ya-kha-mountain",
+      "name": "Phu Ya Kha Mountain",
+      "geography_ids": [
+        "country:la",
+        "la:province:oudomxay"
+      ],
+      "region_legacy": "Oudomxay Province",
+      "nearest_hub": "Muang Xay",
+      "narrow": "Горный объект Удомсая, фигурирующий в актуальных материалах Tourism Laos; маршрут и точка вершины ещё не нормализованы.",
+      "detail_path": "countries/laos/objects/phu-ya-kha-mountain.json"
+    },
+    {
+      "id": "la:mount-phousi",
+      "name": "Mount Phousi",
+      "geography_ids": [
+        "country:la",
+        "la:city:luang-prabang",
+        "la:province:luang-prabang"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "nearest_hub": "Luang Prabang",
+      "narrow": "Священный городской холм Луангпхабанга с храмовыми сооружениями и обзорными точками; выделен отдельно от общей карточки города.",
+      "detail_path": "countries/laos/objects/mount-phousi.json"
+    },
+    {
+      "id": "la:phou-fa-mountain-and-stupa",
+      "name": "Phou Fa Mountain and Stupa",
+      "geography_ids": [
+        "country:la",
+        "la:province:phongsaly",
+        "la:town:phongsaly"
+      ],
+      "region_legacy": "Phongsaly Province",
+      "nearest_hub": "Phongsaly",
+      "narrow": "Гора Пху-Фа над Пхонгсали со ступой и обзорной функцией; выделена отдельно от городской карточки.",
+      "detail_path": "countries/laos/objects/phou-fa-mountain-and-stupa.json"
+    }
+  ]
+}

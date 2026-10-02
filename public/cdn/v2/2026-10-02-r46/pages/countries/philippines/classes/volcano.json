@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r46",
+    "page_type": "country_class",
+    "id": "country-class:ph:volcano"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "object_type": "volcano",
+    "label_ru": "Вулканы и вулканические комплексы",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:ph:relief_geology",
+    "page_path": "pages/countries/philippines/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/volcano.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:ph",
+      "name": "Филиппины",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/philippines.json"
+    },
+    {
+      "id": "ph:geographic_area:albay-bicol",
+      "canonical_geo_id": "geo_ph_0050",
+      "name": "Албай / Бикол",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/albay-bicol.json"
+    },
+    {
+      "id": "ph:geographic_area:central-luzon-pinatubo",
+      "canonical_geo_id": "geo_ph_0047",
+      "name": "Центральный Лусон / Пинатубо",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/central-luzon-pinatubo.json"
+    },
+    {
+      "id": "ph:province:albay",
+      "canonical_geo_id": "geo_ph_0033",
+      "name": "Албай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/province/albay.json"
+    },
+    {
+      "id": "ph:region:bicol-region",
+      "canonical_geo_id": "geo_ph_0008",
+      "name": "Бикол",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/bicol-region.json"
+    },
+    {
+      "id": "ph:region:central-luzon",
+      "canonical_geo_id": "geo_ph_0005",
+      "name": "Центральный Лусон",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/central-luzon.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:mount-pinatubo",
+      "name": "Mount Pinatubo",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:central-luzon-pinatubo",
+        "ph:region:central-luzon"
+      ],
+      "region_legacy": "Central Luzon / Pinatubo",
+      "nearest_hub": "Clark / Angeles",
+      "narrow": "Mount Pinatubo — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/philippines/objects/mount-pinatubo.json"
+    },
+    {
+      "id": "ph:mayon-volcano",
+      "name": "Mayon Volcano",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:albay-bicol",
+        "ph:province:albay",
+        "ph:region:bicol-region"
+      ],
+      "region_legacy": "Albay / Bicol",
+      "nearest_hub": "Legazpi / Daraga",
+      "narrow": "Идеальный вулканический конус Mayon плюс Cagsawa ruins дают один из самых сильных вулканико-культурных кадров страны — но только из разрешённых внешних точек обзора.",
+      "detail_path": "countries/philippines/objects/mayon-volcano.json"
+    }
+  ]
+}

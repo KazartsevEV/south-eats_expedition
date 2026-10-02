@@ -14,7 +14,7 @@ SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
 SCHEMA_VERSION = "2.10.11"
-RELEASE_ID = "2026-10-02-r45"
+RELEASE_ID = "2026-10-02-r46"
 LATEST_RELEASE_ID = "2026-10-02-r44"
 RELEASE_STATUS = "reference_release"
 SUPPORTED_SOURCE_MODELS = {"1.2", "1.5", "1.6"}
@@ -128,6 +128,18 @@ TYPE_BY_NAME = {
     "Savannakhet old quarter": "historic_city",
     "Nam Et-Phou Louey area": "protected_area",
     "Nong Khiaw and Muang Ngoi": "natural_landscape",
+    "Nong Khiaw": "natural_landscape",
+    "Muang Ngoi": "natural_landscape",
+    "Pha That Luang": "religious_site",
+    "Wat Sisaket": "religious_site",
+    "Ho Phra Keo": "religious_site",
+    "Wat Si Muang": "religious_site",
+    "Phongsaly Old Town": "historic_city",
+    "Ban Komaen Ancient Tea Plantation": "cultural_landscape",
+    "Muang Sing Morning Market": "market",
+    "Muang Sing Tai Lue Cultural Landscape": "cultural_landscape",
+    "Nong Fa Lake": "lake",
+    "Dong Ampham National Protected Area": "protected_area",
     "Bolaven Plateau": "natural_landscape",
     "Nam Ha National Protected Area": "protected_area",
     "Tham Piu Cave": "cave",

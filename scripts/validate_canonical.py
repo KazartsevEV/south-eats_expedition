@@ -622,12 +622,35 @@ def main():
         if target_id not in object_id_set:
             fail(f"{source_id}: identity {relation_kind} references unknown object {target_id}")
 
-    # Registry must preserve one-to-one permanent IDs for all migrated objects.
+    # Registry must preserve one-to-one permanent IDs for all active objects,
+    # while retired IDs remain reserved in a separate migration registry.
     registry_object_values = list((registry.get("objects") or {}).values())
     if len(registry_object_values) != len(set(registry_object_values)):
         fail("object ID registry has duplicate canonical IDs")
     if set(object_ids) != set(registry_object_values):
-        fail("canonical object set differs from persistent object ID registry")
+        fail("canonical object set differs from active persistent object ID registry")
+
+    retired_registry = registry.get("retired_objects") or {}
+    retired_ids = []
+    for legacy_key, payload in retired_registry.items():
+        if not isinstance(payload, dict):
+            fail(f"retired object registry entry must be object: {legacy_key}")
+        retired_id = payload.get("id")
+        if not retired_id:
+            fail(f"retired object registry entry lacks id: {legacy_key}")
+        retired_ids.append(retired_id)
+        if retired_id in object_id_set:
+            fail(f"retired object ID reused as active canonical object: {retired_id}")
+        replacements = payload.get("replacement_object_ids") or []
+        if not isinstance(replacements, list) or not replacements:
+            fail(f"retired object registry entry lacks replacements: {legacy_key}")
+        for replacement_id in replacements:
+            if replacement_id not in object_id_set:
+                fail(f"retired object {retired_id} references unknown replacement {replacement_id}")
+    if len(retired_ids) != len(set(retired_ids)):
+        fail("retired object registry has duplicate persistent IDs")
+    if set(retired_ids) & set(registry_object_values):
+        fail("retired and active object registries overlap")
 
     for country_row in manifest.get("countries") or []:
         code = country_row["code"]
@@ -717,6 +740,8 @@ def main():
                 fail("la: proven duplicate cards remain in canonical inventory")
             if counts.get("unresolved", 0):
                 fail("la: unresolved identity cards remain after identity QA")
+            if counts.get("composite_needs_split", 0):
+                fail("la: composite identity cards remain after structural split gate")
         require_file(release, f"views/countries/{code}.json")
 
     global_qa = load(release / "qa" / "global.json")

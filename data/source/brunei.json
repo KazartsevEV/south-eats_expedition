@@ -12119,7 +12119,7 @@
           "hiking",
           "viewpoint"
         ],
-        "why_go": "Тренировочный лесной парк с серией крутых подъёмов и спусков, популярный у местных. Характер места создаёт ритм холмов, лестниц и леса, а не одна панорамная точка.",
+        "why_go": "Лесной тренировочный парк у Джерудонга с системой коротких и длинных петель через серию крутых холмов. Его смысл — не одна смотровая точка, а многократный ритм подъёмов и спусков, бетонных ступеней, лесных гребней, навесов и обзорных просветов. Для самостоятельного путешественника это удобный объект рядом со столицей, где можно выбрать маршрут примерно от 2 км до 15+ км вместо фиксированного «двухчасового хайка».",
         "traveler_card": {
           "location": {
             "region": "Бандар-Сери-Бегаван / Бруней-Муара",
@@ -12150,7 +12150,7 @@
               "url": "https://mapcarta.com/W137295789",
               "basis": "recreational park feature coordinate"
             },
-            "coordinates_checked_at": "2026-09-28",
+            "coordinates_checked_at": "2026-10-02",
             "elevation_source": {
               "type": "map",
               "title": "SRTM30m elevation samples for Brunei forest park reference points",
@@ -12177,79 +12177,439 @@
               },
               "checked_at": "2026-09-28",
               "notes": "Диапазон относится к основному гребню и его высоким точкам и используется как object-level характеристика рельефа; 64 м у primary_location остаётся только point_elevation."
-            }
+            },
+            "geo_points": [
+              {
+                "type": "entrance",
+                "name": "Bukit Shahbandar — официальная точка направления Brunei Tourism",
+                "coordinates": {
+                  "lat": 4.952814,
+                  "lon": 114.8552645,
+                  "elevation_m": null
+                },
+                "accuracy": "medium",
+                "elevation_accuracy": "unknown",
+                "coordinate_source": {
+                  "type": "government_tourism",
+                  "title": "Bukit Shahbandar Recreational Park — Get Directions destination",
+                  "publisher": "Brunei Tourism / Tourism Development Department",
+                  "url": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/",
+                  "authority": "high",
+                  "accessed": "2026-10-02",
+                  "notes": "Координата извлечена из текущей ссылки Get Directions. Это опорная точка прибытия к публичной входной/парковочной зоне, а не геодезически измеренный старт конкретной петли."
+                },
+                "coordinates_checked_at": "2026-10-02",
+                "notes": "Использовать как навигационный якорь парка; конкретный вариант петли выбирать уже по карте/указателям на месте."
+              }
+            ]
           },
           "logistics": {
-            "access": "Короткий автомобильный трансфер из Бандар-Сери-Бегаван в сторону Jerudong; проще всего Dart/такси, автобус — бюджетная альтернатива.",
-            "public_transport": "По данным Бруней туризм, городской автобус обычно работает примерно 06:00–20:00 и стоит около BND 1 за поездку; до начала тропы маршрут и остановку перепроверить перед выездом.",
-            "last_mile": "Тропа начинается непосредственно у инфраструктуры/парковки парка; отдельного длинного пешего подхода нет.",
-            "typical_visit_hours": [
-              2,
-              4
-            ],
-            "permit_or_guide": null,
+            "access": "Парк находится у Jerudong, недалеко от Бандар-Сери-Бегавана. Brunei Tourism рекомендует Dart как самый удобный вариант без своей машины и отдельно ссылается на городскую автобусную сеть. Для самостоятельного хайка точнее всего ехать к официальной точке направления парка, а не к геометрическому центру лесного массива.",
+            "public_transport": "Brunei Tourism указывает городской автобус как бюджетный вариант со средней платой около BND 1 и общим режимом сети 06:00–20:00, но конкретную линию к Bukit Shahbandar на странице объекта не фиксирует. Номер маршрута и остановку проверять по актуальной схеме перед выездом.",
+            "last_mile": "Дорожный подъезд приводит к входной/парковочной зоне; отдельного многокилометрового подхода до начала маршрутной сети нет. Внутри сразу начинается выбор коротких и длинных холмистых петель.",
+            "typical_visit_hours": null,
+            "permit_or_guide": "Для стандартных маркированных петель гид не требуется. На коротких/основных маршрутах self-guided — базовый режим; на длинных связках полезны офлайн-карта или трек из-за разветвлений.",
             "modes": {
-              "public_transport": "для точного старта общественный транспорт неудобен",
-              "taxi_ridehail": "Dart до входа; обратный вызов планировать",
-              "moped": "оставить на официальной парковке",
-              "walking": "внутри несколько км с большим набором высоты"
+              "public_transport": "городской автобус после проверки актуальной линии и остановки",
+              "taxi_ridehail": "Dart до официальной входной точки; обратную подачу разумно планировать заранее",
+              "moped": "обычный дорожный подъезд; оставлять у официальной входной/парковочной зоны",
+              "walking": "маршрут внутри парка выбирается по длине и числу холмов: от коротких петель до длинных связок 15+ км"
             },
-            "water": "воду взять до входа",
-            "overnight_and_camping": "свободную ночёвку не планировать",
-            "terrain_and_movement": "Маршруты холмистые, местами с крутыми ступенями; жара и мокрые корни/ступени важнее абсолютной высоты.",
-            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "water": "Надёжная постоянно доступная питьевая точка на старте или на петлях в актуальных официальных источниках не подтверждена. Воду брать до входа; природные потоки не считать питьевыми.",
+            "overnight_and_camping": "Forestry Department описывает Bukit Shahbandar как forest recreation park, но действующий режим самостоятельного кемпинга на маршрутах публично не опубликован. Свободную ночёвку не считать разрешённой без отдельного подтверждения.",
+            "terrain_and_movement": "По AllTrails доступны разные пользовательские петли: 5 Hills — около 2,1 км, +76 м, 0,5–1 ч; 7 Hills — около 3,4 км, +125 м, 1–1,5 ч; East Loop — около 4,8 км, +174 м, 1,5–2 ч; Bukit Shabandar loop — около 7,1 км, +273 м, 2–2,5 ч; Extended Loop — около 15,6 км, +405 м, 4,5–5 ч. Это ориентиры конкретных треков, а не официальный норматив.",
+            "access_requirements": "Самостоятельное посещение стандартных маркированных петель — базовый режим. Длинные связки требуют навигационной дисциплины и выхода до закрытия.",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "access_source_refs": [
+              "src_000180"
+            ],
+            "mobility_notes": "Даже короткие петли включают повторяющиеся крутые подъёмы/спуски и бетонные ступени. Дождь резко ухудшает сцепление на грунте, корнях и повреждённых участках.",
+            "access_options": [
+              {
+                "id": "dart_or_private_vehicle",
+                "origin": "Bandar Seri Begawan / Jerudong",
+                "modes": [
+                  "taxi_ridehail",
+                  "car",
+                  "moped",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "road",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "городской/пригородный дорожный подъезд к Bukit Shahbandar",
+                    "seasonality": "ливень может увеличить время поездки, но не меняет принцип дорожного доступа",
+                    "navigation": "ехать к официальной точке направления Bukit Shahbandar Recreational Park",
+                    "notes": "Brunei Tourism рекомендует Dart путешественникам без частного автомобиля.",
+                    "source_refs": [
+                      "src_000180"
+                    ]
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved",
+                      "steps",
+                      "forest_trail"
+                    ],
+                    "condition": "начало маршрутной сети у входной зоны; дальше поверхность зависит от выбранной петли",
+                    "seasonality": "после сильного дождя ступени, корни и грунт становятся скользкими",
+                    "navigation": "выбрать короткую или длинную петлю по актуальным указателям; для длинной связки держать офлайн-трек",
+                    "notes": "Официальная точка прибытия не выдаётся за точный GPS каждой отдельной тропы.",
+                    "source_refs": [
+                      "src_000180",
+                      "src_990275"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "city_bus_then_walk",
+                "origin": "Bandar Seri Begawan",
+                "modes": [
+                  "public_transport",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "public_transport",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "городской автобус; конкретная линия и интервал динамичны",
+                    "seasonality": null,
+                    "navigation": null,
+                    "notes": "Brunei Tourism указывает среднюю плату около BND 1 и работу городской сети примерно 06:00–20:00; конкретную остановку у парка проверять перед выездом.",
+                    "source_refs": [
+                      "src_000180"
+                    ]
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "urban_road",
+                      "footpath"
+                    ],
+                    "condition": "локальный подход от фактической остановки к входной зоне",
+                    "seasonality": "ливень ухудшает комфорт",
+                    "navigation": "к официальной точке направления парка",
+                    "notes": "Точный километраж зависит от актуальной автобусной линии и не фиксируется без проверки."
+                  }
+                ]
+              }
+            ],
+            "water_structured": {
+              "at_object": null,
+              "quality": "unknown",
+              "last_reliable_point": "Jerudong / городская зона до входа",
+              "natural_sources": [],
+              "notes": "Наличие озера на территории и влажного леса не означает доступ к безопасной питьевой воде. На длинной петле запас рассчитывать полностью на себя.",
+              "source_refs": []
+            },
+            "supplies": {
+              "status": "limited_or_unverified",
+              "summary": "Официальная страница не гарантирует постоянно работающую точку еды/воды у старта. Базовый запас закрывать до приезда.",
+              "poi_ids": []
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Парк открыт как дневная рекреационная территория; актуальное право ставить палатку или оставаться после закрытия не подтверждено. Ночёвку внутри не планировать без разрешения администрации.",
+              "source_refs": [
+                "src_990272"
+              ]
+            }
           },
           "climate": {
-            "best_period": "Февраль–апрель обычно немного суше; для хайка лучше первые часы после открытия, пока ниже температура.",
-            "heat_rain_notes": "Жарко и влажно круглый год; короткий сильный ливень быстро делает крутые участки скользкими.",
-            "site_specific_notes": null
+            "best_period": "Круглый год; для длинной петли предпочтительнее первые часы после открытия или иное более прохладное окно без грозы.",
+            "heat_rain_notes": "Экваториальная жара и влажность сохраняются круглый год. Сильный ливень быстро ухудшает сцепление на ступенях, корнях и грунте.",
+            "site_specific_notes": "Не планировать старт раньше опубликованного открытия 07:30 только ради «рассвета». После сильной грозы состояние длинной ветки важнее календарного месяца."
           },
           "operations": {
-            "status": "open/verify",
-            "hours": "Daily 07:30–18:00 per Бруней туризм.",
-            "ticket": "Публичный рекреационный парк; отдельная плата за вход на официальной странице не указана — перед выездом проверить, не изменился ли режим.",
-            "closure_notes": "После сильного дождя крутые участки становятся скользкими; закладывать время на выход до закрытия.",
-            "last_verified": "2026-09-28",
-            "official_url": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/"
+            "status": "open_published_schedule",
+            "hours": "Brunei Tourism публикует ежедневный режим 07:30–18:00.",
+            "ticket": "Отдельный входной тариф на текущей официальной странице Brunei Tourism не опубликован. Не фиксировать «бесплатно» как официальный факт без отдельного подтверждения.",
+            "closure_notes": "В 2025 году Forestry Department публиковал закупки на ремонт/модернизацию shelters и hiking trails, а также отдельную установку signage и handrail в Bukit Shahbandar. Это подтверждает текущую работу с инфраструктурой, но не означает, что все участки одновременно приведены к одному состоянию. После сильного дождя оценивать конкретную ветку на месте и закладывать выход до 18:00.",
+            "last_verified": "2026-10-02",
+            "official_url": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/",
+            "source_refs": [
+              "src_000180",
+              "src_990273"
+            ]
           },
           "safety": {
-            "crime_context": "Сопоставимой официальной по конкретному объекту статистики преступности нет; вместо псевдоиндекса указаны практические природные/операционные риски.",
+            "crime_context": "Отдельная официальная статистика преступности по парку не используется; практические риски здесь связаны с рельефом, жарой, дождём и навигацией.",
             "main_risks": [
-              "heat/humidity",
-              "крутые тропы, скользкие после дождя",
-              "dehydration"
+              "повторяющиеся крутые подъёмы и спуски; короткий километраж не равен малой нагрузке",
+              "скользкие ступени, корни и грунт после сильного дождя",
+              "жара, влажность и обезвоживание на длинных петлях",
+              "на разветвлённых длинных связках возможна навигационная ошибка; не рассчитывать выйти после закрытия",
+              "макаки встречаются по свежим полевым сообщениям; не кормить и не оставлять еду доступной"
             ],
-            "sensitive_areas": [],
-            "confidence": "отдельная официальная статистика преступности по объекту отсутствует"
+            "sensitive_areas": [
+              "локально повреждённые или размытые участки",
+              "развилки длинных петель вне очевидного основного направления"
+            ],
+            "confidence": "Часы, Nine Hills, холмистый характер, shelters и observation tower подтверждены официально. Состояние отдельных троп и навигационная сложность длинных связок — динамические traveler reports и маршрутные данные.",
+            "source_refs": [
+              "src_000180",
+              "src_990273",
+              "src_990275"
+            ],
+            "checked_at": "2026-10-02"
           },
           "media": {
             "photo_suitability_5": 5,
             "video_suitability_5": 4,
             "visual_scouting": {
-              "best_time": "06:00–09:00",
-              "best_weather_light": "сухое утро после ночного дождя",
+              "best_time": "Первые часы после официального открытия 07:30 дают более прохладный лес и более низкий свет; для дальних видов с открытых участков важнее хорошая видимость и запас времени до закрытия.",
+              "best_weather_light": "После небольшого дождя листва становится насыщеннее, но сильный ливень ухудшает сцепление. Для обзорной башни и гребневых просветов лучше сухое окно без дымки и грозы.",
               "viewpoints_for_photo_video": [
-                "нижние бетонные лестницы в лесу",
-                "верхний просвет/смотровой участок, откуда видны слои холмов",
-                "гребневой участок тропы, где читается набор высоты"
+                {
+                  "id": "official_arrival_anchor",
+                  "name": "Входная/парковочная зона Bukit Shahbandar",
+                  "coordinates": {
+                    "lat": 4.952814,
+                    "lon": 114.8552645,
+                    "elevation_m": null
+                  },
+                  "accuracy": "medium",
+                  "description": "Текущая точка Get Directions Brunei Tourism. Это ориентир прибытия и начала выбора петли, а не точная позиция камеры на конкретной тропе.",
+                  "access": {
+                    "walk_km": null,
+                    "notes": "Дорожный подъезд; далее выбирать маршрут по актуальным указателям."
+                  },
+                  "view": {
+                    "description": "входная инфраструктура, начало лесной маршрутной сети и первые подъёмы"
+                  },
+                  "best_time": "после открытия",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает входной контекст и начало лесной тропы"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "подходит для указателей, маршрутов и деталей инфраструктуры"
+                    }
+                  ],
+                  "source_refs": [
+                    "src:5afaedaab5c939"
+                  ],
+                  "checked_at": "2026-10-02"
+                },
+                {
+                  "id": "stepped_hill_sections",
+                  "name": "Крутые ступенчатые подъёмы",
+                  "coordinates": {
+                    "lat": null,
+                    "lon": null,
+                    "elevation_m": null
+                  },
+                  "accuracy": "unknown",
+                  "description": "Характерный визуальный мотив Shahbandar — лестницы и короткие крутые подъёмы между холмами; точный GPS конкретной секции не подтверждён.",
+                  "access": {
+                    "walk_km": null,
+                    "notes": "На любой средней/длинной петле; после дождя проверять сцепление и состояние перил."
+                  },
+                  "view": {
+                    "description": "геометрия ступеней, лесной склон и повторяющийся вертикальный ритм маршрута"
+                  },
+                  "best_time": "первые часы после открытия",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает крутизну лестницы вместе с лесным склоном"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "лучше передаёт повторение ступеней без чрезмерного растяжения перспективы"
+                    }
+                  ],
+                  "source_refs": [
+                    "src:5afaedaab5c939",
+                    "src:4af53df9e8c580"
+                  ],
+                  "checked_at": "2026-10-02"
+                },
+                {
+                  "id": "observation_tower",
+                  "name": "Обзорная башня",
+                  "coordinates": {
+                    "lat": null,
+                    "lon": null,
+                    "elevation_m": null
+                  },
+                  "accuracy": "unknown",
+                  "description": "Brunei Tourism подтверждает observation tower как часть инфраструктуры парка; точная координата башни в карточке не фиксируется без надёжного геотега.",
+                  "access": {
+                    "walk_km": null,
+                    "notes": "Доступ зависит от выбранной петли и фактического состояния участка."
+                  },
+                  "view": {
+                    "description": "панорама холмистого леса и окрестностей Jerudong/Bandar Seri Begawan"
+                  },
+                  "best_time": "при хорошей дальней видимости и достаточном запасе до закрытия",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает слои холмов и лесной массив"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "сжимает дальние гряды и выделяет отдельные участки городской окраины"
+                    }
+                  ],
+                  "source_refs": [
+                    "src:5afaedaab5c939"
+                  ],
+                  "checked_at": "2026-10-02"
+                },
+                {
+                  "id": "nine_hills_ridge",
+                  "name": "Гребневые участки длинных петель Nine Hills",
+                  "coordinates": {
+                    "lat": null,
+                    "lon": null,
+                    "elevation_m": null
+                  },
+                  "accuracy": "unknown",
+                  "description": "На длинных связках лучше всего читается собственно характер Bukit Shahbandar: чередование лесных седловин, коротких вершин и очередных спусков.",
+                  "access": {
+                    "walk_km": null,
+                    "notes": "Маршрут выбирать по актуальной разметке и офлайн-треку; точный viewpoint GPS без проверенного геотега не задаётся."
+                  },
+                  "view": {
+                    "description": "слои холмов, лесные седловины, huts и разрывы полога"
+                  },
+                  "best_time": "в первой половине доступного времени",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает рельеф и последовательность холмов"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "подходит для huts, седловин и средней дистанции"
+                    }
+                  ],
+                  "source_refs": [
+                    "src:368dbf6bd86c71",
+                    "src:093c4dc0bd0933"
+                  ],
+                  "checked_at": "2026-10-02"
+                }
+              ],
+              "seasonal_visuals": [
+                "После дождя лес выглядит насыщеннее, но мокрый рельеф ухудшает доступ к тем же точкам.",
+                "В сухое ясное окно с башни и гребневых просветов лучше читаются дальние слои рельефа."
+              ],
+              "video_activity": [
+                "серия подъёмов и спусков через несколько холмов",
+                "смена бетонных ступеней, грунтовой тропы, huts и открытых гребневых участков",
+                "повседневный бег и хайкинг на основных маршрутах без постановки"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "для крутизны ступеней, леса и многопланового рельефа"
+                },
+                {
+                  "type": "standard",
+                  "why": "для естественной передачи тропы, huts и людей в ландшафте"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "для дальних слоёв холмов и панорамы с открытых точек"
+                }
               ]
             },
-            "drone": "Перед запуском проверить авиационные правила Брунея и разрешение администрации парка; не летать над посетителями.",
-            "filming_restrictions": "Обычная ручная съёмка на тропах подходит для личного проекта; организованную/коммерческую съёмку заранее согласовать с администрацией."
+            "drone": {
+              "visual_value": "С воздуха хорошо читается система холмов, лесной массив и соседство Jerudong с городской окраиной.",
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "беспилотное воздушное судно нужно регистрировать в Department of Civil Aviation Brunei",
+                "регистрация не означает автоматического разрешения на конкретный полёт над forest recreation park",
+                "перед запуском отдельно проверить действующие ограничения воздушного пространства и локальные правила Forestry Department; не запускать над скоплением посетителей"
+              ],
+              "checked_at": "2026-10-02",
+              "source_refs": [
+                "src:37b97e3027bc2c"
+              ]
+            },
+            "filming_restrictions": "Публичная страница парка не публикует универсальное правило для фото/видео. Обычную съёмку вести с открытых троп; организованные или технически сложные съёмки не считать автоматически разрешёнными без проверки требований Forestry Department."
           },
           "annotation": {
-            "narrative": "Тренировочный лесной парк с серией крутых подъёмов и спусков, популярный у местных. Характер места создаёт ритм холмов, лестниц и леса, а не одна панорамная точка.",
-            "culture_ethnography": "Утренние и вечерние группы бегунов и хайкеров дают материал о городской культуре активного отдыха.",
-            "geography_geology": "Рельеф заметно круче, чем кажется по карте; после ливня глинистые и корневые участки становятся скользкими."
-          },
-          "traveler_reports": {
-            "recurring_issues": [
-              "жара и набор высоты недооцениваются",
-              "после дождя скользко"
+            "canonical_story_from_sections": true,
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Bukit Shahbandar — лесной рекреационный парк у Джерудонга, рассчитанный не на одну прогулочную дорожку, а на сеть петель по серии холмов. Brunei Tourism описывает его как доступный из столицы лесной парк с маршрутами от мягких дорожек до крутых подъёмов, «Nine Hills» challenge, навесами для отдыха, обзорной башней и озером. Поэтому масштаб лучше понимать через выбор петли: здесь можно сделать короткую тренировку или собрать несколько часов повторяющихся подъёмов и спусков без необходимости ехать в удалённый национальный парк.",
+                "source_refs": [
+                  "src_000180"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": "Bukit Shahbandar входит в систему Forest Recreation Parks Forestry Department. Сам департамент объясняет эту категорию как лесные участки, открытые для двух задач одновременно: дать населению места для отдыха и использовать их для формирования понимания природы и лесов. Текущая страница Forestry Department перечисляет Bukit Shahbandar среди открытых forest recreation parks. В 2025 году ведомство отдельно объявляло работы по ремонту и модернизации shelters и hiking trails, а также установке signage и handrail; это документирует продолжающееся обслуживание объекта, но не позволяет считать каждый участок одинаково новым или исправным.",
+                "source_refs": [
+                  "src_990272",
+                  "src_990273"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Официальные источники расходятся даже в площади: Brunei Tourism пишет о 70 га рекреационного парка, тогда как Forestry Department приводит для Bukit Shahbandar 384 га. Карточка не сводит эти цифры в одну: вероятнее всего, страницы используют разные административные или рекреационные границы. Практический рельеф подтверждается маршрутными треками: AllTrails публикует петли примерно от 2,1 км с набором около 76 м до расширенной связки около 15,6 км с набором около 405 м. Главная характеристика местности — не абсолютная высота, а серия коротких крутых холмов.",
+                "source_refs": [
+                  "src_000180",
+                  "src_990272",
+                  "src_990274"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "Bukit Shahbandar — часть повседневной городской культуры движения: Brunei Tourism прямо описывает парк как популярный у joggers, families и любителей активного отдыха. Свежая туристическая ветка Reddit 2026 года показывает тот же режим на практике: иностранный путешественник самостоятельно арендовал машину, прошёл 7 Hills Loop и встретил на маршруте работников, немного других хайкеров и множество новых указателей/укрытий. Это не «экспедиция с проводником», а обычное тренировочное пространство, где самостоятельность нормальна, но длинные связки всё равно требуют навигации.",
+                "source_refs": [
+                  "src_000180",
+                  "src_990275"
+                ]
+              }
             ]
           },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "self_guided_7_hills_and_maintenance_2026",
+              "summary": "В туристической ветке r/Brunei начала 2026 года автор после обсуждения самостоятельно арендовал машину и прошёл Bukit Shahbandar 7 Hills Loop. Он описал маршрут как хорошо размеченный, с несколькими крутыми подъёмами и приятными видами; отдельно отметил работников, новые/обновляемые shelters и большое количество указателей. Это прямой полевой отчёт о самостоятельном доступе и состоянии основного маршрута на тот момент.",
+              "observed_period": "2026-Q1",
+              "source_refs": [
+                "src_990275"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "long_loop_navigation_and_local_damage_2026",
+              "summary": "В той же ветке местные участники проводят границу между короткими и длинными маршрутами: основные тропы обычно хорошо маркированы, но связки на 7–9 и более холмов могут становиться запутаннее; один участник упоминает локальные landslide sections и неравномерное обслуживание, другой — личный случай выхода из леса уже после темноты после ошибки маршрута. Это не официальный отчёт о закрытиях, а предупреждение о навигационном риске длинных петель.",
+              "observed_period": "2026-Q1",
+              "source_refs": [
+                "src_990275"
+              ],
+              "confidence": "medium"
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",
@@ -12275,7 +12635,7 @@
           "provider": "Brunei Tourism",
           "license": "reuse_terms_unverified",
           "artist": null,
-          "last_checked": "2026-09-28",
+          "last_checked": "2026-10-02",
           "gallery": [
             {
               "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bukit_Shahbandar_Forest_Recreation_Park_hike_01.jpg",
@@ -12284,6 +12644,30 @@
               "license": "CC BY-SA 4.0",
               "artist": "Pangalau",
               "last_checked": "2026-09-30"
+            },
+            {
+              "static_url": "https://www.bruneitourism.com/wp-content/uploads/2024/10/shahbandar-01-1.webp",
+              "source_page": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/",
+              "provider": "Brunei Tourism / Tourism Development Department",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-02"
+            },
+            {
+              "static_url": "https://www.bruneitourism.com/wp-content/uploads/2024/10/shahbandar-04.webp",
+              "source_page": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/",
+              "provider": "Brunei Tourism / Tourism Development Department",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-02"
+            },
+            {
+              "static_url": "https://www.bruneitourism.com/wp-content/uploads/2024/10/shahbandar-05.webp",
+              "source_page": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/",
+              "provider": "Brunei Tourism / Tourism Development Department",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-02"
             }
           ]
         },
@@ -12292,12 +12676,18 @@
             "url": "https://www.bruneitourism.com/places/bukit-shahbandar-recreational-park/",
             "publisher": "Brunei Tourism / Tourism Development Department",
             "used_for": [
-              "hours",
-              "access",
-              "park description",
-              "illustration"
+              "current opening hours",
+              "70 ha tourism-area figure",
+              "Nine Hills and facilities",
+              "Dart/bus access",
+              "official directions anchor",
+              "current official gallery images"
             ],
-            "accessed": "2026-09-28"
+            "accessed": "2026-10-02",
+            "type": "government_tourism",
+            "title": "Bukit Shahbandar Recreational Park",
+            "language": "en",
+            "authority": "high"
           },
           {
             "url": "https://www.booking.com/hotel/bn/jubilee.html",
@@ -12307,60 +12697,231 @@
               "guest review context"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://www.forestry.gov.bn/forest-recreation/",
+            "type": "government_official",
+            "title": "Forest Recreation",
+            "publisher": "Forestry Department, Brunei Darussalam",
+            "language": "en",
+            "accessed": "2026-10-02",
+            "authority": "high",
+            "used_for": [
+              "forest recreation policy",
+              "Bukit Shahbandar official park listing",
+              "384 ha Forestry Department area figure",
+              "camping status context"
+            ],
+            "notes": "Forestry Department page gives 384 ha for Bukit Shahbandar, while Brunei Tourism gives 70 ha; the conflict is preserved rather than reconciled."
+          },
+          {
+            "url": "https://www.forestry.gov.bn/tender-request-for-proposal-rfp/",
+            "type": "government_official",
+            "title": "Tender & Request for Proposal — Forestry Department",
+            "publisher": "Forestry Department, Brunei Darussalam",
+            "language": "en",
+            "accessed": "2026-10-02",
+            "authority": "high",
+            "used_for": [
+              "2025 Bukit Shahbandar shelter/trail upgrading tender",
+              "2025 signage and handrail tender",
+              "current maintenance context"
+            ],
+            "notes": "Tender list documents infrastructure works; it does not by itself prove completion or current condition of every trail section."
+          },
+          {
+            "url": "https://www.alltrails.com/parks/brunei/brunei-and-muara/bukit-shahbandar-forest-recreation-park",
+            "type": "trail_database",
+            "title": "Best trails in Bukit Shahbandar Forest Recreation Park",
+            "publisher": "AllTrails",
+            "language": "en",
+            "accessed": "2026-10-02",
+            "authority": "medium",
+            "used_for": [
+              "route distances",
+              "route elevation gain",
+              "estimated route duration",
+              "route options"
+            ],
+            "notes": "User-contributed route database; values are route estimates, not official Forestry Department specifications."
+          },
+          {
+            "url": "https://www.reddit.com/r/Brunei/comments/1qiko5c/shah_bandar_hiking_advice_for_a_tourist/",
+            "type": "traveler_forum",
+            "title": "Shah Bandar hiking advice for a tourist",
+            "publisher": "Reddit r/Brunei",
+            "language": "en",
+            "published_at": "2026-Q1",
+            "accessed": "2026-10-02",
+            "authority": "low",
+            "used_for": [
+              "2026 self-guided field report",
+              "trail marking",
+              "maintenance signal",
+              "navigation risk on longer loops",
+              "monkey field observations"
+            ],
+            "notes": "Used only as traveler/community evidence, not for official rules."
+          },
+          {
+            "url": "https://www.dca.gov.bn/dca-form-category/unmanned-aircraft/",
+            "type": "government_official",
+            "title": "Unmanned Aircraft",
+            "publisher": "Department of Civil Aviation, Brunei Darussalam",
+            "language": "en",
+            "accessed": "2026-10-02",
+            "authority": "high",
+            "used_for": [
+              "current drone registration requirement"
+            ]
           }
         ],
         "verification": {
           "dynamic_fields": [
             "hours",
-            "tickets",
-            "permits",
             "access",
+            "trail condition",
+            "signage/handrails",
+            "camping",
             "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Тренировочный лесной парк с серией крутых подъёмов и спусков, популярный у местных. Характер места создаёт ритм холмов, лестниц и леса, а не одна панорамная точка. Утренние и вечерние группы бегунов и хайкеров дают материал о городской культуре активного отдыха. Рельеф заметно круче, чем кажется по карте; после ливня глинистые и корневые участки становятся скользкими. Сезон: Февраль–апрель обычно немного суше; для хайка лучше первые часы после открытия, пока ниже температура. Лучшее время: 06:00–09:00 Свет и погода: сухое утро после ночного дождя Сильные точки обзора: нижние бетонные лестницы в лесу; верхний просвет/смотровой участок, откуда видны слои холмов; гребневой участок тропы, где читается набор высоты.",
+        "narrow": "Лесной тренировочный парк у Джерудонга с системой коротких и длинных петель через серию крутых холмов. Его смысл — не одна смотровая точка, а многократный ритм подъёмов и спусков, бетонных ступеней, лесных гребней, навесов и обзорных просветов. Для самостоятельного путешественника это удобный объект рядом со столицей, где можно выбрать маршрут примерно от 2 км до 15+ км вместо фиксированного «двухчасового хайка».",
         "tags": [
           "nature",
           "rainforest",
           "hiking",
           "viewpoint",
           "urban",
-          "sunrise_good",
           "weather_sensitive",
           "class_expanded"
         ],
         "route_meta": {
           "region_ref": "Бандар-Сери-Бегаван / Бруней-Muara",
           "locality_ref": "Бандар-Сери-Бегаван / Jerudong",
-          "typical_visit_hours": [
-            2,
-            4
-          ],
+          "typical_visit_hours": null,
           "transport_modes": {
-            "public_transport": "для точного старта общественный транспорт неудобен",
-            "taxi_ridehail": "Dart до входа; обратный вызов планировать",
-            "moped": "оставить на официальной парковке",
-            "walking": "внутри несколько км с большим набором высоты"
+            "public_transport": "городской автобус после проверки актуальной линии и остановки",
+            "taxi_ridehail": "Dart до официальной входной точки; обратную подачу разумно планировать заранее",
+            "moped": "обычный дорожный подъезд; оставлять у официальной входной/парковочной зоны",
+            "walking": "маршрут внутри парка выбирается по длине и числу холмов: от коротких петель до длинных связок 15+ км"
           },
-          "walking": "внутри несколько км с большим набором высоты",
-          "water": "воду взять до входа",
-          "overnight_and_camping": "свободную ночёвку не планировать",
-          "permit_or_guide": null,
-          "best_period": "Февраль–апрель обычно немного суше; для хайка лучше первые часы после открытия, пока ниже температура.",
-          "current_status": "open/verify",
+          "walking": "AllTrails route options span roughly 2,1 km / +76 м to 15,6 km / +405 м; choose route by actual trail network rather than a single generic distance.",
+          "water": "Питьевая точка на маршруте не подтверждена; полный запас воды брать до входа.",
+          "overnight_and_camping": "Действующий режим самостоятельного кемпинга не опубликован; дневной forest recreation park не считать местом свободной ночёвки.",
+          "permit_or_guide": "Для стандартных маркированных петель гид не нужен; на длинной связке полезен офлайн-трек.",
+          "best_period": "Круглый год; выбирать прохладное окно после открытия и избегать сильной грозы.",
+          "current_status": "открыт ежедневно 07:30–18:00 по Brunei Tourism; состояние конкретной длинной ветки проверять на месте",
           "main_risks": [
-            "heat/humidity",
-            "крутые тропы, скользкие после дождя",
-            "dehydration"
+            "повторяющиеся крутые подъёмы и спуски; короткий километраж не равен малой нагрузке",
+            "скользкие ступени, корни и грунт после сильного дождя",
+            "жара, влажность и обезвоживание на длинных петлях",
+            "на разветвлённых длинных связках возможна навигационная ошибка; не рассчитывать выйти после закрытия",
+            "макаки встречаются по свежим полевым сообщениям; не кормить и не оставлять еду доступной"
           ],
           "expedition_profile": {
             "default_mode": "самостоятельно",
-            "route_scale": "несколько часов; при расширении маршрута возможен многодневный формат",
-            "terrain_and_movement": "Маршруты холмистые, местами с крутыми ступенями; жара и мокрые корни/ступени важнее абсолютной высоты.",
-            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
-            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
-            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+            "route_scale": "от ~2,1 км / 0,5–1 ч до ~15,6 км / 4,5–5 ч по пользовательским трекам AllTrails",
+            "terrain_and_movement": "По AllTrails доступны разные пользовательские петли: 5 Hills — около 2,1 км, +76 м, 0,5–1 ч; 7 Hills — около 3,4 км, +125 м, 1–1,5 ч; East Loop — около 4,8 км, +174 м, 1,5–2 ч; Bukit Shabandar loop — около 7,1 км, +273 м, 2–2,5 ч; Extended Loop — около 15,6 км, +405 м, 4,5–5 ч. Это ориентиры конкретных треков, а не официальный норматив.",
+            "physical_difficulty_policy": "длина и набор высоты — параметры выбора петли, а не причина исключать маршрут; ключевые ограничения — погода, вода, навигация и время до закрытия",
+            "camping_assumption": "наличие палатки не означает разрешение ночевать в forest recreation park",
+            "local_support": "гид не требуется; навигационная помощь оправдана только на сложной длинной связке при неуверенности в маршруте"
+          }
+        },
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-02",
+            "notes": "Убраны англо-русские risk labels, неподтверждённый sunrise tag и расплывчатые формулы «несколько км/несколько часов»; маршрутные параметры теперь привязаны к конкретным трекам."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-02",
+            "scope": "повторный объектный QA Bukit Shahbandar по камбоджийскому эталону",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true
+            },
+            "notes": [
+              "Официальная точка прибытия отделена от центра лесного массива.",
+              "Удалена общая длительность 2–4 часа; вместо неё сохранён набор конкретных маршрутов AllTrails от короткой до расширенной петли.",
+              "Расхождение площади 70 га (Brunei Tourism) и 384 га (Forestry Department) сохранено явно.",
+              "Официальные тендеры 2025 года используются как доказательство работ по shelters/trails/signage/handrail, но не как утверждение, что всё уже отремонтировано.",
+              "Traveler reports 2026 разделяют хорошо маркированный основной маршрут и навигационные риски длинных связок.",
+              "Галерея доведена до пяти релевантных изображений самого парка."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-02",
+            "scope": "редакционная приёмка obj_bn_0015 после доработки",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_omitted_as_not_material": true,
+              "myths_omitted_as_not_documented": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "route_scale_explicit": true,
+              "water_honest_unknowns": true,
+              "overnight_honest_unknowns": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "media_provenance": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "access_anchor_verified": true,
+              "drone_rule_precision": true
+            },
+            "notes": [
+              "Исторический блок раскрывает место через систему Forestry Department и документированные работы 2025 года, без выдуманной даты основания.",
+              "Основная ценность объекта описана через рельеф и тренировочную культуру, а не через декоративную «панораму».",
+              "Viewpoint GPS остаётся null там, где нет надёжного геотега; единственная геопривязанная visual-точка — официальный arrival anchor.",
+              "Self-guided default сохранён, но длинные петли больше не описываются как одинаково простые по навигации."
+            ]
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-02",
+            "scope": "повторный QA Bukit Shahbandar: narrative, часы, доступ, GPS, маршруты, вода, ночёвка, traveler reports, visual recon, maintenance и drone",
+            "checks": {
+              "narrative_section_sources": true,
+              "official_area_conflict_preserved": true,
+              "maintenance_tenders_scoped": true,
+              "operations_sources": true,
+              "access_sources": true,
+              "access_anchor_not_confused_with_center": true,
+              "coordinate_type_precision": true,
+              "no_invented_overall_duration": true,
+              "route_metrics_scoped_to_alltrails": true,
+              "water_unknown_not_falsely_sourced": true,
+              "overnight_permission_scoped": true,
+              "traveler_report_sources": true,
+              "traveler_report_period_scoped": true,
+              "self_guided_vs_long_loop_risk_separated": true,
+              "visual_viewpoint_sources": true,
+              "unknown_viewpoint_gps_preserved": true,
+              "filming_policy_not_invented": true,
+              "drone_rule_precision": true,
+              "gallery_source_provenance": true
+            }
           }
         }
       },

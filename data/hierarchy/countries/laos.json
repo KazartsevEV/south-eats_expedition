@@ -3,9 +3,9 @@
     "schema": "expedition_geography_v1",
     "country_code": "LA",
     "country_slug": "laos",
-    "status": "geo_profile_qa_complete_before_object_cards",
-    "checked_at": "2026-10-01",
-    "next_level": "country_and_regional_layer_complete_object_cards_frozen",
+    "status": "geo_profile_with_expanded_object_inventory",
+    "checked_at": "2026-10-02",
+    "next_level": "object_qa_after_inventory_expansion",
     "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; route hubs remain logistics metadata unless independently verified as settlements.",
     "canonical_source_id": "src_906003",
     "qa_contract": "geo_profile_roles_v1"
@@ -14,7 +14,7 @@
     "parentage": "Only documented administrative containment is encoded as hierarchy.",
     "route_hubs": "A route hub is not promoted to an administrative parent solely because it is convenient for access.",
     "physical_geography": "Cross-province systems such as the Bolaven Plateau and Nam Et–Phou Louey remain physical/protected-area nodes under the country rather than being forced under one province.",
-    "object_visibility": "An object may attach to both an administrative node and a physical-geography node when both relations are supported."
+    "object_visibility": "Объект может быть привязан к нескольким формальным geo-узлам, если это отражает подтверждённую межпровинциальную территорию или одновременно административный и физико-географический контекст."
   },
   "nodes": [
     {
@@ -46,7 +46,12 @@
       "slug": "luang-prabang-city",
       "parent_id": "la:province:luang-prabang",
       "object_ids": [
-        "la:luang-prabang"
+        "la:luang-prabang",
+        "la:wat-xieng-thong",
+        "la:mount-phousi",
+        "la:royal-palace-national-museum-luang-prabang",
+        "la:wat-visounnarath",
+        "la:wat-manolom"
       ],
       "notes_ru": "Исторический город и объект Всемирного наследия.",
       "canonical_id": "geo_la_0025",
@@ -81,7 +86,12 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:plain-of-jars",
-        "la:tham-piu-cave"
+        "la:tham-piu-cave",
+        "la:phousabot-poung-chong-national-protected-area",
+        "la:yord-nam-mo-phou-sam-soum-national-protected-area",
+        "la:kha-waterfall",
+        "la:xieng-khouang-provincial-museum",
+        "la:ban-napia-war-scrap-spoon-village"
       ],
       "legacy_region_names": [
         "Xieng Khouang"
@@ -144,7 +154,10 @@
         "la:vang-vieng-karst",
         "la:tham-chang-cave",
         "la:kaeng-nyui-waterfall",
-        "la:nam-ngum-reservoir"
+        "la:nam-ngum-reservoir",
+        "la:phou-phanang-national-protected-area",
+        "la:vang-xang-archaeological-site",
+        "la:ban-bo-salt-production-village"
       ],
       "legacy_region_names": [
         "Ванг-Вьенг / провинция Вьентьян"
@@ -163,7 +176,8 @@
       "object_ids": [
         "la:vang-vieng-karst",
         "la:tham-chang-cave",
-        "la:kaeng-nyui-waterfall"
+        "la:kaeng-nyui-waterfall",
+        "la:tham-pou-kham-cave-blue-lagoon-1"
       ],
       "notes_ru": "Физико-географический карстовый район вокруг долины Нам-Сонг.",
       "canonical_id": "geo_la_0030",
@@ -205,7 +219,14 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:wat-phou",
-        "la:si-phan-don-4000-islands"
+        "la:si-phan-don-4000-islands",
+        "la:done-daeng-island",
+        "la:done-kho-island",
+        "la:ban-saphai-cultural-village",
+        "la:wat-pho-sayalam",
+        "la:tad-pha-suam-waterfall",
+        "la:tad-champi-waterfall",
+        "la:phou-xieng-thong-national-protected-area"
       ],
       "legacy_region_names": [
         "Чампасак / Си-Фан-Дон / Болавен"
@@ -222,7 +243,8 @@
       "slug": "champasak-district",
       "parent_id": "la:province:champasak",
       "object_ids": [
-        "la:wat-phou"
+        "la:wat-phou",
+        "la:done-daeng-island"
       ],
       "notes_ru": "Административная привязка культурного ландшафта Ват-Пху.",
       "canonical_id": "geo_la_0032",
@@ -303,7 +325,9 @@
       "slug": "bolaven-plateau",
       "parent_id": "country:la",
       "object_ids": [
-        "la:bolaven-plateau"
+        "la:bolaven-plateau",
+        "la:tad-pha-suam-waterfall",
+        "la:tad-champi-waterfall"
       ],
       "notes_ru": "Транс-провинциальное плато; не кодируется как дочернее одной провинции.",
       "canonical_id": "geo_la_0034",
@@ -352,7 +376,10 @@
       "object_ids": [
         "la:vieng-xai-caves",
         "la:hintang-archaeological-park",
-        "la:tad-saleuy-waterfall"
+        "la:tad-saleuy-waterfall",
+        "la:nam-xam-national-protected-area",
+        "la:wat-phoxainaram",
+        "la:independence-monument-sam-neua"
       ],
       "legacy_region_names": [
         "Хуапхан / Вьенгсай / Нам-Эт"
@@ -435,7 +462,12 @@
       "object_ids": [
         "la:kong-lor-cave",
         "la:old-thakhek-town",
-        "la:that-sikhottabong-stupa"
+        "la:that-sikhottabong-stupa",
+        "la:khoun-xe-nong-ma-national-protected-area",
+        "la:tha-falang-lake",
+        "la:khoun-kong-leng-lake",
+        "la:paseuam-cave",
+        "la:tat-sieng-lue-waterfall"
       ],
       "legacy_region_names": [
         "Кхаммуан / Конг-Лор"
@@ -452,7 +484,10 @@
       "slug": "kong-lor-phou-hin-poun",
       "parent_id": "la:province:khammouane",
       "object_ids": [
-        "la:kong-lor-cave"
+        "la:kong-lor-cave",
+        "la:phou-hin-poun-national-park",
+        "la:the-rock-viewpoint-phou-pha-marn",
+        "la:nam-non-cave"
       ],
       "notes_ru": "Карстовый район и речная пещера в системе Пху-Хин-Пун.",
       "canonical_id": "geo_la_0039",
@@ -516,7 +551,13 @@
         "la:hortay-pidok",
         "la:dong-na-tad-sacred-forest",
         "la:dong-phou-vieng-national-protected-area",
-        "la:phou-xang-hae-national-protected-area"
+        "la:phou-xang-hae-national-protected-area",
+        "la:eld-s-deer-sanctuary",
+        "la:xe-bang-nouan-national-protected-area",
+        "la:laving-lavern-national-protected-area",
+        "la:that-phonh-stupa",
+        "la:monkey-forest-savannakhet",
+        "la:ban-done-daeng-sacred-turtle-site"
       ],
       "legacy_region_names": [
         "Savannakhet"
@@ -533,7 +574,10 @@
       "slug": "savannakhet-city",
       "parent_id": "la:province:savannakhet",
       "object_ids": [
-        "la:savannakhet-old-quarter"
+        "la:savannakhet-old-quarter",
+        "la:savannakhet-dinosaur-museum",
+        "la:kaysone-phomvihane-house-and-museum",
+        "la:lao-silk-cotton-weaving-centre-savannakhet"
       ],
       "canonical_id": "geo_la_0042",
       "name_local": "ສະຫວັນນະເຂດ",
@@ -553,7 +597,12 @@
         "la:nam-ha-national-protected-area",
         "la:muang-sing-market-and-tai-lue-cultural-landscape",
         "la:nam-dee-waterfall",
-        "la:tham-kao-rao-cave"
+        "la:tham-kao-rao-cave",
+        "la:luang-namtha-museum",
+        "la:pha-yueang-waterfall",
+        "la:luang-namtha-night-market",
+        "la:luang-namtha-stupa",
+        "la:phouphetphoukham-waterfall"
       ],
       "legacy_region_names": [
         "Луангнамтха / Нам-Ха"
@@ -617,7 +666,8 @@
       "slug": "muang-sing",
       "parent_id": "la:province:luang-namtha",
       "object_ids": [
-        "la:muang-sing-market-and-tai-lue-cultural-landscape"
+        "la:muang-sing-market-and-tai-lue-cultural-landscape",
+        "la:poum-pouk-stupa"
       ],
       "canonical_id": "geo_la_0045",
       "name_local": "ເມືອງສິງ",
@@ -656,7 +706,8 @@
       "slug": "phongsaly",
       "parent_id": "country:la",
       "object_ids": [
-        "la:phongsaly-old-town-and-ancient-tea-highlands"
+        "la:phongsaly-old-town-and-ancient-tea-highlands",
+        "la:phou-daen-din-national-protected-area"
       ],
       "legacy_region_names": [
         "Phongsaly highlands"
@@ -673,7 +724,9 @@
       "slug": "phongsaly-town",
       "parent_id": "la:province:phongsaly",
       "object_ids": [
-        "la:phongsaly-old-town-and-ancient-tea-highlands"
+        "la:phongsaly-old-town-and-ancient-tea-highlands",
+        "la:phongsaly-ethnic-museum",
+        "la:phou-fa-mountain-and-stupa"
       ],
       "canonical_id": "geo_la_0048",
       "name_local": "ຜົ້ງສາລີ",
@@ -704,7 +757,8 @@
       "slug": "hin-nam-no",
       "parent_id": "la:district:boualapha",
       "object_ids": [
-        "la:hin-nam-no-national-park"
+        "la:hin-nam-no-national-park",
+        "la:xe-bang-fai-cave"
       ],
       "notes_ru": "Карстовая охраняемая территория на границе с Вьетнамом; с 2025 года лаосская часть трансграничного объекта Всемирного наследия вместе с Фонгня-Кебанг.",
       "canonical_id": "geo_la_0050",
@@ -904,7 +958,8 @@
         "la:tad-saepha-waterfall",
         "la:tad-samongphak-waterfall",
         "la:tad-saeponglaican-waterfall",
-        "la:tad-phapong-waterfall"
+        "la:tad-phapong-waterfall",
+        "la:saysettha-stupa"
       ],
       "notes_ru": "Восточная часть национального парка Се-Пиан заходит в провинцию Аттапы; речные маршруты по Секонгу и Се-Пиану описываются отдельно от западного входа Кьет-Нгонг.",
       "canonical_id": "geo_la_0063",
@@ -1088,7 +1143,14 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:chom-ong-cave",
-        "la:tad-nam-kat-waterfall"
+        "la:tad-nam-kat-waterfall",
+        "la:phou-hiphi-national-protected-area",
+        "la:sacred-phachaosingkham-temple",
+        "la:nam-hin-lake",
+        "la:phouthat-stupa",
+        "la:pha-ho-pha-hong-cave",
+        "la:phu-ya-kha-mountain",
+        "la:tad-talae-waterfall"
       ],
       "canonical_id": "geo_la_0076",
       "name_local": "ອຸດົມໄຊ",
@@ -1103,7 +1165,9 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:souvannakhomkham-ancient-city",
-        "la:nam-kan-provincial-protected-area"
+        "la:nam-kan-provincial-protected-area",
+        "la:jom-khao-manilat-temple",
+        "la:fort-carnot-houay-xay"
       ],
       "canonical_id": "geo_la_0077",
       "name_local": "ບໍ່ແກ້ວ",
@@ -1119,7 +1183,12 @@
       "object_ids": [
         "la:tad-lor-waterfall",
         "la:kaengkou-waterfall",
-        "la:phou-xieng-thong-national-protected-area"
+        "la:phou-xieng-thong-national-protected-area",
+        "la:xe-bang-nouan-national-protected-area",
+        "la:xe-xap-national-protected-area",
+        "la:simongkhoun-temple",
+        "la:ong-keo-stone-stupa-park",
+        "la:ban-houay-houn-katu-weaving-village"
       ],
       "canonical_id": "geo_la_0078",
       "name_local": "ສາລະວັນ",
@@ -1135,11 +1204,32 @@
       "object_ids": [
         "la:tad-faek-waterfall",
         "la:tad-hia-waterfall",
-        "la:tad-se-noi-tad-hua-khon-waterfall"
+        "la:tad-se-noi-tad-hua-khon-waterfall",
+        "la:xe-xap-national-protected-area",
+        "la:nam-tok-katamtok-xekatam-waterfall",
+        "la:tad-fai-mai-waterfall",
+        "la:kandone-traditional-longhouse-village"
       ],
       "canonical_id": "geo_la_0079",
       "name_local": "ເຊກອງ",
       "notes_ru": "Провинциальная привязка инвентарных водопадов. Структурная нода инвентарного прохода; содержательный региональный профиль не заявляется до отдельного geo QA."
+    },
+    {
+      "id": "la:province:sainyabuli",
+      "kind": "province",
+      "axis": "administrative",
+      "name_ru": "Сайнябули",
+      "slug": "sainyabuli",
+      "parent_id": "country:la",
+      "object_ids": [
+        "la:nam-phoui-national-protected-area",
+        "la:tad-ham-waterfall",
+        "la:xienglom-stupa",
+        "la:phan-tham-nam-thang-cave"
+      ],
+      "canonical_id": "geo_la_0080",
+      "name_local": "ໄຊຍະບູລີ",
+      "notes_ru": "Провинциальная привязка инвентарных объектов Сайнябули; детальная география конкретных входов и объектов будет уточняться на объектном QA."
     }
   ],
   "sources": [

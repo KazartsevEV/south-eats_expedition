@@ -13,6 +13,8 @@ from pathlib import Path
 
 from PIL import Image, ImageOps, UnidentifiedImageError
 
+from release_context import get_release_context
+
 ROOT = Path(__file__).resolve().parents[1]
 CDN = ROOT / "public" / "cdn" / "v2"
 PREVIEW_ROOT = CDN / "previews"
@@ -172,9 +174,9 @@ def media_candidates(release: Path, cc: str, object_doc: dict, cover_media_id: s
 
 
 def main():
-    latest = load(CDN / "latest.json")
-    release_id = latest["release_id"]
-    release = CDN / release_id
+    context = get_release_context(CDN)
+    release_id = context["release_id"]
+    release = context["release"]
     global_search_path = release / "search" / "global.json"
     search = load(global_search_path)
     rows = search.get("objects") or []

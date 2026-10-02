@@ -26,10 +26,11 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:luang-prabang",
-        "la:nong-khiaw-and-muang-ngoi",
         "la:kuang-si-falls",
         "la:pak-ou-caves",
-        "la:tad-sae-waterfall"
+        "la:tad-sae-waterfall",
+        "la:nong-khiaw",
+        "la:muang-ngoi"
       ],
       "legacy_region_names": [
         "Луангпхабанг / север долины Нам-У"
@@ -68,9 +69,9 @@
       "slug": "nong-khiaw",
       "parent_id": "la:province:luang-prabang",
       "object_ids": [
-        "la:nong-khiaw-and-muang-ngoi"
+        "la:nong-khiaw"
       ],
-      "notes_ru": "Операционный населённый пункт составной карточки Нонг-Кхиав / Мыанг-Нгой.",
+      "notes_ru": "Операционный населённый пункт Нонг-Кхиав; Мыанг-Нгой после split ведётся отдельным объектом на уровне провинции до создания собственного geo-узла.",
       "canonical_id": "geo_la_0026",
       "name_local": "ໜອງຂຽວ",
       "legacy_locality_names": [
@@ -595,14 +596,15 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:nam-ha-national-protected-area",
-        "la:muang-sing-market-and-tai-lue-cultural-landscape",
         "la:nam-dee-waterfall",
         "la:tham-kao-rao-cave",
         "la:luang-namtha-museum",
         "la:pha-yueang-waterfall",
         "la:luang-namtha-night-market",
         "la:luang-namtha-stupa",
-        "la:phouphetphoukham-waterfall"
+        "la:phouphetphoukham-waterfall",
+        "la:muang-sing-morning-market",
+        "la:muang-sing-tai-lue-cultural-landscape"
       ],
       "legacy_region_names": [
         "Луангнамтха / Нам-Ха"
@@ -666,8 +668,9 @@
       "slug": "muang-sing",
       "parent_id": "la:province:luang-namtha",
       "object_ids": [
-        "la:muang-sing-market-and-tai-lue-cultural-landscape",
-        "la:poum-pouk-stupa"
+        "la:poum-pouk-stupa",
+        "la:muang-sing-morning-market",
+        "la:muang-sing-tai-lue-cultural-landscape"
       ],
       "canonical_id": "geo_la_0045",
       "name_local": "ເມືອງສິງ",
@@ -684,9 +687,12 @@
       "slug": "vientiane",
       "parent_id": "country:la",
       "object_ids": [
-        "la:vientiane-sacred-architecture",
         "la:buddha-park-xieng-khuan",
-        "la:patuxai"
+        "la:patuxai",
+        "la:pha-that-luang",
+        "la:wat-sisaket",
+        "la:ho-phra-keo",
+        "la:wat-si-muang"
       ],
       "legacy_region_names": [
         "Vientiane Capital"
@@ -706,8 +712,9 @@
       "slug": "phongsaly",
       "parent_id": "country:la",
       "object_ids": [
-        "la:phongsaly-old-town-and-ancient-tea-highlands",
-        "la:phou-daen-din-national-protected-area"
+        "la:phou-daen-din-national-protected-area",
+        "la:phongsaly-old-town",
+        "la:ban-komaen-ancient-tea-plantation"
       ],
       "legacy_region_names": [
         "Phongsaly highlands"
@@ -724,9 +731,9 @@
       "slug": "phongsaly-town",
       "parent_id": "la:province:phongsaly",
       "object_ids": [
-        "la:phongsaly-old-town-and-ancient-tea-highlands",
         "la:phongsaly-ethnic-museum",
-        "la:phou-fa-mountain-and-stupa"
+        "la:phou-fa-mountain-and-stupa",
+        "la:phongsaly-old-town"
       ],
       "canonical_id": "geo_la_0048",
       "name_local": "ຜົ້ງສາລີ",
@@ -954,12 +961,13 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:xe-pian-national-park",
-        "la:nong-fa-dong-ampham-landscape",
         "la:tad-saepha-waterfall",
         "la:tad-samongphak-waterfall",
         "la:tad-saeponglaican-waterfall",
         "la:tad-phapong-waterfall",
-        "la:saysettha-stupa"
+        "la:saysettha-stupa",
+        "la:nong-fa-lake",
+        "la:dong-ampham-national-protected-area"
       ],
       "notes_ru": "Восточная часть национального парка Се-Пиан заходит в провинцию Аттапы; речные маршруты по Секонгу и Се-Пиану описываются отдельно от западного входа Кьет-Нгонг.",
       "canonical_id": "geo_la_0063",
@@ -1100,7 +1108,8 @@
       "slug": "sanxay",
       "parent_id": "la:province:attapeu",
       "object_ids": [
-        "la:nong-fa-dong-ampham-landscape"
+        "la:nong-fa-lake",
+        "la:dong-ampham-national-protected-area"
       ],
       "notes_ru": "Северо-восточный район Аттапы; здесь расположено озеро Nong Fa.",
       "canonical_id": "geo_la_0073",
@@ -1114,9 +1123,9 @@
       "slug": "dong-ampham",
       "parent_id": "la:district:sanxay",
       "object_ids": [
-        "la:nong-fa-dong-ampham-landscape"
+        "la:dong-ampham-national-protected-area"
       ],
-      "notes_ru": "Удалённый охраняемый горно-лесной массив в северо-восточной части Аттапы.",
+      "notes_ru": "Охраняемый горно-лесной массив Dong Ampham; объект территории и вложенное озеро Nong Fa разведены на отдельные карточки.",
       "canonical_id": "geo_la_0074",
       "name_local": null
     },
@@ -1128,9 +1137,9 @@
       "slug": "nong-fa",
       "parent_id": "la:protected-area:dong-ampham",
       "object_ids": [
-        "la:nong-fa-dong-ampham-landscape"
+        "la:nong-fa-lake"
       ],
-      "notes_ru": "Высокогорное кратерное озеро; геоточка объекта хранится как центр водного зеркала, а не trailhead.",
+      "notes_ru": "Высокогорное кратерное озеро Nong Fa; объектная координата относится к центру водного зеркала, а не к trailhead.",
       "canonical_id": "geo_la_0075",
       "name_local": null
     },

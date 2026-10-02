@@ -1,0 +1,748 @@
+{
+  "meta": {
+    "schema_version": "2.10.12",
+    "release_id": "2026-10-02-r47",
+    "page_type": "class_family",
+    "id": "family:religion_ethnography"
+  },
+  "identity": {
+    "family_id": "religion_ethnography",
+    "label_ru": "Религия, этнография и живая культура"
+  },
+  "layout": "class_family",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "count": 77,
+  "classes": [
+    {
+      "id": "class:religious_site",
+      "kind": "object_class",
+      "value": "religious_site",
+      "label_ru": "Храмы и религиозные объекты",
+      "count": 30,
+      "page_path": "pages/classes/religious_site.json",
+      "collection_path": "collections/religious_site.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:living_settlement",
+      "kind": "object_class",
+      "value": "living_settlement",
+      "label_ru": "Живые традиционные поселения",
+      "count": 11,
+      "page_path": "pages/classes/living_settlement.json",
+      "collection_path": "collections/living_settlement.json",
+      "status": "transitional_overlap",
+      "migration": {
+        "status": "transitional_overlap",
+        "target_split": [
+          "traditional_settlement"
+        ],
+        "note_ru": "Старый класс сохраняется до проверки: в новой схеме поселение должно описываться как traditional_settlement, а живая культура — тегами и этнографическим блоком."
+      }
+    },
+    {
+      "id": "class:traditional_settlement",
+      "kind": "object_class",
+      "value": "traditional_settlement",
+      "label_ru": "Традиционные поселения",
+      "count": 0,
+      "page_path": "pages/classes/traditional_settlement.json",
+      "collection_path": null,
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:cultural_landscape",
+      "kind": "object_class",
+      "value": "cultural_landscape",
+      "label_ru": "Культурные ландшафты",
+      "count": 31,
+      "page_path": "pages/classes/cultural_landscape.json",
+      "collection_path": "collections/cultural_landscape.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:market",
+      "kind": "object_class",
+      "value": "market",
+      "label_ru": "Рынки",
+      "count": 5,
+      "page_path": "pages/classes/market.json",
+      "collection_path": "collections/market.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:craft_center",
+      "kind": "object_class",
+      "value": "craft_center",
+      "label_ru": "Ремесленные центры",
+      "count": 0,
+      "page_path": "pages/classes/craft_center.json",
+      "collection_path": null,
+      "status": "canonical_leaf"
+    }
+  ],
+  "country_distribution": [
+    {
+      "country_code": "BN",
+      "count": 8
+    },
+    {
+      "country_code": "ID",
+      "count": 3
+    },
+    {
+      "country_code": "KH",
+      "count": 1
+    },
+    {
+      "country_code": "LA",
+      "count": 32
+    },
+    {
+      "country_code": "MM",
+      "count": 3
+    },
+    {
+      "country_code": "MY",
+      "count": 2
+    },
+    {
+      "country_code": "PH",
+      "count": 6
+    },
+    {
+      "country_code": "SG",
+      "count": 8
+    },
+    {
+      "country_code": "TH",
+      "count": 3
+    },
+    {
+      "country_code": "TL",
+      "count": 4
+    },
+    {
+      "country_code": "VN",
+      "count": 7
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:omar-ali-saifuddien-mosque",
+      "name": "Omar Ali Saifuddien Mosque",
+      "country_code": "BN",
+      "object_type": "religious_site",
+      "narrow": "Действующая мечеть 1958 года в центре Бандар-Сери-Бегавана: султанский проект, искусственная лагуна и церемониальная баржа связывают исламскую архитектуру с послевоенным переустройством столицы.",
+      "detail_path": "countries/brunei/objects/omar-ali-saifuddien-mosque.json"
+    },
+    {
+      "id": "bn:jame-asr-hassanil-bolkiah-mosque",
+      "name": "Jame' Asr Hassanil Bolkiah Mosque",
+      "country_code": "BN",
+      "object_type": "religious_site",
+      "narrow": "Крупнейшая мечеть Брунея, открытая 14 июля 1994 года в честь эпохи правления султана Хассанала Болкиаха. Двадцать девять золотых куполов, сады и фонтаны образуют огромный действующий религиозный комплекс в Киаронге; туристический доступ короткий и подчинён молитвам.",
+      "detail_path": "countries/brunei/objects/jame-asr-hassanil-bolkiah-mosque.json"
+    },
+    {
+      "id": "bn:kampong-ayer",
+      "name": "Kampong Ayer",
+      "country_code": "BN",
+      "object_type": "living_settlement",
+      "narrow": "Кампонг-Айер — живая сеть свайных деревень Бандар-Сери-Бегавана, где река остаётся транспортной улицей, а мостки связывают жилые кварталы и общественные службы. Исторический центр Брунея на воде сегодня особенно интересен контрастом старой пространственной логики, современной перестройки и реальной речной повседневности.",
+      "detail_path": "countries/brunei/objects/kampong-ayer.json"
+    },
+    {
+      "id": "bn:labi-interior",
+      "name": "Labi interior",
+      "country_code": "BN",
+      "object_type": "cultural_landscape",
+      "narrow": "Лаби даёт редкий непрерывный переход от освоенного нефтяного побережья Белайта к внутреннему Борнео: по одной дороге последовательно меняются сельскохозяйственный ландшафт, пресноводное болото, ибанские поселения и лесные маршруты. Ценность маршрута именно в этой смене среды; отдельные длинные дома, Luagan Lalak и водопады остаются самостоятельными объектами справочника.",
+      "detail_path": "countries/brunei/objects/labi-interior.json"
+    },
+    {
+      "id": "bn:tutong-and-tamu-markets",
+      "name": "Pasarneka Tutong / Tamu Tutong",
+      "country_code": "BN",
+      "object_type": "market",
+      "narrow": "Pasarneka Tutong — еженедельный рынок у Pekan Tutong, где в четверг утром сходятся продукты, готовая еда, растения и ремесленные изделия из Тутонга и других районов. Это не набор разных «рынков Тутонга», а один комплекс с недельным ритмом: его смысл — увидеть, как районный центр собирает сельскую продукцию и мелкую торговлю в одну точку.",
+      "detail_path": "countries/brunei/objects/tutong-and-tamu-markets.json"
+    },
+    {
+      "id": "bn:teraja-longhouse",
+      "name": "Teraja Longhouse",
+      "country_code": "BN",
+      "object_type": "living_settlement",
+      "narrow": "Тераджа — действующий ибанский длинный дом в конце дороги Лаби, на границе жилого пространства и низинного дождевого леса. Здесь важен не «этнографический аттракцион», а живая община: семейные помещения выходят в общий ruai, а сам дом служит базой для троп к водопадам и лесным участкам Тераджи.",
+      "detail_path": "countries/brunei/objects/teraja-longhouse.json"
+    },
+    {
+      "id": "bn:mendaram-besar-longhouse",
+      "name": "Mendaram Besar Longhouse",
+      "country_code": "BN",
+      "object_type": "living_settlement",
+      "narrow": "Mendaram Besar — действующий 12-секционный ибанский длинный дом в коридоре Лаби, где жилая архитектура связана с ремеслом, общей галереей ruai, кухней и современным культурным туризмом общины. Это не музей: посещение строится через контакт с хозяевами, а семейные помещения остаются частным пространством.",
+      "detail_path": "countries/brunei/objects/mendaram-besar-longhouse.json"
+    },
+    {
+      "id": "bn:tamu-kianggeh",
+      "name": "Tamu Kianggeh",
+      "country_code": "BN",
+      "object_type": "market",
+      "narrow": "Tamu Kianggeh — старый городской рынок на берегу Sungai Kianggeh в центре Бандар-Сери-Бегавана: свежая рыба, овощи, фрукты, лекарственные травы, домашняя еда и мелкие бытовые товары. Нынешний комплекс построен после крупной реконструкции 2016 года, но его основная функция остаётся повседневной: это место закупок и еды, а не рынок, созданный специально для туристов.",
+      "detail_path": "countries/brunei/objects/tamu-kianggeh.json"
+    },
+    {
+      "id": "kh:oudong",
+      "name": "Oudong",
+      "country_code": "KH",
+      "object_type": "religious_site",
+      "narrow": "Удонг — постангкорская королевская столица и сакральный ландшафт XVII–XIX веков, где город на равнине был связан с хребтом королевских ступ, дворцовыми и ремесленными зонами и речным портом Кампонг-Луонг. На самой горе сохранились династические ступы, буддийские святыни разных эпох, следы более ранних индуистских и махаянских культов и исламское присутствие.",
+      "detail_path": "countries/cambodia/objects/oudong.json"
+    },
+    {
+      "id": "la:wat-phabath",
+      "name": "Wat Phabath",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Важное паломническое святилище Боликхамсая с почитаемым следом Будды; официальный Tourism Laos связывает остановку здесь с дорожной религиозной традицией.",
+      "detail_path": "countries/laos/objects/wat-phabath.json"
+    },
+    {
+      "id": "la:that-sikhottabong-stupa",
+      "name": "That Sikhottabong Stupa",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Историческая ступа на Меконге у Тхакхэка, один из наиболее значимых сакральных объектов Кхаммуана.",
+      "detail_path": "countries/laos/objects/that-sikhottabong-stupa.json"
+    },
+    {
+      "id": "la:that-ing-hang-stupa",
+      "name": "That Ing Hang Stupa",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Главная сакральная ступа провинции Саваннакхет, связанная с буддийским паломничеством и ежегодным фестивалем.",
+      "detail_path": "countries/laos/objects/that-ing-hang-stupa.json"
+    },
+    {
+      "id": "la:dong-na-tad-sacred-forest",
+      "name": "Dong Na Tad Sacred Forest",
+      "country_code": "LA",
+      "object_type": "cultural_landscape",
+      "narrow": "Старовозрастный лес, охраняемый местными жителями также по духовным причинам; отдельный этнографически значимый природный объект.",
+      "detail_path": "countries/laos/objects/dong-na-tad-sacred-forest.json"
+    },
+    {
+      "id": "la:sacred-phachaosingkham-temple",
+      "name": "Sacred Phachaosingkham Temple",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Сакральный храмовый объект Удомсая, отдельно перечисляемый официальным провинциальным туристическим справочником.",
+      "detail_path": "countries/laos/objects/sacred-phachaosingkham-temple.json"
+    },
+    {
+      "id": "la:phouthat-stupa",
+      "name": "Phouthat Stupa",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Историческая ступа Удомсая, которую провинциальный справочник выделяет отдельно от храмов Мыангсая.",
+      "detail_path": "countries/laos/objects/phouthat-stupa.json"
+    },
+    {
+      "id": "la:jom-khao-manilat-temple",
+      "name": "Jom Khao Manilat Temple",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Храм на возвышенности в районе Хуайсая, отдельный культурный объект Бокео.",
+      "detail_path": "countries/laos/objects/jom-khao-manilat-temple.json"
+    },
+    {
+      "id": "la:wat-xieng-thong",
+      "name": "Wat Xieng Thong",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Крупный исторический храм Луангпхабанга; самостоятельный физический объект внутри более широкой городской карточки UNESCO.",
+      "detail_path": "countries/laos/objects/wat-xieng-thong.json"
+    },
+    {
+      "id": "la:wat-visounnarath",
+      "name": "Wat Visounnarath",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Исторический буддийский храм Луангпхабанга, отдельный от Wat Xieng Thong и общей городской карточки.",
+      "detail_path": "countries/laos/objects/wat-visounnarath.json"
+    },
+    {
+      "id": "la:wat-manolom",
+      "name": "Wat Manolom",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Исторический храм Луангпхабанга, выделяемый официальным провинциальным справочником как самостоятельный объект.",
+      "detail_path": "countries/laos/objects/wat-manolom.json"
+    },
+    {
+      "id": "la:simongkhoun-temple",
+      "name": "Simongkhoun Temple",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Храмовый объект Салавана, выделенный официальным провинциальным справочником отдельно от природных достопримечательностей.",
+      "detail_path": "countries/laos/objects/simongkhoun-temple.json"
+    },
+    {
+      "id": "la:ban-houay-houn-katu-weaving-village",
+      "name": "Ban Houay Houn Katu Weaving Village",
+      "country_code": "LA",
+      "object_type": "living_settlement",
+      "narrow": "Деревня кату в Салаване, известная ткацкой традицией; добавлена как живая этнографическая локация, а не коммерческий тур.",
+      "detail_path": "countries/laos/objects/ban-houay-houn-katu-weaving-village.json"
+    },
+    {
+      "id": "la:saysettha-stupa",
+      "name": "Saysettha Stupa",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Историческая ступа в провинции Аттапы, отдельный культурно-религиозный объект.",
+      "detail_path": "countries/laos/objects/saysettha-stupa.json"
+    },
+    {
+      "id": "la:wat-phoxainaram",
+      "name": "Wat Phoxainaram",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Буддийский храмовый объект Хуапхана, отдельный от пещерного комплекса Вьенгсая.",
+      "detail_path": "countries/laos/objects/wat-phoxainaram.json"
+    },
+    {
+      "id": "la:ban-napia-war-scrap-spoon-village",
+      "name": "Ban Napia War Scrap Spoon Village",
+      "country_code": "LA",
+      "object_type": "living_settlement",
+      "narrow": "Деревня Бан-Напиа, известная ремесленной переработкой военного металла; добавлена как живая ремесленная и мемориальная локация.",
+      "detail_path": "countries/laos/objects/ban-napia-war-scrap-spoon-village.json"
+    },
+    {
+      "id": "la:ban-bo-salt-production-village",
+      "name": "Ban Bo Salt Production Village",
+      "country_code": "LA",
+      "object_type": "living_settlement",
+      "narrow": "Деревня традиционной добычи и производства соли в провинции Вьентьян; добавлена как самостоятельная живая производственная локация.",
+      "detail_path": "countries/laos/objects/ban-bo-salt-production-village.json"
+    },
+    {
+      "id": "la:xienglom-stupa",
+      "name": "Xienglom Stupa",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Ступа Сиенглом в провинции Сайнябули; отдельный религиозно-исторический объект.",
+      "detail_path": "countries/laos/objects/xienglom-stupa.json"
+    },
+    {
+      "id": "la:lao-silk-cotton-weaving-centre-savannakhet",
+      "name": "Lao Silk-Cotton Weaving Centre Savannakhet",
+      "country_code": "LA",
+      "object_type": "cultural_landscape",
+      "narrow": "Центр традиционного шёлкового и хлопкового ткачества в Саваннакхете; отдельная ремесленная локация.",
+      "detail_path": "countries/laos/objects/lao-silk-cotton-weaving-centre-savannakhet.json"
+    },
+    {
+      "id": "la:that-phonh-stupa",
+      "name": "That Phonh Stupa",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Историческая ступа в провинции Саваннакхет, отдельная от That Ing Hang и Sikhottabong.",
+      "detail_path": "countries/laos/objects/that-phonh-stupa.json"
+    },
+    {
+      "id": "la:kandone-traditional-longhouse-village",
+      "name": "Kandone Traditional Longhouse Village",
+      "country_code": "LA",
+      "object_type": "living_settlement",
+      "narrow": "Деревня Кандон в Секонге с традиционными длинными домами и резьбой по дереву; добавлена как этнографическая локация.",
+      "detail_path": "countries/laos/objects/kandone-traditional-longhouse-village.json"
+    },
+    {
+      "id": "la:luang-namtha-night-market",
+      "name": "Luang Namtha Night Market",
+      "country_code": "LA",
+      "object_type": "market",
+      "narrow": "Ночной рынок Луангнамтха как самостоятельная городская культурно-бытовая локация; не дублирует рынок Мыанг-Синга.",
+      "detail_path": "countries/laos/objects/luang-namtha-night-market.json"
+    },
+    {
+      "id": "la:luang-namtha-stupa",
+      "name": "Luang Namtha Stupa",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Ступа Луангнамтха на возвышенности, отдельный религиозный и обзорный объект.",
+      "detail_path": "countries/laos/objects/luang-namtha-stupa.json"
+    },
+    {
+      "id": "la:poum-pouk-stupa",
+      "name": "Poum Pouk Stupa",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Историческая ступа в районе Мыанг-Синга; самостоятельный физический объект внутри более широкой культурной карточки Мыанг-Синга.",
+      "detail_path": "countries/laos/objects/poum-pouk-stupa.json"
+    },
+    {
+      "id": "la:ban-saphai-cultural-village",
+      "name": "Ban Saphai Cultural Village",
+      "country_code": "LA",
+      "object_type": "living_settlement",
+      "narrow": "Ткацкая деревня Бан-Сапхай в Чампасаке, добавленная как живая этнографическая и ремесленная локация.",
+      "detail_path": "countries/laos/objects/ban-saphai-cultural-village.json"
+    },
+    {
+      "id": "la:wat-pho-sayalam",
+      "name": "Wat Pho Sayalam",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Буддийский храмовый объект провинции Чампасак, отдельный от древнего комплекса Wat Phou.",
+      "detail_path": "countries/laos/objects/wat-pho-sayalam.json"
+    },
+    {
+      "id": "la:pha-that-luang",
+      "name": "Pha That Luang",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Тхат-Луанг — самостоятельный государственно-буддийский сакральный комплекс Вьентьяна, связанный с традицией о реликвии Будды.",
+      "detail_path": "countries/laos/objects/pha-that-luang.json"
+    },
+    {
+      "id": "la:wat-sisaket",
+      "name": "Wat Sisaket",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Ват-Сисакет — самостоятельный исторический храм Вьентьяна, выделяющийся сохранностью ранне-XIX-векового ансамбля.",
+      "detail_path": "countries/laos/objects/wat-sisaket.json"
+    },
+    {
+      "id": "la:ho-phra-keo",
+      "name": "Ho Phra Keo",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Хо-Пхра-Кео — самостоятельная бывшая королевская святыня Вьентьяна и отдельный музейно-религиозный объект.",
+      "detail_path": "countries/laos/objects/ho-phra-keo.json"
+    },
+    {
+      "id": "la:wat-si-muang",
+      "name": "Wat Si Muang",
+      "country_code": "LA",
+      "object_type": "religious_site",
+      "narrow": "Ват-Си-Муанг — самостоятельный действующий храм Вьентьяна, важный для городской практики обетов и защитных культов.",
+      "detail_path": "countries/laos/objects/wat-si-muang.json"
+    },
+    {
+      "id": "la:ban-komaen-ancient-tea-plantation",
+      "name": "Ban Komaen Ancient Tea Plantation",
+      "country_code": "LA",
+      "object_type": "cultural_landscape",
+      "narrow": "Ban Komaen — отдельная чайная высокогорная локация примерно в 18 км от Пхонгсали, известная старыми чайными деревьями; точная геопривязка и маршрут требуют отдельного QA.",
+      "detail_path": "countries/laos/objects/ban-komaen-ancient-tea-plantation.json"
+    },
+    {
+      "id": "la:muang-sing-morning-market",
+      "name": "Muang Sing Morning Market",
+      "country_code": "LA",
+      "object_type": "market",
+      "narrow": "Утренний рынок Мыанг-Синга — самостоятельная живая торговая и этнографическая локация; точная GPS-точка рынка пока не нормализована.",
+      "detail_path": "countries/laos/objects/muang-sing-morning-market.json"
+    },
+    {
+      "id": "la:muang-sing-tai-lue-cultural-landscape",
+      "name": "Muang Sing Tai Lue Cultural Landscape",
+      "country_code": "LA",
+      "object_type": "cultural_landscape",
+      "narrow": "Мыанг-Синг — самостоятельный культурный ландшафт высокогорной долины с Tai Lue историческим слоем, сельскими поселениями, рисовыми полями и буддийско-анимистическими практиками; утренний рынок выделен отдельно.",
+      "detail_path": "countries/laos/objects/muang-sing-tai-lue-cultural-landscape.json"
+    },
+    {
+      "id": "id:bali-temple-landscapes",
+      "name": "Bali temple landscapes",
+      "country_code": "ID",
+      "object_type": "cultural_landscape",
+      "narrow": "Храмы в вулканическом, рисовом и прибрежном ландшафте; важен именно как живая ритуальная система, а не набор фототочек.",
+      "detail_path": "countries/indonesia/objects/bali-temple-landscapes.json"
+    },
+    {
+      "id": "id:tana-toraja-hinterland",
+      "name": "Tana Toraja hinterland",
+      "country_code": "ID",
+      "object_type": "cultural_landscape",
+      "narrow": "Tana Toraja — горный культурный ландшафт Южного Сулавеси, где tongkonan, рисовые террасы, скальные и пещерные погребения и ритуальные площадки образуют единую систему родства и памяти предков.",
+      "detail_path": "countries/indonesia/objects/tana-toraja-hinterland.json"
+    },
+    {
+      "id": "id:wae-rebo",
+      "name": "Wae Rebo",
+      "country_code": "ID",
+      "object_type": "living_settlement",
+      "narrow": "Изолированная горная деревня Manggarai с семью конусными Mbaru Niang; сильный объект живой архитектуры, общинного наследия и полноценного пешего подхода.",
+      "detail_path": "countries/indonesia/objects/wae-rebo.json"
+    },
+    {
+      "id": "my:bario-kelabit-highlands",
+      "name": "Bario / Kelabit Highlands",
+      "country_code": "MY",
+      "object_type": "cultural_landscape",
+      "narrow": "Барио и Kelabit Highlands — высокогорная сеть поселений, рисовых полей и троп у границы Калимантана; ценность места раскрывается в переходах между деревнями и в жизни келабитов, а не в коротком визите в одну точку.",
+      "detail_path": "countries/malaysia/objects/bario-kelabit-highlands.json"
+    },
+    {
+      "id": "my:kampung-bavanggazo-rungus-longhouse",
+      "name": "Kampung Bavanggazo / Rungus longhouse",
+      "country_code": "MY",
+      "object_type": "living_settlement",
+      "narrow": "Kampung Bavanggazo — действующее поселение Rungus с длинным общинным домом, ремёслами, гонгами и сельским хозяйством; ценность появляется при ночёвке и времени с хозяевами, а не при короткой постановочной остановке.",
+      "detail_path": "countries/malaysia/objects/kampung-bavanggazo-rungus-longhouse.json"
+    },
+    {
+      "id": "mm:shwedagon-pagoda",
+      "name": "Shwedagon Pagoda",
+      "country_code": "MM",
+      "object_type": "religious_site",
+      "narrow": "Shwedagon — не просто золотая ступа, а работающий религиозный космос на Singuttara Hill: четыре крытых подъёма, круговое движение паломников, планетарные посты, алтари, колокола и сотни религиозных построек дают материал от архитектуры до живого ритуала.",
+      "detail_path": "countries/myanmar/objects/shwedagon-pagoda.json"
+    },
+    {
+      "id": "mm:kyaiktiyo-golden-rock",
+      "name": "Kyaiktiyo / Golden Rock",
+      "country_code": "MM",
+      "object_type": "religious_site",
+      "narrow": "Kyaiktiyo — горное паломничество к Golden Rock, где ценность не в «камне, который не падает», а в потоке паломников, подъёме через лесной Kyaikhtiyoe Natural Reserve и вечернем религиозном пространстве на краю хребта.",
+      "detail_path": "countries/myanmar/objects/kyaiktiyo-golden-rock.json"
+    },
+    {
+      "id": "mm:monywa-thanboddhay-and-bodhi-tataung",
+      "name": "Monywa / Thanboddhay and Bodhi Tataung",
+      "country_code": "MM",
+      "object_type": "religious_site",
+      "narrow": "Monywa / Thanboddhay and Bodhi Tataung — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/myanmar/objects/monywa-thanboddhay-and-bodhi-tataung.json"
+    },
+    {
+      "id": "ph:banaue-and-batad-rice-terraces",
+      "name": "Banaue and Batad rice terraces",
+      "country_code": "PH",
+      "object_type": "cultural_landscape",
+      "narrow": "Banaue and Batad rice terraces — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/philippines/objects/banaue-and-batad-rice-terraces.json"
+    },
+    {
+      "id": "ph:siquijor-interior",
+      "name": "Siquijor interior",
+      "country_code": "PH",
+      "object_type": "cultural_landscape",
+      "narrow": "Siquijor interior — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/philippines/objects/siquijor-interior.json"
+    },
+    {
+      "id": "ph:batanes",
+      "name": "Batanes",
+      "country_code": "PH",
+      "object_type": "cultural_landscape",
+      "narrow": "Batanes — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/philippines/objects/batanes.json"
+    },
+    {
+      "id": "ph:sagada",
+      "name": "Sagada",
+      "country_code": "PH",
+      "object_type": "cultural_landscape",
+      "narrow": "Sagada — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/philippines/objects/sagada.json"
+    },
+    {
+      "id": "ph:taal-volcano-and-heritage-towns",
+      "name": "Taal Volcano and heritage towns",
+      "country_code": "PH",
+      "object_type": "cultural_landscape",
+      "narrow": "Taal Volcano and heritage towns — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/philippines/objects/taal-volcano-and-heritage-towns.json"
+    },
+    {
+      "id": "ph:paoay-church-st-augustine-church",
+      "name": "Paoay Church (St. Augustine Church)",
+      "country_code": "PH",
+      "object_type": "religious_site",
+      "narrow": "Один из наиболее сильных архитектурных объектов Филиппин: массивные контрфорсы и местная адаптация барокко к сейсмике делают фасад и силуэт легко читаемыми в кадре.",
+      "detail_path": "countries/philippines/objects/paoay-church-st-augustine-church.json"
+    },
+    {
+      "id": "sg:marina-bay",
+      "name": "Marina Bay",
+      "country_code": "SG",
+      "object_type": "cultural_landscape",
+      "narrow": "Marina Bay — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/marina-bay.json"
+    },
+    {
+      "id": "sg:gardens-by-the-bay",
+      "name": "Gardens by the Bay",
+      "country_code": "SG",
+      "object_type": "cultural_landscape",
+      "narrow": "Gardens by the Bay — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/gardens-by-the-bay.json"
+    },
+    {
+      "id": "sg:singapore-botanic-gardens",
+      "name": "Singapore Botanic Gardens",
+      "country_code": "SG",
+      "object_type": "cultural_landscape",
+      "narrow": "Singapore Botanic Gardens — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/singapore-botanic-gardens.json"
+    },
+    {
+      "id": "sg:hawker-centres",
+      "name": "hawker centres",
+      "country_code": "SG",
+      "object_type": "market",
+      "narrow": "hawker centres — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/hawker-centres.json"
+    },
+    {
+      "id": "sg:bukit-brown",
+      "name": "Bukit Brown",
+      "country_code": "SG",
+      "object_type": "cultural_landscape",
+      "narrow": "Bukit Brown — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/bukit-brown.json"
+    },
+    {
+      "id": "sg:kranji-countryside",
+      "name": "Kranji countryside",
+      "country_code": "SG",
+      "object_type": "cultural_landscape",
+      "narrow": "Kranji countryside — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/kranji-countryside.json"
+    },
+    {
+      "id": "sg:haw-par-villa",
+      "name": "Haw Par Villa",
+      "country_code": "SG",
+      "object_type": "cultural_landscape",
+      "narrow": "Haw Par Villa — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/haw-par-villa.json"
+    },
+    {
+      "id": "sg:fort-canning-park",
+      "name": "Fort Canning Park",
+      "country_code": "SG",
+      "object_type": "cultural_landscape",
+      "narrow": "Fort Canning Park — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/singapore/objects/fort-canning-park.json"
+    },
+    {
+      "id": "th:bangkok-grand-palace-and-temples",
+      "name": "Bangkok Grand Palace and temples",
+      "country_code": "TH",
+      "object_type": "religious_site",
+      "narrow": "Bangkok Grand Palace and temples — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/thailand/objects/bangkok-grand-palace-and-temples.json"
+    },
+    {
+      "id": "th:nan-old-town-and-mountains",
+      "name": "Nan old town and mountains",
+      "country_code": "TH",
+      "object_type": "cultural_landscape",
+      "narrow": "Nan old town and mountains — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/thailand/objects/nan-old-town-and-mountains.json"
+    },
+    {
+      "id": "th:wat-rong-khun-white-temple",
+      "name": "Wat Rong Khun (White Temple)",
+      "country_code": "TH",
+      "object_type": "religious_site",
+      "narrow": "Редкий пример современной тайской сакральной архитектуры и авторского искусства Chalermchai Kositpipat: белый mirror-clad комплекс с очень высокой визуальной плотностью.",
+      "detail_path": "countries/thailand/objects/wat-rong-khun-white-temple.json"
+    },
+    {
+      "id": "tl:oecusse-historic-enclave",
+      "name": "Oecusse historic enclave",
+      "country_code": "TL",
+      "object_type": "cultural_landscape",
+      "narrow": "Oecusse historic enclave — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/timor-leste/objects/oecusse-historic-enclave.json"
+    },
+    {
+      "id": "tl:maubisse-ainaro-highlands",
+      "name": "Maubisse–Ainaro highlands",
+      "country_code": "TL",
+      "object_type": "cultural_landscape",
+      "narrow": "Maubisse–Ainaro highlands — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/timor-leste/objects/maubisse-ainaro-highlands.json"
+    },
+    {
+      "id": "tl:lospalos-fataluku-region",
+      "name": "Lospalos / Fataluku region",
+      "country_code": "TL",
+      "object_type": "cultural_landscape",
+      "narrow": "Lospalos / Fataluku region — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/timor-leste/objects/lospalos-fataluku-region.json"
+    },
+    {
+      "id": "tl:maubara-liquica-coastal-heritage",
+      "name": "Maubara–Liquiçá coastal heritage",
+      "country_code": "TL",
+      "object_type": "cultural_landscape",
+      "narrow": "Easy west-of-Dili route linking a rare 17th-century Dutch fort, Portuguese-era ruins, basket weaving, beaches and seasonal whale/dolphin watching.",
+      "detail_path": "countries/timor-leste/objects/maubara-liquica-coastal-heritage.json"
+    },
+    {
+      "id": "vn:trang-an",
+      "name": "Trang An",
+      "country_code": "VN",
+      "object_type": "cultural_landscape",
+      "narrow": "Trang An — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/trang-an.json"
+    },
+    {
+      "id": "vn:hue-monuments",
+      "name": "Hue monuments",
+      "country_code": "VN",
+      "object_type": "cultural_landscape",
+      "narrow": "Hue monuments — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/hue-monuments.json"
+    },
+    {
+      "id": "vn:kon-tum-communal-houses",
+      "name": "Kon Tum communal houses",
+      "country_code": "VN",
+      "object_type": "cultural_landscape",
+      "narrow": "Kon Tum communal houses — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/kon-tum-communal-houses.json"
+    },
+    {
+      "id": "vn:nam-dinh-church-landscapes",
+      "name": "Nam Dinh church landscapes",
+      "country_code": "VN",
+      "object_type": "cultural_landscape",
+      "narrow": "Nam Dinh church landscapes — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/nam-dinh-church-landscapes.json"
+    },
+    {
+      "id": "vn:duong-lam-ancient-village",
+      "name": "Duong Lam Ancient Village",
+      "country_code": "VN",
+      "object_type": "living_settlement",
+      "narrow": "Duong Lam Ancient Village — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/duong-lam-ancient-village.json"
+    },
+    {
+      "id": "vn:mu-cang-chai-rice-terraces",
+      "name": "Mu Cang Chai rice terraces",
+      "country_code": "VN",
+      "object_type": "cultural_landscape",
+      "narrow": "Один из наиболее фотогеничных агроландшафтов Vietnam: более 2,000 га террас, Hmong farming culture, Khau Pha Pass и два совершенно разных визуальных сезона — water-pouring и golden harvest.",
+      "detail_path": "countries/vietnam/objects/mu-cang-chai-rice-terraces.json"
+    },
+    {
+      "id": "vn:sa-pa-fansipan",
+      "name": "Sa Pa / Fansipan",
+      "country_code": "VN",
+      "object_type": "cultural_landscape",
+      "narrow": "Высочайшая вершина Индокитая над облаками, cable-car infrastructure, pagoda complex и этнокультурный контекст Sa Pa.",
+      "detail_path": "countries/vietnam/objects/sa-pa-fansipan.json"
+    }
+  ]
+}

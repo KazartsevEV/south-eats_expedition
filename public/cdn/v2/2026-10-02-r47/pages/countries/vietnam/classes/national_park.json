@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "schema_version": "2.10.12",
+    "release_id": "2026-10-02-r47",
+    "page_type": "country_class",
+    "id": "country-class:vn:national_park"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "national_park",
+    "label_ru": "Национальные парки",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:protected_ecosystems",
+    "page_path": "pages/countries/vietnam/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/national_park.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 4,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:geographic_area:bac-kan-ba-be",
+      "canonical_geo_id": "geo_vn_0049",
+      "name": "Баккан / Бабе",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/bac-kan-ba-be.json"
+    },
+    {
+      "id": "vn:geographic_area:dong-nai-cat-tien",
+      "canonical_geo_id": "geo_vn_0053",
+      "name": "Донгнай / Каттьен",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/dong-nai-cat-tien.json"
+    },
+    {
+      "id": "vn:geographic_area:ninh-binh-cuc-phuong",
+      "canonical_geo_id": "geo_vn_0050",
+      "name": "Ниньбинь / Кукфыонг",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/ninh-binh-cuc-phuong.json"
+    },
+    {
+      "id": "vn:geographic_area:quang-binh-phong-nha",
+      "canonical_geo_id": "geo_vn_0040",
+      "name": "Куангбинь / Фонгня",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/quang-binh-phong-nha.json"
+    },
+    {
+      "id": "vn:province:dong-nai",
+      "canonical_geo_id": "geo_vn_0027",
+      "name": "Донгнай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/province/dong-nai.json"
+    },
+    {
+      "id": "vn:province:ninh-binh",
+      "canonical_geo_id": "geo_vn_0015",
+      "name": "Ниньбинь",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/province/ninh-binh.json"
+    },
+    {
+      "id": "vn:province:quang-tri",
+      "canonical_geo_id": "geo_vn_0019",
+      "name": "Куангчи",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/province/quang-tri.json"
+    },
+    {
+      "id": "vn:province:thai-nguyen",
+      "canonical_geo_id": "geo_vn_0008",
+      "name": "Тхайнгуен",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/province/thai-nguyen.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:phong-nha-ke-bang",
+      "name": "Phong Nha-Ke Bang",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:quang-binh-phong-nha",
+        "vn:province:quang-tri"
+      ],
+      "region_legacy": "Quang Binh / Phong Nha",
+      "nearest_hub": "Dong Hoi / Phong Nha",
+      "narrow": "Phong Nha-Ke Bang — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/phong-nha-ke-bang.json"
+    },
+    {
+      "id": "vn:ba-be-national-park",
+      "name": "Ba Be National Park",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:bac-kan-ba-be",
+        "vn:province:thai-nguyen"
+      ],
+      "region_legacy": "Bac Kan / Ba Be",
+      "nearest_hub": "Bac Kan / Cho Ra",
+      "narrow": "Ba Be National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/ba-be-national-park.json"
+    },
+    {
+      "id": "vn:cuc-phuong-national-park",
+      "name": "Cuc Phuong National Park",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:ninh-binh-cuc-phuong",
+        "vn:province:ninh-binh"
+      ],
+      "region_legacy": "Ninh Binh / Cuc Phuong",
+      "nearest_hub": "Ninh Binh",
+      "narrow": "Cuc Phuong National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/cuc-phuong-national-park.json"
+    },
+    {
+      "id": "vn:cat-tien-national-park",
+      "name": "Cat Tien National Park",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:dong-nai-cat-tien",
+        "vn:province:dong-nai"
+      ],
+      "region_legacy": "Dong Nai / Cat Tien",
+      "nearest_hub": "Ho Chi Minh City / Nam Cat Tien",
+      "narrow": "Один из крупнейших низинных тропических лесов Vietnam: wildlife, giant trees, Dong Nai River и Bau Sau wetland/Ramsar дают полноценный экспедиционный контент.",
+      "detail_path": "countries/vietnam/objects/cat-tien-national-park.json"
+    }
+  ]
+}

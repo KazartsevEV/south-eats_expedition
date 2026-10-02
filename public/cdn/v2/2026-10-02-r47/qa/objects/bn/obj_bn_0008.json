@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_bn_0008",
+  "status": "passed",
+  "checks": {
+    "language": true,
+    "classification": true,
+    "geo": true,
+    "coordinates": true,
+    "elevation": true,
+    "narrative": true,
+    "sources": true,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
+    "editorial_rebuild": true
+  },
+  "last_reviewed_at": "2026-10-02",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-02",
+    "scope": "obj_bn_0008: привязка источников к конкретным фактам и динамическим полям",
+    "checks": {
+      "narrative_section_sources": true,
+      "operations_sources": true,
+      "access_sources": true,
+      "water_unknown_not_falsely_sourced": true,
+      "overnight_unknown_not_falsely_sourced": true,
+      "traveler_report_sources": true,
+      "visual_viewpoint_sources": true,
+      "drone_rule_precision": true
+    },
+    "notes": [
+      "Текущие часы и Dart привязаны к Brunei Tourism.",
+      "Исторические цифры и даты привязаны к Pelita Brunei 2013; ассортимент и 1K1P — к Pelita Brunei 2024.",
+      "Unknown по воде и ночёвке не наследует общий bibliography source_refs.",
+      "Дрон привязан к официальной DCA, permit_required оставлен null."
+    ]
+  },
+  "identity_review": null,
+  "verification": {
+    "dynamic_fields": [
+      "hours",
+      "cash payment",
+      "Dart availability",
+      "local access",
+      "drone rules"
+    ],
+    "verify_before_departure": true
+  }
+}

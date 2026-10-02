@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "schema_version": "2.10.12",
+    "release_id": "2026-10-02-r47",
+    "page_type": "country_class",
+    "id": "country-class:th:geological_site"
+  },
+  "identity": {
+    "country_code": "TH",
+    "country_slug": "thailand",
+    "object_type": "geological_site",
+    "label_ru": "Геологические объекты",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:th:relief_geology",
+    "page_path": "pages/countries/thailand/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/geological_site.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:th",
+      "name": "Таиланд",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/thailand.json"
+    },
+    {
+      "id": "th:geographic_area:northeast",
+      "canonical_geo_id": "geo_th_0002",
+      "name": "Северо-восток / Исан",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/northeast.json"
+    },
+    {
+      "id": "th:geographic_area:ubon-mekong-pha-taem",
+      "canonical_geo_id": "geo_th_0038",
+      "name": "Убон / Меконг / Пха-Таем",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/ubon-mekong-pha-taem.json"
+    },
+    {
+      "id": "th:province:ubon-ratchathani",
+      "canonical_geo_id": "geo_th_0021",
+      "name": "Убонратчатхани",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/thailand/province/ubon-ratchathani.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:sam-phan-bok",
+      "name": "Sam Phan Bok",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:northeast",
+        "th:geographic_area:ubon-mekong-pha-taem",
+        "th:province:ubon-ratchathani"
+      ],
+      "region_legacy": "Ubon / Mekong / Pha Taem",
+      "nearest_hub": "Ubon Ratchathani / Khong Chiam",
+      "narrow": "Sam Phan Bok — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/thailand/objects/sam-phan-bok.json"
+    }
+  ]
+}

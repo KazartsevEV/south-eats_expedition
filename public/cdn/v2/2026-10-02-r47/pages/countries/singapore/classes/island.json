@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.12",
+    "release_id": "2026-10-02-r47",
+    "page_type": "country_class",
+    "id": "country-class:sg:island"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:sg:water_coast_marine",
+    "page_path": "pages/countries/singapore/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:sg",
+      "name": "Сингапур",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/singapore.json"
+    },
+    {
+      "id": "sg:geographic_area:pulau-ubin",
+      "canonical_geo_id": "geo_sg_0011",
+      "name": "Пулау-Убин",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/singapore/geographic_area/pulau-ubin.json"
+    },
+    {
+      "id": "sg:region:north-east-region",
+      "canonical_geo_id": "geo_sg_0004",
+      "name": "Северо-восточный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/north-east-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:pulau-ubin",
+      "name": "Pulau Ubin",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:pulau-ubin",
+        "sg:region:north-east-region"
+      ],
+      "region_legacy": "Pulau Ubin",
+      "nearest_hub": "Changi Village / Changi Point Ferry Terminal",
+      "narrow": "Pulau Ubin — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/pulau-ubin.json"
+    }
+  ]
+}

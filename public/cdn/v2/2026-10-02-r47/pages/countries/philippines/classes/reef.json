@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "schema_version": "2.10.12",
+    "release_id": "2026-10-02-r47",
+    "page_type": "country_class",
+    "id": "country-class:ph:reef"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "object_type": "reef",
+    "label_ru": "Рифы",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:ph:water_coast_marine",
+    "page_path": "pages/countries/philippines/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/reef.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:ph",
+      "name": "Филиппины",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/philippines.json"
+    },
+    {
+      "id": "ph:geographic_area:negros-oriental-dauin-apo-island",
+      "canonical_geo_id": "geo_ph_0051",
+      "name": "Восточный Негрос / Дауин / остров Апо",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/negros-oriental-dauin-apo-island.json"
+    },
+    {
+      "id": "ph:geographic_area:occidental-mindoro-apo-reef",
+      "canonical_geo_id": "geo_ph_0048",
+      "name": "Западный Миндоро / риф Апо",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/occidental-mindoro-apo-reef.json"
+    },
+    {
+      "id": "ph:geographic_area:tubbataha-sulu-sea",
+      "canonical_geo_id": "geo_ph_0041",
+      "name": "Туббатаха / море Сулу",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/tubbataha-sulu-sea.json"
+    },
+    {
+      "id": "ph:province:negros-oriental",
+      "canonical_geo_id": "geo_ph_0034",
+      "name": "Восточный Негрос",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/province/negros-oriental.json"
+    },
+    {
+      "id": "ph:province:occidental-mindoro",
+      "canonical_geo_id": "geo_ph_0031",
+      "name": "Западный Миндоро",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/province/occidental-mindoro.json"
+    },
+    {
+      "id": "ph:province:palawan",
+      "canonical_geo_id": "geo_ph_0019",
+      "name": "Палаван",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/province/palawan.json"
+    },
+    {
+      "id": "ph:region:mimaropa",
+      "canonical_geo_id": "geo_ph_0007",
+      "name": "МИМАРОПА",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/mimaropa.json"
+    },
+    {
+      "id": "ph:region:negros-island-region",
+      "canonical_geo_id": "geo_ph_0010",
+      "name": "Регион острова Негрос",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/negros-island-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:tubbataha-reefs",
+      "name": "Tubbataha Reefs",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:tubbataha-sulu-sea",
+        "ph:province:palawan",
+        "ph:region:mimaropa"
+      ],
+      "region_legacy": "Tubbataha / Sulu Sea",
+      "nearest_hub": "Puerto Princesa",
+      "narrow": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/tubbataha-reefs.json"
+    },
+    {
+      "id": "ph:apo-reef-natural-park",
+      "name": "Apo Reef Natural Park",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:occidental-mindoro-apo-reef",
+        "ph:province:occidental-mindoro",
+        "ph:region:mimaropa"
+      ],
+      "region_legacy": "Occidental Mindoro / Apo Reef",
+      "nearest_hub": "Sablayan",
+      "narrow": "Apo Reef Natural Park — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/apo-reef-natural-park.json"
+    },
+    {
+      "id": "ph:apo-island-marine-sanctuary",
+      "name": "Apo Island Marine Sanctuary",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:negros-oriental-dauin-apo-island",
+        "ph:province:negros-oriental",
+        "ph:region:negros-island-region"
+      ],
+      "region_legacy": "Negros Oriental / Dauin / Apo Island",
+      "nearest_hub": "Dumaguete / Dauin",
+      "narrow": "Классический community-based marine sanctuary у Negros Oriental: кораллы, green sea turtles и сильный сюжет об охране рифов.",
+      "detail_path": "countries/philippines/objects/apo-island-marine-sanctuary.json"
+    }
+  ]
+}

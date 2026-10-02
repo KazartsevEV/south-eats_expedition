@@ -1,0 +1,680 @@
+{
+  "meta": {
+    "schema_version": "2.10.12",
+    "release_id": "2026-10-02-r47",
+    "page_type": "class_family",
+    "id": "family:protected_ecosystems"
+  },
+  "identity": {
+    "family_id": "protected_ecosystems",
+    "label_ru": "Охраняемая природа и экосистемы"
+  },
+  "layout": "class_family",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "count": 69,
+  "classes": [
+    {
+      "id": "class:national_park",
+      "kind": "object_class",
+      "value": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 30,
+      "page_path": "pages/classes/national_park.json",
+      "collection_path": "collections/national_park.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:protected_area",
+      "kind": "object_class",
+      "value": "protected_area",
+      "label_ru": "Заповедники и охраняемые территории",
+      "count": 24,
+      "page_path": "pages/classes/protected_area.json",
+      "collection_path": "collections/protected_area.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:wildlife_site",
+      "kind": "object_class",
+      "value": "wildlife_site",
+      "label_ru": "Наблюдение за дикой природой",
+      "count": 4,
+      "page_path": "pages/classes/wildlife_site.json",
+      "collection_path": "collections/wildlife_site.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:forest",
+      "kind": "object_class",
+      "value": "forest",
+      "label_ru": "Леса и джунгли",
+      "count": 3,
+      "page_path": "pages/classes/forest.json",
+      "collection_path": "collections/forest.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:mangrove",
+      "kind": "object_class",
+      "value": "mangrove",
+      "label_ru": "Мангровые леса",
+      "count": 1,
+      "page_path": "pages/classes/mangrove.json",
+      "collection_path": "collections/mangrove.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:natural_landscape",
+      "kind": "object_class",
+      "value": "natural_landscape",
+      "label_ru": "Природные ландшафты и треккинг",
+      "count": 7,
+      "page_path": "pages/classes/natural_landscape.json",
+      "collection_path": "collections/natural_landscape.json",
+      "status": "transitional_broad_class",
+      "migration": {
+        "status": "transitional_broad_class",
+        "target_split": [
+          "mountain",
+          "plateau",
+          "karst",
+          "forest",
+          "geological_site"
+        ],
+        "note_ru": "Слишком широкий исторический класс; объекты мигрируются в более точные классы по фактическому типу."
+      }
+    }
+  ],
+  "country_distribution": [
+    {
+      "country_code": "BN",
+      "count": 5
+    },
+    {
+      "country_code": "ID",
+      "count": 5
+    },
+    {
+      "country_code": "KH",
+      "count": 4
+    },
+    {
+      "country_code": "LA",
+      "count": 32
+    },
+    {
+      "country_code": "MY",
+      "count": 5
+    },
+    {
+      "country_code": "SG",
+      "count": 3
+    },
+    {
+      "country_code": "TH",
+      "count": 9
+    },
+    {
+      "country_code": "TL",
+      "count": 1
+    },
+    {
+      "country_code": "VN",
+      "count": 5
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:ulu-temburong-national-park",
+      "name": "Ulu Temburong National Park",
+      "country_code": "BN",
+      "object_type": "national_park",
+      "narrow": "Крупнейший охраняемый лесной парк Брунея: 46 210 га леса, куда основной туристический маршрут входит по реке и далее поднимается к canopy walkway. На 1 октября 2026 года Freme публикует временную приостановку своих поездок в Ulu Temburong National Park, к водопадам и водных активностей из-за низкого уровня воды; это статус конкретного оператора, а не подтверждённое Forestry закрытие всего парка.",
+      "detail_path": "countries/brunei/objects/ulu-temburong-national-park.json"
+    },
+    {
+      "id": "bn:tasek-lama-park",
+      "name": "Tasek Lama Park",
+      "country_code": "BN",
+      "object_type": "forest",
+      "narrow": "Холмистый лесной парк у центра Бандар-Сери-Бегавана: водопад, действующий водосборный резервуар и сеть маршрутов от короткой петли до 8,7 км. Главная практическая оговорка на 2026 год — свежие отзывы отмечают изношенные настилы и размытые участки глубоких троп, поэтому состояние конкретного маршрута нужно оценивать на входе.",
+      "detail_path": "countries/brunei/objects/tasek-lama-park.json"
+    },
+    {
+      "id": "bn:bukit-shahbandar-recreational-park",
+      "name": "Bukit Shahbandar Recreational Park",
+      "country_code": "BN",
+      "object_type": "forest",
+      "narrow": "Лесной тренировочный парк у Джерудонга с системой коротких и длинных петель через серию крутых холмов. Его смысл — не одна смотровая точка, а многократный ритм подъёмов и спусков, бетонных ступеней, лесных гребней, навесов и обзорных просветов. Для самостоятельного путешественника это удобный объект рядом со столицей, где можно выбрать маршрут примерно от 2 км до 15+ км вместо фиксированного «двухчасового хайка».",
+      "detail_path": "countries/brunei/objects/bukit-shahbandar-recreational-park.json"
+    },
+    {
+      "id": "bn:brunei-river-mangrove-safari",
+      "name": "Brunei River Mangrove Safari",
+      "country_code": "BN",
+      "object_type": "mangrove",
+      "narrow": "Речной маршрут из центра Бандар-Сери-Бегавана через Кампонг-Айер к мангровым протокам Brunei River: на одном переходе соединяются живая водная столица, приливный эстуарий и наблюдение за дикой природой. Лодка нужна объективно, но пакетный тур не обязателен: на месте можно договариваться с водным такси/лодочником о конкретной задаче — мангры, носачи, птицы, крокодилы, закат или светлячки.",
+      "detail_path": "countries/brunei/objects/brunei-river-mangrove-safari.json"
+    },
+    {
+      "id": "bn:berakas-forest-recreational-park",
+      "name": "Berakas Forest Recreational Park",
+      "country_code": "BN",
+      "object_type": "natural_landscape",
+      "narrow": "Berakas Forest Recreational Park — прибрежный лесной рекреационный парк в Brunei-Muara, где керангасовый и казуариновый лес выходит к Южно-Китайскому морю. В обычном режиме его ценность — именно переход от лесных дорожек и пикниковых площадок к открытому морскому берегу. Но на октябрь 2026 года парк нельзя описывать как доступный: он временно закрыт с 1 января 2026 года на реконструкцию экотуристической инфраструктуры.",
+      "detail_path": "countries/brunei/objects/berakas-forest-recreational-park.json"
+    },
+    {
+      "id": "kh:cardamom-mountains-community-routes",
+      "name": "Cardamom Mountains community routes",
+      "country_code": "KH",
+      "object_type": "protected_area",
+      "narrow": "Общинные маршруты Чи-Пата — практический вход в южные Кардамоновы горы, а не «карточка всего массива». От деревни и visitor center расходится сеть пеших, велосипедных и речных маршрутов от коротких самостоятельных прогулок до многодневных выходов с лесными убежищами, водопадами, сезонными водопоями и участками с погребальными сосудами. Ценность места — в соединении влажного леса, речной системы, позднесредневековой археологии и современной модели community-based ecotourism, где удалённые лесные выходы организуются самой общиной.",
+      "detail_path": "countries/cambodia/objects/cardamom-mountains-community-routes.json"
+    },
+    {
+      "id": "kh:phnom-kulen-national-park",
+      "name": "Phnom Kulen National Park",
+      "country_code": "KH",
+      "object_type": "national_park",
+      "narrow": "Пном-Кулен — священное песчаниковое плато к северо-востоку от Ангкора, где археология Махендрапарваты, древняя гидротехника, карьеры ангкорского камня, речная резьба и современное паломничество образуют один многослойный ландшафт.",
+      "detail_path": "countries/cambodia/objects/phnom-kulen-national-park.json"
+    },
+    {
+      "id": "kh:kratie-kampi-irrawaddy-dolphins",
+      "name": "Kratie / Kampi Irrawaddy dolphins",
+      "country_code": "KH",
+      "object_type": "wildlife_site",
+      "narrow": "Кампи, примерно в 15 км к северу от Кратьэха, — главный доступный пункт наблюдения за критически исчезающей меконгской популяцией ирравадийского дельфина. Это не «аттракцион с гарантированным дельфином», а глубоководный участок Меконга, где сезонная речная география, местная лодочная экономика и природоохранный режим определяют сам формат посещения.",
+      "detail_path": "countries/cambodia/objects/kratie-kampi-irrawaddy-dolphins.json"
+    },
+    {
+      "id": "kh:bokor-national-park-and-hill-station",
+      "name": "Bokor National Park and hill station",
+      "country_code": "KH",
+      "object_type": "national_park",
+      "narrow": "Бокор — высокое песчаниковое плато Слоновых гор над побережьем Кампота: здесь национальный парк с облачными лесами и собственной эндемичной флорой накладывается на французскую горную станцию 1920-х, королевские постройки, буддийские святыни и современную курортную застройку. Поэтому сводить место к «заброшенному городу-призраку» уже неправильно.",
+      "detail_path": "countries/cambodia/objects/bokor-national-park-and-hill-station.json"
+    },
+    {
+      "id": "la:nam-et-phou-louey-area",
+      "name": "Nam Et-Phou Louey area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Нам-Эт — Пху-Луэй — огромный горный национальный парк северо-восточного Лаоса, где самостоятельность заканчивается не у турфирмы, а у режима охраняемой территории: до Мыанг-Хиама или Ban Son Khoua добираются своим ходом, дальше работают официальные речные и многодневные горные маршруты с гидом парка и местными командами.",
+      "detail_path": "countries/laos/objects/nam-et-phou-louey-area.json"
+    },
+    {
+      "id": "la:nam-ha-national-protected-area",
+      "name": "Nam Ha National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Нам-Ха — 222 400 га горных лесов и водосборов Луангнамтха, где охрана природы с конца 1990-х связана с общинным экотуризмом. Для экспедиции это не «пакетный трек», а сочетание регулируемых многодневных маршрутов, рек, леса и деревень с отдельными самостоятельно доступными дорожными точками; режим конкретного трека нужно проверять до выхода.",
+      "detail_path": "countries/laos/objects/nam-ha-national-protected-area.json"
+    },
+    {
+      "id": "la:hin-nam-no-national-park",
+      "name": "Hin Nam No National Park",
+      "country_code": "LA",
+      "object_type": "national_park",
+      "narrow": "Хин-Нам-Но — крупный карстовый национальный парк на востоке Кхаммуана, соединённый через границу с вьетнамским Фонгня-Кебангом в единый трансграничный объект Всемирного наследия. Экспедиционно это не одна точка, а система известняковых плато, речных пещер, лесов и деревенских маршрутов; наиболее понятный самостоятельный вход в парк — район Нонг-Пинг и пещеры Се-Банг-Фай.",
+      "detail_path": "countries/laos/objects/hin-nam-no-national-park.json"
+    },
+    {
+      "id": "la:nakai-nam-theun-national-park",
+      "name": "Nakai Nam Theun National Park",
+      "country_code": "LA",
+      "object_type": "national_park",
+      "narrow": "Накай–Нам-Теун — один из крупнейших лесных массивов Аннамских гор в Лаосе: около 4 700 км² национального парка между плато Накай и вьетнамской границей, с высотами примерно 500–2300 м. Для экспедиционного маршрута он ценен не одной «точкой», а сочетанием водосборов, лесных хребтов, лодочных подходов и регулируемых многодневных треков.",
+      "detail_path": "countries/laos/objects/nakai-nam-theun-national-park.json"
+    },
+    {
+      "id": "la:phou-khao-khouay-national-park",
+      "name": "Phou Khao Khouay National Park",
+      "country_code": "LA",
+      "object_type": "national_park",
+      "narrow": "Пху-Кхао-Кхуай — большой национальный парк рядом с Вьентьяном, но на земле он распадается на несколько удалённых секторов. Для самостоятельной экспедиционной логики особенно полезен Тад-Леук: сюда ведёт отдельная дорога, есть visitor center, официальный кемпинг и короткая самостоятельная природная тропа. Из Бан-Хаткхая начинаются уже другие, регулируемые местными проводниками маршруты к Тад-Сай/Пха-Сай и на песчаниковые плато.",
+      "detail_path": "countries/laos/objects/phou-khao-khouay-national-park.json"
+    },
+    {
+      "id": "la:xe-pian-national-park",
+      "name": "Xe Pian National Park",
+      "country_code": "LA",
+      "object_type": "national_park",
+      "narrow": "Большой южнолаосский парк, где лес, сезонные болота, деревенские маршруты и Пху-Аса образуют самостоятельный экспедиционный кластер, а не одну обзорную остановку.",
+      "detail_path": "countries/laos/objects/xe-pian-national-park.json"
+    },
+    {
+      "id": "la:dong-hua-sao-national-park",
+      "name": "Dong Hua Sao National Park",
+      "country_code": "LA",
+      "object_type": "national_park",
+      "narrow": "Большой лесной массив на резком уступе Болавенского плато: от низин 100–300 м до пиков почти 1300 м, с водопадами и сильным высотным экологическим градиентом.",
+      "detail_path": "countries/laos/objects/dong-hua-sao-national-park.json"
+    },
+    {
+      "id": "la:nam-kan-provincial-protected-area",
+      "name": "Nam Kan Provincial Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемый лесной массив Бокео, известный популяцией чернощёких хохлатых гиббонов и природными маршрутами; требует отдельного QA режима доступа.",
+      "detail_path": "countries/laos/objects/nam-kan-provincial-protected-area.json"
+    },
+    {
+      "id": "la:nam-kading-national-protected-area",
+      "name": "Nam Kading National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Крупная охраняемая территория Боликхамсая, которую Tourism Laos выделяет отдельно от Phou Khao Khouay.",
+      "detail_path": "countries/laos/objects/nam-kading-national-protected-area.json"
+    },
+    {
+      "id": "la:dong-phou-vieng-national-protected-area",
+      "name": "Dong Phou Vieng National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая территория Саваннакхета с лесными маршрутами и редкой фауной; отдельна от городской и археологической линии провинции.",
+      "detail_path": "countries/laos/objects/dong-phou-vieng-national-protected-area.json"
+    },
+    {
+      "id": "la:phou-xang-hae-national-protected-area",
+      "name": "Phou Xang Hae National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемый массив Саваннакхета с лесными ландшафтами и популяциями крупных млекопитающих, выделенный Tourism Laos как самостоятельная природная территория.",
+      "detail_path": "countries/laos/objects/phou-xang-hae-national-protected-area.json"
+    },
+    {
+      "id": "la:phou-xieng-thong-national-protected-area",
+      "name": "Phou Xieng Thong National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Крупная охраняемая территория западного Салавана у Меконга; отдельный природный объект для будущего маршрутного QA.",
+      "detail_path": "countries/laos/objects/phou-xieng-thong-national-protected-area.json"
+    },
+    {
+      "id": "la:phou-bia",
+      "name": "Phou Bia",
+      "country_code": "LA",
+      "object_type": "natural_landscape",
+      "narrow": "Высочайшая вершина Лаоса в Сайсомбуне; включена в инвентарь как отдельный горный объект, но режим доступа должен быть проверен до публикации практической логистики.",
+      "detail_path": "countries/laos/objects/phou-bia.json"
+    },
+    {
+      "id": "la:phou-hin-poun-national-park",
+      "name": "Phou Hin Poun National Park",
+      "country_code": "LA",
+      "object_type": "national_park",
+      "narrow": "Национальный парк и крупный карстовый массив Кхаммуана; самостоятельные входы, пещеры и тропы будут разведены по точкам на объектном QA.",
+      "detail_path": "countries/laos/objects/phou-hin-poun-national-park.json"
+    },
+    {
+      "id": "la:eld-s-deer-sanctuary",
+      "name": "Eld's Deer Sanctuary",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Официально выделенная охраняемая территория Саваннакхета, связанная с местообитаниями оленя Эльда; режим посещения требует отдельной проверки.",
+      "detail_path": "countries/laos/objects/eld-s-deer-sanctuary.json"
+    },
+    {
+      "id": "la:phou-daen-din-national-protected-area",
+      "name": "Phou Daen Din National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Крупная северная охраняемая территория Пхонгсали; доступ и допустимые маршруты требуют отдельного объектного QA.",
+      "detail_path": "countries/laos/objects/phou-daen-din-national-protected-area.json"
+    },
+    {
+      "id": "la:nam-phoui-national-protected-area",
+      "name": "Nam Phoui National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая территория провинции Сайнябули; добавлена как самостоятельный природный объект без подмены координатами провинциального центра.",
+      "detail_path": "countries/laos/objects/nam-phoui-national-protected-area.json"
+    },
+    {
+      "id": "la:xe-bang-nouan-national-protected-area",
+      "name": "Xe Bang Nouan National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Межпровинциальная охраняемая территория Салавана и Саваннакхета; не сводится к одному административному центру или водопаду.",
+      "detail_path": "countries/laos/objects/xe-bang-nouan-national-protected-area.json"
+    },
+    {
+      "id": "la:phousabot-poung-chong-national-protected-area",
+      "name": "Phousabot Poung Chong National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Горно-лесная охраняемая территория Сиангкхуанга; точные входы и режим доступа будут установлены на QA.",
+      "detail_path": "countries/laos/objects/phousabot-poung-chong-national-protected-area.json"
+    },
+    {
+      "id": "la:xe-xap-national-protected-area",
+      "name": "Xe Xap National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая территория на юге Лаоса, связанная с Салаваном и Секонгом; сохраняется как самостоятельный межпровинциальный объект.",
+      "detail_path": "countries/laos/objects/xe-xap-national-protected-area.json"
+    },
+    {
+      "id": "la:yord-nam-mo-phou-sam-soum-national-protected-area",
+      "name": "Yord Nam Mo-Phou Sam Soum National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая горная территория Сиангкхуанга; на инвентарном проходе фиксируется отдельно от Долины кувшинов.",
+      "detail_path": "countries/laos/objects/yord-nam-mo-phou-sam-soum-national-protected-area.json"
+    },
+    {
+      "id": "la:phou-hiphi-national-protected-area",
+      "name": "Phou Hiphi National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая территория Удомсая; добавлена отдельно от пещер и водопадов провинции.",
+      "detail_path": "countries/laos/objects/phou-hiphi-national-protected-area.json"
+    },
+    {
+      "id": "la:laving-lavern-national-protected-area",
+      "name": "Laving-Lavern National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая территория восточного Саваннакхета; самостоятельный природный объект, не дубль Dong Phou Vieng.",
+      "detail_path": "countries/laos/objects/laving-lavern-national-protected-area.json"
+    },
+    {
+      "id": "la:nam-xam-national-protected-area",
+      "name": "Nam Xam National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая территория Хуапхана; добавлена отдельно от Nam Et–Phou Louey и пещер Вьенгсая.",
+      "detail_path": "countries/laos/objects/nam-xam-national-protected-area.json"
+    },
+    {
+      "id": "la:phou-phanang-national-protected-area",
+      "name": "Phou Phanang National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая территория в провинции Вьентьян; не дублирует Phou Khao Khouay и карст Ванг-Вьенга.",
+      "detail_path": "countries/laos/objects/phou-phanang-national-protected-area.json"
+    },
+    {
+      "id": "la:khoun-xe-nong-ma-national-protected-area",
+      "name": "Khoun Xe Nong Ma National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая карстовая территория Кхаммуана; выделена отдельно от Hin Nam No и Phou Hin Poun.",
+      "detail_path": "countries/laos/objects/khoun-xe-nong-ma-national-protected-area.json"
+    },
+    {
+      "id": "la:the-rock-viewpoint-phou-pha-marn",
+      "name": "The Rock Viewpoint / Phou Pha Marn",
+      "country_code": "LA",
+      "object_type": "natural_landscape",
+      "narrow": "Карстовая обзорная зона Phou Pha Marn в Кхаммуане, известная как The Rock Viewpoint; отдельный узел доступа в ландшафт Пху-Хин-Пун.",
+      "detail_path": "countries/laos/objects/the-rock-viewpoint-phou-pha-marn.json"
+    },
+    {
+      "id": "la:monkey-forest-savannakhet",
+      "name": "Monkey Forest Savannakhet",
+      "country_code": "LA",
+      "object_type": "wildlife_site",
+      "narrow": "Лесной участок в провинции Саваннакхет, известный популяцией макак; режим посещения и точная геопривязка требуют QA.",
+      "detail_path": "countries/laos/objects/monkey-forest-savannakhet.json"
+    },
+    {
+      "id": "la:ban-done-daeng-sacred-turtle-site",
+      "name": "Ban Done Daeng Sacred Turtle Site",
+      "country_code": "LA",
+      "object_type": "wildlife_site",
+      "narrow": "Деревенская локация Саваннакхета, где гигантские черепахи связаны с местными верованиями; этнографические детали будут отделены от легенд на QA.",
+      "detail_path": "countries/laos/objects/ban-done-daeng-sacred-turtle-site.json"
+    },
+    {
+      "id": "la:nong-khiaw",
+      "name": "Nong Khiaw",
+      "country_code": "LA",
+      "object_type": "natural_landscape",
+      "narrow": "Нонг-Кхиав — дорожный и речной узел долины Нам-У среди крупного известнякового карста; отдельный объект с общинными обзорными тропами, военными пещерами и пирсом.",
+      "detail_path": "countries/laos/objects/nong-khiaw.json"
+    },
+    {
+      "id": "la:muang-ngoi",
+      "name": "Muang Ngoi",
+      "country_code": "LA",
+      "object_type": "natural_landscape",
+      "narrow": "Мыанг-Нгой — отдельное речное поселение выше Нонг-Кхиав в узком карстовом коридоре Нам-У; основной самостоятельный доступ идёт локальной пассажирской лодкой.",
+      "detail_path": "countries/laos/objects/muang-ngoi.json"
+    },
+    {
+      "id": "la:dong-ampham-national-protected-area",
+      "name": "Dong Ampham National Protected Area",
+      "country_code": "LA",
+      "object_type": "protected_area",
+      "narrow": "Dong Ampham — самостоятельная крупная охраняемая территория Аттапы; Nong Fa Lake находится внутри неё и ведётся отдельной карточкой.",
+      "detail_path": "countries/laos/objects/dong-ampham-national-protected-area.json"
+    },
+    {
+      "id": "id:komodo-national-park",
+      "name": "Komodo National Park",
+      "country_code": "ID",
+      "object_type": "national_park",
+      "narrow": "Комодские вараны, сухие саванновые острова и один из самых сильных морских ландшафтов региона.",
+      "detail_path": "countries/indonesia/objects/komodo-national-park.json"
+    },
+    {
+      "id": "id:gunung-leuser-national-park-bukit-lawang",
+      "name": "Gunung Leuser National Park / Bukit Lawang",
+      "country_code": "ID",
+      "object_type": "national_park",
+      "narrow": "Bukit Lawang — удобные ворота в Gunung Leuser для настоящего тропического лесного маршрута: крутые грязные тропы, ночёвки в разрешённых лагерях и наблюдение суматранских орангутанов в среде обитания.",
+      "detail_path": "countries/indonesia/objects/gunung-leuser-national-park-bukit-lawang.json"
+    },
+    {
+      "id": "id:tanjung-puting-national-park",
+      "name": "Tanjung Puting National Park",
+      "country_code": "ID",
+      "object_type": "national_park",
+      "narrow": "Tanjung Puting — многодневный речной маршрут по болотному и торфяному лесу Центрального Калимантана, где klotok одновременно служит транспортом, жильём и наблюдательной площадкой.",
+      "detail_path": "countries/indonesia/objects/tanjung-puting-national-park.json"
+    },
+    {
+      "id": "id:kelimutu-national-park",
+      "name": "Kelimutu National Park",
+      "country_code": "ID",
+      "object_type": "national_park",
+      "narrow": "Три кратерных озера с меняющимися цветами на вершине Flores; компактный, но сильный sunrise landscape.",
+      "detail_path": "countries/indonesia/objects/kelimutu-national-park.json"
+    },
+    {
+      "id": "id:wakatobi-national-park",
+      "name": "Wakatobi National Park",
+      "country_code": "ID",
+      "object_type": "national_park",
+      "narrow": "Wakatobi — морской национальный парк из четырёх основных островов, рифовых стен, деревень Bajo и длинной межостровной лодочной логистики; сильный объект для многодневной морской экспедиции.",
+      "detail_path": "countries/indonesia/objects/wakatobi-national-park.json"
+    },
+    {
+      "id": "my:gunung-mulu-national-park",
+      "name": "Gunung Mulu National Park",
+      "country_code": "MY",
+      "object_type": "national_park",
+      "narrow": "Гунунг-Мулу — огромная карстовая система Саравака с пещерами, подземными реками, известняковыми «Иглами» и многодневными лесными маршрутами; это полноценная экспедиционная территория, а не одна экскурсия в пещеру.",
+      "detail_path": "countries/malaysia/objects/gunung-mulu-national-park.json"
+    },
+    {
+      "id": "my:belum-temengor",
+      "name": "Belum-Temengor",
+      "country_code": "MY",
+      "object_type": "protected_area",
+      "narrow": "Belum-Temengor — большой массив старого тропического леса и водохранилища на севере Перака, где основная логистика строится вокруг лодки, лесных троп, разрешений и нескольких суток на воде/в лесу.",
+      "detail_path": "countries/malaysia/objects/belum-temengor.json"
+    },
+    {
+      "id": "my:danum-valley-conservation-area",
+      "name": "Danum Valley Conservation Area",
+      "country_code": "MY",
+      "object_type": "protected_area",
+      "narrow": "Danum Valley — удалённый участок низинного дождевого леса Сабаха с первичным лесом и сильной вероятностью наблюдения дикой природы; ценность места — в нескольких сутках полевой работы, а не в короткой прогулке.",
+      "detail_path": "countries/malaysia/objects/danum-valley-conservation-area.json"
+    },
+    {
+      "id": "my:niah-national-park",
+      "name": "Niah National Park",
+      "country_code": "MY",
+      "object_type": "national_park",
+      "narrow": "Niah — археологический и карстовый комплекс Саравака, где длинный настил через лес ведёт к огромной Great Cave, древним погребениям и Painted Cave; маршрут важен как связь человека, пещеры и тропического ландшафта.",
+      "detail_path": "countries/malaysia/objects/niah-national-park.json"
+    },
+    {
+      "id": "my:sepilok-orangutan-rehabilitation-centre",
+      "name": "Sepilok Orangutan Rehabilitation Centre",
+      "country_code": "MY",
+      "object_type": "wildlife_site",
+      "narrow": "Sepilok — центр реабилитации орангутанов внутри лесного резервата Kabili-Sepilok; важнее наблюдения за животными здесь сама логика возвращения их к самостоятельной жизни в лесу.",
+      "detail_path": "countries/malaysia/objects/sepilok-orangutan-rehabilitation-centre.json"
+    },
+    {
+      "id": "sg:southern-ridges-and-henderson-waves",
+      "name": "Southern Ridges and Henderson Waves",
+      "country_code": "SG",
+      "object_type": "natural_landscape",
+      "narrow": "Southern Ridges and Henderson Waves — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/southern-ridges-and-henderson-waves.json"
+    },
+    {
+      "id": "sg:macritchie-reservoir-treetop-walk",
+      "name": "MacRitchie Reservoir TreeTop Walk",
+      "country_code": "SG",
+      "object_type": "forest",
+      "narrow": "MacRitchie Reservoir TreeTop Walk — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/macritchie-reservoir-treetop-walk.json"
+    },
+    {
+      "id": "sg:labrador-nature-reserve-and-wwii-coastal-landscape",
+      "name": "Labrador Nature Reserve and WWII coastal landscape",
+      "country_code": "SG",
+      "object_type": "protected_area",
+      "narrow": "Редкое сочетание в Singapore: природный берег и лес, Berlayer Creek, морской горизонт и реальные WWII gun/bunker relics в одном компактном городском маршруте.",
+      "detail_path": "countries/singapore/objects/labrador-nature-reserve-and-wwii-coastal-landscape.json"
+    },
+    {
+      "id": "th:khao-sok-national-park",
+      "name": "Khao Sok National Park",
+      "country_code": "TH",
+      "object_type": "national_park",
+      "narrow": "Khao Sok National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/thailand/objects/khao-sok-national-park.json"
+    },
+    {
+      "id": "th:khao-yai-national-park",
+      "name": "Khao Yai National Park",
+      "country_code": "TH",
+      "object_type": "national_park",
+      "narrow": "Khao Yai National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/thailand/objects/khao-yai-national-park.json"
+    },
+    {
+      "id": "th:erawan-national-park",
+      "name": "Erawan National Park",
+      "country_code": "TH",
+      "object_type": "national_park",
+      "narrow": "Erawan National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/thailand/objects/erawan-national-park.json"
+    },
+    {
+      "id": "th:phu-kradueng-national-park",
+      "name": "Phu Kradueng National Park",
+      "country_code": "TH",
+      "object_type": "national_park",
+      "narrow": "Phu Kradueng National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/thailand/objects/phu-kradueng-national-park.json"
+    },
+    {
+      "id": "th:pha-taem-national-park",
+      "name": "Pha Taem National Park",
+      "country_code": "TH",
+      "object_type": "national_park",
+      "narrow": "Pha Taem National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/thailand/objects/pha-taem-national-park.json"
+    },
+    {
+      "id": "th:ko-tarutao-national-park",
+      "name": "Ko Tarutao National Park",
+      "country_code": "TH",
+      "object_type": "national_park",
+      "narrow": "Ko Tarutao National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/thailand/objects/ko-tarutao-national-park.json"
+    },
+    {
+      "id": "th:doi-inthanon-national-park",
+      "name": "Doi Inthanon National Park",
+      "country_code": "TH",
+      "object_type": "national_park",
+      "narrow": "Высшая точка Thailand, cloud forest, waterfalls, birding и Royal Pagodas — редкая комбинация высокогорной природы и монументальной архитектуры.",
+      "detail_path": "countries/thailand/objects/doi-inthanon-national-park.json"
+    },
+    {
+      "id": "th:similan-islands-national-park",
+      "name": "Similan Islands National Park",
+      "country_code": "TH",
+      "object_type": "national_park",
+      "narrow": "Гранитные острова, белые пляжи и сильный Andaman reef/diving landscape; высокое фото/видео качество при жёсткой сезонности.",
+      "detail_path": "countries/thailand/objects/similan-islands-national-park.json"
+    },
+    {
+      "id": "th:khao-sam-roi-yot-national-park-phraya-nakhon-cave",
+      "name": "Khao Sam Roi Yot National Park / Phraya Nakhon Cave",
+      "country_code": "TH",
+      "object_type": "national_park",
+      "narrow": "Известняковые хребты, крупнейшие пресноводные marshes Thailand и Phraya Nakhon Cave с Kuha Karuhas royal pavilion под естественным лучом света — исключительная связка природы и архитектуры.",
+      "detail_path": "countries/thailand/objects/khao-sam-roi-yot-national-park-phraya-nakhon-cave.json"
+    },
+    {
+      "id": "tl:nino-konis-santana-national-park",
+      "name": "Nino Konis Santana National Park",
+      "country_code": "TL",
+      "object_type": "national_park",
+      "narrow": "Nino Konis Santana National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/timor-leste/objects/nino-konis-santana-national-park.json"
+    },
+    {
+      "id": "vn:ha-long-bay-cat-ba",
+      "name": "Ha Long Bay–Cat Ba",
+      "country_code": "VN",
+      "object_type": "natural_landscape",
+      "narrow": "Ha Long Bay–Cat Ba — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/ha-long-bay-cat-ba.json"
+    },
+    {
+      "id": "vn:phong-nha-ke-bang",
+      "name": "Phong Nha-Ke Bang",
+      "country_code": "VN",
+      "object_type": "national_park",
+      "narrow": "Phong Nha-Ke Bang — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/phong-nha-ke-bang.json"
+    },
+    {
+      "id": "vn:ba-be-national-park",
+      "name": "Ba Be National Park",
+      "country_code": "VN",
+      "object_type": "national_park",
+      "narrow": "Ba Be National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/ba-be-national-park.json"
+    },
+    {
+      "id": "vn:cuc-phuong-national-park",
+      "name": "Cuc Phuong National Park",
+      "country_code": "VN",
+      "object_type": "national_park",
+      "narrow": "Cuc Phuong National Park — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/cuc-phuong-national-park.json"
+    },
+    {
+      "id": "vn:cat-tien-national-park",
+      "name": "Cat Tien National Park",
+      "country_code": "VN",
+      "object_type": "national_park",
+      "narrow": "Один из крупнейших низинных тропических лесов Vietnam: wildlife, giant trees, Dong Nai River и Bau Sau wetland/Ramsar дают полноценный экспедиционный контент.",
+      "detail_path": "countries/vietnam/objects/cat-tien-national-park.json"
+    }
+  ]
+}

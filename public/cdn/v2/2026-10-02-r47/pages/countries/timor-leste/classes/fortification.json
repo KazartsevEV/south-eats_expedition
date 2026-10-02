@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.12",
+    "release_id": "2026-10-02-r47",
+    "page_type": "country_class",
+    "id": "country-class:tl:fortification"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "object_type": "fortification",
+    "label_ru": "Фортификации",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:tl:built_heritage",
+    "page_path": "pages/countries/timor-leste/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/fortification.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:tl",
+      "name": "Тимор-Лешти",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/timor-leste.json"
+    },
+    {
+      "id": "tl:geographic_area:bobonaro-balibo",
+      "canonical_geo_id": "geo_tl_0021",
+      "name": "Бобонару / Балибо",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/bobonaro-balibo.json"
+    },
+    {
+      "id": "tl:region:bobonaro",
+      "canonical_geo_id": "geo_tl_0004",
+      "name": "Бобонару",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/bobonaro.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:balibo-fort-and-balibo-house",
+      "name": "Balibo Fort and Balibo House",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:bobonaro-balibo",
+        "tl:region:bobonaro"
+      ],
+      "region_legacy": "Bobonaro / Balibo",
+      "nearest_hub": "Balibo / Maliana",
+      "narrow": "Balibo Fort and Balibo House — важный исторический объект памяти; полезен для контекстного репортажа, но требует сдержанной съёмки и уважения к месту.",
+      "detail_path": "countries/timor-leste/objects/balibo-fort-and-balibo-house.json"
+    }
+  ]
+}

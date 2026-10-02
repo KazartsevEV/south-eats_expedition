@@ -1279,11 +1279,30 @@ def build():
         if legacy_languages and language_geo_id and language_geo_id in geo_entities:
             language_entity = geo_entities[language_geo_id]
             language_block = language_entity.setdefault("languages", {"spoken": [], "notes": None})
+            laos_language_aliases = {
+                "Lao": "лаосский",
+                "Hmong": "хмонг",
+                "Khmu": "кхму",
+                "English limited": "английский — ограниченно",
+                "English in tourism": "английский — в туристической инфраструктуре",
+                "English some tourism": "английский — в туристической инфраструктуре",
+                "French limited": "французский — ограниченно",
+                "Tai Lue": "тай-лы",
+                "Tai Dam": "тай-дам",
+                "Akha varieties": "разновидности языка акха",
+                "Lanten": "лантен",
+                "Phounoy": "пхуной",
+                "тайский часто понимают": "тайский — часто понимают",
+            }
+            migrated_languages = [
+                laos_language_aliases.get(value, value) if code == "LA" else value
+                for value in legacy_languages
+            ]
             language_block["spoken"] = list(dict.fromkeys(
-                (language_block.get("spoken") or []) + list(legacy_languages)
+                (language_block.get("spoken") or []) + migrated_languages
             ))
-            if not language_block.get("notes"):
-                language_block["notes"] = "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
+            if not language_block.get("notes") and code != "LA":
+                language_block["notes"] = "Практический языковой профиль перенесён из объектных данных; требуется отдельная региональная редактура."
 
         story_payload = dict(detail.get("story") or {})
         source_sections = ((((source_object or {}).get("traveler_card") or {}).get("annotation") or {}).get("sections"))

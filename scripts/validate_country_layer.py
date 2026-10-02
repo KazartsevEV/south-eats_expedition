@@ -394,9 +394,31 @@ for code, slug in COUNTRIES.items():
             fail("LA: regional layer upgrade lacks checked_at")
         if len(regions) != LA_REGIONAL_EXPECTED["regional_profiles"]:
             fail(f"LA: expected {LA_REGIONAL_EXPECTED['regional_profiles']} regional profiles, got {len(regions)}")
+        raw_language_aliases = {
+            "Lao", "Hmong", "Khmu", "English limited", "English in tourism",
+            "English some tourism", "French limited", "Tai Lue", "Tai Dam",
+            "Akha varieties", "Lanten", "Phounoy",
+        }
+        climate_summaries = []
         for region in regions:
+            region_name = region.get("name")
             if present(region.get("health")):
-                fail(f"LA: region {region.get('name')!r} contains country-level health boilerplate")
+                fail(f"LA: region {region_name!r} contains country-level health boilerplate")
+            if len(region.get("narrow") or "") < 500:
+                fail(f"LA: region {region_name!r} narrow summary is too weak")
+            leaked_language_aliases = sorted(set(region.get("languages_spoken") or []) & raw_language_aliases)
+            if leaked_language_aliases:
+                fail(f"LA: region {region_name!r} contains non-normalized language labels {leaked_language_aliases}")
+            climate_summary = ((region.get("climate") or {}).get("summary") or "")
+            if len(climate_summary) < 120:
+                fail(f"LA: region {region_name!r} climate summary is too weak")
+            climate_summaries.append(climate_summary)
+            if len(((region.get("geography") or {}).get("summary") or "")) < 120:
+                fail(f"LA: region {region_name!r} geography summary is too weak")
+            if len(((region.get("transport") or {}).get("summary") or "")) < 120:
+                fail(f"LA: region {region_name!r} transport summary is too weak")
+            if len(((region.get("safety") or {}).get("operational_context") or "")) < 80:
+                fail(f"LA: region {region_name!r} safety context is too weak")
             climate_refs = set(((region.get("climate") or {}).get("source_refs") or []))
             if "src_902002" in climate_refs:
                 fail(f"LA: region {region.get('name')!r} climate incorrectly references WHO malaria source")
@@ -407,6 +429,8 @@ for code, slug in COUNTRIES.items():
                 for snippet in LA_REGIONAL_BANNED_SNIPPETS:
                     if snippet.lower() in lowered:
                         fail(f"LA: region {region.get('name')!r} contains banned boilerplate/jargon: {snippet!r}")
+        if len(climate_summaries) != len(set(climate_summaries)):
+            fail("LA: regional climate summaries contain duplicate boilerplate")
 
     hierarchy_path = HIER / f"{slug}.json"
     if not hierarchy_path.exists():

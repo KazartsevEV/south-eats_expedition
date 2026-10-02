@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "schema_version": "2.10.17",
+    "release_id": "2026-10-02-r52",
+    "page_type": "country_class",
+    "id": "country-class:la:market"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "market",
+    "label_ru": "Рынки",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:religion_ethnography",
+    "page_path": "pages/countries/laos/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/market.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:province:luang-namtha",
+      "canonical_geo_id": "geo_la_0043",
+      "name": "Луангнамтха",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/luang-namtha.json"
+    },
+    {
+      "id": "la:town:muang-sing",
+      "canonical_geo_id": "geo_la_0045",
+      "name": "Мыанг-Синг",
+      "kind": "town",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/town/muang-sing.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:luang-namtha-night-market",
+      "name": "Luang Namtha Night Market",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-namtha"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "nearest_hub": "Luang Namtha",
+      "narrow": "Ночной рынок Луангнамтха как самостоятельная городская культурно-бытовая локация; не дублирует рынок Мыанг-Синга.",
+      "detail_path": "countries/laos/objects/luang-namtha-night-market.json"
+    },
+    {
+      "id": "la:muang-sing-morning-market",
+      "name": "Muang Sing Morning Market",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-namtha",
+        "la:town:muang-sing"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "nearest_hub": "Луангнамтха / Мыанг-Синг",
+      "narrow": "Утренний рынок Мыанг-Синга — самостоятельная живая торговая и этнографическая локация; точная GPS-точка рынка пока не нормализована.",
+      "detail_path": "countries/laos/objects/muang-sing-morning-market.json"
+    }
+  ]
+}

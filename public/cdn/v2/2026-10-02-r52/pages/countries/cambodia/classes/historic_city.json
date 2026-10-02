@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.17",
+    "release_id": "2026-10-02-r52",
+    "page_type": "country_class",
+    "id": "country-class:kh:historic_city"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:built_heritage",
+    "page_path": "pages/countries/cambodia/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:province:battambang",
+      "canonical_geo_id": "geo_kh_0033",
+      "name": "Баттамбанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/battambang.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:battambang-historic-shophouses",
+      "name": "Battambang historic shophouses",
+      "geography_ids": [
+        "country:kh",
+        "kh:province:battambang"
+      ],
+      "region_legacy": "Баттамбанг",
+      "nearest_hub": "Баттамбанг",
+      "narrow": "Исторический центр Баттамбанга — не набор отдельных «французских домов», а цельный торгово-жилой ландшафт вдоль реки Сангкер. Между Road 1 и Road 3 сохранился ансамбль примерно из 800 исторических зданий: ранние двухэтажные торговые дома китайского происхождения, перестроенные в индокитайской колониальной среде, рынок Phsar Nat, общественные здания и более поздний модернистский слой эпохи Sangkum. Главная ценность здесь — непрерывность улицы, двора, лавки, жилья и общественной жизни.",
+      "detail_path": "countries/cambodia/objects/battambang-historic-shophouses.json"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.17",
+    "release_id": "2026-10-02-r52",
+    "page_type": "country_class",
+    "id": "country-class:tl:monument"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "object_type": "monument",
+    "label_ru": "Памятники и монументы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:tl:built_heritage",
+    "page_path": "pages/countries/timor-leste/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/monument.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:tl",
+      "name": "Тимор-Лешти",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/timor-leste.json"
+    },
+    {
+      "id": "tl:geographic_area:dili-expedition",
+      "canonical_geo_id": "geo_tl_0015",
+      "name": "Дили",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/dili-expedition.json"
+    },
+    {
+      "id": "tl:region:dili",
+      "canonical_geo_id": "geo_tl_0006",
+      "name": "Дили",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/dili.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:cristo-rei-of-dili",
+      "name": "Cristo Rei of Dili",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:dili-expedition",
+        "tl:region:dili"
+      ],
+      "region_legacy": "Dili",
+      "nearest_hub": "Dili",
+      "narrow": "Cristo Rei of Dili — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/timor-leste/objects/cristo-rei-of-dili.json"
+    }
+  ]
+}

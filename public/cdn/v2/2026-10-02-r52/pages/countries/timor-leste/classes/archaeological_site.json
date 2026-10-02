@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.17",
+    "release_id": "2026-10-02-r52",
+    "page_type": "country_class",
+    "id": "country-class:tl:archaeological_site"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "object_type": "archaeological_site",
+    "label_ru": "Археологические объекты",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:tl:archaeology_memory",
+    "page_path": "pages/countries/timor-leste/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/archaeological_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:tl",
+      "name": "Тимор-Лешти",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/timor-leste.json"
+    },
+    {
+      "id": "tl:geographic_area:lautem-tutuala-jaco",
+      "canonical_geo_id": "geo_tl_0017",
+      "name": "Лаутем / Тутуала / Жаку",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/lautem-tutuala-jaco.json"
+    },
+    {
+      "id": "tl:region:lautem",
+      "canonical_geo_id": "geo_tl_0008",
+      "name": "Лаутем",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/lautem.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:tutuala-rock-art",
+      "name": "Tutuala rock art",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:lautem-tutuala-jaco",
+        "tl:region:lautem"
+      ],
+      "region_legacy": "Lautem / Tutuala / Jaco",
+      "nearest_hub": "Lospalos / Tutuala",
+      "narrow": "Tutuala rock art — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/timor-leste/objects/tutuala-rock-art.json"
+    }
+  ]
+}

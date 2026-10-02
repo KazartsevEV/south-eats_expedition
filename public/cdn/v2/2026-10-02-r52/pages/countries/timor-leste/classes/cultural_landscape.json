@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "schema_version": "2.10.17",
+    "release_id": "2026-10-02-r52",
+    "page_type": "country_class",
+    "id": "country-class:tl:cultural_landscape"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "object_type": "cultural_landscape",
+    "label_ru": "Культурные ландшафты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:tl:religion_ethnography",
+    "page_path": "pages/countries/timor-leste/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/cultural_landscape.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 4,
+  "geography_filters": [
+    {
+      "id": "country:tl",
+      "name": "Тимор-Лешти",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/timor-leste.json"
+    },
+    {
+      "id": "tl:geographic_area:ainaro-maubisse-ramelau",
+      "canonical_geo_id": "geo_tl_0018",
+      "name": "Айнару / Маубиссе / Рамелау",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/ainaro-maubisse-ramelau.json"
+    },
+    {
+      "id": "tl:geographic_area:lautem-tutuala-jaco",
+      "canonical_geo_id": "geo_tl_0017",
+      "name": "Лаутем / Тутуала / Жаку",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/lautem-tutuala-jaco.json"
+    },
+    {
+      "id": "tl:geographic_area:liquica-maubara",
+      "canonical_geo_id": "geo_tl_0022",
+      "name": "Ликиса / Маубара",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/liquica-maubara.json"
+    },
+    {
+      "id": "tl:geographic_area:oecusse-expedition",
+      "canonical_geo_id": "geo_tl_0020",
+      "name": "Оэкуси",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/oecusse-expedition.json"
+    },
+    {
+      "id": "tl:region:ainaro",
+      "canonical_geo_id": "geo_tl_0002",
+      "name": "Айнару",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/ainaro.json"
+    },
+    {
+      "id": "tl:region:lautem",
+      "canonical_geo_id": "geo_tl_0008",
+      "name": "Лаутем",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/lautem.json"
+    },
+    {
+      "id": "tl:region:liquica",
+      "canonical_geo_id": "geo_tl_0009",
+      "name": "Ликиса",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/liquica.json"
+    },
+    {
+      "id": "tl:region:oecusse",
+      "canonical_geo_id": "geo_tl_0013",
+      "name": "Оэкуси-Амбено",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/oecusse.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:oecusse-historic-enclave",
+      "name": "Oecusse historic enclave",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:oecusse-expedition",
+        "tl:region:oecusse"
+      ],
+      "region_legacy": "Oecusse",
+      "nearest_hub": "Pante Macassar",
+      "narrow": "Oecusse historic enclave — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/timor-leste/objects/oecusse-historic-enclave.json"
+    },
+    {
+      "id": "tl:maubisse-ainaro-highlands",
+      "name": "Maubisse–Ainaro highlands",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:ainaro-maubisse-ramelau",
+        "tl:region:ainaro"
+      ],
+      "region_legacy": "Ainaro / Maubisse / Ramelau",
+      "nearest_hub": "Maubisse / Hato Builico",
+      "narrow": "Maubisse–Ainaro highlands — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/timor-leste/objects/maubisse-ainaro-highlands.json"
+    },
+    {
+      "id": "tl:lospalos-fataluku-region",
+      "name": "Lospalos / Fataluku region",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:lautem-tutuala-jaco",
+        "tl:region:lautem"
+      ],
+      "region_legacy": "Lautem / Tutuala / Jaco",
+      "nearest_hub": "Lospalos / Tutuala",
+      "narrow": "Lospalos / Fataluku region — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/timor-leste/objects/lospalos-fataluku-region.json"
+    },
+    {
+      "id": "tl:maubara-liquica-coastal-heritage",
+      "name": "Maubara–Liquiçá coastal heritage",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:liquica-maubara",
+        "tl:region:liquica"
+      ],
+      "region_legacy": "Liquiçá / Maubara",
+      "nearest_hub": "Dili / Liquiçá",
+      "narrow": "Easy west-of-Dili route linking a rare 17th-century Dutch fort, Portuguese-era ruins, basket weaving, beaches and seasonal whale/dolphin watching.",
+      "detail_path": "countries/timor-leste/objects/maubara-liquica-coastal-heritage.json"
+    }
+  ]
+}

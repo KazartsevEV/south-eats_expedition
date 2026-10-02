@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "schema_version": "2.10.17",
+    "release_id": "2026-10-02-r52",
+    "page_type": "country_class",
+    "id": "country-class:la:living_settlement"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "living_settlement",
+    "label_ru": "Живые традиционные поселения",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:religion_ethnography",
+    "page_path": "pages/countries/laos/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/living_settlement.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": {
+    "status": "transitional_overlap",
+    "target_split": [
+      "traditional_settlement"
+    ],
+    "note_ru": "Старый класс сохраняется до проверки: в новой схеме поселение должно описываться как traditional_settlement, а живая культура — тегами и этнографическим блоком."
+  },
+  "count": 5,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:province:champasak",
+      "canonical_geo_id": "geo_la_0031",
+      "name": "Чампасак",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/champasak.json"
+    },
+    {
+      "id": "la:province:salavanh",
+      "canonical_geo_id": "geo_la_0078",
+      "name": "Салаван",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/salavanh.json"
+    },
+    {
+      "id": "la:province:sekong",
+      "canonical_geo_id": "geo_la_0079",
+      "name": "Секонг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/sekong.json"
+    },
+    {
+      "id": "la:province:vientiane",
+      "canonical_geo_id": "geo_la_0029",
+      "name": "Провинция Вьентьян",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/vientiane-province.json"
+    },
+    {
+      "id": "la:province:xiangkhouang",
+      "canonical_geo_id": "geo_la_0027",
+      "name": "Сиангкхуанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/xiangkhouang.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:ban-houay-houn-katu-weaving-village",
+      "name": "Ban Houay Houn Katu Weaving Village",
+      "geography_ids": [
+        "country:la",
+        "la:province:salavanh"
+      ],
+      "region_legacy": "Salavanh Province",
+      "nearest_hub": "Salavanh",
+      "narrow": "Деревня кату в Салаване, известная ткацкой традицией; добавлена как живая этнографическая локация, а не коммерческий тур.",
+      "detail_path": "countries/laos/objects/ban-houay-houn-katu-weaving-village.json"
+    },
+    {
+      "id": "la:ban-napia-war-scrap-spoon-village",
+      "name": "Ban Napia War Scrap Spoon Village",
+      "geography_ids": [
+        "country:la",
+        "la:province:xiangkhouang"
+      ],
+      "region_legacy": "Xiangkhouang Province",
+      "nearest_hub": "Phonsavan",
+      "narrow": "Деревня Бан-Напиа, известная ремесленной переработкой военного металла; добавлена как живая ремесленная и мемориальная локация.",
+      "detail_path": "countries/laos/objects/ban-napia-war-scrap-spoon-village.json"
+    },
+    {
+      "id": "la:ban-bo-salt-production-village",
+      "name": "Ban Bo Salt Production Village",
+      "geography_ids": [
+        "country:la",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Vientiane Province",
+      "nearest_hub": "Vientiane / Vang Vieng",
+      "narrow": "Деревня традиционной добычи и производства соли в провинции Вьентьян; добавлена как самостоятельная живая производственная локация.",
+      "detail_path": "countries/laos/objects/ban-bo-salt-production-village.json"
+    },
+    {
+      "id": "la:kandone-traditional-longhouse-village",
+      "name": "Kandone Traditional Longhouse Village",
+      "geography_ids": [
+        "country:la",
+        "la:province:sekong"
+      ],
+      "region_legacy": "Sekong Province",
+      "nearest_hub": "Sekong",
+      "narrow": "Деревня Кандон в Секонге с традиционными длинными домами и резьбой по дереву; добавлена как этнографическая локация.",
+      "detail_path": "countries/laos/objects/kandone-traditional-longhouse-village.json"
+    },
+    {
+      "id": "la:ban-saphai-cultural-village",
+      "name": "Ban Saphai Cultural Village",
+      "geography_ids": [
+        "country:la",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Champasak Province",
+      "nearest_hub": "Pakse",
+      "narrow": "Ткацкая деревня Бан-Сапхай в Чампасаке, добавленная как живая этнографическая и ремесленная локация.",
+      "detail_path": "countries/laos/objects/ban-saphai-cultural-village.json"
+    }
+  ]
+}

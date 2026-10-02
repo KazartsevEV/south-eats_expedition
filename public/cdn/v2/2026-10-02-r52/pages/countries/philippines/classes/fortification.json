@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "schema_version": "2.10.17",
+    "release_id": "2026-10-02-r52",
+    "page_type": "country_class",
+    "id": "country-class:ph:fortification"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "object_type": "fortification",
+    "label_ru": "Фортификации",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:ph:built_heritage",
+    "page_path": "pages/countries/philippines/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/fortification.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:ph",
+      "name": "Филиппины",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/philippines.json"
+    },
+    {
+      "id": "ph:city:manila",
+      "canonical_geo_id": "geo_ph_0052",
+      "name": "Манила",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/philippines/city/manila.json"
+    },
+    {
+      "id": "ph:geographic_area:metro-manila",
+      "canonical_geo_id": "geo_ph_0038",
+      "name": "Метро Манила",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/metro-manila.json"
+    },
+    {
+      "id": "ph:region:ncr",
+      "canonical_geo_id": "geo_ph_0001",
+      "name": "Национальный столичный регион",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/ncr.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:intramuros",
+      "name": "Intramuros",
+      "geography_ids": [
+        "country:ph",
+        "ph:city:manila",
+        "ph:geographic_area:metro-manila",
+        "ph:region:ncr"
+      ],
+      "region_legacy": "Metro Manila",
+      "nearest_hub": "Manila",
+      "narrow": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/philippines/objects/intramuros.json"
+    }
+  ]
+}

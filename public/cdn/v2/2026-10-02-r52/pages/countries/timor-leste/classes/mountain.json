@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "schema_version": "2.10.17",
+    "release_id": "2026-10-02-r52",
+    "page_type": "country_class",
+    "id": "country-class:tl:mountain"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "object_type": "mountain",
+    "label_ru": "Горы",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:tl:relief_geology",
+    "page_path": "pages/countries/timor-leste/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/mountain.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:tl",
+      "name": "Тимор-Лешти",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/timor-leste.json"
+    },
+    {
+      "id": "tl:geographic_area:ainaro-maubisse-ramelau",
+      "canonical_geo_id": "geo_tl_0018",
+      "name": "Айнару / Маубиссе / Рамелау",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/ainaro-maubisse-ramelau.json"
+    },
+    {
+      "id": "tl:geographic_area:baucau-quelicai-matebian",
+      "canonical_geo_id": "geo_tl_0023",
+      "name": "Баукау / Келикaй / Матебиан",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/baucau-quelicai-matebian.json"
+    },
+    {
+      "id": "tl:region:ainaro",
+      "canonical_geo_id": "geo_tl_0002",
+      "name": "Айнару",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/ainaro.json"
+    },
+    {
+      "id": "tl:region:baucau",
+      "canonical_geo_id": "geo_tl_0003",
+      "name": "Баукау",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/baucau.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:mount-ramelau",
+      "name": "Mount Ramelau",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:ainaro-maubisse-ramelau",
+        "tl:region:ainaro"
+      ],
+      "region_legacy": "Ainaro / Maubisse / Ramelau",
+      "nearest_hub": "Maubisse / Hato Builico",
+      "narrow": "Mount Ramelau — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/timor-leste/objects/mount-ramelau.json"
+    },
+    {
+      "id": "tl:mount-matebian-matebian-feto",
+      "name": "Mount Matebian / Matebian Feto",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:baucau-quelicai-matebian",
+        "tl:region:baucau"
+      ],
+      "region_legacy": "Baucau / Quelicai / Matebian",
+      "nearest_hub": "Baucau / Quelicai",
+      "narrow": "Sacred highland peak and former FALINTIL stronghold: a demanding trek combining mountain landscape, pilgrimage symbolism and resistance history.",
+      "detail_path": "countries/timor-leste/objects/mount-matebian-matebian-feto.json"
+    }
+  ]
+}

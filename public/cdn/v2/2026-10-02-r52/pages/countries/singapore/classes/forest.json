@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.17",
+    "release_id": "2026-10-02-r52",
+    "page_type": "country_class",
+    "id": "country-class:sg:forest"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "object_type": "forest",
+    "label_ru": "Леса и джунгли",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:sg:protected_ecosystems",
+    "page_path": "pages/countries/singapore/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/forest.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:sg",
+      "name": "Сингапур",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/singapore.json"
+    },
+    {
+      "id": "sg:region:central-region",
+      "canonical_geo_id": "geo_sg_0001",
+      "name": "Центральный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/central-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:macritchie-reservoir-treetop-walk",
+      "name": "MacRitchie Reservoir TreeTop Walk",
+      "geography_ids": [
+        "country:sg",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Central / Marina / Civic District",
+      "nearest_hub": "Downtown Singapore",
+      "narrow": "MacRitchie Reservoir TreeTop Walk — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/macritchie-reservoir-treetop-walk.json"
+    }
+  ]
+}

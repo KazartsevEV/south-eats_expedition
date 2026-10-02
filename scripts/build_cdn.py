@@ -14,7 +14,7 @@ SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
 SCHEMA_VERSION = "2.10.11"
-RELEASE_ID = "2026-10-02-r44"
+RELEASE_ID = "2026-10-02-r45"
 LATEST_RELEASE_ID = "2026-10-02-r44"
 RELEASE_STATUS = "reference_release"
 SUPPORTED_SOURCE_MODELS = {"1.2", "1.5", "1.6"}

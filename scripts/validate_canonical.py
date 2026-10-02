@@ -672,6 +672,32 @@ def main():
                 fail(f"{code}: unknown media index ref {media_id}")
 
         profile = load(release / country_row["profile"])
+        if code == "la":
+            required_profile_fields = (
+                "history", "geography", "religions", "languages", "ethnography",
+                "economy", "political_system", "culture", "cuisine", "street_food",
+                "food_market", "festivals", "nature", "natural_risks", "summary",
+                "narrow", "source_refs", "field_source_refs",
+            )
+            missing_profile_fields = [
+                field for field in required_profile_fields
+                if profile.get(field) in (None, "", [], {})
+            ]
+            if missing_profile_fields:
+                fail(f"la: canonical country profile missing fields {missing_profile_fields}")
+            field_source_refs = profile.get("field_source_refs") or {}
+            for field in ("history", "geography", "religions", "languages", "ethnography", "economy", "political_system", "culture"):
+                refs = field_source_refs.get(field) or []
+                if not refs:
+                    fail(f"la: country profile field {field} lacks source_refs")
+                unknown_refs = set(refs) - source_ids
+                if unknown_refs:
+                    fail(f"la: country profile field {field} uses unknown source refs {sorted(unknown_refs)}")
+            food_market = profile.get("food_market") or {}
+            for field in ("typical_simple_meal_local_range", "price_currency", "price_note", "checked_at", "source_refs"):
+                if food_market.get(field) in (None, "", [], {}):
+                    fail(f"la: food_market missing {field}")
+
         rich_food_rows = [
             row for row in (profile.get("street_food") or [])
             if isinstance(row, dict) and row.get("media_id")
@@ -680,6 +706,11 @@ def main():
             row for row in (profile.get("festivals") or [])
             if isinstance(row, dict) and row.get("media_id")
         ]
+        if code == "la":
+            if len(profile.get("street_food") or []) != 6 or len(rich_food_rows) != 6:
+                fail("la: country profile must contain exactly six rich food cards with media_id")
+            if len(profile.get("festivals") or []) != 4 or len(rich_festival_rows) != 4:
+                fail("la: country profile must contain exactly four rich festival cards with media_id")
         for index, row in enumerate(rich_food_rows, start=1):
             if not row.get("name") or not row.get("description"):
                 fail(f"{code}: rich street-food row {index} lacks name/description")

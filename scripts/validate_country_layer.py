@@ -38,6 +38,10 @@ GEO_NODE_REQUIRED_KEYS = {
     "id", "canonical_id", "kind", "name_ru", "name_local", "slug",
     "parent_id", "axis", "object_ids",
 }
+COUNTRY_CULTURE_EXPECTED = {
+    "LA": {"food_cards": 6, "festival_cards": 4},
+}
+
 DYNAMIC_SOURCE_FIELDS = {
     "visa_for_russian_passport": lambda t, s: (t.get("visa_for_russian_passport") or {}).get("source_ids"),
     "land_borders": lambda t, s: (t.get("land_borders") or {}).get("source_ids"),
@@ -196,6 +200,72 @@ for code, slug in COUNTRIES.items():
         source_by_id[short_id] = row
         canonical_source_ids.add(canonical_id)
 
+    culture_expected = COUNTRY_CULTURE_EXPECTED.get(code)
+    if culture_expected:
+        culture_upgrade = meta.get("country_culture_upgrade") or {}
+        if culture_upgrade.get("status") != "food_festivals_rich_cards_complete":
+            fail(f"{code}: country culture upgrade is not marked complete")
+        if culture_upgrade.get("food_cards") != culture_expected["food_cards"]:
+            fail(f"{code}: country culture food-card declaration mismatch")
+        if culture_upgrade.get("festival_cards") != culture_expected["festival_cards"]:
+            fail(f"{code}: country culture festival-card declaration mismatch")
+        if not culture_upgrade.get("checked_at"):
+            fail(f"{code}: country culture upgrade lacks checked_at")
+
+        food = travel.get("food") or {}
+        food_items = food.get("items") or []
+        festivals = travel.get("festivals") or []
+        if len(food_items) != culture_expected["food_cards"]:
+            fail(f"{code}: expected {culture_expected['food_cards']} rich food cards, got {len(food_items)}")
+        if len(festivals) != culture_expected["festival_cards"]:
+            fail(f"{code}: expected {culture_expected['festival_cards']} rich festival cards, got {len(festivals)}")
+        for field in ("budget_food_summary", "typical_simple_meal_local_range", "price_currency", "price_note", "checked_at", "source_ids"):
+            if not present(food.get(field)):
+                fail(f"{code}: country food block missing {field}")
+        food_source_ids = food.get("source_ids") or []
+        unknown_food_sources = sorted(set(food_source_ids) - set(source_by_id))
+        if unknown_food_sources:
+            fail(f"{code}: country food block references unknown source_ids {unknown_food_sources}")
+
+        image_required = ("source_page", "provider", "license", "artist", "last_checked", "subject")
+        for index, item in enumerate(food_items):
+            if not isinstance(item, dict):
+                fail(f"{code}: food card {index} must be an object")
+            for field in ("id", "name", "name_ru", "description", "where_common", "format", "checked_at", "source_ids", "image"):
+                if not present(item.get(field)):
+                    fail(f"{code}: food card {index} missing {field}")
+            if not present(item.get("price_local_range")) and not present(item.get("price_usd_range")):
+                fail(f"{code}: food card {index} lacks approximate price")
+            if present(item.get("price_local_range")) and not present(item.get("price_currency")):
+                fail(f"{code}: food card {index} has local price without price_currency")
+            item_sources = item.get("source_ids") or []
+            unknown_item_sources = sorted(set(item_sources) - set(source_by_id))
+            if unknown_item_sources:
+                fail(f"{code}: food card {index} references unknown source_ids {unknown_item_sources}")
+            image = item.get("image") or {}
+            if not (image.get("url") or image.get("static_url")):
+                fail(f"{code}: food card {index} image lacks url/static_url")
+            for field in image_required:
+                if not present(image.get(field)):
+                    fail(f"{code}: food card {index} image missing {field}")
+
+        for index, item in enumerate(festivals):
+            if not isinstance(item, dict):
+                fail(f"{code}: festival card {index} must be an object")
+            for field in ("id", "name", "local_name", "dates_2026", "typical_month", "description", "where_common", "checked_at", "source_ids", "image"):
+                if not present(item.get(field)):
+                    fail(f"{code}: festival card {index} missing {field}")
+            item_sources = item.get("source_ids") or []
+            unknown_item_sources = sorted(set(item_sources) - set(source_by_id))
+            if unknown_item_sources:
+                fail(f"{code}: festival card {index} references unknown source_ids {unknown_item_sources}")
+            image = item.get("image") or {}
+            if not (image.get("url") or image.get("static_url")):
+                fail(f"{code}: festival card {index} image lacks url/static_url")
+            for field in image_required:
+                if not present(image.get(field)):
+                    fail(f"{code}: festival card {index} image missing {field}")
+
     for field, resolver in DYNAMIC_SOURCE_FIELDS.items():
         ids = resolver(travel, doc.get("safety") or {})
         if not ids:
@@ -315,6 +385,13 @@ for code, slug in COUNTRIES.items():
         "dynamic_fields_sourced": len(DYNAMIC_SOURCE_FIELDS),
         "criminal_law_layer": bool(travel.get("criminal_liability")),
         "criminal_law_items": len((travel.get("criminal_liability") or {}).get("items") or []),
+        "country_culture_cards": (
+            {
+                "food": len(((travel.get("food") or {}).get("items") or [])),
+                "festivals": len(travel.get("festivals") or []),
+            }
+            if code in COUNTRY_CULTURE_EXPECTED else None
+        ),
         "regional_profiles": len(regions),
         "geo_nodes": len(nodes),
         "geometry_nodes": geometry_nodes,

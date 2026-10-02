@@ -376,6 +376,57 @@ for code, slug in COUNTRIES.items():
         if region.get("name") not in legacy_region_names:
             fail(f"{code}: region {region.get('name')!r} has no canonical hierarchy node")
 
+    if code == "LA":
+        regional_upgrade = meta.get("regional_quality_upgrade") or {}
+        if regional_upgrade.get("status") != "regional_profiles_concrete_editorial_pass_complete":
+            fail("LA: regional quality upgrade is not marked complete")
+        if regional_upgrade.get("regional_profiles") != len(regions):
+            fail("LA: regional quality profile count mismatch")
+        if len(regions) != 10:
+            fail(f"LA: expected 10 researched regional profiles, got {len(regions)}")
+
+        forbidden_fragments = [
+            "Тропический муссонный климат с выраженным сухим и дождливым сезонами",
+            "Лаос остаётся в перечне стран",
+            "Ядовитые змеи и комары являются общестрановыми рисками",
+            "Надёжная локальная привязка токсичных растений",
+            "Отдельный локальный перечень характерной фауны",
+            "региональный рерайт",
+            "remote trekking",
+            "urban heritage",
+            "transport entities",
+            "ride-hailing",
+            "gateways",
+            "tourism source",
+        ]
+        climate_summaries = []
+        for region in regions:
+            region_name = region.get("name")
+            serialized = json.dumps(region, ensure_ascii=False)
+            for fragment in forbidden_fragments:
+                if fragment in serialized:
+                    fail(f"LA: region {region_name!r} contains generic/mixed-language fragment {fragment!r}")
+            if present(region.get("health")):
+                fail(f"LA: region {region_name!r} duplicates unsupported country-level health text")
+            climate = region.get("climate") or {}
+            climate_summary = climate.get("summary")
+            if not present(climate_summary) or len(climate_summary) < 120:
+                fail(f"LA: region {region_name!r} climate summary is too weak")
+            climate_summaries.append(climate_summary)
+            geography = (region.get("geography") or {}).get("summary")
+            transport = (region.get("transport") or {}).get("summary")
+            safety = (region.get("safety") or {}).get("operational_context")
+            if not present(geography) or len(geography) < 120:
+                fail(f"LA: region {region_name!r} geography summary is too weak")
+            if not present(transport) or len(transport) < 120:
+                fail(f"LA: region {region_name!r} transport summary is too weak")
+            if not present(safety) or len(safety) < 80:
+                fail(f"LA: region {region_name!r} safety context is too weak")
+            if (region.get("local_reference_provenance") or {}).get("checked_at") != "2026-10-02":
+                fail(f"LA: region {region_name!r} regional provenance is stale")
+        if len(climate_summaries) != len(set(climate_summaries)):
+            fail("LA: regional climate summaries contain duplicate boilerplate")
+
     # Lower-level locality profiles may intentionally remain logistics-only route
     # hubs. They are not promoted into administrative geography without evidence.
 

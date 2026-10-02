@@ -41,7 +41,7 @@ GEO_NODE_REQUIRED_KEYS = {
 COUNTRY_CULTURE_EXPECTED = {
     "LA": {"food_cards": 6, "festival_cards": 4},
 }
-LA_REGIONAL_EXPECTED = {"regional_profiles": 10, "hierarchy_profiles": 8}
+LA_REGIONAL_EXPECTED = {"regional_profiles": 10, "hierarchy_profiles": 35}
 LA_REGIONAL_BANNED_SNIPPETS = (
     "Тропический муссонный климат с выраженным сухим и дождливым сезонами",
     "Основная часть осадков приходится на летний муссон",
@@ -476,6 +476,17 @@ for code, slug in COUNTRIES.items():
                 f"LA: expected {LA_REGIONAL_EXPECTED['hierarchy_profiles']} hierarchy profiles, "
                 f"got {len(hierarchy_profiles)}"
             )
+        required_profile_ids = {
+            node.get("id") for node in nodes
+            if node.get("kind") in {"province", "protected_area", "geographic_area", "archipelago"}
+            or node.get("id") == "la:city:vientiane"
+        }
+        missing_profile_ids = sorted(
+            node_id for node_id in required_profile_ids
+            if not next((node.get("profile") for node in nodes if node.get("id") == node_id), None)
+        )
+        if missing_profile_ids:
+            fail(f"LA: major regional hierarchy nodes lack profiles {missing_profile_ids}")
 
     node_id_set = set(node_ids)
     country_parent = f"country:{code.lower()}"
@@ -502,7 +513,8 @@ for code, slug in COUNTRIES.items():
         if profile:
             if not profile.get("source_refs") or not profile.get("checked_at"):
                 fail(f"{code}: geo node {node.get('id')!r} profile has incomplete provenance")
-            profile_unknown = sorted(set(profile.get("source_refs") or []) - canonical_source_ids)
+            project_canonical_source_ids = canonical_source_ids | set(registry_sources.values())
+            profile_unknown = sorted(set(profile.get("source_refs") or []) - project_canonical_source_ids)
             if profile_unknown:
                 fail(f"{code}: geo node {node.get('id')!r} profile references unknown canonical sources {profile_unknown}")
             if code == "LA":
@@ -520,7 +532,7 @@ for code, slug in COUNTRIES.items():
                     for snippet in LA_REGIONAL_BANNED_SNIPPETS:
                         if snippet.lower() in lowered:
                             fail(f"LA: geo node {node.get('id')!r} contains banned boilerplate/jargon: {snippet!r}")
-        geometry_known_sources = set(canonical_source_ids)
+        geometry_known_sources = set(canonical_source_ids) | set(registry_sources.values())
         if hierarchy_meta.get("canonical_source_id"):
             geometry_known_sources.add(hierarchy_meta.get("canonical_source_id"))
         if validate_node_geometry(code, node, geometry_known_sources):

@@ -68,6 +68,14 @@ LA_REGIONAL_BANNED_SNIPPETS = (
     "сочетает в себе",
     "предлагает посетителям",
     "не оставит равнодуш",
+    "регионально значимый фактор",
+    "практическая база",
+    "планируются отдельно",
+    "полезнее разделять",
+    "для поездки лучше",
+    "не описывает регион",
+    "следует брать из профильных",
+    "хранится отдельным",
     "это не общий «совет осторожности»",
     "треккинговые деревни",
     "следует хранить",
@@ -394,6 +402,8 @@ for code, slug in COUNTRIES.items():
             fail("LA: hierarchy profile declaration mismatch")
         if not regional_upgrade.get("checked_at"):
             fail("LA: regional layer upgrade lacks checked_at")
+        if not regional_upgrade.get("editorial_pass"):
+            fail("LA: regional layer upgrade lacks explicit editorial_pass")
         if len(regions) != LA_REGIONAL_EXPECTED["regional_profiles"]:
             fail(f"LA: expected {LA_REGIONAL_EXPECTED['regional_profiles']} regional profiles, got {len(regions)}")
         raw_language_aliases = {
@@ -454,10 +464,12 @@ for code, slug in COUNTRIES.items():
 
     if code == "LA":
         hierarchy_profile_qa = hierarchy_meta.get("regional_profile_qa") or {}
-        if hierarchy_profile_qa.get("status") != "concrete_field_content":
+        if hierarchy_profile_qa.get("status") != "concrete_field_content_no_editorial_filler":
             fail("LA: hierarchy regional profile QA is not marked complete")
         if not hierarchy_profile_qa.get("checked_at"):
             fail("LA: hierarchy regional profile QA lacks checked_at")
+        if not hierarchy_profile_qa.get("editorial_pass"):
+            fail("LA: hierarchy regional profile QA lacks explicit editorial_pass")
         hierarchy_profiles = [node for node in nodes if node.get("profile")]
         if len(hierarchy_profiles) != LA_REGIONAL_EXPECTED["hierarchy_profiles"]:
             fail(

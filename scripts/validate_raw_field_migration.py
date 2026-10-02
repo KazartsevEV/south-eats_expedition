@@ -39,10 +39,12 @@ for path in sorted(SRC.glob("*.json")):
                 fail(f"canonical sources lost URL from {path.name} / {obj.get('name')}: {url}")
 
 source_object_by_country_name = {}
+source_objects_expected = 0
 for path in sorted(SRC.glob("*.json")):
     doc = load(path)
     code = ((doc.get("meta") or {}).get("country_code") or "").upper()
     for source_obj in ((doc.get("travel") or {}).get("objects") or []):
+        source_objects_expected += 1
         for name in (source_obj.get("name"), source_obj.get("display_name")):
             if name:
                 source_object_by_country_name[(code, name)] = source_obj
@@ -150,8 +152,8 @@ for object_path in sorted((release / "objects").glob("*/*.json")):
 
     objects_checked += 1
 
-if objects_checked != 211:
-    fail(f"expected 211 canonical objects, checked {objects_checked}")
+if objects_checked != source_objects_expected:
+    fail(f"expected {source_objects_expected} canonical objects from source inventory, checked {objects_checked}")
 
 print(json.dumps({
     "status": "ok",

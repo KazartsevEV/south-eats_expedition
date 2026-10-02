@@ -8,7 +8,10 @@
     "next_level": "object_qa_after_inventory_expansion",
     "canonical_id_policy": "Stable geo IDs are stored on formal hierarchy nodes; route hubs remain logistics metadata unless independently verified as settlements.",
     "canonical_source_id": "src_906003",
-    "qa_contract": "geo_profile_roles_v1"
+    "qa_contract": "geo_profile_roles_v1",
+    "notes": [
+      "r46 composite split: formal object memberships migrated from five retired legacy IDs to twelve active semantic child IDs; nested Dong Ampham/Nong Fa membership is now explicit."
+    ]
   },
   "rules": {
     "parentage": "Only documented administrative containment is encoded as hierarchy.",
@@ -26,7 +29,7 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:luang-prabang",
-        "la:nong-khiaw-and-muang-ngoi",
+        "la:muang-ngoi",
         "la:kuang-si-falls",
         "la:pak-ou-caves",
         "la:tad-sae-waterfall"
@@ -68,9 +71,9 @@
       "slug": "nong-khiaw",
       "parent_id": "la:province:luang-prabang",
       "object_ids": [
-        "la:nong-khiaw-and-muang-ngoi"
+        "la:nong-khiaw"
       ],
-      "notes_ru": "Операционный населённый пункт составной карточки Нонг-Кхиав / Мыанг-Нгой.",
+      "notes_ru": "Нонг-Кхиав — самостоятельный населённый пункт и дорожная база; Мыанг-Нгой после r46 вынесен из этой town-node как отдельный объект выше по Нам-У.",
       "canonical_id": "geo_la_0026",
       "name_local": "ໜອງຂຽວ",
       "legacy_locality_names": [
@@ -595,7 +598,6 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:nam-ha-national-protected-area",
-        "la:muang-sing-market-and-tai-lue-cultural-landscape",
         "la:nam-dee-waterfall",
         "la:tham-kao-rao-cave",
         "la:luang-namtha-museum",
@@ -666,7 +668,8 @@
       "slug": "muang-sing",
       "parent_id": "la:province:luang-namtha",
       "object_ids": [
-        "la:muang-sing-market-and-tai-lue-cultural-landscape",
+        "la:muang-sing-morning-market",
+        "la:muang-sing-tai-lue-cultural-landscape",
         "la:poum-pouk-stupa"
       ],
       "canonical_id": "geo_la_0045",
@@ -684,7 +687,10 @@
       "slug": "vientiane",
       "parent_id": "country:la",
       "object_ids": [
-        "la:vientiane-sacred-architecture",
+        "la:pha-that-luang",
+        "la:wat-sisaket",
+        "la:hor-phra-keo-museum",
+        "la:wat-si-muang",
         "la:buddha-park-xieng-khuan",
         "la:patuxai"
       ],
@@ -706,7 +712,7 @@
       "slug": "phongsaly",
       "parent_id": "country:la",
       "object_ids": [
-        "la:phongsaly-old-town-and-ancient-tea-highlands",
+        "la:ban-komaen-400-year-old-tea-plantation",
         "la:phou-daen-din-national-protected-area"
       ],
       "legacy_region_names": [
@@ -724,7 +730,7 @@
       "slug": "phongsaly-town",
       "parent_id": "la:province:phongsaly",
       "object_ids": [
-        "la:phongsaly-old-town-and-ancient-tea-highlands",
+        "la:phongsaly-old-town",
         "la:phongsaly-ethnic-museum",
         "la:phou-fa-mountain-and-stupa"
       ],
@@ -954,7 +960,6 @@
       "parent_id": "country:la",
       "object_ids": [
         "la:xe-pian-national-park",
-        "la:nong-fa-dong-ampham-landscape",
         "la:tad-saepha-waterfall",
         "la:tad-samongphak-waterfall",
         "la:tad-saeponglaican-waterfall",
@@ -1099,9 +1104,7 @@
       "name_ru": "Сансай",
       "slug": "sanxay",
       "parent_id": "la:province:attapeu",
-      "object_ids": [
-        "la:nong-fa-dong-ampham-landscape"
-      ],
+      "object_ids": [],
       "notes_ru": "Северо-восточный район Аттапы; здесь расположено озеро Nong Fa.",
       "canonical_id": "geo_la_0073",
       "name_local": null
@@ -1114,9 +1117,9 @@
       "slug": "dong-ampham",
       "parent_id": "la:district:sanxay",
       "object_ids": [
-        "la:nong-fa-dong-ampham-landscape"
+        "la:dong-ampham-national-protected-area"
       ],
-      "notes_ru": "Удалённый охраняемый горно-лесной массив в северо-восточной части Аттапы.",
+      "notes_ru": "Самостоятельная охраняемая территория; r46 отделяет её от конкретного озера Nong Fa.",
       "canonical_id": "geo_la_0074",
       "name_local": null
     },
@@ -1128,9 +1131,9 @@
       "slug": "nong-fa",
       "parent_id": "la:protected-area:dong-ampham",
       "object_ids": [
-        "la:nong-fa-dong-ampham-landscape"
+        "la:nong-fa-lake"
       ],
-      "notes_ru": "Высокогорное кратерное озеро; геоточка объекта хранится как центр водного зеркала, а не trailhead.",
+      "notes_ru": "Высокогорное озеро Nong Fa как самостоятельный объект внутри Dong Ampham; геоточка относится к воде, не к входу в NPA.",
       "canonical_id": "geo_la_0075",
       "name_local": null
     },

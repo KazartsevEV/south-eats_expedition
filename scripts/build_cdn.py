@@ -13,10 +13,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.10.11"
-RELEASE_ID = "2026-10-02-r46"
+SCHEMA_VERSION = "2.10.12"
+RELEASE_ID = "2026-10-02-r47"
 LATEST_RELEASE_ID = "2026-10-02-r46"
-RELEASE_STATUS = "reference_release"
+RELEASE_STATUS = "candidate"
 SUPPORTED_SOURCE_MODELS = {"1.2", "1.5", "1.6"}
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),

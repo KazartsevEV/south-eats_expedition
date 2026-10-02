@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "schema_version": "2.10.18",
+    "release_id": "2026-10-02-r53",
+    "page_type": "class_family",
+    "id": "country-family:th:relief_geology"
+  },
+  "identity": {
+    "country_code": "TH",
+    "country_slug": "thailand",
+    "family_id": "relief_geology",
+    "label_ru": "Рельеф и геология"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:th",
+    "page_path": "pages/countries/thailand.json"
+  },
+  "global_family_page": "pages/families/relief_geology.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "count": 2,
+  "classes": [
+    {
+      "object_type": "cave",
+      "label_ru": "Пещеры",
+      "count": 1,
+      "global_page_path": "pages/classes/cave.json",
+      "country_page_path": "pages/countries/thailand/classes/cave.json"
+    },
+    {
+      "object_type": "geological_site",
+      "label_ru": "Геологические объекты",
+      "count": 1,
+      "global_page_path": "pages/classes/geological_site.json",
+      "country_page_path": "pages/countries/thailand/classes/geological_site.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:tham-lod-cave-pang-mapha",
+      "name": "Tham Lod Cave / Pang Mapha",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:mae-hong-son-pang-mapha",
+        "th:geographic_area:north",
+        "th:province:mae-hong-son"
+      ],
+      "region_legacy": "Mae Hong Son / Pang Mapha",
+      "narrow": "Один из лучших cave-story объектов северного Таиланда: подземная река, bamboo raft, гигантские образования и археологические следы соединяются в одном маршруте.",
+      "detail_path": "countries/thailand/objects/tham-lod-cave-pang-mapha.json"
+    },
+    {
+      "id": "th:sam-phan-bok",
+      "name": "Sam Phan Bok",
+      "object_type": "geological_site",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:northeast",
+        "th:geographic_area:ubon-mekong-pha-taem",
+        "th:province:ubon-ratchathani"
+      ],
+      "region_legacy": "Ubon / Mekong / Pha Taem",
+      "narrow": "Sam Phan Bok — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/thailand/objects/sam-phan-bok.json"
+    }
+  ]
+}

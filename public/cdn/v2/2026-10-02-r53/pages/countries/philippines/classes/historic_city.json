@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "schema_version": "2.10.18",
+    "release_id": "2026-10-02-r53",
+    "page_type": "country_class",
+    "id": "country-class:ph:historic_city"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:ph:built_heritage",
+    "page_path": "pages/countries/philippines/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:ph",
+      "name": "Филиппины",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/philippines.json"
+    },
+    {
+      "id": "ph:city:iloilo-city",
+      "canonical_geo_id": "geo_ph_0059",
+      "name": "Илоило",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/philippines/city/iloilo-city.json"
+    },
+    {
+      "id": "ph:city:vigan",
+      "canonical_geo_id": "geo_ph_0057",
+      "name": "Виган",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/philippines/city/vigan.json"
+    },
+    {
+      "id": "ph:geographic_area:ilocos-vigan",
+      "canonical_geo_id": "geo_ph_0039",
+      "name": "Илокос / Виган",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/ilocos-vigan.json"
+    },
+    {
+      "id": "ph:geographic_area:iloilo-expedition",
+      "canonical_geo_id": "geo_ph_0042",
+      "name": "Илоило",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/iloilo-expedition.json"
+    },
+    {
+      "id": "ph:province:ilocos-sur",
+      "canonical_geo_id": "geo_ph_0023",
+      "name": "Южный Илокос",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/province/ilocos-sur.json"
+    },
+    {
+      "id": "ph:province:iloilo",
+      "canonical_geo_id": "geo_ph_0025",
+      "name": "Илоило",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/province/iloilo.json"
+    },
+    {
+      "id": "ph:region:ilocos-region",
+      "canonical_geo_id": "geo_ph_0003",
+      "name": "Илокос",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/ilocos-region.json"
+    },
+    {
+      "id": "ph:region:western-visayas",
+      "canonical_geo_id": "geo_ph_0009",
+      "name": "Западные Висайи",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/western-visayas.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:vigan",
+      "name": "Vigan",
+      "geography_ids": [
+        "country:ph",
+        "ph:city:vigan",
+        "ph:geographic_area:ilocos-vigan",
+        "ph:province:ilocos-sur",
+        "ph:region:ilocos-region"
+      ],
+      "region_legacy": "Ilocos / Vigan",
+      "nearest_hub": "Vigan / Laoag",
+      "narrow": "Vigan — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/philippines/objects/vigan.json"
+    },
+    {
+      "id": "ph:iloilo-heritage-districts",
+      "name": "Iloilo heritage districts",
+      "geography_ids": [
+        "country:ph",
+        "ph:city:iloilo-city",
+        "ph:geographic_area:iloilo-expedition",
+        "ph:province:iloilo",
+        "ph:region:western-visayas"
+      ],
+      "region_legacy": "Iloilo",
+      "nearest_hub": "Iloilo City",
+      "narrow": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/philippines/objects/iloilo-heritage-districts.json"
+    }
+  ]
+}

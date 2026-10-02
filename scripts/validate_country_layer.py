@@ -413,9 +413,12 @@ for code, slug in COUNTRIES.items():
             if not present(climate_summary) or len(climate_summary) < 120:
                 fail(f"LA: region {region_name!r} climate summary is too weak")
             climate_summaries.append(climate_summary)
+            narrow = region.get("narrow")
             geography = (region.get("geography") or {}).get("summary")
             transport = (region.get("transport") or {}).get("summary")
             safety = (region.get("safety") or {}).get("operational_context")
+            if not present(narrow) or len(narrow) < 500:
+                fail(f"LA: region {region_name!r} narrow summary is too weak")
             if not present(geography) or len(geography) < 120:
                 fail(f"LA: region {region_name!r} geography summary is too weak")
             if not present(transport) or len(transport) < 120:

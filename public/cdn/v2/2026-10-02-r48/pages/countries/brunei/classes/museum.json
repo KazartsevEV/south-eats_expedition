@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "schema_version": "2.10.13",
+    "release_id": "2026-10-02-r48",
+    "page_type": "country_class",
+    "id": "country-class:bn:museum"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "object_type": "museum",
+    "label_ru": "Музеи",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:bn:archaeology_memory",
+    "page_path": "pages/countries/brunei/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/museum.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "bn:city:bandar-seri-begawan",
+      "canonical_geo_id": "geo_bn_0005",
+      "name": "Бандар-Сери-Бегаван",
+      "kind": "city",
+      "axis": "municipal",
+      "page_path": "pages/geography/brunei/city/bandar-seri-begawan.json"
+    },
+    {
+      "id": "bn:district:brunei-muara",
+      "canonical_geo_id": "geo_bn_0001",
+      "name": "Бруней-Муара",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/brunei-muara.json"
+    },
+    {
+      "id": "bn:mukim:kota-batu",
+      "canonical_geo_id": "geo_bn_0014",
+      "name": "Кота-Бату",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/kota-batu.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:royal-regalia-museum",
+      "name": "Royal Regalia Museum",
+      "geography_ids": [
+        "bn:city:bandar-seri-begawan",
+        "bn:district:brunei-muara",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "nearest_hub": "центр Бандар-Сери-Бегавана",
+      "narrow": "Центральный государственный музей церемониальной культуры Брунея, открытый 30 сентября 1992 года к серебряному юбилею восшествия султана Хассанала Болкиаха и переименованный в Royal Regalia Museum 1 декабря 2017 года. Основные галереи посвящены регалиям коронации 1968 года, серебряному юбилею, королевской экспозиции и конституционной истории.",
+      "detail_path": "countries/brunei/objects/royal-regalia-museum.json"
+    },
+    {
+      "id": "bn:malay-technology-museum",
+      "name": "Malay Technology Museum",
+      "geography_ids": [
+        "bn:district:brunei-muara",
+        "bn:mukim:kota-batu",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "nearest_hub": "Bandar Seri Begawan",
+      "narrow": "Этнографический музей традиционных технологий Брунея: полноразмерные реконструкции домов Кампонг-Айера, лодочное дело, кровли, металлообработка, ткачество, рыболовные и охотничьи инструменты, а также технологии внутренних общин. Полезен как объясняющий объект перед Кампонг-Айером и поездками по внутренним районам: здесь видно не «старинный быт вообще», а конкретные способы строить, добывать, перерабатывать и организовывать жизнь в водной и сухопутной среде.",
+      "detail_path": "countries/brunei/objects/malay-technology-museum.json"
+    }
+  ]
+}

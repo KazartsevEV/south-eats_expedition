@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.13",
+    "release_id": "2026-10-02-r48",
+    "page_type": "country_class",
+    "id": "country-class:la:karst"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "karst",
+    "label_ru": "Карстовые районы",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:relief_geology",
+    "page_path": "pages/countries/laos/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/karst.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:geographic-area:vang-vieng-karst",
+      "canonical_geo_id": "geo_la_0030",
+      "name": "Карст Ванг-Вьенга",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/geographic_area/vang-vieng-karst.json"
+    },
+    {
+      "id": "la:province:vientiane",
+      "canonical_geo_id": "geo_la_0029",
+      "name": "Провинция Вьентьян",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/vientiane-province.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:vang-vieng-karst",
+      "name": "Vang Vieng karst",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:vang-vieng-karst",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "nearest_hub": "Vang Vieng",
+      "narrow": "Ванг-Вьенг — протяжённый карстовый ландшафт долины Нам-Сонг, где город, рисовые поля, деревни, пещеры и почти отвесные известняковые массивы образуют одну систему. Для экспедиции важен не набор «лагун» и развлечений, а сам переход от речной долины к западному поясу пермского карста, его пещерам, общинным землям и точкам обзора.",
+      "detail_path": "countries/laos/objects/vang-vieng-karst.json"
+    }
+  ]
+}

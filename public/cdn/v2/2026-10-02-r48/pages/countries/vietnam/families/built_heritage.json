@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "schema_version": "2.10.13",
+    "release_id": "2026-10-02-r48",
+    "page_type": "class_family",
+    "id": "country-family:vn:built_heritage"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "family_id": "built_heritage",
+    "label_ru": "Поселения и архитектурное наследие"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:vn",
+    "page_path": "pages/countries/vietnam.json"
+  },
+  "global_family_page": "pages/families/built_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "count": 4,
+  "classes": [
+    {
+      "object_type": "city",
+      "label_ru": "Города",
+      "count": 1,
+      "global_page_path": "pages/classes/city.json",
+      "country_page_path": "pages/countries/vietnam/classes/city.json"
+    },
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 2,
+      "global_page_path": "pages/classes/historic_city.json",
+      "country_page_path": "pages/countries/vietnam/classes/historic_city.json"
+    },
+    {
+      "object_type": "industrial_heritage",
+      "label_ru": "Индустриальное наследие",
+      "count": 1,
+      "global_page_path": "pages/classes/industrial_heritage.json",
+      "country_page_path": "pages/countries/vietnam/classes/industrial_heritage.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:ho-chi-minh-city",
+      "name": "Ho Chi Minh City",
+      "object_type": "city",
+      "geography_ids": [
+        "country:vn",
+        "vn:city:ho-chi-minh-city",
+        "vn:geographic_area:ho-chi-minh-city-expedition"
+      ],
+      "region_legacy": "Ho Chi Minh City",
+      "narrow": "Ho Chi Minh City — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/ho-chi-minh-city.json"
+    },
+    {
+      "id": "vn:hanoi-old-quarter",
+      "name": "Hanoi Old Quarter",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:hanoi-red-river-delta"
+      ],
+      "region_legacy": "Hanoi / Red River Delta",
+      "narrow": "Hanoi Old Quarter — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/hanoi-old-quarter.json"
+    },
+    {
+      "id": "vn:hoi-an",
+      "name": "Hoi An",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:vn",
+        "vn:city:da-nang",
+        "vn:geographic_area:hoi-an-quang-nam"
+      ],
+      "region_legacy": "Hoi An / Quang Nam",
+      "narrow": "Hoi An — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/hoi-an.json"
+    },
+    {
+      "id": "vn:long-bien-bridge",
+      "name": "Long Bien Bridge",
+      "object_type": "industrial_heritage",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:hanoi-red-river-delta"
+      ],
+      "region_legacy": "Hanoi / Red River Delta",
+      "narrow": "Long Bien Bridge — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/long-bien-bridge.json"
+    }
+  ]
+}

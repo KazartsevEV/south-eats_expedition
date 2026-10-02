@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.13",
+    "release_id": "2026-10-02-r48",
+    "page_type": "country_class",
+    "id": "country-class:la:memorial_site"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "memorial_site",
+    "label_ru": "Мемориальные места",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:archaeology_memory",
+    "page_path": "pages/countries/laos/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/memorial_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:province:salavanh",
+      "canonical_geo_id": "geo_la_0078",
+      "name": "Салаван",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/salavanh.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:ong-keo-stone-stupa-park",
+      "name": "Ong Keo Stone Stupa Park",
+      "geography_ids": [
+        "country:la",
+        "la:province:salavanh"
+      ],
+      "region_legacy": "Salavanh Province",
+      "nearest_hub": "Salavanh",
+      "narrow": "Мемориально-религиозный объект Салавана, связанный с каменной ступой Онг Кео; детали исторического контекста будут проработаны на QA.",
+      "detail_path": "countries/laos/objects/ong-keo-stone-stupa-park.json"
+    }
+  ]
+}

@@ -20,7 +20,7 @@
   "global_class_page": "pages/classes/waterfall.json",
   "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
   "migration": null,
-  "count": 1,
+  "count": 5,
   "geography_filters": [
     {
       "id": "country:la",
@@ -28,6 +28,54 @@
       "kind": "country",
       "axis": "administrative",
       "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:district:paksong",
+      "canonical_geo_id": "geo_la_0054",
+      "name": "Паксонг",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/district/paksong.json"
+    },
+    {
+      "id": "la:geographic-area:khone-phapheng",
+      "canonical_geo_id": "geo_la_0061",
+      "name": "Кхон-Папенг",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/geographic_area/khone-phapheng.json"
+    },
+    {
+      "id": "la:geographic-area:si-phan-don",
+      "canonical_geo_id": "geo_la_0033",
+      "name": "Си-Фан-Дон",
+      "kind": "archipelago",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/archipelago/si-phan-don.json"
+    },
+    {
+      "id": "la:island:don-khon",
+      "canonical_geo_id": "geo_la_0062",
+      "name": "Дон-Кхон",
+      "kind": "island",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/island/don-khon.json"
+    },
+    {
+      "id": "la:protected-area:dong-houa-sao",
+      "canonical_geo_id": "geo_la_0055",
+      "name": "Национальный парк Донг-Хуа-Сао",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/protected_area/dong-houa-sao.json"
+    },
+    {
+      "id": "la:province:champasak",
+      "canonical_geo_id": "geo_la_0031",
+      "name": "Чампасак",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/champasak.json"
     },
     {
       "id": "la:province:luang-prabang",
@@ -50,6 +98,62 @@
       "nearest_hub": "Luang Prabang",
       "narrow": "Куанг-Си — каскад по известняковым/травертиновым уступам южнее Луангпхабанг. Бирюзовый цвет создаётся рассеянием света в минеральной воде; визуальный интерес — последовательность малых чаш, леса и главного вертикального водопада, а не один бассейн.",
       "detail_path": "countries/laos/objects/kuang-si-falls.json"
+    },
+    {
+      "id": "la:tad-fane",
+      "name": "Tad Fane",
+      "geography_ids": [
+        "country:la",
+        "la:district:paksong",
+        "la:protected-area:dong-houa-sao",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Паксонг / Болавен",
+      "nearest_hub": "Паксонг / Паксе",
+      "narrow": "Тад-Фане — двойной водопад на западной кромке плато Болавен, где реки Чампи и Пак-Кут падают примерно на 120 м в глубокий лесной амфитеатр. Это не просто roadside viewpoint: объект лежит внутри национального парка Донг-Хуа-Сао и связан с более длинными лесными маршрутами по краю плато.",
+      "detail_path": "countries/laos/objects/tad-fane.json"
+    },
+    {
+      "id": "la:tad-yuang",
+      "name": "Tad Yuang",
+      "geography_ids": [
+        "country:la",
+        "la:district:paksong",
+        "la:protected-area:dong-houa-sao",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Паксонг / Болавен",
+      "nearest_hub": "Паксонг / Паксе",
+      "narrow": "Тад-Юанг — компактный двойной водопад плато Болавен с падением около 40–42 м, к которому можно подойти значительно ближе, чем к соседнему Тад-Фане. Сверху устроены рынок и picnic area, а лестничная тропа спускается к среднему и нижнему viewpoints у чаши водопада.",
+      "detail_path": "countries/laos/objects/tad-yuang.json"
+    },
+    {
+      "id": "la:khone-phapheng-falls",
+      "name": "Khone Phapheng Falls",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:khone-phapheng",
+        "la:geographic-area:si-phan-don",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон",
+      "nearest_hub": "Накасанг / Дон-Дет",
+      "narrow": "Кхон-Папенг — не высокий одиночный обрыв, а гигантская система порогов и каскадов Меконга в Си-Фан-Доне. Tourism Laos указывает максимальный перепад около 21 м и участок порогов длиной около 9,7 км; именно эта система исторически разрывает сквозную навигацию по Меконгу.",
+      "detail_path": "countries/laos/objects/khone-phapheng-falls.json"
+    },
+    {
+      "id": "la:li-phi-somphamit-falls",
+      "name": "Li Phi / Somphamit Falls",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:si-phan-don",
+        "la:island:don-khon",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Дон-Кхон",
+      "nearest_hub": "Бан-Кхон-Тай / Дон-Дет",
+      "narrow": "Тад-Сомпхамит — пороги западного Дон-Кхона, где один из рукавов Меконга сжимается между островами и валунами. В официальной лаосской версии «Li Phi» относится не только к этому каскаду, а к более широкому примерно 20-километровому поясу порогов Си-Фан-Дона; сам водопад корректнее называть Тад-Сомпхамит.",
+      "detail_path": "countries/laos/objects/li-phi-somphamit-falls.json"
     }
   ]
 }

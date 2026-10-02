@@ -19,7 +19,22 @@
     "page_path": "pages/geography/laos/province/champasak.json"
   },
   "hierarchy_status": "formalized",
-  "children": [],
+  "children": [
+    {
+      "id": "la:geographic-area:khone-phapheng",
+      "kind": "geographic_area",
+      "name": "Кхон-Папенг",
+      "page_path": "pages/geography/laos/geographic_area/khone-phapheng.json",
+      "object_count": 1
+    },
+    {
+      "id": "la:island:don-khon",
+      "kind": "island",
+      "name": "Дон-Кхон",
+      "page_path": "pages/geography/laos/island/don-khon.json",
+      "object_count": 1
+    }
+  ],
   "legacy_region_names": [],
   "legacy_locality_names": [],
   "canonical_geo_id": "geo_la_0033",
@@ -228,14 +243,28 @@
       "object_type": "island",
       "label_ru": "Острова и архипелаги",
       "count": 1
+    },
+    {
+      "object_type": "waterfall",
+      "label_ru": "Водопады",
+      "count": 2
     }
   ],
   "class_families": [
     {
       "family_id": "water_coast_marine",
       "label_ru": "Вода, побережья и морская среда",
-      "count": 1,
+      "count": 3,
       "classes": [
+        {
+          "object_type": "waterfall",
+          "label_ru": "Водопады",
+          "count": 2,
+          "country_class_page": "pages/countries/laos/classes/waterfall.json",
+          "filter": {
+            "geography_id": "la:geographic-area:si-phan-don"
+          }
+        },
         {
           "object_type": "island",
           "label_ru": "Острова и архипелаги",
@@ -255,6 +284,20 @@
       "object_type": "island",
       "narrow": "Си-Фан-Дон — разветвлённый речной ландшафт нижнего Меконга у камбоджийской границы, где острова, рукава, пороги и сезонные отмели образуют систему, а не один курорт. Его ключи — живые островные деревни, рыболовство и земледелие, огромный барьер водопадов Кхон, а также короткая колониальная железная дорога Дон-Дет–Дон-Кхон, построенная как технический обход участка Меконга, который оказался непроходим для сквозной навигации.",
       "detail_path": "countries/laos/objects/si-phan-don-4000-islands.json"
+    },
+    {
+      "id": "la:khone-phapheng-falls",
+      "name": "Khone Phapheng Falls",
+      "object_type": "waterfall",
+      "narrow": "Кхон-Папенг — не высокий одиночный обрыв, а гигантская система порогов и каскадов Меконга в Си-Фан-Доне. Tourism Laos указывает максимальный перепад около 21 м и участок порогов длиной около 9,7 км; именно эта система исторически разрывает сквозную навигацию по Меконгу.",
+      "detail_path": "countries/laos/objects/khone-phapheng-falls.json"
+    },
+    {
+      "id": "la:li-phi-somphamit-falls",
+      "name": "Li Phi / Somphamit Falls",
+      "object_type": "waterfall",
+      "narrow": "Тад-Сомпхамит — пороги западного Дон-Кхона, где один из рукавов Меконга сжимается между островами и валунами. В официальной лаосской версии «Li Phi» относится не только к этому каскаду, а к более широкому примерно 20-километровому поясу порогов Си-Фан-Дона; сам водопад корректнее называть Тад-Сомпхамит.",
+      "detail_path": "countries/laos/objects/li-phi-somphamit-falls.json"
     }
   ],
   "provenance": {

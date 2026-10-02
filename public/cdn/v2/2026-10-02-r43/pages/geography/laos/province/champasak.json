@@ -28,11 +28,46 @@
       "object_count": 1
     },
     {
+      "id": "la:district:khong",
+      "kind": "district",
+      "name": "Кхонг",
+      "page_path": "pages/geography/laos/district/khong-district.json",
+      "object_count": 1
+    },
+    {
+      "id": "la:district:paksong",
+      "kind": "district",
+      "name": "Паксонг",
+      "page_path": "pages/geography/laos/district/paksong.json",
+      "object_count": 2
+    },
+    {
+      "id": "la:district:pathoumphone",
+      "kind": "district",
+      "name": "Патхумпхон",
+      "page_path": "pages/geography/laos/district/pathoumphone.json",
+      "object_count": 1
+    },
+    {
       "id": "la:geographic-area:si-phan-don",
       "kind": "archipelago",
       "name": "Си-Фан-Дон",
       "page_path": "pages/geography/laos/archipelago/si-phan-don.json",
+      "object_count": 3
+    },
+    {
+      "id": "la:protected-area:beung-kiat-ngong-wetlands",
+      "kind": "protected_area",
+      "name": "Болота Беунг-Кьет-Нгонг",
+      "page_path": "pages/geography/laos/protected_area/beung-kiat-ngong-wetlands.json",
       "object_count": 1
+    },
+    {
+      "id": "la:protected-area:dong-houa-sao",
+      "kind": "protected_area",
+      "name": "Национальный парк Донг-Хуа-Сао",
+      "page_path": "pages/geography/laos/protected_area/dong-houa-sao.json",
+      "object_count": 3
     }
   ],
   "legacy_region_names": [
@@ -369,6 +404,16 @@
       "object_type": "island",
       "label_ru": "Острова и архипелаги",
       "count": 1
+    },
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 2
+    },
+    {
+      "object_type": "waterfall",
+      "label_ru": "Водопады",
+      "count": 4
     }
   ],
   "class_families": [
@@ -389,10 +434,35 @@
       ]
     },
     {
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "national_park",
+          "label_ru": "Национальные парки",
+          "count": 2,
+          "country_class_page": "pages/countries/laos/classes/national_park.json",
+          "filter": {
+            "geography_id": "la:province:champasak"
+          }
+        }
+      ]
+    },
+    {
       "family_id": "water_coast_marine",
       "label_ru": "Вода, побережья и морская среда",
-      "count": 1,
+      "count": 5,
       "classes": [
+        {
+          "object_type": "waterfall",
+          "label_ru": "Водопады",
+          "count": 4,
+          "country_class_page": "pages/countries/laos/classes/waterfall.json",
+          "filter": {
+            "geography_id": "la:province:champasak"
+          }
+        },
         {
           "object_type": "island",
           "label_ru": "Острова и архипелаги",
@@ -419,6 +489,48 @@
       "object_type": "island",
       "narrow": "Си-Фан-Дон — разветвлённый речной ландшафт нижнего Меконга у камбоджийской границы, где острова, рукава, пороги и сезонные отмели образуют систему, а не один курорт. Его ключи — живые островные деревни, рыболовство и земледелие, огромный барьер водопадов Кхон, а также короткая колониальная железная дорога Дон-Дет–Дон-Кхон, построенная как технический обход участка Меконга, который оказался непроходим для сквозной навигации.",
       "detail_path": "countries/laos/objects/si-phan-don-4000-islands.json"
+    },
+    {
+      "id": "la:khone-phapheng-falls",
+      "name": "Khone Phapheng Falls",
+      "object_type": "waterfall",
+      "narrow": "Кхон-Папенг — не высокий одиночный обрыв, а гигантская система порогов и каскадов Меконга в Си-Фан-Доне. Tourism Laos указывает максимальный перепад около 21 м и участок порогов длиной около 9,7 км; именно эта система исторически разрывает сквозную навигацию по Меконгу.",
+      "detail_path": "countries/laos/objects/khone-phapheng-falls.json"
+    },
+    {
+      "id": "la:li-phi-somphamit-falls",
+      "name": "Li Phi / Somphamit Falls",
+      "object_type": "waterfall",
+      "narrow": "Тад-Сомпхамит — пороги западного Дон-Кхона, где один из рукавов Меконга сжимается между островами и валунами. В официальной лаосской версии «Li Phi» относится не только к этому каскаду, а к более широкому примерно 20-километровому поясу порогов Си-Фан-Дона; сам водопад корректнее называть Тад-Сомпхамит.",
+      "detail_path": "countries/laos/objects/li-phi-somphamit-falls.json"
+    },
+    {
+      "id": "la:tad-fane",
+      "name": "Tad Fane",
+      "object_type": "waterfall",
+      "narrow": "Тад-Фане — двойной водопад на западной кромке плато Болавен, где реки Чампи и Пак-Кут падают примерно на 120 м в глубокий лесной амфитеатр. Это не просто roadside viewpoint: объект лежит внутри национального парка Донг-Хуа-Сао и связан с более длинными лесными маршрутами по краю плато.",
+      "detail_path": "countries/laos/objects/tad-fane.json"
+    },
+    {
+      "id": "la:tad-yuang",
+      "name": "Tad Yuang",
+      "object_type": "waterfall",
+      "narrow": "Тад-Юанг — компактный двойной водопад плато Болавен с падением около 40–42 м, к которому можно подойти значительно ближе, чем к соседнему Тад-Фане. Сверху устроены рынок и picnic area, а лестничная тропа спускается к среднему и нижнему viewpoints у чаши водопада.",
+      "detail_path": "countries/laos/objects/tad-yuang.json"
+    },
+    {
+      "id": "la:dong-hua-sao-national-park",
+      "name": "Dong Hua Sao National Park",
+      "object_type": "national_park",
+      "narrow": "Большой лесной массив на резком уступе Болавенского плато: от низин 100–300 м до пиков почти 1300 м, с водопадами и сильным высотным экологическим градиентом.",
+      "detail_path": "countries/laos/objects/dong-hua-sao-national-park.json"
+    },
+    {
+      "id": "la:xe-pian-national-park",
+      "name": "Xe Pian National Park",
+      "object_type": "national_park",
+      "narrow": "Большой южнолаосский парк, где лес, сезонные болота, деревенские маршруты и Пху-Аса образуют самостоятельный экспедиционный кластер, а не одну обзорную остановку.",
+      "detail_path": "countries/laos/objects/xe-pian-national-park.json"
     }
   ],
   "provenance": {

@@ -18,17 +18,108 @@
   },
   "global_family_page": "pages/families/protected_ecosystems.json",
   "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
-  "count": 2,
+  "count": 8,
   "classes": [
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 5,
+      "global_page_path": "pages/classes/national_park.json",
+      "country_page_path": "pages/countries/laos/classes/national_park.json"
+    },
     {
       "object_type": "protected_area",
       "label_ru": "Заповедники и охраняемые территории",
       "count": 2,
       "global_page_path": "pages/classes/protected_area.json",
       "country_page_path": "pages/countries/laos/classes/protected_area.json"
+    },
+    {
+      "object_type": "natural_landscape",
+      "label_ru": "Природные ландшафты и треккинг",
+      "count": 1,
+      "global_page_path": "pages/classes/natural_landscape.json",
+      "country_page_path": "pages/countries/laos/classes/natural_landscape.json"
     }
   ],
   "objects": [
+    {
+      "id": "la:hin-nam-no-national-park",
+      "name": "Hin Nam No National Park",
+      "object_type": "national_park",
+      "geography_ids": [
+        "country:la",
+        "la:district:boualapha",
+        "la:protected-area:hin-nam-no",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Кхаммуан / Буалапа",
+      "narrow": "Хин-Нам-Но — крупный карстовый национальный парк на востоке Кхаммуана, соединённый через границу с вьетнамским Фонгня-Кебангом в единый трансграничный объект Всемирного наследия. Экспедиционно это не одна точка, а система известняковых плато, речных пещер, лесов и деревенских маршрутов; наиболее понятный самостоятельный вход в парк — район Нонг-Пинг и пещеры Се-Банг-Фай.",
+      "detail_path": "countries/laos/objects/hin-nam-no-national-park.json"
+    },
+    {
+      "id": "la:nakai-nam-theun-national-park",
+      "name": "Nakai Nam Theun National Park",
+      "object_type": "national_park",
+      "geography_ids": [
+        "country:la",
+        "la:district:nakai",
+        "la:protected-area:nakai-nam-theun",
+        "la:province:khammouane",
+        "la:town:nakai"
+      ],
+      "region_legacy": "Кхаммуан / Накай–Нам-Теун",
+      "narrow": "Накай–Нам-Теун — один из крупнейших лесных массивов Аннамских гор в Лаосе: около 4 700 км² национального парка между плато Накай и вьетнамской границей, с высотами примерно 500–2300 м. Для экспедиционного маршрута он ценен не одной «точкой», а сочетанием водосборов, лесных хребтов, лодочных подходов и регулируемых многодневных треков.",
+      "detail_path": "countries/laos/objects/nakai-nam-theun-national-park.json"
+    },
+    {
+      "id": "la:phou-khao-khouay-national-park",
+      "name": "Phou Khao Khouay National Park",
+      "object_type": "national_park",
+      "geography_ids": [
+        "country:la",
+        "la:district:thaphabat",
+        "la:protected-area:phou-khao-khouay",
+        "la:province:bolikhamxay",
+        "la:province:xaisomboun",
+        "la:village:ban-hatkhai"
+      ],
+      "region_legacy": "Боликхамсай / Вьентьян / Пху-Кхао-Кхуай",
+      "narrow": "Пху-Кхао-Кхуай — большой национальный парк рядом с Вьентьяном, но на земле он распадается на несколько удалённых секторов. Для самостоятельной экспедиционной логики особенно полезен Тад-Леук: сюда ведёт отдельная дорога, есть visitor center, официальный кемпинг и короткая самостоятельная природная тропа. Из Бан-Хаткхая начинаются уже другие, регулируемые местными проводниками маршруты к Тад-Сай/Пха-Сай и на песчаниковые плато.",
+      "detail_path": "countries/laos/objects/phou-khao-khouay-national-park.json"
+    },
+    {
+      "id": "la:xe-pian-national-park",
+      "name": "Xe Pian National Park",
+      "object_type": "national_park",
+      "geography_ids": [
+        "country:la",
+        "la:district:khong",
+        "la:district:pathoumphone",
+        "la:district:sanamxay",
+        "la:protected-area:beung-kiat-ngong-wetlands",
+        "la:protected-area:xe-pian",
+        "la:province:attapeu",
+        "la:province:champasak",
+        "la:village:kiet-ngong"
+      ],
+      "region_legacy": "Чампасак / Аттапы / Се-Пиан",
+      "narrow": "Большой южнолаосский парк, где лес, сезонные болота, деревенские маршруты и Пху-Аса образуют самостоятельный экспедиционный кластер, а не одну обзорную остановку.",
+      "detail_path": "countries/laos/objects/xe-pian-national-park.json"
+    },
+    {
+      "id": "la:dong-hua-sao-national-park",
+      "name": "Dong Hua Sao National Park",
+      "object_type": "national_park",
+      "geography_ids": [
+        "country:la",
+        "la:protected-area:dong-houa-sao",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Болавен",
+      "narrow": "Большой лесной массив на резком уступе Болавенского плато: от низин 100–300 м до пиков почти 1300 м, с водопадами и сильным высотным экологическим градиентом.",
+      "detail_path": "countries/laos/objects/dong-hua-sao-national-park.json"
+    },
     {
       "id": "la:nam-et-phou-louey-area",
       "name": "Nam Et-Phou Louey area",
@@ -53,6 +144,21 @@
       "region_legacy": "Луангнамтха / Нам-Ха",
       "narrow": "Нам-Ха — 222 400 га горных лесов и водосборов Луангнамтха, где охрана природы с конца 1990-х связана с общинным экотуризмом. Для экспедиции это не «пакетный трек», а сочетание регулируемых многодневных маршрутов, рек, леса и деревень с отдельными самостоятельно доступными дорожными точками; режим конкретного трека нужно проверять до выхода.",
       "detail_path": "countries/laos/objects/nam-ha-national-protected-area.json"
+    },
+    {
+      "id": "la:nong-fa-dong-ampham-landscape",
+      "name": "Nong Fa / Dong Ampham landscape",
+      "object_type": "natural_landscape",
+      "geography_ids": [
+        "country:la",
+        "la:district:sanxay",
+        "la:geographic-area:nong-fa",
+        "la:protected-area:dong-ampham",
+        "la:province:attapeu"
+      ],
+      "region_legacy": "Аттапы / Донг-Амфам",
+      "narrow": "Удалённое высокогорное кратерное озеро в массиве Dong Ampham: сильный экспедиционный объект, где важнее проверка дороги и снабжения, чем туристическая инфраструктура.",
+      "detail_path": "countries/laos/objects/nong-fa-dong-ampham-landscape.json"
     }
   ]
 }

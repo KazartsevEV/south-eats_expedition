@@ -20,7 +20,7 @@
   "global_class_page": "pages/classes/cave.json",
   "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
   "migration": null,
-  "count": 4,
+  "count": 6,
   "geography_filters": [
     {
       "id": "country:la",
@@ -28,6 +28,14 @@
       "kind": "country",
       "axis": "administrative",
       "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:district:thakhek",
+      "canonical_geo_id": "geo_la_0070",
+      "name": "Район Тхакхэк",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/district/thakhek-district.json"
     },
     {
       "id": "la:geographic-area:kong-lor-phou-hin-poun",
@@ -76,6 +84,22 @@
       "kind": "town",
       "axis": "administrative",
       "page_path": "pages/geography/laos/town/vieng-xai.json"
+    },
+    {
+      "id": "la:village:na-khang-xang",
+      "canonical_geo_id": "geo_la_0071",
+      "name": "На-Кханг-Санг",
+      "kind": "village",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/village/na-khang-xang.json"
+    },
+    {
+      "id": "la:village:xiangliab",
+      "canonical_geo_id": "geo_la_0072",
+      "name": "Сианглиаб",
+      "kind": "village",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/village/xiangliab.json"
     }
   ],
   "objects": [
@@ -128,6 +152,34 @@
       "nearest_hub": "Luang Prabang",
       "narrow": "Пак-У — две пещеры в известняковой стене над Меконг у устья Нам-У, заполненные тысячами буддийских изображений разных размеров и периодов. Сюжет — одновременно паломничество, накопление вотивных образов и речная география.",
       "detail_path": "countries/laos/objects/pak-ou-caves.json"
+    },
+    {
+      "id": "la:tham-pa-fa",
+      "name": "Tham Pa Fa",
+      "geography_ids": [
+        "country:la",
+        "la:district:thakhek",
+        "la:province:khammouane",
+        "la:village:na-khang-xang"
+      ],
+      "region_legacy": "Кхаммуан / Тхакхэк",
+      "nearest_hub": "Thakhek",
+      "narrow": "Редкое сочетание живого сакрального объекта и карстовой пещеры: 229 изображений Будды были обнаружены здесь только в 2004 году.",
+      "detail_path": "countries/laos/objects/tham-pa-fa.json"
+    },
+    {
+      "id": "la:tham-nang-aen",
+      "name": "Tham Nang Aen",
+      "geography_ids": [
+        "country:la",
+        "la:district:thakhek",
+        "la:province:khammouane",
+        "la:village:xiangliab"
+      ],
+      "region_legacy": "Кхаммуан / Тхакхэк",
+      "nearest_hub": "Thakhek",
+      "narrow": "Одна из крупнейших доступных речных пещер в районе Тхакхэка: гигантская входная камера, карстовый водный маршрут и хорошо документированная местная легенда.",
+      "detail_path": "countries/laos/objects/tham-nang-aen.json"
     }
   ]
 }

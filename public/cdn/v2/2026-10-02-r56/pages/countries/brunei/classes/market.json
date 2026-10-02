@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r56",
+    "page_type": "country_class",
+    "id": "country-class:bn:market"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "object_type": "market",
+    "label_ru": "Рынки",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:bn:religion_ethnography",
+    "page_path": "pages/countries/brunei/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/market.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "bn:city:bandar-seri-begawan",
+      "canonical_geo_id": "geo_bn_0005",
+      "name": "Бандар-Сери-Бегаван",
+      "kind": "city",
+      "axis": "municipal",
+      "page_path": "pages/geography/brunei/city/bandar-seri-begawan.json"
+    },
+    {
+      "id": "bn:district:brunei-muara",
+      "canonical_geo_id": "geo_bn_0001",
+      "name": "Бруней-Муара",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/brunei-muara.json"
+    },
+    {
+      "id": "bn:district:tutong",
+      "canonical_geo_id": "geo_bn_0004",
+      "name": "Тутонг",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/tutong.json"
+    },
+    {
+      "id": "bn:mukim:kianggeh",
+      "canonical_geo_id": "geo_bn_0016",
+      "name": "Кианггех",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/kianggeh.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:tutong-and-tamu-markets",
+      "name": "Pasarneka Tutong / Tamu Tutong",
+      "geography_ids": [
+        "bn:district:tutong",
+        "country:bn"
+      ],
+      "region_legacy": "Tutong",
+      "nearest_hub": "Tutong",
+      "narrow": "Pasarneka Tutong — еженедельный рынок у Pekan Tutong, где в четверг утром сходятся продукты, готовая еда, растения и ремесленные изделия из Тутонга и других районов. Это не набор разных «рынков Тутонга», а один комплекс с недельным ритмом: его смысл — увидеть, как районный центр собирает сельскую продукцию и мелкую торговлю в одну точку.",
+      "detail_path": "countries/brunei/objects/tutong-and-tamu-markets.json"
+    },
+    {
+      "id": "bn:tamu-kianggeh",
+      "name": "Tamu Kianggeh",
+      "geography_ids": [
+        "bn:city:bandar-seri-begawan",
+        "bn:district:brunei-muara",
+        "bn:mukim:kianggeh",
+        "country:bn"
+      ],
+      "region_legacy": "Бандар-Сери-Бегаван / Бруней-Муара",
+      "nearest_hub": "Bandar Seri Begawan",
+      "narrow": "Tamu Kianggeh — старый городской рынок на берегу Sungai Kianggeh в центре Бандар-Сери-Бегавана: свежая рыба, овощи, фрукты, лекарственные травы, домашняя еда и мелкие бытовые товары. Нынешний комплекс построен после крупной реконструкции 2016 года, но его основная функция остаётся повседневной: это место закупок и еды, а не рынок, созданный специально для туристов.",
+      "detail_path": "countries/brunei/objects/tamu-kianggeh.json"
+    }
+  ]
+}

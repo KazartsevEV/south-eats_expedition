@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r56",
+    "page_type": "class_family",
+    "id": "country-family:sg:water_coast_marine"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "family_id": "water_coast_marine",
+    "label_ru": "Вода, побережья и морская среда"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:sg",
+    "page_path": "pages/countries/singapore.json"
+  },
+  "global_family_page": "pages/families/water_coast_marine.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "count": 2,
+  "classes": [
+    {
+      "object_type": "wetland",
+      "label_ru": "Болота и водно-болотные угодья",
+      "count": 1,
+      "global_page_path": "pages/classes/wetland.json",
+      "country_page_path": "pages/countries/singapore/classes/wetland.json"
+    },
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 1,
+      "global_page_path": "pages/classes/island.json",
+      "country_page_path": "pages/countries/singapore/classes/island.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:sungei-buloh-wetland-reserve",
+      "name": "Sungei Buloh Wetland Reserve",
+      "object_type": "wetland",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:north-kranji-sungei-buloh",
+        "sg:region:north-region"
+      ],
+      "region_legacy": "North / Kranji / Sungei Buloh",
+      "narrow": "Sungei Buloh Wetland Reserve — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/sungei-buloh-wetland-reserve.json"
+    },
+    {
+      "id": "sg:pulau-ubin",
+      "name": "Pulau Ubin",
+      "object_type": "island",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:pulau-ubin",
+        "sg:region:north-east-region"
+      ],
+      "region_legacy": "Pulau Ubin",
+      "narrow": "Pulau Ubin — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/pulau-ubin.json"
+    }
+  ]
+}

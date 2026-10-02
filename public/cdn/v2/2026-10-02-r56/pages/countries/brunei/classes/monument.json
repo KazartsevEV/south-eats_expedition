@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r56",
+    "page_type": "country_class",
+    "id": "country-class:bn:monument"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "object_type": "monument",
+    "label_ru": "Памятники и монументы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:bn:built_heritage",
+    "page_path": "pages/countries/brunei/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/monument.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "bn:district:belait",
+      "canonical_geo_id": "geo_bn_0003",
+      "name": "Белайт",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/belait.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:billionth-barrel-monument",
+      "name": "Billionth Barrel Monument",
+      "geography_ids": [
+        "bn:district:belait",
+        "country:bn"
+      ],
+      "region_legacy": "Белайт / Сериа / Лаби",
+      "nearest_hub": "Seria",
+      "narrow": "Монумент на пляже Сериа отмечает миллиардный баррель нефти, добытый на береговом месторождении в 1991 году, и стоит рядом с исторической площадкой S-1 — скважины, открывшей коммерческую нефть в Сериа в 1929 году. Это компактная, но очень наглядная точка для чтения нефтяной истории Брунея: памятник, морской берег и действующий нефтяной ландшафт находятся в одном поле зрения.",
+      "detail_path": "countries/brunei/objects/billionth-barrel-monument.json"
+    }
+  ]
+}

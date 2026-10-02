@@ -1,0 +1,62 @@
+{
+  "object_id": "obj_bn_0003",
+  "status": "passed",
+  "checks": {
+    "language": true,
+    "classification": true,
+    "geo": true,
+    "coordinates": true,
+    "elevation": true,
+    "narrative": true,
+    "sources": true,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
+    "editorial_rebuild": true
+  },
+  "last_reviewed_at": "2026-10-01",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-01",
+    "scope": "повторный QA obj_bn_0003: динамические часы, речной доступ, вода, мостки, высота и источник каждого поля",
+    "checks": {
+      "narrative_section_sources": true,
+      "operations_sources": true,
+      "access_sources": true,
+      "coordinates_precision": true,
+      "elevation_precision": true,
+      "water_source_specific": true,
+      "overnight_unknown_not_falsely_sourced": true,
+      "traveler_report_sources": true,
+      "visual_viewpoint_sources": true,
+      "walkway_reports_localized": true,
+      "drone_rule_precision": true,
+      "official_walkway_corroboration": true,
+      "official_water_taxi_price_context": true
+    },
+    "notes": [
+      "Часы Gallery исправлены по текущему Tourism Development Department: суббота–четверг 09:00–16:30, пятница 09:00–12:00; старое/кривое отображение на другой странице не используется как текущий режим.",
+      "Водное такси привязано к официальному Mini Guide: многочисленные причалы вдоль Brunei River; фиксированный тариф не выдумывается, цену согласовывать до посадки.",
+      "Речная вода имеет отдельный академический источник загрязнения; неизвестная публичная питьевая точка не маскируется общими источниками.",
+      "Сигналы о ремонте/обрушениях мостков относятся к конкретным участкам/периодам и не превращены в утверждение, что весь Кампонг-Айер закрыт или аварийный.",
+      "0 м сохранён только как приблизительная приливная водная поверхность, не как высота мостков/домов.",
+      "drone.permit_required=true снят как слишком широкое утверждение; регистрация обязательна, flying permit условный по опубликованным правилам DCA.",
+      "Официальная Pelita Brunei подтверждает фактический ремонт повреждённого 125-метрового мостка в Kampung Setia ‘A’ в январе 2026; поздние Reddit-сигналы сохраняются как локализованные пользовательские отчёты.",
+      "Brunei Tourism даёт общий текущий ориентир BND 2–5 за water taxi с возможностью согласования цены; карточка не превращает этот диапазон в фиксированный тариф короткой переправы."
+    ]
+  },
+  "identity_review": null,
+  "verification": {
+    "dynamic_fields": [
+      "gallery hours",
+      "water taxi fare",
+      "walkway condition",
+      "boat access",
+      "filming/drone"
+    ],
+    "verify_before_departure": true
+  }
+}

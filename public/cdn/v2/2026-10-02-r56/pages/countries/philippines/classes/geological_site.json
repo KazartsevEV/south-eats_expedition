@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r56",
+    "page_type": "country_class",
+    "id": "country-class:ph:geological_site"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "object_type": "geological_site",
+    "label_ru": "Геологические объекты",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:ph:relief_geology",
+    "page_path": "pages/countries/philippines/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/geological_site.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:ph",
+      "name": "Филиппины",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/philippines.json"
+    },
+    {
+      "id": "ph:geographic_area:bohol-expedition",
+      "canonical_geo_id": "geo_ph_0037",
+      "name": "Бохоль",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/bohol-expedition.json"
+    },
+    {
+      "id": "ph:province:bohol",
+      "canonical_geo_id": "geo_ph_0022",
+      "name": "Бохоль",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/province/bohol.json"
+    },
+    {
+      "id": "ph:region:central-visayas",
+      "canonical_geo_id": "geo_ph_0011",
+      "name": "Центральные Висайи",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/central-visayas.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:chocolate-hills",
+      "name": "Chocolate Hills",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:bohol-expedition",
+        "ph:province:bohol",
+        "ph:region:central-visayas"
+      ],
+      "region_legacy": "Bohol",
+      "nearest_hub": "Tagbilaran / Panglao",
+      "narrow": "Chocolate Hills — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/philippines/objects/chocolate-hills.json"
+    }
+  ]
+}

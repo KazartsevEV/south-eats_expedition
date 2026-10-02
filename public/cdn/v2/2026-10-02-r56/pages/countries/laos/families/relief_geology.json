@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r56",
+    "page_type": "class_family",
+    "id": "country-family:la:relief_geology"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "family_id": "relief_geology",
+    "label_ru": "Рельеф и геология"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:la",
+    "page_path": "pages/countries/laos.json"
+  },
+  "global_family_page": "pages/families/relief_geology.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "count": 21,
+  "classes": [
+    {
+      "object_type": "mountain",
+      "label_ru": "Горы",
+      "count": 3,
+      "global_page_path": "pages/classes/mountain.json",
+      "country_page_path": "pages/countries/laos/classes/mountain.json"
+    },
+    {
+      "object_type": "plateau",
+      "label_ru": "Плато и нагорья",
+      "count": 1,
+      "global_page_path": "pages/classes/plateau.json",
+      "country_page_path": "pages/countries/laos/classes/plateau.json"
+    },
+    {
+      "object_type": "karst",
+      "label_ru": "Карстовые районы",
+      "count": 1,
+      "global_page_path": "pages/classes/karst.json",
+      "country_page_path": "pages/countries/laos/classes/karst.json"
+    },
+    {
+      "object_type": "cave",
+      "label_ru": "Пещеры",
+      "count": 16,
+      "global_page_path": "pages/classes/cave.json",
+      "country_page_path": "pages/countries/laos/classes/cave.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:phu-ya-kha-mountain",
+      "name": "Phu Ya Kha Mountain",
+      "object_type": "mountain",
+      "geography_ids": [
+        "country:la",
+        "la:province:oudomxay"
+      ],
+      "region_legacy": "Oudomxay Province",
+      "narrow": "Горный объект Удомсая, фигурирующий в актуальных материалах Tourism Laos; маршрут и точка вершины ещё не нормализованы.",
+      "detail_path": "countries/laos/objects/phu-ya-kha-mountain.json"
+    },
+    {
+      "id": "la:mount-phousi",
+      "name": "Mount Phousi",
+      "object_type": "mountain",
+      "geography_ids": [
+        "country:la",
+        "la:city:luang-prabang",
+        "la:province:luang-prabang"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "narrow": "Священный городской холм Луангпхабанга с храмовыми сооружениями и обзорными точками; выделен отдельно от общей карточки города.",
+      "detail_path": "countries/laos/objects/mount-phousi.json"
+    },
+    {
+      "id": "la:phou-fa-mountain-and-stupa",
+      "name": "Phou Fa Mountain and Stupa",
+      "object_type": "mountain",
+      "geography_ids": [
+        "country:la",
+        "la:province:phongsaly",
+        "la:town:phongsaly"
+      ],
+      "region_legacy": "Phongsaly Province",
+      "narrow": "Гора Пху-Фа над Пхонгсали со ступой и обзорной функцией; выделена отдельно от городской карточки.",
+      "detail_path": "countries/laos/objects/phou-fa-mountain-and-stupa.json"
+    },
+    {
+      "id": "la:bolaven-plateau",
+      "name": "Bolaven Plateau",
+      "object_type": "plateau",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:bolaven-plateau"
+      ],
+      "region_legacy": "Чампасак / Сараван / Секонг — плато Болавен",
+      "narrow": "Плато Болавен — крупное вулканическое нагорье южного Лаоса с базальтовыми почвами, кофейными ландшафтами, глубокими речными врезами и серией водопадов по краям плато. Для экспедиции это не один объект, а связка геологии, сельского хозяйства, этнографии и самостоятельного дорожного маршрута вокруг Паксонга, Тад-Фана и Тад-Ло.",
+      "detail_path": "countries/laos/objects/bolaven-plateau.json"
+    },
+    {
+      "id": "la:vang-vieng-karst",
+      "name": "Vang Vieng karst",
+      "object_type": "karst",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:vang-vieng-karst",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "narrow": "Ванг-Вьенг — протяжённый карстовый ландшафт долины Нам-Сонг, где город, рисовые поля, деревни, пещеры и почти отвесные известняковые массивы образуют одну систему. Для экспедиции важен не набор «лагун» и развлечений, а сам переход от речной долины к западному поясу пермского карста, его пещерам, общинным землям и точкам обзора.",
+      "detail_path": "countries/laos/objects/vang-vieng-karst.json"
+    },
+    {
+      "id": "la:vieng-xai-caves",
+      "name": "Vieng Xai caves",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:houaphanh",
+        "la:town:vieng-xai"
+      ],
+      "region_legacy": "Хуапхан / Вьенгсай / Нам-Эт",
+      "narrow": "Вьенгсай — мемориальный карстовый ландшафт, где целая система природных пещер была превращена в распределённый подземный город военного времени. Главное здесь — не отдельный «бункер», а связь геологии, инженерной адаптации, повседневной жизни под бомбардировками и современной политики памяти.",
+      "detail_path": "countries/laos/objects/vieng-xai-caves.json"
+    },
+    {
+      "id": "la:kong-lor-cave",
+      "name": "Kong Lor Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:kong-lor-phou-hin-poun",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Кхаммуан / Конг-Лор",
+      "narrow": "Конг-Лор — активный подземный участок Нам-Хин-Бун, а не просто эффектный зал: река входит в один портал, проходит около 7,5 км под карстовым массивом и выходит к другой долине. Его ценность — в геологии, сквозной речной логистике и живой связи двух деревень по обе стороны пещеры.",
+      "detail_path": "countries/laos/objects/kong-lor-cave.json"
+    },
+    {
+      "id": "la:tham-piu-cave",
+      "name": "Tham Piu Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:xiangkhouang"
+      ],
+      "region_legacy": "Xieng Khouang",
+      "narrow": "Тхам-Пиу — пещера и мемориал в Сиангкхуанг, связанный с гибелью мирных жителей во время войны в Индокитае. Для маршрута это не 'ещё одна пещера', а место памяти, которое объясняет, почему UXO и бомбардировки остаются частью современной географии провинции.",
+      "detail_path": "countries/laos/objects/tham-piu-cave.json"
+    },
+    {
+      "id": "la:pak-ou-caves",
+      "name": "Pak Ou Caves",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-prabang"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "narrow": "Пак-У — две пещеры в известняковой стене над Меконг у устья Нам-У, заполненные тысячами буддийских изображений разных размеров и периодов. Сюжет — одновременно паломничество, накопление вотивных образов и речная география.",
+      "detail_path": "countries/laos/objects/pak-ou-caves.json"
+    },
+    {
+      "id": "la:tham-pa-fa",
+      "name": "Tham Pa Fa",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:district:thakhek",
+        "la:province:khammouane",
+        "la:village:na-khang-xang"
+      ],
+      "region_legacy": "Кхаммуан / Тхакхэк",
+      "narrow": "Редкое сочетание живого сакрального объекта и карстовой пещеры: 229 изображений Будды были обнаружены здесь только в 2004 году.",
+      "detail_path": "countries/laos/objects/tham-pa-fa.json"
+    },
+    {
+      "id": "la:tham-nang-aen",
+      "name": "Tham Nang Aen",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:district:thakhek",
+        "la:province:khammouane",
+        "la:village:xiangliab"
+      ],
+      "region_legacy": "Кхаммуан / Тхакхэк",
+      "narrow": "Одна из крупнейших доступных речных пещер в районе Тхакхэка: гигантская входная камера, карстовый водный маршрут и хорошо документированная местная легенда.",
+      "detail_path": "countries/laos/objects/tham-nang-aen.json"
+    },
+    {
+      "id": "la:chom-ong-cave",
+      "name": "Chom Ong Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:oudomxay"
+      ],
+      "region_legacy": "Oudomxay Province",
+      "narrow": "Крупная пещерная система Удомсая, которую официальный Tourism Laos выделяет среди главных природных объектов провинции; детальная спелеологическая логистика будет проверена на объектном QA.",
+      "detail_path": "countries/laos/objects/chom-ong-cave.json"
+    },
+    {
+      "id": "la:tham-kao-rao-cave",
+      "name": "Tham Kao Rao Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-namtha"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "narrow": "Доступная карстовая пещера района Vieng Phoukha; Tourism Laos относит её к заметным пещерным объектам северного Лаоса.",
+      "detail_path": "countries/laos/objects/tham-kao-rao-cave.json"
+    },
+    {
+      "id": "la:tham-chang-cave",
+      "name": "Tham Chang Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:vang-vieng-karst",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "narrow": "Пещера над Ванг-Вьенгом с локальной историей военного укрытия и позднейшего использования; физический объект внутри более широкого карстового ландшафта.",
+      "detail_path": "countries/laos/objects/tham-chang-cave.json"
+    },
+    {
+      "id": "la:chao-anouvong-cave",
+      "name": "Chao Anouvong Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:xaisomboun"
+      ],
+      "region_legacy": "Xaysomboun Province",
+      "narrow": "Пещерный объект у Anouvong Town, связанный в местной исторической традиции с бегством короля Анувонга; документирован отдельной карточкой Tourism Laos.",
+      "detail_path": "countries/laos/objects/chao-anouvong-cave.json"
+    },
+    {
+      "id": "la:pha-ho-pha-hong-cave",
+      "name": "Pha Ho-Pha Hong Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:oudomxay"
+      ],
+      "region_legacy": "Oudomxay Province",
+      "narrow": "Пещерный объект Удомсая, отдельный от Chom Ong; вход, длина маршрута и сезонность будут проверены на QA.",
+      "detail_path": "countries/laos/objects/pha-ho-pha-hong-cave.json"
+    },
+    {
+      "id": "la:xe-bang-fai-cave",
+      "name": "Xe Bang Fai Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:district:boualapha",
+        "la:protected-area:hin-nam-no",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Khammouane / Boualapha",
+      "narrow": "Крупная активная речная пещера в Хин-Нам-Но; самостоятельный объект внутри национального парка, а не синоним самого парка.",
+      "detail_path": "countries/laos/objects/xe-bang-fai-cave.json"
+    },
+    {
+      "id": "la:paseuam-cave",
+      "name": "Paseuam Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Khammouane Province",
+      "narrow": "Пещера Кхаммуана, выделяемая актуальными материалами Tourism Laos; маршрут внутри и доступ требуют объектного QA.",
+      "detail_path": "countries/laos/objects/paseuam-cave.json"
+    },
+    {
+      "id": "la:nam-non-cave",
+      "name": "Nam Non Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:kong-lor-phou-hin-poun",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Khammouane / Phou Hin Poun",
+      "narrow": "Пещера в карстовом районе Пху-Хин-Пун; добавлена отдельно от Kong Lor и The Rock.",
+      "detail_path": "countries/laos/objects/nam-non-cave.json"
+    },
+    {
+      "id": "la:tham-pou-kham-cave-blue-lagoon-1",
+      "name": "Tham Pou Kham Cave / Blue Lagoon 1",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:vang-vieng-karst",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "narrow": "Пещера Tham Pou Kham и связанный с её входным узлом Blue Lagoon 1 сведены в одну карточку, чтобы не создавать два названия одного посещаемого комплекса.",
+      "detail_path": "countries/laos/objects/tham-pou-kham-cave-blue-lagoon-1.json"
+    },
+    {
+      "id": "la:phan-tham-nam-thang-cave",
+      "name": "Phan Tham Nam Thang Cave",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:sainyabuli"
+      ],
+      "region_legacy": "Sainyabuli Province",
+      "narrow": "Пещерный объект провинции Сайнябули; точка входа и самостоятельный доступ будут установлены на объектном QA.",
+      "detail_path": "countries/laos/objects/phan-tham-nam-thang-cave.json"
+    }
+  ]
+}

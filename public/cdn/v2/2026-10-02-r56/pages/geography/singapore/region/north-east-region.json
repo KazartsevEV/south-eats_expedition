@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r56",
+    "page_type": "geography",
+    "id": "sg:region:north-east-region"
+  },
+  "identity": {
+    "name": "Северо-восточный регион",
+    "name_local": "North-East Region",
+    "kind": "region",
+    "slug": "north-east-region",
+    "country_code": "SG",
+    "axis": "planning_geography"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:sg",
+    "page_path": "pages/countries/singapore.json"
+  },
+  "hierarchy_status": "formalized",
+  "children": [
+    {
+      "id": "sg:geographic_area:pulau-ubin",
+      "kind": "geographic_area",
+      "name": "Пулау-Убин",
+      "page_path": "pages/geography/singapore/geographic_area/pulau-ubin.json",
+      "object_count": 1
+    }
+  ],
+  "legacy_region_names": [],
+  "legacy_locality_names": [],
+  "canonical_geo_id": "geo_sg_0004",
+  "geo_profile": {
+    "id": "geo_sg_0004",
+    "kind": "region",
+    "names": {
+      "primary": "Северо-восточный регион",
+      "local": "North-East Region"
+    },
+    "slug": "north-east-region",
+    "parent_id": "geo_sg",
+    "geo_path": [
+      "geo_sg",
+      "geo_sg_0004"
+    ],
+    "description": {
+      "narrow": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "body": null
+    },
+    "cover_media_id": null,
+    "primary_location": null,
+    "legacy_ids": [
+      "sg:region:north-east-region"
+    ],
+    "migration": {
+      "source_kind": "formal_hierarchy",
+      "axis": "planning_geography",
+      "status": "formalized"
+    },
+    "coverage_role": "structural",
+    "provenance": {
+      "checked_at": "2026-10-01",
+      "sources": [
+        {
+          "publisher": "Singapore planning geography / project research layer",
+          "url": "https://www.ura.gov.sg/Corporate/Planning/Master-Plan",
+          "used_for": [
+            "planning and expedition geography"
+          ],
+          "checked_at": "2026-09-30"
+        },
+        {
+          "publisher": "Expedition South East Drive draft",
+          "used_for": [
+            "expedition regional nodes"
+          ],
+          "checked_at": "2026-09-30"
+        }
+      ],
+      "structural_source_refs": [
+        "src_906008"
+      ],
+      "research_source_refs": [],
+      "source_refs": [
+        "src_906008"
+      ]
+    }
+  },
+  "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+  "class_counts": [
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 1
+    },
+    {
+      "object_type": "market",
+      "label_ru": "Рынки",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "religion_ethnography",
+      "label_ru": "Религия, этнография и живая культура",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "market",
+          "label_ru": "Рынки",
+          "count": 1,
+          "country_class_page": "pages/countries/singapore/classes/market.json",
+          "filter": {
+            "geography_id": "sg:region:north-east-region"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "island",
+          "label_ru": "Острова и архипелаги",
+          "count": 1,
+          "country_class_page": "pages/countries/singapore/classes/island.json",
+          "filter": {
+            "geography_id": "sg:region:north-east-region"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:hawker-centres",
+      "name": "hawker centres",
+      "object_type": "market",
+      "narrow": "hawker centres — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/hawker-centres.json"
+    },
+    {
+      "id": "sg:pulau-ubin",
+      "name": "Pulau Ubin",
+      "object_type": "island",
+      "narrow": "Pulau Ubin — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/pulau-ubin.json"
+    }
+  ],
+  "provenance": {
+    "sources": [
+      {
+        "publisher": "Singapore planning geography / project research layer",
+        "url": "https://www.ura.gov.sg/Corporate/Planning/Master-Plan",
+        "used_for": [
+          "planning and expedition geography"
+        ],
+        "checked_at": "2026-09-30"
+      },
+      {
+        "publisher": "Expedition South East Drive draft",
+        "used_for": [
+          "expedition regional nodes"
+        ],
+        "checked_at": "2026-09-30"
+      }
+    ],
+    "checked_at": "2026-10-01"
+  }
+}

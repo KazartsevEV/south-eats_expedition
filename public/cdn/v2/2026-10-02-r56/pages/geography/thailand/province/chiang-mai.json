@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r56",
+    "page_type": "geography",
+    "id": "th:province:chiang-mai"
+  },
+  "identity": {
+    "name": "Чиангмай",
+    "name_local": "Chiang Mai",
+    "kind": "province",
+    "slug": "chiang-mai",
+    "country_code": "TH",
+    "axis": "administrative"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "th:geographic_area:north",
+    "page_path": "pages/geography/thailand/geographic_area/north.json"
+  },
+  "hierarchy_status": "formalized",
+  "children": [
+    {
+      "id": "th:city:chiang-mai-city",
+      "kind": "city",
+      "name": "Чиангмай",
+      "page_path": "pages/geography/thailand/city/chiang-mai-city.json",
+      "object_count": 0
+    },
+    {
+      "id": "th:geographic_area:northern-thailand-chiang-mai",
+      "kind": "geographic_area",
+      "name": "Северный Таиланд / Чиангмай",
+      "page_path": "pages/geography/thailand/geographic_area/northern-thailand-chiang-mai.json",
+      "object_count": 2
+    }
+  ],
+  "legacy_region_names": [],
+  "legacy_locality_names": [],
+  "canonical_geo_id": "geo_th_0010",
+  "geo_profile": {
+    "id": "geo_th_0010",
+    "kind": "province",
+    "names": {
+      "primary": "Чиангмай",
+      "local": "Chiang Mai"
+    },
+    "slug": "chiang-mai",
+    "parent_id": "geo_th_0001",
+    "geo_path": [
+      "geo_th",
+      "geo_th_0001",
+      "geo_th_0010"
+    ],
+    "description": {
+      "narrow": "Официальная административная единица, включённая в географический каркас экспедиционного справочника.",
+      "body": null
+    },
+    "cover_media_id": null,
+    "primary_location": null,
+    "legacy_ids": [
+      "th:province:chiang-mai"
+    ],
+    "migration": {
+      "source_kind": "formal_hierarchy",
+      "axis": "administrative",
+      "status": "formalized"
+    },
+    "coverage_role": "structural",
+    "provenance": {
+      "checked_at": "2026-10-01",
+      "sources": [
+        {
+          "publisher": "Government of Thailand",
+          "url": "https://thailand.go.th/page/thai-politic",
+          "used_for": [
+            "76-province administrative system and Bangkok special local government"
+          ],
+          "checked_at": "2026-09-30"
+        },
+        {
+          "publisher": "Expedition South East Drive draft",
+          "used_for": [
+            "expedition regional nodes"
+          ],
+          "checked_at": "2026-09-30"
+        }
+      ],
+      "structural_source_refs": [
+        "src_906009"
+      ],
+      "research_source_refs": [],
+      "source_refs": [
+        "src_906009"
+      ]
+    }
+  },
+  "notes_ru": "Официальная административная единица, включённая в географический каркас экспедиционного справочника.",
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    },
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/thailand/classes/historic_city.json",
+          "filter": {
+            "geography_id": "th:province:chiang-mai"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "national_park",
+          "label_ru": "Национальные парки",
+          "count": 1,
+          "country_class_page": "pages/countries/thailand/classes/national_park.json",
+          "filter": {
+            "geography_id": "th:province:chiang-mai"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:chiang-mai",
+      "name": "Chiang Mai",
+      "object_type": "historic_city",
+      "narrow": "Chiang Mai — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/thailand/objects/chiang-mai.json"
+    },
+    {
+      "id": "th:doi-inthanon-national-park",
+      "name": "Doi Inthanon National Park",
+      "object_type": "national_park",
+      "narrow": "Высшая точка Thailand, cloud forest, waterfalls, birding и Royal Pagodas — редкая комбинация высокогорной природы и монументальной архитектуры.",
+      "detail_path": "countries/thailand/objects/doi-inthanon-national-park.json"
+    }
+  ],
+  "provenance": {
+    "sources": [
+      {
+        "publisher": "Government of Thailand",
+        "url": "https://thailand.go.th/page/thai-politic",
+        "used_for": [
+          "76-province administrative system and Bangkok special local government"
+        ],
+        "checked_at": "2026-09-30"
+      },
+      {
+        "publisher": "Expedition South East Drive draft",
+        "used_for": [
+          "expedition regional nodes"
+        ],
+        "checked_at": "2026-09-30"
+      }
+    ],
+    "checked_at": "2026-10-01"
+  }
+}

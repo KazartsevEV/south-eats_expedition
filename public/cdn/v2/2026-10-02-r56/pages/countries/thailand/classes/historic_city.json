@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r56",
+    "page_type": "country_class",
+    "id": "country-class:th:historic_city"
+  },
+  "identity": {
+    "country_code": "TH",
+    "country_slug": "thailand",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:th:built_heritage",
+    "page_path": "pages/countries/thailand/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:th",
+      "name": "Таиланд",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/thailand.json"
+    },
+    {
+      "id": "th:geographic_area:nan-phrae",
+      "canonical_geo_id": "geo_th_0030",
+      "name": "Нан / Пхрэ",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/nan-phrae.json"
+    },
+    {
+      "id": "th:geographic_area:north",
+      "canonical_geo_id": "geo_th_0001",
+      "name": "Северный Таиланд",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/north.json"
+    },
+    {
+      "id": "th:geographic_area:northern-thailand-chiang-mai",
+      "canonical_geo_id": "geo_th_0029",
+      "name": "Северный Таиланд / Чиангмай",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/northern-thailand-chiang-mai.json"
+    },
+    {
+      "id": "th:geographic_area:songkhla-expedition",
+      "canonical_geo_id": "geo_th_0033",
+      "name": "Сонгкхла",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/songkhla-expedition.json"
+    },
+    {
+      "id": "th:geographic_area:south",
+      "canonical_geo_id": "geo_th_0006",
+      "name": "Южный Таиланд",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/south.json"
+    },
+    {
+      "id": "th:province:chiang-mai",
+      "canonical_geo_id": "geo_th_0010",
+      "name": "Чиангмай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/thailand/province/chiang-mai.json"
+    },
+    {
+      "id": "th:province:songkhla",
+      "canonical_geo_id": "geo_th_0016",
+      "name": "Сонгкхла",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/thailand/province/songkhla.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:chiang-mai",
+      "name": "Chiang Mai",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:north",
+        "th:geographic_area:northern-thailand-chiang-mai",
+        "th:province:chiang-mai"
+      ],
+      "region_legacy": "Northern Thailand / Chiang Mai",
+      "nearest_hub": "Chiang Mai",
+      "narrow": "Chiang Mai — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/thailand/objects/chiang-mai.json"
+    },
+    {
+      "id": "th:phrae",
+      "name": "Phrae",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:nan-phrae",
+        "th:geographic_area:north"
+      ],
+      "region_legacy": "Nan / Phrae",
+      "nearest_hub": "Nan / Phrae",
+      "narrow": "Phrae — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/thailand/objects/phrae.json"
+    },
+    {
+      "id": "th:songkhla-old-town",
+      "name": "Songkhla old town",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:songkhla-expedition",
+        "th:geographic_area:south",
+        "th:province:songkhla"
+      ],
+      "region_legacy": "Songkhla",
+      "nearest_hub": "Hat Yai / Songkhla",
+      "narrow": "Songkhla old town — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/thailand/objects/songkhla-old-town.json"
+    }
+  ]
+}

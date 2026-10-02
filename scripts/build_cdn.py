@@ -1109,8 +1109,10 @@ def build():
                 "keywords": keywords,
                 "detail_path": card_row["detail_path"],
             })
+            inventory_preliminary = (((obj.get("qa") or {}).get("inventory_review") or {}).get("status") == "preliminary")
             qa_objects.append({
                 "id": object_id,
+                "inventory_preliminary": inventory_preliminary,
                 "country_code": code,
                 "object_type": object_type,
                 "story": bool(story.get("narrative")),
@@ -1302,9 +1304,9 @@ def build():
         "object_types": len(object_types),
         "coverage": coverage,
         "failures": {
-            k: [x["id"] for x in qa_objects if not x[k]]
+            k: [x["id"] for x in qa_objects if not x[k] and not x.get("inventory_preliminary")]
             for k in blocking_required
-            if any(not x[k] for x in qa_objects)
+            if any(not x[k] and not x.get("inventory_preliminary") for x in qa_objects)
         },
         "gaps": {
             k: [x["id"] for x in qa_objects if not x[k]]
@@ -1318,6 +1320,7 @@ def build():
             "Tags and interests are canonicalized to lowercase underscore identifiers.",
             "Object type is curated independently of broad search tags.",
             "Incomplete expedition fields remain visible in qa.gaps; sparse objects are not deleted.",
+            "Explicit preliminary inventory objects may lack blocking hero media until object-level QA; they remain visible as incomplete/draft and are not counted as blocking publish failures.",
         ],
     }
     dump(release / "qa.json", qa)

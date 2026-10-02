@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.15",
+    "release_id": "2026-10-02-r50",
+    "page_type": "country_class",
+    "id": "country-class:vn:city"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "city",
+    "label_ru": "Города",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:built_heritage",
+    "page_path": "pages/countries/vietnam/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:city:ho-chi-minh-city",
+      "canonical_geo_id": "geo_vn_0028",
+      "name": "Хошимин",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/city/ho-chi-minh-city.json"
+    },
+    {
+      "id": "vn:geographic_area:ho-chi-minh-city-expedition",
+      "canonical_geo_id": "geo_vn_0041",
+      "name": "Хошимин",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/ho-chi-minh-city-expedition.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:ho-chi-minh-city",
+      "name": "Ho Chi Minh City",
+      "geography_ids": [
+        "country:vn",
+        "vn:city:ho-chi-minh-city",
+        "vn:geographic_area:ho-chi-minh-city-expedition"
+      ],
+      "region_legacy": "Ho Chi Minh City",
+      "nearest_hub": "Ho Chi Minh City",
+      "narrow": "Ho Chi Minh City — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/ho-chi-minh-city.json"
+    }
+  ]
+}

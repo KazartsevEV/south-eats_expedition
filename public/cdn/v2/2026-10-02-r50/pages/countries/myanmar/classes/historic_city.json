@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "schema_version": "2.10.15",
+    "release_id": "2026-10-02-r50",
+    "page_type": "country_class",
+    "id": "country-class:mm:historic_city"
+  },
+  "identity": {
+    "country_code": "MM",
+    "country_slug": "myanmar",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:mm:built_heritage",
+    "page_path": "pages/countries/myanmar/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 4,
+  "geography_filters": [
+    {
+      "id": "country:mm",
+      "name": "Мьянма",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/myanmar.json"
+    },
+    {
+      "id": "mm:locality:mawlamyine",
+      "canonical_geo_id": "geo_mm_0030",
+      "name": "Моулмейн",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/city/mawlamyine.json"
+    },
+    {
+      "id": "mm:region:mandalay-central-myanmar",
+      "canonical_geo_id": "geo_mm_0003",
+      "name": "Мандалай / центральная Мьянма",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/mandalay-central-myanmar.json"
+    },
+    {
+      "id": "mm:region:mon-state-kyaiktiyo-mawlamyine",
+      "canonical_geo_id": "geo_mm_0005",
+      "name": "Штат Мон / Кьяиктийо / Моулмейн",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/mon-state-kyaiktiyo-mawlamyine.json"
+    },
+    {
+      "id": "mm:region:pyin-oo-lwin",
+      "canonical_geo_id": "geo_mm_0006",
+      "name": "Пьин-У-Луин",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/pyin-oo-lwin.json"
+    },
+    {
+      "id": "mm:region:tanintharyi-dawei",
+      "canonical_geo_id": "geo_mm_0007",
+      "name": "Танинтайи / Тавой",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/tanintharyi-dawei.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "mm:mandalay-heritage",
+      "name": "Mandalay heritage",
+      "geography_ids": [
+        "country:mm",
+        "mm:region:mandalay-central-myanmar"
+      ],
+      "region_legacy": "Mandalay / центральная Мьянма",
+      "nearest_hub": "Mandalay",
+      "narrow": "Mandalay лучше рассматривать как узел последней королевской географии Бирмы: Palace, Mandalay Hill, Kuthodaw, Mahamuni, ремесленные кварталы и соседняя Amarapura с U Bein Bridge складываются в самостоятельный маршрут на 2–3 дня.",
+      "detail_path": "countries/myanmar/objects/mandalay-heritage.json"
+    },
+    {
+      "id": "mm:mawlamyine-colonial-core",
+      "name": "Mawlamyine colonial core",
+      "geography_ids": [
+        "country:mm",
+        "mm:locality:mawlamyine",
+        "mm:region:mon-state-kyaiktiyo-mawlamyine"
+      ],
+      "region_legacy": "Mon State / Kyaiktiyo / Mawlamyine",
+      "nearest_hub": "Mawlamyine",
+      "narrow": "Mawlamyine colonial core — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/myanmar/objects/mawlamyine-colonial-core.json"
+    },
+    {
+      "id": "mm:pyin-oo-lwin",
+      "name": "Pyin Oo Lwin",
+      "geography_ids": [
+        "country:mm",
+        "mm:region:pyin-oo-lwin"
+      ],
+      "region_legacy": "Pyin Oo Lwin",
+      "nearest_hub": "Mandalay",
+      "narrow": "Pyin Oo Lwin — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/myanmar/objects/pyin-oo-lwin.json"
+    },
+    {
+      "id": "mm:dawei-old-town",
+      "name": "Dawei old town",
+      "geography_ids": [
+        "country:mm",
+        "mm:region:tanintharyi-dawei"
+      ],
+      "region_legacy": "Tanintharyi / Dawei",
+      "nearest_hub": "Dawei",
+      "narrow": "Dawei old town — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/myanmar/objects/dawei-old-town.json"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.15",
+    "release_id": "2026-10-02-r50",
+    "page_type": "country_class",
+    "id": "country-class:ph:religious_site"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "object_type": "religious_site",
+    "label_ru": "Храмы и религиозные объекты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:ph:religion_ethnography",
+    "page_path": "pages/countries/philippines/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/religious_site.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:ph",
+      "name": "Филиппины",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/philippines.json"
+    },
+    {
+      "id": "ph:region:ilocos-region",
+      "canonical_geo_id": "geo_ph_0003",
+      "name": "Илокос",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/ilocos-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:paoay-church-st-augustine-church",
+      "name": "Paoay Church (St. Augustine Church)",
+      "geography_ids": [
+        "country:ph",
+        "ph:region:ilocos-region"
+      ],
+      "region_legacy": "Ilocos / Vigan",
+      "nearest_hub": "Laoag / Paoay",
+      "narrow": "Один из наиболее сильных архитектурных объектов Филиппин: массивные контрфорсы и местная адаптация барокко к сейсмике делают фасад и силуэт легко читаемыми в кадре.",
+      "detail_path": "countries/philippines/objects/paoay-church-st-augustine-church.json"
+    }
+  ]
+}

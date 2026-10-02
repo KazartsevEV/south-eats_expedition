@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.15",
+    "release_id": "2026-10-02-r50",
+    "page_type": "country_class",
+    "id": "country-class:kh:island"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:water_coast_marine",
+    "page_path": "pages/countries/cambodia/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:province:preah-sihanouk",
+      "canonical_geo_id": "geo_kh_0030",
+      "name": "Преах-Сианук",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/preah-sihanouk.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:koh-rong-islands",
+      "name": "Koh Rong islands",
+      "geography_ids": [
+        "country:kh",
+        "kh:province:preah-sihanouk"
+      ],
+      "region_legacy": "острова Сиамского залива / Ко-Ронг",
+      "nearest_hub": "Сиануквиль",
+      "narrow": "Ко-Ронг — крупный лесистый остров у Преах-Сианука, где пляжный туризм наложился на рыбацкие деревни, охраняемую морскую акваторию, коралловые рифы и быстро растущую инфраструктуру. Для самостоятельного маршрута остров нужно читать по конкретным берегам и причалам: запад, восток, Koh Touch, Sok San и Prek Svay заметно различаются по морю, дорогам и плотности застройки.",
+      "detail_path": "countries/cambodia/objects/koh-rong-islands.json"
+    }
+  ]
+}

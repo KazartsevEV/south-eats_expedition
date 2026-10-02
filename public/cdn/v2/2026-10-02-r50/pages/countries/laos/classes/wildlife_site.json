@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "schema_version": "2.10.15",
+    "release_id": "2026-10-02-r50",
+    "page_type": "country_class",
+    "id": "country-class:la:wildlife_site"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "wildlife_site",
+    "label_ru": "Наблюдение за дикой природой",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:protected_ecosystems",
+    "page_path": "pages/countries/laos/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/wildlife_site.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "canonical_geo_id": "geo_la_0041",
+      "name": "Саваннакхет",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/savannakhet.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:monkey-forest-savannakhet",
+      "name": "Monkey Forest Savannakhet",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet Province",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Лесной участок в провинции Саваннакхет, известный популяцией макак; режим посещения и точная геопривязка требуют QA.",
+      "detail_path": "countries/laos/objects/monkey-forest-savannakhet.json"
+    },
+    {
+      "id": "la:ban-done-daeng-sacred-turtle-site",
+      "name": "Ban Done Daeng Sacred Turtle Site",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet Province",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Деревенская локация Саваннакхета, где гигантские черепахи связаны с местными верованиями; этнографические детали будут отделены от легенд на QA.",
+      "detail_path": "countries/laos/objects/ban-done-daeng-sacred-turtle-site.json"
+    }
+  ]
+}

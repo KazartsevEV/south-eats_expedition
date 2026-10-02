@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.15",
+    "release_id": "2026-10-02-r50",
+    "page_type": "country_class",
+    "id": "country-class:sg:historic_building"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "object_type": "historic_building",
+    "label_ru": "Исторические здания и руины",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:sg:built_heritage",
+    "page_path": "pages/countries/singapore/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_building.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:sg",
+      "name": "Сингапур",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/singapore.json"
+    },
+    {
+      "id": "sg:geographic_area:southern-ridges-gillman",
+      "canonical_geo_id": "geo_sg_0013",
+      "name": "Южные хребты / Гиллман",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/singapore/geographic_area/southern-ridges-gillman.json"
+    },
+    {
+      "id": "sg:region:central-region",
+      "canonical_geo_id": "geo_sg_0001",
+      "name": "Центральный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/central-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:gillman-barracks",
+      "name": "Gillman Barracks",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:southern-ridges-gillman",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Southern Ridges / Gillman",
+      "nearest_hub": "HarbourFront / Labrador Park",
+      "narrow": "Gillman Barracks — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/gillman-barracks.json"
+    }
+  ]
+}

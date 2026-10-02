@@ -64,6 +64,16 @@ def fail(message: str):
     raise SystemExit(1)
 
 
+def normalized_object_identity(value):
+    if not value:
+        return None
+    normalized = "".join(
+        char if char.isalnum() else " "
+        for char in str(value).casefold()
+    )
+    return " ".join(normalized.split())
+
+
 def require_file(release: Path, rel: str):
     path = release / rel
     if not path.exists():
@@ -299,6 +309,8 @@ def main():
         fail("canonical object count differs from manifest")
 
     object_ids = []
+    seen_titles = {}
+    seen_slugs = {}
     country_codes = {row.get("code") for row in manifest.get("countries") or []}
     for row in search_rows:
         object_id = row.get("id")
@@ -339,6 +351,22 @@ def main():
                 fail(f"search object {object_id} has invalid preview binary: {preview_asset}")
         if obj.get("id") != object_id:
             fail(f"object id mismatch in {object_path.relative_to(release)}")
+
+        title = ((obj.get("names") or {}).get("primary"))
+        title_key = (code, normalized_object_identity(title))
+        if title_key[1]:
+            previous = seen_titles.get(title_key)
+            if previous and previous != object_id:
+                fail(f"{code}: duplicate normalized object title {title!r}: {previous}, {object_id}")
+            seen_titles[title_key] = object_id
+
+        slug = obj.get("slug")
+        slug_key = (code, normalized_object_identity(slug))
+        if slug_key[1]:
+            previous = seen_slugs.get(slug_key)
+            if previous and previous != object_id:
+                fail(f"{code}: duplicate normalized object slug {slug!r}: {previous}, {object_id}")
+            seen_slugs[slug_key] = object_id
         missing_keys = REQUIRED_OBJECT_KEYS - set(obj)
         if missing_keys:
             fail(f"{object_id} missing canonical keys: {sorted(missing_keys)}")
@@ -413,6 +441,86 @@ def main():
                 fail(f"{object_id}: operational_status missing {key}")
         if not isinstance(operational_status.get("source_refs"), list):
             fail(f"{object_id}: operational_status.source_refs must be array")
+
+        water = visit.get("water")
+        if not isinstance(water, dict):
+            fail(f"{object_id}: visit.water must be object")
+        required_water_keys = {
+            "at_object",
+            "last_reliable_point",
+            "distance_m",
+            "natural_sources",
+            "notes",
+            "quality",
+            "source_refs",
+        }
+        missing_water_keys = required_water_keys - set(water)
+        if missing_water_keys:
+            fail(f"{object_id}: visit.water missing canonical fields {sorted(missing_water_keys)}")
+        if set(water) & {"summary", "last_reliable_source"}:
+            fail(f"{object_id}: visit.water contains legacy alias fields")
+        if not isinstance(water.get("natural_sources"), list):
+            fail(f"{object_id}: visit.water.natural_sources must be array")
+        if not isinstance(water.get("source_refs"), list):
+            fail(f"{object_id}: visit.water.source_refs must be array")
+
+        supplies = visit.get("supplies")
+        if not isinstance(supplies, dict):
+            fail(f"{object_id}: visit.supplies must be object")
+        for key in ["status", "summary", "poi_ids", "source_refs"]:
+            if key not in supplies:
+                fail(f"{object_id}: visit.supplies missing {key}")
+        if not isinstance(supplies.get("poi_ids"), list):
+            fail(f"{object_id}: visit.supplies.poi_ids must be array")
+        if not isinstance(supplies.get("source_refs"), list):
+            fail(f"{object_id}: visit.supplies.source_refs must be array")
+
+        overnight = visit.get("overnight")
+        if not isinstance(overnight, dict):
+            fail(f"{object_id}: visit.overnight must be object")
+        for key in ["status", "summary", "source_refs"]:
+            if key not in overnight:
+                fail(f"{object_id}: visit.overnight missing {key}")
+        if not isinstance(overnight.get("source_refs"), list):
+            fail(f"{object_id}: visit.overnight.source_refs must be array")
+
+        visual = obj.get("visual_recon")
+        if not isinstance(visual, dict):
+            fail(f"{object_id}: visual_recon must be object")
+        for key in [
+            "viewpoints",
+            "seasonal_visuals",
+            "video_activity",
+            "useful_equipment",
+            "best_time",
+            "best_weather_light",
+            "filming_restrictions",
+            "photo_suitability_5",
+            "video_suitability_5",
+            "drone",
+        ]:
+            if key not in visual:
+                fail(f"{object_id}: visual_recon missing {key}")
+        for key in ["viewpoints", "seasonal_visuals", "video_activity", "useful_equipment"]:
+            if not isinstance(visual.get(key), list):
+                fail(f"{object_id}: visual_recon.{key} must be array")
+        drone = visual.get("drone")
+        if not isinstance(drone, dict):
+            fail(f"{object_id}: visual_recon.drone must be object")
+        for key in [
+            "visual_value",
+            "legal_status",
+            "permit_required",
+            "restrictions",
+            "source_refs",
+            "checked_at",
+        ]:
+            if key not in drone:
+                fail(f"{object_id}: visual_recon.drone missing {key}")
+        if not isinstance(drone.get("restrictions"), list):
+            fail(f"{object_id}: visual_recon.drone.restrictions must be array")
+        if not isinstance(drone.get("source_refs"), list):
+            fail(f"{object_id}: visual_recon.drone.source_refs must be array")
 
         rules = visit.get("rules") or {}
         safety = rules.get("safety")

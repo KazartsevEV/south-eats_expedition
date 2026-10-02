@@ -41,6 +41,23 @@ GEO_NODE_REQUIRED_KEYS = {
 COUNTRY_CULTURE_EXPECTED = {
     "LA": {"food_cards": 6, "festival_cards": 4},
 }
+LA_REGIONAL_EXPECTED = {"regional_profiles": 10, "hierarchy_profiles": 8}
+LA_REGIONAL_BANNED_SNIPPETS = (
+    "Тропический муссонный климат с выраженным сухим и дождливым сезонами",
+    "Основная часть осадков приходится на летний муссон",
+    "Лаос остаётся в перечне стран",
+    "общестрановыми рисками",
+    "общестрановой перечень",
+    "текущем наборе источников",
+    "не нормализован",
+    "tourism source",
+    "remote trekking villages",
+    "urban heritage",
+    "railway/border/airport gateways",
+    "object entity",
+    "local tourism structures",
+    "hill tribe experience",
+)
 
 DYNAMIC_SOURCE_FIELDS = {
     "visa_for_russian_passport": lambda t, s: (t.get("visa_for_russian_passport") or {}).get("source_ids"),
@@ -66,6 +83,40 @@ def fail(message: str):
 
 def present(value):
     return value not in (None, "", [], {})
+
+def walk_strings(value):
+    if isinstance(value, str):
+        yield value
+    elif isinstance(value, list):
+        for item in value:
+            yield from walk_strings(item)
+    elif isinstance(value, dict):
+        for item in value.values():
+            yield from walk_strings(item)
+
+def nested_source_refs(value):
+    refs = set()
+    if isinstance(value, list):
+        for item in value:
+            refs.update(nested_source_refs(item))
+    elif isinstance(value, dict):
+        for key, item in value.items():
+            if key in {"source_refs", "local_reference_provenance"}:
+                if key == "source_refs" and isinstance(item, list):
+                    refs.update(item)
+                continue
+            refs.update(nested_source_refs(item))
+    return refs
+
+def child_source_refs(value):
+    refs = set()
+    if not isinstance(value, dict):
+        return refs
+    for key, item in value.items():
+        if key in {"source_refs", "local_reference_provenance"}:
+            continue
+        refs.update(nested_source_refs(item))
+    return refs
 
 def validate_geojson_coordinates(value, label):
     if not isinstance(value, list) or not value:
@@ -313,6 +364,32 @@ for code, slug in COUNTRIES.items():
     if not regions:
         fail(f"{code}: regional stage has no travel.regions")
 
+    if code == "LA":
+        regional_upgrade = meta.get("regional_layer_upgrade") or {}
+        if regional_upgrade.get("status") != "regional_profiles_concrete_and_provenance_aligned":
+            fail("LA: regional layer upgrade is not marked complete")
+        if regional_upgrade.get("regional_profiles") != LA_REGIONAL_EXPECTED["regional_profiles"]:
+            fail("LA: regional profile declaration mismatch")
+        if regional_upgrade.get("hierarchy_profiles") != LA_REGIONAL_EXPECTED["hierarchy_profiles"]:
+            fail("LA: hierarchy profile declaration mismatch")
+        if not regional_upgrade.get("checked_at"):
+            fail("LA: regional layer upgrade lacks checked_at")
+        if len(regions) != LA_REGIONAL_EXPECTED["regional_profiles"]:
+            fail(f"LA: expected {LA_REGIONAL_EXPECTED['regional_profiles']} regional profiles, got {len(regions)}")
+        for region in regions:
+            if present(region.get("health")):
+                fail(f"LA: region {region.get('name')!r} contains country-level health boilerplate")
+            climate_refs = set(((region.get("climate") or {}).get("source_refs") or []))
+            if "src_902002" in climate_refs:
+                fail(f"LA: region {region.get('name')!r} climate incorrectly references WHO malaria source")
+            if "src_000499" not in climate_refs:
+                fail(f"LA: region {region.get('name')!r} climate lacks climate-data source src_000499")
+            for text in walk_strings(region):
+                lowered = text.lower()
+                for snippet in LA_REGIONAL_BANNED_SNIPPETS:
+                    if snippet.lower() in lowered:
+                        fail(f"LA: region {region.get('name')!r} contains banned boilerplate/jargon: {snippet!r}")
+
     hierarchy_path = HIER / f"{slug}.json"
     if not hierarchy_path.exists():
         fail(f"{code}: missing formal regional hierarchy {hierarchy_path}")
@@ -359,6 +436,21 @@ for code, slug in COUNTRIES.items():
             profile_unknown = sorted(set(profile.get("source_refs") or []) - canonical_source_ids)
             if profile_unknown:
                 fail(f"{code}: geo node {node.get('id')!r} profile references unknown canonical sources {profile_unknown}")
+            nested_refs = child_source_refs(profile)
+            missing_profile_refs = sorted(nested_refs - set(profile.get("source_refs") or []))
+            if missing_profile_refs:
+                fail(f"{code}: geo node {node.get('id')!r} profile.source_refs omits nested refs {missing_profile_refs}")
+            if code == "LA":
+                climate_refs = set(((profile.get("climate") or {}).get("source_refs") or []))
+                if "src_902002" in climate_refs:
+                    fail(f"LA: geo node {node.get('id')!r} climate incorrectly references WHO malaria source")
+                if climate_refs and "src_000499" not in climate_refs:
+                    fail(f"LA: geo node {node.get('id')!r} climate lacks climate-data source src_000499")
+                for text in walk_strings(profile):
+                    lowered = text.lower()
+                    for snippet in LA_REGIONAL_BANNED_SNIPPETS:
+                        if snippet.lower() in lowered:
+                            fail(f"LA: geo node {node.get('id')!r} contains banned boilerplate/jargon: {snippet!r}")
         geometry_known_sources = set(canonical_source_ids)
         if hierarchy_meta.get("canonical_source_id"):
             geometry_known_sources.add(hierarchy_meta.get("canonical_source_id"))
@@ -373,6 +465,16 @@ for code, slug in COUNTRIES.items():
         provenance = region.get("local_reference_provenance") or {}
         if not provenance.get("source_refs") or not provenance.get("checked_at"):
             fail(f"{code}: region {region.get('name')!r} has incomplete provenance")
+        nested_refs = child_source_refs(region)
+        provenance_refs = set(provenance.get("source_refs") or [])
+        if nested_refs != provenance_refs:
+            fail(
+                f"{code}: region {region.get('name')!r} provenance mismatch: "
+                f"missing={sorted(nested_refs - provenance_refs)} extra={sorted(provenance_refs - nested_refs)}"
+            )
+        unknown_region_refs = sorted(provenance_refs - canonical_source_ids)
+        if unknown_region_refs:
+            fail(f"{code}: region {region.get('name')!r} references unknown canonical sources {unknown_region_refs}")
         if region.get("name") not in legacy_region_names:
             fail(f"{code}: region {region.get('name')!r} has no canonical hierarchy node")
 
@@ -393,6 +495,15 @@ for code, slug in COUNTRIES.items():
             if code in COUNTRY_CULTURE_EXPECTED else None
         ),
         "regional_profiles": len(regions),
+        "regional_content_qa": (
+            {
+                "status": "concrete_field_content",
+                "hierarchy_profiles": len([node for node in nodes if node.get("profile")]),
+                "boilerplate_gate": True,
+                "provenance_alignment": True,
+            }
+            if code == "LA" else None
+        ),
         "geo_nodes": len(nodes),
         "geometry_nodes": geometry_nodes,
         "regional_geo_contract": True,

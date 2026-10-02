@@ -189,8 +189,8 @@ def main():
     for row in rows:
         object_id = row.get("id")
         cover_media_id = row.get("cover_media_id")
-        if not object_id or not cover_media_id:
-            failures.append(f"{object_id or '<missing-id>'}: cover_media_id is required for local preview")
+        if not object_id:
+            failures.append("<missing-id>: object id is required for local preview")
             continue
 
         cc = object_country(object_id)
@@ -199,6 +199,12 @@ def main():
             failures.append(f"{object_id}: canonical object file missing")
             continue
         object_doc = load(object_path)
+
+        if not cover_media_id:
+            if object_doc.get("status") == "draft":
+                continue
+            failures.append(f"{object_id}: cover_media_id is required for local preview")
+            continue
 
         preview_rel = f"previews/{cc}/{object_id}.webp"
         preview_path = CDN / preview_rel

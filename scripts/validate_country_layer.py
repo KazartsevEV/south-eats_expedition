@@ -514,7 +514,7 @@ for code, slug in COUNTRIES.items():
             if not profile.get("source_refs") or not profile.get("checked_at"):
                 fail(f"{code}: geo node {node.get('id')!r} profile has incomplete provenance")
             project_canonical_source_ids = canonical_source_ids | set(registry_sources.values())
-        profile_unknown = sorted(set(profile.get("source_refs") or []) - project_canonical_source_ids)
+            profile_unknown = sorted(set(profile.get("source_refs") or []) - project_canonical_source_ids)
             if profile_unknown:
                 fail(f"{code}: geo node {node.get('id')!r} profile references unknown canonical sources {profile_unknown}")
             if code == "LA":

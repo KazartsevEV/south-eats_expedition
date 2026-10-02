@@ -580,7 +580,7 @@ def main():
                 fail(f"{object_id}: invalid identity confidence")
             if not identity_review.get("checked_at"):
                 fail(f"{object_id}: identity review lacks checked_at")
-            for key in ["parent_object_ids", "merged_aliases", "complex_components", "proposed_split_children", "evidence_basis"]:
+            for key in ["parent_object_ids", "merged_aliases", "complex_components", "proposed_split_children", "split_from_object_ids", "evidence_basis"]:
                 if not isinstance(identity_review.get(key), list):
                     fail(f"{object_id}: identity_review.{key} must be array")
             if object_id in (identity_review.get("parent_object_ids") or []):
@@ -593,6 +593,15 @@ def main():
                 fail(f"{object_id}: composite_needs_split requires proposed children")
             for related_id in identity_review.get("parent_object_ids") or []:
                 identity_object_refs.append((object_id, related_id, "parent"))
+            split_from_ids = identity_review.get("split_from_object_ids") or []
+            for retired_id in split_from_ids:
+                if not isinstance(retired_id, str) or not OBJECT_ID_RE.match(retired_id):
+                    fail(f"{object_id}: invalid split_from_object_id {retired_id!r}")
+                if retired_id == object_id:
+                    fail(f"{object_id}: cannot split from itself")
+            relation_split_from = ((obj.get("relations") or {}).get("split_from_ids") or [])
+            if relation_split_from != split_from_ids:
+                fail(f"{object_id}: relations.split_from_ids diverges from identity_review.split_from_object_ids")
         verification = qa.get("verification")
         if not isinstance(verification, dict):
             fail(f"{object_id}: qa.verification must be object")
@@ -622,12 +631,67 @@ def main():
         if target_id not in object_id_set:
             fail(f"{source_id}: identity {relation_kind} references unknown object {target_id}")
 
-    # Registry must preserve one-to-one permanent IDs for all migrated objects.
+    # Registry must preserve one-to-one permanent IDs for active objects while
+    # reserving retired IDs after proven one-to-many semantic splits.
     registry_object_values = list((registry.get("objects") or {}).values())
     if len(registry_object_values) != len(set(registry_object_values)):
-        fail("object ID registry has duplicate canonical IDs")
+        fail("object ID registry has duplicate active canonical IDs")
     if set(object_ids) != set(registry_object_values):
-        fail("canonical object set differs from persistent object ID registry")
+        fail("canonical object set differs from active persistent object ID registry")
+
+    retired_registry = registry.get("retired_objects") or {}
+    retired_ids = []
+    for legacy_key, retired_row in retired_registry.items():
+        if not isinstance(retired_row, dict):
+            fail(f"retired object registry row must be object: {legacy_key}")
+        retired_id = retired_row.get("id")
+        if not retired_id or not OBJECT_ID_RE.match(retired_id):
+            fail(f"invalid retired object ID for {legacy_key}: {retired_id}")
+        retired_ids.append(retired_id)
+        if retired_id in object_id_set:
+            fail(f"retired object remains active: {retired_id}")
+        replacement_ids = retired_row.get("replacement_ids") or []
+        if not replacement_ids:
+            fail(f"retired object lacks replacement IDs: {retired_id}")
+        for replacement_id in replacement_ids:
+            if replacement_id not in object_id_set:
+                fail(f"retired object {retired_id} points to unknown replacement {replacement_id}")
+    if len(retired_ids) != len(set(retired_ids)):
+        fail("retired object registry has duplicate IDs")
+    if set(retired_ids) & set(registry_object_values):
+        fail("retired and active object registries overlap")
+
+    if release_id == "2026-10-02-r46":
+        migration_path = ROOT / "data" / "migrations" / "laos-r46-composite-splits.json"
+        if not migration_path.is_file():
+            fail("r46 lacks Laos composite split migration manifest")
+        migration = load(migration_path)
+        mappings = migration.get("mappings") or []
+        if len(mappings) != 5:
+            fail("r46 Laos split migration must contain exactly five retired composites")
+        replacement_union = []
+        for mapping in mappings:
+            retired_id = mapping.get("retired_id")
+            replacement_ids = mapping.get("replacement_ids") or []
+            if retired_id not in retired_ids:
+                fail(f"r46 migration retired ID is not reserved: {retired_id}")
+            if retired_id in object_id_set:
+                fail(f"r46 migration left retired composite active: {retired_id}")
+            if not replacement_ids:
+                fail(f"r46 migration has empty replacement list: {retired_id}")
+            for replacement_id in replacement_ids:
+                if replacement_id not in object_id_set:
+                    fail(f"r46 migration replacement is not active: {replacement_id}")
+                replacement_obj = load(release / "objects" / "la" / f"{replacement_id}.json")
+                replacement_split_from = (((replacement_obj.get("qa") or {}).get("identity_review") or {}).get("split_from_object_ids") or [])
+                if retired_id not in replacement_split_from:
+                    fail(f"{replacement_id}: missing split provenance from {retired_id}")
+                relation_split_from = ((replacement_obj.get("relations") or {}).get("split_from_ids") or [])
+                if retired_id not in relation_split_from:
+                    fail(f"{replacement_id}: canonical relations missing split provenance from {retired_id}")
+                replacement_union.append(replacement_id)
+        if len(replacement_union) != 12 or len(set(replacement_union)) != 12:
+            fail("r46 Laos split migration must resolve to twelve unique replacement objects")
 
     for country_row in manifest.get("countries") or []:
         code = country_row["code"]
@@ -717,6 +781,13 @@ def main():
                 fail("la: proven duplicate cards remain in canonical inventory")
             if counts.get("unresolved", 0):
                 fail("la: unresolved identity cards remain after identity QA")
+            if release_id == "2026-10-02-r46":
+                if len(indexes.get("object_ids") or []) != 148:
+                    fail("la: r46 must contain exactly 148 active object identities after composite split")
+                if counts.get("composite_needs_split", 0):
+                    fail("la: r46 still contains composite_needs_split objects")
+                if counts.get("distinct", 0) != 139 or counts.get("alias_merged", 0) != 5 or counts.get("same_visitable_complex", 0) != 4:
+                    fail(f"la: unexpected r46 identity distribution: {counts}")
         require_file(release, f"views/countries/{code}.json")
 
     global_qa = load(release / "qa" / "global.json")

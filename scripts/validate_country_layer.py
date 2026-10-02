@@ -85,6 +85,25 @@ LA_REGIONAL_BANNED_SNIPPETS = (
     "региональной карточке",
     "object entity",
     "narrative",
+    "не следует смешивать",
+    "важным водным объектом является",
+    "конкретный мост и начало пешего участка зависят от объекта",
+    "обычно дают более устойчивые",
+    "сильнее зависят от ливней",
+    "необходимо проверять перед поездкой",
+    "удобнее для многодневных переходов",
+    "необходимость местного проводника зависят",
+    "следует планировать отдельно",
+    "их состояние нужно проверять по конкретному объекту",
+    "важнее выбирать конкретный вход",
+    "рабочее состояние объектов проверяются перед выездом",
+    "состояние которых особенно существенно после дождей",
+    "фактическое состояние необходимо проверять перед выездом",
+    "делают время в пути важнее линейного расстояния",
+    "удобнее для длинных наземных переходов",
+    "сильнее зависят от сезона",
+    "заметно усложняют перемещение",
+    "доступ зависит от грунтовых горных дорог",
 )
 
 DYNAMIC_SOURCE_FIELDS = {
@@ -518,6 +537,15 @@ for code, slug in COUNTRIES.items():
             if profile_unknown:
                 fail(f"{code}: geo node {node.get('id')!r} profile references unknown canonical sources {profile_unknown}")
             if code == "LA":
+                if len(profile.get("narrow") or "") < 200:
+                    fail(f"LA: geo node {node.get('id')!r} profile.narrow is too weak")
+                for required_field, min_len in (("geography", 100), ("transport", 140), ("climate", 100)):
+                    field_summary = ((profile.get(required_field) or {}).get("summary") or "")
+                    if len(field_summary) < min_len:
+                        fail(
+                            f"LA: geo node {node.get('id')!r} {required_field}.summary "
+                            f"is too weak ({len(field_summary)} < {min_len})"
+                        )
                 nested_refs = child_source_refs(profile)
                 missing_profile_refs = sorted(nested_refs - set(profile.get("source_refs") or []))
                 if missing_profile_refs:

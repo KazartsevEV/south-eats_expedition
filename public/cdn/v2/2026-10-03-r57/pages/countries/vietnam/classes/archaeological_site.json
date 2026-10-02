@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "country_class",
+    "id": "country-class:vn:archaeological_site"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "archaeological_site",
+    "label_ru": "Археологические объекты",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:archaeology_memory",
+    "page_path": "pages/countries/vietnam/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/archaeological_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:city:da-nang",
+      "canonical_geo_id": "geo_vn_0021",
+      "name": "Дананг",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/city/da-nang.json"
+    },
+    {
+      "id": "vn:geographic_area:binh-dinh-quy-nhon",
+      "canonical_geo_id": "geo_vn_0044",
+      "name": "Биньдинь / Куинён",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/binh-dinh-quy-nhon.json"
+    },
+    {
+      "id": "vn:geographic_area:hoi-an-quang-nam",
+      "canonical_geo_id": "geo_vn_0039",
+      "name": "Хойан / бывшая провинция Куангнам",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/hoi-an-quang-nam.json"
+    },
+    {
+      "id": "vn:province:gia-lai",
+      "canonical_geo_id": "geo_vn_0023",
+      "name": "Зялай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/province/gia-lai.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:my-son",
+      "name": "My Son",
+      "geography_ids": [
+        "country:vn",
+        "vn:city:da-nang",
+        "vn:geographic_area:hoi-an-quang-nam"
+      ],
+      "region_legacy": "Hoi An / Quang Nam",
+      "nearest_hub": "Hoi An / Da Nang",
+      "narrow": "My Son — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/my-son.json"
+    },
+    {
+      "id": "vn:quy-nhon-and-cham-towers",
+      "name": "Quy Nhon and Cham towers",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:binh-dinh-quy-nhon",
+        "vn:province:gia-lai"
+      ],
+      "region_legacy": "Binh Dinh / Quy Nhon",
+      "nearest_hub": "Quy Nhon",
+      "narrow": "Quy Nhon and Cham towers — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/quy-nhon-and-cham-towers.json"
+    }
+  ]
+}

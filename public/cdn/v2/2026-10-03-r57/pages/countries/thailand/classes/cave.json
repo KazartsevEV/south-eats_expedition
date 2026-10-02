@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "country_class",
+    "id": "country-class:th:cave"
+  },
+  "identity": {
+    "country_code": "TH",
+    "country_slug": "thailand",
+    "object_type": "cave",
+    "label_ru": "Пещеры",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:th:relief_geology",
+    "page_path": "pages/countries/thailand/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/cave.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:th",
+      "name": "Таиланд",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/thailand.json"
+    },
+    {
+      "id": "th:geographic_area:mae-hong-son-pang-mapha",
+      "canonical_geo_id": "geo_th_0040",
+      "name": "Мэхонгсон / Панг-Мапха",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/mae-hong-son-pang-mapha.json"
+    },
+    {
+      "id": "th:geographic_area:north",
+      "canonical_geo_id": "geo_th_0001",
+      "name": "Северный Таиланд",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/north.json"
+    },
+    {
+      "id": "th:province:mae-hong-son",
+      "canonical_geo_id": "geo_th_0023",
+      "name": "Мэхонгсон",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/thailand/province/mae-hong-son.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:tham-lod-cave-pang-mapha",
+      "name": "Tham Lod Cave / Pang Mapha",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:mae-hong-son-pang-mapha",
+        "th:geographic_area:north",
+        "th:province:mae-hong-son"
+      ],
+      "region_legacy": "Mae Hong Son / Pang Mapha",
+      "nearest_hub": "Pai / Pang Mapha / Mae Hong Son",
+      "narrow": "Один из лучших cave-story объектов северного Таиланда: подземная река, bamboo raft, гигантские образования и археологические следы соединяются в одном маршруте.",
+      "detail_path": "countries/thailand/objects/tham-lod-cave-pang-mapha.json"
+    }
+  ]
+}

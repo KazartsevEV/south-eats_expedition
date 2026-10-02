@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "country_class",
+    "id": "country-class:la:historic_building"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "historic_building",
+    "label_ru": "Исторические здания и руины",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:built_heritage",
+    "page_path": "pages/countries/laos/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_building.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:province:bokeo",
+      "canonical_geo_id": "geo_la_0077",
+      "name": "Бокео",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/bokeo.json"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "canonical_geo_id": "geo_la_0041",
+      "name": "Саваннакхет",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/savannakhet.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:hortay-pidok",
+      "name": "Hortay Pidok",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Историческая библиотека пальмовых рукописей в провинции Саваннакхет; самостоятельный культурный объект вне городской составной карточки.",
+      "detail_path": "countries/laos/objects/hortay-pidok.json"
+    },
+    {
+      "id": "la:fort-carnot-houay-xay",
+      "name": "Fort Carnot Houay Xay",
+      "geography_ids": [
+        "country:la",
+        "la:province:bokeo"
+      ],
+      "region_legacy": "Bokeo Province",
+      "nearest_hub": "Houay Xay",
+      "narrow": "Французский колониальный форт в Хуайсае; существование подтверждено официальным справочником, текущий режим доступа будет перепроверен на QA.",
+      "detail_path": "countries/laos/objects/fort-carnot-houay-xay.json"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "country_class",
+    "id": "country-class:id:island"
+  },
+  "identity": {
+    "country_code": "ID",
+    "country_slug": "indonesia",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:id:water_coast_marine",
+    "page_path": "pages/countries/indonesia/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:region:raja-ampat-west-papua",
+      "canonical_geo_id": "geo_id_0005",
+      "name": "Раджа-Ампат / Западное Папуа",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/indonesia/geographic_area/raja-ampat-west-papua.json"
+    },
+    {
+      "id": "id:region:togean-central-sulawesi",
+      "canonical_geo_id": "geo_id_0012",
+      "name": "Тогеанские острова / Центральный Сулавеси",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/indonesia/geographic_area/togean-central-sulawesi.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "id:raja-ampat",
+      "name": "Raja Ampat",
+      "geography_ids": [
+        "country:id",
+        "id:region:raja-ampat-west-papua"
+      ],
+      "region_legacy": "Raja Ampat / West Papua",
+      "nearest_hub": "Sorong / Waisai",
+      "narrow": "Raja Ampat — не одна точка, а многодневная морская сеть карстовых островов, папуасских деревень и рифов Coral Triangle, где лодка является обычным транспортом между участками маршрута.",
+      "detail_path": "countries/indonesia/objects/raja-ampat.json"
+    },
+    {
+      "id": "id:togean-islands",
+      "name": "Togean Islands",
+      "geography_ids": [
+        "country:id",
+        "id:region:togean-central-sulawesi"
+      ],
+      "region_legacy": "Togean / Central Сулавеси",
+      "nearest_hub": "Ampana / Gorontalo",
+      "narrow": "Togean Islands — удалённый архипелаг залива Tomini с лагунами, рифами, лесными островами и поселениями Bajo, где паромы, ожидание и местные лодки являются частью самостоятельного маршрута.",
+      "detail_path": "countries/indonesia/objects/togean-islands.json"
+    }
+  ]
+}

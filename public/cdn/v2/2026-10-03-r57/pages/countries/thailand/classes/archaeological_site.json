@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "country_class",
+    "id": "country-class:th:archaeological_site"
+  },
+  "identity": {
+    "country_code": "TH",
+    "country_slug": "thailand",
+    "object_type": "archaeological_site",
+    "label_ru": "Археологические объекты",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:th:archaeology_memory",
+    "page_path": "pages/countries/thailand/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/archaeological_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:th",
+      "name": "Таиланд",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/thailand.json"
+    },
+    {
+      "id": "th:geographic_area:central",
+      "canonical_geo_id": "geo_th_0003",
+      "name": "Центральный Таиланд",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/central.json"
+    },
+    {
+      "id": "th:geographic_area:central-plains-ayutthaya",
+      "canonical_geo_id": "geo_th_0027",
+      "name": "Центральная равнина / Аюттхая",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/central-plains-ayutthaya.json"
+    },
+    {
+      "id": "th:geographic_area:lower-isan-buriram-korat",
+      "canonical_geo_id": "geo_th_0034",
+      "name": "Нижний Исан / Бурирам / Корат",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/lower-isan-buriram-korat.json"
+    },
+    {
+      "id": "th:geographic_area:lower-north-sukhothai",
+      "canonical_geo_id": "geo_th_0028",
+      "name": "Нижний Север / Сукхотхай",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/lower-north-sukhothai.json"
+    },
+    {
+      "id": "th:geographic_area:north",
+      "canonical_geo_id": "geo_th_0001",
+      "name": "Северный Таиланд",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/north.json"
+    },
+    {
+      "id": "th:geographic_area:northeast",
+      "canonical_geo_id": "geo_th_0002",
+      "name": "Северо-восток / Исан",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/northeast.json"
+    },
+    {
+      "id": "th:province:phra-nakhon-si-ayutthaya",
+      "canonical_geo_id": "geo_th_0008",
+      "name": "Аюттхая",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/thailand/province/phra-nakhon-si-ayutthaya.json"
+    },
+    {
+      "id": "th:province:sukhothai",
+      "canonical_geo_id": "geo_th_0009",
+      "name": "Сукхотхай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/thailand/province/sukhothai.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:ayutthaya",
+      "name": "Ayutthaya",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:central",
+        "th:geographic_area:central-plains-ayutthaya",
+        "th:province:phra-nakhon-si-ayutthaya"
+      ],
+      "region_legacy": "Central plains / Ayutthaya",
+      "nearest_hub": "Ayutthaya / Bangkok",
+      "narrow": "Ayutthaya — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/thailand/objects/ayutthaya.json"
+    },
+    {
+      "id": "th:sukhothai",
+      "name": "Sukhothai",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:lower-north-sukhothai",
+        "th:geographic_area:north",
+        "th:province:sukhothai"
+      ],
+      "region_legacy": "Lower North / Sukhothai",
+      "nearest_hub": "Sukhothai",
+      "narrow": "Sukhothai — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/thailand/objects/sukhothai.json"
+    },
+    {
+      "id": "th:phimai-and-phanom-rung",
+      "name": "Phimai and Phanom Rung",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:lower-isan-buriram-korat",
+        "th:geographic_area:northeast"
+      ],
+      "region_legacy": "Lower Isan / Buriram / Nakhon Ratchasima",
+      "nearest_hub": "Nakhon Ratchasima / Buriram",
+      "narrow": "Phimai and Phanom Rung — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/thailand/objects/phimai-and-phanom-rung.json"
+    }
+  ]
+}

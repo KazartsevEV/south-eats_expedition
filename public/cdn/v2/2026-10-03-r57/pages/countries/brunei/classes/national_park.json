@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "country_class",
+    "id": "country-class:bn:national_park"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "object_type": "national_park",
+    "label_ru": "Национальные парки",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:bn:protected_ecosystems",
+    "page_path": "pages/countries/brunei/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/national_park.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "bn:district:temburong",
+      "canonical_geo_id": "geo_bn_0002",
+      "name": "Тембуронг",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/temburong.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:ulu-temburong-national-park",
+      "name": "Ulu Temburong National Park",
+      "geography_ids": [
+        "bn:district:temburong",
+        "country:bn"
+      ],
+      "region_legacy": "Тембуронг",
+      "nearest_hub": "Бангар; для речного участка — район Батанг-Дури",
+      "narrow": "Крупнейший охраняемый лесной парк Брунея: 46 210 га леса, куда основной туристический маршрут входит по реке и далее поднимается к canopy walkway. На 1 октября 2026 года Freme публикует временную приостановку своих поездок в Ulu Temburong National Park, к водопадам и водных активностей из-за низкого уровня воды; это статус конкретного оператора, а не подтверждённое Forestry закрытие всего парка.",
+      "detail_path": "countries/brunei/objects/ulu-temburong-national-park.json"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "country_class",
+    "id": "country-class:tl:museum"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "object_type": "museum",
+    "label_ru": "Музеи",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:tl:archaeology_memory",
+    "page_path": "pages/countries/timor-leste/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/museum.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:tl",
+      "name": "Тимор-Лешти",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/timor-leste.json"
+    },
+    {
+      "id": "tl:geographic_area:dili-expedition",
+      "canonical_geo_id": "geo_tl_0015",
+      "name": "Дили",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/dili-expedition.json"
+    },
+    {
+      "id": "tl:region:dili",
+      "canonical_geo_id": "geo_tl_0006",
+      "name": "Дили",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/dili.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:timorese-resistance-archive-and-museum",
+      "name": "Timorese Resistance Archive & Museum",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:dili-expedition",
+        "tl:region:dili"
+      ],
+      "region_legacy": "Dili",
+      "nearest_hub": "Dili",
+      "narrow": "Timorese Resistance Archive & Museum — важный исторический объект памяти; полезен для контекстного репортажа, но требует сдержанной съёмки и уважения к месту.",
+      "detail_path": "countries/timor-leste/objects/timorese-resistance-archive-and-museum.json"
+    },
+    {
+      "id": "tl:dare-memorial-museum-and-overlook",
+      "name": "Dare Memorial Museum and overlook",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:dili-expedition",
+        "tl:region:dili"
+      ],
+      "region_legacy": "Dili",
+      "nearest_hub": "Dili",
+      "narrow": "Dare Memorial Museum and overlook — важный исторический объект памяти; полезен для контекстного репортажа, но требует сдержанной съёмки и уважения к месту.",
+      "detail_path": "countries/timor-leste/objects/dare-memorial-museum-and-overlook.json"
+    }
+  ]
+}

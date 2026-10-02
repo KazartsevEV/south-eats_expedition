@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "country_class",
+    "id": "country-class:vn:historic_city"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:built_heritage",
+    "page_path": "pages/countries/vietnam/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:city:da-nang",
+      "canonical_geo_id": "geo_vn_0021",
+      "name": "Дананг",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/city/da-nang.json"
+    },
+    {
+      "id": "vn:geographic_area:hanoi-red-river-delta",
+      "canonical_geo_id": "geo_vn_0035",
+      "name": "Ханой / дельта Красной реки",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/hanoi-red-river-delta.json"
+    },
+    {
+      "id": "vn:geographic_area:hoi-an-quang-nam",
+      "canonical_geo_id": "geo_vn_0039",
+      "name": "Хойан / бывшая провинция Куангнам",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/hoi-an-quang-nam.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:hanoi-old-quarter",
+      "name": "Hanoi Old Quarter",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:hanoi-red-river-delta"
+      ],
+      "region_legacy": "Hanoi / Red River Delta",
+      "nearest_hub": "Hanoi",
+      "narrow": "Hanoi Old Quarter — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/hanoi-old-quarter.json"
+    },
+    {
+      "id": "vn:hoi-an",
+      "name": "Hoi An",
+      "geography_ids": [
+        "country:vn",
+        "vn:city:da-nang",
+        "vn:geographic_area:hoi-an-quang-nam"
+      ],
+      "region_legacy": "Hoi An / Quang Nam",
+      "nearest_hub": "Hoi An / Da Nang",
+      "narrow": "Hoi An — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/hoi-an.json"
+    }
+  ]
+}

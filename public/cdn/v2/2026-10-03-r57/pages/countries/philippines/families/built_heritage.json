@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "class_family",
+    "id": "country-family:ph:built_heritage"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "family_id": "built_heritage",
+    "label_ru": "Поселения и архитектурное наследие"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:ph",
+    "page_path": "pages/countries/philippines.json"
+  },
+  "global_family_page": "pages/families/built_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "count": 4,
+  "classes": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 2,
+      "global_page_path": "pages/classes/historic_city.json",
+      "country_page_path": "pages/countries/philippines/classes/historic_city.json"
+    },
+    {
+      "object_type": "fortification",
+      "label_ru": "Фортификации",
+      "count": 1,
+      "global_page_path": "pages/classes/fortification.json",
+      "country_page_path": "pages/countries/philippines/classes/fortification.json"
+    },
+    {
+      "object_type": "industrial_heritage",
+      "label_ru": "Индустриальное наследие",
+      "count": 1,
+      "global_page_path": "pages/classes/industrial_heritage.json",
+      "country_page_path": "pages/countries/philippines/classes/industrial_heritage.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:vigan",
+      "name": "Vigan",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:ph",
+        "ph:city:vigan",
+        "ph:geographic_area:ilocos-vigan",
+        "ph:province:ilocos-sur",
+        "ph:region:ilocos-region"
+      ],
+      "region_legacy": "Ilocos / Vigan",
+      "narrow": "Vigan — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/philippines/objects/vigan.json"
+    },
+    {
+      "id": "ph:iloilo-heritage-districts",
+      "name": "Iloilo heritage districts",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:ph",
+        "ph:city:iloilo-city",
+        "ph:geographic_area:iloilo-expedition",
+        "ph:province:iloilo",
+        "ph:region:western-visayas"
+      ],
+      "region_legacy": "Iloilo",
+      "narrow": "Iloilo heritage districts — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/philippines/objects/iloilo-heritage-districts.json"
+    },
+    {
+      "id": "ph:intramuros",
+      "name": "Intramuros",
+      "object_type": "fortification",
+      "geography_ids": [
+        "country:ph",
+        "ph:city:manila",
+        "ph:geographic_area:metro-manila",
+        "ph:region:ncr"
+      ],
+      "region_legacy": "Metro Manila",
+      "narrow": "Intramuros — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/philippines/objects/intramuros.json"
+    },
+    {
+      "id": "ph:negros-sugar-era-hacienda-architecture",
+      "name": "Negros sugar-era hacienda architecture",
+      "object_type": "industrial_heritage",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:negros-expedition",
+        "ph:region:negros-island-region"
+      ],
+      "region_legacy": "Negros",
+      "narrow": "Negros sugar-era hacienda architecture — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/philippines/objects/negros-sugar-era-hacienda-architecture.json"
+    }
+  ]
+}

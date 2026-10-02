@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "country_class",
+    "id": "country-class:my:historic_building"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "historic_building",
+    "label_ru": "Исторические здания и руины",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:built_heritage",
+    "page_path": "pages/countries/malaysia/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_building.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:locality:batu-gajah",
+      "canonical_geo_id": "geo_my_0047",
+      "name": "Бату-Гаджа",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/town/batu-gajah.json"
+    },
+    {
+      "id": "my:region:perak-taiping-kuala-kangsar-belum",
+      "canonical_geo_id": "geo_my_0011",
+      "name": "Перак / Тайпинг / Куала-Кангсар / Белум",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/perak-taiping-kuala-kangsar-belum.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:kellie-s-castle",
+      "name": "Kellie's Castle",
+      "geography_ids": [
+        "country:my",
+        "my:locality:batu-gajah",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
+      "nearest_hub": "Batu Gajah",
+      "narrow": "Kellie’s Castle — незавершённый колониальный особняк начала XX века у Batu Gajah: смесь европейских и южноазиатских мотивов, инженерных амбиций и истории плантационной экономики Перака.",
+      "detail_path": "countries/malaysia/objects/kellie-s-castle.json"
+    }
+  ]
+}

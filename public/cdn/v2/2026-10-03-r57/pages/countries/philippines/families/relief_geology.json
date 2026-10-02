@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "class_family",
+    "id": "country-family:ph:relief_geology"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "family_id": "relief_geology",
+    "label_ru": "Рельеф и геология"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:ph",
+    "page_path": "pages/countries/philippines.json"
+  },
+  "global_family_page": "pages/families/relief_geology.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "count": 4,
+  "classes": [
+    {
+      "object_type": "volcano",
+      "label_ru": "Вулканы и вулканические комплексы",
+      "count": 2,
+      "global_page_path": "pages/classes/volcano.json",
+      "country_page_path": "pages/countries/philippines/classes/volcano.json"
+    },
+    {
+      "object_type": "cave",
+      "label_ru": "Пещеры",
+      "count": 1,
+      "global_page_path": "pages/classes/cave.json",
+      "country_page_path": "pages/countries/philippines/classes/cave.json"
+    },
+    {
+      "object_type": "geological_site",
+      "label_ru": "Геологические объекты",
+      "count": 1,
+      "global_page_path": "pages/classes/geological_site.json",
+      "country_page_path": "pages/countries/philippines/classes/geological_site.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:mount-pinatubo",
+      "name": "Mount Pinatubo",
+      "object_type": "volcano",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:central-luzon-pinatubo",
+        "ph:region:central-luzon"
+      ],
+      "region_legacy": "Central Luzon / Pinatubo",
+      "narrow": "Mount Pinatubo — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/philippines/objects/mount-pinatubo.json"
+    },
+    {
+      "id": "ph:mayon-volcano",
+      "name": "Mayon Volcano",
+      "object_type": "volcano",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:albay-bicol",
+        "ph:province:albay",
+        "ph:region:bicol-region"
+      ],
+      "region_legacy": "Albay / Bicol",
+      "narrow": "Идеальный вулканический конус Mayon плюс Cagsawa ruins дают один из самых сильных вулканико-культурных кадров страны — но только из разрешённых внешних точек обзора.",
+      "detail_path": "countries/philippines/objects/mayon-volcano.json"
+    },
+    {
+      "id": "ph:samar-cave-systems",
+      "name": "Samar cave systems",
+      "object_type": "cave",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:samar-expedition",
+        "ph:province:samar",
+        "ph:region:eastern-visayas"
+      ],
+      "region_legacy": "Samar",
+      "narrow": "Samar cave systems — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/philippines/objects/samar-cave-systems.json"
+    },
+    {
+      "id": "ph:chocolate-hills",
+      "name": "Chocolate Hills",
+      "object_type": "geological_site",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:bohol-expedition",
+        "ph:province:bohol",
+        "ph:region:central-visayas"
+      ],
+      "region_legacy": "Bohol",
+      "narrow": "Chocolate Hills — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/philippines/objects/chocolate-hills.json"
+    }
+  ]
+}

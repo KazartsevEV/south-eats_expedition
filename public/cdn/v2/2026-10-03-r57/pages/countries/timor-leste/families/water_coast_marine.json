@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-03-r57",
+    "page_type": "class_family",
+    "id": "country-family:tl:water_coast_marine"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "family_id": "water_coast_marine",
+    "label_ru": "Вода, побережья и морская среда"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:tl",
+    "page_path": "pages/countries/timor-leste.json"
+  },
+  "global_family_page": "pages/families/water_coast_marine.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "count": 3,
+  "classes": [
+    {
+      "object_type": "lake",
+      "label_ru": "Озёра",
+      "count": 1,
+      "global_page_path": "pages/classes/lake.json",
+      "country_page_path": "pages/countries/timor-leste/classes/lake.json"
+    },
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 2,
+      "global_page_path": "pages/classes/island.json",
+      "country_page_path": "pages/countries/timor-leste/classes/island.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:lake-ira-lalaro",
+      "name": "Lake Ira Lalaro",
+      "object_type": "lake",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:lautem-tutuala-jaco",
+        "tl:region:lautem"
+      ],
+      "region_legacy": "Lautem / Tutuala / Jaco",
+      "narrow": "Lake Ira Lalaro — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/timor-leste/objects/lake-ira-lalaro.json"
+    },
+    {
+      "id": "tl:atauro-island",
+      "name": "Atauro Island",
+      "object_type": "island",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:atauro-expedition",
+        "tl:island:atauro"
+      ],
+      "region_legacy": "Atauro",
+      "narrow": "Atauro Island — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/timor-leste/objects/atauro-island.json"
+    },
+    {
+      "id": "tl:jaco-island-tutuala",
+      "name": "Jaco Island / Tutuala",
+      "object_type": "island",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:lautem-tutuala-jaco",
+        "tl:region:lautem"
+      ],
+      "region_legacy": "Lautem / Tutuala / Jaco",
+      "narrow": "Jaco Island / Tutuala — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/timor-leste/objects/jaco-island-tutuala.json"
+    }
+  ]
+}

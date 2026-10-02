@@ -14,7 +14,7 @@ SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
 SCHEMA_VERSION = "2.10.11"
-RELEASE_ID = "2026-10-02-r45"
+RELEASE_ID = "2026-10-02-r46"
 LATEST_RELEASE_ID = "2026-10-02-r44"
 RELEASE_STATUS = "reference_release"
 SUPPORTED_SOURCE_MODELS = {"1.2", "1.5", "1.6"}
@@ -128,13 +128,23 @@ TYPE_BY_NAME = {
     "Savannakhet old quarter": "historic_city",
     "Nam Et-Phou Louey area": "protected_area",
     "Nong Khiaw and Muang Ngoi": "natural_landscape",
+    "Nong Khiaw": "natural_landscape",
+    "Muang Ngoi": "natural_landscape",
     "Bolaven Plateau": "natural_landscape",
     "Nam Ha National Protected Area": "protected_area",
     "Tham Piu Cave": "cave",
     "Vientiane sacred architecture": "religious_site",
+    "Pha That Luang": "religious_site",
+    "Wat Sisaket": "religious_site",
+    "Hor Phra Keo Museum": "museum",
+    "Wat Si Muang": "religious_site",
     "Old Thakhek Town": "historic_city",
     "Phongsaly old town and ancient tea highlands": "cultural_landscape",
+    "Phongsaly Old Town": "historic_city",
+    "Ban Komaen 400-Year-Old Tea Plantation": "cultural_landscape",
     "Muang Sing market and Tai Lue cultural landscape": "cultural_landscape",
+    "Muang Sing Morning Market": "market",
+    "Muang Sing Tai Lue Cultural Landscape": "cultural_landscape",
     "Kuang Si Falls": "waterfall",
     "Pak Ou Caves": "cave",
     "Hin Nam No National Park": "national_park",
@@ -149,6 +159,8 @@ TYPE_BY_NAME = {
     "Tham Nang Aen": "cave",
     "Dong Hua Sao National Park": "national_park",
     "Nong Fa / Dong Ampham landscape": "natural_landscape",
+    "Nong Fa Lake": "lake",
+    "Dong Ampham National Protected Area": "protected_area",
     "Chom Ong Cave": "cave",
     "Tad Nam Kat Waterfall": "waterfall",
     "Nam Dee Waterfall": "waterfall",

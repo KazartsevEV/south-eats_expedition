@@ -34,7 +34,8 @@
       "Regional QA pass 2026-09-30: closed the remaining unsourced nature summaries in Vang Vieng, Phongsaly and Xieng Khouang using already registered local official/UNESCO sources.",
       "Laos pre-object geo QA 2026-10-01: formal hierarchy linked to existing researched regional profiles; scoped profiles added for composite physical/protected nodes; eight real city/town locality profiles added with independent settlement map anchors. Object payloads unchanged.",
       "2026-10-01 upper-level acceptance pass: revalidated 30-day visa-free entry for Russian ordinary passports, LDIF requirement at the four pilot checkpoints, current international-checkpoint directory, road/driver rules and country seasonality; attraction/object payloads remain frozen.",
-      "2026-10-02 Laos inventory expansion: object database expanded from 70 to 141 entries; 71 source-backed preliminary objects added with null GPS/access fields where not yet QA-verified; obvious synonyms/overlaps suppressed instead of duplicating cards."
+      "2026-10-02 Laos inventory expansion: object database expanded from 70 to 141 entries; 71 source-backed preliminary objects added with null GPS/access fields where not yet QA-verified; obvious synonyms/overlaps suppressed instead of duplicating cards.",
+      "2026-10-02 country-culture pass: Laos food and festival blocks upgraded to Brunei/Cambodia rich-card standard; six food cards and four festival cards now carry dated provenance and licensed Wikimedia images for canonical local media mirrors."
     ],
     "object_card_upgrade_progress": {
       "schema_target": "1.5",
@@ -118,19 +119,26 @@
         "отдельная карточка Blue Lagoon 1 — объединена с Tham Pou Kham Cave в один посещаемый комплекс"
       ],
       "next_step": "object-by-object QA after inventory structural validation"
+    },
+    "country_culture_upgrade": {
+      "status": "food_festivals_rich_cards_complete",
+      "checked_at": "2026-10-02",
+      "food_cards": 6,
+      "festival_cards": 4,
+      "standard": "Brunei/Cambodia rich-card country culture standard with canonical media refs, local mirrored binaries, distribution and dated price/access context"
     }
   },
   "overview": {
     "summary": "Гористая внутриконтинентальная страна бассейна Меконга между Китаем, Вьетнамом, Камбоджей, Таиландом и Мьянмой.",
     "history": "Королевство Лансанг возникло в XIV веке и позднее распалось на несколько центров. В конце XIX века территория вошла во Французский Индокитай; независимость была закреплена в середине XX века. После гражданской войны в 1975 году провозглашена Лаосская Народно-Демократическая Республика.",
     "geography": {
-      "region": "mainland Southeast Asia",
+      "region": "материковая Юго-Восточная Азия",
       "neighbors": [
-        "China",
-        "Vietnam",
-        "Cambodia",
-        "Thailand",
-        "Myanmar"
+        "Китай",
+        "Вьетнам",
+        "Камбоджа",
+        "Таиланд",
+        "Мьянма"
       ],
       "coastline_km": 0,
       "landlocked": true,
@@ -151,7 +159,7 @@
         "RUS_MFA"
       ]
     },
-    "political_system": "Однопартийная социалистическая республика; ведущая политическая роль принадлежит Lao People's Revolutionary Party.",
+    "political_system": "Однопартийная социалистическая республика; ведущая политическая роль закреплена за Народно-революционной партией Лаоса.",
     "economy": {
       "summary": "Гидроэнергетика, горнодобыча, сельское хозяйство, транспорт/логистика и туризм; железная дорога Китай–Лаос усилила связность. Экономика уязвима к высокой задолженности и инфляции.",
       "gdp_current_usd_billion": 18.3,
@@ -331,35 +339,292 @@
     ],
     "festivals": [
       {
-        "name": "Pi Mai Lao",
-        "typical_month": "April"
+        "id": "pi_mai_lao",
+        "name": "Пи Май Лао",
+        "local_name": "Pimai Lao / Lao New Year",
+        "dates_2026": "14–16 апреля 2026",
+        "typical_month": "апрель",
+        "description": "Лаосский Новый год длится три дня и соединяет семейный праздник, буддийское очищение и массовые водные ритуалы. Статуи Будды в храмах омывают ароматизированной водой, строят песчаные ступы, проводят baci и уличные празднования.",
+        "where_common": "По всей стране; особенно масштабные публичные программы проходят в Луангпхабанге и Вьентьяне.",
+        "checked_at": "2026-10-02",
+        "source_ids": [
+          "LA_TOURISM_FESTIVALS_2026"
+        ],
+        "image": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lao%20New%20Year%2C%20Buddha%20bathing.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Lao_New_Year,_Buddha_bathing.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 2.0",
+          "artist": "Sam Haldane",
+          "last_checked": "2026-10-02",
+          "subject": "омовение статуи Будды во время Lao New Year"
+        }
       },
       {
-        "name": "Bun Bang Fai (Rocket Festival)",
-        "typical_month": "May–June"
+        "id": "boun_bang_fai",
+        "name": "Бун Банг Фай",
+        "local_name": "Boun Bang Fai / Rocket Festival",
+        "dates_2026": "2–31 мая 2026; конкретный день определяет провинция",
+        "typical_month": "май",
+        "description": "Праздник ракет связан с обращением к дождю и плодородию перед основной частью сезона дождей. Деревни устраивают шествия, танцы и соревнования самодельных ракет; Tourism Laos связывает запуск с благодарностью Payathaen за дождь для земледелия.",
+        "where_common": "Проводится в разных провинциях и деревнях; единой национальной площадки и одного дня нет.",
+        "checked_at": "2026-10-02",
+        "source_ids": [
+          "LA_TOURISM_FESTIVALS_2026"
+        ],
+        "image": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boun%20Bang%20Fai%20in%20Luang%20Nam%20Tha%2C%20Northern%20Laos.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Boun_Bang_Fai_in_Luang_Nam_Tha,_Northern_Laos.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "Public domain",
+          "artist": "Alfred Raquez",
+          "last_checked": "2026-10-02",
+          "subject": "историческая фотография Boun Bang Fai в Луангнамтха"
+        }
       },
       {
-        "name": "Тхат-Луанг Festival",
-        "typical_month": "November"
+        "id": "that_luang_festival",
+        "name": "Праздник Пха Тхат Луанг",
+        "local_name": "That Luang Festival and Trade Fair",
+        "dates_2026": "24 ноября 2026",
+        "typical_month": "ноябрь",
+        "description": "Главный буддийский фестиваль Вьентьяна сосредоточен вокруг ступы Пха Тхат Луанг. В традиционной программе — процессии с восковыми замками, цветами, свечами и благовониями, музыка и этнические костюмы.",
+        "where_common": "Вьентьян, прежде всего район Pha That Luang и связанная процессия от Vat Si Muang.",
+        "checked_at": "2026-10-02",
+        "source_ids": [
+          "LA_TOURISM_FESTIVALS_2026"
+        ],
+        "image": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/That%20Luang%20Festival%20Vientiane%20Laos.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:That_Luang_Festival_Vientiane_Laos.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0 / GFDL",
+          "artist": "Jialiang Gao",
+          "last_checked": "2026-10-02",
+          "subject": "праздник That Luang у Пха Тхат Луанг во Вьентьяне"
+        }
       },
       {
-        "name": "Boat Racing festivals",
-        "typical_month": "end of Buddhist Lent / variable"
+        "id": "boat_racing_festivals",
+        "name": "Лодочные гонки",
+        "local_name": "Boun Suang Heua / Boat Racing Festival",
+        "dates_2026": "11 сентября 2026 — Луангпхабанг; в других провинциях даты отличаются",
+        "typical_month": "сентябрь–октябрь",
+        "description": "Гонки длинных лодок проходят в разных речных центрах Лаоса и привязаны к местным буддийским и сезонным календарям. Для Луангпхабанга официальный календарь 2026 указывает гонки на Нам-Кхан 11 сентября вместе с церемонией Khao Padabdin и городской ярмаркой.",
+        "where_common": "Луангпхабанг и другие города на Меконге и его притоках; дату одной провинции нельзя переносить на всю страну.",
+        "checked_at": "2026-10-02",
+        "source_ids": [
+          "LA_TOURISM_FESTIVALS_2026"
+        ],
+        "image": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rowers%20on%20a%20long%20racing%20pirogue%20during%20a%20competition%20in%20Don%20Det%20Laos.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Rowers_on_a_long_racing_pirogue_during_a_competition_in_Don_Det_Laos.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "artist": "Basile Morin",
+          "last_checked": "2026-10-02",
+          "subject": "соревнование длинных лодок у Don Det, Si Phan Don"
+        }
       }
     ],
     "food": {
-      "budget_food_summary": "Рынки, noodle stalls и простые семейные рестораны дешёвы.",
+      "budget_food_summary": "Повседневная еда в Лаосе строится вокруг клейкого риса, лапши, салатов из зелёной папайи, лаапа, речной рыбы и региональных колбас. Самый дешёвый формат — рынки, утренние лапшичные, небольшие семейные точки и еда навынос; рестораны в исторических центрах Вьентьяна и Луангпхабанга заметно дороже. Цены ниже привязаны к конкретным меню 2026 года и нужны как полевой ориентир, а не как единый тариф по стране.",
+      "typical_simple_meal_local_range": [
+        30000,
+        80000
+      ],
+      "price_currency": "LAK",
+      "price_note": "Ориентир для простых локальных блюд по текущим меню 2026 года. Отдельная корзинка клейкого риса может стоить дешевле, а речная рыба и ресторанные блюда — существенно дороже.",
+      "checked_at": "2026-10-02",
+      "source_ids": [
+        "LA_FOOD_LAP_ZAP_2026",
+        "LA_FOOD_KHAO_PIAK_2026",
+        "LA_FOOD_KPM_MARKET_2026",
+        "LA_FOOD_VIEWPOINT_2026",
+        "LA_FOOD_FISH_2026"
+      ],
       "street_food": [
-        "khao niao (sticky rice)",
+        "khao niao",
         "laap",
         "tam mak hoong",
         "khao piak sen",
-        "grilled river fish",
-        "Lao sausage"
+        "ping pa",
+        "sai oua"
       ],
-      "typical_simple_meal_usd_range": [
-        1,
-        3.5
+      "items": [
+        {
+          "id": "khao_niao",
+          "name": "Khao niao",
+          "name_ru": "Кхао няо — клейкий рис",
+          "description": "Клейкий рис — базовый крахмал лаосской кухни. Его готовят на пару и подают в плетёной корзинке; небольшие порции едят руками вместе с лаапом, соусами, жареным мясом или рыбой.",
+          "where_common": "Рынки, семейные кафе, гриль-точки и локальные рестораны по всей стране.",
+          "format": "рынок / семейное кафе / еда навынос",
+          "price_local_range": [
+            15000,
+            20000
+          ],
+          "price_currency": "LAK",
+          "price_unit": "корзинка или небольшая порция",
+          "price_context": "Текущие меню Foodpanda Laos дают 15 000–20 000 LAK за отдельную порцию клейкого риса; крупные фасовки и туристические рестораны стоят иначе.",
+          "checked_at": "2026-10-02",
+          "source_ids": [
+            "LA_FOOD_KPM_MARKET_2026",
+            "LA_FOOD_LAP_ZAP_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sticky%20rice%20at%20Kualao%20Restaurant.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Sticky_rice_at_Kualao_Restaurant.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC0 1.0",
+            "artist": "Mx. Granger",
+            "last_checked": "2026-10-02",
+            "subject": "клейкий рис khao niao в ресторане Kualao, Вьентьян"
+          }
+        },
+        {
+          "id": "laap",
+          "name": "Laap",
+          "name_ru": "Лаап",
+          "description": "Лаап — рубленое мясо или рыба, смешанные с травами, лаймом, чили и поджаренным рисовым порошком; варианты отличаются по региону и основному продукту. Его часто едят с клейким рисом и свежей зеленью.",
+          "where_common": "По всей стране — от специализированных лаап-точек и рынков до семейных ресторанов.",
+          "format": "семейное кафе / специализированная лаап-точка / рынок",
+          "price_local_range": [
+            50000,
+            80000
+          ],
+          "price_currency": "LAK",
+          "price_unit": "порция",
+          "price_context": "Foodpanda Laos показывает около 50 000 LAK за говяжий лаап в простой точке; Pa Kham Tanh во Вьентьяне публикует 80 000 LAK за cooked/raw beef laab.",
+          "checked_at": "2026-10-02",
+          "source_ids": [
+            "LA_FOOD_LAP_ZAP_2026",
+            "LA_FOOD_PAKHAMTANH_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lao%20laab.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Lao_laab.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY 2.0",
+            "artist": "Basil Strahm",
+            "last_checked": "2026-10-02",
+            "subject": "лаосский laab с клейким рисом"
+          }
+        },
+        {
+          "id": "tam_mak_hoong",
+          "name": "Tam mak hoong",
+          "name_ru": "Там мак хунг — салат из зелёной папайи",
+          "description": "Зелёную папайю толкут в ступке с чили, лаймом и приправами; лаосская версия часто включает ферментированный рыбный соус и готовится непосредственно перед подачей.",
+          "where_common": "Рынки, уличные точки и простые локальные кафе по всей стране; часто продаётся рядом с грилем и клейким рисом.",
+          "format": "рынок / уличная точка / семейное кафе",
+          "price_local_range": [
+            30000,
+            35000
+          ],
+          "price_currency": "LAK",
+          "price_unit": "порция",
+          "price_context": "В актуальных меню простых заведений во Вьентьяне порция стоит около 30 000–35 000 LAK; туристические рестораны могут быть значительно дороже.",
+          "checked_at": "2026-10-02",
+          "source_ids": [
+            "LA_FOOD_LAP_ZAP_2026",
+            "LA_FOOD_PAKHAMTANH_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lao%20green%20papaya%20salad.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Lao_green_papaya_salad.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0",
+            "artist": "Jpatokal",
+            "last_checked": "2026-10-02",
+            "subject": "там мак хунг, поданный в Луангпхабанге"
+          }
+        },
+        {
+          "id": "khao_piak_sen",
+          "name": "Khao piak sen",
+          "name_ru": "Кхао пьяк сен",
+          "description": "Густой суп с мягкой рисовой лапшой в бульоне, обычно со свининой или курицей, зеленью и жареным луком. Одна миска обычно служит полноценным простым приёмом пищи.",
+          "where_common": "Утренние рынки, лапшичные и небольшие кафе в городах и районных центрах.",
+          "format": "утренняя лапшичная / рынок / семейное кафе",
+          "price_local_range": [
+            40000,
+            50000
+          ],
+          "price_currency": "LAK",
+          "price_unit": "миска",
+          "price_context": "Текущие Foodpanda-меню дают около 40 000–50 000 LAK за khao piak с мясом; состав порции меняет цену.",
+          "checked_at": "2026-10-02",
+          "source_ids": [
+            "LA_FOOD_KHAO_PIAK_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khao%20piak%20sen.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Khao_piak_sen.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0",
+            "artist": "Spencer",
+            "last_checked": "2026-10-02",
+            "subject": "традиционный лаосский суп khao piak sen"
+          }
+        },
+        {
+          "id": "ping_pa",
+          "name": "Ping pa",
+          "name_ru": "Пинг па — жареная речная рыба",
+          "description": "Речную рыбу натирают травами и специями и жарят целиком или крупными кусками; в меню вдоль Меконга встречаются варианты с лемонграссом и галангалом, подаваемые с клейким рисом.",
+          "where_common": "Речные города и острова Меконга, рынки и гриль-точки; ресторанные варианты особенно легко найти в Луангпхабанге и на юге.",
+          "format": "гриль-точка / рынок / локальный ресторан",
+          "price_local_range": [
+            119000,
+            165000
+          ],
+          "price_currency": "LAK",
+          "price_unit": "ресторанная порция",
+          "price_context": "Текущие меню дают 119 000 LAK за grilled fish в простой доставке и 165 000 LAK за Mekong grilled river fish в Viewpoint Restaurant; рыночная цена зависит от вида и размера.",
+          "checked_at": "2026-10-02",
+          "source_ids": [
+            "LA_FOOD_FISH_2026",
+            "LA_FOOD_VIEWPOINT_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Meal%20on%20a%20tray%20in%20Laos.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Meal_on_a_tray_in_Laos.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0",
+            "artist": "Basile Morin",
+            "last_checked": "2026-10-02",
+            "subject": "традиционная трапеза в Лаосе с жареной рыбой и клейким рисом"
+          }
+        },
+        {
+          "id": "sai_oua",
+          "name": "Sai oua",
+          "name_ru": "Сай уа — лаосская колбаса",
+          "description": "Свиная колбаса с лемонграссом, галангалом, листьями кафрского лайма, чесноком, чили и другими ароматическими добавками. Её продают готовой к еде или жарят перед подачей.",
+          "where_common": "Рынки, гриль-точки и небольшие кафе; особенно заметна в Луангпхабанге, но встречается и в столице.",
+          "format": "рынок / гриль-точка / локальный ресторан",
+          "price_local_range": [
+            40000,
+            95000
+          ],
+          "price_currency": "LAK",
+          "price_unit": "порция",
+          "price_context": "Текущая рыночная/доставочная точка даёт около 40 000 LAK за Lao sausage; ресторан в Луангпхабанге — 95 000 LAK за порцию.",
+          "checked_at": "2026-10-02",
+          "source_ids": [
+            "LA_FOOD_KPM_MARKET_2026",
+            "LA_FOOD_VIEWPOINT_2026"
+          ],
+          "image": {
+            "static_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lao%20Sai%20Oua.jpg",
+            "source_page": "https://commons.wikimedia.org/wiki/File:Lao_Sai_Oua.jpg",
+            "provider": "Wikimedia Commons",
+            "license": "CC BY-SA 4.0",
+            "artist": "Bounthy",
+            "last_checked": "2026-10-02",
+            "subject": "лаосская свиная колбаса sai oua"
+          }
+        }
       ]
     },
     "laws_and_prohibitions": [
@@ -37405,6 +37670,126 @@
       ],
       "accessed": "2026-10-01",
       "notes": "Official live directory states 31 international checkpoints and lists visa/eVisa status and operating hours for individual points."
+    },
+    {
+      "id": "LA_TOURISM_FESTIVALS_2026",
+      "canonical_id": "src_902020",
+      "title": "Events & Festivals — Laos tourism calendar and festival descriptions",
+      "publisher": "Tourism Marketing & Promotion Department, Ministry of Culture and Tourism, Lao PDR",
+      "url": "https://www.tourismlaos.org/welcome/buddhism-and-belief/festivals/",
+      "kind": "government",
+      "language": "en",
+      "used_for": [
+        "festivals",
+        "Pimai Lao",
+        "Boun Bang Fai",
+        "boat racing",
+        "That Luang",
+        "country_profile"
+      ],
+      "accessed": "2026-10-02"
+    },
+    {
+      "id": "LA_FOOD_PAKHAMTANH_2026",
+      "canonical_id": "src_902021",
+      "title": "Pa Kham Tanh — current menu",
+      "publisher": "Pa Kham Tanh, Vientiane",
+      "url": "https://www.pakhamtanh.com/",
+      "kind": "other",
+      "language": "en",
+      "used_for": [
+        "food",
+        "laap",
+        "tam mak hoong",
+        "food_prices"
+      ],
+      "accessed": "2026-10-02",
+      "notes": "Restaurant menu snapshot; used only as a dated price/context point, not a nationwide tariff."
+    },
+    {
+      "id": "LA_FOOD_LAP_ZAP_2026",
+      "canonical_id": "src_902022",
+      "title": "Lap Zap Thongpong — current menu",
+      "publisher": "foodpanda Laos",
+      "url": "https://www.foodpanda.la/en/restaurant/ntrl/laabeisbthongpong",
+      "kind": "other",
+      "language": "en",
+      "used_for": [
+        "food",
+        "laap",
+        "tam mak hoong",
+        "khao niao",
+        "food_prices"
+      ],
+      "accessed": "2026-10-02",
+      "notes": "Dynamic menu snapshot; discounts ignored when a regular list price is visible."
+    },
+    {
+      "id": "LA_FOOD_KHAO_PIAK_2026",
+      "canonical_id": "src_902023",
+      "title": "TH Khao Piek Zap 4 Yaek Fai Daeng That Luang — current menu",
+      "publisher": "foodpanda Laos",
+      "url": "https://www.foodpanda.la/en/restaurant/dflw/th-ekhoaapnykeisb-4-einykaifeidngthaadhlwng",
+      "kind": "other",
+      "language": "en",
+      "used_for": [
+        "food",
+        "khao piak sen",
+        "food_prices"
+      ],
+      "accessed": "2026-10-02",
+      "notes": "Dynamic menu snapshot; used for current Vientiane khao-piak price context."
+    },
+    {
+      "id": "LA_FOOD_KPM_MARKET_2026",
+      "canonical_id": "src_902024",
+      "title": "KPM Ping Mou Morning Market I — current menu",
+      "publisher": "foodpanda Laos",
+      "url": "https://www.foodpanda.la/en/restaurant/dhcp/kpm-piinghmuuhahlaadesoaa-echoaaeilk-i",
+      "kind": "other",
+      "language": "en",
+      "used_for": [
+        "food",
+        "khao niao",
+        "sai oua",
+        "food_prices"
+      ],
+      "accessed": "2026-10-02",
+      "notes": "Dynamic menu snapshot; regular list prices retained where promotional prices are also shown."
+    },
+    {
+      "id": "LA_FOOD_VIEWPOINT_2026",
+      "canonical_id": "src_902025",
+      "title": "Viewpoint Restaurant — current menu",
+      "publisher": "Mekong Riverview Hotel, Luang Prabang",
+      "url": "https://mekongriverview.com/viewpoint-restaurant/",
+      "kind": "other",
+      "language": "en",
+      "used_for": [
+        "food",
+        "ping pa",
+        "sai oua",
+        "food_prices",
+        "Luang Prabang"
+      ],
+      "accessed": "2026-10-02",
+      "notes": "Restaurant menu snapshot; used for dated Luang Prabang restaurant price context."
+    },
+    {
+      "id": "LA_FOOD_FISH_2026",
+      "canonical_id": "src_902026",
+      "title": "Phoumsub Khao Poun Jeo King — current menu",
+      "publisher": "foodpanda Laos",
+      "url": "https://www.foodpanda.la/en/restaurant/d0yr/phuumsb-ekhoaapuneechwkhiing",
+      "kind": "other",
+      "language": "en",
+      "used_for": [
+        "food",
+        "grilled fish",
+        "food_prices"
+      ],
+      "accessed": "2026-10-02",
+      "notes": "Dynamic menu snapshot; used only as a lower-end current grilled-fish price point."
     }
   ],
   "uncertainties": [

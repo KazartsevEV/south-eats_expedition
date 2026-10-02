@@ -1,0 +1,557 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r54",
+    "page_type": "class_family",
+    "id": "country-family:la:water_coast_marine"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "family_id": "water_coast_marine",
+    "label_ru": "Вода, побережья и морская среда"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:la",
+    "page_path": "pages/countries/laos.json"
+  },
+  "global_family_page": "pages/families/water_coast_marine.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "count": 41,
+  "classes": [
+    {
+      "object_type": "lake",
+      "label_ru": "Озёра",
+      "count": 5,
+      "global_page_path": "pages/classes/lake.json",
+      "country_page_path": "pages/countries/laos/classes/lake.json"
+    },
+    {
+      "object_type": "waterfall",
+      "label_ru": "Водопады",
+      "count": 33,
+      "global_page_path": "pages/classes/waterfall.json",
+      "country_page_path": "pages/countries/laos/classes/waterfall.json"
+    },
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 3,
+      "global_page_path": "pages/classes/island.json",
+      "country_page_path": "pages/countries/laos/classes/island.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:nam-ngum-reservoir",
+      "name": "Nam Ngum Reservoir",
+      "object_type": "lake",
+      "geography_ids": [
+        "country:la",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "narrow": "Крупное водохранилище Nam Ngum, сформированное гидроэнергетическим проектом и используемое для лодочных маршрутов и ночёвок в прибрежных поселениях.",
+      "detail_path": "countries/laos/objects/nam-ngum-reservoir.json"
+    },
+    {
+      "id": "la:nam-hin-lake",
+      "name": "Nam Hin Lake",
+      "object_type": "lake",
+      "geography_ids": [
+        "country:la",
+        "la:province:oudomxay"
+      ],
+      "region_legacy": "Oudomxay Province",
+      "narrow": "Озеро в Удомсае, выделенное официальным провинциальным туристическим справочником как самостоятельный природный объект.",
+      "detail_path": "countries/laos/objects/nam-hin-lake.json"
+    },
+    {
+      "id": "la:tha-falang-lake",
+      "name": "Tha Falang Lake",
+      "object_type": "lake",
+      "geography_ids": [
+        "country:la",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Khammouane Province",
+      "narrow": "Природный водный объект Кхаммуана, отдельно перечисляемый провинциальным туристическим справочником.",
+      "detail_path": "countries/laos/objects/tha-falang-lake.json"
+    },
+    {
+      "id": "la:khoun-kong-leng-lake",
+      "name": "Khoun Kong Leng Lake",
+      "object_type": "lake",
+      "geography_ids": [
+        "country:la",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Khammouane Province",
+      "narrow": "Голубое карстовое озеро Кхаммуана, отдельный природный объект; точный подъезд и режим купания будут проверены на QA.",
+      "detail_path": "countries/laos/objects/khoun-kong-leng-lake.json"
+    },
+    {
+      "id": "la:nong-fa-lake",
+      "name": "Nong Fa Lake",
+      "object_type": "lake",
+      "geography_ids": [
+        "country:la",
+        "la:district:sanxay",
+        "la:geographic-area:nong-fa",
+        "la:protected-area:dong-ampham",
+        "la:province:attapeu"
+      ],
+      "region_legacy": "Аттапы / Донг-Амфам",
+      "narrow": "Nong Fa — удалённое высокогорное кратерное озеро в Sanxay District; координата относится к центру озера, а не к въезду или trailhead.",
+      "detail_path": "countries/laos/objects/nong-fa-lake.json"
+    },
+    {
+      "id": "la:kuang-si-falls",
+      "name": "Kuang Si Falls",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-prabang"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "narrow": "Куанг-Си — каскад по известняковым/травертиновым уступам южнее Луангпхабанг. Бирюзовый цвет создаётся рассеянием света в минеральной воде; визуальный интерес — последовательность малых чаш, леса и главного вертикального водопада, а не один бассейн.",
+      "detail_path": "countries/laos/objects/kuang-si-falls.json"
+    },
+    {
+      "id": "la:tad-fane",
+      "name": "Tad Fane",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:district:paksong",
+        "la:protected-area:dong-houa-sao",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Паксонг / Болавен",
+      "narrow": "Тад-Фане — двойной водопад на западной кромке плато Болавен, где реки Чампи и Пак-Кут падают примерно на 120 м в глубокий лесной амфитеатр. Это не просто roadside viewpoint: объект лежит внутри национального парка Донг-Хуа-Сао и связан с более длинными лесными маршрутами по краю плато.",
+      "detail_path": "countries/laos/objects/tad-fane.json"
+    },
+    {
+      "id": "la:tad-yuang",
+      "name": "Tad Yuang",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:district:paksong",
+        "la:protected-area:dong-houa-sao",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Паксонг / Болавен",
+      "narrow": "Тад-Юанг — компактный двойной водопад плато Болавен с падением около 40–42 м, к которому можно подойти значительно ближе, чем к соседнему Тад-Фане. Сверху устроены рынок и picnic area, а лестничная тропа спускается к среднему и нижнему viewpoints у чаши водопада.",
+      "detail_path": "countries/laos/objects/tad-yuang.json"
+    },
+    {
+      "id": "la:khone-phapheng-falls",
+      "name": "Khone Phapheng Falls",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:khone-phapheng",
+        "la:geographic-area:si-phan-don",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон",
+      "narrow": "Кхон-Папенг — не высокий одиночный обрыв, а гигантская система порогов и каскадов Меконга в Си-Фан-Доне. Tourism Laos указывает максимальный перепад около 21 м и участок порогов длиной около 9,7 км; именно эта система исторически разрывает сквозную навигацию по Меконгу.",
+      "detail_path": "countries/laos/objects/khone-phapheng-falls.json"
+    },
+    {
+      "id": "la:li-phi-somphamit-falls",
+      "name": "Li Phi / Somphamit Falls",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:si-phan-don",
+        "la:island:don-khon",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Дон-Кхон",
+      "narrow": "Тад-Сомпхамит — пороги западного Дон-Кхона, где один из рукавов Меконга сжимается между островами и валунами. В официальной лаосской версии «Li Phi» относится не только к этому каскаду, а к более широкому примерно 20-километровому поясу порогов Си-Фан-Дона; сам водопад корректнее называть Тад-Сомпхамит.",
+      "detail_path": "countries/laos/objects/li-phi-somphamit-falls.json"
+    },
+    {
+      "id": "la:tad-nam-kat-waterfall",
+      "name": "Tad Nam Kat Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:oudomxay"
+      ],
+      "region_legacy": "Oudomxay Province",
+      "narrow": "Водопад Nam Kat в горном Удомсае; официальный Tourism Laos перечисляет его среди ключевых природных направлений провинции.",
+      "detail_path": "countries/laos/objects/tad-nam-kat-waterfall.json"
+    },
+    {
+      "id": "la:nam-dee-waterfall",
+      "name": "Nam Dee Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-namtha"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "narrow": "Водопад у лантенской деревни Ban Nam Dee недалеко от Луангнамтхи, отдельно выделенный официальным Tourism Laos как самостоятельный объект.",
+      "detail_path": "countries/laos/objects/nam-dee-waterfall.json"
+    },
+    {
+      "id": "la:tad-saleuy-waterfall",
+      "name": "Tad Saleuy Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:houaphanh"
+      ],
+      "region_legacy": "Хуапхан / Вьенгсай / Нам-Эт",
+      "narrow": "Высокий многоступенчатый водопад у Route 6 в Хуапхане, отдельно перечисленный официальным Tourism Laos.",
+      "detail_path": "countries/laos/objects/tad-saleuy-waterfall.json"
+    },
+    {
+      "id": "la:kaeng-nyui-waterfall",
+      "name": "Kaeng Nyui Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:vang-vieng-karst",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "narrow": "Водопад к востоку от Ванг-Вьенга, которым управляет местная община Ban Naduang; отдельный объект внутри региона Ванг-Вьенга.",
+      "detail_path": "countries/laos/objects/kaeng-nyui-waterfall.json"
+    },
+    {
+      "id": "la:tad-xai-waterfall",
+      "name": "Tad Xai Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:protected-area:phou-khao-khouay",
+        "la:province:bolikhamxay"
+      ],
+      "region_legacy": "Bolikhamxay Province",
+      "narrow": "Многоступенчатый водопад внутри Phou Khao Khouay, доступ к которому Tourism Laos связывает с лодочно-пешим маршрутом от Ban Hatkhai.",
+      "detail_path": "countries/laos/objects/tad-xai-waterfall.json"
+    },
+    {
+      "id": "la:tad-leuk-waterfall",
+      "name": "Tad Leuk Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:protected-area:phou-khao-khouay",
+        "la:province:bolikhamxay"
+      ],
+      "region_legacy": "Bolikhamxay Province",
+      "narrow": "Доступный водопад Phou Khao Khouay с рекреационной инфраструктурой и тропами; отдельный физический объект внутри национального парка.",
+      "detail_path": "countries/laos/objects/tad-leuk-waterfall.json"
+    },
+    {
+      "id": "la:tad-lor-waterfall",
+      "name": "Tad Lor Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:salavanh"
+      ],
+      "region_legacy": "Salavanh Province",
+      "narrow": "Главный водопадный объект Салавана и традиционная база для дальнейших маршрутов по провинции.",
+      "detail_path": "countries/laos/objects/tad-lor-waterfall.json"
+    },
+    {
+      "id": "la:kaengkou-waterfall",
+      "name": "Kaengkou Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:salavanh"
+      ],
+      "region_legacy": "Salavanh Province",
+      "narrow": "Широкий водопадный участок в месте соединения рек Xe Don и Xe Set, отдельно описанный Tourism Laos.",
+      "detail_path": "countries/laos/objects/kaengkou-waterfall.json"
+    },
+    {
+      "id": "la:tad-faek-waterfall",
+      "name": "Tad Faek Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:sekong"
+      ],
+      "region_legacy": "Sekong Province",
+      "narrow": "Невысокий водопад с природными бассейнами у Route 11 в Секонге, отдельно описанный Tourism Laos.",
+      "detail_path": "countries/laos/objects/tad-faek-waterfall.json"
+    },
+    {
+      "id": "la:tad-hia-waterfall",
+      "name": "Tad Hia Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:sekong"
+      ],
+      "region_legacy": "Sekong Province",
+      "narrow": "Один из доступных водопадов окрестностей Секонга; добавлен отдельным физическим объектом, а не частью общей карточки Болавена.",
+      "detail_path": "countries/laos/objects/tad-hia-waterfall.json"
+    },
+    {
+      "id": "la:tad-se-noi-tad-hua-khon-waterfall",
+      "name": "Tad Se Noi / Tad Hua Khon Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:sekong"
+      ],
+      "region_legacy": "Sekong Province",
+      "narrow": "Водопад Секонга, известный под названиями Tad Se Noi и Tad Hua Khon; отдельный объект из официального провинциального перечня.",
+      "detail_path": "countries/laos/objects/tad-se-noi-tad-hua-khon-waterfall.json"
+    },
+    {
+      "id": "la:tad-saepha-waterfall",
+      "name": "Tad Saepha Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:attapeu"
+      ],
+      "region_legacy": "Attapeu Province",
+      "narrow": "Удалённый водопад на Xe Pian в Аттапы, к которому Tourism Laos описывает пеший или лодочный доступ с местным проводником.",
+      "detail_path": "countries/laos/objects/tad-saepha-waterfall.json"
+    },
+    {
+      "id": "la:tad-samongphak-waterfall",
+      "name": "Tad Samongphak Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:attapeu"
+      ],
+      "region_legacy": "Attapeu Province",
+      "narrow": "Один из удалённых водопадов бассейна Xe Pian в Аттапы; самостоятельная точка внутри более широкого природного района.",
+      "detail_path": "countries/laos/objects/tad-samongphak-waterfall.json"
+    },
+    {
+      "id": "la:tad-saeponglaican-waterfall",
+      "name": "Tad Saeponglaican Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:attapeu"
+      ],
+      "region_legacy": "Attapeu Province",
+      "narrow": "Отдельный водопад бассейна Xe Pian, упомянутый Tourism Laos среди труднодоступных природных объектов Аттапы.",
+      "detail_path": "countries/laos/objects/tad-saeponglaican-waterfall.json"
+    },
+    {
+      "id": "la:tad-phapong-waterfall",
+      "name": "Tad Phapong Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:attapeu"
+      ],
+      "region_legacy": "Attapeu Province",
+      "narrow": "Водопад на Xe Xou с характерными разноцветными породами по берегам; официальный Tourism Laos описывает доступ пешком или по воде.",
+      "detail_path": "countries/laos/objects/tad-phapong-waterfall.json"
+    },
+    {
+      "id": "la:tad-poung-waterfall",
+      "name": "Tad Poung Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:xaisomboun"
+      ],
+      "region_legacy": "Xaysomboun Province",
+      "narrow": "Двухступенчатый водопад в горном Сайсомбуне, перечисленный Tourism Laos как самостоятельный природный объект.",
+      "detail_path": "countries/laos/objects/tad-poung-waterfall.json"
+    },
+    {
+      "id": "la:tad-houay-nok-waterfall",
+      "name": "Tad Houay Nok Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:xaisomboun"
+      ],
+      "region_legacy": "Xaysomboun Province",
+      "narrow": "Высокий водопад в окрестностях Anouvong Town, который официальный Tourism Laos отмечает как круглогодичный рекреационный объект.",
+      "detail_path": "countries/laos/objects/tad-houay-nok-waterfall.json"
+    },
+    {
+      "id": "la:tad-sae-waterfall",
+      "name": "Tad Sae Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-prabang"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "narrow": "Водопадный комплекс в провинции Луангпхабанг, отдельный от Kuang Si и городской карточки Luang Prabang.",
+      "detail_path": "countries/laos/objects/tad-sae-waterfall.json"
+    },
+    {
+      "id": "la:tad-talae-waterfall",
+      "name": "Tad Talae Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:oudomxay"
+      ],
+      "region_legacy": "Oudomxay Province",
+      "narrow": "Водопад Удомсая, добавленный как отдельный физический объект; доступ и сезонная водность будут проверены на QA.",
+      "detail_path": "countries/laos/objects/tad-talae-waterfall.json"
+    },
+    {
+      "id": "la:tat-sieng-lue-waterfall",
+      "name": "Tat Sieng Lue Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Khammouane Province",
+      "narrow": "Водопад Кхаммуана, отдельный объект в региональном природном каталоге Tourism Laos.",
+      "detail_path": "countries/laos/objects/tat-sieng-lue-waterfall.json"
+    },
+    {
+      "id": "la:kha-waterfall",
+      "name": "Kha Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:xiangkhouang"
+      ],
+      "region_legacy": "Xiangkhouang Province",
+      "narrow": "Водопад Сиангкхуанга, отдельный природный объект вне серийной археологии Долины кувшинов.",
+      "detail_path": "countries/laos/objects/kha-waterfall.json"
+    },
+    {
+      "id": "la:tad-ham-waterfall",
+      "name": "Tad Ham Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:sainyabuli"
+      ],
+      "region_legacy": "Sainyabuli Province",
+      "narrow": "Водопад провинции Сайнябули, выделенный официальным туристическим справочником как самостоятельный природный объект.",
+      "detail_path": "countries/laos/objects/tad-ham-waterfall.json"
+    },
+    {
+      "id": "la:nam-tok-katamtok-xekatam-waterfall",
+      "name": "Nam Tok Katamtok / Xekatam Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:sekong"
+      ],
+      "region_legacy": "Sekong Province",
+      "narrow": "Крупный водопад Секонга, известный как Katamtok/Xekatam; варианты названия сведены в одну карточку.",
+      "detail_path": "countries/laos/objects/nam-tok-katamtok-xekatam-waterfall.json"
+    },
+    {
+      "id": "la:tad-fai-mai-waterfall",
+      "name": "Tad Fai Mai Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:sekong"
+      ],
+      "region_legacy": "Sekong Province",
+      "narrow": "Водопад Секонга, фигурирующий в актуальных материалах Tourism Laos; инфраструктура и доступ будут проверены отдельно.",
+      "detail_path": "countries/laos/objects/tad-fai-mai-waterfall.json"
+    },
+    {
+      "id": "la:pha-yueang-waterfall",
+      "name": "Pha Yueang Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-namtha"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "narrow": "Водопад в провинции Луангнамтха, отдельный от Nam Dee; доступ будет нормализован на QA.",
+      "detail_path": "countries/laos/objects/pha-yueang-waterfall.json"
+    },
+    {
+      "id": "la:phouphetphoukham-waterfall",
+      "name": "Phouphetphoukham Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-namtha"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "narrow": "Водопад провинции Луангнамтха, добавленный отдельно от Nam Dee и Pha Yueang.",
+      "detail_path": "countries/laos/objects/phouphetphoukham-waterfall.json"
+    },
+    {
+      "id": "la:tad-pha-suam-waterfall",
+      "name": "Tad Pha Suam Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:bolaven-plateau",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Болавен",
+      "narrow": "Водопад на плато Болавен, отдельный от Tad Fane, Tad Yuang и Tad Champi.",
+      "detail_path": "countries/laos/objects/tad-pha-suam-waterfall.json"
+    },
+    {
+      "id": "la:tad-champi-waterfall",
+      "name": "Tad Champi Waterfall",
+      "object_type": "waterfall",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:bolaven-plateau",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Болавен",
+      "narrow": "Водопад Чампасак/Болавена, самостоятельный физический объект, не дубль Tad Fane или Tad Yuang.",
+      "detail_path": "countries/laos/objects/tad-champi-waterfall.json"
+    },
+    {
+      "id": "la:si-phan-don-4000-islands",
+      "name": "Si Phan Don / 4000 Islands",
+      "object_type": "island",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:si-phan-don",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
+      "narrow": "Си-Фан-Дон — разветвлённый речной ландшафт нижнего Меконга у камбоджийской границы, где острова, рукава, пороги и сезонные отмели образуют систему, а не один курорт. Его ключи — живые островные деревни, рыболовство и земледелие, огромный барьер водопадов Кхон, а также короткая колониальная железная дорога Дон-Дет–Дон-Кхон, построенная как технический обход участка Меконга, который оказался непроходим для сквозной навигации.",
+      "detail_path": "countries/laos/objects/si-phan-don-4000-islands.json"
+    },
+    {
+      "id": "la:done-daeng-island",
+      "name": "Done Daeng Island",
+      "object_type": "island",
+      "geography_ids": [
+        "country:la",
+        "la:district:champasak",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Champasak Province",
+      "narrow": "Обитаемый остров Меконга у Чампасaка, выделенный отдельно от широкого архипелага Си-Фан-Дон.",
+      "detail_path": "countries/laos/objects/done-daeng-island.json"
+    },
+    {
+      "id": "la:done-kho-island",
+      "name": "Done Kho Island",
+      "object_type": "island",
+      "geography_ids": [
+        "country:la",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Champasak Province",
+      "narrow": "Остров Меконга в провинции Чампасак с отдельным локальным культурным контекстом; не смешивается с Done Daeng.",
+      "detail_path": "countries/laos/objects/done-kho-island.json"
+    }
+  ]
+}

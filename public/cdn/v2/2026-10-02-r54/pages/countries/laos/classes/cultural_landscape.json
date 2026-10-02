@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r54",
+    "page_type": "country_class",
+    "id": "country-class:la:cultural_landscape"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "cultural_landscape",
+    "label_ru": "Культурные ландшафты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:religion_ethnography",
+    "page_path": "pages/countries/laos/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/cultural_landscape.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 4,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:city:savannakhet",
+      "canonical_geo_id": "geo_la_0042",
+      "name": "Саваннакхет",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/city/savannakhet-city.json"
+    },
+    {
+      "id": "la:province:luang-namtha",
+      "canonical_geo_id": "geo_la_0043",
+      "name": "Луангнамтха",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/luang-namtha.json"
+    },
+    {
+      "id": "la:province:phongsaly",
+      "canonical_geo_id": "geo_la_0047",
+      "name": "Пхонгсали",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/phongsaly.json"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "canonical_geo_id": "geo_la_0041",
+      "name": "Саваннакхет",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/savannakhet.json"
+    },
+    {
+      "id": "la:town:muang-sing",
+      "canonical_geo_id": "geo_la_0045",
+      "name": "Мыанг-Синг",
+      "kind": "town",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/town/muang-sing.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:dong-na-tad-sacred-forest",
+      "name": "Dong Na Tad Sacred Forest",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Старовозрастный лес, охраняемый местными жителями также по духовным причинам; отдельный этнографически значимый природный объект.",
+      "detail_path": "countries/laos/objects/dong-na-tad-sacred-forest.json"
+    },
+    {
+      "id": "la:lao-silk-cotton-weaving-centre-savannakhet",
+      "name": "Lao Silk-Cotton Weaving Centre Savannakhet",
+      "geography_ids": [
+        "country:la",
+        "la:city:savannakhet",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet Province",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Центр традиционного шёлкового и хлопкового ткачества в Саваннакхете; отдельная ремесленная локация.",
+      "detail_path": "countries/laos/objects/lao-silk-cotton-weaving-centre-savannakhet.json"
+    },
+    {
+      "id": "la:ban-komaen-ancient-tea-plantation",
+      "name": "Ban Komaen Ancient Tea Plantation",
+      "geography_ids": [
+        "country:la",
+        "la:province:phongsaly"
+      ],
+      "region_legacy": "Phongsaly highlands",
+      "nearest_hub": "Phongsaly Town",
+      "narrow": "Ban Komaen — отдельная чайная высокогорная локация примерно в 18 км от Пхонгсали, известная старыми чайными деревьями; точная геопривязка и маршрут требуют отдельного QA.",
+      "detail_path": "countries/laos/objects/ban-komaen-ancient-tea-plantation.json"
+    },
+    {
+      "id": "la:muang-sing-tai-lue-cultural-landscape",
+      "name": "Muang Sing Tai Lue Cultural Landscape",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-namtha",
+        "la:town:muang-sing"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "nearest_hub": "Луангнамтха / Мыанг-Синг",
+      "narrow": "Мыанг-Синг — самостоятельный культурный ландшафт высокогорной долины с Tai Lue историческим слоем, сельскими поселениями, рисовыми полями и буддийско-анимистическими практиками; утренний рынок выделен отдельно.",
+      "detail_path": "countries/laos/objects/muang-sing-tai-lue-cultural-landscape.json"
+    }
+  ]
+}

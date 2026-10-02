@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r54",
+    "page_type": "country_class",
+    "id": "country-class:la:lake"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "lake",
+    "label_ru": "Озёра",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:water_coast_marine",
+    "page_path": "pages/countries/laos/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/lake.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 5,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:district:sanxay",
+      "canonical_geo_id": "geo_la_0073",
+      "name": "Сансай",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/district/sanxay.json"
+    },
+    {
+      "id": "la:geographic-area:nong-fa",
+      "canonical_geo_id": "geo_la_0075",
+      "name": "Озеро Нонг-Фа",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/geographic_area/nong-fa.json"
+    },
+    {
+      "id": "la:protected-area:dong-ampham",
+      "canonical_geo_id": "geo_la_0074",
+      "name": "Донг-Амфам",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/protected_area/dong-ampham.json"
+    },
+    {
+      "id": "la:province:attapeu",
+      "canonical_geo_id": "geo_la_0063",
+      "name": "Аттапы",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/attapeu.json"
+    },
+    {
+      "id": "la:province:khammouane",
+      "canonical_geo_id": "geo_la_0038",
+      "name": "Кхаммуан",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/khammouane.json"
+    },
+    {
+      "id": "la:province:oudomxay",
+      "canonical_geo_id": "geo_la_0076",
+      "name": "Удомсай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/oudomxay.json"
+    },
+    {
+      "id": "la:province:vientiane",
+      "canonical_geo_id": "geo_la_0029",
+      "name": "Провинция Вьентьян",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/vientiane-province.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:nam-ngum-reservoir",
+      "name": "Nam Ngum Reservoir",
+      "geography_ids": [
+        "country:la",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "nearest_hub": "Tha Heua",
+      "narrow": "Крупное водохранилище Nam Ngum, сформированное гидроэнергетическим проектом и используемое для лодочных маршрутов и ночёвок в прибрежных поселениях.",
+      "detail_path": "countries/laos/objects/nam-ngum-reservoir.json"
+    },
+    {
+      "id": "la:nam-hin-lake",
+      "name": "Nam Hin Lake",
+      "geography_ids": [
+        "country:la",
+        "la:province:oudomxay"
+      ],
+      "region_legacy": "Oudomxay Province",
+      "nearest_hub": "Muang Xay",
+      "narrow": "Озеро в Удомсае, выделенное официальным провинциальным туристическим справочником как самостоятельный природный объект.",
+      "detail_path": "countries/laos/objects/nam-hin-lake.json"
+    },
+    {
+      "id": "la:tha-falang-lake",
+      "name": "Tha Falang Lake",
+      "geography_ids": [
+        "country:la",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Khammouane Province",
+      "nearest_hub": "Thakhek",
+      "narrow": "Природный водный объект Кхаммуана, отдельно перечисляемый провинциальным туристическим справочником.",
+      "detail_path": "countries/laos/objects/tha-falang-lake.json"
+    },
+    {
+      "id": "la:khoun-kong-leng-lake",
+      "name": "Khoun Kong Leng Lake",
+      "geography_ids": [
+        "country:la",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Khammouane Province",
+      "nearest_hub": "Thakhek",
+      "narrow": "Голубое карстовое озеро Кхаммуана, отдельный природный объект; точный подъезд и режим купания будут проверены на QA.",
+      "detail_path": "countries/laos/objects/khoun-kong-leng-lake.json"
+    },
+    {
+      "id": "la:nong-fa-lake",
+      "name": "Nong Fa Lake",
+      "geography_ids": [
+        "country:la",
+        "la:district:sanxay",
+        "la:geographic-area:nong-fa",
+        "la:protected-area:dong-ampham",
+        "la:province:attapeu"
+      ],
+      "region_legacy": "Аттапы / Донг-Амфам",
+      "nearest_hub": "Sanxay",
+      "narrow": "Nong Fa — удалённое высокогорное кратерное озеро в Sanxay District; координата относится к центру озера, а не к въезду или trailhead.",
+      "detail_path": "countries/laos/objects/nong-fa-lake.json"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r54",
+    "page_type": "geography",
+    "id": "my:region:melaka"
+  },
+  "identity": {
+    "name": "Малакка",
+    "name_local": "Melaka",
+    "kind": "geographic_area",
+    "slug": "melaka",
+    "country_code": "MY",
+    "axis": "expedition_geography"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:my",
+    "page_path": "pages/countries/malaysia.json"
+  },
+  "hierarchy_status": "formalized",
+  "children": [],
+  "legacy_region_names": [
+    "Melaka"
+  ],
+  "legacy_locality_names": [],
+  "canonical_geo_id": "geo_my_0003",
+  "geo_profile": {
+    "id": "geo_my_0003",
+    "kind": "geographic_area",
+    "names": {
+      "primary": "Малакка",
+      "local": "Melaka"
+    },
+    "slug": "melaka",
+    "parent_id": "geo_my",
+    "geo_path": [
+      "geo_my",
+      "geo_my_0003"
+    ],
+    "description": {
+      "narrow": "Мелака — низменный прибрежный регион у Малаккского пролива, где исторический город вырос вокруг реки и морского торгового коридора. Компактное старое ядро, речная система и прибрежные участки требуют раздельного описания, а не сведения региона к одной городской достопримечательности.",
+      "body": null
+    },
+    "cover_media_id": null,
+    "primary_location": null,
+    "legacy_ids": [
+      "my:region:melaka"
+    ],
+    "migration": {
+      "source_kind": "formal_hierarchy",
+      "axis": "expedition_geography",
+      "status": "formalized",
+      "regional_content_status": "migrated_existing_region_profile"
+    },
+    "coverage_role": "regional_profile",
+    "provenance": {
+      "checked_at": "2026-10-01",
+      "sources": [
+        {
+          "source_file": "data/source/malaysia.json",
+          "publisher": "Expedition South East project research layer",
+          "used_for": [
+            "researched region identities",
+            "region-to-object linkage",
+            "verified locality relations where canonical locality IDs already exist"
+          ],
+          "checked_at": "2026-09-29"
+        }
+      ],
+      "structural_source_refs": [
+        "src_906005"
+      ],
+      "research_source_refs": [
+        "src_000593",
+        "src_000596",
+        "src_000598",
+        "src_000606",
+        "src_000601",
+        "src_000595",
+        "src_000594",
+        "src_000624",
+        "src_904103"
+      ],
+      "source_refs": [
+        "src_906005",
+        "src_000593",
+        "src_000596",
+        "src_000598",
+        "src_000606",
+        "src_000601",
+        "src_000595",
+        "src_000594",
+        "src_000624",
+        "src_904103",
+        "src_910103"
+      ],
+      "source_urls": [
+        "https://www.dosm.gov.my/"
+      ],
+      "research_checked_at": "2026-09-29"
+    },
+    "geometry_path": "geo/geometries/geo_my_0003.geojson",
+    "geometry": {
+      "status": "available",
+      "geometry_type": "expedition_coverage",
+      "accuracy": "approximate",
+      "simplified": true,
+      "intended_use": "map_mask_navigation_not_cadastral",
+      "coverage_basis": [
+        "Melaka state"
+      ],
+      "source_refs": [
+        "src_910103"
+      ],
+      "source_vintage": "current DOSM open geodata snapshot",
+      "checked_at": "2026-10-01",
+      "note": "Approximate expedition coverage follows the official Melaka state boundary; the node remains a geographic_area rather than an administrative state entity."
+    },
+    "languages": {
+      "spoken": [
+        "малайский",
+        "английский",
+        "путунхуа / хоккиен",
+        "баба-малайский; кристанг как язык культурного наследия"
+      ],
+      "notes": "Практический языковой профиль перенесён из объектных данных; требуется отдельная региональная редактура."
+    },
+    "climate": {
+      "summary": "Жарко и влажно круглый год. На юго-западном побережье полуострова осадки заметно связаны с утренними шквалами с Суматры в мае–августе; основной максимум обычно приходится на октябрь–ноябрь, а минимум — на февраль.",
+      "floods": {
+        "risk_context": "При продолжительных сильных ливнях низкие участки и зоны у рек подвержены подтоплению. Департамент ирригации и дренажа ведёт оперативный мониторинг уровней воды в Малакке.",
+        "live_monitoring": true
+      },
+      "source_refs": [
+        "src_000593",
+        "src_000596"
+      ],
+      "best_period_general": "Утро/вечер; более сухие месяцы комфортнее для пешего центра."
+    },
+    "geography": {
+      "summary": "Низкое прибрежное побережье у Малаккского пролива с историческим городом на реке Малакка; для поездок вдоль воды важны речные и прибрежные участки отдельно от компактного старого центра.",
+      "source_refs": [
+        "src_904103"
+      ]
+    },
+    "marine": {
+      "water_context": "Для вод Малакки и южной части Малаккского пролива Метеорологическая служба Малайзии публикует оперативный прогноз гроз, ветра и высоты волн.",
+      "tides": {
+        "status": "официальная таблица найдена; значения по конкретной станции ещё не нормализованы",
+        "official_source": "официальные таблицы приливов Национального гидрографического центра Малайзии за 2026 год"
+      },
+      "protected_marine": "Департамент рыболовства включает острова Ундан, Додол и Нангка в морскую охраняемую систему Малакки.",
+      "source_refs": [
+        "src_000598",
+        "src_000606",
+        "src_000601"
+      ],
+      "marine_life": {
+        "summary": "Морская охраняемая система Малакки включает островные и рифовые участки; точный список видов должен привязываться к конкретному острову.",
+        "source_refs": []
+      }
+    },
+    "nature": {
+      "fauna": {
+        "status": "Для этого узла отдельный локальный список характерной фауны пока не нормализован; общестрановой список не копируется автоматически."
+      },
+      "dangerous_animals": {
+        "status": "Опасные виды распределены неравномерно; локальный риск следует подтверждать для конкретной среды и маршрута."
+      },
+      "poisonous_plants": {
+        "status": "Надёжная локальная привязка токсичных растений к этому узлу пока не подтверждена отдельным источником; общестрановой список не переносится автоматически."
+      }
+    },
+    "health": {
+      "dengue_reference_2022": {
+        "area": "Малакка",
+        "incidence_per_100k": 65.69
+      },
+      "interpretation": "Исторический показатель по штату за 2022 год; он не описывает текущий риск для конкретного района.",
+      "source_refs": [
+        "src_000595"
+      ]
+    },
+    "safety": {
+      "crime": {
+        "dataset_scope": "полицейский округ",
+        "status": "локальные данные есть, но ещё не сведены"
+      },
+      "source_refs": [
+        "src_000594"
+      ]
+    },
+    "history": {
+      "summary": "Мелака выросла как торговый порт Малаккского пролива и сохраняет последовательные слои малайского султаната XV века, португальского и голландского периода, а затем британского влияния. UNESCO рассматривает Мелаку и Джорджтаун как взаимодополняющие города, показывающие разные этапы почти пяти столетий торговли между Востоком и Западом.",
+      "source_refs": [
+        "src_904103"
+      ]
+    },
+    "culture": {
+      "summary": "Живой культурный слой Мелаки сформирован многовековым торговым обменом. UNESCO прямо связывает его с сосуществованием разных религий, этнических кварталов, языков, религиозных праздников, музыки, кухни и повседневных практик; этот слой важнее туристической стилизации отдельных улиц.",
+      "source_refs": [
+        "src_904103"
+      ]
+    },
+    "architecture": {
+      "summary": "UNESCO выделяет в Мелаке правительственные здания, церкви, площади, фортификации, shophouses и townhouses как элементы единой исторической городской ткани. Их ценность не в отдельных «колониальных фасадах», а в последовательном наложении малайских, китайских, индийских и европейских строительных традиций.",
+      "source_refs": [
+        "src_904103"
+      ]
+    },
+    "transport": {
+      "intercity": "Основной самостоятельный въезд — междугородние автобусы до автовокзал Мелака-Сентрал; оттуда исторический центр связан местными автобусами и сервисами заказа машины.",
+      "local": "Историческое ядро между Голландская площадь, холмом холм Святого Павла, улица Джонкер и набережной реки удобнее проходить пешком; для автовокзал Мелака-Сентрал и внешних районов полезны сервисы заказа машины.",
+      "source_refs": [
+        "src_000624"
+      ]
+    },
+    "freshness": {
+      "checked_at": "2026-09-29"
+    }
+  },
+  "notes_ru": "Канонический региональный узел экспедиционной географии из уже исследованного странового материала; не трактуется как административная единица без отдельного подтверждения.",
+  "class_counts": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "built_heritage",
+      "label_ru": "Поселения и архитектурное наследие",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "historic_city",
+          "label_ru": "Исторические города и кварталы",
+          "count": 1,
+          "country_class_page": "pages/countries/malaysia/classes/historic_city.json",
+          "filter": {
+            "geography_id": "my:region:melaka"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:melaka",
+      "name": "Melaka",
+      "object_type": "historic_city",
+      "narrow": "Малакка — компактный слой истории Малаккского пролива: малайский султанат, португальская крепость, голландский административный центр, британский период, перанаканские дома и сохранившаяся евразийская община кристанг.",
+      "detail_path": "countries/malaysia/objects/melaka.json"
+    }
+  ],
+  "provenance": {
+    "sources": [
+      {
+        "source_file": "data/source/malaysia.json",
+        "publisher": "Expedition South East project research layer",
+        "used_for": [
+          "researched region identities",
+          "region-to-object linkage",
+          "verified locality relations where canonical locality IDs already exist"
+        ],
+        "checked_at": "2026-09-29"
+      }
+    ],
+    "checked_at": "2026-10-01"
+  }
+}

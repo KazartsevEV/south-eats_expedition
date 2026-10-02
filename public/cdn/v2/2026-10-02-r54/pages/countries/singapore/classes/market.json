@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r54",
+    "page_type": "country_class",
+    "id": "country-class:sg:market"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "object_type": "market",
+    "label_ru": "Рынки",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:sg:religion_ethnography",
+    "page_path": "pages/countries/singapore/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/market.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:sg",
+      "name": "Сингапур",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/singapore.json"
+    },
+    {
+      "id": "sg:region:central-region",
+      "canonical_geo_id": "geo_sg_0001",
+      "name": "Центральный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/central-region.json"
+    },
+    {
+      "id": "sg:region:east-region",
+      "canonical_geo_id": "geo_sg_0002",
+      "name": "Восточный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/east-region.json"
+    },
+    {
+      "id": "sg:region:north-east-region",
+      "canonical_geo_id": "geo_sg_0004",
+      "name": "Северо-восточный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/north-east-region.json"
+    },
+    {
+      "id": "sg:region:north-region",
+      "canonical_geo_id": "geo_sg_0003",
+      "name": "Северный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/north-region.json"
+    },
+    {
+      "id": "sg:region:west-region",
+      "canonical_geo_id": "geo_sg_0005",
+      "name": "Западный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/west-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:hawker-centres",
+      "name": "hawker centres",
+      "geography_ids": [
+        "country:sg",
+        "sg:region:central-region",
+        "sg:region:east-region",
+        "sg:region:north-east-region",
+        "sg:region:north-region",
+        "sg:region:west-region"
+      ],
+      "region_legacy": "Central / Marina / Civic District",
+      "nearest_hub": "Downtown Singapore",
+      "narrow": "hawker centres — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/hawker-centres.json"
+    }
+  ]
+}

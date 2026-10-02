@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r54",
+    "page_type": "country_class",
+    "id": "country-class:la:archaeological_site"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "archaeological_site",
+    "label_ru": "Археологические объекты",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:archaeology_memory",
+    "page_path": "pages/countries/laos/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/archaeological_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 4,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:district:champasak",
+      "canonical_geo_id": "geo_la_0032",
+      "name": "Район Чампасак",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/district/champasak-district.json"
+    },
+    {
+      "id": "la:province:bokeo",
+      "canonical_geo_id": "geo_la_0077",
+      "name": "Бокео",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/bokeo.json"
+    },
+    {
+      "id": "la:province:champasak",
+      "canonical_geo_id": "geo_la_0031",
+      "name": "Чампасак",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/champasak.json"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "canonical_geo_id": "geo_la_0041",
+      "name": "Саваннакхет",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/savannakhet.json"
+    },
+    {
+      "id": "la:province:vientiane",
+      "canonical_geo_id": "geo_la_0029",
+      "name": "Провинция Вьентьян",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/vientiane-province.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:wat-phou",
+      "name": "Wat Phou",
+      "geography_ids": [
+        "country:la",
+        "la:district:champasak",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
+      "nearest_hub": "Pakse",
+      "narrow": "Ват-Пху — не отдельный храм у подножия горы, а осевая сакральная система культурного ландшафта Чампасак: от равнины Меконга и древних городов через бараи, процессуальную дорогу и террасы маршрут поднимается к священной горе Пху-Као и постоянному источнику. Первоначальная шиваитская логика комплекса сохранилась в рельефе и гидравлике, а верхнее святилище сегодня остаётся местом живой буддийской практики.",
+      "detail_path": "countries/laos/objects/wat-phou.json"
+    },
+    {
+      "id": "la:souvannakhomkham-ancient-city",
+      "name": "Souvannakhomkham Ancient City",
+      "geography_ids": [
+        "country:la",
+        "la:province:bokeo"
+      ],
+      "region_legacy": "Bokeo Province",
+      "nearest_hub": "Houay Xay",
+      "narrow": "Крупный археологический комплекс Бокео с сетью храмов, ступ и изображений Будды; официальный Tourism Laos рассматривает его как отдельный древний город.",
+      "detail_path": "countries/laos/objects/souvannakhomkham-ancient-city.json"
+    },
+    {
+      "id": "la:heuan-hin-stone-house",
+      "name": "Heuan Hin Stone House",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Каменное сооружение к югу от Саваннакхета, которое Tourism Laos связывает с дорожной инфраструктурой эпохи Джаявармана VII.",
+      "detail_path": "countries/laos/objects/heuan-hin-stone-house.json"
+    },
+    {
+      "id": "la:vang-xang-archaeological-site",
+      "name": "Vang Xang Archaeological Site",
+      "geography_ids": [
+        "country:la",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Vientiane Province",
+      "nearest_hub": "Vang Vieng / Vientiane",
+      "narrow": "Археологический объект провинции Вьентьян, отдельный от природного карста Ванг-Вьенга.",
+      "detail_path": "countries/laos/objects/vang-xang-archaeological-site.json"
+    }
+  ]
+}

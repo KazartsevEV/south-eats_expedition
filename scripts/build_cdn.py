@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "source"
 PUBLIC = ROOT / "public" / "cdn" / "v2"
 
-SCHEMA_VERSION = "2.10.17"
-RELEASE_ID = "2026-10-02-r52"
+SCHEMA_VERSION = "2.10.18"
+RELEASE_ID = "2026-10-02-r53"
 LATEST_RELEASE_ID = "2026-10-02-r52"
 RELEASE_STATUS = "reference_release"
 SUPPORTED_SOURCE_MODELS = {"1.2", "1.5", "1.6"}

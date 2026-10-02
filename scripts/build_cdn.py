@@ -15,8 +15,8 @@ PUBLIC = ROOT / "public" / "cdn" / "v2"
 
 SCHEMA_VERSION = "2.10.15"
 RELEASE_ID = "2026-10-02-r50"
-LATEST_RELEASE_ID = "2026-10-02-r49"
-RELEASE_STATUS = "candidate"
+LATEST_RELEASE_ID = "2026-10-02-r50"
+RELEASE_STATUS = "reference_release"
 SUPPORTED_SOURCE_MODELS = {"1.2", "1.5", "1.6"}
 PUBLISH = [
     ("brunei.json", "BN", "brunei"),

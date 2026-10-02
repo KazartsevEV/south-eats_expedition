@@ -1080,6 +1080,8 @@ def build():
         source_card = (source_object or {}).get("traveler_card") or {}
         source_location = source_card.get("location") or {}
         source_verification = (source_object or {}).get("verification") or {}
+        inventory_review = ((source_object or {}).get("qa") or {}).get("inventory_review") or {}
+        inventory_preliminary = inventory_review.get("status") == "preliminary"
         raw_safety = (detail.get("visit") or {}).get("safety") or {}
 
         # Object-level language profiles belong to geo, not the attraction card.
@@ -1157,7 +1159,7 @@ def build():
             "id": object_id,
             "kind": "attraction",
             "slug": (detail.get("meta") or {}).get("slug") or legacy_row.get("slug"),
-            "status": "published",
+            "status": "draft" if inventory_preliminary else "published",
             "names": {"primary": (detail.get("identity") or {}).get("name")},
             "summary": {"narrow": (detail.get("identity") or {}).get("narrow")},
             "classification": {

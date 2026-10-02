@@ -1279,11 +1279,19 @@ def build():
         if legacy_languages and language_geo_id and language_geo_id in geo_entities:
             language_entity = geo_entities[language_geo_id]
             language_block = language_entity.setdefault("languages", {"spoken": [], "notes": None})
-            language_block["spoken"] = list(dict.fromkeys(
-                (language_block.get("spoken") or []) + list(legacy_languages)
-            ))
-            if not language_block.get("notes"):
-                language_block["notes"] = "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
+            # Laos regional/locality profiles have already been editorially normalized.
+            # Do not append legacy English aliases from object cards back into them.
+            preserve_researched_laos_languages = (
+                code == "LA"
+                and bool(language_block.get("spoken"))
+                and language_entity.get("coverage_role") in {"regional_profile", "locality_profile"}
+            )
+            if not preserve_researched_laos_languages:
+                language_block["spoken"] = list(dict.fromkeys(
+                    (language_block.get("spoken") or []) + list(legacy_languages)
+                ))
+                if not language_block.get("notes"):
+                    language_block["notes"] = "Практический языковой профиль перенесён из объектных данных; требуется отдельная региональная редактура."
 
         story_payload = dict(detail.get("story") or {})
         source_sections = ((((source_object or {}).get("traveler_card") or {}).get("annotation") or {}).get("sections"))

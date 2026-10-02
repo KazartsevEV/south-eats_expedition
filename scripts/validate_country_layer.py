@@ -41,7 +41,7 @@ GEO_NODE_REQUIRED_KEYS = {
 COUNTRY_CULTURE_EXPECTED = {
     "LA": {"food_cards": 6, "festival_cards": 4},
 }
-LA_REGIONAL_EXPECTED = {"regional_profiles": 10, "hierarchy_profiles": 26}
+LA_REGIONAL_EXPECTED = {"regional_profiles": 10, "hierarchy_profiles": 35}
 LA_REGIONAL_BANNED_SNIPPETS = (
     "Тропический муссонный климат с выраженным сухим и дождливым сезонами",
     "Основная часть осадков приходится на летний муссон",
@@ -478,14 +478,15 @@ for code, slug in COUNTRIES.items():
             )
         required_profile_ids = {
             node.get("id") for node in nodes
-            if node.get("kind") == "province" or node.get("id") == "la:city:vientiane"
+            if node.get("kind") in {"province", "protected_area", "geographic_area", "archipelago"}
+            or node.get("id") == "la:city:vientiane"
         }
         missing_profile_ids = sorted(
             node_id for node_id in required_profile_ids
             if not next((node.get("profile") for node in nodes if node.get("id") == node_id), None)
         )
         if missing_profile_ids:
-            fail(f"LA: province/capital hierarchy nodes lack profiles {missing_profile_ids}")
+            fail(f"LA: major regional hierarchy nodes lack profiles {missing_profile_ids}")
 
     node_id_set = set(node_ids)
     country_parent = f"country:{code.lower()}"

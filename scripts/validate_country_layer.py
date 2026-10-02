@@ -41,7 +41,7 @@ GEO_NODE_REQUIRED_KEYS = {
 COUNTRY_CULTURE_EXPECTED = {
     "LA": {"food_cards": 6, "festival_cards": 4},
 }
-LA_REGIONAL_EXPECTED = {"regional_profiles": 10, "hierarchy_profiles": 35}
+LA_REGIONAL_EXPECTED = {"regional_profiles": 10, "hierarchy_profiles": 57}
 LA_REGIONAL_BANNED_SNIPPETS = (
     "Тропический муссонный климат с выраженным сухим и дождливым сезонами",
     "Основная часть осадков приходится на летний муссон",
@@ -500,17 +500,13 @@ for code, slug in COUNTRIES.items():
                 f"LA: expected {LA_REGIONAL_EXPECTED['hierarchy_profiles']} hierarchy profiles, "
                 f"got {len(hierarchy_profiles)}"
             )
-        required_profile_ids = {
-            node.get("id") for node in nodes
-            if node.get("kind") in {"province", "protected_area", "geographic_area", "archipelago"}
-            or node.get("id") == "la:city:vientiane"
-        }
+        required_profile_ids = {node.get("id") for node in nodes}
         missing_profile_ids = sorted(
             node_id for node_id in required_profile_ids
             if not next((node.get("profile") for node in nodes if node.get("id") == node_id), None)
         )
         if missing_profile_ids:
-            fail(f"LA: major regional hierarchy nodes lack profiles {missing_profile_ids}")
+            fail(f"LA: formal hierarchy nodes lack profiles {missing_profile_ids}")
 
     node_id_set = set(node_ids)
     country_parent = f"country:{code.lower()}"
@@ -593,8 +589,8 @@ for code, slug in COUNTRIES.items():
         if region.get("name") not in legacy_region_names:
             fail(f"{code}: region {region.get('name')!r} has no canonical hierarchy node")
 
-    # Lower-level locality profiles may intentionally remain logistics-only route
-    # hubs. They are not promoted into administrative geography without evidence.
+    # Every formal Laos hierarchy node now carries a sourced profile. Pure route
+    # hubs that lack verified settlement/admin geography must stay logistics metadata.
 
     report[code] = {
         "profile_fields": len(PROFILE_FIELDS),

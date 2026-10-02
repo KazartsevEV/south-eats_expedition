@@ -139,7 +139,26 @@ for object_path in sorted((release / "objects").glob("*/*.json")):
             path = release / "geo" / "entities" / f"{geo_id}.json"
             if path.exists():
                 spoken.update(((load(path).get("languages") or {}).get("spoken") or []))
-        missing = [value for value in old_languages if value not in spoken]
+        if code == "LA":
+            laos_language_aliases = {
+                "Lao": "лаосский",
+                "Hmong": "хмонг",
+                "Khmu": "кхму",
+                "English limited": "английский — ограниченно",
+                "English in tourism": "английский — в туристической инфраструктуре",
+                "English some tourism": "английский — в туристической инфраструктуре",
+                "French limited": "французский — ограниченно",
+                "Tai Lue": "тай-лы",
+                "Tai Dam": "тай-дам",
+                "Akha varieties": "разновидности языка акха",
+                "Lanten": "лантен",
+                "Phounoy": "пхуной",
+                "тайский часто понимают": "тайский — часто понимают",
+            }
+            expected_languages = [laos_language_aliases.get(value, value) for value in old_languages]
+        else:
+            expected_languages = old_languages
+        missing = [value for value in expected_languages if value not in spoken]
         if missing:
             fail(f"{obj['id']}: geo language migration lost {missing}")
         language_values_checked += len(old_languages)

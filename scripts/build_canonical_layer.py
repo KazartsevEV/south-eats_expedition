@@ -186,6 +186,78 @@ def remap_geo_sources(geo, registry):
     return geo
 
 
+def _normalized_object_name(value):
+    if not value:
+        return None
+    normalized = "".join(
+        char if char.isalnum() else " "
+        for char in str(value).casefold()
+    )
+    return " ".join(normalized.split())
+
+
+def _information_score(value):
+    if value in (None, "", [], {}):
+        return 0
+    if isinstance(value, dict):
+        return sum(_information_score(child) for child in value.values())
+    if isinstance(value, list):
+        return sum(_information_score(child) for child in value)
+    return 1
+
+
+def _deep_fill_unique(primary, donor):
+    """Preserve the preferred duplicate and fill only missing/additive data."""
+    if isinstance(primary, dict) and isinstance(donor, dict):
+        result = json.loads(json.dumps(primary, ensure_ascii=False))
+        for key, donor_value in donor.items():
+            if key not in result or result[key] in (None, "", [], {}):
+                result[key] = json.loads(json.dumps(donor_value, ensure_ascii=False))
+            else:
+                result[key] = _deep_fill_unique(result[key], donor_value)
+        return result
+    if isinstance(primary, list) and isinstance(donor, list):
+        result = json.loads(json.dumps(primary, ensure_ascii=False))
+        fingerprints = {
+            json.dumps(item, ensure_ascii=False, sort_keys=True)
+            for item in result
+        }
+        for item in donor:
+            fingerprint = json.dumps(item, ensure_ascii=False, sort_keys=True)
+            if fingerprint not in fingerprints:
+                result.append(json.loads(json.dumps(item, ensure_ascii=False)))
+                fingerprints.add(fingerprint)
+        return result
+    return primary if primary not in (None, "", [], {}) else donor
+
+
+def _source_object_score(row):
+    qa = row.get("qa") or {}
+    inventory = qa.get("inventory_review") or {}
+    rebuild = qa.get("rebuild_v2") or {}
+    fact_sources = qa.get("fact_source_review") or {}
+    score = _information_score(row)
+    # A researched card must always beat a preliminary inventory shell.
+    if inventory.get("status") == "preliminary":
+        score -= 10000
+    if rebuild.get("status") == "passed":
+        score += 2000
+    if fact_sources.get("status") == "passed":
+        score += 2000
+    score += 100 * len(row.get("sources") or [])
+    return score
+
+
+def _prefer_and_merge_source_object(existing, candidate):
+    if existing is None:
+        return json.loads(json.dumps(candidate, ensure_ascii=False))
+    existing_score = _source_object_score(existing)
+    candidate_score = _source_object_score(candidate)
+    if candidate_score > existing_score:
+        return _deep_fill_unique(candidate, existing)
+    return _deep_fill_unique(existing, candidate)
+
+
 def remap_visual_sources(visual, registry):
     visual = json.loads(json.dumps(visual or {}, ensure_ascii=False))
     for row in visual.get("viewpoints") or []:
@@ -195,6 +267,111 @@ def remap_visual_sources(visual, registry):
     if isinstance(drone, dict):
         drone["source_refs"] = remap_source_refs(drone.get("source_refs"), registry)
     return visual
+
+
+def canonical_visual_recon(visual):
+    """Keep all researched visual facts while guaranteeing one stable shape."""
+    out = json.loads(json.dumps(visual or {}, ensure_ascii=False))
+    for key in ("viewpoints", "seasonal_visuals", "video_activity", "useful_equipment"):
+        value = out.get(key)
+        out[key] = value if isinstance(value, list) else []
+    for key in (
+        "best_time",
+        "best_weather_light",
+        "filming_restrictions",
+        "photo_suitability_5",
+        "video_suitability_5",
+    ):
+        out.setdefault(key, None)
+
+    drone = out.get("drone")
+    if not isinstance(drone, dict):
+        drone = {}
+    out["drone"] = {
+        "visual_value": drone.get("visual_value"),
+        "legal_status": drone.get("legal_status"),
+        "permit_required": drone.get("permit_required"),
+        "restrictions": drone.get("restrictions") if isinstance(drone.get("restrictions"), list) else [],
+        "source_refs": drone.get("source_refs") if isinstance(drone.get("source_refs"), list) else [],
+        "checked_at": drone.get("checked_at"),
+    }
+    return out
+
+
+def canonical_water(logistics, source_refs, strict_source_scope=False, preliminary=False):
+    structured = logistics.get("water_structured")
+    if isinstance(structured, dict):
+        out = json.loads(json.dumps(structured, ensure_ascii=False))
+        out["at_object"] = out.get("at_object")
+        out["last_reliable_point"] = out.get("last_reliable_point")
+        out["distance_m"] = out.get("distance_m")
+        out["natural_sources"] = out.get("natural_sources") if isinstance(out.get("natural_sources"), list) else []
+        out["notes"] = out.get("notes") if out.get("notes") is not None else out.get("summary")
+        out.pop("summary", None)
+        out.pop("last_reliable_source", None)
+        out["quality"] = out.get("quality")
+        explicit_refs = out.get("source_refs") if isinstance(out.get("source_refs"), list) else []
+        out["source_refs"] = (
+            list(dict.fromkeys(explicit_refs))
+            if strict_source_scope
+            else list(dict.fromkeys(explicit_refs + list(source_refs)))
+        )
+        return out
+
+    note = None if preliminary else logistics.get("water")
+    return {
+        "at_object": None,
+        "last_reliable_point": None,
+        "distance_m": None,
+        "natural_sources": [],
+        "notes": note,
+        "quality": None if preliminary and note is None else "unknown",
+        "source_refs": [] if preliminary or note is None else list(source_refs),
+    }
+
+
+def canonical_supplies(logistics, source_refs, strict_source_scope=False, preliminary=False):
+    structured = logistics.get("supplies")
+    if isinstance(structured, dict):
+        out = json.loads(json.dumps(structured, ensure_ascii=False))
+        out.setdefault("status", None)
+        out.setdefault("summary", None)
+        out["poi_ids"] = out.get("poi_ids") if isinstance(out.get("poi_ids"), list) else []
+        explicit_refs = out.get("source_refs") if isinstance(out.get("source_refs"), list) else []
+        out["source_refs"] = (
+            list(dict.fromkeys(explicit_refs))
+            if strict_source_scope
+            else list(dict.fromkeys(explicit_refs + list(source_refs)))
+        )
+        return out
+    return {
+        "status": None,
+        "summary": None,
+        "poi_ids": [],
+        "source_refs": [],
+    }
+
+
+def canonical_overnight(logistics, source_refs, strict_source_scope=False, preliminary=False):
+    structured = logistics.get("overnight")
+    if isinstance(structured, dict):
+        out = json.loads(json.dumps(structured, ensure_ascii=False))
+        out.setdefault("status", None)
+        out.setdefault("summary", None)
+        explicit_refs = out.get("source_refs") if isinstance(out.get("source_refs"), list) else []
+        out["source_refs"] = (
+            list(dict.fromkeys(explicit_refs))
+            if strict_source_scope
+            else list(dict.fromkeys(explicit_refs + list(source_refs)))
+        )
+        return out
+
+    summary = None if preliminary else logistics.get("overnight_and_camping")
+    return {
+        "status": None if preliminary and summary is None else "unclear",
+        "summary": summary,
+        "source_refs": [] if preliminary or summary is None else list(source_refs),
+    }
 
 
 def canonical_point(point):
@@ -389,10 +566,16 @@ def build():
     for code, (_, source_doc) in sources_by_code.items():
         travel = source_doc.get("travel") or {}
         for row in travel.get("objects") or []:
-            if row.get("name"):
-                source_object_by_country_name[(code, row.get("name"))] = row
-            if row.get("display_name"):
-                source_object_by_country_name[(code, row.get("display_name"))] = row
+            aliases = [row.get("name"), row.get("display_name")]
+            for alias in aliases:
+                normalized_alias = _normalized_object_name(alias)
+                if not normalized_alias:
+                    continue
+                key = (code, normalized_alias)
+                source_object_by_country_name[key] = _prefer_and_merge_source_object(
+                    source_object_by_country_name.get(key),
+                    row,
+                )
         for row in travel.get("regions") or []:
             if row.get("name"):
                 region_profile_by_country_name[(code, row.get("name"))] = row
@@ -1076,12 +1259,16 @@ def build():
         logistics = (detail.get("visit") or {}).get("logistics") or {}
         operations = (detail.get("visit") or {}).get("operations") or {}
         visual_recon = remap_visual_sources(detail.get("visual_recon"), registry)
-        source_object = source_object_by_country_name.get((code, (detail.get("identity") or {}).get("name")))
+        source_object = source_object_by_country_name.get((
+            code,
+            _normalized_object_name((detail.get("identity") or {}).get("name")),
+        ))
         source_card = (source_object or {}).get("traveler_card") or {}
         source_location = source_card.get("location") or {}
         source_verification = (source_object or {}).get("verification") or {}
         inventory_review = ((source_object or {}).get("qa") or {}).get("inventory_review") or {}
         inventory_preliminary = inventory_review.get("status") == "preliminary"
+        visual_recon = canonical_visual_recon(visual_recon)
         raw_safety = (detail.get("visit") or {}).get("safety") or {}
 
         # Object-level language profiles belong to geo, not the attraction card.
@@ -1145,9 +1332,9 @@ def build():
             ),
             "narrative": bool(sections),
             "sources": bool(source_refs),
-            "access": bool(canonical_access_options or logistics.get("access")),
-            "water": bool(logistics.get("water")),
-            "overnight": bool(logistics.get("overnight_and_camping")),
+            "access": bool(canonical_access_options or (logistics.get("access") and not inventory_preliminary)),
+            "water": bool(logistics.get("water_structured") or (logistics.get("water") and not inventory_preliminary)),
+            "overnight": bool(logistics.get("overnight") or (logistics.get("overnight_and_camping") and not inventory_preliminary)),
             "traveler_reports": bool(reports),
             "visual_recon": bool(visual_recon.get("best_time") or visual_recon.get("viewpoints")),
             "gallery_min_5": len(set(media_ids)) >= 5,
@@ -1180,16 +1367,20 @@ def build():
                 "entry": {
                     "hours": operations.get("hours"),
                     "ticket": operations.get("ticket"),
-                    "closure_notes": operations.get("closure_notes"),
+                    "closure_notes": None if inventory_preliminary else operations.get("closure_notes"),
                     "status": operations.get("status"),
                     "official_url": operations.get("official_url"),
-                    "notes": logistics.get("access"),
+                    "notes": None if inventory_preliminary else logistics.get("access"),
                     "source_refs": (
-                        list(dict.fromkeys((operations.get("source_refs") or []) + (logistics.get("access_source_refs") or [])))
-                        if strict_source_scope
-                        else source_refs
+                        []
+                        if inventory_preliminary
+                        else (
+                            list(dict.fromkeys((operations.get("source_refs") or []) + (logistics.get("access_source_refs") or [])))
+                            if strict_source_scope
+                            else source_refs
+                        )
                     ),
-                    "checked_at": operations.get("last_verified"),
+                    "checked_at": None if inventory_preliminary else operations.get("last_verified"),
                     "typical_visit_hours": logistics.get("typical_visit_hours"),
                     "public_transport": legacy_access_note("public_transport"),
                     "last_mile": legacy_access_note("last_mile"),
@@ -1208,59 +1399,49 @@ def build():
                     },
                 },
                 "access_options": canonical_access_options,
-                "water": (
-                    {
-                        **json.loads(json.dumps(logistics.get("water_structured"), ensure_ascii=False)),
-                        "source_refs": (
-                            list(dict.fromkeys((logistics.get("water_structured") or {}).get("source_refs", [])))
-                            if strict_source_scope
-                            else list(dict.fromkeys((logistics.get("water_structured") or {}).get("source_refs", []) + source_refs))
-                        ),
-                    }
-                    if isinstance(logistics.get("water_structured"), dict)
-                    else {
-                        "summary": logistics.get("water"),
-                        "quality": "unknown",
-                        "last_reliable_source": None,
-                        "distance_m": None,
-                        "natural_sources": [],
-                        "source_refs": source_refs,
-                    }
+                "water": canonical_water(
+                    logistics,
+                    source_refs,
+                    strict_source_scope=strict_source_scope,
+                    preliminary=inventory_preliminary,
                 ),
-                "supplies": json.loads(json.dumps(logistics.get("supplies"), ensure_ascii=False)) if isinstance(logistics.get("supplies"), dict) else None,
-                "overnight": (
-                    {
-                        **json.loads(json.dumps(logistics.get("overnight"), ensure_ascii=False)),
-                        "source_refs": (
-                            list(dict.fromkeys((logistics.get("overnight") or {}).get("source_refs", [])))
-                            if strict_source_scope
-                            else list(dict.fromkeys((logistics.get("overnight") or {}).get("source_refs", []) + source_refs))
-                        ),
-                    }
-                    if isinstance(logistics.get("overnight"), dict)
-                    else {
-                        "status": "unclear",
-                        "summary": logistics.get("overnight_and_camping"),
-                        "source_refs": source_refs,
-                    }
+                "supplies": canonical_supplies(
+                    logistics,
+                    source_refs,
+                    strict_source_scope=strict_source_scope,
+                    preliminary=inventory_preliminary,
+                ),
+                "overnight": canonical_overnight(
+                    logistics,
+                    source_refs,
+                    strict_source_scope=strict_source_scope,
+                    preliminary=inventory_preliminary,
                 ),
                 "lodging_ids": lodging_ids,
                 "rules": {
                     "permit_or_guide": logistics.get("permit_or_guide"),
                     "access_requirements": logistics.get("access_requirements"),
                     "source_refs": (
-                        list(dict.fromkeys(logistics.get("rules_source_refs") or []))
-                        if strict_source_scope
-                        else source_refs
+                        []
+                        if inventory_preliminary
+                        else (
+                            list(dict.fromkeys(logistics.get("rules_source_refs") or []))
+                            if strict_source_scope
+                            else source_refs
+                        )
                     ),
-                    "checked_at": operations.get("last_verified"),
+                    "checked_at": None if inventory_preliminary else operations.get("last_verified"),
                     "safety": {
                         "crime_context": raw_safety.get("crime_context"),
                         "main_risks": raw_safety.get("main_risks") or [],
                         "sensitive_areas": raw_safety.get("sensitive_areas") or [],
                         "confidence": raw_safety.get("confidence"),
                         "source_refs": safety_source_refs,
-                        "checked_at": raw_safety.get("checked_at") or operations.get("last_verified"),
+                        "checked_at": (
+                            raw_safety.get("checked_at")
+                            if raw_safety.get("checked_at")
+                            else (None if inventory_preliminary else operations.get("last_verified"))
+                        ),
                     },
                 },
                 "seasonality": (detail.get("visit") or {}).get("climate"),

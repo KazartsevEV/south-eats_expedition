@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r45",
+    "page_type": "country_class",
+    "id": "country-class:la:historic_city"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:built_heritage",
+    "page_path": "pages/countries/laos/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:city:luang-prabang",
+      "canonical_geo_id": "geo_la_0025",
+      "name": "Луангпхабанг",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/city/luang-prabang-city.json"
+    },
+    {
+      "id": "la:city:savannakhet",
+      "canonical_geo_id": "geo_la_0042",
+      "name": "Саваннакхет",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/city/savannakhet-city.json"
+    },
+    {
+      "id": "la:city:thakhek",
+      "canonical_geo_id": "geo_la_0040",
+      "name": "Тхакхэк",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/city/thakhek.json"
+    },
+    {
+      "id": "la:province:khammouane",
+      "canonical_geo_id": "geo_la_0038",
+      "name": "Кхаммуан",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/khammouane.json"
+    },
+    {
+      "id": "la:province:luang-prabang",
+      "canonical_geo_id": "geo_la_0024",
+      "name": "Луангпхабанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/luang-prabang.json"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "canonical_geo_id": "geo_la_0041",
+      "name": "Саваннакхет",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/savannakhet.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:luang-prabang",
+      "name": "Luang Prabang",
+      "geography_ids": [
+        "country:la",
+        "la:city:luang-prabang",
+        "la:province:luang-prabang"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "nearest_hub": "Луангпхабанг / Нонг-Кхиав",
+      "narrow": "Луангпхабанг — бывшая королевская и религиозная столица на полуострове между Меконгом и Нам-Кханом, где средневековые ваты, деревянные кварталы старых деревень и колониальная уличная сеть сохранились как единый живой город. Его экспедиционный интерес — не набор храмов, а связь сакрального ландшафта Пху-Си, речной географии, городской архитектуры и действующих буддийско-анимистических практик.",
+      "detail_path": "countries/laos/objects/luang-prabang.json"
+    },
+    {
+      "id": "la:savannakhet-old-quarter",
+      "name": "Savannakhet old quarter",
+      "geography_ids": [
+        "country:la",
+        "la:city:savannakhet",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Старый Саваннакхет — редкий для Лаоса компактный исторический городской ансамбль, где колониальная и арт-деко архитектура существует внутри действующей многоэтничной среды. Здесь важны не отдельные «французские дома», а сетка улиц, рынки, храмы, кинотеатры и Меконг как единая городская система.",
+      "detail_path": "countries/laos/objects/savannakhet-old-quarter.json"
+    },
+    {
+      "id": "la:old-thakhek-town",
+      "name": "Old Thakhek Town",
+      "geography_ids": [
+        "country:la",
+        "la:city:thakhek",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Кхаммуан / Конг-Лор",
+      "nearest_hub": "Thakhek",
+      "narrow": "Старый Тхакхэк — компактный квартал на Меконг с франко-лаосскими шопхаусами, католическим и буддийским слоями и ролью транзитного центра к карсту Кхаммуан. Для экспедиции он работает как человеческая прелюдия к кольцевой маршрут Тхакхэка и Конг-Лор.",
+      "detail_path": "countries/laos/objects/old-thakhek-town.json"
+    }
+  ]
+}

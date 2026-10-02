@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r45",
+    "page_type": "country_class",
+    "id": "country-class:mm:religious_site"
+  },
+  "identity": {
+    "country_code": "MM",
+    "country_slug": "myanmar",
+    "object_type": "religious_site",
+    "label_ru": "Храмы и религиозные объекты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:mm:religion_ethnography",
+    "page_path": "pages/countries/myanmar/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/religious_site.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:mm",
+      "name": "Мьянма",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/myanmar.json"
+    },
+    {
+      "id": "mm:locality:kinpun",
+      "canonical_geo_id": "geo_mm_0031",
+      "name": "Кинпун",
+      "kind": "village",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/village/kinpun.json"
+    },
+    {
+      "id": "mm:locality:monywa",
+      "canonical_geo_id": "geo_mm_0036",
+      "name": "Моунъюа",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/city/monywa.json"
+    },
+    {
+      "id": "mm:region:mon-state-kyaiktiyo-mawlamyine",
+      "canonical_geo_id": "geo_mm_0005",
+      "name": "Штат Мон / Кьяиктийо / Моулмейн",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/mon-state-kyaiktiyo-mawlamyine.json"
+    },
+    {
+      "id": "mm:region:sagaing-monywa",
+      "canonical_geo_id": "geo_mm_0011",
+      "name": "Сикайн / Моунъюа",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/sagaing-monywa.json"
+    },
+    {
+      "id": "mm:region:yangon",
+      "canonical_geo_id": "geo_mm_0001",
+      "name": "Янгон и окрестности",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/yangon.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "mm:shwedagon-pagoda",
+      "name": "Shwedagon Pagoda",
+      "geography_ids": [
+        "country:mm",
+        "mm:region:yangon"
+      ],
+      "region_legacy": "Yangon",
+      "nearest_hub": "Yangon",
+      "narrow": "Shwedagon — не просто золотая ступа, а работающий религиозный космос на Singuttara Hill: четыре крытых подъёма, круговое движение паломников, планетарные посты, алтари, колокола и сотни религиозных построек дают материал от архитектуры до живого ритуала.",
+      "detail_path": "countries/myanmar/objects/shwedagon-pagoda.json"
+    },
+    {
+      "id": "mm:kyaiktiyo-golden-rock",
+      "name": "Kyaiktiyo / Golden Rock",
+      "geography_ids": [
+        "country:mm",
+        "mm:locality:kinpun",
+        "mm:region:mon-state-kyaiktiyo-mawlamyine"
+      ],
+      "region_legacy": "штат Мон / Kyaiktiyo / Mawlamyine",
+      "nearest_hub": "Kinpun",
+      "narrow": "Kyaiktiyo — горное паломничество к Golden Rock, где ценность не в «камне, который не падает», а в потоке паломников, подъёме через лесной Kyaikhtiyoe Natural Reserve и вечернем религиозном пространстве на краю хребта.",
+      "detail_path": "countries/myanmar/objects/kyaiktiyo-golden-rock.json"
+    },
+    {
+      "id": "mm:monywa-thanboddhay-and-bodhi-tataung",
+      "name": "Monywa / Thanboddhay and Bodhi Tataung",
+      "geography_ids": [
+        "country:mm",
+        "mm:locality:monywa",
+        "mm:region:sagaing-monywa"
+      ],
+      "region_legacy": "Sagaing / Monywa",
+      "nearest_hub": "Monywa",
+      "narrow": "Monywa / Thanboddhay and Bodhi Tataung — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/myanmar/objects/monywa-thanboddhay-and-bodhi-tataung.json"
+    }
+  ]
+}

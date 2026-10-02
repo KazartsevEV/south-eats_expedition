@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r45",
+    "page_type": "class_family",
+    "id": "country-family:id:religion_ethnography"
+  },
+  "identity": {
+    "country_code": "ID",
+    "country_slug": "indonesia",
+    "family_id": "religion_ethnography",
+    "label_ru": "Религия, этнография и живая культура"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:id",
+    "page_path": "pages/countries/indonesia.json"
+  },
+  "global_family_page": "pages/families/religion_ethnography.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "count": 3,
+  "classes": [
+    {
+      "object_type": "living_settlement",
+      "label_ru": "Живые традиционные поселения",
+      "count": 1,
+      "global_page_path": "pages/classes/living_settlement.json",
+      "country_page_path": "pages/countries/indonesia/classes/living_settlement.json"
+    },
+    {
+      "object_type": "cultural_landscape",
+      "label_ru": "Культурные ландшафты",
+      "count": 2,
+      "global_page_path": "pages/classes/cultural_landscape.json",
+      "country_page_path": "pages/countries/indonesia/classes/cultural_landscape.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "id:wae-rebo",
+      "name": "Wae Rebo",
+      "object_type": "living_settlement",
+      "geography_ids": [
+        "country:id",
+        "id:region:flores-komodo"
+      ],
+      "region_legacy": "Flores / Komodo",
+      "narrow": "Изолированная горная деревня Manggarai с семью конусными Mbaru Niang; сильный объект живой архитектуры, общинного наследия и полноценного пешего подхода.",
+      "detail_path": "countries/indonesia/objects/wae-rebo.json"
+    },
+    {
+      "id": "id:bali-temple-landscapes",
+      "name": "Bali temple landscapes",
+      "object_type": "cultural_landscape",
+      "geography_ids": [
+        "country:id",
+        "id:region:bali"
+      ],
+      "region_legacy": "Bali",
+      "narrow": "Храмы в вулканическом, рисовом и прибрежном ландшафте; важен именно как живая ритуальная система, а не набор фототочек.",
+      "detail_path": "countries/indonesia/objects/bali-temple-landscapes.json"
+    },
+    {
+      "id": "id:tana-toraja-hinterland",
+      "name": "Tana Toraja hinterland",
+      "object_type": "cultural_landscape",
+      "geography_ids": [
+        "country:id",
+        "id:region:toraja-south-sulawesi"
+      ],
+      "region_legacy": "Toraja / South Сулавеси",
+      "narrow": "Tana Toraja — горный культурный ландшафт Южного Сулавеси, где tongkonan, рисовые террасы, скальные и пещерные погребения и ритуальные площадки образуют единую систему родства и памяти предков.",
+      "detail_path": "countries/indonesia/objects/tana-toraja-hinterland.json"
+    }
+  ]
+}

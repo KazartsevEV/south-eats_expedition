@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r45",
+    "page_type": "country_class",
+    "id": "country-class:mm:mountain"
+  },
+  "identity": {
+    "country_code": "MM",
+    "country_slug": "myanmar",
+    "object_type": "mountain",
+    "label_ru": "Горы",
+    "family_id": "relief_geology"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:mm:relief_geology",
+    "page_path": "pages/countries/myanmar/families/relief_geology.json"
+  },
+  "global_class_page": "pages/classes/mountain.json",
+  "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:mm",
+      "name": "Мьянма",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/myanmar.json"
+    },
+    {
+      "id": "mm:locality:kanpetlet",
+      "canonical_geo_id": "geo_mm_0039",
+      "name": "Канпетлет",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/town/kanpetlet.json"
+    },
+    {
+      "id": "mm:region:chin-state-nat-ma-taung",
+      "canonical_geo_id": "geo_mm_0013",
+      "name": "Штат Чин / Нат-Ма-Таун",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/chin-state-nat-ma-taung.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "mm:nat-ma-taung-mount-victoria",
+      "name": "Nat Ma Taung / Mount Victoria",
+      "geography_ids": [
+        "country:mm",
+        "mm:locality:kanpetlet",
+        "mm:region:chin-state-nat-ma-taung"
+      ],
+      "region_legacy": "Chin State / Nat Ma Taung",
+      "nearest_hub": "Kanpetlet",
+      "narrow": "Высокогорный Nat Ma Taung в Chin State — ASEAN heritage/biodiversity landscape с эндемичной флорой, горными лесами и Chin cultural context; сейчас объект только для исследования базы.",
+      "detail_path": "countries/myanmar/objects/nat-ma-taung-mount-victoria.json"
+    }
+  ]
+}

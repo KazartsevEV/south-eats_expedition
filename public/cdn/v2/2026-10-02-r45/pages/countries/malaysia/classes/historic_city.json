@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r45",
+    "page_type": "country_class",
+    "id": "country-class:my:historic_city"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:built_heritage",
+    "page_path": "pages/countries/malaysia/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 5,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:locality:kuala-kangsar",
+      "canonical_geo_id": "geo_my_0036",
+      "name": "Куала-Кангсар",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/town/kuala-kangsar.json"
+    },
+    {
+      "id": "my:locality:kuching",
+      "canonical_geo_id": "geo_my_0041",
+      "name": "Кучинг",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/city/kuching.json"
+    },
+    {
+      "id": "my:locality:taiping",
+      "canonical_geo_id": "geo_my_0034",
+      "name": "Тайпинг",
+      "kind": "city",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/city/taiping.json"
+    },
+    {
+      "id": "my:region:melaka",
+      "canonical_geo_id": "geo_my_0003",
+      "name": "Малакка",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/melaka.json"
+    },
+    {
+      "id": "my:region:penang-george-town",
+      "canonical_geo_id": "geo_my_0002",
+      "name": "Пенанг / Джорджтаун",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/penang-george-town.json"
+    },
+    {
+      "id": "my:region:perak-taiping-kuala-kangsar-belum",
+      "canonical_geo_id": "geo_my_0011",
+      "name": "Перак / Тайпинг / Куала-Кангсар / Белум",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/perak-taiping-kuala-kangsar-belum.json"
+    },
+    {
+      "id": "my:region:sarawak-kuching-niah",
+      "canonical_geo_id": "geo_my_0006",
+      "name": "Саравак / Кучинг / Ниа",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/sarawak-kuching-niah.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:george-town",
+      "name": "George Town",
+      "geography_ids": [
+        "country:my",
+        "my:region:penang-george-town"
+      ],
+      "region_legacy": "Penang / George Town",
+      "nearest_hub": "George Town / Penang",
+      "narrow": "Джорджтаун — живой портовый город Малаккского пролива, где в пешем радиусе соседствуют китайские клановые дома, мечети, индуистские храмы, перанаканская архитектура, торговые дома и жилые Clan Jetties.",
+      "detail_path": "countries/malaysia/objects/george-town.json"
+    },
+    {
+      "id": "my:melaka",
+      "name": "Melaka",
+      "geography_ids": [
+        "country:my",
+        "my:region:melaka"
+      ],
+      "region_legacy": "Melaka",
+      "nearest_hub": "Melaka City",
+      "narrow": "Малакка — компактный слой истории Малаккского пролива: малайский султанат, португальская крепость, голландский административный центр, британский период, перанаканские дома и сохранившаяся евразийская община кристанг.",
+      "detail_path": "countries/malaysia/objects/melaka.json"
+    },
+    {
+      "id": "my:taiping",
+      "name": "Taiping",
+      "geography_ids": [
+        "country:my",
+        "my:locality:taiping",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
+      "nearest_hub": "Taiping",
+      "narrow": "Тайпинг — бывший оловодобывающий и колониальный центр Перака, где промышленная история, железная дорога, влажный городской климат и Lake Gardens дают спокойный, но содержательный полевой материал.",
+      "detail_path": "countries/malaysia/objects/taiping.json"
+    },
+    {
+      "id": "my:kuala-kangsar",
+      "name": "Kuala Kangsar",
+      "geography_ids": [
+        "country:my",
+        "my:locality:kuala-kangsar",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
+      "nearest_hub": "Kuala Kangsar",
+      "narrow": "Куала-Кангсар — королевский центр Перака: мечеть Ubudiah, дворцовый ансамбль, ремесленные традиции и речной ландшафт позволяют читать политическую и материальную культуру султаната вне мегаполиса.",
+      "detail_path": "countries/malaysia/objects/kuala-kangsar.json"
+    },
+    {
+      "id": "my:kuching-old-town-and-waterfront",
+      "name": "Kuching old town and waterfront",
+      "geography_ids": [
+        "country:my",
+        "my:locality:kuching",
+        "my:region:sarawak-kuching-niah"
+      ],
+      "region_legacy": "Sarawak / Kuching / Niah",
+      "nearest_hub": "Kuching",
+      "narrow": "Старый Кучинг — речной порт Саравака, где на одном берегу читаются китайские торговые дома, индийско-мусульманские улицы и наследие «белых раджей», а через реку — малайские kampung и современный государственный центр.",
+      "detail_path": "countries/malaysia/objects/kuching-old-town-and-waterfront.json"
+    }
+  ]
+}

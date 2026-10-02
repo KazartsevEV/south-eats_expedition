@@ -717,6 +717,8 @@ def main():
                 fail("la: proven duplicate cards remain in canonical inventory")
             if counts.get("unresolved", 0):
                 fail("la: unresolved identity cards remain after identity QA")
+            if counts.get("composite_needs_split", 0):
+                fail("la: composite identity cards remain after structural split gate")
         require_file(release, f"views/countries/{code}.json")
 
     global_qa = load(release / "qa" / "global.json")

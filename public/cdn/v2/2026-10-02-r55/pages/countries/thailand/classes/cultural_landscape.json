@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r55",
+    "page_type": "country_class",
+    "id": "country-class:th:cultural_landscape"
+  },
+  "identity": {
+    "country_code": "TH",
+    "country_slug": "thailand",
+    "object_type": "cultural_landscape",
+    "label_ru": "Культурные ландшафты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:th:religion_ethnography",
+    "page_path": "pages/countries/thailand/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/cultural_landscape.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:th",
+      "name": "Таиланд",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/thailand.json"
+    },
+    {
+      "id": "th:geographic_area:nan-phrae",
+      "canonical_geo_id": "geo_th_0030",
+      "name": "Нан / Пхрэ",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/nan-phrae.json"
+    },
+    {
+      "id": "th:geographic_area:north",
+      "canonical_geo_id": "geo_th_0001",
+      "name": "Северный Таиланд",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/north.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:nan-old-town-and-mountains",
+      "name": "Nan old town and mountains",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:nan-phrae",
+        "th:geographic_area:north"
+      ],
+      "region_legacy": "Nan / Phrae",
+      "nearest_hub": "Nan / Phrae",
+      "narrow": "Nan old town and mountains — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/thailand/objects/nan-old-town-and-mountains.json"
+    }
+  ]
+}

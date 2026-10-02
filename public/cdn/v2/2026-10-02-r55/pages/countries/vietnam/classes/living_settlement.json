@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r55",
+    "page_type": "country_class",
+    "id": "country-class:vn:living_settlement"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "living_settlement",
+    "label_ru": "Живые традиционные поселения",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:religion_ethnography",
+    "page_path": "pages/countries/vietnam/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/living_settlement.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": {
+    "status": "transitional_overlap",
+    "target_split": [
+      "traditional_settlement"
+    ],
+    "note_ru": "Старый класс сохраняется до проверки: в новой схеме поселение должно описываться как traditional_settlement, а живая культура — тегами и этнографическим блоком."
+  },
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:geographic_area:hanoi-red-river-delta",
+      "canonical_geo_id": "geo_vn_0035",
+      "name": "Ханой / дельта Красной реки",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/hanoi-red-river-delta.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:duong-lam-ancient-village",
+      "name": "Duong Lam Ancient Village",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:hanoi-red-river-delta"
+      ],
+      "region_legacy": "Hanoi / Red River Delta",
+      "nearest_hub": "Hanoi",
+      "narrow": "Duong Lam Ancient Village — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/vietnam/objects/duong-lam-ancient-village.json"
+    }
+  ]
+}

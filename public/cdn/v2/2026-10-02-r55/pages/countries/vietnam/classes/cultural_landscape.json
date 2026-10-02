@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r55",
+    "page_type": "country_class",
+    "id": "country-class:vn:cultural_landscape"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "cultural_landscape",
+    "label_ru": "Культурные ландшафты",
+    "family_id": "religion_ethnography"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:religion_ethnography",
+    "page_path": "pages/countries/vietnam/families/religion_ethnography.json"
+  },
+  "global_class_page": "pages/classes/cultural_landscape.json",
+  "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
+  "migration": null,
+  "count": 6,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:city:hue",
+      "canonical_geo_id": "geo_vn_0020",
+      "name": "Хюэ",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/city/hue.json"
+    },
+    {
+      "id": "vn:geographic_area:central-highlands-kon-tum",
+      "canonical_geo_id": "geo_vn_0045",
+      "name": "Центральное нагорье / Контум",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/central-highlands-kon-tum.json"
+    },
+    {
+      "id": "vn:geographic_area:hue-central-coast",
+      "canonical_geo_id": "geo_vn_0038",
+      "name": "Хюэ / центральное побережье",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/hue-central-coast.json"
+    },
+    {
+      "id": "vn:geographic_area:nam-dinh-legacy",
+      "canonical_geo_id": "geo_vn_0046",
+      "name": "Намдинь",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/nam-dinh-legacy.json"
+    },
+    {
+      "id": "vn:geographic_area:ninh-binh-trang-an",
+      "canonical_geo_id": "geo_vn_0036",
+      "name": "Ниньбинь / Чанган",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/ninh-binh-trang-an.json"
+    },
+    {
+      "id": "vn:geographic_area:sa-pa-lao-cai-hoang-lien",
+      "canonical_geo_id": "geo_vn_0052",
+      "name": "Шапа / Лаокай / Хоангльен",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/sa-pa-lao-cai-hoang-lien.json"
+    },
+    {
+      "id": "vn:geographic_area:yen-bai-mu-cang-chai",
+      "canonical_geo_id": "geo_vn_0051",
+      "name": "Йенбай / Мукангчай",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/yen-bai-mu-cang-chai.json"
+    },
+    {
+      "id": "vn:province:lao-cai",
+      "canonical_geo_id": "geo_vn_0007",
+      "name": "Лаокай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/province/lao-cai.json"
+    },
+    {
+      "id": "vn:province:ninh-binh",
+      "canonical_geo_id": "geo_vn_0015",
+      "name": "Ниньбинь",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/province/ninh-binh.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:trang-an",
+      "name": "Trang An",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:ninh-binh-trang-an",
+        "vn:province:ninh-binh"
+      ],
+      "region_legacy": "Ninh Binh / Trang An",
+      "nearest_hub": "Ninh Binh",
+      "narrow": "Trang An — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/trang-an.json"
+    },
+    {
+      "id": "vn:hue-monuments",
+      "name": "Hue monuments",
+      "geography_ids": [
+        "country:vn",
+        "vn:city:hue",
+        "vn:geographic_area:hue-central-coast"
+      ],
+      "region_legacy": "Hue / central coast",
+      "nearest_hub": "Hue",
+      "narrow": "Hue monuments — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/hue-monuments.json"
+    },
+    {
+      "id": "vn:kon-tum-communal-houses",
+      "name": "Kon Tum communal houses",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:central-highlands-kon-tum"
+      ],
+      "region_legacy": "Central Highlands / Kon Tum",
+      "nearest_hub": "Kon Tum",
+      "narrow": "Kon Tum communal houses — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/kon-tum-communal-houses.json"
+    },
+    {
+      "id": "vn:nam-dinh-church-landscapes",
+      "name": "Nam Dinh church landscapes",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:nam-dinh-legacy",
+        "vn:province:ninh-binh"
+      ],
+      "region_legacy": "Nam Dinh",
+      "nearest_hub": "Nam Dinh",
+      "narrow": "Nam Dinh church landscapes — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/nam-dinh-church-landscapes.json"
+    },
+    {
+      "id": "vn:mu-cang-chai-rice-terraces",
+      "name": "Mu Cang Chai rice terraces",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:yen-bai-mu-cang-chai",
+        "vn:province:lao-cai"
+      ],
+      "region_legacy": "Yen Bai / Mu Cang Chai",
+      "nearest_hub": "Mu Cang Chai / Yen Bai / Hanoi",
+      "narrow": "Один из наиболее фотогеничных агроландшафтов Vietnam: более 2,000 га террас, Hmong farming culture, Khau Pha Pass и два совершенно разных визуальных сезона — water-pouring и golden harvest.",
+      "detail_path": "countries/vietnam/objects/mu-cang-chai-rice-terraces.json"
+    },
+    {
+      "id": "vn:sa-pa-fansipan",
+      "name": "Sa Pa / Fansipan",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:sa-pa-lao-cai-hoang-lien",
+        "vn:province:lao-cai"
+      ],
+      "region_legacy": "Sa Pa / Lao Cai / Hoang Lien",
+      "nearest_hub": "Sa Pa",
+      "narrow": "Высочайшая вершина Индокитая над облаками, cable-car infrastructure, pagoda complex и этнокультурный контекст Sa Pa.",
+      "detail_path": "countries/vietnam/objects/sa-pa-fansipan.json"
+    }
+  ]
+}

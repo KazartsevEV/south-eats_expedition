@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r55",
+    "page_type": "geography",
+    "id": "th:geographic_area:central"
+  },
+  "identity": {
+    "name": "Центральный Таиланд",
+    "name_local": "Central Thailand",
+    "kind": "geographic_area",
+    "slug": "central",
+    "country_code": "TH",
+    "axis": "physical_geography"
+  },
+  "layout": "geography",
+  "parent": {
+    "id": "country:th",
+    "page_path": "pages/countries/thailand.json"
+  },
+  "hierarchy_status": "formalized",
+  "children": [
+    {
+      "id": "th:province:phra-nakhon-si-ayutthaya",
+      "kind": "province",
+      "name": "Аюттхая",
+      "page_path": "pages/geography/thailand/province/phra-nakhon-si-ayutthaya.json",
+      "object_count": 1
+    },
+    {
+      "id": "th:province:prachuap-khiri-khan",
+      "kind": "province",
+      "name": "Прачуапкхирикхан",
+      "page_path": "pages/geography/thailand/province/prachuap-khiri-khan.json",
+      "object_count": 1
+    }
+  ],
+  "legacy_region_names": [],
+  "legacy_locality_names": [],
+  "canonical_geo_id": "geo_th_0003",
+  "geo_profile": {
+    "id": "geo_th_0003",
+    "kind": "geographic_area",
+    "names": {
+      "primary": "Центральный Таиланд",
+      "local": "Central Thailand"
+    },
+    "slug": "central",
+    "parent_id": "geo_th",
+    "geo_path": [
+      "geo_th",
+      "geo_th_0003"
+    ],
+    "description": {
+      "narrow": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+      "body": null
+    },
+    "cover_media_id": null,
+    "primary_location": null,
+    "legacy_ids": [
+      "th:geographic_area:central"
+    ],
+    "migration": {
+      "source_kind": "formal_hierarchy",
+      "axis": "physical_geography",
+      "status": "formalized"
+    },
+    "coverage_role": "structural",
+    "provenance": {
+      "checked_at": "2026-10-01",
+      "sources": [
+        {
+          "publisher": "Government of Thailand",
+          "url": "https://thailand.go.th/page/thai-politic",
+          "used_for": [
+            "76-province administrative system and Bangkok special local government"
+          ],
+          "checked_at": "2026-09-30"
+        },
+        {
+          "publisher": "Expedition South East Drive draft",
+          "used_for": [
+            "expedition regional nodes"
+          ],
+          "checked_at": "2026-09-30"
+        }
+      ],
+      "structural_source_refs": [
+        "src_906009"
+      ],
+      "research_source_refs": [],
+      "source_refs": [
+        "src_906009"
+      ]
+    }
+  },
+  "notes_ru": "Экспедиционный географический узел из существующей исследовательской заготовки; не подменяет административное деление.",
+  "class_counts": [
+    {
+      "object_type": "archaeological_site",
+      "label_ru": "Археологические объекты",
+      "count": 1
+    },
+    {
+      "object_type": "national_park",
+      "label_ru": "Национальные парки",
+      "count": 1
+    }
+  ],
+  "class_families": [
+    {
+      "family_id": "archaeology_memory",
+      "label_ru": "Археология, древность и историческая память",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "archaeological_site",
+          "label_ru": "Археологические объекты",
+          "count": 1,
+          "country_class_page": "pages/countries/thailand/classes/archaeological_site.json",
+          "filter": {
+            "geography_id": "th:geographic_area:central"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "national_park",
+          "label_ru": "Национальные парки",
+          "count": 1,
+          "country_class_page": "pages/countries/thailand/classes/national_park.json",
+          "filter": {
+            "geography_id": "th:geographic_area:central"
+          }
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:ayutthaya",
+      "name": "Ayutthaya",
+      "object_type": "archaeological_site",
+      "narrow": "Ayutthaya — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/thailand/objects/ayutthaya.json"
+    },
+    {
+      "id": "th:khao-sam-roi-yot-national-park-phraya-nakhon-cave",
+      "name": "Khao Sam Roi Yot National Park / Phraya Nakhon Cave",
+      "object_type": "national_park",
+      "narrow": "Известняковые хребты, крупнейшие пресноводные marshes Thailand и Phraya Nakhon Cave с Kuha Karuhas royal pavilion под естественным лучом света — исключительная связка природы и архитектуры.",
+      "detail_path": "countries/thailand/objects/khao-sam-roi-yot-national-park-phraya-nakhon-cave.json"
+    }
+  ],
+  "provenance": {
+    "sources": [
+      {
+        "publisher": "Government of Thailand",
+        "url": "https://thailand.go.th/page/thai-politic",
+        "used_for": [
+          "76-province administrative system and Bangkok special local government"
+        ],
+        "checked_at": "2026-09-30"
+      },
+      {
+        "publisher": "Expedition South East Drive draft",
+        "used_for": [
+          "expedition regional nodes"
+        ],
+        "checked_at": "2026-09-30"
+      }
+    ],
+    "checked_at": "2026-10-01"
+  }
+}

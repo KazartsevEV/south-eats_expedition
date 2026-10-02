@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "schema_version": "2.10.19",
+    "release_id": "2026-10-02-r55",
+    "page_type": "country_class",
+    "id": "country-class:id:historic_city"
+  },
+  "identity": {
+    "country_code": "ID",
+    "country_slug": "indonesia",
+    "object_type": "historic_city",
+    "label_ru": "Исторические города и кварталы",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:id:built_heritage",
+    "page_path": "pages/countries/indonesia/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_city.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:id",
+      "name": "Индонезия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/indonesia.json"
+    },
+    {
+      "id": "id:region:maluku-banda",
+      "canonical_geo_id": "geo_id_0006",
+      "name": "Молуккские острова / Банда",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/indonesia/geographic_area/maluku-banda.json"
+    },
+    {
+      "id": "id:region:yogyakarta-central-java",
+      "canonical_geo_id": "geo_id_0001",
+      "name": "Джокьякарта / Центральная Ява",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/indonesia/geographic_area/yogyakarta-central-java.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "id:banda-neira",
+      "name": "Banda Neira",
+      "geography_ids": [
+        "country:id",
+        "id:region:maluku-banda"
+      ],
+      "region_legacy": "Maluku / Banda",
+      "nearest_hub": "Banda Neira",
+      "narrow": "Banda Neira — компактный исторический остров в центре бывшей мировой торговли мускатным орехом: Fort Belgica, колониальные дома, плантации и действующий Gunung Api собираются в самостоятельный многодневный маршрут.",
+      "detail_path": "countries/indonesia/objects/banda-neira.json"
+    },
+    {
+      "id": "id:lasem",
+      "name": "Lasem",
+      "geography_ids": [
+        "country:id",
+        "id:region:yogyakarta-central-java"
+      ],
+      "region_legacy": "Yogyakarta / Central Java",
+      "nearest_hub": "Semarang / Rembang",
+      "narrow": "Lasem — редкий китайско-яванский старый город северной Явы: храмы klenteng, закрытые дворы, торговые дома и красный батик образуют живую городскую ткань вне массового маршрута.",
+      "detail_path": "countries/indonesia/objects/lasem.json"
+    }
+  ]
+}

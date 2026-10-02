@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.14",
+    "release_id": "2026-10-02-r49",
+    "page_type": "country_class",
+    "id": "country-class:vn:island"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:water_coast_marine",
+    "page_path": "pages/countries/vietnam/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:city:ho-chi-minh-city",
+      "canonical_geo_id": "geo_vn_0028",
+      "name": "Хошимин",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/vietnam/city/ho-chi-minh-city.json"
+    },
+    {
+      "id": "vn:geographic_area:con-dao",
+      "canonical_geo_id": "geo_vn_0047",
+      "name": "Кондао",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/con-dao.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:con-dao",
+      "name": "Con Dao",
+      "geography_ids": [
+        "country:vn",
+        "vn:city:ho-chi-minh-city",
+        "vn:geographic_area:con-dao"
+      ],
+      "region_legacy": "Con Dao",
+      "nearest_hub": "Con Son",
+      "narrow": "Con Dao — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/vietnam/objects/con-dao.json"
+    }
+  ]
+}

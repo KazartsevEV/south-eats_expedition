@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.14",
+    "release_id": "2026-10-02-r49",
+    "page_type": "country_class",
+    "id": "country-class:kh:wildlife_site"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "wildlife_site",
+    "label_ru": "Наблюдение за дикой природой",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:protected_ecosystems",
+    "page_path": "pages/countries/cambodia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/wildlife_site.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:province:kratie",
+      "canonical_geo_id": "geo_kh_0037",
+      "name": "Кратьэх",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/cambodia/province/kratie.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:kratie-kampi-irrawaddy-dolphins",
+      "name": "Kratie / Kampi Irrawaddy dolphins",
+      "geography_ids": [
+        "country:kh",
+        "kh:province:kratie"
+      ],
+      "region_legacy": "Кратьэх / средний Меконг",
+      "nearest_hub": "Кратьэх / Кампи",
+      "narrow": "Кампи, примерно в 15 км к северу от Кратьэха, — главный доступный пункт наблюдения за критически исчезающей меконгской популяцией ирравадийского дельфина. Это не «аттракцион с гарантированным дельфином», а глубоководный участок Меконга, где сезонная речная география, местная лодочная экономика и природоохранный режим определяют сам формат посещения.",
+      "detail_path": "countries/cambodia/objects/kratie-kampi-irrawaddy-dolphins.json"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "schema_version": "2.10.14",
+    "release_id": "2026-10-02-r49",
+    "page_type": "country_class",
+    "id": "country-class:mm:lake"
+  },
+  "identity": {
+    "country_code": "MM",
+    "country_slug": "myanmar",
+    "object_type": "lake",
+    "label_ru": "Озёра",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:mm:water_coast_marine",
+    "page_path": "pages/countries/myanmar/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/lake.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:mm",
+      "name": "Мьянма",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/myanmar.json"
+    },
+    {
+      "id": "mm:locality:hopin",
+      "canonical_geo_id": "geo_mm_0038",
+      "name": "Хопин",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/town/hopin.json"
+    },
+    {
+      "id": "mm:locality:nyaungshwe",
+      "canonical_geo_id": "geo_mm_0028",
+      "name": "Ньяунгшве",
+      "kind": "town",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/myanmar/town/nyaungshwe.json"
+    },
+    {
+      "id": "mm:region:kachin-state-indawgyi",
+      "canonical_geo_id": "geo_mm_0012",
+      "name": "Штат Качин / Индавджи",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/kachin-state-indawgyi.json"
+    },
+    {
+      "id": "mm:region:shan-state-inle-kakku",
+      "canonical_geo_id": "geo_mm_0004",
+      "name": "Штат Шан / Инле / Какку",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/myanmar/geographic_area/shan-state-inle-kakku.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "mm:inle-lake",
+      "name": "Inle Lake",
+      "geography_ids": [
+        "country:mm",
+        "mm:locality:nyaungshwe",
+        "mm:region:shan-state-inle-kakku"
+      ],
+      "region_legacy": "штат Шан / Inle / Kakku",
+      "nearest_hub": "Nyaungshwe",
+      "narrow": "Inle — высокогорный пресноводный культурный ландшафт, где лодочные маршруты связывают свайные поселения, плавучие поля Yechan, рыболовство Intha, монастыри и рынки; лодочник здесь прежде всего транспорт и местный навигатор, а не «пакетный тур».",
+      "detail_path": "countries/myanmar/objects/inle-lake.json"
+    },
+    {
+      "id": "mm:indawgyi-lake",
+      "name": "Indawgyi Lake",
+      "geography_ids": [
+        "country:mm",
+        "mm:locality:hopin",
+        "mm:region:kachin-state-indawgyi"
+      ],
+      "region_legacy": "Kachin State / Indawgyi",
+      "nearest_hub": "Hopin",
+      "narrow": "Крупнейшее пресноводное озеро Myanmar и UNESCO Biosphere Reserve с важными водно-болотными экосистемами и Shwe Myitzu пагодой — высокий исследовательский потенциал, но не обычный маршрут при текущей безопасности.",
+      "detail_path": "countries/myanmar/objects/indawgyi-lake.json"
+    }
+  ]
+}

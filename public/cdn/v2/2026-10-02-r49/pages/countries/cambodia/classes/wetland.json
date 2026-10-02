@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.14",
+    "release_id": "2026-10-02-r49",
+    "page_type": "country_class",
+    "id": "country-class:kh:wetland"
+  },
+  "identity": {
+    "country_code": "KH",
+    "country_slug": "cambodia",
+    "object_type": "wetland",
+    "label_ru": "Болота и водно-болотные угодья",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:kh:water_coast_marine",
+    "page_path": "pages/countries/cambodia/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/wetland.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:kh",
+      "name": "Камбоджа",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/cambodia.json"
+    },
+    {
+      "id": "kh:geographic-area:tonle-sap",
+      "canonical_geo_id": "geo_kh_0040",
+      "name": "Тонлесап",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/cambodia/geographic_area/tonle-sap.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kh:tonle-sap-biosphere-reserve",
+      "name": "Tonle Sap Biosphere Reserve",
+      "geography_ids": [
+        "country:kh",
+        "kh:geographic-area:tonle-sap"
+      ],
+      "region_legacy": "Тонлесап",
+      "nearest_hub": "Сиемреап / Пурсат / Кампонгчнанг",
+      "narrow": "Тонлесап — огромная сезонно пульсирующая система озера, реки, затопляемых лесов, поймы и поселений. Её главный механизм — ежегодный разворот течения реки Тонлесап под напором Меконга: вместе с водой меняются площадь озера, рыбные миграции, дороги, причалы и сама география повседневной жизни.",
+      "detail_path": "countries/cambodia/objects/tonle-sap-biosphere-reserve.json"
+    }
+  ]
+}

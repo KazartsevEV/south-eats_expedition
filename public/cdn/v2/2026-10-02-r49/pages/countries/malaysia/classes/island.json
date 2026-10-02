@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "schema_version": "2.10.14",
+    "release_id": "2026-10-02-r49",
+    "page_type": "country_class",
+    "id": "country-class:my:island"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:water_coast_marine",
+    "page_path": "pages/countries/malaysia/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:region:langkawi-northwest-coast",
+      "canonical_geo_id": "geo_my_0009",
+      "name": "Лангкави / северо-западное побережье",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/langkawi-northwest-coast.json"
+    },
+    {
+      "id": "my:region:perhentian-east-coast",
+      "canonical_geo_id": "geo_my_0010",
+      "name": "Перхентианские острова / восточное побережье",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/perhentian-east-coast.json"
+    },
+    {
+      "id": "my:region:semporna-sipadan-east-sabah",
+      "canonical_geo_id": "geo_my_0012",
+      "name": "Семпорна / Сипадан / восточный Сабах",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/semporna-sipadan-east-sabah.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:langkawi",
+      "name": "Langkawi",
+      "geography_ids": [
+        "country:my",
+        "my:region:langkawi-northwest-coast"
+      ],
+      "region_legacy": "Langkawi / northwest coast",
+      "nearest_hub": "Langkawi",
+      "narrow": "Лангкави интересен не курортным набором развлечений, а сочетанием древних карстов, мангров Kilim, островных дорог, рыбацких поселений и доступных участков побережья в пределах одного архипелага.",
+      "detail_path": "countries/malaysia/objects/langkawi.json"
+    },
+    {
+      "id": "my:perhentian-islands",
+      "name": "Perhentian islands",
+      "geography_ids": [
+        "country:my",
+        "my:region:perhentian-east-coast"
+      ],
+      "region_legacy": "Perhentian / east coast",
+      "nearest_hub": "Kuala Besut",
+      "narrow": "Перхентианы — удобная морская база для самостоятельного островного режима: пешие связки между бухтами, лодочные переброски, рифы у берега и возможность собирать несколько дней вокруг воды и троп, а не вокруг пакетной экскурсии.",
+      "detail_path": "countries/malaysia/objects/perhentian-islands.json"
+    },
+    {
+      "id": "my:sipadan-island",
+      "name": "Sipadan Island",
+      "geography_ids": [
+        "country:my",
+        "my:region:semporna-sipadan-east-sabah"
+      ],
+      "region_legacy": "Semporna / Sipadan / east Sabah",
+      "nearest_hub": "Semporna",
+      "narrow": "Сипадан — океанический остров на вершине подводного вулканического конуса с почти вертикальными рифовыми стенами, черепахами и пелагическими стаями; доступ строго ограничен разрешениями.",
+      "detail_path": "countries/malaysia/objects/sipadan-island.json"
+    }
+  ]
+}

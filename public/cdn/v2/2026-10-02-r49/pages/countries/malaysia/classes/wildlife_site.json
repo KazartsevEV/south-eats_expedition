@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.14",
+    "release_id": "2026-10-02-r49",
+    "page_type": "country_class",
+    "id": "country-class:my:wildlife_site"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "object_type": "wildlife_site",
+    "label_ru": "Наблюдение за дикой природой",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:my:protected_ecosystems",
+    "page_path": "pages/countries/malaysia/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/wildlife_site.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:my",
+      "name": "Малайзия",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/malaysia.json"
+    },
+    {
+      "id": "my:locality:sepilok",
+      "canonical_geo_id": "geo_my_0048",
+      "name": "Сепилок",
+      "kind": "settlement",
+      "axis": "settlement_geography",
+      "page_path": "pages/geography/malaysia/settlement/sepilok.json"
+    },
+    {
+      "id": "my:region:sandakan-sepilok",
+      "canonical_geo_id": "geo_my_0014",
+      "name": "Сандакан / Сепилок",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/malaysia/geographic_area/sandakan-sepilok.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:sepilok-orangutan-rehabilitation-centre",
+      "name": "Sepilok Orangutan Rehabilitation Centre",
+      "geography_ids": [
+        "country:my",
+        "my:locality:sepilok",
+        "my:region:sandakan-sepilok"
+      ],
+      "region_legacy": "Sandakan / Sepilok",
+      "nearest_hub": "Sepilok",
+      "narrow": "Sepilok — центр реабилитации орангутанов внутри лесного резервата Kabili-Sepilok; важнее наблюдения за животными здесь сама логика возвращения их к самостоятельной жизни в лесу.",
+      "detail_path": "countries/malaysia/objects/sepilok-orangutan-rehabilitation-centre.json"
+    }
+  ]
+}

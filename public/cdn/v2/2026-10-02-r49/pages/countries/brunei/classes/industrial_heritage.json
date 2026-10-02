@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.14",
+    "release_id": "2026-10-02-r49",
+    "page_type": "country_class",
+    "id": "country-class:bn:industrial_heritage"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "object_type": "industrial_heritage",
+    "label_ru": "Индустриальное наследие",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:bn:built_heritage",
+    "page_path": "pages/countries/brunei/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/industrial_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "bn:district:belait",
+      "canonical_geo_id": "geo_bn_0003",
+      "name": "Белайт",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/brunei/district/belait.json"
+    },
+    {
+      "id": "country:bn",
+      "name": "Бруней",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/brunei.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:seria-oil-heritage-landscape",
+      "name": "Seria oil heritage landscape",
+      "geography_ids": [
+        "bn:district:belait",
+        "country:bn"
+      ],
+      "region_legacy": "Белайт / Сериа",
+      "nearest_hub": "Seria",
+      "narrow": "Сериа — редкий случай, где история национальной нефтяной экономики читается прямо в городской ткани: у побережья сохранились действующие станки-качалки, рядом с первым коммерческим открытием S‑1 стоит Billionth Barrel Monument, а жилые кварталы и инфраструктура выросли внутри нефтепромыслового ландшафта. Это не музей под открытым небом: часть оборудования работает и относится к промышленной инфраструктуре, поэтому смотреть её нужно с публичных дорог и площадок.",
+      "detail_path": "countries/brunei/objects/seria-oil-heritage-landscape.json"
+    }
+  ]
+}

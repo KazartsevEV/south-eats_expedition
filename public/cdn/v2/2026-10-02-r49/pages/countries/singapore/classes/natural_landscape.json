@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "schema_version": "2.10.14",
+    "release_id": "2026-10-02-r49",
+    "page_type": "country_class",
+    "id": "country-class:sg:natural_landscape"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "object_type": "natural_landscape",
+    "label_ru": "Природные ландшафты и треккинг",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:sg:protected_ecosystems",
+    "page_path": "pages/countries/singapore/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/natural_landscape.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": {
+    "status": "transitional_broad_class",
+    "target_split": [
+      "mountain",
+      "plateau",
+      "karst",
+      "forest",
+      "geological_site"
+    ],
+    "note_ru": "Слишком широкий исторический класс; объекты мигрируются в более точные классы по фактическому типу."
+  },
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:sg",
+      "name": "Сингапур",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/singapore.json"
+    },
+    {
+      "id": "sg:geographic_area:southern-ridges-gillman",
+      "canonical_geo_id": "geo_sg_0013",
+      "name": "Южные хребты / Гиллман",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/singapore/geographic_area/southern-ridges-gillman.json"
+    },
+    {
+      "id": "sg:region:central-region",
+      "canonical_geo_id": "geo_sg_0001",
+      "name": "Центральный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/central-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:southern-ridges-and-henderson-waves",
+      "name": "Southern Ridges and Henderson Waves",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:southern-ridges-gillman",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Southern Ridges / Gillman",
+      "nearest_hub": "HarbourFront / Labrador Park",
+      "narrow": "Southern Ridges and Henderson Waves — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/southern-ridges-and-henderson-waves.json"
+    }
+  ]
+}

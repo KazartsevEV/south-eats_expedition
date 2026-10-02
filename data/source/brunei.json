@@ -11280,7 +11280,7 @@
           "technology history",
           "architecture"
         ],
-        "why_go": "Музей традиционных технологий и материальной культуры: водные поселения, ремёсла, строительство, обработка материалов и хозяйственные практики. Удобен как объясняющий объект перед Кампонг-Айер и внутренними районами.",
+        "why_go": "Этнографический музей традиционных технологий Брунея: полноразмерные реконструкции домов Кампонг-Айера, лодочное дело, кровли, металлообработка, ткачество, рыболовные и охотничьи инструменты, а также технологии внутренних общин. Полезен как объясняющий объект перед Кампонг-Айером и поездками по внутренним районам: здесь видно не «старинный быт вообще», а конкретные способы строить, добывать, перерабатывать и организовывать жизнь в водной и сухопутной среде.",
         "traveler_card": {
           "location": {
             "region": "Бандар-Сери-Бегаван / Бруней-Муара",
@@ -11304,15 +11304,15 @@
               "lon": 114.9698,
               "elevation_m": 8
             },
-            "coordinate_type": "entrance",
+            "coordinate_type": "center",
             "accuracy": "high",
             "elevation_accuracy": "approximate",
             "coordinate_source": {
               "provider": "Mapcarta / OpenStreetMap",
               "url": "https://mapcarta.com/N2077189639",
-              "basis": "museum feature coordinate"
+              "basis": "mapped museum feature; treated as site center rather than a verified doorway"
             },
-            "coordinates_checked_at": "2026-09-28",
+            "coordinates_checked_at": "2026-10-02",
             "elevation_source": {
               "type": "map",
               "title": "SRTM30m elevation samples for Brunei museum entrances",
@@ -11339,78 +11339,462 @@
               },
               "checked_at": "2026-09-28",
               "notes": "Высота площадки самого объекта над средним уровнем моря; для точечного культурного объекта используется как object_elevation."
-            }
+            },
+            "geo_points": [
+              {
+                "type": "entrance",
+                "name": "Malay Technology Museum — официальная точка направления Brunei Tourism",
+                "coordinates": {
+                  "lat": 4.8835525,
+                  "lon": 114.9696208,
+                  "elevation_m": null
+                },
+                "accuracy": "medium",
+                "elevation_accuracy": "unknown",
+                "coordinate_source": {
+                  "type": "government_tourism",
+                  "title": "Malay Technology Museum — Get Directions destination",
+                  "publisher": "Brunei Tourism / Tourism Development Department",
+                  "url": "https://www.bruneitourism.com/places/malay-technology-museum/",
+                  "authority": "high",
+                  "accessed": "2026-10-02",
+                  "notes": "Координата извлечена из текущей ссылки Get Directions; это опорная точка прибытия к публичной музейной зоне, а не геодезически подтверждённый порог."
+                },
+                "coordinates_checked_at": "2026-10-02",
+                "notes": "Использовать для навигации к Simpang 482. Основная координата объекта остаётся центром музейного участка."
+              }
+            ]
           },
           "logistics": {
-            "access": "Dart/автомобиль из центра BSB; удобно совместить с Kota Batu museums.",
-            "public_transport": "Без частной машины практичнее всего Dart; городской автобус дешевле, но за пределами центрального Бандар-Сери-Бегаван покрытие и частота заметно хуже.",
-            "last_mile": null,
-            "typical_visit_hours": [
-              1.5,
-              2.5
-            ],
-            "permit_or_guide": null,
-            "mobility_notes": null,
+            "access": "Музей находится в Simpang 482, Kota Batu. Актуальный Brunei Tourism рекомендует Dart как самый простой вариант без частной машины; городской автобус указан как более дешёвый вариант, но без номера конкретной линии на странице объекта.",
+            "public_transport": "Brunei Tourism указывает городской автобус со средней платой около BND 1 и общий режим сети 06:00–20:00. Конкретную линию и остановку у Simpang 482 перед поездкой сверять по актуальной схеме; старые номера маршрутов не переносить автоматически.",
+            "last_mile": "Подача Dart/автомобиля — к Simpang 482 и официальной точке направления. Внутри музейного участка дальнего пешего подхода нет.",
+            "typical_visit_hours": null,
+            "permit_or_guide": "Для обычного посещения гид не требуется. Это самостоятельный музейный визит; экскурсию имеет смысл искать только если нужен углублённый этнографический контекст.",
+            "mobility_notes": "Основная нагрузка — перемещение внутри музейных залов и между уровнями/экспозиционными блоками; актуальная безбарьерность всех зон публично не описана.",
             "modes": {
-              "public_transport": "автобус в сторону Kota Batu возможен, но не как единственная опора",
-              "taxi_ridehail": "Dart предсказуемее",
-              "moped": "прямой подъезд",
-              "walking": "из центра несколько км"
+              "public_transport": "городской автобус после проверки актуальной линии; Brunei Tourism указывает средний тариф около BND 1 и работу сети 06:00–20:00",
+              "taxi_ridehail": "Dart до Simpang 482 — официальный рекомендованный вариант без своей машины",
+              "moped": "обычный городской дорожный подъезд к Simpang 482",
+              "walking": "от центрального BSB фиксированный километраж не хранится; пеший переход разумен прежде всего внутри кластера Kota Batu"
             },
-            "water": "воду купить до входа",
-            "overnight_and_camping": "кемпинга нет",
-            "access_requirements": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст",
+            "water": "Постоянная питьевая точка внутри музея в актуальных публичных источниках не подтверждена. Воду проще купить до прибытия в Kota Batu.",
+            "overnight_and_camping": "Музей не является кемпинговой площадкой; актуальное разрешение на ночёвку на территории не опубликовано. Не планировать палатку без отдельного разрешения владельца территории.",
+            "access_requirements": "Обычный визит самостоятельный; соблюдать действующий билетный режим и указания персонала.",
             "self_guided_default": true,
-            "travel_model": "самостоятельно"
+            "travel_model": "самостоятельно",
+            "access_source_refs": [
+              "src_000324"
+            ],
+            "access_options": [
+              {
+                "id": "dart_to_museum",
+                "origin": "Bandar Seri Begawan",
+                "modes": [
+                  "ride_hailing",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "ride_hailing",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "городской подъезд к Simpang 482",
+                    "seasonality": "сильный ливень может увеличить время поездки",
+                    "navigation": "подача к официальной точке направления Malay Technology Museum",
+                    "notes": "Dart прямо рекомендован Brunei Tourism.",
+                    "source_refs": [
+                      "src_000324"
+                    ]
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "короткий проход от зоны высадки к музею",
+                    "seasonality": null,
+                    "navigation": "по текущим указателям музейного комплекса",
+                    "notes": "Не подменять точную дверь центральной координатой участка."
+                  }
+                ]
+              },
+              {
+                "id": "city_bus_to_kota_batu",
+                "origin": "Bandar Seri Begawan",
+                "modes": [
+                  "public_transport",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "public_transport",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "городской автобус; линия и интервал динамичны",
+                    "seasonality": null,
+                    "navigation": null,
+                    "notes": "Официальный туристический портал указывает среднюю плату около BND 1 и работу сети 06:00–20:00; конкретную линию проверять перед выездом.",
+                    "source_refs": [
+                      "src_000324"
+                    ]
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "локальный подход в Simpang 482",
+                    "seasonality": null,
+                    "navigation": "к музейному входу по текущим указателям",
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "id": "private_vehicle",
+                "origin": "Bandar Seri Begawan / Kota Batu",
+                "modes": [
+                  "car",
+                  "moped",
+                  "walking"
+                ],
+                "legs": [
+                  {
+                    "mode": "road",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "обычный городской дорожный подъезд",
+                    "seasonality": "круглый год; ливень ухудшает видимость",
+                    "navigation": "Simpang 482, Kota Batu",
+                    "notes": null,
+                    "source_refs": [
+                      "src_000324"
+                    ]
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": [
+                      "paved"
+                    ],
+                    "condition": "короткий проход от парковочной/высадочной зоны",
+                    "seasonality": null,
+                    "navigation": null,
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "water_structured": {
+              "at_object": null,
+              "quality": "unknown",
+              "last_reliable_point": "городская зона до входа",
+              "natural_sources": [],
+              "notes": "Музейный объект: природных источников нет; публичная питьевая колонка или гарантированная продажа воды внутри не подтверждены.",
+              "source_refs": []
+            },
+            "supplies": {
+              "status": "city_adjacent",
+              "summary": "Постоянное кафе или магазин внутри музея текущей официальной страницей не заявлены; воду и еду лучше закрыть до входа.",
+              "poi_ids": []
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Публичные источники описывают объект как дневной музей. Разрешение на самостоятельную ночёвку или палатку на музейной территории не подтверждено.",
+              "source_refs": []
+            }
           },
           "climate": {
-            "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
-            "heat_rain_notes": "Экваториальный климат: высокая влажность и жара круглый год; сильный ливень возможен в любой месяц.",
-            "site_specific_notes": null
+            "best_period": "Круглый год в часы работы; погода влияет прежде всего на внешний подход, а не на саму музейную экспозицию.",
+            "heat_rain_notes": "На улице жарко и влажно круглый год; сильный ливень возможен в любой месяц. Основные залы — крытый объект.",
+            "site_specific_notes": "Для музейного дня сезонность значительно менее важна, чем актуальные часы, пятничное закрытие и режим конкретной выставки."
           },
           "operations": {
-            "hours": "Бруней туризм публикует дневной режим; Friday закрыт. Перед визитом сверять актуальные часы на странице.",
-            "ticket": "Бруней туризм указывает отдельный входной тариф; сверять перед визитом.",
-            "closure_notes": null,
-            "last_verified": "2026-09-28",
-            "official_url": "https://www.bruneitourism.com/places/malay-technology-museum/"
+            "hours": "Текущий Brunei Tourism: понедельник–четверг 09:00–17:00, пятница закрыто, воскресенье 08:30–16:30. На странице Brunei Tourism после строки «Friday — Closed» следующая строка ошибочно снова подписана Friday 09:00–17:00; текущая официальная страница музея в Instagram для 1–18 октября 2026 подтверждает субботу 09:00–17:00 и воскресенье 08:30–16:30. Рабочий режим карточки: Mon–Thu & Sat 09:00–17:00, Fri closed, Sun 08:30–16:30.",
+            "ticket": "Brunei Tourism публикует для нерезидентов: взрослый BND 3, ребёнок 7–11 лет BND 1; для резидентов вход бесплатный. Для иностранных студентов в Брунее и иностранных работников с Green Smart IC предусмотрены опубликованные исключения при предъявлении удостоверения.",
+            "closure_notes": "Часы и билет динамичны. Для визита поздно днём полезно учитывать полевой отчёт июля 2025 о выключении части света/видео раньше опубликованного закрытия; это единичный пользовательский сигнал, а не официальный режим.",
+            "last_verified": "2026-10-02",
+            "official_url": "https://www.bruneitourism.com/places/malay-technology-museum/",
+            "status": "open_published_schedule",
+            "source_refs": [
+              "src_000324",
+              "src_990271",
+              "src_990270"
+            ]
           },
           "safety": {
-            "crime_context": "Сопоставимой официальной статистики преступности именно по объекту нет; вместо фиктивного объект преступность оценка приведены реальные операционные и природные риски.",
+            "crime_context": "Отдельная официальная статистика преступности по музею не используется; для визита важнее режим работы и правила внутри экспозиции.",
             "main_risks": [
-              "музейные ограничения",
-              "жара на внешних участках",
-              "обычная осторожность с вещами"
+              "приезд слишком близко к закрытию: один Google-отзыв июля 2025 сообщает о раннем выключении части экспозиционного света и видео",
+              "жара и тропический ливень на внешнем подходе",
+              "неясная безбарьерность всех внутренних уровней — маршрут по зданию проверять на месте"
             ],
-            "sensitive_areas": [],
-            "confidence": "отдельная официальная статистика преступности по объекту отсутствует"
+            "sensitive_areas": [
+              "экспонаты и реконструкции, к которым нельзя прикасаться без разрешения",
+              "служебные и закрытые зоны музея"
+            ],
+            "confidence": "Операционный режим опирается на текущие официальные источники; раннее сворачивание экспозиции — единичный traveler report и хранится отдельно как низкоуверенный полевой сигнал.",
+            "source_refs": [
+              "src_990270"
+            ],
+            "checked_at": "2026-10-02"
           },
           "media": {
             "photo_suitability_5": 4,
             "video_suitability_5": 4,
             "visual_scouting": {
-              "best_time": "экстерьер утром, интерьер в рабочие часы",
-              "best_weather_light": "резерв на жару/ливень",
+              "best_time": "Для фасада полезен дневной свет в пределах текущих часов; интерьер определяется прежде всего открытостью залов и музейными правилами, а не отдельным «съёмочным часом».",
+              "best_weather_light": "Интерьер мало зависит от погоды; сильный ливень влияет главным образом на внешний подход и фасад.",
               "viewpoints_for_photo_video": [
-                "внешний фасад в Kota Batu",
-                "разрешённая реконструкция/экспонат свайного жилья",
-                "зоны экспозиции с инструментами и плетением"
+                {
+                  "id": "official_arrival_and_facade",
+                  "name": "Входная зона и фасад Malay Technology Museum",
+                  "coordinates": {
+                    "lat": 4.8835525,
+                    "lon": 114.9696208,
+                    "elevation_m": null
+                  },
+                  "accuracy": "medium",
+                  "description": "Текущая официальная точка направления Brunei Tourism. Здесь читается музей как отдельное здание в кластере Kota Batu; координата служит якорем прибытия, а не точной позицией камеры.",
+                  "access": {
+                    "walk_km": null,
+                    "notes": "Dart, автомобиль или локальный пеший подход внутри Kota Batu."
+                  },
+                  "view": {
+                    "description": "фасад, входная зона и контекст музейного участка"
+                  },
+                  "best_time": "в часы работы",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает здание вместе с окружающим участком"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "даёт более естественную геометрию фасада и входа"
+                    }
+                  ],
+                  "source_refs": [
+                    "src:ab34e132a5ad6d"
+                  ],
+                  "checked_at": "2026-10-02"
+                },
+                {
+                  "id": "water_village_house_gallery",
+                  "name": "Галерея традиционных домов Кампонг-Айера",
+                  "coordinates": {
+                    "lat": null,
+                    "lon": null,
+                    "elevation_m": null
+                  },
+                  "accuracy": "unknown",
+                  "description": "Полноразмерные и модельные реконструкции показывают устройство свайного жилья и различия архитектурных типов водного поселения.",
+                  "access": {
+                    "walk_km": null,
+                    "notes": "Внутри музея; конкретное расположение зала и разрешение на съёмку проверять по указателям персонала."
+                  },
+                  "view": {
+                    "description": "реконструкции домов, конструктивные детали и связь жилья с водной средой"
+                  },
+                  "best_time": "в часы работы",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "помещает крупную реконструкцию дома и окружающую экспозицию в один контекст"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "подходит для конструктивных деталей без сильного искажения"
+                    }
+                  ],
+                  "source_refs": [
+                    "src:227f9c114d3105"
+                  ],
+                  "checked_at": "2026-10-02"
+                },
+                {
+                  "id": "water_village_technology_gallery",
+                  "name": "Галерея технологий Кампонг-Айера",
+                  "coordinates": {
+                    "lat": null,
+                    "lon": null,
+                    "elevation_m": null
+                  },
+                  "accuracy": "unknown",
+                  "description": "Здесь сосредоточены ремесленные процессы водного поселения: лодочное дело, кровли, металлообработка и ткачество.",
+                  "access": {
+                    "walk_km": null,
+                    "notes": "Внутри музея; следовать действующим правилам съёмки."
+                  },
+                  "view": {
+                    "description": "инструменты, материалы и технологические цепочки ремёсел"
+                  },
+                  "best_time": "в часы работы",
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "удобен для групп предметов и рабочих сцен реконструкции"
+                    },
+                    {
+                      "type": "macro",
+                      "why": "полезен для фактуры плетения, металла и небольших инструментов, если съёмка разрешена"
+                    }
+                  ],
+                  "source_refs": [
+                    "src:227f9c114d3105"
+                  ],
+                  "checked_at": "2026-10-02"
+                },
+                {
+                  "id": "inland_technology_gallery",
+                  "name": "Галерея технологий внутренних общин",
+                  "coordinates": {
+                    "lat": null,
+                    "lon": null,
+                    "elevation_m": null
+                  },
+                  "accuracy": "unknown",
+                  "description": "Сопоставляет дома и хозяйственные практики Kedayan, Dusun, Murut и других внутренних сообществ с водной технологией Кампонг-Айера.",
+                  "access": {
+                    "walk_km": null,
+                    "notes": "Внутри музея; точный GPS внутри здания не имеет практической ценности и не выдумывается."
+                  },
+                  "view": {
+                    "description": "модели домов, сельскохозяйственные и охотничьи инструменты, процессы переработки сырья"
+                  },
+                  "best_time": "в часы работы",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает дом или крупную этнографическую сцену целиком"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "подходит для инструментов и предметных групп"
+                    }
+                  ],
+                  "source_refs": [
+                    "src:ab34e132a5ad6d",
+                    "src:227f9c114d3105"
+                  ],
+                  "checked_at": "2026-10-02"
+                }
+              ],
+              "seasonal_visuals": [],
+              "video_activity": [
+                "переход от реконструкций водного жилья к ремесленным технологиям Кампонг-Айера",
+                "сопоставление водных и внутренних способов строительства и хозяйства",
+                "детали инструментов и материалов в тех зонах, где музей разрешает съёмку"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "для крупных реконструкций домов и интерьерных сцен"
+                },
+                {
+                  "type": "standard",
+                  "why": "для предметных групп и экспозиционных связок"
+                },
+                {
+                  "type": "macro",
+                  "why": "для небольших ремесленных деталей при разрешённой съёмке"
+                }
               ]
             },
-            "drone": "Не применимо внутри; внешний дрон — только по авиационным правилам.",
-            "filming_restrictions": "Следовать музейным знакам; отдельные экспонаты могут иметь запрет фото/видео."
+            "drone": {
+              "visual_value": "Снаружи дрон мог бы показать музей в речном и городском контексте Kota Batu, но для интерьера он неприменим.",
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "беспилотное воздушное судно нужно регистрировать в Department of Civil Aviation Brunei",
+                "регистрация сама по себе не означает разрешение на конкретный полёт над музейной территорией",
+                "перед запуском отдельно проверить действующие ограничения воздушного пространства и согласие владельца/администрации площадки"
+              ],
+              "checked_at": "2026-10-02",
+              "source_refs": [
+                "src:37b97e3027bc2c"
+              ]
+            },
+            "filming_restrictions": "Текущая публичная страница музея не публикует универсальное правило фото/видео для всех залов. Ориентироваться на таблички и указания персонала; отсутствие запрета на сайте не считать автоматическим разрешением."
           },
           "annotation": {
-            "narrative": "Музей традиционных технологий и материальной культуры: водные поселения, ремёсла, строительство, обработка материалов и хозяйственные практики. Удобен как объясняющий объект перед Кампонг-Айер и внутренними районами.",
-            "culture_ethnography": "",
-            "geography_geology": "Находится в Kota Batu у Бруней река, рядом с историко-археологическим поясом старой столицы."
-          },
-          "traveler_reports": {
-            "recurring_issues": [
-              "без подготовленных вопросов легко снять набор витрин",
-              "часы перепроверять"
+            "canonical_story_from_sections": true,
+            "sections": [
+              {
+                "section_id": "overview",
+                "content": "Malay Technology Museum — не музей современной техники. Его предмет — материальные технологии Брунея до повсеместной модернизации: как строили дома на воде, делали лодки и кровли, обрабатывали металл, ткали, ловили рыбу и организовывали хозяйство внутренних общин. Актуальный Brunei Tourism отдельно подчёркивает полноразмерные модели домов, оружие предков и инструменты для охоты, рыболовства и ремёсел. Поэтому музей особенно полезен перед Кампонг-Айером: после него свайное поселение читается не как необычная архитектурная картинка, а как среда со своей инженерией и специализацией труда.",
+                "source_refs": [
+                  "src_000324"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": "Академическое исследование музейной политики Брунея указывает, что здание Malay Technology Museum было подарено Royal Dutch Shell Group в связи с достижением полной независимости в 1984 году, а музей официально открылся в 1988 году. В том же исследовании со слов музейного руководства формулируются три задачи учреждения: собирать этнографические предметы, поддерживать исследования коллекций и показывать их публике. Это важный контекст: музей задуман не как склад «старых вещей», а как институт документирования технологий и архитектуры, значительная часть которых исчезала из повседневного употребления.",
+                "source_refs": [
+                  "src_990269"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "В музейной логике ремесло показано как система знаний, а не декоративный фольклор. Галерея водного поселения связывает лодочное дело, изготовление кровель, золотое и серебряное дело, литьё, кузнечное ремесло и ткачество с экономикой Кампонг-Айера. Академическое исследование дополнительно рассматривает Malay Technology Museum как один из государственных механизмов сохранения и репрезентации культурного наследия после независимости. Это интерпретация исследователя, а не нейтральный «факт о национальной идентичности», поэтому в карточке она отделена от описания самих экспонатов.",
+                "source_refs": [
+                  "src_990269"
+                ]
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Экспозиция построена вокруг трёх крупных тем. Первая показывает традиционные дома Кампонг-Айера и их архитектурные различия. Вторая — технологии водного поселения: строительство лодок и кровель, металлообработку, ткачество и другие ремёсла. Третья переносит фокус во внутренние районы и показывает дома и хозяйственные практики Kedayan, Dusun и Murut; актуальный Brunei Tourism также упоминает Penan. В академическом описании встречаются переработка саго, изготовление духовой трубки и обработка риса. Поэтому «Malay» в названии музея не следует понимать как одну бытовую модель: экспозиция сопоставляет несколько сообществ и разные экологические способы жизни.",
+                "source_refs": [
+                  "src_000324",
+                  "src_990269"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Музей находится в Simpang 482, Kota Batu, у восточной части городского коридора Бандар-Сери-Бегавана и рядом с Brunei River. Brunei Tourism описывает его как расположенный недалеко от Kampong Ayer. В практическом маршруте это часть кластера Kota Batu, а не объект в пешем ядре центра столицы: для отдельного визита проще Dart/машина, а общественный транспорт требует проверки актуальной линии.",
+                "source_refs": [
+                  "src_000324"
+                ]
+              }
             ]
           },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "early_gallery_shutdown_signal_2025",
+              "summary": "Google-отзыв от 31 июля 2025, агрегированный Wanderlog, сообщает: посетитель пришёл около 15:50, а часть видео и освещения в выставочных зонах начали выключать примерно в 16:30–16:40 при заявленном закрытии в 17:00. Это единичный отчёт и не доказывает постоянную практику, но поздний визит лучше не рассчитывать до последней минуты.",
+              "observed_period": "2025-07-31",
+              "source_refs": [
+                "src_990270"
+              ],
+              "confidence": "low"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "exhibits_open_and_useful_2026",
+              "summary": "Google-отзыв от 4 января 2026, агрегированный Wanderlog, описывает музей как открытый и содержательно полезный: посетитель отдельно отмечает показ традиционной деревенской жизни, повседневных инструментов и пищевых ресурсов. Это полевой сигнал, что основная экспозиция функционировала в начале 2026 года, но он не заменяет официальный статус конкретного зала.",
+              "observed_period": "2026-01-04",
+              "source_refs": [
+                "src_990270"
+              ],
+              "confidence": "medium"
+            }
+          ],
           "accommodation": [
             {
               "name": "Jubilee Hotel",
@@ -11436,7 +11820,7 @@
           "provider": "Wikimedia Commons",
           "license": "CC BY-SA 3.0",
           "artist": "Kurun",
-          "last_checked": "2026-09-28",
+          "last_checked": "2026-10-02",
           "gallery": [
             {
               "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Traditional_Malay_Craftsmanship_%26_Technology_in_Brunei_09.jpg",
@@ -11445,6 +11829,30 @@
               "license": "CC BY-SA 4.0",
               "artist": "Tawinann",
               "last_checked": "2026-09-30"
+            },
+            {
+              "static_url": "https://www.bruneitourism.com/wp-content/uploads/2024/10/malaytechmuseum-03.webp",
+              "source_page": "https://www.bruneitourism.com/places/malay-technology-museum/",
+              "provider": "Brunei Tourism / Tourism Development Department",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-02"
+            },
+            {
+              "static_url": "https://www.bruneitourism.com/wp-content/uploads/2024/10/malaytechmuseum-04.webp",
+              "source_page": "https://www.bruneitourism.com/places/malay-technology-museum/",
+              "provider": "Brunei Tourism / Tourism Development Department",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-02"
+            },
+            {
+              "static_url": "https://www.bruneitourism.com/wp-content/uploads/2024/10/malaytechmuseum-05.webp",
+              "source_page": "https://www.bruneitourism.com/places/malay-technology-museum/",
+              "provider": "Brunei Tourism / Tourism Development Department",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-02"
             }
           ]
         },
@@ -11453,12 +11861,18 @@
             "url": "https://www.bruneitourism.com/places/malay-technology-museum/",
             "publisher": "Brunei Tourism / Tourism Development Department",
             "used_for": [
-              "description",
-              "access",
-              "hours",
-              "visitor logistics"
+              "current description and ethnic groups",
+              "opening hours",
+              "ticket prices and exemptions",
+              "Dart and public bus access",
+              "official directions anchor",
+              "current official gallery images"
             ],
-            "accessed": "2026-09-28"
+            "accessed": "2026-10-02",
+            "type": "government_tourism",
+            "title": "Malay Technology Museum",
+            "language": "en",
+            "authority": "high"
           },
           {
             "url": "https://commons.wikimedia.org/wiki/File:Malay_technology_museum_BSB.JPG",
@@ -11467,7 +11881,9 @@
               "illustration",
               "license provenance"
             ],
-            "accessed": "2026-09-28"
+            "accessed": "2026-10-02",
+            "type": "wikimedia_commons",
+            "authority": "medium"
           },
           {
             "url": "https://deps.mofe.gov.bn/",
@@ -11486,19 +11902,79 @@
               "guest review context"
             ],
             "accessed": "2026-09-28"
+          },
+          {
+            "url": "https://studylib.net/doc/8649033/traditional-woven-textile---universiti-brunei-darussalam",
+            "type": "academic_thesis",
+            "title": "Traditional Woven Textiles: Tradition and Identity Construction in the ‘New State’ of Brunei Darussalam",
+            "publisher": "Siti Norkhalbi Haji Wahsalfelah / University of Western Australia (web mirror: StudyLib)",
+            "language": "en",
+            "published_at": "2005",
+            "accessed": "2026-10-02",
+            "authority": "medium",
+            "used_for": [
+              "museum opening context",
+              "institutional objectives",
+              "three-gallery structure",
+              "water-village technologies",
+              "inland-community ethnography",
+              "academic interpretation of heritage and national identity"
+            ],
+            "notes": "Используется как академический источник; интерпретации автора отделяются от описательных фактов экспозиции."
+          },
+          {
+            "url": "https://wanderlog.com/place/details/117747/malay-technology-museum",
+            "type": "traveler_review_aggregator",
+            "title": "Malay Technology Museum — recent Google review excerpts",
+            "publisher": "Wanderlog / aggregated Google reviews",
+            "language": "en",
+            "accessed": "2026-10-02",
+            "authority": "low",
+            "used_for": [
+              "2025 early gallery shutdown field report",
+              "2026 exhibit usability field report"
+            ],
+            "notes": "Traveler reports only; not used for official hours, prices or legal rules."
+          },
+          {
+            "url": "https://www.instagram.com/p/Dd22zUjGoG9/",
+            "type": "official_social",
+            "title": "PAMERAN “OMOCHA: JAPANESE TOYS TODAY” — Muzium Teknologi Melayu",
+            "publisher": "Muzium Teknologi Melayu official Instagram",
+            "language": "ms",
+            "published_at": "2026-09",
+            "accessed": "2026-10-02",
+            "authority": "high",
+            "used_for": [
+              "current October 2026 museum schedule",
+              "Saturday/Sunday hours cross-check"
+            ],
+            "notes": "Temporary-exhibition post is used only to corroborate the museum schedule during 1–18 October 2026."
+          },
+          {
+            "url": "https://www.dca.gov.bn/dca-form-category/unmanned-aircraft/",
+            "type": "government_official",
+            "title": "Unmanned Aircraft",
+            "publisher": "Department of Civil Aviation, Brunei Darussalam",
+            "language": "en",
+            "accessed": "2026-10-02",
+            "authority": "high",
+            "used_for": [
+              "current drone registration requirement"
+            ]
           }
         ],
         "verification": {
           "dynamic_fields": [
             "hours",
             "tickets",
-            "permits",
             "access",
+            "temporary exhibitions",
             "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Музей традиционных технологий и материальной культуры: водные поселения, ремёсла, строительство, обработка материалов и хозяйственные практики. Удобен как объясняющий объект перед Кампонг-Айер и внутренними районами. Находится в Kota Batu у Бруней река, рядом с историко-археологическим поясом старой столицы. Сезон: Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год. Лучшее время: экстерьер утром, интерьер в рабочие часы Свет и погода: резерв на жару/ливень",
+        "narrow": "Этнографический музей традиционных технологий Брунея: полноразмерные реконструкции домов Кампонг-Айера, лодочное дело, кровли, металлообработка, ткачество, рыболовные и охотничьи инструменты, а также технологии внутренних общин. Полезен как объясняющий объект перед Кампонг-Айером и поездками по внутренним районам: здесь видно не «старинный быт вообще», а конкретные способы строить, добывать, перерабатывать и организовывать жизнь в водной и сухопутной среде.",
         "tags": [
           "culture",
           "museum",
@@ -11506,44 +11982,131 @@
           "technology_history",
           "architecture",
           "history",
-          "nature",
           "ethnography",
-          "water",
-          "sunrise_good",
-          "weather_sensitive",
           "class_expanded"
         ],
         "route_meta": {
           "region_ref": "Бандар-Сери-Бегаван / Бруней-Muara",
           "locality_ref": "Бандар-Сери-Бегаван",
-          "typical_visit_hours": [
-            1.5,
-            2.5
-          ],
+          "typical_visit_hours": null,
           "transport_modes": {
-            "public_transport": "автобус в сторону Kota Batu возможен, но не как единственная опора",
-            "taxi_ridehail": "Dart предсказуемее",
-            "moped": "прямой подъезд",
-            "walking": "из центра несколько км"
+            "public_transport": "городской автобус после проверки актуальной линии; Brunei Tourism указывает средний тариф около BND 1 и работу сети 06:00–20:00",
+            "taxi_ridehail": "Dart до Simpang 482 — официальный рекомендованный вариант без своей машины",
+            "moped": "обычный городской дорожный подъезд к музею",
+            "walking": "фиксированный километраж из центра не хранится; пешком разумнее связывать музей с соседними объектами Kota Batu"
           },
-          "walking": "из центра несколько км",
-          "water": "воду купить до входа",
-          "overnight_and_camping": "кемпинга нет",
-          "permit_or_guide": null,
-          "best_period": "Февраль–апрель обычно удобнее по осадкам; жара и высокая влажность круглый год.",
-          "current_status": null,
+          "walking": "фиксированный километраж из центра не хранится; пешком разумнее связывать музей с соседними объектами Kota Batu",
+          "water": "Публичная питьевая точка внутри не подтверждена; воду купить до входа.",
+          "overnight_and_camping": "Музей не является кемпингом; право на палатку/ночёвку на территории не подтверждено.",
+          "permit_or_guide": "Обычный визит самостоятельный; гид не требуется.",
+          "best_period": "Круглый год в часы работы.",
+          "current_status": "открыт по опубликованному расписанию; пятница закрыта; динамические часы перепроверять перед визитом",
           "main_risks": [
-            "музейные ограничения",
-            "жара на внешних участках",
-            "обычная осторожность с вещами"
+            "поздний приход незадолго до закрытия",
+            "ливень и жара на внешнем подходе",
+            "неясная безбарьерность всех внутренних уровней"
           ],
           "expedition_profile": {
             "default_mode": "самостоятельно",
-            "route_scale": "несколько часов",
-            "terrain_and_movement": "из центра несколько км",
-            "physical_difficulty_policy": "ступени, уклон, длительная ходьба и многодневность считаются параметрами маршрута, а не самостоятельными ограничениями",
-            "camping_assumption": "путешественник имеет палатку и походное снаряжение; ночёвка оценивается прежде всего по законности, доступу к воде и режиму территории",
-            "local_support": "гид не требуется; использовать местного специалиста только при конкретной необходимости: закрытый/регулируемый маршрут, переговоры с общиной, редкая природная навигация или углублённый исторический контекст"
+            "route_scale": "музейный визит без подтверждённой фиксированной длительности",
+            "terrain_and_movement": "городской подъезд + внутренний маршрут по музейным залам",
+            "physical_difficulty_policy": "ступени и внутренняя доступность фиксируются как параметры объекта; универсальная безбарьерность всех зон не заявляется без источника",
+            "camping_assumption": "наличие палатки не означает право ночевать на музейной территории",
+            "local_support": "гид не нужен; специалист имеет смысл только для углублённой этнографической интерпретации"
+          }
+        },
+        "qa": {
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-02",
+            "notes": "Убраны англо-русские служебные фразы, туристические штампы и нерелевантные nature/water/sunrise tags; терминология сохранена только там, где она нужна для музейных и этнографических понятий."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-02",
+            "scope": "повторный объектный QA Malay Technology Museum по камбоджийскому эталону",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true
+            },
+            "notes": [
+              "Карточка перестроена из краткого каталожного описания в связный рассказ о материальной технологии водных и внутренних общин.",
+              "Center участка и текущая официальная точка прибытия разведены; entrance взят из Get Directions Brunei Tourism.",
+              "Опубликованы точные текущие тарифы; ошибка подписи Saturday/Friday на Brunei Tourism не замолчана и сверена с официальным Instagram музея на октябрь 2026.",
+              "Неподтверждённая длительность 1,5–2,5 часа удалена.",
+              "Traveler reports заменены на датированные отчёты с источником вместо общих фраз без provenance.",
+              "Галерея доведена до пяти релевантных изображений самого музея."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-02",
+            "scope": "редакционная приёмка obj_bn_0014 после доработки",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "ethnography_substantive": true,
+              "geography_substantive": true,
+              "geology_omitted_as_not_material": true,
+              "myths_omitted_as_not_documented": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest_unknowns": true,
+              "overnight_honest_unknowns": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "media_provenance": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "access_anchor_verified": true,
+              "drone_rule_precision": true
+            },
+            "notes": [
+              "История музея и структура трёх галерей опираются на академический источник; исследовательская интерпретация национальной идентичности явно атрибутирована.",
+              "Этнография разделяет водный Кампонг-Айер и внутренние сообщества вместо единого ярлыка «традиции».",
+              "Точный GPS внутренних залов не выдумывается; координата есть только у внешнего arrival anchor.",
+              "Сезонность перестроена под крытый музей: ключевы часы и режим, а не абстрактный сухой сезон."
+            ]
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-02",
+            "scope": "повторный QA Malay Technology Museum: narrative, операции, билет, доступ, GPS, вода, ночёвка, traveler reports, visual recon, media и drone",
+            "checks": {
+              "narrative_section_sources": true,
+              "academic_interpretation_attributed": true,
+              "operations_sources": true,
+              "ticket_sources": true,
+              "saturday_label_conflict_reconciled": true,
+              "access_sources": true,
+              "access_anchor_not_confused_with_center": true,
+              "coordinate_type_precision": true,
+              "no_invented_visit_duration": true,
+              "water_unknown_not_falsely_sourced": true,
+              "overnight_permission_scoped": true,
+              "traveler_report_sources": true,
+              "traveler_report_dates_match_sources": true,
+              "visual_viewpoint_sources": true,
+              "unknown_interior_gps_preserved": true,
+              "filming_policy_not_invented": true,
+              "drone_rule_precision": true,
+              "gallery_source_provenance": true
+            }
           }
         }
       },

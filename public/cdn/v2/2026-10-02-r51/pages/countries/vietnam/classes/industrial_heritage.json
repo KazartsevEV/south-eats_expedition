@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.16",
+    "release_id": "2026-10-02-r51",
+    "page_type": "country_class",
+    "id": "country-class:vn:industrial_heritage"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "industrial_heritage",
+    "label_ru": "Индустриальное наследие",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:built_heritage",
+    "page_path": "pages/countries/vietnam/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/industrial_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:geographic_area:hanoi-red-river-delta",
+      "canonical_geo_id": "geo_vn_0035",
+      "name": "Ханой / дельта Красной реки",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/hanoi-red-river-delta.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:long-bien-bridge",
+      "name": "Long Bien Bridge",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:hanoi-red-river-delta"
+      ],
+      "region_legacy": "Hanoi / Red River Delta",
+      "nearest_hub": "Hanoi",
+      "narrow": "Long Bien Bridge — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/vietnam/objects/long-bien-bridge.json"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "schema_version": "2.10.16",
+    "release_id": "2026-10-02-r51",
+    "page_type": "country_class",
+    "id": "country-class:vn:natural_landscape"
+  },
+  "identity": {
+    "country_code": "VN",
+    "country_slug": "vietnam",
+    "object_type": "natural_landscape",
+    "label_ru": "Природные ландшафты и треккинг",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:vn:protected_ecosystems",
+    "page_path": "pages/countries/vietnam/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/natural_landscape.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": {
+    "status": "transitional_broad_class",
+    "target_split": [
+      "mountain",
+      "plateau",
+      "karst",
+      "forest",
+      "geological_site"
+    ],
+    "note_ru": "Слишком широкий исторический класс; объекты мигрируются в более точные классы по фактическому типу."
+  },
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:vn",
+      "name": "Вьетнам",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/vietnam.json"
+    },
+    {
+      "id": "vn:geographic_area:ha-long-cat-ba",
+      "canonical_geo_id": "geo_vn_0037",
+      "name": "Халонг / Катба",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/vietnam/geographic_area/ha-long-cat-ba.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "vn:ha-long-bay-cat-ba",
+      "name": "Ha Long Bay–Cat Ba",
+      "geography_ids": [
+        "country:vn",
+        "vn:geographic_area:ha-long-cat-ba"
+      ],
+      "region_legacy": "Ha Long / Cat Ba",
+      "nearest_hub": "Ha Long / Cat Ba / Hai Phong",
+      "narrow": "Ha Long Bay–Cat Ba — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/ha-long-bay-cat-ba.json"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.16",
+    "release_id": "2026-10-02-r51",
+    "page_type": "country_class",
+    "id": "country-class:sg:protected_area"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "object_type": "protected_area",
+    "label_ru": "Заповедники и охраняемые территории",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:sg:protected_ecosystems",
+    "page_path": "pages/countries/singapore/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/protected_area.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:sg",
+      "name": "Сингапур",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/singapore.json"
+    },
+    {
+      "id": "sg:geographic_area:southern-coast-labrador-pasir-panjang",
+      "canonical_geo_id": "geo_sg_0014",
+      "name": "Южное побережье / Лабрадор / Пасир-Панджанг",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/singapore/geographic_area/southern-coast-labrador-pasir-panjang.json"
+    },
+    {
+      "id": "sg:region:central-region",
+      "canonical_geo_id": "geo_sg_0001",
+      "name": "Центральный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/central-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:labrador-nature-reserve-and-wwii-coastal-landscape",
+      "name": "Labrador Nature Reserve and WWII coastal landscape",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:southern-coast-labrador-pasir-panjang",
+        "sg:region:central-region"
+      ],
+      "region_legacy": "Southern coast / Labrador / Pasir Panjang",
+      "nearest_hub": "Labrador Park MRT / HarbourFront",
+      "narrow": "Редкое сочетание в Singapore: природный берег и лес, Berlayer Creek, морской горизонт и реальные WWII gun/bunker relics в одном компактном городском маршруте.",
+      "detail_path": "countries/singapore/objects/labrador-nature-reserve-and-wwii-coastal-landscape.json"
+    }
+  ]
+}

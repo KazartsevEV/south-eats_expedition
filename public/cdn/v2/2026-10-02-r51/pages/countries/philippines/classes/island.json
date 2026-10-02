@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "schema_version": "2.10.16",
+    "release_id": "2026-10-02-r51",
+    "page_type": "country_class",
+    "id": "country-class:ph:island"
+  },
+  "identity": {
+    "country_code": "PH",
+    "country_slug": "philippines",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:ph:water_coast_marine",
+    "page_path": "pages/countries/philippines/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:ph",
+      "name": "Филиппины",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/philippines.json"
+    },
+    {
+      "id": "ph:geographic_area:boracay-western-visayas",
+      "canonical_geo_id": "geo_ph_0040",
+      "name": "Боракай / Западные Висайи",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/boracay-western-visayas.json"
+    },
+    {
+      "id": "ph:geographic_area:palawan-expedition",
+      "canonical_geo_id": "geo_ph_0035",
+      "name": "Палаван",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/philippines/geographic_area/palawan-expedition.json"
+    },
+    {
+      "id": "ph:province:aklan",
+      "canonical_geo_id": "geo_ph_0024",
+      "name": "Аклан",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/province/aklan.json"
+    },
+    {
+      "id": "ph:province:palawan",
+      "canonical_geo_id": "geo_ph_0019",
+      "name": "Палаван",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/province/palawan.json"
+    },
+    {
+      "id": "ph:region:mimaropa",
+      "canonical_geo_id": "geo_ph_0007",
+      "name": "МИМАРОПА",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/mimaropa.json"
+    },
+    {
+      "id": "ph:region:western-visayas",
+      "canonical_geo_id": "geo_ph_0009",
+      "name": "Западные Висайи",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/philippines/region/western-visayas.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "ph:palawan-el-nido-coron",
+      "name": "Palawan / El Nido / Coron",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:palawan-expedition",
+        "ph:province:palawan",
+        "ph:region:mimaropa"
+      ],
+      "region_legacy": "Palawan",
+      "nearest_hub": "Puerto Princesa / El Nido / Busuanga",
+      "narrow": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/palawan-el-nido-coron.json"
+    },
+    {
+      "id": "ph:boracay",
+      "name": "Boracay",
+      "geography_ids": [
+        "country:ph",
+        "ph:geographic_area:boracay-western-visayas",
+        "ph:province:aklan",
+        "ph:region:western-visayas"
+      ],
+      "region_legacy": "Boracay / Western Visayas",
+      "nearest_hub": "Caticlan / Kalibo",
+      "narrow": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/boracay.json"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.16",
+    "release_id": "2026-10-02-r51",
+    "page_type": "country_class",
+    "id": "country-class:sg:wetland"
+  },
+  "identity": {
+    "country_code": "SG",
+    "country_slug": "singapore",
+    "object_type": "wetland",
+    "label_ru": "Болота и водно-болотные угодья",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:sg:water_coast_marine",
+    "page_path": "pages/countries/singapore/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/wetland.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:sg",
+      "name": "Сингапур",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/singapore.json"
+    },
+    {
+      "id": "sg:geographic_area:north-kranji-sungei-buloh",
+      "canonical_geo_id": "geo_sg_0010",
+      "name": "Север / Кранджи / Сунгей-Булох",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/singapore/geographic_area/north-kranji-sungei-buloh.json"
+    },
+    {
+      "id": "sg:region:north-region",
+      "canonical_geo_id": "geo_sg_0003",
+      "name": "Северный регион",
+      "kind": "region",
+      "axis": "planning_geography",
+      "page_path": "pages/geography/singapore/region/north-region.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sg:sungei-buloh-wetland-reserve",
+      "name": "Sungei Buloh Wetland Reserve",
+      "geography_ids": [
+        "country:sg",
+        "sg:geographic_area:north-kranji-sungei-buloh",
+        "sg:region:north-region"
+      ],
+      "region_legacy": "North / Kranji / Sungei Buloh",
+      "nearest_hub": "Kranji / Woodlands",
+      "narrow": "Sungei Buloh Wetland Reserve — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/sungei-buloh-wetland-reserve.json"
+    }
+  ]
+}

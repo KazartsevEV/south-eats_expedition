@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "schema_version": "2.10.16",
+    "release_id": "2026-10-02-r51",
+    "page_type": "class_family",
+    "id": "country-family:my:water_coast_marine"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "family_id": "water_coast_marine",
+    "label_ru": "Вода, побережья и морская среда"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:my",
+    "page_path": "pages/countries/malaysia.json"
+  },
+  "global_family_page": "pages/families/water_coast_marine.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "count": 4,
+  "classes": [
+    {
+      "object_type": "river",
+      "label_ru": "Реки",
+      "count": 1,
+      "global_page_path": "pages/classes/river.json",
+      "country_page_path": "pages/countries/malaysia/classes/river.json"
+    },
+    {
+      "object_type": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 3,
+      "global_page_path": "pages/classes/island.json",
+      "country_page_path": "pages/countries/malaysia/classes/island.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:kinabatangan-river",
+      "name": "Kinabatangan River",
+      "object_type": "river",
+      "geography_ids": [
+        "country:my",
+        "my:locality:sukau",
+        "my:region:sabah-east-coast-danum-kinabatangan"
+      ],
+      "region_legacy": "Sabah east coast / Danum / Kinabatangan",
+      "narrow": "Кинабатанган — не просто лодочная прогулка, а длинный речной коридор с пойменным лесом, старицами и высокой концентрацией животных; базироваться лучше в Sukau/Bilit несколько суток и выходить на реку многократно.",
+      "detail_path": "countries/malaysia/objects/kinabatangan-river.json"
+    },
+    {
+      "id": "my:langkawi",
+      "name": "Langkawi",
+      "object_type": "island",
+      "geography_ids": [
+        "country:my",
+        "my:region:langkawi-northwest-coast"
+      ],
+      "region_legacy": "Langkawi / northwest coast",
+      "narrow": "Лангкави интересен не курортным набором развлечений, а сочетанием древних карстов, мангров Kilim, островных дорог, рыбацких поселений и доступных участков побережья в пределах одного архипелага.",
+      "detail_path": "countries/malaysia/objects/langkawi.json"
+    },
+    {
+      "id": "my:perhentian-islands",
+      "name": "Perhentian islands",
+      "object_type": "island",
+      "geography_ids": [
+        "country:my",
+        "my:region:perhentian-east-coast"
+      ],
+      "region_legacy": "Perhentian / east coast",
+      "narrow": "Перхентианы — удобная морская база для самостоятельного островного режима: пешие связки между бухтами, лодочные переброски, рифы у берега и возможность собирать несколько дней вокруг воды и троп, а не вокруг пакетной экскурсии.",
+      "detail_path": "countries/malaysia/objects/perhentian-islands.json"
+    },
+    {
+      "id": "my:sipadan-island",
+      "name": "Sipadan Island",
+      "object_type": "island",
+      "geography_ids": [
+        "country:my",
+        "my:region:semporna-sipadan-east-sabah"
+      ],
+      "region_legacy": "Semporna / Sipadan / east Sabah",
+      "narrow": "Сипадан — океанический остров на вершине подводного вулканического конуса с почти вертикальными рифовыми стенами, черепахами и пелагическими стаями; доступ строго ограничен разрешениями.",
+      "detail_path": "countries/malaysia/objects/sipadan-island.json"
+    }
+  ]
+}

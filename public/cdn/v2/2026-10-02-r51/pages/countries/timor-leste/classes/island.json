@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "schema_version": "2.10.16",
+    "release_id": "2026-10-02-r51",
+    "page_type": "country_class",
+    "id": "country-class:tl:island"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:tl:water_coast_marine",
+    "page_path": "pages/countries/timor-leste/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:tl",
+      "name": "Тимор-Лешти",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/timor-leste.json"
+    },
+    {
+      "id": "tl:geographic_area:atauro-expedition",
+      "canonical_geo_id": "geo_tl_0016",
+      "name": "Атауро",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/atauro-expedition.json"
+    },
+    {
+      "id": "tl:geographic_area:lautem-tutuala-jaco",
+      "canonical_geo_id": "geo_tl_0017",
+      "name": "Лаутем / Тутуала / Жаку",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/timor-leste/geographic_area/lautem-tutuala-jaco.json"
+    },
+    {
+      "id": "tl:island:atauro",
+      "canonical_geo_id": "geo_tl_0014",
+      "name": "Атауро",
+      "kind": "island",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/island/atauro.json"
+    },
+    {
+      "id": "tl:region:lautem",
+      "canonical_geo_id": "geo_tl_0008",
+      "name": "Лаутем",
+      "kind": "region",
+      "axis": "administrative",
+      "page_path": "pages/geography/timor-leste/region/lautem.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:atauro-island",
+      "name": "Atauro Island",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:atauro-expedition",
+        "tl:island:atauro"
+      ],
+      "region_legacy": "Atauro",
+      "nearest_hub": "Dili / Atauro",
+      "narrow": "Atauro Island — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/timor-leste/objects/atauro-island.json"
+    },
+    {
+      "id": "tl:jaco-island-tutuala",
+      "name": "Jaco Island / Tutuala",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:lautem-tutuala-jaco",
+        "tl:region:lautem"
+      ],
+      "region_legacy": "Lautem / Tutuala / Jaco",
+      "nearest_hub": "Lospalos / Tutuala",
+      "narrow": "Jaco Island / Tutuala — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/timor-leste/objects/jaco-island-tutuala.json"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "schema_version": "2.10.16",
+    "release_id": "2026-10-02-r51",
+    "page_type": "country_class",
+    "id": "country-class:la:museum"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "museum",
+    "label_ru": "Музеи",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:archaeology_memory",
+    "page_path": "pages/countries/laos/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/museum.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 6,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:city:luang-prabang",
+      "canonical_geo_id": "geo_la_0025",
+      "name": "Луангпхабанг",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/city/luang-prabang-city.json"
+    },
+    {
+      "id": "la:city:savannakhet",
+      "canonical_geo_id": "geo_la_0042",
+      "name": "Саваннакхет",
+      "kind": "city",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/city/savannakhet-city.json"
+    },
+    {
+      "id": "la:province:luang-namtha",
+      "canonical_geo_id": "geo_la_0043",
+      "name": "Луангнамтха",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/luang-namtha.json"
+    },
+    {
+      "id": "la:province:luang-prabang",
+      "canonical_geo_id": "geo_la_0024",
+      "name": "Луангпхабанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/luang-prabang.json"
+    },
+    {
+      "id": "la:province:phongsaly",
+      "canonical_geo_id": "geo_la_0047",
+      "name": "Пхонгсали",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/phongsaly.json"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "canonical_geo_id": "geo_la_0041",
+      "name": "Саваннакхет",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/savannakhet.json"
+    },
+    {
+      "id": "la:province:xiangkhouang",
+      "canonical_geo_id": "geo_la_0027",
+      "name": "Сиангкхуанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/xiangkhouang.json"
+    },
+    {
+      "id": "la:town:phongsaly",
+      "canonical_geo_id": "geo_la_0048",
+      "name": "Пхонгсали",
+      "kind": "town",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/town/phongsaly-town.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:royal-palace-national-museum-luang-prabang",
+      "name": "Royal Palace National Museum Luang Prabang",
+      "geography_ids": [
+        "country:la",
+        "la:city:luang-prabang",
+        "la:province:luang-prabang"
+      ],
+      "region_legacy": "Луангпхабанг / север долины Нам-У",
+      "nearest_hub": "Luang Prabang",
+      "narrow": "Бывший королевский дворец Луангпхабанга, ныне музей; отдельный посещаемый объект внутри исторического города.",
+      "detail_path": "countries/laos/objects/royal-palace-national-museum-luang-prabang.json"
+    },
+    {
+      "id": "la:phongsaly-ethnic-museum",
+      "name": "Phongsaly Ethnic Museum",
+      "geography_ids": [
+        "country:la",
+        "la:province:phongsaly",
+        "la:town:phongsaly"
+      ],
+      "region_legacy": "Phongsaly Province",
+      "nearest_hub": "Phongsaly",
+      "narrow": "Этнографический музей Пхонгсали, отдельный городской объект; не дублирует широкую карточку старого города и чайных высокогорий.",
+      "detail_path": "countries/laos/objects/phongsaly-ethnic-museum.json"
+    },
+    {
+      "id": "la:xieng-khouang-provincial-museum",
+      "name": "Xieng Khouang Provincial Museum",
+      "geography_ids": [
+        "country:la",
+        "la:province:xiangkhouang"
+      ],
+      "region_legacy": "Xiangkhouang Province",
+      "nearest_hub": "Phonsavan",
+      "narrow": "Провинциальный музей Сиангкхуанга с региональным историко-археологическим контекстом; отдельный объект от самих площадок кувшинов.",
+      "detail_path": "countries/laos/objects/xieng-khouang-provincial-museum.json"
+    },
+    {
+      "id": "la:savannakhet-dinosaur-museum",
+      "name": "Savannakhet Dinosaur Museum",
+      "geography_ids": [
+        "country:la",
+        "la:city:savannakhet",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet Province",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Музей динозавров в Саваннакхете, самостоятельный научно-музейный объект и не часть архитектурной карточки старого квартала.",
+      "detail_path": "countries/laos/objects/savannakhet-dinosaur-museum.json"
+    },
+    {
+      "id": "la:kaysone-phomvihane-house-and-museum",
+      "name": "Kaysone Phomvihane House and Museum",
+      "geography_ids": [
+        "country:la",
+        "la:city:savannakhet",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet Province",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Дом-музей в Саваннакхете, посвящённый Кейсону Фомвихану; добавлен как отдельный мемориально-исторический музейный объект.",
+      "detail_path": "countries/laos/objects/kaysone-phomvihane-house-and-museum.json"
+    },
+    {
+      "id": "la:luang-namtha-museum",
+      "name": "Luang Namtha Museum",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-namtha"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "nearest_hub": "Luang Namtha",
+      "narrow": "Провинциальный музей Луангнамтха, отдельный культурный объект и источник этнографического контекста региона.",
+      "detail_path": "countries/laos/objects/luang-namtha-museum.json"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.16",
+    "release_id": "2026-10-02-r51",
+    "page_type": "country_class",
+    "id": "country-class:th:island"
+  },
+  "identity": {
+    "country_code": "TH",
+    "country_slug": "thailand",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:th:water_coast_marine",
+    "page_path": "pages/countries/thailand/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:th",
+      "name": "Таиланд",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/thailand.json"
+    },
+    {
+      "id": "th:geographic_area:andaman-phuket-krabi",
+      "canonical_geo_id": "geo_th_0031",
+      "name": "Андаманское побережье / Пхукет / Краби",
+      "kind": "geographic_area",
+      "axis": "expedition_geography",
+      "page_path": "pages/geography/thailand/geographic_area/andaman-phuket-krabi.json"
+    },
+    {
+      "id": "th:geographic_area:south",
+      "canonical_geo_id": "geo_th_0006",
+      "name": "Южный Таиланд",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/thailand/geographic_area/south.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "th:phuket-krabi-andaman-islands",
+      "name": "Phuket/Krabi/Andaman islands",
+      "geography_ids": [
+        "country:th",
+        "th:geographic_area:andaman-phuket-krabi",
+        "th:geographic_area:south"
+      ],
+      "region_legacy": "Andaman / Phuket / Krabi",
+      "nearest_hub": "Phuket / Krabi",
+      "narrow": "Phuket/Krabi/Andaman islands — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/thailand/objects/phuket-krabi-andaman-islands.json"
+    }
+  ]
+}

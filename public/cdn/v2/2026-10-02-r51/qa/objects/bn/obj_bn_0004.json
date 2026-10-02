@@ -1,0 +1,70 @@
+{
+  "object_id": "obj_bn_0004",
+  "status": "passed",
+  "checks": {
+    "language": true,
+    "classification": true,
+    "geo": true,
+    "coordinates": true,
+    "elevation": true,
+    "narrative": true,
+    "sources": true,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
+    "editorial_rebuild": true
+  },
+  "last_reviewed_at": "2026-10-01",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-01",
+    "scope": "повторный QA obj_bn_0004: официальный статус парка, operator alert, Forestry area source, entry-pass model, river access and drone precision",
+    "checks": {
+      "narrative_section_sources": true,
+      "park_area_source_correct": true,
+      "operations_sources": true,
+      "official_status_separated_from_operator_status": true,
+      "access_sources": true,
+      "entry_pass_claim_precision": true,
+      "coordinates_precision": true,
+      "elevation_precision": true,
+      "water_unknown_not_falsely_sourced": true,
+      "supplies_source_specific": true,
+      "overnight_unknown_not_falsely_sourced": true,
+      "traveler_report_sources": true,
+      "visual_recon": true,
+      "drone_rule_precision": true,
+      "geology_source": true,
+      "canopy_dimensions_officially_verified": true,
+      "osm_coordinate_identity_verified": true,
+      "coordinate_accuracy_not_overstated": true
+    },
+    "notes": [
+      "Исправлена ошибочная ссылка overview: площадь 46 210 га теперь ссылается на Forestry Department src_904639, а не на Wikimedia Commons src_904647.",
+      "Официальный Brunei Tourism продолжает публиковать часы парка; уведомление Freme о низкой воде хранится как operator-specific disruption, а не как доказанное официальное закрытие всего парка.",
+      "GOV.BN подтверждает наличие Entry Pass Application и отдельного Travel Agent Permit, но публичная страница не доказывает конкретную процедуру для индивидуального иностранца; формулировка оставлена нейтральной.",
+      "Питьевая пригодность рек/ручьёв неизвестна; отсутствие надёжного источника не прикрывается общей библиографией.",
+      "Дрон приведён к точным общим правилам DCA; park-specific launch permission не выдумывается.",
+      "Координаты регистрационного причала, trailhead и canopy viewpoint соответствуют конкретным именованным OSM-узлам; accuracy снижена с high до medium, потому что это картографические POI, а не полевой или официальный геодезический GPS-замер.",
+      "Добавлена геология Batu Apoi по Smithsonian ForestGEO: Setap Formation, Meligan Formation, почвы и расчленённый рельеф.",
+      "Размеры Canopy Walkway перепроверены по официальной брошюре Tourism Development Department: башни 42 м, мосты 10 м, холм около 300 м.",
+      "Freme low-water alert сохранён как operator-specific disruption; официальный Forestry-wide closure из него не выводится."
+    ]
+  },
+  "identity_review": null,
+  "verification": {
+    "dynamic_fields": [
+      "hours",
+      "entry pass",
+      "operator access",
+      "river level",
+      "waterfall access",
+      "canopy walkway",
+      "filming/drone"
+    ],
+    "verify_before_departure": true
+  }
+}

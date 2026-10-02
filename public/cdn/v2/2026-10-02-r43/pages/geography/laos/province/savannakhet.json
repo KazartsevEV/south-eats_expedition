@@ -220,9 +220,10 @@
         "лаосский",
         "тайский часто понимают",
         "встречается вьетнамский язык",
-        "английский ограниченно используется в туристической сфере"
+        "английский ограниченно используется в туристической сфере",
+        "английский — ограниченно в туристической инфраструктуре"
       ],
-      "notes": null
+      "notes": "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
     },
     "climate": {
       "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -324,8 +325,33 @@
   "notes_ru": null,
   "class_counts": [
     {
+      "object_type": "archaeological_site",
+      "label_ru": "Археологические объекты",
+      "count": 1
+    },
+    {
+      "object_type": "cultural_landscape",
+      "label_ru": "Культурные ландшафты",
+      "count": 1
+    },
+    {
+      "object_type": "historic_building",
+      "label_ru": "Исторические здания и руины",
+      "count": 1
+    },
+    {
       "object_type": "historic_city",
       "label_ru": "Исторические города и кварталы",
+      "count": 1
+    },
+    {
+      "object_type": "protected_area",
+      "label_ru": "Заповедники и охраняемые территории",
+      "count": 2
+    },
+    {
+      "object_type": "religious_site",
+      "label_ru": "Храмы и религиозные объекты",
       "count": 1
     }
   ],
@@ -333,13 +359,79 @@
     {
       "family_id": "built_heritage",
       "label_ru": "Поселения и архитектурное наследие",
-      "count": 1,
+      "count": 2,
       "classes": [
         {
           "object_type": "historic_city",
           "label_ru": "Исторические города и кварталы",
           "count": 1,
           "country_class_page": "pages/countries/laos/classes/historic_city.json",
+          "filter": {
+            "geography_id": "la:province:savannakhet"
+          }
+        },
+        {
+          "object_type": "historic_building",
+          "label_ru": "Исторические здания и руины",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/historic_building.json",
+          "filter": {
+            "geography_id": "la:province:savannakhet"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "archaeology_memory",
+      "label_ru": "Археология, древность и историческая память",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "archaeological_site",
+          "label_ru": "Археологические объекты",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/archaeological_site.json",
+          "filter": {
+            "geography_id": "la:province:savannakhet"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "religion_ethnography",
+      "label_ru": "Религия, этнография и живая культура",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "religious_site",
+          "label_ru": "Храмы и религиозные объекты",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/religious_site.json",
+          "filter": {
+            "geography_id": "la:province:savannakhet"
+          }
+        },
+        {
+          "object_type": "cultural_landscape",
+          "label_ru": "Культурные ландшафты",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/cultural_landscape.json",
+          "filter": {
+            "geography_id": "la:province:savannakhet"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "protected_ecosystems",
+      "label_ru": "Охраняемая природа и экосистемы",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "protected_area",
+          "label_ru": "Заповедники и охраняемые территории",
+          "count": 2,
+          "country_class_page": "pages/countries/laos/classes/protected_area.json",
           "filter": {
             "geography_id": "la:province:savannakhet"
           }
@@ -354,6 +446,48 @@
       "object_type": "historic_city",
       "narrow": "Старый Саваннакхет — редкий для Лаоса компактный исторический городской ансамбль, где колониальная и арт-деко архитектура существует внутри действующей многоэтничной среды. Здесь важны не отдельные «французские дома», а сетка улиц, рынки, храмы, кинотеатры и Меконг как единая городская система.",
       "detail_path": "countries/laos/objects/savannakhet-old-quarter.json"
+    },
+    {
+      "id": "la:heuan-hin-stone-house",
+      "name": "Heuan Hin Stone House",
+      "object_type": "archaeological_site",
+      "narrow": "Каменное сооружение к югу от Саваннакхета, которое Tourism Laos связывает с дорожной инфраструктурой эпохи Джаявармана VII.",
+      "detail_path": "countries/laos/objects/heuan-hin-stone-house.json"
+    },
+    {
+      "id": "la:that-ing-hang-stupa",
+      "name": "That Ing Hang Stupa",
+      "object_type": "religious_site",
+      "narrow": "Главная сакральная ступа провинции Саваннакхет, связанная с буддийским паломничеством и ежегодным фестивалем.",
+      "detail_path": "countries/laos/objects/that-ing-hang-stupa.json"
+    },
+    {
+      "id": "la:hortay-pidok",
+      "name": "Hortay Pidok",
+      "object_type": "historic_building",
+      "narrow": "Историческая библиотека пальмовых рукописей в провинции Саваннакхет; самостоятельный культурный объект вне городской составной карточки.",
+      "detail_path": "countries/laos/objects/hortay-pidok.json"
+    },
+    {
+      "id": "la:dong-na-tad-sacred-forest",
+      "name": "Dong Na Tad Sacred Forest",
+      "object_type": "cultural_landscape",
+      "narrow": "Старовозрастный лес, охраняемый местными жителями также по духовным причинам; отдельный этнографически значимый природный объект.",
+      "detail_path": "countries/laos/objects/dong-na-tad-sacred-forest.json"
+    },
+    {
+      "id": "la:dong-phou-vieng-national-protected-area",
+      "name": "Dong Phou Vieng National Protected Area",
+      "object_type": "protected_area",
+      "narrow": "Охраняемая территория Саваннакхета с лесными маршрутами и редкой фауной; отдельна от городской и археологической линии провинции.",
+      "detail_path": "countries/laos/objects/dong-phou-vieng-national-protected-area.json"
+    },
+    {
+      "id": "la:phou-xang-hae-national-protected-area",
+      "name": "Phou Xang Hae National Protected Area",
+      "object_type": "protected_area",
+      "narrow": "Охраняемый массив Саваннакхета с лесными ландшафтами и популяциями крупных млекопитающих, выделенный Tourism Laos как самостоятельная природная территория.",
+      "detail_path": "countries/laos/objects/phou-xang-hae-national-protected-area.json"
     }
   ],
   "provenance": {

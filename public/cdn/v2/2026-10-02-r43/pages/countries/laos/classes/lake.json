@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:la:lake"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "lake",
+    "label_ru": "Озёра",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:water_coast_marine",
+    "page_path": "pages/countries/laos/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/lake.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:province:vientiane",
+      "canonical_geo_id": "geo_la_0029",
+      "name": "Провинция Вьентьян",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/vientiane-province.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:nam-ngum-reservoir",
+      "name": "Nam Ngum Reservoir",
+      "geography_ids": [
+        "country:la",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "nearest_hub": "Tha Heua",
+      "narrow": "Крупное водохранилище Nam Ngum, сформированное гидроэнергетическим проектом и используемое для лодочных маршрутов и ночёвок в прибрежных поселениях.",
+      "detail_path": "countries/laos/objects/nam-ngum-reservoir.json"
+    }
+  ]
+}

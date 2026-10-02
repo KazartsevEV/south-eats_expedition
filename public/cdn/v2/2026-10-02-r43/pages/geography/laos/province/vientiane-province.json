@@ -25,7 +25,7 @@
       "kind": "geographic_area",
       "name": "Карст Ванг-Вьенга",
       "page_path": "pages/geography/laos/geographic_area/vang-vieng-karst.json",
-      "object_count": 1
+      "object_count": 3
     }
   ],
   "legacy_region_names": [
@@ -215,9 +215,10 @@
       "spoken": [
         "лаосский",
         "английский в туристической сфере",
-        "тайский широко понимают"
+        "тайский широко понимают",
+        "английский — ограниченно в туристической инфраструктуре"
       ],
-      "notes": null
+      "notes": "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
     },
     "climate": {
       "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -308,8 +309,23 @@
   "notes_ru": null,
   "class_counts": [
     {
+      "object_type": "cave",
+      "label_ru": "Пещеры",
+      "count": 1
+    },
+    {
       "object_type": "karst",
       "label_ru": "Карстовые районы",
+      "count": 1
+    },
+    {
+      "object_type": "lake",
+      "label_ru": "Озёра",
+      "count": 1
+    },
+    {
+      "object_type": "waterfall",
+      "label_ru": "Водопады",
       "count": 1
     }
   ],
@@ -317,13 +333,47 @@
     {
       "family_id": "relief_geology",
       "label_ru": "Рельеф и геология",
-      "count": 1,
+      "count": 2,
       "classes": [
         {
           "object_type": "karst",
           "label_ru": "Карстовые районы",
           "count": 1,
           "country_class_page": "pages/countries/laos/classes/karst.json",
+          "filter": {
+            "geography_id": "la:province:vientiane"
+          }
+        },
+        {
+          "object_type": "cave",
+          "label_ru": "Пещеры",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/cave.json",
+          "filter": {
+            "geography_id": "la:province:vientiane"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "lake",
+          "label_ru": "Озёра",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/lake.json",
+          "filter": {
+            "geography_id": "la:province:vientiane"
+          }
+        },
+        {
+          "object_type": "waterfall",
+          "label_ru": "Водопады",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/waterfall.json",
           "filter": {
             "geography_id": "la:province:vientiane"
           }
@@ -338,6 +388,27 @@
       "object_type": "karst",
       "narrow": "Ванг-Вьенг — протяжённый карстовый ландшафт долины Нам-Сонг, где город, рисовые поля, деревни, пещеры и почти отвесные известняковые массивы образуют одну систему. Для экспедиции важен не набор «лагун» и развлечений, а сам переход от речной долины к западному поясу пермского карста, его пещерам, общинным землям и точкам обзора.",
       "detail_path": "countries/laos/objects/vang-vieng-karst.json"
+    },
+    {
+      "id": "la:tham-chang-cave",
+      "name": "Tham Chang Cave",
+      "object_type": "cave",
+      "narrow": "Пещера над Ванг-Вьенгом с локальной историей военного укрытия и позднейшего использования; физический объект внутри более широкого карстового ландшафта.",
+      "detail_path": "countries/laos/objects/tham-chang-cave.json"
+    },
+    {
+      "id": "la:kaeng-nyui-waterfall",
+      "name": "Kaeng Nyui Waterfall",
+      "object_type": "waterfall",
+      "narrow": "Водопад к востоку от Ванг-Вьенга, которым управляет местная община Ban Naduang; отдельный объект внутри региона Ванг-Вьенга.",
+      "detail_path": "countries/laos/objects/kaeng-nyui-waterfall.json"
+    },
+    {
+      "id": "la:nam-ngum-reservoir",
+      "name": "Nam Ngum Reservoir",
+      "object_type": "lake",
+      "narrow": "Крупное водохранилище Nam Ngum, сформированное гидроэнергетическим проектом и используемое для лодочных маршрутов и ночёвок в прибрежных поселениях.",
+      "detail_path": "countries/laos/objects/nam-ngum-reservoir.json"
     }
   ],
   "provenance": {

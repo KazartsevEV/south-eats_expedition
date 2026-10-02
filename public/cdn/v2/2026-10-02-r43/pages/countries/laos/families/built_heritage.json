@@ -18,7 +18,7 @@
   },
   "global_family_page": "pages/families/built_heritage.json",
   "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
-  "count": 3,
+  "count": 6,
   "classes": [
     {
       "object_type": "historic_city",
@@ -26,6 +26,20 @@
       "count": 3,
       "global_page_path": "pages/classes/historic_city.json",
       "country_page_path": "pages/countries/laos/classes/historic_city.json"
+    },
+    {
+      "object_type": "historic_building",
+      "label_ru": "Исторические здания и руины",
+      "count": 1,
+      "global_page_path": "pages/classes/historic_building.json",
+      "country_page_path": "pages/countries/laos/classes/historic_building.json"
+    },
+    {
+      "object_type": "monument",
+      "label_ru": "Памятники и монументы",
+      "count": 2,
+      "global_page_path": "pages/classes/monument.json",
+      "country_page_path": "pages/countries/laos/classes/monument.json"
     }
   ],
   "objects": [
@@ -67,6 +81,42 @@
       "region_legacy": "Кхаммуан / Конг-Лор",
       "narrow": "Старый Тхакхэк — компактный квартал на Меконг с франко-лаосскими шопхаусами, католическим и буддийским слоями и ролью транзитного центра к карсту Кхаммуан. Для экспедиции он работает как человеческая прелюдия к кольцевой маршрут Тхакхэка и Конг-Лор.",
       "detail_path": "countries/laos/objects/old-thakhek-town.json"
+    },
+    {
+      "id": "la:hortay-pidok",
+      "name": "Hortay Pidok",
+      "object_type": "historic_building",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "narrow": "Историческая библиотека пальмовых рукописей в провинции Саваннакхет; самостоятельный культурный объект вне городской составной карточки.",
+      "detail_path": "countries/laos/objects/hortay-pidok.json"
+    },
+    {
+      "id": "la:buddha-park-xieng-khuan",
+      "name": "Buddha Park / Xieng Khuan",
+      "object_type": "monument",
+      "geography_ids": [
+        "country:la",
+        "la:city:vientiane"
+      ],
+      "region_legacy": "Vientiane Capital",
+      "narrow": "Скульптурный парк Xieng Khuan на окраине Вьентьяна; отдельный физический объект, не дублирующий составную карточку исторических храмов центра.",
+      "detail_path": "countries/laos/objects/buddha-park-xieng-khuan.json"
+    },
+    {
+      "id": "la:patuxai",
+      "name": "Patuxai",
+      "object_type": "monument",
+      "geography_ids": [
+        "country:la",
+        "la:city:vientiane"
+      ],
+      "region_legacy": "Vientiane Capital",
+      "narrow": "Монумент Patuxai во Вьентьяне, отдельный светский городской объект и важный ориентир столицы.",
+      "detail_path": "countries/laos/objects/patuxai.json"
     }
   ]
 }

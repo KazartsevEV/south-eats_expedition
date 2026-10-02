@@ -225,9 +225,10 @@
         "хмонг",
         "кхму",
         "у границы заметно влияние вьетнамского языка",
-        "английский ограниченно"
+        "английский ограниченно",
+        "английский — ограниченно в туристической инфраструктуре"
       ],
-      "notes": null
+      "notes": "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
     },
     "climate": {
       "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -335,9 +336,35 @@
       "object_type": "cave",
       "label_ru": "Пещеры",
       "count": 1
+    },
+    {
+      "object_type": "megalithic_site",
+      "label_ru": "Мегалиты",
+      "count": 1
+    },
+    {
+      "object_type": "waterfall",
+      "label_ru": "Водопады",
+      "count": 1
     }
   ],
   "class_families": [
+    {
+      "family_id": "archaeology_memory",
+      "label_ru": "Археология, древность и историческая память",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "megalithic_site",
+          "label_ru": "Мегалиты",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/megalithic_site.json",
+          "filter": {
+            "geography_id": "la:province:houaphanh"
+          }
+        }
+      ]
+    },
     {
       "family_id": "relief_geology",
       "label_ru": "Рельеф и геология",
@@ -353,6 +380,22 @@
           }
         }
       ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "waterfall",
+          "label_ru": "Водопады",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/waterfall.json",
+          "filter": {
+            "geography_id": "la:province:houaphanh"
+          }
+        }
+      ]
     }
   ],
   "objects": [
@@ -362,6 +405,20 @@
       "object_type": "cave",
       "narrow": "Вьенгсай — мемориальный карстовый ландшафт, где целая система природных пещер была превращена в распределённый подземный город военного времени. Главное здесь — не отдельный «бункер», а связь геологии, инженерной адаптации, повседневной жизни под бомбардировками и современной политики памяти.",
       "detail_path": "countries/laos/objects/vieng-xai-caves.json"
+    },
+    {
+      "id": "la:hintang-archaeological-park",
+      "name": "Hintang Archaeological Park",
+      "object_type": "megalithic_site",
+      "narrow": "Археологический парк стоячих камней Хинтанг на горном хребте Хуапхана; отдельный мегалитический объект, не дублирующий Plain of Jars.",
+      "detail_path": "countries/laos/objects/hintang-archaeological-park.json"
+    },
+    {
+      "id": "la:tad-saleuy-waterfall",
+      "name": "Tad Saleuy Waterfall",
+      "object_type": "waterfall",
+      "narrow": "Высокий многоступенчатый водопад у Route 6 в Хуапхане, отдельно перечисленный официальным Tourism Laos.",
+      "detail_path": "countries/laos/objects/tad-saleuy-waterfall.json"
     }
   ],
   "provenance": {

@@ -197,6 +197,13 @@
       "source_refs": [
         "src_906003"
       ]
+    },
+    "languages": {
+      "spoken": [
+        "лаосский",
+        "английский — ограниченно в туристической инфраструктуре"
+      ],
+      "notes": "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
     }
   },
   "notes_ru": "Восточная часть национального парка Се-Пиан заходит в провинцию Аттапы; речные маршруты по Секонгу и Се-Пиану описываются отдельно от западного входа Кьет-Нгонг.",
@@ -210,6 +217,11 @@
       "object_type": "natural_landscape",
       "label_ru": "Природные ландшафты и треккинг",
       "count": 1
+    },
+    {
+      "object_type": "waterfall",
+      "label_ru": "Водопады",
+      "count": 4
     }
   ],
   "class_families": [
@@ -237,6 +249,22 @@
           }
         }
       ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 4,
+      "classes": [
+        {
+          "object_type": "waterfall",
+          "label_ru": "Водопады",
+          "count": 4,
+          "country_class_page": "pages/countries/laos/classes/waterfall.json",
+          "filter": {
+            "geography_id": "la:province:attapeu"
+          }
+        }
+      ]
     }
   ],
   "objects": [
@@ -253,6 +281,34 @@
       "object_type": "natural_landscape",
       "narrow": "Удалённое высокогорное кратерное озеро в массиве Dong Ampham: сильный экспедиционный объект, где важнее проверка дороги и снабжения, чем туристическая инфраструктура.",
       "detail_path": "countries/laos/objects/nong-fa-dong-ampham-landscape.json"
+    },
+    {
+      "id": "la:tad-saepha-waterfall",
+      "name": "Tad Saepha Waterfall",
+      "object_type": "waterfall",
+      "narrow": "Удалённый водопад на Xe Pian в Аттапы, к которому Tourism Laos описывает пеший или лодочный доступ с местным проводником.",
+      "detail_path": "countries/laos/objects/tad-saepha-waterfall.json"
+    },
+    {
+      "id": "la:tad-samongphak-waterfall",
+      "name": "Tad Samongphak Waterfall",
+      "object_type": "waterfall",
+      "narrow": "Один из удалённых водопадов бассейна Xe Pian в Аттапы; самостоятельная точка внутри более широкого природного района.",
+      "detail_path": "countries/laos/objects/tad-samongphak-waterfall.json"
+    },
+    {
+      "id": "la:tad-saeponglaican-waterfall",
+      "name": "Tad Saeponglaican Waterfall",
+      "object_type": "waterfall",
+      "narrow": "Отдельный водопад бассейна Xe Pian, упомянутый Tourism Laos среди труднодоступных природных объектов Аттапы.",
+      "detail_path": "countries/laos/objects/tad-saeponglaican-waterfall.json"
+    },
+    {
+      "id": "la:tad-phapong-waterfall",
+      "name": "Tad Phapong Waterfall",
+      "object_type": "waterfall",
+      "narrow": "Водопад на Xe Xou с характерными разноцветными породами по берегам; официальный Tourism Laos описывает доступ пешком или по воде.",
+      "detail_path": "countries/laos/objects/tad-phapong-waterfall.json"
     }
   ],
   "provenance": {

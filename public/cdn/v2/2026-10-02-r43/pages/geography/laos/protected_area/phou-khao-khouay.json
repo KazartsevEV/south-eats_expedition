@@ -182,6 +182,13 @@
       "source_refs": [
         "src_906003"
       ]
+    },
+    "languages": {
+      "spoken": [
+        "лаосский",
+        "английский — ограниченно в туристической инфраструктуре"
+      ],
+      "notes": "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
     }
   },
   "notes_ru": "Транс-провинциальный национальный парк; parent=country выбран намеренно, чтобы не приписывать весь парк одной провинции. Карточка хранит рабочие точки доступа отдельно.",
@@ -190,6 +197,11 @@
       "object_type": "national_park",
       "label_ru": "Национальные парки",
       "count": 1
+    },
+    {
+      "object_type": "waterfall",
+      "label_ru": "Водопады",
+      "count": 2
     }
   ],
   "class_families": [
@@ -208,6 +220,22 @@
           }
         }
       ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 2,
+      "classes": [
+        {
+          "object_type": "waterfall",
+          "label_ru": "Водопады",
+          "count": 2,
+          "country_class_page": "pages/countries/laos/classes/waterfall.json",
+          "filter": {
+            "geography_id": "la:protected-area:phou-khao-khouay"
+          }
+        }
+      ]
     }
   ],
   "objects": [
@@ -217,6 +245,20 @@
       "object_type": "national_park",
       "narrow": "Пху-Кхао-Кхуай — большой национальный парк рядом с Вьентьяном, но на земле он распадается на несколько удалённых секторов. Для самостоятельной экспедиционной логики особенно полезен Тад-Леук: сюда ведёт отдельная дорога, есть visitor center, официальный кемпинг и короткая самостоятельная природная тропа. Из Бан-Хаткхая начинаются уже другие, регулируемые местными проводниками маршруты к Тад-Сай/Пха-Сай и на песчаниковые плато.",
       "detail_path": "countries/laos/objects/phou-khao-khouay-national-park.json"
+    },
+    {
+      "id": "la:tad-xai-waterfall",
+      "name": "Tad Xai Waterfall",
+      "object_type": "waterfall",
+      "narrow": "Многоступенчатый водопад внутри Phou Khao Khouay, доступ к которому Tourism Laos связывает с лодочно-пешим маршрутом от Ban Hatkhai.",
+      "detail_path": "countries/laos/objects/tad-xai-waterfall.json"
+    },
+    {
+      "id": "la:tad-leuk-waterfall",
+      "name": "Tad Leuk Waterfall",
+      "object_type": "waterfall",
+      "narrow": "Доступный водопад Phou Khao Khouay с рекреационной инфраструктурой и тропами; отдельный физический объект внутри национального парка.",
+      "detail_path": "countries/laos/objects/tad-leuk-waterfall.json"
     }
   ],
   "provenance": {

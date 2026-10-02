@@ -20,7 +20,7 @@
   "global_class_page": "pages/classes/megalithic_site.json",
   "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
   "migration": null,
-  "count": 1,
+  "count": 2,
   "geography_filters": [
     {
       "id": "country:la",
@@ -36,6 +36,14 @@
       "kind": "geographic_area",
       "axis": "cultural_geography",
       "page_path": "pages/geography/laos/geographic_area/plain-of-jars.json"
+    },
+    {
+      "id": "la:province:houaphanh",
+      "canonical_geo_id": "geo_la_0035",
+      "name": "Хуапхан",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/houaphanh.json"
     },
     {
       "id": "la:province:xiangkhouang",
@@ -59,6 +67,18 @@
       "nearest_hub": "Пхонсаван",
       "narrow": "Долина кувшинов — не одно поле, а серийный археологический ландшафт Сиангкхуанга: 15 компонентов ЮНЕСКО объединяют мегалитические кувшины, каменные диски, погребения, карьеры и следы изготовления. Главный смысл объекта сегодня — сочетание железновековой мегалитической традиции с более поздними фазами погребального использования, доказанными раскопками, и с живым послевоенным ландшафтом, где безопасное перемещение всё ещё привязано к известным маршрутам.",
       "detail_path": "countries/laos/objects/plain-of-jars.json"
+    },
+    {
+      "id": "la:hintang-archaeological-park",
+      "name": "Hintang Archaeological Park",
+      "geography_ids": [
+        "country:la",
+        "la:province:houaphanh"
+      ],
+      "region_legacy": "Хуапхан / Вьенгсай / Нам-Эт",
+      "nearest_hub": "Sam Neua",
+      "narrow": "Археологический парк стоячих камней Хинтанг на горном хребте Хуапхана; отдельный мегалитический объект, не дублирующий Plain of Jars.",
+      "detail_path": "countries/laos/objects/hintang-archaeological-park.json"
     }
   ]
 }

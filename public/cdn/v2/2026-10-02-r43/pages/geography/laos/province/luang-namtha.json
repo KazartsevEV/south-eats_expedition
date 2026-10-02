@@ -230,9 +230,10 @@
         "лантен",
         "хмонг",
         "тай-дам / тай-лы",
-        "английский в основном через местных проводников и организаторов доступа"
+        "английский в основном через местных проводников и организаторов доступа",
+        "английский — ограниченно в туристической инфраструктуре"
       ],
-      "notes": null
+      "notes": "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
     },
     "climate": {
       "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -327,6 +328,11 @@
   "notes_ru": null,
   "class_counts": [
     {
+      "object_type": "cave",
+      "label_ru": "Пещеры",
+      "count": 1
+    },
+    {
       "object_type": "cultural_landscape",
       "label_ru": "Культурные ландшафты",
       "count": 1
@@ -334,6 +340,11 @@
     {
       "object_type": "protected_area",
       "label_ru": "Заповедники и охраняемые территории",
+      "count": 1
+    },
+    {
+      "object_type": "waterfall",
+      "label_ru": "Водопады",
       "count": 1
     }
   ],
@@ -369,6 +380,38 @@
           }
         }
       ]
+    },
+    {
+      "family_id": "relief_geology",
+      "label_ru": "Рельеф и геология",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "cave",
+          "label_ru": "Пещеры",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/cave.json",
+          "filter": {
+            "geography_id": "la:province:luang-namtha"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "water_coast_marine",
+      "label_ru": "Вода, побережья и морская среда",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "waterfall",
+          "label_ru": "Водопады",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/waterfall.json",
+          "filter": {
+            "geography_id": "la:province:luang-namtha"
+          }
+        }
+      ]
     }
   ],
   "objects": [
@@ -385,6 +428,20 @@
       "object_type": "cultural_landscape",
       "narrow": "Мыанг-Синг — высокогорная долина у китайской границы, исторически связанная с Tai Lue княжествами и торговыми маршрутами. Утренний рынок собирает Lao, Tai Lue, Akha, Hmong и другие группы региона; окружающий ландшафт — рисовые поля, деревни и небольшие буддийские ваты.",
       "detail_path": "countries/laos/objects/muang-sing-market-and-tai-lue-cultural-landscape.json"
+    },
+    {
+      "id": "la:nam-dee-waterfall",
+      "name": "Nam Dee Waterfall",
+      "object_type": "waterfall",
+      "narrow": "Водопад у лантенской деревни Ban Nam Dee недалеко от Луангнамтхи, отдельно выделенный официальным Tourism Laos как самостоятельный объект.",
+      "detail_path": "countries/laos/objects/nam-dee-waterfall.json"
+    },
+    {
+      "id": "la:tham-kao-rao-cave",
+      "name": "Tham Kao Rao Cave",
+      "object_type": "cave",
+      "narrow": "Доступная карстовая пещера района Vieng Phoukha; Tourism Laos относит её к заметным пещерным объектам северного Лаоса.",
+      "detail_path": "countries/laos/objects/tham-kao-rao-cave.json"
     }
   ],
   "provenance": {

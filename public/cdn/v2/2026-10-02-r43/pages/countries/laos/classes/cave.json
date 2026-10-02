@@ -20,7 +20,7 @@
   "global_class_page": "pages/classes/cave.json",
   "definition": "Горы, вулканы, плато, карст, пещеры и геологические объекты.",
   "migration": null,
-  "count": 6,
+  "count": 10,
   "geography_filters": [
     {
       "id": "country:la",
@@ -46,6 +46,14 @@
       "page_path": "pages/geography/laos/geographic_area/kong-lor-phou-hin-poun.json"
     },
     {
+      "id": "la:geographic-area:vang-vieng-karst",
+      "canonical_geo_id": "geo_la_0030",
+      "name": "Карст Ванг-Вьенга",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/geographic_area/vang-vieng-karst.json"
+    },
+    {
       "id": "la:province:houaphanh",
       "canonical_geo_id": "geo_la_0035",
       "name": "Хуапхан",
@@ -62,12 +70,44 @@
       "page_path": "pages/geography/laos/province/khammouane.json"
     },
     {
+      "id": "la:province:luang-namtha",
+      "canonical_geo_id": "geo_la_0043",
+      "name": "Луангнамтха",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/luang-namtha.json"
+    },
+    {
       "id": "la:province:luang-prabang",
       "canonical_geo_id": "geo_la_0024",
       "name": "Луангпхабанг",
       "kind": "province",
       "axis": "administrative",
       "page_path": "pages/geography/laos/province/luang-prabang.json"
+    },
+    {
+      "id": "la:province:oudomxay",
+      "canonical_geo_id": "geo_la_0076",
+      "name": "Удомсай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/oudomxay.json"
+    },
+    {
+      "id": "la:province:vientiane",
+      "canonical_geo_id": "geo_la_0029",
+      "name": "Провинция Вьентьян",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/vientiane-province.json"
+    },
+    {
+      "id": "la:province:xaisomboun",
+      "canonical_geo_id": "geo_la_0057",
+      "name": "Сайсомбун",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/xaisomboun.json"
     },
     {
       "id": "la:province:xiangkhouang",
@@ -180,6 +220,55 @@
       "nearest_hub": "Thakhek",
       "narrow": "Одна из крупнейших доступных речных пещер в районе Тхакхэка: гигантская входная камера, карстовый водный маршрут и хорошо документированная местная легенда.",
       "detail_path": "countries/laos/objects/tham-nang-aen.json"
+    },
+    {
+      "id": "la:chom-ong-cave",
+      "name": "Chom Ong Cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:oudomxay"
+      ],
+      "region_legacy": "Oudomxay Province",
+      "nearest_hub": "Muang Xay",
+      "narrow": "Крупная пещерная система Удомсая, которую официальный Tourism Laos выделяет среди главных природных объектов провинции; детальная спелеологическая логистика будет проверена на объектном QA.",
+      "detail_path": "countries/laos/objects/chom-ong-cave.json"
+    },
+    {
+      "id": "la:tham-kao-rao-cave",
+      "name": "Tham Kao Rao Cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:luang-namtha"
+      ],
+      "region_legacy": "Луангнамтха / Нам-Ха",
+      "nearest_hub": "Vieng Phoukha",
+      "narrow": "Доступная карстовая пещера района Vieng Phoukha; Tourism Laos относит её к заметным пещерным объектам северного Лаоса.",
+      "detail_path": "countries/laos/objects/tham-kao-rao-cave.json"
+    },
+    {
+      "id": "la:tham-chang-cave",
+      "name": "Tham Chang Cave",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:vang-vieng-karst",
+        "la:province:vientiane"
+      ],
+      "region_legacy": "Ванг-Вьенг / провинция Вьентьян",
+      "nearest_hub": "Vang Vieng",
+      "narrow": "Пещера над Ванг-Вьенгом с локальной историей военного укрытия и позднейшего использования; физический объект внутри более широкого карстового ландшафта.",
+      "detail_path": "countries/laos/objects/tham-chang-cave.json"
+    },
+    {
+      "id": "la:chao-anouvong-cave",
+      "name": "Chao Anouvong Cave",
+      "geography_ids": [
+        "country:la",
+        "la:province:xaisomboun"
+      ],
+      "region_legacy": "Xaysomboun Province",
+      "nearest_hub": "Anouvong",
+      "narrow": "Пещерный объект у Anouvong Town, связанный в местной исторической традиции с бегством короля Анувонга; документирован отдельной карточкой Tourism Laos.",
+      "detail_path": "countries/laos/objects/chao-anouvong-cave.json"
     }
   ]
 }

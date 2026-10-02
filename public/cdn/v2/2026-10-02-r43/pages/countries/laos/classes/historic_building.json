@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r43",
+    "page_type": "country_class",
+    "id": "country-class:la:historic_building"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "historic_building",
+    "label_ru": "Исторические здания и руины",
+    "family_id": "built_heritage"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:built_heritage",
+    "page_path": "pages/countries/laos/families/built_heritage.json"
+  },
+  "global_class_page": "pages/classes/historic_building.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "migration": null,
+  "count": 1,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "canonical_geo_id": "geo_la_0041",
+      "name": "Саваннакхет",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/savannakhet.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:hortay-pidok",
+      "name": "Hortay Pidok",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Историческая библиотека пальмовых рукописей в провинции Саваннакхет; самостоятельный культурный объект вне городской составной карточки.",
+      "detail_path": "countries/laos/objects/hortay-pidok.json"
+    }
+  ]
+}

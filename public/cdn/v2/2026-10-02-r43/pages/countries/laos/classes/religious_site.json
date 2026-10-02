@@ -20,7 +20,7 @@
   "global_class_page": "pages/classes/religious_site.json",
   "definition": "Священные места, традиционные поселения, культурные ландшафты, рынки и ремесленные центры.",
   "migration": null,
-  "count": 1,
+  "count": 4,
   "geography_filters": [
     {
       "id": "country:la",
@@ -36,6 +36,30 @@
       "kind": "city",
       "axis": "administrative",
       "page_path": "pages/geography/laos/city/vientiane.json"
+    },
+    {
+      "id": "la:province:bolikhamxay",
+      "canonical_geo_id": "geo_la_0056",
+      "name": "Боликхамсай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/bolikhamxay.json"
+    },
+    {
+      "id": "la:province:khammouane",
+      "canonical_geo_id": "geo_la_0038",
+      "name": "Кхаммуан",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/khammouane.json"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "canonical_geo_id": "geo_la_0041",
+      "name": "Саваннакхет",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/savannakhet.json"
     }
   ],
   "objects": [
@@ -50,6 +74,42 @@
       "nearest_hub": "Vientiane",
       "narrow": "Сакральная архитектура Вьентьян читается как система: Pha Тхат-Луанг — государственно-буддийский символ, Ват-Сисакет — редкий уцелевший ранне-XIX-вековый храм, Wat Хо-Пхра-Кео — бывшая королевская святыня, Ват-Си-Муанг — активный городской центр обетов и защитных культов.",
       "detail_path": "countries/laos/objects/vientiane-sacred-architecture.json"
+    },
+    {
+      "id": "la:wat-phabath",
+      "name": "Wat Phabath",
+      "geography_ids": [
+        "country:la",
+        "la:province:bolikhamxay"
+      ],
+      "region_legacy": "Bolikhamxay Province",
+      "nearest_hub": "Paksan",
+      "narrow": "Важное паломническое святилище Боликхамсая с почитаемым следом Будды; официальный Tourism Laos связывает остановку здесь с дорожной религиозной традицией.",
+      "detail_path": "countries/laos/objects/wat-phabath.json"
+    },
+    {
+      "id": "la:that-sikhottabong-stupa",
+      "name": "That Sikhottabong Stupa",
+      "geography_ids": [
+        "country:la",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Кхаммуан / Конг-Лор",
+      "nearest_hub": "Thakhek",
+      "narrow": "Историческая ступа на Меконге у Тхакхэка, один из наиболее значимых сакральных объектов Кхаммуана.",
+      "detail_path": "countries/laos/objects/that-sikhottabong-stupa.json"
+    },
+    {
+      "id": "la:that-ing-hang-stupa",
+      "name": "That Ing Hang Stupa",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Главная сакральная ступа провинции Саваннакхет, связанная с буддийским паломничеством и ежегодным фестивалем.",
+      "detail_path": "countries/laos/objects/that-ing-hang-stupa.json"
     }
   ]
 }

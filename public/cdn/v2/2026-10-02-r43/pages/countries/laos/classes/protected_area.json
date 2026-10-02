@@ -20,7 +20,7 @@
   "global_class_page": "pages/classes/protected_area.json",
   "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
   "migration": null,
-  "count": 2,
+  "count": 7,
   "geography_filters": [
     {
       "id": "country:la",
@@ -46,12 +46,44 @@
       "page_path": "pages/geography/laos/protected_area/nam-ha.json"
     },
     {
+      "id": "la:province:bokeo",
+      "canonical_geo_id": "geo_la_0077",
+      "name": "Бокео",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/bokeo.json"
+    },
+    {
+      "id": "la:province:bolikhamxay",
+      "canonical_geo_id": "geo_la_0056",
+      "name": "Боликхамсай",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/bolikhamxay.json"
+    },
+    {
       "id": "la:province:luang-namtha",
       "canonical_geo_id": "geo_la_0043",
       "name": "Луангнамтха",
       "kind": "province",
       "axis": "administrative",
       "page_path": "pages/geography/laos/province/luang-namtha.json"
+    },
+    {
+      "id": "la:province:salavanh",
+      "canonical_geo_id": "geo_la_0078",
+      "name": "Салаван",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/salavanh.json"
+    },
+    {
+      "id": "la:province:savannakhet",
+      "canonical_geo_id": "geo_la_0041",
+      "name": "Саваннакхет",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/savannakhet.json"
     }
   ],
   "objects": [
@@ -79,6 +111,66 @@
       "nearest_hub": "Луангнамтха",
       "narrow": "Нам-Ха — 222 400 га горных лесов и водосборов Луангнамтха, где охрана природы с конца 1990-х связана с общинным экотуризмом. Для экспедиции это не «пакетный трек», а сочетание регулируемых многодневных маршрутов, рек, леса и деревень с отдельными самостоятельно доступными дорожными точками; режим конкретного трека нужно проверять до выхода.",
       "detail_path": "countries/laos/objects/nam-ha-national-protected-area.json"
+    },
+    {
+      "id": "la:nam-kan-provincial-protected-area",
+      "name": "Nam Kan Provincial Protected Area",
+      "geography_ids": [
+        "country:la",
+        "la:province:bokeo"
+      ],
+      "region_legacy": "Bokeo Province",
+      "nearest_hub": "Houay Xay",
+      "narrow": "Охраняемый лесной массив Бокео, известный популяцией чернощёких хохлатых гиббонов и природными маршрутами; требует отдельного QA режима доступа.",
+      "detail_path": "countries/laos/objects/nam-kan-provincial-protected-area.json"
+    },
+    {
+      "id": "la:nam-kading-national-protected-area",
+      "name": "Nam Kading National Protected Area",
+      "geography_ids": [
+        "country:la",
+        "la:province:bolikhamxay"
+      ],
+      "region_legacy": "Bolikhamxay Province",
+      "nearest_hub": "Paksan",
+      "narrow": "Крупная охраняемая территория Боликхамсая, которую Tourism Laos выделяет отдельно от Phou Khao Khouay.",
+      "detail_path": "countries/laos/objects/nam-kading-national-protected-area.json"
+    },
+    {
+      "id": "la:dong-phou-vieng-national-protected-area",
+      "name": "Dong Phou Vieng National Protected Area",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Охраняемая территория Саваннакхета с лесными маршрутами и редкой фауной; отдельна от городской и археологической линии провинции.",
+      "detail_path": "countries/laos/objects/dong-phou-vieng-national-protected-area.json"
+    },
+    {
+      "id": "la:phou-xang-hae-national-protected-area",
+      "name": "Phou Xang Hae National Protected Area",
+      "geography_ids": [
+        "country:la",
+        "la:province:savannakhet"
+      ],
+      "region_legacy": "Savannakhet",
+      "nearest_hub": "Savannakhet",
+      "narrow": "Охраняемый массив Саваннакхета с лесными ландшафтами и популяциями крупных млекопитающих, выделенный Tourism Laos как самостоятельная природная территория.",
+      "detail_path": "countries/laos/objects/phou-xang-hae-national-protected-area.json"
+    },
+    {
+      "id": "la:phou-xieng-thong-national-protected-area",
+      "name": "Phou Xieng Thong National Protected Area",
+      "geography_ids": [
+        "country:la",
+        "la:province:salavanh"
+      ],
+      "region_legacy": "Salavanh Province",
+      "nearest_hub": "Salavanh",
+      "narrow": "Крупная охраняемая территория западного Салавана у Меконга; отдельный природный объект для будущего маршрутного QA.",
+      "detail_path": "countries/laos/objects/phou-xieng-thong-national-protected-area.json"
     }
   ]
 }

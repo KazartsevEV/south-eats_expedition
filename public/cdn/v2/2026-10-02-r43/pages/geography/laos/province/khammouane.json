@@ -249,9 +249,10 @@
       "spoken": [
         "лаосский",
         "кхму",
-        "английский через туристические службы"
+        "английский через туристические службы",
+        "английский — ограниченно в туристической инфраструктуре"
       ],
-      "notes": null
+      "notes": "Практический языковой профиль перенесён из объектных данных; региональный рерайт и уточнение источников остаются вторым проходом."
     },
     "climate": {
       "summary": "Тропический муссонный климат с выраженным сухим и дождливым сезонами; высота сильно меняет температуру и туманность.",
@@ -367,6 +368,11 @@
       "object_type": "national_park",
       "label_ru": "Национальные парки",
       "count": 2
+    },
+    {
+      "object_type": "religious_site",
+      "label_ru": "Храмы и религиозные объекты",
+      "count": 1
     }
   ],
   "class_families": [
@@ -380,6 +386,22 @@
           "label_ru": "Исторические города и кварталы",
           "count": 1,
           "country_class_page": "pages/countries/laos/classes/historic_city.json",
+          "filter": {
+            "geography_id": "la:province:khammouane"
+          }
+        }
+      ]
+    },
+    {
+      "family_id": "religion_ethnography",
+      "label_ru": "Религия, этнография и живая культура",
+      "count": 1,
+      "classes": [
+        {
+          "object_type": "religious_site",
+          "label_ru": "Храмы и религиозные объекты",
+          "count": 1,
+          "country_class_page": "pages/countries/laos/classes/religious_site.json",
           "filter": {
             "geography_id": "la:province:khammouane"
           }
@@ -433,6 +455,13 @@
       "object_type": "historic_city",
       "narrow": "Старый Тхакхэк — компактный квартал на Меконг с франко-лаосскими шопхаусами, католическим и буддийским слоями и ролью транзитного центра к карсту Кхаммуан. Для экспедиции он работает как человеческая прелюдия к кольцевой маршрут Тхакхэка и Конг-Лор.",
       "detail_path": "countries/laos/objects/old-thakhek-town.json"
+    },
+    {
+      "id": "la:that-sikhottabong-stupa",
+      "name": "That Sikhottabong Stupa",
+      "object_type": "religious_site",
+      "narrow": "Историческая ступа на Меконге у Тхакхэка, один из наиболее значимых сакральных объектов Кхаммуана.",
+      "detail_path": "countries/laos/objects/that-sikhottabong-stupa.json"
     },
     {
       "id": "la:hin-nam-no-national-park",

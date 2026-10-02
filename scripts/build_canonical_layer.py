@@ -1456,6 +1456,7 @@ def build():
             "relations": {
                 "legacy_ids": [old_object_id],
                 "legacy_detail_path": detail_path,
+                "split_from_ids": identity_review.get("split_from_object_ids") or [],
             },
             "freshness": {
                 "checked_at": operations.get("last_verified"),
@@ -1477,6 +1478,7 @@ def build():
                         "merged_aliases": identity_review.get("merged_aliases") or [],
                         "complex_components": identity_review.get("complex_components") or [],
                         "proposed_split_children": identity_review.get("proposed_split_children") or [],
+                        "split_from_object_ids": identity_review.get("split_from_object_ids") or [],
                         "evidence_basis": identity_review.get("evidence_basis") or [],
                         "notes": identity_review.get("notes"),
                     }

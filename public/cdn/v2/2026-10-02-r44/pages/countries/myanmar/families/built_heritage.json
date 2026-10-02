@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r44",
+    "page_type": "class_family",
+    "id": "country-family:mm:built_heritage"
+  },
+  "identity": {
+    "country_code": "MM",
+    "country_slug": "myanmar",
+    "family_id": "built_heritage",
+    "label_ru": "Поселения и архитектурное наследие"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:mm",
+    "page_path": "pages/countries/myanmar.json"
+  },
+  "global_family_page": "pages/families/built_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "count": 4,
+  "classes": [
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 4,
+      "global_page_path": "pages/classes/historic_city.json",
+      "country_page_path": "pages/countries/myanmar/classes/historic_city.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "mm:mandalay-heritage",
+      "name": "Mandalay heritage",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:mm",
+        "mm:region:mandalay-central-myanmar"
+      ],
+      "region_legacy": "Mandalay / центральная Мьянма",
+      "narrow": "Mandalay лучше рассматривать как узел последней королевской географии Бирмы: Palace, Mandalay Hill, Kuthodaw, Mahamuni, ремесленные кварталы и соседняя Amarapura с U Bein Bridge складываются в самостоятельный маршрут на 2–3 дня.",
+      "detail_path": "countries/myanmar/objects/mandalay-heritage.json"
+    },
+    {
+      "id": "mm:mawlamyine-colonial-core",
+      "name": "Mawlamyine colonial core",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:mm",
+        "mm:locality:mawlamyine",
+        "mm:region:mon-state-kyaiktiyo-mawlamyine"
+      ],
+      "region_legacy": "Mon State / Kyaiktiyo / Mawlamyine",
+      "narrow": "Mawlamyine colonial core — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/myanmar/objects/mawlamyine-colonial-core.json"
+    },
+    {
+      "id": "mm:pyin-oo-lwin",
+      "name": "Pyin Oo Lwin",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:mm",
+        "mm:region:pyin-oo-lwin"
+      ],
+      "region_legacy": "Pyin Oo Lwin",
+      "narrow": "Pyin Oo Lwin — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/myanmar/objects/pyin-oo-lwin.json"
+    },
+    {
+      "id": "mm:dawei-old-town",
+      "name": "Dawei old town",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:mm",
+        "mm:region:tanintharyi-dawei"
+      ],
+      "region_legacy": "Tanintharyi / Dawei",
+      "narrow": "Dawei old town — заметный культурно-архитектурный объект региона; сочетает исторический контекст, детали среды и сильный визуальный материал для фото/видео.",
+      "detail_path": "countries/myanmar/objects/dawei-old-town.json"
+    }
+  ]
+}

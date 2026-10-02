@@ -1,0 +1,704 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r44",
+    "page_type": "class_family",
+    "id": "family:water_coast_marine"
+  },
+  "identity": {
+    "family_id": "water_coast_marine",
+    "label_ru": "Вода, побережья и морская среда"
+  },
+  "layout": "class_family",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "count": 65,
+  "classes": [
+    {
+      "id": "class:river",
+      "kind": "object_class",
+      "value": "river",
+      "label_ru": "Реки",
+      "count": 1,
+      "page_path": "pages/classes/river.json",
+      "collection_path": "collections/river.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:lake",
+      "kind": "object_class",
+      "value": "lake",
+      "label_ru": "Озёра",
+      "count": 9,
+      "page_path": "pages/classes/lake.json",
+      "collection_path": "collections/lake.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:wetland",
+      "kind": "object_class",
+      "value": "wetland",
+      "label_ru": "Болота и водно-болотные угодья",
+      "count": 3,
+      "page_path": "pages/classes/wetland.json",
+      "collection_path": "collections/wetland.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:waterfall",
+      "kind": "object_class",
+      "value": "waterfall",
+      "label_ru": "Водопады",
+      "count": 33,
+      "page_path": "pages/classes/waterfall.json",
+      "collection_path": "collections/waterfall.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:island",
+      "kind": "object_class",
+      "value": "island",
+      "label_ru": "Острова и архипелаги",
+      "count": 16,
+      "page_path": "pages/classes/island.json",
+      "collection_path": "collections/island.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:beach",
+      "kind": "object_class",
+      "value": "beach",
+      "label_ru": "Пляжи",
+      "count": 0,
+      "page_path": "pages/classes/beach.json",
+      "collection_path": null,
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:reef",
+      "kind": "object_class",
+      "value": "reef",
+      "label_ru": "Рифы",
+      "count": 3,
+      "page_path": "pages/classes/reef.json",
+      "collection_path": "collections/reef.json",
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:diving_site",
+      "kind": "object_class",
+      "value": "diving_site",
+      "label_ru": "Места для дайвинга",
+      "count": 0,
+      "page_path": "pages/classes/diving_site.json",
+      "collection_path": null,
+      "status": "canonical_leaf"
+    },
+    {
+      "id": "class:river_or_wetland",
+      "kind": "object_class",
+      "value": "river_or_wetland",
+      "label_ru": "Реки, озёра, водно-болотные угодья",
+      "count": 0,
+      "page_path": "pages/classes/river_or_wetland.json",
+      "collection_path": null,
+      "status": "transitional_broad_class",
+      "migration": {
+        "status": "transitional_broad_class",
+        "target_split": [
+          "river",
+          "lake",
+          "wetland"
+        ],
+        "note_ru": "Промежуточный класс старой схемы; должен исчезнуть после покарточной классификации."
+      }
+    },
+    {
+      "id": "class:island_or_coast",
+      "kind": "object_class",
+      "value": "island_or_coast",
+      "label_ru": "Острова и побережья",
+      "count": 0,
+      "page_path": "pages/classes/island_or_coast.json",
+      "collection_path": null,
+      "status": "transitional_broad_class",
+      "migration": {
+        "status": "transitional_broad_class",
+        "target_split": [
+          "island",
+          "beach",
+          "reef",
+          "diving_site"
+        ],
+        "note_ru": "Промежуточный класс старой схемы; должен быть разделён по реальному типу объекта."
+      }
+    }
+  ],
+  "country_distribution": [
+    {
+      "country_code": "BN",
+      "count": 1
+    },
+    {
+      "country_code": "ID",
+      "count": 3
+    },
+    {
+      "country_code": "KH",
+      "count": 2
+    },
+    {
+      "country_code": "LA",
+      "count": 40
+    },
+    {
+      "country_code": "MM",
+      "count": 2
+    },
+    {
+      "country_code": "MY",
+      "count": 4
+    },
+    {
+      "country_code": "PH",
+      "count": 5
+    },
+    {
+      "country_code": "SG",
+      "count": 2
+    },
+    {
+      "country_code": "TH",
+      "count": 1
+    },
+    {
+      "country_code": "TL",
+      "count": 3
+    },
+    {
+      "country_code": "VN",
+      "count": 2
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:tasek-merimbun-heritage-park",
+      "name": "Tasek Merimbun Heritage Park",
+      "country_code": "BN",
+      "object_type": "lake",
+      "narrow": "Здесь в одной точке сходятся чёрноводная экология Борнео, археология Тутонга и живая культурная история местных дусунов. Это не парк ради одного «красивого озера»: вода, болотные леса, островные археологические участки и деревенская история объясняют, почему территория получила статус ASEAN Heritage Park ещё в 1984 году.",
+      "detail_path": "countries/brunei/objects/tasek-merimbun-heritage-park.json"
+    },
+    {
+      "id": "kh:koh-rong-islands",
+      "name": "Koh Rong islands",
+      "country_code": "KH",
+      "object_type": "island",
+      "narrow": "Ко-Ронг — крупный лесистый остров у Преах-Сианука, где пляжный туризм наложился на рыбацкие деревни, охраняемую морскую акваторию, коралловые рифы и быстро растущую инфраструктуру. Для самостоятельного маршрута остров нужно читать по конкретным берегам и причалам: запад, восток, Koh Touch, Sok San и Prek Svay заметно различаются по морю, дорогам и плотности застройки.",
+      "detail_path": "countries/cambodia/objects/koh-rong-islands.json"
+    },
+    {
+      "id": "kh:tonle-sap-biosphere-reserve",
+      "name": "Tonle Sap Biosphere Reserve",
+      "country_code": "KH",
+      "object_type": "wetland",
+      "narrow": "Тонлесап — огромная сезонно пульсирующая система озера, реки, затопляемых лесов, поймы и поселений. Её главный механизм — ежегодный разворот течения реки Тонлесап под напором Меконга: вместе с водой меняются площадь озера, рыбные миграции, дороги, причалы и сама география повседневной жизни.",
+      "detail_path": "countries/cambodia/objects/tonle-sap-biosphere-reserve.json"
+    },
+    {
+      "id": "la:si-phan-don-4000-islands",
+      "name": "Si Phan Don / 4000 Islands",
+      "country_code": "LA",
+      "object_type": "island",
+      "narrow": "Си-Фан-Дон — разветвлённый речной ландшафт нижнего Меконга у камбоджийской границы, где острова, рукава, пороги и сезонные отмели образуют систему, а не один курорт. Его ключи — живые островные деревни, рыболовство и земледелие, огромный барьер водопадов Кхон, а также короткая колониальная железная дорога Дон-Дет–Дон-Кхон, построенная как технический обход участка Меконга, который оказался непроходим для сквозной навигации.",
+      "detail_path": "countries/laos/objects/si-phan-don-4000-islands.json"
+    },
+    {
+      "id": "la:kuang-si-falls",
+      "name": "Kuang Si Falls",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Куанг-Си — каскад по известняковым/травертиновым уступам южнее Луангпхабанг. Бирюзовый цвет создаётся рассеянием света в минеральной воде; визуальный интерес — последовательность малых чаш, леса и главного вертикального водопада, а не один бассейн.",
+      "detail_path": "countries/laos/objects/kuang-si-falls.json"
+    },
+    {
+      "id": "la:tad-fane",
+      "name": "Tad Fane",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Тад-Фане — двойной водопад на западной кромке плато Болавен, где реки Чампи и Пак-Кут падают примерно на 120 м в глубокий лесной амфитеатр. Это не просто roadside viewpoint: объект лежит внутри национального парка Донг-Хуа-Сао и связан с более длинными лесными маршрутами по краю плато.",
+      "detail_path": "countries/laos/objects/tad-fane.json"
+    },
+    {
+      "id": "la:tad-yuang",
+      "name": "Tad Yuang",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Тад-Юанг — компактный двойной водопад плато Болавен с падением около 40–42 м, к которому можно подойти значительно ближе, чем к соседнему Тад-Фане. Сверху устроены рынок и picnic area, а лестничная тропа спускается к среднему и нижнему viewpoints у чаши водопада.",
+      "detail_path": "countries/laos/objects/tad-yuang.json"
+    },
+    {
+      "id": "la:khone-phapheng-falls",
+      "name": "Khone Phapheng Falls",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Кхон-Папенг — не высокий одиночный обрыв, а гигантская система порогов и каскадов Меконга в Си-Фан-Доне. Tourism Laos указывает максимальный перепад около 21 м и участок порогов длиной около 9,7 км; именно эта система исторически разрывает сквозную навигацию по Меконгу.",
+      "detail_path": "countries/laos/objects/khone-phapheng-falls.json"
+    },
+    {
+      "id": "la:li-phi-somphamit-falls",
+      "name": "Li Phi / Somphamit Falls",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Тад-Сомпхамит — пороги западного Дон-Кхона, где один из рукавов Меконга сжимается между островами и валунами. В официальной лаосской версии «Li Phi» относится не только к этому каскаду, а к более широкому примерно 20-километровому поясу порогов Си-Фан-Дона; сам водопад корректнее называть Тад-Сомпхамит.",
+      "detail_path": "countries/laos/objects/li-phi-somphamit-falls.json"
+    },
+    {
+      "id": "la:tad-nam-kat-waterfall",
+      "name": "Tad Nam Kat Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад Nam Kat в горном Удомсае; официальный Tourism Laos перечисляет его среди ключевых природных направлений провинции.",
+      "detail_path": "countries/laos/objects/tad-nam-kat-waterfall.json"
+    },
+    {
+      "id": "la:nam-dee-waterfall",
+      "name": "Nam Dee Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад у лантенской деревни Ban Nam Dee недалеко от Луангнамтхи, отдельно выделенный официальным Tourism Laos как самостоятельный объект.",
+      "detail_path": "countries/laos/objects/nam-dee-waterfall.json"
+    },
+    {
+      "id": "la:tad-saleuy-waterfall",
+      "name": "Tad Saleuy Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Высокий многоступенчатый водопад у Route 6 в Хуапхане, отдельно перечисленный официальным Tourism Laos.",
+      "detail_path": "countries/laos/objects/tad-saleuy-waterfall.json"
+    },
+    {
+      "id": "la:kaeng-nyui-waterfall",
+      "name": "Kaeng Nyui Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад к востоку от Ванг-Вьенга, которым управляет местная община Ban Naduang; отдельный объект внутри региона Ванг-Вьенга.",
+      "detail_path": "countries/laos/objects/kaeng-nyui-waterfall.json"
+    },
+    {
+      "id": "la:nam-ngum-reservoir",
+      "name": "Nam Ngum Reservoir",
+      "country_code": "LA",
+      "object_type": "lake",
+      "narrow": "Крупное водохранилище Nam Ngum, сформированное гидроэнергетическим проектом и используемое для лодочных маршрутов и ночёвок в прибрежных поселениях.",
+      "detail_path": "countries/laos/objects/nam-ngum-reservoir.json"
+    },
+    {
+      "id": "la:tad-xai-waterfall",
+      "name": "Tad Xai Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Многоступенчатый водопад внутри Phou Khao Khouay, доступ к которому Tourism Laos связывает с лодочно-пешим маршрутом от Ban Hatkhai.",
+      "detail_path": "countries/laos/objects/tad-xai-waterfall.json"
+    },
+    {
+      "id": "la:tad-leuk-waterfall",
+      "name": "Tad Leuk Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Доступный водопад Phou Khao Khouay с рекреационной инфраструктурой и тропами; отдельный физический объект внутри национального парка.",
+      "detail_path": "countries/laos/objects/tad-leuk-waterfall.json"
+    },
+    {
+      "id": "la:tad-lor-waterfall",
+      "name": "Tad Lor Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Главный водопадный объект Салавана и традиционная база для дальнейших маршрутов по провинции.",
+      "detail_path": "countries/laos/objects/tad-lor-waterfall.json"
+    },
+    {
+      "id": "la:kaengkou-waterfall",
+      "name": "Kaengkou Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Широкий водопадный участок в месте соединения рек Xe Don и Xe Set, отдельно описанный Tourism Laos.",
+      "detail_path": "countries/laos/objects/kaengkou-waterfall.json"
+    },
+    {
+      "id": "la:tad-faek-waterfall",
+      "name": "Tad Faek Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Невысокий водопад с природными бассейнами у Route 11 в Секонге, отдельно описанный Tourism Laos.",
+      "detail_path": "countries/laos/objects/tad-faek-waterfall.json"
+    },
+    {
+      "id": "la:tad-hia-waterfall",
+      "name": "Tad Hia Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Один из доступных водопадов окрестностей Секонга; добавлен отдельным физическим объектом, а не частью общей карточки Болавена.",
+      "detail_path": "countries/laos/objects/tad-hia-waterfall.json"
+    },
+    {
+      "id": "la:tad-se-noi-tad-hua-khon-waterfall",
+      "name": "Tad Se Noi / Tad Hua Khon Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад Секонга, известный под названиями Tad Se Noi и Tad Hua Khon; отдельный объект из официального провинциального перечня.",
+      "detail_path": "countries/laos/objects/tad-se-noi-tad-hua-khon-waterfall.json"
+    },
+    {
+      "id": "la:tad-saepha-waterfall",
+      "name": "Tad Saepha Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Удалённый водопад на Xe Pian в Аттапы, к которому Tourism Laos описывает пеший или лодочный доступ с местным проводником.",
+      "detail_path": "countries/laos/objects/tad-saepha-waterfall.json"
+    },
+    {
+      "id": "la:tad-samongphak-waterfall",
+      "name": "Tad Samongphak Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Один из удалённых водопадов бассейна Xe Pian в Аттапы; самостоятельная точка внутри более широкого природного района.",
+      "detail_path": "countries/laos/objects/tad-samongphak-waterfall.json"
+    },
+    {
+      "id": "la:tad-saeponglaican-waterfall",
+      "name": "Tad Saeponglaican Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Отдельный водопад бассейна Xe Pian, упомянутый Tourism Laos среди труднодоступных природных объектов Аттапы.",
+      "detail_path": "countries/laos/objects/tad-saeponglaican-waterfall.json"
+    },
+    {
+      "id": "la:tad-phapong-waterfall",
+      "name": "Tad Phapong Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад на Xe Xou с характерными разноцветными породами по берегам; официальный Tourism Laos описывает доступ пешком или по воде.",
+      "detail_path": "countries/laos/objects/tad-phapong-waterfall.json"
+    },
+    {
+      "id": "la:tad-poung-waterfall",
+      "name": "Tad Poung Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Двухступенчатый водопад в горном Сайсомбуне, перечисленный Tourism Laos как самостоятельный природный объект.",
+      "detail_path": "countries/laos/objects/tad-poung-waterfall.json"
+    },
+    {
+      "id": "la:tad-houay-nok-waterfall",
+      "name": "Tad Houay Nok Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Высокий водопад в окрестностях Anouvong Town, который официальный Tourism Laos отмечает как круглогодичный рекреационный объект.",
+      "detail_path": "countries/laos/objects/tad-houay-nok-waterfall.json"
+    },
+    {
+      "id": "la:tad-sae-waterfall",
+      "name": "Tad Sae Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопадный комплекс в провинции Луангпхабанг, отдельный от Kuang Si и городской карточки Luang Prabang.",
+      "detail_path": "countries/laos/objects/tad-sae-waterfall.json"
+    },
+    {
+      "id": "la:nam-hin-lake",
+      "name": "Nam Hin Lake",
+      "country_code": "LA",
+      "object_type": "lake",
+      "narrow": "Озеро в Удомсае, выделенное официальным провинциальным туристическим справочником как самостоятельный природный объект.",
+      "detail_path": "countries/laos/objects/nam-hin-lake.json"
+    },
+    {
+      "id": "la:tad-talae-waterfall",
+      "name": "Tad Talae Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад Удомсая, добавленный как отдельный физический объект; доступ и сезонная водность будут проверены на QA.",
+      "detail_path": "countries/laos/objects/tad-talae-waterfall.json"
+    },
+    {
+      "id": "la:tha-falang-lake",
+      "name": "Tha Falang Lake",
+      "country_code": "LA",
+      "object_type": "lake",
+      "narrow": "Природный водный объект Кхаммуана, отдельно перечисляемый провинциальным туристическим справочником.",
+      "detail_path": "countries/laos/objects/tha-falang-lake.json"
+    },
+    {
+      "id": "la:khoun-kong-leng-lake",
+      "name": "Khoun Kong Leng Lake",
+      "country_code": "LA",
+      "object_type": "lake",
+      "narrow": "Голубое карстовое озеро Кхаммуана, отдельный природный объект; точный подъезд и режим купания будут проверены на QA.",
+      "detail_path": "countries/laos/objects/khoun-kong-leng-lake.json"
+    },
+    {
+      "id": "la:tat-sieng-lue-waterfall",
+      "name": "Tat Sieng Lue Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад Кхаммуана, отдельный объект в региональном природном каталоге Tourism Laos.",
+      "detail_path": "countries/laos/objects/tat-sieng-lue-waterfall.json"
+    },
+    {
+      "id": "la:kha-waterfall",
+      "name": "Kha Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад Сиангкхуанга, отдельный природный объект вне серийной археологии Долины кувшинов.",
+      "detail_path": "countries/laos/objects/kha-waterfall.json"
+    },
+    {
+      "id": "la:tad-ham-waterfall",
+      "name": "Tad Ham Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад провинции Сайнябули, выделенный официальным туристическим справочником как самостоятельный природный объект.",
+      "detail_path": "countries/laos/objects/tad-ham-waterfall.json"
+    },
+    {
+      "id": "la:nam-tok-katamtok-xekatam-waterfall",
+      "name": "Nam Tok Katamtok / Xekatam Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Крупный водопад Секонга, известный как Katamtok/Xekatam; варианты названия сведены в одну карточку.",
+      "detail_path": "countries/laos/objects/nam-tok-katamtok-xekatam-waterfall.json"
+    },
+    {
+      "id": "la:tad-fai-mai-waterfall",
+      "name": "Tad Fai Mai Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад Секонга, фигурирующий в актуальных материалах Tourism Laos; инфраструктура и доступ будут проверены отдельно.",
+      "detail_path": "countries/laos/objects/tad-fai-mai-waterfall.json"
+    },
+    {
+      "id": "la:pha-yueang-waterfall",
+      "name": "Pha Yueang Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад в провинции Луангнамтха, отдельный от Nam Dee; доступ будет нормализован на QA.",
+      "detail_path": "countries/laos/objects/pha-yueang-waterfall.json"
+    },
+    {
+      "id": "la:phouphetphoukham-waterfall",
+      "name": "Phouphetphoukham Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад провинции Луангнамтха, добавленный отдельно от Nam Dee и Pha Yueang.",
+      "detail_path": "countries/laos/objects/phouphetphoukham-waterfall.json"
+    },
+    {
+      "id": "la:tad-pha-suam-waterfall",
+      "name": "Tad Pha Suam Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад на плато Болавен, отдельный от Tad Fane, Tad Yuang и Tad Champi.",
+      "detail_path": "countries/laos/objects/tad-pha-suam-waterfall.json"
+    },
+    {
+      "id": "la:tad-champi-waterfall",
+      "name": "Tad Champi Waterfall",
+      "country_code": "LA",
+      "object_type": "waterfall",
+      "narrow": "Водопад Чампасак/Болавена, самостоятельный физический объект, не дубль Tad Fane или Tad Yuang.",
+      "detail_path": "countries/laos/objects/tad-champi-waterfall.json"
+    },
+    {
+      "id": "la:done-daeng-island",
+      "name": "Done Daeng Island",
+      "country_code": "LA",
+      "object_type": "island",
+      "narrow": "Обитаемый остров Меконга у Чампасaка, выделенный отдельно от широкого архипелага Си-Фан-Дон.",
+      "detail_path": "countries/laos/objects/done-daeng-island.json"
+    },
+    {
+      "id": "la:done-kho-island",
+      "name": "Done Kho Island",
+      "country_code": "LA",
+      "object_type": "island",
+      "narrow": "Остров Меконга в провинции Чампасак с отдельным локальным культурным контекстом; не смешивается с Done Daeng.",
+      "detail_path": "countries/laos/objects/done-kho-island.json"
+    },
+    {
+      "id": "id:raja-ampat",
+      "name": "Raja Ampat",
+      "country_code": "ID",
+      "object_type": "island",
+      "narrow": "Raja Ampat — не одна точка, а многодневная морская сеть карстовых островов, папуасских деревень и рифов Coral Triangle, где лодка является обычным транспортом между участками маршрута.",
+      "detail_path": "countries/indonesia/objects/raja-ampat.json"
+    },
+    {
+      "id": "id:togean-islands",
+      "name": "Togean Islands",
+      "country_code": "ID",
+      "object_type": "island",
+      "narrow": "Togean Islands — удалённый архипелаг залива Tomini с лагунами, рифами, лесными островами и поселениями Bajo, где паромы, ожидание и местные лодки являются частью самостоятельного маршрута.",
+      "detail_path": "countries/indonesia/objects/togean-islands.json"
+    },
+    {
+      "id": "id:lake-toba-samosir-batak-cultural-landscape",
+      "name": "Lake Toba / Samosir Batak cultural landscape",
+      "country_code": "ID",
+      "object_type": "lake",
+      "narrow": "Lake Toba и Samosir соединяют гигантскую вулканическую кальдеру с живой культурой Batak Toba: rumah bolon, родовые деревни, ulos, каменные комплексы и горные дороги складываются в многодневный самостоятельный маршрут.",
+      "detail_path": "countries/indonesia/objects/lake-toba-samosir-batak-cultural-landscape.json"
+    },
+    {
+      "id": "my:langkawi",
+      "name": "Langkawi",
+      "country_code": "MY",
+      "object_type": "island",
+      "narrow": "Лангкави интересен не курортным набором развлечений, а сочетанием древних карстов, мангров Kilim, островных дорог, рыбацких поселений и доступных участков побережья в пределах одного архипелага.",
+      "detail_path": "countries/malaysia/objects/langkawi.json"
+    },
+    {
+      "id": "my:perhentian-islands",
+      "name": "Perhentian islands",
+      "country_code": "MY",
+      "object_type": "island",
+      "narrow": "Перхентианы — удобная морская база для самостоятельного островного режима: пешие связки между бухтами, лодочные переброски, рифы у берега и возможность собирать несколько дней вокруг воды и троп, а не вокруг пакетной экскурсии.",
+      "detail_path": "countries/malaysia/objects/perhentian-islands.json"
+    },
+    {
+      "id": "my:kinabatangan-river",
+      "name": "Kinabatangan River",
+      "country_code": "MY",
+      "object_type": "river",
+      "narrow": "Кинабатанган — не просто лодочная прогулка, а длинный речной коридор с пойменным лесом, старицами и высокой концентрацией животных; базироваться лучше в Sukau/Bilit несколько суток и выходить на реку многократно.",
+      "detail_path": "countries/malaysia/objects/kinabatangan-river.json"
+    },
+    {
+      "id": "my:sipadan-island",
+      "name": "Sipadan Island",
+      "country_code": "MY",
+      "object_type": "island",
+      "narrow": "Сипадан — океанический остров на вершине подводного вулканического конуса с почти вертикальными рифовыми стенами, черепахами и пелагическими стаями; доступ строго ограничен разрешениями.",
+      "detail_path": "countries/malaysia/objects/sipadan-island.json"
+    },
+    {
+      "id": "mm:inle-lake",
+      "name": "Inle Lake",
+      "country_code": "MM",
+      "object_type": "lake",
+      "narrow": "Inle — высокогорный пресноводный культурный ландшафт, где лодочные маршруты связывают свайные поселения, плавучие поля Yechan, рыболовство Intha, монастыри и рынки; лодочник здесь прежде всего транспорт и местный навигатор, а не «пакетный тур».",
+      "detail_path": "countries/myanmar/objects/inle-lake.json"
+    },
+    {
+      "id": "mm:indawgyi-lake",
+      "name": "Indawgyi Lake",
+      "country_code": "MM",
+      "object_type": "lake",
+      "narrow": "Крупнейшее пресноводное озеро Myanmar и UNESCO Biosphere Reserve с важными водно-болотными экосистемами и Shwe Myitzu пагодой — высокий исследовательский потенциал, но не обычный маршрут при текущей безопасности.",
+      "detail_path": "countries/myanmar/objects/indawgyi-lake.json"
+    },
+    {
+      "id": "ph:palawan-el-nido-coron",
+      "name": "Palawan / El Nido / Coron",
+      "country_code": "PH",
+      "object_type": "island",
+      "narrow": "Palawan / El Nido / Coron — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/palawan-el-nido-coron.json"
+    },
+    {
+      "id": "ph:boracay",
+      "name": "Boracay",
+      "country_code": "PH",
+      "object_type": "island",
+      "narrow": "Boracay — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/boracay.json"
+    },
+    {
+      "id": "ph:tubbataha-reefs",
+      "name": "Tubbataha Reefs",
+      "country_code": "PH",
+      "object_type": "reef",
+      "narrow": "Tubbataha Reefs — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/tubbataha-reefs.json"
+    },
+    {
+      "id": "ph:apo-reef-natural-park",
+      "name": "Apo Reef Natural Park",
+      "country_code": "PH",
+      "object_type": "reef",
+      "narrow": "Apo Reef Natural Park — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/philippines/objects/apo-reef-natural-park.json"
+    },
+    {
+      "id": "ph:apo-island-marine-sanctuary",
+      "name": "Apo Island Marine Sanctuary",
+      "country_code": "PH",
+      "object_type": "reef",
+      "narrow": "Классический community-based marine sanctuary у Negros Oriental: кораллы, green sea turtles и сильный сюжет об охране рифов.",
+      "detail_path": "countries/philippines/objects/apo-island-marine-sanctuary.json"
+    },
+    {
+      "id": "sg:pulau-ubin",
+      "name": "Pulau Ubin",
+      "country_code": "SG",
+      "object_type": "island",
+      "narrow": "Pulau Ubin — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/pulau-ubin.json"
+    },
+    {
+      "id": "sg:sungei-buloh-wetland-reserve",
+      "name": "Sungei Buloh Wetland Reserve",
+      "country_code": "SG",
+      "object_type": "wetland",
+      "narrow": "Sungei Buloh Wetland Reserve — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/singapore/objects/sungei-buloh-wetland-reserve.json"
+    },
+    {
+      "id": "th:phuket-krabi-andaman-islands",
+      "name": "Phuket/Krabi/Andaman islands",
+      "country_code": "TH",
+      "object_type": "island",
+      "narrow": "Phuket/Krabi/Andaman islands — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/thailand/objects/phuket-krabi-andaman-islands.json"
+    },
+    {
+      "id": "tl:atauro-island",
+      "name": "Atauro Island",
+      "country_code": "TL",
+      "object_type": "island",
+      "narrow": "Atauro Island — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/timor-leste/objects/atauro-island.json"
+    },
+    {
+      "id": "tl:jaco-island-tutuala",
+      "name": "Jaco Island / Tutuala",
+      "country_code": "TL",
+      "object_type": "island",
+      "narrow": "Jaco Island / Tutuala — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/timor-leste/objects/jaco-island-tutuala.json"
+    },
+    {
+      "id": "tl:lake-ira-lalaro",
+      "name": "Lake Ira Lalaro",
+      "country_code": "TL",
+      "object_type": "lake",
+      "narrow": "Lake Ira Lalaro — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/timor-leste/objects/lake-ira-lalaro.json"
+    },
+    {
+      "id": "vn:mekong-delta",
+      "name": "Mekong Delta",
+      "country_code": "VN",
+      "object_type": "wetland",
+      "narrow": "Mekong Delta — один из наиболее выразительных природных объектов региона; подходит для ландшафта, wildlife/outdoor-сюжета и маршрутного видео.",
+      "detail_path": "countries/vietnam/objects/mekong-delta.json"
+    },
+    {
+      "id": "vn:con-dao",
+      "name": "Con Dao",
+      "country_code": "VN",
+      "object_type": "island",
+      "narrow": "Con Dao — сильный морской/островной объект региона: ландшафт, лодочная логистика и природный материал дают высокий потенциал для фото и экспедиционного видео.",
+      "detail_path": "countries/vietnam/objects/con-dao.json"
+    }
+  ]
+}

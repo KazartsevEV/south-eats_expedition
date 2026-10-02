@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r44",
+    "page_type": "class_family",
+    "id": "country-family:bn:built_heritage"
+  },
+  "identity": {
+    "country_code": "BN",
+    "country_slug": "brunei",
+    "family_id": "built_heritage",
+    "label_ru": "Поселения и архитектурное наследие"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:bn",
+    "page_path": "pages/countries/brunei.json"
+  },
+  "global_family_page": "pages/families/built_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "count": 2,
+  "classes": [
+    {
+      "object_type": "industrial_heritage",
+      "label_ru": "Индустриальное наследие",
+      "count": 1,
+      "global_page_path": "pages/classes/industrial_heritage.json",
+      "country_page_path": "pages/countries/brunei/classes/industrial_heritage.json"
+    },
+    {
+      "object_type": "monument",
+      "label_ru": "Памятники и монументы",
+      "count": 1,
+      "global_page_path": "pages/classes/monument.json",
+      "country_page_path": "pages/countries/brunei/classes/monument.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bn:seria-oil-heritage-landscape",
+      "name": "Seria oil heritage landscape",
+      "object_type": "industrial_heritage",
+      "geography_ids": [
+        "bn:district:belait",
+        "country:bn"
+      ],
+      "region_legacy": "Белайт / Сериа",
+      "narrow": "Сериа — редкий случай, где история национальной нефтяной экономики читается прямо в городской ткани: у побережья сохранились действующие станки-качалки, рядом с первым коммерческим открытием S‑1 стоит Billionth Barrel Monument, а жилые кварталы и инфраструктура выросли внутри нефтепромыслового ландшафта. Это не музей под открытым небом: часть оборудования работает и относится к промышленной инфраструктуре, поэтому смотреть её нужно с публичных дорог и площадок.",
+      "detail_path": "countries/brunei/objects/seria-oil-heritage-landscape.json"
+    },
+    {
+      "id": "bn:billionth-barrel-monument",
+      "name": "Billionth Barrel Monument",
+      "object_type": "monument",
+      "geography_ids": [
+        "bn:district:belait",
+        "country:bn"
+      ],
+      "region_legacy": "Белайт / Сериа / Лаби",
+      "narrow": "Монумент на пляже Сериа отмечает миллиардный баррель нефти, добытый на береговом месторождении в 1991 году, и стоит рядом с исторической площадкой S-1 — скважины, открывшей коммерческую нефть в Сериа в 1929 году. Это компактная, но очень наглядная точка для чтения нефтяной истории Брунея: памятник, морской берег и действующий нефтяной ландшафт находятся в одном поле зрения.",
+      "detail_path": "countries/brunei/objects/billionth-barrel-monument.json"
+    }
+  ]
+}

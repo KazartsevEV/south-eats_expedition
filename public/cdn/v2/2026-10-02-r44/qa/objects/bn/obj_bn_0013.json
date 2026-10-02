@@ -1,0 +1,52 @@
+{
+  "object_id": "obj_bn_0013",
+  "status": "passed",
+  "checks": {
+    "language": true,
+    "classification": true,
+    "geo": true,
+    "coordinates": true,
+    "elevation": true,
+    "narrative": true,
+    "sources": true,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
+    "editorial_rebuild": true
+  },
+  "last_reviewed_at": "2026-10-02",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-02",
+    "scope": "повторный QA: narrative, access, GPS/elevation, water/overnight, visual recon, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "operations_sources": true,
+      "access_sources": true,
+      "public_transport_claim_scoped": true,
+      "coordinate_type_precision": true,
+      "coordinate_accuracy_not_overstated": true,
+      "elevation_exact_anchor_sample": true,
+      "water_unknown_not_falsely_sourced": true,
+      "supplies_unknown_not_falsely_sourced": true,
+      "overnight_unknown_not_falsely_sourced": true,
+      "traveler_report_sources": true,
+      "visual_viewpoint_sources": true,
+      "seasonal_visual_claims_not_overstated": true,
+      "drone_rule_precision": true
+    }
+  },
+  "verification": {
+    "dynamic_fields": [
+      "hours",
+      "tickets",
+      "permits",
+      "access",
+      "filming/drone"
+    ],
+    "verify_before_departure": true
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r44",
+    "page_type": "country_class",
+    "id": "country-class:la:megalithic_site"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "megalithic_site",
+    "label_ru": "Мегалиты",
+    "family_id": "archaeology_memory"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:archaeology_memory",
+    "page_path": "pages/countries/laos/families/archaeology_memory.json"
+  },
+  "global_class_page": "pages/classes/megalithic_site.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "migration": null,
+  "count": 2,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:geographic-area:plain-of-jars",
+      "canonical_geo_id": "geo_la_0028",
+      "name": "Равнина кувшинов",
+      "kind": "geographic_area",
+      "axis": "cultural_geography",
+      "page_path": "pages/geography/laos/geographic_area/plain-of-jars.json"
+    },
+    {
+      "id": "la:province:houaphanh",
+      "canonical_geo_id": "geo_la_0035",
+      "name": "Хуапхан",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/houaphanh.json"
+    },
+    {
+      "id": "la:province:xiangkhouang",
+      "canonical_geo_id": "geo_la_0027",
+      "name": "Сиангкхуанг",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/xiangkhouang.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:plain-of-jars",
+      "name": "Plain of Jars",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:plain-of-jars",
+        "la:province:xiangkhouang"
+      ],
+      "region_legacy": "Xieng Khouang",
+      "nearest_hub": "Пхонсаван",
+      "narrow": "Долина кувшинов — не одно поле, а серийный археологический ландшафт Сиангкхуанга: 15 компонентов ЮНЕСКО объединяют мегалитические кувшины, каменные диски, погребения, карьеры и следы изготовления. Главный смысл объекта сегодня — сочетание железновековой мегалитической традиции с более поздними фазами погребального использования, доказанными раскопками, и с живым послевоенным ландшафтом, где безопасное перемещение всё ещё привязано к известным маршрутам.",
+      "detail_path": "countries/laos/objects/plain-of-jars.json"
+    },
+    {
+      "id": "la:hintang-archaeological-park",
+      "name": "Hintang Archaeological Park",
+      "geography_ids": [
+        "country:la",
+        "la:province:houaphanh"
+      ],
+      "region_legacy": "Хуапхан / Вьенгсай / Нам-Эт",
+      "nearest_hub": "Sam Neua",
+      "narrow": "Археологический парк стоячих камней Хинтанг на горном хребте Хуапхана; отдельный мегалитический объект, не дублирующий Plain of Jars.",
+      "detail_path": "countries/laos/objects/hintang-archaeological-park.json"
+    }
+  ]
+}

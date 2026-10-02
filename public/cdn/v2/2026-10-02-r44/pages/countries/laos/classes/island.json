@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r44",
+    "page_type": "country_class",
+    "id": "country-class:la:island"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "island",
+    "label_ru": "Острова и архипелаги",
+    "family_id": "water_coast_marine"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:water_coast_marine",
+    "page_path": "pages/countries/laos/families/water_coast_marine.json"
+  },
+  "global_class_page": "pages/classes/island.json",
+  "definition": "Реки, озёра, водно-болотные угодья, водопады, острова, пляжи, рифы и дайв-сайты.",
+  "migration": null,
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:district:champasak",
+      "canonical_geo_id": "geo_la_0032",
+      "name": "Район Чампасак",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/district/champasak-district.json"
+    },
+    {
+      "id": "la:geographic-area:si-phan-don",
+      "canonical_geo_id": "geo_la_0033",
+      "name": "Си-Фан-Дон",
+      "kind": "archipelago",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/archipelago/si-phan-don.json"
+    },
+    {
+      "id": "la:province:champasak",
+      "canonical_geo_id": "geo_la_0031",
+      "name": "Чампасак",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/champasak.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:si-phan-don-4000-islands",
+      "name": "Si Phan Don / 4000 Islands",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:si-phan-don",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Чампасак / Си-Фан-Дон / Болавен",
+      "nearest_hub": "Pakse",
+      "narrow": "Си-Фан-Дон — разветвлённый речной ландшафт нижнего Меконга у камбоджийской границы, где острова, рукава, пороги и сезонные отмели образуют систему, а не один курорт. Его ключи — живые островные деревни, рыболовство и земледелие, огромный барьер водопадов Кхон, а также короткая колониальная железная дорога Дон-Дет–Дон-Кхон, построенная как технический обход участка Меконга, который оказался непроходим для сквозной навигации.",
+      "detail_path": "countries/laos/objects/si-phan-don-4000-islands.json"
+    },
+    {
+      "id": "la:done-daeng-island",
+      "name": "Done Daeng Island",
+      "geography_ids": [
+        "country:la",
+        "la:district:champasak",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Champasak Province",
+      "nearest_hub": "Champasak",
+      "narrow": "Обитаемый остров Меконга у Чампасaка, выделенный отдельно от широкого архипелага Си-Фан-Дон.",
+      "detail_path": "countries/laos/objects/done-daeng-island.json"
+    },
+    {
+      "id": "la:done-kho-island",
+      "name": "Done Kho Island",
+      "geography_ids": [
+        "country:la",
+        "la:province:champasak"
+      ],
+      "region_legacy": "Champasak Province",
+      "nearest_hub": "Pakse / Champasak",
+      "narrow": "Остров Меконга в провинции Чампасак с отдельным локальным культурным контекстом; не смешивается с Done Daeng.",
+      "detail_path": "countries/laos/objects/done-kho-island.json"
+    }
+  ]
+}

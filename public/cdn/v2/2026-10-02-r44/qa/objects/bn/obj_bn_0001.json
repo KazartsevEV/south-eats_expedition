@@ -1,0 +1,51 @@
+{
+  "object_id": "obj_bn_0001",
+  "status": "passed",
+  "checks": {
+    "language": true,
+    "classification": true,
+    "geo": true,
+    "coordinates": true,
+    "elevation": true,
+    "narrative": true,
+    "sources": true,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
+    "editorial_rebuild": true
+  },
+  "last_reviewed_at": "2026-10-01",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-01",
+    "scope": "повторный QA obj_bn_0001: привязка источников к конкретным фактам и динамическим полям",
+    "checks": {
+      "narrative_section_sources": true,
+      "operations_sources": true,
+      "access_sources": true,
+      "water_unknown_not_falsely_sourced": true,
+      "overnight_unknown_not_falsely_sourced": true,
+      "traveler_report_sources": true,
+      "visual_viewpoint_sources": true,
+      "drone_rule_precision": true
+    },
+    "notes": [
+      "Убрано ложное ощущение доказанности: water/overnight unknown больше не наследуют общий список источников карточки.",
+      "Режим немусульманского посещения разделён на базовое правило из официального буклета и отдельную рекомендацию для Рамадана.",
+      "drone.permit_required=true признан слишком широким: DCA требует регистрацию, а flying permit в опубликованном руководстве привязан к public events и полётам выше 200 ft ASL."
+    ]
+  },
+  "verification": {
+    "dynamic_fields": [
+      "hours",
+      "prayer access",
+      "Ramadan access",
+      "public transport",
+      "drone/filming"
+    ],
+    "verify_before_departure": true
+  }
+}

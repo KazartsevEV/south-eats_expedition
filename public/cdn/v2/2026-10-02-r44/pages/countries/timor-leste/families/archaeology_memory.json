@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r44",
+    "page_type": "class_family",
+    "id": "country-family:tl:archaeology_memory"
+  },
+  "identity": {
+    "country_code": "TL",
+    "country_slug": "timor-leste",
+    "family_id": "archaeology_memory",
+    "label_ru": "Археология, древность и историческая память"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:tl",
+    "page_path": "pages/countries/timor-leste.json"
+  },
+  "global_family_page": "pages/families/archaeology_memory.json",
+  "definition": "Археологические комплексы, мегалиты, музеи и мемориальные места.",
+  "count": 3,
+  "classes": [
+    {
+      "object_type": "archaeological_site",
+      "label_ru": "Археологические объекты",
+      "count": 1,
+      "global_page_path": "pages/classes/archaeological_site.json",
+      "country_page_path": "pages/countries/timor-leste/classes/archaeological_site.json"
+    },
+    {
+      "object_type": "museum",
+      "label_ru": "Музеи",
+      "count": 2,
+      "global_page_path": "pages/classes/museum.json",
+      "country_page_path": "pages/countries/timor-leste/classes/museum.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "tl:tutuala-rock-art",
+      "name": "Tutuala rock art",
+      "object_type": "archaeological_site",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:lautem-tutuala-jaco",
+        "tl:region:lautem"
+      ],
+      "region_legacy": "Lautem / Tutuala / Jaco",
+      "narrow": "Tutuala rock art — характерная точка региона, полезная для понимания местной среды, повседневности и культурного контекста.",
+      "detail_path": "countries/timor-leste/objects/tutuala-rock-art.json"
+    },
+    {
+      "id": "tl:timorese-resistance-archive-and-museum",
+      "name": "Timorese Resistance Archive & Museum",
+      "object_type": "museum",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:dili-expedition",
+        "tl:region:dili"
+      ],
+      "region_legacy": "Dili",
+      "narrow": "Timorese Resistance Archive & Museum — важный исторический объект памяти; полезен для контекстного репортажа, но требует сдержанной съёмки и уважения к месту.",
+      "detail_path": "countries/timor-leste/objects/timorese-resistance-archive-and-museum.json"
+    },
+    {
+      "id": "tl:dare-memorial-museum-and-overlook",
+      "name": "Dare Memorial Museum and overlook",
+      "object_type": "museum",
+      "geography_ids": [
+        "country:tl",
+        "tl:geographic_area:dili-expedition",
+        "tl:region:dili"
+      ],
+      "region_legacy": "Dili",
+      "narrow": "Dare Memorial Museum and overlook — важный исторический объект памяти; полезен для контекстного репортажа, но требует сдержанной съёмки и уважения к месту.",
+      "detail_path": "countries/timor-leste/objects/dare-memorial-museum-and-overlook.json"
+    }
+  ]
+}

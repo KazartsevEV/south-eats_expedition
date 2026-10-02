@@ -1,0 +1,63 @@
+{
+  "object_id": "obj_bn_0005",
+  "status": "passed",
+  "checks": {
+    "language": true,
+    "classification": true,
+    "geo": true,
+    "coordinates": true,
+    "elevation": true,
+    "narrative": true,
+    "sources": true,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
+    "editorial_rebuild": true
+  },
+  "last_reviewed_at": "2026-10-01",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-01",
+    "scope": "повторный QA obj_bn_0005: операции музея, координатная семантика, traveler-report provenance, visual recon и точность правил дрона",
+    "checks": {
+      "narrative_section_sources": true,
+      "operations_sources": true,
+      "access_sources": true,
+      "water_unknown_not_falsely_sourced": true,
+      "supplies_not_falsely_sourced": true,
+      "overnight_unknown_not_falsely_sourced": true,
+      "traveler_report_sources": true,
+      "photography_policy_not_overstated": true,
+      "visual_viewpoint_sources": true,
+      "coordinate_type_precision": true,
+      "coordinate_accuracy_not_overstated": true,
+      "elevation_precision": true,
+      "drone_rule_precision": true
+    },
+    "notes": [
+      "Wikidata-координата музея больше не выдается за точный вход: coordinate_type изменён на center, accuracy снижена до medium.",
+      "Геотег наружного снимка хранится как viewpoint, а не entrance; внутримузейные EXIF-координаты помечены approximate.",
+      "water/overnight/supplies остаются честно непроверенными и при строгом source scope не наследуют общую библиографию.",
+      "Операционные часы и официальный тариф привязаны к Brunei Tourism; сентябрьский отчёт BND 10 хранится как противоречащий traveler report.",
+      "Исправлен неверный source_ref отчёта о протечках: февральский сигнал теперь ссылается на соответствующий Reddit-источник, а не на Tripadvisor.",
+      "Фото/видео не объявлены официально разрешёнными или запрещёнными: официальный сайт правила не публикует, а пользовательский отчёт используется только как временный практический сигнал.",
+      "drone.permit_required=true признан слишком широким; DCA требует регистрацию, а flying permit в опубликованном руководстве привязан к public events и полётам выше 200 ft ASL.",
+      "CI fix: visual viewpoint source_refs are derived from each viewpoint source URL by build_cdn; canonical src_* IDs must not be injected into the legacy remap input."
+    ]
+  },
+  "verification": {
+    "dynamic_fields": [
+      "hours",
+      "entry fee",
+      "cash/card acceptance",
+      "locker policy",
+      "photography/filming",
+      "special closures",
+      "drone"
+    ],
+    "verify_before_departure": true
+  }
+}

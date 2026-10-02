@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r44",
+    "page_type": "country_class",
+    "id": "country-class:la:natural_landscape"
+  },
+  "identity": {
+    "country_code": "LA",
+    "country_slug": "laos",
+    "object_type": "natural_landscape",
+    "label_ru": "Природные ландшафты и треккинг",
+    "family_id": "protected_ecosystems"
+  },
+  "layout": "country_class",
+  "parent": {
+    "id": "country-family:la:protected_ecosystems",
+    "page_path": "pages/countries/laos/families/protected_ecosystems.json"
+  },
+  "global_class_page": "pages/classes/natural_landscape.json",
+  "definition": "Национальные парки, резерваты, леса, мангры, места наблюдения за дикой природой и крупные природные ландшафты.",
+  "migration": {
+    "status": "transitional_broad_class",
+    "target_split": [
+      "mountain",
+      "plateau",
+      "karst",
+      "forest",
+      "geological_site"
+    ],
+    "note_ru": "Слишком широкий исторический класс; объекты мигрируются в более точные классы по фактическому типу."
+  },
+  "count": 3,
+  "geography_filters": [
+    {
+      "id": "country:la",
+      "name": "Лаос",
+      "kind": "country",
+      "axis": "administrative",
+      "page_path": "pages/countries/laos.json"
+    },
+    {
+      "id": "la:district:sanxay",
+      "canonical_geo_id": "geo_la_0073",
+      "name": "Сансай",
+      "kind": "district",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/district/sanxay.json"
+    },
+    {
+      "id": "la:geographic-area:kong-lor-phou-hin-poun",
+      "canonical_geo_id": "geo_la_0039",
+      "name": "Карст Конг-Лор / Пху-Хин-Пун",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/geographic_area/kong-lor-phou-hin-poun.json"
+    },
+    {
+      "id": "la:geographic-area:nong-fa",
+      "canonical_geo_id": "geo_la_0075",
+      "name": "Озеро Нонг-Фа",
+      "kind": "geographic_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/geographic_area/nong-fa.json"
+    },
+    {
+      "id": "la:protected-area:dong-ampham",
+      "canonical_geo_id": "geo_la_0074",
+      "name": "Донг-Амфам",
+      "kind": "protected_area",
+      "axis": "physical_geography",
+      "page_path": "pages/geography/laos/protected_area/dong-ampham.json"
+    },
+    {
+      "id": "la:province:attapeu",
+      "canonical_geo_id": "geo_la_0063",
+      "name": "Аттапы",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/attapeu.json"
+    },
+    {
+      "id": "la:province:khammouane",
+      "canonical_geo_id": "geo_la_0038",
+      "name": "Кхаммуан",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/khammouane.json"
+    },
+    {
+      "id": "la:province:xaisomboun",
+      "canonical_geo_id": "geo_la_0057",
+      "name": "Сайсомбун",
+      "kind": "province",
+      "axis": "administrative",
+      "page_path": "pages/geography/laos/province/xaisomboun.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "la:nong-fa-dong-ampham-landscape",
+      "name": "Nong Fa / Dong Ampham landscape",
+      "geography_ids": [
+        "country:la",
+        "la:district:sanxay",
+        "la:geographic-area:nong-fa",
+        "la:protected-area:dong-ampham",
+        "la:province:attapeu"
+      ],
+      "region_legacy": "Аттапы / Донг-Амфам",
+      "nearest_hub": "Sanxay",
+      "narrow": "Удалённое высокогорное кратерное озеро в массиве Dong Ampham: сильный экспедиционный объект, где важнее проверка дороги и снабжения, чем туристическая инфраструктура.",
+      "detail_path": "countries/laos/objects/nong-fa-dong-ampham-landscape.json"
+    },
+    {
+      "id": "la:phou-bia",
+      "name": "Phou Bia",
+      "geography_ids": [
+        "country:la",
+        "la:province:xaisomboun"
+      ],
+      "region_legacy": "Xaysomboun Province",
+      "nearest_hub": "Anouvong",
+      "narrow": "Высочайшая вершина Лаоса в Сайсомбуне; включена в инвентарь как отдельный горный объект, но режим доступа должен быть проверен до публикации практической логистики.",
+      "detail_path": "countries/laos/objects/phou-bia.json"
+    },
+    {
+      "id": "la:the-rock-viewpoint-phou-pha-marn",
+      "name": "The Rock Viewpoint / Phou Pha Marn",
+      "geography_ids": [
+        "country:la",
+        "la:geographic-area:kong-lor-phou-hin-poun",
+        "la:province:khammouane"
+      ],
+      "region_legacy": "Khammouane / Phou Hin Poun",
+      "nearest_hub": "Thakhek",
+      "narrow": "Карстовая обзорная зона Phou Pha Marn в Кхаммуане, известная как The Rock Viewpoint; отдельный узел доступа в ландшафт Пху-Хин-Пун.",
+      "detail_path": "countries/laos/objects/the-rock-viewpoint-phou-pha-marn.json"
+    }
+  ]
+}

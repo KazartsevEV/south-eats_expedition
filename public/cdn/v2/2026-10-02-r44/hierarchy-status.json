@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r44"
+  },
+  "order": [
+    "project",
+    "region",
+    "country_catalog",
+    "taxonomy_families",
+    "geography_contract",
+    "country_pages",
+    "geography_pages",
+    "object_geography_index",
+    "class_family_pages",
+    "country_class_pages",
+    "object_classes",
+    "object_cards"
+  ],
+  "levels": {
+    "project": {
+      "status": "complete"
+    },
+    "region": {
+      "status": "complete"
+    },
+    "country_catalog": {
+      "status": "complete",
+      "total": 11,
+      "published": 11
+    },
+    "taxonomy_families": {
+      "status": "complete",
+      "families": 6,
+      "classes": 41
+    },
+    "geography_contract": {
+      "status": "complete",
+      "nodes": 463,
+      "formalized_countries": [
+        "BN",
+        "ID",
+        "KH",
+        "LA",
+        "MM",
+        "MY",
+        "PH",
+        "SG",
+        "TH",
+        "TL",
+        "VN"
+      ],
+      "note": "Формализованные страны используют доказанную иерархию; остальные сохраняют route-region/hub как переходный слой без выдуманного административного parentage."
+    },
+    "country_pages": {
+      "status": "in_progress",
+      "published": 11,
+      "placeholders": 0
+    },
+    "geography_pages": {
+      "status": "generated_from_existing_source",
+      "count": 451
+    },
+    "object_geography_index": {
+      "status": "complete",
+      "objects": 333,
+      "formalized_countries": [
+        "BN",
+        "ID",
+        "KH",
+        "LA",
+        "MM",
+        "MY",
+        "PH",
+        "SG",
+        "TH",
+        "TL",
+        "VN"
+      ]
+    },
+    "class_family_pages": {
+      "status": "complete",
+      "global": 6,
+      "country_scoped": 59
+    },
+    "country_class_pages": {
+      "status": "complete_for_published_objects",
+      "count": 126
+    },
+    "object_classes": {
+      "status": "formalized_with_transitional_legacy_types"
+    },
+    "object_cards": {
+      "status": "lower_branch_migration_in_progress"
+    }
+  },
+  "next_descent_rule": "После QA уровня переходить только к его детям: страна → география/класс → объект."
+}

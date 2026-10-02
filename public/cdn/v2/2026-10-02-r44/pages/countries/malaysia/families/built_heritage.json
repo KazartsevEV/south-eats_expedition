@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "schema_version": "2.10.11",
+    "release_id": "2026-10-02-r44",
+    "page_type": "class_family",
+    "id": "country-family:my:built_heritage"
+  },
+  "identity": {
+    "country_code": "MY",
+    "country_slug": "malaysia",
+    "family_id": "built_heritage",
+    "label_ru": "Поселения и архитектурное наследие"
+  },
+  "layout": "class_family",
+  "parent": {
+    "id": "country:my",
+    "page_path": "pages/countries/malaysia.json"
+  },
+  "global_family_page": "pages/families/built_heritage.json",
+  "definition": "Города, историческая застройка, дворцы, фортификации, индустриальные и иные созданные человеком объекты.",
+  "count": 7,
+  "classes": [
+    {
+      "object_type": "city",
+      "label_ru": "Города",
+      "count": 1,
+      "global_page_path": "pages/classes/city.json",
+      "country_page_path": "pages/countries/malaysia/classes/city.json"
+    },
+    {
+      "object_type": "historic_city",
+      "label_ru": "Исторические города и кварталы",
+      "count": 5,
+      "global_page_path": "pages/classes/historic_city.json",
+      "country_page_path": "pages/countries/malaysia/classes/historic_city.json"
+    },
+    {
+      "object_type": "historic_building",
+      "label_ru": "Исторические здания и руины",
+      "count": 1,
+      "global_page_path": "pages/classes/historic_building.json",
+      "country_page_path": "pages/countries/malaysia/classes/historic_building.json"
+    }
+  ],
+  "objects": [
+    {
+      "id": "my:kuala-lumpur",
+      "name": "Kuala Lumpur",
+      "object_type": "city",
+      "geography_ids": [
+        "country:my",
+        "my:region:kuala-lumpur-klang-valley"
+      ],
+      "region_legacy": "Kuala Lumpur / Klang Valley",
+      "narrow": "Куала-Лумпур полезен как полевой срез современной Малайзии: колониальное ядро у слияния Кланга и Гомбак, малайский Kampung Baru, китайские и индийские кварталы, рынки и сверхвысотный центр читаются в одном городском маршруте.",
+      "detail_path": "countries/malaysia/objects/kuala-lumpur.json"
+    },
+    {
+      "id": "my:george-town",
+      "name": "George Town",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:my",
+        "my:region:penang-george-town"
+      ],
+      "region_legacy": "Penang / George Town",
+      "narrow": "Джорджтаун — живой портовый город Малаккского пролива, где в пешем радиусе соседствуют китайские клановые дома, мечети, индуистские храмы, перанаканская архитектура, торговые дома и жилые Clan Jetties.",
+      "detail_path": "countries/malaysia/objects/george-town.json"
+    },
+    {
+      "id": "my:melaka",
+      "name": "Melaka",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:my",
+        "my:region:melaka"
+      ],
+      "region_legacy": "Melaka",
+      "narrow": "Малакка — компактный слой истории Малаккского пролива: малайский султанат, португальская крепость, голландский административный центр, британский период, перанаканские дома и сохранившаяся евразийская община кристанг.",
+      "detail_path": "countries/malaysia/objects/melaka.json"
+    },
+    {
+      "id": "my:taiping",
+      "name": "Taiping",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:my",
+        "my:locality:taiping",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
+      "narrow": "Тайпинг — бывший оловодобывающий и колониальный центр Перака, где промышленная история, железная дорога, влажный городской климат и Lake Gardens дают спокойный, но содержательный полевой материал.",
+      "detail_path": "countries/malaysia/objects/taiping.json"
+    },
+    {
+      "id": "my:kuala-kangsar",
+      "name": "Kuala Kangsar",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:my",
+        "my:locality:kuala-kangsar",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
+      "narrow": "Куала-Кангсар — королевский центр Перака: мечеть Ubudiah, дворцовый ансамбль, ремесленные традиции и речной ландшафт позволяют читать политическую и материальную культуру султаната вне мегаполиса.",
+      "detail_path": "countries/malaysia/objects/kuala-kangsar.json"
+    },
+    {
+      "id": "my:kuching-old-town-and-waterfront",
+      "name": "Kuching old town and waterfront",
+      "object_type": "historic_city",
+      "geography_ids": [
+        "country:my",
+        "my:locality:kuching",
+        "my:region:sarawak-kuching-niah"
+      ],
+      "region_legacy": "Sarawak / Kuching / Niah",
+      "narrow": "Старый Кучинг — речной порт Саравака, где на одном берегу читаются китайские торговые дома, индийско-мусульманские улицы и наследие «белых раджей», а через реку — малайские kampung и современный государственный центр.",
+      "detail_path": "countries/malaysia/objects/kuching-old-town-and-waterfront.json"
+    },
+    {
+      "id": "my:kellie-s-castle",
+      "name": "Kellie's Castle",
+      "object_type": "historic_building",
+      "geography_ids": [
+        "country:my",
+        "my:locality:batu-gajah",
+        "my:region:perak-taiping-kuala-kangsar-belum"
+      ],
+      "region_legacy": "Perak / Taiping / Kuala Kangsar / Belum",
+      "narrow": "Kellie’s Castle — незавершённый колониальный особняк начала XX века у Batu Gajah: смесь европейских и южноазиатских мотивов, инженерных амбиций и истории плантационной экономики Перака.",
+      "detail_path": "countries/malaysia/objects/kellie-s-castle.json"
+    }
+  ]
+}

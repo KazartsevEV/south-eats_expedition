@@ -319,14 +319,6 @@ def main():
         cover = row.get("cover_media_id")
         if cover is not None and cover not in media_ids:
             fail(f"search object {object_id} references unknown cover media {cover}")
-        preview_asset = row.get("preview_asset")
-        if not preview_asset:
-            fail(f"search object {object_id} is missing local preview_asset")
-        preview_path = PUBLIC / preview_asset
-        if not preview_path.is_file():
-            fail(f"search object {object_id} preview binary is missing: {preview_asset}")
-        if preview_path.suffix.lower() != ".webp" or preview_path.stat().st_size < 256:
-            fail(f"search object {object_id} has invalid preview binary: {preview_asset}")
 
         parts = object_id.split("_")
         code = parts[1]
@@ -334,6 +326,17 @@ def main():
             fail(f"object {object_id} country code is not present in manifest")
         object_path = require_file(release, f"objects/{code}/{object_id}.json")
         obj = load(object_path)
+
+        preview_asset = row.get("preview_asset")
+        if not preview_asset:
+            if obj.get("status") != "draft":
+                fail(f"search object {object_id} is missing local preview_asset")
+        else:
+            preview_path = PUBLIC / preview_asset
+            if not preview_path.is_file():
+                fail(f"search object {object_id} preview binary is missing: {preview_asset}")
+            if preview_path.suffix.lower() != ".webp" or preview_path.stat().st_size < 256:
+                fail(f"search object {object_id} has invalid preview binary: {preview_asset}")
         if obj.get("id") != object_id:
             fail(f"object id mismatch in {object_path.relative_to(release)}")
         missing_keys = REQUIRED_OBJECT_KEYS - set(obj)

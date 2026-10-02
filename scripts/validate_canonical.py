@@ -309,6 +309,7 @@ def main():
         fail("canonical object count differs from manifest")
 
     object_ids = []
+    identity_object_refs = []
     seen_titles = {}
     seen_slugs = {}
     country_codes = {row.get("code") for row in manifest.get("countries") or []}
@@ -558,6 +559,40 @@ def main():
                 fail(f"{object_id}: unknown canonical source ref {source_id}")
 
         qa = obj.get("qa") or {}
+        identity_review = qa.get("identity_review")
+        if code == "la":
+            if not isinstance(identity_review, dict):
+                fail(f"{object_id}: Laos object lacks identity_review")
+            if identity_review.get("status") != "reviewed":
+                fail(f"{object_id}: identity_review.status must be reviewed")
+            valid_identity_status = {
+                "distinct",
+                "alias_merged",
+                "same_visitable_complex",
+                "composite_needs_split",
+                "duplicate_of",
+                "unresolved",
+            }
+            identity_status = identity_review.get("identity_status")
+            if identity_status not in valid_identity_status:
+                fail(f"{object_id}: invalid identity_status {identity_status!r}")
+            if identity_review.get("confidence") not in {"high", "medium", "low"}:
+                fail(f"{object_id}: invalid identity confidence")
+            if not identity_review.get("checked_at"):
+                fail(f"{object_id}: identity review lacks checked_at")
+            for key in ["parent_object_ids", "merged_aliases", "complex_components", "proposed_split_children", "evidence_basis"]:
+                if not isinstance(identity_review.get(key), list):
+                    fail(f"{object_id}: identity_review.{key} must be array")
+            if object_id in (identity_review.get("parent_object_ids") or []):
+                fail(f"{object_id}: identity review cannot reference itself as parent")
+            if identity_status == "alias_merged" and len(identity_review.get("merged_aliases") or []) < 2:
+                fail(f"{object_id}: alias_merged requires at least two aliases")
+            if identity_status == "same_visitable_complex" and len(identity_review.get("complex_components") or []) < 2:
+                fail(f"{object_id}: same_visitable_complex requires at least two components")
+            if identity_status == "composite_needs_split" and len(identity_review.get("proposed_split_children") or []) < 2:
+                fail(f"{object_id}: composite_needs_split requires proposed children")
+            for related_id in identity_review.get("parent_object_ids") or []:
+                identity_object_refs.append((object_id, related_id, "parent"))
         verification = qa.get("verification")
         if not isinstance(verification, dict):
             fail(f"{object_id}: qa.verification must be object")
@@ -582,6 +617,10 @@ def main():
 
     if len(object_ids) != len(set(object_ids)):
         fail("duplicate canonical object IDs")
+    object_id_set = set(object_ids)
+    for source_id, target_id, relation_kind in identity_object_refs:
+        if target_id not in object_id_set:
+            fail(f"{source_id}: identity {relation_kind} references unknown object {target_id}")
 
     # Registry must preserve one-to-one permanent IDs for all migrated objects.
     registry_object_values = list((registry.get("objects") or {}).values())
@@ -663,7 +702,21 @@ def main():
         require_file(release, f"infrastructure/poi/{code}/index.json")
         require_file(release, f"infrastructure/transport/{code}/index.json")
         require_file(release, f"media/{code}/index.json")
-        require_file(release, f"qa/countries/{code}.json")
+        country_qa_path = require_file(release, f"qa/countries/{code}.json")
+        country_qa_doc = load(country_qa_path)
+        if code == "la":
+            identity_summary = country_qa_doc.get("identity_review")
+            if not isinstance(identity_summary, dict):
+                fail("la: country QA lacks identity_review summary")
+            if identity_summary.get("objects_reviewed") != len(indexes.get("object_ids") or []):
+                fail("la: identity review does not cover the full object inventory")
+            counts = identity_summary.get("counts") or {}
+            if sum(counts.values()) != len(indexes.get("object_ids") or []):
+                fail("la: identity review counts do not sum to object total")
+            if counts.get("duplicate_of", 0):
+                fail("la: proven duplicate cards remain in canonical inventory")
+            if counts.get("unresolved", 0):
+                fail("la: unresolved identity cards remain after identity QA")
         require_file(release, f"views/countries/{code}.json")
 
     global_qa = load(release / "qa" / "global.json")

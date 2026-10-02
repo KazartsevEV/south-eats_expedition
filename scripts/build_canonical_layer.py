@@ -1292,6 +1292,7 @@ def build():
         language_review = ((source_object or {}).get("qa") or {}).get("language_review") or {}
         rebuild_review = ((source_object or {}).get("qa") or {}).get("rebuild_v2") or {}
         fact_source_review = ((source_object or {}).get("qa") or {}).get("fact_source_review") or {}
+        identity_review = ((source_object or {}).get("qa") or {}).get("identity_review") or {}
         strict_source_scope = fact_source_review.get("status") == "passed"
         sections = narrative_sections(story_payload, source_refs, strict_source_scope=strict_source_scope)
         reports = traveler_reports_list((detail.get("visit") or {}).get("traveler_reports"))
@@ -1466,6 +1467,22 @@ def build():
                 "checks": checks,
                 "last_reviewed_at": operations.get("last_verified"),
                 "fact_source_review": fact_source_review or None,
+                "identity_review": (
+                    {
+                        "status": identity_review.get("status"),
+                        "identity_status": identity_review.get("identity_status"),
+                        "confidence": identity_review.get("confidence"),
+                        "checked_at": identity_review.get("checked_at"),
+                        "parent_object_ids": identity_review.get("parent_object_ids") or [],
+                        "merged_aliases": identity_review.get("merged_aliases") or [],
+                        "complex_components": identity_review.get("complex_components") or [],
+                        "proposed_split_children": identity_review.get("proposed_split_children") or [],
+                        "evidence_basis": identity_review.get("evidence_basis") or [],
+                        "notes": identity_review.get("notes"),
+                    }
+                    if identity_review
+                    else None
+                ),
                 "verification": {
                     "dynamic_fields": source_verification.get("dynamic_fields") or [],
                     "verify_before_departure": source_verification.get("verify_before_departure"),
@@ -1962,6 +1979,24 @@ def build():
         }
         country_layer_missing = {k: v for k, v in country_layer_missing.items() if v}
 
+        identity_rows = [
+            ((obj.get("qa") or {}).get("identity_review") or {})
+            for obj in objects
+            if isinstance((obj.get("qa") or {}).get("identity_review"), dict)
+            and ((obj.get("qa") or {}).get("identity_review") or {}).get("identity_status")
+        ]
+        identity_counts = Counter(row.get("identity_status") for row in identity_rows)
+        identity_parent_links = sum(len(row.get("parent_object_ids") or []) for row in identity_rows)
+        identity_issues = {
+            status: [
+                obj["id"]
+                for obj in objects
+                if (((obj.get("qa") or {}).get("identity_review") or {}).get("identity_status") == status)
+            ]
+            for status in ("composite_needs_split", "duplicate_of", "unresolved")
+        }
+        identity_issues = {key: value for key, value in identity_issues.items() if value}
+
         country_payload = {
             "country": code.lower(),
             "country_layer": {
@@ -1975,6 +2010,21 @@ def build():
             "objects_passed": passed,
             "objects_incomplete": len(objects) - passed,
             "object_missing": dict(sorted(missing.items())),
+            "identity_review": {
+                "status": (
+                    "not_started"
+                    if not identity_rows
+                    else (
+                        "reviewed_with_structural_followup"
+                        if identity_issues
+                        else "passed"
+                    )
+                ),
+                "objects_reviewed": len(identity_rows),
+                "counts": dict(sorted(identity_counts.items())),
+                "parent_child_links": identity_parent_links,
+                "issues": identity_issues,
+            },
         }
         dump(release / "qa" / "countries" / f"{code.lower()}.json", country_payload)
         country_qa_rows.append(country_payload)

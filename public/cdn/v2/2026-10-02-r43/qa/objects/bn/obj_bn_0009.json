@@ -1,6 +1,6 @@
 {
   "object_id": "obj_bn_0009",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
@@ -14,17 +14,40 @@
     "overnight": true,
     "traveler_reports": true,
     "visual_recon": true,
-    "gallery_min_5": false,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-01",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-02",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-02",
+    "scope": "повторный QA Tasek Merimbun: narrative, доступ, GPS, вода, ночёвка, traveler reports, visual recon, media и drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "source_conflict_preserved": true,
+      "local_tradition_labeled": true,
+      "operations_sources": true,
+      "access_sources": true,
+      "access_anchor_not_confused_with_center": true,
+      "coordinate_type_precision": true,
+      "no_invented_duration_or_walk_distance": true,
+      "water_unknown_not_falsely_sourced": true,
+      "overnight_permission_scoped": true,
+      "traveler_report_sources": true,
+      "traveler_report_dates_match_sources": true,
+      "visual_viewpoint_sources": true,
+      "seasonal_visual_claims_scoped": true,
+      "drone_rule_precision": true,
+      "gallery_source_provenance": true
+    }
+  },
   "verification": {
     "dynamic_fields": [
       "hours",
       "tickets",
-      "permits",
       "access",
+      "bridge/boardwalk condition",
+      "camping",
       "filming/drone"
     ],
     "verify_before_departure": true

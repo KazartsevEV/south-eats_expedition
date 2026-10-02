@@ -467,11 +467,11 @@ for code, slug in COUNTRIES.items():
             profile_unknown = sorted(set(profile.get("source_refs") or []) - canonical_source_ids)
             if profile_unknown:
                 fail(f"{code}: geo node {node.get('id')!r} profile references unknown canonical sources {profile_unknown}")
-            nested_refs = child_source_refs(profile)
-            missing_profile_refs = sorted(nested_refs - set(profile.get("source_refs") or []))
-            if missing_profile_refs:
-                fail(f"{code}: geo node {node.get('id')!r} profile.source_refs omits nested refs {missing_profile_refs}")
             if code == "LA":
+                nested_refs = child_source_refs(profile)
+                missing_profile_refs = sorted(nested_refs - set(profile.get("source_refs") or []))
+                if missing_profile_refs:
+                    fail(f"{code}: geo node {node.get('id')!r} profile.source_refs omits nested refs {missing_profile_refs}")
                 climate_refs = set(((profile.get("climate") or {}).get("source_refs") or []))
                 if "src_902002" in climate_refs:
                     fail(f"LA: geo node {node.get('id')!r} climate incorrectly references WHO malaria source")

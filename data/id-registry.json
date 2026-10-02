@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "note": "Persistent canonical IDs assigned during migration from CDN 2.8.1/r21. Keys are legacy identifiers used only for migration lookup; canonical IDs must never be regenerated from names or slugs.",
+  "note": "Persistent ID registry. Active canonical IDs live in objects/geo/lodging/sources; retired_objects reserves historical object IDs and one-to-many replacements after proven modeling errors.",
   "objects": {
     "bn:omar-ali-saifuddien-mosque": "obj_bn_0001",
     "bn:jame-asr-hassanil-bolkiah-mosque": "obj_bn_0002",
@@ -48,14 +48,10 @@
     "la:kong-lor-cave": "obj_la_0007",
     "la:savannakhet-old-quarter": "obj_la_0008",
     "la:nam-et-phou-louey-area": "obj_la_0009",
-    "la:nong-khiaw-and-muang-ngoi": "obj_la_0010",
     "la:bolaven-plateau": "obj_la_0011",
     "la:nam-ha-national-protected-area": "obj_la_0012",
     "la:tham-piu-cave": "obj_la_0013",
-    "la:vientiane-sacred-architecture": "obj_la_0014",
     "la:old-thakhek-town": "obj_la_0015",
-    "la:phongsaly-old-town-and-ancient-tea-highlands": "obj_la_0016",
-    "la:muang-sing-market-and-tai-lue-cultural-landscape": "obj_la_0017",
     "la:kuang-si-falls": "obj_la_0018",
     "la:pak-ou-caves": "obj_la_0019",
     "id:borobudur": "obj_id_0001",
@@ -224,7 +220,6 @@
     "la:tham-pa-fa": "obj_la_0028",
     "la:tham-nang-aen": "obj_la_0029",
     "la:dong-hua-sao-national-park": "obj_la_0030",
-    "la:nong-fa-dong-ampham-landscape": "obj_la_0031",
     "la:chom-ong-cave": "obj_la_0032",
     "la:tad-nam-kat-waterfall": "obj_la_0033",
     "la:nam-dee-waterfall": "obj_la_0034",
@@ -334,7 +329,19 @@
     "la:done-daeng-island": "obj_la_0138",
     "la:done-kho-island": "obj_la_0139",
     "la:ban-saphai-cultural-village": "obj_la_0140",
-    "la:wat-pho-sayalam": "obj_la_0141"
+    "la:wat-pho-sayalam": "obj_la_0141",
+    "la:nong-khiaw": "obj_la_0142",
+    "la:muang-ngoi": "obj_la_0143",
+    "la:pha-that-luang": "obj_la_0144",
+    "la:wat-sisaket": "obj_la_0145",
+    "la:hor-phra-keo-museum": "obj_la_0146",
+    "la:wat-si-muang": "obj_la_0147",
+    "la:phongsaly-old-town": "obj_la_0148",
+    "la:ban-komaen-400-year-old-tea-plantation": "obj_la_0149",
+    "la:muang-sing-morning-market": "obj_la_0150",
+    "la:muang-sing-tai-lue-cultural-landscape": "obj_la_0151",
+    "la:nong-fa-lake": "obj_la_0152",
+    "la:dong-ampham-national-protected-area": "obj_la_0153"
   },
   "geo": {
     "bn:region:bandar-seri-begavan-brunei-muara": "geo_bn_0001",
@@ -2633,6 +2640,63 @@
     "src:c4cff6b6b924f0": "src_990392",
     "src:9b9e612b0156a3": "src_990393",
     "src:80a26795075595": "src_990394",
-    "src:460a9234a38ff9": "src_990395"
+    "src:460a9234a38ff9": "src_990395",
+    "src:4c47cc9e2776b2": "src_990396",
+    "src:83c1852776628d": "src_990397",
+    "src:6a7a74cb1cab84": "src_990398"
+  },
+  "retired_objects": {
+    "la:nong-khiaw-and-muang-ngoi": {
+      "id": "obj_la_0010",
+      "reason": "composite_split",
+      "replacement_ids": [
+        "obj_la_0142",
+        "obj_la_0143"
+      ],
+      "retired_at": "2026-10-02",
+      "migration_id": "laos-r46-composite-splits"
+    },
+    "la:vientiane-sacred-architecture": {
+      "id": "obj_la_0014",
+      "reason": "composite_split",
+      "replacement_ids": [
+        "obj_la_0144",
+        "obj_la_0145",
+        "obj_la_0146",
+        "obj_la_0147"
+      ],
+      "retired_at": "2026-10-02",
+      "migration_id": "laos-r46-composite-splits"
+    },
+    "la:phongsaly-old-town-and-ancient-tea-highlands": {
+      "id": "obj_la_0016",
+      "reason": "composite_split",
+      "replacement_ids": [
+        "obj_la_0148",
+        "obj_la_0149"
+      ],
+      "retired_at": "2026-10-02",
+      "migration_id": "laos-r46-composite-splits"
+    },
+    "la:muang-sing-market-and-tai-lue-cultural-landscape": {
+      "id": "obj_la_0017",
+      "reason": "composite_split",
+      "replacement_ids": [
+        "obj_la_0150",
+        "obj_la_0151"
+      ],
+      "retired_at": "2026-10-02",
+      "migration_id": "laos-r46-composite-splits"
+    },
+    "la:nong-fa-dong-ampham-landscape": {
+      "id": "obj_la_0031",
+      "reason": "composite_split",
+      "replacement_ids": [
+        "obj_la_0152",
+        "obj_la_0153"
+      ],
+      "retired_at": "2026-10-02",
+      "migration_id": "laos-r46-composite-splits"
+    }
   }
 }

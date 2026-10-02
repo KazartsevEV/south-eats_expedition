@@ -1,0 +1,117 @@
+{
+  "migration_id": "laos-r46-composite-splits",
+  "checked_at": "2026-10-02",
+  "country": "LA",
+  "from_release": "2026-10-02-r45",
+  "to_release": "2026-10-02-r46",
+  "policy": "Retire only proven composite modeling errors. Never reuse retired IDs. Preserve one-to-many provenance and all supported facts in replacement children.",
+  "totals": {
+    "retired_composites": 5,
+    "replacement_objects": 12,
+    "net_active_object_change": 7,
+    "active_objects_after": 148
+  },
+  "mappings": [
+    {
+      "retired_id": "obj_la_0010",
+      "retired_name": "Nong Khiaw and Muang Ngoi",
+      "reason": "two distinct settlements with separate access identities",
+      "replacement_ids": [
+        "obj_la_0142",
+        "obj_la_0143"
+      ],
+      "replacement_names": [
+        "Nong Khiaw",
+        "Muang Ngoi"
+      ]
+    },
+    {
+      "retired_id": "obj_la_0014",
+      "retired_name": "Vientiane sacred architecture",
+      "reason": "package card combined four independently visitable sacred/museum objects",
+      "replacement_ids": [
+        "obj_la_0144",
+        "obj_la_0145",
+        "obj_la_0146",
+        "obj_la_0147"
+      ],
+      "replacement_names": [
+        "Pha That Luang",
+        "Wat Sisaket",
+        "Hor Phra Keo Museum",
+        "Wat Si Muang"
+      ]
+    },
+    {
+      "retired_id": "obj_la_0016",
+      "retired_name": "Phongsaly old town and ancient tea highlands",
+      "reason": "urban old town and Ban Komaen tea plantation are physically separate locations",
+      "replacement_ids": [
+        "obj_la_0148",
+        "obj_la_0149"
+      ],
+      "replacement_names": [
+        "Phongsaly Old Town",
+        "Ban Komaen 400-Year-Old Tea Plantation"
+      ]
+    },
+    {
+      "retired_id": "obj_la_0017",
+      "retired_name": "Muang Sing market and Tai Lue cultural landscape",
+      "reason": "specific morning market and broader cultural landscape are different entity levels",
+      "replacement_ids": [
+        "obj_la_0150",
+        "obj_la_0151"
+      ],
+      "replacement_names": [
+        "Muang Sing Morning Market",
+        "Muang Sing Tai Lue Cultural Landscape"
+      ]
+    },
+    {
+      "retired_id": "obj_la_0031",
+      "retired_name": "Nong Fa / Dong Ampham landscape",
+      "reason": "specific lake was conflated with a 200000 ha protected area",
+      "replacement_ids": [
+        "obj_la_0152",
+        "obj_la_0153"
+      ],
+      "replacement_names": [
+        "Nong Fa Lake",
+        "Dong Ampham National Protected Area"
+      ]
+    }
+  ],
+  "source_evidence": [
+    {
+      "url": "https://tourismluangprabang.org/recommended-trips/day-trips/misty-mountains-nong-khiaw-to-muang-ngoi/",
+      "supports": [
+        "obj_la_0010"
+      ]
+    },
+    {
+      "url": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+      "supports": [
+        "obj_la_0014"
+      ]
+    },
+    {
+      "url": "https://www.tourismlaos.org/northern-provinces/phongsali-province/",
+      "supports": [
+        "obj_la_0016"
+      ]
+    },
+    {
+      "url": "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/",
+      "supports": [
+        "obj_la_0017"
+      ]
+    },
+    {
+      "url": "https://laoparks.la/parks/",
+      "supports": [
+        "obj_la_0031"
+      ]
+    }
+  ]
+}

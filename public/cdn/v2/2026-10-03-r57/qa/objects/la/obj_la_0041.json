@@ -1,24 +1,46 @@
 {
   "object_id": "obj_la_0041",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-03",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-03",
+    "scope": "Kaeng Nyui: identity, ADB GPS, trail elevation range, water-flow seasonality, new 2025 road, Ban Naduang history and CBT, watershed conservation, eastern sandstone-hill geology, ancestor beliefs, Baci, name traditions, current traveler reports, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "waterfall_height_conflict_preserved": true,
+      "road_old_vs_new_split": true,
+      "regional_geology_not_overstated_as_site_petrology": true,
+      "village_history_versions_preserved": true,
+      "old_demography_not_presented_as_current": true,
+      "ancestor_beliefs_scoped_to_village": true,
+      "modern_etymology_marked_weak": true,
+      "ticket_marked_dynamic": true,
+      "water_quality_unknown_preserved": true,
+      "camping_permission_unknown_preserved": true,
+      "traveler_report_period_scoped": true,
+      "gallery_sources_traced": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -38,12 +60,13 @@
   },
   "verification": {
     "dynamic_fields": [
-      "access",
+      "ticket",
       "hours",
-      "tickets",
-      "water",
+      "water flow",
+      "swimming conditions",
+      "local transport",
       "overnight",
-      "filming/drone"
+      "drone"
     ],
     "verify_before_departure": true
   }

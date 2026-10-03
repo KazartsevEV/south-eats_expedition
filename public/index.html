@@ -297,12 +297,19 @@ function elevation(e){
   if(e.min_m!=null||e.max_m!=null)return (e.min_m==null?'?':e.min_m)+'–'+(e.max_m==null?'?':e.max_m)+' м';
   return '—';
 }
+var MODE_LABELS={walking:'пешком',walk:'пешком',moped:'мопед',motorcycle:'мотоцикл',public_transport:'общественный транспорт',ride_hailing:'такси',taxi:'такси',boat:'лодка',ferry:'паром',car:'автомобиль',bicycle:'велосипед',other:'другое'};
+var WATER_LABELS={potable:'питьевая',filter_required:'нужна фильтрация',treatment_required:'нужна обработка',technical_only:'техническая',unknown:'неизвестно'};
+var OVERNIGHT_LABELS={official:'официально',allowed:'разрешено',permission_required:'по разрешению',tolerated_in_practice:'допускается на практике',prohibited:'запрещено',unclear:'неясно'};
+var DRONE_LABELS={regulated:'регулируется',allowed:'разрешён',prohibited:'запрещён',unclear:'неясно',unknown:'неизвестно'};
+function modeLabel(v){return MODE_LABELS[v]||v||'маршрут'}
 function access(v){
-  var map={walking:'пешком',walk:'пешком',moped:'мопед',motorcycle:'мотоцикл',public_transport:'общественный',ride_hailing:'такси',taxi:'такси',boat:'лодка',car:'авто'};
   var modes=[];
   (v&&v.access_options||[]).forEach(function(x){(x.modes||[]).forEach(function(m){if(modes.indexOf(m)<0)modes.push(m)})});
-  return modes.slice(0,4).map(function(x){return map[x]||x}).join(' · ')||'—';
+  return modes.slice(0,4).map(modeLabel).join(' · ')||'—';
 }
+function overnightLabel(v){return OVERNIGHT_LABELS[v]||v||'—'}
+function waterQualityLabel(v){return WATER_LABELS[v]||v||'—'}
+function droneLabel(v){return DRONE_LABELS[v]||v||'—'}
 async function j(url){
   var r=await fetch(url,{cache:'no-store'});
   if(!r.ok)throw new Error(r.status+' '+url);
@@ -1156,8 +1163,13 @@ async function renderObject(id){
   var o=state.objects.find(function(x){return x.id===id})||{},cc=ccOf(id),c=cname(cc),cover=await media(d.media&&d.media.cover_id),g=await galleryHTML(d.media&&d.media.gallery_ids),s=await sourceHTML(d.freshness&&d.freshness.source_refs),v=d.visit||{},geoCtx=objectGeoContext(d,o,cc);
   var heroFallback=previewURL((d.media&&d.media.preview_asset)||previewPath(o)),heroFull=mirroredMediaURL(cover),heroImage=heroFull||heroFallback,heroSource=(cover&&cover.source_page)||'';
   var acc=(v.access_options||[]).map(function(a){
-    var legs=(a.legs||[]).map(function(l){return l.notes||[l.mode,l.distance_km!=null?l.distance_km+' км':'',l.duration_min!=null?l.duration_min+' мин':''].filter(Boolean).join(' · ')}).filter(Boolean).join(' ');
-    return '<p><b>'+esc((a.modes||[]).join(' + ')||a.id||'Маршрут')+'</b> — '+esc(legs||'детали уточняются')+'</p>';
+    var title=a.origin?'Из '+a.origin:(a.id||'Маршрут');
+    var legs=(a.legs||[]).map(function(l){
+      var facts=[modeLabel(l.mode),l.distance_km!=null?l.distance_km+' км':'',l.duration_min!=null?l.duration_min+' мин':'',l.elevation_gain_m!=null?'набор '+l.elevation_gain_m+' м':''].filter(Boolean).join(' · ');
+      var detail=[l.condition,l.navigation,l.notes].filter(Boolean).join(' ');
+      return '<p><b>'+esc(facts||modeLabel(l.mode))+':</b> '+esc(detail||'подробности не опубликованы')+'</p>';
+    }).join('');
+    return '<div class="route-option"><p><b>'+esc(title)+'</b></p>'+legs+'</div>';
   }).join('');
   var reports=(d.traveler_reports||[]).map(function(r){return '<p>• '+esc(r.summary||r.text||'')+'</p>'}).join('');
   var vp=(d.visual_recon&&d.visual_recon.viewpoints||[]).map(function(x){return '<p><b>'+esc(x.name||'Точка')+'</b>'+(x.coordinates?' · '+esc(coords(x.coordinates)):'')+'<br>'+esc(x.description||(x.view&&x.view.description)||'')+'</p>'}).join('');
@@ -1167,12 +1179,12 @@ async function renderObject(id){
   view.innerHTML=breadcrumb(objectCrumbs)+
     '<div class="split"><div><div class="object-hero">'+(heroImage?'<img src="'+esc(heroImage)+'" data-lightbox-url="'+esc(heroFull||heroImage)+'" data-lightbox-source="'+esc(heroSource)+'" data-lightbox-caption="'+esc(d.names&&d.names.primary||'')+'" alt="'+esc(d.names&&d.names.primary||'')+'">':'<div class="preview-placeholder">Зеркальный media-файл и fallback preview ещё не опубликованы в текущем CDN.</div>')+'</div>'+
     '<div class="object-main"><div class="eyebrow">'+esc(className(d.classification&&d.classification.class_id))+'</div><h1>'+esc(d.names&&d.names.primary||o.title||id)+'</h1><p class="lead">'+esc(d.summary&&d.summary.narrow||'')+'</p>'+
-    '<div class="kv"><div><small>GPS</small>'+esc(coords(d.geo&&d.geo.primary_location))+'</div><div><small>Высота</small>'+esc(elevation(d.geo&&d.geo.object_elevation))+'</div><div><small>Доступ</small>'+esc(access(v))+'</div><div><small>Ночёвка</small>'+esc(v.overnight&&v.overnight.status||'—')+'</div></div>'+
+    '<div class="kv"><div><small>GPS</small>'+esc(coords(d.geo&&d.geo.primary_location))+'</div><div><small>Высота</small>'+esc(elevation(d.geo&&d.geo.object_elevation))+'</div><div><small>Доступ</small>'+esc(access(v))+'</div><div><small>Ночёвка</small>'+esc(overnightLabel(v.overnight&&v.overnight.status))+'</div></div>'+
     narrativeHTML(d.narrative)+
     '<section class="copy-section"><h2>Как добраться</h2>'+(acc||'<p>Данные доступа пока не структурированы.</p>')+'</section>'+
-    '<section class="copy-section"><h2>Вода и ночёвка</h2><p><b>Вода:</b> '+esc(v.water&&v.water.summary||'—')+'</p><p><b>Качество:</b> '+esc(v.water&&v.water.quality||'—')+'</p><p><b>Ночёвка:</b> '+esc(v.overnight&&v.overnight.summary||'—')+'</p></section>'+
+    '<section class="copy-section"><h2>Вода и ночёвка</h2><p><b>Вода:</b> '+esc(v.water&&(v.water.notes||v.water.summary)||'—')+'</p>'+(v.water&&v.water.last_reliable_point?'<p><b>Последняя надёжная точка:</b> '+esc(v.water.last_reliable_point)+'</p>':'')+'<p><b>Качество:</b> '+esc(waterQualityLabel(v.water&&v.water.quality))+'</p><p><b>Ночёвка:</b> '+esc(v.overnight&&v.overnight.summary||'—')+'</p></section>'+
     (reports?'<section class="copy-section"><h2>Отчёты путешественников</h2>'+reports+'</section>':'')+
-    (d.visual_recon?'<section class="copy-section"><h2>Визуальная разведка</h2><p><b>Лучшее время:</b> '+esc(d.visual_recon.best_time||'—')+'</p>'+vp+'<p><b>Дрон:</b> '+esc(typeof d.visual_recon.drone==='string'?d.visual_recon.drone:(d.visual_recon.drone&&d.visual_recon.drone.legal_status)||'—')+'</p></section>':'')+
+    (d.visual_recon?'<section class="copy-section"><h2>Визуальная разведка</h2><p><b>Лучшее время:</b> '+esc(d.visual_recon.best_time||'—')+'</p>'+vp+'<p><b>Дрон:</b> '+esc(typeof d.visual_recon.drone==='string'?d.visual_recon.drone:droneLabel(d.visual_recon.drone&&d.visual_recon.drone.legal_status))+'</p></section>':'')+
     g+s+'</div></div>'+
     '<aside><div class="side-card"><h3>Локальная карта объекта</h3><div class="side-map" id="objectMap"></div></div>'+
     '<div class="side-card"><h3>География</h3>'+objectGeoLinks(geoCtx)+'</div>'+

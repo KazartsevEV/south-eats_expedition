@@ -1,24 +1,43 @@
 {
   "object_id": "obj_la_0040",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-03",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-03",
+    "scope": "Tham Chang: identity, entrance GPS, approximate elevation, Vang Vieng karst geology, Meuang Xong refuge tradition, Ho Wars chronology, name traditions, stairs/luck practice, current access/ferry, hours, price reports, water, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "regional_geology_not_overstated_as_site_petrology": true,
+      "tourist_history_vs_academic_chronology_split": true,
+      "name_etymologies_marked_tradition": true,
+      "current_crossing_uncertainty_preserved": true,
+      "ticket_marked_traveler_report": true,
+      "water_quality_unknown_preserved": true,
+      "camping_permission_unknown_preserved": true,
+      "traveler_report_period_scoped": true,
+      "gallery_open_license": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -38,12 +57,13 @@
   },
   "verification": {
     "dynamic_fields": [
-      "access",
       "hours",
-      "tickets",
-      "water",
-      "overnight",
-      "filming/drone"
+      "ticket",
+      "river crossing",
+      "access",
+      "water activity",
+      "crowding",
+      "drone"
     ],
     "verify_before_departure": true
   }

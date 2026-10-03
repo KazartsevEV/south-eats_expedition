@@ -11,6 +11,7 @@ on:
       - "data/id-registry.json"
       - "scripts/**"
       - "public/index.html"
+      - "public/ui/**"
       - ".github/workflows/cdn-pages.yml"
   pull_request:
     branches: [main]
@@ -21,6 +22,8 @@ on:
       - "data/geo/**"
       - "data/id-registry.json"
       - "scripts/**"
+      - "public/index.html"
+      - "public/ui/**"
       - ".github/workflows/cdn-pages.yml"
   workflow_dispatch:
 
@@ -81,6 +84,9 @@ jobs:
       - name: Validate recursive hierarchy
         run: python scripts/validate_hierarchy.py public/cdn/v2
 
+      - name: Validate JSON-driven renderer boundary
+        run: python scripts/validate_renderer_data_driven.py
+
       - name: Build and validate derived maps in scratch CDN
         shell: bash
         run: |
@@ -116,6 +122,7 @@ jobs:
             python scripts/validate_canonical.py public/cdn/v2
             python scripts/validate_raw_field_migration.py public/cdn/v2
             python scripts/validate_hierarchy.py public/cdn/v2
+            python scripts/validate_renderer_data_driven.py
 
             git add public/cdn/v2
             if git diff --cached --quiet; then

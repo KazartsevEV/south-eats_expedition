@@ -1,24 +1,40 @@
 {
   "object_id": "obj_la_0037",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-03",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-03",
+    "scope": "Nam Kan: designation, gibbons, historic extent/elevation, access, seasonal conditions, traveler reports, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "historic_current_extent_split": true,
+      "current_access_scoped": true,
+      "water_scope_explicit": true,
+      "camping_permission_unknown_preserved": true,
+      "traveler_report_period_scoped": true,
+      "gallery_context_scoped": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -37,11 +53,11 @@
   "verification": {
     "dynamic_fields": [
       "access",
-      "hours",
-      "tickets",
+      "tour schedules",
+      "road conditions",
       "water",
       "overnight",
-      "filming/drone"
+      "drone"
     ],
     "verify_before_departure": true
   }

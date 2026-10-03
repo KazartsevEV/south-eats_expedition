@@ -188,6 +188,16 @@ def main():
     preview_source_by_object: dict[str, str] = {}
     required_files: set[Path] = set()
 
+    existing_preview_source_by_object: dict[str, str] = {}
+    existing_index_path = PREVIEW_ROOT / "index.json"
+    if existing_index_path.exists():
+        existing_index = load(existing_index_path)
+        for item in existing_index.get("items") or []:
+            object_id = item.get("object_id")
+            source_media_id = item.get("source_media_id")
+            if object_id and source_media_id:
+                existing_preview_source_by_object[object_id] = source_media_id
+
     for row in rows:
         object_id = row.get("id")
         cover_media_id = row.get("cover_media_id")
@@ -222,7 +232,14 @@ def main():
         chosen_media_path = None
         chosen_media_doc = None
 
-        if preview_path.exists() and preview_path.stat().st_size >= 256:
+        preferred_media_id = candidates[0][0]
+        preview_is_current = (
+            preview_path.exists()
+            and preview_path.stat().st_size >= 256
+            and existing_preview_source_by_object.get(object_id) == preferred_media_id
+        )
+
+        if preview_is_current:
             chosen_media_id, chosen_media_path, chosen_media_doc = candidates[0]
         else:
             candidate_errors = []

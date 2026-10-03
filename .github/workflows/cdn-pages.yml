@@ -48,6 +48,9 @@ jobs:
       - name: Install image preview dependency
         run: python -m pip install --disable-pip-version-check Pillow==11.3.0
 
+      - name: Apply Nam Kan object QA migration
+        run: python scripts/qa_laos_obj0037.py
+
       - name: Validate imported donor snapshots
         run: python scripts/validate_import_snapshots.py
 
@@ -106,6 +109,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
+            python scripts/qa_laos_obj0037.py
             python scripts/build_cdn.py
             python scripts/build_canonical_layer.py
             python scripts/build_media_mirrors.py
@@ -117,7 +121,7 @@ jobs:
             python scripts/validate_raw_field_migration.py public/cdn/v2
             python scripts/validate_hierarchy.py public/cdn/v2
 
-            git add public/cdn/v2
+            git add data/source/laos.json data/id-registry.json public/cdn/v2
             if git diff --cached --quiet; then
               echo "CDN is already up to date on current main."
               exit 0

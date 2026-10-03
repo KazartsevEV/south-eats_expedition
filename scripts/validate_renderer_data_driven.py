@@ -40,6 +40,24 @@ if not isinstance(dictionary.get("field_labels"), dict) or not dictionary["field
     fail("renderer field_labels missing")
 if not isinstance(dictionary.get("value_labels"), dict):
     fail("renderer value_labels missing")
+for key in (
+    "access_mode_labels",
+    "geo_kind_labels",
+    "region_section_labels",
+    "narrative_section_labels",
+):
+    value = dictionary.get(key)
+    if not isinstance(value, dict) or not value:
+        fail(f"renderer {key} missing")
+
+for forbidden in (
+    "var map={walking:",
+    "definition:'Что такое Юго-Восточная Азия'",
+    "country:'страна',region:'регион'",
+    "var labels={overview:'Обзор'",
+):
+    if forbidden in index_text:
+        fail(f"presentation dictionary hardcoded in renderer: {forbidden}")
 
 region = load(release / "region" / "southeast-asia.json")
 countries = region.get("countries") or []
@@ -65,13 +83,39 @@ object_literals = {
     and len(row["title"].strip()) >= 6
 }
 
+country_structural_literals: set[str] = set()
+for row in countries:
+    for key in ("slug", "page_path"):
+        value = row.get(key)
+        if isinstance(value, str) and value.strip():
+            country_structural_literals.add(value.strip())
+
+object_ids = {
+    row["id"].strip()
+    for row in objects
+    if isinstance(row, dict)
+    and isinstance(row.get("id"), str)
+    and row["id"].strip()
+}
+
 hardcoded_countries = sorted(value for value in country_literals if value in index_text)
+hardcoded_country_structure = sorted(
+    value for value in country_structural_literals if value in index_text
+)
 hardcoded_objects = sorted(value for value in object_literals if value in index_text)
+hardcoded_object_ids = sorted(value for value in object_ids if value in index_text)
 
 if hardcoded_countries:
     fail("country content hardcoded in index.html: " + ", ".join(hardcoded_countries))
+if hardcoded_country_structure:
+    fail(
+        "country structural content hardcoded in index.html: "
+        + ", ".join(hardcoded_country_structure)
+    )
 if hardcoded_objects:
     fail("object content hardcoded in index.html: " + ", ".join(hardcoded_objects[:20]))
+if hardcoded_object_ids:
+    fail("object ids hardcoded in index.html: " + ", ".join(hardcoded_object_ids[:20]))
 
 print(
     json.dumps(
@@ -82,6 +126,7 @@ print(
             "objects": len(objects),
             "field_labels": len(dictionary["field_labels"]),
             "value_labels": len(dictionary["value_labels"]),
+            "presentation_dictionaries": 4,
             "renderer_country_object_literals": 0,
         },
         ensure_ascii=False,

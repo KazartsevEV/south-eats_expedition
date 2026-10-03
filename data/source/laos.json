@@ -22718,87 +22718,515 @@
       },
       {
         "name": "Souvannakhomkham Ancient City",
-        "class": "inventory",
+        "class": "archaeology",
         "interest": [
           "archaeology",
-          "history"
+          "history",
+          "buddhism",
+          "mekong",
+          "ruins"
         ],
-        "why_go": "Крупный археологический комплекс Бокео с сетью храмов, ступ и изображений Будды; официальный Tourism Laos рассматривает его как отдельный древний город.",
+        "why_go": "Суваннакхомкхам — не один храм, а рассыпанный по берегу Меконга археологический ландшафт: остатки ступ и монастырей, земляные укрепления и несколько крупных изображений Будды. Официальные источники связывают место с очень ранним городом, но полевые археологи осторожнее: видимые кирпичные руины в основном относятся к эпохе Ланна и позднее. В 2024 году район снова оказался в центре внимания после находки сотен буддийских изображений на острове Пхынгкхам.",
         "traveler_card": {
           "location": {
-            "region": "Bokeo Province",
-            "nearest_hub": "Houay Xay",
+            "region": "Bokeo Province / Ton Pheung District",
+            "nearest_hub": "Houay Xay / Ton Pheung",
             "languages_spoken": [
               "лаосский",
-              "английский — ограниченно в туристической инфраструктуре"
+              "тайский в приграничной зоне",
+              "английский — ограниченно"
             ],
             "coordinates": {
-              "lat": null,
-              "lon": null,
-              "elevation_m": null
+              "lat": 20.2595833,
+              "lon": 100.1203833,
+              "elevation_m": 379
             },
-            "coordinate_type": null,
-            "accuracy": "unknown",
-            "elevation_accuracy": "unknown",
-            "coordinates_checked_at": null,
-            "geo_points": []
+            "coordinate_type": "archaeological_core",
+            "accuracy": "high",
+            "elevation_accuracy": "approximate",
+            "coordinate_source": {
+              "type": "academic",
+              "title": "Natural Degradation of Earthworks, Trenches, Walls and Moats, Northern Thailand",
+              "publisher": "Journal of Field Archaeology / Boise State University repository",
+              "url": "https://experts.boisestate.edu/ws/portalfiles/portal/723903/Natural%20Degradation%20of%20Earthworks%20Trenches%20Walls%20and%20Moats%20Nor.pdf",
+              "authority": "high",
+              "accessed": "2026-10-03",
+              "notes": "Published field-survey coordinate for the rectangular Souvannakhomkham earthwork; WGS84."
+            },
+            "object_elevation": {
+              "representative_m": 379,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "approximate",
+              "source": {
+                "type": "official_map",
+                "title": "SRTM90m elevation at Souvannakhomkham earthwork survey coordinate",
+                "publisher": "OpenTopoData / SRTM90m",
+                "url": "https://api.opentopodata.org/v1/srtm90m?locations=20.2595833%2C100.1203833",
+                "authority": "medium",
+                "accessed": "2026-10-03"
+              },
+              "checked_at": "2026-10-03",
+              "notes": "Около 379 м по SRTM90 в опубликованной точке земляного укрепления. Это ориентир по рельефу, не геодезическая отметка всего комплекса."
+            },
+            "geo_points": [
+              {
+                "type": "viewpoint",
+                "name": "Большой каменный Будда — точка путешественника 2014 года",
+                "coordinates": {
+                  "lat": 20.2497,
+                  "lon": 100.16522,
+                  "elevation_m": 371
+                },
+                "accuracy": "medium",
+                "elevation_accuracy": "approximate",
+                "coordinate_source": {
+                  "type": "traveler_report",
+                  "title": "Northern Thailand and Laos on a CRF250L — Souvannakhomkham Buddha GPS",
+                  "publisher": "GT-Rider",
+                  "url": "https://www.gt-rider.com/se-asia-motorcycling/threads/northern-thailand-and-laos-on-a-crf250l-end-of-2014.16139/page-2",
+                  "authority": "medium",
+                  "accessed": "2026-10-03"
+                },
+                "elevation_source": {
+                  "type": "official_map",
+                  "title": "SRTM90m elevation at Souvannakhomkham Buddha coordinate",
+                  "publisher": "OpenTopoData / SRTM90m",
+                  "url": "https://api.opentopodata.org/v1/srtm90m?locations=20.24970%2C100.16522",
+                  "authority": "medium",
+                  "accessed": "2026-10-03"
+                },
+                "checked_at": "2026-10-03",
+                "notes": "Точка относится к одному из крупных Будд, а не к центру всего археологического массива."
+              }
+            ],
+            "coordinates_checked_at": "2026-10-03",
+            "elevation_source": {
+              "type": "official_map",
+              "title": "SRTM90m elevation at Souvannakhomkham earthwork survey coordinate",
+              "publisher": "OpenTopoData / SRTM90m",
+              "url": "https://api.opentopodata.org/v1/srtm90m?locations=20.2595833%2C100.1203833",
+              "authority": "medium",
+              "accessed": "2026-10-03",
+              "notes": "Approximate terrain elevation at the published archaeological-core coordinate."
+            }
           },
           "logistics": {
-            "access": "Инвентарная карточка: существование объекта подтверждено официальным Tourism Laos; точный самостоятельный доступ будет проверен на объектном QA.",
-            "public_transport": null,
-            "last_mile": null,
+            "access": "Самый понятный самостоятельный путь идёт из Хуайсая на запад по дороге 3 вдоль Меконга в сторону Тон-Пхынга. Региональный путеводитель даёт около 50 км до района Суваннакхомкхама и рекомендует мотоцикл; можно также нанять сонгтхэу или тук-тук с водителем на день. Сам комплекс очень растянут, поэтому одной точки назначения недостаточно.",
+            "public_transport": "Регулярный маршрут прямо по всем археологическим участкам не подтверждён. Для осмотра нескольких памятников практичнее собственный мотоцикл/машина или местный водитель из Хуайсая либо Тон-Пхынга.",
+            "last_mile": "К отдельным руинам ведут полевые и местные дороги. В 2014 году путешественник нашёл крупного Будду только с помощью местного жителя; в 2024 году район уже сильно изменился из-за новой застройки и дорог. Для полного обхода рассчитывать на навигацию только по старым точкам не стоит.",
             "typical_visit_hours": null,
-            "permit_or_guide": null,
-            "mobility_notes": null,
-            "modes": {},
-            "water": "Не исследовано на инвентарном проходе.",
-            "overnight_and_camping": "Не исследовано на инвентарном проходе.",
-            "self_guided_default": null,
-            "travel_model": "предварительный инвентарь перед полным объектным QA"
+            "permit_or_guide": "Обязательный гид для обычного посещения опубликованными источниками не подтверждён. Местный водитель или проводник сильно упрощает поиск разнесённых руин.",
+            "mobility_notes": "Это не благоустроенный единый маршрут: грунт, поля, дорожки между руинами и отдельные береговые участки. В дождь полевые дороги могут размокать.",
+            "modes": {
+              "public_transport": "Прямого регулярного транспорта по археологическому комплексу не подтверждено.",
+              "taxi_ridehail": "Тук-тук, сонгтхэу или частного водителя лучше договаривать на день.",
+              "car": "Подходит для подъезда из Хуайсая и перемещения между крупными точками, но состояние последних полевых подъездов меняется.",
+              "moped": "Рабочий самостоятельный вариант в сухой сезон; часть старых маршрутов проходит по грунту.",
+              "motorcycle": "Удобен для разнесённых точек комплекса, особенно если нужно искать памятники вне основной дороги.",
+              "walking": "Пешком разумно осматривать отдельный кластер руин, но не весь археологический ландшафт."
+            },
+            "water": "Подтверждённого постоянного источника питьевой воды непосредственно у руин нет. Запас лучше взять в Хуайсае или Тон-Пхынге.",
+            "overnight_and_camping": "Свободный кемпинг на археологической территории не подтверждён и не должен считаться допустимым. Ночевать практичнее в Хуайсае или Тон-Пхынге; конкретное жильё у самого комплекса в этой карточке не привязывается без актуальной проверки.",
+            "access_requirements": "Не заходить на активные раскопки и не трогать находки. Для удалённых памятников спрашивать местный доступ: часть территории используется под сельское хозяйство и менялась из-за инфраструктурных работ.",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно на мотоцикле/машине; для поиска разнесённых руин полезен местный водитель",
+            "access_options": [
+              {
+                "id": "houay_xay_route3",
+                "origin": "Хуайсай",
+                "modes": [
+                  "motorcycle",
+                  "moped",
+                  "car",
+                  "taxi"
+                ],
+                "checked_at": "2026-10-03",
+                "source_refs": [
+                  "src_990465",
+                  "src_990388"
+                ],
+                "legs": [
+                  {
+                    "mode": "motorcycle",
+                    "distance_km": 50,
+                    "duration_min": null,
+                    "surface": "paved",
+                    "condition": "Основной коридор дороги 3 вдоль Меконга; отдельные последние подъезды к руинам могут быть грунтовыми.",
+                    "seasonality": "В дождь полевые съезды хуже.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Ехать в район Тон-Пхынга, затем выбирать конкретный археологический участок.",
+                    "fords": 0,
+                    "notes": "50 км — ориентир регионального путеводителя до района древнего города, а не точная дистанция до каждой руины.",
+                    "source_refs": [
+                      "src_990465"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "local_ruins_loop",
+                "origin": "Тон-Пхынг / район Суваннакхомкхама",
+                "modes": [
+                  "motorcycle",
+                  "walking"
+                ],
+                "checked_at": "2026-10-03",
+                "source_refs": [
+                  "src_990452",
+                  "src_990466"
+                ],
+                "legs": [
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "trail",
+                    "condition": "Полевые тропы и дороги между отдельными ступами, Буддами и остатками монастырей.",
+                    "seasonality": "В дождь грязь и высокая растительность затрудняют проход.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Лучше заранее выбрать конкретные точки и при необходимости спросить дорогу у местных.",
+                    "fords": null,
+                    "notes": "Комплекс слишком большой для одного короткого пешего маршрута.",
+                    "source_refs": [
+                      "src_990452",
+                      "src_990466"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "water_structured": {
+              "at_object": false,
+              "quality": "unknown",
+              "last_reliable_point": "Тон-Пхынг или Хуайсай",
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "river",
+                  "name": "Меконг",
+                  "potability": "treatment_required",
+                  "notes": "Речную воду не считать питьевой без обработки."
+                }
+              ],
+              "notes": "Питьевую воду брать до выезда к разнесённым руинам.",
+              "source_refs": [
+                "src_990465"
+              ]
+            },
+            "supplies": {
+              "status": "available_nearby",
+              "summary": "Базовые покупки делать в Тон-Пхынге или Хуайсае. Постоянный магазин непосредственно у каждого археологического участка не подтверждён.",
+              "poi_ids": [],
+              "source_refs": [
+                "src_990465"
+              ]
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Свободный кемпинг внутри археологической территории не подтверждён. Для ночёвки использовать населённые пункты вне памятников.",
+              "source_refs": [
+                "src_990465"
+              ]
+            }
           },
           "climate": {
-            "best_period": null,
-            "heat_rain_notes": null,
-            "site_specific_notes": null
+            "best_period": "Сухой сезон удобнее для полевых дорог и поиска руин среди растительности.",
+            "heat_rain_notes": "В сезон дождей грунтовые съезды могут превращаться в грязь, а высокая растительность сильнее закрывает низкие кирпичные остатки.",
+            "site_specific_notes": "Низкая вода в Меконге иногда открывает участки берега и островов, где фиксировались археологические находки; это не означает свободный доступ к раскопкам."
           },
           "operations": {
-            "status": null,
+            "status": "open",
             "hours": null,
             "ticket": null,
-            "closure_notes": "Актуальные часы, цена и режим доступа не нормализованы; проверить при объектном QA.",
-            "last_verified": "2026-10-02",
-            "official_url": "https://www.tourismlaos.org/northern-provinces/bokeo/"
+            "closure_notes": "Единых надёжных часов работы и общего билета на весь археологический ландшафт не найдено. Отдельные раскопки или храмовые участки могут иметь собственный режим.",
+            "last_verified": "2026-10-03",
+            "official_url": "https://www.tourismlaos.org/northern-provinces/bokeo/",
+            "current_alert": "В районе идут изменения инфраструктуры и периодические археологические работы; маршруты к отдельным точкам лучше перепроверять на месте.",
+            "status_snapshot": {
+              "as_of": "2026-10-03",
+              "summary": "Tourism Laos по-прежнему продвигает Суваннакхомкхам как археологический объект; в 2024 году на Пхынгкхаме продолжались официальные раскопки.",
+              "source_refs": [
+                "src_990388",
+                "src_990468"
+              ]
+            },
+            "source_refs": [
+              "src_990388",
+              "src_990468"
+            ]
           },
           "safety": {
-            "main_risks": [],
-            "sensitive_areas": []
+            "main_risks": [
+              "грунтовые подъезды и грязь в сезон дождей",
+              "отсутствие единой разметки на большой территории",
+              "жара и открытые поля между памятниками",
+              "берег Меконга и крутые откосы на отдельных участках",
+              "активные раскопки и неукреплённые археологические остатки"
+            ],
+            "sensitive_areas": [
+              "не заходить за ограждения активных раскопок",
+              "не трогать и не перемещать кирпичи, фрагменты статуй и другие находки",
+              "уважать религиозные подношения у изображений Будды"
+            ],
+            "confidence": "medium",
+            "source_refs": [
+              "src_990464",
+              "src_990467",
+              "src_990466"
+            ],
+            "checked_at": "2026-10-03"
           },
           "media": {
-            "photo_suitability_5": null,
-            "video_suitability_5": null,
+            "photo_suitability_5": 5,
+            "video_suitability_5": 4,
+            "best_light": "Утро и поздний день дают более мягкий свет на кирпичных руинах и открытом берегу; в полдень тени короткие и жёсткие.",
             "visual_scouting": {
-              "best_time": null,
-              "best_weather_light": null,
-              "viewpoints_for_photo_video": [],
-              "seasonal_visuals": [],
-              "video_activity": [],
-              "useful_equipment": []
+              "best_time": "утро или поздний день",
+              "best_weather_light": "Сухая ясная погода удобнее для полевых дорог; после дождя кирпич темнее и насыщеннее, но подъезд хуже.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_earthwork_core",
+                  "name": "Земляное укрепление Суваннакхомкхама",
+                  "description": "Археологическая точка полевого обследования на западной части комплекса.",
+                  "coordinates": {
+                    "lat": 20.2595833,
+                    "lon": 100.1203833,
+                    "elevation_m": 379
+                  },
+                  "access": "Подъезд по местным дорогам; точный последний съезд лучше уточнять на месте.",
+                  "view": {
+                    "description": "Ров, вал, пойма Меконга и масштаб древнего оборонительного контура."
+                  },
+                  "best_time": "утро или поздний день",
+                  "best_weather_light": "Низкий боковой свет лучше показывает рельеф валов и рвов.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает форму земляного рельефа и связь с поймой"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "удобен для отдельных участков рва и руин"
+                    }
+                  ],
+                  "source": {
+                    "type": "academic",
+                    "title": "Natural Degradation of Earthworks, Trenches, Walls and Moats, Northern Thailand",
+                    "publisher": "Journal of Field Archaeology",
+                    "url": "https://experts.boisestate.edu/ws/portalfiles/portal/723903/Natural%20Degradation%20of%20Earthworks%20Trenches%20Walls%20and%20Moats%20Nor.pdf",
+                    "authority": "high",
+                    "accessed": "2026-10-03"
+                  }
+                },
+                {
+                  "id": "vp_large_buddha",
+                  "name": "Большой Будда",
+                  "description": "Один из самых узнаваемых памятников комплекса — крупное изображение Будды среди кирпичных остатков.",
+                  "coordinates": {
+                    "lat": 20.2497,
+                    "lon": 100.16522,
+                    "elevation_m": 371
+                  },
+                  "access": "По местным полевым дорогам; точка зафиксирована путешественником в 2014 году.",
+                  "view": {
+                    "description": "Крупная фигура Будды, остатки кирпичной архитектуры и открытая равнина."
+                  },
+                  "best_time": "утро или поздний день",
+                  "best_weather_light": "Боковой свет подчёркивает фактуру старого кирпича и штукатурки.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "показывает статую вместе с руинами и окружением"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для самой фигуры и деталей поверхности"
+                    }
+                  ],
+                  "source": {
+                    "type": "traveler_report",
+                    "title": "Northern Thailand and Laos on a CRF250L",
+                    "publisher": "GT-Rider",
+                    "url": "https://www.gt-rider.com/se-asia-motorcycling/threads/northern-thailand-and-laos-on-a-crf250l-end-of-2014.16139/page-2",
+                    "authority": "medium",
+                    "accessed": "2026-10-03"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "В сухой сезон низкие земляные формы и кирпичные основания легче различимы, а полевые дороги проходимее.",
+                "После дождей растительность ярче, но низкие руины быстрее скрываются травой и доступ по грунту хуже.",
+                "При низкой воде Меконга заметнее береговые и островные участки, связанные с новыми находками."
+              ],
+              "video_activity": [
+                "проход между разнесёнными ступами и изображениями Будды",
+                "масштаб земляного рва и вала на фоне поймы",
+                "современные раскопки — только с разрешения и без захода в рабочую зону"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "для руин в широком речном ландшафте"
+                },
+                {
+                  "type": "standard",
+                  "why": "для статуй и архитектурных деталей"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "для деталей удалённых памятников через поля"
+                }
+              ]
             },
-            "drone": null,
-            "filming_restrictions": null
+            "drone": {
+              "visual_value": "С воздуха особенно хорошо читается масштаб комплекса: пойма Меконга, земляные укрепления и разнесённые группы руин.",
+              "legal_status": "regulated",
+              "permit_required": "Действуют общие правила Управления гражданской авиации Лаоса; для археологического объекта и активных раскопок дополнительно требуется согласование с местными органами/владельцем площадки.",
+              "restrictions": [
+                "не выше 120 м над землёй",
+                "полёт только в прямой видимости",
+                "не летать над населёнными пунктами без требуемого согласования",
+                "для контролируемого, военного и иного ограниченного воздушного пространства требуется отдельное разрешение",
+                "не запускать над активными раскопками без отдельного разрешения"
+              ],
+              "source": {
+                "type": "government_official",
+                "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+                "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+                "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+                "authority": "high",
+                "accessed": "2026-09-29"
+              },
+              "checked_at": "2026-10-03"
+            },
+            "filming_restrictions": "Археологические раскопки и религиозные церемонии снимать только с разрешения. Отдельного общего тарифа или публичного режима коммерческой съёмки для всего комплекса не найдено."
           },
           "annotation": {
-            "narrative": "Крупный археологический комплекс Бокео с сетью храмов, ступ и изображений Будды; официальный Tourism Laos рассматривает его как отдельный древний город.",
+            "canonical_story_from_sections": true,
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Крупный археологический комплекс Бокео с сетью храмов, ступ и изображений Будды; официальный Tourism Laos рассматривает его как отдельный древний город."
+                "content": "Суваннакхомкхам растянут вдоль левого берега Меконга напротив древнего района Чианг-Саен. Это не компактные руины за оградой: памятники разбросаны по полям и дорогам на большой площади. Официальный Tourism Laos говорит примерно о 40 участках и выделяет семиметрового Будду; полевые исследования фиксируют земляное укрепление примерно 2 × 0,5 км и десятки кирпичных монастырских остатков вокруг него.",
+                "source_refs": [
+                  "src_990388",
+                  "src_990464"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Официальная туристическая версия относит основание города к V веку и говорит о многократных перестройках. При этом сами видимые руины гораздо моложе: Tourism Laos связывает их прежде всего с XIV–XVI веками."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "Полевые археологи осторожнее ранней датировки. В обследовании 2008–2012 годов кирпичные памятники вокруг земляного укрепления выглядят в основном как сооружения стиля Ланна. Авторы прямо отмечают, что легендарный более ранний город пока плохо подтверждён археологически, хотя форма и степень разрушения самого рва могут указывать на более древний этап."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "В марте–мае 2024 года на острове Пхынгкхам, который лаосские власти связывают с Суваннакхомкхамом, раскопки дали сотни буддийских изображений и фрагментов. К началу апреля сообщалось более чем о 200 статуях; позже — более чем о 910 предметах, а 16 мая нашли изображение Будды высотой 2,20 м. Это новая археологическая линия комплекса, а не доказательство всех ранних дат из хроник."
+                  }
+                ],
+                "source_refs": [
+                  "src_990388",
+                  "src_990464",
+                  "src_990467",
+                  "src_990468",
+                  "src_990469"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "Место остаётся частью живой буддийской культуры, а не только археологией. Перед возобновлением раскопок на Пхынгкхаме в мае 2024 года комитет провёл религиозный обряд. Старые и новые изображения Будды продолжают восприниматься как святыни; поэтому находки здесь одновременно археологические предметы и объекты религиозного почитания.",
+                "source_refs": [
+                  "src_990468",
+                  "src_990466"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Комплекс лежит в широкой долине Меконга в районе Тон-Пхынг, напротив Чианг-Саена. Река здесь меняла русло, поэтому часть древнего ландшафта оказалась на островах и бывших поймах. Земляное укрепление открыто к реке с юга, а цепочка храмовых руин тянется восточнее вдоль берега. Официальная туристическая зона намного шире одной точки: у разных источников речь идёт о десятках памятников на площади до 10 000 га.",
+                "source_refs": [
+                  "src_990464",
+                  "src_990388",
+                  "src_990465"
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "Для самого археологического комплекса важнее геоморфология Меконга, чем состав камня. Высокий сухой берег, старые русла и изменения положения реки повлияли на то, где сохранились укрепления и монастырские участки. В полевом исследовании южная сторона земляного укрепления открыта к Меконгу, а старый берег рассматривается как естественная часть обороны.",
+                "source_refs": [
+                  "src_990464"
+                ]
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Современный Суваннакхомкхам находится не в отдельном музейном парке, а среди населённых и сельскохозяйственных земель Тон-Пхынга. Путешественники неоднократно отмечали, что без помощи местных легко проехать мимо отдельных Будд и ступ: сеть полевых дорог менялась вместе с плантациями и новой застройкой. Поэтому знание местных жителей здесь до сих пор практичнее старых туристических схем.",
+                "source_refs": [
+                  "src_990452",
+                  "src_990466"
+                ]
+              },
+              {
+                "section_id": "myths_beliefs",
+                "content": [
+                  {
+                    "type": "legend",
+                    "text": "О происхождении названия существует местная легенда. Вице-король Аякумарн будто бы имел сына по имени Суванна, которого двор счёл несчастливым и отправил вниз по Меконгу на плоту. Отец устроил обряд «кхумкхам»: люди зажгли свечи и обратились к Пхая-Наку, змеиному духу Меконга. Нак якобы вернул плот, а город назвали Суваннакхомкхам. Этот сюжет относится к легендарной традиции и не используется как датировка реального города."
+                  },
+                  {
+                    "type": "local_tradition",
+                    "text": "Поздняя традиция связывает историю города и с перемещением населения после гибели Вьенг-Йонока, который в хрониках «ушёл в болото» или был затоплен. Археологические исследования подтверждают существование большого исторического ландшафта, но не доказывают эту последовательность событий."
+                  }
+                ],
+                "source_refs": [
+                  "src_990465",
+                  "src_990466",
+                  "src_990470",
+                  "src_990464"
+                ]
               }
             ]
           },
-          "traveler_reports": {
-            "recurring_issues": []
-          },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "navigation",
+              "summary": "Конец 2014 года: мотоциклист искал крупного каменного Будду среди плантаций и сети полевых дорог. Без местного жителя, который сел к нему на мотоцикл и показывал путь, памятник было легко пропустить. Он записал координату одного из Будд: 20.24970, 100.16522.",
+              "observed_period": "2014",
+              "source_refs": [
+                "src_990452"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "site_change",
+              "summary": "Май 2024 года: GT-Rider описывает Тон-Пхынг как быстро меняющийся район с новой застройкой и дорогами и специально возвращается к старым Буддам и свежим находкам. Это подтверждает главное практическое ограничение: старые схемы доступа быстро устаревают.",
+              "observed_period": "2024-05",
+              "source_refs": [
+                "src_990466"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "route",
+              "summary": "Региональный путеводитель советует ехать из Хуайсая на мотоцикле по дороге 3 либо нанимать сонгтхэу/тук-тук с водителем. От посетительского центра у Бан-Дон-Тхат короткая тропа ведёт к кирпичным ступам и семиметровому Будде.",
+              "observed_period": "undated_recent_guide",
+              "source_refs": [
+                "src_990465"
+              ],
+              "confidence": "medium"
+            }
+          ],
           "accommodation": []
         },
         "sources": [
@@ -22815,6 +23243,162 @@
               "baseline description"
             ],
             "accessed": "2026-10-02"
+          },
+          {
+            "type": "academic",
+            "title": "Natural Degradation of Earthworks, Trenches, Walls and Moats, Northern Thailand",
+            "publisher": "Journal of Field Archaeology / Boise State University",
+            "url": "https://experts.boisestate.edu/ws/portalfiles/portal/723903/Natural%20Degradation%20of%20Earthworks%20Trenches%20Walls%20and%20Moats%20Nor.pdf",
+            "language": "en",
+            "published_at": "2015",
+            "authority": "high",
+            "used_for": [
+              "earthwork dimensions",
+              "field-survey coordinates",
+              "Lan Na monument assessment",
+              "riverbank defensive interpretation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "other",
+            "title": "Bokeo’s Heritage Sites — Souvannakhomkham",
+            "publisher": "We Are Lao",
+            "url": "https://wearelao.com/standard-page/bokeos-heritage-sites/",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "50 km access",
+              "motorbike/tuk-tuk access",
+              "7m Buddha route",
+              "legend",
+              "site-scale context"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Chasing old Buddhas & the new face of Ton Phueng",
+            "publisher": "GT-Rider",
+            "url": "https://www.gt-rider.com/se-asia-motorcycling/threads/chasing-old-buddhas-the-new-face-of-ton-phueng.16290/",
+            "language": "en",
+            "published_at": "2024-05-16",
+            "authority": "medium",
+            "used_for": [
+              "2024 traveler conditions",
+              "modern development context",
+              "legend retelling",
+              "gallery"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "Over 200 Buddha images unearthed",
+            "publisher": "KPL / Lao News Agency",
+            "url": "https://kpl.gov.la/asean2024/En/detail.aspx?id=81741",
+            "language": "en",
+            "published_at": "2024-04-03",
+            "authority": "high",
+            "used_for": [
+              "2024 Pheungkham excavation",
+              "201 Buddha images"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "Excavation of cultural treasures resumes",
+            "publisher": "KPL / Lao News Agency",
+            "url": "https://kpl.gov.la/asean2024/En/detail.aspx?id=82496",
+            "language": "en",
+            "published_at": "2024-05-09",
+            "authority": "high",
+            "used_for": [
+              "910+ finds",
+              "religious ritual before excavation",
+              "Pheungkham excavation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "Large Buddha Image unearthed on Pheungkham Island",
+            "publisher": "KPL / Lao News Agency",
+            "url": "https://kpl.gov.la/asean2024/En/detail.aspx?id=82708",
+            "language": "en",
+            "published_at": "2024-05-17",
+            "authority": "high",
+            "used_for": [
+              "2.20m Buddha discovery",
+              "Pheungkham excavation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "academic",
+            "title": "The Legend of Souvannakhomkham City — bibliographic record",
+            "publisher": "CiNii / Tokyo University of Foreign Studies",
+            "url": "https://ci.nii.ac.jp/ncid/BD11562926?l=en",
+            "language": "en",
+            "published_at": "2024",
+            "authority": "medium",
+            "used_for": [
+              "existence of dedicated Lao legend/history corpus",
+              "legend framing"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "official_map",
+            "title": "SRTM90m elevation at Souvannakhomkham earthwork coordinate",
+            "publisher": "OpenTopoData / SRTM90m",
+            "url": "https://api.opentopodata.org/v1/srtm90m?locations=20.2595833%2C100.1203833",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "approximate site elevation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "official_map",
+            "title": "SRTM90m elevation at Souvannakhomkham Buddha coordinate",
+            "publisher": "OpenTopoData / SRTM90m",
+            "url": "https://api.opentopodata.org/v1/srtm90m?locations=20.24970%2C100.16522",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "approximate Buddha-point elevation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Northern Thailand and Laos on a CRF250L — Souvannakhomkham",
+            "publisher": "GT-Rider",
+            "url": "https://www.gt-rider.com/se-asia-motorcycling/threads/northern-thailand-and-laos-on-a-crf250l-end-of-2014.16139/page-2",
+            "language": "en",
+            "published_at": "2014",
+            "authority": "medium",
+            "used_for": [
+              "Buddha GPS",
+              "navigation difficulty",
+              "local guidance"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+            "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+            "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "drone rules"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
@@ -22822,35 +23406,178 @@
             "access",
             "hours",
             "tickets",
+            "excavation zones",
             "water",
             "overnight",
-            "filming/drone"
+            "filming/drone",
+            "road condition"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Крупный археологический комплекс Бокео с сетью храмов, ступ и изображений Будды; официальный Tourism Laos рассматривает его как отдельный древний город.",
+        "narrow": "Суваннакхомкхам — большой археологический ландшафт на Меконге в районе Тон-Пхынг: земляные укрепления, руины монастырей, ступы и крупные изображения Будды. Источники расходятся в датировке раннего города, а видимые памятники в основном связывают с Ланна и Лансанг.",
         "qa": {
-          "inventory_review": {
-            "status": "preliminary",
-            "checked_at": "2026-10-02",
-            "notes": "Добавлено на инвентарном проходе из официального Tourism Laos. Полный object QA намеренно не заявлен."
-          },
           "identity_review": {
             "status": "reviewed",
             "identity_status": "distinct",
-            "confidence": "medium",
-            "checked_at": "2026-10-02",
+            "confidence": "high",
+            "checked_at": "2026-10-03",
             "parent_object_ids": [],
-            "merged_aliases": [],
+            "merged_aliases": [
+              "Souvannahkhomkham",
+              "Souvanna Khom Kham",
+              "Suvanna Khom Kham"
+            ],
             "complex_components": [],
             "proposed_split_children": [],
             "evidence_basis": [
-              "project_inventory_crosscheck",
-              "separate_official_or_project_source_listing"
+              "official_provincial_listing",
+              "peer_reviewed_field_survey",
+              "completed_object_research"
             ],
-            "evidence_urls": [],
-            "notes": "Отдельная инвентарная сущность: отдельное имя/официальная listing identity; точного или семантического дубля внутри текущего Laos inventory не найдено."
+            "evidence_urls": [
+              "https://www.tourismlaos.org/northern-provinces/bokeo/",
+              "https://experts.boisestate.edu/ws/portalfiles/portal/723903/Natural%20Degradation%20of%20Earthworks%20Trenches%20Walls%20and%20Moats%20Nor.pdf"
+            ],
+            "notes": "Один крупный археологический ландшафт с множеством разнесённых храмовых и земляных участков; отдельные Будды и раскопы остаются geo_points/компонентами, а не дублирующими объектами."
+          },
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-03",
+            "notes": "Пользовательский текст переписан на естественный русский; легендарная традиция отделена от археологической датировки."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "scope": "полный объектный QA Souvannakhomkham Ancient City по стандарту сильных Laos/Cambodia/Brunei карточек",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_honest_scope": true,
+              "ethnography_substantive": true,
+              "myths_beliefs_substantive": true,
+              "legend_labeled": true,
+              "official_vs_archaeological_dating_split": true,
+              "no_narrative_duplication": true
+            },
+            "notes": [
+              "Официальная ранняя датировка не смешана с более осторожной археологической оценкой видимых руин.",
+              "Легенда об Аякумарне, Суванне и Пхая-Наке помечена как легенда, а не исторический факт.",
+              "Комплекс описан как разнесённый археологический ландшафт; одна координата не выдаётся за все 40+ участков.",
+              "Неизвестные часы, единый билет, питьевая вода у руин и режим кемпинга не придуманы."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "scope": "полная редакционная, полевая и источниковая перестройка Souvannakhomkham Ancient City",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_no_invention": true,
+              "ethnography_scoped": true,
+              "myths_beliefs_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest": true,
+              "overnight_honest": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "media_provenance": true,
+              "gallery_min_5": true,
+              "archaeological_core_coordinate": true,
+              "multi_site_extent_explicit": true,
+              "drone_rule_precision": true
+            }
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "scope": "Souvannakhomkham: archaeology, chronology, earthworks, 2024 excavation, legend, access, GPS/elevation, traveler reports, media and drone",
+            "checks": {
+              "narrative_section_sources": true,
+              "coordinate_source_scoped": true,
+              "elevation_source_scoped": true,
+              "official_archaeology_disagreement_preserved": true,
+              "recent_excavation_dated": true,
+              "legend_not_upgraded_to_history": true,
+              "current_access_scoped": true,
+              "water_unknown_preserved": true,
+              "camping_permission_unknown_preserved": true,
+              "traveler_report_period_scoped": true,
+              "gallery_context_scoped": true,
+              "drone_rules_official": true
+            }
           }
+        },
+        "illustration": {
+          "static_url": "https://www.gt-rider.com/se-asia-motorcycling/attachments/1716749054612-jpeg.155389/",
+          "source_page": "https://www.gt-rider.com/se-asia-motorcycling/threads/chasing-old-buddhas-the-new-face-of-ton-phueng.16290/",
+          "provider": "GT-Rider",
+          "license": "reuse_terms_unverified",
+          "artist": "DavidFL",
+          "illustration_scope": "Souvannakhomkham / 2024 field visit",
+          "last_checked": "2026-10-03",
+          "gallery": [
+            {
+              "static_url": "https://www.gt-rider.com/se-asia-motorcycling/attachments/1716749054612-jpeg.155389/",
+              "source_page": "https://www.gt-rider.com/se-asia-motorcycling/threads/chasing-old-buddhas-the-new-face-of-ton-phueng.16290/",
+              "provider": "GT-Rider",
+              "license": "reuse_terms_unverified",
+              "artist": "DavidFL",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://www.gt-rider.com/se-asia-motorcycling/attachments/1716749084126-jpeg.155390/",
+              "source_page": "https://www.gt-rider.com/se-asia-motorcycling/threads/chasing-old-buddhas-the-new-face-of-ton-phueng.16290/",
+              "provider": "GT-Rider",
+              "license": "reuse_terms_unverified",
+              "artist": "DavidFL",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://www.gt-rider.com/se-asia-motorcycling/attachments/1716749130867-jpeg.155392/",
+              "source_page": "https://www.gt-rider.com/se-asia-motorcycling/threads/chasing-old-buddhas-the-new-face-of-ton-phueng.16290/",
+              "provider": "GT-Rider",
+              "license": "reuse_terms_unverified",
+              "artist": "DavidFL",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://www.gt-rider.com/se-asia-motorcycling/attachments/1716749258471-jpeg.155394/",
+              "source_page": "https://www.gt-rider.com/se-asia-motorcycling/threads/chasing-old-buddhas-the-new-face-of-ton-phueng.16290/",
+              "provider": "GT-Rider",
+              "license": "reuse_terms_unverified",
+              "artist": "DavidFL",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://www.gt-rider.com/se-asia-motorcycling/attachments/1716749466499-jpeg.155399/",
+              "source_page": "https://www.gt-rider.com/se-asia-motorcycling/threads/chasing-old-buddhas-the-new-face-of-ton-phueng.16290/",
+              "provider": "GT-Rider",
+              "license": "reuse_terms_unverified",
+              "artist": "DavidFL",
+              "last_checked": "2026-10-03"
+            }
+          ]
         }
       },
       {

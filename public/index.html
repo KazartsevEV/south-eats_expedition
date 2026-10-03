@@ -302,7 +302,7 @@ function elevation(e){
   return '—';
 }
 function access(v){
-  var map={walking:'пешком',walk:'пешком',moped:'мопед',motorcycle:'мотоцикл',public_transport:'общественный',ride_hailing:'такси',taxi:'такси',boat:'лодка',car:'авто'};
+  var map=(state.renderer&&state.renderer.access_mode_labels)||{};
   var modes=[];
   (v&&v.access_options||[]).forEach(function(x){(x.modes||[]).forEach(function(m){if(modes.indexOf(m)<0)modes.push(m)})});
   return modes.slice(0,4).map(function(x){return map[x]||x}).join(' · ')||'—';
@@ -385,18 +385,7 @@ function legalRisksCard(value){
 }
 function seaReferenceHTML(){
   var r=state.seaReference,c=r&&r.content;if(!c)return '';
-  var labels={
-    definition:'Что такое Юго-Восточная Азия',
-    mainland_and_maritime:'Материковая и морская части',
-    natural_zones:'Природные зоны',
-    climate:'Климат и сезонность',
-    historical_layers:'Исторические слои',
-    languages:'Языки',
-    religions:'Религии',
-    ethnicity:'Этнография',
-    movement:'Перемещение по региону',
-    independent_travel:'Самостоятельное путешествие'
-  };
+  var labels=(state.renderer&&state.renderer.region_section_labels)||{};
   return '<section class="section"><div class="section-head"><div><div class="eyebrow">Southeast Asia</div><h2>'+esc(c.title||'Юго-Восточная Азия')+'</h2></div><p>Региональный справочный слой CDN.</p></div>'+
     '<div class="reference-grid">'+Object.keys(labels).filter(function(k){return c[k]}).map(function(k){
       return '<article class="reference-card"><h3>'+esc(labels[k])+'</h3><p>'+esc(c[k])+'</p></article>';
@@ -614,12 +603,8 @@ function objectGeoLinks(ctx){
   return html;
 }
 function geoKindLabel(kind){
-  var labels={
-    country:'страна',region:'регион',province:'провинция',state:'штат',district:'район',
-    island:'остров',archipelago:'архипелаг',city:'город',town:'город',village:'деревня',
-    settlement:'поселение',protected_area:'охраняемая территория',geographic_area:'местность'
-  };
-  return labels[kind]||'территория';
+  var labels=(state.renderer&&state.renderer.geo_kind_labels)||{};
+  return labels[kind]||labels.__default||kind||'';
 }
 function geoMapLabel(g){
   return (g&&g.names&&(g.names.local||g.names.en||g.names.primary||g.names.ru))||(g&&g.id)||'';
@@ -1047,7 +1032,7 @@ function renderClass(id,cc){
   addBaseMap('classMap',objs,{maxZoom:7,pad:.12,singleZoom:9,emptyMessage:'В этом классе пока нет объектов с canonical GPS.'});bindGo();bindObjectGrid();
 }
 function narrativeHTML(n){
-  var labels={overview:'Обзор',history:'История',culture:'Культура',geography:'География',geology:'Геология',ethnography:'Этнография',myths_beliefs:'Мифы и поверья'};
+  var labels=(state.renderer&&state.renderer.narrative_section_labels)||{};
   return (n&&n.sections||[]).map(function(s){
     var body='';
     if(Array.isArray(s.content))body=s.content.map(function(x){return '<p>'+(x&&x.type?'<b>'+esc(x.type)+'</b> ':'')+esc(x&&x.text!=null?x.text:x)+'</p>'}).join('');

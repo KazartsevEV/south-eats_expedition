@@ -23,6 +23,7 @@ NEW_SOURCES = {
     "https://www.journeyatthirty.com/vang-vieng-laos-part-ii.html": "src_990520",
     "https://sg.trip.com/moments/detail/vang-vieng-21457-150662542/?curr=&locale=en-SG": "src_990521",
     "https://uat.discoverlaos.today/destination/vang-vieng": "src_990522",
+    "https://ewsdata.rightsindevelopment.org/files/documents/02/ADB-49387-002_rVRbhBM.pdf": "src_990523",
 }
 
 def source_key(url: str) -> str:

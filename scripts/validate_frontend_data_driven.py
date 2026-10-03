@@ -140,16 +140,31 @@ for row in geo_rows:
             if value:
                 geo_names.add(value)
 
-checks = (
+text_checks = (
     ("country content", country_literals),
     ("country structural content", country_structural),
-    ("object ids", object_ids),
     ("object titles", object_titles),
-    ("geo ids", geo_ids),
     ("geo names", geo_names),
 )
-for label, values in checks:
+for label, values in text_checks:
     hits = sorted(value for value in values if len(value) >= 4 and value in html)
+    if hits:
+        fail(errors, f"{label} hardcoded in frontend: " + ", ".join(hits[:20]))
+
+identifier_checks = (
+    ("object ids", object_ids),
+    ("geo ids", geo_ids),
+)
+for label, values in identifier_checks:
+    hits = sorted(
+        value
+        for value in values
+        if len(value) >= 4
+        and re.search(
+            rf"(?<![0-9A-Za-z_]){re.escape(value)}(?![0-9A-Za-z_])",
+            html,
+        )
+    )
     if hits:
         fail(errors, f"{label} hardcoded in frontend: " + ", ".join(hits[:20]))
 

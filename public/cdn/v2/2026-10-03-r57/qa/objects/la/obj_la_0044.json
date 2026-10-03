@@ -1,29 +1,49 @@
 {
   "object_id": "obj_la_0044",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-03",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-03",
+    "scope": "Tad Xai: identity vs Pha Xay, exact GPS/elevation, seven-step morphology, sandstone geology, Ban Hatkhai access, seasonality, current 2025 park status, CBT context, water/camping, traveler reality, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "waterfall_height_not_confused_with_site_elevation": true,
+      "tad_xai_pha_xay_separated": true,
+      "direct_vs_stream_distance_scoped": true,
+      "legacy_route_period_scoped": true,
+      "old_prices_removed": true,
+      "current_status_official": true,
+      "current_field_report_scoped": true,
+      "water_not_marked_potable": true,
+      "camping_permission_not_overstated": true,
+      "gallery_sources_traced": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
-    "confidence": "medium",
-    "checked_at": "2026-10-02",
+    "confidence": "high",
+    "checked_at": "2026-10-03",
     "parent_object_ids": [
       "obj_la_0025"
     ],
@@ -32,17 +52,22 @@
     "proposed_split_children": [],
     "evidence_basis": [
       "project_inventory_crosscheck",
-      "separate_official_or_project_source_listing"
+      "osm_separate_waterfall_nodes",
+      "official_two_waterfall_description",
+      "academic_tad_xai_coordinates"
     ],
-    "notes": "Отдельная инвентарная сущность: отдельное имя/официальная listing identity; точного или семантического дубля внутри текущего Laos inventory не найдено."
+    "notes": "Tad Xai — семиступенчатый водопад; Pha Xay — отдельный соседний высокий сброс ниже по течению. Туристические маршруты часто объединяют их как Tad Xay/Pha Xay, но физически и в OSM это разные водопады."
   },
   "verification": {
     "dynamic_fields": [
-      "access",
-      "hours",
-      "tickets",
-      "water",
-      "overnight",
+      "road condition",
+      "Ban Hatkhai guide/boat availability",
+      "public transport",
+      "park/trek permits",
+      "entry fees",
+      "camping permission",
+      "swimming conditions",
+      "water level",
       "filming/drone"
     ],
     "verify_before_departure": true

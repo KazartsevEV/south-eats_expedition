@@ -81,6 +81,9 @@ jobs:
       - name: Validate recursive hierarchy
         run: python scripts/validate_hierarchy.py public/cdn/v2
 
+      - name: Validate JSON-driven frontend
+        run: python scripts/validate_frontend_data_driven.py
+
       - name: Build and validate derived maps in scratch CDN
         shell: bash
         run: |

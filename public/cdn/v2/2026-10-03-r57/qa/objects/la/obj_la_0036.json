@@ -1,47 +1,72 @@
 {
   "object_id": "obj_la_0036",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-03",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-03",
+    "scope": "Souvannakhomkham: archaeology, chronology, earthworks, 2024 excavation, legend, access, GPS/elevation, traveler reports, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "official_archaeology_disagreement_preserved": true,
+      "recent_excavation_dated": true,
+      "legend_not_upgraded_to_history": true,
+      "current_access_scoped": true,
+      "water_unknown_preserved": true,
+      "camping_permission_unknown_preserved": true,
+      "traveler_report_period_scoped": true,
+      "gallery_context_scoped": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
-    "confidence": "medium",
-    "checked_at": "2026-10-02",
+    "confidence": "high",
+    "checked_at": "2026-10-03",
     "parent_object_ids": [],
-    "merged_aliases": [],
+    "merged_aliases": [
+      "Souvannahkhomkham",
+      "Souvanna Khom Kham",
+      "Suvanna Khom Kham"
+    ],
     "complex_components": [],
     "proposed_split_children": [],
     "evidence_basis": [
-      "project_inventory_crosscheck",
-      "separate_official_or_project_source_listing"
+      "official_provincial_listing",
+      "peer_reviewed_field_survey",
+      "completed_object_research"
     ],
-    "notes": "Отдельная инвентарная сущность: отдельное имя/официальная listing identity; точного или семантического дубля внутри текущего Laos inventory не найдено."
+    "notes": "Один крупный археологический ландшафт с множеством разнесённых храмовых и земляных участков; отдельные Будды и раскопы остаются geo_points/компонентами, а не дублирующими объектами."
   },
   "verification": {
     "dynamic_fields": [
       "access",
       "hours",
       "tickets",
+      "excavation zones",
       "water",
       "overnight",
-      "filming/drone"
+      "filming/drone",
+      "road condition"
     ],
     "verify_before_departure": true
   }

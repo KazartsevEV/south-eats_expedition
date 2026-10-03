@@ -138,16 +138,24 @@ def write_mirror(source_url: str, source_page: str | None, output: Path):
             except EOFError:
                 pass
             img = ImageOps.exif_transpose(src)
+            source_width, source_height = img.size
             img.thumbnail(MIRROR_MAX_SIZE, Image.Resampling.LANCZOS)
             if img.mode not in {"RGB", "RGBA"}:
                 if "A" in img.getbands():
                     img = img.convert("RGBA")
                 else:
                     img = img.convert("RGB")
+            mirror_width, mirror_height = img.size
             output.parent.mkdir(parents=True, exist_ok=True)
             tmp = output.with_suffix(".tmp.webp")
             img.save(tmp, "WEBP", quality=WEBP_QUALITY, method=6)
             tmp.replace(output)
+            return {
+                "source_width": source_width,
+                "source_height": source_height,
+                "width": mirror_width,
+                "height": mirror_height,
+            }
     except (UnidentifiedImageError, OSError) as exc:
         raise RuntimeError(f"cannot decode image: {exc}") from exc
 
@@ -181,11 +189,24 @@ def main():
         mirror_path = CDN / mirror_rel
         required_files.add(mirror_path)
 
+        mirror_info = None
         if not mirror_path.exists() or mirror_path.stat().st_size < 256:
             try:
-                write_mirror(source_url, media.get("source_page"), mirror_path)
+                mirror_info = write_mirror(source_url, media.get("source_page"), mirror_path)
             except Exception as exc:
                 failures.append(f"{media_id}: {source_url}: {exc}")
+                continue
+        else:
+            try:
+                with Image.open(mirror_path) as existing:
+                    mirror_info = {
+                        "source_width": None,
+                        "source_height": None,
+                        "width": existing.width,
+                        "height": existing.height,
+                    }
+            except Exception as exc:
+                failures.append(f"{media_id}: cannot inspect existing mirror: {exc}")
                 continue
 
         media["mirror_asset"] = mirror_rel
@@ -195,6 +216,7 @@ def main():
             "max_height": MIRROR_MAX_SIZE[1],
             "quality": WEBP_QUALITY,
             "derived_from": source_url,
+            **(mirror_info or {}),
         }
         dump(media_path, media)
         mirror_rows.append({

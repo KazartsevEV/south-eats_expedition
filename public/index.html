@@ -726,19 +726,20 @@ async function hydratePreview(card,o){
   var box=card.querySelector('.preview');
   if(!box)return;
   var local=previewPath(o);
-  if(!local)return;
-  var imageURL=previewURL(local);
   var m=o&&o.cover_media_id?await media(o.cover_media_id):null;
-  var fullURL=mirroredMediaURL(m)||imageURL;
+  var mirrorURL=mirroredMediaURL(m);
+  var fallbackURL=previewURL(local);
+  var imageURL=mirrorURL||fallbackURL;
+  if(!imageURL)return;
   var im=document.createElement('img');
   im.loading='lazy';
   im.alt=o.title||'';
   im.src=imageURL;
-  im.setAttribute('data-lightbox-url',fullURL);
+  im.setAttribute('data-lightbox-url',mirrorURL||imageURL);
   im.setAttribute('data-lightbox-source',m&&m.source_page||'');
   im.setAttribute('data-lightbox-caption',o.title||'');
   im.style.cursor='zoom-in';
-  im.onerror=function(){im.remove()};
+  im.onerror=function(){if(fallbackURL&&im.src!==fallbackURL)im.src=fallbackURL;else im.remove()};
   box.prepend(im);
 }
 function objectCard(o){
@@ -1117,9 +1118,13 @@ function renderClass(id,cc){
 }
 function narrativeHTML(n){
   var labels={overview:'Обзор',history:'История',culture:'Культура',geography:'География',geology:'Геология',ethnography:'Этнография',myths_beliefs:'Мифы и поверья'};
+  var typeLabels={documented_history:'Документировано',local_tradition:'Местная традиция',legend:'Легенда',modern_tourist_story:'Современный пересказ'};
   return (n&&n.sections||[]).map(function(s){
     var body='';
-    if(Array.isArray(s.content))body=s.content.map(function(x){return '<p>'+(x&&x.type?'<b>'+esc(x.type)+'</b> ':'')+esc(x&&x.text!=null?x.text:x)+'</p>'}).join('');
+    if(Array.isArray(s.content))body=s.content.map(function(x){
+      var label=x&&x.type&&typeLabels[x.type]?'<b>'+esc(typeLabels[x.type])+':</b> ':'';
+      return '<p>'+label+esc(x&&x.text!=null?x.text:x)+'</p>';
+    }).join('');
     else body='<p>'+esc(s.content||'')+'</p>';
     return '<section class="copy-section"><h2>'+esc(labels[s.section_id]||s.section_id)+'</h2>'+body+'</section>';
   }).join('');
@@ -1149,7 +1154,7 @@ async function renderObject(id){
   var d=await detail(id);
   if(!d){view.innerHTML='<div class="error">Объект не найден: '+esc(id)+'</div>';return}
   var o=state.objects.find(function(x){return x.id===id})||{},cc=ccOf(id),c=cname(cc),cover=await media(d.media&&d.media.cover_id),g=await galleryHTML(d.media&&d.media.gallery_ids),s=await sourceHTML(d.freshness&&d.freshness.source_refs),v=d.visit||{},geoCtx=objectGeoContext(d,o,cc);
-  var heroPreview=previewURL((d.media&&d.media.preview_asset)||previewPath(o)),heroFull=mirroredMediaURL(cover)||heroPreview,heroSource=(cover&&cover.source_page)||'';
+  var heroFallback=previewURL((d.media&&d.media.preview_asset)||previewPath(o)),heroFull=mirroredMediaURL(cover),heroImage=heroFull||heroFallback,heroSource=(cover&&cover.source_page)||'';
   var acc=(v.access_options||[]).map(function(a){
     var legs=(a.legs||[]).map(function(l){return l.notes||[l.mode,l.distance_km!=null?l.distance_km+' км':'',l.duration_min!=null?l.duration_min+' мин':''].filter(Boolean).join(' · ')}).filter(Boolean).join(' ');
     return '<p><b>'+esc((a.modes||[]).join(' + ')||a.id||'Маршрут')+'</b> — '+esc(legs||'детали уточняются')+'</p>';
@@ -1160,7 +1165,7 @@ async function renderObject(id){
   (geoCtx.trail||[]).forEach(function(g){objectCrumbs.push({label:g.name||g.id,hash:'#/region/'+g.id})});
   objectCrumbs.push({label:d.names&&d.names.primary||o.title||id});
   view.innerHTML=breadcrumb(objectCrumbs)+
-    '<div class="split"><div><div class="object-hero">'+(heroPreview?'<img src="'+esc(heroPreview)+'" data-lightbox-url="'+esc(heroFull||'')+'" data-lightbox-source="'+esc(heroSource)+'" data-lightbox-caption="'+esc(d.names&&d.names.primary||'')+'" alt="'+esc(d.names&&d.names.primary||'')+'">':(mirroredMediaURL(cover)?'<img src="'+esc(mirroredMediaURL(cover))+'" data-lightbox-url="'+esc(mirroredMediaURL(cover))+'" data-lightbox-source="'+esc(cover.source_page||'')+'" data-lightbox-caption="'+esc(d.names&&d.names.primary||'')+'" alt="'+esc(d.names&&d.names.primary||'')+'">':'<div class="preview-placeholder">Локальный preview/cover ещё не опубликован в текущем CDN.</div>'))+'</div>'+
+    '<div class="split"><div><div class="object-hero">'+(heroImage?'<img src="'+esc(heroImage)+'" data-lightbox-url="'+esc(heroFull||heroImage)+'" data-lightbox-source="'+esc(heroSource)+'" data-lightbox-caption="'+esc(d.names&&d.names.primary||'')+'" alt="'+esc(d.names&&d.names.primary||'')+'">':'<div class="preview-placeholder">Зеркальный media-файл и fallback preview ещё не опубликованы в текущем CDN.</div>')+'</div>'+
     '<div class="object-main"><div class="eyebrow">'+esc(className(d.classification&&d.classification.class_id))+'</div><h1>'+esc(d.names&&d.names.primary||o.title||id)+'</h1><p class="lead">'+esc(d.summary&&d.summary.narrow||'')+'</p>'+
     '<div class="kv"><div><small>GPS</small>'+esc(coords(d.geo&&d.geo.primary_location))+'</div><div><small>Высота</small>'+esc(elevation(d.geo&&d.geo.object_elevation))+'</div><div><small>Доступ</small>'+esc(access(v))+'</div><div><small>Ночёвка</small>'+esc(v.overnight&&v.overnight.status||'—')+'</div></div>'+
     narrativeHTML(d.narrative)+

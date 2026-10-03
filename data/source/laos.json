@@ -21884,87 +21884,479 @@
       },
       {
         "name": "Tham Kao Rao Cave",
-        "class": "inventory",
+        "class": "nature",
         "interest": [
           "cave",
-          "nature"
+          "nature",
+          "karst",
+          "khmu",
+          "ethnography",
+          "bats",
+          "cave_fauna"
         ],
-        "why_go": "Доступная карстовая пещера района Vieng Phoukha; Tourism Laos относит её к заметным пещерным объектам северного Лаоса.",
+        "why_go": "Тхам-Као-Рао — крупная карстовая пещера у кхмуской деревни Нам-Энг в районе Вьенг-Пхукха. Здесь есть большие залы со сталактитами и натёками, летучие мыши и собственная местная традиция: перед входом проводник совершает обряд для духа пещеры. Современные отзывы показывают, что пещера остаётся довольно дикой — освещение может не работать, а дальше первых оборудованных метров нужен хороший собственный свет.",
         "traveler_card": {
           "location": {
-            "region": "Луангнамтха / Нам-Ха",
-            "nearest_hub": "Vieng Phoukha",
+            "region": "Луангнамтха / Вьенг-Пхукха / Нам-Энг",
+            "nearest_hub": "Вьенг-Пхукха",
             "languages_spoken": [
               "лаосский",
-              "английский — ограниченно в туристической инфраструктуре"
+              "кхму",
+              "английский — ограниченно у части проводников"
             ],
             "coordinates": {
-              "lat": null,
-              "lon": null,
-              "elevation_m": null
+              "lat": 20.7251,
+              "lon": 101.1541,
+              "elevation_m": 729
             },
-            "coordinate_type": null,
-            "accuracy": "unknown",
-            "elevation_accuracy": "unknown",
-            "coordinates_checked_at": null,
-            "geo_points": []
+            "coordinate_type": "cave_entrance",
+            "accuracy": "medium",
+            "elevation_accuracy": "medium",
+            "coordinate_source": {
+              "type": "academic",
+              "title": "Cyrtodactylus wayakonei — type locality at Kao Rao Cave",
+              "publisher": "The Reptile Database",
+              "url": "https://reptile-database.reptarium.cz/Cyrtodactylus/wayakonei?search_param=%28%28taxon%3D%27Gekkonidae%27%29%29",
+              "language": "en",
+              "authority": "high",
+              "used_for": [
+                "Kao Rao Cave locality coordinates",
+                "elevation around cave entrance"
+              ],
+              "accessed": "2026-10-03",
+              "notes": "Type locality is given as Kao Rao Cave near Ban Nam Eng, 20.7251 N, 101.1541 E, about 729 m."
+            },
+            "object_elevation": {
+              "representative_m": 729,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "medium",
+              "source": {
+                "type": "academic",
+                "title": "Cyrtodactylus wayakonei — type locality at Kao Rao Cave",
+                "publisher": "The Reptile Database",
+                "url": "https://reptile-database.reptarium.cz/Cyrtodactylus/wayakonei?search_param=%28%28taxon%3D%27Gekkonidae%27%29%29",
+                "language": "en",
+                "authority": "high",
+                "accessed": "2026-10-03",
+                "used_for": [
+                  "Kao Rao Cave entrance elevation"
+                ]
+              },
+              "checked_at": "2026-10-03",
+              "notes": "Около 729 м — опубликованная высота типового местонахождения у входа в пещеру; внутри системы отметка меняется."
+            },
+            "coordinates_checked_at": "2026-10-03",
+            "geo_points": [],
+            "elevation_source": {
+              "type": "academic",
+              "title": "Cyrtodactylus wayakonei — type locality at Kao Rao Cave",
+              "publisher": "The Reptile Database",
+              "url": "https://reptile-database.reptarium.cz/Cyrtodactylus/wayakonei?search_param=%28%28taxon%3D%27Gekkonidae%27%29%29",
+              "language": "en",
+              "authority": "high",
+              "used_for": [
+                "elevation around cave entrance"
+              ],
+              "accessed": "2026-10-03",
+              "notes": "Type locality elevation about 729 m."
+            }
           },
           "logistics": {
-            "access": "Инвентарная карточка: существование объекта подтверждено официальным Tourism Laos; точный самостоятельный доступ будет проверен на объектном QA.",
-            "public_transport": null,
-            "last_mile": null,
-            "typical_visit_hours": null,
-            "permit_or_guide": null,
-            "mobility_notes": null,
-            "modes": {},
-            "water": "Не исследовано на инвентарном проходе.",
-            "overnight_and_camping": "Не исследовано на инвентарном проходе.",
-            "self_guided_default": null,
-            "travel_model": "предварительный инвентарь перед полным объектным QA"
+            "access": "Из Луангнамтхи ехать на юг по дороге R3 в сторону Вьенг-Пхукха. Старый проектный источник даёт около 48 км до пещерного комплекса. У Нам-Энг есть указатель на Као-Рао; последние сотни метров идут к подножию известнякового массива. В 2024 году путешественник доехал сюда из Луангнамтхи на мотоцикле примерно за полтора часа.",
+            "public_transport": "Надёжного прямого рейса именно к входу в пещеру не подтверждено. Реалистичный самостоятельный вариант — мотоцикл, машина или частный водитель по R3; общественный транспорт можно рассматривать только до Вьенг-Пхукха или деревень на трассе с дальнейшей организацией последнего участка.",
+            "last_mile": "По старым описаниям пещера находится примерно в 300 м от основной дороги и около 1–1,5 км от деревни Нам-Энг. На месте ориентироваться по указателю и тропе к известняковому массиву; точный нынешний метраж благоустроенного подхода не опубликован.",
+            "typical_visit_hours": [
+              1,
+              2
+            ],
+            "permit_or_guide": "Современный отзыв 2025 года показывает, что отдельные посетители заходят самостоятельно, но старый официальный формат предусматривал деревенского проводника и прямо требовал держаться с проводником. Для глубокого прохода местный проводник разумнее считать нормой, особенно при неработающем освещении.",
+            "mobility_notes": "Первые участки местами оборудованы, но дальше поверхность влажная и скользкая. Старый маршрут оценивал пещеру как лёгкую или средней сложности, без обязательного ползания.",
+            "terrain_and_movement": "Темнота, влажный известняк, скользкие участки и большие подземные объёмы. В 2024 году электрическое освещение не работало; собственный основной и резервный свет обязателен.",
+            "modes": {
+              "public_transport": "Прямой подтверждённый рейс к пещере не найден.",
+              "taxi_ridehail": "Городские приложения такси на этом участке не считать надёжным вариантом; частного водителя лучше искать заранее.",
+              "car": "По R3 из Луангнамтхи или Вьенг-Пхукха до района Нам-Энг, затем короткий подъезд/подход к пещере.",
+              "moped": "Рабочий самостоятельный вариант по R3; в дождь учитывать скользкие обочины и последний грунтовый участок.",
+              "motorcycle": "Наиболее практичный самостоятельный вариант; отзыв ноября 2024 года даёт около 1,5 часа от Луангнамтхи.",
+              "walking": "От района Нам-Энг к входу — короткий лесной подход; внутри ходьба по влажному камню и местами неровному полу."
+            },
+            "water": "Надёжной питьевой точки у самого входа не подтверждено. На старом организованном маршруте воду выдавал оператор; самостоятельному посетителю лучше брать запас из Вьенг-Пхукха или Луангнамтхи.",
+            "overnight_and_camping": "Свободный кемпинг у пещеры не подтверждён. Старые путеводители упоминали проживание в семье в Нам-Энг, но актуальность этой услуги на 2026 год не проверена; для надёжной ночёвки лучше рассчитывать на Вьенг-Пхукха или Луангнамтху.",
+            "access_requirements": "Не рассчитывать на стационарный свет. Иметь как минимум два независимых источника света; глубокий проход не считать обычной размеченной прогулкой.",
+            "self_guided_default": true,
+            "travel_model": "самостоятельно до входа; для глубокого прохода лучше местный проводник",
+            "access_options": [
+              {
+                "id": "luang_namtha_to_kao_rao",
+                "origin": "Луангнамтха",
+                "modes": [
+                  "motorcycle",
+                  "car"
+                ],
+                "checked_at": "2026-10-03",
+                "source_refs": [
+                  "src_990456",
+                  "src_990458"
+                ],
+                "legs": [
+                  {
+                    "mode": "motorcycle",
+                    "distance_km": 48,
+                    "duration_min": 90,
+                    "surface": "paved",
+                    "condition": "Основной участок идёт по R3; состояние короткого подъезда к пещере отдельно не подтверждено.",
+                    "seasonality": "В сезон дождей последний участок и тропа могут быть скользкими.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Ехать по R3 к Нам-Энг; искать указатель Kao Rao Cave.",
+                    "fords": 0,
+                    "notes": "48 км — проектная привязка пещерного комплекса; около 1,5 часа на мотоцикле — наблюдение путешественника ноября 2024 года."
+                  }
+                ]
+              },
+              {
+                "id": "nam_eng_to_cave",
+                "origin": "Нам-Энг / указатель на Као-Рао",
+                "modes": [
+                  "walking"
+                ],
+                "checked_at": "2026-10-03",
+                "source_refs": [
+                  "src_990456",
+                  "src_990458",
+                  "src_990455"
+                ],
+                "legs": [
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "trail",
+                    "condition": "Короткая лесная тропа к известняковому массиву; у входа и внутри местами мокро и скользко.",
+                    "seasonality": "После дождей влажность и скользкость выше.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": {
+                      "lat": 20.7251,
+                      "lon": 101.1541,
+                      "coordinate_type": "cave_entrance",
+                      "accuracy": "medium"
+                    },
+                    "navigation": "Держаться подхода к пещере; старый деревенский маршрут проходил через лес и священный источник.",
+                    "fords": null,
+                    "notes": "Старые источники расходятся в метраже: около 300 м от основной дороги и примерно 1–1,5 км от деревни."
+                  }
+                ]
+              }
+            ],
+            "water_structured": {
+              "at_object": null,
+              "quality": "unknown",
+              "last_reliable_point": "Вьенг-Пхукха / Луангнамтха",
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "spring",
+                  "name": "священный источник у маршрута Нам-Энг",
+                  "potability": "unknown",
+                  "notes": "Источник упомянут в старом деревенском маршруте; пригодность воды для питья не подтверждена."
+                }
+              ],
+              "notes": "Для самостоятельного посещения запас питьевой воды брать заранее.",
+              "source_refs": [
+                "src_990455"
+              ]
+            },
+            "supplies": {
+              "status": "not_confirmed_at_object",
+              "summary": "Работающий магазин, кафе или постоянный киоск у входа не подтверждены. Еду, воду и батарейки лучше купить до выезда.",
+              "poi_ids": [],
+              "source_refs": [
+                "src_990458"
+              ]
+            },
+            "overnight": {
+              "status": "unclear",
+              "summary": "Свободный лагерь у пещеры не подтверждён. Исторически Нам-Энг предлагала проживание в семье, но актуальность на 2026 год не проверена.",
+              "source_refs": [
+                "src_000439",
+                "src_990457"
+              ]
+            }
           },
           "climate": {
-            "best_period": null,
-            "heat_rain_notes": null,
-            "site_specific_notes": null
+            "best_period": "Сухие месяцы удобнее для подъезда и ходьбы по пещере. В сезон дождей влажность выше, камень скользит сильнее, а подход по лесу становится тяжелее.",
+            "heat_rain_notes": "Внутри температура стабильнее наружной, но влажность высокая круглый год.",
+            "site_specific_notes": "Сезон влияет прежде всего на дорогу и скользкость пола; сама пещера остаётся тёмной и влажной независимо от времени года."
           },
           "operations": {
-            "status": null,
+            "status": "open",
             "hours": null,
-            "ticket": null,
-            "closure_notes": "Актуальные часы, цена и режим доступа не нормализованы; проверить при объектном QA.",
-            "last_verified": "2026-10-02",
-            "official_url": "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/"
+            "ticket": "Официальный актуальный тариф 2026 года не найден. Последнее датированное наблюдение: в марте 2025 года с посетителя взяли 10 000 кип.",
+            "closure_notes": "Постоянные часы кассы не подтверждены. В ноябре 2024 года касса была без сотрудника, освещение не работало, туалет был сломан; в марте 2025 года билет продавал человек, приехавший к пещере на мотоцикле.",
+            "last_verified": "2026-10-03",
+            "official_url": "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/",
+            "status_snapshot": {
+              "as_of": "2026-10-03",
+              "summary": "Свежие отзывы 2024–2025 годов подтверждают, что пещеру продолжают посещать, но инфраструктура может работать нерегулярно.",
+              "source_refs": [
+                "src_990458"
+              ]
+            },
+            "source_refs": [
+              "src_990458",
+              "src_000439"
+            ]
           },
           "safety": {
-            "main_risks": [],
-            "sensitive_areas": []
+            "main_risks": [
+              "полная темнота при неработающем стационарном освещении",
+              "влажный и скользкий известняк",
+              "потеря направления в глубокой части",
+              "летучие мыши и другая пещерная фауна — не беспокоить",
+              "инфраструктура у входа может быть частично неработоспособна"
+            ],
+            "sensitive_areas": [
+              "не трогать и не ломать натёчные образования",
+              "не оставлять надписей на стенах",
+              "уважать местный обряд у входа, если его проводит деревенский проводник"
+            ],
+            "confidence": "high",
+            "source_refs": [
+              "src_990455",
+              "src_990458",
+              "src_000439"
+            ],
+            "checked_at": "2026-10-03"
           },
           "media": {
-            "photo_suitability_5": null,
-            "video_suitability_5": null,
+            "photo_suitability_5": 5,
+            "video_suitability_5": 4,
+            "best_light": "У входа лучше дневной рассеянный свет. Внутри естественного света почти нет, поэтому время суток там мало что меняет.",
             "visual_scouting": {
-              "best_time": null,
-              "best_weather_light": null,
-              "viewpoints_for_photo_video": [],
-              "seasonal_visuals": [],
-              "video_activity": [],
-              "useful_equipment": []
+              "best_time": "днём для входа и леса; внутри — без привязки ко времени суток",
+              "best_weather_light": "В сухую погоду проще подход. После дождя лес насыщеннее, но внутри и на подходе заметно скользче.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_kao_rao_entrance",
+                  "name": "Вход в Као-Рао",
+                  "description": "Точка у основания известнякового массива, где дневной свет быстро переходит в тёмную галерею.",
+                  "coordinates": {
+                    "lat": 20.7251,
+                    "lon": 101.1541,
+                    "elevation_m": 729
+                  },
+                  "access": "По короткой тропе от района Нам-Энг / дороги R3.",
+                  "view": {
+                    "description": "Известняковый портал, лес у входа и первые натёчные формы."
+                  },
+                  "best_time": "днём",
+                  "best_weather_light": "Рассеянный свет лучше показывает одновременно лес и детали входа.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "помещает портал и окружающий лес в один кадр"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "удобен для натёков и масштаба с человеком"
+                    },
+                    {
+                      "type": "phone",
+                      "why": "подходит для входной части при хорошем внешнем свете"
+                    }
+                  ],
+                  "source": {
+                    "type": "academic",
+                    "title": "Cyrtodactylus wayakonei — type locality at Kao Rao Cave",
+                    "publisher": "The Reptile Database",
+                    "url": "https://reptile-database.reptarium.cz/Cyrtodactylus/wayakonei?search_param=%28%28taxon%3D%27Gekkonidae%27%29%29",
+                    "language": "en",
+                    "authority": "high",
+                    "accessed": "2026-10-03",
+                    "used_for": [
+                      "visual viewpoint GPS"
+                    ]
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "В сухой сезон подход проще и меньше грязи.",
+                "В сезон дождей лес у входа ярче, но пол и камни внутри становятся опаснее."
+              ],
+              "video_activity": [
+                "переход от лесного входа к полной темноте",
+                "масштаб крупных залов и натёчных колонн",
+                "летучие мыши — только с дистанции и без направленного беспокойства"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "полезен в крупных подземных залах"
+                },
+                {
+                  "type": "standard",
+                  "why": "показывает детали сталактитов и кальцитовых натёков без сильного искажения"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "удобна на влажных и неровных участках"
+                },
+                {
+                  "type": "phone",
+                  "why": "достаточен у входа, но в глубине зависит от собственного света"
+                }
+              ]
             },
-            "drone": null,
-            "filming_restrictions": null
+            "drone": {
+              "visual_value": "С воздуха можно показать известняковый массив и лес вокруг Нам-Энг; саму подземную систему дрон не показывает.",
+              "legal_status": "regulated",
+              "permit_required": "Действуют общие правила Управления гражданской авиации Лаоса. Отдельный режим запуска именно у Као-Рао в проверенных источниках не найден; перед запуском нужно уточнить местные ограничения и согласие владельца/общины на площадку.",
+              "restrictions": [
+                "не выше 120 м над землёй",
+                "полёт только в прямой видимости",
+                "для ограниченного и контролируемого воздушного пространства требуется согласование",
+                "для взлёта и посадки на частной или общинной территории нужно разрешение"
+              ],
+              "source": {
+                "type": "government_official",
+                "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+                "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+                "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+                "language": "en",
+                "authority": "high",
+                "accessed": "2026-09-29",
+                "used_for": [
+                  "drone rules"
+                ]
+              },
+              "checked_at": "2026-10-03"
+            },
+            "filming_restrictions": "Перед съёмкой жителей Нам-Энг и ритуала у входа получать согласие. Отдельных правил коммерческой съёмки внутри пещеры в проверенных источниках нет."
           },
           "annotation": {
-            "narrative": "Доступная карстовая пещера района Vieng Phoukha; Tourism Laos относит её к заметным пещерным объектам северного Лаоса.",
+            "canonical_story_from_sections": true,
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Доступная карстовая пещера района Vieng Phoukha; Tourism Laos относит её к заметным пещерным объектам северного Лаоса."
+                "content": "Као-Рао — не короткий грот у дороги, а часть крупного пещерного комплекса в известняковом массиве возле Нам-Энг. Старые проектные материалы описывали здесь три пещеры, две из которых были доступны посетителям; сухая и водная ветви тянутся примерно на 3 км каждая. Для обычного посещения открыта лишь часть системы. Внутри — крупные залы, сталактиты, сталагмиты и старые кальцитовые натёки; современный путешественник в 2025 году провёл под землёй около двух часов и так и не был уверен, дошёл ли до конца доступного хода.",
+                "source_refs": [
+                  "src_990456",
+                  "src_990458",
+                  "src_903282"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Туризм вокруг Као-Рао развивался вместе с деревней Нам-Энг. Исследование местного туризма пишет, что в начале 2000-х посещения пещеры были неорганизованными и быстро сошли на нет. В 2006–2007 годах местные власти заново выбрали Нам-Энг как туристический узел и начали развивать пещеру, тропы и базовую инфраструктуру."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "К 2008 году проект Большого Меконга уже рассматривал комплекс Нам-Энг как отдельный объект на коридоре Луангнамтха—Вьенг-Пхукха. В документах того времени фиксировались три пещеры, близость к дороге и участие кхмуской деревни в туризме. Нынешние отзывы показывают, что объект сохранился, но инфраструктура работает неровно: в 2024 году посетитель писал о неработающем освещении и сломанном туалете."
+                  }
+                ],
+                "source_refs": [
+                  "src_990457",
+                  "src_990456",
+                  "src_990458"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "Пещера встроена в деревенскую систему экотуризма, а не существует отдельно от Нам-Энг. Старый маршрут Vieng Phoukha Ecoguide Service включал встречу с местным проводником, лес, священный источник, обед, саму пещеру и оплату услуг деревне. Доход распределялся через работу местных проводников и приготовление еды. Такой формат важен для понимания места: Као-Рао — одновременно природный объект и часть кхмуского культурного ландшафта.",
+                "source_refs": [
+                  "src_990455",
+                  "src_990457",
+                  "src_990463"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Пещера находится возле деревни Нам-Энг в районе Вьенг-Пхукха, примерно в 48 км к югу от Луангнамтхи. Проектные материалы помещают пещеры у подножия большого известнякового массива; старое описание даёт около 300 м от основной дороги, а современная туристическая сводка — примерно 1,5 км к востоку от Нам-Энг. Опубликованная научная точка у входа — 20.7251, 101.1541, около 729 м над уровнем моря.",
+                "source_refs": [
+                  "src_990456",
+                  "src_990458",
+                  "src_990459"
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "Као-Рао сформирована в карстовом известняке Вьенг-Пхукха. Вода постепенно растворяет породу, расширяет трещины и создаёт галереи и залы; капельная вода затем наращивает сталактиты, сталагмиты и кальцитовые корки. В старом описании доступного участка отдельно отмечались кристаллические отложения на древних натёках и ребристые формы пола — остатки старых карбонатных ванн. У Као-Рао есть и важная биологическая сторона: пещера стала типовым местонахождением нескольких животных, описанных наукой. Здесь найдены геккон Cyrtodactylus wayakonei, паук Mekonglema kaorao, узкоареальные наземные улитки и пещерная многоножка Glyphiulus semicostulifer. Поэтому Као-Рао ценна не только формами карста, но и хорошо документированным пещерным биоразнообразием.",
+                "source_refs": [
+                  "src_000439",
+                  "src_990458",
+                  "src_990456",
+                  "src_990459",
+                  "src_990460",
+                  "src_990461",
+                  "src_990462"
+                ]
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Нам-Энг — кхмуская деревня, которая участвовала в организации посещения пещеры и лесных маршрутов. В исследованиях местного туризма пещера рассматривается вместе с деревенским хозяйством, лесом и ремесленными занятиями, а проводник выступает не как внешний экскурсовод, а как представитель общины. На более поздних маршрутах по Вьенг-Пхукха Као-Рао по-прежнему соединяют с посещением кхмуских деревень вдоль дороги R3.",
+                "source_refs": [
+                  "src_990457",
+                  "src_990455",
+                  "src_990463"
+                ]
+              },
+              {
+                "section_id": "myths_beliefs",
+                "content": [
+                  {
+                    "type": "local_tradition",
+                    "text": "В кхмуской традиции пещеру называют Оунг-Као-Рао. Старый официальный маршрут записывает местное поверье о духе пещеры, который может затуманить человеку зрение и не дать найти выход."
+                  },
+                  {
+                    "type": "documented_ritual_tradition",
+                    "text": "Перед входом деревенский проводник совершал небольшой обряд, чтобы умилостивить духа и попросить безопасного прохода. В стоимость старого маршрута даже входило небольшое подношение духу пещеры. Это хорошо документированная местная практика, а не пересказ туристической легенды без источника."
+                  }
+                ],
+                "source_refs": [
+                  "src_990455"
+                ]
               }
             ]
           },
-          "traveler_reports": {
-            "recurring_issues": []
-          },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "self_guided_visit",
+              "summary": "Март 2025 года: путешественник прошёл пещеру один, использовал несколько источников света и провёл под землёй около двух часов. Большая часть движения была по относительно ровному полу, с отдельными участками лазания и узкими местами. На выходе он заплатил 10 000 кип человеку, который приехал к пещере на мотоцикле.",
+              "observed_period": "2025-03",
+              "source_refs": [
+                "src_990458"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "infrastructure",
+              "summary": "Ноябрь 2024 года: посетитель доехал из Луангнамтхи на мотоцикле примерно за полтора часа. На месте никто не сидел у кассы, туалет был сломан, электрический свет в пещере не работал. Первые примерно 100 м имели хороший проход, дальше стало темнее, влажнее и скользко.",
+              "observed_period": "2024-11",
+              "source_refs": [
+                "src_990458"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "guide",
+              "summary": "Февраль 2023 года: путешественница ходила с местным проводником из Вьенг-Пхукха и оценила доступную глубину примерно в 700 м. Она отдельно отмечала скользкие места, хорошие натёки и то, что проводник принёс нормальные налобные фонари.",
+              "observed_period": "2023-02",
+              "source_refs": [
+                "src_990458"
+              ],
+              "confidence": "medium"
+            }
+          ],
           "accommodation": []
         },
         "sources": [
@@ -21981,42 +22373,347 @@
               "baseline description"
             ],
             "accessed": "2026-10-02"
+          },
+          {
+            "type": "government_official",
+            "title": "Tham Kao Rao Cave — Ecotourism Laos",
+            "publisher": "GMS Sustainable Tourism Development Project in Lao PDR",
+            "url": "https://www.ecotourismlaos.com/activities/act_caves_thamkaorao",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "Khmu name",
+              "cave spirit tradition",
+              "ritual at entrance",
+              "historic guided route",
+              "difficulty",
+              "village benefit"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "project_material",
+            "title": "Developing Tourism in the Greater Mekong Subregion Economic Corridors",
+            "publisher": "Greater Mekong Subregion / Asian Development Bank",
+            "url": "https://www.greatermekong.org/sites/default/files/gms-journal-v4.pdf",
+            "language": "en",
+            "published_at": "2008",
+            "authority": "high",
+            "used_for": [
+              "cave complex scale",
+              "three caves",
+              "two visitor-accessible caves",
+              "3 km dry/wet caves",
+              "48 km south of Luang Namtha",
+              "Khmu village context"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "academic",
+            "title": "Tourism development and local participation study — Nam Eng village",
+            "publisher": "Lincoln University",
+            "url": "https://researcharchive.lincoln.ac.nz/server/api/core/bitstreams/1c396d30-6f97-40ab-9812-f49d0eeaabe7/content",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "Nam Eng tourism history",
+              "2006–2007 redevelopment",
+              "village infrastructure",
+              "community participation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Kao Rao Cave — recent Google reviews aggregation",
+            "publisher": "Wanderlog",
+            "url": "https://wanderlog.com/place/details/331271/kao-rao-cave",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "2023–2025 field observations",
+              "ticket observation",
+              "lighting condition",
+              "surface condition",
+              "travel time"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "academic",
+            "title": "Cyrtodactylus wayakonei",
+            "publisher": "The Reptile Database",
+            "url": "https://reptile-database.reptarium.cz/Cyrtodactylus/wayakonei?search_param=%28%28taxon%3D%27Gekkonidae%27%29%29",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "cave coordinates",
+              "elevation",
+              "type-locality cave fauna"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "academic",
+            "title": "Taxonomic revision of Telemidae from East and Southeast Asia — Mekonglema kaorao",
+            "publisher": "ZooKeys / ScienceDirect mirror",
+            "url": "https://www.sciencedirect.com/org/science/article/pii/S1313298920004991",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "Mekonglema kaorao type locality"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "academic",
+            "title": "Paraboysidia species from Kao Rao Cave",
+            "publisher": "Journal of Conchology",
+            "url": "https://conchsoc.org/sites/default/files/jconch/42/4/2016-42409.pdf",
+            "language": "en",
+            "published_at": "2016",
+            "authority": "high",
+            "used_for": [
+              "cave snail fauna",
+              "independent cave entrance coordinates/elevation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "academic",
+            "title": "Two new species of Glyphiulus from Laos",
+            "publisher": "ZooKeys / Semantic Scholar mirror",
+            "url": "https://pdfs.semanticscholar.org/ab96/80c21975ea72449efb6d5da87124f0c90e8b.pdf",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "Glyphiulus semicostulifer type locality",
+              "cave biodiversity"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Full Day Visit Khmu Town of Vieng Phoukha & Kao Rao Cave",
+            "publisher": "Phou Iu Travel & Ecotourism",
+            "url": "https://phouiu-ecotourism-laos.com/2023/02/20/1-day-easy-trip-luang-namtha-vieng-phoukha/",
+            "language": "en",
+            "published_at": "2023-02-20",
+            "authority": "medium",
+            "used_for": [
+              "recent organized visit context",
+              "R3 and Khmu village linkage"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "Caves — Tham Kao Rao",
+            "publisher": "Tourism Laos",
+            "url": "https://www.tourismlaos.org/caves/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "karst context",
+              "bats and swifts",
+              "regional cave significance"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+            "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+            "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "drone rules"
+            ],
+            "accessed": "2026-09-29"
           }
         ],
         "verification": {
           "dynamic_fields": [
             "access",
             "hours",
-            "tickets",
+            "ticket",
+            "lighting",
+            "guide availability",
             "water",
             "overnight",
-            "filming/drone"
+            "drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Доступная карстовая пещера района Vieng Phoukha; Tourism Laos относит её к заметным пещерным объектам северного Лаоса.",
+        "narrow": "Тхам-Као-Рао — крупная карстовая пещера у деревни Нам-Энг, примерно в 48 км к югу от Луангнамтхи. Внутри — большие известняковые ходы, летучие мыши и богатая пещерная фауна; с пещерой связана кхмуская традиция о духе, который сбивает людей с пути.",
         "qa": {
-          "inventory_review": {
-            "status": "preliminary",
-            "checked_at": "2026-10-02",
-            "notes": "Добавлено на инвентарном проходе из официального Tourism Laos. Полный object QA намеренно не заявлен."
-          },
           "identity_review": {
             "status": "reviewed",
             "identity_status": "distinct",
-            "confidence": "medium",
-            "checked_at": "2026-10-02",
+            "confidence": "high",
+            "checked_at": "2026-10-03",
             "parent_object_ids": [],
-            "merged_aliases": [],
+            "merged_aliases": [
+              "Kao Rao Cave",
+              "Oung Kao Rao"
+            ],
             "complex_components": [],
             "proposed_split_children": [],
             "evidence_basis": [
-              "project_inventory_crosscheck",
-              "separate_official_or_project_source_listing"
+              "official_provincial_listing",
+              "scientific_type_locality",
+              "completed_object_research"
             ],
-            "evidence_urls": [],
-            "notes": "Отдельная инвентарная сущность: отдельное имя/официальная listing identity; точного или семантического дубля внутри текущего Laos inventory не найдено."
+            "evidence_urls": [
+              "https://www.tourismlaos.org/northern-provinces/luang-namtha-province/",
+              "https://www.ecotourismlaos.com/activities/act_caves_thamkaorao"
+            ],
+            "notes": "Одна пещерная достопримечательность у Nam Eng; старые материалы описывают более широкий Nam Eng cave complex из нескольких пещер, но карточка относится к Tham Kao Rao."
+          },
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-03",
+            "notes": "Пользовательский текст переписан на естественный русский; англоязычные названия оставлены только в источниках и служебных полях."
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "scope": "полный объектный QA Tham Kao Rao Cave по стандарту сильных карточек Laos/Cambodia/Brunei",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_substantive": true,
+              "ethnography_substantive": true,
+              "myths_beliefs_substantive": true,
+              "cave_biodiversity": true,
+              "no_narrative_duplication": true
+            },
+            "notes": [
+              "Местное поверье и обряд у входа отделены от документированной истории.",
+              "Старые проектные данные о длине и деревенском маршруте не выдаются за нынешний режим доступа.",
+              "Свежие отзывы 2024–2025 годов используются только как наблюдения о фактическом состоянии инфраструктуры."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "scope": "полная полевая и редакционная перестройка Tham Kao Rao Cave",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_substantive": true,
+              "ethnography_scoped": true,
+              "myths_beliefs_scoped": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_current": true,
+              "water_honest": true,
+              "overnight_honest": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "media_provenance": true,
+              "gallery_min_5": true,
+              "coordinate_scientific_anchor": true,
+              "elevation_scientific_anchor": true,
+              "drone_rule_precision": true
+            }
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "scope": "Tham Kao Rao: identity, GPS/elevation, karst and cave scale, tourism history, Khmu village context, cave-spirit tradition, recent infrastructure, biodiversity, water/overnight, media and drone",
+            "checks": {
+              "narrative_section_sources": true,
+              "coordinate_source_scoped": true,
+              "elevation_source_scoped": true,
+              "historic_route_dated": true,
+              "recent_infrastructure_dated": true,
+              "current_ticket_not_overstated": true,
+              "water_potability_not_invented": true,
+              "camping_permission_not_invented": true,
+              "traveler_reports_period_scoped": true,
+              "local_tradition_labeled": true,
+              "cave_fauna_scientific": true,
+              "gallery_object_specific": true,
+              "drone_rules_official": true
+            }
           }
+        },
+        "illustration": {
+          "static_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/LuangNamtha_ThamKaoRao1_tango7174.jpg",
+          "source_page": "https://commons.wikimedia.org/wiki/File:LuangNamtha_ThamKaoRao1_tango7174.jpg",
+          "provider": "Wikimedia Commons",
+          "license": "reuse_terms_unverified",
+          "artist": "tango7174",
+          "illustration_scope": "object-specific",
+          "last_checked": "2026-10-03",
+          "gallery": [
+            {
+              "static_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/LuangNamtha_ThamKaoRao1_tango7174.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:LuangNamtha_ThamKaoRao1_tango7174.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "reuse_terms_unverified",
+              "artist": "tango7174",
+              "last_checked": "2026-10-03",
+              "subject": "Натёчные образования в Као-Рао"
+            },
+            {
+              "static_url": "https://www.ecotourismlaos.com/images/thamkaorao1.jpg",
+              "source_page": "https://www.ecotourismlaos.com/activities/act_caves_thamkaorao",
+              "provider": "Ecotourism Laos",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-03",
+              "subject": "Као-Рао — вход и деревенский маршрут"
+            },
+            {
+              "static_url": "https://www.ecotourismlaos.com/images/thamkaorao2.jpg",
+              "source_page": "https://www.ecotourismlaos.com/activities/act_caves_thamkaorao",
+              "provider": "Ecotourism Laos",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-03",
+              "subject": "Известняковые формы внутри Као-Рао"
+            },
+            {
+              "static_url": "https://itin-dev.wanderlogstatic.com/freeImage/YR4eEuA3vXi0ojQbSLbfZczrTNnLgSKv",
+              "source_page": "https://wanderlog.com/place/details/331271/kao-rao-cave",
+              "provider": "Wanderlog / user photo",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-03",
+              "subject": "Современный вид пещеры"
+            },
+            {
+              "static_url": "https://itin-dev.wanderlogstatic.com/freeImage/ECpXWTrqy9yWQrHrMxEExF9vUQcjwc4U",
+              "source_page": "https://wanderlog.com/place/details/331271/kao-rao-cave",
+              "provider": "Wanderlog / user photo",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-03",
+              "subject": "Подземный зал Као-Рао"
+            }
+          ]
         }
       },
       {

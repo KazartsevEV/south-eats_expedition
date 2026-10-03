@@ -76,7 +76,7 @@ card["location"] = {
     "elevation_accuracy": "approximate",
     "coordinates_checked_at": CHECKED,
     "coordinate_source": {
-        "type": "map",
+        "type": "map_osm",
         "title": "Tad Saleuy Waterfall — OpenStreetMap node via Mapcarta",
         "publisher": "Mapcarta / OpenStreetMap",
         "url": "https://mapcarta.com/N2499313658",
@@ -133,7 +133,7 @@ card["location"] = {
             "accuracy": "medium",
             "elevation_accuracy": "unknown",
             "coordinate_source": {
-                "type": "map",
+                "type": "map_osm",
                 "title": "Tad Saleuy Waterfall — OpenStreetMap node via Mapcarta",
                 "publisher": "Mapcarta / OpenStreetMap",
                 "url": "https://mapcarta.com/N2499313658",
@@ -596,7 +596,7 @@ card["accommodation"] = []
 existing_sources = [s for s in (obj.get("sources") or []) if isinstance(s, dict)]
 add_sources = [
     {
-        "type": "map",
+        "type": "map_osm",
         "title": "Tad Saleuy Waterfall Map",
         "publisher": "Mapcarta / OpenStreetMap",
         "url": "https://mapcarta.com/N2499313658",
@@ -640,7 +640,7 @@ add_sources = [
         "accessed": CHECKED,
     },
     {
-        "type": "travel_reference",
+        "type": "other",
         "title": "Saleuy Waterfall",
         "publisher": "Discover Laos Today",
         "url": "https://discoverlaos.today/vi/houaphanh-province/thing-to-do/saleuy-waterfall",
@@ -651,7 +651,7 @@ add_sources = [
         "accessed": CHECKED,
     },
     {
-        "type": "institutional",
+        "type": "other",
         "title": "Lao Landscapes and Livelihoods Project — June 2024 Houaphanh field mission",
         "publisher": "World Bank",
         "url": "https://documents1.worldbank.org/curated/en/099082024040022946/pdf/P17055914a75440fd183b9144ebc6b2e704.pdf",

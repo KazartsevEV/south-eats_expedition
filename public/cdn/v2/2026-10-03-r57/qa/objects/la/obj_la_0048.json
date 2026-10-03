@@ -1,44 +1,72 @@
 {
   "object_id": "obj_la_0048",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-04",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-04",
+    "scope": "Heuan Hin: identity, GPS/elevation, dating conflict, 1642/1907 documentation, materials/unfinished architecture, living Buddhist reuse, national heritage 2026, festival, road access, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "jayavarman_resthouse_claim_attributed": true,
+      "early_11c_architectural_interpretation_attributed": true,
+      "original_religious_function_uncertain": true,
+      "modern_buddhist_reuse_separated": true,
+      "national_heritage_2026_official": true,
+      "festival_dates_dynamic": true,
+      "old_road_report_period_scoped": true,
+      "water_quality_unknown_preserved": true,
+      "camping_permission_unknown_preserved": true,
+      "gallery_sources_traced": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
-    "confidence": "medium",
-    "checked_at": "2026-10-02",
+    "confidence": "high",
+    "checked_at": "2026-10-04",
     "parent_object_ids": [],
-    "merged_aliases": [],
+    "merged_aliases": [
+      "Heuan Hin",
+      "Huan Hin",
+      "Heun Hin",
+      "Phasathin"
+    ],
     "complex_components": [],
     "proposed_split_children": [],
     "evidence_basis": [
-      "project_inventory_crosscheck",
-      "separate_official_or_project_source_listing"
+      "official_national_heritage_listing",
+      "academic_conservation_study",
+      "historical_architectural_analysis"
     ],
-    "notes": "Отдельная инвентарная сущность: отдельное имя/официальная listing identity; точного или семантического дубля внутри текущего Laos inventory не найдено."
+    "notes": "Отдельный кхмерский археологический памятник в Xayphouthong; не сливать с That Phon и другими объектами Savannakhet."
   },
   "verification": {
     "dynamic_fields": [
-      "access",
       "hours",
-      "tickets",
+      "ticket",
+      "road condition",
+      "festival dates",
+      "heritage access restrictions",
       "water",
       "overnight",
       "filming/drone"

@@ -238,15 +238,9 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 'use strict';
 
 var CDN='./cdn/v2/';
-var COUNTRY={
-  bn:{flag:'🇧🇳',name:'Бруней',en:'Brunei'},kh:{flag:'🇰🇭',name:'Камбоджа',en:'Cambodia'},la:{flag:'🇱🇦',name:'Лаос',en:'Laos'},
-  id:{flag:'🇮🇩',name:'Индонезия',en:'Indonesia'},my:{flag:'🇲🇾',name:'Малайзия',en:'Malaysia'},mm:{flag:'🇲🇲',name:'Мьянма',en:'Myanmar'},
-  th:{flag:'🇹🇭',name:'Таиланд',en:'Thailand'},vn:{flag:'🇻🇳',name:'Вьетнам',en:'Vietnam'},ph:{flag:'🇵🇭',name:'Филиппины',en:'Philippines'},
-  sg:{flag:'🇸🇬',name:'Сингапур',en:'Singapore'},tl:{flag:'🇹🇱',name:'Тимор-Лешти',en:'Timor-Leste'}
-};
 var state={
   release:null,latest:null,manifest:null,objects:[],classes:[],tags:[],geo:[],geoById:{},seaReference:null,
-  classById:{},detail:new Map(),media:new Map(),countryData:new Map(),geoDetail:new Map(),boundary:new Map(),mapsIndex:null,mapInstances:[]
+  classById:{},detail:new Map(),media:new Map(),countryData:new Map(),geoDetail:new Map(),boundary:new Map(),mapsIndex:null,mapInstances:[],renderer:null
 };
 var view=document.getElementById('view');
 
@@ -287,7 +281,17 @@ document.getElementById('lightboxStage').addEventListener('wheel',function(e){
 },{passive:false});
 function ccOf(id){var m=String(id||'').match(/^obj_([a-z]{2})_/);return m?m[1]:''}
 function mediaCC(id){var m=String(id||'').match(/^med_([a-z]{2})_/);return m?m[1]:''}
-function cname(cc){return COUNTRY[cc]||{flag:'',name:cc.toUpperCase()}}
+function cname(cc){
+  var code=String(cc||'').toUpperCase();
+  var rows=(state.seaReference&&state.seaReference.countries)||[];
+  var row=rows.find(function(x){return String(x.country_code||'').toUpperCase()===code});
+  if(!row)return{flag:'',name:code,en:code};
+  return{
+    flag:row.flag||'',
+    name:row.name_ru||row.name_en||row.name_local||code,
+    en:row.name_en||row.name_ru||row.name_local||code
+  };
+}
 function className(id){return state.classById[id]||id||'Без класса'}
 function coords(c){return c&&c.lat!=null&&c.lon!=null?Number(c.lat).toFixed(5)+', '+Number(c.lon).toFixed(5):'GPS уточняется'}
 function validCoord(c){return c&&Number.isFinite(Number(c.lat))&&Number.isFinite(Number(c.lon))}
@@ -335,92 +339,19 @@ async function countryBoundary(cc){
   if(!state.boundary.has(cc))state.boundary.set(cc,maybe(CDN+state.release+'/geo/geometries/geo_'+cc+'.geojson'));
   return state.boundary.get(cc);
 }
-var FIELD_LABELS={
-  summary:'Кратко',scope:'Область',scope_note:'Границы применимости',items:'Составы и правовые риски',offence:'Состав / запрещённое действие',what_counts:'Что может подпадать под норму',penalty:'Наказание',nuance:'Важное уточнение',rainfall_pattern:'Распределение осадков',floods:'Наводнения и подтопления',
-  risk_context:'Что учитывать',live_monitoring:'Оперативный мониторинг',dengue_reference_2022:'Денге: справочный фон 2022 года',
-  incidence_per_100k:'Случаев на 100 тыс.',interpretation:'Как понимать данные',crime:'Преступность',dataset_scope:'Территориальная основа',
-  public_transport:'Общественный транспорт',dynamic_status:'Текущий статус',water_context:'Морские условия',tides:'Приливы и отливы',
-  official_source:'Официальный источник',turtle_context:'Морские черепахи',protected_marine:'Морская охраняемая территория',
-  temperature_context:'Температура',documented_biodiversity:'Биоразнообразие',dangerous_animals:'Опасные животные',poisonous_plants:'Ядовитые растения',
-  malaria:'Малярия',mountain_weather:'Горная погода',mount_kinabalu:'Восхождение на Кинабалу',danum:'Долина Данум',kinabatangan:'Кинабантанган',
-  expedition:'Экспедиционные риски',security_advisory:'Предупреждения безопасности',lahad_datu_danum:'Лахад-Дату → Данум',
-  sandakan_kinabatangan:'Сандакан → Кинабантанган',expedition_note:'Примечание по логистике',delta:'Дельта',sarawak_delta:'Дельта Саравака',
-  niah:'Ниа',forest:'Лес',wilderness:'Дикая местность',park_access:'Доступ в парк',kelabit:'Келабиты',
-  dominant_expedition_risks:'Основные экспедиционные риски',air:'Авиация',road:'Дорога',marine:'Море',fauna_and_flora:'Фауна и флора',
-  documented_examples:'Характерные виды',protected_status:'Охранный статус',weather:'Морская погода',marine_life:'Морские обитатели',
-  gateway:'Транспортный узел',hydrography:'Гидрография',royal_belum:'Royal Belum',documented_fauna:'Отмеченная фауна',flora:'Флора',
-  fuel:'Топливо',sipadan:'Сипадан',tun_sakaran:'Tun Sakaran',terrestrial:'Наземная природа',marine_access:'Доступ по морю',
-  rungus:'Рунгусы',turtle_islands:'Turtle Islands',annual_reference:'Годовая климатическая справка',annual_reference_status:'Статус годовой нормы',
-  mean_annual_temperature_c:'Среднегодовая температура, °C',annual_precipitation_mm:'Осадки за год, мм',annual_precipitation_uncertainty_mm:'Неопределённость осадков, мм',
-  data_basis:'Основа данных',caveat:'Ограничения данных',best_period:'Предпочтительный период',role:'Роль в логистике',
-  rail:'Железная дорога',water:'Водный транспорт',police_district_2023:'Данные полицейского округа за 2023 год',
-  assault_all:'Преступления против личности',property_all:'Имущественные преступления',date:'Дата среза',unit:'Единица учёта',
-  mapping_note:'Привязка к территории',protected_area:'Охраняемая территория',ecosystems:'Экосистемы',habitats:'Местообитания',
-  note:'Примечание',status:'Статус',area:'Территория',scope:'Область',reference_location:'Опорная точка',
-  air_temp_mean_c_by_month:'Средняя температура воздуха по месяцам, °C',sea_temp_mean_c_by_month:'Средняя температура моря по месяцам, °C',
-  source_quality:'Качество источника',best_period_general:'Предпочтительный период',local_notes:'Местные особенности',
-  coast:'Побережье',expedition_note:'Практическое значение',turtle_context:'Морские черепахи',
-  dangerous_animals:'Опасные животные',poisonous_plants:'Ядовитые растения',documented_fauna:'Отмеченная фауна',
-  terrestrial:'Наземная природа',island_vegetation:'Растительность островов',dominant_expedition_risk:'Основной экспедиционный риск',
-  intercity:'Междугороднее сообщение',local:'Местное перемещение',walking:'Пешком',modes:'Способы передвижения',
-  taxi_ridehail:'Такси и заказ машины',moped:'Мопед',gateway_for:'Связи',tickets:'Билеты и регистрация',
-  mountains_m:'Высоты гор, м',summit_m:'Высота вершины, м',bajau:'Баджау',orang_ulu:'Оранг-улу',jahai:'Джахай',
-  spoken:'Языки',protected_marine:'Морские охраняемые территории',annual_precipitation_mm:'Осадки за год, мм',
-  annual_precipitation_uncertainty_mm:'Неопределённость осадков, мм',period:'Период',
-  region:'Регион',neighbors:'Соседи',coastline_km_approx:'Протяжённость береговой линии, км',seas_and_oceans:'Моря и океанические бассейны',
-  highest_point:'Высшая точка',name:'Название',elevation_m:'Высота, м',elevation_m_approx:'Примерная высота, м',terrain:'Рельеф и ландшафт',
-  official:'Официальный статус',profile:'Описание',primary:'Основной язык',practical:'Практическое использование',diversity:'Языковое разнообразие',
-  gdp_current_usd_billion:'ВВП, млрд долл. США',gdp_per_capita_usd:'ВВП на душу населения, долл. США',gdp_growth_pct:'Рост ВВП, %',year:'Год',
-  poverty:'Бедность',metric:'Показатель',value_pct:'Значение, %',notes:'Примечания',overview:'Обзор',street_food:'Уличная еда',festivals:'Праздники и фестивали',
-  fauna:'Фауна',common_traveler_risks:'Основные риски для путешественника',sensitive_areas:'Чувствительные и ограниченные зоны',
-  natural_hazards:'Природные явления и риски',natural_phenomena:'Природные явления',marine_fauna:'Морские обитатели',
-  vector_borne_diseases:'Инфекции, переносимые насекомыми',regional_note:'Региональная оговорка',field_context:'Практическое значение',
-  hydrologic_context:'Гидрологический контекст',operational_context:'Практические риски',operational_rule:'Как использовать данные',
-  river:'Река',rivers:'Реки',wetlands:'Водно-болотные угодья',coastline:'Береговая линия',mangroves:'Мангры',
-  road:'Автомобильные дороги',river_transport:'Речной транспорт',water_transport:'Водный транспорт',field_note:'Полевое примечание',
-  crime_level:'Уровень преступности',qualitative:'Качественная оценка',risk:'Риск',where:'Где встречается',rule:'Правило',offence:'Что наказуемо',what_counts:'Что может подпадать под норму',penalty:'Возможное наказание',nuance:'Неоднозначность и границы нормы',items:'Составы и риски',checked_at:'Проверено',
-  geography:'География',economy:'Экономика',religions:'Религии',languages:'Языки',ethnography:'Этнография',culture:'Культура',history:'История',nature:'Природа',
-  cuisine:'Кухня',natural_risks:'Природные риски',safety_snapshot:'Безопасность',transport:'Транспорт',transport_rules:'Транспортные правила',
-  visa:'Виза',visa_run:'Визаран',borders:'Сухопутные границы',airports:'Аэропорты',international_air_links:'Международное авиасообщение',
-  laws_and_prohibitions:'Законы и ограничения',currency:'Валюта',camping:'Кемпинг',drones:'Дроны',permits:'Разрешения',limits:'Ограничения',
-  passport_validity:'Срок действия паспорта',stay_days:'Срок пребывания, дней',extension:'Продление',possible:'Возможно',
-  legal_status:'Правовой статус',permit_required:'Требуется разрешение',road_side:'Сторона движения',foreign_licence:'Иностранные права',
-  rental:'Аренда',temporary_import:'Временный ввоз',vehicle_standard_note:'Примечание по транспорту',restrictions:'Ограничения',
-  countries:'Страны',main_crossings:'Основные переходы',neighbors_land:'Сухопутные соседи',landlocked:'Нет выхода к морю',coastline_km:'Береговая линия, км',
-  iata:'Код IATA',local_currency_per_1_usd:'Местной валюты за 1 доллар США',rate_type:'Тип курса',typical_month:'Типичный месяц',
-  fee_usd_typical:'Ориентировочный сбор, долл. США',fee_idr:'Сбор, индонезийских рупий',entry_form:'Форма въезда',tourist_visa:'Туристическая виза',
-  visa_exemption_note:'Примечание о безвизовом режиме',general_rule:'Общее правило',general_status:'Общий статус',protected_areas:'Охраняемые территории',
-  category:'Категория',annual_cap_days:'Годовой лимит, дней',annual_cap_period:'Период годового лимита',tourist_use:'Использование туристами',
-  observation_time_note:'Примечание о времени наблюдений',spatial_variation:'Региональные различия',as_of:'По состоянию на',
-  Jan:'Январь',Feb:'Февраль',Mar:'Март',Apr:'Апрель',May:'Май',Jun:'Июнь',Jul:'Июль',Aug:'Август',Sep:'Сентябрь',Oct:'Октябрь',Nov:'Ноябрь',Dec:'Декабрь'
-};
-var VALUE_LABELS={
-  police_district:'полицейский округ',
-  local_dataset_available_not_yet_aggregated:'локальные данные доступны, но ещё не агрегированы',
-  district_data_available_not_yet_aggregated:'районные данные доступны, но ещё не агрегированы',
-  official_table_identified_values_not_normalized:'официальная таблица найдена; значения по конкретной станции ещё не нормализованы',
-  not_normalized_locally:'локальные данные ещё не нормализованы',
-  not_reduced_to_one_list:'единый список неприменим без локальной привязки',
-  urban_crime_metric_not_useful_for_remote_park:'городская статистика преступности неприменима к удалённому парку',
-  'urban crime metric_not_useful_for_remote_park':'городская статистика преступности неприменима к удалённому парку',
-  'urban district crime metric_not_meaningful_for_bario_without_local_mapping':'районная городская статистика неприменима к Барио без отдельной локальной привязки',
-  'not_applicable_as_city_metric':'городская статистика преступности здесь неприменима',
-  'Besut district data available_not_yet_aggregated':'данные по округу Бесут есть, но ещё не сведены',
-  'Kudat district data available_not_yet_aggregated':'данные по округу Кудат есть, но ещё не сведены',
-  'Sandakan district data available_not_yet_aggregated':'данные по округу Сандакан есть, но ещё не сведены',
-  'Semporna district data available_not_yet_aggregated':'данные по округу Семпорна есть, но ещё не сведены',
-  'Lahad Datu/Kinabatangan/Sandakan district rows available_not_yet_aggregated':'данные по округам Лахад-Дату, Кинабантанган и Сандакан есть, но ещё не сведены',
-  'Kuching/Miri district data available_not_yet_aggregated':'данные по округам Кучинг и Мири есть, но ещё не сведены',
-  'Ranau/Kota Belud/Kota Kinabalu-area rows require separate aggregation; no single highlands crime rate.':'данные по Ранау, Кота-Белуду и Кота-Кинабалу нужно рассматривать раздельно; единого показателя для высокогорья нет',
-  'regional_gateway':'региональный транспортный узел','boat_gateway':'узел лодочного сообщения','mainland_gateway':'материковый транспортный узел',
-  true:'да',false:'нет'
-};
-function fieldLabel(k){return FIELD_LABELS[k]||k.replace(/_/g,' ')}
+function fieldLabel(k){
+  var labels=(state.renderer&&state.renderer.field_labels)||{};
+  return labels[k]||k.replace(/_/g,' ');
+}
 function scalar(v,key){
   if(v==null||v==='')return '';
-  if(typeof v==='boolean')return v?'да':'нет';
+  if(typeof v==='boolean'){
+    var boolLabels=(state.renderer&&state.renderer.value_labels)||{};
+    return esc(boolLabels[String(v)]||(v?'да':'нет'));
+  }
   if(typeof v==='string'){
-    var mapped=VALUE_LABELS[v];
+    var valueLabels=(state.renderer&&state.renderer.value_labels)||{};
+    var mapped=valueLabels[v];
     return esc(mapped||v);
   }
   if(typeof v==='number')return esc(v);
@@ -1235,10 +1166,11 @@ async function boot(){
     var base=CDN+state.release+'/';
     var all=await Promise.all([
       j(base+'manifest.json'),j(base+'search/global.json'),j(base+'taxonomy/object-classes.json'),
-      j(base+'taxonomy/tags.json'),j(base+'geo/index.json'),maybe(base+'maps/index.json'),maybe(base+'region/southeast-asia.json')
+      j(base+'taxonomy/tags.json'),j(base+'geo/index.json'),maybe(base+'maps/index.json'),maybe(base+'region/southeast-asia.json'),
+      j('./ui/renderer.ru.json')
     ]);
     state.manifest=all[0];state.objects=all[1].objects||[];state.classes=all[2].classes||[];state.tags=all[3].tags||[];
-    state.geo=all[4].entities||[];state.mapsIndex=all[5];state.seaReference=all[6];
+    state.geo=all[4].entities||[];state.mapsIndex=all[5];state.seaReference=all[6];state.renderer=all[7];
     state.classById=Object.fromEntries(state.classes.map(function(x){return[x.id,x.label_ru||x.id]}));
     state.geoById=Object.fromEntries(state.geo.map(function(x){return[x.id,x]}));
     document.getElementById('releasePill').textContent=state.release+' · schema '+(state.latest.schema_version||'—');

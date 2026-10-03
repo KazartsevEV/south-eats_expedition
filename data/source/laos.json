@@ -3,7 +3,7 @@
     "country": "Lao People's Democratic Republic",
     "country_code": "LA",
     "language": "ru",
-    "last_updated": "2026-10-02",
+    "last_updated": "2026-10-03",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -27511,7 +27511,7 @@
                   },
                   {
                     "mode": "walking",
-                    "distance_km": 1.0,
+                    "distance_km": 1,
                     "duration_min": null,
                     "surface": "trail",
                     "condition": "Оборудованная лесная петля вдоль ручьёв, малых каскадов и Кенлона; мокрые участки скользкие.",
@@ -28296,87 +28296,591 @@
       },
       {
         "name": "Nam Ngum Reservoir",
-        "class": "inventory",
+        "class": "lake",
         "interest": [
           "lake",
-          "water"
+          "water",
+          "hydropower",
+          "history",
+          "fishing",
+          "ethnography",
+          "boat",
+          "landscape",
+          "resettlement",
+          "industrial_heritage"
         ],
-        "why_go": "Крупное водохранилище Nam Ngum, сформированное гидроэнергетическим проектом и используемое для лодочных маршрутов и ночёвок в прибрежных поселениях.",
+        "why_go": "Нам-Нгум — огромное искусственное озеро, где инженерная история первой крупной гидроэнергетики Лаоса буквально стала новым ландшафтом: вода затопила долины, оставила сотни островов-вершин и создала отдельную рыболовную экономику. Для самостоятельного путешествия важно не смешивать три разных опыта: южную дамбу и обновлённую марину Nam Ngum 1, длинные лодочные маршруты по центральной акватории и тихий северный берег у Tha Heua.",
         "traveler_card": {
           "location": {
-            "region": "Ванг-Вьенг / провинция Вьентьян",
-            "nearest_hub": "Tha Heua",
+            "region": "провинция Вьентьян / Keo Oudom — Tha Heua",
+            "nearest_hub": "Keo Oudom / Tha Heua",
             "languages_spoken": [
               "лаосский",
               "английский — ограниченно в туристической инфраструктуре"
             ],
             "coordinates": {
-              "lat": null,
-              "lon": null,
-              "elevation_m": null
+              "lat": 18.55668,
+              "lon": 102.64087,
+              "elevation_m": 208
             },
-            "coordinate_type": null,
-            "accuracy": "unknown",
-            "elevation_accuracy": "unknown",
-            "coordinates_checked_at": null,
-            "geo_points": []
+            "coordinate_type": "center",
+            "accuracy": "medium",
+            "elevation_accuracy": "approximate",
+            "coordinates_checked_at": "2026-10-03",
+            "coordinate_source": {
+              "type": "map_osm",
+              "title": "Angkep Nam Ngum Map — reservoir",
+              "publisher": "Mapcarta / OpenStreetMap-derived mapping",
+              "url": "https://mapcarta.com/16156328",
+              "language": "en",
+              "authority": "medium",
+              "accessed": "2026-10-03",
+              "notes": "Representative reservoir feature coordinate, not an entrance."
+            },
+            "object_elevation": {
+              "representative_m": 208,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "approximate",
+              "source": {
+                "type": "map_osm",
+                "title": "Angkep Nam Ngum Map — reservoir",
+                "publisher": "Mapcarta / OpenStreetMap-derived mapping",
+                "url": "https://mapcarta.com/16156328",
+                "language": "en",
+                "authority": "medium",
+                "accessed": "2026-10-03"
+              },
+              "checked_at": "2026-10-03",
+              "notes": "Около 208 м — картографическая отметка в репрезентативной точке. Уровень воды меняется; это не фиксированная отметка всей акватории."
+            },
+            "geo_points": [
+              {
+                "type": "viewpoint",
+                "name": "Nam Ngum 1 Dam — южная кромка водохранилища",
+                "coordinates": {
+                  "lat": 18.530724,
+                  "lon": 102.547159,
+                  "elevation_m": 208
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "approximate",
+                "coordinate_source": {
+                  "type": "other",
+                  "title": "Nam Ngum 1 Dam.JPG",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:Nam_Ngum_1_Dam.JPG",
+                  "language": "en",
+                  "authority": "medium",
+                  "accessed": "2026-10-03",
+                  "notes": "Geotagged camera position at the dam."
+                },
+                "elevation_source": {
+                  "type": "map_osm",
+                  "title": "Nam Ngum Dam Map",
+                  "publisher": "Mapcarta / OpenStreetMap-derived mapping",
+                  "url": "https://mapcarta.com/15655500",
+                  "language": "en",
+                  "authority": "medium",
+                  "accessed": "2026-10-03"
+                },
+                "checked_at": "2026-10-03",
+                "notes": "Точка относится к дамбе/южной кромке, а не к центру водохранилища."
+              },
+              {
+                "type": "viewpoint",
+                "name": "Tha Heua — северный берег и рыбный рынок",
+                "coordinates": {
+                  "lat": 18.7871,
+                  "lon": 102.508,
+                  "elevation_m": null
+                },
+                "accuracy": "high",
+                "elevation_accuracy": "unknown",
+                "coordinate_source": {
+                  "type": "other",
+                  "title": "VientianeProvince ThaHeua2 tango7174.jpg",
+                  "publisher": "Wikimedia Commons",
+                  "url": "https://commons.wikimedia.org/wiki/File:VientianeProvince_ThaHeua2_tango7174.jpg",
+                  "language": "en",
+                  "authority": "medium",
+                  "accessed": "2026-10-03",
+                  "notes": "Geotagged photograph of the Tha Heua roadside fish market."
+                },
+                "checked_at": "2026-10-03",
+                "notes": "Полезная северная береговая точка; это не координата южной марины."
+              }
+            ],
+            "elevation_source": {
+              "type": "map_osm",
+              "title": "Angkep Nam Ngum Map — reservoir",
+              "publisher": "Mapcarta / OpenStreetMap-derived mapping",
+              "url": "https://mapcarta.com/16156328",
+              "language": "en",
+              "authority": "medium",
+              "accessed": "2026-10-03",
+              "notes": "Approximate terrain/waterbody elevation at the representative reservoir coordinate; not a fixed operating water level."
+            }
           },
           "logistics": {
-            "access": "Инвентарная карточка: существование объекта подтверждено официальным Tourism Laos; точный самостоятельный доступ будет проверен на объектном QA.",
-            "public_transport": null,
-            "last_mile": null,
-            "typical_visit_hours": null,
-            "permit_or_guide": null,
-            "mobility_notes": null,
-            "modes": {},
-            "water": "Не исследовано на инвентарном проходе.",
-            "overnight_and_camping": "Не исследовано на инвентарном проходе.",
-            "self_guided_default": null,
-            "travel_model": "предварительный инвентарь перед полным объектным QA"
+            "access": "У Нам-Нгум нет одного «входа». Для южной рекреационной зоны у Nam Ngum 1 ехать из Вьентьяна к Keo Oudom/Thalat: Tourism Laos даёт около 100 км до водохранилища, а последние 6,3 км официально реконструированы в бетонный подъезд от Highway 10. Для северного берега и более тихой акватории отдельный узел — Tha Heua к югу от Ванг-Вьенга.",
+            "public_transport": "Надёжного регулярного общественного транспорта прямо к новой южной марине и между береговыми узлами не подтверждено. Самостоятельно практичнее мотоцикл/мопед, машина или заранее договорённый водитель. Межбереговые и прогулочные лодки существуют, но расписание и цена зависят от конкретного оператора.",
+            "last_mile": "Южная зона после реконструкции имеет въезд, парковку, внутренние дороги, круглый павильон, три обзорные точки, ступенчатую площадку и проходы к лодочным ресторанам. Северный Tha Heua — другой береговой кластер; не следует строить маршрут туда по координатам дамбы.",
+            "typical_visit_hours": [
+              3,
+              8
+            ],
+            "permit_or_guide": "Для обычного самостоятельного посещения берега обязательный гид не подтверждён. Лодка с местным капитаном нужна только для выхода в акваторию; частная экскурсия не является обязательным способом попасть к озеру.",
+            "mobility_notes": "Южный рекреационный узел после реконструкции заметно доступнее прежнего: 6,3 км подъезда забетонированы, парковка и пешеходные зоны обновлены. На северном направлении из Ванг-Вьенга к Tha Heua свежий мотоотчёт февраля 2025 года описывал дорогу как грубую и местами песчаную; это отдельный маршрут и его состояние следует проверять заново.",
+            "modes": {
+              "public_transport": "Прямой регулярный маршрут к выбранному береговому узлу не подтверждён.",
+              "taxi_ridehail": "Из Вьентьяна и Ванг-Вьенга возможен частный водитель.",
+              "car": "Основной вариант к южной рекреационной зоне; последние 6,3 км реконструированы в бетон.",
+              "moped": "Подходит к южной зоне по дорогам общего пользования; северный путь Ванг-Вьенг—Tha Heua в феврале 2025 описывался как грубый/песчаный.",
+              "motorcycle": "Удобен для связки береговых точек и Tha Heua; состояние второстепенных дорог проверять по сезону.",
+              "boat": "Главный способ увидеть островной рельеф и удалённые участки водохранилища. Фиксированного общего расписания для всей акватории нет.",
+              "walking": "В южной марине прогулка идёт по новым внутренним дорожкам и обзорным площадкам; пешком охватить водохранилище как объект невозможно."
+            },
+            "self_guided_default": true,
+            "travel_model": "самостоятельно до выбранного берегового узла + локальная лодка по необходимости",
+            "access_options": [
+              {
+                "id": "vientiane_south_marina",
+                "origin": "Вьентьян",
+                "modes": [
+                  "car",
+                  "motorcycle",
+                  "moped",
+                  "taxi"
+                ],
+                "checked_at": "2026-10-03",
+                "source_refs": [
+                  "src_000283",
+                  "src_990524"
+                ],
+                "legs": [
+                  {
+                    "mode": "car",
+                    "distance_km": 100,
+                    "duration_min": null,
+                    "surface": "paved",
+                    "condition": "Основной межгородской подъезд; финальные 6,3 км от Highway 10 до Nam Ngum 1 Recreation Area реконструированы в бетон.",
+                    "seasonality": "Круглогодичный дорожный доступ к южной рекреационной зоне.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Из Вьентьяна на север в сторону Keo Oudom/Thalat, затем по Highway 10 и новому 6,3-км подъезду к рекреационной зоне.",
+                    "fords": 0,
+                    "notes": "100 км — официальный туристический ориентир до Nam Ngum Reservoir; не точная дистанция до любой точки береговой линии.",
+                    "source_refs": [
+                      "src_000283",
+                      "src_990524"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "vang_vieng_tha_heua",
+                "origin": "Ванг-Вьенг",
+                "modes": [
+                  "motorcycle",
+                  "moped",
+                  "car"
+                ],
+                "checked_at": "2026-10-03",
+                "source_refs": [
+                  "src_990529"
+                ],
+                "legs": [
+                  {
+                    "mode": "motorcycle",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "mixed",
+                    "condition": "Пользовательский отчёт февраля 2025 года описывает дорогу к Tha Heua как грубую и песчаную; это не характеристика нового южного подъезда у дамбы.",
+                    "seasonality": "В сухой сезон песок и пыль; в дождливый состояние требует отдельной проверки.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Южнее Ванг-Вьенга к Tha Heua на северном/северо-западном берегу водохранилища.",
+                    "fords": null,
+                    "notes": "Не переносить этот отчёт на дорогу из Вьентьяна к Nam Ngum 1 marina.",
+                    "source_refs": [
+                      "src_990529"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "water": "Бутилированная вода и напитки доступны в южной рекреационной зоне и в Tha Heua. Воду самого водохранилища не считать питьевой.",
+            "water_structured": {
+              "at_object": true,
+              "quality": "treatment_required",
+              "last_reliable_point": "магазины/рестораны южной марины Nam Ngum 1 или Tha Heua",
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "reservoir",
+                  "name": "Nam Ngum Reservoir",
+                  "potability": "treatment_required",
+                  "notes": "Крупный эксплуатируемый водоём с рыболовством и лодочным движением; прямое питьё без обработки не подтверждено."
+                }
+              ],
+              "notes": "Для питья брать бутилированную воду. Наличие поверхностной воды не означает безопасный источник.",
+              "source_refs": [
+                "src_990524",
+                "src_990528"
+              ]
+            },
+            "supplies": {
+              "status": "available_at_site",
+              "summary": "В реконструированной южной зоне есть магазины, традиционные закуски, лодочные рестораны и парковочная инфраструктура; в Tha Heua есть рыбный рынок и береговые сервисы.",
+              "poi_ids": [],
+              "source_refs": [
+                "src_990524",
+                "src_990534"
+              ]
+            },
+            "overnight_and_camping": "Жильё подтверждено на северном берегу у Tha Heua, но свободный кемпинг на берегах водохранилища как разрешённая практика источниками не подтверждён. Не выдавать необорудованный берег или остров за легальный кемпинг.",
+            "overnight": {
+              "status": "unclear",
+              "summary": "Опубликованного общего разрешения на свободный кемпинг по берегам/островам Nam Ngum не найдено. Для ночёвки использовать существующее жильё у Tha Heua либо согласованную площадку.",
+              "source_refs": [
+                "src_990529",
+                "src_990530"
+              ]
+            },
+            "access_requirements": "На дамбе и у энергетической инфраструктуры соблюдать ограждения и локальные ограничения; на воде пользоваться лодкой с местным капитаном и не считать любой остров свободно доступным без согласования."
           },
           "climate": {
-            "best_period": null,
-            "heat_rain_notes": null,
-            "site_specific_notes": null
+            "best_period": "Прохладный сухой сезон удобнее для дороги и долгих лодочных выходов. Для воды и зелени выразительнее конец дождливого сезона и первые месяцы после него, когда уровень выше.",
+            "heat_rain_notes": "В сухой сезон открытая вода и береговые площадки дают сильное солнце и мало тени. В сезон дождей возможны грозы и ухудшение видимости и условий для малых лодок.",
+            "site_specific_notes": "Уровень водохранилища меняется. В октябре 2025 путешественник отдельно отмечал высокий уровень воды; по словам капитана, затем он постепенно снижается к концу года."
           },
           "operations": {
-            "status": null,
+            "status": "open/verify",
             "hours": null,
             "ticket": null,
-            "closure_notes": "Актуальные часы, цена и режим доступа не нормализованы; проверить при объектном QA.",
-            "last_verified": "2026-10-02",
-            "official_url": "https://www.tourismlaos.org/central-provinces/vientiane-province/"
+            "closure_notes": "Южная рекреационная зона вновь открылась 3 декабря 2024 года после трёхлетней реконструкции. Единых часов и единого тарифа для всего водохранилища нет; лодка, ресторан и отдельные активности оплачиваются по месту.",
+            "last_verified": "2026-10-03",
+            "official_url": "https://www.tourismlaos.org/2025/01/27/nam-ngum-1-reservoir-reopens-with-green-initiatives/",
+            "current_alert": "В начале reopening только часть лодочного флота соответствовала новым стандартам, а посещение островов планировалось развивать позже. На 2026 год не фиксировать старые цифры флота как текущую гарантию — конкретную лодку и маршрут проверять на месте.",
+            "status_snapshot": {
+              "as_of": "2026-10-03",
+              "summary": "Официальные материалы подтверждают reopening южной зоны после реконструкции, а KPL в 2025 году продолжал называть Nam Ngum 1 одним из ключевых действующих объектов провинции. Отзывы конца 2025 — февраля 2026 подтверждают активные лодочные прогулки на северной части озера у Tha Heua.",
+              "source_refs": [
+                "src_990524",
+                "src_990535",
+                "src_990530"
+              ]
+            },
+            "source_refs": [
+              "src_990524",
+              "src_990535",
+              "src_990530"
+            ]
           },
           "safety": {
-            "main_risks": [],
-            "sensitive_areas": []
+            "main_risks": [
+              "открытая вода, ветер и быстро меняющаяся погода на большой акватории",
+              "разный технический уровень частных лодок",
+              "сильное солнце и мало тени на воде",
+              "грубые/песчаные участки северного дорожного подхода по свежему отчёту 2025 года",
+              "режимный характер дамбы и энергетической инфраструктуры"
+            ],
+            "sensitive_areas": [
+              "не заходить за технические ограждения Nam Ngum 1",
+              "не запускать дрон рядом с дамбой/электростанцией без отдельного разрешения",
+              "не считать необитаемый остров автоматически свободным для высадки или ночёвки",
+              "при съёмке рыбаков и жителей Tha Heua спрашивать согласие"
+            ],
+            "confidence": "medium",
+            "source_refs": [
+              "src_990524",
+              "src_990529"
+            ],
+            "checked_at": "2026-10-03"
           },
           "media": {
-            "photo_suitability_5": null,
-            "video_suitability_5": null,
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "На большой акватории особенно хорошо работают низкое утреннее и предзакатное освещение: острова отделяются друг от друга по планам, а вода даёт отражения. На южной дамбе полезен боковой свет, подчёркивающий инженерный рельеф.",
             "visual_scouting": {
-              "best_time": null,
-              "best_weather_light": null,
-              "viewpoints_for_photo_video": [],
-              "seasonal_visuals": [],
-              "video_activity": [],
-              "useful_equipment": []
+              "best_time": "раннее утро и предзакатное время; для островного рельефа — также ясный день с хорошей дальней видимостью",
+              "best_weather_light": "После дождливого сезона острова и склоны зеленее, вода выше; в сухой сезон дорожный доступ проще, но дальние планы может съедать дымка.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_dam",
+                  "name": "Nam Ngum 1 Dam",
+                  "description": "Южная кромка водохранилища у бетонной гравитационной дамбы.",
+                  "coordinates": {
+                    "lat": 18.530724,
+                    "lon": 102.547159,
+                    "elevation_m": 208
+                  },
+                  "access": "По дорожному подъезду к Nam Ngum 1; технические зоны не пересекать.",
+                  "view": {
+                    "description": "плотина, выход водохранилища, гористая береговая линия и инженерный масштаб проекта"
+                  },
+                  "best_time": "утро или поздний день",
+                  "best_weather_light": "Боковой свет лучше показывает форму плотины и рельеф берегов.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для дамбы вместе с акваторией и береговым рельефом"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для инженерных деталей и масштаба сооружения"
+                    }
+                  ],
+                  "source": {
+                    "type": "other",
+                    "title": "Nam Ngum 1 Dam.JPG",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Nam_Ngum_1_Dam.JPG",
+                    "language": "en",
+                    "authority": "medium",
+                    "accessed": "2026-10-03"
+                  }
+                },
+                {
+                  "id": "vp_tha_heua",
+                  "name": "Tha Heua — северный берег",
+                  "description": "Береговой узел у деревни Tha Heua, где рыболовство водохранилища видно не как декорацию, а как повседневную экономику.",
+                  "coordinates": {
+                    "lat": 18.7871,
+                    "lon": 102.508,
+                    "elevation_m": null
+                  },
+                  "access": "По дороге из Ванг-Вьенга к Tha Heua; точка основана на геотегированной фотографии рыбного рынка.",
+                  "view": {
+                    "description": "северная акватория, рыбацкие лодки, улов и береговые поселения"
+                  },
+                  "best_time": "утро для рынка; поздний день для воды и заката",
+                  "best_weather_light": "Мягкий низкий свет делает отдельные острова и лодки лучше читаемыми.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для рынка и береговой среды"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для лодок, людей и бытовых деталей без вторжения в личное пространство"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "для лодок и островов дальше от берега"
+                    }
+                  ],
+                  "source": {
+                    "type": "other",
+                    "title": "VientianeProvince ThaHeua2 tango7174.jpg",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:VientianeProvince_ThaHeua2_tango7174.jpg",
+                    "language": "en",
+                    "authority": "medium",
+                    "accessed": "2026-10-03"
+                  }
+                },
+                {
+                  "id": "vp_boat_islands",
+                  "name": "Островная акватория с лодки",
+                  "description": "Главная визуальная особенность Нам-Нгума — разветвлённая береговая линия и множество лесистых островов, которые лучше всего читаются с воды.",
+                  "coordinates": null,
+                  "access": "Только на лодке из выбранного берегового узла; точку маршрута согласовывать с капитаном.",
+                  "view": {
+                    "description": "лесистые острова, узкие проливы, рыбацкие лодки и дальние горы"
+                  },
+                  "best_time": "утро или предзакатное время",
+                  "best_weather_light": "Чистый воздух важнее жёсткости света: дымка быстро съедает многоплановость далёких островов.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для проливов и островов в контексте"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для лодок и ближайших берегов"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "для сжатия дальних островных планов и рыбацких сцен"
+                    }
+                  ],
+                  "source": {
+                    "type": "other",
+                    "title": "Category:Nam Ngum Lake",
+                    "publisher": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/Category:Nam_Ngum_Lake",
+                    "language": "en",
+                    "authority": "medium",
+                    "accessed": "2026-10-03"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Конец сезона дождей и начало прохладного сезона: высокий уровень воды, насыщенная зелень и наиболее цельный островной ландшафт.",
+                "Поздний сухой сезон: береговая линия сильнее обнажается, острова визуально крупнее, но зелень беднее и возможна дымка.",
+                "Октябрь 2025: путешественник отмечал высокий уровень воды; это полезный сезонный ориентир, а не фиксированный календарь уровней."
+              ],
+              "video_activity": [
+                "лодки между островами и их след на спокойной воде",
+                "рыбацкая жизнь и рынок улова в Tha Heua",
+                "лодочные рестораны и марина в южной рекреационной зоне",
+                "контраст масштаба бетонной дамбы и открытого островного озера"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "для островного ландшафта и дамбы в окружении"
+                },
+                {
+                  "type": "standard",
+                  "why": "для лодок, рынка и береговых сцен"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "для дальних островов и рыбацких лодок на большой акватории"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "для съёмки с лодки и у воды"
+                },
+                {
+                  "type": "phone",
+                  "why": "южные обзорные площадки и береговые точки доступны без специальной фототехники"
+                }
+              ]
             },
-            "drone": null,
-            "filming_restrictions": null
+            "drone": {
+              "visual_value": "С воздуха особенно хорошо читается искусственное происхождение ландшафта: затопленные долины, ветвистая береговая линия и острова-вершины старого рельефа.",
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "Применяются общие правила БПЛА Лаоса.",
+                "Не считать полёт над дамбой Nam Ngum 1 и электростанцией автоматически разрешённым: это энергетическая инфраструктура.",
+                "Отдельный опубликованный режим для туристического полёта над всей акваторией не найден; разрешение и локальные ограничения проверять перед запуском.",
+                "Не летать над плотными скоплениями посетителей и лодочными ресторанами без требуемого согласования."
+              ],
+              "checked_at": "2026-10-03",
+              "source": {
+                "type": "government_official",
+                "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+                "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+                "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+                "language": "en",
+                "authority": "high",
+                "accessed": "2026-09-29",
+                "used_for": [
+                  "drone rules"
+                ]
+              }
+            },
+            "filming_restrictions": "Отдельного общего запрета на обычную наземную любительскую съёмку водохранилища не найдено. Технические зоны дамбы, дрон, коммерческая съёмка и крупные планы жителей/рыбаков требуют отдельного согласования."
           },
           "annotation": {
-            "narrative": "Крупное водохранилище Nam Ngum, сформированное гидроэнергетическим проектом и используемое для лодочных маршрутов и ночёвок в прибрежных поселениях.",
+            "canonical_story_from_sections": true,
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Крупное водохранилище Nam Ngum, сформированное гидроэнергетическим проектом и используемое для лодочных маршрутов и ночёвок в прибрежных поселениях."
+                "content": "Нам-Нгум часто выглядит как естественное горное озеро, но этот пейзаж появился только после перекрытия реки. При нормальном подпорном уровне водохранилище занимает около 370 км²: бывшие вершины и гребни стали островами, а затопленные речные долины — длинными заливами. Поэтому объект интересен сразу в трёх слоях: как инженерный ландшафт, как новая экосистема и как пространство, вокруг которого за полвека перестроилась жизнь прибрежных поселений.",
+                "source_refs": [
+                  "src_990525",
+                  "src_990526",
+                  "src_990531"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Строительство Nam Ngum 1 началось в 1968 году, а первые агрегаты ввели в эксплуатацию в декабре 1971-го. EDL-Generation называет объект резервуарной гидроэлектростанцией с бетонной гравитационной дамбой; исходная мощность затем несколько раз увеличивалась."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "За созданием озера стоит и социальная цена. Исследование переселения Nam Ngum 1 оценивает затронутое население примерно в 23 деревни и 570 хозяйств. Людей переселяли в конце 1960-х и 1970-х, а последствия разных схем расселения и доступа к дороге и ирригации были заметны спустя десятилетия."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "Туристический берег у Nam Ngum 1 пережил ещё одну крупную перестройку уже в XXI веке. Рекреационную зону закрыли примерно на три года, с 2021 по 2024 год обновляли марину, парковку, внутренние дороги, обзорные площадки и 6,3-километровый подъезд, после чего объект вновь открылся 3 декабря 2024 года."
+                  }
+                ],
+                "source_refs": [
+                  "src_990525",
+                  "src_990526",
+                  "src_990527",
+                  "src_990524"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "У водохранилища есть устойчивое неофициальное имя «Thalay Lao» — «Лаосское море». Оно хорошо объясняет культурный масштаб места для страны без морского побережья: широкая открытая вода, острова, лодочные рестораны и поездки выходного дня воспринимаются здесь почти как морской отдых. После реконструкции южной зоны власти отдельно сделали ставку на местные закуски, ремёсла и работу жителей в торговле и лодочном сервисе, а не только на обзор дамбы.",
+                "source_refs": [
+                  "src_990524"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Nam Ngum 1 лежит на реке Нам-Нгум, одном из крупных притоков Меконга. EDL-Generation указывает водосбор около 8460 км² и площадь водохранилища около 370 км². Его форма сильно разветвлена: вода заполнила сеть долин, поэтому на карте и с лодки виден не единый круглый бассейн, а система длинных рукавов, полуостровов и островов. Репрезентативный центр объекта хранится отдельно от дамбы и береговых точек, потому что одна координата доступа для такого водоёма бессмысленна.",
+                "source_refs": [
+                  "src_990525",
+                  "src_990531",
+                  "src_990532"
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "Визуальная «тысяча островов» — прежде всего след затопленного рельефа, а не отдельный архипелаг вулканического или кораллового происхождения. После подъёма воды вершины и гребни прежней суши остались над поверхностью. Точную литологию отдельных островов карточка не фиксирует: надёжного источника, позволяющего переносить одну геологическую характеристику на всю огромную акваторию, нет.",
+                "source_refs": [
+                  "src_990531"
+                ]
+              },
+              {
+                "section_id": "ethnography",
+                "content": "После создания водохранилища рыболовство стало одной из главных новых адаптаций прибрежных сообществ. Историческое исследование уловов фиксировало более 55 преимущественно местных видов рыб и резкий рост промысловой нагрузки к концу 1990-х; маленькая пелагическая рыба pa keo стала особенно важной частью улова. На северном берегу эта связь видна буквально: геотегированная фотография Tha Heua показывает придорожный рынок с рыбой из Nam Ngum, а свежие отчёты путешественников всё ещё описывают ночные рыбацкие лодки как часть повседневного звукового и визуального ландшафта.",
+                "source_refs": [
+                  "src_990528",
+                  "src_990534",
+                  "src_990529"
+                ]
               }
             ]
           },
-          "traveler_reports": {
-            "recurring_issues": []
-          },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "tha_heua_road_and_stay",
+              "summary": "Февраль 2025: два мото-путешественника независимо описывали Tha Heua как рабочий северный узел для спокойной ночёвки у воды. Дорога из Ванг-Вьенга оценивалась как грубая и местами песчаная; один из отчётов отдельно отмечал красивые закаты и шум ночной рыбалки.",
+              "observed_period": "2025-02",
+              "source_refs": [
+                "src_990529"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "current_boat_activity",
+              "summary": "Октябрь–декабрь 2025 и февраль 2026: свежие отзывы о лодочных прогулках на северной части Nam Ngum подтверждают действующие круизы, купание и каяки на отдельных маршрутах и высадки на небольших островах. Это подтверждает реальную лодочную активность, но не означает свободный доступ к любому острову.",
+              "observed_period": "2025-10/2026-02",
+              "source_refs": [
+                "src_990530"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "seasonal_water_level",
+              "summary": "В отзыве октября 2025 уровень воды описан как высокий; капитан ожидал постепенного снижения к концу года. Использовать как полевой сезонный ориентир, а не как гидрологический график.",
+              "observed_period": "2025-10",
+              "source_refs": [
+                "src_990530"
+              ],
+              "confidence": "medium"
+            }
+          ],
           "accommodation": []
         },
         "sources": [
@@ -28389,29 +28893,243 @@
             "authority": "high",
             "used_for": [
               "object existence",
-              "inventory classification",
-              "baseline description"
+              "boat access",
+              "Vientiane distance",
+              "fishing villages",
+              "baseline tourism context"
             ],
-            "accessed": "2026-10-02"
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "Nam Ngum 1 Reservoir Reopens with Green Initiatives",
+            "publisher": "Tourism Laos / Ministry of Culture and Tourism",
+            "url": "https://www.tourismlaos.org/2025/01/27/nam-ngum-1-reservoir-reopens-with-green-initiatives/",
+            "language": "en",
+            "published_at": "2025-01-27",
+            "authority": "high",
+            "used_for": [
+              "2024 reopening",
+              "marina reconstruction",
+              "6.3 km concrete access road",
+              "viewpoints",
+              "shops",
+              "boat standards"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "NAM NGUM 1 HYDROPOWER PLANT",
+            "publisher": "EDL-Generation Public Company",
+            "url": "https://edlgen.com.la/project/nam_ngum_1hpp/?lang=en",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "1971 operation",
+              "dam type",
+              "reservoir area",
+              "catchment",
+              "hydropower history"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "EdL-Gen Prospectus — Nam Ngum 1",
+            "publisher": "EDL-Generation Public Company",
+            "url": "https://www.edlgen.com.la/uploads/prospectus/2010/en/EdL-Gen-Prospectus-new.pdf",
+            "language": "en",
+            "published_at": "2010",
+            "authority": "high",
+            "used_for": [
+              "1968 construction start",
+              "1971 commissioning",
+              "phased development"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "academic",
+            "title": "The livelihood reconstruction of resettlers from the Nam Ngum 1 hydropower project in Laos",
+            "publisher": "International Journal of Water Resources Development / Taylor & Francis",
+            "url": "https://www.tandfonline.com/doi/abs/10.1080/07900627.2012.738592",
+            "language": "en",
+            "published_at": "2013",
+            "authority": "high",
+            "used_for": [
+              "23 villages",
+              "570 households",
+              "resettlement history",
+              "long-term livelihood differences"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "academic",
+            "title": "Changes in fisheries yield and catch composition at the Nam Ngum Reservoir, Lao PDR",
+            "publisher": "Fisheries research paper / ResearchGate copy",
+            "url": "https://www.researchgate.net/publication/285484375_Changes_in_fisheries_yield_and_catch_composition_at_the_Nam_Ngum_Reservoir_Lao_PDR",
+            "language": "en",
+            "published_at": "2001",
+            "authority": "high",
+            "used_for": [
+              "370 km2 reservoir area",
+              "55+ fish species",
+              "fishery methods",
+              "catch change",
+              "pa keo importance"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "reddit",
+            "title": "Nam Ngum Reservoir Advice",
+            "publisher": "Reddit r/laos",
+            "url": "https://www.reddit.com/r/laos/comments/1irh0i6",
+            "language": "en",
+            "published_at": "2025-02-17",
+            "authority": "medium",
+            "used_for": [
+              "Tha Heua access",
+              "Vang Vieng road condition",
+              "lakeside stays",
+              "night fishing noise"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "traveler_report",
+            "title": "BBQ Lunch Cruise on Nam Ngum Lake — recent reviews",
+            "publisher": "Tripadvisor",
+            "url": "https://www.tripadvisor.com/AttractionProductReview-g612363-d34027287-BBQ_Lunch_Cruise_on_Nam_Ngum_Lake-Vang_Vieng_Vientiane_Province.html",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "2025-2026 boat activity",
+              "island stop",
+              "kayaking/swimming",
+              "October water level"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "map_osm",
+            "title": "Angkep Nam Ngum Map — reservoir",
+            "publisher": "Mapcarta / OpenStreetMap-derived mapping",
+            "url": "https://mapcarta.com/16156328",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "reservoir representative center",
+              "approximate elevation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "map_osm",
+            "title": "Nam Ngum Dam Map",
+            "publisher": "Mapcarta / OpenStreetMap-derived mapping",
+            "url": "https://mapcarta.com/15655500",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "dam coordinate cross-check",
+              "dam elevation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "other",
+            "title": "Category:Nam Ngum Lake",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/Category:Nam_Ngum_Lake",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "gallery",
+              "island landscape",
+              "reservoir visual identity"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "other",
+            "title": "Nam Ngum 1 Dam.JPG",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:Nam_Ngum_1_Dam.JPG",
+            "language": "en",
+            "published_at": "2011-12-01",
+            "authority": "medium",
+            "used_for": [
+              "dam viewpoint GPS",
+              "gallery",
+              "dam visual documentation"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "Vientiane Province Welcomes Over 900,000 Tourists in First Quarter of 2025",
+            "publisher": "Lao News Agency (KPL)",
+            "url": "https://kpl.gov.la/detail.aspx?id=90623",
+            "language": "en",
+            "published_at": "2025-04-07",
+            "authority": "high",
+            "used_for": [
+              "2025 operating tourism status",
+              "current provincial significance"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "other",
+            "title": "VientianeProvince ThaHeua2 tango7174.jpg",
+            "publisher": "Wikimedia Commons",
+            "url": "https://commons.wikimedia.org/wiki/File:VientianeProvince_ThaHeua2_tango7174.jpg",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "Tha Heua viewpoint GPS",
+              "fish market",
+              "gallery context",
+              "reservoir fisheries landscape"
+            ],
+            "accessed": "2026-10-03"
+          },
+          {
+            "type": "government_official",
+            "title": "Lao Civil Aviation Safety Regulation Part 17 – Unmanned Aircraft",
+            "publisher": "Lao Department of Civil Aviation / Ministry of Public Works and Transport",
+            "url": "https://www.mpwt.gov.la/download_legislation?name=Lao+Civil+Aviation+Regulation+Part+17+Unmanned+Aircraft",
+            "language": "en",
+            "authority": "high",
+            "accessed": "2026-09-29",
+            "used_for": [
+              "drone rules"
+            ]
           }
         ],
         "verification": {
           "dynamic_fields": [
             "access",
+            "road condition",
+            "boat availability",
+            "boat price",
             "hours",
             "tickets",
-            "water",
+            "water level",
             "overnight",
             "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Крупное водохранилище Nam Ngum, сформированное гидроэнергетическим проектом и используемое для лодочных маршрутов и ночёвок в прибрежных поселениях.",
+        "narrow": "Нам-Нгум — водохранилище площадью около 370 км², созданное ГЭС Nam Ngum 1 в 1971 году. Это одновременно инженерный памятник, крупный рыболовный водоём и островной озёрный ландшафт: на юге работает реконструированная рекреационная зона у дамбы, на севере Tha Heua остаётся самостоятельным береговым узлом для лодок и ночёвок.",
         "qa": {
           "inventory_review": {
-            "status": "preliminary",
-            "checked_at": "2026-10-02",
-            "notes": "Добавлено на инвентарном проходе из официального Tourism Laos. Полный object QA намеренно не заявлен."
+            "status": "replaced_by_full_qa",
+            "checked_at": "2026-10-03",
+            "notes": "Предварительная inventory-карточка заменена полным объектным исследованием."
           },
           "identity_review": {
             "status": "reviewed",
@@ -28428,7 +29146,177 @@
             ],
             "evidence_urls": [],
             "notes": "Отдельная инвентарная сущность: отдельное имя/официальная listing identity; точного или семантического дубля внутри текущего Laos inventory не найдено."
+          },
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-03",
+            "notes": "Разделены водохранилище, дамба, южная рекреационная зона и северный Tha Heua; старые и новые дорожные сведения не смешиваются."
+          },
+          "human_copy_review": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "checks": {
+              "natural_russian": true,
+              "no_stock_travel_copy": true,
+              "practical_information_first": true,
+              "uncertainty_preserved": true,
+              "engineering_history_explained": true,
+              "resettlement_context_explained": true,
+              "fisheries_context_explained": true
+            }
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "scope": "полный объектный QA Nam Ngum Reservoir",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_scope_honest": true,
+              "ethnography_substantive": true,
+              "hydropower_context": true,
+              "resettlement_context": true,
+              "fisheries_context": true,
+              "multiple_access_nodes_preserved": true,
+              "no_narrative_duplication": true
+            },
+            "notes": [
+              "Primary coordinate is a representative reservoir center, not a false entrance.",
+              "Dam and Tha Heua are stored as separate georeferenced points.",
+              "208 m is an approximate map elevation and explicitly not a fixed reservoir level.",
+              "The 2025 rough-road report applies only to the Vang Vieng–Tha Heua approach, not the rebuilt southern marina access.",
+              "No sourced traditional reservoir-origin myth was found; no mythology section was fabricated.",
+              "Camping legality remains unclear rather than being inferred from open shoreline."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "scope": "полная историческая, гидроэнергетическая, социальная, полевая и визуальная перестройка Nam Ngum Reservoir",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "ethnography_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided": true,
+              "water_honest": true,
+              "overnight_honest": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "media_provenance": true,
+              "gallery_min_5": true,
+              "drone_rule_precision": true
+            }
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-03",
+            "scope": "Nam Ngum: reservoir identity, center/dam/Tha Heua geodata, 1971 hydropower history, resettlement, fisheries, 2024 reopening, 2025 access conditions, 2025-26 boat activity, media and drone",
+            "checks": {
+              "narrative_section_sources": true,
+              "coordinate_source_scoped": true,
+              "elevation_source_scoped": true,
+              "reservoir_center_not_access_point": true,
+              "dam_separate_from_reservoir_center": true,
+              "tha_heua_separate_access_node": true,
+              "history_official": true,
+              "resettlement_academic": true,
+              "fisheries_academic": true,
+              "reopening_official": true,
+              "north_road_report_period_scoped": true,
+              "boat_activity_recent_report_scoped": true,
+              "water_quality_not_overstated": true,
+              "camping_permission_unknown_preserved": true,
+              "gallery_sources_traced": true,
+              "drone_rules_official": true
+            }
           }
+        },
+        "illustration": {
+          "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nam%20Ngum%20Lake.JPG",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Nam_Ngum_Lake.JPG",
+          "provider": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "artist": "Chaoborus",
+          "illustration_scope": "Nam Ngum reservoir, islands, boats, dam and Tha Heua fisheries landscape",
+          "last_checked": "2026-10-03",
+          "gallery": [
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nam%20Ngum%20Lake.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Nam_Ngum_Lake.JPG",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "artist": "Chaoborus",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/2%20Islands%20on%20Nam%20Ngum%20Lake.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:2_Islands_on_Nam_Ngum_Lake.JPG",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "artist": "Chaoborus",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Boat%20on%20Nam%20Ngum%20Lake.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Boat_on_Nam_Ngum_Lake.JPG",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "artist": "Chaoborus",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Boats%20on%20Nam%20Ngum%20Lake.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Boats_on_Nam_Ngum_Lake.JPG",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "artist": "Chaoborus",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Islands%20on%20Nam%20Ngum%20Lake.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Islands_on_Nam_Ngum_Lake.JPG",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "artist": "Chaoborus",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/PhouBia%20from%20Nam%20Ngum%20Lake.jpg",
+              "source_page": "https://commons.wikimedia.org/wiki/File:PhouBia_from_Nam_Ngum_Lake.jpg",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "artist": "Chaoborus",
+              "last_checked": "2026-10-03"
+            },
+            {
+              "static_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nam%20Ngum%201%20Dam.JPG",
+              "source_page": "https://commons.wikimedia.org/wiki/File:Nam_Ngum_1_Dam.JPG",
+              "provider": "Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "artist": "Chaoborus",
+              "last_checked": "2026-10-03"
+            }
+          ]
         }
       },
       {

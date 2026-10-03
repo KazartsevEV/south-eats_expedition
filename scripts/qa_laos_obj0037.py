@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# One-shot canonical migration for Laos obj_la_0037.
 from __future__ import annotations
 
 import hashlib

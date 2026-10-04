@@ -1,24 +1,42 @@
 {
   "object_id": "obj_la_0054",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-04",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-04",
+    "scope": "Tad Lor: identity vs Tad Hang/Tad Soung, GPS/elevation, Route 20 access, Xe Set hydropower, seasonality, village/ethnography context, current bridge/visitor reports, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "waterfall_identity_distinct": true,
+      "hydropower_current_official": true,
+      "release_time_historical_only": true,
+      "public_transport_schedule_not_overstated": true,
+      "water_quality_honest": true,
+      "camping_permission_unknown_preserved": true,
+      "traveler_report_period_scoped": true,
+      "gallery_sources_traced": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -37,9 +55,12 @@
   "verification": {
     "dynamic_fields": [
       "access",
-      "hours",
+      "public transport",
+      "bridge condition",
+      "water level",
+      "hydropower release",
+      "swimming conditions",
       "tickets",
-      "water",
       "overnight",
       "filming/drone"
     ],

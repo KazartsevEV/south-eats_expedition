@@ -173,6 +173,38 @@ def remap_source_refs(values, registry):
     return out
 
 
+def normalize_nested_source_refs(value, registry):
+    """Remap registered legacy source refs anywhere inside a canonical entity.
+
+    Source-country research may contain a mix of already-canonical src_* IDs
+    and newly registered legacy src:<hash> IDs. Existing field-specific
+    remappers cover geo/visual data, but logistics, narrative and traveler
+    reports can also carry fact-scoped refs. Convert only refs that are known
+    legacy keys in the persistent registry; preserve already-canonical IDs.
+    """
+    source_registry = registry.get("sources") or {}
+
+    def walk(node):
+        if isinstance(node, dict):
+            out = {}
+            for key, child in node.items():
+                if key == "source_refs" and isinstance(child, list):
+                    refs = []
+                    for item in child:
+                        mapped = source_registry.get(item, item)
+                        if mapped not in refs:
+                            refs.append(mapped)
+                    out[key] = refs
+                else:
+                    out[key] = walk(child)
+            return out
+        if isinstance(node, list):
+            return [walk(child) for child in node]
+        return node
+
+    return walk(value)
+
+
 def remap_geo_sources(geo, registry):
     geo = json.loads(json.dumps(geo or {}, ensure_ascii=False))
     for point in [geo.get("primary_location")] + list(geo.get("points") or []):
@@ -1508,6 +1540,7 @@ def build():
                 },
             },
         }
+        canonical = normalize_nested_source_refs(canonical, registry)
         dump(release / "objects" / code.lower() / f"{object_id}.json", canonical)
         canonical_objects[object_id] = canonical
         canonical_object_ids_by_country[code].append(object_id)

@@ -2,18 +2,23 @@
   "id": "obj_la_0057",
   "kind": "attraction",
   "slug": "tad-faek-waterfall",
-  "status": "draft",
+  "status": "published",
   "names": {
     "primary": "Tad Faek Waterfall"
   },
   "summary": {
-    "narrow": "Невысокий водопад с природными бассейнами у Route 11 в Секонге, отдельно описанный Tourism Laos."
+    "narrow": "Tad Faek — не высокий «открыточный» водопад, а широкая каменная ступень реки примерно в пяти метрах высотой с двумя естественными бассейнами. Для Секонга это прежде всего местное место купания и пикников: по выходным сюда приезжают семьи, а в будни участок бывает заметно тише. Главный практический нюанс 2026 года — свежий полевой отчёт фиксировал строительные работы по туристическому благоустройству, поэтому старые сведения о беседках, бунгало, прокате камер и плате за вход нельзя считать текущими без проверки."
   },
   "classification": {
     "class_id": "nature.waterfall",
     "tag_ids": [
       "waterfall",
-      "nature"
+      "swimming",
+      "river",
+      "local_recreation",
+      "road_trip",
+      "geology",
+      "local_tradition"
     ]
   },
   "geo": {
@@ -23,17 +28,83 @@
     ],
     "nearest_place_id": null,
     "nearest_place_name_raw": "Sekong",
-    "primary_location": null,
+    "primary_location": {
+      "lat": 15.24385,
+      "lon": 106.75158,
+      "elevation_m": 120.0,
+      "elevation_range_m": null,
+      "coordinate_type": "waterfall_base",
+      "accuracy": "high",
+      "elevation_accuracy": "approximate",
+      "source_refs": [
+        "src_990695"
+      ],
+      "elevation_source_refs": [
+        "src_990696"
+      ],
+      "checked_at": "2026-10-04"
+    },
     "geo_points": [],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 120.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "site",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src_990696"
+      ],
+      "checked_at": "2026-10-04",
+      "notes": "Около 120 м — полевая отметка научного сбора у Tad Faek, а не геодезическая отметка верхней кромки водопада."
+    }
   },
   "narrative": {
     "sections": [
       {
         "section_id": "overview",
-        "content": "Невысокий водопад с природными бассейнами у Route 11 в Секонге, отдельно описанный Tourism Laos.",
+        "content": "Tad Faek — широкий невысокий каскад, где вода пересекает каменную ступень примерно пяти метров высотой и образует две естественные чаши. Его ценность не в вертикальном масштабе, а в форме русла: широкая полка, валуны, спокойные участки воды и лесной берег. Это популярное местное место отдыха, особенно по выходным и праздникам.",
         "source_refs": [
+          "src_000431",
+          "src_990697",
+          "src_990698"
+        ]
+      },
+      {
+        "section_id": "culture",
+        "content": "Для Секонга Tad Faek — прежде всего общественное место отдыха. KPL описывает семьи, которые приезжают сюда по выходным, готовят еду, сидят у воды и купаются; Tourism Laos тоже предупреждает, что по выходным и праздникам людей заметно больше. Поэтому спокойный «дикий водопад» и шумная местная пикниковая площадка — два одинаково реальных режима одного места.",
+        "source_refs": [
+          "src_990697",
           "src_000431"
+        ]
+      },
+      {
+        "section_id": "geography",
+        "content": "Водопад лежит примерно в 14–16 км южнее города Секонг по дорожному коридору к Аттапы. Официальный Tourism Laos даёт поворот на 14,5-м километре и ещё 2,4 км до каскада. Координата OSM 15.24385, 106.75158 почти совпадает с научной полевой точкой 2010 года 15°14.7′N 106°45.1′E, что хорошо подтверждает идентичность объекта.",
+        "source_refs": [
+          "src_000431",
+          "src_990695",
+          "src_990696"
+        ]
+      },
+      {
+        "section_id": "geology",
+        "content": "Форма Tad Faek определяется широким выходом прочного коренного основания поперёк русла: вода не падает одной узкой струёй, а распределяется по каменной полке и ступеням, создавая верхний и нижний бассейны. Надёжного петрографического источника для самой породы каскада не найдено, поэтому карточка не называет её базальтом, песчаником или другой породой только по внешнему виду.",
+        "source_refs": [
+          "src_000431",
+          "src_990698"
+        ]
+      },
+      {
+        "section_id": "myths_beliefs",
+        "content": [
+          {
+            "type": "local_tradition",
+            "text": "Tourism Laos фиксирует местное предупреждение о нижнем бассейне: считается, что там живёт рыба pa pao с острыми зубами, поэтому местные предпочитают купаться в верхней чаше. Источник передаёт это именно как местное верование/рассказ; карточка не превращает его в научно подтверждённую зоологическую опасность."
+          }
+        ],
+        "source_refs": [
+          "src_000431",
+          "src_990704"
         ]
       }
     ]
@@ -42,94 +113,315 @@
     "entry": {
       "hours": null,
       "ticket": null,
-      "closure_notes": null,
-      "status": null,
+      "closure_notes": "Единое актуальное расписание и тариф не подтверждены. Discover Laos публикует 08:00–17:00, но это вторичный туристический источник; январь 2026 года дал свежий отчёт о строительных работах и переустройстве площадки.",
+      "status": "open/verify",
       "official_url": "https://www.tourismlaos.org/southern-provinces/xekong-province/",
-      "notes": null,
-      "source_refs": [],
-      "checked_at": null,
-      "typical_visit_hours": null,
-      "public_transport": null,
-      "last_mile": null,
-      "mobility_notes": null,
+      "notes": "Из Секонга ехать на юг в сторону Аттапы. Tourism Laos даёт поворот примерно на 14,5-м километре и ещё около 2,4 км до водопада. В части путеводителей тот же дорожный коридор подписан как Route 16, тогда как официальный Tourism Laos использует Route 11; ориентироваться лучше по направлению Sekong—Attapeu и названию Tad Faek, а не только по номеру дороги.",
+      "source_refs": [
+        "src_000431",
+        "src_990699",
+        "src_990698"
+      ],
+      "checked_at": "2026-10-04",
+      "typical_visit_hours": [
+        1,
+        3
+      ],
+      "public_transport": "Регулярный общественный транспорт прямо к водопаду не подтверждён. Для самостоятельного визита практичнее мотоцикл/мопед, автомобиль или локальный водитель из Секонга.",
+      "last_mile": "От основной дороги — примерно 2,4 км по боковой дороге к зоне водопада. Discover Laos описывает участок как грунтовый; после сильных дождей состояние последнего подъезда проверять отдельно.",
+      "mobility_notes": "У воды — каменные плиты, валуны и мокрые поверхности. Широкий верхний бассейн используется для купания; после ливней поток сильнее и кромка водопада опаснее.",
       "terrain_and_movement": null,
       "operational_status": {
         "access_mode": null,
         "access_status": null,
-        "current_alert": null,
+        "current_alert": "В январе 2026 посетители сообщали о значительных строительных работах на Tad Faek/Tad Hua Khon. Перед выездом проверять, какие участки, беседки, питание и купальные зоны реально доступны.",
         "security_access_status": null,
         "security_region": null,
         "security_snapshot_as_of": null,
-        "status_snapshot": null,
-        "source_refs": [],
-        "checked_at": "2026-10-02"
+        "status_snapshot": {
+          "as_of": "2026-10-04",
+          "summary": "Официальный Tourism Laos продолжает публиковать Tad Faek как достопримечательность Xekong; свежий полевой отчёт января 2026 указывает не на закрытие, а на активное туристическое переустройство участка.",
+          "source_refs": [
+            "src_000431",
+            "src_990699"
+          ]
+        },
+        "source_refs": [
+          "src_000431",
+          "src_990699",
+          "src_990698"
+        ],
+        "checked_at": "2026-10-04"
       }
     },
-    "access_options": [],
+    "access_options": [
+      {
+        "id": "sekong_tad_faek",
+        "origin": "Sekong",
+        "modes": [
+          "car",
+          "motorcycle",
+          "moped",
+          "taxi"
+        ],
+        "checked_at": "2026-10-04",
+        "source_refs": [
+          "src_000431",
+          "src_990698",
+          "src_990704"
+        ],
+        "legs": [
+          {
+            "mode": "motorcycle",
+            "distance_km": 16.9,
+            "duration_min": null,
+            "surface": "mixed",
+            "condition": "Около 14,5 км по основной дороге на юг и примерно 2,4 км бокового подъезда; последний участок описывается как грунтовый.",
+            "seasonality": "В дождливый сезон боковой подъезд и мокрые камни у воды сложнее.",
+            "elevation_gain_m": null,
+            "elevation_loss_m": null,
+            "trailhead": null,
+            "navigation": "Sekong → на юг в сторону Attapeu → поворот Tad Faek около км 14,5 → ещё около 2,4 км к водопаду.",
+            "fords": 0,
+            "notes": "16,9 км — сумма двух опубликованных маршрутных ориентиров, а не GPS-трек.",
+            "source_refs": [
+              "src_000431",
+              "src_990698",
+              "src_990704"
+            ]
+          }
+        ]
+      }
+    ],
     "water": {
-      "at_object": null,
-      "last_reliable_point": null,
+      "at_object": true,
+      "quality": "technical_only",
+      "last_reliable_point": "Sekong",
       "distance_m": null,
-      "natural_sources": [],
-      "notes": null,
-      "quality": null,
-      "source_refs": []
+      "natural_sources": [
+        {
+          "type": "stream",
+          "name": "Tad Faek river pools",
+          "potability": "treatment_required",
+          "notes": "Поверхностная вода и купальные бассейны; не пить без обработки."
+        }
+      ],
+      "notes": "Старые источники упоминают ресторан/напитки у водопада, но январь 2026 дал сведения о перестройке участка; запас воды лучше привезти.",
+      "source_refs": [
+        "src_000431",
+        "src_990699",
+        "src_990700"
+      ]
     },
     "supplies": {
-      "status": null,
-      "summary": null,
+      "status": "limited",
+      "summary": "Исторически у водопада работали простые рестораны/киоски и беседки. Из-за отмеченной в январе 2026 стройки текущий набор услуг неизвестен; основные покупки делать в Sekong.",
       "poi_ids": [],
-      "source_refs": []
+      "source_refs": [
+        "src_990698",
+        "src_990700",
+        "src_990699"
+      ]
     },
     "overnight": {
-      "status": null,
-      "summary": null,
-      "source_refs": []
+      "status": "unclear",
+      "summary": "Старые бунгало/простое размещение описывались Travelfish и другими путеводителями, но после строительных работ 2026 года полагаться на них нельзя. Для гарантированной ночёвки использовать Sekong.",
+      "source_refs": [
+        "src_990700",
+        "src_990699"
+      ]
     },
     "lodging_ids": [],
     "rules": {
-      "permit_or_guide": null,
-      "access_requirements": null,
+      "permit_or_guide": "Обязательный гид для обычного посещения не подтверждён. Это короткий придорожный природный объект, но текущие строительные работы и локальные правила купания нужно уточнять на месте.",
+      "access_requirements": "Следовать локальным указаниям по купанию и строительным ограждениям; не прыгать с кромки водопада без подтверждения условий; нижний бассейн связан с местным предупреждением о рыбе pa pao — воспринимать его как местную традицию и в любом случае учитывать советы жителей.",
       "source_refs": [],
-      "checked_at": null,
+      "checked_at": "2026-10-04",
       "safety": {
         "crime_context": null,
-        "main_risks": [],
-        "sensitive_areas": [],
-        "confidence": null,
-        "source_refs": [],
-        "checked_at": null
+        "main_risks": [
+          "скользкие каменные плиты и валуны",
+          "сильное течение после дождей",
+          "неизвестная глубина и подводный рельеф бассейнов",
+          "строительные работы и временные ограждения по свежему отчёту 2026 года",
+          "жара и солнце на открытых каменных участках"
+        ],
+        "sensitive_areas": [
+          "следовать местным указаниям о том, в каком бассейне купаться",
+          "не заходить в строительные зоны",
+          "не воспринимать старые сведения о прыжках с уступов как рекомендацию",
+          "не оставлять мусор в популярной местной пикниковой зоне"
+        ],
+        "confidence": "high",
+        "source_refs": [
+          "src_000431",
+          "src_990699",
+          "src_990697"
+        ],
+        "checked_at": "2026-10-04"
       }
     },
     "seasonality": {
-      "best_period": null,
-      "heat_rain_notes": null,
-      "site_specific_notes": null
+      "best_period": "Ноябрь–февраль удобнее по погоде и для спокойного дорожного доступа. В сезон дождей водопад мощнее и лес ярче, но течение и скользкие камни делают купание менее предсказуемым.",
+      "heat_rain_notes": "В сухой сезон воды обычно спокойнее; в дождливый сезон поток шире и сильнее. После сильных ливней не ориентироваться на фотографии спокойного верхнего бассейна.",
+      "site_specific_notes": "Для визуального вида водопада лучше период с уверенным расходом воды; для купания важнее текущая сила течения и локальные указания, а не календарный месяц."
     }
   },
-  "traveler_reports": [],
-  "visual_recon": {
-    "photo_suitability_5": null,
-    "video_suitability_5": null,
-    "best_time": null,
-    "best_weather_light": null,
-    "viewpoints": [],
-    "seasonal_visuals": [],
-    "video_activity": [],
-    "useful_equipment": [],
-    "drone": {
-      "visual_value": null,
-      "legal_status": null,
-      "permit_required": null,
-      "restrictions": [],
-      "source_refs": [],
-      "checked_at": null
+  "traveler_reports": [
+    {
+      "kind": "traveler_report",
+      "topic": "2026_construction",
+      "summary": "Январь 2026: путешественники, заехавшие к Tad Faek и соседнему Tad Hua Khon, отметили масштабные строительные работы по подготовке туристической площадки и слабое впечатление от визита именно из-за стройки. Это самый свежий найденный полевой сигнал и причина не считать старую инфраструктуру неизменной.",
+      "observed_period": "2026-01",
+      "source_refs": [
+        "src_990699"
+      ],
+      "confidence": "medium"
     },
-    "filming_restrictions": null
+    {
+      "kind": "traveler_report",
+      "topic": "historical_facilities",
+      "summary": "Travelfish в старом описании 2017 года фиксировал беседки у воды, прокат камер, небольшой ресторан и простые бунгало. Эти сведения полезны для понимания прежней модели места, но после работ 2026 года не должны показываться как гарантированно действующие услуги.",
+      "observed_period": "2017",
+      "source_refs": [
+        "src_990700"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "kind": "traveler_report",
+      "topic": "old_concession_and_fee",
+      "summary": "Старый путеводитель Lonely Planet описывал период, когда предыдущий concession потерял лицензию и вход был бесплатным. Это историческая ситуация, а не текущий тариф; актуальную плату карточка намеренно оставляет неизвестной.",
+      "observed_period": "historical guidebook snapshot",
+      "source_refs": [
+        "src_990701"
+      ],
+      "confidence": "low"
+    }
+  ],
+  "visual_recon": {
+    "photo_suitability_5": 5,
+    "video_suitability_5": 4,
+    "best_time": "утро без толпы или поздний день; по сезону — при достаточном расходе воды",
+    "best_weather_light": "После дождей поток мощнее и зелень насыщеннее, но мокрый камень опаснее. В сухой сезон проще работать у воды, хотя каскад может быть спокойнее.",
+    "viewpoints": [
+      {
+        "id": "vp_main_ledge",
+        "name": "Широкая каменная ступень Tad Faek",
+        "description": "Основной невысокий каскад, растянутый поперёк русла, с верхним и нижним бассейнами.",
+        "coordinates": {
+          "lat": 15.24385,
+          "lon": 106.75158,
+          "elevation_m": 120.0
+        },
+        "gps": {
+          "decimal": "15.243850, 106.751580",
+          "dms": "15°14′37.9″N 106°45′05.7″E"
+        },
+        "access": "От зоны входа по короткому подходу к реке; учитывать текущие строительные ограждения.",
+        "view": {
+          "description": "широкий пяти-метровый каскад, каменная полка, лес и природные бассейны"
+        },
+        "best_time": "поздний день или облачная погода",
+        "best_weather_light": "Мягкий боковой свет лучше показывает фактуру камня и прозрачность воды.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для всей ширины каскада и бассейнов"
+          },
+          {
+            "type": "standard",
+            "why": "для отдельных струй, камней и отдыхающих без вторжения в личное пространство"
+          }
+        ],
+        "source_refs": [
+          "src_990698"
+        ]
+      },
+      {
+        "id": "vp_upper_pool",
+        "name": "Верхний бассейн",
+        "description": "Более спокойная природная чаша выше основной ступени; именно её официальное описание связывает с обычным местным купанием.",
+        "coordinates": null,
+        "gps": null,
+        "access": "На территории Tad Faek; условия у воды оценивать на месте.",
+        "view": {
+          "description": "широкая гладь верхнего бассейна, лесные берега и кромка водопада"
+        },
+        "best_time": "утро или поздний день",
+        "best_weather_light": "Рассеянный свет уменьшает блики на воде.",
+        "useful_equipment": [
+          {
+            "type": "wide",
+            "why": "для бассейна и окружающего леса"
+          },
+          {
+            "type": "action_camera",
+            "why": "для водной среды, если купание разрешено и безопасно"
+          }
+        ],
+        "source_refs": [
+          "src_000431"
+        ]
+      }
+    ],
+    "seasonal_visuals": [
+      "Дождливый сезон: широкий поток выглядит мощнее, лес ярко-зелёный, но вода и камни опаснее.",
+      "Прохладный сухой сезон: спокойнее доступ и купальная среда, однако расход воды ниже.",
+      "Начало 2026 года: строительные работы могут временно попадать в кадр и менять привычные точки доступа."
+    ],
+    "video_activity": [
+      "вода, проходящая по широкой каменной ступени",
+      "спокойное движение воды в верхнем бассейне",
+      "местная пикниковая жизнь только без навязчивой съёмки людей",
+      "контраст русла в сухой и более полноводный сезон"
+    ],
+    "useful_equipment": [
+      {
+        "type": "wide",
+        "why": "для широкой формы каскада"
+      },
+      {
+        "type": "standard",
+        "why": "для деталей потока и каменной поверхности"
+      },
+      {
+        "type": "action_camera",
+        "why": "для водной среды при безопасном купании"
+      },
+      {
+        "type": "phone",
+        "why": "объект короткого доступа и не требует специальной техники"
+      }
+    ],
+    "drone": {
+      "visual_value": "С воздуха читается широкая форма русла, лесной коридор и положение водопада относительно сельской дороги.",
+      "legal_status": "regulated",
+      "permit_required": null,
+      "restrictions": [
+        "Применяются общие правила БПЛА Лаоса.",
+        "Не запускать над людьми, купальными бассейнами и строительной площадкой без локального согласования.",
+        "Отдельного опубликованного разрешения для Tad Faek не найдено."
+      ],
+      "source_refs": [
+        "src_000504"
+      ],
+      "checked_at": "2026-10-04"
+    },
+    "filming_restrictions": "Отдельного запрета на обычную наземную любительскую съёмку не найдено. Людей крупным планом снимать с согласия; дрон и коммерческую работу согласовывать отдельно."
   },
   "media": {
-    "cover_id": null,
-    "gallery_ids": []
+    "cover_id": "med_la_fbbb7ca06e71",
+    "gallery_ids": [
+      "med_la_fbbb7ca06e71",
+      "med_la_09954d758379",
+      "med_la_ab5858a17145",
+      "med_la_9c7922589204",
+      "med_la_654aabfd2b1e",
+      "med_la_d7c477358600"
+    ],
+    "preview_asset": "previews/la/obj_la_0057.webp",
+    "preview_source_media_id": "med_la_fbbb7ca06e71"
   },
   "relations": {
     "legacy_ids": [
@@ -138,32 +430,61 @@
     "legacy_detail_path": "countries/laos/objects/tad-faek-waterfall.json"
   },
   "freshness": {
-    "checked_at": "2026-10-02",
+    "checked_at": "2026-10-04",
     "source_file": "laos.json",
     "source_refs": [
-      "src_000431"
+      "src_000431",
+      "src_990695",
+      "src_990696",
+      "src_990673",
+      "src_990697",
+      "src_990698",
+      "src_990699",
+      "src_990700",
+      "src_990701",
+      "src_990702",
+      "src_990703",
+      "src_990704"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
-      "coordinates": false,
-      "elevation": false,
+      "coordinates": true,
+      "elevation": true,
       "narrative": true,
       "sources": true,
-      "access": false,
-      "water": false,
-      "overnight": false,
-      "traveler_reports": false,
-      "visual_recon": false,
-      "gallery_min_5": false,
+      "access": true,
+      "water": true,
+      "overnight": true,
+      "traveler_reports": true,
+      "visual_recon": true,
+      "gallery_min_5": true,
       "editorial_rebuild": true
     },
-    "last_reviewed_at": "2026-10-02",
-    "fact_source_review": null,
+    "last_reviewed_at": "2026-10-04",
+    "fact_source_review": {
+      "status": "passed",
+      "checked_at": "2026-10-04",
+      "scope": "Tad Faek: identity, GPS/elevation, 5 m form, Route 11/road access, upper/lower pools, local pa pao tradition, local recreation, Jan 2026 construction, historical facilities, media and drone",
+      "checks": {
+        "narrative_section_sources": true,
+        "coordinate_source_scoped": true,
+        "elevation_source_scoped": true,
+        "official_height_preferred": true,
+        "road_number_conflict_preserved": true,
+        "pa_pao_marked_tradition": true,
+        "current_construction_period_scoped": true,
+        "old_facilities_marked_historical": true,
+        "water_quality_not_overstated": true,
+        "camping_permission_unknown_preserved": true,
+        "gallery_sources_traced": true,
+        "drone_rules_official": true
+      }
+    },
     "identity_review": {
       "status": "reviewed",
       "identity_status": "distinct",
@@ -182,8 +503,11 @@
     "verification": {
       "dynamic_fields": [
         "access",
+        "construction status",
         "hours",
-        "tickets",
+        "ticket",
+        "food/stalls",
+        "swimming conditions",
         "water",
         "overnight",
         "filming/drone"

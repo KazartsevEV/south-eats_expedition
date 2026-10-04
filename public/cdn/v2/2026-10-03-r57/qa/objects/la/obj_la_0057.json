@@ -1,24 +1,42 @@
 {
   "object_id": "obj_la_0057",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-04",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-04",
+    "scope": "Tad Faek: identity, GPS/elevation, 5 m form, Route 11/road access, upper/lower pools, local pa pao tradition, local recreation, Jan 2026 construction, historical facilities, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "official_height_preferred": true,
+      "road_number_conflict_preserved": true,
+      "pa_pao_marked_tradition": true,
+      "current_construction_period_scoped": true,
+      "old_facilities_marked_historical": true,
+      "water_quality_not_overstated": true,
+      "camping_permission_unknown_preserved": true,
+      "gallery_sources_traced": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -37,8 +55,11 @@
   "verification": {
     "dynamic_fields": [
       "access",
+      "construction status",
       "hours",
-      "tickets",
+      "ticket",
+      "food/stalls",
+      "swimming conditions",
       "water",
       "overnight",
       "filming/drone"

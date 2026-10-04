@@ -1,24 +1,43 @@
 {
   "object_id": "obj_la_0060",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-04",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-04",
+    "scope": "Tad Saepha identity, GPS/elevation, dimensions, Xe Pian NPA, Ban Mai/Oy guide model, seasonal boat/trek access, homestay, 2026 status, media and drone",
+    "checks": {
+      "coordinate_confidence_preserved": true,
+      "elevation_source_scoped": true,
+      "dimensions_crosschecked": true,
+      "protected_area_official": true,
+      "ban_mai_oy_scoped": true,
+      "guide_model_official": true,
+      "boat_seasonality_scoped": true,
+      "distance_conflict_preserved": true,
+      "trail_metrics_not_invented": true,
+      "water_not_marked_potable": true,
+      "camping_not_assumed": true,
+      "gallery_sources_traced": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -38,11 +57,13 @@
   },
   "verification": {
     "dynamic_fields": [
-      "access",
+      "guide availability",
+      "boat availability",
+      "road/trail condition",
       "hours",
-      "tickets",
-      "water",
-      "overnight",
+      "fees",
+      "homestay",
+      "water level",
       "filming/drone"
     ],
     "verify_before_departure": true

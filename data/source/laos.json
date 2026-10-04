@@ -44478,122 +44478,622 @@
       },
       {
         "name": "Tad Saepha Waterfall",
-        "class": "inventory",
+        "class": "waterfall",
         "interest": [
           "waterfall",
+          "river",
+          "jungle",
+          "protected_area",
+          "trekking",
+          "boat",
+          "community_based_tourism",
+          "ethnography",
+          "birdwatching",
           "remote"
         ],
-        "why_go": "Удалённый водопад на Xe Pian в Аттапы, к которому Tourism Laos описывает пеший или лодочный доступ с местным проводником.",
+        "why_go": "Tad Saepha — большой удалённый водопад на Xe Pian внутри одноимённой охраняемой территории: примерно 23 м высотой и до 120 м шириной в полноводный сезон. Интерес здесь не только в самом каскаде: маршрут начинается через Ban Mai, деревню народа ой, и официальная модель посещения связывает водопад с местным проводником, пешим переходом либо лодкой в зелёный сезон.",
         "traveler_card": {
           "location": {
-            "region": "Attapeu Province",
-            "nearest_hub": "Sanamxay",
+            "region": "Attapeu Province / Xe Pian National Protected Area",
+            "nearest_hub": "Ban Mai / Attapeu (Samakkhixay)",
             "languages_spoken": [
               "лаосский",
-              "английский — ограниченно в туристической инфраструктуре"
+              "языки местных мон-кхмерских общин; в Ban Mai источники указывают Oy",
+              "английский — ограниченно"
             ],
             "coordinates": {
-              "lat": null,
-              "lon": null,
-              "elevation_m": null
+              "lat": 14.7765,
+              "lon": 106.44185,
+              "elevation_m": 125
             },
-            "coordinate_type": null,
-            "accuracy": "unknown",
-            "elevation_accuracy": "unknown",
-            "coordinates_checked_at": null,
+            "coordinate_type": "waterfall_base",
+            "accuracy": "medium",
+            "elevation_accuracy": "approximate",
+            "coordinates_checked_at": "2026-10-04",
+            "coordinate_source": {
+              "type": "traveler_report",
+              "title": "Если вдруг занесло в Аттапы на юге Лаоса",
+              "publisher": "Frog Travelers",
+              "url": "https://frog-travelers.ru/attapu-laos-chto-posmotret-dostoprimechatelnosti-oteli/",
+              "language": "ru",
+              "authority": "medium",
+              "accessed": "2026-10-04",
+              "notes": "Published map coordinate for Tad Saepha: 14.7765, 106.44185. Authors compiled the provincial waterfall inventory; coordinate treated as medium-confidence rather than survey-grade."
+            },
+            "elevation_source": {
+              "type": "official_map",
+              "title": "SRTM90m elevation at Tad Saepha mapped coordinate",
+              "publisher": "OpenTopoData / SRTM90m",
+              "url": "https://api.opentopodata.org/v1/srtm90m?locations=14.7765,106.44185",
+              "language": "en",
+              "authority": "medium",
+              "accessed": "2026-10-04"
+            },
+            "object_elevation": {
+              "representative_m": 125,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "approximate",
+              "source": {
+                "type": "official_map",
+                "title": "SRTM90m elevation at Tad Saepha mapped coordinate",
+                "publisher": "OpenTopoData / SRTM90m",
+                "url": "https://api.opentopodata.org/v1/srtm90m?locations=14.7765,106.44185",
+                "language": "en",
+                "authority": "medium",
+                "accessed": "2026-10-04"
+              },
+              "checked_at": "2026-10-04",
+              "notes": "Около 125 м по SRTM90 в опубликованной точке. Это высота местности у водопада, не высота каскада."
+            },
             "geo_points": []
           },
           "logistics": {
-            "access": "Инвентарная карточка: существование объекта подтверждено официальным Tourism Laos; точный самостоятельный доступ будет проверен на объектном QA.",
-            "public_transport": null,
-            "last_mile": null,
-            "typical_visit_hours": null,
-            "permit_or_guide": null,
-            "mobility_notes": null,
-            "modes": {},
-            "water": "Не исследовано на инвентарном проходе.",
-            "overnight_and_camping": "Не исследовано на инвентарном проходе.",
-            "self_guided_default": null,
-            "travel_model": "предварительный инвентарь перед полным объектным QA"
+            "access": "Базовый узел — Ban Mai в Xe Pian NPA. Tourism Laos пишет, что Tad Saepha достигают пешком или на лодке с местным проводником из Ban Mai; WeAreLao уточняет, что лодочный вариант характерен для зелёного сезона. До самого Ban Mai источники дают около 60–61 км от Attapeu/Samakkhixay, тогда как Discover Laos указывает около 40 км до водопада. Эти цифры описывают разные дорожные/маршрутные точки и не должны превращаться в одну «точную» дистанцию.",
+            "public_transport": "Регулярный общественный транспорт непосредственно к Ban Mai и водопаду не подтверждён. Реалистичная схема — добраться до Attapeu, затем частный транспорт/договорённость до Ban Mai и дальше местный проводник.",
+            "last_mile": "Из Ban Mai — лесной маршрут пешком либо лодка по Xe Pian в сезон достаточной воды. Длина и время до Tad Saepha в официальных источниках не опубликованы как единый норматив; маршрут зависит от уровня воды и выбранного способа.",
+            "typical_visit_hours": [
+              4,
+              10
+            ],
+            "permit_or_guide": "Официальные материалы описывают посещение именно с local guide from Ban Mai. Это следует считать стандартной моделью доступа в удалённую часть Xe Pian NPA; не выдавать самостоятельное блуждание по охраняемому лесу за эквивалентный маршрут.",
+            "mobility_notes": "Лесные тропы могут быть грязными и скользкими; лодочный маршрут зависит от уровня воды. У самого каскада мокрые скалы и сильное течение.",
+            "modes": {
+              "public_transport": "До Attapeu есть региональные автобусы; прямого рейса к водопаду не подтверждено.",
+              "taxi_ridehail": "Частный водитель из Attapeu может довезти до района Ban Mai; ride-hailing не считать гарантированным.",
+              "car": "Подходит до деревенского/лесного стартового узла, но не заменяет последний участок к водопаду.",
+              "motorcycle": "Возможен до Ban Mai по местным дорогам, состояние которых в дождливый сезон меняется.",
+              "boat": "Официально описанный вариант из Ban Mai в зелёный сезон по Xe Pian с местным проводником.",
+              "walking": "Официально описанный лесной вариант из Ban Mai с местным проводником."
+            },
+            "self_guided_default": false,
+            "travel_model": "самостоятельно до Attapeu/Ban Mai + местный проводник на последний участок",
+            "access_options": [
+              {
+                "id": "attapeu_ban_mai_saepha",
+                "origin": "Attapeu (Samakkhixay)",
+                "modes": [
+                  "car",
+                  "motorcycle",
+                  "taxi",
+                  "walking",
+                  "boat"
+                ],
+                "checked_at": "2026-10-04",
+                "source_refs": [
+                  "src:dd0a8b8ca77f30",
+                  "src:289e5868a8b42e",
+                  "src:faaaa120f60547",
+                  "src:c1e979ad79f2d1"
+                ],
+                "legs": [
+                  {
+                    "mode": "car",
+                    "distance_km": 60,
+                    "duration_min": null,
+                    "surface": "mixed",
+                    "condition": "Региональный подъезд к Ban Mai; точная трассировка и состояние последних местных дорог требуют проверки по сезону.",
+                    "seasonality": "В сезон дождей наземный доступ сложнее.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Attapeu/Samakkhixay → район Ban Mai в Xe Pian NPA.",
+                    "fords": null,
+                    "notes": "Около 60 км — WeAreLao; Frog Travelers даёт 61 км. Discover Laos указывает около 40 км до Tad Saepha, поэтому дистанцию считать ориентиром, а не точной дорожной метрикой.",
+                    "source_refs": [
+                      "src:289e5868a8b42e",
+                      "src:bfa8cdcd856233",
+                      "src:faaaa120f60547"
+                    ]
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "trail",
+                    "condition": "Лесная тропа из Ban Mai с местным проводником.",
+                    "seasonality": "В дождливый сезон грязь и скользкие участки; лодка может быть предпочтительнее.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Маршрут задаёт местный проводник Ban Mai.",
+                    "fords": null,
+                    "notes": "Не придумываем длину и время: надёжного трека в источниках нет.",
+                    "source_refs": [
+                      "src:dd0a8b8ca77f30",
+                      "src:289e5868a8b42e"
+                    ]
+                  },
+                  {
+                    "mode": "boat",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": null,
+                    "condition": "Лодка по Xe Pian из Ban Mai при достаточном уровне воды.",
+                    "seasonality": "Green Season / высокая вода.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "С местным лодочником/проводником Ban Mai.",
+                    "fords": 0,
+                    "notes": "Официально/регионально описанный сезонный способ доступа.",
+                    "source_refs": [
+                      "src:dd0a8b8ca77f30",
+                      "src:289e5868a8b42e"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "water": "Xe Pian и лесные водотоки дают природную воду, но питьевой статус не подтверждён. Питьевую воду брать из Attapeu/Ban Mai.",
+            "water_structured": {
+              "at_object": true,
+              "quality": "treatment_required",
+              "last_reliable_point": "Ban Mai перед выходом на лесной/лодочный участок",
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "river",
+                  "name": "Xe Pian",
+                  "potability": "treatment_required",
+                  "notes": "Поверхностную речную воду без обработки не считать питьевой."
+                }
+              ],
+              "notes": "Для автономного выхода брать запас; природную воду фильтровать и обеззараживать.",
+              "source_refs": [
+                "src:dd0a8b8ca77f30",
+                "src:faaaa120f60547"
+              ]
+            },
+            "supplies": {
+              "status": "limited",
+              "summary": "Базовые запасы лучше делать в Attapeu. Ban Mai — деревенский стартовый узел с homestay, но постоянный магазин/ассортимент для экспедиционного снабжения не подтверждён.",
+              "poi_ids": [],
+              "source_refs": [
+                "src:289e5868a8b42e",
+                "src:c1e979ad79f2d1"
+              ]
+            },
+            "overnight_and_camping": "Ban Mai официально/регионально описывается как деревня с homestay. Свободный кемпинг у Tad Saepha внутри Xe Pian NPA не подтверждён и не должен считаться разрешённым по умолчанию.",
+            "overnight": {
+              "status": "permission_required",
+              "summary": "Для ночёвки использовать Ban Mai homestay или заранее согласованную местную площадку. Дикий кемпинг непосредственно у водопада не подтверждён.",
+              "source_refs": [
+                "src:dd0a8b8ca77f30",
+                "src:289e5868a8b42e",
+                "src:c1e979ad79f2d1"
+              ]
+            },
+            "access_requirements": "Следовать маршруту местного проводника, правилам Xe Pian NPA и деревенским договорённостям. Не собирать растения/животных и не уходить с согласованного маршрута."
           },
           "climate": {
-            "best_period": null,
-            "heat_rain_notes": null,
-            "site_specific_notes": null
+            "best_period": "Ноябрь–февраль — более сухая погода и проще пеший доступ. Июнь–октябрь — наиболее мощный водопад и рабочий лодочный сценарий, но лесные тропы сложнее.",
+            "heat_rain_notes": "В дождливый сезон уровень Xe Pian повышается, тропы становятся грязнее и возрастает риск сильного течения. В сухой сезон пешком проще, но жара и расход воды требуют запаса питьевой воды.",
+            "site_specific_notes": "Discover Laos прямо делит сезоны: июнь–октябрь для максимального потока, ноябрь–февраль для более комфортного доступа."
           },
           "operations": {
-            "status": null,
+            "status": "open/verify",
             "hours": null,
             "ticket": null,
-            "closure_notes": "Актуальные часы, цена и режим доступа не нормализованы; проверить при объектном QA.",
-            "last_verified": "2026-10-02",
-            "official_url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/"
+            "closure_notes": "Discover Laos публикует 06:00–18:00 и круглогодичный доступ weather permitting, но для удалённого NPA реальная возможность посещения зависит от Ban Mai, проводника, уровня воды и состояния маршрута. Единого входного тарифа в проверенных источниках нет.",
+            "last_verified": "2026-10-04",
+            "official_url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/",
+            "current_alert": "Удалённый маршрут в Xe Pian NPA нельзя планировать как придорожный объект: перед выездом нужно подтвердить проводника/лодку в Ban Mai и сезонную проходимость.",
+            "status_snapshot": {
+              "as_of": "2026-10-04",
+              "summary": "Tourism Laos продолжает публиковать Tad Saepha как объект Xe Pian NPA с доступом пешком или на лодке через Ban Mai. Discover Laos и свежий региональный гид 2026 также продолжают описывать этот кластер как действующий.",
+              "source_refs": [
+                "src:dd0a8b8ca77f30",
+                "src:faaaa120f60547",
+                "src:c1e979ad79f2d1"
+              ]
+            },
+            "source_refs": [
+              "src:dd0a8b8ca77f30",
+              "src:faaaa120f60547",
+              "src:c1e979ad79f2d1"
+            ]
           },
           "safety": {
-            "main_risks": [],
-            "sensitive_areas": []
+            "main_risks": [
+              "удалённый лесной маршрут без гарантированной связи",
+              "сильный поток Xe Pian в сезон дождей",
+              "грязные и скользкие тропы",
+              "мокрые скалы у широкого каскада",
+              "жара и обезвоживание в сухой сезон",
+              "зависимость лодочного доступа от уровня воды"
+            ],
+            "sensitive_areas": [
+              "Xe Pian National Protected Area — не сходить с согласованного маршрута",
+              "не беспокоить диких животных и птиц",
+              "не собирать лесные продукты без разрешения",
+              "уважать правила Ban Mai и местного проводника"
+            ],
+            "confidence": "high",
+            "source_refs": [
+              "src:dd0a8b8ca77f30",
+              "src:faaaa120f60547",
+              "src:289e5868a8b42e",
+              "src:c1e979ad79f2d1"
+            ],
+            "checked_at": "2026-10-04"
           },
           "media": {
-            "photo_suitability_5": null,
-            "video_suitability_5": null,
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "Утро и пасмурный день лучше удерживают детали широкого белого потока и тёмного леса; в сезон дождей объём воды максимальный.",
             "visual_scouting": {
-              "best_time": null,
-              "best_weather_light": null,
-              "viewpoints_for_photo_video": [],
-              "seasonal_visuals": [],
-              "video_activity": [],
-              "useful_equipment": []
+              "best_time": "раннее утро; по сезону — июнь–октябрь для максимального потока либо ноябрь–февраль для более простого доступа",
+              "best_weather_light": "Облачность снижает контраст между белой водой и тёмным лесом. После сильных дождей визуальный эффект выше, но подход сложнее.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_main_falls",
+                  "name": "Основная кромка Tad Saepha",
+                  "description": "Широкий фронт каскада Xe Pian, где река растягивается примерно до 120 м перед 23-метровым падением.",
+                  "coordinates": {
+                    "lat": 14.7765,
+                    "lon": 106.44185,
+                    "elevation_m": 125
+                  },
+                  "access": "С местным проводником из Ban Mai пешком или лодкой, затем по локальной тропе.",
+                  "view": {
+                    "description": "широкая водяная завеса, неровный каменный уступ и плотный лес Xe Pian NPA"
+                  },
+                  "best_time": "утро или облачная погода",
+                  "best_weather_light": "Ровный свет лучше показывает структуру широкого каскада и лес по краям.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для всей ширины водопада"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для отдельных потоков и каменного уступа"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "для деталей противоположной части каскада без приближения к краю"
+                    }
+                  ],
+                  "source": {
+                    "type": "other",
+                    "title": "Tad Sae Pha ຕາດແຊພະ",
+                    "publisher": "Discover Laos Today",
+                    "url": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+                    "language": "en",
+                    "authority": "medium",
+                    "accessed": "2026-10-04"
+                  }
+                },
+                {
+                  "id": "vp_xe_pian_approach",
+                  "name": "Подход по Xe Pian",
+                  "description": "Лодочный/береговой маршрут к водопаду через лесную реку, являющийся частью самого опыта.",
+                  "coordinates": null,
+                  "access": "Только с местным проводником/лодочником Ban Mai.",
+                  "view": {
+                    "description": "лесной коридор Xe Pian, речные берега и приближение к широкому каскаду"
+                  },
+                  "best_time": "утро",
+                  "best_weather_light": "Мягкий свет в лесном коридоре и достаточная видимость на воде.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для речного коридора и леса"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для лодки, берегов и деталей маршрута"
+                    },
+                    {
+                      "type": "action_camera",
+                      "why": "для движения по воде при безопасных условиях"
+                    }
+                  ],
+                  "source": {
+                    "type": "other",
+                    "title": "Attapeu Waterfalls",
+                    "publisher": "WeAreLao",
+                    "url": "https://wearelao.com/standard-page/attapeu-waterfalls/",
+                    "language": "en",
+                    "authority": "medium",
+                    "accessed": "2026-10-04"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Июнь–октябрь: максимальная ширина и мощность потока, насыщенная зелень, но наиболее сложный доступ.",
+                "Ноябрь–февраль: комфортнее пеший маршрут и ниже риски на тропе, при этом водопад обычно сохраняет значительный расход.",
+                "Поздний сухой сезон: меньше воды и выше тепловая нагрузка на пешем участке."
+              ],
+              "video_activity": [
+                "широкая водяная завеса на каменном уступе",
+                "движение лодки по лесному Xe Pian",
+                "переход от деревенского старта Ban Mai к охраняемому лесу",
+                "птицы и природная активность вдоль реки без преследования животных"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "для 120-метрового фронта каскада"
+                },
+                {
+                  "type": "standard",
+                  "why": "для реки и лесной среды"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "для удалённых частей водопада и птиц с дистанции"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "для лодочного участка"
+                },
+                {
+                  "type": "phone",
+                  "why": "для деревенского и маршрутного контекста без лишнего веса"
+                }
+              ]
             },
-            "drone": null,
-            "filming_restrictions": null
+            "drone": {
+              "visual_value": "С воздуха читаются масштаб 120-метровой кромки, лесной коридор Xe Pian и положение водопада внутри охраняемой территории.",
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "Применяются общие правила БПЛА Лаоса.",
+                "Xe Pian — охраняемая территория; локальное разрешение нельзя считать автоматическим.",
+                "Не беспокоить птиц и диких животных; не запускать над деревней и группами людей без согласования.",
+                "Отдельного опубликованного разрешения для Tad Saepha не найдено."
+              ],
+              "source_refs": [
+                "src:23a65d16d80264",
+                "src:dd0a8b8ca77f30"
+              ],
+              "checked_at": "2026-10-04"
+            },
+            "filming_restrictions": "Наземная любительская съёмка природного объекта отдельно не запрещена в найденных источниках. Для съёмки жителей Ban Mai, коммерческой работы и дрона требуется отдельное согласование."
           },
           "annotation": {
-            "narrative": "Удалённый водопад на Xe Pian в Аттапы, к которому Tourism Laos описывает пеший или лодочный доступ с местным проводником.",
+            "canonical_story_from_sections": true,
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Удалённый водопад на Xe Pian в Аттапы, к которому Tourism Laos описывает пеший или лодочный доступ с местным проводником."
+                "content": "Tad Saepha — крупный широкий водопад на Xe Pian в глубине Xe Pian National Protected Area. Discover Laos и региональные источники дают масштаб около 23 м высоты и до 120 м ширины, особенно впечатляющий в сезон дождей. В отличие от придорожных водопадов южного Лаоса, Tad Saepha связан с деревенским маршрутом через Ban Mai и требует отдельного выхода в лес или лодки.",
+                "source_refs": [
+                  "src:faaaa120f60547",
+                  "src:289e5868a8b42e",
+                  "src:dd0a8b8ca77f30"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Туристическая модель Tad Saepha развивалась как часть community-based ecotourism вокруг Ban Mai и Xe Pian NPA. Tourism Laos описывает homestay в Ban Mai и местного проводника как основу доступа к каскадам Xe Pian, а не отдельную коммерческую парковую площадку у самого водопада."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "В современных материалах 2025–2026 этот формат всё ещё сохраняется: Tad Saepha фигурирует среди удалённых природных объектов Аттапы, до которых идут пешком или на лодке, а Ban Mai продолжает описываться как деревня с homestay и стартом в охраняемый лес."
+                  }
+                ],
+                "source_refs": [
+                  "src:dd0a8b8ca77f30",
+                  "src:289e5868a8b42e",
+                  "src:c1e979ad79f2d1"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "Смысл маршрута не сводится к водопаду. Ban Mai — живая деревня, через которую организован доступ в Xe Pian NPA; WeAreLao прямо называет её этнической деревней Oy и связывает с homestay. Поэтому визит затрагивает деревенскую экономику проводников, лодочников и размещения. Это не повод превращать поселение в «этнографическое шоу»: правила визита и съёмки задают сами жители.",
+                "source_refs": [
+                  "src:289e5868a8b42e",
+                  "src:c1e979ad79f2d1"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Tad Saepha находится на Xe Pian в южной части Аттапы, внутри Xe Pian NPA. Вторичный картографический источник даёт точку 14.7765, 106.44185; SRTM90 в этой точке — около 125 м. Водопад связан с более крупной цепочкой каскадов Xe Pian, включая Tad Samongphak и Tad Saeponglaican, поэтому важно не смешивать их координаты: Tad Samongphak лежит южнее, Tad Saeponglai — севернее.",
+                "source_refs": [
+                  "src:bfa8cdcd856233",
+                  "src:1dc8525d79f10b",
+                  "src:dd0a8b8ca77f30"
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "Проверенные источники описывают Tad Saepha как 120-метровую широкую кромку на Xe Pian с примерно 23-метровым падением по неровному каменному уступу. Точный состав породы в доступных материалах не установлен, поэтому карточка не приписывает водопаду конкретную литологию. Геоморфологически главное — резкая каменная ступень поперёк крупного лесного русла.",
+                "source_refs": [
+                  "src:289e5868a8b42e",
+                  "src:faaaa120f60547"
+                ]
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Ban Mai в региональном источнике обозначен как община Oy; свежий гид 2026 по Аттапы также выделяет Ban Mai с homestay и традициями. Это конкретная привязка к стартовой деревне маршрута. Более широкие списки народов Аттапы не переносим на Tad Saepha без доказательств: для карточки важен именно Oy-контекст Ban Mai и роль деревни в доступе к Xe Pian.",
+                "source_refs": [
+                  "src:289e5868a8b42e",
+                  "src:c1e979ad79f2d1"
+                ]
               }
             ]
           },
-          "traveler_reports": {
-            "recurring_issues": []
-          },
-          "accommodation": []
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "mapped_coordinate",
+              "summary": "Frog Travelers в обновляемом обзоре Аттапы приводит Tad Saepha отдельной точкой 14.7765, 106.44185 и отличает её от Tad Samongphak и Tad Saeponglai. Авторы не заявляют прохождение именно этого маршрута, поэтому координата используется с medium confidence.",
+              "observed_period": "article maintained 2025",
+              "source_refs": [
+                "src:bfa8cdcd856233"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "2026_access_model",
+              "summary": "Свежий региональный гид, обновлённый в мае 2026 года, по-прежнему описывает водопады Xe Pian, включая Tad Saepha, как доступные пешком или на лодке и советует опытного местного проводника для глубоких выходов в природные территории.",
+              "observed_period": "2026-05",
+              "source_refs": [
+                "src:c1e979ad79f2d1"
+              ],
+              "confidence": "medium"
+            }
+          ],
+          "accommodation": [
+            {
+              "name": "Ban Mai Homestay",
+              "area": "Ban Mai, Xe Pian NPA, Attapeu Province",
+              "price_for_two": null,
+              "contact": null,
+              "social_or_web": null,
+              "coordinates": null,
+              "checked_at": "2026-10-04",
+              "source": "Tourism Laos / WeAreLao / Laos by Nomadays",
+              "source_refs": [
+                "src:dd0a8b8ca77f30",
+                "src:289e5868a8b42e",
+                "src:c1e979ad79f2d1"
+              ]
+            }
+          ]
         },
         "sources": [
           {
             "type": "government_official",
-            "title": "Tad Saepha Waterfall — official provincial tourism listing",
+            "title": "Tad Saepha Waterfall — Attapeu Province",
             "publisher": "Tourism Laos / Ministry of Culture and Tourism",
             "url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/",
             "language": "en",
             "authority": "high",
             "used_for": [
-              "object existence",
-              "inventory classification",
-              "baseline description"
+              "object identity",
+              "Xe Pian NPA",
+              "Ban Mai guide access",
+              "walking/boat access",
+              "homestay"
             ],
-            "accessed": "2026-10-02"
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "other",
+            "title": "Tad Sae Pha ຕາດແຊພະ",
+            "publisher": "Discover Laos Today",
+            "url": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "23 m height",
+              "120 m width",
+              "seasonality",
+              "40 km contextual distance",
+              "hours claim",
+              "visual recon",
+              "gallery"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "other",
+            "title": "Attapeu Waterfalls",
+            "publisher": "WeAreLao",
+            "url": "https://wearelao.com/standard-page/attapeu-waterfalls/",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "23 m/120 m dimensions",
+              "Ban Mai Oy identity",
+              "~60 km access",
+              "guide",
+              "green-season boat",
+              "homestay"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Если вдруг занесло в Аттапы на юге Лаоса",
+            "publisher": "Frog Travelers",
+            "url": "https://frog-travelers.ru/attapu-laos-chto-posmotret-dostoprimechatelnosti-oteli/",
+            "language": "ru",
+            "authority": "medium",
+            "used_for": [
+              "mapped GPS",
+              "61 km secondary distance",
+              "separation from neighboring waterfall coordinates"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "official_map",
+            "title": "SRTM90m elevation at Tad Saepha mapped coordinate",
+            "publisher": "OpenTopoData / SRTM90m",
+            "url": "https://api.opentopodata.org/v1/srtm90m?locations=14.7765,106.44185",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "approximate 125 m site elevation"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Attapeu Laos: What to See, Do & How to Get There",
+            "publisher": "Laos by Nomadays",
+            "url": "https://www.laosbynomadays.com/guide-laos/destination/attapeu",
+            "language": "en",
+            "published_at": "2026-05-02",
+            "authority": "medium",
+            "used_for": [
+              "2026 access model",
+              "Xe Pian waterfalls by foot/boat",
+              "local guide recommendation",
+              "Ban Mai homestay",
+              "seasonal access"
+            ],
+            "accessed": "2026-10-04"
           }
         ],
         "verification": {
           "dynamic_fields": [
-            "access",
+            "guide availability",
+            "boat availability",
+            "road/trail condition",
             "hours",
-            "tickets",
-            "water",
-            "overnight",
+            "fees",
+            "homestay",
+            "water level",
             "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Удалённый водопад на Xe Pian в Аттапы, к которому Tourism Laos описывает пеший или лодочный доступ с местным проводником.",
+        "narrow": "Tad Saepha — широкий лесной водопад на Xe Pian в Xe Pian NPA, примерно 23 м высотой и до 120 м шириной. Это не придорожная остановка: доступ строится через Ban Mai с местным проводником, пешком либо на лодке в сезон высокой воды; в деревне есть homestay.",
         "qa": {
           "inventory_review": {
-            "status": "preliminary",
-            "checked_at": "2026-10-02",
-            "notes": "Добавлено на инвентарном проходе из официального Tourism Laos. Полный object QA намеренно не заявлен."
+            "status": "replaced_by_full_qa",
+            "checked_at": "2026-10-04",
+            "notes": "Предварительная inventory-карточка заменена полным объектным исследованием."
           },
           "identity_review": {
             "status": "reviewed",
@@ -44612,7 +45112,172 @@
             ],
             "evidence_urls": [],
             "notes": "Отдельная инвентарная сущность: отдельное имя/официальная listing identity; точного или семантического дубля внутри текущего Laos inventory не найдено."
+          },
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-04",
+            "notes": "Ban Mai/Oy контекст привязан только к стартовой деревне; расхождение 40 км vs 60–61 км не скрыто; точная длина лесного last mile не выдумана."
+          },
+          "human_copy_review": {
+            "status": "passed",
+            "checked_at": "2026-10-04",
+            "checks": {
+              "natural_russian": true,
+              "no_stock_travel_copy": true,
+              "practical_information_first": true,
+              "uncertainty_preserved": true,
+              "community_context_scoped": true,
+              "protected_area_context": true
+            }
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-04",
+            "scope": "полный объектный QA Tad Saepha Waterfall",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "protected_area": true,
+              "guide_model": true,
+              "community_homestay": true,
+              "ethnography_scoped": true,
+              "dimensions_crosschecked": true,
+              "no_invented_trail_metrics": true,
+              "no_narrative_duplication": true
+            },
+            "notes": [
+              "GPS 14.7765, 106.44185 comes from a secondary mapped inventory and is kept at medium confidence, not upgraded to survey-grade.",
+              "125 m is SRTM90 terrain elevation at that mapped point, not waterfall height.",
+              "23 m height and 120 m width are independently repeated by Discover Laos and WeAreLao.",
+              "Official access uses a Ban Mai local guide; boat access is seasonal and walking distance/time remain null without a reliable track.",
+              "Published 40 km and 60–61 km figures describe different route references and are preserved as a conflict.",
+              "Wild camping at the waterfall is not inferred; Ban Mai homestay is the supported overnight model.",
+              "Gallery contains seven distinct object-specific Discover Laos assets."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-04",
+            "scope": "полная природная, географическая, community-access и экспедиционная перестройка Tad Saepha",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_honest": true,
+              "ethnography_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_guide_scoped": true,
+              "water_honest": true,
+              "overnight_honest": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "media_provenance": true,
+              "gallery_min_5": true,
+              "drone_rule_precision": true
+            }
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-04",
+            "scope": "Tad Saepha identity, GPS/elevation, dimensions, Xe Pian NPA, Ban Mai/Oy guide model, seasonal boat/trek access, homestay, 2026 status, media and drone",
+            "checks": {
+              "coordinate_confidence_preserved": true,
+              "elevation_source_scoped": true,
+              "dimensions_crosschecked": true,
+              "protected_area_official": true,
+              "ban_mai_oy_scoped": true,
+              "guide_model_official": true,
+              "boat_seasonality_scoped": true,
+              "distance_conflict_preserved": true,
+              "trail_metrics_not_invented": true,
+              "water_not_marked_potable": true,
+              "camping_not_assumed": true,
+              "gallery_sources_traced": true,
+              "drone_rules_official": true
+            }
           }
+        },
+        "illustration": {
+          "static_url": "https://discoverlaos.today/img/thing_to_do/90f8da69792d4e292230b1fbb7a88fa3.jpg?p=original",
+          "source_page": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+          "provider": "Discover Laos Today",
+          "license": "reuse_terms_unverified",
+          "artist": null,
+          "last_checked": "2026-10-04",
+          "illustration_scope": "Tad Saepha waterfall, Xe Pian river and forest approach",
+          "gallery": [
+            {
+              "static_url": "https://discoverlaos.today/img/thing_to_do/90f8da69792d4e292230b1fbb7a88fa3.jpg?p=original",
+              "source_page": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+              "provider": "Discover Laos Today",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://discoverlaos.today/img/thing_to_do/b0a29caec81882838c0ee86b737810a8.jpg?p=original",
+              "source_page": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+              "provider": "Discover Laos Today",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://discoverlaos.today/img/thing_to_do/af5c78dae84309d407640dac059ea0a9.jpg?p=original",
+              "source_page": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+              "provider": "Discover Laos Today",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://discoverlaos.today/img/thing_to_do/7ef0c47156c81c2733303f15f68ffb34.jpg?p=original",
+              "source_page": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+              "provider": "Discover Laos Today",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://discoverlaos.today/img/thing_to_do/4416f2810b7ad2e21da352a3534e5ee2.jpg?p=original",
+              "source_page": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+              "provider": "Discover Laos Today",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://discoverlaos.today/img/thing_to_do/c182cd0d33d11e3aa6e47336ef0440ba.jpg?p=original",
+              "source_page": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+              "provider": "Discover Laos Today",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://discoverlaos.today/img/thing_to_do/4fff508cb9d85be33ab3d3470de8a3a6.jpg?p=original",
+              "source_page": "https://discoverlaos.today/attapeu-province/thing-to-do/tad-sae-pha",
+              "provider": "Discover Laos Today",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            }
+          ]
         }
       },
       {

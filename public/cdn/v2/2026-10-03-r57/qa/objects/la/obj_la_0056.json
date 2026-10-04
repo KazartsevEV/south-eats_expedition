@@ -1,24 +1,43 @@
 {
   "object_id": "obj_la_0056",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
-    "gallery_min_5": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-04",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-04",
+    "scope": "Phou Xieng Thong: NPA identity and 1993 decree, NPA/AHP area distinction, KBA coordinates/elevation, Ban Mai access, Phou Khong trek, community livelihoods, birds/fisheries, 2023 ecotourism zoning, 2024 AHP designation, media and drone",
+    "checks": {
+      "narrative_section_sources": true,
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "npa_vs_ahp_area_separated": true,
+      "ban_mai_not_used_as_npa_center": true,
+      "old_transport_marked_stale": true,
+      "local_guide_requirement_preserved": true,
+      "water_quality_not_overstated": true,
+      "camping_permission_not_invented": true,
+      "biodiversity_historic_vs_current_separated": true,
+      "traveler_report_scope_preserved": true,
+      "gallery_sources_traced": true,
+      "drone_rules_official": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -37,10 +56,13 @@
   "verification": {
     "dynamic_fields": [
       "access",
-      "hours",
-      "tickets",
+      "boat availability",
+      "public transport",
+      "guide availability",
+      "permit",
       "water",
-      "overnight",
+      "homestay",
+      "trail status",
       "filming/drone"
     ],
     "verify_before_departure": true

@@ -31,15 +31,17 @@
     "primary_location": {
       "lat": 16.54891,
       "lon": 105.27966,
-      "elevation_m": null,
+      "elevation_m": 153.0,
       "elevation_range_m": null,
       "coordinate_type": "center",
       "accuracy": "medium",
-      "elevation_accuracy": "unknown",
+      "elevation_accuracy": "approximate",
       "source_refs": [
         "src_990618"
       ],
-      "elevation_source_refs": [],
+      "elevation_source_refs": [
+        "src_990644"
+      ],
       "checked_at": "2026-10-04"
     },
     "geo_points": [
@@ -58,7 +60,18 @@
         "checked_at": "2026-10-04"
       }
     ],
-    "object_elevation": null
+    "object_elevation": {
+      "representative_m": 153.0,
+      "min_m": null,
+      "max_m": null,
+      "reference_type": "site",
+      "accuracy": "approximate",
+      "source_refs": [
+        "src_990644"
+      ],
+      "checked_at": "2026-10-04",
+      "notes": "Около 153 м по SRTM90 в точке библиотеки; это ориентировочная высота рельефа, не геодезическая отметка свайного павильона."
+    }
   },
   "narrative": {
     "sections": [
@@ -462,17 +475,18 @@
       "src_990613",
       "src_990618",
       "src_990619",
-      "src_990620"
+      "src_990620",
+      "src_990644"
     ]
   },
   "qa": {
-    "status": "incomplete",
+    "status": "passed",
     "checks": {
       "language": true,
       "classification": true,
       "geo": true,
       "coordinates": true,
-      "elevation": false,
+      "elevation": true,
       "narrative": true,
       "sources": true,
       "access": true,
@@ -491,7 +505,6 @@
       "checks": {
         "narrative_section_sources": true,
         "coordinate_source_scoped": true,
-        "elevation_unknown_preserved": true,
         "collection_count_conflict_preserved": true,
         "building_vs_manuscript_date_separated": true,
         "heritage_status_current": true,
@@ -499,7 +512,8 @@
         "water_quality_not_invented": true,
         "camping_permission_unknown_preserved": true,
         "gallery_sources_traced": true,
-        "drone_rules_official": true
+        "drone_rules_official": true,
+        "elevation_source_scoped": true
       }
     },
     "identity_review": {

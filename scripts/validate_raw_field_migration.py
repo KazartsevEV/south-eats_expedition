@@ -10,6 +10,7 @@ from release_context import get_release_context
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = Path(sys.argv[1] if len(sys.argv) > 1 else ROOT / "public" / "cdn" / "v2")
 SRC = ROOT / "data" / "source"
+ID_REGISTRY_PATH = ROOT / "data" / "id-registry.json"
 
 def load(path: Path):
     with path.open("r", encoding="utf-8") as f:
@@ -19,6 +20,32 @@ def fail(message: str):
     print(f"ERROR: {message}", file=sys.stderr)
     raise SystemExit(1)
 
+
+def normalize_source_refs(value, registry):
+    source_registry = registry.get("sources") or {}
+
+    def walk(node):
+        if isinstance(node, dict):
+            out = {}
+            for key, child in node.items():
+                if key == "source_refs" and isinstance(child, list):
+                    refs = []
+                    for item in child:
+                        mapped = source_registry.get(item, item)
+                        if mapped not in refs:
+                            refs.append(mapped)
+                    out[key] = refs
+                else:
+                    out[key] = walk(child)
+            return out
+        if isinstance(node, list):
+            return [walk(child) for child in node]
+        return node
+
+    return walk(value)
+
+
+registry = load(ID_REGISTRY_PATH)
 ctx = get_release_context(PUBLIC)
 release = ctx["release"]
 sources_index = load(release / "sources" / "index.json")
@@ -88,7 +115,10 @@ for object_path in sorted((release / "objects").glob("*/*.json")):
         "security_snapshot_as_of",
         "status_snapshot",
     ):
-        if op.get(key) != operations.get(key):
+        expected = operations.get(key)
+        if key == "status_snapshot":
+            expected = normalize_source_refs(expected, registry)
+        if op.get(key) != expected:
             fail(f"{obj['id']}: operational_status.{key} migration mismatch")
 
     safety = ((visit.get("rules") or {}).get("safety") or {})

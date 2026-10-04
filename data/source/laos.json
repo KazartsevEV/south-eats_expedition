@@ -38455,87 +38455,528 @@
       },
       {
         "name": "Phou Xang Hae National Protected Area",
-        "class": "inventory",
+        "class": "protected_area",
         "interest": [
           "protected_area",
-          "wildlife"
+          "wildlife",
+          "elephant",
+          "trekking",
+          "phou_thai",
+          "ethnography",
+          "sandstone",
+          "cave",
+          "sacred_site",
+          "camping",
+          "community_based_tourism",
+          "geology",
+          "history"
         ],
-        "why_go": "Охраняемый массив Саваннакхета с лесными ландшафтами и популяциями крупных млекопитающих, выделенный Tourism Laos как самостоятельная природная территория.",
+        "why_go": "Phou Xang Hae — один из самых экспедиционных лесных массивов Саваннакхета: длинный песчаниковый хребет, пху-тайские деревни, старый многодневный Deep Mountain Trek, священные скальные формы и реальная популяция диких азиатских слонов. Здесь особенно важно не превращать wildlife в обещание встречи: учёт 2021 года оценил всего около 35–40 слонов, а главный природоохранный конфликт — соседство стад с сельхозземлями и дорогами.",
         "traveler_card": {
           "location": {
-            "region": "Savannakhet",
-            "nearest_hub": "Savannakhet",
+            "region": "Savannakhet Province / Atsaphone — Phalanxay — Phin — Xepon — Vilabouly",
+            "nearest_hub": "Phalanxay / Vilabouly",
             "languages_spoken": [
               "лаосский",
-              "английский — ограниченно в туристической инфраструктуре"
+              "пху-тай",
+              "языки Lao Theung (включая Makong, Suay и Katang)",
+              "английский — ограниченно через гидов"
             ],
             "coordinates": {
-              "lat": null,
-              "lon": null,
+              "lat": 16.8833,
+              "lon": 105.7083,
               "elevation_m": null
             },
-            "coordinate_type": null,
-            "accuracy": "unknown",
+            "coordinate_type": "center",
+            "accuracy": "approximate",
             "elevation_accuracy": "unknown",
-            "coordinates_checked_at": null,
+            "coordinates_checked_at": "2026-10-04",
+            "coordinate_source": {
+              "type": "government_official",
+              "title": "Fifth National Report to the Convention on Biological Diversity — Lao PDR",
+              "publisher": "Government of Lao PDR / Convention on Biological Diversity",
+              "url": "https://www.cbd.int/doc/world/la/la-nr-05-en.pdf",
+              "language": "en",
+              "published_at": "2016",
+              "authority": "high",
+              "accessed": "2026-10-04",
+              "notes": "Representative midpoint derived from the published NPA coordinate extent; not a visitor entrance or wildlife location."
+            },
+            "object_elevation": {
+              "representative_m": null,
+              "min_m": 190,
+              "max_m": 794,
+              "reference_type": "range",
+              "accuracy": "approximate",
+              "source": {
+                "type": "academic",
+                "title": "Field management of Nam Poui and Phou Xang He National Biodiversity Conservation Areas",
+                "publisher": "Lao-Swedish Forestry Programme / IUCN; ResearchGate copy",
+                "url": "https://www.researchgate.net/publication/225088948_Field_management_of_Nam_Poui_and_Phou_Xang_He_National_Biodiversity_Conservation_Areas",
+                "language": "en",
+                "published_at": "1998",
+                "authority": "high",
+                "accessed": "2026-10-04"
+              },
+              "checked_at": "2026-10-04",
+              "notes": "Исторический полевой профиль даёт рельеф от ниже 200 м до 794 м; нижняя граница хранится как приблизительные 190 м, а не как точная отметка."
+            },
             "geo_points": []
           },
           "logistics": {
-            "access": "Инвентарная карточка: существование объекта подтверждено официальным Tourism Laos; точный самостоятельный доступ будет проверен на объектном QA.",
-            "public_transport": null,
-            "last_mile": null,
+            "access": "Phou Xang Hae — протяжённая NPA, поэтому маршрут выбирают по конкретной деревне. Базовый южный доступ идёт от Route 9 по сельским дорогам в сторону Phalanxay/Vilabouly и партнёрских пху-тайских деревень. Старый Deep Mountain Trek начинался с длинного трансфера из Savannakhet и далее шёл полностью с местными/провинциальными гидами.",
+            "public_transport": "Route 9 обслуживает район общественным транспортом, но надёжного регулярного сообщения от трассы к началу горных троп не подтверждено. Последний участок нужно организовывать через местного водителя/гидов.",
+            "last_mile": "Сельские дороги и треки исторически описывались как очень грубые. Полноценный маршрут уходит на несколько дней в горы с homestay и лесными лагерями; это не объект для самостоятельной короткой прогулки без локальной организации.",
             "typical_visit_hours": null,
-            "permit_or_guide": null,
-            "mobility_notes": null,
-            "modes": {},
-            "water": "Не исследовано на инвентарном проходе.",
-            "overnight_and_camping": "Не исследовано на инвентарном проходе.",
-            "self_guided_default": null,
-            "travel_model": "предварительный инвентарь перед полным объектным QA"
+            "permit_or_guide": "Для глубокого маршрута местный/провинциальный гид практически обязателен из-за навигации, деревенских разрешений, священных мест, ночёвок и UXO-контекста. Старые опубликованные дни отправления не считать действующим расписанием — текущую возможность trekking нужно подтверждать.",
+            "mobility_notes": "Крутые песчаниковые уступы, длинные лесные переходы, каменные плато, пещеры и грубые сельские дороги. В сезон дождей доступ ухудшается, а часть речных/грунтовых участков может стать непроходимой.",
+            "modes": {
+              "public_transport": "До населённых узлов Route 9; не до начала глубинного трека.",
+              "taxi_ridehail": "Частный водитель возможен до деревни/точки старта; ride-hailing вне Savannakhet не считать рабочей системой.",
+              "car": "Нужен высокий клиренс на последних сельских дорогах; дорожное состояние проверять непосредственно перед выездом.",
+              "motorcycle": "Гибкий вариант для опытного водителя до населённых точек, но не замена пешему маршруту.",
+              "walking": "Основной режим внутри горной части; исторический продукт занимал 4–5 дней.",
+              "boat": "Не является основной логистикой классического Deep Mountain Trek."
+            },
+            "self_guided_default": false,
+            "travel_model": "организованный многодневный trek через провинциального/деревенского гида; самостоятельный подъезд возможен только до населённых точек",
+            "access_options": [
+              {
+                "id": "route9_southern_access",
+                "origin": "Savannakhet / Route 9",
+                "modes": [
+                  "public_transport",
+                  "car",
+                  "motorcycle",
+                  "taxi"
+                ],
+                "checked_at": "2026-10-04",
+                "source_refs": [
+                  "src_990390",
+                  "src_990646",
+                  "src_990646"
+                ],
+                "legs": [
+                  {
+                    "mode": "car",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "mixed",
+                    "condition": "Route 9 — основной коридор; последние дороги к горным деревням исторически грубые, местами только сезонно проходимые.",
+                    "seasonality": "Сухой сезон заметно надёжнее; северные и внутренние треки в дождливый сезон хуже.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Выбирать конкретную деревню старта через Vilabouly/Phalanxay и текущего гида.",
+                    "fords": null,
+                    "notes": "Не использовать приблизительный центр NPA как точку навигации.",
+                    "source_refs": [
+                      "src_990646",
+                      "src_990646"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "deep_mountain_trek",
+                "origin": "пху-тайская деревня в районе Vilabouly",
+                "modes": [
+                  "walking"
+                ],
+                "checked_at": "2026-10-04",
+                "source_refs": [
+                  "src_990647",
+                  "src_990627"
+                ],
+                "legs": [
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": null,
+                    "surface": "trail",
+                    "condition": "Несколько дней по лесу, песчаниковым плато, пещерам и скальным выходам с деревенскими ночёвками и лесными лагерями.",
+                    "seasonality": "Сухой сезон предпочтителен; старые программы не гарантируют работу маршрута круглый год.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Только по согласованной тропе с проводником; конкретные координаты священных мест и wildlife sites не публикуются без необходимости.",
+                    "fords": null,
+                    "notes": "Исторический вариант занимал 4–5 дней и включал Tham Xang See, Hin Lam Phan, Darn Sao Hai и Darn Nang Ngoi.",
+                    "source_refs": [
+                      "src_990647",
+                      "src_990627"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "water": "Природные ручьи есть, но питьевой статус не подтверждён. Воду и обработку организовывать вместе с проводником; стартовый запас брать в деревне.",
+            "water_structured": {
+              "at_object": true,
+              "quality": "treatment_required",
+              "last_reliable_point": "деревня старта",
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "stream",
+                  "potability": "treatment_required",
+                  "notes": "Горные и лесные ручьи; сезонность и качество меняются."
+                }
+              ],
+              "notes": "На многодневном маршруте не полагаться на один источник и не пить поверхностную воду без обработки.",
+              "source_refs": [
+                "src_990646",
+                "src_990647"
+              ]
+            },
+            "supplies": {
+              "status": "limited",
+              "summary": "Основные продукты брать до выхода. Старый trekking product частично опирался на homestay и пищу, которую готовили проводники из заранее взятых и разрешённых местных продуктов.",
+              "poi_ids": [],
+              "source_refs": [
+                "src_990647"
+              ]
+            },
+            "overnight_and_camping": "Исторический маршрут включал homestay в пху-тайских деревнях и два лесных campout. Это не означает свободный кемпинг по всей NPA: ночёвки возможны только в рамках согласованного маршрута.",
+            "overnight": {
+              "status": "permission_required",
+              "summary": "Homestay и лесной лагерь требуют согласования с деревней/гидом; самостоятельный произвольный лагерь внутри NPA не считать разрешённым.",
+              "source_refs": [
+                "src_990647",
+                "src_990627"
+              ]
+            },
+            "access_requirements": "Не сходить с используемых троп из-за UXO и природоохранного режима. Не приближаться к слонам и не пытаться искать стада по старым координатам минеральных солонцов. Священные скалы посещать по правилам, которые объясняет местный проводник."
           },
           "climate": {
-            "best_period": null,
-            "heat_rain_notes": null,
-            "site_specific_notes": null
+            "best_period": "Прохладный сухой сезон примерно ноябрь–февраль наиболее удобен для многодневного перехода. Ноябрь в старом маршруте отдельно отмечался как хороший период, чтобы слышать гиббонов.",
+            "heat_rain_notes": "Конец сухого сезона жарче и пыльнее. В муссон второстепенные дороги и тропы хуже, ручьи полноводнее, а риск сложных переправ и скользкого песчаника выше.",
+            "site_specific_notes": "Tham Xang See связывается с посещением дикими слонами в дождливый сезон, но это не повод искать животных внутри пещеры или планировать близкий контакт."
           },
           "operations": {
-            "status": null,
+            "status": "open/verify",
             "hours": null,
             "ticket": null,
-            "closure_notes": "Актуальные часы, цена и режим доступа не нормализованы; проверить при объектном QA.",
-            "last_verified": "2026-10-02",
-            "official_url": "https://www.tourismlaos.org/central-provinces/savannakhet-province/"
+            "closure_notes": "Единого входа, кассы и расписания на NPA нет. Исторический 4–5-дневный ecotrek документирован, но старые фиксированные departures и контакты не считаются текущей гарантией; перед поездкой требуется актуальная договорённость.",
+            "last_verified": "2026-10-04",
+            "official_url": "https://laoparks.la/parks/",
+            "current_alert": "Современный PAMD подтверждает статус и площадь, но детальная visitor-информация на объектной странице пока заполнена заглушками. Поэтому действующий маршрут/сборы нужно подтверждать через местные органы или провинциальных гидов.",
+            "status_snapshot": {
+              "as_of": "2026-10-04",
+              "summary": "Lao Parks/PAMD подтверждает действующий NPA. В 2025 UNDP включил Phou Xang Hae в новый проект усиления охраны первичных лесных ландшафтов, что подтверждает текущий природоохранный статус территории.",
+              "source_refs": [
+                "src_000107",
+                "src_990645"
+              ]
+            },
+            "source_refs": [
+              "src_000107",
+              "src_990645"
+            ]
           },
           "safety": {
-            "main_risks": [],
-            "sensitive_areas": []
+            "main_risks": [
+              "UXO вне регулярно используемых троп в восточном Саваннакхете",
+              "конфликт человек–слон в сельскохозяйственной периферии",
+              "грубые сезонные дороги и длительная эвакуация",
+              "жара, обезвоживание и ограниченная связь",
+              "скользкие песчаниковые уступы и пещеры",
+              "дикие животные; встреча со слоном требует увеличивать дистанцию, а не приближаться"
+            ],
+            "sensitive_areas": [
+              "не публиковать и не использовать старые точные wildlife/mineral-lick coordinates для поиска животных",
+              "священный Hin Lam Phan и другие культурные места — соблюдать правила проводника",
+              "не входить в Tham Xang See при признаках присутствия слонов",
+              "не сходить с согласованной тропы к военным остаткам или неизвестному металлу"
+            ],
+            "confidence": "high",
+            "source_refs": [
+              "src_990648",
+              "src_990650",
+              "src_990647"
+            ],
+            "checked_at": "2026-10-04"
           },
           "media": {
-            "photo_suitability_5": null,
-            "video_suitability_5": null,
+            "photo_suitability_5": 5,
+            "video_suitability_5": 5,
+            "best_light": "На песчаниковых плато лучший рельеф даёт низкий боковой свет; в лесу — утро и облачность. Для животных важнее дистанция и отсутствие преследования, чем свет.",
             "visual_scouting": {
-              "best_time": null,
-              "best_weather_light": null,
-              "viewpoints_for_photo_video": [],
-              "seasonal_visuals": [],
-              "video_activity": [],
-              "useful_equipment": []
+              "best_time": "раннее утро в лесу; поздний день на Darn Sao Hai/Darn Nang Ngoi",
+              "best_weather_light": "Сухой сезон даёт более предсказуемые дороги и чистые обзорные точки; после дождя лес насыщеннее, но камень скользкий и доступ сложнее.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_sandstone_ridge",
+                  "name": "Песчаниковый хребет Phou Xang Hae",
+                  "description": "Каменные выходы и плато старого Deep Mountain Trek.",
+                  "coordinates": null,
+                  "access": "Только по многодневному согласованному маршруту.",
+                  "view": {
+                    "description": "песчаниковые формы, лесной полог и дальние равнины Саваннакхета"
+                  },
+                  "best_time": "утро или поздний день",
+                  "best_weather_light": "Боковой свет подчёркивает слоистость и форму камня.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для плато и лесных панорам"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для отдельных форм и человека в масштабе"
+                    }
+                  ],
+                  "source": {
+                    "type": "government_official",
+                    "title": "Phou Xang Hae 5-Day Trek",
+                    "publisher": "Ecotourism Laos",
+                    "url": "https://www.ecotourismlaos.com/activities/puxanghae_trk",
+                    "language": "en",
+                    "authority": "high",
+                    "accessed": "2026-10-04"
+                  }
+                },
+                {
+                  "id": "vp_hin_lam_phan",
+                  "name": "Hin Lam Phan",
+                  "description": "Священные грибовидные песчаниковые формы на глубинном маршруте.",
+                  "coordinates": null,
+                  "access": "С проводником; местные табу обязательны.",
+                  "view": {
+                    "description": "крупные необычные скальные формы среди горного леса"
+                  },
+                  "best_time": "мягкий дневной или предзакатный свет",
+                  "best_weather_light": "Рассеянный свет хорошо держит фактуру камня без глубоких провалов.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для формы целиком и окружения"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для деталей поверхности"
+                    }
+                  ],
+                  "source": {
+                    "type": "government_official",
+                    "title": "Phou Xang Hae 5-Day Trek",
+                    "publisher": "Ecotourism Laos",
+                    "url": "https://www.ecotourismlaos.com/activities/puxanghae_trk",
+                    "language": "en",
+                    "authority": "high",
+                    "accessed": "2026-10-04"
+                  }
+                },
+                {
+                  "id": "vp_phouthai_village",
+                  "name": "Пху-тайская деревня маршрута",
+                  "description": "Homestay, ткачество и сельская среда Vilabouly.",
+                  "coordinates": null,
+                  "access": "Только как гость деревни; съёмку людей согласовывать.",
+                  "view": {
+                    "description": "деревенские дома, ткачество, хозяйство и горный ландшафт"
+                  },
+                  "best_time": "утро или предзакатное время",
+                  "best_weather_light": "Мягкий свет удобен для среды и деталей ремесла.",
+                  "useful_equipment": [
+                    {
+                      "type": "standard",
+                      "why": "для ремесла и бытовой среды"
+                    },
+                    {
+                      "type": "wide",
+                      "why": "для поселения в ландшафте"
+                    },
+                    {
+                      "type": "phone",
+                      "why": "наименее навязчив после согласия жителей"
+                    }
+                  ],
+                  "source": {
+                    "type": "other",
+                    "title": "Trekking in Savannakhet — Deep Mountain Trek",
+                    "publisher": "WeAreLao",
+                    "url": "https://wearelao.com/standard-page/trekking-in-savannakhet/",
+                    "language": "en",
+                    "authority": "medium",
+                    "accessed": "2026-10-04"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Ноябрь–февраль: сухой маршрут, лучше дальняя видимость с плато и комфортнее переходы.",
+                "Поздний сухой сезон: каменные формы открыты сильнее, но лес суше и жара выше.",
+                "Дождливый сезон: яркий лес и активные ручьи, но сложнее дороги; Tham Xang See связывается с сезонным использованием слонами."
+              ],
+              "video_activity": [
+                "длинный пеший проход по песчаниковому хребту",
+                "ткачество и деревенский быт только с согласия",
+                "ландшафт Hin Lam Phan и Darn Sao Hai без постановки",
+                "следы животных и объяснение проводника вместо преследования wildlife"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "для песчаникового рельефа и панорам"
+                },
+                {
+                  "type": "standard",
+                  "why": "для деревень и форм среднего масштаба"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "для удалённой дикой природы без сближения"
+                },
+                {
+                  "type": "long_telephoto",
+                  "why": "если животное появляется далеко на безопасной дистанции"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "для длинного маршрута и дождливых участков"
+                },
+                {
+                  "type": "phone",
+                  "why": "для ненавязчивой документальной съёмки в деревнях после согласия"
+                }
+              ]
             },
-            "drone": null,
-            "filming_restrictions": null
+            "drone": {
+              "visual_value": "С воздуха песчаниковые хребты и коридор между ними читаются особенно хорошо, но полёты рядом со стадами слонов и деревнями недопустимы без отдельного согласования.",
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "Применяются общие правила БПЛА Лаоса.",
+                "Для National Protected Area требуется проверка локального согласования.",
+                "Не использовать дрон для поиска или сопровождения диких слонов.",
+                "Не летать над деревнями, священными объектами и людьми без разрешения."
+              ],
+              "source_refs": [
+                "src:23a65d16d80264",
+                "src:3344c5533473db"
+              ],
+              "checked_at": "2026-10-04"
+            },
+            "filming_restrictions": "Священные места, baci и жители снимаются только с согласия сообщества. Wildlife не преследовать; точные местонахождения стад и солонцов не публиковать."
           },
           "annotation": {
-            "narrative": "Охраняемый массив Саваннакхета с лесными ландшафтами и популяциями крупных млекопитающих, выделенный Tourism Laos как самостоятельная природная территория.",
+            "canonical_story_from_sections": true,
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Охраняемый массив Саваннакхета с лесными ландшафтами и популяциями крупных млекопитающих, выделенный Tourism Laos как самостоятельная природная территория."
+                "content": "Phou Xang Hae охватывает длинную систему лесистых холмов и плато на севере Саваннакхета. Современный Lao Parks публикует площадь 109 000 га; более ранние официальные и международные материалы дают 109 900 га и 1060 км². Территория разбита между пятью районами и не имеет одного универсального входа: южная сторона связана с Route 9, а северные склоны значительно круче.",
+                "source_refs": [
+                  "src_000107",
+                  "src_990645",
+                  "src_990646"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Phou Xang Hae вошёл в систему национальных охраняемых территорий по декрету 164/PM от 29 октября 1993 года. Это подтверждается национальным отчётом Лаоса в рамках Конвенции о биологическом разнообразии и позднейшими природоохранными материалами."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "В 1990-е годы управление строилось вокруг Lao-Swedish Forestry Programme и IUCN: проводились обследования дикой природы, картирование деревенского землепользования, обучение сотрудников и первые попытки общинного природоохранного управления."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "К 2000-м на этой базе появился один из ранних community-based trekking продуктов южного Лаоса. В 2021 году государственная Wildlife and Aquatic Management Division при поддержке UNDP/GEF снова обследовала слонов и связала охрану вида с патрулированием, зонированием и альтернативными доходами для деревень."
+                  }
+                ],
+                "source_refs": [
+                  "src_990649",
+                  "src_990646",
+                  "src_990648"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "Культурная ось маршрута проходит через пху-тайские деревни Vilabouly, которые официальный Tourism Laos связывает с происхождением местной пху-тайской традиции и сильной школой шёлкового и хлопкового ткачества. Старый Deep Mountain Trek был устроен не как «показ деревни», а как чередование homestay, лесного лагеря, работы с местными проводниками, baci, музыки, ткачества и рассказов о ландшафте.",
+                "source_refs": [
+                  "src_990390",
+                  "src_990647",
+                  "src_990627"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Территория включает два основных хребта — Phou Xang Hae и Phou Hinho/Katon — ориентированных примерно с северо-запада на юго-восток и разделённых более плоским коридором. Исторический полевой профиль даёт высоты от менее 200 до 794 м. Южные и западные склоны поднимаются к плато мягче, тогда как северная кромка образует выраженный крутой уступ.",
+                "source_refs": [
+                  "src_990646",
+                  "src_990650"
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "Для Phou Xang Hae геология прямо определяет характер маршрута: официальный профиль описывает крутой песчаниковый уступ и обширные выходы песчаника — местные darns. Именно такие формы создают плоские каменные поверхности, уступы, «грибовидные» скалы и панорамные плато старого trekking route. При этом отдельные туристические интерпретации вроде «четырёхполосной дороги древней цивилизации» являются легендарным объяснением природной формы, а не археологически доказанной дорогой.",
+                "source_refs": [
+                  "src_990646",
+                  "src_990647"
+                ]
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Исторические материалы делят guardian villages между Lao Loum и Lao Theung: среди первых преобладают Phou Tai, среди вторых упоминаются Makong, Suay и Katang. Основа хозяйства — рис, домашний скот, рыболовство, охота и сбор недревесных лесных продуктов. Для маршрута особенно важна пху-тайская линия Vilabouly: деревни показывают не музейную реконструкцию, а живые практики ткачества, сельского хозяйства и использования леса.",
+                "source_refs": [
+                  "src_990646",
+                  "src_990647",
+                  "src_990627"
+                ]
+              },
+              {
+                "section_id": "myths_beliefs",
+                "content": [
+                  {
+                    "type": "legend",
+                    "text": "Маршрут по хребту сопровождает история двух сестёр Nang Lun и Nang Laa. Рассказ привязан к последовательности скальных форм и помогает читать горный ландшафт как местную историю, а не просто набор обзорных точек."
+                  },
+                  {
+                    "type": "local_tradition",
+                    "text": "Hin Lam Phan считается священной скальной формацией, похожей на гигантские грибы. Старый официальный маршрут прямо требовал, чтобы местный проводник объяснял табу и допустимое поведение у этого места."
+                  },
+                  {
+                    "type": "legend",
+                    "text": "Darn Sao Hai — «плато плачущей девушки» — также имеет собственный рассказ о плачущей девушке. Формы и история входят в туристическую традицию маршрута, но не являются документированной древней историей."
+                  },
+                  {
+                    "type": "modern_tourist_story",
+                    "text": "Каменную поверхность, похожую на широкую мощёную дорогу, некоторые участники и гиды объясняют как след «древней цивилизации». Археологического подтверждения этой интерпретации найдено не было, поэтому она хранится только как местная/туристическая история."
+                  }
+                ],
+                "source_refs": [
+                  "src_990647",
+                  "src_990627"
+                ]
               }
             ]
           },
-          "traveler_reports": {
-            "recurring_issues": []
-          },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "rough_access",
+              "summary": "Современные независимые путеводители продолжают описывать Phou Xang Hae как удалённую территорию с очень слабой туристической инфраструктурой и грубыми дорогами. Это согласуется со старой моделью: посещение строится вокруг локального проводника и многодневного трека, а не свободной парковой прогулки.",
+              "observed_period": "2026",
+              "source_refs": [
+                "src_990651",
+                "src_990652"
+              ],
+              "confidence": "low"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "trek_character",
+              "summary": "Независимые описания Deep Mountain Trek повторяют ключевые элементы старой официальной программы: homestay у Phou Thai, лесной лагерь, Elephant-Scratching Cave, Hin Lam Phan и baci. Их полезно воспринимать как подтверждение характера маршрута, но не как актуальное расписание.",
+              "observed_period": "2026",
+              "source_refs": [
+                "src_990627"
+              ],
+              "confidence": "medium"
+            }
+          ],
           "accommodation": []
         },
         "sources": [
@@ -38548,29 +38989,215 @@
             "authority": "high",
             "used_for": [
               "object existence",
-              "inventory classification",
-              "baseline description"
+              "wild elephants",
+              "rocky outcrops",
+              "Phouthai context"
             ],
-            "accessed": "2026-10-02"
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "government_official",
+            "title": "Parks — Phou Xang Hae",
+            "publisher": "Protected Area Management Division / Lao Parks",
+            "url": "https://laoparks.la/parks/",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "current designation",
+              "109000 ha current area"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "government_official",
+            "title": "Phou Xang Hae National Protected Area",
+            "publisher": "Protected Area Management Division, Department of Forestry",
+            "url": "https://lll-pamd2026.com/parks/phou-xang-hae/",
+            "language": "en",
+            "published_at": "2026-08-14",
+            "authority": "high",
+            "used_for": [
+              "current 1993 year",
+              "current object identity"
+            ],
+            "accessed": "2026-10-04",
+            "notes": "Visitor/biodiversity body currently contains placeholder text; only populated identity fields are used."
+          },
+          {
+            "type": "government_official",
+            "title": "Phou Xang Hae — protected-area profile",
+            "publisher": "Ecotourism Laos / Lao tourism authorities",
+            "url": "https://www.ecotourismlaos.com/index_php/resources/protected-areas/177-phou-xang-hae",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "bounds",
+              "access",
+              "sandstone geology",
+              "historic management",
+              "villages",
+              "ethnic composition",
+              "historic wildlife"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "government_official",
+            "title": "Phou Xang Hae 5-Day Trek",
+            "publisher": "Ecotourism Laos",
+            "url": "https://www.ecotourismlaos.com/activities/puxanghae_trk",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "Deep Mountain Trek",
+              "Phouthai homestay",
+              "legends",
+              "sacred rocks",
+              "caves",
+              "camping",
+              "visual recon",
+              "gallery"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "other",
+            "title": "Asian Elephant in the Phou Xang Hae National Protected Area — Increased population but challenges remain",
+            "publisher": "UNDP Lao PDR",
+            "url": "https://www.undp.org/laopdr/blog/asian-elephant-phou-xang-hae-national-protected-area-npa-increased-population-challenges-remain",
+            "language": "en",
+            "published_at": "2021-10-21",
+            "authority": "high",
+            "used_for": [
+              "2021 elephant survey",
+              "35-40 elephants",
+              "human-elephant conflict",
+              "threats",
+              "conservation interventions",
+              "gallery"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "government_official",
+            "title": "Fifth National Report to the Convention on Biological Diversity — Lao PDR",
+            "publisher": "Government of Lao PDR / Convention on Biological Diversity",
+            "url": "https://www.cbd.int/doc/world/la/la-nr-05-en.pdf",
+            "language": "en",
+            "published_at": "2016",
+            "authority": "high",
+            "used_for": [
+              "1993 establishment",
+              "109900 ha",
+              "official bounds"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "academic",
+            "title": "Field management of Nam Poui and Phou Xang He National Biodiversity Conservation Areas",
+            "publisher": "Lao-Swedish Forestry Programme / IUCN; ResearchGate copy",
+            "url": "https://www.researchgate.net/publication/225088948_Field_management_of_Nam_Poui_and_Phou_Xang_He_National_Biodiversity_Conservation_Areas",
+            "language": "en",
+            "published_at": "1998",
+            "authority": "high",
+            "used_for": [
+              "elevation range",
+              "forest blocks",
+              "historic wildlife",
+              "UXO",
+              "village resource use",
+              "historic access"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "other",
+            "title": "Trekking in Savannakhet",
+            "publisher": "WeAreLao",
+            "url": "https://wearelao.com/standard-page/trekking-in-savannakhet/",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "4-day Deep Mountain Trek cross-check",
+              "Ban Paphaknao",
+              "Ban Naxalo",
+              "baci",
+              "route character"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Phu Xang Hae NPA",
+            "publisher": "Lonely Planet",
+            "url": "https://www.lonelyplanet.com/points-of-interest/phu-xang-hae-npa/1545892",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "independent access/infrastructure context"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Phou Xang He National Protected Area National Park Guide",
+            "publisher": "TakeYourBackpack",
+            "url": "https://www.takeyourbackpack.com/backpacking-in-laos/visit-phou-xang-he-national-protected-area/",
+            "language": "en",
+            "published_at": "2026-05-02",
+            "authority": "low",
+            "used_for": [
+              "current rough-access traveler context only"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "government_official",
+            "title": "Savannakhet — Phou Xang Hae 5-Day Trek listing",
+            "publisher": "Ecotourism Laos",
+            "url": "https://www.ecotourismlaos.com/index_php/savannakhet",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "Phou Xang Hae trekking listing",
+              "gallery"
+            ],
+            "accessed": "2026-10-04"
+          },
+          {
+            "type": "other",
+            "title": "Trekking — Phu Xang Hae, Savannakhet",
+            "publisher": "IndochinaValue",
+            "url": "https://www.indochinavalue.com/laos-travel-destinations/savannakhet-travel-guide/things-to-do-in-savannakhet/trekking-travel",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "Phou Xang Hae trek cross-check",
+              "gallery"
+            ],
+            "accessed": "2026-10-04"
           }
         ],
         "verification": {
           "dynamic_fields": [
-            "access",
-            "hours",
-            "tickets",
+            "guide/operator availability",
+            "fees",
+            "route condition",
+            "road access",
+            "wildlife sightings",
             "water",
-            "overnight",
+            "overnight/camping",
             "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Охраняемый массив Саваннакхета с лесными ландшафтами и популяциями крупных млекопитающих, выделенный Tourism Laos как самостоятельная природная территория.",
+        "narrow": "Phou Xang Hae — национальная охраняемая территория Саваннакхета площадью около 109 000 га, созданная в 1993 году. Рельеф задаёт крутой песчаниковый уступ и плато до примерно 794 м; старый общинный маршрут связывает пху-тайские деревни, Tham Xang See, священный Hin Lam Phan и панорамные плато. Популяция диких слонов подтверждена современным учётом, но наблюдение животных не гарантируется.",
         "qa": {
           "inventory_review": {
-            "status": "preliminary",
-            "checked_at": "2026-10-02",
-            "notes": "Добавлено на инвентарном проходе из официального Tourism Laos. Полный object QA намеренно не заявлен."
+            "status": "replaced_by_full_qa",
+            "checked_at": "2026-10-04",
+            "notes": "Предварительная inventory-карточка заменена полным объектным исследованием."
           },
           "identity_review": {
             "status": "reviewed",
@@ -38587,7 +39214,163 @@
             ],
             "evidence_urls": [],
             "notes": "Отдельная инвентарная сущность: отдельное имя/официальная listing identity; точного или семантического дубля внутри текущего Laos inventory не найдено."
+          },
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-04",
+            "notes": "NPA описана как протяжённая территория; wildlife не обещается; старые tourist departures не выданы за текущий график; exact wildlife coordinates намеренно не превращены в visitor GPS."
+          },
+          "human_copy_review": {
+            "status": "passed",
+            "checked_at": "2026-10-04",
+            "checks": {
+              "natural_russian": true,
+              "no_stock_travel_copy": true,
+              "practical_information_first": true,
+              "geology_explained": true,
+              "elephant_conservation_explained": true,
+              "ethnography_explained": true,
+              "legends_scoped": true,
+              "uncertainty_preserved": true
+            }
+          },
+          "card_review": {
+            "status": "passed",
+            "checked_at": "2026-10-04",
+            "scope": "полный объектный QA Phou Xang Hae National Protected Area",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": true,
+              "elevation": true,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_substantive": true,
+              "ethnography_substantive": true,
+              "myths_beliefs_substantive": true,
+              "protected_area_not_modeled_as_single_gate": true,
+              "elephant_population_scoped_to_2021": true,
+              "sensitive_wildlife_coordinates_not_promoted": true,
+              "no_narrative_duplication": true
+            },
+            "notes": [
+              "Primary GPS is an approximate center derived from published bounds, never an entrance.",
+              "Object elevation is stored as an area-wide historic range below 200–794 m.",
+              "Current official PAMD object page has placeholder visitor text, so no access facts were taken from placeholders.",
+              "2021 elephant estimate is time-scoped and not a sighting guarantee.",
+              "Historic mineral-lick coordinates are not promoted as visitor waypoints.",
+              "Пять визуальных активов привязаны к Phou Xang Hae trekking/conservation context; культурный кадр ткачества взят из официального Tourism Laos для Vilabouly, который является частью пху-тайского контекста маршрута."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "passed",
+            "checked_at": "2026-10-04",
+            "scope": "полная природоохранная, историческая, геологическая, этнографическая, логистическая и визуальная перестройка Phou Xang Hae NPA",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_substantive": true,
+              "ethnography_substantive": true,
+              "myths_beliefs_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "extended_object_model": true,
+              "water_honest": true,
+              "overnight_honest": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "media_provenance": true,
+              "gallery_min_5": true,
+              "drone_rule_precision": true
+            }
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-04",
+            "scope": "Phou Xang Hae: current designation/area, official bounds, 1993 establishment, elevation/geology, community trek, Phou Thai context, 2021 elephant survey, access uncertainty, legends and drone",
+            "checks": {
+              "narrative_section_sources": true,
+              "coordinate_source_scoped": true,
+              "elevation_source_scoped": true,
+              "center_not_presented_as_entrance": true,
+              "current_area_official": true,
+              "history_1993_sourced": true,
+              "elephant_2021_survey_sourced": true,
+              "elephant_sightings_not_guaranteed": true,
+              "wildlife_sensitive_points_not_exposed": true,
+              "old_departure_schedule_not_presented_current": true,
+              "water_not_marked_potable": true,
+              "camping_permission_not_overstated": true,
+              "legends_labeled": true,
+              "drone_rules_official": true,
+              "gallery_sources_traced": true
+            }
           }
+        },
+        "illustration": {
+          "static_url": "https://www.ecotourismlaos.com/images/phouxanghae.jpg",
+          "source_page": "https://www.ecotourismlaos.com/activities/puxanghae_trk",
+          "provider": "Ecotourism Laos",
+          "license": "reuse_terms_unverified",
+          "artist": null,
+          "illustration_scope": "Phou Xang Hae trekking ridge, forest, Phou Thai cultural landscape and protected-area context",
+          "last_checked": "2026-10-04",
+          "gallery": [
+            {
+              "static_url": "https://www.ecotourismlaos.com/images/phouxanghae.jpg",
+              "source_page": "https://www.ecotourismlaos.com/activities/puxanghae_trk",
+              "provider": "Ecotourism Laos",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://www.ecotourismlaos.com/images/phouxanghae_trek.jpg",
+              "source_page": "https://www.ecotourismlaos.com/activities/puxanghae_trk",
+              "provider": "Ecotourism Laos",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://www.tourismlaos.org/wp-content/uploads/2025/01/laha-1-1024x683-1-845x683.jpg",
+              "source_page": "https://www.tourismlaos.org/central-provinces/savannakhet-province/",
+              "provider": "Tourism Laos / Ministry of Culture and Tourism",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://www.ecotourismlaos.com/images/contents/trekking/forest.jpg",
+              "source_page": "https://www.ecotourismlaos.com/index_php/savannakhet",
+              "provider": "Ecotourism Laos",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            },
+            {
+              "static_url": "https://www.indochinavalue.com/images/destinations/content/Savannakhet-trekking-laos-tour-indochinavalue.jpg",
+              "source_page": "https://www.indochinavalue.com/laos-travel-destinations/savannakhet-travel-guide/things-to-do-in-savannakhet/trekking-travel",
+              "provider": "IndochinaValue",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-04"
+            }
+          ]
         }
       },
       {

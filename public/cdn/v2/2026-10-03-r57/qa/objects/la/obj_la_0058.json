@@ -5,20 +5,34 @@
     "language": true,
     "classification": true,
     "geo": true,
-    "coordinates": false,
-    "elevation": false,
+    "coordinates": true,
+    "elevation": true,
     "narrative": true,
     "sources": true,
-    "access": false,
-    "water": false,
-    "overnight": false,
-    "traveler_reports": false,
-    "visual_recon": false,
+    "access": true,
+    "water": true,
+    "overnight": true,
+    "traveler_reports": true,
+    "visual_recon": true,
     "gallery_min_5": false,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-10-02",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-04",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-04",
+    "scope": "Tad Hia identity, exact GPS/elevation, historic access, current official listing, regional geography, river-plant evidence and honest unknowns",
+    "checks": {
+      "coordinate_source_scoped": true,
+      "elevation_source_scoped": true,
+      "old_access_period_scoped": true,
+      "current_official_listing": true,
+      "regional_ethnography_not_overstated": true,
+      "geology_not_invented": true,
+      "water_not_marked_potable": true,
+      "camping_permission_unknown_preserved": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -36,9 +50,12 @@
   },
   "verification": {
     "dynamic_fields": [
-      "access",
+      "last-mile road condition",
+      "local transport",
       "hours",
       "tickets",
+      "swimming conditions",
+      "water level",
       "water",
       "overnight",
       "filming/drone"

@@ -35839,11 +35839,11 @@
             "coordinates": {
               "lat": 16.54891,
               "lon": 105.27966,
-              "elevation_m": null
+              "elevation_m": 153
             },
             "coordinate_type": "center",
             "accuracy": "medium",
-            "elevation_accuracy": "unknown",
+            "elevation_accuracy": "approximate",
             "coordinates_checked_at": "2026-10-04",
             "coordinate_source": {
               "type": "traveler_report",
@@ -35856,7 +35856,24 @@
               "accessed": "2026-10-04",
               "notes": "Field GPS recorded at Hotay Pidok; village survey coordinate independently places Ban Nong Lamchan within roughly 200 m."
             },
-            "object_elevation": null,
+            "object_elevation": {
+              "representative_m": 153,
+              "min_m": null,
+              "max_m": null,
+              "reference_type": "site",
+              "accuracy": "approximate",
+              "source": {
+                "type": "official_map",
+                "title": "SRTM90m elevation at Hortay Pidok",
+                "publisher": "OpenTopoData / SRTM90m",
+                "url": "https://api.opentopodata.org/v1/srtm90m?locations=16.54891%2C105.27966",
+                "language": "en",
+                "authority": "medium",
+                "accessed": "2026-10-04"
+              },
+              "checked_at": "2026-10-04",
+              "notes": "Около 153 м по SRTM90 в точке библиотеки; это ориентировочная высота рельефа, не геодезическая отметка свайного павильона."
+            },
             "geo_points": [
               {
                 "type": "viewpoint",
@@ -35882,7 +35899,17 @@
                 "checked_at": "2026-10-04",
                 "notes": "Use as locality corroboration only; primary object GPS remains the field-recorded library coordinate."
               }
-            ]
+            ],
+            "elevation_source": {
+              "type": "official_map",
+              "title": "SRTM90m elevation at Hortay Pidok",
+              "publisher": "OpenTopoData / SRTM90m",
+              "url": "https://api.opentopodata.org/v1/srtm90m?locations=16.54891%2C105.27966",
+              "language": "en",
+              "authority": "medium",
+              "accessed": "2026-10-04",
+              "notes": "Approximate terrain elevation at the exact Hortay Pidok coordinate."
+            }
           },
           "logistics": {
             "access": "Из Саваннакхета ехать в Чампхон. Актуальный путеводитель 2026 года ведёт по Route 11 до Ban Kengkok, затем около 7 км в сторону Ban Taleo и дальше на север к Ban Nonglamchan. Полевой мотоотчёт 2018 года фиксировал другой удобный заход с Route 9 через Monkey Forest и уже тогда описывал дорогу к библиотеке как асфальтированную.",
@@ -36400,6 +36427,19 @@
               "older route context"
             ],
             "accessed": "2026-10-04"
+          },
+          {
+            "type": "official_map",
+            "title": "SRTM90m elevation at Hortay Pidok",
+            "publisher": "OpenTopoData / SRTM90m",
+            "url": "https://api.opentopodata.org/v1/srtm90m?locations=16.54891%2C105.27966",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "primary elevation",
+              "object elevation"
+            ],
+            "accessed": "2026-10-04"
           }
         ],
         "verification": {
@@ -36521,7 +36561,6 @@
             "checks": {
               "narrative_section_sources": true,
               "coordinate_source_scoped": true,
-              "elevation_unknown_preserved": true,
               "collection_count_conflict_preserved": true,
               "building_vs_manuscript_date_separated": true,
               "heritage_status_current": true,
@@ -36529,7 +36568,8 @@
               "water_quality_not_invented": true,
               "camping_permission_unknown_preserved": true,
               "gallery_sources_traced": true,
-              "drone_rules_official": true
+              "drone_rules_official": true,
+              "elevation_source_scoped": true
             }
           }
         },

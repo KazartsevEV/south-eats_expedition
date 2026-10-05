@@ -12902,6 +12902,9 @@
                   }
                 ]
               }
+            ],
+            "rules_source_refs": [
+              "src_000268"
             ]
           },
           "climate": {
@@ -13417,8 +13420,6 @@
           "forest",
           "swimming",
           "photo",
-          "ethnography",
-          "rural",
           "water",
           "weather_sensitive",
           "class_expanded"
@@ -13507,7 +13508,8 @@
               "Дорожные отчёты 2025 года сохранены как противоречащие друг другу traveler reports, поэтому покрытие не нормализовано в ложное «асфальтировано полностью».",
               "Свободный кемпинг не объявлен запрещённым или разрешённым без источника; статус оставлен unclear.",
               "Галерея доведена до пяти объектно-специфичных изображений с лицензиями; локальные WebP должны быть построены media-mirror pipeline.",
-              "Три точки визуальной разведки имеют подтверждённые GPS камеры/объекта; сомнительная EXIF-высота верхнего кадра сознательно не перенесена."
+              "Три точки визуальной разведки имеют подтверждённые GPS камеры/объекта; сомнительная EXIF-высота верхнего кадра сознательно не перенесена.",
+              "Из тегов удалены неподтверждённые ethnography/rural: для самого водопада объектно-специфичный этнографический материал не найден."
             ]
           },
           "rebuild_v2": {
@@ -13547,7 +13549,7 @@
           "fact_source_review": {
             "status": "passed",
             "checked_at": "2026-10-06",
-            "scope": "Kuang Si Falls: narrative, geology, operations, access, internal walking, water/supplies, overnight uncertainty, traveler reports, visual recon and media",
+            "scope": "Kuang Si Falls: narrative, geology, operations, access, internal walking, water/supplies, overnight uncertainty, traveler reports, visual recon and media; access rules",
             "checks": {
               "narrative_section_sources": true,
               "operations_sources": true,
@@ -13563,7 +13565,8 @@
               "geotag_scope_preserved": true,
               "gallery_source_provenance": true,
               "geology_measurement_scope": true,
-              "drone_rule_precision": true
+              "drone_rule_precision": true,
+              "rules_source_refs": true
             }
           }
         }

@@ -1,6 +1,6 @@
 {
   "object_id": "obj_la_0019",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
@@ -14,11 +14,31 @@
     "overnight": true,
     "traveler_reports": true,
     "visual_recon": true,
-    "gallery_min_5": false,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-09-28",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-06",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-06",
+    "scope": "Pak Ou Caves: narrative, archaeology, myths, operations, boat/road access, walking scale, water/supplies, overnight uncertainty, traveler reports, visual recon, media",
+    "checks": {
+      "narrative_section_sources": true,
+      "archaeology_source": true,
+      "legend_scope": true,
+      "operations_sources": true,
+      "access_sources_current": true,
+      "no_invented_walking_distance": true,
+      "water_source_scope": true,
+      "overnight_permission_scoped": true,
+      "traveler_report_sources": true,
+      "traveler_report_period_scoped": true,
+      "visual_viewpoint_sources": true,
+      "gallery_source_provenance": true,
+      "drone_rule_precision": true,
+      "rules_source_refs": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -38,10 +58,11 @@
     "dynamic_fields": [
       "hours",
       "tickets",
-      "permits",
+      "boat timetable",
+      "boat fare",
+      "crossing fare",
       "access",
       "weather",
-      "security/status",
       "filming/drone"
     ],
     "verify_before_departure": true

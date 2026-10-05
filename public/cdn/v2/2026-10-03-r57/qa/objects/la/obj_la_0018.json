@@ -1,6 +1,6 @@
 {
   "object_id": "obj_la_0018",
-  "status": "incomplete",
+  "status": "passed",
   "checks": {
     "language": true,
     "classification": true,
@@ -14,11 +14,32 @@
     "overnight": true,
     "traveler_reports": true,
     "visual_recon": true,
-    "gallery_min_5": false,
+    "gallery_min_5": true,
     "editorial_rebuild": true
   },
-  "last_reviewed_at": "2026-09-28",
-  "fact_source_review": null,
+  "last_reviewed_at": "2026-10-06",
+  "fact_source_review": {
+    "status": "passed",
+    "checked_at": "2026-10-06",
+    "scope": "Kuang Si Falls: narrative, geology, operations, access, internal walking, water/supplies, overnight uncertainty, traveler reports, visual recon and media",
+    "checks": {
+      "narrative_section_sources": true,
+      "operations_sources": true,
+      "access_sources_current": true,
+      "park_map_walk_times_scoped": true,
+      "no_invented_internal_distance": true,
+      "road_surface_conflict_preserved": true,
+      "water_source_scope": true,
+      "overnight_permission_scoped": true,
+      "traveler_report_sources": true,
+      "traveler_report_period_scoped": true,
+      "visual_viewpoint_sources": true,
+      "geotag_scope_preserved": true,
+      "gallery_source_provenance": true,
+      "geology_measurement_scope": true,
+      "drone_rule_precision": true
+    }
+  },
   "identity_review": {
     "status": "reviewed",
     "identity_status": "distinct",
@@ -38,10 +59,11 @@
     "dynamic_fields": [
       "hours",
       "tickets",
-      "permits",
+      "shared-transfer schedule",
+      "transport prices",
+      "road surface",
       "access",
-      "weather",
-      "security/status",
+      "weather/season",
       "filming/drone"
     ],
     "verify_before_departure": true

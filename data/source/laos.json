@@ -3,7 +3,7 @@
     "country": "Lao People's Democratic Republic",
     "country_code": "LA",
     "language": "ru",
-    "last_updated": "2026-10-04",
+    "last_updated": "2026-10-06",
     "purpose": "Expedition South East",
     "data_model_version": "1.6",
     "dynamic_fields": [
@@ -45282,19 +45282,28 @@
       },
       {
         "name": "Tad Samongphak Waterfall",
-        "class": "inventory",
+        "class": "waterfall",
         "interest": [
           "waterfall",
-          "remote"
+          "remote",
+          "river",
+          "national_protected_area",
+          "forest",
+          "boat",
+          "walking",
+          "community_based_tourism",
+          "ethnography",
+          "wildlife"
         ],
-        "why_go": "Один из удалённых водопадов бассейна Xe Pian в Аттапы; самостоятельная точка внутри более широкого природного района.",
+        "why_go": "Tad Samongphak — удалённый речной порог в Xe Pian National Protected Area: примерно 10-метровый сброс через русло шириной около 30 м, к которому исторически идут из деревни Ban Mai с местным проводником — на длиннохвостой лодке или пешком вдоль Xe Pian. Смысл места не только в самом водопаде: это одна из опорных точек ранней модели community-based ecotourism Аттапы, где лодки, проводники и homestay были встроены в деревенскую экономику.",
         "traveler_card": {
           "location": {
-            "region": "Attapeu Province",
-            "nearest_hub": "Sanamxay",
+            "region": "Attapeu Province / Sanamxay District / Xe Pian NPA",
+            "nearest_hub": "Ban Mai / Sanamxay",
             "languages_spoken": [
               "лаосский",
-              "английский — ограниченно в туристической инфраструктуре"
+              "язык общины Oy — в деревенском контексте",
+              "английский — ограниченно, прежде всего через проводников/туристические контакты"
             ],
             "coordinates": {
               "lat": null,
@@ -45304,65 +45313,455 @@
             "coordinate_type": null,
             "accuracy": "unknown",
             "elevation_accuracy": "unknown",
-            "coordinates_checked_at": null,
-            "geo_points": []
+            "coordinates_checked_at": "2026-10-06",
+            "geo_points": [],
+            "object_elevation": null,
+            "coordinate_status": {
+              "status": "unresolved",
+              "reason": "Надёжной опубликованной GPS-точки именно Tad Samongphak не найдено. Координаты Ban Mai и соседних гидробиологических станций не подменяют координату водопада."
+            }
           },
           "logistics": {
-            "access": "Инвентарная карточка: существование объекта подтверждено официальным Tourism Laos; точный самостоятельный доступ будет проверен на объектном QA.",
-            "public_transport": null,
-            "last_mile": null,
-            "typical_visit_hours": null,
-            "permit_or_guide": null,
-            "mobility_notes": null,
-            "modes": {},
-            "water": "Не исследовано на инвентарном проходе.",
-            "overnight_and_camping": "Не исследовано на инвентарном проходе.",
-            "self_guided_default": null,
-            "travel_model": "предварительный инвентарь перед полным объектным QA"
+            "access": "Самостоятельно имеет смысл доехать до Ban Mai через Sanamxay, а последний участок к Tad Samongphak проходить с местным проводником. Старый официальный маршрут даёт около 48 км от Attapeu town до Ban Mai; более новый WeAreLao пишет примерно 60 км до стартовой деревни для водопадов. Эти цифры не сводим искусственно: они могли считать разные дорожные точки и версии маршрута.",
+            "public_transport": "Регулярный общественный транспорт прямо к Ban Mai или водопаду не подтверждён. Для дорожного участка практичны мотоцикл/машина или заранее согласованный водитель; последний участок — пешком или на местной лодке.",
+            "last_mile": "Из Ban Mai к Tad Samongphak: WeAreLao даёт примерно 45 минут на лодке или около часа пешком; старый Ecotourism Laos — около часа на длиннохвостой лодке. В сезон высокой воды лодочный вариант становится основным; в сухой сезон исторические операторы описывали возможность сухопутного подхода.",
+            "typical_visit_hours": [
+              5,
+              10
+            ],
+            "permit_or_guide": "Для выхода из Ban Mai к водопаду официальный Tourism Laos и Ecotourism Laos прямо указывают местного проводника. Это не «тур ради тура»: маршрут проходит внутри охраняемой территории и использует деревенскую лодочную логистику.",
+            "mobility_notes": "Маршрут сочетает дорогу, речную лодку и лесную тропу. После дождей течение сильнее; пеший вариант даёт мокрые камни, грязь и корни. Старые схемы автомобильного/мото-подъезда к верхнему Samongphak считать только историческим резервным вариантом.",
+            "modes": {
+              "public_transport": "Прямой подтверждённый рейсовый транспорт отсутствует в найденных источниках.",
+              "taxi_ridehail": "Частного водителя можно организовывать из Attapeu; ride-hailing как надёжный способ возврата из Ban Mai не подтверждён.",
+              "car": "Подходит до Ban Mai в зависимости от текущего состояния дороги; дальше водный или пеший маршрут.",
+              "moped": "Возможен до деревенского узла при подходящем состоянии дороги; на лесной последний участок не полагаться как на гарантированно проезжаемый.",
+              "motorcycle": "Практичный вариант до Ban Mai; исторические источники также описывали сухосезонные мото-подходы, но текущая проходимость не подтверждена.",
+              "boat": "Основной характерный доступ из Ban Mai: длиннохвостая лодка с местным проводником вверх по Xe Pian.",
+              "walking": "Около часа от Ban Mai по современному туристическому описанию; точная дистанция источниками расходится."
+            },
+            "self_guided_default": false,
+            "travel_model": "самостоятельно до Ban Mai; далее местный проводник + лодка или пеший маршрут",
+            "access_options": [
+              {
+                "id": "attapeu_ban_mai",
+                "origin": "Attapeu / Samakkhixay",
+                "modes": [
+                  "car",
+                  "motorcycle",
+                  "moped",
+                  "taxi"
+                ],
+                "checked_at": "2026-10-06",
+                "source_refs": [
+                  "src:74dfd702592185",
+                  "src:d5a799c00216a3"
+                ],
+                "legs": [
+                  {
+                    "mode": "car",
+                    "distance_km": 48,
+                    "duration_min": null,
+                    "surface": "mixed",
+                    "condition": "Исторический официальный маршрут через Sanamxay к Ban Mai; современное состояние всех последних участков отдельно не опубликовано.",
+                    "seasonality": "Дождливый сезон может ухудшать второстепенные дороги.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": null,
+                    "navigation": "Attapeu → Nonglom Lake / Sanamxay → Ban Mai на Xe Pian.",
+                    "fords": null,
+                    "notes": "48 км — исторический официальный ориентир. WeAreLao даёт около 60 км до Ban Mai в контексте маршрута к Tad Saepha; перед выездом уточнять фактический маршрут.",
+                    "source_refs": [
+                      "src:74dfd702592185",
+                      "src:289e5868a8b42e"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ban_mai_samongphak",
+                "origin": "Ban Mai",
+                "modes": [
+                  "boat",
+                  "walking"
+                ],
+                "checked_at": "2026-10-06",
+                "source_refs": [
+                  "src:74dfd702592185",
+                  "src:289e5868a8b42e",
+                  "src:dd0a8b8ca77f30"
+                ],
+                "legs": [
+                  {
+                    "mode": "boat",
+                    "distance_km": null,
+                    "duration_min": 60,
+                    "surface": "unknown",
+                    "condition": "Длиннохвостая лодка вверх по Xe Pian с деревенским проводником.",
+                    "seasonality": "На высокой воде лодочный маршрут удобнее; официальный старый материал допускает прохождение всего каскадного маршрута по воде при достаточном уровне.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": {
+                      "lat": 14.706111,
+                      "lon": 106.496111
+                    },
+                    "navigation": "От Ban Mai вверх по Xe Pian к Tad Samongphak.",
+                    "fords": 0,
+                    "notes": "Ecotourism Laos даёт около часа; WeAreLao — около 45 минут. 60 минут сохранено как официальный исторический ориентир, а не гарантированное современное расписание.",
+                    "source_refs": [
+                      "src:74dfd702592185",
+                      "src:ccf5f5bd4ccfff",
+                      "src:289e5868a8b42e"
+                    ]
+                  },
+                  {
+                    "mode": "walking",
+                    "distance_km": null,
+                    "duration_min": 60,
+                    "surface": "trail",
+                    "condition": "Лесная/речная тропа; местами возможны мокрые участки и пересечения водотоков.",
+                    "seasonality": "На высокой воде пеший подход сложнее; конкретное состояние тропы проверять в Ban Mai.",
+                    "elevation_gain_m": null,
+                    "elevation_loss_m": null,
+                    "trailhead": {
+                      "lat": 14.706111,
+                      "lon": 106.496111
+                    },
+                    "navigation": "Из Ban Mai к Houay Samong и далее вдоль системы Xe Pian с местным проводником.",
+                    "fords": null,
+                    "notes": "WeAreLao указывает около часа пешком; Petit Futé одновременно даёт ориентир порядка 10 км от Ban Mai, поэтому точную дистанцию без GPS-трека не фиксируем.",
+                    "source_refs": [
+                      "src:289e5868a8b42e",
+                      "src:2a7be53defe4cf",
+                      "src:ccf5f5bd4ccfff"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "water": "Поверхностной воды много, но питьевой статус не подтверждён. Ban Mai исторически имел небольшие магазины/ресторан; питьевую воду брать там и не рассчитывать на Xe Pian как на безопасный источник.",
+            "water_structured": {
+              "at_object": true,
+              "quality": "treatment_required",
+              "last_reliable_point": "Ban Mai — магазины/небольшой ресторан по Ecotourism Laos",
+              "distance_m": null,
+              "natural_sources": [
+                {
+                  "type": "river",
+                  "name": "Xe Pian / Houay Samong",
+                  "potability": "treatment_required",
+                  "notes": "Природная вода; пить без обработки нельзя считать безопасным."
+                }
+              ],
+              "notes": "На маршрут брать достаточный запас питьевой воды; речную воду при необходимости фильтровать и обеззараживать.",
+              "source_refs": [
+                "src:74dfd702592185"
+              ]
+            },
+            "supplies": {
+              "status": "available_nearby",
+              "summary": "Ban Mai исторически имел небольшой ресторан и магазины со снеками. Наличие и ассортимент в 2026 году отдельно не подтверждены; основные запасы лучше покупать в Attapeu/Sanamxay.",
+              "poi_ids": [],
+              "source_refs": [
+                "src:74dfd702592185"
+              ]
+            },
+            "overnight_and_camping": "Homestay в Ban Mai — часть исторической и современной туристической модели района. Ночёвка непосредственно у Tad Samongphak как разрешённый кемпинг не подтверждена.",
+            "overnight": {
+              "status": "unclear",
+              "summary": "Для самого водопада правило кемпинга не найдено. Практичная ночёвка — согласованный homestay в Ban Mai; его текущую доступность нужно подтверждать до выезда.",
+              "source_refs": [
+                "src:dd0a8b8ca77f30",
+                "src:d5a799c00216a3",
+                "src:289e5868a8b42e"
+              ]
+            },
+            "access_requirements": "Маршрут проходит внутри Xe Pian NPA: использовать местного проводника из Ban Mai, не сходить без необходимости с маршрута, не собирать растения и не тревожить животных."
           },
           "climate": {
-            "best_period": null,
-            "heat_rain_notes": null,
-            "site_specific_notes": null
+            "best_period": "Для сильного потока особенно интересен период сразу после сезона дождей. Для более предсказуемой дороги и пешего подхода удобнее сухой сезон, но уровень воды и конкретная проходимость меняются.",
+            "heat_rain_notes": "В дождливый сезон Xe Pian становится выше и быстрее, что улучшает визуальную мощь водопада, но повышает требования к лодке и делает тропу скользкой.",
+            "site_specific_notes": "Исторический оператор отдельно отмечал Samongphak как особенно выразительный сразу после сезона дождей; это полевой ориентир, а не официальный гидрограф."
           },
           "operations": {
-            "status": null,
+            "status": "open/verify",
             "hours": null,
             "ticket": null,
-            "closure_notes": "Актуальные часы, цена и режим доступа не нормализованы; проверить при объектном QA.",
-            "last_verified": "2026-10-02",
-            "official_url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/"
+            "closure_notes": "Объект остаётся в официальном перечне Tourism Laos, но отдельного текущего расписания, билетной кассы или опубликованного operational notice для Tad Samongphak нет.",
+            "last_verified": "2026-10-06",
+            "official_url": "https://www.tourismlaos.org/southern-provinces/attapeu-province/",
+            "current_alert": "Не использовать старые телефоны, цены и обещание ежедневного выезда из исторических CBT-материалов как текущие. Проводника и лодку подтверждать в Attapeu/Sanamxay/Ban Mai перед маршрутом.",
+            "status_snapshot": {
+              "as_of": "2026-10-06",
+              "summary": "Tourism Laos продолжает перечислять Tad Samongphak среди водопадов Xe Pian, доступных пешком или по воде с местным проводником; KPL в 2023 году также перечисляло Samongphak среди туристических объектов Аттапы.",
+              "source_refs": [
+                "src:dd0a8b8ca77f30",
+                "src:ef464c1137b79d"
+              ]
+            },
+            "source_refs": [
+              "src:dd0a8b8ca77f30",
+              "src:ef464c1137b79d"
+            ]
           },
           "safety": {
-            "main_risks": [],
-            "sensitive_areas": []
+            "main_risks": [
+              "быстрое течение и высокий уровень Xe Pian после дождей",
+              "разный технический уровень локальных лодок",
+              "скользкие камни, грязь, корни и броды на лесной тропе",
+              "удалённость от медицинской помощи и слабая связь",
+              "жара, влажность и ограниченные запасы на последнем участке"
+            ],
+            "sensitive_areas": [
+              "маршрут проходит внутри Xe Pian National Protected Area",
+              "не сходить с маршрута и не собирать флору/фауну",
+              "не запускать дрон над деревней, лодками или людьми без согласования",
+              "не считать старые операторские контакты действующими"
+            ],
+            "confidence": "medium",
+            "source_refs": [
+              "src:dd0a8b8ca77f30",
+              "src:74dfd702592185",
+              "src:d5a799c00216a3"
+            ],
+            "checked_at": "2026-10-06"
           },
           "media": {
-            "photo_suitability_5": null,
-            "video_suitability_5": null,
+            "photo_suitability_5": 4,
+            "video_suitability_5": 5,
+            "best_light": "Мягкий утренний или облачный свет лучше держит детали широкого белого потока и тёмного лесного русла; сразу после дождливого сезона главный визуальный фактор — высокий расход воды.",
             "visual_scouting": {
-              "best_time": null,
-              "best_weather_light": null,
-              "viewpoints_for_photo_video": [],
-              "seasonal_visuals": [],
-              "video_activity": [],
-              "useful_equipment": []
+              "best_time": "утро; по сезону — сразу после дождливого периода при безопасном уровне реки",
+              "best_weather_light": "Рассеянный свет уменьшает блики на воде и провалы в тенях под лесным пологом.",
+              "viewpoints_for_photo_video": [
+                {
+                  "id": "vp_main_shelf",
+                  "name": "Главная речная ступень Tad Samongphak",
+                  "description": "Широкая примерно 30-метровая ступень на системе Houay Samong—Xe Pian; точную GPS-точку не публикуем до надёжной фиксации.",
+                  "coordinates": null,
+                  "access": "Из Ban Mai с местным проводником — лодкой или пешком.",
+                  "view": {
+                    "description": "широкий низкий каскад, бурный поток, скальный порог и плотный речной лес"
+                  },
+                  "best_time": "утро или облачная погода",
+                  "best_weather_light": "После дождей поток мощнее; при слишком высокой воде безопасная точка обзора может быть дальше от кромки.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для всей ширины речной ступени и лесного окружения"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для структуры потока и скальной кромки"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "для деталей противоположного берега без выхода на мокрые камни"
+                    }
+                  ],
+                  "source": {
+                    "type": "government_official",
+                    "title": "Waterfalls — Tad Samongphak in Attapeu Province",
+                    "publisher": "Ecotourism Laos / Lao National Tourism Administration legacy portal",
+                    "url": "https://www.ecotourismlaos.com/activities/act_waterfall",
+                    "language": "en",
+                    "authority": "high",
+                    "accessed": "2026-10-06"
+                  }
+                },
+                {
+                  "id": "vp_xe_pian_approach",
+                  "name": "Подход по Xe Pian",
+                  "description": "Речной подход от Ban Mai — часть визуальной ценности объекта: длиннохвостая лодка, галерейный лес и рыбаки по берегам.",
+                  "coordinates": {
+                    "lat": 14.706111,
+                    "lon": 106.496111,
+                    "elevation_m": null
+                  },
+                  "access": "Старт по воде из Ban Mai.",
+                  "view": {
+                    "description": "Xe Pian, лодка, прибрежный лес и деревенская речная жизнь"
+                  },
+                  "best_time": "утро",
+                  "best_weather_light": "Низкий мягкий свет лучше отделяет слои галерейного леса.",
+                  "useful_equipment": [
+                    {
+                      "type": "wide",
+                      "why": "для русла и лесных берегов"
+                    },
+                    {
+                      "type": "standard",
+                      "why": "для лодки и речных сцен"
+                    },
+                    {
+                      "type": "telephoto",
+                      "why": "для птиц и дальних деталей без приближения"
+                    }
+                  ],
+                  "source": {
+                    "type": "academic",
+                    "title": "Fishes of the Xe Pian at Ban Mai — locality record",
+                    "publisher": "Journal of South Asian Natural History",
+                    "url": "https://bionames.org/bionames-archive/issn/1022-0828/5/37.pdf",
+                    "language": "en",
+                    "authority": "high",
+                    "accessed": "2026-10-06"
+                  }
+                }
+              ],
+              "seasonal_visuals": [
+                "Сразу после сезона дождей: максимальная визуальная мощь потока, насыщенный лес, но выше риск на воде и камнях.",
+                "Сухой сезон: легче пеший/сухопутный подход, ниже вода и лучше читается форма речной ступени.",
+                "При очень высокой воде безопасная точка съёмки может быть удалена от кромки — не приближаться ради кадра."
+              ],
+              "video_activity": [
+                "движение длиннохвостой лодки по Xe Pian",
+                "широкий поток через главную ступень Samongphak",
+                "рыбацкие и речные сцены на подходе без постановочного вмешательства",
+                "переход от деревенского берега Ban Mai к закрытому лесному руслу"
+              ],
+              "useful_equipment": [
+                {
+                  "type": "wide",
+                  "why": "для широкой ступени и речного леса"
+                },
+                {
+                  "type": "standard",
+                  "why": "для потока и лодочных сцен"
+                },
+                {
+                  "type": "telephoto",
+                  "why": "для противоположного берега и птиц"
+                },
+                {
+                  "type": "action_camera",
+                  "why": "для съёмки с лодки при защите от воды"
+                },
+                {
+                  "type": "phone",
+                  "why": "для лёгкой полевой фиксации на влажном маршруте"
+                }
+              ]
             },
-            "drone": null,
-            "filming_restrictions": null
+            "drone": {
+              "visual_value": "С воздуха хорошо читалась бы связь водопада с извилистым Xe Pian и сплошным речным лесом, но охраняемый статус территории и деревенская логистика делают наземную/лодочную разведку приоритетной.",
+              "legal_status": "regulated",
+              "permit_required": null,
+              "restrictions": [
+                "Применяются общие правила БПЛА Лаоса.",
+                "Xe Pian NPA — охраняемая территория; локальное природоохранное разрешение нельзя считать автоматическим.",
+                "Не летать над Ban Mai, лодками и людьми без согласования.",
+                "Отдельного опубликованного разрешения на дрон именно над Tad Samongphak не найдено."
+              ],
+              "source_refs": [
+                "src:23a65d16d80264",
+                "src:dd0a8b8ca77f30"
+              ],
+              "checked_at": "2026-10-06"
+            },
+            "filming_restrictions": "Отдельного запрета на обычную наземную любительскую съёмку не найдено. Для дрона, коммерческой работы и съёмки жителей Ban Mai крупным планом требуется отдельное согласование."
           },
           "annotation": {
-            "narrative": "Один из удалённых водопадов бассейна Xe Pian в Аттапы; самостоятельная точка внутри более широкого природного района.",
+            "canonical_story_from_sections": true,
             "sections": [
               {
                 "section_id": "overview",
-                "content": "Один из удалённых водопадов бассейна Xe Pian в Аттапы; самостоятельная точка внутри более широкого природного района."
+                "content": "Tad Samongphak — не придорожный водопад, а часть речного маршрута внутри Xe Pian National Protected Area. Старый национальный экотуристический портал описывает его как 10-метровый сброс через русло шириной около 30 м; современный WeAreLao даёт ту же геометрию. К водопаду традиционно выходят из Ban Mai: по воде вверх по Xe Pian или пешком через лес. Поэтому здесь важен не только каскад, но и сама связка «деревня — лодка — проводник — охраняемый лес».",
+                "source_refs": [
+                  "src:74dfd702592185",
+                  "src:289e5868a8b42e",
+                  "src:dd0a8b8ca77f30"
+                ]
+              },
+              {
+                "section_id": "history",
+                "content": [
+                  {
+                    "type": "documented_history",
+                    "text": "Туристическая история Tad Samongphak хорошо документирована с 2000-х как часть первого community-based ecotourism опыта Аттапы. Проект вокруг Ban Mai развивали провинциальный туристический офис, сама деревня и CUSO: доход распределялся через homestay, работу проводников и использование деревенских лодок, а отдельный сбор шёл в фонд Ban Mai и соседних деревень."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "Старые официальные программы предлагали однодневный или двухдневный маршрут из Аттапы через Nonglom Lake и Sanamxay к Ban Mai, затем вверх по Xe Pian к Samongphak и дальше пешком к Tad Saepha. Контакты и старые цены из этих материалов не считаются актуальными, но сама структура маршрута повторяется в нескольких независимых туристических источниках."
+                  },
+                  {
+                    "type": "documented_history",
+                    "text": "В 2023 году Lao News Agency по-прежнему перечисляло Samongphak среди туристических объектов Аттапы. При этом публикация подробно описывает соседний Xeponglai, а не Samongphak; режим автомобильного доступа Xeponglai нельзя автоматически переносить на этот водопад."
+                  }
+                ],
+                "source_refs": [
+                  "src:d5a799c00216a3",
+                  "src:74dfd702592185",
+                  "src:3dbff80fd6db1d",
+                  "src:ef464c1137b79d"
+                ]
+              },
+              {
+                "section_id": "culture",
+                "content": "Ban Mai важен не как декоративная «этническая остановка», а как хозяйственный узел доступа. Ответственный туризм здесь изначально строили так, чтобы деньги за ночлег, лодку и работу проводника оставались в деревне. Группы ограничивали по размеру одновременно ради безопасности на лодках и чтобы не превращать домашний приём в массовый поток. Эта модель — часть культурного контекста Tad Samongphak не меньше, чем сама поездка по реке.",
+                "source_refs": [
+                  "src:d5a799c00216a3",
+                  "src:74dfd702592185"
+                ]
+              },
+              {
+                "section_id": "geography",
+                "content": "Водопад находится в бассейне Xe Pian внутри одноимённой охраняемой территории. Источники описывают его в районе соединения Houay Samong с Xe Pian: вода проходит через поперечную скальную ступень примерно десятиметровой высоты. От Ban Mai маршрут идёт вверх по Xe Pian; научная ихтиологическая работа фиксирует саму реку у Ban Mai в точке 14°42′22″N, 106°29′46″E, но это только надёжная привязка стартового речного узла, а не координата водопада.",
+                "source_refs": [
+                  "src:ccf5f5bd4ccfff",
+                  "src:74dfd702592185",
+                  "src:289e5868a8b42e"
+                ]
+              },
+              {
+                "section_id": "geology",
+                "content": "Проверенные источники уверенно описывают форму — широкая речная ступень — но не дают петрографию породы самого уступа. Поэтому карточка не называет его базальтовым, песчаниковым или иным только по региональному контексту. Для полевого чтения достаточно того, что это русловой порог в системе Houay Samong—Xe Pian; точный литологический состав остаётся отдельным исследовательским пробелом.",
+                "source_refs": [
+                  "src:74dfd702592185",
+                  "src:289e5868a8b42e"
+                ]
+              },
+              {
+                "section_id": "ethnography",
+                "content": "Ban Mai в современных туристических материалах описывается как община Oy. Исторический CBT-проект включал проживание в семье, общую еду, работу местных лодочников и проводников и наблюдение повседневной жизни на Xe Pian. Более широкие рассказы о «племенных ритуалах» из агрегаторов к Samongphak не переносим: отдельной подтверждённой легенды или обряда именно у водопада в проверенных источниках нет.",
+                "source_refs": [
+                  "src:289e5868a8b42e",
+                  "src:d5a799c00216a3"
+                ]
               }
             ]
           },
-          "traveler_reports": {
-            "recurring_issues": []
-          },
+          "traveler_reports": [
+            {
+              "kind": "traveler_report",
+              "topic": "historic_field_route",
+              "summary": "Документированный CBT-маршрут 2000-х шёл из Attapeu через Nonglom и Sanamxay к Ban Mai, затем на длиннохвостой лодке к Samongphak. Он полезен как подтверждение устойчивой маршрутной архитектуры, но старые контакты и тарифы из него не считаются актуальными.",
+              "observed_period": "2000s",
+              "source_refs": [
+                "src:d5a799c00216a3",
+                "src:3dbff80fd6db1d"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "recent_route_description",
+              "summary": "WeAreLao в актуально доступной карточке маршрута даёт около 45 минут на лодке или примерно час пешком от Ban Mai и подтверждает размеры порядка 10 м высоты и 30 м ширины.",
+              "observed_period": "current_web_listing",
+              "source_refs": [
+                "src:289e5868a8b42e"
+              ],
+              "confidence": "medium"
+            },
+            {
+              "kind": "traveler_report",
+              "topic": "independent_motorcycle_gap",
+              "summary": "Мото-путешественник, собиравший водопады южного Лаоса, в 2017 году упоминал Samongphak среди оставшихся на будущую поездку, а не как посещённый объект. Это важно как отрицательное свидетельство: независимых подробных современных отчётов о фактическом прохождении найдено мало.",
+              "observed_period": "2017",
+              "source_refs": [],
+              "confidence": "low"
+            }
+          ],
           "accommodation": []
         },
         "sources": [
@@ -45375,29 +45774,191 @@
             "authority": "high",
             "used_for": [
               "object existence",
-              "inventory classification",
-              "baseline description"
+              "Xe Pian NPA",
+              "local guide requirement",
+              "boat or walking access"
             ],
-            "accessed": "2026-10-02"
+            "accessed": "2026-10-06"
+          },
+          {
+            "type": "government_official",
+            "title": "Trekking in Attapeu — Ban Mai and the Xe Pian NPA",
+            "publisher": "Ecotourism Laos / Lao National Tourism Administration legacy portal",
+            "url": "https://www.ecotourismlaos.com/index_php/attapeu",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "10 m height",
+              "30 m width",
+              "48 km Attapeu-Ban Mai route",
+              "one-hour boat",
+              "Ban Mai supplies",
+              "homestay",
+              "seasonal boat access"
+            ],
+            "accessed": "2026-10-06"
+          },
+          {
+            "type": "government_official",
+            "title": "Waterfalls — Tad Samongphak in Attapeu Province",
+            "publisher": "Ecotourism Laos / Lao National Tourism Administration legacy portal",
+            "url": "https://www.ecotourismlaos.com/activities/act_waterfall",
+            "language": "en",
+            "authority": "high",
+            "used_for": [
+              "object-specific photo",
+              "Xe Pian NPA",
+              "guide from Ban Mai",
+              "walking/boat access"
+            ],
+            "accessed": "2026-10-06"
+          },
+          {
+            "type": "other",
+            "title": "Attapeu Waterfalls",
+            "publisher": "WeAreLao",
+            "url": "https://wearelao.com/standard-page/attapeu-waterfalls/",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "45-minute boat",
+              "one-hour hike",
+              "10 m height",
+              "30 m width",
+              "Oy community",
+              "current web route description"
+            ],
+            "accessed": "2026-10-06"
+          },
+          {
+            "type": "other",
+            "title": "Tour Packages — Sepiane River trip and Samongphak Waterfall",
+            "publisher": "Dokchampakham Group",
+            "url": "https://dokchampakham.weebly.com/tour-packages.html",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "one-hour boat",
+              "post-rainy-season flow",
+              "dry-season road option",
+              "5 km onward trek to Saepha",
+              "historical operator route"
+            ],
+            "accessed": "2026-10-06"
+          },
+          {
+            "type": "other",
+            "title": "A Guide to Responsible Tourism in Cambodia, Laos and Vietnam — Ban Mai Village Homestay",
+            "publisher": "ST-EP / SNV / regional responsible-tourism programme",
+            "url": "https://lib.ncdd.gov.kh/storage/app/public/test_library/CAT_24077_1/2007-Guide-to-Responsible-Tourism-in-Cam-Laos-Vn.pdf",
+            "language": "en",
+            "published_at": "2007",
+            "authority": "high",
+            "used_for": [
+              "CBT history",
+              "Ban Mai income model",
+              "village fund",
+              "group-size limits",
+              "48 km route",
+              "local guides and boats"
+            ],
+            "accessed": "2026-10-06"
+          },
+          {
+            "type": "other",
+            "title": "Laos: Jewel of the Mekong — Visit Xe Pian and Attapeu region",
+            "publisher": "Lao tourism brochure / archived copy",
+            "url": "https://lao-online.com/all_files/books/B00526.pdf",
+            "language": "en",
+            "authority": "medium",
+            "used_for": [
+              "historic one-day route",
+              "Ban Mai 48 km",
+              "boat to Samongphak",
+              "alternate Tamayot approach",
+              "local-guide model"
+            ],
+            "accessed": "2026-10-06"
+          },
+          {
+            "type": "traveler_report",
+            "title": "Attapeu Waterfalls — 2026 guide entry",
+            "publisher": "Petit Futé",
+            "url": "https://www.petitfute.com/v58813-sepiang/c1173-visites-points-d-interet/c974-site-naturel/462335-attapeu-waterfalls.html",
+            "language": "fr",
+            "published_at": "2026",
+            "authority": "medium",
+            "used_for": [
+              "Ban Mai Oy identity",
+              "10 km route estimate",
+              "10 m fall",
+              "guide recommendation",
+              "homestay availability context"
+            ],
+            "accessed": "2026-10-06"
+          },
+          {
+            "type": "academic",
+            "title": "Fishes of the Xe Pian at Ban Mai — locality record",
+            "publisher": "Journal of South Asian Natural History",
+            "url": "https://bionames.org/bionames-archive/issn/1022-0828/5/37.pdf",
+            "language": "en",
+            "published_at": "2000",
+            "authority": "high",
+            "used_for": [
+              "Ban Mai Xe Pian route-start coordinate only"
+            ],
+            "accessed": "2026-10-06",
+            "notes": "14°42′22″N, 106°29′46″E is Xe Pian at Ban Mai, not Tad Samongphak."
+          },
+          {
+            "type": "other",
+            "title": "Tad Samongphak Waterfall — image gallery",
+            "publisher": "Go Globbie",
+            "url": "https://www.goglobbie.com/country/Laos/attraction/Tad-Samongphak-Waterfall",
+            "language": "en",
+            "authority": "low",
+            "used_for": [
+              "object-specific gallery only"
+            ],
+            "accessed": "2026-10-06",
+            "notes": "Generic prose on the page is not used as factual authority; only object-labelled media assets are reused as visual provenance."
+          },
+          {
+            "type": "government_official",
+            "title": "Xeponglai, a well-known tourist destination in Attapeu",
+            "publisher": "Lao News Agency (KPL)",
+            "url": "https://kpl.gov.la/EN/detail.aspx?id=76171",
+            "language": "en",
+            "published_at": "2023",
+            "authority": "high",
+            "used_for": [
+              "2023 Samongphak tourism-inventory presence only"
+            ],
+            "accessed": "2026-10-06"
           }
         ],
         "verification": {
           "dynamic_fields": [
-            "access",
+            "Ban Mai road condition",
+            "guide availability",
+            "boat availability",
             "hours",
             "tickets",
-            "water",
+            "water level",
+            "supplies",
+            "homestay",
             "overnight",
             "filming/drone"
           ],
           "verify_before_departure": true
         },
-        "narrow": "Один из удалённых водопадов бассейна Xe Pian в Аттапы; самостоятельная точка внутри более широкого природного района.",
+        "narrow": "Tad Samongphak — примерно 10-метровый и 30-метровый по ширине водопад на системе Houay Samong—Xe Pian внутри Xe Pian NPA. Базовый экспедиционный узел — Ban Mai в Sanamxay: отсюда к каскаду идут с местным проводником пешком или на длиннохвостой лодке. Надёжной опубликованной GPS-точки самого каскада пока нет, поэтому координаты водопада не подменяются координатами деревни или соседнего участка реки.",
         "qa": {
           "inventory_review": {
-            "status": "preliminary",
-            "checked_at": "2026-10-02",
-            "notes": "Добавлено на инвентарном проходе из официального Tourism Laos. Полный object QA намеренно не заявлен."
+            "status": "replaced_by_research_core",
+            "checked_at": "2026-10-06",
+            "notes": "Inventory shell replaced by a full source-backed research card. Exact waterfall GPS/elevation remain unresolved rather than inferred from Ban Mai or nearby stream stations."
           },
           "identity_review": {
             "status": "reviewed",
@@ -45416,7 +45977,158 @@
             ],
             "evidence_urls": [],
             "notes": "Отдельная инвентарная сущность: отдельное имя/официальная listing identity; точного или семантического дубля внутри текущего Laos inventory не найдено."
+          },
+          "language_review": {
+            "status": "reviewed",
+            "checked_at": "2026-10-06",
+            "notes": "Object, Ban Mai trailhead and neighboring Tad Saepha/Xeponglai are explicitly separated; historic route data are period-scoped."
+          },
+          "human_copy_review": {
+            "status": "passed",
+            "checked_at": "2026-10-06",
+            "checks": {
+              "natural_russian": true,
+              "no_stock_travel_copy": true,
+              "practical_information_first": true,
+              "uncertainty_preserved": true,
+              "no_invented_mythology": true,
+              "no_invented_geology": true
+            }
+          },
+          "card_review": {
+            "status": "in_progress",
+            "checked_at": "2026-10-06",
+            "scope": "Tad Samongphak full research card with unresolved exact waterfall GPS/elevation",
+            "checks": {
+              "language": true,
+              "classification": true,
+              "geo": true,
+              "coordinates": false,
+              "elevation": false,
+              "narrative": true,
+              "sources": true,
+              "access": true,
+              "water": true,
+              "overnight": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "gallery_min_5": true,
+              "fact_source_scoping": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "geology_scope_honest": true,
+              "ethnography_substantive": true,
+              "guide_requirement": true,
+              "media_provenance": true
+            },
+            "notes": [
+              "No reliable published GPS point for the waterfall itself was found; Ban Mai and scientific stream coordinates are not substituted.",
+              "Ban Mai route-start coordinate is used only as a trailhead/boat origin.",
+              "10 m height and ~30 m width are repeated by official Ecotourism Laos and current WeAreLao.",
+              "Historic 48 km and current-ish ~60 km Attapeu-Ban Mai descriptions are preserved as a route-source discrepancy.",
+              "Old phone numbers, fees and daily-departure claims were not promoted to current facts.",
+              "No site-specific myth was found; none was invented.",
+              "Gallery reaches five object-labelled images, but four are low-authority Go Globbie assets and are marked accordingly."
+            ]
+          },
+          "rebuild_v2": {
+            "status": "in_progress",
+            "checked_at": "2026-10-06",
+            "scope": "full Tad Samongphak card minus exact waterfall GPS/elevation",
+            "checks": {
+              "connected_story": true,
+              "history_substantive": true,
+              "culture_substantive": true,
+              "geography_substantive": true,
+              "ethnography_substantive": true,
+              "no_placeholder_sections": true,
+              "no_invented_precision": true,
+              "logistics_self_guided_to_trailhead": true,
+              "local_guide_requirement": true,
+              "water_honest": true,
+              "overnight_honest": true,
+              "traveler_reports": true,
+              "visual_recon": true,
+              "sources": true,
+              "media_provenance": true,
+              "gallery_min_5": true,
+              "coordinates": false,
+              "elevation": false
+            }
+          },
+          "fact_source_review": {
+            "status": "passed",
+            "checked_at": "2026-10-06",
+            "scope": "Tad Samongphak identity, dimensions, Xe Pian/Ban Mai access, CBT history, Oy context, route-start coordinate, seasonal access, supplies, media and drone",
+            "checks": {
+              "dimensions_official": true,
+              "ban_mai_coordinate_scoped": true,
+              "waterfall_coordinate_not_fabricated": true,
+              "old_access_period_scoped": true,
+              "current_official_listing": true,
+              "guide_requirement_official": true,
+              "cbt_history_sourced": true,
+              "oy_identity_sourced": true,
+              "neighboring_waterfalls_not_conflated": true,
+              "geology_not_invented": true,
+              "water_not_marked_potable": true,
+              "camping_permission_unknown_preserved": true,
+              "gallery_sources_traced": true,
+              "drone_rules_official": true
+            }
           }
+        },
+        "illustration": {
+          "static_url": "https://www.ecotourismlaos.com/images/waterfall/tad_samongphak.jpg",
+          "source_page": "https://www.ecotourismlaos.com/activities/act_waterfall",
+          "provider": "Ecotourism Laos / Lao National Tourism Administration legacy portal",
+          "license": "reuse_terms_unverified",
+          "artist": null,
+          "illustration_scope": "Tad Samongphak waterfall; four additional object-labelled views from Go Globbie used only as low-authority visual provenance.",
+          "last_checked": "2026-10-06",
+          "gallery": [
+            {
+              "static_url": "https://www.ecotourismlaos.com/images/waterfall/tad_samongphak.jpg",
+              "source_page": "https://www.ecotourismlaos.com/activities/act_waterfall",
+              "provider": "Ecotourism Laos / Lao National Tourism Administration legacy portal",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-06"
+            },
+            {
+              "static_url": "https://mdw-travel-data-us-east-1.s3.amazonaws.com/img/country/Laos/Tad-Samongphak-Waterfall/img_00.jpg",
+              "source_page": "https://www.goglobbie.com/country/Laos/attraction/Tad-Samongphak-Waterfall",
+              "provider": "Go Globbie",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-06"
+            },
+            {
+              "static_url": "https://mdw-travel-data-us-east-1.s3.amazonaws.com/img/country/Laos/Tad-Samongphak-Waterfall/img_01.jpg",
+              "source_page": "https://www.goglobbie.com/country/Laos/attraction/Tad-Samongphak-Waterfall",
+              "provider": "Go Globbie",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-06"
+            },
+            {
+              "static_url": "https://mdw-travel-data-us-east-1.s3.amazonaws.com/img/country/Laos/Tad-Samongphak-Waterfall/img_02.jpg",
+              "source_page": "https://www.goglobbie.com/country/Laos/attraction/Tad-Samongphak-Waterfall",
+              "provider": "Go Globbie",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-06"
+            },
+            {
+              "static_url": "https://mdw-travel-data-us-east-1.s3.amazonaws.com/img/country/Laos/Tad-Samongphak-Waterfall/img_03.jpg",
+              "source_page": "https://www.goglobbie.com/country/Laos/attraction/Tad-Samongphak-Waterfall",
+              "provider": "Go Globbie",
+              "license": "reuse_terms_unverified",
+              "artist": null,
+              "last_checked": "2026-10-06"
+            }
+          ]
         }
       },
       {
